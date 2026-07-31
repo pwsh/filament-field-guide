@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "manufacturer.schema.json",
+  "title": "Manufacturer",
+  "type": "object",
+  "required": ["id", "name", "status", "provenance"],
+  "additionalProperties": false,
+  "properties": {
+    "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$" },
+    "name": { "type": "string" },
+    "status": { "enum": ["example", "draft", "researched", "verified"] },
+    "summary": { "type": "string" },
+    "headquarters_country": { "type": "string" },
+    "manufacturing_countries": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Countries where filament actually originates, not where it is sold"
+    },
+    "brands": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Brand names this company operates or sells under"
+    },
+    "oem_relationships": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["company", "relationship"],
+        "properties": {
+          "company": { "type": "string" },
+          "relationship": { "enum": ["manufactures-for", "manufactured-by", "suspected-manufactured-by", "rebrands", "joint-venture"] },
+          "notes": { "type": "string" }
+        }
+      },
+      "description": "Known or suspected white-label / subcontract manufacturing relationships"
+    },
+    "endpoints": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "website": { "type": "string" },
+        "store": { "type": "string" },
+        "docs": { "type": "string" },
+        "support": { "type": "string" },
+        "social": {
+          "type": "object",
+          "additionalProperties": { "type": "string" },
+          "description": "platform -> URL (youtube, x, instagram, facebook, reddit, discord, tiktok...)"
+        }
+      }
+    },
+    "product_lines": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["name"],
+        "properties": {
+          "name": { "type": "string" },
+          "filament_ids": { "type": "array", "items": { "type": "string" }, "description": "filament type ids this line covers" },
+          "notes": { "type": "string" }
+        }
+      }
+    },
+    "makes_plates": { "type": "boolean" },
+    "plate_ids": { "type": "array", "items": { "type": "string" } },
+    "price_tier": { "enum": ["budget", "mid", "premium", "engineering"] },
+    "additional_notes": { "type": "string" },
+    "provenance": { "$ref": "filament.schema.json#/$defs/provenance" }
+  }
+}

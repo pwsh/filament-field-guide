@@ -1,0 +1,177 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "filament.schema.json",
+  "title": "Filament Type",
+  "type": "object",
+  "required": ["id", "name", "polymer_class", "status", "printing", "provenance"],
+  "additionalProperties": false,
+  "properties": {
+    "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$", "description": "Unique slug; must equal filename without .json" },
+    "name": { "type": "string" },
+    "aliases": { "type": "array", "items": { "type": "string" } },
+    "status": { "enum": ["example", "draft", "researched", "verified"], "description": "Entry maturity. 'example' entries are placeholders demonstrating the schema." },
+    "base_type": { "type": ["string", "null"], "description": "id of the base filament this is a variation of (e.g. silk-pla -> pla); null for base types" },
+    "variation_kind": { "type": ["string", "null"], "description": "e.g. silk, matte, carbon-fiber-filled, glass-filled, high-flow, foaming, flame-retardant, esd-safe, conductive, wood-filled, metal-filled, glow, gradient" },
+    "polymer_class": {
+      "enum": ["polylactide", "polyester-copolyester", "styrenic", "polyamide", "elastomer", "polycarbonate", "polyolefin", "polyvinyl", "high-performance", "support-soluble", "support-breakaway", "composite-other"],
+      "description": "Chemical-makeup grouping used for filtering"
+    },
+    "chemical_makeup": { "type": "string", "description": "Fuller chemistry description, e.g. 'Polyethylene terephthalate glycol-modified'" },
+    "summary": { "type": "string", "description": "1-3 sentence overview shown on cards and reference sheets" },
+    "printing": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["nozzle_temp_c", "enclosure_recommended", "heated_chamber_required"],
+      "properties": {
+        "nozzle_temp_c": { "$ref": "#/$defs/rangeRec" },
+        "bed_temp_c": { "$ref": "#/$defs/rangeRec" },
+        "ambient_temp_c": { "$ref": "#/$defs/rangeRec", "description": "Recommended ambient/chamber temperature" },
+        "speed_mm_s": { "$ref": "#/$defs/rangeRec" },
+        "enclosure_recommended": { "type": "boolean" },
+        "heated_chamber_required": { "type": "boolean" },
+        "requires_hardened_nozzle": { "type": "boolean" },
+        "part_cooling_fan_pct": { "$ref": "#/$defs/rangeRec" },
+        "notes": { "type": "string" }
+      }
+    },
+    "drying": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "required_before_use": { "enum": ["always", "if-exposed", "rarely"] },
+        "temp_c": { "$ref": "#/$defs/rangeRec" },
+        "time_hours": { "$ref": "#/$defs/rangeRec" },
+        "methods": { "type": "array", "items": { "type": "string" } },
+        "dryness_validation": { "type": "string", "description": "How to confirm the filament is properly dried/prepared (e.g. no popping/steam at nozzle, no stringing, weight loss plateau)" },
+        "notes": { "type": "string" }
+      }
+    },
+    "storage": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "recommendations": { "type": "string" },
+        "max_humidity_pct": { "type": "number" },
+        "hygroscopy": { "enum": ["low", "moderate", "high", "extreme"] }
+      }
+    },
+    "price": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "usd_per_kg_low": { "type": "number" },
+        "usd_per_kg_high": { "type": "number" },
+        "notes": { "type": "string" }
+      }
+    },
+    "use_cases": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "recommended": { "type": "array", "items": { "type": "string" } },
+        "not_recommended": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "suitability": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "food_contact": { "enum": ["no", "conditional", "yes-certified-lines"], "description": "FDM layer gaps harbor bacteria; 'yes' requires certified filament AND food-safe process" },
+        "load_bearing": { "enum": ["no", "light", "moderate", "high"] },
+        "high_temperature": { "enum": ["no", "moderate", "yes"] },
+        "outdoor": { "enum": ["no", "limited", "yes"] }
+      }
+    },
+    "properties": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "density_g_cm3": { "type": "number" },
+        "grams_per_100cm3": { "type": "number", "description": "Standardized weight per volume (derived: density x 100)" },
+        "cm3_per_100g": { "type": "number", "description": "Standardized volume per weight (derived: 100 / density)" },
+        "shrinkage_pct": { "$ref": "#/$defs/rangeRec" },
+        "glass_transition_c": { "type": "number" },
+        "heat_deflection_c": { "type": "number", "description": "HDT at 0.45 MPa unless noted" },
+        "max_service_temp_c": { "type": "number" },
+        "tensile_strength_mpa": { "$ref": "#/$defs/rangeRec" },
+        "notes": { "type": "string" }
+      }
+    },
+    "scores": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "1-10 rubric scores; rubrics defined in glossary. 10 is always the desirable end except warp_tendency where 10 = warps most.",
+      "properties": {
+        "ease_of_print": { "$ref": "#/$defs/score" },
+        "dimensional_stability": { "$ref": "#/$defs/score" },
+        "warp_tendency": { "$ref": "#/$defs/score" },
+        "layer_adhesion": { "$ref": "#/$defs/score" },
+        "compression_strength": { "$ref": "#/$defs/score" },
+        "temperature_tolerance": { "$ref": "#/$defs/score" },
+        "uv_tolerance": { "$ref": "#/$defs/score" },
+        "weather_tolerance": { "$ref": "#/$defs/score" },
+        "water_tolerance": { "$ref": "#/$defs/score" }
+      }
+    },
+    "compatibility": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "bonds_with": { "type": "array", "items": { "type": "string" }, "description": "filament ids that fuse/adhere when co-printed" },
+        "support_materials": { "type": "array", "items": { "type": "string" }, "description": "filament ids usable as support/interface for this material" },
+        "usable_as_support_for": { "type": "array", "items": { "type": "string" } },
+        "notes": { "type": "string" }
+      }
+    },
+    "plate_recommendations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["plate_id", "rating"],
+        "properties": {
+          "plate_id": { "type": "string" },
+          "rating": { "enum": ["recommended", "usable", "avoid"] },
+          "notes": { "type": "string" }
+        }
+      }
+    },
+    "emissions": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "voc_level": { "enum": ["minimal", "low", "moderate", "high"], "description": "Relative volatile-organic-compound emission level while printing" },
+        "particulate_level": { "enum": ["minimal", "low", "moderate", "high"], "description": "Relative ultrafine-particle emission level while printing" },
+        "primary_emissions": { "type": "array", "items": { "type": "string" }, "description": "Named compounds/species emitted, e.g. styrene, lactide, caprolactam, ultrafine particles" },
+        "ventilation": { "enum": ["optional", "recommended", "required"], "description": "Ventilation/filtration guidance for off-gassing during printing" },
+        "notes": { "type": "string" }
+      }
+    },
+    "safety_notes": { "type": "string", "description": "Other safety guidance beyond emissions (handling, post-processing, additives)" },
+    "additional_notes": { "type": "string" },
+    "provenance": { "$ref": "#/$defs/provenance" }
+  },
+  "$defs": {
+    "rangeRec": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "min": { "type": "number" },
+        "max": { "type": "number" },
+        "recommended": { "type": "number" }
+      }
+    },
+    "score": { "type": "number", "minimum": 1, "maximum": 10 },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["last_verified", "confidence"],
+      "properties": {
+        "sources": { "type": "array", "items": { "type": "string", "description": "URL or citation" } },
+        "last_verified": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+        "confidence": { "enum": ["placeholder", "low", "medium", "high"] },
+        "conflicts": { "type": "string", "description": "Unresolved disagreements between sources, for Fable review" }
+      }
+    }
+  }
+}

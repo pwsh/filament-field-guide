@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "plate.schema.json",
+  "title": "Build Plate Type",
+  "type": "object",
+  "required": ["id", "name", "status", "provenance"],
+  "additionalProperties": false,
+  "properties": {
+    "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$" },
+    "name": { "type": "string" },
+    "aliases": { "type": "array", "items": { "type": "string" } },
+    "status": { "enum": ["example", "draft", "researched", "verified"] },
+    "summary": { "type": "string" },
+    "surface_makeup": { "type": "string", "description": "Chemical/material composition, e.g. 'Polyetherimide (PEI) powder-coated on spring steel'" },
+    "texture": { "enum": ["smooth", "textured", "satin", "patterned", "other"] },
+    "manufacturers": { "type": "array", "items": { "type": "string" }, "description": "manufacturer ids or names offering this plate type" },
+    "filament_compatibility": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["filament_id", "rating"],
+        "properties": {
+          "filament_id": { "type": "string" },
+          "rating": { "enum": ["recommended", "usable-with-prep", "avoid"] },
+          "bed_temp_c": { "$ref": "filament.schema.json#/$defs/rangeRec" },
+          "adhesion_aid": { "type": "string", "description": "glue stick, hairspray, none, release agent required..." },
+          "notes": { "type": "string", "description": "e.g. 'PETG can fuse to smooth PEI and rip chunks out - use release agent'" }
+        }
+      }
+    },
+    "preparation": { "type": "string", "description": "First-use and per-print prep" },
+    "cleaning": { "type": "string", "description": "Routine and deep cleaning procedures" },
+    "model_removal": { "type": "string", "description": "Recommended removal technique" },
+    "stuck_print_recovery": { "type": "string", "description": "What to do when a print will not release" },
+    "temperature_limits_c": { "$ref": "filament.schema.json#/$defs/rangeRec" },
+    "lifespan_notes": { "type": "string", "description": "Wear patterns, when to replace, recoating options" },
+    "price": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "usd_low": { "type": "number" },
+        "usd_high": { "type": "number" },
+        "notes": { "type": "string" }
+      }
+    },
+    "additional_notes": { "type": "string" },
+    "provenance": { "$ref": "filament.schema.json#/$defs/provenance" }
+  }
+}

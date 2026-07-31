@@ -1,0 +1,87 @@
+{
+  "id": "pla",
+  "name": "PLA (Polylactic Acid)",
+  "aliases": ["Polylactide"],
+  "status": "example",
+  "base_type": null,
+  "variation_kind": null,
+  "polymer_class": "polylactide",
+  "chemical_makeup": "Polylactic acid, a biodegradable aliphatic polyester derived from fermented plant starch",
+  "summary": "The default FDM material: easiest to print, stiff, accurate, inexpensive — but soft above ~55 °C and brittle under impact. Example entry pending Phase A research.",
+  "printing": {
+    "nozzle_temp_c": { "min": 190, "max": 230, "recommended": 210 },
+    "bed_temp_c": { "min": 45, "max": 65, "recommended": 60 },
+    "ambient_temp_c": { "min": 15, "max": 30 },
+    "speed_mm_s": { "min": 40, "max": 300, "recommended": 100 },
+    "enclosure_recommended": false,
+    "heated_chamber_required": false,
+    "requires_hardened_nozzle": false,
+    "part_cooling_fan_pct": { "min": 80, "max": 100, "recommended": 100 }
+  },
+  "drying": {
+    "required_before_use": "if-exposed",
+    "temp_c": { "min": 40, "max": 55, "recommended": 50 },
+    "time_hours": { "min": 4, "max": 8, "recommended": 6 },
+    "methods": ["filament dryer", "convection oven at lowest setting", "drybox with desiccant"],
+    "dryness_validation": "No popping/steam at nozzle; clean glossy extrudate; minimal stringing on retraction test"
+  },
+  "storage": {
+    "recommendations": "Sealed bag or drybox with desiccant between uses; tolerates weeks of open air in dry climates",
+    "max_humidity_pct": 40,
+    "hygroscopy": "moderate"
+  },
+  "price": { "usd_per_kg_low": 12, "usd_per_kg_high": 30 },
+  "use_cases": {
+    "recommended": ["prototypes", "visual models", "low-stress fixtures", "toys", "indoor decorative parts"],
+    "not_recommended": ["parts in hot cars or sun", "sustained-load brackets (creep)", "outdoor fixtures", "impact-loaded parts"]
+  },
+  "suitability": {
+    "food_contact": "conditional",
+    "load_bearing": "light",
+    "high_temperature": "no",
+    "outdoor": "no"
+  },
+  "properties": {
+    "density_g_cm3": 1.24,
+    "grams_per_100cm3": 124,
+    "cm3_per_100g": 80.6,
+    "shrinkage_pct": { "min": 0.2, "max": 0.4 },
+    "glass_transition_c": 60,
+    "heat_deflection_c": 55,
+    "max_service_temp_c": 52,
+    "tensile_strength_mpa": { "min": 45, "max": 65 }
+  },
+  "scores": {
+    "ease_of_print": 10,
+    "dimensional_stability": 8,
+    "warp_tendency": 1,
+    "layer_adhesion": 7,
+    "compression_strength": 7,
+    "temperature_tolerance": 2,
+    "uv_tolerance": 3,
+    "weather_tolerance": 2,
+    "water_tolerance": 5
+  },
+  "compatibility": {
+    "bonds_with": ["pla"],
+    "support_materials": ["pva", "petg"],
+    "usable_as_support_for": ["petg"],
+    "notes": "PETG and PLA separate cleanly, so each works as a support interface for the other"
+  },
+  "plate_recommendations": [
+    { "plate_id": "pei-textured", "rating": "recommended", "notes": "No adhesive needed on a clean plate" }
+  ],
+  "emissions": {
+    "voc_level": "minimal",
+    "particulate_level": "low",
+    "primary_emissions": ["lactide", "ultrafine particles (low)"],
+    "ventilation": "optional",
+    "notes": "Lowest-emission common filament; sweet odor is lactide. Ventilation still sensible for continuous printing in occupied rooms."
+  },
+  "safety_notes": "Additive-heavy variants (glow, metal-filled) change the emission and abrasion picture — see variation entries",
+  "provenance": {
+    "sources": ["EXAMPLE ENTRY — values are typical published figures; replace via Phase A research"],
+    "last_verified": "2026-07-31",
+    "confidence": "placeholder"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "glossary.schema.json",
+  "title": "Glossary",
+  "type": "object",
+  "required": ["entries"],
+  "additionalProperties": false,
+  "properties": {
+    "entries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["key", "term", "definition", "why_it_matters"],
+        "properties": {
+          "key": { "type": "string", "description": "Property path this entry documents, e.g. 'scores.warp_tendency' or a free term key" },
+          "term": { "type": "string" },
+          "definition": { "type": "string" },
+          "why_it_matters": { "type": "string", "description": "Why and where this property is important to consider" },
+          "units": { "type": "string" },
+          "rubric": {
+            "type": "object",
+            "additionalProperties": { "type": "string" },
+            "description": "For 1-10 scores: anchor descriptions keyed by score value, e.g. {\"1\": \"...\", \"5\": \"...\", \"10\": \"...\"}"
+          },
+          "see_also": { "type": "array", "items": { "type": "string" } }
+        }
+      }
+    }
+  }
+}

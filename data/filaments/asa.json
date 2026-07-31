@@ -1,0 +1,87 @@
+{
+  "id": "asa",
+  "name": "ASA (Acrylonitrile Styrene Acrylate)",
+  "aliases": [],
+  "status": "example",
+  "base_type": null,
+  "variation_kind": null,
+  "polymer_class": "styrenic",
+  "chemical_makeup": "Terpolymer of acrylonitrile, styrene, and acrylate rubber — ABS chemistry with the butadiene rubber replaced by UV-stable acrylate",
+  "summary": "The outdoor workhorse: ABS-like strength and temperature resistance with strong UV stability. Needs an enclosure and ventilation. Example entry pending Phase A research.",
+  "printing": {
+    "nozzle_temp_c": { "min": 240, "max": 270, "recommended": 255 },
+    "bed_temp_c": { "min": 90, "max": 110, "recommended": 100 },
+    "ambient_temp_c": { "min": 40, "max": 60, "recommended": 50 },
+    "speed_mm_s": { "min": 30, "max": 150, "recommended": 60 },
+    "enclosure_recommended": true,
+    "heated_chamber_required": false,
+    "requires_hardened_nozzle": false,
+    "part_cooling_fan_pct": { "min": 0, "max": 30, "recommended": 10 }
+  },
+  "drying": {
+    "required_before_use": "if-exposed",
+    "temp_c": { "min": 75, "max": 85, "recommended": 80 },
+    "time_hours": { "min": 3, "max": 8, "recommended": 4 },
+    "methods": ["filament dryer", "convection oven"],
+    "dryness_validation": "No popping or surface pitting; consistent gloss on a test print"
+  },
+  "storage": {
+    "recommendations": "Sealed with desiccant; less moisture-critical than PETG/PA but dry storage improves surfaces",
+    "max_humidity_pct": 40,
+    "hygroscopy": "moderate"
+  },
+  "price": { "usd_per_kg_low": 18, "usd_per_kg_high": 45 },
+  "use_cases": {
+    "recommended": ["outdoor fixtures", "automotive trim", "RC and drone parts", "housings in sun", "signage"],
+    "not_recommended": ["open-frame printers in cold rooms", "unventilated spaces (styrene emissions)", "food contact"]
+  },
+  "suitability": {
+    "food_contact": "no",
+    "load_bearing": "moderate",
+    "high_temperature": "moderate",
+    "outdoor": "yes"
+  },
+  "properties": {
+    "density_g_cm3": 1.07,
+    "grams_per_100cm3": 107,
+    "cm3_per_100g": 93.5,
+    "shrinkage_pct": { "min": 0.4, "max": 0.7 },
+    "glass_transition_c": 105,
+    "heat_deflection_c": 96,
+    "max_service_temp_c": 90,
+    "tensile_strength_mpa": { "min": 40, "max": 50 }
+  },
+  "scores": {
+    "ease_of_print": 5,
+    "dimensional_stability": 7,
+    "warp_tendency": 7,
+    "layer_adhesion": 6,
+    "compression_strength": 7,
+    "temperature_tolerance": 7,
+    "uv_tolerance": 9,
+    "weather_tolerance": 9,
+    "water_tolerance": 8
+  },
+  "compatibility": {
+    "bonds_with": ["asa", "abs"],
+    "support_materials": ["hips"],
+    "usable_as_support_for": ["abs"],
+    "notes": "HIPS dissolves in limonene, giving soluble supports for styrenics"
+  },
+  "plate_recommendations": [
+    { "plate_id": "pei-textured", "rating": "recommended", "notes": "Clean textured PEI at 100 °C; glue stick as release/adhesion tuner on large flats" }
+  ],
+  "emissions": {
+    "voc_level": "high",
+    "particulate_level": "high",
+    "primary_emissions": ["styrene", "ultrafine particles (high)"],
+    "ventilation": "required",
+    "notes": "Styrene is a respiratory irritant and possible carcinogen with chronic exposure. Print enclosed with exhaust or HEPA+activated-carbon filtration; never in occupied unventilated rooms."
+  },
+  "safety_notes": "Enclosure serves double duty: warp control and emission containment",
+  "provenance": {
+    "sources": ["EXAMPLE ENTRY — values are typical published figures; replace via Phase A research"],
+    "last_verified": "2026-07-31",
+    "confidence": "placeholder"
+  }
+}

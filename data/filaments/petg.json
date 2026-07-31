@@ -1,0 +1,87 @@
+{
+  "id": "petg",
+  "name": "PETG (Polyethylene Terephthalate Glycol)",
+  "aliases": ["Glycol-modified PET"],
+  "status": "example",
+  "base_type": null,
+  "variation_kind": null,
+  "polymer_class": "polyester-copolyester",
+  "chemical_makeup": "Polyethylene terephthalate copolymerized with cyclohexanedimethanol (glycol modification) to suppress crystallization",
+  "summary": "The step up from PLA: tougher, more temperature- and water-resistant, still printable on open machines. Strings more and loves moisture. Example entry pending Phase A research.",
+  "printing": {
+    "nozzle_temp_c": { "min": 220, "max": 260, "recommended": 240 },
+    "bed_temp_c": { "min": 65, "max": 90, "recommended": 80 },
+    "ambient_temp_c": { "min": 15, "max": 35 },
+    "speed_mm_s": { "min": 30, "max": 200, "recommended": 60 },
+    "enclosure_recommended": false,
+    "heated_chamber_required": false,
+    "requires_hardened_nozzle": false,
+    "part_cooling_fan_pct": { "min": 30, "max": 70, "recommended": 50 }
+  },
+  "drying": {
+    "required_before_use": "if-exposed",
+    "temp_c": { "min": 55, "max": 65, "recommended": 65 },
+    "time_hours": { "min": 4, "max": 12, "recommended": 6 },
+    "methods": ["filament dryer", "drybox with desiccant"],
+    "dryness_validation": "No popping at nozzle; stringing drops dramatically after drying — a stringing test is the best PETG dryness check"
+  },
+  "storage": {
+    "recommendations": "Drybox or sealed bag with desiccant; PETG absorbs moisture faster than PLA",
+    "max_humidity_pct": 30,
+    "hygroscopy": "high"
+  },
+  "price": { "usd_per_kg_low": 14, "usd_per_kg_high": 35 },
+  "use_cases": {
+    "recommended": ["functional parts", "brackets", "enclosures", "water-exposed parts", "living hinges (thin)", "printer parts away from hotend"],
+    "not_recommended": ["fine-detail miniatures (stringing)", "high-heat applications", "parts needing crisp sharp corners"]
+  },
+  "suitability": {
+    "food_contact": "conditional",
+    "load_bearing": "moderate",
+    "high_temperature": "no",
+    "outdoor": "limited"
+  },
+  "properties": {
+    "density_g_cm3": 1.27,
+    "grams_per_100cm3": 127,
+    "cm3_per_100g": 78.7,
+    "shrinkage_pct": { "min": 0.3, "max": 0.8 },
+    "glass_transition_c": 80,
+    "heat_deflection_c": 70,
+    "max_service_temp_c": 70,
+    "tensile_strength_mpa": { "min": 45, "max": 55 }
+  },
+  "scores": {
+    "ease_of_print": 7,
+    "dimensional_stability": 7,
+    "warp_tendency": 3,
+    "layer_adhesion": 9,
+    "compression_strength": 7,
+    "temperature_tolerance": 4,
+    "uv_tolerance": 6,
+    "weather_tolerance": 6,
+    "water_tolerance": 8
+  },
+  "compatibility": {
+    "bonds_with": ["petg", "tpu"],
+    "support_materials": ["pla", "bvoh"],
+    "usable_as_support_for": ["pla", "tpu"],
+    "notes": "PLA/PETG mutual-separation trick works both directions"
+  },
+  "plate_recommendations": [
+    { "plate_id": "pei-textured", "rating": "recommended", "notes": "Textured PEI releases PETG cleanly; avoid bare smooth PEI without release agent" }
+  ],
+  "emissions": {
+    "voc_level": "low",
+    "particulate_level": "low",
+    "primary_emissions": ["ultrafine particles (low)"],
+    "ventilation": "optional",
+    "notes": "Comparable to PLA in most emission studies; ventilation recommended for continuous multi-printer use."
+  },
+  "safety_notes": "",
+  "provenance": {
+    "sources": ["EXAMPLE ENTRY — values are typical published figures; replace via Phase A research"],
+    "last_verified": "2026-07-31",
+    "confidence": "placeholder"
+  }
+}

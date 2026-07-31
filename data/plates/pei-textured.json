@@ -1,0 +1,28 @@
+{
+  "id": "pei-textured",
+  "name": "Textured PEI (powder-coated spring steel)",
+  "aliases": ["Textured powder-coated plate", "Gold textured plate"],
+  "status": "example",
+  "summary": "The modern default build surface: powder-coated polyetherimide on flexible spring steel. Grips hot, releases cold, needs no adhesives for most materials, and leaves a uniform textured finish. Example entry pending Phase D research.",
+  "surface_makeup": "Polyetherimide (PEI) powder coating fused onto a spring-steel sheet",
+  "texture": "textured",
+  "manufacturers": ["Bambu Lab", "Prusa Research", "Wham Bam", "Energetic", "BIQU", "FYSETC", "Creality"],
+  "filament_compatibility": [
+    { "filament_id": "pla", "rating": "recommended", "bed_temp_c": { "min": 50, "max": 65 }, "adhesion_aid": "none", "notes": "Wash with dish soap if adhesion drops — skin oils are the usual culprit" },
+    { "filament_id": "petg", "rating": "recommended", "bed_temp_c": { "min": 70, "max": 90 }, "adhesion_aid": "none", "notes": "Texture prevents the PEI-fusing problem smooth sheets have with PETG" },
+    { "filament_id": "asa", "rating": "recommended", "bed_temp_c": { "min": 95, "max": 110 }, "adhesion_aid": "none or thin glue stick on large flats", "notes": "Enclosure matters more than the plate for ASA adhesion" }
+  ],
+  "preparation": "First use and periodically: wash with warm water and unscented dish soap, dry with a clean paper towel. Avoid touching the print area. IPA between prints removes light residue but eventually smears oils — soap wash beats IPA.",
+  "cleaning": "Routine: 91%+ IPA wipe when cold. Deep: dish-soap scrub. Never scrape with metal on the coating; acetone is unnecessary and can degrade some coatings.",
+  "model_removal": "Let the plate cool below ~40 °C, then flex the sheet — prints pop free. Cold-release is the design feature; prying hot defeats it.",
+  "stuck_print_recovery": "Put the plate (with print) in a freezer for 10–15 minutes, then flex. For thin flat prints, flex progressively from a corner. As a last resort slide a thin plastic spatula under an edge — never metal blades on the coating.",
+  "temperature_limits_c": { "max": 120 },
+  "lifespan_notes": "Coating wears glossy in high-use zones over months-to-years; adhesion loss that soap washing doesn't fix indicates wear. Sheets can be re-powder-coated by some vendors or replaced.",
+  "price": { "usd_low": 15, "usd_high": 60 },
+  "additional_notes": "TPU can bond aggressively if printed too hot on fresh coating — first candidate for a 'usable-with-prep' rating once TPU entry exists.",
+  "provenance": {
+    "sources": ["EXAMPLE ENTRY — verify manufacturers, temps, and care guidance in Phase D"],
+    "last_verified": "2026-07-31",
+    "confidence": "placeholder"
+  }
+}

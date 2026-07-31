@@ -1,0 +1,251 @@
+{
+  "entries": [
+    {
+      "key": "polymer_class",
+      "term": "Polymer class",
+      "definition": "Chemical-family grouping of the filament's base polymer (polylactide, copolyester, styrenic, polyamide, elastomer, etc.).",
+      "why_it_matters": "Materials in the same class share printing behavior, bonding compatibility, and post-processing options. It is the primary axis for filtering and for predicting whether two materials will fuse."
+    },
+    {
+      "key": "printing.nozzle_temp_c",
+      "term": "Nozzle temperature",
+      "definition": "Hotend temperature range the material extrudes reliably at, with a single most-recommended value.",
+      "why_it_matters": "Too cold causes under-extrusion and weak layer bonds; too hot causes stringing, oozing, and polymer degradation. The recommended value is the consensus starting point before tuning.",
+      "units": "°C"
+    },
+    {
+      "key": "printing.bed_temp_c",
+      "term": "Bed temperature",
+      "definition": "Build-plate temperature range for first-layer adhesion and warp control.",
+      "why_it_matters": "Keeps the part above/near its glass transition at the interface so it grips the plate. Wrong bed temps are the top cause of failed first layers and elephant's foot.",
+      "units": "°C"
+    },
+    {
+      "key": "printing.ambient_temp_c",
+      "term": "Ambient / chamber temperature",
+      "definition": "Recommended air temperature surrounding the print.",
+      "why_it_matters": "High-shrinkage materials (ABS, ASA, PA, PC) need warm, draft-free air to cool evenly; printing them in a cold room guarantees warping and layer splitting.",
+      "units": "°C"
+    },
+    {
+      "key": "printing.speed_mm_s",
+      "term": "Print speed",
+      "definition": "Volumetric-flow-limited linear speed range the material prints well at on typical hardware.",
+      "why_it_matters": "Every polymer has a melt rate; exceeding it causes under-extrusion. Flexibles and high-temp materials generally need slower speeds than PLA/PETG.",
+      "units": "mm/s"
+    },
+    {
+      "key": "printing.enclosure_recommended",
+      "term": "Enclosure recommended",
+      "definition": "Whether a passive enclosure measurably improves results for this material.",
+      "why_it_matters": "Enclosures block drafts and retain heat, reducing warp and layer splitting. Also relevant for containing VOCs/particulates from styrenics."
+    },
+    {
+      "key": "printing.heated_chamber_required",
+      "term": "Heated chamber required",
+      "definition": "Whether an actively heated chamber (not just an enclosure) is effectively mandatory for usable parts.",
+      "why_it_matters": "True high-performance polymers (PEEK, PEI/ULTEM, PPS) delaminate without 60–150 °C chamber temps; this flag separates 'hobbyist-printable' from 'industrial-hardware' materials."
+    },
+    {
+      "key": "printing.requires_hardened_nozzle",
+      "term": "Hardened nozzle required",
+      "definition": "Whether the filament abrades brass nozzles (carbon/glass fiber, metal, glow additives).",
+      "why_it_matters": "Filled filaments can destroy a brass nozzle in a single spool; hardened steel, ruby, or carbide is required."
+    },
+    {
+      "key": "drying",
+      "term": "Drying (temperature & time)",
+      "definition": "Recommended dehydration temperature and duration before printing.",
+      "why_it_matters": "Hygroscopic polymers absorb atmospheric moisture that boils in the hotend, causing popping, stringing, foaming, weak parts, and rough surfaces. Nylon and PVA can become unprintable in hours of exposure.",
+      "units": "°C / hours"
+    },
+    {
+      "key": "drying.dryness_validation",
+      "term": "Dryness validation",
+      "definition": "Observable signs that filament is properly dried and preparation was sufficient.",
+      "why_it_matters": "Drying blind wastes time or under-dries. Checks include: no audible popping or visible steam while extruding, no foamy/matte extrudate, minimal stringing on a retraction test, and weight-loss plateau between drying cycles."
+    },
+    {
+      "key": "storage.hygroscopy",
+      "term": "Hygroscopy",
+      "definition": "How aggressively the material absorbs moisture from air (low / moderate / high / extreme).",
+      "why_it_matters": "Determines storage rigor: 'low' tolerates open-air storage for weeks; 'extreme' (PVA, PA) needs dryboxes with desiccant and printing from a dryer."
+    },
+    {
+      "key": "properties.shrinkage_pct",
+      "term": "Shrinkage",
+      "definition": "Percentage the polymer contracts as it cools from extrusion to room temperature.",
+      "why_it_matters": "Drives warping, dimensional error, and internal stress. Parts needing tight fits must be compensated by this factor in CAD or slicer.",
+      "units": "%"
+    },
+    {
+      "key": "properties.density_g_cm3",
+      "term": "Density",
+      "definition": "Mass per unit volume of the solid polymer.",
+      "why_it_matters": "Converts spool weight to printable volume, estimates part weight, and affects cost-per-part. Basis for the standardized weight-per-volume and volume-per-weight figures.",
+      "units": "g/cm³"
+    },
+    {
+      "key": "properties.grams_per_100cm3",
+      "term": "Weight per volume",
+      "definition": "Standardized mass of 100 cm³ of solid material (density × 100).",
+      "why_it_matters": "Lets you compare 'how heavy will this part be' across materials at a glance.",
+      "units": "g per 100 cm³"
+    },
+    {
+      "key": "properties.cm3_per_100g",
+      "term": "Volume per weight",
+      "definition": "Standardized solid volume yielded by 100 g of material (100 ÷ density).",
+      "why_it_matters": "Lets you compare 'how much part does a spool buy' across materials — lightweight polymers like PP yield notably more volume per spool.",
+      "units": "cm³ per 100 g"
+    },
+    {
+      "key": "properties.glass_transition_c",
+      "term": "Glass transition temperature (Tg)",
+      "definition": "Temperature at which the amorphous polymer softens from rigid to rubbery.",
+      "why_it_matters": "Practical ceiling for structural use — parts sag and creep near Tg. Explains why PLA fails in a parked car (~60 °C) and ASA does not.",
+      "units": "°C"
+    },
+    {
+      "key": "properties.heat_deflection_c",
+      "term": "Heat deflection temperature (HDT)",
+      "definition": "Temperature at which a standard bar deflects under a standard load (0.45 MPa unless noted).",
+      "why_it_matters": "The load-bearing analogue of Tg; the better number for 'will this bracket survive under load at temperature'.",
+      "units": "°C"
+    },
+    {
+      "key": "properties.max_service_temp_c",
+      "term": "Max service temperature",
+      "definition": "Highest continuous-use temperature at which printed parts retain useful properties.",
+      "why_it_matters": "The single number to check for under-hood, near-hotend, or hot-environment applications.",
+      "units": "°C"
+    },
+    {
+      "key": "scores.ease_of_print",
+      "term": "Ease of print (1–10)",
+      "definition": "How forgiving the material is on ordinary hardware with default profiles.",
+      "why_it_matters": "Predicts time-to-success for newcomers and whether special hardware/tuning is needed.",
+      "rubric": {
+        "10": "Prints reliably on any machine, open frame, minimal tuning (PLA)",
+        "7": "Minor tuning; watch moisture or stringing (PETG)",
+        "5": "Needs enclosure or careful tuning; failures common without (ABS)",
+        "3": "Needs drybox, slow speeds, or special surfaces (PA, TPU 85A)",
+        "1": "Industrial hardware and expertise required (PEEK)"
+      }
+    },
+    {
+      "key": "scores.dimensional_stability",
+      "term": "Dimensional stability (1–10)",
+      "definition": "How precisely printed dimensions match design and hold over time (creep, moisture swell, thermal drift).",
+      "why_it_matters": "Critical for functional parts with tolerances: enclosures, gears, press fits, printer parts.",
+      "rubric": {
+        "10": "Holds sub-0.1 mm accuracy and shape over years indoors",
+        "5": "Noticeable creep under sustained load or moisture-driven swelling",
+        "1": "Distorts readily with heat, load, or humidity"
+      }
+    },
+    {
+      "key": "scores.warp_tendency",
+      "term": "Warp tendency (1–10)",
+      "definition": "How strongly the material lifts corners and distorts while printing. Higher = warps MORE (inverted scale).",
+      "why_it_matters": "Warping scales with part footprint; a high score means large flat parts need brims, enclosures, and adhesion strategy.",
+      "rubric": {
+        "1": "Essentially never warps (PLA on any surface)",
+        "5": "Warps on large parts without enclosure (PETG large flats)",
+        "10": "Unprintable at size without heated chamber (PP, PEEK, unfilled PA)"
+      }
+    },
+    {
+      "key": "scores.layer_adhesion",
+      "term": "Layer adhesion (1–10)",
+      "definition": "Relative strength of the bond between printed layers versus the material's bulk strength.",
+      "why_it_matters": "FDM parts fail at layer lines first; a material with great tensile specs but poor layer adhesion is weak in practice, especially loaded in Z.",
+      "rubric": {
+        "10": "Near-isotropic; Z strength close to XY (PCTG, well-printed PETG)",
+        "5": "Distinct Z weakness; orient loads in-plane",
+        "1": "Delaminates readily; decorative use only"
+      }
+    },
+    {
+      "key": "scores.compression_strength",
+      "term": "Compression strength (1–10)",
+      "definition": "Resistance to crushing loads relative to other FDM materials.",
+      "why_it_matters": "Jigs, feet, spacers, and press tools load parts in compression, where FDM parts are strongest — this score ranks materials for those uses."
+    },
+    {
+      "key": "scores.temperature_tolerance",
+      "term": "Temperature tolerance (1–10)",
+      "definition": "Composite score for retaining strength and shape at elevated temperature.",
+      "why_it_matters": "Quick filter for hot environments; see Tg/HDT/max service temp for the underlying numbers."
+    },
+    {
+      "key": "scores.uv_tolerance",
+      "term": "UV tolerance (1–10)",
+      "definition": "Resistance to sunlight-induced embrittlement, chalking, and color fade.",
+      "why_it_matters": "UV degradation is the main killer of outdoor prints; ASA exists specifically to fix ABS's poor score here."
+    },
+    {
+      "key": "scores.weather_tolerance",
+      "term": "Outdoor weather tolerance (1–10)",
+      "definition": "Composite resistance to the full outdoor cycle: UV, rain, humidity, and temperature swings.",
+      "why_it_matters": "The single filter for 'can this live outside' — garden fixtures, RC parts, housings, signage."
+    },
+    {
+      "key": "scores.water_tolerance",
+      "term": "Water tolerance (1–10)",
+      "definition": "Resistance to property loss from immersion or sustained moisture (absorption, swelling, hydrolysis).",
+      "why_it_matters": "Nylon parts absorb water and soften/swell; PVA dissolves outright. Matters for marine, plumbing-adjacent, and bathroom uses."
+    },
+    {
+      "key": "suitability.food_contact",
+      "term": "Food contact suitability",
+      "definition": "Whether the material can be used for food-contact items (no / conditional / yes on certified lines).",
+      "why_it_matters": "Even food-safe polymers become unsafe as FDM prints: layer crevices harbor bacteria, and nozzles/additives contaminate. 'Conditional' means certified filament plus sealing or single-use."
+    },
+    {
+      "key": "suitability.load_bearing",
+      "term": "Load-bearing suitability",
+      "definition": "Fitness for sustained structural loads (no / light / moderate / high), accounting for creep.",
+      "why_it_matters": "Short-term strength misleads: PLA is strong but creeps under constant load; PC and filled nylons hold. Use this for brackets, mounts, and fixtures."
+    },
+    {
+      "key": "compatibility.bonds_with",
+      "term": "Bonds with",
+      "definition": "Other filament types that weld to this one when co-printed in multi-material prints.",
+      "why_it_matters": "Enables multi-material design (flex+rigid, soluble supports) and predicts which combinations delaminate at the interface."
+    },
+    {
+      "key": "compatibility.support_materials",
+      "term": "Support / interface materials",
+      "definition": "Materials usable as support or as a support-interface layer for this filament — either soluble (PVA, BVOH) or cleanly separable (PETG under PLA, HIPS under ABS).",
+      "why_it_matters": "The right support pairing gives perfect undersides and makes otherwise-unprintable geometry routine."
+    },
+    {
+      "key": "emissions.voc_level",
+      "term": "VOC emission level",
+      "definition": "Relative level of volatile organic compounds released while the material is melted and extruded (minimal / low / moderate / high).",
+      "why_it_matters": "VOCs like styrene (ABS/ASA) and caprolactam (nylon) are respiratory irritants and, for some compounds, suspected carcinogens with chronic exposure. This drives where a printer can safely live — desk, garage, or ventilated cabinet.",
+      "see_also": ["emissions.ventilation", "emissions.particulate_level"]
+    },
+    {
+      "key": "emissions.particulate_level",
+      "term": "Particulate emission level",
+      "definition": "Relative level of ultrafine particles (UFP, <100 nm) released during printing.",
+      "why_it_matters": "UFPs penetrate deep into lungs and are emitted by all FDM printing to some degree — hotter-printing materials generally emit far more. Independent of VOCs: a material can be low-odor but still a high UFP emitter.",
+      "see_also": ["emissions.ventilation"]
+    },
+    {
+      "key": "emissions.ventilation",
+      "term": "Ventilation requirement",
+      "definition": "Whether ventilation/filtration during printing is optional, recommended, or required for this material.",
+      "why_it_matters": "The actionable summary of the emissions data: 'optional' suits occasional printing in living spaces, 'recommended' means move air or filter (HEPA+carbon) for regular use, 'required' means never print it in occupied unventilated rooms.",
+      "see_also": ["emissions.voc_level", "emissions.particulate_level"]
+    },
+    {
+      "key": "provenance.confidence",
+      "term": "Data confidence",
+      "definition": "Maturity of an entry's data: placeholder, low, medium, or high.",
+      "why_it_matters": "This catalog is built incrementally by research sessions; confidence tells you whether a number is a consensus of datasheets or a first-pass estimate."
+    }
+  ]
+}

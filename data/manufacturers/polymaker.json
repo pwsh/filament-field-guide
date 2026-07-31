@@ -1,0 +1,38 @@
+{
+  "id": "polymaker",
+  "name": "Polymaker",
+  "status": "example",
+  "summary": "Large filament-focused manufacturer spanning budget (PolyTerra) through engineering (PolyMax, Fiberon) lines. Example entry pending Phase C research.",
+  "headquarters_country": "China",
+  "manufacturing_countries": ["China"],
+  "brands": ["Polymaker", "PolyTerra", "PolyLite", "PolyMax", "PolyMide", "PolyCast", "PolyDissolve", "PolySonic", "Fiberon", "Panchroma"],
+  "oem_relationships": [
+    { "company": "Overture", "relationship": "manufactures-for", "notes": "User-verified (research/verified-oem-relationships.md)" },
+    { "company": "Inland (Micro Center)", "relationship": "manufactures-for", "notes": "User-verified; diamond spool cutout indicates Polymaker production (round = eSUN)" },
+    { "company": "Bambu Lab", "relationship": "manufactures-for", "notes": "User-verified; Bambu resells eSUN/Polymaker and Sunlu production — line-level mapping pending Phase C" }
+  ],
+  "endpoints": {
+    "website": "https://polymaker.com",
+    "store": "https://us.polymaker.com",
+    "docs": "https://support.polymaker.com",
+    "social": {
+      "youtube": "https://www.youtube.com/@Polymaker3D",
+      "instagram": "https://www.instagram.com/polymaker3d",
+      "x": "https://x.com/Polymaker3D",
+      "reddit": "https://www.reddit.com/r/Polymaker/"
+    }
+  },
+  "product_lines": [
+    { "name": "PolyTerra", "filament_ids": ["pla"], "notes": "Matte budget PLA line" },
+    { "name": "PolyLite", "filament_ids": ["pla", "petg", "asa"], "notes": "Standard line" },
+    { "name": "Fiberon", "filament_ids": [], "notes": "Fiber-filled engineering line (PA-CF etc.) — filaments pending Phase B" }
+  ],
+  "makes_plates": false,
+  "plate_ids": [],
+  "price_tier": "mid",
+  "provenance": {
+    "sources": ["EXAMPLE ENTRY — verify brands, OEM relationships, and origin countries in Phase C"],
+    "last_verified": "2026-07-31",
+    "confidence": "placeholder"
+  }
+}

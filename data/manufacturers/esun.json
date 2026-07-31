@@ -1,0 +1,37 @@
+{
+  "id": "esun",
+  "name": "eSUN (Shenzhen Esun Industrial Co.)",
+  "status": "example",
+  "summary": "One of the highest-volume filament producers globally; sells under its own brand and is widely reported as an OEM for other labels. Example entry pending Phase C research.",
+  "headquarters_country": "China",
+  "manufacturing_countries": ["China"],
+  "brands": ["eSUN", "eBOX", "ePLA", "eSilk", "eTwinkling"],
+  "oem_relationships": [
+    { "company": "Inland (Micro Center)", "relationship": "manufactures-for", "notes": "User-verified; round spool cutout indicates eSUN production (diamond = Polymaker)" },
+    { "company": "3dHojor", "relationship": "manufactures-for", "notes": "User-verified (research/verified-oem-relationships.md)" },
+    { "company": "Bambu Lab", "relationship": "manufactures-for", "notes": "User-verified; Bambu resells eSUN/Polymaker and Sunlu production — line-level mapping pending Phase C" }
+  ],
+  "endpoints": {
+    "website": "https://www.esun3d.com",
+    "store": "https://esun3dstore.com",
+    "docs": "https://www.esun3d.com/support/",
+    "social": {
+      "youtube": "https://www.youtube.com/@eSUN3d",
+      "instagram": "https://www.instagram.com/esun3d_filament",
+      "facebook": "https://www.facebook.com/esun3dfilament"
+    }
+  },
+  "product_lines": [
+    { "name": "ePLA family", "filament_ids": ["pla"], "notes": "PLA+, matte, silk, luminous variants" },
+    { "name": "PETG", "filament_ids": ["petg"] },
+    { "name": "Engineering", "filament_ids": ["asa"], "notes": "ABS+, ASA, PA, PC lines — expand in Phase B/C" }
+  ],
+  "makes_plates": false,
+  "plate_ids": [],
+  "price_tier": "budget",
+  "provenance": {
+    "sources": ["EXAMPLE ENTRY — verify brands, OEM relationships, and origin countries in Phase C"],
+    "last_verified": "2026-07-31",
+    "confidence": "placeholder"
+  }
+}
