@@ -1,0 +1,86 @@
+{
+  "id": "extrudr",
+  "name": "Extrudr (FD3D GmbH)",
+  "status": "researched",
+  "summary": "Austrian filament manufacturer based in Lauterach, Vorarlberg, trading as Extrudr under the legal entity FD3D GmbH. Produces in Austria with in-house laser-micrometer diameter QC, and is best known for GreenTEC and GreenTEC Pro - oil-free, bio-based engineering materials positioned as sustainable alternatives to petrochemical polymers.",
+  "headquarters_country": "Austria",
+  "manufacturing_countries": [
+    "Austria"
+  ],
+  "brands": [
+    "Extrudr",
+    "GreenTEC",
+    "DuraPro",
+    "NX2",
+    "BioFusion"
+  ],
+  "endpoints": {
+    "website": "https://www.extrudr.com/",
+    "social": {
+      "youtube": "https://www.youtube.com/@extrudr",
+      "linkedin": "https://www.linkedin.com/company/extrudr",
+      "facebook": "https://www.facebook.com/extrudr"
+    }
+  },
+  "product_lines": [
+    {
+      "name": "PLA",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Includes the NX2 specialty PLA line"
+    },
+    {
+      "name": "PETG",
+      "filament_ids": [
+        "petg"
+      ]
+    },
+    {
+      "name": "PCTG",
+      "filament_ids": [
+        "pctg"
+      ]
+    },
+    {
+      "name": "DuraPro ABS",
+      "filament_ids": [
+        "abs"
+      ]
+    },
+    {
+      "name": "ASA",
+      "filament_ids": [
+        "asa"
+      ]
+    },
+    {
+      "name": "TPU",
+      "filament_ids": [
+        "tpu"
+      ]
+    },
+    {
+      "name": "GreenTEC / GreenTEC Pro",
+      "notes": "Bio-based, oil-free engineering material; a proprietary biopolymer blend with no established filament type id"
+    },
+    {
+      "name": "BioFusion",
+      "notes": "Bio-based composite line; base polymer not confirmed"
+    }
+  ],
+  "price_tier": "premium",
+  "additional_notes": "No evidence of white-labelling for others or of reselling, so no oem_relationships are recorded; Extrudr does not appear in research/verified-oem-relationships.md. Pricing roughly $24-38/kg per a third-party review aggregator, comparable to Fillamentum and colorFabb. Whether Extrudr sells build plates was not established - the site has an accessories section but no build-plate product was found - so makes_plates is left unset. Some third-party reviews report batch-to-batch diameter variability despite the company's QC claims. Whether all raw polymer feedstock is EU-sourced versus imported resin is unverified; manufacturing_countries reflects extrusion location.",
+  "provenance": {
+    "sources": [
+      "https://www.extrudr.com/en/company/about-us",
+      "https://at.linkedin.com/company/extrudr",
+      "https://filamentcheatsheet.com/brands/extrudr/",
+      "https://www.extrudr.com/en/inlt/products/greentec/",
+      "https://www.3dnatives.com/en/low-cost-high-performance-filaments-from-extrudr-200420214/"
+    ],
+    "last_verified": "2026-07-31",
+    "confidence": "medium",
+    "conflicts": "Company QC claims (laser micrometer, tight tolerance) versus third-party reports of batch-to-batch diameter variability are unreconciled. GreenTEC and BioFusion have no mapped filament type ids."
+  }
+}

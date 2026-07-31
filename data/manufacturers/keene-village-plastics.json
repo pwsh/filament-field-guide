@@ -1,0 +1,97 @@
+{
+  "id": "keene-village-plastics",
+  "name": "Keene Village Plastics (Village Plastics)",
+  "status": "researched",
+  "summary": "Long-established US industrial plastics manufacturer that extruded its way into 3D printing filament at wholesale scale, self-describing as \"the largest manufacturer of high-quality 3D printer filaments in the United States\". Operates consumer-facing as Village Plastics and reached the hobbyist market by acquiring the MakeShaper filament brand in 2018/2019.",
+  "headquarters_country": "United States",
+  "manufacturing_countries": [
+    "United States"
+  ],
+  "brands": [
+    "Keene Village Plastics",
+    "KVP",
+    "Village Plastics",
+    "MakeShaper",
+    "3D Solve",
+    "PAPC",
+    "Koil"
+  ],
+  "oem_relationships": [
+    {
+      "company": "MakeShaper",
+      "relationship": "manufactures-for",
+      "notes": "MakeShaper is a wholly-owned sub-brand since the 2018/2019 acquisition, not an arm's-length customer; KVP manufactures MakeShaper filament itself rather than sourcing it externally. Recorded here for traceability of the label; MakeShaper has no independent manufacturing presence and so gets no separate entry."
+    }
+  ],
+  "endpoints": {
+    "website": "https://www.villageplastics.com/",
+    "store": "https://www.villageplastics.com/",
+    "social": {
+      "instagram": "https://www.instagram.com/keeneplastics/",
+      "linkedin": "https://www.linkedin.com/company/keene-village-plastics"
+    }
+  },
+  "product_lines": [
+    {
+      "name": "PLA",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Includes the P-PLA grade."
+    },
+    {
+      "name": "ABS",
+      "filament_ids": [
+        "abs"
+      ]
+    },
+    {
+      "name": "PETG",
+      "filament_ids": [
+        "petg"
+      ]
+    },
+    {
+      "name": "HIPS",
+      "filament_ids": [
+        "hips"
+      ]
+    },
+    {
+      "name": "PAPC",
+      "filament_ids": [
+        "pa",
+        "pc"
+      ],
+      "notes": "Nylon/polycarbonate line; exact composition not documented in sources, so both base ids are listed provisionally."
+    },
+    {
+      "name": "3D Solve",
+      "filament_ids": [
+        "pva"
+      ],
+      "notes": "Soluble support line; solvent chemistry not stated in sources, so the pva mapping is provisional."
+    },
+    {
+      "name": "Welding rod",
+      "filament_ids": [],
+      "notes": "Thermoplastic welding rod — an industrial product line, not 3D printing filament, reflecting the company's plastics heritage."
+    }
+  ],
+  "makes_plates": false,
+  "price_tier": "mid",
+  "additional_notes": "Corporate geography is unresolved: the consumer site gives East Longmeadow, Massachusetts, company imagery references a \"Keene Village Plastics Factory\" tied to Keene, New Hampshire-area operations, and ThomasNet separately lists a Euclid, Ohio facility — KVP appears to run multiple US sites and the HQ-vs-factory-of-record distinction was not settled. All identified sites are domestic, so manufacturing_countries is unambiguous even though the specific address is not. Also sells \"Koil\", a spool-less packaging format. Price tier is inferred from industrial/wholesale QC positioning rather than observed USD/kg.",
+  "provenance": {
+    "sources": [
+      "https://www.villageplastics.com/",
+      "https://www.villageplastics.com/post/keene-village-plastics-announces-acquisition-of-makeshaper",
+      "https://3dprintingindustry.com/news/keene-village-plastics-acquires-3d-printing-filament-manufacturer-makeshaper-expands-reach-to-hobbyist-market-150718/",
+      "https://www.instagram.com/keeneplastics/",
+      "https://www.thomasnet.com/company/keene-village-plastics-co-20042930/profile",
+      "https://www.makeshaper.com/"
+    ],
+    "last_verified": "2026-07-31",
+    "confidence": "medium",
+    "conflicts": "Sources disagree on the company's principal location: East Longmeadow MA (own site), Keene NH (factory imagery/name), and Euclid OH (ThomasNet). Treated as a multi-site US manufacturer with HQ unresolved. The PAPC and 3D Solve filament_ids mappings are provisional pending datasheets."
+  }
+}

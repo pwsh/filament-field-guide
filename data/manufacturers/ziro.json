@@ -1,0 +1,58 @@
+{
+  "id": "ziro",
+  "name": "Ziro (ZIRO 3D Print Technology Company Limited)",
+  "status": "researched",
+  "summary": "Hong Kong-registered brand with production in Shenzhen, differentiated by an unusually broad range of exotic and novelty aesthetic PLA finishes rather than engineering materials. Ziro also runs its own published OEM/private-label and wholesale programme, so it likely supplies unnamed third-party labels.",
+  "headquarters_country": "Hong Kong",
+  "manufacturing_countries": [
+    "China"
+  ],
+  "brands": [
+    "ZIRO"
+  ],
+  "endpoints": {
+    "website": "https://ziro3d.com/",
+    "store": "https://ziro3dprint.en.alibaba.com/",
+    "docs": "https://ziro3d.com/pages/about",
+    "social": {
+      "instagram": "https://www.instagram.com/ziro3dprint/"
+    }
+  },
+  "product_lines": [
+    {
+      "name": "PLA",
+      "filament_ids": [
+        "pla",
+        "pla-cf"
+      ],
+      "notes": "Basic plus 12+ specialty finishes: Fluorescent, Glow-in-Dark, High Speed, Metal, Translucent, Matte, Silk, Stone, Carbon Fiber, Diamond, Mystical, Twinkling, Firefly, Chameleon, Iridescent"
+    },
+    {
+      "name": "Multi-Color PLA",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Gradient, tri-color and striped coextrusions"
+    },
+    {
+      "name": "TPU",
+      "filament_ids": [
+        "tpu"
+      ],
+      "notes": "95A Shore, standard and gradient"
+    }
+  ],
+  "price_tier": "budget",
+  "additional_notes": "Registered at Capital Plaza, Tsim Sha Tsui, Hong Kong, with factory operations in Shenzhen per its Alibaba company profile; the Shenzhen arm appears as 'Shenzhen Ziro 3d Print Technology Co., Ltd.'. Runs a dedicated OEM section (https://ziro3d.com/pages/oem-section) and a wholesale programme, meaning Ziro may act as an upstream supplier, but no customer brands are named and it does not appear anywhere in the verified-OEM file. PETG and ABS availability could not be confirmed from the pages reviewed. Also sold on Amazon (search 'ZIRO 3D Printer Filament'); no canonical Amazon storefront URL was captured. Build plates not confirmed, so makes_plates is left unset.",
+  "provenance": {
+    "sources": [
+      "https://ziro3d.com/pages/about",
+      "https://ziro3dprint.en.alibaba.com/",
+      "https://ziro3d.com/pages/oem-section",
+      "https://www.instagram.com/ziro3dprint/"
+    ],
+    "last_verified": "2026-07-31",
+    "confidence": "medium",
+    "conflicts": "Marketing positions Ziro as a 'premium' filament manufacturer while observed pricing matches other Amazon/Newegg budget labels; price_tier follows the pricing evidence, not the marketing copy, and no exact $/kg figure was verified. Two corporate identities (HK holding company and Shenzhen operating arm) appear across sources; the relationship between them is inferred, not documented."
+  }
+}

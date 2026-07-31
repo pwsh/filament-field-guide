@@ -1,0 +1,70 @@
+{
+  "id": "iemai-3d",
+  "name": "IEMAI 3D (Dongguan Imai Intelligent Technology Co., Ltd.)",
+  "status": "researched",
+  "summary": "Dongguan-based manufacturer established 2015 producing 3D printing materials and equipment for industrial sectors, and the parent OEM behind the iSanghu and iSanmate retail filament labels. Consumer output skews toward aesthetic and visual-effect filaments rather than production-grade engineering materials.",
+  "headquarters_country": "China",
+  "manufacturing_countries": [
+    "China"
+  ],
+  "brands": [
+    "IEMAI 3D",
+    "iSanghu",
+    "iSanmate",
+    "Songhu Plastic"
+  ],
+  "oem_relationships": [
+    {
+      "company": "iSanghu",
+      "relationship": "manufactures-for",
+      "notes": "User-verified (research/verified-oem-relationships.md). iSanghu is a retail-facing label of IEMAI with no independent factory; recorded here rather than as its own entry."
+    },
+    {
+      "company": "iSanmate",
+      "relationship": "manufactures-for",
+      "notes": "User-verified (research/verified-oem-relationships.md). iSanmate is a retail-facing label of IEMAI with no independent factory; recorded here rather than as its own entry."
+    }
+  ],
+  "endpoints": {
+    "website": "https://store.iemai3d.com/",
+    "store": "https://www.isanmate.com/",
+    "social": {
+      "facebook": "https://www.facebook.com/iemai3d.china/",
+      "linkedin": "https://www.linkedin.com/company/iemai-3d"
+    }
+  },
+  "product_lines": [
+    {
+      "name": "iSanghu",
+      "filament_ids": [
+        "pla",
+        "petg",
+        "abs-cf"
+      ],
+      "notes": "PLA, High-Speed PLA, Silk PLA, PETG, Transparent PETG, ABS-CF"
+    },
+    {
+      "name": "iSanmate",
+      "filament_ids": [
+        "pla",
+        "pla-cf",
+        "pc"
+      ],
+      "notes": "Wood PLA, Rainbow PLA, Silk PLA, High-Speed PLA, PLA-CF, and a translucent PC lamp-shade filament"
+    }
+  ],
+  "price_tier": "budget",
+  "additional_notes": "HQ and manufacturing at 2nd Floor, Building F, No.6 Hupan Road, Dalingshan Town, Dongguan, Guangdong. Chinese name 东莞一迈智能科技有限公司. Additional endpoints: iSanghu store https://www.isanghu3d.com/, secondary IEMAI Facebook https://www.facebook.com/iemai3dprinting/, iSanmate Facebook https://www.facebook.com/iSANMATE/. Company literature describes supplying 3D printing equipment and materials to aerospace, automotive, petrochemical, medical and electronics customers, implying industrial OEM work beyond consumer filament, though no specific industrial clients were verified. Pricing spans $14-22/kg for iSanghu (Tier C) and $18-28/kg for iSanmate aesthetic composites, so the single budget tier understates the iSanmate specialty range. iSanmate is described as CE/ISO certified, but reviewers note it prioritises visual effect over dimensional consistency — decorative/hobbyist rather than production-grade. Build plates: none found, so makes_plates is left unset.",
+  "provenance": {
+    "sources": [
+      "https://craft.co/iemai-3d",
+      "https://www.isanmate.com/about-us/",
+      "https://filamentcheatsheet.com/brands/isanghu/",
+      "https://filamentcheatsheet.com/brands/isanmate/",
+      "/home/claude/filament-repo/research/verified-oem-relationships.md (project-owner verified)"
+    ],
+    "last_verified": "2026-07-31",
+    "confidence": "medium",
+    "conflicts": "The relationship between IEMAI and 'Songhu Plastic' is inferred only from a Facebook page titled 'IEMAI 3D & Songhu Plastic' and is unverified. Claimed industrial-sector OEM scope comes from company self-description with no named clients. A single price_tier cannot express the iSanghu (budget) vs iSanmate (specialty/mid) split."
+  }
+}

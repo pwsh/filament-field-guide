@@ -1,0 +1,78 @@
+{
+  "id": "devil-design",
+  "name": "Devil Design (Devil Design Sp. J.)",
+  "status": "researched",
+  "summary": "Polish filament producer based in Mikolow, Silesia, marketed in Polish retail as a 'Polski producent filamentu' (Polish filament manufacturer). Filament-only catalogue covering PLA, PET-G, ABS+, ASA, PA12, HIPS and TPU in 1 kg, 2 kg and bulk 5 kg formats, sold direct and through an unusually broad electronics-distribution channel (TME).",
+  "headquarters_country": "Poland",
+  "manufacturing_countries": [
+    "Poland"
+  ],
+  "brands": [
+    "Devil Design"
+  ],
+  "endpoints": {
+    "website": "https://devildesign.com/en/",
+    "store": "https://shop.devildesign.com",
+    "docs": "https://devildesign.com/en/oferta/",
+    "social": {
+      "instagram": "https://www.instagram.com/devil_design_/",
+      "facebook": "https://www.facebook.com/devildesignpl/"
+    }
+  },
+  "product_lines": [
+    {
+      "name": "PLA",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Flagship line; includes Silk, Silk Dual and glow-in-the-dark variants"
+    },
+    {
+      "name": "PET-G",
+      "filament_ids": [
+        "petg"
+      ]
+    },
+    {
+      "name": "ABS+ / ASA",
+      "filament_ids": [
+        "abs",
+        "asa"
+      ]
+    },
+    {
+      "name": "PA12",
+      "filament_ids": [
+        "pa"
+      ],
+      "notes": "Nylon 12 grade"
+    },
+    {
+      "name": "HIPS",
+      "filament_ids": [
+        "hips"
+      ]
+    },
+    {
+      "name": "TPU",
+      "filament_ids": [
+        "tpu"
+      ]
+    }
+  ],
+  "makes_plates": false,
+  "price_tier": "mid",
+  "additional_notes": "Addresses seen in research: ul. Zwirki i Wigury 56E and 65, 43-190 Mikolow, Poland. Spool formats: 1 kg flagship, 2 kg industrial (limited colours), 5 kg custom/bulk with a 100 kg minimum order, and 6 x 0.33 kg starter packs. Distributed by TME (Transfer Multisort Elektronik) as an official line-card brand, an unusual channel for a filament maker. Lifetime warranty claimed on filament bought from official distributors; Bambu Lab print profiles are published. No build-plate or print-surface products found, so makes_plates is set false on absence of evidence. EU retail PLA around $18-20/kg (unverified against a price index), placing it at the budget/mid boundary. No official YouTube channel could be confirmed - only third-party unboxing videos - so none is recorded.",
+  "provenance": {
+    "sources": [
+      "https://devildesign.com/en/",
+      "https://devildesign.com/en/oferta/",
+      "https://devildesign.com/download/PLA_-_product_card.pdf",
+      "https://www.tme.com/us/en-us/linecard/p,devil-design_1019/",
+      "https://www.facebook.com/devildesignpl/about/"
+    ],
+    "last_verified": "2026-07-31",
+    "confidence": "medium",
+    "conflicts": "In-house manufacturing is inferred from retail descriptions ('Polski producent filamentu') rather than a primary company statement; it remains unverified that Devil Design is not itself a private label of another Polish extruder. No oem_relationships are recorded because no counterparty could be named. Exact price per kg is unconfirmed."
+  }
+}

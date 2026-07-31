@@ -100,6 +100,18 @@ every property sourced from the glossary.
 
 ## 7. Open items / ideas discovered so far
 
+- **Phase C follow-ups (2026-07-31):** endpoint link-checking cannot run via curl from
+  the research sandbox (all URLs return 000) — needs WebFetch-based verification in a
+  future session. Filament ids referenced by product lines but not yet in `data/filaments/`
+  (Phase A/B must adopt these slugs or Phase E must rename): abs, tpu, pa, pc, pva, hips,
+  pp, pctg, pvb, pcl, tpc, tpe, peek, pei, pekk, ppsu, pps, pha, peba, pvc, pvdf, pmma,
+  pla-cf, petg-cf, petg-gf, pa-cf, pet-cf, pp-gf. Corporate-ownership edges (Michelin→
+  Fenner→NinjaTek, Braskem→taulman3D, Nexa3D→Essentium) now encodable via new
+  `parent-company` relationship value — several entries still describe these in notes only.
+  Essentium deliberately skipped (absorbed; no independent presence) — revisit if
+  historical brands are wanted. 3DJake's origin recorded as "European Union (specific
+  country undisclosed)" — non-country string, revisit if country filtering is added.
+
 - Recyclability & sustainability notes per polymer class (candidate future property).
 - Abrasiveness (hardened-nozzle requirement) — included as `requires_hardened_nozzle`.
 - Filament–nozzle-material interactions (brass vs hardened vs ruby) — candidate.
@@ -113,3 +125,8 @@ every property sourced from the glossary.
   primary emissions, ventilation requirement) + glossary entries, per owner request.
 - 2026-07-31 — Seeded `research/verified-oem-relationships.md` with 15 owner-verified
   brand/OEM mappings for Phase C ingestion.
+- 2026-07-31 — **Phase C first tranche complete**: 58 manufacturer entries (7 clusters,
+  sonnet research → opus collation), all schema-valid. 85 source conflicts recorded in
+  per-entry `provenance.conflicts`. Extended `oem_relationships.relationship` enum with
+  `distributes` and `parent-company`. Fable overrides: qidi-tech price_tier → mid;
+  ninjatek/colorFabb → distributes.

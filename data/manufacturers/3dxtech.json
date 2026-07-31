@@ -1,0 +1,109 @@
+{
+  "id": "3dxtech",
+  "name": "3DXTECH",
+  "status": "researched",
+  "summary": "US engineering-filament producer based in Grand Rapids, Michigan, running a 68,000 sq ft ISO 9001:2015-certified plant. Makes everything it sells in-house, from commodity PLA/PETG up to ultra-performance PEEK, PEKK and PEI, plus carbon- and glass-filled composites, ESD-safe grades and pellets. Sub-brands cover product families rather than separate companies: Triton3D (Stratasys-compatible spools), 3DXLabs, ThermaX, CarbonX, OBSIDIAN and 3DXSTAT.",
+  "headquarters_country": "United States",
+  "manufacturing_countries": [
+    "United States"
+  ],
+  "brands": [
+    "3DXTECH",
+    "Triton3D",
+    "3DXLabs",
+    "ThermaX",
+    "CarbonX",
+    "OBSIDIAN",
+    "3DXSTAT"
+  ],
+  "oem_relationships": [],
+  "endpoints": {
+    "website": "https://www.3dxtech.com/",
+    "store": "https://www.3dxtech.com/",
+    "support": "https://www.3dxtech.com/pages/frequently-asked-questions",
+    "social": {
+      "youtube": "https://www.youtube.com/channel/UC9ur-CvVpSgBwcF3hJw1Krg",
+      "x": "https://twitter.com/3dxtech",
+      "instagram": "https://www.instagram.com/3dxtech_social",
+      "facebook": "https://www.facebook.com/3DXTech",
+      "linkedin": "https://www.linkedin.com/company/3dxtech"
+    }
+  },
+  "product_lines": [
+    {
+      "name": "General purpose",
+      "filament_ids": [
+        "pla",
+        "petg",
+        "abs",
+        "asa",
+        "hips"
+      ],
+      "notes": "Also includes Simubone, a bone-simulant filament that has no generic material id in this catalog."
+    },
+    {
+      "name": "Engineering",
+      "filament_ids": [
+        "pa",
+        "pc",
+        "pctg",
+        "tpu",
+        "pvdf"
+      ],
+      "notes": "Nylon, polycarbonate, PC-ABS alloy, PCTG, PPE+PS blend, TPU and PVDF."
+    },
+    {
+      "name": "ThermaX ultra-performance",
+      "filament_ids": [
+        "peek",
+        "pekk",
+        "pei"
+      ],
+      "notes": "PEEK, PEKK and PEI/Ultem. Site pricing observed at $158-$1175 for small to medium spools."
+    },
+    {
+      "name": "High-performance polymers",
+      "filament_ids": [
+        "pps",
+        "htn",
+        "psu",
+        "pes",
+        "ppsu"
+      ]
+    },
+    {
+      "name": "Composites and specialty",
+      "filament_ids": [
+        "pla-cf",
+        "petg-cf",
+        "abs-cf",
+        "pa-cf",
+        "pa-gf",
+        "peek-cf"
+      ],
+      "notes": "CarbonX carbon-fiber-filled and glass-fiber-filled grades, 3DXSTAT ESD-safe, OBSIDIAN wear-resistant nylon+CF, chemical-resistant and flame-retardant formulations."
+    },
+    {
+      "name": "Support materials",
+      "filament_ids": [
+        "hips",
+        "pva"
+      ],
+      "notes": "Break-away and soluble support filaments; exact chemistry per SKU not itemised in the sources used."
+    }
+  ],
+  "makes_plates": false,
+  "price_tier": "engineering",
+  "additional_notes": "Sells filament dryers (FD1) and filament maintainers (FM1) as accessories, plus pellets for larger-format machines; no build-plate or print-surface products were found, so makes_plates is set false on absence of evidence rather than a positive statement. Its own FAQ confirms enterprise customers run 3DXTECH material in Stratasys printers via the Triton3D line, but that is a compatibility/aftermarket play, not an OEM supply relationship with Stratasys. No evidence found that 3DXTECH white-labels for other retail brands or resells anyone else's extrusion, so oem_relationships is deliberately empty. Markets itself as a 'leading supplier of ultra-polymer 3D printing filaments' with 25+ years of parent expertise in high-performance materials. Price tier is 'engineering' overall even though its PLA/PETG/ABS sit at mid-tier pricing.",
+  "provenance": {
+    "sources": [
+      "https://www.3dxtech.com/pages/about-us",
+      "https://www.3dxtech.com/pages/frequently-asked-questions",
+      "https://www.3dxtech.com/",
+      "https://www.sliceengineering.com/collections/3dxtech-3d-printer-filaments"
+    ],
+    "last_verified": "2026-07-31",
+    "confidence": "medium",
+    "conflicts": "None between sources. Two absence-of-evidence calls: no build-plate products were found (makes_plates false) and no Reddit/Discord/TikTok presence was found (likely none official, but unconfirmed)."
+  }
+}

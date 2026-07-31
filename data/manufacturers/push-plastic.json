@@ -1,0 +1,83 @@
+{
+  "id": "push-plastic",
+  "name": "Push Plastic",
+  "status": "researched",
+  "summary": "US filament extruder established September 2013, running its own production since inception and claiming 25+ years of plastics experience behind it. Unusually broad engineering catalog for a small US operation — PEI, PMMA and PC+PBT alongside the commodity materials — in both 1.75 mm and 2.85 mm, with SAM.gov certification for government and institutional sales.",
+  "headquarters_country": "United States",
+  "manufacturing_countries": [
+    "United States"
+  ],
+  "brands": [
+    "Push Plastic"
+  ],
+  "endpoints": {
+    "website": "https://www.pushplastic.com/",
+    "store": "https://www.pushplastic.com/",
+    "docs": "https://www.pushplastic.com/pages/about-us",
+    "social": {
+      "instagram": "https://www.instagram.com/pushplastic/"
+    }
+  },
+  "product_lines": [
+    {
+      "name": "PLA",
+      "filament_ids": [
+        "pla"
+      ]
+    },
+    {
+      "name": "PETG and PCTG",
+      "filament_ids": [
+        "petg",
+        "pctg"
+      ]
+    },
+    {
+      "name": "ABS / ASA / HIPS",
+      "filament_ids": [
+        "abs",
+        "asa",
+        "hips"
+      ]
+    },
+    {
+      "name": "Engineering polymers",
+      "filament_ids": [
+        "pc",
+        "pa",
+        "pei",
+        "pmma"
+      ],
+      "notes": "PC+PBT blend, nylon, PEI (Ultem-class) and PMMA acrylic."
+    },
+    {
+      "name": "Carbon fiber composites",
+      "filament_ids": [
+        "pla-cf",
+        "petg-cf",
+        "pa-cf"
+      ],
+      "notes": "Carbon-fiber composite line; base polymers inferred from the surrounding catalog rather than itemised in sources."
+    },
+    {
+      "name": "Flexibles",
+      "filament_ids": [
+        "tpu"
+      ]
+    }
+  ],
+  "makes_plates": false,
+  "price_tier": "mid",
+  "additional_notes": "Location (Little Rock, Arkansas) comes from Filament Cheat Sheet; Push Plastic's own site does not state a location, so both HQ and manufacturing origin rest on a secondary source and should be confirmed against a primary source. In-house US extrusion since 2013 with a 100% virgin material claim (no regrind); no white-labeling confirmed in either direction, so oem_relationships is empty. A rumored connection to Filastruder was searched for and found no corroborating evidence — treat as unfounded. SAM.gov certified, CAGE Code 8CH52. Also resells 3D printers, accessories and resin/color pellets. Typical PLA/ABS pricing $22-32/kg; Filament Cheat Sheet rates the brand Tier B.",
+  "provenance": {
+    "sources": [
+      "https://www.pushplastic.com/pages/about-us",
+      "https://filamentcheatsheet.com/brands/push_plastic/",
+      "https://www.instagram.com/pushplastic/",
+      "https://www.teamfdm.com/links/link/17-push-plastic/"
+    ],
+    "last_verified": "2026-07-31",
+    "confidence": "medium",
+    "conflicts": "Little Rock, Arkansas as HQ and manufacturing site is corroborated only by a secondary review source; the company's own site is silent on location. Recommended follow-up: primary-source confirmation. Carbon-fiber base polymers are inferred."
+  }
+}

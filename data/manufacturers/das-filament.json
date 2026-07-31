@@ -1,0 +1,61 @@
+{
+  "id": "das-filament",
+  "name": "DAS FILAMENT",
+  "status": "researched",
+  "summary": "Small German filament manufacturer in Emskirchen, Bavaria, registered as a sole proprietorship (Roman Stieben, DAS FILAMENT). States that all its filaments are developed and produced in Germany. Notable for offering both 1.75 mm and 2.85 mm diameters, uncommon among current European premium brands, and for targeting the German-language maker market rather than global distribution.",
+  "headquarters_country": "Germany",
+  "manufacturing_countries": [
+    "Germany"
+  ],
+  "brands": [
+    "DAS FILAMENT"
+  ],
+  "endpoints": {
+    "website": "https://dasfilament.de/",
+    "store": "https://dasfilament.de/",
+    "social": {
+      "instagram": "https://www.instagram.com/dasfilament_de/",
+      "x": "https://twitter.com/dasfilament_de",
+      "makerworld": "https://makerworld.com/en/@DASFILAMENT"
+    }
+  },
+  "product_lines": [
+    {
+      "name": "PLA",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Marketed as a bioplastic; the core line"
+    },
+    {
+      "name": "PETG",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "Marketed on temperature resistance"
+    },
+    {
+      "name": "TPU",
+      "filament_ids": [
+        "tpu"
+      ]
+    },
+    {
+      "name": "Specialty materials",
+      "notes": "A general specialty category exists in the catalog but the individual materials were not itemized in the sources reviewed"
+    }
+  ],
+  "makes_plates": false,
+  "additional_notes": "The company explicitly states in-house German development and production ('alle Filamente werden von uns in Deutschland entwickelt und produziert'); no white-labelling in either direction was found, so no oem_relationships are recorded, and it does not appear in research/verified-oem-relationships.md. price_tier is deliberately unset: no pricing was confirmed this pass. Sells filament, spools/refills and accessories (adapters, sample sets) only - no build plates found. Legal form is a sole proprietorship per German business registries; whether a GmbH restructuring has since occurred was not checked. The full specialty-material list needs a catalog pass.",
+  "provenance": {
+    "sources": [
+      "https://dasfilament.de/",
+      "https://www.dasfilament.de/impressum",
+      "https://firmeneintrag.creditreform.de/91448/8190974840/ROMAN_STIEBEN_DAS_FILAMENT",
+      "https://www.instagram.com/dasfilament_de/"
+    ],
+    "last_verified": "2026-07-31",
+    "confidence": "low",
+    "conflicts": "Sourcing is thin: product catalog is only partially enumerated, no pricing was found (price_tier omitted), and the sole-proprietorship legal form comes from a credit-registry listing that may lag a restructuring."
+  }
+}

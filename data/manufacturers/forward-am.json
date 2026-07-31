@@ -1,0 +1,80 @@
+{
+  "id": "forward-am",
+  "name": "Forward AM Technologies (Ultrafuse)",
+  "status": "researched",
+  "summary": "Engineering-materials supplier behind the Ultrafuse filament brand, best known for pioneering print-then-sinter metal FDM filaments (Ultrafuse 316L and 17-4PH stainless steel) alongside a full polymer range. Formerly BASF Forward AM, it is NO LONGER part of BASF: BASF has exited additive manufacturing and Forward AM was carved out via management buyout into an independent company led by CEO Martin Back, retaining the Ultrafuse brand and IP.",
+  "headquarters_country": "Germany",
+  "manufacturing_countries": [
+    "Germany"
+  ],
+  "brands": [
+    "Forward AM",
+    "Ultrafuse"
+  ],
+  "oem_relationships": [
+    {
+      "company": "Nexa3D",
+      "relationship": "joint-venture",
+      "notes": "Co-development partnership on photopolymer materials (Businesswire, 2021; Engineering.com). A materials/hardware partnership rather than a supply or white-label arrangement; 'joint-venture' is the nearest available enum value. Not present in research/verified-oem-relationships.md."
+    },
+    {
+      "company": "iAM Marketplace",
+      "relationship": "joint-venture",
+      "notes": "essentium.com now redirects to i-am-marketplace.com, which describes iAM Marketplace as combining iSQUARED, Forward AM and AM Marketplace GmbH into one ecosystem — so Forward AM materials are now sold through a consolidated multi-brand storefront. The redirect and page content are directly observed; the underlying corporate structure is unverified. Not present in research/verified-oem-relationships.md."
+    }
+  ],
+  "endpoints": {
+    "website": "https://www.ultrafusefff.com/",
+    "store": "https://i-am-marketplace.com/",
+    "docs": "https://3dgbire.com/pages/forward-am"
+  },
+  "product_lines": [
+    {
+      "name": "Ultrafuse standard polymers",
+      "filament_ids": [
+        "pla",
+        "petg",
+        "abs",
+        "asa"
+      ]
+    },
+    {
+      "name": "Ultrafuse engineering polymers",
+      "filament_ids": [
+        "tpu",
+        "pa",
+        "pc"
+      ],
+      "notes": "TPU 85A, PA6 and PA12 nylon, and polycarbonate."
+    },
+    {
+      "name": "Ultrafuse support",
+      "filament_ids": [
+        "pva"
+      ]
+    },
+    {
+      "name": "Ultrafuse metal",
+      "filament_ids": [
+        "316l",
+        "17-4ph"
+      ],
+      "notes": "Metal-filled print-then-sinter filaments: Ultrafuse 316L and Ultrafuse 17-4PH stainless steel. 17-4PH is explicitly confirmed as a retained flagship product post-carve-out. Priced well above polymer filament."
+    }
+  ],
+  "makes_plates": false,
+  "price_tier": "engineering",
+  "additional_notes": "IMPORTANT for anyone reading older sources: BASF is no longer the parent company. Most pre-carve-out coverage still describes 'BASF Forward AM' as a BASF subsidiary. headquarters_country is recorded as Germany on the basis of the historic Heidelberg/Ludwigshafen BASF Forward AM base plus leadership continuity through the buyout; the independent entity's registered HQ was not directly stated in any source found. manufacturing_countries likewise carries forward the historic German/European BASF polymer-plant footprint — post-buyout production sites are unconfirmed. Reported 30% annual growth since 2022 under Forward AM leadership. No social profiles confirmed. No build-plate products found — this is an industrial materials supplier, not a hardware or accessory vendor.",
+  "provenance": {
+    "sources": [
+      "https://3dprintingindustry.com/news/basf-exits-the-3d-printing-industry-forward-am-carved-out-into-a-new-company-231451/",
+      "https://www.ultrafusefff.com/",
+      "https://www.businesswire.com/news/home/20210503005363/en/Nexa3D-Expands-Partnership-with-BASF-Forward-AM-to-Deliver-Ultrafast-Photoplastics-for-Rapid-Prototyping/",
+      "https://3dgbire.com/collections/forward-am",
+      "https://i-am-marketplace.com/welcome-isquared-customers"
+    ],
+    "last_verified": "2026-07-31",
+    "confidence": "medium",
+    "conflicts": "Corporate structure is in flux and only partly resolved. The BASF carve-out is confirmed but the independent entity's HQ and manufacturing sites are not stated in any source found — Germany is carried forward from the BASF era for both fields. The iAM Marketplace consolidation (iSQUARED + Forward AM + AM Marketplace GmbH, sharing a storefront with the former Essentium business) is observed via redirect but the legal relationships behind it are unverified. Metal-filament premium pricing is industry knowledge, not confirmed with $/kg figures."
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "id": "ic3d",
+  "name": "IC3D, Inc. (IC3D Printers)",
+  "status": "researched",
+  "summary": "Central Ohio manufacturer founded in 2012, vertically integrated across \"machines, materials, and manufacturing\": it extrudes its own filament in-house and also designs and builds its own industrial FDM printers (Virago series, up to 4 cubic feet of build volume). Also sells production-focused additive manufacturing and contract manufacturing services.",
+  "headquarters_country": "United States",
+  "manufacturing_countries": [
+    "United States"
+  ],
+  "brands": [
+    "IC3D",
+    "IC3D Printers",
+    "Virago"
+  ],
+  "endpoints": {
+    "website": "https://www.ic3dprinters.com/",
+    "store": "https://www.ic3dprinters.com/shop/pla-filaments/",
+    "docs": "https://www.ic3dprinters.com/about-us/",
+    "social": {
+      "instagram": "https://www.instagram.com/ic3d_printers/",
+      "facebook": "https://www.facebook.com/ic3dprinters/",
+      "x": "https://x.com/ic3d_printers",
+      "linkedin": "https://www.linkedin.com/company/ic3d-printers"
+    }
+  },
+  "product_lines": [
+    {
+      "name": "PETG",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "Standard, recycled and UV-resistant grades."
+    },
+    {
+      "name": "Carbon Fiber PETG",
+      "filament_ids": [
+        "petg-cf"
+      ]
+    },
+    {
+      "name": "PLA",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Includes impact-modified variants."
+    },
+    {
+      "name": "ABS",
+      "filament_ids": [
+        "abs"
+      ]
+    },
+    {
+      "name": "Flexibles",
+      "filament_ids": [
+        "tpe"
+      ]
+    }
+  ],
+  "price_tier": "mid",
+  "additional_notes": "Legal entity IC3D, Inc. trading as IC3D Printers; manufacturing and HQ in the Columbus/Hilliard area of central Ohio. Filament in 1.75 mm and 2.85 mm. Nylon, PC, PVA and HIPS are not confirmed in the current catalog. IC3D offers contract manufacturing, so it may act as an OEM/co-packer for third parties, but no client brand was named in the research — no oem_relationships row is recorded rather than inventing a counterparty. Positioning is mid-to-premium/industrial (production users rather than hobbyist budget buyers) and typical USD/kg was not sourced, so price_tier \"mid\" is a soft placement. Build plates were not confirmed either way — the hardware business sells whole industrial printers, not print surfaces — so makes_plates is left unset. The dual hardware + material vertical integration is unusual among US filament makers.",
+  "provenance": {
+    "sources": [
+      "https://www.ic3dprinters.com/about-us/",
+      "https://www.ic3dprinters.com/shop/pla-filaments/",
+      "https://www.instagram.com/ic3d_printers/",
+      "https://columbusunderground.com/3d-printers/"
+    ],
+    "last_verified": "2026-07-31",
+    "confidence": "medium",
+    "conflicts": "IC3D confirms it offers contract manufacturing but names no client brands, so any white-label output it produces is invisible in this entry. Price tier is unsourced positioning rather than observed pricing."
+  }
+}

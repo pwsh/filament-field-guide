@@ -1,37 +1,113 @@
 {
   "id": "esun",
-  "name": "eSUN (Shenzhen Esun Industrial Co.)",
-  "status": "example",
-  "summary": "One of the highest-volume filament producers globally; sells under its own brand and is widely reported as an OEM for other labels. Example entry pending Phase C research.",
+  "name": "eSUN (Shenzhen Esun Industrial Co., Ltd.)",
+  "status": "researched",
+  "summary": "Founded 2002 in Shenzhen, eSUN is one of the oldest and highest-volume Chinese filament and resin producers (~30,000 t/yr capacity, NEEQ-listed, stock 836514). It sells under its own eSUN brand and is a major upstream OEM whose production reaches many budget retail labels.",
   "headquarters_country": "China",
-  "manufacturing_countries": ["China"],
-  "brands": ["eSUN", "eBOX", "ePLA", "eSilk", "eTwinkling"],
+  "manufacturing_countries": [
+    "China",
+    "Vietnam"
+  ],
+  "brands": [
+    "eSUN",
+    "iSUN3D",
+    "eBOX",
+    "ePLA",
+    "eSilk",
+    "eTwinkling",
+    "3dHojor"
+  ],
   "oem_relationships": [
-    { "company": "Inland (Micro Center)", "relationship": "manufactures-for", "notes": "User-verified; round spool cutout indicates eSUN production (diamond = Polymaker)" },
-    { "company": "3dHojor", "relationship": "manufactures-for", "notes": "User-verified (research/verified-oem-relationships.md)" },
-    { "company": "Bambu Lab", "relationship": "manufactures-for", "notes": "User-verified; Bambu resells eSUN/Polymaker and Sunlu production — line-level mapping pending Phase C" }
+    {
+      "company": "Inland (Micro Center)",
+      "relationship": "manufactures-for",
+      "notes": "User-verified (research/verified-oem-relationships.md); round spool cutout indicates eSUN production (diamond = Polymaker). Spool-cutout identification is the only evidence found; not corroborated by either company's own materials."
+    },
+    {
+      "company": "3dHojor",
+      "relationship": "manufactures-for",
+      "notes": "User-verified (research/verified-oem-relationships.md). 3dHojor is a retail label with no independent manufacturing presence."
+    },
+    {
+      "company": "Bambu Lab",
+      "relationship": "manufactures-for",
+      "notes": "User-verified; Bambu resells eSUN/Polymaker and Sunlu production — line-level mapping still unresolved (research/verified-oem-relationships.md open questions)."
+    }
   ],
   "endpoints": {
-    "website": "https://www.esun3d.com",
-    "store": "https://esun3dstore.com",
-    "docs": "https://www.esun3d.com/support/",
+    "website": "https://www.esun3d.com/",
+    "store": "https://esun.en.alibaba.com/",
+    "docs": "https://www.esungroup.net/about-esun/",
     "social": {
-      "youtube": "https://www.youtube.com/@eSUN3d",
-      "instagram": "https://www.instagram.com/esun3d_filament",
-      "facebook": "https://www.facebook.com/esun3dfilament"
+      "instagram": "https://www.instagram.com/esun3dprinting/",
+      "x": "https://twitter.com/esun3dfilament",
+      "facebook": "https://www.facebook.com/eSUN3D/",
+      "youtube": "https://www.youtube.com/@esun-3D",
+      "linkedin": "https://www.linkedin.com/company/shenzhen-esun-industrial-co.-ltd/"
     }
   },
   "product_lines": [
-    { "name": "ePLA family", "filament_ids": ["pla"], "notes": "PLA+, matte, silk, luminous variants" },
-    { "name": "PETG", "filament_ids": ["petg"] },
-    { "name": "Engineering", "filament_ids": ["asa"], "notes": "ABS+, ASA, PA, PC lines — expand in Phase B/C" }
+    {
+      "name": "PLA family",
+      "filament_ids": [
+        "pla",
+        "pla-cf"
+      ],
+      "notes": "PLA+, silk, matte, high-speed, glow-in-the-dark, wood/marble aesthetic blends, carbon-fiber filled"
+    },
+    {
+      "name": "PETG",
+      "filament_ids": [
+        "petg"
+      ]
+    },
+    {
+      "name": "ABS / ASA",
+      "filament_ids": [
+        "abs",
+        "asa"
+      ]
+    },
+    {
+      "name": "Nylon",
+      "filament_ids": [
+        "pa",
+        "pa-cf"
+      ],
+      "notes": "PA6 and PA12 grades including carbon-fiber filled"
+    },
+    {
+      "name": "Flexibles",
+      "filament_ids": [
+        "tpu"
+      ],
+      "notes": "TPU and TPE grades"
+    },
+    {
+      "name": "Polycarbonate blends",
+      "filament_ids": [
+        "pc"
+      ]
+    },
+    {
+      "name": "Soluble support",
+      "filament_ids": [
+        "pva"
+      ]
+    }
   ],
-  "makes_plates": false,
-  "plate_ids": [],
-  "price_tier": "budget",
+  "price_tier": "mid",
+  "additional_notes": "Roughly 43 filament SKUs across ~10 material families, plus photopolymer resins, PCL and lactate esters. Sub-entities: iSUN3D (custom printing systems) and wholly-owned Xiaogan Esun New Material Co., Ltd. Manufacturing in Shenzhen (Guangdong), Xiaogan industrial park (Hubei) and a Vietnam facility operating since 2019; branches in Wuhan, Beijing, Hong Kong and the US. National High-Tech Enterprise; ranked top-10 among Chinese degradable-plastics producers. Western retail PLA typically $15-20/kg (exact figure unverified), so 'mid' is a close call against 'budget'. Whether eSUN sells build plates/print surfaces was not established, so makes_plates is left unset.",
   "provenance": {
-    "sources": ["EXAMPLE ENTRY — verify brands, OEM relationships, and origin countries in Phase C"],
+    "sources": [
+      "https://www.esun3d.com/about-us/",
+      "https://www.esungroup.net/about-esun/",
+      "https://filamentcheatsheet.com/database/brand/esun_3d/",
+      "https://esun.en.alibaba.com/",
+      "/home/claude/filament-repo/research/verified-oem-relationships.md (project-owner verified)"
+    ],
     "last_verified": "2026-07-31",
-    "confidence": "placeholder"
+    "confidence": "medium",
+    "conflicts": "The Inland and Bambu Lab relationships are owner-verified but externally uncorroborated: the Inland link rests only on spool-cutout identification (round = eSUN, diamond = Polymaker), and which Bambu Lab lines come from eSUN vs Polymaker vs Sunlu is unresolved. Price tier sits on the budget/mid boundary; no verified $/kg figure was found."
   }
 }

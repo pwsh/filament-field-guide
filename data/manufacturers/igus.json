@@ -1,0 +1,49 @@
+{
+  "id": "igus",
+  "name": "igus GmbH",
+  "status": "researched",
+  "summary": "Cologne-based German motion-plastics manufacturer whose iglidur tribo-polymer line extends into 3D printing as 'tribo-filament'. Its filaments are engineered for wear resistance, self-lubrication and low friction in functional moving parts — gears, bushings, cable carriers — rather than for general prototyping. Vertically integrated: igus compounds its own polymers and extrudes its own filament.",
+  "headquarters_country": "Germany",
+  "manufacturing_countries": [
+    "Germany"
+  ],
+  "brands": [
+    "igus",
+    "iglidur"
+  ],
+  "oem_relationships": [],
+  "endpoints": {
+    "website": "https://www.igus.com/",
+    "docs": "https://www.igus.com/info/3d-printing-materials"
+  },
+  "product_lines": [
+    {
+      "name": "iglidur tribo-filament",
+      "filament_ids": [
+        "pa",
+        "tpu"
+      ],
+      "notes": "Wear-resistant, self-lubricating FDM filament in 1.75mm and 3mm, aimed at gears, bushings and cable carriers. Base chemistries are proprietary tribo-polymer compounds, most commonly nylon-family; the pa and tpu ids here are approximations to catalog material ids, not confirmed chemistries. Industry-cited SKU names such as I150-PF, I180-PF and I190-PF could not be confirmed from an igus source in this research session."
+    },
+    {
+      "name": "Specialty tribo grades",
+      "filament_ids": [
+        "pa"
+      ],
+      "notes": "FDA-compliant, high-temperature and chemical-resistant formulations within the tribo-filament range (confirmed qualitatively, not itemised by SKU)."
+    }
+  ],
+  "makes_plates": false,
+  "price_tier": "engineering",
+  "additional_notes": "igus's core business is motion-plastics components — plain bearings, cable carriers, linear guides — for automation and industrial markets; 3D printing filament is a materials-sales extension of its self-lubricating polymer competency, serving prototyping and low-volume production of functional parts across food and beverage, medical and manufacturing sectors. Operates a 41,000 sq ft materials test laboratory in Cologne and a US engineering centre in Detroit. igus has manufacturing plants outside Germany, but filament-specific production sites beyond Cologne were not itemised, so manufacturing_countries lists Germany only. Specific filament catalog sub-pages attempted in this session (/product/24471, /wpck/183/3d_druck_filament_engl) returned 404, so only the general 3D-printing materials page is recorded. Also sells SLS powders and DLP resin, which are outside this catalog's scope. No social profiles confirmed. No build-plate or print-surface products — consistent with a materials and components business rather than a printer-hardware vendor.",
+  "provenance": {
+    "sources": [
+      "https://www.igus.com/info/3d-printing-materials",
+      "https://www.igus.com/",
+      "https://en.wikipedia.org/wiki/Igus"
+    ],
+    "last_verified": "2026-07-31",
+    "confidence": "low",
+    "conflicts": "No source disagreements, but sourcing is thin: several igus filament sub-pages 404'd and the Wikipedia fetch failed, so SKU names, exact base chemistries (the pa/tpu filament_ids are approximations), non-German filament production and pricing are all unverified."
+  }
+}

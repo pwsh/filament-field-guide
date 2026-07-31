@@ -1,0 +1,89 @@
+{
+  "id": "geeetech",
+  "name": "GEEETECH (Shenzhen Getech Technology Co., Ltd.)",
+  "status": "researched",
+  "summary": "Shenzhen 3D printing manufacturer founded in 2013, one of the earliest Chinese open-source printer companies. It builds its own FDM printers, filament dryers and build surfaces alongside a broad filament range, and acts as an upstream OEM producing filament for the TEQStone, XZN and Giantarm labels (project-owner verified).",
+  "headquarters_country": "China",
+  "manufacturing_countries": [
+    "China"
+  ],
+  "brands": [
+    "GEEETECH",
+    "TEQStone",
+    "XZN",
+    "Giantarm"
+  ],
+  "oem_relationships": [
+    {
+      "company": "TEQStone",
+      "relationship": "manufactures-for",
+      "notes": "User-verified (research/verified-oem-relationships.md). TEQStone is a retail label with no independent manufacturing presence and so has no entry of its own; not mentioned on Geeetech's own pages."
+    },
+    {
+      "company": "XZN",
+      "relationship": "manufactures-for",
+      "notes": "User-verified (research/verified-oem-relationships.md). XZN is a retail label with no independent manufacturing presence and so has no entry of its own; not mentioned on Geeetech's own pages."
+    },
+    {
+      "company": "Giantarm",
+      "relationship": "manufactures-for",
+      "notes": "User-verified (research/verified-oem-relationships.md). Giantarm is a retail label with no independent manufacturing presence and so has no entry of its own; not mentioned on Geeetech's own pages."
+    }
+  ],
+  "endpoints": {
+    "website": "https://www.geeetech.com/",
+    "store": "https://www.geeetech.com/",
+    "docs": "https://wiki.geeetech.com/",
+    "social": {
+      "youtube": "https://www.youtube.com/user/geeetech",
+      "facebook": "https://www.facebook.com/p/Geeetech-Online-Store-61571634163860/"
+    }
+  },
+  "product_lines": [
+    {
+      "name": "PLA family",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Standard, silk, matte, dual-colour silk, marble, wood and glow-in-the-dark variants"
+    },
+    {
+      "name": "PETG",
+      "filament_ids": [
+        "petg"
+      ]
+    },
+    {
+      "name": "ABS",
+      "filament_ids": [
+        "abs"
+      ]
+    },
+    {
+      "name": "ASA",
+      "filament_ids": [
+        "asa"
+      ]
+    },
+    {
+      "name": "TPU",
+      "filament_ids": [
+        "tpu"
+      ]
+    }
+  ],
+  "makes_plates": true,
+  "price_tier": "budget",
+  "additional_notes": "Legal entity Shenzhen Getech Technology Co., Ltd. Sells PEI sheets (including Bambu Lab A1 Mini-compatible sizes), magnetic flexible plates, tempered glass beds and bed adhesive, for both its own and third-party printers; no plate_ids are asserted since no plate entries exist for them. Also manufactures FDM printers (Mizar S, Mizar M, Thunder) and the D1 filament dryer. Scale claims of 'millions of printers' and '1M+ users in 100+ countries' are self-reported marketing. Instagram, TikTok, X and LinkedIn links appear in the site footer but exact handles were not individually verified, so they are omitted from endpoints.social.",
+  "provenance": {
+    "sources": [
+      "/home/claude/filament-repo/research/verified-oem-relationships.md (project-owner verified)",
+      "https://www.geeetech.com/about-us-ezp-14.html",
+      "https://en.everybodywiki.com/Geeetech",
+      "https://wiki.geeetech.com/"
+    ],
+    "last_verified": "2026-07-31",
+    "confidence": "medium",
+    "conflicts": "The TEQStone/XZN/Giantarm OEM relationships are owner-verified but have no public corroboration: Geeetech's about-us page makes no mention of private-label or OEM business. They are consistent with its scale as a vertically integrated Shenzhen manufacturer but remain unconfirmed via open web, and whether Geeetech extrudes all its own filament or subcontracts any of it was not established."
+  }
+}

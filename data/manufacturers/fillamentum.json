@@ -1,0 +1,140 @@
+{
+  "id": "fillamentum",
+  "name": "Fillamentum Manufacturing Czech s.r.o.",
+  "status": "researched",
+  "summary": "Czech filament manufacturer founded in 2011 in Hulin, originally trading as Parzlich s.r.o. Vertically integrated with in-house R&D and one of the broadest exotic-polymer catalogs in Europe (PVDF, PVC, PEBA, PC/ABS, PP). ISO 9001 and ISO 14001 certified and, unusually for the sector, publicly traded on the Prague Stock Exchange under ticker FILL.",
+  "headquarters_country": "Czech Republic",
+  "manufacturing_countries": [
+    "Czech Republic"
+  ],
+  "brands": [
+    "Fillamentum",
+    "Fillamentum Industrial",
+    "Fillamentum Nanoilen"
+  ],
+  "endpoints": {
+    "website": "https://fillamentum.com/",
+    "store": "https://fillamentumusa.com/",
+    "social": {
+      "instagram": "https://www.instagram.com/fillamentum/",
+      "facebook": "https://www.facebook.com/fillamentum/",
+      "youtube": "https://www.youtube.com/@Fillamentum",
+      "x": "https://twitter.com/Fillamentum"
+    }
+  },
+  "product_lines": [
+    {
+      "name": "Extrafill PLA",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Includes PLA Crystal Clear"
+    },
+    {
+      "name": "PETG / CPE",
+      "filament_ids": [
+        "petg",
+        "petg-cf"
+      ],
+      "notes": "PETG plus CPE HG100 (modified PETG) and CPE CF112 (carbon-fiber PETG)"
+    },
+    {
+      "name": "ABS eXTRAFILL",
+      "filament_ids": [
+        "abs"
+      ]
+    },
+    {
+      "name": "ASA Extrafill",
+      "filament_ids": [
+        "asa"
+      ]
+    },
+    {
+      "name": "Flexfill",
+      "filament_ids": [
+        "tpu",
+        "tpe",
+        "peba"
+      ],
+      "notes": "Flexfill TPU 98A and 92A, Flexfill TPE, Flexfill PEBA"
+    },
+    {
+      "name": "Nylon",
+      "filament_ids": [
+        "pa"
+      ],
+      "notes": "Includes aramid-reinforced grades"
+    },
+    {
+      "name": "0rCA",
+      "filament_ids": [
+        "pa-cf"
+      ],
+      "notes": "Nylon recycled from fishing nets, carbon-fiber reinforced"
+    },
+    {
+      "name": "HIPS",
+      "filament_ids": [
+        "hips"
+      ]
+    },
+    {
+      "name": "NonOilen",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Biodegradable engineering bioplastic marketed under the Nanoilen branding; a PLA-family blend rather than plain PLA"
+    },
+    {
+      "name": "Timberfill",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Wood-fiber composite on a PLA base"
+    },
+    {
+      "name": "vINYL 303",
+      "filament_ids": [
+        "pvc"
+      ]
+    },
+    {
+      "name": "Fluorodur",
+      "filament_ids": [
+        "pvdf"
+      ]
+    },
+    {
+      "name": "PC/ABS",
+      "filament_ids": [
+        "pc"
+      ],
+      "notes": "Polycarbonate/ABS alloy"
+    },
+    {
+      "name": "PP 2320",
+      "filament_ids": [
+        "pp"
+      ]
+    },
+    {
+      "name": "OBC 905",
+      "notes": "Olefin block copolymer; no established filament type id"
+    }
+  ],
+  "price_tier": "premium",
+  "additional_notes": "No evidence found of white-labelling for other brands or of reselling another OEM, so no oem_relationships are recorded; Fillamentum does not appear in research/verified-oem-relationships.md. Arkema and Westlake Chemical are base-polymer feedstock suppliers, not filament OEM partners. Distributes to 62+ countries. Price tier is a close call between premium and engineering: the consumer Extrafill lines are premium-priced while the exotic PVDF/PVC/PEBA/0rCA range sits in engineering territory; no per-kg figure was confirmed this pass. Whether Fillamentum sells build plates was not established (none found), so makes_plates is left unset.",
+  "provenance": {
+    "sources": [
+      "https://fillamentum.com/pages/about-us/",
+      "https://www.pse.cz/en/detail/CZ0009007027",
+      "https://fillamentum.com/blogs/news/from-now-on-parzlich-s-r-o-becomes-fillamentum-manufacturing-czech-s-r-o/",
+      "https://fillamentum.com/collections/",
+      "https://www.youtube.com/@Fillamentum"
+    ],
+    "last_verified": "2026-07-31",
+    "confidence": "medium",
+    "conflicts": "price_tier set to 'premium' though the catalog straddles premium and engineering; no confirmed per-kg pricing. OBC 905 has no mapped filament type id."
+  }
+}

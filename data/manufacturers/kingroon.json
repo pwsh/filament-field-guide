@@ -1,0 +1,40 @@
+{
+  "id": "kingroon",
+  "name": "Kingroon (Kingroon 3D)",
+  "status": "researched",
+  "summary": "Budget Chinese printer brand (KP3S, KLP1) that also sells a wide house filament catalog. Kingroon does not extrude its own filament: per owner-verified records it is manufactured by Landu in China, and a third-party review source independently characterises Kingroon filament as an OEM brand attached to the printers, corroborating the contract-manufacture pattern without naming Landu. Positioning is firmly budget, with bulk 10kg pricing and occasional batch-to-batch variability reported.",
+  "headquarters_country": "China",
+  "manufacturing_countries": ["China"],
+  "brands": ["Kingroon", "Kingroon 3D"],
+  "oem_relationships": [
+    {
+      "company": "Landu",
+      "relationship": "manufactured-by",
+      "notes": "Owner-verified per research/verified-oem-relationships.md. Corroborated indirectly by filamentcheatsheet.com, which describes Kingroon filament as 'an OEM brand from Kingroon printers' without naming the specific OEM."
+    }
+  ],
+  "endpoints": {
+    "website": "https://kingroon.com",
+    "store": "https://kingroon.com"
+  },
+  "product_lines": [
+    { "name": "PLA", "filament_ids": ["pla"], "notes": "PLA, PLA+ and Silk PLA including tri-color lines; wide color catalog" },
+    { "name": "PETG", "filament_ids": ["petg"] },
+    { "name": "TPU", "filament_ids": ["tpu"] },
+    { "name": "Nylon", "filament_ids": ["pa"] }
+  ],
+  "makes_plates": true,
+  "plate_ids": [],
+  "price_tier": "budget",
+  "additional_notes": "Roughly $10-18/kg, with bulk 10kg packs around $100. Also sells replacement parts, nozzles, build plates and filament dryers, including Bambu Lab-compatible replacement parts per a Formnext 2025 listing. Rated 'Tier B' (about 4.0/5) by one review aggregator, with occasional batch and diameter variability reported. Founding year and exact HQ city were not confirmed in this pass — a follow-up deep dive is recommended.",
+  "provenance": {
+    "sources": [
+      "https://kingroon.com/",
+      "https://filamentcheatsheet.com/brands/kingroon/",
+      "research/verified-oem-relationships.md"
+    ],
+    "last_verified": "2026-07-31",
+    "confidence": "low",
+    "conflicts": "Public sourcing on Kingroon's corporate details is thin: founding year and exact HQ city are unconfirmed. The Landu relationship rests on the owner-verified table alone; no public source names Landu directly."
+  }
+}

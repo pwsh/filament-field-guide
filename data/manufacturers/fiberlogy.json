@@ -1,0 +1,108 @@
+{
+  "id": "fiberlogy",
+  "name": "Fiberlogy (Fiberlab S.A.)",
+  "status": "researched",
+  "summary": "Polish filament manufacturer near Krakow, trading as Fiberlogy under the legal entity Fiberlab S.A. Produces in-house in Poland with a 'Made in EU' marketing emphasis, and carries an unusually deep engineering and composite lineup (PCTG, PP, PA-CF) for its catalog size alongside decorative lines such as FiberSilk.",
+  "headquarters_country": "Poland",
+  "manufacturing_countries": [
+    "Poland"
+  ],
+  "brands": [
+    "Fiberlogy",
+    "Fiberlab"
+  ],
+  "endpoints": {
+    "website": "https://fiberlogy.com/",
+    "support": "https://fiberlogy.com/en_US/contact",
+    "social": {
+      "instagram": "https://www.instagram.com/fiberlogy_filaments/",
+      "youtube": "https://www.youtube.com/@fiberlogy",
+      "linkedin": "https://www.linkedin.com/showcase/fiberlogy"
+    }
+  },
+  "product_lines": [
+    {
+      "name": "PLA family",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Easy PLA, Impact PLA and HD-PLA"
+    },
+    {
+      "name": "FiberSilk",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Metallic-finish decorative PLA"
+    },
+    {
+      "name": "Easy PET-G",
+      "filament_ids": [
+        "petg"
+      ]
+    },
+    {
+      "name": "PCTG",
+      "filament_ids": [
+        "pctg"
+      ],
+      "notes": "Marketed at 90 kJ/m2 impact strength"
+    },
+    {
+      "name": "ABS",
+      "filament_ids": [
+        "abs"
+      ],
+      "notes": "ABS and Easy ABS"
+    },
+    {
+      "name": "ASA",
+      "filament_ids": [
+        "asa"
+      ]
+    },
+    {
+      "name": "PP",
+      "filament_ids": [
+        "pp"
+      ]
+    },
+    {
+      "name": "FiberFlex",
+      "filament_ids": [
+        "tpu"
+      ],
+      "notes": "TPU in 30D and 40D shore grades"
+    },
+    {
+      "name": "Nylon",
+      "filament_ids": [
+        "pa",
+        "pa-cf"
+      ],
+      "notes": "PA and PA12 carbon-fiber composites"
+    },
+    {
+      "name": "Soluble support",
+      "filament_ids": [
+        "pva"
+      ],
+      "notes": "Water-soluble support material; exact chemistry (PVA vs BVOH) not confirmed"
+    }
+  ],
+  "makes_plates": false,
+  "price_tier": "premium",
+  "additional_notes": "No evidence of white-labelling for other brands or of reselling, so no oem_relationships are recorded; Fiberlogy does not appear in research/verified-oem-relationships.md. A directory listing under the name 'Fiberlab' refers to the same legal entity that owns the Fiberlogy brand, not a separate third-party OEM. Observed pricing: ASA roughly EUR 35-45/kg, PP roughly EUR 35-53/kg, PA12+CF roughly EUR 80-116/kg. A third-party review aggregator positions the brand between budget brands like eSUN and premium brands like Prusament, which reads as mid; 'premium' was chosen because the observed EUR/kg figures sit above mid-tier pricing - flagged as a judgment call. No build plates are advertised on the site (filament and spools only).",
+  "provenance": {
+    "sources": [
+      "https://fiberlogy.com/en/about-us/",
+      "https://fiberlogy.com/en_US/contact",
+      "https://spoolhound.com/fiberlogy-filament",
+      "https://www.voxelmatters.directory/company/fiberlab/",
+      "https://www.youtube.com/@fiberlogy"
+    ],
+    "last_verified": "2026-07-31",
+    "confidence": "medium",
+    "conflicts": "price_tier: the review aggregator's 'between eSUN and Prusament' framing implies mid, while the EUR 35-116/kg observed pricing implies premium; 'premium' chosen, needs a Fable-level call. Soluble support chemistry mapped to 'pva' provisionally."
+  }
+}

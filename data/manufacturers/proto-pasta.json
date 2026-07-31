@@ -1,0 +1,75 @@
+{
+  "id": "proto-pasta",
+  "name": "Protopasta (Protoplant, Inc.)",
+  "status": "researched",
+  "summary": "Protoplant, Inc. (dba \"Protoplant, makers of Protopasta\") is a US specialty filament maker founded in 2013 via Kickstarter by Dustin Cram, Aaron Cram and Alexander Dick. It extrudes all of its own product in Vancouver, Washington and is best known as an early pioneer of composite and filled PLA rather than a broad engineering-material catalog.",
+  "headquarters_country": "United States",
+  "manufacturing_countries": [
+    "United States"
+  ],
+  "brands": [
+    "Protopasta",
+    "Proto-pasta"
+  ],
+  "endpoints": {
+    "website": "https://proto-pasta.com/",
+    "store": "https://proto-pasta.com/",
+    "support": "https://proto-pasta.com/pages/general-faq",
+    "social": {
+      "instagram": "https://www.instagram.com/protopasta/",
+      "x": "https://twitter.com/proto_pasta",
+      "facebook": "https://www.facebook.com/protopasta/",
+      "linktree": "https://linktr.ee/proto_pasta"
+    }
+  },
+  "product_lines": [
+    {
+      "name": "PLA and HTPLA",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Standard PLA plus HTPLA, a heat-treatable (annealable) grade; also glitter and color-shift aesthetic variants."
+    },
+    {
+      "name": "Recycled PLA",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Recycled Black PLA made from in-house process scrap."
+    },
+    {
+      "name": "Carbon Fiber PLA",
+      "filament_ids": [
+        "pla-cf"
+      ]
+    },
+    {
+      "name": "Metal-filled PLA",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Five metal fills including Magnetic Iron and Stainless Steel; heavy, abrasive, polishable composites."
+    },
+    {
+      "name": "Conductive PLA",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Carbon-loaded conductive grade for low-current electronics experiments."
+    }
+  ],
+  "makes_plates": false,
+  "price_tier": "premium",
+  "additional_notes": "Sold direct and through resellers (MatterHackers, 3DJake, Amazon, eBay), but production stays at Protoplant — no white-label manufacturing for other brands was found in either direction, so oem_relationships is empty rather than unknown. \"All Protopasta products are produced at Protoplant, in Vancouver, Washington, USA\"; no country-of-origin controversy surfaced. Runs a \"CM Designs\" collaboration line and a Filament Workshop education product, neither verified as a separate brand. Filament Cheat Sheet rates the brand Tier A-; exotic composites are commonly cited around $40-60+/kg but exact pricing is unverified.",
+  "provenance": {
+    "sources": [
+      "https://proto-pasta.com/pages/about-us",
+      "https://proto-pasta.com/pages/general-faq",
+      "https://filamentcheatsheet.com/brands/proto-pasta/",
+      "https://www.instagram.com/protopasta/"
+    ],
+    "last_verified": "2026-07-31",
+    "confidence": "medium",
+    "conflicts": "None. Price-tier placement rests on a third-party review-site rating plus unverified street-price ranges rather than a published price list."
+  }
+}

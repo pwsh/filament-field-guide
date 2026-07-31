@@ -1,0 +1,68 @@
+{
+  "id": "landu",
+  "name": "Landu (Hongkong Landu Innovations Technology Co., Limited)",
+  "status": "researched",
+  "summary": "Hong Kong-registered filament company with large-scale production in Shenzhen and Dongguan — a 50,000 sq m manufacturing centre running roughly 3,000 tons per month. Sells budget-priced LANDU-branded filament, resin and accessories, and is the confirmed OEM behind Kingroon-branded filament.",
+  "headquarters_country": "Hong Kong",
+  "manufacturing_countries": [
+    "China"
+  ],
+  "brands": [
+    "LANDU"
+  ],
+  "oem_relationships": [
+    {
+      "company": "Kingroon",
+      "relationship": "manufactures-for",
+      "notes": "User-verified (research/verified-oem-relationships.md). Landu's own About page does not mention Kingroon; recorded as owner-verified ground truth without external corroboration."
+    }
+  ],
+  "endpoints": {
+    "website": "https://www.landustore.com/",
+    "store": "https://landu3d.en.alibaba.com/",
+    "docs": "https://www.landustore.com/pages/about-us",
+    "social": {
+      "facebook": "https://www.facebook.com/Landu3DOfficial/"
+    }
+  },
+  "product_lines": [
+    {
+      "name": "PLA",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Standard, Silk PLA and refill (spool-less) options"
+    },
+    {
+      "name": "PETG",
+      "filament_ids": [
+        "petg"
+      ]
+    },
+    {
+      "name": "ABS",
+      "filament_ids": [
+        "abs"
+      ]
+    },
+    {
+      "name": "Flexibles",
+      "filament_ids": [
+        "tpu"
+      ]
+    }
+  ],
+  "price_tier": "budget",
+  "additional_notes": "Registered at Peter Leung Industrial Building, Kwun Tong, Hong Kong, with operations and manufacturing in Shenzhen and Dongguan. https://landu3d.com/ redirects to landustore.com. Also sells photopolymer resins and accessories including filament dryers, build-plate adhesives and spool adapters; it is not confirmed to sell build plates or print surfaces themselves, so makes_plates is left unset. Among the cheapest labels in this cluster — bulk/bundle pricing around $7.91-11.68/kg. Markets 'localized production strategies to reduce shipping costs and environmental impact'. Its 3,000 t/month capacity suggests it likely supplies further unnamed labels beyond Kingroon.",
+  "provenance": {
+    "sources": [
+      "https://www.landustore.com/pages/about-us",
+      "https://landu3d.en.alibaba.com/de_DE/index.html",
+      "https://www.facebook.com/Landu3DOfficial/",
+      "/home/claude/filament-repo/research/verified-oem-relationships.md (project-owner verified)"
+    ],
+    "last_verified": "2026-07-31",
+    "confidence": "medium",
+    "conflicts": "Unverified lead: retail listings titled 'Landu Elegoo PLA' (Slickdeals) suggest Landu may also supply or co-label Elegoo-branded filament. This is not in the owner-verified file and is not encoded as an oem_relationship pending verification. The Kingroon relationship itself is owner-verified but externally uncorroborated."
+  }
+}

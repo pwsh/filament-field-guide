@@ -1,0 +1,116 @@
+{
+  "id": "rosa3d",
+  "name": "ROSA3D (ROSA PLAST Sp. z o.o.)",
+  "status": "researched",
+  "summary": "Polish filament manufacturer in Hipolitow near Warsaw, self-described as a 'Polish manufacturer of 3D printing filament'. Broad catalogue spanning PLA, PET-G (including a high-speed grade), PCTG, ABS, ASA, PC, TPU, PA (incl. PA12+CF), PP/PP-GF30, HIPS and an R-Series recycled range, with specialty ESD-safe, medical-grade and PTFE-infused grades.",
+  "headquarters_country": "Poland",
+  "manufacturing_countries": [
+    "Poland"
+  ],
+  "brands": [
+    "ROSA3D",
+    "ROSA3D R-Series"
+  ],
+  "endpoints": {
+    "website": "https://www.rosa3d.pl/en/",
+    "store": "https://b2b.rosa3d.pl",
+    "docs": "https://www.rosa3d.pl/en/filaments",
+    "social": {
+      "instagram": "https://www.instagram.com/rosa3dfilaments/",
+      "tiktok": "https://www.tiktok.com/@rosa3dfilaments"
+    }
+  },
+  "product_lines": [
+    {
+      "name": "PLA",
+      "filament_ids": [
+        "pla"
+      ]
+    },
+    {
+      "name": "PET-G",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "Standard and Standard HS (high speed); a PTFE-infused PET-G is also offered"
+    },
+    {
+      "name": "PCTG",
+      "filament_ids": [
+        "pctg"
+      ]
+    },
+    {
+      "name": "ABS / ASA",
+      "filament_ids": [
+        "abs",
+        "asa"
+      ],
+      "notes": "Includes a medical-grade ABS"
+    },
+    {
+      "name": "PC",
+      "filament_ids": [
+        "pc"
+      ]
+    },
+    {
+      "name": "TPU",
+      "filament_ids": [
+        "tpu"
+      ]
+    },
+    {
+      "name": "PA (Nylon)",
+      "filament_ids": [
+        "pa",
+        "pa-cf"
+      ],
+      "notes": "Includes PA12 with carbon fibre"
+    },
+    {
+      "name": "PP",
+      "filament_ids": [
+        "pp",
+        "pp-gf"
+      ],
+      "notes": "Includes PP GF30 glass-filled"
+    },
+    {
+      "name": "HIPS",
+      "filament_ids": [
+        "hips"
+      ]
+    },
+    {
+      "name": "BIO / BioWOOD",
+      "filament_ids": [
+        "pla-wood"
+      ],
+      "notes": "Wood-filled bio line; base polymer assumed PLA, not explicitly confirmed"
+    },
+    {
+      "name": "R-Series (recycled)",
+      "filament_ids": [
+        "r-pla",
+        "r-petg"
+      ],
+      "notes": "R-PLA, R-PET-G and R-PET-G Impact made from recycled feedstock"
+    }
+  ],
+  "makes_plates": false,
+  "price_tier": "mid",
+  "additional_notes": "Registered address: ROSA PLAST Sp. z o.o., ul. Hipolitowska 102B, 05-074 Hipolitow, Poland; production at the same site. Named a Forbes Diamonds 2026 winner (Polish business-growth recognition) and pushes a strong education/classroom positioning ('Filaments for a Great Start - 3D Printing in Education'). No dedicated build-plate or print-surface products found. Carried by pan-European retailer 3DJake alongside other Polish brands, corroborating an established distribution footprint.",
+  "provenance": {
+    "sources": [
+      "https://www.rosa3d.pl/en/",
+      "https://www.rosa3d.pl/en/about-the-company",
+      "https://www.rosa3d.pl/en/filaments",
+      "https://www.instagram.com/rosa3dfilaments/",
+      "https://www.tiktok.com/@atome3d/video/7497568924083703062"
+    ],
+    "last_verified": "2026-07-31",
+    "confidence": "medium",
+    "conflicts": "In-house extrusion is implied by the company's self-description and a TikTok promo referencing 'the factory that makes your favorite filament', but no primary facility documentation was fetched; the factory-reference source is a third-party account and is itself unverified. No OEM counterparty could be named, so oem_relationships is omitted. Exact $/kg unconfirmed."
+  }
+}

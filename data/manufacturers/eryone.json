@@ -1,0 +1,96 @@
+{
+  "id": "eryone",
+  "name": "Eryone (Shenzhen Eryone Technology Co., Ltd.)",
+  "status": "researched",
+  "summary": "Shenzhen filament producer founded in 2018 running a dual consumer and B2B/OEM business: it sells its own broad Eryone-branded range and white-labels filament for other brands, including ENISINA (project-owner verified). Also sells FDM and resin printers, resin and Maflex build surfaces.",
+  "headquarters_country": "China",
+  "manufacturing_countries": [
+    "China"
+  ],
+  "brands": [
+    "Eryone"
+  ],
+  "oem_relationships": [
+    {
+      "company": "ENISINA",
+      "relationship": "manufactures-for",
+      "notes": "User-verified (research/verified-oem-relationships.md). ENISINA is a retail label with no independent manufacturing presence and so has no entry of its own. Corroborated indirectly: Eryone's B2B site openly offers 'OEM filament 3D solutions', though it does not name ENISINA."
+    }
+  ],
+  "endpoints": {
+    "website": "https://eryone3d.com/",
+    "store": "https://de.eryone3d.com/",
+    "docs": "https://www.eryoneb2b.com/",
+    "social": {
+      "facebook": "https://www.facebook.com/eryone3d/",
+      "instagram": "https://www.instagram.com/eryone3d/",
+      "x": "https://x.com/Eryone_official",
+      "youtube": "https://www.youtube.com/@Eryone3D",
+      "tiktok": "https://www.tiktok.com/@eryone3d_official"
+    }
+  },
+  "product_lines": [
+    {
+      "name": "PLA family",
+      "filament_ids": [
+        "pla",
+        "pla-cf"
+      ],
+      "notes": "Standard, silk, matte, high-speed, rainbow/multi-colour, glow-in-the-dark and carbon-fibre filled; consumer retail around $27.99/kg"
+    },
+    {
+      "name": "PETG",
+      "filament_ids": [
+        "petg",
+        "petg-cf"
+      ],
+      "notes": "Standard, high-speed and carbon-fibre grades"
+    },
+    {
+      "name": "ABS",
+      "filament_ids": [
+        "abs"
+      ]
+    },
+    {
+      "name": "ASA",
+      "filament_ids": [
+        "asa"
+      ]
+    },
+    {
+      "name": "TPU",
+      "filament_ids": [
+        "tpu"
+      ],
+      "notes": "Flexible and high-speed grades"
+    },
+    {
+      "name": "Nylon",
+      "filament_ids": [
+        "pa"
+      ]
+    },
+    {
+      "name": "PP",
+      "filament_ids": [
+        "pp"
+      ]
+    }
+  ],
+  "makes_plates": true,
+  "price_tier": "mid",
+  "additional_notes": "Legal entity Shenzhen Eryone Technology Co., Ltd. Operates a separate B2B/OEM site (eryoneb2b.com) advertising 'OEM filament 3D solutions, partnering with factories to provide top-quality products tailored to your needs' plus a 'China Bambu Lab Filament Supplier' page, confirming a wholesale/private-label arm alongside the consumer brand. Note that the B2B wording 'partnering with factories' leaves open how much extrusion is in-house versus subcontracted. Sells Maflex magnetic flexible PEI build surfaces separately and plates compatible with Ultimaker and its own ER20 printer; no plate_ids are asserted since no plate entries exist for them. Bulk/MOQ B2B pricing is far below the consumer $27.99/kg figure.",
+  "provenance": {
+    "sources": [
+      "/home/claude/filament-repo/research/verified-oem-relationships.md (project-owner verified)",
+      "https://www.eryone.com/about-us/",
+      "https://www.eryoneb2b.com/filament-3d/",
+      "https://eryone3d.com/pages/eryone",
+      "https://www.eryoneb2b.com/bambu-lab-filament/"
+    ],
+    "last_verified": "2026-07-31",
+    "confidence": "medium",
+    "conflicts": "The ENISINA relationship is owner-verified but is not named on any public Eryone page; corroboration extends only to Eryone running an OEM/private-label business in general. Eryone's own B2B copy says it partners with factories, which sits awkwardly with describing it as an in-house manufacturer, so the extent of its own extrusion capacity is unresolved. A 'China Bambu Lab Filament Supplier' B2B page exists but is not evidence of an actual Bambu Lab supply relationship."
+  }
+}

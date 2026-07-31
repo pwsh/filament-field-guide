@@ -1,0 +1,98 @@
+{
+  "id": "prusa-research",
+  "name": "Prusa Research a.s. (Prusament)",
+  "status": "researched",
+  "summary": "Czech joint-stock company behind the Original Prusa printer ecosystem. Its filament brand, Prusament, is extruded in-house by wholly-owned subsidiary Prusa Polymers a.s. on roughly 12 production lines near Prague. Vertically integrated: Prusa makes its own filament, printers and build surfaces, and no evidence was found of it white-labelling for other brands.",
+  "headquarters_country": "Czech Republic",
+  "manufacturing_countries": [
+    "Czech Republic"
+  ],
+  "brands": [
+    "Prusament",
+    "Original Prusa",
+    "Prusa Polymers"
+  ],
+  "oem_relationships": [
+    {
+      "company": "Prusa Polymers a.s.",
+      "relationship": "manufactured-by",
+      "notes": "Intra-group, not third-party white-labelling: Prusa Polymers is Prusa Research's wholly-owned filament subsidiary and is the actual extruder of Prusament. Recorded for completeness; Prusa Research does not appear in research/verified-oem-relationships.md."
+    }
+  ],
+  "endpoints": {
+    "website": "https://www.prusa3d.com/",
+    "store": "https://prusament.com/",
+    "docs": "https://help.prusa3d.com/",
+    "support": "https://help.prusa3d.com/",
+    "social": {
+      "facebook": "https://www.facebook.com/PrusaResearch/",
+      "instagram": "https://www.instagram.com/josefprusa/",
+      "x": "https://twitter.com/prusa3d",
+      "youtube": "https://www.youtube.com/channel/UCLHAxAdvAKJY0niRJZRYMvg"
+    }
+  },
+  "product_lines": [
+    {
+      "name": "Prusament PLA",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "40+ colors including blends, galaxy/silk-style effects and limited editions"
+    },
+    {
+      "name": "Prusament PETG",
+      "filament_ids": [
+        "petg"
+      ]
+    },
+    {
+      "name": "Prusament ASA",
+      "filament_ids": [
+        "asa"
+      ]
+    },
+    {
+      "name": "Prusament PC Blend",
+      "filament_ids": [
+        "pc"
+      ],
+      "notes": "Polycarbonate blend, also offered carbon-fiber filled"
+    },
+    {
+      "name": "Prusament PA11 Carbon Fiber",
+      "filament_ids": [
+        "pa-cf"
+      ],
+      "notes": "Bio-based PA11 nylon with carbon fiber"
+    },
+    {
+      "name": "Prusament PVB",
+      "filament_ids": [
+        "pvb"
+      ],
+      "notes": "Smoothable with isopropyl alcohol"
+    },
+    {
+      "name": "Prusament Resin",
+      "notes": "Photopolymer resins for MSLA printers, not filament"
+    }
+  ],
+  "makes_plates": true,
+  "plate_ids": [
+    "pei-textured"
+  ],
+  "price_tier": "premium",
+  "additional_notes": "Markets on tolerance: claimed +/-0.02 mm diameter versus an industry norm of +/-0.05 mm, with per-spool QR codes linking to batch measurement data. Pricing roughly $29.99/kg for standard PLA, $49.99 for 2 kg spools, up to ~$44/kg for limited editions. Sells genuine double-sided PEI powder-coated spring steel sheets (smooth and textured) as build surfaces for Original Prusa printers. Reported 2024 addition of a US production line in Delaware is not included in manufacturing_countries because it rests on a single trade-press citation. No HIPS or PVA found in the current catalog; whether those were ever offered and discontinued was not established.",
+  "provenance": {
+    "sources": [
+      "https://prusament.com/story-behind-prusament/",
+      "https://en.wikipedia.org/wiki/Prusa_Research",
+      "https://www.prusa3d.com/page/contact-details_237176/",
+      "https://prusament.com/materials/pla/",
+      "https://www.prusa3d.com/product/double-sided-textured-pei-powder-coated-spring-steel-sheet/"
+    ],
+    "last_verified": "2026-07-31",
+    "confidence": "medium",
+    "conflicts": "A 2024 Tom's Hardware report of a Delaware (US) production line is uncorroborated, so manufacturing_countries lists only Czech Republic; if confirmed, the United States should be added."
+  }
+}

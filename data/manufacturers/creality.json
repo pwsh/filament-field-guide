@@ -1,0 +1,52 @@
+{
+  "id": "creality",
+  "name": "Shenzhen Creality 3D Technology Co., Ltd. (深圳市创想三维科技股份有限公司)",
+  "status": "researched",
+  "summary": "Founded 2014 in Shenzhen and one of the largest consumer FDM hardware makers in the world (Ender, CR, K-series, Sermoon, HALOT resin). Unlike most printer brands, Creality extrudes its own filament in-house at scale and also acts as the OEM behind the Soleyin filament label. Catalog spans budget commodity PLA through Hyper high-speed lines and filled specialty variants.",
+  "headquarters_country": "China",
+  "manufacturing_countries": ["China"],
+  "brands": ["Creality", "Ender", "CR-Series", "K-Series", "Sermoon", "HALOT", "Creality Cloud", "Soleyin"],
+  "oem_relationships": [
+    {
+      "company": "Soleyin",
+      "relationship": "manufactures-for",
+      "notes": "Owner-verified per research/verified-oem-relationships.md: Soleyin-branded filament is manufactured by Creality. Soleyin is a minor label with no independent catalog presence, so it is recorded here rather than as its own entry."
+    },
+    {
+      "company": "Comgrow",
+      "relationship": "manufactures-for",
+      "notes": "Owner-verified per research/verified-oem-relationships.md: Comgrow resells Creality filament."
+    }
+  ],
+  "endpoints": {
+    "website": "https://www.creality.com",
+    "store": "https://store.creality.com",
+    "docs": "https://www.crealitycloud.com",
+    "support": "https://forum.creality.com",
+    "social": {
+      "discord": "https://discord.com/invite/creality",
+      "facebook": "https://www.facebook.com/groups/crealitystore"
+    }
+  },
+  "product_lines": [
+    { "name": "Standard", "filament_ids": ["pla", "petg", "abs", "asa", "tpu"], "notes": "Commodity lines priced around $15-20/kg for PLA" },
+    { "name": "Hyper Series", "filament_ids": ["pla", "petg", "abs"], "notes": "High-speed formulations tuned for Creality's K-series and other fast printers" },
+    { "name": "CR-Silk PLA", "filament_ids": ["pla"], "notes": "Silk/lustre PLA line" },
+    { "name": "Specialty / filled", "filament_ids": ["pla", "pla-cf", "pva"], "notes": "Wood-filled and carbon-fiber-filled variants plus PVA support; exact SKU list unverified" }
+  ],
+  "makes_plates": true,
+  "plate_ids": [],
+  "price_tier": "budget",
+  "additional_notes": "Manufacturing referenced across Shenzhen, Wuhan and Huizhou facilities. Vertically integrated: no evidence found that Creality outsources its own-brand filament to a third party. Sells an extensive line of PEI, glass and spring-steel build plates as printer accessories and spares. Corporate strategy publicly described as 'One Core with Two Wings' (printers plus ecosystem and cloud). Stock-listing status has been publicly discussed but specifics are unverified.",
+  "provenance": {
+    "sources": [
+      "https://en.wikipedia.org/wiki/Creality",
+      "https://store.creality.com/about",
+      "https://www.creality.com/products/creality-filament-resin",
+      "research/verified-oem-relationships.md"
+    ],
+    "last_verified": "2026-07-31",
+    "confidence": "medium",
+    "conflicts": "Creality's listing/IPO status is discussed in secondary sources without confirmable specifics. Exact filament SKU list per material family could not be fully enumerated from primary sources."
+  }
+}

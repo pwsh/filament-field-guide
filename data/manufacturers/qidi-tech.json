@@ -1,0 +1,73 @@
+{
+  "id": "qidi-tech",
+  "name": "QIDI Tech (Zhejiang Qidi Technology Co., Ltd.)",
+  "status": "researched",
+  "summary": "Chinese printer maker selling under the QIDI / Qidi Tech consumer brand, known for actively-heated-chamber machines (X-Max, Q1 series). Its filament is a house accessory line sold almost exclusively through qidi3d.com rather than third-party retail, and is profiled specifically for QIDI's own printers. No third-party OEM relationship is confirmed and the brand does not appear in the owner-verified ground-truth table, so whether production is truly in-house or contract-manufactured remains open.",
+  "headquarters_country": "China",
+  "manufacturing_countries": [
+    "China"
+  ],
+  "brands": [
+    "QIDI",
+    "Qidi Tech"
+  ],
+  "oem_relationships": [],
+  "endpoints": {
+    "website": "https://qidi3d.com",
+    "store": "https://us.qidi3d.com",
+    "docs": "https://qidi3d.com/pages/choose-the-right-filament-3d-filaments-guide-for-qidi-printers"
+  },
+  "product_lines": [
+    {
+      "name": "Rapido",
+      "filament_ids": [
+        "pla",
+        "abs"
+      ],
+      "notes": "High-speed Rapido PLA and Rapido ABS"
+    },
+    {
+      "name": "PETG",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "PETG and PETG-Tough"
+    },
+    {
+      "name": "ASA",
+      "filament_ids": [
+        "asa"
+      ]
+    },
+    {
+      "name": "TPU",
+      "filament_ids": [
+        "tpu"
+      ]
+    },
+    {
+      "name": "Engineering composites",
+      "filament_ids": [
+        "pa-cf",
+        "pet-cf",
+        "pp-gf"
+      ],
+      "notes": "PAHT-CF, PET-CF and PPGF glass-fiber; roughly $20-55/kg across the range"
+    }
+  ],
+  "makes_plates": true,
+  "plate_ids": [],
+  "price_tier": "mid",
+  "additional_notes": "Materials are positioned around ecosystem and slicer-profile integration with QIDI's own enclosed high-speed printers rather than universal cross-brand tuning. Build plates are very likely sold as printer accessories given the hardware business, but this was not independently confirmed in this research pass. Social profiles were not verified and are therefore not recorded.",
+  "provenance": {
+    "sources": [
+      "https://us.qidi3d.com/collections/qidi-3d-printer-filament",
+      "https://filamentcheatsheet.com/brands/qidi_tech/",
+      "https://trademarks.justia.com/976/46/qidi-97646032.html",
+      "https://discovery.patsnap.com/company/wenzhou-qidi-machinery/"
+    ],
+    "last_verified": "2026-07-31",
+    "confidence": "low",
+    "conflicts": "Corporate lineage unresolved: current trademark filings show 'ZHEJIANG QIDI TECHNOLOGY CO., LTD' while older/alternate sourcing references 'Wenzhou Qidi Machinery Co., Ltd.' as a related or predecessor entity, and some sources cite Suzhou rather than Zhejiang as the HQ city. Flagged rather than resolved. Also unverified whether filament is extruded in-house or contract-manufactured."
+  }
+}

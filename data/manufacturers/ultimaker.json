@@ -1,0 +1,101 @@
+{
+  "id": "ultimaker",
+  "name": "UltiMaker (Ultimaker B.V.)",
+  "status": "researched",
+  "summary": "Dutch desktop and professional FDM printer maker that also formulates and sells its own verified material range (Tough PLA, CPE/CPE+, Nylon, PC, TPU 95A, PVA, PP and more). Headquartered in Utrecht since 2019; the 2022 merger with MakerBot brought that brand in-house, leaving NPM Capital with 53.5% and Stratasys with 46.5%. Runs an open materials marketplace with third-party partners such as Tectonic-3D on top of its own catalog.",
+  "headquarters_country": "Netherlands",
+  "manufacturing_countries": [
+    "Netherlands",
+    "United States",
+    "Singapore"
+  ],
+  "brands": [
+    "UltiMaker",
+    "Ultimaker",
+    "MakerBot"
+  ],
+  "oem_relationships": [
+    {
+      "company": "MakerBot",
+      "relationship": "rebrands",
+      "notes": "MakerBot merged with Ultimaker in 2022 and is now a brand UltiMaker owns and operates (MakerBot Sketch / Sketch Sprint printers sell alongside the UltiMaker S, Factor and Method series). This is in-house brand ownership, not third-party white-labelling; 'rebrands' is the nearest available enum value. Not present in research/verified-oem-relationships.md."
+    },
+    {
+      "company": "Tectonic-3D",
+      "relationship": "joint-venture",
+      "notes": "Tectonic-3D high-performance filaments are integrated into the UltiMaker materials marketplace. Confirmed as a partnership and marketplace listing, explicitly NOT a manufacture-for relationship — UltiMaker does not make these and Tectonic-3D does not make UltiMaker's own line. 'joint-venture' is the nearest available enum value. Not present in research/verified-oem-relationships.md."
+    },
+    {
+      "company": "Stratasys",
+      "relationship": "joint-venture",
+      "notes": "Stratasys holds a 46.5% minority stake in Ultimaker B.V. post-MakerBot merger (NPM Capital holds 53.5%). Ownership stake, not a manufacturing relationship; recorded here because it links UltiMaker into the wider Stratasys professional-AM ecosystem. Not present in research/verified-oem-relationships.md."
+    }
+  ],
+  "endpoints": {
+    "website": "https://ultimaker.com/",
+    "docs": "https://ultimaker.com/materials/",
+    "social": {
+      "linkedin": "https://linkedin.com/company/ultimaker",
+      "x": "https://twitter.com/Ultimaker",
+      "youtube": "https://youtube.com/user/Ultimaker3D",
+      "facebook": "https://facebook.com/UltiMaker",
+      "instagram": "https://instagram.com/ultimaker"
+    }
+  },
+  "product_lines": [
+    {
+      "name": "Standard polymers",
+      "filament_ids": [
+        "pla",
+        "petg",
+        "abs",
+        "pp"
+      ],
+      "notes": "Includes Tough PLA, a toughened PLA grade positioned against ABS."
+    },
+    {
+      "name": "CPE / CPE+",
+      "filament_ids": [
+        "cpe"
+      ],
+      "notes": "Chemically resistant co-polyester; CPE+ is the higher-temperature variant."
+    },
+    {
+      "name": "Engineering polymers",
+      "filament_ids": [
+        "pa",
+        "pc",
+        "tpu"
+      ],
+      "notes": "Nylon, polycarbonate and TPU 95A."
+    },
+    {
+      "name": "Support",
+      "filament_ids": [
+        "pva"
+      ],
+      "notes": "Dissolvable PVA support material."
+    },
+    {
+      "name": "Composites and metals",
+      "filament_ids": [
+        "petg-cf"
+      ],
+      "notes": "PET-CF carbon fiber, plus metal-filled materials supplied via the Metal Expansion Kit. Available through marketplace and expansion kits rather than the core certified range."
+    }
+  ],
+  "price_tier": "premium",
+  "additional_notes": "Materials are segmented by printer tier: Factor series (certified high-performance/industrial), S series (broadest range, 300+ materials through the open marketplace) and Method series (polymers, composites and metals for engineering use). Multi-continent manufacturing — Netherlands (primary), US assembly lines and a Singapore site opened in 2018 serving APAC/China — is confirmed for printer hardware; it is unverified whether filament is extruded at all three or only a subset, so manufacturing_countries may overstate the filament footprint. UltiMaker sells printer-specific build plates and glass beds as accessories for its own hardware, which is standard OEM practice, but no source confirmed a specific SKU in this research session, so makes_plates is left unset rather than asserted. No evidence UltiMaker white-labels for others or resells another manufacturer's filament under its own name. Pricing sits above hobbyist commodity brands, reflecting a verified-material ecosystem; no $/kg figure was confirmed.",
+  "provenance": {
+    "sources": [
+      "https://en.wikipedia.org/wiki/Ultimaker",
+      "https://ultimaker.com/",
+      "https://ultimaker.com/materials/",
+      "https://www.dynamism.com/ultimaker/ultimaker-filament.html",
+      "https://www.matterhackers.com/store/c/ultimaker-petg-filament"
+    ],
+    "last_verified": "2026-07-31",
+    "confidence": "medium",
+    "conflicts": "manufacturing_countries lists all three UltiMaker sites, but only printer-hardware production is sourced to them — filament-specific extrusion locations were not itemised, so the Netherlands entry is solid and the US/Singapore entries are inferred. Build-plate sales are likely but unconfirmed, so makes_plates is unset. Reddit/Discord/TikTok presence not confirmed."
+  }
+}

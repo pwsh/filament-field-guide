@@ -1,0 +1,71 @@
+{
+  "id": "matterhackers",
+  "name": "MatterHackers, Inc.",
+  "status": "researched",
+  "summary": "One of the largest US 3D-printing retailers, based in Lake Forest, California. MatterHackers is primarily a marketplace for third-party printers and materials — and owns/operates the LulzBot printer brand — but also sells house-brand filament under Pro Series (engineering tier) and MH Build Series (budget tier), claimed as made in the USA.",
+  "headquarters_country": "United States",
+  "manufacturing_countries": [
+    "United States"
+  ],
+  "brands": [
+    "MatterHackers",
+    "Pro Series",
+    "MH Build Series",
+    "LulzBot"
+  ],
+  "endpoints": {
+    "website": "https://www.matterhackers.com/",
+    "store": "https://www.matterhackers.com/",
+    "docs": "https://www.matterhackers.com/about",
+    "support": "https://help.matterhackers.com/",
+    "social": {
+      "youtube": "https://www.youtube.com/@MatterHackers",
+      "linkedin": "https://www.linkedin.com/company/matterhackers"
+    }
+  },
+  "product_lines": [
+    {
+      "name": "Pro Series",
+      "filament_ids": [
+        "pla",
+        "petg",
+        "abs",
+        "asa",
+        "tpu",
+        "pa",
+        "pa-cf",
+        "pc"
+      ],
+      "notes": "House engineering tier; Pro Series PLA product pages claim US manufacture and +/-0.02 mm diameter control."
+    },
+    {
+      "name": "MH Build Series",
+      "filament_ids": [
+        "pla",
+        "petg",
+        "abs"
+      ],
+      "notes": "House budget tier, including multi-color PLA lines."
+    },
+    {
+      "name": "Third-party marketplace catalog",
+      "filament_ids": [],
+      "notes": "Hundreds of other brands resold (ColorFabb, Fillamentum, Polymaker and others), each originating wherever that brand manufactures. Not MatterHackers product."
+    }
+  ],
+  "makes_plates": true,
+  "price_tier": "mid",
+  "additional_notes": "manufacturing_countries covers the house brands only (US, per product-page claims). The wider marketplace is mixed/global by definition and should not be read as MatterHackers-origin. It is not established whether MatterHackers extrudes Pro Series / MH Build Series itself or contracts a US toll extruder; because no counterparty is named, no oem_relationships row is recorded. NylonX (carbon-fiber nylon) is a distinct third-party brand/manufacturer that MatterHackers retails, not a house brand — the full corporate relationship is unverified. Sells build plates and print surfaces, e.g. LayerLock Powder Coated PEI Build Plates (https://www.matterhackers.com/store/c/powder-coated-pei-build-plate); no plate entries exist in this catalog yet, so plate_ids is unset. Price tier spans budget (MH Build) to engineering (Pro Series PA-CF); \"mid\" is the midpoint of that span, not a measured position. HQ 20321 Valencia Cir, Lake Forest, CA.",
+  "provenance": {
+    "sources": [
+      "https://www.matterhackers.com/about",
+      "https://www.matterhackers.com/store/l/pro-series-pla/sk/M87TDNAD",
+      "https://help.matterhackers.com",
+      "https://www.yelp.com/biz/matterhackers-lake-forest",
+      "https://en.wikipedia.org/wiki/MatterHackers"
+    ],
+    "last_verified": "2026-07-31",
+    "confidence": "medium",
+    "conflicts": "Whether house-brand filament is extruded in-house or by a contracted US toll extruder is unresolved; \"Made in the USA\" is a product-page claim with no primary-source manufacturing documentation. NylonX's status (third-party product carried vs. house line) is asserted from catalog context, not from a corporate statement. Price tier is a forced single value for a brand that deliberately spans budget to engineering."
+  }
+}

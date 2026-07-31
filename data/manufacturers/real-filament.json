@@ -1,0 +1,63 @@
+{
+  "id": "real-filament",
+  "name": "Real Filament",
+  "status": "researched",
+  "summary": "Dutch filament brand describing itself as 'a Dutch company that produces 3D filament within Europe'. Around eight filament types listed without distinct line branding - PLA (including a biodegradable/pliable variant), PETG, TPU, PVA, a water-soluble support and a 'multifunctional durable' material - sold from NL stock and through a reseller network in the Netherlands and UK.",
+  "headquarters_country": "Netherlands",
+  "manufacturing_countries": [
+    "Netherlands"
+  ],
+  "brands": [
+    "Real Filament"
+  ],
+  "endpoints": {
+    "website": "https://real-filament.com/",
+    "social": {
+      "instagram": "https://www.instagram.com/realfilament/",
+      "facebook": "https://www.facebook.com/realfilament/"
+    }
+  },
+  "product_lines": [
+    {
+      "name": "PLA",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Marketed as biodegradable and easy to print; a second, more pliable biodegradable PLA variant is also listed"
+    },
+    {
+      "name": "PETG",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "Glossy, water-resistant"
+    },
+    {
+      "name": "TPU",
+      "filament_ids": [
+        "tpu"
+      ]
+    },
+    {
+      "name": "PVA",
+      "filament_ids": [
+        "pva"
+      ],
+      "notes": "Fully soluble, lightweight; a separate water-soluble support material is also listed"
+    }
+  ],
+  "makes_plates": false,
+  "price_tier": "budget",
+  "additional_notes": "The exact legal entity behind the brand could not be confirmed on-site. Distributed via NL stock plus resellers such as https://filamentz.nl/en/collections/real-filament and https://www.123-3d.co.uk/3D-filament/Filament-brand/REAL-filament-p19007.html. Corporate transparency is markedly lower than the Polish and Czech brands in this cluster. A 'multifunctional durable' filament is listed on the site but the material is unclear - probably ABS or ASA - so it is not represented in product_lines. Explicit false lead to avoid: this is not Dutch Filaments B.V. (maker of Facilan-type filaments), which was acquired by Mitsubishi Chemical in 2018; no evidence links the two. FormFutura and FilRight are separate NL filament makers with no established link to Real Filament. No build plates found.",
+  "provenance": {
+    "sources": [
+      "https://real-filament.com/",
+      "https://www.instagram.com/realfilament/",
+      "https://filamentz.nl/en/collections/real-filament",
+      "https://www.123-3d.co.uk/3D-filament/Filament-brand/REAL-filament-p19007.html"
+    ],
+    "last_verified": "2026-07-31",
+    "confidence": "low",
+    "conflicts": "Sources are thin. The legal entity name is unconfirmed; the claim to 'produce' filament is the company's own and unverified, with no manufacturing address, facility detail or ownership structure found, so it is unresolved whether extrusion is in-house or contracted to a Dutch/EU toller. No counterparty could be named, so no suspected-manufactured-by relationship is recorded, and manufacturing_countries rests solely on the company's own claim. Price tier is inferred from the stock-and-reseller distribution model, not from observed pricing."
+  }
+}

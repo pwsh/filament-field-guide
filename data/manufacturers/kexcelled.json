@@ -1,0 +1,71 @@
+{
+  "id": "kexcelled",
+  "name": "Kexcelled (North Bridge New Material Technology (Suzhou) Co., Ltd.)",
+  "status": "researched",
+  "summary": "Suzhou-based filament and resin manufacturer selling directly under the Kexcelled brand, with an unusually strong certification profile for a value-priced Chinese producer (ISO 9001, ISO 13485 medical QMS, FDA and CE-MDR Class I, UL 94 V0 on select materials) and manufacturing diversified beyond China into Thailand.",
+  "headquarters_country": "China",
+  "manufacturing_countries": [
+    "China",
+    "Thailand"
+  ],
+  "brands": [
+    "Kexcelled",
+    "MOLEGRID"
+  ],
+  "endpoints": {
+    "website": "https://kexcelled3d.com/",
+    "store": "https://kexcelled3d.en.alibaba.com/",
+    "docs": "https://kexcelled3d.com/pages/about-us"
+  },
+  "product_lines": [
+    {
+      "name": "General series",
+      "filament_ids": [
+        "pla",
+        "petg"
+      ],
+      "notes": "Everyday standard filaments"
+    },
+    {
+      "name": "Aesthetic series",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Decorative/visual-effect PLA grades"
+    },
+    {
+      "name": "Functional series",
+      "filament_ids": [
+        "abs",
+        "asa"
+      ]
+    },
+    {
+      "name": "Flexible series",
+      "filament_ids": [
+        "tpu"
+      ],
+      "notes": "Elastomer grades"
+    },
+    {
+      "name": "High-performance series",
+      "filament_ids": [
+        "pc"
+      ],
+      "notes": "Polycarbonate and other engineering grades, some UL 94 V0 rated"
+    }
+  ],
+  "price_tier": "mid",
+  "additional_notes": "HQ upgraded in Suzhou in 2024; manufacturing at Nantong (since 2023) and Suzhou, plus a Thailand factory launched in 2025 — one of the few producers in this cluster with genuine non-China capacity. A Germany office is planned for 2026. Also produces photopolymer resins across Dental, Consumer, Professional, Garage Kit and Jewelry ranges, including the proprietary MOLEGRID resin (2018). Certifications: ISO 9001 (2019), FDA approval and CE-MDR Class I (2023), ISO 13485:2016 (2026), RoHS/REACH-SVHC/TSCA/Prop 65 compliance. Company reports 600+ employees, sales in 60+ countries and 40+ patents. Sold heavily via Alibaba and Amazon, often on Bambu Lab-compatible spools. No OEM relationship to any brand in the verified-OEM network was found. Build plates not confirmed, so makes_plates is left unset. A YouTube presence exists (video vKLeQXW7OQI) but the canonical channel URL was not verified, so it is omitted from endpoints.social.",
+  "provenance": {
+    "sources": [
+      "https://kexcelled3d.com/pages/about-us",
+      "https://kexcelled3d.en.alibaba.com/",
+      "https://www.in3dtec.com/the-top-chinese-3d-printing-filament-providers-an-overview",
+      "https://kexcelled3d.com/"
+    ],
+    "last_verified": "2026-07-31",
+    "confidence": "medium",
+    "conflicts": "Legal entity (North Bridge New Material Technology (Suzhou) Co., Ltd.) rests on a single Alibaba company overview. Price tier is a judgement call on a budget/mid boundary — no verified $/kg figures were found."
+  }
+}

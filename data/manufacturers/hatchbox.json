@@ -1,0 +1,90 @@
+{
+  "id": "hatchbox",
+  "name": "HATCHBOX 3D (Hatchbox Inc.)",
+  "status": "researched",
+  "summary": "Long-running Amazon-first US filament label, trading since at least 2014 (HB HATCHBOX trademarks filed 2014/2015). Hatchbox is a brand/importer rather than a factory: standard lines have historically been described as Chinese-manufactured, while the separate PLA MAX line is marketed as USA-made. No specific OEM has been confirmed.",
+  "headquarters_country": "United States",
+  "manufacturing_countries": [
+    "China",
+    "United States"
+  ],
+  "brands": [
+    "HATCHBOX 3D",
+    "PLA MAX",
+    "Reload Series"
+  ],
+  "oem_relationships": [],
+  "endpoints": {
+    "website": "https://www.hatchbox3d.com/",
+    "social": {
+      "instagram": "https://www.instagram.com/hatchbox3d/",
+      "facebook": "https://www.facebook.com/HATCHBOX3D",
+      "youtube": "https://www.youtube.com/channel/UCoUNYur501cAOpQLuX_FFwQ"
+    }
+  },
+  "product_lines": [
+    {
+      "name": "PLA",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Core 1 kg line; 1 kg black PLA listed at $21.99"
+    },
+    {
+      "name": "PLA PRO+",
+      "filament_ids": [
+        "pla"
+      ]
+    },
+    {
+      "name": "PLA MAX",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Explicitly marketed as USA-made and biobased; sold via the 'USA Made' collection"
+    },
+    {
+      "name": "ABS",
+      "filament_ids": [
+        "abs"
+      ]
+    },
+    {
+      "name": "PETG",
+      "filament_ids": [
+        "petg"
+      ]
+    },
+    {
+      "name": "TPU",
+      "filament_ids": [
+        "tpu"
+      ]
+    },
+    {
+      "name": "Reload Series",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Refill/spool-reload packaging line"
+    },
+    {
+      "name": "Cleaning filament",
+      "notes": "Nozzle cleaning filament; base polymer not specified"
+    }
+  ],
+  "price_tier": "mid",
+  "additional_notes": "Corporate address is not published on the official site and did not surface in trademark records beyond the owner name Hatchbox Inc.; US base is inferred from Amazon/US retail presence and from the 'USA Made' line being marketed as a distinct exception. Manufacturing origin for standard lines rests on a 2018 retailer account (Printed Solid) describing Hatchbox as 'a Chinese manufactured filament' sold wholesale, alongside a note that the wholesale program was discontinued after 2017-2018 supply issues; whether that remains current is unverified. Also sells 3D printer resin. Instagram and Facebook entries were assembled from the handles @hatchbox3d and HATCHBOX3D cited in research rather than from links captured directly. No build plates or print surfaces were found, but this is an unverified negative so makes_plates is left unset.",
+  "provenance": {
+    "sources": [
+      "https://www.hatchbox3d.com/pages/about-us",
+      "https://www.hatchbox3d.com/collections/usa-made",
+      "https://www.hatchbox3d.com/products/3d-pla-1kg1-75-blk",
+      "https://www.printedsolid.com/blogs/news/a-note-concerning-availability-of-hatchbox",
+      "https://trademarks.justia.com/owners/hatchbox-inc-4052954"
+    ],
+    "last_verified": "2026-07-31",
+    "confidence": "low",
+    "conflicts": "Manufacturing origin is split and only partly evidenced: the 'China' entry comes from a single 2018 third-party retailer blog post, while 'United States' comes from Hatchbox's own PLA MAX marketing. No OEM factory is named by any source, and headquarters location is inferred rather than documented."
+  }
+}

@@ -1,38 +1,107 @@
 {
   "id": "polymaker",
   "name": "Polymaker",
-  "status": "example",
-  "summary": "Large filament-focused manufacturer spanning budget (PolyTerra) through engineering (PolyMax, Fiberon) lines. Example entry pending Phase C research.",
+  "status": "researched",
+  "summary": "R&D-led filament manufacturer headquartered in Changshu, China, with offices in Shanghai, Utrecht and Houston. Its catalog spans budget aesthetic PLA (PolyTerra/Panchroma) through engineering composites (Fiberon, PolyMax), and it is one of very few Chinese-origin brands with confirmed US manufacturing capacity.",
   "headquarters_country": "China",
-  "manufacturing_countries": ["China"],
-  "brands": ["Polymaker", "PolyTerra", "PolyLite", "PolyMax", "PolyMide", "PolyCast", "PolyDissolve", "PolySonic", "Fiberon", "Panchroma"],
+  "manufacturing_countries": [
+    "China",
+    "United States"
+  ],
+  "brands": [
+    "Polymaker",
+    "PolyTerra",
+    "PolyLite",
+    "PolyMax",
+    "PolyMide",
+    "PolyCast",
+    "PolyDissolve",
+    "PolySonic",
+    "PolySmooth",
+    "PolyDryer",
+    "Fiberon",
+    "Panchroma"
+  ],
   "oem_relationships": [
-    { "company": "Overture", "relationship": "manufactures-for", "notes": "User-verified (research/verified-oem-relationships.md)" },
-    { "company": "Inland (Micro Center)", "relationship": "manufactures-for", "notes": "User-verified; diamond spool cutout indicates Polymaker production (round = eSUN)" },
-    { "company": "Bambu Lab", "relationship": "manufactures-for", "notes": "User-verified; Bambu resells eSUN/Polymaker and Sunlu production — line-level mapping pending Phase C" }
+    {
+      "company": "Overture",
+      "relationship": "manufactures-for",
+      "notes": "User-verified (research/verified-oem-relationships.md). Polymaker's own About page makes no public mention of Overture, consistent with an undisclosed white-label arrangement; treated as authoritative per the owner-verified file."
+    },
+    {
+      "company": "Inland (Micro Center)",
+      "relationship": "manufactures-for",
+      "notes": "User-verified (research/verified-oem-relationships.md); diamond spool cutout indicates Polymaker production (round = eSUN)."
+    },
+    {
+      "company": "Bambu Lab",
+      "relationship": "manufactures-for",
+      "notes": "User-verified; Bambu resells eSUN/Polymaker and Sunlu production — line-level mapping pending (research/verified-oem-relationships.md open questions)."
+    }
   ],
   "endpoints": {
-    "website": "https://polymaker.com",
-    "store": "https://us.polymaker.com",
-    "docs": "https://support.polymaker.com",
+    "website": "https://polymaker.com/",
+    "store": "https://shop.polymaker.com/",
+    "docs": "https://wiki.polymaker.com/",
     "social": {
-      "youtube": "https://www.youtube.com/@Polymaker3D",
-      "instagram": "https://www.instagram.com/polymaker3d",
-      "x": "https://x.com/Polymaker3D",
-      "reddit": "https://www.reddit.com/r/Polymaker/"
+      "instagram": "https://www.instagram.com/polymaker_3d/",
+      "x": "https://x.com/Polymaker_3D",
+      "facebook": "https://www.facebook.com/Polymaker.3D/",
+      "youtube": "https://www.youtube.com/@Polymaker"
     }
   },
   "product_lines": [
-    { "name": "PolyTerra", "filament_ids": ["pla"], "notes": "Matte budget PLA line" },
-    { "name": "PolyLite", "filament_ids": ["pla", "petg", "asa"], "notes": "Standard line" },
-    { "name": "Fiberon", "filament_ids": [], "notes": "Fiber-filled engineering line (PA-CF etc.) — filaments pending Phase B" }
+    {
+      "name": "PolyLite",
+      "filament_ids": [
+        "pla",
+        "petg",
+        "abs",
+        "asa"
+      ],
+      "notes": "Standard everyday line"
+    },
+    {
+      "name": "PolyTerra / Panchroma",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Eco/aesthetic matte PLA line"
+    },
+    {
+      "name": "PolyMax",
+      "filament_ids": [
+        "pc"
+      ],
+      "notes": "Advanced PC blends including PC-FR; also PC-ABS and PC-PBT alloys"
+    },
+    {
+      "name": "Fiberon",
+      "filament_ids": [
+        "pa-cf",
+        "petg-cf"
+      ],
+      "notes": "Fiber-reinforced composites: PA6-CF, PA6-GF, PET-CF, PETG-rCF, PPS-CF"
+    },
+    {
+      "name": "PolySmooth",
+      "filament_ids": [
+        "pvb"
+      ],
+      "notes": "PVB for vapour smoothing"
+    }
   ],
-  "makes_plates": false,
-  "plate_ids": [],
-  "price_tier": "mid",
+  "price_tier": "premium",
+  "additional_notes": "Primary manufacturing in Changshu, China, with expanded production in Houston, Texas from 2024. Sells the PolyDryer drying/storage hardware; no build plates or print surfaces found, so makes_plates is left unset. Standard and Pro PLA lines run roughly $25-30/kg with engineering composites higher. Won 'Material Company of the Year' at the 3D Printing Industry Awards twice within five years, most recently January 2023. Additional Instagram accounts exist for polymaker_figurines and polymaker_education.",
   "provenance": {
-    "sources": ["EXAMPLE ENTRY — verify brands, OEM relationships, and origin countries in Phase C"],
+    "sources": [
+      "https://wiki.polymaker.com/polymaker-products/about-polymaker",
+      "https://polymaker.com/about-polymaker/",
+      "https://www.linkedin.com/company/polymaker-3d",
+      "/home/claude/filament-repo/research/verified-oem-relationships.md (project-owner verified)"
+    ],
     "last_verified": "2026-07-31",
-    "confidence": "placeholder"
+    "confidence": "medium",
+    "conflicts": "Legal entity name unconfirmed — 'Polymaker LLC' appears on ZoomInfo and a Shanghai/Changshu Chinese entity is implied, but neither was verified from official filings. The owner-verified Overture relationship is not acknowledged in any Polymaker-published source; recorded as authoritative but externally uncorroborated. Bambu Lab line-level attribution remains open."
   }
 }

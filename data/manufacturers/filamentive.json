@@ -1,0 +1,75 @@
+{
+  "id": "filamentive",
+  "name": "Filamentive (Filamentive Limited)",
+  "status": "researched",
+  "summary": "UK sustainability-focused filament brand in Bradford, built around post-industrial recycled feedstock from single-source waste streams. Range covers rPLA and rPETG in many variants plus TPU, ASA, PEEK and bio-derived Algae PLA, Hemp PLA and BioHT, offered in XL and refill spool formats. Certified to RoHS, REACH, ISO 14021 and EN-71, and an Ultimaker Material Alliance Partner.",
+  "headquarters_country": "United Kingdom",
+  "manufacturing_countries": [
+    "United Kingdom"
+  ],
+  "brands": [
+    "Filamentive"
+  ],
+  "endpoints": {
+    "website": "https://www.filamentive.com/",
+    "store": "https://www.filamentive.com/shop/",
+    "docs": "https://www.filamentive.com/downloads/"
+  },
+  "product_lines": [
+    {
+      "name": "rPLA",
+      "filament_ids": [
+        "r-pla"
+      ],
+      "notes": "Recycled PLA, the core line"
+    },
+    {
+      "name": "rPETG",
+      "filament_ids": [
+        "r-petg",
+        "petg-cf"
+      ],
+      "notes": "Recycled PETG including Matte, Cosmic, Tough, Carbon Fibre and wood-infused variants"
+    },
+    {
+      "name": "TPU",
+      "filament_ids": [
+        "tpu"
+      ]
+    },
+    {
+      "name": "ASA",
+      "filament_ids": [
+        "asa"
+      ]
+    },
+    {
+      "name": "PEEK",
+      "filament_ids": [
+        "peek"
+      ]
+    },
+    {
+      "name": "Bio-derived",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Algae PLA, Hemp PLA and BioHT; PLA-based, exact chemistry of BioHT not confirmed"
+    }
+  ],
+  "makes_plates": false,
+  "price_tier": "premium",
+  "additional_notes": "Registered as Filamentive Ltd, company no. 09720892 (England & Wales), at Bradford Chamber Business Park, New Lane, Bradford, BD4 8BX. Claims over 100,000 kg of plastic diverted from landfill and runs a free PLA recycling scheme; a finalist for 'Material Company of the Year' several times between 2018 and 2021. A US-facing site runs at https://www.filamentive.com/usa/ off the back of a partnership with 3D Printlife. Social handles could not be confirmed via fetch, so endpoints.social is omitted entirely rather than guessed. No build plates or print surfaces found.",
+  "provenance": {
+    "sources": [
+      "https://www.filamentive.com/about-filamentive-recycled-filament/",
+      "https://www.filamentive.com/",
+      "https://tocco.earth/supplier/filamentive",
+      "https://www.filamentive.com/uk-filament-brand-filamentive-launches-strategic-partnership-with-3d-printlife-in-the-us/",
+      "https://www.filamentive.com/downloads/"
+    ],
+    "last_verified": "2026-07-31",
+    "confidence": "medium",
+    "conflicts": "It is unverified whether Filamentive extrudes in-house or contracts extrusion to a UK/EU toller - the company presents itself as a recycler/compounder and does not disclose its resin or extrusion suppliers. manufacturing_countries is therefore set to the United Kingdom on the strength of the company's own UK-manufacture positioning, and the exact facility is unconfirmed. Because no counterparty could be named, no suspected-manufactured-by relationship is recorded. Exact $/kg unconfirmed."
+  }
+}

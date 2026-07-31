@@ -1,0 +1,89 @@
+{
+  "id": "azurefilm",
+  "name": "AzureFilm d.o.o.",
+  "status": "researched",
+  "summary": "Slovenian filament manufacturer registered in Sezana with operations in Ljubljana, founded by the Derman family (brand launched 2014, family enterprise roots from 1968). Unusually, it builds its own extrusion lines and tooling in-house (mold making, injection molding, CNC milling), sells 3D printers alongside filament, and offers private-label/OEM production to third-party brands - making it a potential upstream OEM as well as a retail brand.",
+  "headquarters_country": "Slovenia",
+  "manufacturing_countries": [
+    "Slovenia"
+  ],
+  "brands": [
+    "AzureFilm"
+  ],
+  "oem_relationships": [
+    {
+      "company": "Unidentified private-label clients",
+      "relationship": "manufactures-for",
+      "notes": "AzureFilm's own marketing advertises private-label options, i.e. it produces filament for other brands. Direction is AzureFilm as supplier TO others, not the reverse. No client brand has been identified and this does not appear in research/verified-oem-relationships.md - flagged there as a new candidate row for further research rather than established fact."
+    }
+  ],
+  "endpoints": {
+    "website": "https://azurefilm.com/",
+    "store": "https://azurefilm.com/",
+    "social": {
+      "facebook": "https://www.facebook.com/azurefilm/",
+      "instagram": "https://www.instagram.com/azurefilm3d/",
+      "youtube": "https://www.youtube.com/@Azurefilm3D",
+      "linkedin": "https://si.linkedin.com/company/azurefilm3d"
+    }
+  },
+  "product_lines": [
+    {
+      "name": "PLA",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Standard PLA plus Silk PLA"
+    },
+    {
+      "name": "Strongman PLA",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Higher-toughness PLA variant; a product line, not a separate brand"
+    },
+    {
+      "name": "PETG",
+      "filament_ids": [
+        "petg"
+      ]
+    },
+    {
+      "name": "ABS",
+      "filament_ids": [
+        "abs"
+      ]
+    },
+    {
+      "name": "ASA",
+      "filament_ids": [
+        "asa"
+      ]
+    },
+    {
+      "name": "TPU",
+      "filament_ids": [
+        "tpu"
+      ]
+    },
+    {
+      "name": "3D printers and spare parts",
+      "notes": "Hardware, not filament; AzureFilm also builds its own production machinery"
+    }
+  ],
+  "price_tier": "mid",
+  "additional_notes": "Roughly $20-28/kg per a third-party review aggregator - budget-to-mid, sold largely direct rather than through major marketplaces. Related Slovenian registry entities 'AZUREFILM GROUP d.o.o.' and 'AZUREFILM PROIZVODNJA 3D TISKALNIKOV IN FILAMENTOV D.O.O.' suggest a group/holding structure; the exact corporate relationship between them is unverified. Third-party reviews report batch-to-batch variance and occasionally loose spool winding despite a stated +/-0.02 mm tolerance. Whether print surfaces are included in the printer spare-parts range was not established, so makes_plates is left unset.",
+  "provenance": {
+    "sources": [
+      "https://azurefilm.com/about-us/",
+      "https://si.kompass.com/c/azurefilm-d-o-o/si7095228000/",
+      "https://filamentcheatsheet.com/brands/azurefilm/",
+      "https://www.instagram.com/azurefilm3d/",
+      "https://itis.siol.net/azurefilm-proizvodnja-3d-tiskalnikov-in-filamentov-poslovna-enota-ljubljana_trgovina",
+      "/home/claude/filament-repo/research/verified-oem-relationships.md (cross-checked; AzureFilm not listed)"
+    ],
+    "last_verified": "2026-07-31",
+    "confidence": "medium",
+    "conflicts": "The private-label/OEM relationship rests solely on AzureFilm's own marketing with no named client brand, so the oem_relationships entry uses a placeholder company name and should be replaced once a client is identified. Corporate structure across the three AzureFilm registry entities is unresolved. Stated +/-0.02 mm tolerance conflicts with third-party reports of batch variance."
+  }
+}

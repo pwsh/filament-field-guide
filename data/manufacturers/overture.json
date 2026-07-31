@@ -1,0 +1,86 @@
+{
+  "id": "overture",
+  "name": "Overture 3D Technologies, LLC",
+  "status": "researched",
+  "summary": "US-based consumer filament brand founded in 2019 and headquartered in Houston, Texas. Overture is an importer/brand rather than a factory: its filament is manufactured by Polymaker (project-owner verified), so the material itself originates in China. Best known as a high-volume Amazon budget/mid brand with a broad PLA aesthetic range.",
+  "headquarters_country": "United States",
+  "manufacturing_countries": [
+    "China"
+  ],
+  "brands": [
+    "Overture",
+    "OVERTURE Filament"
+  ],
+  "oem_relationships": [
+    {
+      "company": "Polymaker",
+      "relationship": "manufactured-by",
+      "notes": "User-verified (research/verified-oem-relationships.md). No public statement from either company was found to corroborate or deny this; treated as owner-authoritative but not independently confirmed via open web."
+    }
+  ],
+  "endpoints": {
+    "website": "https://overture3d.com/",
+    "social": {
+      "facebook": "https://facebook.com/groups/overture3d",
+      "x": "https://x.com/Overture3D",
+      "instagram": "https://instagram.com/overture3dfilament/",
+      "youtube": "https://youtube.com/@overture_3d",
+      "tiktok": "https://tiktok.com/@overture_3d"
+    }
+  },
+  "product_lines": [
+    {
+      "name": "PLA family",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Regular, Aesthetic, Functional, Professional, Plus, Super Plus, Gradient, Matte, Silk, Rock, Shimmer and Glow variants"
+    },
+    {
+      "name": "PETG",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "Includes a High Speed grade"
+    },
+    {
+      "name": "TPU",
+      "filament_ids": [
+        "tpu"
+      ],
+      "notes": "95A and High Speed grades"
+    },
+    {
+      "name": "ABS / ASA",
+      "filament_ids": [
+        "abs",
+        "asa"
+      ]
+    },
+    {
+      "name": "Easy Nylon",
+      "filament_ids": [
+        "pa"
+      ]
+    },
+    {
+      "name": "PC Professional",
+      "filament_ids": [
+        "pc"
+      ]
+    }
+  ],
+  "price_tier": "budget",
+  "additional_notes": "Registered as Overture 3D Technologies, LLC (10777 Westheimer Rd Ste 159, Houston, TX 77042) per USPTO trademark records. No sub-brands known. Spool pricing runs roughly $11.69-$32.99 with standard 1 kg PLA typically $15-20, placing it on the budget/mid boundary; heavy bundle and discount promotion is characteristic of the brand. No build plates or print surfaces were found on the official store, but this is an unverified negative so makes_plates is left unset.",
+  "provenance": {
+    "sources": [
+      "https://overture3d.com/pages/about-us",
+      "https://overture3d.com/",
+      "https://trademarks.justia.com/owners/overture-3d-technologies-llc-4111517",
+      "/home/claude/filament-repo/research/verified-oem-relationships.md (project-owner verified)"
+    ],
+    "last_verified": "2026-07-31",
+    "confidence": "medium",
+    "conflicts": "The Polymaker manufacturing relationship is owner-verified but has no public corroboration or denial; manufacturing_countries is derived entirely from that relationship rather than from any Overture statement of origin."
+  }
+}

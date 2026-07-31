@@ -1,0 +1,61 @@
+{
+  "id": "duramic-3d",
+  "name": "Duramic 3D",
+  "status": "researched",
+  "summary": "Small Amazon-centric consumer filament label selling a PLA-heavy range plus PETG and TPU. Corporate ownership, headquarters and factory are not disclosed anywhere public; Duramic 3D appears to be a reseller of contract-manufactured filament rather than a producer, but no sourcing statement of any kind was found.",
+  "manufacturing_countries": [],
+  "brands": [
+    "Duramic 3D"
+  ],
+  "oem_relationships": [],
+  "endpoints": {
+    "website": "https://duramic3d.com/",
+    "store": "https://duramic3d.com/collections/all",
+    "support": "mailto:service@duramic3d.com",
+    "social": {
+      "tiktok": "https://www.tiktok.com/@duramic3d",
+      "instagram": "https://www.instagram.com/duramic3dofficial/"
+    }
+  },
+  "product_lines": [
+    {
+      "name": "PLA",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Basic, Neat, Matte, Silk and Glow variants; from $15.99"
+    },
+    {
+      "name": "PLA Plus",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "From $20.59"
+    },
+    {
+      "name": "Premium PETG",
+      "filament_ids": [
+        "petg"
+      ]
+    },
+    {
+      "name": "TPU",
+      "filament_ids": [
+        "tpu"
+      ],
+      "notes": "$23.99-$39.99"
+    }
+  ],
+  "price_tier": "budget",
+  "additional_notes": "headquarters_country and manufacturing_countries are left empty because nothing was found to support a value: the about-us page returned 404 at research time, no address is published, and the only contact channel found is service@duramic3d.com. China is the industry-typical origin for this price tier but was not confirmed, so it is deliberately not asserted. Nylon and PVB appear in the site meta description with no live product pages found. Some filament bundles ship with a 200x200 mm build surface as an included accessory; whether Duramic sells build plates standalone is unclear, so makes_plates is left unset. Social entries were assembled from the handles @duramic3d and @duramic3dofficial cited in research rather than from links captured directly.",
+  "provenance": {
+    "sources": [
+      "https://duramic3d.com/",
+      "https://duramic3d.com/collections/all",
+      "https://www.srvfast.com/duramic-3d-premium-pla-pro-printer-filament-1-75mm-3d-printing-filament-with-build-surface-200-x-200mm-dimensional-accuracy-0-05-mm-white-3-spools-1kg-spool-pla-plus-white-3.html"
+    ],
+    "last_verified": "2026-07-31",
+    "confidence": "low",
+    "conflicts": "No source establishes ownership, headquarters, or country of manufacture; the presumption that production is Chinese is industry inference only and is therefore not encoded. Nylon/PVB product claims come from site metadata that no live product page corroborates."
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "id": "inland",
+  "name": "Inland (Micro Center)",
+  "status": "researched",
+  "summary": "Private store brand of US electronics retailer Micro Center, with no separate corporate entity, website or social presence. Inland filament is produced by eSUN or Polymaker (project-owner verified), identifiable by the spool cutout: diamond = Polymaker, round = eSUN. The catalogue mirrors those OEMs' own lines at Micro Center's budget in-store pricing.",
+  "headquarters_country": "United States",
+  "manufacturing_countries": [
+    "China",
+    "Vietnam"
+  ],
+  "brands": [
+    "Inland"
+  ],
+  "oem_relationships": [
+    {
+      "company": "eSUN",
+      "relationship": "manufactured-by",
+      "notes": "User-verified (research/verified-oem-relationships.md): round spool cutout indicates eSUN production. Community mapping (VORON Design forum, not manufacturer-confirmed) matches Inland HS-PLA+ to eSUN PLA+ and notes eSUN spools carry an internal cardboard reinforcing ring; the same thread places this eSUN production in Vietnam."
+    },
+    {
+      "company": "Polymaker",
+      "relationship": "manufactured-by",
+      "notes": "User-verified (research/verified-oem-relationships.md): diamond spool cutout indicates Polymaker production. Community mapping (VORON Design forum, not manufacturer-confirmed) matches Inland PLA Matte to Polymaker Panchroma Matte PLA and Inland Cosplay PLA to Polymaker CosPLA Type A, and notes Polymaker spools have a pill-shaped hole near the spindle."
+    }
+  ],
+  "endpoints": {
+    "store": "https://www.microcenter.com/site/content/inland%20filament.aspx"
+  },
+  "product_lines": [
+    {
+      "name": "PLA",
+      "filament_ids": [
+        "pla"
+      ]
+    },
+    {
+      "name": "PLA+ / HS-PLA+",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Community-identified as equivalent to eSUN PLA+"
+    },
+    {
+      "name": "PLA Matte",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Community-identified as equivalent to Polymaker Panchroma Matte PLA"
+    },
+    {
+      "name": "Silk PLA",
+      "filament_ids": [
+        "pla"
+      ]
+    },
+    {
+      "name": "Cosplay PLA",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Community-identified as equivalent to Polymaker CosPLA Type A"
+    },
+    {
+      "name": "PETG / PETG+",
+      "filament_ids": [
+        "petg"
+      ]
+    },
+    {
+      "name": "TPU",
+      "filament_ids": [
+        "tpu"
+      ]
+    }
+  ],
+  "makes_plates": false,
+  "price_tier": "budget",
+  "additional_notes": "Inland is a label, not a manufacturer, so manufacturing_countries reflects its OEMs: China for Polymaker-sourced lines and Vietnam for eSUN-sourced lines (the Vietnam detail is community-reported and not manufacturer-confirmed). There is no Inland website, documentation, wiki or social media; the Micro Center category page is the only endpoint. Micro Center stocks build plates and PEI sheets in store but they are Creality-branded, so makes_plates is false. In-store filament typically runs $17-20/kg. Community quality complaints about Inland silk PLA appear on the Bambu Lab forum (anecdotal, unverified). Spools carry no manufacturer information, so consumer-facing sourcing is deliberately opaque.",
+  "provenance": {
+    "sources": [
+      "/home/claude/filament-repo/research/verified-oem-relationships.md (project-owner verified)",
+      "https://forum.vorondesign.com/threads/inland-microcenter-filament-oems.17500/",
+      "https://www.microcenter.com/site/content/inland%20filament.aspx",
+      "https://forum.bambulab.com/t/beware-inland-brand-microcenter-silk-pla/108737"
+    ],
+    "last_verified": "2026-07-31",
+    "confidence": "medium",
+    "conflicts": "The verified-oem-relationships file names eSUN generically while the VORON forum thread places eSUN's Inland production in Vietnam specifically; this is treated as a refinement rather than a contradiction, but it is community-sourced and not manufacturer-confirmed. The same thread cautions that sourcing could change at any time and that all SKU-to-OEM mappings are indirect, so per-line OEM assignment should not be considered settled."
+  }
+}

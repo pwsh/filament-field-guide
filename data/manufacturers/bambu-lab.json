@@ -1,0 +1,61 @@
+{
+  "id": "bambu-lab",
+  "name": "Bambu Lab (拓竹 Tuozhu)",
+  "status": "researched",
+  "summary": "Shenzhen-based consumer 3D printer company founded August 2020, best known for the X1/P1/A1 series and the AMS multi-material system. Bambu-branded filament is not produced in Bambu's own extrusion plants: per owner-verified records it is OEM-produced/resold via Sunlu and eSUN/Polymaker, all of whom manufacture in China. Catalog is broad (PLA, PETG, ABS, ASA, TPU, PA/PA-CF, PC, PVA and dedicated support materials) and tightly integrated with Bambu's RFID/AMS ecosystem.",
+  "headquarters_country": "China",
+  "manufacturing_countries": ["China"],
+  "brands": ["Bambu Lab", "MakerWorld", "Bambu Studio", "Bambu Handy", "Cyberbrick"],
+  "oem_relationships": [
+    {
+      "company": "Sunlu",
+      "relationship": "manufactured-by",
+      "notes": "Owner-verified per research/verified-oem-relationships.md: Bambu-branded filament is resold/OEM production from Sunlu. No official Bambu confirmation of which SKUs."
+    },
+    {
+      "company": "eSUN",
+      "relationship": "manufactured-by",
+      "notes": "Owner-verified per research/verified-oem-relationships.md (row 'Bambu Lab | Sunlu; eSUN/Polymaker'). Community consensus additionally suggests eSUN supplies core PLA/PETG/ABS volumes, but that line-level mapping is unverified."
+    },
+    {
+      "company": "Polymaker",
+      "relationship": "manufactured-by",
+      "notes": "Owner-verified per research/verified-oem-relationships.md. Community consensus additionally suggests Polymaker supplies engineering-grade lines (Support W/G, PA-CF); that line-level mapping is unverified and not officially confirmed by Bambu."
+    }
+  ],
+  "endpoints": {
+    "website": "https://bambulab.com",
+    "store": "https://us.store.bambulab.com",
+    "docs": "https://wiki.bambulab.com",
+    "support": "https://forum.bambulab.com",
+    "social": {
+      "discord": "https://discord.com/invite/bambulab",
+      "reddit": "https://www.reddit.com/r/BambuLab/"
+    }
+  },
+  "product_lines": [
+    { "name": "PLA", "filament_ids": ["pla"], "notes": "PLA Basic, Matte, Silk, Marble, Wood, Galaxy and other specialty colorways" },
+    { "name": "PETG", "filament_ids": ["petg"], "notes": "PETG Basic and PETG HF (high flow)" },
+    { "name": "ABS / ASA", "filament_ids": ["abs", "asa"] },
+    { "name": "TPU", "filament_ids": ["tpu"], "notes": "TPU 95A, AMS-compatible variants" },
+    { "name": "Engineering / composites", "filament_ids": ["pa", "pa-cf", "pc", "pet-cf"], "notes": "PAHT-CF, PA6-CF, PC, PET-CF" },
+    { "name": "Support materials", "filament_ids": ["pva"], "notes": "Support W and Support G interface materials plus water-soluble PVA" }
+  ],
+  "makes_plates": true,
+  "plate_ids": [],
+  "price_tier": "mid",
+  "additional_notes": "Standard PLA sits around $25-30/kg with premium pricing on specialty and engineering lines. Reputationally relevant (though not filament-related): 2023-2025 controversies over cloud outages and closed-ecosystem/DRM authentication restricting local and third-party slicer access. Reported to be IDG Capital-backed since 2023, but the control structure is an unverified detail. Build plates sold include Cool Plate, Engineering Plate, Textured/Smooth PEI and High-Temp Plate.",
+  "provenance": {
+    "sources": [
+      "https://en.wikipedia.org/wiki/Bambu_Lab",
+      "https://sigmafilament.com/who-makes-bambu-labs-filament-truth/",
+      "https://wiki.bambulab.com/en/general/filament-guide-material-table",
+      "https://wiki.bambulab.com/en/filament-acc/acc/plates",
+      "https://forum.bambulab.com/t/who-makes-bambu-labs-filaments/4311",
+      "research/verified-oem-relationships.md"
+    ],
+    "last_verified": "2026-07-31",
+    "confidence": "medium",
+    "conflicts": "Owner-verified ground truth confirms Sunlu and eSUN/Polymaker as Bambu's filament sources in general, but no official or reliable source maps specific SKUs (PLA Basic vs PLA Matte vs PA-CF) to a specific OEM. Community claims that eSUN handles core commodity lines and Polymaker handles engineering lines are unverified. Bambu has never publicly confirmed any OEM."
+  }
+}

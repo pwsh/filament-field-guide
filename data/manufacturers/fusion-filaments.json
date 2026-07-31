@@ -1,0 +1,65 @@
+{
+  "id": "fusion-filaments",
+  "name": "Fusion Filaments",
+  "status": "researched",
+  "summary": "Value-tier US filament seller based in Maryland Heights, Missouri, with a copolyester-heavy catalog (PCTG, HT-PET) alongside PLA, ABS and ASA and a government/school purchasing program. Whether it extrudes its own filament or sources it was not established from available pages.",
+  "headquarters_country": "United States",
+  "manufacturing_countries": [
+    "United States"
+  ],
+  "brands": [
+    "Fusion Filaments"
+  ],
+  "endpoints": {
+    "website": "https://www.fusionfilaments.com/",
+    "store": "https://www.fusionfilaments.com/",
+    "social": {
+      "instagram": "https://www.instagram.com/fusionfilaments/",
+      "facebook": "https://www.facebook.com/fusionfilaments/"
+    }
+  },
+  "product_lines": [
+    {
+      "name": "PLA and HT-PLA",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Includes a discounted \"Mystery\" PLA at the bottom of the price range."
+    },
+    {
+      "name": "HT-PET and PCTG",
+      "filament_ids": [
+        "petg",
+        "pctg"
+      ],
+      "notes": "HT-PET is marketed as distinct from ordinary PETG; mapped to the petg id pending a separate ht-pet entry."
+    },
+    {
+      "name": "ASA and EasyASA",
+      "filament_ids": [
+        "asa"
+      ]
+    },
+    {
+      "name": "ABS",
+      "filament_ids": [
+        "abs"
+      ],
+      "notes": "Matte and gloss variants."
+    }
+  ],
+  "makes_plates": false,
+  "price_tier": "budget",
+  "additional_notes": "Manufacturing location is not stated on the site; manufacturing_countries is set to the United States on the strength of the Missouri HQ and SAM.gov-registered government/school vendor positioning, which is inference rather than a documented claim. No OEM relationship was confirmed in either direction — neither an explicit in-house manufacturing claim nor any outsourcing arrangement was found — so oem_relationships is left empty. Pricing observed at $9.95/kg (PLA Mystery) up to $26.99/kg (PCTG) with $5 flat-rate shipping. The About Us page returned 404 on retry, so founding and history details are absent. No TPU, nylon, PC or fiber-filled lines confirmed.",
+  "provenance": {
+    "sources": [
+      "https://www.fusionfilaments.com/",
+      "https://www.fusionfilaments.com/government-purchasing",
+      "https://www.instagram.com/fusionfilaments/",
+      "https://www.facebook.com/fusionfilaments/"
+    ],
+    "last_verified": "2026-07-31",
+    "confidence": "low",
+    "conflicts": "Manufacturing origin is unverified: the company does not state where its filament is extruded, and US origin is inferred from HQ and government-vendor status only. Corporate history is unavailable because the About page 404s."
+  }
+}

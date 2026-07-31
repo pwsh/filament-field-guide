@@ -1,0 +1,40 @@
+{
+  "id": "flashforge",
+  "name": "Zhejiang Flashforge 3D Technology Co., Ltd.",
+  "status": "researched",
+  "summary": "Zhejiang-based printer maker founded 2011 (Creator, Adventurer, Guider, AD5X lines) that extrudes its own filament in-house. Flashforge is also the owner-verified manufacturer behind Voxelab, its budget consumer sub-brand. Filament catalog leans toward high-speed tuned commodity materials plus engineering-grade carbon-fiber-reinforced variants.",
+  "headquarters_country": "China",
+  "manufacturing_countries": ["China"],
+  "brands": ["Flashforge", "Voxelab", "Creator", "Adventurer", "Guider"],
+  "oem_relationships": [
+    {
+      "company": "Voxelab",
+      "relationship": "manufactures-for",
+      "notes": "Owner-verified per research/verified-oem-relationships.md and self-disclosed on Voxelab's own about page, which describes Voxelab as 'a subsidiary brand of the premium 3D Printers developer Flashforge'. Voxelab has its own catalog and web presence and therefore also has its own entry."
+    }
+  ],
+  "endpoints": {
+    "website": "https://www.flashforge.com",
+    "docs": "https://wiki.flashforge.com"
+  },
+  "product_lines": [
+    { "name": "HS (high speed)", "filament_ids": ["pla", "petg"], "notes": "HS PLA and HS PETG tuned for high-speed printing" },
+    { "name": "PLA Pro", "filament_ids": ["pla"] },
+    { "name": "ABS / ASA", "filament_ids": ["abs", "asa"] },
+    { "name": "Engineering composites", "filament_ids": ["pla-cf", "pa-cf"], "notes": "Carbon-fiber-reinforced engineering grades; exact SKU list unverified" }
+  ],
+  "makes_plates": true,
+  "plate_ids": [],
+  "price_tier": "mid",
+  "additional_notes": "ISO 9001 certified; self-reports 134 patents and 36 software copyrights and approximately 1 million users across 200+ countries (self-reported, unverified). Sells build plates, enclosure kits and nozzle assemblies as accessories for the Creator, Adventurer, Guider and AD5X lines. Manufacturing is in Zhejiang, China. Social profiles on YouTube, Facebook and Instagram exist but exact URLs were not verified, so none are recorded.",
+  "provenance": {
+    "sources": [
+      "https://www.flashforge.com/pages/about-us",
+      "https://www.voxelab3dp.com/aboutUs",
+      "https://wiki.flashforge.com/en/filaments_and_accessories/filament",
+      "research/verified-oem-relationships.md"
+    ],
+    "last_verified": "2026-07-31",
+    "confidence": "medium"
+  }
+}

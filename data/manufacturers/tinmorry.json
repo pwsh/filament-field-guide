@@ -1,0 +1,57 @@
+{
+  "id": "tinmorry",
+  "name": "Tinmorry",
+  "status": "researched",
+  "summary": "Budget filament label distributed largely through Amazon and its own storefronts, emphasising metallic and silk specialty finishes alongside standard PLA and PETG. No legal entity or factory was identified; third-party reviews repeatedly flag batch-to-batch consistency problems.",
+  "headquarters_country": "China",
+  "manufacturing_countries": [
+    "China"
+  ],
+  "brands": [
+    "TINMORRY"
+  ],
+  "endpoints": {
+    "website": "https://tinmorry.com/",
+    "store": "https://www.amazon.com/stores/TINMORRY3DPrintingFilament/",
+    "social": {
+      "facebook": "https://www.facebook.com/tinmorry.net/"
+    }
+  },
+  "product_lines": [
+    {
+      "name": "PLA",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Standard and Silk PLA"
+    },
+    {
+      "name": "PETG",
+      "filament_ids": [
+        "petg",
+        "petg-cf"
+      ],
+      "notes": "Standard, Metallic PETG, PETG-CF and PETG-GF"
+    },
+    {
+      "name": "ABS",
+      "filament_ids": [
+        "abs"
+      ],
+      "notes": "Listed under the site's abs-filament product category"
+    }
+  ],
+  "price_tier": "budget",
+  "additional_notes": "An alternate storefront exists at https://tinmorry.net/. Headquarters and manufacturing location are not disclosed by any source found; China origin is presumed from the distribution pattern and product design and is unverified. Rated Tier C by filamentcheatsheet at $14-28/kg, with polarised reviews — reports of catastrophic PETG blob failures alongside praise for good batches, plus customer-service disputes. Build plates: none found, so makes_plates is left unset. No OEM relationship to any brand in the verified-OEM file was found; the actual contract producer is unknown.",
+  "provenance": {
+    "sources": [
+      "https://filamentcheatsheet.com/brands/tinmorry/",
+      "https://tinmorry.com/about-us/",
+      "https://www.facebook.com/tinmorry.net/",
+      "https://www.amazon.com/stores/TINMORRY3DPrintingFilament/"
+    ],
+    "last_verified": "2026-07-31",
+    "confidence": "low",
+    "conflicts": "No legal entity, HQ or manufacturing site was confirmed by any source; headquarters_country and manufacturing_countries are presumption from distribution pattern only and should be treated as unverified. Reviews disagree sharply on quality, ranging from total print failures to positive reports."
+  }
+}

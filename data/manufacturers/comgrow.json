@@ -1,0 +1,66 @@
+{
+  "id": "comgrow",
+  "name": "Comgrow (Shenzhen ZCSW Technology Co., Ltd.)",
+  "status": "researched",
+  "summary": "Hong Kong-registered multi-brand 3D printing retailer founded in 2017, operating under the mainland entity Shenzhen ZCSW Technology Co., Ltd. Comgrow is an authorised Creality distributor that resells Creality filament (project-owner verified) and also sells own-brand COMGROW filament and accessories; it is a reseller/accessory brand rather than an independent extruder. A 2024 announcement indicates a merger with the related Sovol brand.",
+  "headquarters_country": "Hong Kong",
+  "manufacturing_countries": [
+    "China"
+  ],
+  "brands": [
+    "Comgrow",
+    "COMGROW"
+  ],
+  "oem_relationships": [
+    {
+      "company": "Creality",
+      "relationship": "rebrands",
+      "notes": "User-verified (research/verified-oem-relationships.md): Comgrow resells Creality filament and is not the manufacturer. Corroborated by Comgrow's own about-us page, which describes the company as an authorised distributor of Creality 3D printers."
+    },
+    {
+      "company": "Sovol",
+      "relationship": "joint-venture",
+      "notes": "Comgrow's about page describes Sovol as 'developed by their parent company', making the two sibling brands rather than supplier and customer. A 2024 company TikTok post announced a Comgrow/Sovol merger with Comgrow links redirecting to Sovol; independently unverified."
+    }
+  ],
+  "endpoints": {
+    "website": "https://www.comgrow.com/",
+    "store": "https://www.comgrow.com/",
+    "social": {
+      "facebook": "https://www.facebook.com/Comgrow/",
+      "youtube": "https://www.youtube.com/@ComgrowOfficial",
+      "instagram": "https://www.instagram.com/comgrowofficial/",
+      "x": "https://x.com/Comgrow3D",
+      "tiktok": "https://www.tiktok.com/@comgrow"
+    }
+  },
+  "product_lines": [
+    {
+      "name": "PLA",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Includes silk, chameleon and glow-in-the-dark variants"
+    },
+    {
+      "name": "PETG",
+      "filament_ids": [
+        "petg"
+      ]
+    }
+  ],
+  "makes_plates": true,
+  "price_tier": "budget",
+  "additional_notes": "Registered address RM 023, 9/F BLK G Kwai Shing Industrial Building Stage 2, 42-46 Tai Lin Pai Road, Kwai Chung, NT, Hong Kong; legal entity Shenzhen ZCSW Technology Co., Ltd. Sells PEI plates, double-sided build plates and flexible steel plates, though these appear to be largely Creality-branded rather than Comgrow-branded, so makes_plates=true reflects that it sells plates rather than that it produces them; no plate_ids are asserted. Also retails Creality (Ender, K-series) and Sovol printers and SH01-SH03 filament dryers (from $59). Manufacturing origin is China for both own-brand and resold Creality filament.",
+  "provenance": {
+    "sources": [
+      "https://www.comgrow.com/pages/about-us",
+      "https://www.comgrow.com/",
+      "https://www.tiktok.com/@comgrow/video/7329698177408437546",
+      "/home/claude/filament-repo/research/verified-oem-relationships.md (project-owner verified)"
+    ],
+    "last_verified": "2026-07-31",
+    "confidence": "medium",
+    "conflicts": "Brand identity is unstable: a 2024 company TikTok announcement describes a Comgrow/Sovol merger with Comgrow redirecting to Sovol, which is independently unverified and may make this entry a historical rather than a live brand. Whether Comgrow-branded filament is also Creality-produced (as opposed to only the explicitly resold Creality filament) is not established, and the build plates it sells are Creality-branded."
+  }
+}

@@ -29,7 +29,7 @@
         "required": ["company", "relationship"],
         "properties": {
           "company": { "type": "string" },
-          "relationship": { "enum": ["manufactures-for", "manufactured-by", "suspected-manufactured-by", "rebrands", "joint-venture"] },
+          "relationship": { "enum": ["manufactures-for", "manufactured-by", "suspected-manufactured-by", "rebrands", "joint-venture", "distributes", "parent-company"] },
           "notes": { "type": "string" }
         }
       },

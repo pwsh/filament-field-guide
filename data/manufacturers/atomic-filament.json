@@ -1,0 +1,69 @@
+{
+  "id": "atomic-filament",
+  "name": "Atomic Filament",
+  "status": "researched",
+  "summary": "Founder-operated US filament extruder in Kendallville, Indiana, started in 2014. Every spool is manufactured in-house and the brand positions on tight diameter control (claimed +/-0.02 mm) plus specialty UV-reactive and shade-shifting colors.",
+  "headquarters_country": "United States",
+  "manufacturing_countries": [
+    "United States"
+  ],
+  "brands": [
+    "Atomic Filament"
+  ],
+  "endpoints": {
+    "website": "https://atomicfilament.com/",
+    "store": "https://atomicfilament.com/",
+    "social": {
+      "instagram": "https://www.instagram.com/therealatomicfilament/",
+      "facebook": "https://www.facebook.com/Atomicfilament2015/",
+      "x": "https://twitter.com/atomicfilament",
+      "linkedin": "https://www.linkedin.com/company/atomic-filament"
+    }
+  },
+  "product_lines": [
+    {
+      "name": "PLA",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Plant-based (corn/sugarcane) PLA marketed alongside the petroleum-based lines; UV-reactive and shade-shifting/color-change specialty colors."
+    },
+    {
+      "name": "PETG and PCTG",
+      "filament_ids": [
+        "petg",
+        "pctg"
+      ],
+      "notes": "PCTG is sold as a distinct copolyester grade from PETG."
+    },
+    {
+      "name": "ABS / ASA",
+      "filament_ids": [
+        "abs",
+        "asa"
+      ]
+    },
+    {
+      "name": "Carbon fiber composites",
+      "filament_ids": [
+        "pla-cf",
+        "petg-cf"
+      ],
+      "notes": "Carbon-fiber filled grades; exact base-polymer lineup not itemised in sources, so the filament ids here are inferred from the base catalog."
+    }
+  ],
+  "makes_plates": false,
+  "price_tier": "premium",
+  "additional_notes": "Corporate entity name beyond the trading name \"Atomic Filament\" was not confirmed; address of record is 6928 North 400 East, Kendallville, Indiana. Founded 2014 by a founder identified publicly only as \"Mike\"; privately owned with a hands-on founder-operator model. Sells 3.5 kg jumbo rolls and sample packs. No nylon, PC, TPU, PVA or HIPS lines confirmed. Filament Cheat Sheet rates the brand Tier A. A rumored link to Proto-pasta or 3D Printlife was searched for and returned no corroborating evidence — treat any such claim as unfounded; oem_relationships is therefore empty.",
+  "provenance": {
+    "sources": [
+      "https://atomicfilament.com/pages/about-us",
+      "https://filamentcheatsheet.com/brands/atomic-filament/",
+      "https://www.facebook.com/Atomicfilament2015/",
+      "https://www.instagram.com/therealatomicfilament/"
+    ],
+    "last_verified": "2026-07-31",
+    "confidence": "medium",
+    "conflicts": "An unsourced community claim linking Atomic Filament to Proto-pasta / 3D Printlife could not be corroborated and is recorded here as rejected rather than encoded as a relationship. Carbon-fiber base polymers are inferred, not documented."
+  }
+}

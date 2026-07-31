@@ -1,0 +1,46 @@
+{
+  "id": "elegoo",
+  "name": "ELEGOO",
+  "status": "researched",
+  "summary": "Shenzhen electronics and 3D printing company founded 2015 by Chris Hong (with co-founder Kevin Wang); the name combines 'ELE' (electronic) and 'GOO' (googol). Best known for the Mars/Saturn resin printers, with FDM (Neptune, Centauri Carbon) and filament as a newer expansion. Elegoo appears to produce its own-brand filament directly and is the owner-verified manufacturer behind the Deeplee label. Catalog is unusually broad for a printer brand, running from budget PLA to flame-retardant PC and carbon/glass-filled composites.",
+  "headquarters_country": "China",
+  "manufacturing_countries": ["China"],
+  "brands": ["ELEGOO", "Neptune", "Centauri Carbon", "Mars", "Saturn", "Deeplee"],
+  "oem_relationships": [
+    {
+      "company": "Deeplee",
+      "relationship": "manufactures-for",
+      "notes": "Owner-verified per research/verified-oem-relationships.md: Deeplee (deeplee3d.com) filament is manufactured by Elegoo. Deeplee is recorded here rather than as its own entry."
+    }
+  ],
+  "endpoints": {
+    "website": "https://www.elegoo.com",
+    "store": "https://us.elegoo.com",
+    "social": {
+      "x": "https://x.com/Elegoo_Official"
+    }
+  },
+  "product_lines": [
+    { "name": "PLA", "filament_ids": ["pla"], "notes": "Basic, Plus, Pro, Silk, Marble, Metallic, Matte, Sparkle, Galaxy, Wood, Glow, and Rapid PLA Plus" },
+    { "name": "PETG", "filament_ids": ["petg"], "notes": "PETG Rapid, Pro and Translucent" },
+    { "name": "ABS / ASA", "filament_ids": ["abs", "asa"] },
+    { "name": "TPU", "filament_ids": ["tpu"], "notes": "TPU 95A including a Rapid variant" },
+    { "name": "PC", "filament_ids": ["pc"], "notes": "PC and PC-FR (flame retardant)" },
+    { "name": "Composites", "filament_ids": ["pla-cf", "petg-cf", "petg-gf", "pa-cf", "pet-cf"], "notes": "PLA-CF, PETG-CF, PETG-GF, PAHT-CF and PET-CF; premium tier up to around $56/kg" }
+  ],
+  "makes_plates": true,
+  "plate_ids": [],
+  "price_tier": "budget",
+  "additional_notes": "Standard PLA roughly $13-19/kg, with engineering and CF lines priced well above; 10kg bulk spools are offered. Sells PEI sheets and spring-steel plates for the Neptune and Centauri Carbon lines. ChiTuBox is a closely associated slicer widely used with Elegoo resin printers, but the relationship is a partnership or possible investment rather than a confirmed subsidiary. In-house software includes ELEGOO Slicer, ELEGOO SatelLite, Nexprint and the ELEGOO Matrix App. No evidence found that Elegoo outsources its own-brand filament to another OEM.",
+  "provenance": {
+    "sources": [
+      "https://www.elegoo.com/pages/about",
+      "https://us.elegoo.com/pages/elegoo-filaments",
+      "https://deeplee3d.com/",
+      "research/verified-oem-relationships.md"
+    ],
+    "last_verified": "2026-07-31",
+    "confidence": "medium",
+    "conflicts": "Exact registered legal entity name could not be confirmed beyond the 'ELEGOO' brand (China and US registrations both referenced). Ownership relationship to ChiTuBox is unconfirmed — partner or investor rather than verified subsidiary."
+  }
+}

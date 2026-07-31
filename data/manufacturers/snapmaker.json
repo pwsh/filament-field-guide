@@ -1,0 +1,36 @@
+{
+  "id": "snapmaker",
+  "name": "Shenzhen Snapmaker Technologies Co., Ltd.",
+  "status": "researched",
+  "summary": "Shenzhen company founded 2016, distinctive for building multi-function 3-in-1 machines (3D printing, laser, CNC) rather than printers alone (Snapmaker 2.0, Artisan, J1, U1). Filament is an in-house accessory line with RFID-tagged spools tuned to Snapmaker's own machines, and the material range is narrower than pure filament brands — PLA, PETG and TPU only, with no confirmed ABS/ASA/PA/PC lines. No third-party OEM relationship is documented and the brand is absent from the owner-verified ground-truth table.",
+  "headquarters_country": "China",
+  "manufacturing_countries": ["China"],
+  "brands": ["Snapmaker", "SnapSpeed", "Artisan"],
+  "oem_relationships": [],
+  "endpoints": {
+    "website": "https://snapmaker.com",
+    "store": "https://shop.snapmaker.com",
+    "docs": "https://wiki.snapmaker.com",
+    "support": "https://support.snapmaker.com"
+  },
+  "product_lines": [
+    { "name": "PLA", "filament_ids": ["pla"], "notes": "PLA Basic, SnapSpeed PLA, Silk PLA and Matte PLA" },
+    { "name": "PETG HF", "filament_ids": ["petg"], "notes": "High-flow PETG" },
+    { "name": "TPU 95A HF", "filament_ids": ["tpu"], "notes": "High-flow TPU 95A, around $40/kg" }
+  ],
+  "makes_plates": true,
+  "plate_ids": [],
+  "price_tier": "mid",
+  "additional_notes": "Standard PLA around $23/kg. Build plates and other consumables are sold under the Materials/accessories collection for the 3-in-1 machines. Roughly ten years in market as of 2026. Whether the filament is extruded in-house or contract-manufactured is unverified; no specific manufacturing facility was identified. Social profiles on YouTube, Facebook, Instagram and X are presumed to exist but were not verified, so none are recorded.",
+  "provenance": {
+    "sources": [
+      "https://shop.snapmaker.com/collections/3d-printer-filament",
+      "https://wiki.snapmaker.com/en/general/manual/filament_library",
+      "https://baike.baidu.com/en/item/Shenzhen%20Snapmaker%20Technologies%20Co.,%20Ltd./53513",
+      "https://www.3dprintingjournal.com/p/06-01-2016-snapmaker-was-founded"
+    ],
+    "last_verified": "2026-07-31",
+    "confidence": "low",
+    "conflicts": "Corporate sourcing is thinner than the other brands in this cluster; founding year rests largely on 3dprintingjournal.com and a Baidu Baike entry. Actual production origin (in-house vs contracted) is unverified, as is the absence of ABS/ASA/PA/PC lines (likely absent rather than confirmed absent)."
+  }
+}

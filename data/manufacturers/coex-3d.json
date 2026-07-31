@@ -1,0 +1,94 @@
+{
+  "id": "coex-3d",
+  "name": "COEX LLC (COEX 3D)",
+  "status": "researched",
+  "summary": "Green Bay, Wisconsin manufacturer with an unusual origin: a plastic spiral book-binding producer operating since 1996 that pivoted its PVC monofilament extrusion expertise into FDM filament in 2016. Manufactures everything in-house on 100% virgin resins, with an engineering-leaning catalog including its own CoexFlex TPE and CoexNylex nylon lines.",
+  "headquarters_country": "United States",
+  "manufacturing_countries": [
+    "United States"
+  ],
+  "brands": [
+    "COEX 3D",
+    "CoexFlex",
+    "CoexNylex",
+    "COEX Next"
+  ],
+  "endpoints": {
+    "website": "https://coex3d.com/",
+    "store": "https://coex3d.com/",
+    "docs": "https://coex3d.com/pages/about-coex-and-our-team",
+    "social": {
+      "instagram": "https://www.instagram.com/coex3d/",
+      "facebook": "https://www.facebook.com/Coex3D/",
+      "x": "https://x.com/Coex3D",
+      "youtube": "https://www.youtube.com/@coex3d",
+      "linkedin": "https://www.linkedin.com/company/coex-llc"
+    }
+  },
+  "product_lines": [
+    {
+      "name": "PLA",
+      "filament_ids": [
+        "pla",
+        "pla-cf"
+      ],
+      "notes": "Standard, COEX Next, +Silk, PLA Prime and a carbon-filled grade."
+    },
+    {
+      "name": "ABS",
+      "filament_ids": [
+        "abs"
+      ],
+      "notes": "Standard, ABS Prime and a flame-retardant grade."
+    },
+    {
+      "name": "ASA Prime",
+      "filament_ids": [
+        "asa"
+      ]
+    },
+    {
+      "name": "PETG and PCTG Prime",
+      "filament_ids": [
+        "petg",
+        "pctg"
+      ]
+    },
+    {
+      "name": "CoexFlex",
+      "filament_ids": [
+        "tpe"
+      ],
+      "notes": "House flexible/TPE line."
+    },
+    {
+      "name": "CoexNylex",
+      "filament_ids": [
+        "pa"
+      ],
+      "notes": "House nylon line."
+    },
+    {
+      "name": "HIPS",
+      "filament_ids": [
+        "hips"
+      ],
+      "notes": "Sold as a support material."
+    }
+  ],
+  "makes_plates": false,
+  "price_tier": "mid",
+  "additional_notes": "\"Prime\" and \"Next\" are product-tier names within the COEX 3D brand, not separate brands. No white-labeling relationships were found in either direction, so oem_relationships is empty. Employee-owned after Todd Louthain, who joined in April 2020 as sales/marketing lead, purchased the business from the prior owners; co-owner Ashten Saeger, cited as instrumental to the company's early formation, died unexpectedly in 2017. Sells bed-adhesion products and adhesives (\"NoClogger\") but no evidence of build plates or print surfaces. Price tier reflects \"100% virgin resins\" US-manufacturer positioning; typical USD/kg was not sourced.",
+  "provenance": {
+    "sources": [
+      "https://coex3d.com/pages/about-coex-and-our-team",
+      "https://coex3d.com/",
+      "https://greenbayinnovationgroup.com/introducing-coex-3d-a-green-bay-manufacturer-of-3d-printing-filaments/",
+      "https://www.instagram.com/coex3d/",
+      "https://www.linkedin.com/company/coex-llc"
+    ],
+    "last_verified": "2026-07-31",
+    "confidence": "medium",
+    "conflicts": "None material. Price tier is positioning-based rather than derived from observed pricing."
+  }
+}

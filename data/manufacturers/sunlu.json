@@ -1,0 +1,88 @@
+{
+  "id": "sunlu",
+  "name": "Sunlu (Zhuhai Sunlu Industrial Co., Ltd.)",
+  "status": "researched",
+  "summary": "Founded July 2013 in Zhuhai, Guangdong, Sunlu is a high-volume Chinese filament producer with three FDM production bases, 20,000+ tons of cumulative shipments and 36 global distribution points. It sells under its own brand, is well known for its S-series filament dryers, and manufactures for several budget retail labels.",
+  "headquarters_country": "China",
+  "manufacturing_countries": [
+    "China"
+  ],
+  "brands": [
+    "SUNLU",
+    "Tecbears",
+    "INSLOGIC"
+  ],
+  "oem_relationships": [
+    {
+      "company": "Jayo",
+      "relationship": "manufactures-for",
+      "notes": "User-verified (research/verified-oem-relationships.md). Jayo is positioned as a lower-priced sibling label using the same production."
+    },
+    {
+      "company": "Tecbears",
+      "relationship": "manufactures-for",
+      "notes": "User-verified (research/verified-oem-relationships.md). Retail label with no independent catalog presence."
+    },
+    {
+      "company": "INSLOGIC",
+      "relationship": "manufactures-for",
+      "notes": "User-verified (research/verified-oem-relationships.md). Retail label with no independent catalog presence."
+    },
+    {
+      "company": "Bambu Lab",
+      "relationship": "manufactures-for",
+      "notes": "User-verified (research/verified-oem-relationships.md); Bambu-branded filament is OEM production from Sunlu alongside eSUN/Polymaker. Which lines come from Sunlu is unverified."
+    }
+  ],
+  "endpoints": {
+    "website": "https://www.sunlu.com/",
+    "store": "https://store.sunlu.com/",
+    "docs": "https://www.sunlu.com/about-us",
+    "social": {
+      "linkedin": "https://www.linkedin.com/company/zhuhai-sunlu-industrial-co-ltd"
+    }
+  },
+  "product_lines": [
+    {
+      "name": "PLA family",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "PLA, PLA+, PLA Meta, Silk PLA, Wood PLA, Matte PLA"
+    },
+    {
+      "name": "PETG",
+      "filament_ids": [
+        "petg"
+      ]
+    },
+    {
+      "name": "ABS",
+      "filament_ids": [
+        "abs"
+      ]
+    },
+    {
+      "name": "Flexibles",
+      "filament_ids": [
+        "tpu"
+      ]
+    }
+  ],
+  "makes_plates": true,
+  "plate_ids": [],
+  "price_tier": "mid",
+  "additional_notes": "Also produces photopolymer resins and the widely used S-series filament dryers, plus PEI-coated magnetic spring-steel build surfaces (e.g. 235x235 mm) sold separately from the filament line; no individual plate entries exist in this catalog yet, so plate_ids is empty. HQ in Zhuhai/Guangdong with a German branch office. Typical PLA around $15-20/kg (exact figure unverified), placing it on the budget/mid boundary.",
+  "provenance": {
+    "sources": [
+      "https://www.sunlu.com/about-us",
+      "https://filamentcheatsheet.com/brands/sunlu/",
+      "https://store.sunlu.com/",
+      "https://www.linkedin.com/company/zhuhai-sunlu-industrial-co-ltd",
+      "/home/claude/filament-repo/research/verified-oem-relationships.md (project-owner verified)"
+    ],
+    "last_verified": "2026-07-31",
+    "confidence": "medium",
+    "conflicts": "Legal entity name is unsettled: LinkedIn lists 'Zhuhai Sunlu Industrial Co., Ltd' while trade sources refer to 'SUNLU (Guangdong) Technology Co., Ltd.'; which is the current registered name is unverified. Which Bambu Lab lines are Sunlu-produced is also unresolved."
+  }
+}

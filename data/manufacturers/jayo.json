@@ -1,0 +1,55 @@
+{
+  "id": "jayo",
+  "name": "Jayo",
+  "status": "researched",
+  "summary": "Budget AliExpress/Amazon filament label sold through its own storefronts, positioned as a cheaper alternative to Sunlu-branded product. Jayo is not a factory: its filament is manufactured by Sunlu, so its material originates from Sunlu's Chinese production bases.",
+  "headquarters_country": "China",
+  "manufacturing_countries": [
+    "China"
+  ],
+  "brands": [
+    "JAYO",
+    "3DJAYO"
+  ],
+  "oem_relationships": [
+    {
+      "company": "Sunlu",
+      "relationship": "manufactured-by",
+      "notes": "User-verified (research/verified-oem-relationships.md). Community and review sources independently describe Jayo as a lower-priced Sunlu manufacturing sibling, consistent with the owner-verified relationship."
+    }
+  ],
+  "endpoints": {
+    "website": "https://jayo3d.com/",
+    "store": "https://jayo.shop/en-usd",
+    "social": {}
+  },
+  "product_lines": [
+    {
+      "name": "PLA family",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "PLA, PLA+, PLA Meta, Silk PLA — mirrors Sunlu's material range, consistent with shared production"
+    },
+    {
+      "name": "PETG",
+      "filament_ids": [
+        "petg"
+      ]
+    }
+  ],
+  "price_tier": "budget",
+  "additional_notes": "Storefronts: Amazon https://www.amazon.com/stores/JAYO/ and AliExpress https://www.aliexpress.com/store/1103589253 (a second AliExpress store, https://www.aliexpress.com/store/911431006, trades as '3DJAYO'). Typical pricing $10-18/kg, commonly on 1.1 kg spools. Third-party reviews (filamentcheatsheet Tier B) report consistent quality with some batch variability, notably in white and silk colours. manufacturing_countries reflects Sunlu's Chinese factories rather than any Jayo-owned plant. Build plates: none found.",
+  "provenance": {
+    "sources": [
+      "https://filamentcheatsheet.com/brands/jayo/",
+      "https://jayo3d.com/",
+      "https://www.aliexpress.com/store/1103589253",
+      "https://www.amazon.com/stores/JAYO/",
+      "/home/claude/filament-repo/research/verified-oem-relationships.md (project-owner verified)"
+    ],
+    "last_verified": "2026-07-31",
+    "confidence": "medium",
+    "conflicts": "No legal entity behind the Jayo brand was independently confirmed; it operates as 'JAYO Official Store'/'jayo3d'. Two separate AliExpress storefronts are associated with the brand and it is unverified whether both are official."
+  }
+}

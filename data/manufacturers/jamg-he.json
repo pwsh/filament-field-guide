@@ -1,0 +1,58 @@
+{
+  "id": "jamg-he",
+  "name": "Jamg He",
+  "status": "researched",
+  "summary": "Chinese materials and hardware producer with over two decades in UV-curing and 3D printing, selling FDM filaments, SLA/LCD/DLP resins, LCD printers, UV ink, curing boxes and dryers. It is the manufacturer behind the AceAddity retail filament label.",
+  "headquarters_country": "China",
+  "manufacturing_countries": [
+    "China"
+  ],
+  "brands": [
+    "Jamg He",
+    "AceAddity"
+  ],
+  "oem_relationships": [
+    {
+      "company": "AceAddity",
+      "relationship": "manufactures-for",
+      "notes": "User-verified (research/verified-oem-relationships.md). Neither company's own site acknowledges the arrangement, so it is recorded as owner-verified ground truth without external corroboration; AceAddity has no independent catalog presence and gets no separate entry."
+    }
+  ],
+  "endpoints": {
+    "website": "https://www.jamghe.com/",
+    "store": "https://www.amazon.com/stores/JamgHe/"
+  },
+  "product_lines": [
+    {
+      "name": "PLA",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "ECO PLA+, Hi-Speed PLA+, Premium PLA Plus and Light-Weight (LW-)PLA"
+    },
+    {
+      "name": "PETG",
+      "filament_ids": [
+        "petg"
+      ]
+    },
+    {
+      "name": "Functional Filament",
+      "filament_ids": [],
+      "notes": "Named line on the company site; constituent materials not itemised in sources found"
+    }
+  ],
+  "price_tier": "mid",
+  "additional_notes": "Also sells SLA/LCD/DLP resins (Standard Plus, Water Washable, Eco Standard, engineering grades), LCD 3D printers, UV ink, curing boxes and filament dryers — the broadest non-filament hardware lineup in this cluster, suggesting a manufacturing group rather than a pure filament label. Target sectors: jewelry, dental, medical, aerospace, education. Products claim FDA, REACH, CE, RoHS and TSCA compliance. EU distributor pricing: filaments EUR 12.50-29.95, resins EUR 19.95-29.99. Further listings at https://filament2print.com/en/brand/112-jamg-he, https://3dpartnershop.com/brands/jamghe/ and https://protomont.com/brand/jamg-he/. Build plates not confirmed, so makes_plates is left unset. Manufacturing city was not established; China origin is inferred from company background.",
+  "provenance": {
+    "sources": [
+      "https://www.jamghe.com/",
+      "https://filament2print.com/en/brand/112-jamg-he",
+      "https://www.amazon.com/stores/JamgHe/",
+      "/home/claude/filament-repo/research/verified-oem-relationships.md (project-owner verified)"
+    ],
+    "last_verified": "2026-07-31",
+    "confidence": "low",
+    "conflicts": "Ownership chain (brand owned by Yongchanghe, established 2001, itself a subsidiary of Meilianxing Technology Co., Ltd.) comes from a single AI-summarised fetch and needs corroboration. No HQ city or factory location was found. The owner-verified AceAddity relationship is not acknowledged by either company publicly."
+  }
+}

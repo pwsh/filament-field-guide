@@ -1,0 +1,101 @@
+{
+  "id": "ninjatek",
+  "name": "NinjaTek (Fenner Precision Polymers)",
+  "status": "researched",
+  "summary": "Flexible-filament specialist operating as a division of Fenner Precision Polymers, part of Fenner (UK), which Michelin Group acquired in May 2018. Its catalog is almost entirely TPU — NinjaFlex, Chinchilla, Cheetah, Eel and Armadillo — extruded in the US on the back of Fenner's roughly 50 years of belt and polymer extrusion experience. It also retails colorFabb-branded materials through its own shop.",
+  "headquarters_country": "United States",
+  "manufacturing_countries": [
+    "United States"
+  ],
+  "brands": [
+    "NinjaTek",
+    "NinjaFlex",
+    "Chinchilla",
+    "Cheetah",
+    "Eel",
+    "Armadillo"
+  ],
+  "oem_relationships": [
+    {
+      "company": "colorFabb",
+      "relationship": "distributes",
+      "notes": "NinjaTek's own shop (ninjatek.com/shop/) sells colorFabb-branded ASA, PA, PLA/PHA, co-polyesters and specialty fills (bronzeFill, corkFill, copperFill, glowFill, steelFill, woodFill). Products stay colorFabb-branded, so this is distribution rather than white-labelling; 'rebrands' is the closest available enum value and overstates the link. Relationship type (distribution partnership vs common ownership) is unverified. Not present in research/verified-oem-relationships.md."
+    }
+  ],
+  "endpoints": {
+    "website": "https://ninjatek.com/",
+    "store": "https://ninjatek.com/shop/",
+    "docs": "https://ninjatek.com/support/technical-specs/",
+    "support": "https://ninjatek.com/support/technical-specs/",
+    "social": {
+      "facebook": "https://www.facebook.com/NinjaTek3D/",
+      "x": "https://twitter.com/ninjatek3d",
+      "instagram": "https://www.instagram.com/ninjatek3dprint/",
+      "linkedin": "https://www.linkedin.com/company/ninjatek-3d",
+      "youtube": "https://www.youtube.com/channel/UCICpx5wQr_-6ft6DBOl8gDQ"
+    }
+  },
+  "product_lines": [
+    {
+      "name": "NinjaFlex",
+      "filament_ids": [
+        "tpu"
+      ],
+      "notes": "Flagship 85A flexible TPU, plus NinjaFlex Edge at 83A."
+    },
+    {
+      "name": "Chinchilla",
+      "filament_ids": [
+        "tpu"
+      ],
+      "notes": "75A skin-safe soft TPU."
+    },
+    {
+      "name": "Cheetah",
+      "filament_ids": [
+        "tpu"
+      ],
+      "notes": "95A fast-printing flexible TPU."
+    },
+    {
+      "name": "Eel",
+      "filament_ids": [
+        "tpu"
+      ],
+      "notes": "60D conductive flexible TPU."
+    },
+    {
+      "name": "Armadillo",
+      "filament_ids": [
+        "tpu"
+      ],
+      "notes": "75D abrasion-resistant rigid TPU."
+    },
+    {
+      "name": "colorFabb resale range",
+      "filament_ids": [
+        "asa",
+        "pa",
+        "pla",
+        "petg"
+      ],
+      "notes": "Stocked in NinjaTek's shop but formulated and branded by colorFabb, not NinjaTek: ASA, PA, PLA/PHA, co-polyesters and specialty fills."
+    }
+  ],
+  "makes_plates": false,
+  "price_tier": "premium",
+  "additional_notes": "Fenner Group's registered HQ is Hessle, England, but the NinjaTek filament operation is North American; Manheim, Pennsylvania is the commonly reported site and matches Fenner Precision Polymers' PA footprint, though it could not be confirmed from ninjatek.com in this research session. headquarters_country is therefore recorded as United States for the filament business, with UK ultimate parent ownership noted here; manufacturing_countries is United States on the strength of consistent 'Made in USA' branding. Pricing is premium for specialty TPU: MatterHackers listings for the brand ranged $48.83-$192.88 per item, with no verified $/kg. No build-plate products were found. NinjaTek pitches itself as a boutique specialty-materials brand with 'the infrastructure of a global corporation' behind it via Michelin.",
+  "provenance": {
+    "sources": [
+      "https://ninjatek.com/about-ninjatek/",
+      "https://ninjatek.com/",
+      "https://ninjatek.ca/",
+      "https://www.mromagazine.com/press-releases/fenner-drives-announces-creation-of-ninjatek-division-to-focus-on-value-added-3d-printing-materials-and-services/",
+      "https://en.wikipedia.org/wiki/Fenner_(company)",
+      "https://www.matterhackers.com/store/c/browse-by-filament-manufacturer"
+    ],
+    "last_verified": "2026-07-31",
+    "confidence": "medium",
+    "conflicts": "HQ is ambiguous: parent Fenner is registered in Hessle, England (confirmed) while the NinjaTek filament operation is reported as Manheim, Pennsylvania (unverified against a primary source). The colorFabb link is observed on ninjatek.com/shop/ but its nature — distribution deal vs common ownership — is unresolved, and 'rebrands' is a lossy fit for it. Exact US manufacturing site is inferred, not confirmed."
+  }
+}

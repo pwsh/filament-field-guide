@@ -1,0 +1,72 @@
+{
+  "id": "taulman3d",
+  "name": "taulman3D",
+  "status": "researched",
+  "summary": "One of the earliest specialty-nylon FDM filament brands, historically based in Missouri, USA, and known for Nylon 645, Nylon 680 FDA, Alloy 910, Nylon Bridge and the T-Glase copolyester line. Acquired by Brazilian petrochemical major Braskem, which now hosts the taulman3D catalog on its braskem3d.com additive-manufacturing portal alongside Braskem's own PP/PE and bio-based filaments.",
+  "headquarters_country": "United States",
+  "manufacturing_countries": [
+    "United States"
+  ],
+  "brands": [
+    "taulman3D",
+    "T-Glase",
+    "Alloy 910",
+    "Nylon Bridge"
+  ],
+  "oem_relationships": [
+    {
+      "company": "Braskem",
+      "relationship": "joint-venture",
+      "notes": "Braskem acquired taulman3D outright (Braskem press release; TCT Magazine, announced circa 2021-2022), so this is corporate ownership rather than a supply relationship — 'joint-venture' is the closest available enum value and overstates independence. Braskem's own copy states taulman3D 'is responsible for the entire filament manufacturing process, from raw material to packaging', implying in-house manufacture continued post-acquisition. Not present in research/verified-oem-relationships.md."
+    },
+    {
+      "company": "Xtellar",
+      "relationship": "rebrands",
+      "notes": "Distributor listings (MatterHackers) now show the former taulman3D nylon line under the name Xtellar. The taulman3D-to-Xtellar rebrand is plausible from naming and catalog adjacency but was NOT independently confirmed; flagged for follow-up. Not present in research/verified-oem-relationships.md."
+    }
+  ],
+  "endpoints": {
+    "website": "https://braskem3d.com/",
+    "store": "https://filament2print.com/en/brand/5-taulman3d",
+    "docs": "https://braskem3d.com/taulman3d-carbon-fiber-reinforced-nylon-filament-na.html"
+  },
+  "product_lines": [
+    {
+      "name": "Nylon",
+      "filament_ids": [
+        "pa"
+      ],
+      "notes": "Nylon 230, Nylon 645, Nylon 680 FDA (food-contact), Alloy 910 nylon blend and Nylon Bridge easy-print nylon."
+    },
+    {
+      "name": "Reinforced nylon",
+      "filament_ids": [
+        "pa-cf",
+        "pa-gf"
+      ],
+      "notes": "Carbon-fiber-reinforced nylon and Glass-Fiber-filled Nylon Alloy."
+    },
+    {
+      "name": "Copolyester",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "T-Glase, T-lyne, Guideline, Enviro PETG and TECH-G. Grouped under petg as the nearest catalog material id; several are PET or PETT rather than strict PETG."
+    }
+  ],
+  "makes_plates": false,
+  "price_tier": "engineering",
+  "additional_notes": "Pre-acquisition the company was long associated with St. Peters / O'Fallon, Missouri; that HQ was not re-verified post-Braskem, and it is unclear whether Braskem has since consolidated production into its own Brazilian or US sites. manufacturing_countries is recorded as United States on the strength of the Missouri plant description carried in distributor copy, which may be legacy marketing text. No standalone taulman3d.com was confirmed reachable in this research session — it may now redirect into braskem3d.com — so endpoints.website points at the Braskem AM portal that currently hosts the products. No social profiles were found. No build-plate products found. Offers FDA and medical-grade formulations. Xtellar-labelled SKUs at MatterHackers ranged $16.55-$60.00, but the SKU-level mapping between taulman3D and Xtellar names is unverified.",
+  "provenance": {
+    "sources": [
+      "https://www.braskem.com.br/usa/news-detail/braskem-acquires-taulman3d-expanding-its-portfolio-of-materials-for-additive-manufacturing-applications",
+      "https://www.tctmagazine.com/braskem-acquires-taulman3d-expanding-its-portfolio-of-materials-for-additive-manufacturing-operations/",
+      "https://braskem3d.com/taulman3d-carbon-fiber-reinforced-nylon-filament-na.html",
+      "https://filament2print.com/en/brand/5-taulman3d",
+      "https://pitchbook.com/profiles/company/517666-06"
+    ],
+    "last_verified": "2026-07-31",
+    "confidence": "low",
+    "conflicts": "Brand identity is unresolved: retail listings show the nylon line as 'Xtellar' while Braskem's portal still uses 'taulman3D', and no source confirms the rebrand. Manufacturing location is also unresolved — the Missouri plant claim comes from distributor copy that may predate the Braskem acquisition, and whether Braskem consolidated production into Brazil or its own US sites is unknown. Official website endpoint is an inference (braskem3d.com) because taulman3d.com reachability was not verified."
+  }
+}

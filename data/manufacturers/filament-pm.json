@@ -1,0 +1,108 @@
+{
+  "id": "filament-pm",
+  "name": "Filament PM (Plasty Mladec)",
+  "status": "researched",
+  "summary": "Czech filament brand launched in 2013 by Plasty Mladec, a plastics extruder founded in 1992 that originally made plastic profiles and welding wire. Around 16 filament types in 1.75 mm and 2.85 mm, including carbon-fibre CFJet, wood-filled WoodJet and recycled RePLA+/RePETG lines, distributed to roughly 30 countries. An official Prusa Research filament partner since 2014.",
+  "headquarters_country": "Czech Republic",
+  "manufacturing_countries": [
+    "Czech Republic"
+  ],
+  "brands": [
+    "Filament PM",
+    "Plasty Mladec"
+  ],
+  "oem_relationships": [
+    {
+      "company": "Prusa Research",
+      "relationship": "manufactures-for",
+      "notes": "Long-running official filament partnership since 2014, described as co-branding/partner supply rather than pure resale. Not listed in research/verified-oem-relationships.md; sourced from Filament PM's own about pages and industry profiles, so the exact commercial form of the partnership is unverified."
+    }
+  ],
+  "endpoints": {
+    "website": "https://www.filament-pm.com/",
+    "store": "https://shop.filament-pm.com/",
+    "docs": "https://www.plastymladec.cz/en",
+    "social": {
+      "youtube": "https://www.youtube.com/channel/UC2uJFdSlLUIdg7tC-l5v_xQ",
+      "facebook": "https://www.facebook.com/filamentpm/"
+    }
+  },
+  "product_lines": [
+    {
+      "name": "PLA",
+      "filament_ids": [
+        "pla"
+      ]
+    },
+    {
+      "name": "ABS / ABS-T",
+      "filament_ids": [
+        "abs"
+      ]
+    },
+    {
+      "name": "PET-G",
+      "filament_ids": [
+        "petg"
+      ]
+    },
+    {
+      "name": "ASA",
+      "filament_ids": [
+        "asa"
+      ]
+    },
+    {
+      "name": "TPU",
+      "filament_ids": [
+        "tpu"
+      ]
+    },
+    {
+      "name": "PA (Nylon)",
+      "filament_ids": [
+        "pa",
+        "pa-cf"
+      ],
+      "notes": "Includes PA-CFJet, carbon-fibre-reinforced PA12"
+    },
+    {
+      "name": "CFJet",
+      "filament_ids": [
+        "pla-cf",
+        "petg-cf",
+        "pa-cf"
+      ],
+      "notes": "Carbon-fibre-reinforced family; exact base-polymer coverage beyond PA12 not fully confirmed"
+    },
+    {
+      "name": "WoodJet",
+      "filament_ids": [
+        "pla-wood"
+      ],
+      "notes": "Wood-filled line; base polymer assumed PLA"
+    },
+    {
+      "name": "Recycled (RePLA+ / RePETG)",
+      "filament_ids": [
+        "r-pla",
+        "r-petg"
+      ]
+    }
+  ],
+  "makes_plates": false,
+  "price_tier": "premium",
+  "additional_notes": "Parent Plasty Mladec operates its own extrusion lines in Mladec, Czech Republic; the company grew from 3 employees to 50+ on the back of the filament business. A separate UK-facing site runs at https://www.filament-pm.co.uk/. No build-plate or print-surface products found. Price tier recorded as premium given the engineering-leaning CF/PA range, though the commodity PLA/PET-G lines sit closer to mid.",
+  "provenance": {
+    "sources": [
+      "https://www.filament-pm.com/article/about-us-48",
+      "https://www.plastymladec.cz/en",
+      "https://shop.filament-pm.com/",
+      "https://www.filament-pm.co.uk/page/about-us-26",
+      "https://en.industryarena.com/filament-pm"
+    ],
+    "last_verified": "2026-07-31",
+    "confidence": "medium",
+    "conflicts": "The Prusa Research relationship is encoded as manufactures-for based on a long-standing 'official filament partner' description; whether Prusa-branded filament is actually extruded by Plasty Mladec, or the partnership is only distribution/profile co-branding, was not established. Legal form of the parent is cited inconsistently across sources (a.s. vs s.r.o.). Exact $/kg unconfirmed."
+  }
+}

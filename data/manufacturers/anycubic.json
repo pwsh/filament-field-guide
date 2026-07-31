@@ -1,0 +1,36 @@
+{
+  "id": "anycubic",
+  "name": "Shenzhen Anycubic Technology Co., Ltd.",
+  "status": "researched",
+  "summary": "Shenzhen printer maker founded 2015 by Lu Ouyang (CEO) and James Ouyang, operating in both FDM (Kobra series) and resin/SLA. Sells house-brand filament and resin alongside its hardware. Whether Anycubic extrudes filament itself or contracts it out is unresolved: a single low-confidence company-profile source names eSUN as a filament supplier, but this is uncorroborated and absent from the owner-verified ground-truth table, so no OEM relationship is encoded.",
+  "headquarters_country": "China",
+  "manufacturing_countries": ["China"],
+  "brands": ["ANYCUBIC", "Kobra", "Photon"],
+  "oem_relationships": [],
+  "endpoints": {
+    "website": "https://www.anycubic.com",
+    "store": "https://store.anycubic.com"
+  },
+  "product_lines": [
+    { "name": "PLA", "filament_ids": ["pla"], "notes": "PLA and PLA+" },
+    { "name": "PETG", "filament_ids": ["petg"] },
+    { "name": "ABS / ASA", "filament_ids": ["abs", "asa"], "notes": "Includes a High-Performance ASA line" },
+    { "name": "TPU", "filament_ids": ["tpu"] },
+    { "name": "Engineering / composites", "filament_ids": ["pa", "pla-cf"], "notes": "Nylon PA and carbon-fiber filled variants; exact base polymer of the 'Carbon Fiber' SKU unverified" }
+  ],
+  "makes_plates": true,
+  "plate_ids": [],
+  "price_tier": "budget",
+  "additional_notes": "Also runs a substantial UV resin business for its SLA printers, which is out of scope for this filament catalog. Sells PEI Spring Steel Magnetic Platforms and a double-sided smooth PEI plate for the Kobra series. Regional storefronts include eu.anycubic.com and anycubic.biz. Social profiles on YouTube, Facebook, Instagram, X and Reddit exist but exact handles were not verified, so none are recorded.",
+  "provenance": {
+    "sources": [
+      "https://anycubic.biz/o-kompanii",
+      "https://store.anycubic.com/collections/filaments",
+      "https://store.anycubic.com/products/smooth-plate",
+      "https://www.cbinsights.com/company/anycubic"
+    ],
+    "last_verified": "2026-07-31",
+    "confidence": "low",
+    "conflicts": "One secondary company-profile source (CB Insights) describes eSUN as an Anycubic filament supplier. This is a single low-confidence source, is not corroborated elsewhere, and does not appear in the owner-verified ground-truth table, so no oem_relationship was encoded. Open question: whether Anycubic filament is produced in-house or contract-manufactured."
+  }
+}

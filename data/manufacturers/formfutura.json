@@ -1,0 +1,111 @@
+{
+  "id": "formfutura",
+  "name": "FormFutura B.V.",
+  "status": "researched",
+  "summary": "Dutch filament supplier founded in 2012 by Arnold Medenblik, operating largely as a B2B/wholesale brand serving 400+ resellers in 75+ countries. Carries the broadest material catalog among the European premium brands surveyed, from budget EasyFil consumer spools through high-temperature engineering polymers (PEEK, PEI, PEKK, PPSU, PPS), plus resins and pellets.",
+  "headquarters_country": "Netherlands",
+  "manufacturing_countries": [
+    "Netherlands"
+  ],
+  "brands": [
+    "FormFutura",
+    "EasyFil",
+    "ApolloX",
+    "ReForm",
+    "Centaur"
+  ],
+  "endpoints": {
+    "website": "https://www.formfutura.com/",
+    "social": {
+      "facebook": "https://www.facebook.com/Formfutura/",
+      "instagram": "https://www.instagram.com/formfutura/",
+      "linkedin": "https://www.linkedin.com/company/formfutura"
+    }
+  },
+  "product_lines": [
+    {
+      "name": "EasyFil",
+      "filament_ids": [
+        "pla",
+        "petg"
+      ],
+      "notes": "Consumer/value line: EasyFil PLA, EasyFil ePLA, EasyFil ePETG; also offered on Bambu-compatible coils"
+    },
+    {
+      "name": "ApolloX",
+      "filament_ids": [
+        "asa"
+      ],
+      "notes": "ASA-based engineering line"
+    },
+    {
+      "name": "ReForm",
+      "filament_ids": [
+        "pla",
+        "petg"
+      ],
+      "notes": "Recycled line - ReForm rPLA and rPETG, also sold as pellets"
+    },
+    {
+      "name": "Centaur",
+      "filament_ids": [
+        "pp"
+      ],
+      "notes": "Polypropylene pellets including a medical grade"
+    },
+    {
+      "name": "Styrenics and standard engineering",
+      "filament_ids": [
+        "abs",
+        "hips",
+        "pc",
+        "pctg",
+        "pcl"
+      ]
+    },
+    {
+      "name": "Nylon and flexibles",
+      "filament_ids": [
+        "pa",
+        "tpu",
+        "tpc"
+      ]
+    },
+    {
+      "name": "High-temperature polymers",
+      "filament_ids": [
+        "peek",
+        "pei",
+        "pekk",
+        "ppsu",
+        "pps"
+      ]
+    },
+    {
+      "name": "Composites and specialty",
+      "filament_ids": [
+        "pla-cf",
+        "pa-cf"
+      ],
+      "notes": "Carbon-fiber, glass-fiber, metal-fill, wood-fill and stone-fill grades, plus flame-retardant, food-safe and chemical/UV/water-resistant specialty filaments"
+    },
+    {
+      "name": "Resins",
+      "notes": "LCD/SLA photopolymer resins, not filament"
+    }
+  ],
+  "price_tier": "mid",
+  "additional_notes": "Price tier spans a wide range that a single enum cannot capture: EasyFil is budget-to-mid while ApolloX and the PEEK/PEI/PEKK range is engineering-tier; 'mid' is the catalog midpoint. No confirmed evidence that FormFutura white-labels for other retail brands or resells another OEM, so no oem_relationships are recorded; it does not appear in research/verified-oem-relationships.md. Explicitly distinct from Dutch Filaments B.V. (acquired by Mitsubishi Chemical in 2018), an unrelated Dutch filament company - flagged because the two are easily confused. Partners with Brazil-based Thibra3D on specific formulations; that is a collaboration, not ownership or an OEM supply arrangement. Sells FEP film, adhesives, spool holders and resin-cleaning accessories but no build plate was found, so makes_plates is left unset.",
+  "provenance": {
+    "sources": [
+      "https://www.formfutura.com/about",
+      "https://www.facebook.com/Formfutura/",
+      "https://3dprintingcenter.net/interview-with-arnold-medenblik-co-founder-of-dutch-filament-masters-formfutura/",
+      "https://formfutura.com/blog/easyfil-epla-easyfil-epetg-en-apollox-avilable-on-bambu-coils",
+      "https://3dprint.com/210666/formfutura-thibra3d-filaments/"
+    ],
+    "last_verified": "2026-07-31",
+    "confidence": "medium",
+    "conflicts": "HQ city is unresolved: Facebook lists Nijmegen, other sources say Amsterdam (likely Nijmegen operations with Amsterdam registration). Manufacturing origin is claimed as Netherlands but in-house extrusion versus contract manufacturing was not confirmed, so manufacturing_countries should be treated as provisional. price_tier compresses a budget-through-engineering range into one value."
+  }
+}

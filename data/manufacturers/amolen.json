@@ -1,0 +1,61 @@
+{
+  "id": "amolen",
+  "name": "Amolen",
+  "status": "researched",
+  "summary": "Colour- and character-led consumer filament brand founded in 2017 and operating from Los Angeles, California. With roughly four employees it is a brand/import company rather than an extruder; manufacturing is outsourced and almost certainly Chinese, though no factory or OEM has been confirmed.",
+  "headquarters_country": "United States",
+  "manufacturing_countries": [],
+  "brands": [
+    "Amolen",
+    "Amolen3D",
+    "Amolentech"
+  ],
+  "oem_relationships": [],
+  "endpoints": {
+    "website": "https://www.amolen.com/",
+    "social": {
+      "facebook": "https://www.facebook.com/Amolentech/"
+    }
+  },
+  "product_lines": [
+    {
+      "name": "PLA",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Basic/High-Speed at $21.99/kg plus Galaxy Series, Silk S-Series, wood, marble/granite, glow-in-the-dark and colour-changing variants"
+    },
+    {
+      "name": "PETG",
+      "filament_ids": [
+        "petg"
+      ]
+    },
+    {
+      "name": "ABS",
+      "filament_ids": [
+        "abs"
+      ]
+    },
+    {
+      "name": "TPU",
+      "filament_ids": [
+        "tpu"
+      ]
+    }
+  ],
+  "price_tier": "mid",
+  "additional_notes": "Address on file is 8271 Melrose Ave Suite 200, Los Angeles, CA 90046. manufacturing_countries is left empty rather than asserting China: no OEM is disclosed, and the only lead is a Shanghai B2B supplier (Shanghai Maijie Industrial Co., Ltd.) listing 'Amolen Filament products', which reads as a reseller/distributor listing and is explicitly not treated as a manufacturing statement. Amolen's own about page claims materials 'sourced from the United States and made from biodegradable corn starch' for at least some PLA; given the company's size and the absence of any known US extrusion facility this is read as PLA-feedstock marketing language, not evidence of US manufacturing. A 2025 '8 years' anniversary post implies continuous operation since 2017. Instagram, YouTube and X presence was not confirmed. No build plates were found, but this is an unverified negative so makes_plates is left unset.",
+  "provenance": {
+    "sources": [
+      "https://www.amolen.com/pages/about-amolen",
+      "https://rocketreach.co/amolen-profile_b73b6973c7ebd906",
+      "https://www.maijietextiles.com/amolen-filament/",
+      "https://www.amolen.com/products/pla-basic-high-speed",
+      "https://www.facebook.com/Amolentech/"
+    ],
+    "last_verified": "2026-07-31",
+    "confidence": "low",
+    "conflicts": "Amolen's own 'sourced from the United States' PLA claim conflicts with every structural indicator (four employees, no known US extrusion capacity, brand-style operation); this entry treats it as marketing language and asserts no manufacturing country at all. The Shanghai Maijie listing is the sole OEM lead and is judged a distributor listing, so no oem_relationship is recorded."
+  }
+}

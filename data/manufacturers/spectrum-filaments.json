@@ -1,0 +1,100 @@
+{
+  "id": "spectrum-filaments",
+  "name": "Spectrum Filaments (Spectrum Group Sp. z o.o.)",
+  "status": "researched",
+  "summary": "Polish filament manufacturer near Warsaw that debuted in 2015 and now lists 50+ materials, from commodity PLA and PET-G through PCTG, PA, PP, PC, PPS, PEBA and soluble supports, plus pellets and a spool refill system. States that all filament is produced in-house in Poland, and is expanding into North America with a dedicated US warehouse and store.",
+  "headquarters_country": "Poland",
+  "manufacturing_countries": [
+    "Poland"
+  ],
+  "brands": [
+    "Spectrum Filaments",
+    "The Filament",
+    "PrograFen"
+  ],
+  "endpoints": {
+    "website": "https://spectrumfilaments.com/en/",
+    "store": "https://us.spectrumfilaments.com/",
+    "docs": "https://spectrumfilaments.com/en/distributors/",
+    "social": {
+      "linkedin": "https://www.linkedin.com/company/spectrumfilaments"
+    }
+  },
+  "product_lines": [
+    {
+      "name": "PLA",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Premium, Matte and other variants"
+    },
+    {
+      "name": "PET-G / PET-G Premium",
+      "filament_ids": [
+        "petg"
+      ]
+    },
+    {
+      "name": "PCTG / PET",
+      "filament_ids": [
+        "pctg",
+        "pet"
+      ]
+    },
+    {
+      "name": "ABS / ASA / HIPS",
+      "filament_ids": [
+        "abs",
+        "asa",
+        "hips"
+      ]
+    },
+    {
+      "name": "TPU",
+      "filament_ids": [
+        "tpu"
+      ]
+    },
+    {
+      "name": "Engineering polymers",
+      "filament_ids": [
+        "pa",
+        "pc",
+        "pp",
+        "pps",
+        "peba",
+        "hdpe"
+      ],
+      "notes": "Nylon, polycarbonate, polypropylene, PPS, PEBA variants and HDPE"
+    },
+    {
+      "name": "Wood-filled",
+      "filament_ids": [
+        "pla-wood"
+      ]
+    },
+    {
+      "name": "Soluble supports",
+      "filament_ids": [
+        "pva"
+      ],
+      "notes": "Soluble and breakaway support materials; specific chemistry not confirmed"
+    }
+  ],
+  "makes_plates": false,
+  "price_tier": "premium",
+  "additional_notes": "Registered address: Spectrum Group Sp. z o.o., Parkowa 85, 05-806 Pecice, Poland; production is at the same Pecice site near Warsaw. Also operates a legacy shop at https://shop.spectrumfilaments.com/ and an alternate Shopify storefront at https://spectrum-filaments.myshopify.com/, neither of which is recorded in endpoints since the current US store supersedes them. Offers spool authenticity verification. Instagram, YouTube, Facebook and TikTok all reportedly use the handle @spectrumfilaments, but the exact URLs were not individually confirmed, so only LinkedIn is recorded. No build-plate products found. Price tier recorded as premium for the Premium PLA/engineering range although the catalogue straddles mid and premium; no verified $/kg figure.",
+  "provenance": {
+    "sources": [
+      "https://spectrumfilaments.com/en/",
+      "https://spectrumfilaments.com/en/distributors/",
+      "https://us.spectrumfilaments.com/",
+      "https://3dprintingcenter.net/we-just-focus-on-our-work-an-interview-with-tomasz-augustyniak-of-spectrum-group/",
+      "https://www.3dprintingjournal.com/p/06-25-2015-spectrum-filaments-officially",
+      "https://www.3djake.com/spectrum"
+    ],
+    "last_verified": "2026-07-31",
+    "confidence": "medium",
+    "conflicts": "Price tier is a judgment call: the catalogue spans budget-adjacent 'The Filament' value products through premium engineering grades, and no verified per-kg pricing was found. 'The Filament' and 'PrograFen' are recorded as portfolio brands rather than separate entries because no independent catalogue or web presence was found for either; if either turns out to have its own storefront it should be split out."
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "id": "3djake",
+  "name": "3DJake (niceshops GmbH)",
+  "status": "researched",
+  "summary": "Austrian pan-European 3D printing retailer operated by niceshops GmbH that also sells a 3DJAKE house-brand filament range - ecoPLA, easyPETG, mattePLA, ABS, ASA, PCTG, TPU A95, niceBIO, magicPLA and mysteryPLA. The house line is marketed as 'Made in EU' with no disclosed contract manufacturer, making 3DJake a label rather than a verified extruder; the storefront simultaneously resells Devil Design, Spectrum, ROSA3D, Fiberlogy, FormFutura and Extrudr.",
+  "headquarters_country": "Austria",
+  "manufacturing_countries": [
+    "European Union (specific country undisclosed)"
+  ],
+  "brands": [
+    "3DJake",
+    "3DJAKE",
+    "3DJake International",
+    "ecoPLA",
+    "easyPETG",
+    "niceBIO",
+    "magicPLA",
+    "mysteryPLA"
+  ],
+  "oem_relationships": [
+    {
+      "company": "Unidentified EU contract extruder",
+      "relationship": "suspected-manufactured-by",
+      "notes": "The 3DJAKE house line is labelled 'Made in EU' rather than 'Made in Austria', in contrast to 3DJake's explicit 'Filament Made in Austria' page for partner brand Extrudr, which suggests house-brand production is outsourced to a contract extruder elsewhere in the EU. The specific OEM is not identified and this is not in research/verified-oem-relationships.md - it is a suspicion flagged for corroboration, parallel to that file's unresolved Bambu Lab OEM mapping."
+    }
+  ],
+  "endpoints": {
+    "website": "https://www.3djake.com/",
+    "store": "https://www.3djake.com/3djake/3djake-filaments",
+    "docs": "https://www.3djake.com/info/imprint"
+  },
+  "product_lines": [
+    {
+      "name": "ecoPLA",
+      "filament_ids": [
+        "pla",
+        "pla-cf",
+        "pla-wood"
+      ],
+      "notes": "Core house PLA with Carbon Fiber, Silk, Sparkling and Wood variants"
+    },
+    {
+      "name": "easyPETG",
+      "filament_ids": [
+        "petg",
+        "petg-cf"
+      ],
+      "notes": "Includes Carbon Fiber and Matte variants"
+    },
+    {
+      "name": "mattePLA",
+      "filament_ids": [
+        "pla"
+      ]
+    },
+    {
+      "name": "ABS / ASA",
+      "filament_ids": [
+        "abs",
+        "asa"
+      ]
+    },
+    {
+      "name": "PCTG",
+      "filament_ids": [
+        "pctg"
+      ]
+    },
+    {
+      "name": "TPU A95",
+      "filament_ids": [
+        "tpu"
+      ]
+    },
+    {
+      "name": "niceBIO",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Bio-based/biodegradable line; base polymer not explicitly stated, PLA assumed"
+    },
+    {
+      "name": "magicPLA / mysteryPLA",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Colour-changing and novelty PLA lines"
+    }
+  ],
+  "makes_plates": false,
+  "price_tier": "mid",
+  "additional_notes": "Legal entity: niceshops GmbH, Saaz 99, 8341 Paldau, Austria; VAT ATU63964918; commercial register FN302888z. Because the house line is a label with undisclosed production, manufacturing_countries records the EU-wide 'Made in EU' claim rather than Austria - the filament does not demonstrably originate in Austria, and the specific member state is unknown. Scope of this entry is the 3DJAKE house brand; the wider retail catalogue is out of scope, but its cross-listings (e.g. https://www.3djake.com/spectrum, https://www.3djake.com/formfutura) corroborate the existence and positioning of several other brands in this research cluster. 3DJake does sell build surfaces at https://www.3djake.com/spare-parts-upgrades/build-surfaces, but those are third-party products resold as accessories, not own-brand manufacture, so makes_plates is false. Parent group pages: https://www.niceshops.com/en/shops-and-brands/3djake and https://www.niceshops.com/en/inhouse-brands.",
+  "provenance": {
+    "sources": [
+      "https://www.3djake.com/3djake/3djake-filaments",
+      "https://www.3djake.com/info/imprint",
+      "https://www.niceshops.com/en/inhouse-brands",
+      "https://www.3djake.com/info/guide/filament-made-in-austria-extrudr",
+      "https://www.3djake.com/spectrum",
+      "https://www.3djake.com/3djake/nicebio"
+    ],
+    "last_verified": "2026-07-31",
+    "confidence": "medium",
+    "conflicts": "The contract manufacturer behind the 3DJAKE house line is undisclosed and unidentified; the suspected-manufactured-by relationship names a placeholder counterparty rather than a real company, and should be replaced or removed once the OEM is established. manufacturing_countries holds a non-country value ('European Union (specific country undisclosed)') because the true origin country is unknown - flagged for a Fable-level decision on how to model label brands with undisclosed EU-wide sourcing. Price tier for the house line is unconfirmed."
+  }
+}

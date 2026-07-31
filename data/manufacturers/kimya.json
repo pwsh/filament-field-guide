@@ -1,0 +1,73 @@
+{
+  "id": "kimya",
+  "name": "Kimya (ARMOR Group)",
+  "status": "researched",
+  "summary": "French engineering-filament brand of the ARMOR Group industrial group, positioned for functional end-use parts rather than hobbyist printing. Best documented product is ABS-R, an impact-modified ABS; the broader catalog reportedly spans PLA, PETG, TPU, nylon (including reinforced grades), PC and carbon/glass-fiber-filled engineering materials.",
+  "headquarters_country": "France",
+  "manufacturing_countries": [
+    "France"
+  ],
+  "brands": [
+    "Kimya"
+  ],
+  "oem_relationships": [
+    {
+      "company": "ARMOR Group",
+      "relationship": "joint-venture",
+      "notes": "Kimya is described across distributor listings as ARMOR Group's 3D-printing materials brand ('Kimya 3D printing filament by Armor Group'), i.e. an in-house brand rather than a reseller. Recorded as 'joint-venture' because the enum has no parent-company value; this is corporate ownership, not a supply relationship. Note that ARMOR's own corporate site division list (ARMOR-IIMAK, ARMOR Battery Films, ALTKIN) did not show Kimya as a current named division, so the ownership may have changed — see provenance.conflicts. Not present in research/verified-oem-relationships.md."
+    }
+  ],
+  "endpoints": {
+    "website": "https://www.kimya.fr/en/",
+    "store": "https://www.matterhackers.com/store/c/browse-by-filament-manufacturer",
+    "docs": "https://www.armor-group.com/en/"
+  },
+  "product_lines": [
+    {
+      "name": "ABS-R",
+      "filament_ids": [
+        "abs"
+      ],
+      "notes": "Impact-modified ABS; the only Kimya product directly confirmed from a source in this research session. Sample price $22.65 for a black spool at MatterHackers."
+    },
+    {
+      "name": "Standard polymers",
+      "filament_ids": [
+        "pla",
+        "petg",
+        "tpu"
+      ],
+      "notes": "Reported catalog breadth, not itemised from a Kimya-controlled source — treat as unverified."
+    },
+    {
+      "name": "Engineering polymers",
+      "filament_ids": [
+        "pa",
+        "pc"
+      ],
+      "notes": "Nylon including reinforced grades, and polycarbonate. Reported, not independently confirmed."
+    },
+    {
+      "name": "Reinforced composites",
+      "filament_ids": [
+        "pa-cf",
+        "pa-gf",
+        "petg-cf"
+      ],
+      "notes": "Carbon- and glass-fiber-filled engineering filaments for functional end-use parts. Reported, not independently confirmed."
+    }
+  ],
+  "price_tier": "engineering",
+  "additional_notes": "This entry rests largely on distributor listings: kimya.fr could not be fetched in this research session (robots/SSL blocks), so the website endpoint is the believed URL with unverified reachability, and filament2print's Kimya brand page returned 404. The product line list beyond ABS-R is industry-standard-knowledge rather than sourced itemisation. Whether Kimya's filament is extruded at ARMOR's Nantes HQ site (20 rue Chevreul, 44105 Nantes) or a separate ARMOR facility is unverified; manufacturing_countries is set to France on brand positioning and ARMOR's French base rather than a confirmed plant. Build-plate products not confirmed either way, so makes_plates is left unset. No social profiles confirmed. Price tier is recorded as engineering on positioning ('functional end-use parts'), though the one confirmed price point sits in mid territory.",
+  "provenance": {
+    "sources": [
+      "https://www.armor-group.com/en/",
+      "https://www.matterhackers.com/store/c/browse-by-filament-manufacturer",
+      "https://filament2print.com/en/brand/9-kimya",
+      "https://www.kimya.fr/en/"
+    ],
+    "last_verified": "2026-07-31",
+    "confidence": "low",
+    "conflicts": "Corporate structure is genuinely unresolved: older sources and current distributor copy describe Kimya as an ARMOR Group brand, but ARMOR's own site division list (ARMOR-IIMAK, ARMOR Battery Films, ALTKIN) does not name Kimya — so Kimya may have been divested, renamed or restructured out of ARMOR. Could not be settled in this research session; flagged for follow-up. Secondary gaps: no Kimya-controlled source was reachable, so the product range beyond ABS-R, the manufacturing site and the official URL are all unverified."
+  }
+}
