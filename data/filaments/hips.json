@@ -1,0 +1,181 @@
+{
+  "id": "hips",
+  "name": "HIPS (High Impact Polystyrene)",
+  "aliases": [
+    "High Impact Polystyrene",
+    "HIPS"
+  ],
+  "status": "researched",
+  "base_type": null,
+  "variation_kind": null,
+  "polymer_class": "support-breakaway",
+  "chemical_makeup": "High impact polystyrene — an amorphous styrenic thermoplastic, typically polystyrene blended/grafted with polybutadiene rubber for impact modification",
+  "summary": "A light, styrenic material with two lives: a limonene-dissolvable support material and a genuinely usable lightweight build material for props, prototypes and RC airframes. It prints in the ABS difficulty tier — enclosure, warm bed, minimal part cooling — but shrinks noticeably less than ABS and sands and vapour-smooths beautifully.",
+  "printing": {
+    "nozzle_temp_c": {
+      "min": 220,
+      "max": 270,
+      "recommended": 235
+    },
+    "bed_temp_c": {
+      "min": 80,
+      "max": 115,
+      "recommended": 105
+    },
+    "ambient_temp_c": {
+      "min": 30,
+      "max": 55,
+      "recommended": 45
+    },
+    "speed_mm_s": {
+      "min": 35,
+      "max": 100,
+      "recommended": 50
+    },
+    "enclosure_recommended": true,
+    "heated_chamber_required": false,
+    "requires_hardened_nozzle": false,
+    "part_cooling_fan_pct": {
+      "min": 0,
+      "max": 20,
+      "recommended": 0
+    },
+    "notes": "Nozzle temperature varies widely by brand — eSUN 230-270 °C, Prusa 225-255 °C, Filament Cheat Sheet and Xometry both 220-250 °C; the recorded range is the union and ~230-240 °C is the safe starting point. eSUN's TDS specifies 0 % part cooling: low or no cooling improves layer bonding and reduces warping. An enclosure is strongly recommended but not mandatory for small parts; a heated chamber is not required, though large or tall parts warp badly without one. Legacy bedslingers should stay at 40-60 mm/s; high-flow hotends can reach the top of the range. Standard brass nozzles are fine — HIPS is not abrasive."
+  },
+  "drying": {
+    "required_before_use": "if-exposed",
+    "temp_c": {
+      "min": 70,
+      "max": 80,
+      "recommended": 75
+    },
+    "time_hours": {
+      "min": 4,
+      "max": 6,
+      "recommended": 4
+    },
+    "methods": [
+      "filament dryer",
+      "food dehydrator",
+      "convection oven at lowest setting",
+      "sealed box with desiccant"
+    ],
+    "dryness_validation": "No popping or crackling at the nozzle; no visible surface bubbles or blisters on the extrudate; glossy, consistent extrusion",
+    "notes": "Xometry describes HIPS as 'not hygroscopic', and it is markedly less moisture-sensitive than nylon, PVA or BVOH — but weeks of open-air exposure can still absorb enough moisture to cause surface defects. No authoritative brand-published drying schedule was found; the 70-80 °C / 4-6 h figures are extrapolated from general styrenic guidance (unverified). Dry only if print quality has visibly degraded."
+  },
+  "storage": {
+    "recommendations": "Normal sealed bag or storage box with desiccant is adequate in most climates; no dry box or in-print drying needed. Reseal between jobs and dry only if surface defects appear.",
+    "max_humidity_pct": 50,
+    "hygroscopy": "low"
+  },
+  "price": {
+    "usd_per_kg_low": 20,
+    "usd_per_kg_high": 50,
+    "notes": "2025-2026 pricing for standard unfilled grades (3DSourced). Observed retail: 3DXTech 3DXMAX HIPS around $32/kg, MatterHackers around $36-43/kg for 1 kg spools with bulk discounts."
+  },
+  "use_cases": {
+    "recommended": [
+      "limonene-dissolvable support material (traditionally paired with ABS)",
+      "lightweight functional prototypes and housings",
+      "cosplay props and helmets (low density keeps wearables light)",
+      "RC aircraft and drone airframe components",
+      "architectural models needing fine sanding or machining",
+      "parts finished by chemical vapour smoothing (limonene or acetone)"
+    ],
+    "not_recommended": [
+      "outdoor or UV-exposed parts (no UV stabiliser; embrittles and yellows)",
+      "direct repeated food contact",
+      "parts needing high surface hardness (scratches easily)",
+      "fire-sensitive applications (flammable, releases styrene fumes)",
+      "precision parts needing minimal shrink and warp without an enclosure"
+    ]
+  },
+  "suitability": {
+    "food_contact": "no",
+    "load_bearing": "light",
+    "high_temperature": "moderate",
+    "outdoor": "no"
+  },
+  "properties": {
+    "density_g_cm3": 1.05,
+    "grams_per_100cm3": 105,
+    "cm3_per_100g": 95.2,
+    "shrinkage_pct": {
+      "min": 1.2,
+      "max": 1.5,
+      "recommended": 1.35
+    },
+    "glass_transition_c": 98,
+    "heat_deflection_c": 88,
+    "max_service_temp_c": 80,
+    "tensile_strength_mpa": {
+      "min": 27,
+      "max": 45,
+      "recommended": 29
+    },
+    "notes": "Density 1.04-1.06 g/cm³ is consistent across the eSUN and Flashforge datasheets — among the lightest common filaments, which is why it suits wearables and RC airframes. HDT 88 °C at 0.455 MPa (Flashforge TDS). Tg ~96-100 °C is consistent with general polystyrene data but not datasheet-sourced (unverified). Max service temperature is not directly published; ~70-85 °C inferred from HDT (unverified). Tensile strength is recorded as the full reported spread: eSUN 27 MPa, Flashforge 28.5-29.5 MPa, Xometry-cited comparison figures 32-45 MPa. Elongation at break is badly disputed — eSUN 39 % versus Flashforge 6-6.5 % — so it is omitted rather than guessed. Shrinkage ~1.2-1.5 % is single-source (3dtechvalley, unverified), though Prusa's knowledge base corroborates qualitatively that HIPS shrinks much less than ABS."
+  },
+  "scores": {
+    "ease_of_print": 5,
+    "dimensional_stability": 5,
+    "warp_tendency": 6,
+    "layer_adhesion": 6,
+    "compression_strength": 5,
+    "temperature_tolerance": 5,
+    "uv_tolerance": 2,
+    "weather_tolerance": 2,
+    "water_tolerance": 7
+  },
+  "compatibility": {
+    "bonds_with": [
+      "abs",
+      "asa",
+      "hips"
+    ],
+    "support_materials": [
+      "hips"
+    ],
+    "usable_as_support_for": [
+      "petg",
+      "pla"
+    ],
+    "notes": "Chemical bonding and soluble-support suitability point in opposite directions here, and sources genuinely disagree. HIPS welds strongly to ABS and ASA (same styrenic family; joins with ABS cement or acetone and sands as one piece), and older hobbyist guides and 3DXTech marketing therefore present HIPS as the classic dissolvable support for ABS. Prusa's current knowledge base explicitly recommends against that: limonene, the solvent that dissolves HIPS, also attacks and etches ABS and ASA surfaces, so the model is damaged in the bath. Prusa instead recommends HIPS supports under PETG and other limonene-insoluble materials, which separate cleanly — so usable_as_support_for lists PETG and PLA, not ABS/ASA, despite the strong chemical bond. As a build material HIPS is normally printed single-material with same-material breakaway supports. No sourced guidance was found for TPU, TPE, PA, PC, PP, PVA, BVOH, PCTG, PVB or PET (unverified)."
+  },
+  "plate_recommendations": [
+    {
+      "plate_id": "pei-textured",
+      "rating": "recommended",
+      "notes": "Prusa's knowledge base notes good adhesion to PEI, and the 100-110 °C bed sits within the normal high-temperature PEI operating range. No release agent is generally required; a glue stick or an ABS-in-acetone slurry helps first-layer adhesion on marginal setups or very large footprints."
+    }
+  ],
+  "emissions": {
+    "voc_level": "high",
+    "particulate_level": "high",
+    "primary_emissions": [
+      "styrene (~10-110 µg/min)",
+      "ultrafine particles"
+    ],
+    "ventilation": "required",
+    "notes": "Styrene is the dominant VOC for both HIPS and ABS filaments, measured at roughly 10-110 µg/min in the Zhang/Kwon et al. (Environ. Sci. Technol., 2016) desktop-printer chamber study. Ultrafine-particle emissions from styrenics are among the highest of the common filament classes; that study's overall UFP range across all filament/printer combinations spanned roughly 10⁸-10¹¹ particles/min. Styrene is a respiratory and eye irritant and a suspected carcinogen at high chronic exposure. Ventilate — especially in enclosed or heated-chamber setups where fumes concentrate — and use combined gas plus particle filtration for frequent printing in occupied spaces. Ventilation set to 'required' (Fable calibration): identical styrene-dominated profile to ABS/ASA, which are both 'required'."
+  },
+  "safety_notes": "HIPS is flammable and gives off styrene fumes when overheated. Limonene and acetone vapour smoothing must be done outdoors or in a fume-extracted space with no ignition sources, using nitrile gloves and eye protection; limonene is also a skin sensitiser. Sanding HIPS produces fine styrenic dust — wet-sand or use a mask.",
+  "additional_notes": "HIPS occupies an unusual position in this catalog: it is classed as a breakaway/soluble support material but is fully viable as a standalone build material, which is why suitability and score fields are populated as a build material rather than left support-only.",
+  "provenance": {
+    "sources": [
+      "https://www.esun3d.com/uploads/eSUN_HIPS-Filament_TDS_V4.0.pdf",
+      "https://after-support.flashforge.jp/uploads/datasheet/tds/HIPS_TDS_EN.pdf",
+      "https://help.prusa3d.com/article/hips_167118",
+      "https://www.simplify3d.com/resources/materials-guide/hips/",
+      "https://filamentcheatsheet.com/filaments/hips/",
+      "https://www.xometry.com/resources/3d-printing/hips-3d-printing-filament/",
+      "https://www.3dtechvalley.com/hips-filament/",
+      "https://www.3dxtech.com/collections/hips",
+      "https://pubmed.ncbi.nlm.nih.gov/26741485/",
+      "https://www.matterhackers.com/store/3d-printer-filament/hips-175mm-1kg",
+      "https://www.3dsourced.com/guides/3d-printing-materials-cost/"
+    ],
+    "last_verified": "2026-07-31",
+    "confidence": "medium",
+    "conflicts": "Support pairing is the major unresolved conflict: traditional guidance (hobbyist guides, 3DXTech) presents HIPS as the dissolvable support for ABS, while Prusa's current knowledge base advises against HIPS under ABS/ASA because limonene attacks those surfaces, recommending PETG instead. Both positions are recorded — bonds_with keeps ABS/ASA, usable_as_support_for follows Prusa. Elongation at break: eSUN 39 % vs Flashforge 6-6.5 % — a ~6x disagreement, likely grade or test-direction dependent; omitted from properties. Tensile strength spread 27-45 MPa across eSUN, Flashforge and Xometry-cited tables. Nozzle temperature spans 220-270 °C across brands. Food contact: filamentz.nl markets HIPS as 'FDA safe' while 3dtechvalley explicitly advises against direct food contact for printed parts (layer-line bacterial harbouring, unverified filament additives) — recorded as 'no' for printed parts even though the base resin appears in food packaging. Drying schedule is extrapolated, not brand-published."
+  }
+}

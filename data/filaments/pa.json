@@ -1,0 +1,125 @@
+{
+  "id": "pa",
+  "name": "PA (Nylon / Polyamide)",
+  "aliases": ["Nylon", "Polyamide", "PA6", "PA12", "CoPA"],
+  "status": "researched",
+  "base_type": null,
+  "variation_kind": null,
+  "polymer_class": "polyamide",
+  "chemical_makeup": "Aliphatic polyamide — unfilled PA6 or PA12 semi-crystalline engineering thermoplastic. PA6 is stiffer, higher-melting and more hygroscopic; PA12 is lower density, absorbs less moisture and is more dimensionally stable at a lower melting point",
+  "summary": "The toughest common engineering filament: outstanding layer adhesion, wear and impact resistance, and low friction, which is why it dominates gears, bushings and living mechanical parts. It is also the most demanding material here — extremely hygroscopic, high-warping, and dimensionally restless as humidity changes, so it needs constant drying, an enclosure and a forgiving build surface.",
+  "printing": {
+    "nozzle_temp_c": { "min": 240, "max": 290, "recommended": 265 },
+    "bed_temp_c": { "min": 70, "max": 110, "recommended": 90 },
+    "ambient_temp_c": { "min": 35, "max": 55, "recommended": 45 },
+    "speed_mm_s": { "min": 30, "max": 80, "recommended": 50 },
+    "enclosure_recommended": true,
+    "heated_chamber_required": false,
+    "requires_hardened_nozzle": false,
+    "part_cooling_fan_pct": { "min": 0, "max": 20, "recommended": 10 },
+    "notes": "PA12 grades run roughly 240-290 °C (eSUN ePA12 TDS); PA6 grades usually 260-290 °C, and Prusa cites 285 °C for its PA blend. Keep part cooling near zero — aggressive cooling degrades layer adhesion and amplifies warping. An enclosure is effectively required for anything but small parts, and community practice targets ~45 °C+ ambient; an actively heated chamber is strongly beneficial for large parts but is not the hard prerequisite it is for PEEK-class polymers, so heated_chamber_required is recorded as false. Unfilled PA does not require a hardened nozzle, though stainless/hardened is commonly preferred; CF/GF-filled variants do require one."
+  },
+  "drying": {
+    "required_before_use": "always",
+    "temp_c": { "min": 60, "max": 90, "recommended": 70 },
+    "time_hours": { "min": 4, "max": 24, "recommended": 12 },
+    "methods": ["filament dryer", "food dehydrator", "convection oven at low temperature", "print directly from a heated dryer", "drybox with desiccant while printing"],
+    "dryness_validation": "Clean, crisp extrusion with a glossy (not matte or fuzzy) surface finish; no audible popping or crackling at the nozzle; no steam, bubbles or foaming in the extrudate; stringing collapses back to normal; the snap-test brittleness of a saturated spool disappears",
+    "notes": "Nylon is the most hygroscopic common filament and degrades visibly — bubbling, stringing, brittleness — within hours of ambient exposure. eSUN specifies >12 h at 70 °C; Prusa says keep below 90 °C. Badly saturated spools can need 24-48 h. Printing from a heated dryer or sealed drybox is the practical default rather than an optional extra."
+  },
+  "storage": {
+    "recommendations": "Airtight container with fresh desiccant at all times, including between prints on the same day; keep spools in a drybox on the printer rather than on an open shelf. Left in open air, nylon can absorb roughly 10% of its weight in water (Prusa).",
+    "max_humidity_pct": 20,
+    "hygroscopy": "extreme"
+  },
+  "price": {
+    "usd_per_kg_low": 35,
+    "usd_per_kg_high": 90,
+    "notes": "2025-2026 unfilled PA6/PA12 pricing extrapolated from observed spool prices: budget eSUN lines ~$30-40/kg, Polymaker PolyMide CoPA ~$50-67/kg on 0.75-1 kg spools, specialist PA12 grades $55-90/kg. Precise current retail range unverified."
+  },
+  "use_cases": {
+    "recommended": [
+      "functional gears, bushings and low-friction bearings",
+      "wear surfaces and sliding mechanisms",
+      "snap-fit and flexure-adjacent mechanical parts",
+      "tool handles, jigs and shop fixtures",
+      "cable ties and retention clips",
+      "impact-resistant brackets",
+      "RC and drone structural parts",
+      "end-use functional prototypes needing toughness and fatigue life"
+    ],
+    "not_recommended": [
+      "outdoor UV-exposed parts (degrades in sunlight)",
+      "dimensionally critical precision fits without post-print conditioning",
+      "humid-environment enclosures and wet-service parts",
+      "quick one-off prints (drying overhead outweighs the print)",
+      "parts under sustained load needing high stiffness and low creep",
+      "beginner projects on open-frame printers"
+    ]
+  },
+  "suitability": {
+    "food_contact": "conditional",
+    "load_bearing": "moderate",
+    "high_temperature": "moderate",
+    "outdoor": "limited"
+  },
+  "properties": {
+    "density_g_cm3": 1.08,
+    "grams_per_100cm3": 108,
+    "cm3_per_100g": 92.6,
+    "shrinkage_pct": { "min": 1.0, "max": 2.5, "recommended": 1.5 },
+    "glass_transition_c": 50,
+    "heat_deflection_c": 80,
+    "max_service_temp_c": 90,
+    "tensile_strength_mpa": { "min": 40, "max": 80, "recommended": 52 },
+    "notes": "Density spans the PA12 (~1.01-1.04) to PA6 (~1.12-1.14) range; 1.08 is recorded as the mid-point for an unfilled generic PA. Tg is 40-60 °C depending on grade and drops further when the part is wet. HDT@0.45 MPa is the widest disagreement in the sources: eSUN ePA12 cites 100 °C while unfilled PA6 is often listed at 55-65 °C unless annealed — 80 °C is the recorded mid-point, not a datasheet value. Tensile: eSUN ePA12 50.8 MPa, partmfg table 52.45 MPa, general range 40-80 MPa."
+  },
+  "scores": {
+    "ease_of_print": 3,
+    "dimensional_stability": 3,
+    "warp_tendency": 9,
+    "layer_adhesion": 9,
+    "compression_strength": 7,
+    "temperature_tolerance": 6,
+    "uv_tolerance": 2,
+    "weather_tolerance": 3,
+    "water_tolerance": 1
+  },
+  "compatibility": {
+    "bonds_with": ["pa"],
+    "support_materials": ["pa"],
+    "usable_as_support_for": [],
+    "notes": "Nylon reliably welds only to itself. It does not bond usefully to pla, petg, abs, asa, pc, pp, pva, hips, bvoh, pctg, pvb or pet — the chemistry and the 240-290 °C print window are both mismatched. Some engineering TPUs are marketed as nylon-compatible and can reach marginal interlayer bonding, but that is brand-specific rather than a property of the class. Soluble supports are impractical: PVA degrades above ~200 °C and BVOH, while more heat-tolerant, still sits below nylon's range, so same-material PA breakaway supports are the standard workaround. PA is a poor support material for other polymers because it cross-bonds so weakly."
+  },
+  "plate_recommendations": [
+    {
+      "plate_id": "pei-textured",
+      "rating": "usable",
+      "notes": "Textured PEI works at ~80-110 °C bed and is preferred over smooth PEI, which nylon can over-bond to and tear on removal. Adhesion on bare PEI is still inconsistent, so a glue stick is commonly applied as an adhesion PROMOTER here — the opposite of its release-layer role for PC/PETG/TPU. A dedicated PA sheet or garolite (G10) plate outperforms textured PEI for large parts."
+    }
+  ],
+  "emissions": {
+    "voc_level": "high",
+    "particulate_level": "moderate",
+    "primary_emissions": ["caprolactam (~2-180 µg/min, from PA6)", "ultrafine particles (~10⁸-10¹¹ particles/min)"],
+    "ventilation": "recommended",
+    "notes": "Caprolactam is the named marker compound for PA6 and has been reported at levels exceeding some chronic-exposure limits at close range in poorly ventilated spaces; Prusa's own knowledge base flags a strong odour. UFP emission is material- and temperature-dependent and sits between PLA's low baseline and ABS's high baseline. Use an enclosure plus active ventilation or a HEPA+carbon filter for extended prints, and do not run long nylon jobs in an unventilated occupied room."
+  },
+  "safety_notes": "Drying ovens set above 90 °C can deform spools and, at nylon's higher drying temperatures, accelerate off-gassing — keep drying under 90 °C and ventilate the dryer. Carbon- and glass-filled PA variants are abrasive and produce respirable fibre dust when sanded or machined; wear a respirator and use wet sanding.",
+  "additional_notes": "Nylon parts continue to move after printing: they absorb ambient moisture and grow, then shrink again when dried, which is why precision fits should be conditioned (soaked to equilibrium or dried and sealed) before final measurement. Choosing between PA6 and PA12 is the main design decision — PA6 for stiffness and heat, PA12 for dimensional calm and easier printing.",
+  "provenance": {
+    "sources": [
+      "https://help.prusa3d.com/article/polyamide-nylon_167188",
+      "https://www.simplify3d.com/resources/materials-guide/nylon/",
+      "https://www.esun3d.com/uploads/eSUN_ePA12-Filament_TDS_V4.01.pdf",
+      "https://www.partmfg.com/3d-printing-filament-properties-table/",
+      "https://help.prusa3d.com/article/water-soluble-materials-pva-bvoh_162860",
+      "https://shop.polymaker.com/pages/nylon",
+      "http://built-envi.com/portfolio/ultrafine-particle-emissions-from-3d-printers/",
+      "https://www.cnckitchen.com/blog/carbon-fiber-nylon-in-3d-printing-pa6-vs-pa12-tested"
+    ],
+    "last_verified": "2026-07-31",
+    "confidence": "medium",
+    "conflicts": "HDT@0.45 MPa is the largest unresolved disagreement: eSUN's ePA12 TDS cites 100 °C while unfilled PA6 is commonly listed at 55-65 °C unless annealed; 80 °C is a recorded mid-point rather than a measured figure. Density (1.01-1.14) and Tg (40-60 °C) both vary with PA6 vs PA12 grade rather than between sources, so single values here are grade-averaged. Nozzle temperature differs by grade: eSUN ePA12 240-290 °C vs Prusa's 285 °C for a PA blend. Price range is extrapolated from spool listings and is unverified against current retail. Max continuous service temperature (80-100 °C) is a community/aggregator figure, not a datasheet value."
+  }
+}

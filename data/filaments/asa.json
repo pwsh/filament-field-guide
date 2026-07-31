@@ -1,39 +1,59 @@
 {
   "id": "asa",
   "name": "ASA (Acrylonitrile Styrene Acrylate)",
-  "aliases": [],
-  "status": "example",
+  "aliases": ["ASA", "Acrylonitrile Styrene Acrylate", "Acrylic Styrene Acrylonitrile"],
+  "status": "researched",
   "base_type": null,
   "variation_kind": null,
   "polymer_class": "styrenic",
-  "chemical_makeup": "Terpolymer of acrylonitrile, styrene, and acrylate rubber — ABS chemistry with the butadiene rubber replaced by UV-stable acrylate",
-  "summary": "The outdoor workhorse: ABS-like strength and temperature resistance with strong UV stability. Needs an enclosure and ventilation. Example entry pending Phase A research.",
+  "chemical_makeup": "Acrylonitrile styrene acrylate — a styrenic terpolymer in which a grafted acrylate-ester rubber phase is dispersed in a styrene-acrylonitrile (SAN) matrix. The saturated acrylate rubber replaces ABS's polybutadiene, removing the double bonds UV attacks; amorphous engineering thermoplastic",
+  "summary": "ABS reformulated for sunlight: the same styrenic stiffness, impact resistance and ~100 °C glass transition, but with a weather-stable acrylate rubber phase that makes it the best UV and outdoor performer among common filaments. The cost is ABS-grade warping that demands an enclosure, and high styrene-dominated emissions that demand ventilation.",
   "printing": {
-    "nozzle_temp_c": { "min": 240, "max": 270, "recommended": 255 },
-    "bed_temp_c": { "min": 90, "max": 110, "recommended": 100 },
-    "ambient_temp_c": { "min": 40, "max": 60, "recommended": 50 },
-    "speed_mm_s": { "min": 30, "max": 150, "recommended": 60 },
+    "nozzle_temp_c": { "min": 240, "max": 280, "recommended": 255 },
+    "bed_temp_c": { "min": 80, "max": 110, "recommended": 100 },
+    "ambient_temp_c": { "min": 40, "max": 60, "recommended": 55 },
+    "speed_mm_s": { "min": 35, "max": 250, "recommended": 90 },
     "enclosure_recommended": true,
     "heated_chamber_required": false,
     "requires_hardened_nozzle": false,
-    "part_cooling_fan_pct": { "min": 0, "max": 30, "recommended": 10 }
+    "part_cooling_fan_pct": { "min": 10, "max": 25, "recommended": 15 },
+    "notes": "Brand starting points differ: Polymaker 240-280 °C (start 250), Prusament 260±10 °C, Bambu 240-270 °C. Bed 90-110 °C (Polymaker), 110±5 °C (Prusament), 80-100 °C with glue (Bambu). Keep part cooling low — heavy cooling splits layers. An enclosed, draft-free ~60 °C chamber is the ideal; a passive enclosure suffices for small parts, while large flat parts effectively require active chamber heat. Modern enclosed CoreXY machines run 200-250 mm/s; legacy/Bowden setups sit at 35-70 mm/s. Hardened nozzle only for CF/GF-filled ASA."
   },
   "drying": {
     "required_before_use": "if-exposed",
     "temp_c": { "min": 75, "max": 85, "recommended": 80 },
-    "time_hours": { "min": 3, "max": 8, "recommended": 4 },
-    "methods": ["filament dryer", "convection oven"],
-    "dryness_validation": "No popping or surface pitting; consistent gloss on a test print"
+    "time_hours": { "min": 8, "max": 12, "recommended": 8 },
+    "methods": ["dedicated filament dryer", "convection oven at 75-85 °C", "heated-bed method at 90-100 °C for 12 h", "drybox with desiccant"],
+    "dryness_validation": "No popping or crackling while extruding; no bubbles or voids in a hand-pulled test strand; consistent glossy extrudate; no increase in stringing on a retraction test",
+    "notes": "Bambu's drying wiki gives 75-85 °C for 8 h (oven) or 90-100 °C for 12 h (heated-bed method); Bambu's own ASA product page states 80 °C for 8 h. ASA does not need the routine drying nylon does, but it absorbs enough to matter after open-air storage."
   },
   "storage": {
-    "recommendations": "Sealed with desiccant; less moisture-critical than PETG/PA but dry storage improves surfaces",
-    "max_humidity_pct": 40,
+    "recommendations": "Store sealed with desiccant, targeting under 20% RH. Absorbs less aggressively than nylon or PETG but noticeably more than PLA, so resealing between prints is worthwhile rather than optional.",
+    "max_humidity_pct": 20,
     "hygroscopy": "moderate"
   },
-  "price": { "usd_per_kg_low": 18, "usd_per_kg_high": 45 },
+  "price": {
+    "usd_per_kg_low": 18,
+    "usd_per_kg_high": 45,
+    "notes": "2025-2026 pricing for standard unfilled grades: budget brands ~$18-22, Bambu $29.99/kg, premium Prusament/Polymaker and specialty colours ~$35-45 per kg. Exact bounds unverified."
+  },
   "use_cases": {
-    "recommended": ["outdoor fixtures", "automotive trim", "RC and drone parts", "housings in sun", "signage"],
-    "not_recommended": ["open-frame printers in cold rooms", "unventilated spaces (styrene emissions)", "food contact"]
+    "recommended": [
+      "outdoor enclosures and signage",
+      "automotive exterior trim and license-plate frames",
+      "garden and patio fixtures",
+      "mailboxes and other permanently sun-exposed housings",
+      "drone and RC frames exposed to sun",
+      "workshop jigs and fixtures",
+      "functional weather-exposed prototypes"
+    ],
+    "not_recommended": [
+      "food-contact items",
+      "indoor decor where PLA would do the job more easily",
+      "printing in unenclosed, unventilated occupied rooms (styrene VOCs)",
+      "tight-tolerance small parts printed without an enclosure (corner lift and warp)",
+      "flexible or energy-absorbing applications needing elastomer behaviour"
+    ]
   },
   "suitability": {
     "food_contact": "no",
@@ -45,43 +65,61 @@
     "density_g_cm3": 1.07,
     "grams_per_100cm3": 107,
     "cm3_per_100g": 93.5,
-    "shrinkage_pct": { "min": 0.4, "max": 0.7 },
-    "glass_transition_c": 105,
-    "heat_deflection_c": 96,
-    "max_service_temp_c": 90,
-    "tensile_strength_mpa": { "min": 40, "max": 50 }
+    "shrinkage_pct": { "min": 0.4, "max": 0.7, "recommended": 0.55 },
+    "glass_transition_c": 100,
+    "heat_deflection_c": 93,
+    "max_service_temp_c": 85,
+    "tensile_strength_mpa": { "min": 37, "max": 47, "recommended": 43 },
+    "notes": "Density spans 1.05 (Bambu) to 1.08-1.09 (Polymaker/partmfg.com) with Prusament at 1.07 — 1.07 recorded. HDT from the Prusament TDS is 93 °C at 0.45 MPa and 86 °C at 1.8 MPa; Bambu cites 100 °C without stating a load. Tensile strength shows a notable brand spread: Bambu 37±3 MPa, Prusament 42-45 MPa, Polymaker/partmfg.com 47.1 MPa. Shrinkage and max service temperature are typical-for-styrenics estimates rather than datasheet values. CNC Kitchen measured a bending modulus of ~2300 MPa for ASA against ~3300 MPa for PLA, and ~30% impact energy absorbed versus 8% for PLA and 14% for PETG."
   },
   "scores": {
     "ease_of_print": 5,
     "dimensional_stability": 7,
     "warp_tendency": 7,
-    "layer_adhesion": 6,
-    "compression_strength": 7,
+    "layer_adhesion": 4,
+    "compression_strength": 6,
     "temperature_tolerance": 7,
     "uv_tolerance": 9,
     "weather_tolerance": 9,
     "water_tolerance": 8
   },
   "compatibility": {
-    "bonds_with": ["asa", "abs"],
+    "bonds_with": ["asa", "abs", "petg"],
     "support_materials": ["hips"],
     "usable_as_support_for": ["abs"],
-    "notes": "HIPS dissolves in limonene, giving soluble supports for styrenics"
+    "notes": "Welds chemically to ABS — same SAN matrix family — which makes ABS/ASA the standard multi-material pairing for outdoor parts. The PETG joint is weaker and order-dependent: PETG printed first with ASA on top is stronger than the reverse, so treat it as semi-compatible rather than a true weld. No chemical bond to PLA, PC, PA, PP, TPU or TPE (mechanical interlock only; specifics unverified). PVA and BVOH are unusable as supports because they degrade below ASA's 240-280 °C nozzle window. HIPS is the conventional breakaway/limonene-soluble support for the ABS/ASA family, though the documentation is for ABS and only inferred for ASA."
   },
   "plate_recommendations": [
-    { "plate_id": "pei-textured", "rating": "recommended", "notes": "Clean textured PEI at 100 °C; glue stick as release/adhesion tuner on large flats" }
+    {
+      "plate_id": "pei-textured",
+      "rating": "recommended",
+      "notes": "Works at 90-110 °C bed. ASA still lifts at the corners on larger footprints, so a glue stick or dedicated adhesion promoter (Magigoo-type) is commonly applied even on textured PEI, and brims help. Bambu's 80-100 °C bed guidance explicitly assumes glue."
+    }
   ],
   "emissions": {
     "voc_level": "high",
     "particulate_level": "high",
-    "primary_emissions": ["styrene", "ultrafine particles (high)"],
+    "primary_emissions": ["styrene", "benzaldehyde", "acetophenone", "ethylbenzene", "toluene", "C3-benzenes", "ultrafine particles"],
     "ventilation": "required",
-    "notes": "Styrene is a respiratory irritant and possible carcinogen with chronic exposure. Print enclosed with exhaust or HEPA+activated-carbon filtration; never in occupied unventilated rooms."
+    "notes": "Grouped with ABS and ULTRAT as the top VOC emitters among common filaments (irrgang.dev, citing an academic emissions study), dominated by styrene. Ultrafine particle emission is elevated and comparable to ABS. Print in an enclosure vented externally, or filtered through HEPA plus activated carbon; do not run ASA in an occupied unventilated room."
   },
-  "safety_notes": "Enclosure serves double duty: warp control and emission containment",
+  "safety_notes": "Styrene is a respiratory irritant and a suspected carcinogen on chronic exposure — the enclosure is a containment measure as much as a warp-control one. Carbon- and glass-filled ASA grades are abrasive and need a hardened nozzle; do not inhale fibre dust when sanding them.",
+  "additional_notes": "Z-strength is the weak axis and is strongly process-dependent: CNC Kitchen measured Z at only ~29% of XY strength when printed unenclosed, against ~46-55% for PLA and PETG, with an enclosure recovering roughly 20%. Orient loads in-plane and treat the enclosure as a structural requirement, not a cosmetic one.",
   "provenance": {
-    "sources": ["EXAMPLE ENTRY — values are typical published figures; replace via Phase A research"],
+    "sources": [
+      "https://wiki.polymaker.com/the-basics/3d-printing-materials/asa",
+      "https://prusament.com/wp-content/uploads/2022/10/ASA_Prusament_TDS_2022_16_EN.pdf",
+      "https://us.store.bambulab.com/products/asa-filament",
+      "https://wiki.bambulab.com/en/filament-acc/filament/dry-filament",
+      "https://www.partmfg.com/3d-printing-filament-properties-table/",
+      "https://www.simplify3d.com/resources/materials-guide/asa/",
+      "https://www.cnckitchen.com/blog/comparing-pla-petg-amp-asa-feat-prusament",
+      "https://www.irrgang.dev/comparing-3d-printer-emissions/",
+      "https://3dsolved.com/3d-filament-glass-transition-temperatures/",
+      "https://tinkeratlas.com/tools/filament-compatibility"
+    ],
     "last_verified": "2026-07-31",
-    "confidence": "placeholder"
+    "confidence": "medium",
+    "conflicts": "HDT: Prusament measures 93 °C at 0.45 MPa and 86 °C at 1.8 MPa while Bambu cites 100 °C without specifying the load basis — 93 °C recorded on the schema's 0.45 MPa basis. Density: Bambu 1.05, Prusament 1.07, Polymaker/partmfg.com 1.08-1.09. Tensile strength spans 37±3 MPa (Bambu) to 47.1 MPa (Polymaker/partmfg.com), a spread too wide to be measurement noise alone. Drying: Bambu's wiki says 75-85 °C while Bambu's own ASA product page says 80 °C. Shrinkage (~0.4-0.7%), max continuous service temperature (~80-90 °C) and the 'moderate' hygroscopy class are typical-for-class or community estimates, not datasheet figures. HIPS as an ASA support is documented for ABS and inferred for ASA."
   }
 }

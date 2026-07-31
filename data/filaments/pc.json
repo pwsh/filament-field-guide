@@ -1,0 +1,122 @@
+{
+  "id": "pc",
+  "name": "PC (Polycarbonate)",
+  "aliases": ["Polycarbonate", "PC Blend", "PC-ABS", "PC-PBT"],
+  "status": "researched",
+  "base_type": null,
+  "variation_kind": null,
+  "polymer_class": "polycarbonate",
+  "chemical_makeup": "Bisphenol-A polycarbonate — an amorphous engineering thermoplastic. Catalog blends such as PC-ABS and PC-PBT share this base chemistry with toughening or flow modifiers",
+  "summary": "The high-temperature structural workhorse of desktop FDM: the best heat resistance, stiffness and sustained-load performance of the common materials, with impact toughness to match. The price is process difficulty — 250-310 °C nozzle temperatures, an enclosure that is effectively mandatory, and hygroscopy on par with nylon.",
+  "printing": {
+    "nozzle_temp_c": { "min": 250, "max": 310, "recommended": 275 },
+    "bed_temp_c": { "min": 90, "max": 120, "recommended": 110 },
+    "ambient_temp_c": { "min": 45, "max": 70, "recommended": 55 },
+    "speed_mm_s": { "min": 20, "max": 60, "recommended": 40 },
+    "enclosure_recommended": true,
+    "heated_chamber_required": false,
+    "requires_hardened_nozzle": false,
+    "part_cooling_fan_pct": { "min": 0, "max": 20, "recommended": 5 },
+    "notes": "Sources cluster into two bands: Polymaker PolyMax PC runs cooler at 250-270 °C, while Prusa (275 °C ±10) and Simplify3D (260-310 °C) push higher. Start at 275 °C and tune for layer bonding. Keep part cooling near zero — excessive cooling is the main cause of layer separation in PC. Drop to 20-40 mm/s for large or warp-prone geometry. An enclosure is near-required and 45-70 °C ambient is the target; an actively heated chamber is strongly beneficial for medium and large parts but is not the hard prerequisite it is for PEEK-class polymers, so heated_chamber_required is recorded as false. Unfilled PC prints fine on stock brass or steel nozzles; CF/GF PC variants need a hardened nozzle."
+  },
+  "drying": {
+    "required_before_use": "always",
+    "temp_c": { "min": 60, "max": 80, "recommended": 75 },
+    "time_hours": { "min": 4, "max": 12, "recommended": 6 },
+    "methods": ["filament dryer", "convection oven at low temperature", "print directly from a heated dryer", "drybox with desiccant while printing"],
+    "dryness_validation": "Clear, glossy extrudate rather than hazy, matte or bubbly; no popping or hissing at the nozzle; consistent extrusion width; the part does not snap brittly on a test coupon",
+    "notes": "Prusa describes PC as 'extremely hygroscopic'. Polymaker specifies 75 °C for 6 h on PolyMax PC; saturated spools benefit from longer. Prusament PC Blend is noted to absorb moisture much less than standard polycarbonates, so drying rigour is partly brand-dependent."
+  },
+  "storage": {
+    "recommendations": "Airtight container with desiccant, with minimal ambient exposure between prints; print from a drybox or heated dryer for long jobs. Standard PC is at the extreme end of hygroscopy, while some PC blends are merely high.",
+    "max_humidity_pct": 20,
+    "hygroscopy": "extreme"
+  },
+  "price": {
+    "usd_per_kg_low": 30,
+    "usd_per_kg_high": 65,
+    "notes": "2025-2026 pricing for standard unfilled PC: Polymaker PolyMax PC $38.99/0.75 kg (~$52/kg) or $144.99/3 kg (~$48/kg); Bambu and other mainstream brands generally $30-45/kg. Precise low end unverified."
+  },
+  "use_cases": {
+    "recommended": [
+      "functional prototypes needing heat plus impact resistance",
+      "under-hood and automotive fixtures",
+      "electronics enclosures and housings",
+      "fan shrouds and heat-adjacent brackets",
+      "tooling, jigs and fixtures",
+      "load-bearing structural components",
+      "optically clear lens and light-guide parts on clear grades"
+    ],
+    "not_recommended": [
+      "food-contact items (standard grades are not food-safe)",
+      "quick low-effort prints (drying plus enclosure overhead)",
+      "fine-detail miniatures (high temperatures worsen stringing and detail)",
+      "long-term outdoor UV exposure without coating or stabiliser",
+      "beginner setups and open-frame printers"
+    ]
+  },
+  "suitability": {
+    "food_contact": "no",
+    "load_bearing": "high",
+    "high_temperature": "yes",
+    "outdoor": "limited"
+  },
+  "properties": {
+    "density_g_cm3": 1.2,
+    "grams_per_100cm3": 120,
+    "cm3_per_100g": 83.3,
+    "shrinkage_pct": { "min": 0.5, "max": 0.8, "recommended": 0.6 },
+    "glass_transition_c": 145,
+    "heat_deflection_c": 114,
+    "max_service_temp_c": 112,
+    "tensile_strength_mpa": { "min": 41, "max": 72, "recommended": 53 },
+    "notes": "Density 1.19-1.20 g/cm³. Shrinkage is numerically low-moderate yet PC still warps badly, because the driver is thermal stress from the high processing temperature rather than crystallisation. Tg is recorded at 145 °C to reflect general BPA-PC literature (~150 °C); Polymaker's PolyMax PC measured 113 °C by DSC, which likely reflects a modified grade. HDT@0.45 MPa: PolyMax PC 114 °C (HDT@1.8 MPa 99 °C), general literature to 140 °C. Tensile: PolyMax PC 53.4 MPa XY and 41.4 MPa Z, partmfg 52 MPa, 3dprinterly up to 65 MPa."
+  },
+  "scores": {
+    "ease_of_print": 3,
+    "dimensional_stability": 6,
+    "warp_tendency": 8,
+    "layer_adhesion": 8,
+    "compression_strength": 8,
+    "temperature_tolerance": 9,
+    "uv_tolerance": 3,
+    "weather_tolerance": 4,
+    "water_tolerance": 5
+  },
+  "compatibility": {
+    "bonds_with": ["pc", "abs", "asa"],
+    "support_materials": ["bvoh", "hips", "pc"],
+    "usable_as_support_for": [],
+    "notes": "PC has the best cross-material affinity of the engineering trio: it is chemically related to ABS (PC-ABS blends are a commercial product) and interfaces can partially fuse, with ASA a weaker second. It does not weld reliably to pla, petg, pa, pp, pctg, pvb, pet, tpu or tpe. Prusa explicitly notes BVOH and HIPS as compatible supports including via MMU2/3; PVA is unsuitable because it degrades well below PC's print temperature. PC is not used as a support for other polymers — its melt temperature is too high and it bonds too aggressively."
+  },
+  "plate_recommendations": [
+    {
+      "plate_id": "pei-textured",
+      "rating": "recommended",
+      "notes": "Textured/satin PEI at ~90-115 °C bed is the recommended surface. Prusa explicitly warns against smooth PEI, where PC's adhesion is strong enough to tear the sheet. Use a glue stick as a SEPARATOR/release layer to protect the plate, matching the pattern for PETG and TPU rather than nylon's promoter role."
+    }
+  ],
+  "emissions": {
+    "voc_level": "moderate",
+    "particulate_level": "moderate",
+    "primary_emissions": ["ultrafine particles", "unspecified VOCs (no single dominant marker compound identified in the sources reviewed)"],
+    "ventilation": "recommended",
+    "notes": "Prusa describes a moderate odour. PC's VOC profile is less characterised in the literature than nylon's caprolactam or ABS's styrene, so no marker compound is named here. UFP emission is moderate and brand/temperature dependent, sitting between the PLA and ABS extremes in the built-envi summary of ACS EST studies. Because PC is printed hot and enclosed, extended sessions should be vented or filtered rather than run in an occupied room."
+  },
+  "safety_notes": "Standard grades are bisphenol-A based, which is a further reason to keep them out of food- and drink-contact uses regardless of print-surface hygiene. The 250-310 °C hotend and 90-120 °C bed are burn hazards, and a hot enclosure concentrates off-gassing — vent before opening the door.",
+  "additional_notes": "PC's weakness is process, not material: dry, hot and enclosed it delivers the strongest, most heat-tolerant parts in this catalog, but under-dried or under-enclosed it delaminates and prints worse than ABS. PC blends (PC-ABS, PC-PBT, Prusament PC Blend) trade some heat resistance for markedly easier printing and lower moisture uptake and are the pragmatic choice for most users.",
+  "provenance": {
+    "sources": [
+      "https://help.prusa3d.com/article/polycarbonate-pc_165812",
+      "https://www.simplify3d.com/resources/materials-guide/polycarbonate/",
+      "https://wiki.polymaker.com/polymaker-products/more-about-our-products/documents/technical-data-sheets/polycarbonate/polymax-tm-pc",
+      "https://3dprinterly.com/filament-printing-guide/polycarbonate/",
+      "https://www.partmfg.com/3d-printing-filament-properties-table/",
+      "https://shop.polymaker.com/products/polymax-pc",
+      "http://built-envi.com/portfolio/ultrafine-particle-emissions-from-3d-printers/"
+    ],
+    "last_verified": "2026-07-31",
+    "confidence": "medium",
+    "conflicts": "Glass transition is the main disagreement: Polymaker measured 113 °C by DSC on PolyMax PC while Simplify3D and general PC literature cite ~150 °C — the gap most likely reflects different grades and measurement conditions; 145 °C is recorded for generic BPA-PC and the Polymaker figure is preserved in properties.notes. Nozzle temperature splits similarly: Polymaker 250-270 °C vs Simplify3D 260-310 °C. Tensile strength spans 41-72 MPa across sources and is strongly anisotropic (PolyMax XY 53.4 vs Z 41.4 MPa). Hygroscopy is brand-dependent — Prusa calls standard PC extremely hygroscopic while noting Prusament PC Blend absorbs far less. Water tolerance is scored 5 as a compromise: PC as a filament behaves like nylon, but a finished PC part is far less water-permeable than a nylon one. The low end of the price range is unverified."
+  }
+}

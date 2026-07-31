@@ -1,0 +1,123 @@
+{
+  "id": "tpu",
+  "name": "TPU (Thermoplastic Polyurethane)",
+  "aliases": ["TPU", "Thermoplastic Polyurethane", "Flexible filament", "TPU 95A"],
+  "status": "researched",
+  "base_type": null,
+  "variation_kind": null,
+  "polymer_class": "elastomer",
+  "chemical_makeup": "Thermoplastic polyurethane — a block copolymer alternating rigid hard segments (diisocyanate plus a short chain extender) with flexible soft segments (polyester or polyether polyol). Ether-based grades resist hydrolysis better; ester-based grades resist oil and abrasion better. Filament grades cluster at Shore 85A-95A",
+  "summary": "The default flexible filament: a rubbery block copolymer that prints on any direct-drive machine at room temperature with essentially no warp, and absorbs impact and vibration that rigid filaments transmit. The difficulties are all in feeding and tuning — it buckles in Bowden paths, needs slow speeds and retraction work, drinks moisture, and is markedly weaker in Z than XY.",
+  "printing": {
+    "nozzle_temp_c": { "min": 210, "max": 250, "recommended": 230 },
+    "bed_temp_c": { "min": 20, "max": 60, "recommended": 45 },
+    "ambient_temp_c": { "min": 18, "max": 30, "recommended": 22 },
+    "speed_mm_s": { "min": 10, "max": 80, "recommended": 30 },
+    "enclosure_recommended": false,
+    "heated_chamber_required": false,
+    "requires_hardened_nozzle": false,
+    "part_cooling_fan_pct": { "min": 0, "max": 50, "recommended": 30 },
+    "notes": "Brand windows: Ultrafuse TPU 95A 210-230 °C with a 40 °C bed, NinjaTek Cheetah 225-250 °C at room temperature to 50 °C with glue recommended, Polymaker 210-250 °C (start 230) at 40-60 °C. Direct drive with a constrained filament path is effectively required; Bowden setups buckle the filament and need 10-25 mm/s. On tuned direct-drive/CoreXY machines 25-80 mm/s is realistic (NinjaTek: perimeters 25-45, infill 50-80); 'high-flow' TPU marketing claims of 150-250 mm/s are unverified. No enclosure or chamber needed."
+  },
+  "drying": {
+    "required_before_use": "always",
+    "temp_c": { "min": 65, "max": 80, "recommended": 70 },
+    "time_hours": { "min": 5, "max": 24, "recommended": 8 },
+    "methods": ["dedicated filament dryer", "hot-air or vacuum oven at 70 °C", "heated-bed method at 80-90 °C for 12 h", "print directly from a drybox with desiccant"],
+    "dryness_validation": "No popping or crackling at the nozzle; no foamy or bubbly surface on an extruded strand; smooth consistent extrusion without 'worming' or surging; no rise in stringing on a retraction test",
+    "notes": "Ultrafuse specifies 70 °C for at least 5 h in a hot-air or vacuum oven; Bambu's wiki gives 65-75 °C for 8 h (oven) or 80-90 °C for 12 h (heated bed); some sources cite 24 h for softer grades. Treat drying as routine rather than occasional — softer Shore A grades in particular can re-absorb enough moisture to print badly within hours of open-air exposure, so 'always' is recorded even though hard 95A grades sometimes tolerate a skipped cycle."
+  },
+  "storage": {
+    "recommendations": "Sealed with desiccant at all times, targeting under 20% RH, and ideally printed straight from a drybox. Softer Shore A grades absorb faster than 95A.",
+    "max_humidity_pct": 20,
+    "hygroscopy": "high"
+  },
+  "price": {
+    "usd_per_kg_low": 20,
+    "usd_per_kg_high": 70,
+    "notes": "2025-2026 pricing for standard 85A-95A grades: budget generic ~$20-25, Bambu TPU ~$25-30, premium NinjaTek Cheetah and specialty soft grades $50-70+ per kg. Bounds unverified — flexible filament retail pricing is not consistently published per kilogram."
+  },
+  "use_cases": {
+    "recommended": [
+      "phone and device cases",
+      "gaskets and seals",
+      "RC tyres and shock absorbers",
+      "wearables such as watch bands and orthotic inserts",
+      "vibration dampers and isolating mounts",
+      "cable strain reliefs and protective sleeving",
+      "drone propeller guards",
+      "shoe midsole and soft-goods prototypes"
+    ],
+    "not_recommended": [
+      "rigid structural or load-bearing parts",
+      "high-temperature applications",
+      "tight-tolerance mating parts (elastic recovery causes dimensional drift)",
+      "large flat parts (bed adhesion and removal are awkward)",
+      "food-contact use on uncertified grades"
+    ]
+  },
+  "suitability": {
+    "food_contact": "conditional",
+    "load_bearing": "light",
+    "high_temperature": "no",
+    "outdoor": "limited"
+  },
+  "properties": {
+    "density_g_cm3": 1.22,
+    "grams_per_100cm3": 122,
+    "cm3_per_100g": 82.0,
+    "glass_transition_c": -25,
+    "max_service_temp_c": 70,
+    "tensile_strength_mpa": { "min": 6, "max": 44, "recommended": 30 },
+    "notes": "Density spans 1.15 (Ultrafuse, 1149 kg/m³) to 1.24 (Polymaker wiki, 95A) with Ultimaker at 1.22 — 1.22 recorded. Tg is far below room temperature at about -25 °C (Ultrafuse), with a melting point near 144 °C; HDT is rarely published for elastomers and is almost certainly well under 50 °C, so it is omitted rather than guessed. Max service temperature of roughly 60-80 °C is an unverified estimate. The tensile range is dominated by print orientation, not grade: Ultimaker measured 23.7±2.1 MPa XY, 37.9±1.6 MPa YZ and only 6.4±0.5 MPa in Z; Ultrafuse reports 44.2 MPa XY and Polymaker 35 MPa. Shrinkage is very low to near zero but no source publishes a figure, so the field is omitted."
+  },
+  "scores": {
+    "ease_of_print": 3,
+    "dimensional_stability": 4,
+    "warp_tendency": 1,
+    "layer_adhesion": 3,
+    "compression_strength": 2,
+    "temperature_tolerance": 3,
+    "uv_tolerance": 4,
+    "weather_tolerance": 4,
+    "water_tolerance": 6
+  },
+  "compatibility": {
+    "bonds_with": ["tpu", "petg", "pla"],
+    "support_materials": ["pla"],
+    "usable_as_support_for": [],
+    "notes": "Joints to PLA and PETG rely mainly on mechanical interlocking rather than a chemical weld — design dovetails or keyed features, print the rigid material first, then TPU on top at a reduced 20-30 mm/s. The PETG pairing is the more reliable of the two but is still weaker than a same-family weld. Does not bond usefully to ABS, ASA, PC or PA. PLA is the practical breakaway support because it releases cleanly; PVA and HIPS are not documented as reliable supports or interfaces for TPU (temperature and adhesion mismatch, unverified). TPU is not used as a support material for anything."
+  },
+  "plate_recommendations": [
+    {
+      "plate_id": "pei-textured",
+      "rating": "usable",
+      "notes": "Powder-coated textured PEI works well at room temperature to 60 °C bed and per Prusa generally needs no separator. The failure mode is over-adhesion rather than lifting: soft grades can grip hard enough that removal tears the part, so a glue stick is often applied as a release layer rather than an adhesion aid. Very soft flex grades on smooth or satin sheets do need a separator (glue stick or Kapton)."
+    }
+  ],
+  "emissions": {
+    "voc_level": "low",
+    "particulate_level": "low",
+    "primary_emissions": ["ultrafine particles", "isocyanate residues (unverified)", "urethane/plasticizer decomposition byproducts (unverified)"],
+    "ventilation": "recommended",
+    "notes": "Not a styrenic, so TPU avoids the styrene that dominates ABS/ASA emissions and is generally regarded as a lower VOC and UFP emitter. No quantitative UFP or speciated VOC study for TPU was located in this research, and urethane chemistry can in principle release isocyanate residues at print temperature, so ventilate as a general precaution — less critical than for ASA/ABS but not dismissible."
+  },
+  "safety_notes": "Isocyanate residues from urethane chemistry are a plausible but unquantified hazard; avoid running TPU hot (above ~250 °C) where thermal decomposition becomes more likely. Carbon-filled and other compounded flexible grades are abrasive and need a hardened nozzle.",
+  "additional_notes": "Anisotropy is the defining design constraint: Ultimaker's data shows Z strength roughly four times lower than XY, so flex parts must be oriented so that stretching and bending load layers in-plane. Elastic recovery also means printed dimensions settle slightly off nominal, which rules TPU out for press fits held to tight tolerance.",
+  "provenance": {
+    "sources": [
+      "https://move.forward-am.com/hubfs/AES%20Documentation/Flexible%20Filaments/TPU%2095A/TDS/Ultrafuse_TPU-95A_TDS_EN_v1.0.pdf",
+      "https://um-support-files.ultimaker.com/materials/2.85mm/tds/TPU-95A/Ultimaker-TPU95A-TDS-v5.00.pdf",
+      "https://wiki.polymaker.com/the-basics/3d-printing-materials/tpu",
+      "https://www.matterhackers.com/store/l/ninjatek-cheetah-filament/sk/MZX20S29",
+      "https://wiki.bambulab.com/en/filament-acc/filament/dry-filament",
+      "https://filamentspecs.com/tpu-tpe-guide/",
+      "https://help.prusa3d.com/article/flexible-materials_2057",
+      "https://www.partmfg.com/3d-printing-filament-properties-table/",
+      "https://tinkeratlas.com/tools/filament-compatibility"
+    ],
+    "last_verified": "2026-07-31",
+    "confidence": "medium",
+    "conflicts": "Tensile strength: 6.4 MPa (Ultimaker Z) to 44.2 MPa (Ultrafuse XY) — the spread is mostly orientation, but grade and hardness differences add to it, so no single figure is meaningful without stating axis. Density: Ultrafuse 1.15, Ultimaker 1.22, Polymaker 1.24. Part cooling: Polymaker recommends 20-50% fan while other guides recommend the fan off for maximum layer adhesion. Drying time: Ultrafuse 5 h, Bambu 8-12 h, some community sources 24 h for soft grades. Bonding: this entry's sources describe PLA/PETG joints as mechanical interlock only, while the PETG entry cites sources reporting a genuine if weak TPU-PETG weld — unresolved. HDT, shrinkage %, max service temperature and the emissions profile are all unverified; no speciated emissions study for TPU was found."
+  }
+}

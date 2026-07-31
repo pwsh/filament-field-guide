@@ -1,39 +1,61 @@
 {
   "id": "pla",
   "name": "PLA (Polylactic Acid)",
-  "aliases": ["Polylactide"],
-  "status": "example",
+  "aliases": ["Polylactide", "PLA"],
+  "status": "researched",
   "base_type": null,
   "variation_kind": null,
   "polymer_class": "polylactide",
-  "chemical_makeup": "Polylactic acid, a biodegradable aliphatic polyester derived from fermented plant starch",
-  "summary": "The default FDM material: easiest to print, stiff, accurate, inexpensive — but soft above ~55 °C and brittle under impact. Example entry pending Phase A research.",
+  "chemical_makeup": "Polylactic acid — an aliphatic polyester polymerised from lactic acid/lactide derived from fermented plant starch (corn, sugarcane); biodegradable under industrial composting conditions",
+  "summary": "The default FDM material and the easiest polymer to print: no enclosure, almost no warp, excellent dimensional accuracy and the lowest emissions of the common filaments. The trade-off is heat and weather: parts soften near 55-60 °C, creep under sustained load, and embrittle in sunlight.",
   "printing": {
     "nozzle_temp_c": { "min": 190, "max": 230, "recommended": 210 },
-    "bed_temp_c": { "min": 45, "max": 65, "recommended": 60 },
-    "ambient_temp_c": { "min": 15, "max": 30 },
+    "bed_temp_c": { "min": 45, "max": 60, "recommended": 60 },
+    "ambient_temp_c": { "min": 15, "max": 30, "recommended": 22 },
     "speed_mm_s": { "min": 40, "max": 300, "recommended": 100 },
     "enclosure_recommended": false,
     "heated_chamber_required": false,
     "requires_hardened_nozzle": false,
-    "part_cooling_fan_pct": { "min": 80, "max": 100, "recommended": 100 }
+    "part_cooling_fan_pct": { "min": 80, "max": 100, "recommended": 100 },
+    "notes": "Heated bed is helpful but optional. Run part cooling at full after the first 1-2 layers. Modern CoreXY machines (Bambu, Prusa MK4) sustain 200-300 mm/s on PLA; legacy bedslingers sit at 40-150 mm/s. An enclosure is not just unnecessary but can be counterproductive — trapped heat promotes heat creep and clogs in some hotends. Hardened nozzles are only needed for abrasive filled PLA variants (wood, carbon, glow)."
   },
   "drying": {
     "required_before_use": "if-exposed",
-    "temp_c": { "min": 40, "max": 55, "recommended": 50 },
+    "temp_c": { "min": 45, "max": 55, "recommended": 50 },
     "time_hours": { "min": 4, "max": 8, "recommended": 6 },
-    "methods": ["filament dryer", "convection oven at lowest setting", "drybox with desiccant"],
-    "dryness_validation": "No popping/steam at nozzle; clean glossy extrudate; minimal stringing on retraction test"
+    "methods": ["filament dryer", "food dehydrator", "convection oven at lowest setting", "drybox with desiccant"],
+    "dryness_validation": "No popping/crackling or visible steam at the nozzle; glossy, consistent extrudate rather than matte or rough; no fine surface bubbles; minimal stringing on a retraction test",
+    "notes": "Prusa recommends 45 °C for 6 h, Bambu 55 °C for 8 h. Lower drying temperatures than PETG/ABS mean less risk of spool deformation."
   },
   "storage": {
-    "recommendations": "Sealed bag or drybox with desiccant between uses; tolerates weeks of open air in dry climates",
+    "recommendations": "Sealed bag or drybox with desiccant between uses; tolerates weeks of open air in a dry room but grows brittle after prolonged humid exposure",
     "max_humidity_pct": 40,
-    "hygroscopy": "moderate"
+    "hygroscopy": "low"
   },
-  "price": { "usd_per_kg_low": 12, "usd_per_kg_high": 30 },
+  "price": {
+    "usd_per_kg_low": 14,
+    "usd_per_kg_high": 35,
+    "notes": "2025-2026 pricing for standard unfilled grades: budget $14-18, mid $18-22, premium/specialty $25-35 per kg"
+  },
   "use_cases": {
-    "recommended": ["prototypes", "visual models", "low-stress fixtures", "toys", "indoor decorative parts"],
-    "not_recommended": ["parts in hot cars or sun", "sustained-load brackets (creep)", "outdoor fixtures", "impact-loaded parts"]
+    "recommended": [
+      "prototypes and concept models",
+      "decorative and display pieces",
+      "cosplay props",
+      "low-stress toys",
+      "figurines and miniatures",
+      "dimensionally accurate test/fit prints",
+      "indoor household items",
+      "educational and hobby projects"
+    ],
+    "not_recommended": [
+      "outdoor parts (UV embrittlement and discolouration)",
+      "sustained-load mechanical parts (creep)",
+      "anything in a hot car or near heat (softens above ~60 °C)",
+      "automotive/engine-bay parts",
+      "direct hot-liquid food contact",
+      "high-impact or drop-prone parts (brittle fracture)"
+    ]
   },
   "suitability": {
     "food_contact": "conditional",
@@ -45,43 +67,60 @@
     "density_g_cm3": 1.24,
     "grams_per_100cm3": 124,
     "cm3_per_100g": 80.6,
-    "shrinkage_pct": { "min": 0.2, "max": 0.4 },
-    "glass_transition_c": 60,
-    "heat_deflection_c": 55,
+    "shrinkage_pct": { "min": 0.3, "max": 0.5, "recommended": 0.4 },
+    "glass_transition_c": 58,
+    "heat_deflection_c": 57,
     "max_service_temp_c": 52,
-    "tensile_strength_mpa": { "min": 45, "max": 65 }
+    "tensile_strength_mpa": { "min": 45, "max": 65, "recommended": 55 },
+    "notes": "Prusament PLA cites 1.24 g/cm³ and XY tensile ~51-59 MPa; other property tables run to 65 MPa. Tg and HDT@0.45MPa both fall in the 55-60 °C band, which is why PLA is unusable in hot environments. Max service temp is an estimate (Tg minus margin), not a datasheet figure."
   },
   "scores": {
     "ease_of_print": 10,
     "dimensional_stability": 8,
     "warp_tendency": 1,
-    "layer_adhesion": 7,
-    "compression_strength": 7,
+    "layer_adhesion": 6,
+    "compression_strength": 8,
     "temperature_tolerance": 2,
     "uv_tolerance": 3,
     "weather_tolerance": 2,
-    "water_tolerance": 5
+    "water_tolerance": 6
   },
   "compatibility": {
     "bonds_with": ["pla"],
-    "support_materials": ["pva", "petg"],
-    "usable_as_support_for": ["petg"],
-    "notes": "PETG and PLA separate cleanly, so each works as a support interface for the other"
+    "support_materials": ["pva", "bvoh", "petg"],
+    "usable_as_support_for": ["petg", "tpu"],
+    "notes": "PLA does not chemically weld to PETG, ABS, ASA, PC, PA or PP — that non-bonding is deliberately exploited so PLA and PETG each release cleanly as breakaway support for the other. PVA is the classic dissolvable support/interface for PLA (water-soluble, similar print temperatures); BVOH also works. PLA is not usable with ABS/ASA in either direction: their 90-110 °C bed temperatures deform PLA."
   },
   "plate_recommendations": [
-    { "plate_id": "pei-textured", "rating": "recommended", "notes": "No adhesive needed on a clean plate" }
+    {
+      "plate_id": "pei-textured",
+      "rating": "recommended",
+      "notes": "Prints well on textured/satin PEI with no release agent at 45-60 °C bed. A glue stick is optional for awkward geometries only."
+    }
   ],
   "emissions": {
-    "voc_level": "minimal",
+    "voc_level": "low",
     "particulate_level": "low",
-    "primary_emissions": ["lactide", "ultrafine particles (low)"],
+    "primary_emissions": ["lactide (~4-5 µg/min)", "ultrafine particles (~10⁸ particles/min)"],
     "ventilation": "optional",
-    "notes": "Lowest-emission common filament; sweet odor is lactide. Ventilation still sensible for continuous printing in occupied rooms."
+    "notes": "Lowest-emission common filament. Azimi et al. (2016) measured median UFP emission around 10⁸ particles/min — roughly 100-1000x lower than ABS. The sweet odour is lactide. A normally ventilated room is sufficient for occasional printing; move air for continuous printing in an occupied space."
   },
-  "safety_notes": "Additive-heavy variants (glow, metal-filled) change the emission and abrasion picture — see variation entries",
+  "safety_notes": "Filled and additive-heavy variants (glow, metal-filled, wood, carbon) change both the abrasion and emission picture and need a hardened nozzle — see the relevant variation entries.",
+  "additional_notes": "Biodegradable only under industrial composting conditions, not in a home compost heap or landfill.",
   "provenance": {
-    "sources": ["EXAMPLE ENTRY — values are typical published figures; replace via Phase A research"],
+    "sources": [
+      "https://help.prusa3d.com/article/pla_2062",
+      "https://prusament.com/wp-content/uploads/2022/10/PLA_Prusament_TDS_2021_10_EN.pdf",
+      "https://www.simplify3d.com/resources/materials-guide/pla/",
+      "https://www.partmfg.com/3d-printing-filament-properties-table/",
+      "https://salesplastics.com/comparison-of-material-properties-pla-vs-abs-vs-petg/",
+      "https://filamentdryingtool.com/filament-drying-chart",
+      "https://ultimaker.com/learn/is-pla-food-safe-a-guide-to-food-safe-3d-printing-and-filaments/",
+      "https://academy.cba.mit.edu/classes/scanning_printing/emissions.pdf",
+      "https://tinkeratlas.com/tools/filament-compatibility"
+    ],
     "last_verified": "2026-07-31",
-    "confidence": "placeholder"
+    "confidence": "medium",
+    "conflicts": "Density: Prusament states 1.24 g/cm³, other tables cite up to 1.25 — 1.24 used. Tensile strength: Prusament XY 51-59 MPa, comparison tables up to 65 MPa, partmfg.com an outlier at 72 MPa — the 72 MPa figure is rejected and 45-65 MPa recorded as consensus. Max continuous service temperature (~50-55 °C) is inferred from Tg, not measured in any cited datasheet."
   }
 }

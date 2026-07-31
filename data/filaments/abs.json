@@ -1,0 +1,126 @@
+{
+  "id": "abs",
+  "name": "ABS (Acrylonitrile Butadiene Styrene)",
+  "aliases": ["ABS"],
+  "status": "researched",
+  "base_type": null,
+  "variation_kind": null,
+  "polymer_class": "styrenic",
+  "chemical_makeup": "Acrylonitrile butadiene styrene — an amorphous terpolymer of acrylonitrile (chemical resistance, rigidity), polybutadiene rubber (impact toughness) and styrene (processability and gloss)",
+  "summary": "The classic engineering thermoplastic: tough, impact-resistant, usable near 95-100 °C and uniquely acetone-smoothable. In exchange it is the hardest of the commodity three to print — high shrinkage, real warping and delamination without a heated enclosure, poor UV life, and styrene fumes that demand ventilation.",
+  "printing": {
+    "nozzle_temp_c": { "min": 230, "max": 270, "recommended": 255 },
+    "bed_temp_c": { "min": 90, "max": 110, "recommended": 100 },
+    "ambient_temp_c": { "min": 40, "max": 60, "recommended": 50 },
+    "speed_mm_s": { "min": 20, "max": 150, "recommended": 60 },
+    "enclosure_recommended": true,
+    "heated_chamber_required": false,
+    "requires_hardened_nozzle": false,
+    "part_cooling_fan_pct": { "min": 0, "max": 20, "recommended": 0 },
+    "notes": "Print with part cooling essentially off (the BCN3D TDS specifies fan off); active cooling causes warping and interlayer cracking, so use light fan only for bridges and steep overhangs. A heated, draft-free enclosure is effectively mandatory for anything beyond small parts — a passive enclosure suffices for most hobby work, which is why heated_chamber_required is false rather than true. Legacy profiles run 20-60 mm/s; enclosed modern machines push 80-150 mm/s, still slower than PLA/PETG to manage shrinkage. Bed temperature scales with part footprint. Hardened nozzle only for filled ABS grades."
+  },
+  "drying": {
+    "required_before_use": "if-exposed",
+    "temp_c": { "min": 70, "max": 85, "recommended": 80 },
+    "time_hours": { "min": 4, "max": 8, "recommended": 7 },
+    "methods": ["filament dryer", "convection oven", "print directly from a heated drybox"],
+    "dryness_validation": "No popping/crackling or steam at the nozzle; smooth glossy extrusion free of micro-bubbles; no fine hairs or fuzz on printed walls",
+    "notes": "Bambu recommends 80 °C for 8 h. Because ABS keeps absorbing moisture on the shelf, desiccant storage is an ongoing practice rather than a pre-print step; wet ABS bubbles and bonds poorly between layers."
+  },
+  "storage": {
+    "recommendations": "Airtight box or drybox with desiccant at all times, not just before printing; more sensitive to ambient humidity swings than PLA",
+    "max_humidity_pct": 30,
+    "hygroscopy": "moderate"
+  },
+  "price": {
+    "usd_per_kg_low": 18,
+    "usd_per_kg_high": 35,
+    "notes": "2025-2026 pricing for standard unfilled grades: budget $18-22, mid $20-24, premium $28-35 per kg. ABS no longer undercuts PETG — budget PETG now often matches or beats it."
+  },
+  "use_cases": {
+    "recommended": [
+      "functional mechanical parts",
+      "impact-resistant enclosures and housings",
+      "automotive interior and moderate-heat parts",
+      "tool handles",
+      "cosmetic parts finished by acetone vapour smoothing",
+      "parts needing higher HDT than PLA or PETG",
+      "snap-fit and interlocking assemblies (good fatigue resistance)",
+      "prototypes intended for sanding and painting"
+    ],
+    "not_recommended": [
+      "UV-exposed outdoor parts (yellows and embrittles — use ASA instead)",
+      "food-contact items",
+      "printing in an unventilated occupied room (styrene fumes)",
+      "open-frame printers or beginners (warping and delamination)",
+      "fine-detail miniatures",
+      "storage or use in humid conditions without drying"
+    ]
+  },
+  "suitability": {
+    "food_contact": "no",
+    "load_bearing": "moderate",
+    "high_temperature": "yes",
+    "outdoor": "no"
+  },
+  "properties": {
+    "density_g_cm3": 1.05,
+    "grams_per_100cm3": 105,
+    "cm3_per_100g": 95.2,
+    "shrinkage_pct": { "min": 0.5, "max": 1.5, "recommended": 0.8 },
+    "glass_transition_c": 103,
+    "heat_deflection_c": 99,
+    "max_service_temp_c": 85,
+    "tensile_strength_mpa": { "min": 30, "max": 45, "recommended": 42 },
+    "notes": "Density 1.04-1.06 g/cm³ — the lightest of the commodity three, so a 1 kg spool yields noticeably more part volume. BCN3D TDS: HDT 99 °C, Vicat softening 105 °C, yield 45 MPa, operating limit 85 °C. Highest shrinkage of the three, and larger/thicker parts trend to the top of the band."
+  },
+  "scores": {
+    "ease_of_print": 4,
+    "dimensional_stability": 4,
+    "warp_tendency": 8,
+    "layer_adhesion": 5,
+    "compression_strength": 7,
+    "temperature_tolerance": 7,
+    "uv_tolerance": 2,
+    "weather_tolerance": 2,
+    "water_tolerance": 5
+  },
+  "compatibility": {
+    "bonds_with": ["abs", "asa", "pc"],
+    "support_materials": ["hips"],
+    "usable_as_support_for": ["asa"],
+    "notes": "Welds permanently to ASA (same styrenic family, near-identical bonding) and bonds moderately to PC — the basis of commercial PC/ABS blends and a common multi-material engineering pairing. HIPS is the classic breakaway/soluble support for ABS: matching print temperatures and dissolvable in D-limonene. Because ABS welds to ASA rather than releasing from it, ASA-supported-by-ABS is a structural pairing, not a clean-release one. ABS pairs badly with PLA and PETG in either direction — its 100 °C bed and 250 °C nozzle deform them, and the chemistries do not fuse."
+  },
+  "plate_recommendations": [
+    {
+      "plate_id": "pei-textured",
+      "rating": "usable",
+      "notes": "Works at 90-110 °C bed but wants an adhesion aid — Prusa's standard advice is a glue-stick layer on the PEI sheet. Community practice also uses an ABS/acetone slurry as a first-layer promoter (unverified against primary sources). Textured PEI plus a brim and an enclosure is the reliable combination for large flat parts."
+    }
+  ],
+  "emissions": {
+    "voc_level": "high",
+    "particulate_level": "high",
+    "primary_emissions": ["styrene (~12-113 µg/min)", "ultrafine particles (~2×10¹⁰ to 9×10¹⁰ particles/min)"],
+    "ventilation": "required",
+    "notes": "The highest-emitting of the three by a wide margin: Azimi et al. (2016) measured UFP rates roughly 100-1000x those of PLA, with styrene as the named VOC of concern. Print in a well-ventilated space; the ideal setup is an enclosure that contains fumes plus external venting or HEPA+carbon filtration. Ventilate the room without blowing a draft across the print itself."
+  },
+  "safety_notes": "Styrene is a respiratory irritant and a suspected carcinogen with chronic exposure — do not run ABS in an unventilated occupied room. Acetone vapour smoothing adds its own hazards: acetone is highly flammable and needs ventilation away from ignition sources.",
+  "additional_notes": "For outdoor work choose ASA instead: near-identical printing and mechanical behaviour with vastly better UV resistance.",
+  "provenance": {
+    "sources": [
+      "https://help.prusa3d.com/article/abs_2058",
+      "https://3dprint.pe/wp-content/uploads/2018/09/TDS_BCN3D_Filaments_ABS.pdf",
+      "https://www.partmfg.com/3d-printing-filament-properties-table/",
+      "https://salesplastics.com/comparison-of-material-properties-pla-vs-abs-vs-petg/",
+      "https://wiki.bambulab.com/en/ams-2-pro/manual/drying-function",
+      "https://www.3dfilamentprice.com/blog/pla-vs-abs-vs-petg-3d-printing-material-value",
+      "https://www.sovol3d.com/blogs/news/best-filament-for-outdoor-3d-prints-asa-vs-petg-vs-abs",
+      "https://academy.cba.mit.edu/classes/scanning_printing/emissions.pdf",
+      "https://tinkeratlas.com/tools/filament-compatibility"
+    ],
+    "last_verified": "2026-07-31",
+    "confidence": "medium",
+    "conflicts": "Shrinkage: Prusa-cited ABS figures quote 1-2 % for large parts while property tables cite ~0.5 % — recorded as a 0.5-1.5 % consensus band with 0.8 % typical. HDT: BCN3D measures 99 °C, Polymaker's table spans 100-118 °C across grades — 99 °C recorded for plain ABS. Bed temperature: Prusa defaults ~100 °C, the BCN3D TDS says 90 °C. Heated chamber: sources describe an enclosure as 'effectively required' for large parts, but since a passive enclosure is normally sufficient, heated_chamber_required is set false and enclosure_recommended true. ABS/acetone slurry as an adhesion aid is community practice, unverified against the cited sources."
+  }
+}

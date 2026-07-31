@@ -1,0 +1,119 @@
+{
+  "id": "pet",
+  "name": "PET (Polyethylene Terephthalate)",
+  "aliases": ["PET", "rPET", "Recycled PET", "Polyethylene terephthalate"],
+  "status": "researched",
+  "base_type": null,
+  "variation_kind": null,
+  "polymer_class": "polyester-copolyester",
+  "chemical_makeup": "Unmodified polyethylene terephthalate — polymerised from terephthalic acid (or DMT) and ethylene glycol with no CHDM glycol modification, which leaves it semi-crystalline rather than amorphous like PETG and PCTG. The same polymer as beverage bottles; rPET grades are post-consumer or post-industrial recyclate (bottle flake) sharing the base chemistry.",
+  "summary": "The unmodified parent of PETG: stiffer, more heat-tolerant and more chemically resistant, but semi-crystalline, so it shrinks and warps as it crystallises rather than simply cooling. That single difference makes it markedly harder to print than PETG and explains why it stayed a niche material even though it is the world's most common polyester.",
+  "printing": {
+    "nozzle_temp_c": { "min": 250, "max": 280, "recommended": 265 },
+    "bed_temp_c": { "min": 70, "max": 90, "recommended": 80 },
+    "ambient_temp_c": { "min": 25, "max": 45, "recommended": 35 },
+    "speed_mm_s": { "min": 40, "max": 250, "recommended": 60 },
+    "enclosure_recommended": true,
+    "heated_chamber_required": false,
+    "requires_hardened_nozzle": false,
+    "part_cooling_fan_pct": { "min": 40, "max": 70, "recommended": 50 },
+    "notes": "Needs a stable, warm ambient far more than PETG does, because warping here is driven by crystallisation as well as thermal contraction — drafts produce uneven crystallinity and unpredictable distortion. eSUN quotes up to 250 mm/s on modern hardware, but legacy or Bowden machines should sit at 40-80 mm/s given how sensitive the result is to cooling rate. An all-metal hotend is required for the 250-280 °C window. Unfilled PET is not abrasive; PET-CF and PET-GF variants do need a hardened nozzle."
+  },
+  "drying": {
+    "required_before_use": "always",
+    "temp_c": { "min": 55, "max": 70, "recommended": 65 },
+    "time_hours": { "min": 4, "max": 8, "recommended": 6 },
+    "methods": ["filament dryer", "food dehydrator", "convection oven at lowest setting", "drybox with desiccant"],
+    "dryness_validation": "No popping or crackling at the nozzle; no fogging or frosting of the extruded strand; consistent gloss along a purge line",
+    "notes": "PET's hygroscopicity is well established at the industrial level — injection moulders dry PET resin as a matter of course because wet PET hydrolyses in the melt and permanently loses molecular weight. eSUN's TDS lists drying as N/A, which should be read as unstated rather than unnecessary; the 55-70 °C for 4-8 h figures are the copolyester-family default, not an eSUN specification."
+  },
+  "storage": {
+    "recommendations": "Sealed with fresh desiccant between every use; PET is the one common copolyester where moisture does irreversible chemical damage in the hotend rather than just cosmetic damage to the surface. Keep at stable room temperature.",
+    "max_humidity_pct": 30,
+    "hygroscopy": "moderate"
+  },
+  "price": {
+    "usd_per_kg_low": 18,
+    "usd_per_kg_high": 35,
+    "notes": "Standard PET runs roughly $20-35/kg. Recycled grades are similar or slightly cheaper — FormFutura ReForm rPET is around EUR 16.50/kg (~$18/kg), while branded rPET spools commonly sit at $25-35/kg."
+  },
+  "use_cases": {
+    "recommended": [
+      "parts needing more stiffness and thermal headroom than PETG",
+      "chemically resistant containers and fixtures",
+      "sustainability-focused prints using recycled rPET",
+      "tooling, jigs and fixtures",
+      "assembly guides and alignment aids",
+      "general-purpose functional parts where stiffness outranks ease of printing"
+    ],
+    "not_recommended": [
+      "first prints or beginner projects (warp-prone and needs tuning)",
+      "large flat parts without an enclosure (severe corner lift from crystallisation shrinkage)",
+      "tight-tolerance parts on open-frame printers in uncontrolled ambient conditions",
+      "long unattended prints (needs closer monitoring than PETG)",
+      "printers without a bed that reaches 70-90 °C or without an all-metal hotend"
+    ]
+  },
+  "suitability": {
+    "food_contact": "conditional",
+    "load_bearing": "moderate",
+    "high_temperature": "moderate",
+    "outdoor": "limited"
+  },
+  "properties": {
+    "density_g_cm3": 1.28,
+    "grams_per_100cm3": 128,
+    "cm3_per_100g": 78.1,
+    "heat_deflection_c": 70,
+    "tensile_strength_mpa": { "min": 35, "max": 45, "recommended": 40 },
+    "notes": "Density 1.28 g/cm³ and tensile 35-45 MPa (eSUN TDS). HDT is quoted as a 60-80 °C @0.45 MPa band; 70 °C is recorded as the midpoint. Stiffness is where PET separates from the amorphous copolyesters: eSUN lists flexural strength 90-100 MPa and flexural modulus 2100-2500 MPa against roughly 60 MPa / 1600 MPa for PCTG, consistent with semi-crystalline structure. Glass transition is deliberately omitted — eSUN does not state it, and general polymer literature spreads bulk PET's Tg across 67-81 °C, so no filament-specific figure could be confirmed. Max service temperature is likewise unpublished; Siraya Tech claims only qualitatively superior thermal durability to PETG. Shrinkage is not published either, and is qualitatively described as higher and less predictable than PETG's because it is crystallisation-driven. As an rPET comparator, Ultrafuse rPET measures 38.6 MPa XY tensile and 48.2 kJ/m² unnotched impact XY, though that grade is PETG-based."
+  },
+  "scores": {
+    "ease_of_print": 4,
+    "dimensional_stability": 5,
+    "warp_tendency": 7,
+    "layer_adhesion": 7,
+    "compression_strength": 7,
+    "temperature_tolerance": 6,
+    "uv_tolerance": 4,
+    "weather_tolerance": 4,
+    "water_tolerance": 9
+  },
+  "compatibility": {
+    "bonds_with": ["pet", "petg", "pctg"],
+    "support_materials": ["petg", "pla"],
+    "usable_as_support_for": [],
+    "notes": "Shares the ester backbone with PETG and PCTG, so those are the plausible co-print partners; no direct multi-material fusion test was found, and the temperature mismatch (PET at 250-280 °C against PETG at 230-250 °C) complicates it in practice (unverified). No bond is documented to PLA, ABS, ASA, PA, PC, PP, TPU, TPE, HIPS, PVA or BVOH. No water-soluble support is confirmed to bond to PET, so breakaway and same-family mechanical supports are the practical route — Bambu explicitly lists PET-CF/GF as not AMS-compatible, which underlines how little soluble-support integration exists for this family. PET is not used as a support material for other filaments."
+  },
+  "plate_recommendations": [
+    {
+      "plate_id": "pei-textured",
+      "rating": "recommended",
+      "notes": "Holds well at 70-90 °C, which matters because PET wants every bit of first-layer grip it can get. As with PETG it can bond aggressively enough to pull the PEI coating off — use a thin glue-stick layer, a wiped window-cleaner or dish-soap film, or talcum powder as a deliberate separator, and let the plate cool completely before removing the part. Do not use cooking oils as a release agent; community reports describe catastrophic adhesion failures."
+    }
+  ],
+  "emissions": {
+    "voc_level": "moderate",
+    "particulate_level": "low",
+    "primary_emissions": ["acetaldehyde", "phthalic acid esters", "ultrafine particles (65-80 nm mode)"],
+    "ventilation": "recommended",
+    "notes": "No PET-specific emissions study was found; this is extrapolated from the chemically adjacent PETG study (MDPI Materials), which reports ultrafine particle emissions roughly 10x below ABS with a 65-80 nm dominant particle size, acetaldehyde up to 70.93 µg/m³, and phthalic acid esters — with both particle and VOC concentrations still exceeding WHO/IFA reference thresholds in an enclosed room. PET's higher nozzle temperature (250-280 °C versus PETG's 230-250 °C) should push emission rates above the measured PETG values, since the literature ties emission rate closely to extrusion temperature."
+  },
+  "safety_notes": "Requires an all-metal hotend — the 250-280 °C window is above the safe limit for PTFE-lined hotends, which degrade and release fluoropolymer decomposition products. Recycled rPET of unknown provenance may carry residues or contaminants from its previous life; use certified filament rather than uncharacterised recyclate for anything approaching food or skin contact.",
+  "additional_notes": "Almost all filament sold as 'PET' at consumer level is actually PETG, and several 'rPET' products (FormFutura ReForm, Ultrafuse rPET) are recycled PETG rather than unmodified PET. Check the datasheet's nozzle temperature: a 230-250 °C window means it is a glycol-modified grade and belongs under the petg entry, not this one.",
+  "provenance": {
+    "sources": [
+      "https://www.esun3d.com/uploads/PET_TDS-V1-2024.07.091.pdf",
+      "https://siraya.tech/blogs/news/pctg-vs-petg-vs-pet-a-balanced-guide-to-3d-printing-copolyesters",
+      "https://www.elecrow.com/blog/pet-vs-petg-whats-the-difference.html",
+      "https://www.formfutura.com/reform-rpet",
+      "https://www.sculpteo.com/en/materials/fdm-material/rpet-recycled-material/",
+      "https://www.mdpi.com/1996-1944/19/9/1895",
+      "https://wiki.bambulab.com/en/general/filament-guide-material-table",
+      "https://forum.prusa3d.com/forum/original-prusa-i3-mk3s-mk3-how-do-i-print-this-printing-help/petg-sticks-to-well-to-pei-a-solution/"
+    ],
+    "last_verified": "2026-07-31",
+    "confidence": "medium",
+    "conflicts": "Nozzle temperature: eSUN's pure-PET TDS says 250-280 °C while products marketed as rPET run 230-255 °C — the lower figures come from glycol-modified (PETG-based) recyclate, not unmodified PET, so 250-280 °C is recorded. Drying: eSUN lists it as N/A while general PET practice makes it mandatory; 'always' is recorded on chemistry grounds (melt hydrolysis) rather than on the datasheet, and the 55-70 °C / 4-8 h figures are family defaults, unverified for eSUN specifically. HDT: a wide 60-80 °C band with no single value published. Glass transition, shrinkage and max service temperature are all unpublished for filament grades and are omitted rather than estimated. Ease of print: sources disagree on whether PET is harder than ABS — the argument that it is rests on crystallisation-driven warp being less tunable than ABS's purely thermal warp, which is a qualitative claim, not a measurement. Layer adhesion is scored from the claim that it is 'comparable to PETG when well controlled'; no dedicated third-party mechanical test of pure PET was found. Food contact: base rPET resin is documented as compliant with the EU Plastics Regulation, but that covers the resin, not an FDM part with its porosity and layer crevices — recorded as conditional. UV and outdoor performance are entirely undocumented for PET filament; those scores are reasoned, not sourced."
+  }
+}

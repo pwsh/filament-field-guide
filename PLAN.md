@@ -130,3 +130,13 @@ every property sourced from the glossary.
   per-entry `provenance.conflicts`. Extended `oem_relationships.relationship` enum with
   `distributes` and `parent-company`. Fable overrides: qidi-tech price_tier → mid;
   ninjatek/colorFabb → distributes.
+- 2026-07-31 — **Phase A complete**: all 15 core filament types researched and written
+  (pla, petg, abs, asa, tpu, tpe, pa, pc, pp, pva, hips, bvoh, pctg, pvb, pet) — full
+  printing/drying/storage/properties/scores/compatibility/emissions data, 84 source
+  conflicts recorded per-entry. Scores calibrated against fixed anchors (pla ease 10 /
+  warp 1, petg 7/3, asa 5/7/uv 9); validator passes with zero warnings (all
+  cross-references now resolve). Fable calibration override: hips ventilation
+  recommended → required (styrene profile identical to ABS/ASA). Known tension logged:
+  tpu/tpe layer_adhesion=3 follows the rubric's Z/XY-ratio definition (Ultimaker ~27%)
+  and contradicts the community's 'TPU has great layer adhesion' folklore — revisit the
+  rubric or the score in Phase E.
