@@ -63,6 +63,11 @@
         "ventilation": "required",
         "voc_level": "high"
       },
+      "feeding": {
+        "drive_system": "any",
+        "ams_compatible": "yes",
+        "feeding_assistant_recommended": false
+      },
       "enclosure_recommended": true,
       "heated_chamber_required": false,
       "confidence": "medium"
@@ -124,6 +129,11 @@
         "ventilation": "required",
         "voc_level": "high"
       },
+      "feeding": {
+        "drive_system": "any",
+        "ams_compatible": "yes",
+        "feeding_assistant_recommended": false
+      },
       "enclosure_recommended": true,
       "heated_chamber_required": false,
       "confidence": "medium"
@@ -181,6 +191,11 @@
       "emissions": {
         "ventilation": "optional",
         "voc_level": "low"
+      },
+      "feeding": {
+        "drive_system": "any",
+        "ams_compatible": "conditional",
+        "feeding_assistant_recommended": false
       },
       "enclosure_recommended": false,
       "heated_chamber_required": false,
@@ -240,6 +255,11 @@
       "emissions": {
         "ventilation": "required",
         "voc_level": "high"
+      },
+      "feeding": {
+        "drive_system": "any",
+        "ams_compatible": "yes",
+        "feeding_assistant_recommended": false
       },
       "enclosure_recommended": true,
       "heated_chamber_required": false,
@@ -306,6 +326,11 @@
         "ventilation": "recommended",
         "voc_level": "high"
       },
+      "feeding": {
+        "drive_system": "any",
+        "ams_compatible": "yes",
+        "feeding_assistant_recommended": false
+      },
       "enclosure_recommended": true,
       "heated_chamber_required": false,
       "confidence": "medium"
@@ -367,6 +392,11 @@
       "emissions": {
         "ventilation": "recommended",
         "voc_level": "moderate"
+      },
+      "feeding": {
+        "drive_system": "any",
+        "ams_compatible": "yes",
+        "feeding_assistant_recommended": false
       },
       "enclosure_recommended": true,
       "heated_chamber_required": false,
@@ -430,6 +460,11 @@
         "ventilation": "recommended",
         "voc_level": "moderate"
       },
+      "feeding": {
+        "drive_system": "any",
+        "ams_compatible": "yes",
+        "feeding_assistant_recommended": false
+      },
       "enclosure_recommended": true,
       "heated_chamber_required": false,
       "confidence": "medium"
@@ -490,6 +525,11 @@
       "emissions": {
         "ventilation": "recommended",
         "voc_level": "moderate"
+      },
+      "feeding": {
+        "drive_system": "any",
+        "ams_compatible": "yes",
+        "feeding_assistant_recommended": false
       },
       "enclosure_recommended": true,
       "heated_chamber_required": false,
@@ -553,6 +593,11 @@
         "ventilation": "recommended",
         "voc_level": "low"
       },
+      "feeding": {
+        "drive_system": "any",
+        "ams_compatible": "yes",
+        "feeding_assistant_recommended": false
+      },
       "enclosure_recommended": false,
       "heated_chamber_required": false,
       "confidence": "medium"
@@ -614,6 +659,11 @@
       "emissions": {
         "ventilation": "optional",
         "voc_level": "low"
+      },
+      "feeding": {
+        "drive_system": "any",
+        "ams_compatible": "yes",
+        "feeding_assistant_recommended": false
       },
       "enclosure_recommended": false,
       "heated_chamber_required": false,
@@ -677,6 +727,11 @@
         "ventilation": "recommended",
         "voc_level": "low"
       },
+      "feeding": {
+        "drive_system": "any",
+        "ams_compatible": "conditional",
+        "feeding_assistant_recommended": false
+      },
       "enclosure_recommended": true,
       "heated_chamber_required": false,
       "confidence": "medium"
@@ -736,6 +791,11 @@
       "emissions": {
         "ventilation": "optional",
         "voc_level": "low"
+      },
+      "feeding": {
+        "drive_system": "any",
+        "ams_compatible": "conditional",
+        "feeding_assistant_recommended": false
       },
       "enclosure_recommended": false,
       "heated_chamber_required": false,
@@ -799,6 +859,11 @@
       "emissions": {
         "ventilation": "recommended",
         "voc_level": "low"
+      },
+      "feeding": {
+        "drive_system": "any",
+        "ams_compatible": "yes",
+        "feeding_assistant_recommended": false
       },
       "enclosure_recommended": false,
       "heated_chamber_required": false,
@@ -864,6 +929,12 @@
         "ventilation": "recommended",
         "voc_level": "low"
       },
+      "feeding": {
+        "drive_system": "direct-drive-required",
+        "ams_compatible": "no",
+        "feeding_assistant_recommended": true
+      },
+      "shore_hardness": "83A-96A",
       "enclosure_recommended": false,
       "heated_chamber_required": false,
       "confidence": "low"
@@ -927,6 +998,12 @@
         "ventilation": "recommended",
         "voc_level": "low"
       },
+      "feeding": {
+        "drive_system": "direct-drive-required",
+        "ams_compatible": "no",
+        "feeding_assistant_recommended": false
+      },
+      "shore_hardness": "85A-95A",
       "enclosure_recommended": false,
       "heated_chamber_required": false,
       "confidence": "medium"

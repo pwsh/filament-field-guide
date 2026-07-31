@@ -15,9 +15,16 @@
     "speed_mm_s": { "min": 20, "max": 50, "recommended": 30 },
     "enclosure_recommended": false,
     "heated_chamber_required": false,
+    "enclosure_open_for_cooling": true,
     "requires_hardened_nozzle": false,
     "part_cooling_fan_pct": { "min": 50, "max": 100, "recommended": 100 },
     "notes": "Prints fine on standard open-frame machines; no enclosure or chamber heat needed. Throughput is the real limit — Prusa rates PVA/PVA+ at roughly 4 mm³/s maximum volumetric flow versus ~15 mm³/s for PLA, so raising the nominal speed will not help. Sources disagree on part cooling: eSUN's TDS specifies 100 %, the Filament Cheat Sheet calls for moderate cooling only; both are plausible depending on the brand's additive package (unverified). Feed from a dry box or AMS at all times."
+  },
+  "feeding": {
+    "drive_system": "any",
+    "ams_compatible": "conditional",
+    "feeding_assistant_recommended": false,
+    "notes": "Conditional, and the condition is dryness. Bambu's material table marks PVA AMS-usable only in a dry state, while the AMS notes list 'absorbent PVA' among the materials that get stuck in the AMS feed tube; Prusa's soluble-material guidance for the MMU warns that badly stored PVA/BVOH deteriorates within months, goes soft at a much lower temperature and causes trouble at the loading stage, that stringy tips must be trimmed, and that the filament deforms in diameter under idler pressure so the sensor needs precise calibration. Moisture-degraded PVA is also brittle enough to snap inside the feed path and buffer, which kills the print. In practice: sealed, actively desiccated unit only, with a spool that has never been left in open air. Enclosure: Bambu's heat-creep table lists PVA — with PLA and TPU — among the materials to run with the upper glass cover removed, which is why enclosure_open_for_cooling is true here even though PVA is a support rather than a low-Tg build material."
   },
   "drying": {
     "required_before_use": "always",
@@ -111,7 +118,10 @@
       "https://www.simplify3d.com/resources/materials-guide/pva/",
       "https://support.bcn3d.com/knowledge/bvoh-vs-pva",
       "https://help.prusa3d.com/article/water-soluble-materials-pva-bvoh_162860",
-      "https://www.3dsourced.com/guides/3d-printing-materials-cost/"
+      "https://www.3dsourced.com/guides/3d-printing-materials-cost/",
+      "https://wiki.bambulab.com/en/knowledge-sharing/notes-ams",
+      "https://wiki.bambulab.com/en/general/filament-guide-material-table",
+      "https://wiki.bambulab.com/en/filament-acc/filament/heat-creep"
     ],
     "last_verified": "2026-07-31",
     "confidence": "medium",

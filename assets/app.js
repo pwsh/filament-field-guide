@@ -263,6 +263,16 @@ const Tooltip = {
     this.node.hidden = false;
     this.target = target;
     this.position(target);
+    this.markTruncation();
+  },
+  /** Long glossary prose is line-clamped in CSS; say so and point at the full entry. */
+  markTruncation() {
+    const clamped = ['.tt-def', '.tt-why'].some((sel) => {
+      const n = this.node.querySelector(sel);
+      return n && n.scrollHeight > n.clientHeight + 2;
+    });
+    const hint = this.node.querySelector('.tt-hint');
+    if (clamped && hint) hint.textContent = 'Shortened here — click for the full glossary entry';
   },
   position(target) {
     const r = target.getBoundingClientRect();
@@ -298,7 +308,7 @@ function rubricAnchor(rubric, value) {
 function tooltipContent(entry, value) {
   const out = frag(
     el('span', { class: 'tt-term', text: entry.term || entry.key }),
-    el('p', { text: entry.definition || '' })
+    el('p', { class: 'tt-def', text: entry.definition || '' })
   );
   if (entry.why_it_matters) out.appendChild(el('p', { class: 'tt-why', text: entry.why_it_matters }));
   const meta = [];
@@ -312,7 +322,7 @@ function tooltipContent(entry, value) {
       el('b', { text: anchor.exact ? `At ${anchor.score}/10: ` : `Nearest anchor ${anchor.score}/10: ` }),
       txt(anchor.text)));
   }
-  out.appendChild(el('div', { class: 'tt-meta', text: 'Click for the full glossary entry' }));
+  out.appendChild(el('div', { class: 'tt-meta tt-hint', text: 'Click for the full glossary entry' }));
   return out;
 }
 
@@ -456,6 +466,27 @@ const LEVEL_ORDER = ['minimal', 'low', 'moderate', 'high'];
 const ventTone = (v) => ({ optional: 'good', recommended: 'mid', required: 'bad' }[v] || 'neutral');
 /** Emission levels: less is better. */
 const levelTone = (v) => ({ minimal: 'good', low: 'good', moderate: 'mid', high: 'bad' }[v] || 'neutral');
+
+const AMS_ORDER = ['no', 'conditional', 'yes'];
+/** AMS/material-station compatibility: yes = green, conditional = amber, no = red. */
+const amsTone = (v) => ({ yes: 'good', conditional: 'mid', no: 'bad' }[v] || 'neutral');
+
+function amsBadge(v) {
+  if (!has(v)) return null;
+  return badge(`AMS: ${v}`, amsTone(v), 'Compatibility with AMS/MMU-style material stations');
+}
+
+const DRIVE_LABELS = {
+  any: 'any drive system',
+  'direct-drive-recommended': 'direct drive recommended',
+  'direct-drive-required': 'direct drive required',
+};
+const driveTone = (v) => ({ any: 'good', 'direct-drive-recommended': 'mid', 'direct-drive-required': 'bad' }[v] || 'neutral');
+
+function driveBadge(v) {
+  if (!has(v)) return null;
+  return badge(DRIVE_LABELS[v] || prettyEnum(v), driveTone(v), 'Extruder drive system requirement');
+}
 
 function ventilationBadge(v) {
   if (!has(v)) return null;
@@ -771,6 +802,7 @@ function readFilamentState(p) {
     base: paramBool(p, 'base'),
     maxp: paramNum(p, 'maxp', null),
     vent: paramStr(p, 'vent'),
+    ams: paramStr(p, 'ams'),
     sort: paramStr(p, 'sort', 'name'),
     dir: paramStr(p, 'dir', 'asc'),
   };
@@ -805,6 +837,11 @@ function filterFilaments(rows, s) {
       const have = pick(f, 'emissions.ventilation');
       if (!has(have) || VENT_ORDER.indexOf(have) > VENT_ORDER.indexOf(s.vent)) return false;
     }
+    if (s.ams) {
+      // "at least this much material-station compatibility": no < conditional < yes
+      const have = pick(f, 'feeding.ams_compatible');
+      if (!has(have) || AMS_ORDER.indexOf(have) < AMS_ORDER.indexOf(s.ams)) return false;
+    }
     return true;
   });
 }
@@ -818,23 +855,28 @@ async function viewFilaments(route) {
    * it, fall back to reading the entity files — but only when the ventilation
    * filter is actually in use, so the common path stays a single fetch.
    */
-  let emissionsReady = rows.every((f) => has(pick(f, 'emissions')));
-  const ensureEmissions = async () => {
-    if (emissionsReady) return;
+  let extrasReady = rows.every((f) => has(pick(f, 'emissions')) && has(pick(f, 'feeding')));
+  const ensureExtras = async () => {
+    if (extrasReady) return;
     const byId = new Map((await loadAllEntities('filaments')).map((e) => [e.id, e]));
     for (const row of rows) {
       const full = byId.get(row.id);
-      if (full && has(full.emissions) && !has(row.emissions)) row.emissions = full.emissions;
+      if (!full) continue;
+      if (has(full.emissions) && !has(row.emissions)) row.emissions = full.emissions;
+      if (has(full.feeding) && !has(row.feeding)) row.feeding = full.feeding;
+      const shore = pick(full, 'properties.shore_hardness');
+      if (has(shore) && !has(row.shore_hardness)) row.shore_hardness = shore;
     }
-    emissionsReady = true;
+    extrasReady = true;
   };
-  if (readFilamentState(route.params).vent) await ensureEmissions();
+  const initial = readFilamentState(route.params);
+  if (initial.vent || initial.ams) await ensureExtras();
 
   const render = () => {
     const s = readFilamentState(route.params);
     const set = (patch) => {
       writeParams(route, Object.assign(readFilamentState(route.params), patch), FILAMENT_DEFAULTS);
-      if (patch.vent && !emissionsReady) { ensureEmissions().then(render); return; }
+      if ((patch.vent || patch.ams) && !extrasReady) { ensureExtras().then(render); return; }
       render();
     };
     const onSort = (key) => {
@@ -876,6 +918,11 @@ async function viewFilaments(route) {
           { key: 'suitability.food_contact' }),
         field('Load bearing', selectControl('f-load', [['', 'any'], ['light', 'light or better'], ['moderate', 'moderate or better'], ['high', 'high']], s.load, (v) => set({ load: v })),
           { key: 'suitability.load_bearing' }),
+        field('AMS compatible', selectControl('f-ams', [
+          ['', 'all'],
+          ['conditional', 'yes or conditional'],
+          ['yes', 'yes only'],
+        ], s.ams, (v) => set({ ams: v })), { key: 'feeding.ams_compatible' }),
         field('Ventilation', selectControl('f-vent', [
           ['', 'any'],
           ['optional', 'optional only'],
@@ -920,6 +967,12 @@ async function viewFilaments(route) {
         if (f.enclosure_recommended) flags.appendChild(badge('enclosure', 'mid', 'Enclosure recommended'));
         if (f.heated_chamber_required) flags.appendChild(badge('chamber', 'bad', 'Heated chamber required'));
         if (has(f.base_type)) flags.appendChild(badge(`variation of ${f.base_type}`, 'neutral'));
+        if (pick(f, 'feeding.drive_system') === 'direct-drive-required') {
+          flags.appendChild(badge('direct drive required', 'bad', 'Needs a direct-drive extruder'));
+        }
+        if (pick(f, 'feeding.ams_compatible') === 'no') flags.appendChild(amsBadge('no'));
+        const shore = has(f.shore_hardness) ? f.shore_hardness : pick(f, 'properties.shore_hardness');
+        if (has(shore)) flags.appendChild(badge(`Shore ${shore}`, 'neutral', 'Shore hardness'));
         if (pick(f, 'emissions.ventilation') === 'required') flags.appendChild(ventilationBadge('required'));
         if (isPlaceholder(f)) flags.appendChild(badge('example', 'example', 'Example data pending research'));
 
@@ -1244,6 +1297,9 @@ function printingSection(f) {
       : badge(pr.heated_chamber_required ? 'required' : 'not required', pr.heated_chamber_required ? 'bad' : 'good')],
     ['printing.requires_hardened_nozzle', pr.requires_hardened_nozzle === undefined ? null
       : badge(pr.requires_hardened_nozzle ? 'hardened nozzle required' : 'brass nozzle ok', pr.requires_hardened_nozzle ? 'bad' : 'good')],
+    ['printing.enclosure_open_for_cooling', pr.enclosure_open_for_cooling === undefined ? null
+      : badge(pr.enclosure_open_for_cooling ? 'open the enclosure' : 'keep the enclosure closed',
+        pr.enclosure_open_for_cooling ? 'mid' : 'neutral')],
     ['printing.notes', pr.notes],
   ]));
 }
@@ -1277,8 +1333,30 @@ function propertiesSection(f) {
     ['properties.heat_deflection_c', fmtNum(p.heat_deflection_c, '°C')],
     ['properties.max_service_temp_c', fmtNum(p.max_service_temp_c, '°C')],
     ['properties.tensile_strength_mpa', fmtRange(p.tensile_strength_mpa, 'MPa')],
+    ['properties.shore_hardness', p.shore_hardness],
     ['properties.notes', p.notes, { label: 'Property notes' }],
   ]));
+}
+
+function feedingSection(f) {
+  const fd = f.feeding;
+  const shore = pick(f, 'properties.shore_hardness');
+  if (!has(fd) && !has(shore)) return null;
+  const headline = el('p', { class: 'headline-badges' });
+  appendKids(headline, [amsBadge(fd && fd.ams_compatible), driveBadge(fd && fd.drive_system)]);
+  return section('Feeding & handling', 'feeding.drive_system',
+    headline.childNodes.length ? headline : null,
+    kvTable([
+      ['feeding.drive_system', fd && has(fd.drive_system)
+        ? badge(DRIVE_LABELS[fd.drive_system] || prettyEnum(fd.drive_system), driveTone(fd.drive_system)) : null],
+      ['feeding.ams_compatible', fd && has(fd.ams_compatible)
+        ? badge(prettyEnum(fd.ams_compatible), amsTone(fd.ams_compatible)) : null],
+      ['feeding.feeding_assistant_recommended', fd && fd.feeding_assistant_recommended === undefined ? null
+        : (fd ? badge(fd.feeding_assistant_recommended ? 'recommended' : 'not needed',
+          fd.feeding_assistant_recommended ? 'mid' : 'good') : null)],
+      ['properties.shore_hardness', shore],
+      ['feeding.notes', fd && fd.notes, { label: 'Feeding notes' }],
+    ]));
 }
 
 function emissionsSection(f) {
@@ -1370,7 +1448,11 @@ async function viewFilamentDetail(id) {
     backCrumb('#/filaments', 'All filaments'),
     detailHeader(f, {
       classLabel: prettyEnum(f.polymer_class),
-      extraBadges: pick(f, 'emissions.ventilation') === 'required' ? ventilationBadge('required') : null,
+      extraBadges: [
+        pick(f, 'feeding.drive_system') === 'direct-drive-required' ? driveBadge('direct-drive-required') : null,
+        pick(f, 'feeding.ams_compatible') === 'no' ? amsBadge('no') : null,
+        pick(f, 'emissions.ventilation') === 'required' ? ventilationBadge('required') : null,
+      ],
       actions: [
         el('a', { class: 'btn', href: `#/filament/${encodeURIComponent(f.id)}/sheet` }, 'Reference sheet'),
         el('button', {
@@ -1397,6 +1479,7 @@ async function viewFilamentDetail(id) {
     plateRecommendationsSection(f),
     relatedFilaments(f),
     madeBySection(f.id),
+    feedingSection(f),
     emissionsSection(f),
     f.safety_notes ? section('Safety', null, el('p', { text: f.safety_notes })) : null,
     f.additional_notes ? section('Additional notes', null, el('p', { text: f.additional_notes })) : null,
@@ -1555,6 +1638,19 @@ async function viewPlateDetail(id) {
  * 13. Printable reference sheets
  * ========================================================================== */
 
+/**
+ * Reference sheets must stay a single printed page, but researched entries can
+ * carry paragraphs of prose. Trim on a word boundary; the detail page has it all.
+ */
+function trimText(str, max) {
+  if (!has(str)) return null;
+  const text = String(str).trim();
+  if (text.length <= max) return text;
+  const cut = text.slice(0, max);
+  const space = cut.lastIndexOf(' ');
+  return (space > max * 0.6 ? cut.slice(0, space) : cut).replace(/[\s,;:.]+$/, '') + '…';
+}
+
 function sheetBlock(title, ...content) {
   const body = content.flat(Infinity).filter(Boolean);
   if (!body.length) return null;
@@ -1594,6 +1690,7 @@ async function viewFilamentSheet(id) {
   if (pr.enclosure_recommended) flags.push('enclosure recommended');
   if (pr.heated_chamber_required) flags.push('heated chamber REQUIRED');
   if (pr.requires_hardened_nozzle) flags.push('hardened nozzle required');
+  if (pr.enclosure_open_for_cooling) flags.push('run enclosure open / cover off');
 
   const topScores = el('div', { class: 'meters' });
   for (const k of ['ease_of_print', 'warp_tendency', 'temperature_tolerance', 'layer_adhesion', 'weather_tolerance']) {
@@ -1609,7 +1706,7 @@ async function viewFilamentSheet(id) {
         txt([prettyEnum(f.polymer_class), f.chemical_makeup].filter(has).join(' · ')),
         pick(f, 'provenance.last_verified') ? txt(` · verified ${pick(f, 'provenance.last_verified')}`) : null,
         isPlaceholder(f) ? txt(' · EXAMPLE DATA — pending research') : null),
-      f.summary ? el('p', { class: 'fine', text: f.summary }) : null,
+      f.summary ? el('p', { class: 'fine', text: trimText(f.summary, 210) }) : null,
       el('div', { class: 'sheet-cols' },
         sheetBlock('Print settings', miniTable([
           ['Nozzle', fmtRange(pr.nozzle_temp_c, '°C')],
@@ -1618,16 +1715,17 @@ async function viewFilamentSheet(id) {
           ['Speed', fmtRange(pr.speed_mm_s, 'mm/s')],
           ['Part cooling', fmtRange(pr.part_cooling_fan_pct, '%')],
           ['Hardware', flags.length ? flags.join('; ') : 'no special hardware'],
-        ]), pr.notes ? el('p', { class: 'fine', text: pr.notes }) : null),
+        ]), pr.notes ? el('p', { class: 'fine', text: trimText(pr.notes, 190) }) : null),
         sheetBlock('Drying & storage', miniTable([
           ['Dry before use', prettyEnum(d.required_before_use)],
           ['Dry at', fmtRange(d.temp_c, '°C')],
           ['For', fmtRange(d.time_hours, 'h')],
           ['Methods', Array.isArray(d.methods) ? d.methods.join(', ') : null],
           ['Hygroscopy', prettyEnum(st.hygroscopy)],
-          ['Store', st.recommendations],
+          ['Store', trimText(st.recommendations, 120)],
           ['Max humidity', fmtNum(st.max_humidity_pct, '% RH')],
-        ]), d.dryness_validation ? el('p', { class: 'fine' }, el('strong', { text: 'Dryness check: ' }), txt(d.dryness_validation)) : null),
+        ]), d.dryness_validation
+          ? el('p', { class: 'fine' }, el('strong', { text: 'Dryness check: ' }), txt(trimText(d.dryness_validation, 140))) : null),
         sheetBlock('Key properties', miniTable([
           ['Density', fmtNum(props.density_g_cm3, 'g/cm³')],
           ['Per 100 cm³', fmtNum(props.grams_per_100cm3, 'g')],
@@ -1644,21 +1742,31 @@ async function viewFilamentSheet(id) {
         has(f.suitability) ? sheetBlock('Suitability', suitabilityBadges(f.suitability)) : null,
         (pick(f, 'use_cases.recommended') || pick(f, 'use_cases.not_recommended'))
           ? sheetBlock('Use cases',
-            bulletList((pick(f, 'use_cases.recommended') || []).slice(0, 6), 'pros fine'),
+            bulletList((pick(f, 'use_cases.recommended') || []).slice(0, 5), 'pros fine'),
             (pick(f, 'use_cases.not_recommended') || []).length
               ? frag(el('p', { class: 'fine', style: 'margin:.2rem 0 0' }, el('strong', { text: 'Avoid for: ' }),
-                txt((pick(f, 'use_cases.not_recommended') || []).join('; ')))) : null)
+                txt(trimText((pick(f, 'use_cases.not_recommended') || []).join('; '), 150)))) : null)
           : null,
         Array.isArray(f.plate_recommendations) && f.plate_recommendations.length
           ? sheetBlock('Build plates', miniTable(f.plate_recommendations.map((r) => [
             (indexEntry('plates', r.plate_id) || {}).name || r.plate_id,
-            `${prettyEnum(r.rating)}${r.notes ? ' — ' + r.notes : ''}`,
+            `${prettyEnum(r.rating)}${r.notes ? ' — ' + trimText(r.notes, 95) : ''}`,
           ]))) : null,
         has(f.compatibility) ? sheetBlock('Compatibility', miniTable([
           ['Bonds with', (pick(f, 'compatibility.bonds_with') || []).join(', ')],
           ['Supports', (pick(f, 'compatibility.support_materials') || []).join(', ')],
           ['Support for', (pick(f, 'compatibility.usable_as_support_for') || []).join(', ')],
         ])) : null,
+        (has(f.feeding) || has(pick(f, 'properties.shore_hardness'))) ? sheetBlock('Feeding & handling',
+          el('p', { class: 'vent-headline' },
+            amsBadge(pick(f, 'feeding.ams_compatible')),
+            txt(' '),
+            driveBadge(pick(f, 'feeding.drive_system'))),
+          miniTable([
+            ['Shore hardness', pick(f, 'properties.shore_hardness')],
+            ['Feed assistant', pick(f, 'feeding.feeding_assistant_recommended') === undefined ? null
+              : (pick(f, 'feeding.feeding_assistant_recommended') ? 'recommended' : 'not needed')],
+          ])) : null,
         (has(f.emissions) || f.safety_notes) ? sheetBlock('Emissions & safety',
           has(pick(f, 'emissions.ventilation'))
             ? el('p', { class: 'vent-headline' }, ventilationBadge(pick(f, 'emissions.ventilation'))) : null,
@@ -1669,10 +1777,10 @@ async function viewFilamentSheet(id) {
               ? badge(prettyEnum(pick(f, 'emissions.particulate_level')), levelTone(pick(f, 'emissions.particulate_level'))) : null],
             ['Emits', (pick(f, 'emissions.primary_emissions') || []).join(', ')],
           ]),
-          pick(f, 'emissions.notes') ? el('p', { class: 'fine', text: pick(f, 'emissions.notes') }) : null,
-          f.safety_notes ? el('p', { class: 'fine', text: f.safety_notes }) : null) : null),
+          pick(f, 'emissions.notes') ? el('p', { class: 'fine', text: trimText(pick(f, 'emissions.notes'), 160) }) : null,
+          f.safety_notes ? el('p', { class: 'fine', text: trimText(f.safety_notes, 140) }) : null) : null),
       el('p', { class: 'fine faint', style: 'margin-top:.6rem' },
-        txt(`Confidence: ${pick(f, 'provenance.confidence') || 'unknown'}. Filament Reference — ${f.id}`))));
+        txt(`Condensed sheet — see the full entry for complete notes. Confidence: ${pick(f, 'provenance.confidence') || 'unknown'}. Filament Reference — ${f.id}`))));
 }
 
 async function viewPlateSheet(id) {
@@ -1687,7 +1795,7 @@ async function viewPlateSheet(id) {
       el('p', { class: 'sheet-sub' },
         txt([prettyEnum(p.texture), p.surface_makeup].filter(has).join(' · ')),
         isPlaceholder(p) ? txt(' · EXAMPLE DATA — pending research') : null),
-      p.summary ? el('p', { class: 'fine', text: p.summary }) : null,
+      p.summary ? el('p', { class: 'fine', text: trimText(p.summary, 260) }) : null,
       el('div', { class: 'sheet-cols' },
         sheetBlock('At a glance', miniTable([
           ['Texture', prettyEnum(p.texture)],
@@ -1699,13 +1807,13 @@ async function viewPlateSheet(id) {
         compat.length ? sheetBlock('Filament compatibility', miniTable(compat.map((c) => [
           (indexEntry('filaments', c.filament_id) || {}).name || c.filament_id,
           `${prettyEnum(c.rating)}${fmtRange(c.bed_temp_c, '°C') ? ' @ ' + fmtRange(c.bed_temp_c, '°C') : ''}` +
-          `${c.adhesion_aid ? ' · aid: ' + c.adhesion_aid : ''}`,
+          `${c.adhesion_aid ? ' · aid: ' + trimText(c.adhesion_aid, 60) : ''}`,
         ]))) : null,
-        p.preparation ? sheetBlock('Preparation', el('p', { class: 'fine', text: p.preparation })) : null,
-        p.cleaning ? sheetBlock('Cleaning', el('p', { class: 'fine', text: p.cleaning })) : null,
-        p.model_removal ? sheetBlock('Model removal', el('p', { class: 'fine', text: p.model_removal })) : null,
-        p.stuck_print_recovery ? sheetBlock('Stuck print recovery', el('p', { class: 'fine', text: p.stuck_print_recovery })) : null,
-        p.lifespan_notes ? sheetBlock('Lifespan', el('p', { class: 'fine', text: p.lifespan_notes })) : null),
+        p.preparation ? sheetBlock('Preparation', el('p', { class: 'fine', text: trimText(p.preparation, 320) })) : null,
+        p.cleaning ? sheetBlock('Cleaning', el('p', { class: 'fine', text: trimText(p.cleaning, 320) })) : null,
+        p.model_removal ? sheetBlock('Model removal', el('p', { class: 'fine', text: trimText(p.model_removal, 320) })) : null,
+        p.stuck_print_recovery ? sheetBlock('Stuck print recovery', el('p', { class: 'fine', text: trimText(p.stuck_print_recovery, 320) })) : null,
+        p.lifespan_notes ? sheetBlock('Lifespan', el('p', { class: 'fine', text: trimText(p.lifespan_notes, 320) })) : null),
       el('p', { class: 'fine faint', style: 'margin-top:.6rem' },
         txt(`Confidence: ${pick(p, 'provenance.confidence') || 'unknown'}. Filament Reference — ${p.id}`))));
 }
@@ -1725,6 +1833,7 @@ const FILAMENT_COMPARE_ROWS = [
   { key: 'printing.speed_mm_s', get: (f) => fmtRange(pick(f, 'printing.speed_mm_s'), 'mm/s') },
   { key: 'printing.part_cooling_fan_pct', get: (f) => fmtRange(pick(f, 'printing.part_cooling_fan_pct'), '%') },
   { key: 'printing.enclosure_recommended', get: (f) => boolBadge(pick(f, 'printing.enclosure_recommended'), true) },
+  { key: 'printing.enclosure_open_for_cooling', get: (f) => boolBadge(pick(f, 'printing.enclosure_open_for_cooling'), false) },
   { key: 'printing.heated_chamber_required', get: (f) => boolBadge(pick(f, 'printing.heated_chamber_required'), true) },
   { key: 'printing.requires_hardened_nozzle', get: (f) => boolBadge(pick(f, 'printing.requires_hardened_nozzle'), true) },
   { key: 'drying.required_before_use', get: (f) => prettyEnum(pick(f, 'drying.required_before_use')) },
@@ -1739,6 +1848,13 @@ const FILAMENT_COMPARE_ROWS = [
   { key: 'properties.heat_deflection_c', get: (f) => fmtNum(pick(f, 'properties.heat_deflection_c'), '°C') },
   { key: 'properties.max_service_temp_c', get: (f) => fmtNum(pick(f, 'properties.max_service_temp_c'), '°C') },
   { key: 'properties.tensile_strength_mpa', get: (f) => fmtRange(pick(f, 'properties.tensile_strength_mpa'), 'MPa') },
+  { key: 'properties.shore_hardness', get: (f) => pick(f, 'properties.shore_hardness') },
+  { key: 'feeding.drive_system', get: (f) => driveBadge(pick(f, 'feeding.drive_system')) },
+  { key: 'feeding.ams_compatible', get: (f) => amsBadge(pick(f, 'feeding.ams_compatible')) },
+  {
+    key: 'feeding.feeding_assistant_recommended',
+    get: (f) => boolBadge(pick(f, 'feeding.feeding_assistant_recommended'), true),
+  },
 ].concat(SCORE_KEYS.map((k) => ({
   key: `scores.${k}`,
   score: k,

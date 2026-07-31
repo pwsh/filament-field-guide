@@ -15,9 +15,16 @@
     "speed_mm_s": { "min": 20, "max": 150, "recommended": 60 },
     "enclosure_recommended": true,
     "heated_chamber_required": false,
+    "enclosure_open_for_cooling": false,
     "requires_hardened_nozzle": false,
     "part_cooling_fan_pct": { "min": 0, "max": 20, "recommended": 0 },
     "notes": "Print with part cooling essentially off (the BCN3D TDS specifies fan off); active cooling causes warping and interlayer cracking, so use light fan only for bridges and steep overhangs. A heated, draft-free enclosure is effectively mandatory for anything beyond small parts — a passive enclosure suffices for most hobby work, which is why heated_chamber_required is false rather than true. Legacy profiles run 20-60 mm/s; enclosed modern machines push 80-150 mm/s, still slower than PLA/PETG to manage shrinkage. Bed temperature scales with part footprint. Hardened nozzle only for filled ABS grades."
+  },
+  "feeding": {
+    "drive_system": "any",
+    "ams_compatible": "yes",
+    "feeding_assistant_recommended": false,
+    "notes": "Rigid and dimensionally stable in the feed path; Bambu's material table lists ABS as AMS-compatible and no vendor restricts it. Filled ABS grades are the usual caveat, as abrasive fibres wear the AMS PTFE tubes. Enclosure: ABS wants the chamber sealed and warm, so enclosure_open_for_cooling is false — Bambu and QIDI both specify the cover installed for ABS."
   },
   "drying": {
     "required_before_use": "if-exposed",
@@ -117,7 +124,9 @@
       "https://www.3dfilamentprice.com/blog/pla-vs-abs-vs-petg-3d-printing-material-value",
       "https://www.sovol3d.com/blogs/news/best-filament-for-outdoor-3d-prints-asa-vs-petg-vs-abs",
       "https://academy.cba.mit.edu/classes/scanning_printing/emissions.pdf",
-      "https://tinkeratlas.com/tools/filament-compatibility"
+      "https://tinkeratlas.com/tools/filament-compatibility",
+      "https://wiki.bambulab.com/en/general/filament-guide-material-table",
+      "https://wiki.bambulab.com/en/filament-acc/filament/heat-creep"
     ],
     "last_verified": "2026-07-31",
     "confidence": "medium",

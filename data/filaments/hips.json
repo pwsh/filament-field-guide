@@ -34,6 +34,7 @@
     },
     "enclosure_recommended": true,
     "heated_chamber_required": false,
+    "enclosure_open_for_cooling": false,
     "requires_hardened_nozzle": false,
     "part_cooling_fan_pct": {
       "min": 0,
@@ -41,6 +42,12 @@
       "recommended": 0
     },
     "notes": "Nozzle temperature varies widely by brand — eSUN 230-270 °C, Prusa 225-255 °C, Filament Cheat Sheet and Xometry both 220-250 °C; the recorded range is the union and ~230-240 °C is the safe starting point. eSUN's TDS specifies 0 % part cooling: low or no cooling improves layer bonding and reduces warping. An enclosure is strongly recommended but not mandatory for small parts; a heated chamber is not required, though large or tall parts warp badly without one. Legacy bedslingers should stay at 40-60 mm/s; high-flow hotends can reach the top of the range. Standard brass nozzles are fine — HIPS is not abrasive."
+  },
+  "feeding": {
+    "drive_system": "any",
+    "ams_compatible": "yes",
+    "feeding_assistant_recommended": false,
+    "notes": "Rigid, non-abrasive, low-hygroscopy styrenic that feeds essentially like ABS, which Bambu lists as AMS-compatible; HIPS itself is not named in Bambu's material table and is not on the AMS notes' excluded list, so 'yes' rests on the absence of any documented restriction plus the mechanical similarity to ABS rather than on a direct vendor statement. Enclosure: HIPS prints in the ABS tier with the fan off and wants the chamber closed, so enclosure_open_for_cooling is false."
   },
   "drying": {
     "required_before_use": "if-exposed",
@@ -172,7 +179,9 @@
       "https://www.3dxtech.com/collections/hips",
       "https://pubmed.ncbi.nlm.nih.gov/26741485/",
       "https://www.matterhackers.com/store/3d-printer-filament/hips-175mm-1kg",
-      "https://www.3dsourced.com/guides/3d-printing-materials-cost/"
+      "https://www.3dsourced.com/guides/3d-printing-materials-cost/",
+      "https://wiki.bambulab.com/en/general/filament-guide-material-table",
+      "https://wiki.bambulab.com/en/knowledge-sharing/notes-ams"
     ],
     "last_verified": "2026-07-31",
     "confidence": "medium",

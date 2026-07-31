@@ -15,9 +15,16 @@
     "speed_mm_s": { "min": 15, "max": 30, "recommended": 20 },
     "enclosure_recommended": false,
     "heated_chamber_required": false,
+    "enclosure_open_for_cooling": false,
     "requires_hardened_nozzle": false,
     "part_cooling_fan_pct": { "min": 0, "max": 100, "recommended": 60 },
     "notes": "Nozzle temperature is consistent across BCN3D and Fiberlogy at 190-210 °C. Bed temperature is set by the model material rather than the BVOH: BCN3D quotes a wide 45-90 °C depending on what it is supporting, Fiberlogy a narrower 50-70 °C. No enclosure or heated chamber is called for; standard open-frame machines are fine. Speed is deliberately low — BCN3D recommends ~20 mm/s, and Prusa notes BVOH shares PVA's ~4 mm³/s maximum volumetric flow (versus ~15 mm³/s for PLA), so throughput is capped regardless of printer class. Part cooling guidance is broad (Fiberlogy 0-100 %, BCN3D 50-100 %); tune to bridging needs. Feed from a dry box."
+  },
+  "feeding": {
+    "drive_system": "any",
+    "ams_compatible": "conditional",
+    "feeding_assistant_recommended": false,
+    "notes": "Conditional for the same reason as PVA. Prusa's MMU soluble-material guidance treats PVA and BVOH together and warns that poorly stored spools deteriorate, go soft at a much lower temperature and cause trouble at the loading stage, that stringy tips need trimming mid-print, and that the filament's diameter deforms under idler pressure so the sensor needs precise calibration; Bambu's AMS notes bar absorbent PVA from the feed tube on the same grounds. BVOH tolerates a damp multi-day job better than PVA does but absorbs moisture just as fast, so the condition is a sealed, actively desiccated unit and a spool kept out of open air. The pronounced Z anisotropy that makes tall support towers snap during printing is a separate reason to keep the feed path short and low-tension. Enclosure: no BVOH-specific door guidance exists — Bambu's heat-creep table flags PVA for cover-removed printing and BVOH may well behave the same way, but that is unverified, so false is recorded rather than inferred."
   },
   "drying": {
     "required_before_use": "always",
@@ -110,7 +117,9 @@
       "https://fiberlogy.com/en/BVOH-Filament-1_75mm-0_5kg",
       "https://bigrep.com/filaments/bvoh/",
       "https://help.prusa3d.com/article/water-soluble-materials-pva-bvoh_162860",
-      "https://bcn3d.com/product/bvoh-bcn3d-filaments/"
+      "https://bcn3d.com/product/bvoh-bcn3d-filaments/",
+      "https://wiki.bambulab.com/en/knowledge-sharing/notes-ams",
+      "https://wiki.bambulab.com/en/filament-acc/filament/heat-creep"
     ],
     "last_verified": "2026-07-31",
     "confidence": "medium",

@@ -15,9 +15,16 @@
     "speed_mm_s": { "min": 40, "max": 110, "recommended": 60 },
     "enclosure_recommended": true,
     "heated_chamber_required": false,
+    "enclosure_open_for_cooling": false,
     "requires_hardened_nozzle": false,
     "part_cooling_fan_pct": { "min": 20, "max": 60, "recommended": 30 },
     "notes": "An all-metal hotend is effectively mandatory: the useful window sits above 250 °C and CNC Kitchen ran Essentium PCTG at 270 °C. Brass nozzles are fine — unfilled PCTG is not abrasive. Moderate cooling (~30 %) preserves layer bonding; Spectrum's datasheet permits up to 100 % but full cooling costs Z strength. Enclosure is optional for small parts and genuinely helpful on large flats, where shrink-induced stress lifts corners. Legacy Bowden machines should stay at 40-60 mm/s; direct-drive CoreXY machines handle 80-110 mm/s."
+  },
+  "feeding": {
+    "drive_system": "any",
+    "ams_compatible": "yes",
+    "feeding_assistant_recommended": false,
+    "notes": "PCTG is not named in Bambu's filament-guide material table, but it is a rigid, non-abrasive amorphous copolyester that feeds exactly like PETG, which Bambu does list as AMS-compatible, and it appears nowhere on the AMS notes' excluded list. Moisture uptake is lower than PETG's, so an unsealed unit is not the concern it is for PA or PC. Enclosure: this entry already treats an enclosure as genuinely helpful on large flats where shrink lifts corners, so the chamber heat is wanted and enclosure_open_for_cooling is false — the opposite of the PLA case."
   },
   "drying": {
     "required_before_use": "if-exposed",
@@ -115,7 +122,9 @@
       "https://filamentcheatsheet.com/filaments/pctg/",
       "https://www.mdpi.com/1996-1944/19/9/1895",
       "https://forum.prusa3d.com/forum/filament-materials-and-techniques/pctg-a-better-petg/",
-      "https://wiki.bambulab.com/en/general/filament-guide-material-table"
+      "https://wiki.bambulab.com/en/general/filament-guide-material-table",
+      "https://wiki.bambulab.com/en/knowledge-sharing/notes-ams",
+      "https://wiki.bambulab.com/en/filament-acc/filament/heat-creep"
     ],
     "last_verified": "2026-07-31",
     "confidence": "medium",

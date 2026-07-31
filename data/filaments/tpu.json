@@ -15,9 +15,16 @@
     "speed_mm_s": { "min": 10, "max": 80, "recommended": 30 },
     "enclosure_recommended": false,
     "heated_chamber_required": false,
+    "enclosure_open_for_cooling": true,
     "requires_hardened_nozzle": false,
     "part_cooling_fan_pct": { "min": 0, "max": 50, "recommended": 30 },
     "notes": "Brand windows: Ultrafuse TPU 95A 210-230 °C with a 40 °C bed, NinjaTek Cheetah 225-250 °C at room temperature to 50 °C with glue recommended, Polymaker 210-250 °C (start 230) at 40-60 °C. Direct drive with a constrained filament path is effectively required; Bowden setups buckle the filament and need 10-25 mm/s. On tuned direct-drive/CoreXY machines 25-80 mm/s is realistic (NinjaTek: perimeters 25-45, infill 50-80); 'high-flow' TPU marketing claims of 150-250 mm/s are unverified. No enclosure or chamber needed."
+  },
+  "feeding": {
+    "drive_system": "direct-drive-required",
+    "ams_compatible": "no",
+    "feeding_assistant_recommended": false,
+    "notes": "Barred from the AMS: Bambu's AMS notes group TPU with TPE and absorbent PVA as materials that get stuck in the AMS feed tube, and the material table records TPU as not AMS-compatible. That verdict is grade-specific, not chemistry-specific — Bambu's TPU printing guide puts the AMS-safe line at firm 55D/68D/77D-class grades (its own 'TPU for AMS' is 68D per the Bambu TDS), warns that 95A down to 80A may bend inside the AMS and cause feeding failures, and says 75A and below should not be run on these printers at all. This generic 85A-95A entry therefore records 'no'; the firm ~60D-class grades that ARE AMS-safe get their own grade-specific entries. Outside a material station, 95A survives a short well-constrained Bowden path while 85A-90A wants direct drive, which is why direct-drive-required is recorded for the range as a whole. A spool-side feeding assistant is unnecessary at 95A but genuinely helps at the soft end of the range and below it. Enclosure: Bambu's heat-creep table lists TPU (with PLA) as a material to run with the upper glass cover removed, and QIDI's door-open table names TPU 95A, so enclosure_open_for_cooling is true."
   },
   "drying": {
     "required_before_use": "always",
@@ -63,6 +70,7 @@
     "outdoor": "limited"
   },
   "properties": {
+    "shore_hardness": "85A-95A",
     "density_g_cm3": 1.22,
     "grams_per_100cm3": 122,
     "cm3_per_100g": 82.0,
@@ -114,7 +122,12 @@
       "https://filamentspecs.com/tpu-tpe-guide/",
       "https://help.prusa3d.com/article/flexible-materials_2057",
       "https://www.partmfg.com/3d-printing-filament-properties-table/",
-      "https://tinkeratlas.com/tools/filament-compatibility"
+      "https://tinkeratlas.com/tools/filament-compatibility",
+      "https://wiki.bambulab.com/en/knowledge-sharing/notes-ams",
+      "https://wiki.bambulab.com/en/knowledge-sharing/tpu-printing-guide",
+      "https://store.bblcdn.eu/s8/default/0b83dc5419534babb4287686cb8c7375/Bambu_TPU_for_AMS_Technical_Data_Sheet.pdf",
+      "https://wiki.bambulab.com/en/filament-acc/filament/heat-creep",
+      "https://wiki.qidi3d.com/en/software/qidi-studio/expand/print-with-door-open"
     ],
     "last_verified": "2026-07-31",
     "confidence": "medium",

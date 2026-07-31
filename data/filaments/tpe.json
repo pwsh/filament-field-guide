@@ -15,9 +15,16 @@
     "speed_mm_s": { "min": 5, "max": 30, "recommended": 20 },
     "enclosure_recommended": false,
     "heated_chamber_required": false,
+    "enclosure_open_for_cooling": false,
     "requires_hardened_nozzle": false,
     "part_cooling_fan_pct": { "min": 0, "max": 20, "recommended": 0 },
     "notes": "3D Insider gives 210-230 °C at a 40-50 °C bed and warns against exceeding 60 °C; filamentspecs puts SEBS-type TPE nearer 245 °C with a 70-80 °C bed for larger parts. Speed is the real constraint: 10-20 mm/s typical, 30 mm/s maximum, and starting as low as 5 mm/s on an untuned machine. Run the fan off or very low for layer adhesion — the opposite of TPU's 20-50%. Direct drive strongly preferred. Interestingly, SEBS TPE tolerates a higher volumetric flow than TPU (~5.0 vs 3.2 mm³/s per filamentspecs), so throughput at these speeds is comparable or slightly better despite the lower linear limit."
+  },
+  "feeding": {
+    "drive_system": "direct-drive-required",
+    "ams_compatible": "no",
+    "feeding_assistant_recommended": true,
+    "notes": "Barred from material stations: Bambu's AMS notes name TPE explicitly, alongside TPU and absorbent PVA, as a material that can get stuck in the AMS feed tube. SEBS-based TPE is softer and more rubbery than same-number TPU and prints at 5-30 mm/s, so a long unsupported path is not viable at all — direct drive with a constrained filament path is required. A spool-side feeding assistant (motorised unwinder or short guided top-mount path) is recommended because soft grades stretch under the drag of unwinding their own spool, producing under-extrusion that no extruder setting corrects. Enclosure: no TPE-specific door-open guidance was found — Bambu's heat-creep table covers TPU but not TPE — so enclosure_open_for_cooling is recorded false rather than inferred from the TPU row."
   },
   "drying": {
     "required_before_use": "if-exposed",
@@ -63,6 +70,7 @@
     "outdoor": "limited"
   },
   "properties": {
+    "shore_hardness": "83A-96A",
     "density_g_cm3": 1.15,
     "grams_per_100cm3": 115,
     "cm3_per_100g": 87.0,
@@ -111,7 +119,9 @@
       "https://esun3dstore.com/products/tpe-83a",
       "https://help.prusa3d.com/article/flexible-materials_2057",
       "https://3dsolved.com/3d-filament-glass-transition-temperatures/",
-      "https://tinkeratlas.com/tools/filament-compatibility"
+      "https://tinkeratlas.com/tools/filament-compatibility",
+      "https://wiki.bambulab.com/en/knowledge-sharing/notes-ams",
+      "https://wiki.bambulab.com/en/filament-acc/filament/heat-creep"
     ],
     "last_verified": "2026-07-31",
     "confidence": "low",

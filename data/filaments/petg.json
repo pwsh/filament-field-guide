@@ -15,9 +15,16 @@
     "speed_mm_s": { "min": 40, "max": 200, "recommended": 80 },
     "enclosure_recommended": false,
     "heated_chamber_required": false,
+    "enclosure_open_for_cooling": false,
     "requires_hardened_nozzle": false,
     "part_cooling_fan_pct": { "min": 30, "max": 50, "recommended": 40 },
     "notes": "Prusa profiles run 230 °C first layer / 240 °C for the rest; the Prusament TDS quotes 250±10 °C. Keep part cooling low — fan off for the first layers, then roughly half power; heavy cooling is the main cause of brittle, poorly bonded PETG. No chamber needed, but a draft-free room (or an enclosure on large parts) helps. Hardened nozzle only for CF/GF-filled PETG."
+  },
+  "feeding": {
+    "drive_system": "any",
+    "ams_compatible": "yes",
+    "feeding_assistant_recommended": false,
+    "notes": "Listed AMS-compatible by Bambu and unproblematic in Prusa's MMU: rigid, non-abrasive and only moderately hygroscopic. The exception is CF/GF-filled PETG from third parties, which is barred because the fibres abrade the AMS PTFE tubes. Enclosure: Bambu's heat-creep table and QIDI's door-open table both keep the cover installed for PETG, so enclosure_open_for_cooling is false — PETG's Tg is high enough that chamber heat helps rather than hurts, though Bambu does note PETG can suffer heat creep if the enclosure runs unusually hot."
   },
   "drying": {
     "required_before_use": "if-exposed",
@@ -117,7 +124,9 @@
       "https://www.3dfilamentprice.com/blog/pla-vs-abs-vs-petg-3d-printing-material-value",
       "https://www.sovol3d.com/blogs/news/best-filament-for-outdoor-3d-prints-asa-vs-petg-vs-abs",
       "https://academy.cba.mit.edu/classes/scanning_printing/emissions.pdf",
-      "https://tinkeratlas.com/tools/filament-compatibility"
+      "https://tinkeratlas.com/tools/filament-compatibility",
+      "https://wiki.bambulab.com/en/general/filament-guide-material-table",
+      "https://wiki.bambulab.com/en/filament-acc/filament/heat-creep"
     ],
     "last_verified": "2026-07-31",
     "confidence": "medium",

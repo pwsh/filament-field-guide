@@ -123,15 +123,62 @@
     {
       "key": "scores.ease_of_print",
       "term": "Ease of print (1–10)",
-      "definition": "How forgiving the material is on ordinary hardware with default profiles.",
-      "why_it_matters": "Predicts time-to-success for newcomers and whether special hardware/tuning is needed.",
+      "definition": "A composite expert score of how forgiving the material is on ordinary hardware with default profiles. It is not a single measurement: it aggregates seven weighted factors — (1) hardware gating: what the material refuses to print without (enclosure, heated chamber, all-metal hotend, hardened nozzle, special build surface, direct-drive extruder, feeding assistant); (2) moisture burden: how aggressively it must be dried and kept dry to print at all; (3) first-layer & warp management: adhesion aids, brims, and draft sensitivity needed to keep parts attached and flat; (4) tuning-window width: how narrow the workable temperature/speed/cooling windows are and how badly results degrade outside them; (5) failure-mode frequency: how often prints fail (clogs, delamination, corner lift, jams) even for experienced users; (6) speed ceiling: how far below common printing speeds the material forces you; (7) repeatability: once dialed in, whether it stays dialed in. Each entry is scored against the fixed anchors — PLA=10, PETG=7, ASA=5, unfilled PA / soft TPU=3, PEEK-class=1 — and every entry scores independently: a variation or grade (TPU 95A vs 60A, PLA vs LW-PLA, PA6-CF vs PA12) gets its own score because these factors genuinely differ between grades.",
+      "why_it_matters": "Predicts time-to-success and whether special hardware or process discipline is needed before you buy a spool. Because it is a composite, check the entry's printing/drying/feeding sections to see WHICH factor is dragging a low score — a 3 driven by moisture (PVA) is a different problem than a 3 driven by hardware gating (PC).",
       "rubric": {
         "10": "Prints reliably on any machine, open frame, minimal tuning (PLA)",
+        "9": "PLA-like process with one extra care item, e.g. moisture (PVB)",
         "7": "Minor tuning; watch moisture or stringing (PETG)",
-        "5": "Needs enclosure or careful tuning; failures common without (ABS)",
-        "3": "Needs drybox, slow speeds, or special surfaces (PA, TPU 85A)",
-        "1": "Industrial hardware and expertise required (PEEK)"
-      }
+        "5": "Needs enclosure or careful tuning; failures common without (ABS, HIPS)",
+        "3": "Needs drybox, slow speeds, direct drive, or special surfaces (PA, TPU 85A)",
+        "2": "Multiple simultaneous barriers, incl. build-surface chemistry (PP)",
+        "1": "Industrial hardware and expertise required (PEEK, PEI/ULTEM)"
+      },
+      "see_also": ["feeding.drive_system", "feeding.ams_compatible", "printing.enclosure_open_for_cooling", "drying"]
+    },
+    {
+      "key": "feeding.drive_system",
+      "term": "Drive system requirement",
+      "definition": "Whether the material feeds through any extruder ('any'), works notably better with the extruder gears directly above the hotend ('direct-drive-recommended'), or effectively cannot be pushed through a long Bowden tube at all ('direct-drive-required').",
+      "why_it_matters": "Flexible filament under compressive load buckles inside a Bowden tube like pushing rope — the softer the grade, the shorter the unsupported path must be. TPU ≥95A can survive a short Bowden; ~85A-90A wants direct drive; ≤85A demands it. Rigid materials feed through anything.",
+      "see_also": ["feeding.ams_compatible", "feeding.feeding_assistant_recommended", "properties.shore_hardness"]
+    },
+    {
+      "key": "feeding.ams_compatible",
+      "term": "AMS / material-station compatibility",
+      "definition": "Whether the filament is safe to load in automatic material systems (Bambu AMS/AMS 2/AMS HT, Prusa MMU, Creality CFS): 'yes', 'conditional' (works with specific precautions or specific units), or 'no'.",
+      "why_it_matters": "AMS units push filament through long PTFE paths with rubber rollers — soft flexibles (TPU 90A and below) buckle and jam them, which is why vendors bar them; firm grades around ~55D-64D (e.g. Bambu TPU for AMS at 68D, TPU 60D-class) feed fine. Brittle materials (damp PVA, some filled filaments) can snap inside the feed path, and abrasive filaments wear the PTFE. A jam mid-multi-color-print usually kills the print, so check this before assigning a material to an AMS slot rather than an external spool holder.",
+      "see_also": ["feeding.drive_system", "properties.shore_hardness"]
+    },
+    {
+      "key": "feeding.feeding_assistant_recommended",
+      "term": "Feeding assistant recommended",
+      "definition": "Whether soft grades benefit from a powered or gravity-assist feeder that moves filament from the spool to the extruder inlet so the extruder never pulls against spool drag.",
+      "why_it_matters": "Very soft filament (~60A-85A) stretches under the tension of unwinding its own spool, causing under-extrusion that no extruder setting fixes. A spool-side assistant (motorized unwinder, low-friction top-mount, or short guided path) removes that tension. Mostly irrelevant at 95A and above.",
+      "see_also": ["feeding.drive_system", "properties.shore_hardness"]
+    },
+    {
+      "key": "properties.shore_hardness",
+      "term": "Shore hardness",
+      "definition": "Indentation hardness of elastomers and soft polymers, measured on the Shore A scale (softer, rubber bands ~20A, skateboard wheels ~95A) or Shore D scale (harder; ~55D-64D overlaps the top of the A scale and behaves semi-rigid). Filament grades are named by it: TPU 85A, 90A, 95A, 60D.",
+      "why_it_matters": "For flexibles this single number drives nearly everything: printability (harder = easier), drive-system and AMS requirements, feeding-assistant need, print speed ceiling, and part behavior (energy return, grip, compression set). Two 'TPU' spools at 60A and 60D are, in practice, different materials — which is why each grade gets its own catalog entry rather than sharing one.",
+      "units": "Shore A / Shore D",
+      "see_also": ["feeding.drive_system", "feeding.ams_compatible", "scores.ease_of_print"]
+    },
+    {
+      "key": "printing.enclosure_open_for_cooling",
+      "term": "Open enclosure for cooling",
+      "definition": "On an enclosed printer, whether this material prints better with the door/lid open so ambient heat escapes.",
+      "why_it_matters": "The inverse of the enclosure requirement: low-Tg materials (PLA, PVB) and heat-soft flexibles deform, string, and clog from heat creep inside a 35-45 °C sealed chamber. Enclosed printers routinely warn to open the door for PLA. Materials with this flag true pair badly with 'set and forget' enclosed printing of mixed-material jobs.",
+      "see_also": ["printing.enclosure_recommended", "printing.part_cooling_fan_pct"]
+    },
+    {
+      "key": "printing.part_cooling_fan_pct",
+      "term": "Part cooling fan",
+      "definition": "Recommended part-cooling fan duty range while printing (percent of full speed).",
+      "why_it_matters": "Cooling is a per-material trade: high cooling sharpens detail and overhangs but weakens layer bonds. PLA wants ~100%; PETG ~30-50%; ABS/ASA/PC nearly none (cooling splits their layers); flexibles vary by grade. The recommended value is the profile starting point.",
+      "units": "%",
+      "see_also": ["printing.enclosure_open_for_cooling", "scores.layer_adhesion"]
     },
     {
       "key": "scores.dimensional_stability",

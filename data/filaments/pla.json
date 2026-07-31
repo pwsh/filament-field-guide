@@ -15,9 +15,16 @@
     "speed_mm_s": { "min": 40, "max": 300, "recommended": 100 },
     "enclosure_recommended": false,
     "heated_chamber_required": false,
+    "enclosure_open_for_cooling": true,
     "requires_hardened_nozzle": false,
     "part_cooling_fan_pct": { "min": 80, "max": 100, "recommended": 100 },
     "notes": "Heated bed is helpful but optional. Run part cooling at full after the first 1-2 layers. Modern CoreXY machines (Bambu, Prusa MK4) sustain 200-300 mm/s on PLA; legacy bedslingers sit at 40-150 mm/s. An enclosure is not just unnecessary but can be counterproductive — trapped heat promotes heat creep and clogs in some hotends. Hardened nozzles are only needed for abrasive filled PLA variants (wood, carbon, glow)."
+  },
+  "feeding": {
+    "drive_system": "any",
+    "ams_compatible": "yes",
+    "feeding_assistant_recommended": false,
+    "notes": "The reference AMS/MMU material: Bambu's filament-guide material table lists unfilled PLA as AMS-compatible and multi-colour PLA is the standard use case. The exceptions are filled and effect grades — Bambu's AMS notes bar third-party PLA-CF/PLA-GF, certain silk PLA and glow-in-the-dark PLA from the AMS because they wear the PTFE feed tubes or break inside the feed path. Enclosure: Bambu's heat-creep guidance and QIDI's door-open table both say to remove the upper cover / open the front door for PLA, since a 35-45 °C chamber sits close enough to PLA's ~58 °C Tg to soften filament in the extruder and cause heat-creep clogs."
   },
   "drying": {
     "required_before_use": "if-exposed",
@@ -117,7 +124,9 @@
       "https://filamentdryingtool.com/filament-drying-chart",
       "https://ultimaker.com/learn/is-pla-food-safe-a-guide-to-food-safe-3d-printing-and-filaments/",
       "https://academy.cba.mit.edu/classes/scanning_printing/emissions.pdf",
-      "https://tinkeratlas.com/tools/filament-compatibility"
+      "https://tinkeratlas.com/tools/filament-compatibility",
+      "https://wiki.bambulab.com/en/filament-acc/filament/heat-creep",
+      "https://wiki.bambulab.com/en/knowledge-sharing/notes-ams"
     ],
     "last_verified": "2026-07-31",
     "confidence": "medium",

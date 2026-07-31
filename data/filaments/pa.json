@@ -15,9 +15,16 @@
     "speed_mm_s": { "min": 30, "max": 80, "recommended": 50 },
     "enclosure_recommended": true,
     "heated_chamber_required": false,
+    "enclosure_open_for_cooling": false,
     "requires_hardened_nozzle": false,
     "part_cooling_fan_pct": { "min": 0, "max": 20, "recommended": 10 },
     "notes": "PA12 grades run roughly 240-290 °C (eSUN ePA12 TDS); PA6 grades usually 260-290 °C, and Prusa cites 285 °C for its PA blend. Keep part cooling near zero — aggressive cooling degrades layer adhesion and amplifies warping. An enclosure is effectively required for anything but small parts, and community practice targets ~45 °C+ ambient; an actively heated chamber is strongly beneficial for large parts but is not the hard prerequisite it is for PEEK-class polymers, so heated_chamber_required is recorded as false. Unfilled PA does not require a hardened nozzle, though stainless/hardened is commonly preferred; CF/GF-filled variants do require one."
+  },
+  "feeding": {
+    "drive_system": "any",
+    "ams_compatible": "yes",
+    "feeding_assistant_recommended": false,
+    "notes": "Mechanically unproblematic in a material station — Bambu's material table lists PA/PAHT as AMS-compatible — but nylon is the most hygroscopic material in this catalog, and an unsealed AMS-style unit is functionally an open-air spool holder. Over a long multi-material job an unsealed unit will let PA pick up enough moisture to string and bubble, so restrict it to a sealed, actively desiccated unit (AMS 2 Pro / AMS HT class) with fresh desiccant, or feed from a heated drybox instead. Third-party PA-CF and PA-GF are barred outright by Bambu because the fibres wear the AMS PTFE tubes. Enclosure: PA needs the retained chamber heat, so enclosure_open_for_cooling is false; Bambu specifies the cover installed for PA."
   },
   "drying": {
     "required_before_use": "always",
@@ -116,7 +123,9 @@
       "https://help.prusa3d.com/article/water-soluble-materials-pva-bvoh_162860",
       "https://shop.polymaker.com/pages/nylon",
       "http://built-envi.com/portfolio/ultrafine-particle-emissions-from-3d-printers/",
-      "https://www.cnckitchen.com/blog/carbon-fiber-nylon-in-3d-printing-pa6-vs-pa12-tested"
+      "https://www.cnckitchen.com/blog/carbon-fiber-nylon-in-3d-printing-pa6-vs-pa12-tested",
+      "https://wiki.bambulab.com/en/general/filament-guide-material-table",
+      "https://wiki.bambulab.com/en/knowledge-sharing/notes-ams"
     ],
     "last_verified": "2026-07-31",
     "confidence": "medium",

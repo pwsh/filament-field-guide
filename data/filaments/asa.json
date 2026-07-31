@@ -15,9 +15,16 @@
     "speed_mm_s": { "min": 35, "max": 250, "recommended": 90 },
     "enclosure_recommended": true,
     "heated_chamber_required": false,
+    "enclosure_open_for_cooling": false,
     "requires_hardened_nozzle": false,
     "part_cooling_fan_pct": { "min": 10, "max": 25, "recommended": 15 },
     "notes": "Brand starting points differ: Polymaker 240-280 °C (start 250), Prusament 260±10 °C, Bambu 240-270 °C. Bed 90-110 °C (Polymaker), 110±5 °C (Prusament), 80-100 °C with glue (Bambu). Keep part cooling low — heavy cooling splits layers. An enclosed, draft-free ~60 °C chamber is the ideal; a passive enclosure suffices for small parts, while large flat parts effectively require active chamber heat. Modern enclosed CoreXY machines run 200-250 mm/s; legacy/Bowden setups sit at 35-70 mm/s. Hardened nozzle only for CF/GF-filled ASA."
+  },
+  "feeding": {
+    "drive_system": "any",
+    "ams_compatible": "yes",
+    "feeding_assistant_recommended": false,
+    "notes": "Listed AMS-compatible by Bambu and feeds like ABS — rigid, non-abrasive in unfilled form, moderate hygroscopy. CF/GF-filled ASA is the exception, as with every abrasive filament in an AMS. Enclosure: ASA needs the retained chamber heat even more than ABS does, so enclosure_open_for_cooling is false; Bambu and QIDI both specify the cover installed."
   },
   "drying": {
     "required_before_use": "if-exposed",
@@ -116,7 +123,9 @@
       "https://www.cnckitchen.com/blog/comparing-pla-petg-amp-asa-feat-prusament",
       "https://www.irrgang.dev/comparing-3d-printer-emissions/",
       "https://3dsolved.com/3d-filament-glass-transition-temperatures/",
-      "https://tinkeratlas.com/tools/filament-compatibility"
+      "https://tinkeratlas.com/tools/filament-compatibility",
+      "https://wiki.bambulab.com/en/general/filament-guide-material-table",
+      "https://wiki.bambulab.com/en/filament-acc/filament/heat-creep"
     ],
     "last_verified": "2026-07-31",
     "confidence": "medium",

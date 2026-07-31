@@ -15,9 +15,16 @@
     "speed_mm_s": { "min": 20, "max": 65, "recommended": 40 },
     "enclosure_recommended": true,
     "heated_chamber_required": false,
+    "enclosure_open_for_cooling": false,
     "requires_hardened_nozzle": false,
     "part_cooling_fan_pct": { "min": 50, "max": 100, "recommended": 80 },
     "notes": "Pure PP typically extrudes at 210-230 °C (PPprint tested at 210 °C); Prusa quotes a broader 220-270 °C and filled/composite PP grades reach 250-280 °C. Bed temperature depends entirely on the surface: Braskem specifies 60-80 °C with a PP adhesion stick or as low as 20-40 °C with spray adhesive, PPprint 50-80 °C, Prusa 85-100 °C. Unlike the other engineering materials, PP wants strong part cooling — 50-100% after a 0% first layer. Braskem suggests 20-40 mm/s for the first layer, 35-65 mm/s for general layers and under 20 mm/s for high resolution. A 45-60 °C enclosure is optional per Simplify3D but makes a large difference to warp control; an actively heated chamber is beneficial rather than mandatory. No hardened nozzle needed for unfilled PP."
+  },
+  "feeding": {
+    "drive_system": "any",
+    "ams_compatible": "conditional",
+    "feeding_assistant_recommended": false,
+    "notes": "Recorded conditional rather than yes. PP is not listed in Bambu's filament-guide material table, and a Bambu community report documents an AMS jam after a PP print, with users attributing it to PP being limper and softer than TPU ('a wet noodle') so the AMS feeder rollers struggle for reliable grip; PP's low surface energy — the same property that makes PP tape a release film for other filaments — works against gear bite as well. No vendor statement either way was found, so this is a community-sourced caution, not a documented restriction: PP feeds fine from a direct spool holder on any drive system, but assigning it to an AMS/MMU slot is a risk. Enclosure: PP wants a warm 45-60 °C chamber for warp control, so enclosure_open_for_cooling is false."
   },
   "drying": {
     "required_before_use": "rarely",
@@ -115,7 +122,9 @@
       "https://www.igo3d.com/mediafiles/Sonstiges/Braskem/FL105PP/Braskem-Polypropylene-Filament-Printing-Guide_EN.pdf",
       "https://www.ppprint.de/wp-content/uploads/2019/03/PPprint-data-sheet-eng-21.02.2019.pdf",
       "https://fiberlogy.com/en/PP-Filament-1_75mm-0_75kg",
-      "http://built-envi.com/portfolio/ultrafine-particle-emissions-from-3d-printers/"
+      "http://built-envi.com/portfolio/ultrafine-particle-emissions-from-3d-printers/",
+      "https://wiki.bambulab.com/en/general/filament-guide-material-table",
+      "https://forum.bambulab.com/t/ams-jammed-after-printing-with-pp/27502"
     ],
     "last_verified": "2026-07-31",
     "confidence": "medium",

@@ -15,9 +15,16 @@
     "speed_mm_s": { "min": 40, "max": 200, "recommended": 60 },
     "enclosure_recommended": false,
     "heated_chamber_required": false,
+    "enclosure_open_for_cooling": true,
     "requires_hardened_nozzle": false,
     "part_cooling_fan_pct": { "min": 80, "max": 100, "recommended": 100 },
     "notes": "Essentially a PLA profile. Polymaker quotes 190-220 °C and up to 200 mm/s at a 15 mm³/s volumetric ceiling; Prusa quotes 215 ± 10 °C and requires a heated bed at 65-85 °C. Open-frame machines are fine and an enclosure brings no benefit. Run full part cooling — surface quality before smoothing directly determines how good the smoothed finish is. Unfilled, so a brass nozzle is fine."
+  },
+  "feeding": {
+    "drive_system": "any",
+    "ams_compatible": "yes",
+    "feeding_assistant_recommended": false,
+    "notes": "Rigid and PLA-like in the feed path, so no drive-system or material-station restriction applies; PVB is not named in Bambu's material table but is absent from the AMS notes' excluded list and is neither flexible nor abrasive. The practical caution for a multi-day AMS job is hygroscopy rather than feeding: PVB should be resealed between prints and not left sitting in an unsealed unit. Enclosure: Bambu's heat-creep guidance names PLA as the material to run with the upper cover removed, and PVB runs a PLA-class profile (190-225 °C, full part cooling) at Tg 70 °C, so enclosure_open_for_cooling is recorded true by direct analogy — no PVB-specific door-open statement was found, and Polymaker simply states no enclosure is needed for PolySmooth."
   },
   "drying": {
     "required_before_use": "if-exposed",
@@ -111,7 +118,9 @@
       "https://polymaker.com/wp-content/uploads/lana-downloads/PolySmooth_TDS_V5.1.pdf",
       "https://prusament.com/materials/prusament-pvb/",
       "https://facfox.com/docs/kb/pvb-filament-all-you-need-to-know",
-      "https://forum.prusa3d.com/forum/hardware-firmware-and-software-help/pvb-polyvinyl-butyral-polysmooth-by-polymaker-etc/"
+      "https://forum.prusa3d.com/forum/hardware-firmware-and-software-help/pvb-polyvinyl-butyral-polysmooth-by-polymaker-etc/",
+      "https://wiki.bambulab.com/en/filament-acc/filament/heat-creep",
+      "https://wiki.bambulab.com/en/knowledge-sharing/notes-ams"
     ],
     "last_verified": "2026-07-31",
     "confidence": "medium",

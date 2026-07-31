@@ -31,6 +31,17 @@
         "heated_chamber_required": { "type": "boolean" },
         "requires_hardened_nozzle": { "type": "boolean" },
         "part_cooling_fan_pct": { "$ref": "#/$defs/rangeRec" },
+        "enclosure_open_for_cooling": { "type": "boolean", "description": "On an enclosed printer, print with the door/lid open so trapped heat does not soften the part or promote heat creep (typical for PLA/PVB/TPU)" },
+        "notes": { "type": "string" }
+      }
+    },
+    "feeding": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "drive_system": { "enum": ["any", "direct-drive-recommended", "direct-drive-required"], "description": "Whether Bowden extruders can feed this material or a direct-drive extruder is needed" },
+        "ams_compatible": { "enum": ["yes", "conditional", "no"], "description": "Suitability for automatic material/spool-changer systems (Bambu AMS, Prusa MMU, Creality CFS): flexibles below ~55D jam the feed path; brittle materials can snap in the buffer" },
+        "feeding_assistant_recommended": { "type": "boolean", "description": "Soft grades (~60A-85A) benefit from a spool-side feeding assistant that pushes filament from spool to extruder" },
         "notes": { "type": "string" }
       }
     },
@@ -86,6 +97,7 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "shore_hardness": { "type": "string", "pattern": "^[0-9]{1,3}[AD]([ -–]*[0-9]{1,3}[AD])?$", "description": "Shore hardness for elastomers/soft materials, e.g. '95A', '60D', or a range '85A-95A' for a generic entry. Grade-specific variation entries should carry a single value." },
         "density_g_cm3": { "type": "number" },
         "grams_per_100cm3": { "type": "number", "description": "Standardized weight per volume (derived: density x 100)" },
         "cm3_per_100g": { "type": "number", "description": "Standardized volume per weight (derived: 100 / density)" },

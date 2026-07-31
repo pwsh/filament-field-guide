@@ -230,7 +230,7 @@ th.sortable:hover { color: var(--text); }
 .sort-btn:hover { color: var(--accent); background: none; }
 th[aria-sort="ascending"] .sort-btn, th[aria-sort="descending"] .sort-btn { color: var(--accent); }
 td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
-td.cell-name { font-weight: 600; min-width: 11rem; }
+td.cell-name { font-weight: 600; min-width: 10rem; }
 td.num, th.num { width: 1%; }
 th.num .th-inner { justify-content: flex-end; }
 td.cell-name .sub { display: block; font-weight: 400; font-size: .82rem; color: var(--text-muted); }
@@ -280,12 +280,17 @@ td.cell-name .sub { display: block; font-weight: 400; font-size: .82rem; color: 
 .badge-bad { background: var(--danger-soft); color: var(--danger); border-color: color-mix(in srgb, var(--danger) 35%, transparent); }
 .badge-neutral { background: var(--bg-sunken); }
 .badge-group { display: inline-flex; flex-wrap: wrap; gap: .25rem; }
+/* keep the suitability column from widening the table past its container */
+.responsive-table td:last-child .badge-group { max-width: 11.5rem; }
+.responsive-table td.cell-name .badge-group { max-width: 10.5rem; }
 .badge-key { font-weight: 500; opacity: .8; }
 
 .pill-class {
   display: inline-block; font-size: .78rem; padding: .05rem .5rem; border-radius: 999px;
-  background: var(--bg-sunken); border: 1px solid var(--border); color: var(--text-muted); white-space: nowrap;
+  background: var(--bg-sunken); border: 1px solid var(--border); color: var(--text-muted);
 }
+/* class names wrap rather than forcing the data table wider than its container */
+.responsive-table td .pill-class { max-width: 7.5rem; }
 
 /* ---------- score meters ---------- */
 .meters { display: grid; gap: .5rem; }
@@ -310,11 +315,15 @@ td.cell-name .sub { display: block; font-weight: 400; font-size: .82rem; color: 
   background: var(--bg-elev); color: var(--text);
   border: 1px solid var(--border-strong); border-radius: var(--radius-sm);
   box-shadow: var(--shadow); padding: .6rem .75rem; font-size: .84rem; line-height: 1.45;
+  max-height: min(60vh, 420px); overflow: hidden;
   pointer-events: none;
 }
 #tooltip[hidden] { display: none; }
 #tooltip .tt-term { font-weight: 700; display: block; margin-bottom: .2rem; }
 #tooltip .tt-why { color: var(--text-muted); margin-top: .35rem; }
+/* long glossary prose is clamped so a tooltip never becomes a wall of text */
+#tooltip .tt-def { display: -webkit-box; -webkit-line-clamp: 8; -webkit-box-orient: vertical; overflow: hidden; }
+#tooltip .tt-why { display: -webkit-box; -webkit-line-clamp: 5; -webkit-box-orient: vertical; overflow: hidden; }
 #tooltip .tt-meta { margin-top: .35rem; font-size: .8rem; color: var(--text-faint); }
 #tooltip .tt-rubric { margin-top: .35rem; padding-top: .35rem; border-top: 1px solid var(--border); font-size: .8rem; }
 #tooltip .tt-rubric b { color: var(--accent-text); }
@@ -325,6 +334,7 @@ td.cell-name .sub { display: block; font-weight: 400; font-size: .82rem; color: 
 .detail-head .titles { flex: 1 1 320px; }
 .detail-head h1 { margin-bottom: .3rem; }
 .detail-meta { display: flex; flex-wrap: wrap; gap: .35rem; align-items: center; margin-bottom: .5rem; }
+.headline-badges { display: flex; flex-wrap: wrap; gap: .35rem; margin: 0 0 .6rem; }
 .detail-summary { color: var(--text-muted); max-width: 70ch; }
 .crumbs { font-size: .85rem; color: var(--text-faint); margin-bottom: .5rem; }
 .crumbs a { color: var(--text-muted); }
@@ -392,13 +402,15 @@ td.cell-name .sub { display: block; font-weight: 400; font-size: .82rem; color: 
   .wrap { width: 100%; }
   a { color: #000 !important; text-decoration: none; }
   .card, .sheet, .table-wrap { border: 1px solid #bbb !important; box-shadow: none !important; break-inside: avoid; }
-  .sheet { padding: 0; border: 0 !important; font-size: 9.5pt; line-height: 1.35; }
-  .sheet h1 { font-size: 1.25rem; }
-  .sheet-sub { margin-bottom: .3rem; }
+  .sheet { padding: 0; border: 0 !important; font-size: 9pt; line-height: 1.28; }
+  .sheet h1 { font-size: 1.15rem; margin-bottom: .05rem; }
+  .sheet-sub { margin-bottom: .25rem; font-size: .82rem; }
   .sheet-cols { columns: 2; column-gap: 1.1rem; }
   .sheet-block { break-inside: avoid; margin-bottom: .5rem; }
   .sheet-block h2 { margin-bottom: .2rem; }
-  .sheet table th, .sheet table td { padding: .1rem .25rem; }
+  .sheet table th, .sheet table td { padding: .06rem .25rem; }
+  .sheet-block h2 { font-size: .72rem; letter-spacing: .05em; }
+  .sheet .fine { font-size: .78rem; }
   .sheet .meter { grid-template-columns: minmax(96px, 40%) 1fr auto; gap: .35rem; }
   .sheet .meters { gap: .25rem; }
   .sheet ul { margin-bottom: .2rem; }

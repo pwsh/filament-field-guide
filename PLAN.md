@@ -64,10 +64,20 @@ sonnet/haiku agents, collates with opus, and commits schema-valid JSON.
   for the ~15 core types (PLA, PETG, ABS, ASA, TPU, PC, PA/Nylon, PVA, HIPS, BVOH, PP,
   PCTG, PVB, PET, TPE). Sources: Simplify3D, Prusa, Bambu, BCN3D, All3DP guides,
   MDPI/academic property tables.
-- **Phase B — Variations & specialty formulations.** Per class: silk/matte/gradient PLA,
-  high-flow, CF/GF-filled, flame-retardant, ESD-safe, conductive, wood/metal-filled,
-  foaming (LW-PLA), high-temp (PPS, PEEK, PEI/ULTEM, PPA). Each variation gets its own
-  entry with a `base_type` link.
+- **Phase B — Variations, grades & specialty formulations.** Each gets its own entry with
+  a `base_type` link and independently scored ease/feeding fields, because grades behave
+  differently. Scope: (a) PLA variants — silk, matte, gradient, high-flow/high-speed,
+  wood/metal-filled, glow, foaming LW-PLA; (b) fiber-filled — pla-cf, petg-cf, petg-gf,
+  pa6-cf, pa12-cf, pet-cf, pp-gf, asa-cf; (c) blends & co-polymers — cope (Polymaker
+  Panchroma CoPE), pc-abs, pc-pbt, abs-gf; (d) polyamide grades — pa6, pa12, pa66, ppa
+  (high-temp polyphthalamide); (e) TPU/flex by shore grade — tpu-60a, tpu-85a, tpu-90a,
+  tpu-95a, tpu-58d/60d, tpu-64d/68d (AMS-grade), with per-grade drive/AMS/feeding-assistant
+  values (90A is not AMS-safe, 60D is); (f) high-performance — peek, pekk, pei-ultem,
+  pps, pps-cf, ppsu; (g) specialty lines from manufacturer wikis (e.g. Polymaker
+  specialty: PolyCast castable, PolySmooth/PVB done, ESD-safe, flame-retardant,
+  conductive). Functional additives (FR, ESD) are `variation_kind` values on their base
+  chemistry. Reference: Polymaker wiki specialty & Panchroma pages, Bambu/Prusa material
+  line-ups, 3DXTech catalog for high-performance.
 - **Phase C — Manufacturers (target ~60–100).** Brands, OEM/white-label relationships,
   countries of manufacture, endpoints. Sonnet per manufacturer cluster; haiku for
   endpoint/link gathering; opus collates. Flag conflicting origin claims for Fable review.
@@ -140,3 +150,12 @@ every property sourced from the glossary.
   tpu/tpe layer_adhesion=3 follows the rubric's Z/XY-ratio definition (Ultimaker ~27%)
   and contradicts the community's 'TPU has great layer adhesion' folklore — revisit the
   rubric or the score in Phase E.
+- 2026-07-31 — **Feeding/handling model added** (owner request): schema gains `feeding`
+  (drive_system, ams_compatible, feeding_assistant_recommended), `printing.
+  enclosure_open_for_cooling`, `properties.shore_hardness`. Glossary: new entries for all
+  five plus part_cooling_fan_pct, and `ease_of_print` rewritten to document the composite
+  methodology (7 weighted factors, fixed anchors, per-grade scoring). All 15 entries
+  populated from Bambu AMS/heat-creep wikis + Prusa MMU docs (opus pass, 7 judgment calls
+  accepted). Phase B scope expanded to per-grade entries: TPU shore grades, PA grades
+  (pa6/pa12/ppa), blends (CoPE, PC-ABS), specialty and high-performance lines. Site
+  renders feeding sections, AMS filter, shore badges; sheets re-verified single-page.

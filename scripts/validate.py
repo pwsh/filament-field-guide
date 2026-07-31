@@ -144,6 +144,12 @@ def summary_fil(f: dict) -> dict:
     em = f.get("emissions", {})
     if em:
         out["emissions"] = {k: em[k] for k in ("ventilation", "voc_level") if k in em}
+    fe = f.get("feeding", {})
+    if fe:
+        out["feeding"] = {k: fe[k] for k in ("drive_system", "ams_compatible", "feeding_assistant_recommended") if k in fe}
+    sh = f.get("properties", {}).get("shore_hardness")
+    if sh:
+        out["shore_hardness"] = sh
     pr = f.get("printing", {})
     out["enclosure_recommended"] = pr.get("enclosure_recommended")
     out["heated_chamber_required"] = pr.get("heated_chamber_required")

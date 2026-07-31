@@ -15,9 +15,16 @@
     "speed_mm_s": { "min": 40, "max": 250, "recommended": 60 },
     "enclosure_recommended": true,
     "heated_chamber_required": false,
+    "enclosure_open_for_cooling": false,
     "requires_hardened_nozzle": false,
     "part_cooling_fan_pct": { "min": 40, "max": 70, "recommended": 50 },
     "notes": "Needs a stable, warm ambient far more than PETG does, because warping here is driven by crystallisation as well as thermal contraction — drafts produce uneven crystallinity and unpredictable distortion. eSUN quotes up to 250 mm/s on modern hardware, but legacy or Bowden machines should sit at 40-80 mm/s given how sensitive the result is to cooling rate. An all-metal hotend is required for the 250-280 °C window. Unfilled PET is not abrasive; PET-CF and PET-GF variants do need a hardened nozzle."
+  },
+  "feeding": {
+    "drive_system": "any",
+    "ams_compatible": "yes",
+    "feeding_assistant_recommended": false,
+    "notes": "Unfilled PET is rigid and non-abrasive and feeds like any copolyester through any drive system; no vendor restricts it. The exception matters more here than elsewhere because so much 'PET' on the market is filled: Bambu explicitly marks PET-CF/PET-GF as not AMS-compatible (outside its own optimised CF lines) because the abrasive fibres wear the AMS PTFE tubes. PET is also the one copolyester where moisture does irreversible hotend damage, so an unsealed unit on a long job is a real risk. Enclosure: PET warps as it crystallises and needs a stable warm ambient, so enclosure_open_for_cooling is false."
   },
   "drying": {
     "required_before_use": "always",
@@ -110,7 +117,8 @@
       "https://www.sculpteo.com/en/materials/fdm-material/rpet-recycled-material/",
       "https://www.mdpi.com/1996-1944/19/9/1895",
       "https://wiki.bambulab.com/en/general/filament-guide-material-table",
-      "https://forum.prusa3d.com/forum/original-prusa-i3-mk3s-mk3-how-do-i-print-this-printing-help/petg-sticks-to-well-to-pei-a-solution/"
+      "https://forum.prusa3d.com/forum/original-prusa-i3-mk3s-mk3-how-do-i-print-this-printing-help/petg-sticks-to-well-to-pei-a-solution/",
+      "https://wiki.bambulab.com/en/knowledge-sharing/notes-ams"
     ],
     "last_verified": "2026-07-31",
     "confidence": "medium",
