@@ -1,0 +1,128 @@
+{
+  "id": "pla-plus",
+  "name": "PLA+ (Toughened PLA)",
+  "aliases": ["PLA Plus", "PLA Pro", "Tough PLA", "PLA Tough+", "eSUN PLA+"],
+  "status": "researched",
+  "base_type": "pla",
+  "variation_kind": "toughened",
+  "polymer_class": "polylactide",
+  "chemical_makeup": "PLA-majority blend (PLLA/PDLA polylactide) compounded with an undisclosed impact modifier / elastomeric toughening additive; manufacturers describe it only as 'modified based on PLA material' and publish no filler or co-monomer content",
+  "summary": "Base PLA plus a proprietary impact modifier — same lactide chemistry, mechanical delta only. Versus base PLA it trades some stiffness and tensile strength for markedly better impact toughness and layer adhesion (Bambu measures higher elongation in Z than in XY, the toughening signature), runs hotter at the top of the range (210-250 °C vs 190-230 °C), wants a hotter/longer dry (55 °C/8 h vs 45-55 °C/6 h) and prints slower than base PLA (eSUN and colorFabb recommend 40-50 mm/s). Heat resistance is unchanged: HDT still ~53-58 °C.",
+  "printing": {
+    "nozzle_temp_c": { "min": 210, "max": 250, "recommended": 225 },
+    "bed_temp_c": { "min": 35, "max": 65, "recommended": 55 },
+    "ambient_temp_c": { "min": 15, "max": 45, "recommended": 25 },
+    "speed_mm_s": { "min": 30, "max": 100, "recommended": 45 },
+    "enclosure_recommended": false,
+    "heated_chamber_required": false,
+    "requires_hardened_nozzle": false,
+    "part_cooling_fan_pct": { "min": 80, "max": 100, "recommended": 100 },
+    "enclosure_open_for_cooling": true,
+    "notes": "Delta vs base PLA: the usable nozzle band extends higher and is brand-split — eSUN PLA+ 210-230 °C and colorFabb Tough PLA 210-230 °C sit on top of base PLA, while Bambu PLA Tough+ specifies 220-250 °C with spec samples printed at 245 °C, notably hotter than base PLA and probably a different toughening compound. Bed 35-65 °C (eSUN rec 45 °C, colorFabb 50-60 °C, Bambu rec 55 °C). Full part cooling as with base PLA. The other real delta is speed: eSUN recommends 40 mm/s (tested to 100 mm/s) and colorFabb 40-50 mm/s, well below base PLA's 100+ mm/s, so this is not the grade to pick for throughput — see pla-hf. Bambu lists an optional 25-45 °C chamber for dimensional consistency; it is not a requirement, and as with all PLA grades an enclosed machine should be run with the door/lid open to avoid heat creep."
+  },
+  "feeding": {
+    "drive_system": "any",
+    "ams_compatible": "yes",
+    "feeding_assistant_recommended": false,
+    "notes": "Rigid, unfilled and non-abrasive, so it feeds identically to base PLA: any extruder, standard brass-compatible drive gears and PTFE, no spool-side assistant. Bambu ships PLA Tough+ as an explicitly AMS-supported product, matching base PLA's plain 'yes' rather than the 'conditional' rating carried by silk and filled PLA grades. No shore hardness applies — this is a rigid grade, not a flexible."
+  },
+  "drying": {
+    "required_before_use": "if-exposed",
+    "temp_c": { "min": 45, "max": 65, "recommended": 55 },
+    "time_hours": { "min": 4, "max": 12, "recommended": 8 },
+    "methods": ["filament dryer", "blast oven at 55 °C", "heated bed at 65-75 °C for 12 h", "food dehydrator", "drybox with desiccant"],
+    "dryness_validation": "No popping/crackling or visible steam at the nozzle; glossy, consistent extrudate; minimal stringing on a retraction test — same checks as base PLA",
+    "notes": "Delta vs base PLA (45-55 °C / 4-8 h): Bambu specifies 55 °C for 8 h in a blast/dry-box oven or 65-75 °C for 12 h using the printer heatbed, hotter and longer than typical base-PLA practice. eSUN and colorFabb publish no drying parameters, so for those brands standard PLA drying is the working assumption (unverified). Separately, Bambu recommends post-print annealing at 50-60 °C for 6-12 h to raise heat resistance — a post-process, not a drying step, and the opposite of lw-pla, where annealing is actively harmful."
+  },
+  "storage": {
+    "recommendations": "Sealed bag or drybox with desiccant between uses; tolerates open-air storage in a dry room like base PLA",
+    "max_humidity_pct": 40,
+    "hygroscopy": "low"
+  },
+  "price": {
+    "usd_per_kg_low": 22,
+    "usd_per_kg_high": 45,
+    "notes": "eSUN PLA+ about $22.99/kg (1 kg spool, eSUN store, confirmed); Bambu PLA Tough+ about $29.99/kg and colorFabb Tough PLA about $40-45/kg (both unverified — store figures not confirmed by fetch). Roughly a $5-15/kg premium over base PLA's $14-35/kg band."
+  },
+  "use_cases": {
+    "recommended": [
+      "functional prototypes",
+      "snap-fit parts and clips",
+      "brackets and mounts",
+      "tool handles and grips",
+      "RC and drone frames",
+      "cosplay props needing more durability than base PLA",
+      "drop-prone household items"
+    ],
+    "not_recommended": [
+      "high-temperature parts (HDT still ~53-58 °C)",
+      "continuously loaded structural parts (creep, as with base PLA)",
+      "maximum-stiffness parts (see pla-cf)",
+      "high-throughput printing (see pla-hf)",
+      "outdoor parts",
+      "food-contact items"
+    ]
+  },
+  "suitability": {
+    "food_contact": "no",
+    "load_bearing": "moderate",
+    "high_temperature": "no",
+    "outdoor": "no"
+  },
+  "properties": {
+    "density_g_cm3": 1.23,
+    "grams_per_100cm3": 123,
+    "cm3_per_100g": 81.3,
+    "glass_transition_c": 61,
+    "heat_deflection_c": 58,
+    "max_service_temp_c": 52,
+    "tensile_strength_mpa": { "min": 35, "max": 63, "recommended": 45 },
+    "notes": "Density is brand-split but all within base-PLA range: eSUN 1.23, colorFabb 1.24, Bambu PLA Tough+ 1.21 g/cm³ — 1.23 recorded. Tensile figures do NOT agree across brands because the test methods differ: eSUN 63 MPa (injection-moulded spline, which overstates FDM-printed parts), colorFabb 55 MPa (printed X-Y), Bambu 34.9±1 MPa X-Y / 20.9±1 MPa Z. Elongation at break: eSUN 20 %, colorFabb 8.6 %, Bambu 5.1 % X-Y / 10.4 % Z — Bambu's Z elongation exceeding X-Y is the clearest evidence of the toughening package working on interlayer bonds. Impact: eSUN IZOD 9 kJ/m², colorFabb Charpy notched 5.8 kJ/m², Bambu 80.6±9.5 kJ/m² X-Y; different tests, not comparable. Thermal (Bambu): Tg 61 °C, HDT 58 °C at 1.8 MPa, melt 151 °C; eSUN HDT 53 °C; colorFabb lists Tg/HDT as N/A. HDT here is at 1.8 MPa, not the schema-default 0.45 MPa. Shrinkage not published by any brand (unverified) — assume base PLA's 0.3-0.5 %."
+  },
+  "scores": {
+    "ease_of_print": 8,
+    "dimensional_stability": 7,
+    "warp_tendency": 1,
+    "layer_adhesion": 8,
+    "compression_strength": 7,
+    "temperature_tolerance": 2,
+    "uv_tolerance": 3,
+    "weather_tolerance": 2,
+    "water_tolerance": 6
+  },
+  "compatibility": {
+    "bonds_with": ["pla", "pla-plus", "pla-hf", "lw-pla", "pla-cf", "pla-silk", "pla-matte", "pla-gradient"],
+    "support_materials": ["pva", "bvoh", "petg", "pla"],
+    "usable_as_support_for": ["petg", "tpu"],
+    "notes": "Same PLA-family bonding behaviour as the base entry: welds to itself and other PLA grades, does not weld to PETG/ABS/ASA/PC/PA/PP. Commonly paired with lw-pla (tough ribs inside foamed skins) and with base PLA for multi-colour work. Standard PLA breakaway or water-soluble PVA/BVOH supports, as recommended by colorFabb and Polymaker for their tough PLA lines."
+  },
+  "plate_recommendations": [
+    {
+      "plate_id": "pei-textured",
+      "rating": "recommended",
+      "notes": "Same as base PLA — adheres at 45-60 °C with no release agent, and the textured grain suits the grade's naturally matte finish. No special surface needed."
+    }
+  ],
+  "emissions": {
+    "voc_level": "low",
+    "particulate_level": "low",
+    "primary_emissions": ["lactide", "ultrafine particles"],
+    "ventilation": "optional",
+    "notes": "No measured difference from base PLA — no styrene, caprolactam or foaming agent involved, and the emission class stays far below ABS/ASA. The one caveat is that Bambu's grade runs up to 250 °C, ~20 °C hotter than base PLA, which nudges particulate output up; and because the impact-modifier chemistry is undisclosed, any trace difference in emitted species is unverified. Ventilate for continuous printing in an occupied room."
+  },
+  "safety_notes": "No formal FDA/NSF food-contact certification was found for any brand's PLA+, and the toughening additive is undisclosed — treat as not food-safe, a stricter call than base PLA's 'conditional'.",
+  "additional_notes": "PLA+ is a compounded grade, not a different base resin — 'PLA+', 'PLA Pro' and 'Tough PLA' are marketing names covering different proprietary formulations, which is why brand-to-brand mechanical figures diverge so widely. Bambu notes resistance to most oils and greases.",
+  "provenance": {
+    "sources": [
+      "https://store.bblcdn.com/s1/default/788ce5d74ab94508a6e3fcfee11159a5/Bambu_PLA_Tough_Technical_Data_Sheet.pdf",
+      "https://www.esun3d.com/uploads/eSUN_PLA+-Filament_TDS_V4.0.pdf",
+      "https://colorfabb.com/media/datasheets/tds/colorfabb/TDS_E_ColorFabb_Tough_PLA.pdf",
+      "https://esun3dstore.com/products/pla-pro",
+      "https://us.store.bambulab.com/products/pla-tough-upgrade",
+      "https://colorfabb.com/tough-pla"
+    ],
+    "last_verified": "2026-07-31",
+    "confidence": "medium",
+    "conflicts": "Tensile strength disagrees by a factor of ~1.8 across brands (eSUN 63 MPa injection-moulded, colorFabb 55 MPa printed X-Y, Bambu 34.9 MPa X-Y) because the test specimens differ — recorded as a 35-63 MPa range rather than reconciled. Impact strength is reported in incompatible tests (IZOD 9 kJ/m², Charpy notched 5.8 kJ/m², Bambu 80.6 kJ/m²) and cannot be compared. Nozzle temperature is brand-split: 210-230 °C for eSUN/colorFabb vs 220-250 °C for Bambu. HDT: Bambu 58 °C at 1.8 MPa vs eSUN 53 °C (load unstated) vs colorFabb N/A. Drying parameters exist only for Bambu; eSUN/colorFabb values are assumed from base PLA (unverified). Prices for Bambu and colorFabb are estimates, not confirmed store figures."
+  }
+}

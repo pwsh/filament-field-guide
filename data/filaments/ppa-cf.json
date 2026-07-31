@@ -1,0 +1,129 @@
+{
+  "id": "ppa-cf",
+  "name": "PPA-CF (Carbon-Fiber-Filled Polyphthalamide)",
+  "aliases": ["PPA CF", "Polyphthalamide Carbon Fiber", "PAHT-CF", "HTN-CF", "CarbonX HTN+CF", "High-temperature nylon CF"],
+  "status": "researched",
+  "base_type": "pa",
+  "variation_kind": "carbon-fiber-filled",
+  "polymer_class": "composite-other",
+  "chemical_makeup": "Polyphthalamide — a semi-aromatic polyamide in which a phthalic (aromatic) diacid replaces part of the aliphatic diacid of a conventional nylon — compounded with chopped carbon fiber. The aromatic rings stiffen the chain and raise the melting point far above PA6 or PA12, which is the whole reason this grade exists; the fiber then adds stiffness on top of an already-elevated baseline. Loading is undisclosed by Bambu and 3DXTech.",
+  "summary": "The high-temperature end of the CF-nylon family and the hardest print of the four composites in this cluster. Deltas vs the base pa entry: XY tensile 168±4 MPa against unfilled PA's ~52 MPa, HDT@0.45 MPa 227 °C against ~80 °C, and an explicit 50-80 °C chamber-temperature specification no other polyamide entry carries. Vs siblings: highest strength, stiffness and heat resistance of the trio, but the worst anisotropy (168 MPa XY against 57 MPa Z, a ~3:1 gap, so layer_adhesion falls to 3), the most aggressive drying schedule in the catalog (100-140 °C for 8-12 h), the hottest nozzle (280-315 °C) and the highest price (~$172-266/kg).",
+  "printing": {
+    "nozzle_temp_c": { "min": 280, "max": 315, "recommended": 295 },
+    "bed_temp_c": { "min": 100, "max": 120, "recommended": 110 },
+    "ambient_temp_c": { "min": 50, "max": 80, "recommended": 60 },
+    "speed_mm_s": { "min": 30, "max": 100, "recommended": 60 },
+    "enclosure_recommended": true,
+    "heated_chamber_required": false,
+    "enclosure_open_for_cooling": false,
+    "requires_hardened_nozzle": true,
+    "part_cooling_fan_pct": { "min": 0, "max": 10, "recommended": 0 },
+    "notes": "The hottest window of the four composites in this cluster and of the whole polyamide family: Bambu 280-310 °C, 3DXTech CarbonX HTN+CF 285-315 °C, against pa6-cf's 260-300 °C and the base pa entry's 240-290 °C. Bed 100-120 °C, also the highest here. This is the only polyamide entry in the catalog with a vendor chamber-temperature specification — Bambu gives 50-80 °C — and community practice is to run 60-70 °C chamber with part cooling fully off, which 'significantly enhances interlayer adhesion' (P3D). heated_chamber_required is nonetheless recorded false, matching the base pa entry and the catalog's convention of reserving true for PEEK/PEI-class hardware: the lower half of Bambu's chamber band is reachable passively on a well-insulated prosumer enclosure with a 110 °C bed. A 0.6 mm nozzle is recommended and 0.2 mm is explicitly not supported; speed under 100 mm/s (Bambu), with flow +5-10 % for complex geometry. Hardened steel nozzle mandatory."
+  },
+  "feeding": {
+    "drive_system": "any",
+    "ams_compatible": "no",
+    "feeding_assistant_recommended": false,
+    "notes": "Rigid, so any extruder feeds it; no shore hardness and no feeding assistant (not an elastomer). Bambu states explicitly that PPA-CF is NOT compatible with Bambu Lab AMS systems — the same two mechanisms as pa6-cf, carbon-fiber wear on the PTFE feed path and snap risk from a stiff, brittle strand on the AMS bend radii, and here the strand is stiffer still. Single-spool external feed from a heated drybox on a chamber-heated enclosed printer is standard practice, and the 280-315 °C hotend requirement rules out most machines that would host an AMS anyway."
+  },
+  "drying": {
+    "required_before_use": "always",
+    "temp_c": { "min": 100, "max": 140, "recommended": 120 },
+    "time_hours": { "min": 8, "max": 12, "recommended": 10 },
+    "methods": ["blast oven at 100-140 °C", "high-temperature filament dryer", "print directly from a heated high-temperature dryer", "sealed drybox with desiccant while printing"],
+    "dryness_validation": "No popping, hissing or steam at the nozzle and a void-free, evenly dimensioned purge line; no layer separation on a tall test wall, which is the characteristic undried-PPA-CF failure reported by the community. The matte fiber-filled surface makes gloss useless as a tell.",
+    "notes": "The most aggressive drying schedule in this catalog: Bambu specifies 100-140 °C for 8-12 h in a blast oven, against 80 °C for pa6-cf and 90 °C for pa12-cf. That is not because PPA absorbs more water — measured uptake is 1.30 % (Bambu TDS), between pa6-cf's 3-9 % and pa12-cf's 0.7-1 % — but because PPA's much higher melting point raises the temperature ceiling at which drying can be run, letting the schedule be short and hot. Ordinary 70-90 °C filament dryers cannot reach these temperatures; a blast oven or high-temperature unit is genuinely required. Store sealed below 20 % RH with desiccant."
+  },
+  "storage": {
+    "recommendations": "Sealed with fresh desiccant below 20 % RH (Bambu). Less frantic than pa6-cf — 1.3 % uptake against 3-9 % — but far less forgiving than pa12-cf, and redrying requires a blast oven rather than a desk dryer, so preventing pickup is much cheaper than reversing it.",
+    "max_humidity_pct": 20,
+    "hygroscopy": "high"
+  },
+  "price": {
+    "usd_per_kg_low": 172,
+    "usd_per_kg_high": 266,
+    "notes": "The most expensive entry in this cluster and one of the most expensive filaments in the catalog. Bambu PPA-CF at $149.18/750 g (~$198.90/kg on 3DJake); P3D cites $129-150 per 0.75 kg spool (~$172-200/kg) and calls it 'one of the most expensive high-performance 3D printing filaments on the market'. 3DXTech CarbonX HTN+CF runs $200/750 g (~$266/kg) or $425/2 kg (~$212.50/kg). Roughly 2-3x pa6-cf."
+  },
+  "use_cases": {
+    "recommended": [
+      "under-hood automotive brackets under sustained high temperature",
+      "industrial tooling and jigs in hot or chemically aggressive environments",
+      "aerospace fixtures and high-load structural mounts",
+      "parts that must survive sustained exposure near 200 °C",
+      "high-load parts that can be oriented so the load runs in-plane",
+      "metal-replacement brackets where pa6-cf's heat ceiling is the limiting factor"
+    ],
+    "not_recommended": [
+      "anything printable adequately in pa6-cf or pa12-cf — the cost premium is 2-3x",
+      "beginners and non-enclosed printers: without chamber heat the layer bond is poor",
+      "parts loaded in Z without annealing (Z tensile is 34 % of XY, the worst gap in this cluster)",
+      "0.2 mm nozzle detail work — explicitly unsupported",
+      "printers whose hotend tops out below ~300 °C",
+      "workflows without a blast oven for the 100-140 °C drying schedule",
+      "food-contact items"
+    ]
+  },
+  "suitability": {
+    "food_contact": "no",
+    "load_bearing": "high",
+    "high_temperature": "yes",
+    "outdoor": "limited"
+  },
+  "properties": {
+    "density_g_cm3": 1.25,
+    "grams_per_100cm3": 125,
+    "cm3_per_100g": 80.0,
+    "shrinkage_pct": { "min": 0.3, "max": 1.0, "recommended": 0.5 },
+    "glass_transition_c": 125,
+    "heat_deflection_c": 227,
+    "max_service_temp_c": 180,
+    "tensile_strength_mpa": { "min": 106, "max": 172, "recommended": 168 },
+    "notes": "Density 1.25 g/cm³ (Bambu) is the highest in this cluster — above pa6-cf's 1.17 and pa12-cf's 1.06 — so 100 g yields only 80 cm³, the least part volume per spool of the four composites. Tensile XY 168±4 MPa un-annealed against Z 57±5 MPa (Bambu), a ~3:1 anisotropy that is the largest here and the reason layer_adhesion scores 3; P3D calls it a 48 % strength increase over standard PA6-CF. HDT 227 °C @0.45 MPa and 196 °C @1.8 MPa (Bambu) — the highest of the trio, against pa6-cf's ~190 °C and pa12-cf's 150 °C. 3DXTech's competing CarbonX HTN+CF quotes markedly lower figures (tensile 106 MPa, HDT 200 °C), which is why the tensile range spans 106-172 MPa. Max service temperature 180 °C is a conservative reading: a community review reports prolonged exposure to ~227 °C without structural compromise, but no vendor publishes a continuous-use figure, and 227 °C is the HDT rather than a service rating. Tg ~125 °C is a typical semi-aromatic polyamide value, not a datasheet figure for these products. Water absorption 1.30 % (Bambu TDS). Shrinkage is reasoned from the observed low-warp behaviour under chamber heat, not published."
+  },
+  "scores": {
+    "ease_of_print": 3,
+    "dimensional_stability": 7,
+    "warp_tendency": 3,
+    "layer_adhesion": 3,
+    "compression_strength": 10,
+    "temperature_tolerance": 9,
+    "uv_tolerance": 4,
+    "weather_tolerance": 6,
+    "water_tolerance": 6
+  },
+  "compatibility": {
+    "bonds_with": ["ppa-cf", "ppa", "pa"],
+    "support_materials": ["ppa-cf", "ppa"],
+    "usable_as_support_for": [],
+    "notes": "Welds to itself and to unfilled PPA/PAHT. Bonding to the aliphatic grades (pa, pa6-cf, pa12-cf) is amide-to-amide and physically possible but poor in practice, because PPA's melt range sits 30-60 °C above theirs — the aliphatic partner degrades before the PPA flows properly, so treat cross-grade prints as unsupported. No bond to pla, petg, abs, asa, pc, pp, pctg, pvb or pet. No soluble support survives 280-315 °C: pva degrades above ~200 °C and bvoh sits lower still, so this material is effectively always printed single-material with same-material breakaway supports where geometry demands them."
+  },
+  "plate_recommendations": [
+    {
+      "plate_id": "pei-textured",
+      "rating": "usable",
+      "notes": "Same rating and reasoning as pa6-cf: nylon-family adhesion to textured PEI is inconsistent and forum consensus is against it, so a glue stick or PA-specific adhesive is used as an adhesion PROMOTER rather than a release layer. The complication unique to this entry is bed temperature — 100-120 °C is at the top of what many adhesives and flexible sheets are rated for, so check the plate's and the adhesive's temperature ratings before a long job. Garolite / G10 is the preferred surface for the polyamide family and has no catalog plate entry yet, so it is recorded here in notes."
+    }
+  ],
+  "emissions": {
+    "voc_level": "high",
+    "particulate_level": "high",
+    "primary_emissions": ["amide-family degradation VOCs", "caprolactam-class byproducts", "ultrafine particles", "respirable carbon fiber dust (post-processing)"],
+    "ventilation": "required",
+    "notes": "Rated a full step above pa6-cf and pa12-cf on particulates and escalated from 'recommended' to 'required' ventilation, on temperature grounds: ultrafine-particle and VOC emission rise steeply with nozzle temperature, and at 280-315 °C this is the hottest-processing material in the cluster by 15-30 °C. Nylon-class amide byproducts plus carbon-fiber fines during sanding and machining. An enclosed, chamber-heated printer with HEPA plus activated-carbon filtration and external exhaust is the working assumption for this grade, not an optional upgrade — do not run it in an occupied unventilated room."
+  },
+  "safety_notes": "Abrasive: hardened steel nozzle mandatory. The 100-140 °C drying schedule requires a blast oven — ordinary filament dryers cannot reach it, and plastic spools may soften near the top of that range, so check the spool material before oven-drying. Hotend temperatures near 315 °C exceed the safe limit of PTFE-lined hotends: an all-metal hotend is required, and PTFE degradation above ~250 °C releases toxic fumes. Wet-sand printed parts with respiratory protection. Not food-contact suitable.",
+  "additional_notes": "PPA-CF only makes sense when heat is the binding constraint. If pa6-cf's ~190 °C HDT and pa12-cf's 150 °C are both adequate, this grade buys nothing but cost, drying overhead and chamber-heating requirements. Where it does apply, annealing at 120-140 °C for 6-12 h is close to mandatory: the un-annealed 168/57 MPa XY:Z split makes Z-loaded geometry unusable, and this is the largest anisotropy in the cluster. Fiber loading is undisclosed by both Bambu and 3DXTech, and their published mechanical figures differ by more than 50 %, so treat any number here as brand-specific rather than a property of PPA-CF as a class.",
+  "provenance": {
+    "sources": [
+      "https://bambulab.com/en-us/filament/ppa-cf",
+      "https://store.bblcdn.eu/s8/default/f592e57fe69c40289897513bdd2b61bc/Bambus_PPA-CF_Technical_Data_Sheet_2ab26420-79f5-4692-888e-090006814050.pdf",
+      "https://www.3djake.com/bambu-lab/ppa-cf-black",
+      "https://p3d.mx/blogs/3d-printer-review/bambu-ppa-cf-filament-review",
+      "https://www.3dxtech.com/products/carbonx-htn-cf",
+      "https://siraya.tech/blogs/news/comparing-composition-and-performance-of-paht-filament-materials-based-on-ppa-pa6-pa12-and-pa612"
+    ],
+    "last_verified": "2026-07-31",
+    "confidence": "medium",
+    "conflicts": "Bambu and 3DXTech disagree by more than 50 % on the headline mechanicals: Bambu gives XY tensile 168±4 MPa and HDT 227 °C @0.45 MPa, 3DXTech's CarbonX HTN+CF gives 106 MPa and 200 °C. Neither discloses fiber loading, so the gap cannot be attributed to matrix or filler with any confidence; the recorded range spans both and the 'recommended' tensile follows Bambu. Max service temperature 180 °C is a conservative editorial reading — the only supporting claim is a community review asserting prolonged exposure to ~227 °C, which is the HDT rather than a continuous-use rating, and no vendor publishes a CUT. Tg ~125 °C is a class-typical semi-aromatic polyamide value, not a datasheet figure for either product. heated_chamber_required is recorded false despite Bambu's explicit 50-80 °C chamber specification, following the catalog convention that reserves true for PEEK/PEI-class hardware; a reviewer may reasonably disagree, and the requirement is instead expressed through ambient_temp_c and the ease_of_print score. Price spans $172-266/kg across three sources with no single consensus figure. Shrinkage is reasoned, not published."
+  }
+}

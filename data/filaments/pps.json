@@ -1,0 +1,121 @@
+{
+  "id": "pps",
+  "name": "PPS (Polyphenylene Sulfide)",
+  "aliases": ["Polyphenylene sulfide", "PPS unfilled", "3DXTech ThermaX PPS", "Ryton"],
+  "status": "researched",
+  "base_type": null,
+  "variation_kind": null,
+  "polymer_class": "high-performance",
+  "chemical_makeup": "Semi-crystalline aromatic polymer with an aryl sulfide backbone — benzene rings bridged by sulfur atoms rather than the ether/ketone links of peek and pekk or the imide and sulfone links of pei-ultem and ppsu. That backbone is what makes it inherently flame retardant and essentially insoluble in any known solvent below 200 °C, and it is also why its Tg is only 85 °C where the rest of the cluster sits at 143-220 °C. Base chemistry for the pps-cf carbon-fiber variant.",
+  "summary": "The chemical-resistance specialist of the high-performance cluster, and the cheapest entry in it at roughly $140-200/kg. Nothing else in this catalog matches its solvent and chemical resistance, and flame retardancy comes free with the chemistry rather than from additives. The catch is a Tg of just 85 °C — lower than pc's 145 °C and only marginally above pla's world — so although Tm is 285 °C, practical stiffness falls away far earlier than the peek/pekk/pei numbers suggest. Deltas vs siblings: best-in-class chemical, solvent and water tolerance (10/10), worst-in-class Tg, and semi-crystalline warp behaviour that puts it closer to peek than to the amorphous pair. Its own carbon-filled variant pps-cf fixes most of the warp and stiffness problems and is the grade most engineering users actually buy.",
+  "printing": {
+    "nozzle_temp_c": { "min": 365, "max": 390, "recommended": 375 },
+    "bed_temp_c": { "min": 100, "max": 130, "recommended": 120 },
+    "ambient_temp_c": { "min": 50, "max": 90, "recommended": 80 },
+    "enclosure_recommended": true,
+    "heated_chamber_required": false,
+    "enclosure_open_for_cooling": false,
+    "requires_hardened_nozzle": false,
+    "part_cooling_fan_pct": { "min": 0, "max": 10, "recommended": 0 },
+    "notes": "Nozzle 365-390 °C per 3DXTech. Bed temperature needed correction: one scrape of the 3DXTech page returned a '315-345 °C' bed figure that is almost certainly a data-extraction error, since PPS melts at 285 °C and has a Tg of 85 °C — cross-checked against Bambu's PPS-CF sheet (bed 100-120 °C for a ~90 % PPS matrix), the recorded 100-130 °C band is the defensible reading and the higher figure is treated as erroneous. Chamber is recommended up to 50-90 °C where available but is NOT strictly required, which is the one hardware gate PPS relaxes relative to peek, pekk, pei-ultem and ppsu; enclosure_recommended stays true because a semi-crystalline polymer with an 85 °C Tg is very draft-sensitive. Cooling off. 365-390 °C is still above Bambu's stock hotend and marginally above even the X1E/H2D high-temp hotend's ~350 °C ceiling — note the sharp contrast with the pps-cf variant, which Bambu specifies at only 310-340 °C. Unfilled, so no hardened nozzle; pps-cf requires one."
+  },
+  "feeding": {
+    "drive_system": "direct-drive-recommended",
+    "ams_compatible": "no",
+    "feeding_assistant_recommended": false,
+    "notes": "Rigid, feeds easily, direct drive preferred for extrusion pressure at 375 °C. AMS is recorded no for unfilled PPS: the process temperature is above what any AMS-fed hotend delivers, and while Bambu's AMS-HT is rated to dry PPS-family filament to 85 °C, that is a drying specification and not a statement that unfilled PPS can be fed through an AMS on a P1 or X1. Feed from an external spool holder or drybox. Unlike pps-cf there is no brittleness or abrasion objection here — the objection is purely temperature."
+  },
+  "drying": {
+    "required_before_use": "always",
+    "temp_c": { "min": 100, "max": 120, "recommended": 110 },
+    "time_hours": { "min": 4, "max": 12, "recommended": 4 },
+    "methods": ["filament dryer or convection oven at 110 °C", "print from a heated drybox", "sealed drybox with desiccant while printing"],
+    "dryness_validation": "No popping or steam at the nozzle and a clean, void-free purge line. PPS absorbs comparatively little water, so a spool that has been sealed with desiccant since its last use usually passes on inspection alone.",
+    "notes": "3DXTech specifies 110 °C for 4 hours. The recorded band widens the upper end to acknowledge Bambu's much more intensive schedule for the filled pps-cf grade (100-140 °C for 8-12 h in a blast oven, or 110-120 °C for 12 h on the heatbed), which sits against Fiberon's claim that PPS-CF is comparatively moisture-insensitive — a genuine disagreement carried over from the variant. For unfilled PPS the 110 °C / 4 h figure is the sourced one; treat longer schedules as insurance."
+  },
+  "storage": {
+    "recommendations": "Sealed with desiccant between prints. PPS is markedly less thirsty than pei-ultem or the nylons — its water tolerance in service is the best in the catalog — but the 375 °C process temperature means the little moisture it does carry still flashes hard in the melt.",
+    "max_humidity_pct": 25,
+    "hygroscopy": "moderate"
+  },
+  "price": {
+    "usd_per_kg_low": 140,
+    "usd_per_kg_high": 200,
+    "notes": "3DXTech ThermaX PPS 500 g spools: $70 at 2.85 mm (~$140/kg) and $100 at 1.75 mm (~$200/kg) — the diameter premium is the whole spread. This makes PPS the cheapest material in the high-performance cluster: below pei-ultem 1010 ($195/kg) at the 2.85 mm end, and a fraction of peek, pekk or ppsu at $400-900/kg."
+  },
+  "use_cases": {
+    "recommended": [
+      "chemical processing components exposed to aggressive solvents",
+      "automotive fluid-handling parts",
+      "oil and gas hardware",
+      "electrical and electronics housings needing inherent flame retardance",
+      "parts that must survive immersion or sustained humidity",
+      "cost-sensitive high-performance work where peek is out of budget"
+    ],
+    "not_recommended": [
+      "structural parts operating above ~85 °C without reinforcement or annealing (Tg is the limiting factor, not Tm)",
+      "large flat geometry without careful bed and chamber control",
+      "printers below ~365 °C hotend capability — use the pps-cf variant at 310-350 °C instead",
+      "stiffness-critical parts, where pps-cf is the obvious upgrade",
+      "food-contact items (not verified for printed parts)"
+    ]
+  },
+  "suitability": {
+    "food_contact": "no",
+    "load_bearing": "moderate",
+    "high_temperature": "moderate",
+    "outdoor": "yes"
+  },
+  "properties": {
+    "density_g_cm3": 1.35,
+    "grams_per_100cm3": 135,
+    "cm3_per_100g": 74.1,
+    "glass_transition_c": 85,
+    "notes": "Tg 85 °C and Tm 285 °C. The Tg is the defining number of this entry and the reason high_temperature suitability is recorded as moderate rather than yes despite a 285 °C melting point: unreinforced PPS parts lose stiffness well below where peek, pekk, pei-ultem or ppsu would, and only reinforcement (pps-cf) or annealing recovers usable performance at temperature. HDT is deliberately not recorded — no unfilled figure appeared in the sources reviewed, and the 235-265 °C values in circulation all belong to filled AND annealed grades, so importing them here would be wrong by a wide margin. Density 1.35 g/cm³ is the standard literature value for unfilled PPS rather than a filament datasheet figure; note it is HIGHER than the filled pps-cf variant's 1.26 g/cm³, which is the reverse of the usual filler effect and reflects Bambu's compound rather than a pure fiber-loading calculation. Chemical resistance is the standout property: insoluble in any known solvent below 200 °C."
+  },
+  "scores": {
+    "ease_of_print": 3,
+    "dimensional_stability": 5,
+    "warp_tendency": 9,
+    "layer_adhesion": 6,
+    "compression_strength": 7,
+    "temperature_tolerance": 8,
+    "uv_tolerance": 8,
+    "weather_tolerance": 9,
+    "water_tolerance": 10
+  },
+  "compatibility": {
+    "bonds_with": ["pps", "pps-cf"],
+    "support_materials": ["pps", "pps-cf"],
+    "usable_as_support_for": [],
+    "notes": "Welds to itself and to its own carbon-filled variant pps-cf — same matrix chemistry, overlapping melt behaviour — although the two grades' published nozzle windows do not overlap cleanly (365-390 °C unfilled vs 310-350 °C filled), so a dual-material job needs a compromise temperature. No soluble support survives 365-390 °C: pva and bvoh are far out of range. No bonding to pla, petg, abs, asa, pc, pa, pp or any other commodity material."
+  },
+  "plate_recommendations": [
+    {
+      "plate_id": "pei-textured",
+      "rating": "usable",
+      "notes": "Not documented for unfilled PPS specifically in the sources reviewed (unverified). Rated usable by analogy to pps-cf and to general practice for high-temperature semi-crystalline polymers, where textured PEI with a high-temperature adhesive, or a garolite/G10 sheet, are the common combinations. The bed range here (100-130 °C) is well within a PEI sheet's comfort zone, unlike peek's 130-145 °C under a 400 °C nozzle — which is why this is usable where peek and pekk are avoid. No garolite plate entry exists in the catalog yet."
+    }
+  ],
+  "emissions": {
+    "voc_level": "moderate",
+    "particulate_level": "high",
+    "primary_emissions": ["ultrafine particles", "unspecified high-temperature process VOCs (no PPS-specific speciation found in this research pass)", "trace sulfur-bearing species if the melt is overheated (inferred from the aryl sulfide backbone, unverified)"],
+    "ventilation": "required",
+    "notes": "No PPS-specific VOC or particulate data was found. The temperature-scaling rule puts a 365-390 °C process near the top of the catalog, so ventilation is recorded as required. One material-specific caution that does not apply to the rest of the cluster: the backbone is an aryl sulfide, so an overheated melt is a plausible source of sulfurous odour and species — this is inferred from chemistry rather than measured, and is recorded so it is not mistaken for evidence."
+  },
+  "safety_notes": "375 °C hotend and 120-130 °C bed are burn hazards. Flame retardancy is inherent to the chemistry, so there are no flame-retardant additives to handle. Do not push the melt materially above the published window: the sulfide backbone makes overheating an odour and decomposition risk rather than merely a degradation risk. Food contact is not verified for printed parts.",
+  "additional_notes": "Unfilled PPS is comparatively rare in real use — the CF and GF reinforced grades dominate engineering practice because they fix exactly the weaknesses this entry documents (warp, dimensional drift, low stiffness retention near Tg). Treat this entry as the chemistry baseline and pps-cf as the grade to actually buy unless conductivity is a problem, in which case a PPS-GF20 glass-filled grade is the insulating alternative (no catalog entry yet). Against the cluster: choose PPS when the enemy is chemistry rather than heat, and peek, pekk or pei-ultem when the enemy is heat.",
+  "provenance": {
+    "sources": [
+      "https://www.3dxtech.com/products/thermax-pps",
+      "https://store.bblcdn.eu/s8/default/623b28bf2fbe495fa9dd559a85f494ed/Bambu_PPS-CF_Technical_Data_Sheet.pdf",
+      "https://wiki.polymaker.com/polymaker-products/polymaker-filaments/fiberon-tm/fiberon-tm-pps-cf10",
+      "https://www.ensingerplastics.com/en-us/thermoplastic-materials/pps-plastic",
+      "https://www.honyplastic.com/news/the-difference-between-peek-and-pps-312998.html"
+    ],
+    "last_verified": "2026-07-31",
+    "confidence": "medium",
+    "conflicts": "Bed temperature is the sharpest conflict: a 3DXTech scrape returned '315-345 °C', which is physically implausible for a polymer melting at 285 °C with a Tg of 85 °C, and is treated here as a data-extraction error in favour of a 100-130 °C band cross-checked against Bambu's PPS-CF sheet. Nozzle temperature disagrees across grades by a wide margin — 365-390 °C for 3DXTech's unfilled PPS against 310-340 °C for Bambu's PPS-CF compound — which is a large enough gap to suggest different base resins rather than a pure filler effect, and it should be resolved against manufacturer data directly. Drying disagrees too: 3DXTech 110 °C/4 h for unfilled, Bambu 100-140 °C/8-12 h for the filled grade, Fiberon claiming relative moisture insensitivity. No HDT figure exists for the unfilled grade in any source reviewed, so the field is left empty rather than borrowed from filled/annealed data. Density 1.35 g/cm³ is a literature value, unverified against a filament datasheet. Build-surface guidance for unfilled PPS is unverified and reasoned by analogy. Emissions are inferred, including the sulfur-species note."
+  }
+}

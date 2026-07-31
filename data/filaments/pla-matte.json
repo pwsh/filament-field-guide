@@ -1,0 +1,125 @@
+{
+  "id": "pla-matte",
+  "name": "Matte PLA",
+  "aliases": ["PLA Matte", "Matte Finish PLA", "PolyTerra-style PLA"],
+  "status": "researched",
+  "base_type": "pla",
+  "variation_kind": "matte",
+  "polymer_class": "polylactide",
+  "chemical_makeup": "PLA compounded with a fine, non-abrasive mineral/particulate matting agent that scatters light at the surface; a surface-effect filler package rather than a reinforcing fibre (Polymaker PolyTerra uses a comparable plant-fibre-derived matting approach)",
+  "summary": "Base PLA plus a light matting filler that kills gloss and visually hides layer lines and fingerprints. Versus base PLA it is denser (1.31 vs 1.24 g/cm³), runs 5-10 °C hotter and 10-20 % slower because the filler raises melt viscosity, and is somewhat weaker and more brittle (tensile XY 30 MPa vs 45-65 MPa) — everything else, including drying and warp behaviour, is base-PLA-equivalent.",
+  "printing": {
+    "nozzle_temp_c": { "min": 190, "max": 230, "recommended": 220 },
+    "bed_temp_c": { "min": 35, "max": 45, "recommended": 40 },
+    "ambient_temp_c": { "min": 25, "max": 45, "recommended": 30 },
+    "speed_mm_s": { "min": 40, "max": 300, "recommended": 90 },
+    "enclosure_recommended": false,
+    "heated_chamber_required": false,
+    "requires_hardened_nozzle": false,
+    "part_cooling_fan_pct": { "min": 80, "max": 100, "recommended": 100 },
+    "enclosure_open_for_cooling": true,
+    "notes": "Delta vs base PLA: same nominal 190-230 °C window but Bambu tests specimens at 220 °C and community guidance is +5 to +10 °C over plain PLA, with a 10-20 % speed reduction from your usual PLA profile because the matting filler raises melt viscosity. Bambu's TDS still rates the material to 300 mm/s on capable hardware. The filler load is low and mineral (not glass or carbon), so a brass nozzle is fine — this is the key hardware difference from pla-wood, pla-glow and pla-metal."
+  },
+  "feeding": {
+    "drive_system": "any",
+    "ams_compatible": "yes",
+    "feeding_assistant_recommended": false,
+    "notes": "Rigid and non-abrasive; feeds through Bowden or direct drive identically to base PLA and is listed AMS-compatible in Bambu's material table with no caveats. The most AMS-safe of the six aesthetic PLA variants alongside pla-gradient. No feeding assistant needed."
+  },
+  "drying": {
+    "required_before_use": "if-exposed",
+    "temp_c": { "min": 45, "max": 55, "recommended": 50 },
+    "time_hours": { "min": 6, "max": 8, "recommended": 8 },
+    "methods": ["filament dryer", "blast oven at 50 °C", "food dehydrator", "drybox with desiccant"],
+    "dryness_validation": "No popping or steam at the nozzle and no stringing on a retraction test; note that the matte surface hides the fine bubbling that betrays wet silk PLA, so judge by sound and stringing rather than by finish",
+    "notes": "Essentially unchanged from base PLA — Bambu specifies 50 °C for 8 h. The mineral filler is not meaningfully hygroscopic, so this is not a moisture-critical material the way pla-wood is."
+  },
+  "storage": {
+    "recommendations": "Sealed bag or drybox with desiccant between uses; tolerates open-air storage about as well as base PLA",
+    "max_humidity_pct": 40,
+    "hygroscopy": "low"
+  },
+  "price": {
+    "usd_per_kg_low": 20,
+    "usd_per_kg_high": 23,
+    "notes": "Bambu PLA Matte around $19.99-22.99/kg. The premium over base PLA has narrowed to marginal in recent years — cheaper than pla-gradient, pla-wood, pla-glow and pla-metal, which sit near $25/kg"
+  },
+  "use_cases": {
+    "recommended": [
+      "display pieces and showpieces",
+      "architectural and scale models",
+      "cosplay props and set dressing",
+      "parts where layer lines and fingerprints must not read",
+      "photography and product-mockup props"
+    ],
+    "not_recommended": [
+      "high-impact parts",
+      "snap-fit and clip geometry (more brittle than base PLA)",
+      "food-contact items (filler package uncertified)",
+      "sustained-load or outdoor parts, same as base PLA"
+    ]
+  },
+  "suitability": {
+    "food_contact": "no",
+    "load_bearing": "light",
+    "high_temperature": "no",
+    "outdoor": "no"
+  },
+  "properties": {
+    "density_g_cm3": 1.31,
+    "grams_per_100cm3": 131,
+    "cm3_per_100g": 76.3,
+    "shrinkage_pct": { "min": 0.3, "max": 0.5, "recommended": 0.4 },
+    "glass_transition_c": 61,
+    "heat_deflection_c": 58,
+    "max_service_temp_c": 52,
+    "tensile_strength_mpa": { "min": 25, "max": 35, "recommended": 30 },
+    "notes": "Bambu PLA Matte TDS: density 1.31 g/cm³ (the densest of the unfilled-looking PLA variants, and above base PLA's 1.24), tensile XY 30±5 MPa and Z 22±4 MPa, elongation XY 14.8±4.2 % and Z 4.8±1.7 %, Tg 61 °C, HDT 58 °C at 0.45 MPa and 52 °C at 1.8 MPa. Elongation is far better than pla-silk's 2.8 %, so 'more brittle than base PLA' is a relative statement: matte is the toughest of the aesthetic variants after pla-gradient. Flexural strength is reported lower than base PLA because filler particles act as stress concentrators, but no primary datasheet figure was found."
+  },
+  "scores": {
+    "ease_of_print": 9,
+    "dimensional_stability": 8,
+    "warp_tendency": 1,
+    "layer_adhesion": 5,
+    "compression_strength": 7,
+    "temperature_tolerance": 2,
+    "uv_tolerance": 3,
+    "weather_tolerance": 2,
+    "water_tolerance": 6
+  },
+  "compatibility": {
+    "bonds_with": ["pla", "pla-matte", "pla-silk", "pla-gradient"],
+    "support_materials": ["pva", "bvoh", "petg", "pla"],
+    "usable_as_support_for": ["petg"],
+    "notes": "Standard PLA-family behaviour, identical to the base entry: welds to itself and other PLA grades, releases cleanly from PETG. Matte and base PLA are frequently combined in multi-colour prints with no interface penalty beyond the slight strength drop of the matte side."
+  },
+  "plate_recommendations": [
+    {
+      "plate_id": "pei-textured",
+      "rating": "recommended",
+      "notes": "The best aesthetic pairing of the six variants: a textured first layer matches the matte top surfaces so the whole part reads uniformly non-reflective. Smooth PEI also works. This is the opposite of pla-silk, where texture degrades the finish."
+    }
+  ],
+  "emissions": {
+    "voc_level": "low",
+    "particulate_level": "low",
+    "primary_emissions": ["lactide", "ultrafine particles"],
+    "ventilation": "optional",
+    "notes": "No difference from base PLA reported; the mineral matting agent is inert at printing temperature and produces no unusual odour, unlike pla-wood's charring fibre."
+  },
+  "safety_notes": "The matting filler package is not food-contact certified; treat matte parts as decorative.",
+  "additional_notes": "Matte finish is a filler effect, not a process effect — unlike pla-silk gloss, it cannot be tuned in or out with temperature and speed.",
+  "provenance": {
+    "sources": [
+      "https://store.bblcdn.com/s7/default/5b061f2feeac4ba88f355a33248bbda7/Bambu_PLA_Matte_Technical_Data_Sheet.pdf",
+      "https://wiki.bambulab.com/en/general/filament-guide-material-table",
+      "https://sigmafilament.com/matte-pla-vs-pla-data-comparison/",
+      "https://polymaker.com/product/polyterra-pla/",
+      "https://zbotic.in/silk-pla-vs-matte-pla-filament-which-finish-looks-better/",
+      "https://forum.bambulab.com/t/pla-matte-layer-adhesion/21090"
+    ],
+    "last_verified": "2026-07-31",
+    "confidence": "medium",
+    "conflicts": "Tensile strength: Bambu's TDS gives 30±5 MPa XY, while a secondary comparison source cites 40-60 MPa for matte against 50-70 MPa for standard PLA — the sources agree on the direction (matte is weaker than base PLA) but not the magnitude; the manufacturer datasheet is recorded. Flexural strength is cited by a secondary source at 50-80 MPa vs 70-90 MPa for base PLA, unverified against any datasheet. Speed: Bambu rates 300 mm/s while community guidance says run 10-20 % slower than base PLA; both are captured in the printing range and notes."
+  }
+}

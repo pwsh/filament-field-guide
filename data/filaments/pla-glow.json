@@ -1,0 +1,128 @@
+{
+  "id": "pla-glow",
+  "name": "Glow-in-the-Dark PLA",
+  "aliases": ["PLA Glow", "GITD PLA", "Glow PLA", "Phosphorescent PLA"],
+  "status": "researched",
+  "base_type": "pla",
+  "variation_kind": "glow",
+  "polymer_class": "composite-other",
+  "chemical_makeup": "PLA matrix loaded with phosphorescent mineral pigment, typically strontium-aluminate-based; the phosphor crystals are hard and angular, which is what makes this variant abrasive despite its modest filler fraction",
+  "summary": "PLA carrying a strontium-aluminate phosphor that charges under light and glows in the dark. Printing temperatures are base-PLA-like (190-230 °C) and it has the best layer bonding of any filled variant in this cluster (Z 26 vs XY 32 MPa), but the phosphor is aggressively abrasive: a hardened nozzle is required, 0.2 mm nozzles are out, and it chews plastic AMS feeder components in a way base PLA never does.",
+  "printing": {
+    "nozzle_temp_c": { "min": 190, "max": 230, "recommended": 220 },
+    "bed_temp_c": { "min": 35, "max": 45, "recommended": 40 },
+    "ambient_temp_c": { "min": 25, "max": 45, "recommended": 30 },
+    "speed_mm_s": { "min": 40, "max": 250, "recommended": 150 },
+    "enclosure_recommended": false,
+    "heated_chamber_required": false,
+    "requires_hardened_nozzle": true,
+    "part_cooling_fan_pct": { "min": 80, "max": 100, "recommended": 100 },
+    "enclosure_open_for_cooling": true,
+    "notes": "Thermally this is base PLA — Bambu tests specimens at 220 °C and 200 mm/s and rates the material below 250 mm/s, so unlike pla-wood and heavy pla-metal there is no speed penalty. The delta is entirely abrasion: CNC Kitchen's nozzle-wear testing found glow filaments more damaging to brass than some fibre-reinforced materials (colorFabb GlowFill removed roughly 0.5 mm from a brass nozzle tip over a 100 g sample, while better-behaved brands such as dasFilament caused little wear). Use hardened steel and 0.4 mm or larger — Bambu explicitly advises against 0.2 mm nozzles because of phosphor particle size. Print thick: glow brightness and duration keep improving with wall thickness up to about 2 mm, with diminishing returns beyond."
+  },
+  "feeding": {
+    "drive_system": "any",
+    "ams_compatible": "conditional",
+    "feeding_assistant_recommended": false,
+    "notes": "The sharpest feeding caveat in this cluster. Bambu's material table lists glow PLA as AMS-compatible but not recommended for AMS Lite, while forum users report the filament chewing through the AMS feeder inlet funnel within roughly 500 g and triggering motor-overload errors — abrasive wear on plastic feed components, not a jam. Experiences vary widely by brand and batch, matching CNC Kitchen's finding that abrasiveness is brand-dependent. Mitigations: feed from an external spool, fit an aftermarket metal/ceramic feeder-inlet protector, or use an AMS 2 Pro with ceramic inlet funnels. Rigid material, so drive system is unrestricted and no feeding assistant is needed."
+  },
+  "drying": {
+    "required_before_use": "if-exposed",
+    "temp_c": { "min": 45, "max": 55, "recommended": 55 },
+    "time_hours": { "min": 4, "max": 8, "recommended": 8 },
+    "methods": ["filament dryer", "blast oven at 55 °C", "food dehydrator", "drybox with desiccant"],
+    "dryness_validation": "No popping or steam at the nozzle and minimal stringing on a retraction test; extrudate should be smooth rather than pitted",
+    "notes": "Bambu specifies 55 °C for 8 h, matching base PLA. The mineral phosphor is not hygroscopic and no source reports an additive-driven moisture penalty — unlike pla-wood, where the filler absorbs water on its own."
+  },
+  "storage": {
+    "recommendations": "Sealed bag or drybox with desiccant; same tolerance as base PLA. Light exposure during storage is harmless — it simply charges the phosphor",
+    "max_humidity_pct": 40,
+    "hygroscopy": "low"
+  },
+  "price": {
+    "usd_per_kg_low": 24,
+    "usd_per_kg_high": 26,
+    "notes": "Bambu PLA Glow around $24.99/kg, matching pla-gradient and pla-wood and above base PLA at $18-20/kg. Budget for nozzle wear on top of filament cost"
+  },
+  "use_cases": {
+    "recommended": [
+      "novelty and decorative prints",
+      "night lights and light-switch surrounds",
+      "safety and wayfinding markers",
+      "cosplay props and costume accents",
+      "thick-walled parts where glow duration matters (target 2 mm or more)",
+      "toys and gifts (non-load-bearing)"
+    ],
+    "not_recommended": [
+      "fine-detail prints needing a 0.2 mm nozzle",
+      "printing on a shared or expensive hotend without a hardened nozzle fitted",
+      "high-volume AMS-fed jobs without feeder protection",
+      "load-bearing or structural parts",
+      "food-contact items",
+      "outdoor or hot-environment parts (base-PLA limits apply)"
+    ]
+  },
+  "suitability": {
+    "food_contact": "no",
+    "load_bearing": "light",
+    "high_temperature": "no",
+    "outdoor": "no"
+  },
+  "properties": {
+    "density_g_cm3": 1.26,
+    "grams_per_100cm3": 126,
+    "cm3_per_100g": 79.4,
+    "shrinkage_pct": { "min": 0.3, "max": 0.5, "recommended": 0.4 },
+    "glass_transition_c": 55,
+    "heat_deflection_c": 55,
+    "max_service_temp_c": 48,
+    "tensile_strength_mpa": { "min": 29, "max": 35, "recommended": 32 },
+    "notes": "Bambu PLA Glow TDS: density 1.26 g/cm³ (only just above base PLA's 1.24, so the phosphor load is modest by mass), tensile XY 32±3 MPa and Z 26±3 MPa, elongation XY 8.6±1.2 % and Z 6.5±0.8 %, Tg 55 °C, HDT 55 °C at 0.45 MPa and 52 °C at 1.8 MPa. The Z/XY tensile ratio of about 0.81 is the second best in this cluster after pla-metal and far better than pla-wood's 0.58 — this variant's problem is hardware wear, not part strength. Thermal numbers sit slightly below base PLA."
+  },
+  "scores": {
+    "ease_of_print": 7,
+    "dimensional_stability": 7,
+    "warp_tendency": 1,
+    "layer_adhesion": 6,
+    "compression_strength": 7,
+    "temperature_tolerance": 2,
+    "uv_tolerance": 3,
+    "weather_tolerance": 2,
+    "water_tolerance": 5
+  },
+  "compatibility": {
+    "bonds_with": ["pla", "pla-glow", "pla-matte", "pla-silk", "pla-gradient"],
+    "support_materials": ["pla", "pva", "bvoh", "petg"],
+    "usable_as_support_for": [],
+    "notes": "Standard PLA-family bonding: welds to base PLA and other PLA grades, does not weld to PETG/ABS/ASA/PC/PA/PP. Practical workflow note — if you fit a hardened nozzle for glow, that nozzle stays in for the support material too, so plan a nozzle swap only if a finer nozzle is genuinely required for interface quality. Not recommended as a support material itself: it wastes an abrasive, expensive filament."
+  },
+  "plate_recommendations": [
+    {
+      "plate_id": "pei-textured",
+      "rating": "recommended",
+      "notes": "Adheres normally at 35-45 °C with no release agent. Phosphor granules can read as slightly gritty on the plate-facing surface; smooth PEI gives a cleaner bottom face if that surface is visible."
+    }
+  ],
+  "emissions": {
+    "voc_level": "low",
+    "particulate_level": "low",
+    "primary_emissions": ["lactide", "ultrafine particles"],
+    "ventilation": "optional",
+    "notes": "No emissions delta from base PLA — the strontium-aluminate phosphor is an inert mineral at printing temperature and no unique fume hazard is reported. Standard good-practice ventilation for continuous printing still applies."
+  },
+  "safety_notes": "Not food-contact certified — the phosphor pigment is uncertified for that use. Fit a hardened nozzle before printing: brass wear from this material shows up as under-extrusion on subsequent, unrelated prints, so the cost of skipping it lands on the next job.",
+  "additional_notes": "Glow performance is a design variable, not just a material one: charge under bright light (UV or daylight charges fastest) and build walls at least 1-2 mm thick, since brightness and afterglow duration scale with the amount of phosphor in the light path. Green-emitting phosphors are typically the brightest and longest-lasting; blue and other colours glow more dimly.",
+  "provenance": {
+    "sources": [
+      "https://store.bblcdn.com/cd34cf072d14484bbf027290d16abe9b.pdf",
+      "https://www.cnckitchen.com/blog/which-glow-in-the-dark-filament-is-the-best",
+      "https://forum.bambulab.com/t/pla-glow-is-not-ams-compatible-despite-what-the-website-says/85223?page=2",
+      "https://wiki.bambulab.com/en/general/filament-guide-material-table",
+      "https://us.qidi3d.com/blogs/print-lab/glow-in-dark-filament-tips",
+      "https://shop3duniverse.com/products/bambu-lab-pla-glow-1-75mm-1kg"
+    ],
+    "last_verified": "2026-07-31",
+    "confidence": "medium",
+    "conflicts": "AMS compatibility is directly disputed: Bambu's own material table lists glow PLA as AMS-compatible (excluding AMS Lite), while a long forum thread documents the material destroying AMS feeder inlet funnels within ~500 g and causing motor-overload errors. Recorded as 'conditional' with mitigations. Abrasiveness is strongly brand-dependent per CNC Kitchen — colorFabb GlowFill removed ~0.5 mm of a brass nozzle tip over 100 g while dasFilament caused minimal wear, so 'requires hardened nozzle' is set true for the category even though some spools would survive brass. Bambu's own wording is 'recommended for long-term printing' rather than required. UV stability of the phosphor pigment over long outdoor exposure is unverified."
+  }
+}

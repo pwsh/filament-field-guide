@@ -1,0 +1,126 @@
+{
+  "id": "tpu-60a",
+  "name": "TPU 60A (ultra-soft flexible)",
+  "aliases": ["TPU 60A", "Shore 60A TPU", "Ultra-soft TPU", "Filaflex 60A", "65A ultra-soft TPU"],
+  "status": "researched",
+  "base_type": "tpu",
+  "variation_kind": "shore-grade",
+  "polymer_class": "elastomer",
+  "chemical_makeup": "Thermoplastic polyurethane with the same polyester/polyether-polyurethane backbone as base TPU, formulated with a markedly lower hard-segment ratio. The reduced hard-segment content is what produces Shore 60A silicone/gel-like softness instead of the 85A-95A firmness of the generic grade",
+  "summary": "The softest commonly sold FDM-printable TPU, and the hardest to print. Delta vs base TPU: hard-segment content drops to give a silicone-like 60A instead of the base entry's 85A-95A band, elongation at break roughly doubles to ~950%, print speed collapses to 10-20 mm/s, retraction must go to zero, and the nozzle runs hotter (~235 °C) than a typical 95A to keep the very-low-viscosity melt moving. Feeding is the whole problem: Bowden paths are ruled out entirely, a spool-side feeding assistant is close to mandatory, and Bambu's own guide puts 75A-and-below in the 'should not be printed' bucket, so this grade is off the table on those machines.",
+  "printing": {
+    "nozzle_temp_c": { "min": 225, "max": 245, "recommended": 235 },
+    "bed_temp_c": { "min": 20, "max": 45, "recommended": 30 },
+    "ambient_temp_c": { "min": 18, "max": 30, "recommended": 22 },
+    "speed_mm_s": { "min": 10, "max": 20, "recommended": 15 },
+    "enclosure_recommended": false,
+    "heated_chamber_required": false,
+    "enclosure_open_for_cooling": true,
+    "requires_hardened_nozzle": false,
+    "part_cooling_fan_pct": { "min": 0, "max": 50, "recommended": 25 },
+    "notes": "Recreus Filaflex 60A specifies 235 °C, hotter than the 210-230 °C typical of 95A, because the melt viscosity at this hardness is so low that a cooler nozzle produces inconsistent flow rather than cleaner detail. A heated bed is not strictly required — adhesion is good even unheated — but 40-45 °C helps on larger footprints. Speed is the hard constraint: above roughly 20 mm/s the filament compresses and buckles at the extruder inlet instead of advancing, so this grade prints at half to a third of the base entry's 30 mm/s recommendation. Retraction should be set to 0 mm; any retraction at this durometer stretches the filament in the drive gear and jams. Recreus also states Filaflex 60A is not compatible with all-metal hotends. No enclosure needed (low print temperature, no warp), and on an enclosed machine run with the lid off as for base TPU. Not abrasive — standard brass nozzle is fine."
+  },
+  "feeding": {
+    "drive_system": "direct-drive-required",
+    "ams_compatible": "no",
+    "feeding_assistant_recommended": true,
+    "notes": "The most feed-constrained grade in the TPU family. Recreus states Filaflex 60A is Bowden-incompatible outright, so 'direct-drive-required' here is absolute rather than the base entry's 'required in practice, 95A can survive a short constrained path'. AMS is a firm no and by a wide margin: Bambu's TPU guide places '75A, 70A or lower' in the should-not-be-printed bucket for those printers because the filament flattens in the PTFE feed path and clogs, and 60A sits well under that threshold — this is stricter than the base entry's AMS verdict, which is about jamming a material station rather than the printer as a whole. A spool-side feeding assistant (external spool on rollers, minimal tube friction) is close to mandatory even on non-Bambu machines, because at 60A the filament stretches under its own spool drag and under-extrudes in a way no extruder tuning corrects — this is the flag the base entry records as false for the 85A-95A range."
+  },
+  "drying": {
+    "required_before_use": "always",
+    "temp_c": { "min": 65, "max": 75, "recommended": 70 },
+    "time_hours": { "min": 6, "max": 8, "recommended": 8 },
+    "methods": ["dedicated filament dryer", "hot-air oven at 70 °C", "heated-bed method at 80-90 °C for 12 h", "print directly from a drybox with desiccant"],
+    "dryness_validation": "No popping or crackling at the nozzle and no foamy extrudate; note that a retraction/stringing test is a poor validator at this grade because 60A strings under normal dry conditions, so judge on extrusion sound and strand surface rather than on stringing",
+    "notes": "Drying is not distinct from the rest of the TPU family — the chemistry is filler-free, so hardness does not shift the regime. Bambu's general TPU guidance (70 °C for 8 h forced-air, or 80-90 °C for 12 h on a heated bed) applies unchanged. Store under 20% RH with desiccant."
+  },
+  "storage": {
+    "recommendations": "Sealed with desiccant under 20% RH at all times and printed from a drybox where possible. Softer grades re-absorb faster than 95A, so open-air exposure of even a few hours is worth drying out.",
+    "max_humidity_pct": 20,
+    "hygroscopy": "high"
+  },
+  "price": {
+    "usd_per_kg_low": 40,
+    "usd_per_kg_high": 116,
+    "notes": "The reference product, Recreus Filaflex 60A Pro, is a premium SKU at $57.90 per 500 g, i.e. roughly $116/kg. Generic 'TPU 60A' from budget suppliers is cited around $40-60/kg but exact figures for those brands are unverified. This is the most expensive grade in the family — the base entry's $20-70 band does not reach the top end here."
+  },
+  "use_cases": {
+    "recommended": [
+      "wearables and skin-contact padding",
+      "medical and orthotic cushioning",
+      "gel-like grips and handle overmoulds",
+      "soft seals and gaskets needing high compression recovery",
+      "vibration damping and isolation pads",
+      "silicone-substitute prototypes"
+    ],
+    "not_recommended": [
+      "any load-bearing or structural part",
+      "dimensionally precise or tight-tolerance parts",
+      "Bambu printers and any material-station / AMS slot",
+      "Bowden-fed machines",
+      "all-metal hotends (per Recreus)",
+      "fast or unattended production runs"
+    ]
+  },
+  "suitability": {
+    "food_contact": "no",
+    "load_bearing": "no",
+    "high_temperature": "no",
+    "outdoor": "limited"
+  },
+  "properties": {
+    "shore_hardness": "60A",
+    "density_g_cm3": 1.18,
+    "grams_per_100cm3": 118,
+    "cm3_per_100g": 84.7,
+    "glass_transition_c": -25,
+    "max_service_temp_c": 65,
+    "notes": "Elongation at break is the headline number: ~950% for Filaflex 60A, against ~550-580% for the 95A grades — the clearest quantitative marker of the softness-for-stretch trade across the family. Density is NOT confirmed for this grade; 1.18 g/cm³ is a mid-range estimate from the 1.15-1.20 typical of soft TPU and is unverified, so the derived grams_per_100cm3 and cm3_per_100g inherit that uncertainty. Tensile strength is not published for 60A specifically but is markedly lower than the 95A grades' 39-49 MPa because ultimate tensile tracks hard-segment content. Tg is carried over from the base entry (about -25 °C) as a family value, not a 60A measurement. No HDT or grade-specific service temperature was found; the 65 °C max service figure is an unverified estimate at the low end of TPU's general 60-80 °C band, placed below the base entry's 70 °C because this grade creeps first."
+  },
+  "scores": {
+    "ease_of_print": 2,
+    "dimensional_stability": 1,
+    "warp_tendency": 1,
+    "layer_adhesion": 3,
+    "compression_strength": 1,
+    "temperature_tolerance": 2,
+    "uv_tolerance": 4,
+    "weather_tolerance": 3,
+    "water_tolerance": 6
+  },
+  "compatibility": {
+    "bonds_with": ["tpu", "tpu-85a", "tpu-90a", "tpu-95a", "tpu-60d", "tpu-68d", "tpe"],
+    "support_materials": ["pla"],
+    "usable_as_support_for": [],
+    "notes": "Welds cleanly to base TPU and every sibling grade — same chemistry family — which is what makes multi-durometer prints (soft 60A pads on a firmer 95A or 60D body) practical. The rigid-material story is unchanged from the base entry: joints to PLA and PETG are mechanical interlock only, and at 60A the compliance makes even that weaker. Soluble and breakaway supports are impractical: PVA and HIPS are not documented as reliable interfaces for TPU, and at this softness supports tear the part on removal, so design to avoid supports or use same-material minimal supports."
+  },
+  "plate_recommendations": [
+    {
+      "plate_id": "pei-textured",
+      "rating": "usable",
+      "notes": "Textured PEI releases cleanly at this grade's low bed temperature and needs no special surface. The failure mode is over-adhesion, not lifting, and it is worse here than for the base entry: a 60A part can grip hard enough that removal tears it, so a glue stick applied as a release layer (not an adhesion aid) is the standard precaution."
+    }
+  ],
+  "emissions": {
+    "voc_level": "low",
+    "particulate_level": "low",
+    "primary_emissions": ["ultrafine particles", "isocyanate residues (unverified)", "urethane decomposition byproducts (unverified)"],
+    "ventilation": "recommended",
+    "notes": "Same profile as base TPU — moderate ultrafine particles and some VOCs including possible isocyanates, more than PLA and less than ABS, with essentially no styrene. No source differentiates TPU emissions by Shore grade (unverified). The one grade-specific consideration is temperature: emissions rise with nozzle temperature, and 60A needs a comparatively hot 235 °C, so ventilation or HEPA-plus-carbon filtration is worth more here than for a 95A running at 210-220 °C."
+  },
+  "safety_notes": "Urethane chemistry can in principle release isocyanate residues at print temperature; avoid running above ~250 °C where decomposition becomes more likely. Not certified for skin-contact or medical use as printed, despite the wearable/orthotic use cases — certification is per-SKU and per-application.",
+  "additional_notes": "This grade is a hand-tuned material, not a profile-and-go one. Expect to dial extruder tension, flow and speed per printer, and expect the tuning to be less repeatable than for firmer grades because filament diameter under drive-gear pressure varies with how the spool is unwinding. Practical implication: reserve 60A for parts where softness is the point, and step up to 85A or 95A the moment the design also needs dimensional control.",
+  "provenance": {
+    "sources": [
+      "https://recreus.com/en-en/products/filaflex-60a",
+      "https://wiki.bambulab.com/en/knowledge-sharing/tpu-printing-guide",
+      "https://spoolhound.com/tpu-hardness-guide",
+      "https://3dbite.com/tpu-filament-grades-shore-hardness-guide-3d-printing/",
+      "https://www.snapmaker.com/blog/is-tpu-toxic-to-3d-printing/",
+      "https://printpal.io/wiki/tpu-flexibles-guide"
+    ],
+    "last_verified": "2026-07-31",
+    "confidence": "low",
+    "conflicts": "Density is unverified for this grade — no 60A datasheet publishes it, so 1.18 g/cm³ is an interpolation from the 1.15-1.20 soft-TPU range and the derived weight/volume figures are only as good as that estimate. Tensile strength, HDT and max service temperature are likewise unpublished for 60A. Price spans roughly 3x ($40/kg generic to $116/kg for Filaflex 60A Pro) with no way to tell whether the budget product is the same durometer in practice. Water tolerance depends on whether the specific product is ester- or ether-based (ester hydrolyses faster) and Recreus does not state which chemistry Filaflex 60A uses. Scoring note: the research notes rated 'compression/elastic recovery' 10/10 for this grade, but this catalog's compression_strength score measures resistance to crushing loads, which is the inverse — 60A scores 1 there while being the best in the family at springing back. Emissions are not differentiated by Shore grade in any source found."
+  }
+}

@@ -1,0 +1,125 @@
+{
+  "id": "tpu-85a",
+  "name": "TPU 85A (soft flexible)",
+  "aliases": ["TPU 85A", "Shore 85A TPU", "NinjaFlex", "Bambu TPU 85A"],
+  "status": "researched",
+  "base_type": "tpu",
+  "variation_kind": "shore-grade",
+  "polymer_class": "elastomer",
+  "chemical_makeup": "Thermoplastic polyurethane with the base TPU hard/soft segment chemistry, formulated to a Shore 85A durometer — more hard segment than 60A, less than 95A. Represented by NinjaTek NinjaFlex and Bambu Lab TPU 85A",
+  "summary": "The soft end of the mainstream flexible range: gel-insole firmness, appreciably easier to feed than 60A but still the slowest and fussiest of the grades people actually buy in volume. Delta vs base TPU: this is the bottom of the base entry's 85A-95A band, so it prints slower (15-20 mm/s), wants retraction at or near zero, and adds a hardware gate the base entry does not record — Bambu's guide requires a 0.6 mm or 0.8 mm nozzle for TPU 85A and rules out 0.4 mm and 0.2 mm. Printable directly on Bambu machines unlike 60A, but still barred from the AMS.",
+  "printing": {
+    "nozzle_temp_c": { "min": 215, "max": 250, "recommended": 225 },
+    "bed_temp_c": { "min": 25, "max": 50, "recommended": 45 },
+    "ambient_temp_c": { "min": 18, "max": 30, "recommended": 22 },
+    "speed_mm_s": { "min": 15, "max": 25, "recommended": 18 },
+    "enclosure_recommended": false,
+    "heated_chamber_required": false,
+    "enclosure_open_for_cooling": true,
+    "requires_hardened_nozzle": false,
+    "part_cooling_fan_pct": { "min": 0, "max": 50, "recommended": 30 },
+    "notes": "Brand windows differ widely: NinjaFlex 85A specifies 225-250 °C with a room-temperature to 50 °C bed, while Bambu-guide-adjacent figures for TPU 85A sit at 215-230 °C. The important delta from the base entry is a nozzle-diameter gate: Bambu's official 85A/90A guide requires a 0.6 mm or 0.8 mm nozzle for 85A and states it is not compatible with 0.4 mm or 0.2 mm — the softer melt will not feed reliably through a small orifice. 90A carries no such restriction. Speed 15-20 mm/s, the slowest of the mainstream A-grades and well under the base entry's 30 mm/s. Retraction off or near zero. No enclosure; run an enclosed printer with the lid open as for base TPU. Not abrasive."
+  },
+  "feeding": {
+    "drive_system": "direct-drive-required",
+    "ams_compatible": "no",
+    "feeding_assistant_recommended": true,
+    "notes": "Direct drive is required — this is the durometer the glossary describes as demanding it outright. Bambu's wiki puts 85A in the 'moderately hard' bucket that is compatible with its printers directly, so unlike 60A the machine itself is not the obstacle, but running it through the AMS risks bending and feeding failures in the tighter feed path; feed from an external spool holder instead. A spool-side feeding assistant is worthwhile here: 85A is at the top of the ~60A-85A band where filament stretches under spool drag and under-extrudes, which is why this flag is true while the base 85A-95A entry records false. Note also that Bambu's 85A spool swells in storage — recorded width goes from 65.4 mm to 69.4 mm — so a sealed dry box sized for a standard spool may not close."
+  },
+  "drying": {
+    "required_before_use": "always",
+    "temp_c": { "min": 70, "max": 85, "recommended": 70 },
+    "time_hours": { "min": 8, "max": 12, "recommended": 8 },
+    "methods": ["forced-air oven at 70 °C for 8 h", "compatible heated bed at 75-85 °C for 8 h", "dedicated filament dryer", "print directly from a drybox with desiccant"],
+    "dryness_validation": "No popping or crackling at the nozzle and no foamy or bubbly extrudate; stringing is a weak validator at this durometer because 85A strings when perfectly dry",
+    "notes": "Bambu specifies the same regime for TPU 85A and 90A: 70 °C for 8 h in a forced-air oven, or 75-85 °C for 8 h on a compatible heatbed, stored under 20% RH with desiccant. Hardness does not shift TPU drying — the chemistry is filler-free — so this matches the base entry apart from the tighter, better-documented window. Account for spool swelling when choosing a dry box."
+  },
+  "storage": {
+    "recommendations": "Sealed with desiccant under 20% RH. Bambu records the 85A spool swelling from 65.4 mm to 69.4 mm in width, so size the sealed container for the swollen spool rather than the nominal one.",
+    "max_humidity_pct": 20,
+    "hygroscopy": "high"
+  },
+  "price": {
+    "usd_per_kg_low": 50,
+    "usd_per_kg_high": 70,
+    "notes": "Bambu sells TPU 85A and 90A as one bundle line at roughly $54-60/kg (1 kg spool at about $59.99 direct; $53.99 CAD / €59.99 / £59.99 regionally). NinjaFlex 85A sits in a similar $50-70/kg band, exact per-kg figure unverified. Both are above the base entry's $20-70 midpoint — there is no true budget 85A in the way there is a budget 95A."
+  },
+  "use_cases": {
+    "recommended": [
+      "soft grips and handle overmoulds",
+      "gaskets and compliant seals",
+      "vibration dampeners and isolating feet",
+      "phone cases needing extra squish",
+      "cosplay and wearable soft parts",
+      "shoe insole and soft-goods prototypes"
+    ],
+    "not_recommended": [
+      "AMS or other material-station slots (bending/feeding failures)",
+      "0.4 mm or 0.2 mm nozzles (per Bambu's 85A guide)",
+      "fine-detail or dimensionally tight parts",
+      "high-speed or production-volume runs",
+      "structural or load-bearing parts"
+    ]
+  },
+  "suitability": {
+    "food_contact": "no",
+    "load_bearing": "no",
+    "high_temperature": "no",
+    "outdoor": "limited"
+  },
+  "properties": {
+    "shore_hardness": "85A",
+    "density_g_cm3": 1.21,
+    "grams_per_100cm3": 121,
+    "cm3_per_100g": 82.6,
+    "glass_transition_c": -25,
+    "max_service_temp_c": 68,
+    "notes": "No brand-specific density, tensile or elongation figures were found published for Bambu TPU 85A; 1.21 g/cm³ is an unverified mid-range value drawn from the 1.19-1.22 typical of soft TPU, and the derived weight/volume figures inherit that uncertainty. Directionally, elongation at break and tensile sit between 60A (~950% elongation, lowest tensile) and 95A (~550-580% elongation, 39-49 MPa tensile): lower stretch and higher strength than 60A, the reverse against 95A. Tg is the family value carried from the base entry, not an 85A measurement. Max service temperature of 68 °C is an unverified estimate placed marginally below the base entry's 70 °C, since the softer grade creeps sooner."
+  },
+  "scores": {
+    "ease_of_print": 3,
+    "dimensional_stability": 2,
+    "warp_tendency": 1,
+    "layer_adhesion": 3,
+    "compression_strength": 2,
+    "temperature_tolerance": 3,
+    "uv_tolerance": 4,
+    "weather_tolerance": 3,
+    "water_tolerance": 6
+  },
+  "compatibility": {
+    "bonds_with": ["tpu", "tpu-60a", "tpu-90a", "tpu-95a", "tpu-60d", "tpu-68d", "tpe"],
+    "support_materials": ["pla"],
+    "usable_as_support_for": [],
+    "notes": "Same-family welds to base TPU and every sibling grade make multi-durometer assemblies practical — an 85A grip zone on a 95A or 60D body is the common pattern. Bonding to rigid materials is unchanged from the base entry: PLA and PETG joints are mechanical interlock, not a chemical weld. Rigid and soluble supports remain impractical (PVA/HIPS are not documented as reliable TPU interfaces, and removal tears soft parts), so prefer same-material minimal supports or support-free geometry."
+  },
+  "plate_recommendations": [
+    {
+      "plate_id": "pei-textured",
+      "rating": "usable",
+      "notes": "Bambu lists TPU 85A as compatible with its cool, engineering and high-temp PEI plates, explicitly excluding the supertack cool plate, which over-adheres flexibles. Textured PEI behaves the same way as for base TPU: the risk is over-adhesion tearing the part on removal rather than lifting, so a glue stick is used as a release layer. No special surface required."
+    }
+  ],
+  "emissions": {
+    "voc_level": "low",
+    "particulate_level": "low",
+    "primary_emissions": ["ultrafine particles", "isocyanate residues (unverified)", "urethane decomposition byproducts (unverified)"],
+    "ventilation": "recommended",
+    "notes": "Indistinguishable from base TPU on the available evidence: moderate ultrafine particles and some VOCs, no meaningful styrene, more than PLA and less than ABS. No source differentiates TPU emissions by Shore grade (unverified). The 215-230 °C working range is at the cooler end of the family, so this grade sits slightly better than 60A or 60D on the temperature-emissions relationship, but not enough to change the ventilation recommendation."
+  },
+  "safety_notes": "Urethane chemistry can in principle release isocyanate residues at print temperature; keep below ~250 °C. NinjaFlex's 225-250 °C window reaches that ceiling, so favour the lower half of it. Not food-contact or skin-contact certified as printed regardless of the wearable use cases.",
+  "additional_notes": "The nozzle-diameter requirement is the practical gotcha: a user who owns only a 0.4 mm nozzle should buy 90A or 95A instead of 85A, because Bambu's guide rules 0.4 mm out for this grade while explicitly allowing it for 90A. That single line is the clearest behavioural difference between the two grades that ship as one bundled product line at one price.",
+  "provenance": {
+    "sources": [
+      "https://wiki.bambulab.com/en/filament-acc/filament/tpu-85a-90a-printing-guide-for-x-series",
+      "https://wiki.bambulab.com/en/knowledge-sharing/tpu-printing-guide",
+      "https://filascope.com/filament/tpu-85a-tpu-90a",
+      "https://ninjatek.com/support/printing-guidelines/",
+      "https://spoolhound.com/tpu-hardness-guide",
+      "https://us.store.bambulab.com/products/tpu-85a-tpu-90a"
+    ],
+    "last_verified": "2026-07-31",
+    "confidence": "low",
+    "conflicts": "Nozzle temperature disagrees by 35 °C between brands: NinjaFlex 85A specifies 225-250 °C while Bambu-guide-adjacent figures give 215-230 °C — the recorded range spans both rather than picking one. No density, tensile or elongation datasheet figure was found for any 85A product, so the density and all derived weight/volume figures are unverified estimates. Max service temperature is likewise an estimate. Scoring note: the research notes rated 'compression recovery' 9/10 for this grade, but this catalog's compression_strength score measures resistance to crushing loads, which is the inverse — 85A scores 2 there while being second only to 60A at springing back. Emissions are not grade-differentiated in any source found."
+  }
+}

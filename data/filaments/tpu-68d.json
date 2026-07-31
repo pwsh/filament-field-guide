@@ -1,0 +1,123 @@
+{
+  "id": "tpu-68d",
+  "name": "TPU 68D (AMS-grade rigid flexible)",
+  "aliases": ["TPU 68D", "TPU for AMS", "Shore 68D TPU", "TPU 64D", "AMS-compatible TPU"],
+  "status": "researched",
+  "base_type": "tpu",
+  "variation_kind": "shore-grade",
+  "polymer_class": "elastomer",
+  "chemical_makeup": "Thermoplastic polyurethane with the highest hard-segment ratio of the catalogued grades, measuring roughly Shore 64D-68D. Engineered specifically for stiffness sufficient to survive a material station's bend radius and PTFE feed path; Bambu Lab's TPU for AMS is the reference product",
+  "summary": "TPU engineered backwards from a feeding problem: stiff enough to run through a material station without buckling, which makes it the only flexible-adjacent grade that can sit in an AMS slot alongside PLA and PETG. Delta vs base TPU: it inverts the base entry's defining constraints — AMS goes from a firm 'no' to 'yes', drive system from 'required' to 'any', the bed runs cooler at 30-35 °C rather than 45 °C, and density rises to a documented 1.26 g/cm³. What it gives up is rubberiness and, critically, Z-axis strength: 31% breaking elongation in Z against over 650% in XY, the most extreme anisotropy documented anywhere in the family.",
+  "printing": {
+    "nozzle_temp_c": { "min": 220, "max": 240, "recommended": 230 },
+    "bed_temp_c": { "min": 30, "max": 40, "recommended": 35 },
+    "ambient_temp_c": { "min": 18, "max": 30, "recommended": 22 },
+    "speed_mm_s": { "min": 30, "max": 80, "recommended": 50 },
+    "enclosure_recommended": false,
+    "heated_chamber_required": false,
+    "enclosure_open_for_cooling": true,
+    "requires_hardened_nozzle": false,
+    "part_cooling_fan_pct": { "min": 0, "max": 60, "recommended": 40 },
+    "notes": "220-240 °C nozzle with Bambu's own test specimens run at 230 °C. The bed is the surprise: 30-35 °C, cooler than every other grade in the family and less than half the 50-60 °C that 60D wants, reflecting near-rigid low-warp behaviour rather than a need to hold the interface soft. Speed can run close to standard PLA/PETG rates — the recorded 30-80 mm/s is inferred from the grade being AMS-safe (a material that survives a material station's feed path is not speed-limited by buckling) rather than from a published ceiling, and is unverified. No enclosure; on an enclosed machine the family's lid-open guidance still applies. Not abrasive."
+  },
+  "feeding": {
+    "drive_system": "any",
+    "ams_compatible": "yes",
+    "feeding_assistant_recommended": false,
+    "notes": "This is the grade the base entry points at when it says the AMS verdict is grade-specific rather than chemistry-specific. Bambu's wiki places harder TPUs (77D, 55D) in the AMS-compatible bucket and this SKU is branded 'TPU for AMS' outright, measured at 68D on its own datasheet — standard AMS and AMS-lite drive gears handle it without the bending and feeding failures that bar 80A-95A. Because it does not buckle under compressive load, drive system is recorded as 'any': Bowden paths are fine, which no other grade in this family can claim unreservedly. No feeding assistant needed."
+  },
+  "drying": {
+    "required_before_use": "always",
+    "temp_c": { "min": 70, "max": 90, "recommended": 70 },
+    "time_hours": { "min": 8, "max": 12, "recommended": 8 },
+    "methods": ["blast/forced-air oven at 70 °C for 8 h", "X1-series heated bed at 80-90 °C for 12 h", "dedicated filament dryer", "print directly from a drybox with desiccant"],
+    "dryness_validation": "No popping or crackling at the nozzle, no foamy extrudate, and no rise in stringing on a retraction test — fully usable at this stiffness. Water absorption is documented at only 1.20% at 25 °C/55% RH, so a plateau in spool weight between drying cycles arrives sooner here than for the soft grades",
+    "notes": "Bambu specifies 70 °C for 8 h in a blast oven, or 80-90 °C for 12 h on the X1-series heated bed, stored sealed under 20% RH with desiccant. Same general regime as the rest of the family, sitting at the higher end of the range because the more rigid polymer tolerates the heat."
+  },
+  "storage": {
+    "recommendations": "Sealed with desiccant under 20% RH. The documented 1.20% water absorption at 25 °C/55% RH makes this the least moisture-sensitive grade in the family, but it is still a urethane and Bambu still specifies sealed storage.",
+    "max_humidity_pct": 20,
+    "hygroscopy": "moderate"
+  },
+  "price": {
+    "usd_per_kg_low": 35,
+    "usd_per_kg_high": 45,
+    "notes": "Bambu TPU for AMS is about $38.79/kg for a 1 kg spool at 3DJake — notably cheaper than Bambu's own TPU 85A/90A at roughly $60/kg, which likely reflects easier and faster manufacturing of the more rigid grade. Sits below the base entry's midpoint."
+  },
+  "use_cases": {
+    "recommended": [
+      "multi-colour and multi-material AMS prints needing a flexible accent",
+      "semi-rigid components printed alongside rigid filaments in one job",
+      "parts needing moderate flex with good in-plane strength",
+      "protective housings and bumpers",
+      "oil- and grease-exposed mechanical parts"
+    ],
+    "not_recommended": [
+      "parts loaded in tensile across layers (31% Z elongation vs >650% XY)",
+      "applications needing rubbery compression or squish (use 60A or 85A)",
+      "high-temperature service (no HDT published)",
+      "food-contact use"
+    ]
+  },
+  "suitability": {
+    "food_contact": "no",
+    "load_bearing": "moderate",
+    "high_temperature": "no",
+    "outdoor": "limited"
+  },
+  "properties": {
+    "shore_hardness": "68D",
+    "density_g_cm3": 1.26,
+    "grams_per_100cm3": 126,
+    "cm3_per_100g": 79.4,
+    "glass_transition_c": -25,
+    "max_service_temp_c": 75,
+    "tensile_strength_mpa": { "min": 11.2, "max": 22.4, "recommended": 22.4 },
+    "notes": "The best-documented grade in the family after 95A, from Bambu's own TDS. Density 1.26 g/cm³ — the highest here, against roughly 1.19-1.24 for the Shore A grades and the base entry's 1.22, consistent with tighter polymer packing at higher hardness. Melting temperature 183 °C. Water absorption 1.20% at 25 °C/55% RH. Tensile 22.4±0.6 MPa in X-Y against only 11.2±0.5 MPa in Z, a 2x anisotropy; breaking elongation over 650% in X-Y against 31% in Z, a greater-than-20x anisotropy that is the sharpest layer-direction weakness recorded for any TPU grade in this catalog. Young's modulus 1190±0.4 MPa X-Y versus 600±0.5 MPa Z. HDT is not published, so the 75 °C max service temperature is an unverified estimate — the 183 °C melt point sets an absolute ceiling but says little about the useful service range. Tg is the family value carried from the base entry."
+  },
+  "scores": {
+    "ease_of_print": 7,
+    "dimensional_stability": 7,
+    "warp_tendency": 1,
+    "layer_adhesion": 2,
+    "compression_strength": 6,
+    "temperature_tolerance": 5,
+    "uv_tolerance": 4,
+    "weather_tolerance": 5,
+    "water_tolerance": 7
+  },
+  "compatibility": {
+    "bonds_with": ["tpu", "tpu-60a", "tpu-85a", "tpu-90a", "tpu-95a", "tpu-60d", "tpe"],
+    "support_materials": ["pla", "petg"],
+    "usable_as_support_for": [],
+    "notes": "Purpose-built to be co-printed through a material station alongside PLA, PETG and ABS in adjacent slots without jamming the feed path — the practical multi-material story the rest of the family cannot offer. Chemically welds to base TPU and all sibling grades, but the documented Z weakness means multi-durometer TPU assemblies should avoid loading the bond line in the vertical print direction. Rigid-material bonding is unchanged from the base entry: mechanical interlock with PLA and PETG, no useful weld to ABS, ASA, PC or PA. Breakaway supports are feasible because the part is rigid enough to survive removal, though the PETG pairing is inferred from stiffness rather than documented (unverified)."
+  },
+  "plate_recommendations": [
+    {
+      "plate_id": "pei-textured",
+      "rating": "recommended",
+      "notes": "Compatible with cool, engineering and high-temp PEI plates, following the same family guidance Bambu gives for 85A/90A. The unusually low 30-35 °C bed target reduces the over-adhesion and plate-damage risk that makes textured PEI merely 'usable' for the soft grades. No special surface such as garolite is required."
+    }
+  ],
+  "emissions": {
+    "voc_level": "low",
+    "particulate_level": "low",
+    "primary_emissions": ["ultrafine particles", "isocyanate residues (unverified)", "urethane decomposition byproducts (unverified)"],
+    "ventilation": "recommended",
+    "notes": "Bambu's spec sheet describes the material as odorless, which is a specifically documented and favourable data point against the family's general moderate-VOC profile — but odour is not a proxy for ultrafine particles, and no independent chamber test of VOCs or UFPs for this grade was found (unverified beyond the manufacturer's claim). Standard TPU ventilation precautions therefore still apply at the 220-240 °C nozzle range, and the emissions levels are recorded no lower than the base entry despite the odorless claim."
+  },
+  "safety_notes": "Urethane chemistry can in principle release isocyanate residues at print temperature; the 220-240 °C window stays clear of the ~250 °C decomposition concern, making this the safest grade in the family on that axis. Not food-contact certified as printed. The manufacturer's odorless claim should not be read as an absence of ultrafine particles.",
+  "additional_notes": "The Z anisotropy is the governing design constraint and it is worse than the base entry's already-significant roughly 4x figure: 31% breaking elongation across layers against over 650% in-plane means a part that flexes beautifully when bent in the print plane can snap without warning when the same bend loads the layer lines. Orient every functional part accordingly, and treat this grade as 'a rigid material with some give' rather than as a flexible. Its reason to exist is the AMS slot, not the durometer.",
+  "provenance": {
+    "sources": [
+      "https://cdn.shopify.com/s/files/1/1339/4265/files/Bambu_TPU_for_AMS_Technical_Data_Sheet.pdf",
+      "https://bambulab.com/en/filament/tpu-for-ams",
+      "https://wiki.bambulab.com/en/knowledge-sharing/tpu-printing-guide",
+      "https://www.3djake.com/bambu-lab/tpu-for-ams-black",
+      "https://3dbite.com/tpu-filament-grades-shore-hardness-guide-3d-printing/"
+    ],
+    "last_verified": "2026-07-31",
+    "confidence": "medium",
+    "conflicts": "Almost all the property data comes from a single manufacturer datasheet with no independent corroboration, so the confidence rests on one source rather than on agreement between several. Shore hardness is quoted as a 64D-68D range across sources with 68D the measured figure for the reference product; the single value 68D is recorded per the schema's guidance for grade-specific entries. Tensile is recorded as a range spanning the Z (11.2 MPa) and X-Y (22.4 MPa) figures because a single number is meaningless without stating the axis — the same problem the base entry flags. HDT is not published, so max service temperature is an estimate and the 183 °C melt point should not be read as a service figure. Print speed has no published ceiling and is inferred from AMS compatibility. Bambu's 'odorless' claim is a manufacturer statement with no chamber-test backing. Scoring note: the research notes rated 'compression/elastic recovery' 3/10 here, but this catalog's compression_strength score measures resistance to crushing loads, which is the inverse — 68D scores 6, the highest in the family, because it is the least rubbery."
+  }
+}

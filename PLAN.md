@@ -159,3 +159,12 @@ every property sourced from the glossary.
   accepted). Phase B scope expanded to per-grade entries: TPU shore grades, PA grades
   (pa6/pa12/ppa), blends (CoPE, PC-ABS), specialty and high-performance lines. Site
   renders feeding sections, AMS filter, shore badges; sheets re-verified single-page.
+- 2026-07-31 — **Phase B complete**: 40 variation/grade entries (catalog now 55 filaments)
+  — PLA aesthetic + functional variants, fiber-filled composites, PA grades (pa6/pa12/
+  pa66/ppa) + composites, six TPU shore grades with per-grade feeding/AMS values
+  (monotonic ease 2→7 from 60A to 68D; only 60D conditional / 68D yes for AMS), blends
+  (CoPE, PC-ABS, PC-PBT, ESD, FR), and the high-performance tier (PEEK/PEKK/PEI-ULTEM/
+  PPS/PPS-CF/PPSU — temperature_tolerance 10 ceiling now in use). 79 source conflicts
+  recorded per-entry; collator overrides accepted (pp-gf ease 6→4 uv 9→5; pc-abs rescaled
+  to catalog anchors; abs-fr 132 °C melting-point datasheet claim rejected; pps bed-temp
+  scrape error corrected). Validator: 0 errors, 0 warnings at 55/58/1 entities.

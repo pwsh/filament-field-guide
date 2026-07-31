@@ -1,0 +1,125 @@
+{
+  "id": "abs-fr",
+  "name": "ABS-FR (Flame-Retardant ABS)",
+  "aliases": ["FR-ABS", "ABS FR", "UL94 V-0 ABS", "FireWire FR-ABS", "ABSpro Flame Retardant"],
+  "status": "researched",
+  "base_type": "abs",
+  "variation_kind": "flame-retardant",
+  "polymer_class": "styrenic",
+  "chemical_makeup": "The same acrylonitrile butadiene styrene terpolymer as base ABS, compounded with a flame-retardant additive package sufficient to reach a UL94 V-0 self-extinguishing rating. The additive chemistry is brand-specific and mostly undisclosed: FormFutura states its ABSpro FR uses halogen-free modifiers, while the industry at large splits between brominated (halogenated) systems and halogen-free ones based on magnesium or aluminium hydroxide, silicon or phosphorus compounds. Not an abrasive filler.",
+  "summary": "Base ABS made self-extinguishing to UL94 V-0. Deltas vs abs: bed temperatures run at or above the top of the base range (several brands specify 100-110 °C), density rises slightly to ~1.1 g/cm³, HDT drops to about 84 °C from base ABS's 99 °C, elongation at break falls to around 10 %, and price runs 2-5x base ABS. Printability itself is largely unchanged — same warp behaviour, same enclosure guidance, still no hardened nozzle. The emissions picture is the one that gets worse: base ABS's styrene plus flame-retardant decomposition products of undisclosed chemistry.",
+  "printing": {
+    "nozzle_temp_c": { "min": 220, "max": 270, "recommended": 250 },
+    "bed_temp_c": { "min": 80, "max": 110, "recommended": 100 },
+    "ambient_temp_c": { "min": 40, "max": 60, "recommended": 50 },
+    "speed_mm_s": { "min": 20, "max": 150, "recommended": 60 },
+    "enclosure_recommended": true,
+    "heated_chamber_required": false,
+    "enclosure_open_for_cooling": false,
+    "requires_hardened_nozzle": false,
+    "part_cooling_fan_pct": { "min": 0, "max": 20, "recommended": 0 },
+    "notes": "Nozzle temperature is the most brand-split figure in this entry: 3DXTech FireWire runs 220-240 °C, notably cooler than base ABS, SUNLU 240-260 °C scaling with speed, FormFutura 240-265 °C and eSUN eABS Max 230-270 °C — check the spool rather than reusing a generic ABS profile. Bed temperature trends the other way, consistently at or above base ABS's range: SUNLU 80-90 °C but eSUN 95-110 °C (recommending 100 °C), 3DXTech and FormFutura both 100-110 °C. Part cooling stays essentially off, as for base ABS, and 3DXTech and FormFutura both call a heated chamber recommended rather than required — the same posture as the base entry. The additive is not abrasive, so a stock brass nozzle is fine. Speed is carried from base ABS; no FR-specific figure is published (unverified)."
+  },
+  "feeding": {
+    "drive_system": "any",
+    "ams_compatible": "yes",
+    "feeding_assistant_recommended": false,
+    "notes": "Rigid, unfilled by any abrasive filler and dimensionally stable in the feed path, so standard drive gears and any extruder topology work. 3DXTech states explicitly that FireWire FR-ABS is compatible with automated material systems including the Bambu AMS, which keeps this in line with base ABS's plain 'yes' rather than the conditional rating filled variants get. The reduced elongation at break (~10 %) is worth noting for tight buffer bend radii but no vendor flags it as a feed problem (unverified). Enclosure stays closed and warm, so enclosure_open_for_cooling is false."
+  },
+  "drying": {
+    "required_before_use": "if-exposed",
+    "temp_c": { "min": 50, "max": 80, "recommended": 65 },
+    "time_hours": { "min": 3, "max": 4, "recommended": 4 },
+    "methods": ["filament dryer", "convection oven", "print directly from a heated drybox"],
+    "dryness_validation": "No popping or crackling and no steam at the nozzle; smooth extrusion free of micro-bubbles; no fuzz or fine hairs on printed walls.",
+    "notes": "Brands disagree by 30 °C: SUNLU says 50 °C (duration unstated), eSUN eABS Max 65 °C for over 3 h, 3DXTech FireWire 80 °C for 4 h — the last being hotter than base ABS's own 70-85 °C schedule. The recorded range brackets all three. Moisture behaviour is otherwise base ABS's: it keeps absorbing on the shelf, so desiccant storage is ongoing practice rather than a pre-print step."
+  },
+  "storage": {
+    "recommendations": "Airtight box or drybox with desiccant at all times, following base ABS practice. Nothing in the fetched datasheets suggests the flame-retardant package changes moisture uptake (unverified).",
+    "max_humidity_pct": 30,
+    "hygroscopy": "moderate"
+  },
+  "price": {
+    "usd_per_kg_low": 45,
+    "usd_per_kg_high": 107,
+    "notes": "SUNLU ABS-FR $44.99/kg (from $39.99 on sale) sets the low end; FormFutura ABSpro FR at €30.99/500 g (~$67/kg) the middle; 3DXTech FireWire FR-ABS at $80/750 g (~$107/kg) or $210/2 kg (~$105/kg) the top. Roughly 2-5x base ABS's $18-35/kg, with the spread reflecting hobby versus industrial certification rather than performance."
+  },
+  "use_cases": {
+    "recommended": [
+      "electronics enclosures and power-supply housings",
+      "parts subject to fire-safety codes requiring UL94 V-0",
+      "automotive interior components",
+      "machine and equipment housings",
+      "drone frames and battery enclosures",
+      "industrial tool handles near ignition sources"
+    ],
+    "not_recommended": [
+      "food-contact items",
+      "high-impact or high-elongation parts (elongation at break ~10 %)",
+      "outdoor or UV-exposed service (the FR package does nothing for UV — use ASA)",
+      "cost-sensitive prototyping where plain ABS would do",
+      "printing in an unventilated occupied room",
+      "open-frame printers and beginner setups"
+    ]
+  },
+  "suitability": {
+    "food_contact": "no",
+    "load_bearing": "moderate",
+    "high_temperature": "moderate",
+    "outdoor": "no"
+  },
+  "properties": {
+    "density_g_cm3": 1.1,
+    "grams_per_100cm3": 110,
+    "cm3_per_100g": 90.9,
+    "heat_deflection_c": 84,
+    "tensile_strength_mpa": { "min": 33, "max": 45, "recommended": 38 },
+    "notes": "Density 1.1 g/cm³ (SUNLU), slightly above base ABS's 1.05 — the mineral or phosphorus additive adds a little mass. SUNLU publishes HDT 84 °C, tensile 33 MPa, elongation at break 10 %, flexural strength 54 MPa, flexural modulus 2154 MPa and impact strength to 14 kJ/m²; eSUN eABS Max reports density 1.05 g/cm³ and tensile 45 MPa but no HDT. The two deltas that matter versus base ABS are HDT falling from 99 °C to 84 °C and elongation dropping to about 10 %, both consistent with an additive package that interrupts the polymer matrix. SUNLU also lists a melting point of 132 °C, which is implausibly low for an ABS-class amorphous material and is treated as a datasheet error rather than recorded. Tg, shrinkage and max service temperature are not published for FR grades and are not carried over blindly from base ABS (unverified). For context, Spectrum's PC/ABS-FR V0 — a different, PC-blended material — reaches 60 MPa tensile, 90 °C HDT and 35 kJ/m² Charpy at 1.17 g/cm³, showing where the PC-blended FR grades sit relative to pure ABS-FR."
+  },
+  "scores": {
+    "ease_of_print": 4,
+    "dimensional_stability": 4,
+    "warp_tendency": 8,
+    "layer_adhesion": 4,
+    "compression_strength": 7,
+    "temperature_tolerance": 6,
+    "uv_tolerance": 2,
+    "weather_tolerance": 2,
+    "water_tolerance": 5
+  },
+  "compatibility": {
+    "bonds_with": ["abs-fr", "abs", "asa", "pc"],
+    "support_materials": ["hips"],
+    "usable_as_support_for": [],
+    "notes": "Same styrenic matrix as base abs, so it welds to itself, to base abs and asa, and moderately to pc — the same set the base entry lists. HIPS remains the classic breakaway/soluble support: matching print window, dissolvable in D-limonene. Acetone welding and vapour smoothing should work on the same chemistry, but no source confirms it for FR grades and the additive package could change the solvent response (unverified) — test on a scrap before committing a part. Pairs badly with PLA and PETG in either direction because of the 100-110 °C bed. Not listed as a support for other materials: too expensive and no release advantage over plain ABS."
+  },
+  "plate_recommendations": [
+    {
+      "plate_id": "pei-textured",
+      "rating": "usable",
+      "notes": "Same rating and reasoning as base ABS: workable at 90-110 °C but wanting an adhesion aid, with a glue-stick layer the standard advice and an ABS/acetone slurry the common community alternative (unverified). Bed temperatures here trend to the top of the ABS range, so a brim plus an enclosure remains the reliable combination for large flat parts."
+    }
+  ],
+  "emissions": {
+    "voc_level": "high",
+    "particulate_level": "high",
+    "primary_emissions": ["styrene", "ultrafine particles", "flame-retardant additive decomposition products (chemistry undisclosed by most brands)"],
+    "ventilation": "required",
+    "notes": "Base ABS is already the highest-emitting common filament — roughly 100-1000x PLA's ultrafine-particle rate with styrene as the named VOC — and the FR package adds a second, less characterised stream on top of it. Where the additive is brominated, the secondary literature flags endocrine, developmental and reproductive concerns from chronic fume exposure; halogen-free grades such as FormFutura's ABSpro FR avoid halogenated byproducts but still need full ABS-level ventilation. Because most brands do not disclose which system they use, treat every ABS-FR spool as at least base-ABS-level risk and default to external venting or HEPA plus carbon filtration, with extra caution on unspecified formulations."
+  },
+  "safety_notes": "Styrene remains a respiratory irritant and suspected carcinogen on chronic exposure, so the base ABS rule holds: never run this in an unventilated occupied room. The flame-retardant additive adds an unquantified second hazard whose chemistry is brand-dependent and usually undisclosed — prefer grades that state halogen-free modifiers where the choice exists. Note also what the V-0 rating does and does not mean: the part self-extinguishes when the ignition source is removed, it is not fireproof, and it still produces smoke and decomposition products while burning. Acetone vapour smoothing, if it works on a given grade, carries its own flammability and ventilation hazards.",
+  "additional_notes": "The only reason to choose this over base ABS is a fire-safety requirement — it is more expensive, less heat-resistant and slightly more brittle, with no printability gain. If the part also needs strength or heat beyond plain ABS, the PC/ABS-FR grades (a different material, related to pc-abs rather than to this entry) reach markedly higher tensile and HDT. For outdoor fire-rated parts nothing here helps: the FR package does nothing for UV, and ASA remains the weathering answer.",
+  "provenance": {
+    "sources": [
+      "https://store.sunlu.com/products/sunlu-abs-flame-retardant-abs-fr-3d-printer-filament-1kg-engineering-filaments",
+      "https://www.3dxtech.com/products/firewire-r-fr-abs",
+      "https://www.esun3d.com/uploads/eSUN_eABS-Max-Filament_TDS_V4.0.pdf",
+      "https://www.formfutura.com/product/abspro-flame-retardant/",
+      "https://spectrumfilaments.com/wp-content/uploads/2024/02/en_tds_spectrum_pc_abs_fr_v0.pdf",
+      "https://ecoreprap.com/3d-printing/flame-retardant-filament-for-3d-printing-what-you-need-to-know/"
+    ],
+    "last_verified": "2026-07-31",
+    "confidence": "medium",
+    "conflicts": "Additive chemistry is the largest unknown: only FormFutura states its system (halogen-free), so the emissions and safety guidance has to cover both halogenated and halogen-free possibilities, and the health concerns cited for brominated systems come from a secondary source rather than a datasheet. Process figures split widely by brand — nozzle 220-240 °C (3DXTech) against 240-270 °C (eSUN/FormFutura/SUNLU), bed 80-90 °C (SUNLU) against 100-110 °C (3DXTech/FormFutura), drying 50 °C (SUNLU) against 80 °C (3DXTech). Mechanical data also disagrees: SUNLU 33 MPa tensile at 1.1 g/cm³ against eSUN 45 MPa at 1.05 g/cm³, so density and strength are both effectively brand-specific and the recorded values follow SUNLU with eSUN as the upper bound. SUNLU's stated 132 °C melting point is rejected as implausible for ABS and is likely a datasheet error or a figure copied from a different material. HDT rests on a single SUNLU figure of 84 °C, which puts this below base ABS's 99 °C — plausible but uncorroborated. Layer adhesion is scored 4 against base ABS's 5 by inference from reduced elongation at break, not from a Z-strength measurement. Acetone weldability, shrinkage, Tg, max service temperature and print speed are all undocumented for FR grades. Spectrum's PC/ABS-FR figures are included as context only and describe a PC-blended material, not this entry."
+  }
+}

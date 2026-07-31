@@ -1,0 +1,129 @@
+{
+  "id": "pp-gf",
+  "name": "PP-GF (Glass-Fiber-Filled Polypropylene)",
+  "aliases": ["PP GF", "PP-GF30", "PP-GF25", "Polypropylene Glass Fiber", "Ultrafuse PP GF30", "PPGF"],
+  "status": "researched",
+  "base_type": "pp",
+  "variation_kind": "glass-fiber-filled",
+  "polymer_class": "composite-other",
+  "chemical_makeup": "The same semi-crystalline polyolefin matrix as base PP, compounded with chopped glass fiber at roughly 25-30 wt% — BASF Ultrafuse PP GF30 and BCN3D PP-GF30 at 30 %, Fiberthree PP-GF25 at 25 %, Recreus PPGF undisclosed. The polyolefin chemistry, its hydrophobicity and its notorious low surface energy are all unchanged; the fiber is a mechanical reinforcement that restrains the matrix as it crystallises.",
+  "summary": "Glass fiber is added to polypropylene less for stiffness than for restraint. Deltas vs the base pp entry: the fiber directly suppresses PP's defining crystallisation shrinkage, so warp_tendency drops from 10 — the catalog's worst — to 4, HDT@0.45 MPa rises from ~95 °C to 127 °C with service to 120 °C, and XY tensile roughly doubles to 41.7 MPa. What it does NOT fix is the other half of PP's difficulty: the material still refuses to stick to standard build surfaces and needs a PP-specific tape, sheet or primer, and the fiber adds a hardened-nozzle requirement base PP does not have. Vs the CF nylons in this cluster it is the coolest-running and lowest-temperature-ceiling option, but has the best water tolerance of the four by a wide margin.",
+  "printing": {
+    "nozzle_temp_c": { "min": 230, "max": 260, "recommended": 245 },
+    "bed_temp_c": { "min": 20, "max": 80, "recommended": 60 },
+    "ambient_temp_c": { "min": 30, "max": 60, "recommended": 45 },
+    "speed_mm_s": { "min": 30, "max": 80, "recommended": 50 },
+    "enclosure_recommended": true,
+    "heated_chamber_required": false,
+    "enclosure_open_for_cooling": false,
+    "requires_hardened_nozzle": true,
+    "part_cooling_fan_pct": { "min": 30, "max": 70, "recommended": 50 },
+    "notes": "Nozzle temperature barely moves from base PP — BASF Ultrafuse PP GF30 240-260 °C, BCN3D PP-GF30 230-250 °C, Recreus PPGF 240-260 °C — sitting in the upper half of the base entry's very wide 200-280 °C span. The real deltas are elsewhere. A hardened steel or ruby nozzle becomes mandatory (Recreus: avoid brass) where unfilled PP needs none, and BASF recommends 0.6 mm minimum against the usual 0.4 mm because fiber content raises clog risk. Bed temperature is entirely a function of which adhesion product is used, which is why the recorded span is 20-80 °C: BASF 20-40 °C on PP tape or spray adhesive, Recreus 40 °C once primer is applied, BCN3D 80 °C with Magigoo Pro PPGF. Part cooling drops from base PP's 50-100 % to BCN3D's 50 %, because the fiber now handles the warp control that aggressive cooling was compensating for. An enclosure still helps, but its role shrinks from rescue to draft exclusion; heated_chamber_required stays false as on the base entry."
+  },
+  "feeding": {
+    "drive_system": "any",
+    "ams_compatible": "no",
+    "feeding_assistant_recommended": false,
+    "notes": "Rigid enough for any extruder — noticeably stiffer than base PP, whose limpness is part of why the base entry rates AMS 'conditional' after a documented jam. This entry is stepped down to 'no' rather than up, for a different reason: glass fiber abrades the PTFE feed path and the roller surfaces of a material station, the same mechanism that bars third-party CF and GF filaments from the AMS. No vendor publishes a PP-GF AMS verdict and no PP-GF product exists in Bambu's catalog, so this is inferred from the general filled-filament bar plus the base entry's jam report, not a documented restriction. PP's low surface energy also works against feeder-gear bite. Feed from a direct spool holder. Not an elastomer: no shore hardness, no feeding assistant."
+  },
+  "drying": {
+    "required_before_use": "rarely",
+    "temp_c": { "min": 40, "max": 60, "recommended": 50 },
+    "time_hours": { "min": 2, "max": 6, "recommended": 4 },
+    "methods": ["dedicated filament dryer", "convection oven at low temperature", "sealed bag with desiccant"],
+    "dryness_validation": "Largely a non-issue, exactly as on the base pp entry — watch only for minor surface popping or inconsistent extrusion as the rare sign that a spool has picked up surface humidity. Do not judge by gloss: the fiber-filled surface is matte by design.",
+    "notes": "The one place PP-GF is dramatically easier than every other entry in this cluster. BASF states drying is NOT required for Ultrafuse PP GF30, because PP is hydrophobic and glass fiber, unlike the polyamide matrices of pa6-cf, pa12-cf and ppa-cf, does not add hygroscopicity. A light 40-60 °C dry after long open-air storage may improve surface finish, but it is a corrective measure rather than a routine one — the recorded temperature band is lower and shorter than the base pp entry's 60-80 °C / 4-6 h precisely because there is less to drive off and no benefit to pushing a low-melting polyolefin hotter."
+  },
+  "storage": {
+    "recommendations": "A sealed container with desiccant is good practice but not urgent, unchanged from base PP: the material tolerates open-shelf storage far better than the polyamide composites in this cluster, which need dryboxes and, for ppa-cf, a blast oven to recover.",
+    "max_humidity_pct": 60,
+    "hygroscopy": "low"
+  },
+  "price": {
+    "usd_per_kg_low": 85,
+    "usd_per_kg_high": 215,
+    "notes": "Wide and poorly documented in USD. Recreus PPGF at EUR 48.95/600 g works out to roughly $86/kg equivalent; BCN3D PP-GF30 at EUR 139.95/700 g is roughly $214/kg equivalent, a printer-specific certified product priced well above the general-purpose alternatives. Mid-tier industrial lines (BASF Ultrafuse, Fiberthree) are expected to land in an $80-150/kg band, but neither publishes pricing on the pages fetched, so that estimate is unverified. Against the base pp entry's $40-70/kg this is a 2-3x premium."
+  },
+  "use_cases": {
+    "recommended": [
+      "automotive and aerospace structural brackets, bars, shafts and frames",
+      "parts for harsh, humid or chemically aggressive environments",
+      "weather-exposed outdoor components (BCN3D cites UV and water resistance)",
+      "chemical-handling and fluid-adjacent hardware needing more stiffness than base PP",
+      "large flat PP parts that would be unprintable unfilled",
+      "housings and fixtures that must resist moisture indefinitely"
+    ],
+    "not_recommended": [
+      "high-precision small parts needing isotropic strength (ZX tensile is 38 % of XY)",
+      "living hinges and repeated-flex parts — the fiber destroys exactly the fatigue behaviour base pp is chosen for",
+      "food-contact vessels: no food-safe certification was found for any PP-GF filament",
+      "continuous service above ~120 °C — the lowest temperature ceiling in this cluster",
+      "printing on stock PEI, glass or standard build surfaces without a PP-specific tape, sheet or primer",
+      "brass-nozzle printers and 0.4 mm-only setups where BASF recommends 0.6 mm",
+      "glued or solvent-welded assemblies (inherited from base PP)"
+    ]
+  },
+  "suitability": {
+    "food_contact": "no",
+    "load_bearing": "moderate",
+    "high_temperature": "moderate",
+    "outdoor": "yes"
+  },
+  "properties": {
+    "density_g_cm3": 1.12,
+    "grams_per_100cm3": 112,
+    "cm3_per_100g": 89.3,
+    "shrinkage_pct": { "min": 0.5, "max": 1.5, "recommended": 1.0 },
+    "glass_transition_c": -5,
+    "heat_deflection_c": 127,
+    "max_service_temp_c": 120,
+    "tensile_strength_mpa": { "min": 30, "max": 42, "recommended": 41.7 },
+    "notes": "Density 1.12 g/cm³ is NOT sourced from any of the filament datasheets fetched — it is the typical figure for industrial PP-GF30 compounds (~1.10-1.15) and is recorded as unverified for these specific products. It is the single biggest change from base PP: glass is ~2.5 g/cm³, so a 30 % loading pushes density from 0.90 to ~1.12 and destroys base PP's headline advantage of the most part volume per spool in the catalog — 89.3 cm³ per 100 g against base PP's 111.1, a ~20 % loss. Tensile 41.7 MPa XY against 15.9 MPa ZX (BASF Ultrafuse PP GF30), a 2.6:1 anisotropy comparable to the CF nylons; base PP's own orientation split is 35.1/18.7 MPa, so the fiber widens the gap as well as raising the ceiling. Impact strength 2.4-25.8 kJ/m² depending on orientation (BASF) — a tenfold spread that is the clearest statement of how directional this material is. HDT 127 °C @0.45 MPa (BASF) against base PP's ~95 °C, with service to 120 °C (BCN3D) — this is the primary functional reason to glass-fill PP. Tg is carried from base PP at about -5 °C and remains irrelevant as a service limit, being far below room temperature. Shrinkage is a reasoned reduction from base PP's estimated 1.0-2.5 % consistent with the qualitative 'reduced shrinkage and warping' reports; no source quantifies it."
+  },
+  "scores": {
+    "ease_of_print": 4,
+    "dimensional_stability": 7,
+    "warp_tendency": 4,
+    "layer_adhesion": 5,
+    "compression_strength": 8,
+    "temperature_tolerance": 7,
+    "uv_tolerance": 5,
+    "weather_tolerance": 7,
+    "water_tolerance": 10
+  },
+  "compatibility": {
+    "bonds_with": ["pp-gf", "pp"],
+    "support_materials": ["pp-gf", "pp"],
+    "usable_as_support_for": [],
+    "notes": "Inherits base PP's defining trait of near-universal non-adhesion unchanged — the glass fiber does nothing to raise the matrix's surface energy. It welds only to itself and to base pp, and will not bond to pla, petg, abs, asa, pa, pc, pva, hips, bvoh, pctg, pvb, pet, tpu or tpe. No soluble support pairs with it, since PP is inert to water and to most solvents, so supports must be same-material PP or PP-GF breakaway. Unlike base pp, it is not useful as a deliberate release layer or interface sheet for other materials: the fiber-roughened surface leaves a poor finish where plain PP tape gives a clean one."
+  },
+  "plate_recommendations": [
+    {
+      "plate_id": "pei-textured",
+      "rating": "avoid",
+      "notes": "Unchanged from the base pp entry, and the single most important practical fact about this material: glass fiber fixes warping, not adhesion. Textured PEI provides essentially no grip because PP's low surface energy is a chemistry problem the filler does not touch. Use a PP-specific print sheet, PP packing tape (PP sticks to itself), or a dedicated primer — Magigoo Pro PPGF is the BCN3D-recommended product and Recreus ships its own primer, with bed temperature then set to suit the adhesive (20-40 °C for spray, 80 °C with Magigoo Pro PPGF). Ordinary glue sticks, hairspray and painter's tape do not work. Garolite / G10 is a polyamide-family fix and is not the answer here; that surface has no catalog plate entry yet in any case."
+    }
+  ],
+  "emissions": {
+    "voc_level": "low",
+    "particulate_level": "low",
+    "primary_emissions": ["ultrafine particles", "respirable glass fiber dust (post-processing)"],
+    "ventilation": "recommended",
+    "notes": "Printing emissions match the base pp entry: no styrene as with the styrenics and no caprolactam as with the polyamide composites in this cluster, and no dominant marker compound is reported for PP in the sources reviewed. Both levels are inferred rather than measured — the ventilation guides consulted do not cover PP at all — so treat them as low-confidence, exactly as flagged on the base entry. The one genuine delta is at the bench rather than the nozzle: sanding, drilling or machining printed parts liberates respirable glass fiber dust. Ventilation is recommended as general FDM practice, not in response to a PP-specific hazard."
+  },
+  "safety_notes": "Abrasive: hardened steel or ruby nozzle required, and Recreus explicitly warns against brass. Do not dry-sand, drill or machine printed parts without respiratory protection and dust capture — glass fiber fines are a respiratory and skin irritant. PP-specific adhesion primers and spray adhesives are the practical way to make first layers stick; use them with ventilation per their own instructions. Because PP resists solvents and glues, post-print assembly relies on mechanical fasteners, heat staking or PP welding rather than adhesives. Not food-contact suitable: no certification was found for any PP-GF filament, and the fiber-roughened surface compounds the usual FDM layer-crevice problem.",
+  "additional_notes": "The clean way to frame PP-GF against base PP is that PP has two independent difficulties — catastrophic warp and universal non-adhesion — and glass fiber solves only the first. Budget for a PP-specific build surface or primer before buying a spool, exactly as for base PP; that decision still determines whether the material is usable or infuriating. The trade going the other way is that the fiber destroys base PP's living-hinge and fatigue behaviour, which is the main reason people buy polypropylene in the first place, so PP-GF is a genuinely different material rather than a strictly better one. Fiber loading varies 25-30 % across brands and Recreus discloses none, so treat mechanical figures as brand-specific.",
+  "provenance": {
+    "sources": [
+      "https://forward-am.com/material-portfolio/ultrafuse-filaments-for-fused-filaments-fabrication-fff/reinforced-filaments/ultrafuse-pp-gf30/",
+      "https://bcn3d.com/product/pp-gf30-bcn3d-filaments/",
+      "https://recreus.com/en-en/products/ppgf",
+      "https://ec3d.nl/en/products/recreus-pp3d-glass-fiber-1-75mm-600g",
+      "https://spoolhound.com/pp-filament-guide",
+      "https://www.matterhackers.com/store/l/magigoo-ppgf-3d-bed-adhesion-solution-for-glass-reinforced-polypropylene-filament/sk/M0KUH9UX"
+    ],
+    "last_verified": "2026-07-31",
+    "confidence": "low",
+    "conflicts": "Confidence is low because several core fields are unsourced or brand-split. Density (1.12 g/cm³) is not published on any of the filament pages fetched — it is a generic industrial PP-GF30 compound figure and must be re-verified before it is trusted, which matters more here than elsewhere because it inverts base PP's volume-per-spool advantage. Bed temperature disagrees by 60 °C across vendors (BASF 20-40 °C on tape or spray, Recreus 40 °C with primer, BCN3D 80 °C with Magigoo Pro PPGF), because the number is a property of the adhesion product rather than the filament; the recorded 60 °C recommendation is a midpoint that matches no single vendor. Fiber loading spans 25-30 % where disclosed and is undisclosed by Recreus. Pricing is EUR-converted from two retail listings with no US figures and no published prices for BASF or Fiberthree. Emissions levels are inferred from the base pp entry, which itself flags them as low-confidence — no PP or PP-GF VOC or UFP measurement was found. AMS incompatibility is inferred from the general filled-filament bar and the base entry's community jam report, not a vendor statement. Shrinkage is described only qualitatively as 'reduced' by SpoolHound; the recorded range is reasoned. The researcher's suggested ease_of_print of 6 was lowered to 4 against the glossary rubric, which places 'special surfaces' at 3 and base PP at 2 explicitly for build-surface chemistry: PP-GF removes the warp barrier but keeps the adhesion barrier and adds a hardened-nozzle requirement, so it cannot reach the ABS/HIPS anchor at 5. Similarly UV tolerance is recorded 5 rather than the suggested 9 — BCN3D's UV-resistance claim is a product claim about a stabilised grade, not a property of unstabilised PP, whose base entry scores 3."
+  }
+}

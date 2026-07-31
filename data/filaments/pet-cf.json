@@ -1,0 +1,127 @@
+{
+  "id": "pet-cf",
+  "name": "PET-CF (Carbon-Fiber-Filled PET)",
+  "aliases": ["PET CF", "PET Carbon Fiber", "Carbon-filled PET", "Bambu PET-CF"],
+  "status": "researched",
+  "base_type": "pet",
+  "variation_kind": "carbon-fiber-filled",
+  "polymer_class": "composite-other",
+  "chemical_makeup": "Unmodified, semi-crystalline polyethylene terephthalate — no CHDM glycol modification — compounded with chopped carbon fiber. Removing the glycol modifier is what gives the base resin its stiffness and heat resistance and its narrow processing window; the fiber then suppresses the crystallisation-driven warp that makes base PET awkward, and pushes stiffness and HDT higher again.",
+  "summary": "The heat-resistant member of the filled-copolyester set. Deltas vs base pet: warp largely tamed by the fiber, tensile up to 74 MPa XY, and HDT 205 °C at 0.45 MPa against base PET's ~70 °C — but a hardened nozzle, a 260-290 °C nozzle, a 45-60 °C chamber, a sub-100 mm/s speed cap and no AMS. Against petg-cf it is the harder print by a wide margin and roughly 20-30 % dearer, bought for a heat ceiling petg-cf simply does not have.",
+  "printing": {
+    "nozzle_temp_c": { "min": 260, "max": 290, "recommended": 270 },
+    "bed_temp_c": { "min": 80, "max": 100, "recommended": 90 },
+    "ambient_temp_c": { "min": 45, "max": 60, "recommended": 50 },
+    "speed_mm_s": { "min": 20, "max": 100, "recommended": 60 },
+    "enclosure_recommended": true,
+    "heated_chamber_required": false,
+    "enclosure_open_for_cooling": false,
+    "requires_hardened_nozzle": true,
+    "part_cooling_fan_pct": { "min": 0, "max": 60, "recommended": 30 },
+    "notes": "Deltas vs petg-cf: nozzle up from 230-270 °C to 260-290 °C (Bambu tests at 270 °C), bed up from 60-90 °C to 80-100 °C, chamber raised to a 45-60 °C target, and the speed ceiling halved to under 100 mm/s because the stiff, brittle melt tolerates less shear. Against base PET the change is mostly hardware: base PET is not abrasive, this is, so a hardened nozzle becomes mandatory — and Bambu adds that a plain stainless nozzle is not recommended either, only hardened steel or equivalent, with 0.2 mm nozzles unsupported. An all-metal hotend is required at these temperatures. A passive enclosure suffices for most parts, so heated_chamber_required stays false, but an unenclosed machine in a cold room will not produce usable large parts."
+  },
+  "feeding": {
+    "drive_system": "any",
+    "ams_compatible": "no",
+    "feeding_assistant_recommended": false,
+    "notes": "The sharpest feeding delta in this cluster: Bambu lists its own PET-CF as not AMS-compatible, unlike its own PETG-CF which is allowed — the unmodified-PET matrix is brittle enough to snap in an AMS feed path on top of the usual fiber abrasion of PTFE tubing. Feed it from an external dry spool holder. Rigid, so any extruder drives it, but hardened steel or equivalent nozzle at 0.4 mm or larger is required, and the filament must be dried before loading or it will feed inconsistently and hydrolyse in the melt. Not flexible: no shore hardness, no feeding assistant."
+  },
+  "drying": {
+    "required_before_use": "always",
+    "temp_c": { "min": 80, "max": 100, "recommended": 80 },
+    "time_hours": { "min": 8, "max": 12, "recommended": 12 },
+    "methods": ["blast oven at 80 °C for 8-12 h", "heated-bed method at 90-100 °C for 12 h", "high-temperature filament dryer", "print from a sealed drybox with desiccant"],
+    "dryness_validation": "No popping, crackling or steam at the nozzle and no frosting or foaming of the extruded strand. Because wet PET loses molecular weight permanently in the melt, treat a failed check as a reason to stop and dry rather than to push through — the strength loss is not recovered by drying afterwards.",
+    "notes": "Bambu specifies 80 °C for 8-12 h in a blast oven or 90-100 °C for 12 h by the heated-bed method, with storage below 20 % RH sealed with desiccant. Both hotter and longer than petg-cf's 65 °C / 8 h, and hotter than base PET's 55-70 °C family default, because the higher print temperature makes any residual moisture more damaging."
+  },
+  "storage": {
+    "recommendations": "Sealed below 20 % RH with fresh desiccant at all times, and printed from a drybox on long jobs. Stricter than base PET's 30 % guidance because the material sits in the hotend at 260-290 °C, where hydrolysis is fastest.",
+    "max_humidity_pct": 20,
+    "hygroscopy": "moderate"
+  },
+  "price": {
+    "usd_per_kg_low": 35,
+    "usd_per_kg_high": 45,
+    "notes": "Bambu $35.99/kg (from $44.99). Roughly on par with or slightly above petg-cf, and Siraya Tech puts the category at 20-30 % above PETG-CF generally — around double base PET's $18-35/kg."
+  },
+  "use_cases": {
+    "recommended": [
+      "under-hood and other sustained-heat automotive parts",
+      "aerospace and drone components",
+      "industrial tooling, jigs and fixtures",
+      "functional prototypes loaded at elevated temperature",
+      "parts that would creep or soften in petg-cf above ~70 °C",
+      "stiff structural brackets where Z loading can be designed out"
+    ],
+    "not_recommended": [
+      "beginner projects or first prints on an open-frame machine",
+      "AMS or multi-material slots (vendor-listed incompatible)",
+      "parts loaded in Z (Z tensile is under half of XY)",
+      "impact-prone or flexible parts",
+      "food-contact items",
+      "cosmetic parts (opaque matte black, fiber-flecked)"
+    ]
+  },
+  "suitability": {
+    "food_contact": "no",
+    "load_bearing": "high",
+    "high_temperature": "yes",
+    "outdoor": "limited"
+  },
+  "properties": {
+    "density_g_cm3": 1.29,
+    "grams_per_100cm3": 129,
+    "cm3_per_100g": 77.5,
+    "glass_transition_c": 75,
+    "heat_deflection_c": 205,
+    "max_service_temp_c": 150,
+    "tensile_strength_mpa": { "min": 68, "max": 80, "recommended": 74 },
+    "notes": "Bambu TDS: density 1.29 g/cm³ (barely above base PET's 1.28), tensile 74±6 MPa XY and 35±5 MPa Z (Z/XY ≈ 0.47 — the most anisotropic entry in this cluster), Tg 75 °C, HDT 182 °C at 1.8 MPa and 205 °C at 0.45 MPa, Vicat softening 226 °C. The HDT figure is the reason this material exists: it is roughly three times base PET's ~70 °C and nearly three times petg-cf's 70 °C, and it comes from crystallinity in the unmodified PET matrix nucleated by the fiber, not from the fiber alone. Cross-brand figures are much more conservative — Siraya Tech's industry band is 70-120 MPa tensile, 90-140 MPa flexural, 120-150 °C HDT — so the Bambu numbers should be read as one well-characterised product rather than as the category. Max service temperature is a reasoned figure well below HDT, not a datasheet value. Shrinkage is unpublished; it is lower than base PET's crystallisation-driven shrink because the fiber restrains it, but no number could be confirmed."
+  },
+  "scores": {
+    "ease_of_print": 3,
+    "dimensional_stability": 8,
+    "warp_tendency": 4,
+    "layer_adhesion": 5,
+    "compression_strength": 9,
+    "temperature_tolerance": 9,
+    "uv_tolerance": 5,
+    "weather_tolerance": 5,
+    "water_tolerance": 9
+  },
+  "compatibility": {
+    "bonds_with": ["pet-cf", "pet"],
+    "support_materials": ["pet", "pet-cf"],
+    "usable_as_support_for": [],
+    "notes": "Welds to itself and to base PET. Co-printing with the PETG family is not recommended even though the chemistries are related: the nozzle windows are 30-40 °C apart and the shrink behaviour differs (crystallisation-driven here, purely thermal in PETG), so the interface is unreliable. Same-material or base-PET breakaway supports are the practical route; no soluble support survives a 260-290 °C nozzle, which rules out PVA and BVOH. Garolite is a polyamide-family surface and is not needed here."
+  },
+  "plate_recommendations": [
+    {
+      "plate_id": "pei-textured",
+      "rating": "recommended",
+      "notes": "Textured PEI at 80-100 °C, as for base PET, and let the plate cool fully before removal. The enclosure matters more than the plate here: at a 45-60 °C chamber target, first-layer grip is rarely the limiting factor — uneven cooling is."
+    }
+  ],
+  "emissions": {
+    "voc_level": "moderate",
+    "particulate_level": "moderate",
+    "primary_emissions": ["acetaldehyde", "phthalic acid esters", "ultrafine particles", "carbon fiber fines (post-processing)"],
+    "ventilation": "recommended",
+    "notes": "Chemically the same low-styrene polyester profile as base PET and petg-cf — no styrene, unlike the ABS/ASA family — but emitted at a higher rate because emission scales with extrusion temperature and this runs 260-290 °C against petg-cf's 230-270 °C. The enclosure that the process needs for warp control doubles as containment; vent it externally or filter through HEPA plus carbon. Carbon fiber dust during post-processing carries the same respiratory caution as every filled grade here."
+  },
+  "safety_notes": "Requires an all-metal hotend — the 260-290 °C window degrades PTFE-lined hotends and releases fluoropolymer decomposition products. Abrasive: hardened steel or equivalent nozzle mandatory, and Bambu specifically warns that plain stainless steel is not sufficient. Do not sand, drill or cut printed CF parts without a mask and dust capture. Not food-contact suitable.",
+  "additional_notes": "Position this against its siblings by heat, not by strength: petg-cf and pet-cf have similar densities and both are stiff, but petg-cf gives up at roughly 70 °C while pet-cf holds shape under load past 180 °C. If the part never sees heat, petg-cf is the cheaper, far easier print. Note also that most consumer filament labelled 'PET' is really PETG — a product with a 230-250 °C window is a petg-cf, not this entry.",
+  "provenance": {
+    "sources": [
+      "https://cdn.shopify.com/s/files/1/0224/5205/files/Bambu_PET-CF_Technical_Data_Sheet.pdf",
+      "https://us.store.bambulab.com/products/pet-cf",
+      "https://bambulab.com/en-us/filament/pet-cf",
+      "https://siraya.tech/blogs/news/pet-cf-vs-petg-cf",
+      "https://tinmorry.net/en-us/products/carbon-fiber-pet-filament-1-75mm-tinmorry-pet-cf-3d-printer-filament-high-dimensional-stability-exceptional-thermal-resistance-compatible-with-most-fdm-3d-printers-1-kg-1-spool-light-black",
+      "https://wiki.bambulab.com/en/general/filament-guide-material-table"
+    ],
+    "last_verified": "2026-07-31",
+    "confidence": "medium",
+    "conflicts": "HDT is the big one: Bambu's TDS reports 205 °C at 0.45 MPa and 182 °C at 1.8 MPa, while Siraya Tech's cross-brand survey puts the category at 120-150 °C. The Bambu figure is recorded because it is the only primary datasheet in the source set, but it is one product, not the category — expect a generic PET-CF to land nearer 150 °C. Tensile likewise: 74±6 MPa (Bambu) against a 70-120 MPa industry band. Max service temperature and shrinkage are unpublished and are reasoned, not sourced. UV and weather scores are inferred — no UV testing was found for any PET-CF product, and the entry is chosen for thermal and mechanical performance rather than outdoor service. Water tolerance is scored from repeated 'very low moisture absorption' marketing claims (3DXTech, TINMORRY) rather than a measured absorption figure, which sits awkwardly beside the strict drying requirement: the resin absorbs little but suffers badly from what it does absorb."
+  }
+}

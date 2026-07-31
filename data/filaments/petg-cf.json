@@ -1,0 +1,128 @@
+{
+  "id": "petg-cf",
+  "name": "PETG-CF (Carbon-Fiber-Filled PETG)",
+  "aliases": ["PETG CF", "PETG Carbon Fiber", "Carbon-filled PETG", "XT-CF20", "CarbonX PETG+CF"],
+  "status": "researched",
+  "base_type": "petg",
+  "variation_kind": "carbon-fiber-filled",
+  "polymer_class": "composite-other",
+  "chemical_makeup": "The same glycol-modified PET (CHDM-modified copolyester) matrix as base PETG, compounded with chopped carbon fiber — typically ~10-20 wt% (ColorFabb XT-CF20 is 20 %; Bambu and eSUN do not disclose their loading). The filler does not alter the copolyester chemistry or its hydrolysis behaviour; it adds stiffness, a matte black surface, and abrasiveness.",
+  "summary": "Base PETG made stiff and dimensionally quiet by chopped carbon fiber. Deltas vs petg: tensile modulus roughly 5100 MPa against ~2000 MPa, warp and stringing both drop, and the surface goes matte black — paid for with a mandatory hardened nozzle, a lower speed ceiling (<150-200 mm/s vs PETG's 200+), sharply reduced elongation (~2 % vs 20 %+) and much weaker layer bonding. Unlike pet-cf it gains almost no heat resistance: HDT stays around 70 °C, the same as base PETG.",
+  "printing": {
+    "nozzle_temp_c": { "min": 230, "max": 270, "recommended": 250 },
+    "bed_temp_c": { "min": 60, "max": 90, "recommended": 80 },
+    "ambient_temp_c": { "min": 18, "max": 40, "recommended": 28 },
+    "speed_mm_s": { "min": 30, "max": 200, "recommended": 80 },
+    "enclosure_recommended": false,
+    "heated_chamber_required": false,
+    "enclosure_open_for_cooling": false,
+    "requires_hardened_nozzle": true,
+    "part_cooling_fan_pct": { "min": 0, "max": 40, "recommended": 20 },
+    "notes": "Deltas vs base PETG: hardened nozzle mandatory, nozzle window shifted up (Bambu tests 240-270 °C against base PETG's 220-250 °C; ColorFabb XT-CF20 240-260 °C; 3DXTech CarbonX 230-260 °C), speed ceiling lowered to <150-200 mm/s to avoid fiber packing and clogs, and part cooling cut from base PETG's 30-50 % to 0-40 % because fiber-filled melt needs the heat to weld and over-cooling worsens the already-weak layer bond. Bed 60-90 °C brackets base PETG's 70-90 °C (Bambu 60-80, ColorFabb 60-70, eSUN 75-90). No enclosure required — warp is lower than base PETG, not higher — but a draft-free room improves consistency. Use 0.4 mm or larger; Bambu explicitly lists the 0.2 mm nozzle as incompatible."
+  },
+  "feeding": {
+    "drive_system": "any",
+    "ams_compatible": "conditional",
+    "feeding_assistant_recommended": false,
+    "notes": "Rigid, so any drive system feeds it, though direct drive reduces grinding risk on a long Bowden path. AMS is the real delta vs base PETG's plain 'yes': Bambu lists its own PETG-CF as AMS-compatible (not AMS lite), while third-party CF-filled filament is generally barred from the AMS because the fibers abrade the PTFE tubes and the low-elongation strand can snap on tight bend radii — hence 'conditional' rather than 'yes'. Hardened steel or equivalent wear-resistant nozzle required. Not a flexible material, so no shore hardness and no feeding assistant."
+  },
+  "drying": {
+    "required_before_use": "if-exposed",
+    "temp_c": { "min": 60, "max": 70, "recommended": 65 },
+    "time_hours": { "min": 8, "max": 12, "recommended": 8 },
+    "methods": ["dedicated filament dryer", "blast oven at 65 °C", "heated-bed method at 75-85 °C for 12 h", "drybox with desiccant"],
+    "dryness_validation": "No popping or steam at the nozzle; no fuzz or surface voids on a purge line. Gloss is a poor indicator here — the extrudate is matte by design — so listen for pops and inspect for voids rather than judging by shine.",
+    "notes": "Bambu specifies 65 °C for 8 h in a blast oven or 75-85 °C for 12 h by the heated-bed method; eSUN says 65 °C for over 8 h. Essentially base PETG's schedule (50-65 °C / 4-8 h) run a little hotter and longer. The carbon fiber itself adds little hygroscopicity, but a low-elongation matrix shows moisture defects (voids, fuzzy walls) more visibly and with a bigger strength penalty than base PETG does."
+  },
+  "storage": {
+    "recommendations": "Sealed with desiccant between prints, as for base PETG. The consequence of neglect is worse rather than the absorption rate being higher — moisture voids in a brittle, fiber-filled matrix cost more strength than they do in unfilled PETG.",
+    "max_humidity_pct": 30,
+    "hygroscopy": "moderate"
+  },
+  "price": {
+    "usd_per_kg_low": 25,
+    "usd_per_kg_high": 67,
+    "notes": "Roughly 1.3-2x base PETG's $18-42/kg. Bambu $34.99/kg (discounted); eSUN, TINMORRY and generic brands $25-35/kg; premium US-made 3DXTech CarbonX runs $50/750 g (~$67/kg) or $120/2 kg (~$60/kg)."
+  },
+  "use_cases": {
+    "recommended": [
+      "jigs, fixtures and tooling needing stiffness rather than heat resistance",
+      "drone and RC frames",
+      "functional brackets and camera mounts",
+      "flat, large-footprint parts where base PETG would bow",
+      "matte cosmetic-functional parts where PETG's gloss and stringing are unwanted"
+    ],
+    "not_recommended": [
+      "parts needing flexibility, impact toughness or snap-fit elasticity (elongation ~2 %)",
+      "clear or translucent parts (the fiber makes it opaque matte black)",
+      "food-contact items",
+      "sustained load above ~70 °C — the CF does not raise PETG's HDT (use pet-cf instead)",
+      "parts loaded in Z (Z tensile is roughly 65 % of XY)",
+      "0.2 mm nozzle detail work"
+    ]
+  },
+  "suitability": {
+    "food_contact": "no",
+    "load_bearing": "moderate",
+    "high_temperature": "moderate",
+    "outdoor": "limited"
+  },
+  "properties": {
+    "density_g_cm3": 1.3,
+    "grams_per_100cm3": 130,
+    "cm3_per_100g": 76.9,
+    "shrinkage_pct": { "min": 0.1, "max": 0.25, "recommended": 0.15 },
+    "glass_transition_c": 80,
+    "heat_deflection_c": 70,
+    "max_service_temp_c": 65,
+    "tensile_strength_mpa": { "min": 45, "max": 58, "recommended": 51 },
+    "notes": "Density spans 1.26 (eSUN) to 1.35 (ColorFabb XT-CF20, injection-moulded reference) — 1.30 recorded as the midpoint, slightly above base PETG's 1.27 because carbon fiber (~1.8 g/cm³) is denser than the matrix but the loading is low. Tensile: eSUN 51.3 MPa XY / 32.9 MPa Z (Z/XY ≈ 0.64); ColorFabb XT-CF20 55.8 MPa printed against 76 MPa injection-moulded. Elongation at break collapses to ~2.04 % printed (ColorFabb) from 7.5 % injection-moulded and base PETG's 20 %+. Tensile modulus 5143 MPa (ColorFabb) against roughly 2000 MPa for base PETG — the headline gain. HDT is the headline non-gain: eSUN reports 70 °C, essentially base PETG's 72 °C, because amorphous PETG softening dominates at these fiber loadings. Tg and max service temp are carried from the base entry (unverified for the filled grade); shrinkage is a reasoned reduction from base PETG's 0.2-0.3 %, not a datasheet figure."
+  },
+  "scores": {
+    "ease_of_print": 6,
+    "dimensional_stability": 8,
+    "warp_tendency": 2,
+    "layer_adhesion": 6,
+    "compression_strength": 8,
+    "temperature_tolerance": 5,
+    "uv_tolerance": 5,
+    "weather_tolerance": 5,
+    "water_tolerance": 8
+  },
+  "compatibility": {
+    "bonds_with": ["petg-cf", "petg", "petg-gf", "pctg"],
+    "support_materials": ["pla", "petg", "bvoh"],
+    "usable_as_support_for": [],
+    "notes": "Welds to itself and to the rest of the copolyester family (base petg, petg-gf, pctg) — same matrix chemistry, overlapping nozzle windows. PLA remains the clean breakaway support it is for base PETG, and BVOH the soluble option, though PLA supports want the lower end of the CF nozzle range to avoid deforming them. Same-material supports fuse hard, exactly as with base PETG, so use breakaway settings. Not listed as a support for other materials: the fiber-roughened interface leaves a poor finish. Unlike petg-gf, the carbon loading makes the surface mildly conductive — keep it away from exposed electronics where petg-gf is the safer filled choice."
+  },
+  "plate_recommendations": [
+    {
+      "plate_id": "pei-textured",
+      "rating": "recommended",
+      "notes": "Same preference as base PETG and for the same reason — textured PEI grips well at 60-90 °C without the catastrophic over-adhesion bare PETG shows on smooth PEI. The matte fiber-filled surface hides plate texture cosmetically. No special surface needed; garolite is a polyamide-family concern, not a copolyester one."
+    }
+  ],
+  "emissions": {
+    "voc_level": "low",
+    "particulate_level": "moderate",
+    "primary_emissions": ["ultrafine particles", "trace acetaldehyde / terephthalate-related compounds (unverified)", "carbon fiber fines (post-processing)"],
+    "ventilation": "recommended",
+    "notes": "Printing emissions match base PETG — no styrene, mild odour, particulates above PLA but far below ABS/ASA. The delta is not at the nozzle but at the bench: sanding, drilling or machining cured CF parts liberates respirable carbon fiber dust, so wear a mask and capture dust for post-processing. Fiber ends can also shed as fine particulate from the nozzle tip at the top of the temperature range."
+  },
+  "safety_notes": "Abrasive — a brass nozzle can be visibly worn within a single spool, so hardened steel or ruby is mandatory. Do not sand or drill printed CF parts without respiratory protection and dust capture; carbon fiber fines are a respiratory irritant. Not food-contact suitable: the fiber-roughened surface traps bacteria on top of the usual FDM layer-crevice problem.",
+  "additional_notes": "Choose between the filled PETG grades by the failure mode you care about: petg-cf for maximum stiffness and the lowest warp, petg-gf for better toughness, higher annealed heat resistance and electrical non-conductivity. If the part needs to hold load above ~70 °C, neither is the answer — pet-cf is, at the cost of a much harder print. Fiber loading is undisclosed by most vendors, so treat mechanical numbers as brand-specific.",
+  "provenance": {
+    "sources": [
+      "https://bambulab.com/en-us/filament/petg-cf",
+      "https://us.store.bambulab.com/products/petg-cf",
+      "https://colorfabb.com/media/datasheets/tds/colorfabb/TDS_E_ColorFabb_XT_CF20.pdf",
+      "https://www.3dxtech.com/products/carbonx-petg-cf-1",
+      "https://www.esun3d.com/epetg-cf-product/",
+      "https://help.prusa3d.com/article/composite-materials-filled-with-carbon-kevlar-or-glass_167387",
+      "https://siraya.tech/blogs/news/pet-cf-vs-petg-cf"
+    ],
+    "last_verified": "2026-07-31",
+    "confidence": "medium",
+    "conflicts": "Fiber loading is disclosed only by ColorFabb (20 %); Bambu and eSUN state none, so mechanical figures are not comparable brand to brand. Density spans 1.26 (eSUN) to 1.35 (ColorFabb, injection-moulded reference) — 1.30 recorded as a midpoint rather than a measured filament value. Tensile spans 51.3 MPa (eSUN, printed) to 55.8 MPa printed / 76 MPa moulded (ColorFabb); Siraya Tech's cross-brand band is a wider 50-70 MPa. HDT: only eSUN publishes one (70 °C) and it shows essentially no gain over base PETG, which contradicts the common marketing claim that CF raises heat resistance — recorded as 70 °C on the datasheet. Nozzle range disagrees at the bottom end (3DXTech 230 °C vs Bambu 240 °C) and bed at the top (ColorFabb 70 °C vs eSUN 90 °C). AMS status is brand-split: Bambu's own grade is allowed, third-party CF generally is not — recorded 'conditional'. Tg, max service temp and shrinkage are inherited or reasoned from base PETG, not measured for the filled grade."
+  }
+}

@@ -1,0 +1,131 @@
+{
+  "id": "pa6-cf",
+  "name": "PA6-CF (Carbon-Fiber-Filled Nylon 6)",
+  "aliases": ["PA6 CF", "Nylon 6 Carbon Fiber", "PA6-CF20", "CarbonX Nylon 6+CF", "Fiberon PA6-CF20", "PolyMide PA6-CF"],
+  "status": "researched",
+  "base_type": "pa",
+  "variation_kind": "carbon-fiber-filled",
+  "polymer_class": "composite-other",
+  "chemical_makeup": "The same caprolactam-derived PA6 amide backbone as the pa6 grade, compounded with chopped (discontinuous) carbon fiber at roughly 15-20 wt% — Polymaker/Fiberon label their grade PA6-CF20 at 20 %, Bambu and several others do not disclose loading. The fiber is a physical reinforcement only: it does not alter the amide chemistry, the hydrogen bonding, or PA6's appetite for water.",
+  "summary": "PA6 turned into a stiff engineering composite. Deltas vs the base pa entry and the pa6 grade: modulus rises past 8.6 GPa and XY tensile to 105-140 MPa (against pa6's 55-58 MPa), HDT@0.45 MPa jumps from ~85 °C to 175-215 °C, and the carbon fiber suppresses nylon's signature warping so completely that CNC Kitchen prints it reliably on open-frame machines — which is why warp_tendency falls from pa6's 9 to 3. It is paid for with a mandatory hardened nozzle, layer adhesion that drops below unfilled PA6 (Z tensile 67.7 MPa against 105 MPa XY), brittleness in place of nylon toughness, and PA6's unchanged 3-9 % moisture uptake, which costs 44 % of tensile strength and two-thirds of stiffness when the part gets wet. Vs siblings: stiffest and hottest-running of the trio when dry, but pa12-cf beats it outright in humid service and ppa-cf beats it on heat.",
+  "printing": {
+    "nozzle_temp_c": { "min": 260, "max": 300, "recommended": 280 },
+    "bed_temp_c": { "min": 25, "max": 110, "recommended": 100 },
+    "ambient_temp_c": { "min": 35, "max": 60, "recommended": 45 },
+    "speed_mm_s": { "min": 30, "max": 150, "recommended": 60 },
+    "enclosure_recommended": true,
+    "heated_chamber_required": false,
+    "enclosure_open_for_cooling": false,
+    "requires_hardened_nozzle": true,
+    "part_cooling_fan_pct": { "min": 0, "max": 10, "recommended": 0 },
+    "notes": "Deltas vs the pa6 grade (220-270 °C, no hardened nozzle): the window shifts up to 260-300 °C — Bambu 260-290 °C, Polymaker/Fiberon 280-300 °C, 3DXTech Obsidian PA6-CF V2 265-285 °C — and a wear-resistant nozzle of 0.4 mm or larger becomes mandatory, because chopped carbon fiber destroys brass. Bed temperature is the widest disagreement in this entry: Bambu 80-100 °C, 3DXTech 90-110 °C, but Polymaker specifies only 25-50 °C, so the recorded 25-110 °C span is a union of vendor windows and 100 °C follows the Bambu/3DXTech consensus rather than Polymaker. Part cooling stays off (Fiberon specifies 0 %), exactly as on the base pa entry — fan air splits the already-weak fiber-filled layer bond. Fiberon claims up to 300 mm/s; the recorded 150 mm/s ceiling reflects community practice, and CNC Kitchen ran markedly slower for reliable results. An enclosure is recommended and improves layer bonding, but heated_chamber_required stays false as on the base entry — CNC Kitchen reports the CF reinforcement 'eliminates typical nylon warping issues, enabling reliable printing on standard machines'."
+  },
+  "feeding": {
+    "drive_system": "any",
+    "ams_compatible": "no",
+    "feeding_assistant_recommended": false,
+    "notes": "Rigid and easy to push, so any extruder feeds it and no feeding assistant applies (not an elastomer, no shore hardness). The AMS verdict is the hard delta vs the base pa entry's 'yes' and the pa6 grade's 'conditional': Bambu states outright that PA6-CF is NOT compatible with the AMS, on two independent grounds — the fiber-laden strand is brittle enough to snap on the buffer's bend radii, and carbon fiber abrades the PTFE feed path and the feeder gears. Feed from an external spool holder inside a heated drybox on an enclosed printer, and use hardened extruder gears where the machine offers them. A wear-resistant nozzle is mandatory regardless of feed path."
+  },
+  "drying": {
+    "required_before_use": "always",
+    "temp_c": { "min": 70, "max": 90, "recommended": 80 },
+    "time_hours": { "min": 6, "max": 20, "recommended": 8 },
+    "methods": ["blast/convection oven at 80 °C", "dedicated filament dryer", "food dehydrator", "print directly from a heated dryer", "sealed drybox with desiccant while printing"],
+    "dryness_validation": "No audible popping, hissing or crackling at the nozzle and no steam or bubbles in the extrudate; the purge line comes out even and void-free rather than blistered; stringing collapses back to baseline. Gloss is a poor tell here because the fiber-filled surface is matte by design — listen and inspect for voids instead, or confirm with a filament moisture meter.",
+    "notes": "Unchanged in kind from the pa6 grade, because the carbon fiber does not reduce moisture uptake at all: PA6 absorbs 3-9 wt% water (3DXTech) whatever the filler. Vendor schedules disagree on duration — 3DXTech specifies 80 °C for 6 h minimum, Bambu-style nylon guidance is 70-80 °C for 8-12 h, and CNC Kitchen pre-dried for 20 h at 80 °C to get repeatable results — so the recorded 6-20 h band is a union rather than a consensus. Polymaker's 80-100 °C / 1-3 h figure is post-print annealing, not drying, and the two must not be confused. Wet PA6-CF hisses, foams, strings and loses 44 % of its tensile strength."
+  },
+  "storage": {
+    "recommendations": "Airtight with fresh desiccant at all times, including between prints on the same day; Polymaker specifies storage below 20 % RH. Treat a heated drybox on the printer as the normal state, not an upgrade — this is the pa6 storage regime unchanged, and the consequence of neglect is worse than for unfilled PA6 because a brittle fiber-filled matrix pays a bigger strength penalty for moisture voids.",
+    "max_humidity_pct": 15,
+    "hygroscopy": "extreme"
+  },
+  "price": {
+    "usd_per_kg_low": 79,
+    "usd_per_kg_high": 135,
+    "notes": "Bambu Lab is the volume reference: $79.08/1 kg and $42.87/500 g (~$85.74/kg). Premium lines run far higher — 3DXTech Obsidian PA6-CF V2 at $99.99/750 g (~$133/kg), Polymaker Fiberon in the same band. Budget PA6-CF from Sunlu and similar brands is reported at $40-60/kg but was not verified against a listing, so the recorded low end follows Bambu. Roughly 2x the pa6 grade's $35-70/kg."
+  },
+  "use_cases": {
+    "recommended": [
+      "structural jigs, fixtures and shop tooling needing stiffness rather than toughness",
+      "automotive under-hood brackets and mounts",
+      "robotic end-effectors and arm segments",
+      "Markforged Onyx-style replacement parts",
+      "fine-detail functional parts at 0.15 mm layers and below",
+      "load-bearing parts that can be oriented so the load runs in-plane"
+    ],
+    "not_recommended": [
+      "outdoor or high-humidity structural parts under sustained load (44 % strength loss and two-thirds stiffness loss when wet)",
+      "parts needing impact toughness — the CF trades away exactly what unfilled pa6 is bought for",
+      "parts loaded in Z without post-print annealing (Z tensile is ~64 % of XY)",
+      "sustained load with no annealing step: un-annealed PA6-CF creeps badly",
+      "brass-nozzle printers and unsealed material stations",
+      "anything where pa12-cf's humidity stability matters more than peak dry stiffness"
+    ]
+  },
+  "suitability": {
+    "food_contact": "no",
+    "load_bearing": "high",
+    "high_temperature": "yes",
+    "outdoor": "no"
+  },
+  "properties": {
+    "density_g_cm3": 1.17,
+    "grams_per_100cm3": 117,
+    "cm3_per_100g": 85.5,
+    "shrinkage_pct": { "min": 0.3, "max": 1.0, "recommended": 0.5 },
+    "glass_transition_c": 60,
+    "heat_deflection_c": 190,
+    "max_service_temp_c": 140,
+    "tensile_strength_mpa": { "min": 100, "max": 140, "recommended": 105 },
+    "notes": "Density 1.17 g/cm³ (Polymaker) sits above the pa6 grade's 1.13 and the base pa entry's grade-averaged 1.08, because carbon fiber (~1.8 g/cm³) is denser than the matrix; 100 g yields 85.5 cm³ against pa6's 88.5. Tensile dry: Polymaker 105±5 MPa XY and 67.7±4.7 MPa Z (Z/XY ≈ 0.64), Fiberon PA6-CF20 up to 109 MPa XY with modulus >8.6 GPa, CNC Kitchen measured ~140 MPa against marketing claims of ~170 MPa. Moisture-conditioned samples retain only 56 % of dry tensile and about a third of dry stiffness (0.7 mm deflection dry, degrading sharply wet) — the single most important number in this entry. HDT@0.45 MPa is recorded at 190 °C as a midpoint of a genuine three-way disagreement (3DXTech Obsidian V2 175 °C, Bambu 186 °C, Polymaker 215 °C); Polymaker also gives 196 °C @1.8 MPa. Max service temperature 140 °C is inferred by scaling 3DXTech's published 120 °C continuous-use figure for pa12-cf against the higher HDT, not a datasheet value — CNC Kitchen's ~205 °C is a short-term failure point, not a service rating. Tg 60 °C is carried from the pa6 grade (dry state; a wet part's Tg falls sharply). Shrinkage is a reasoned reduction from pa6's 1.0-2.5 % consistent with the observed warp suppression, not a published figure."
+  },
+  "scores": {
+    "ease_of_print": 5,
+    "dimensional_stability": 6,
+    "warp_tendency": 3,
+    "layer_adhesion": 4,
+    "compression_strength": 9,
+    "temperature_tolerance": 8,
+    "uv_tolerance": 3,
+    "weather_tolerance": 3,
+    "water_tolerance": 2
+  },
+  "compatibility": {
+    "bonds_with": ["pa6-cf", "pa6", "pa", "pa66"],
+    "support_materials": ["pa6-cf", "pa6"],
+    "usable_as_support_for": [],
+    "notes": "Welds to itself and to the rest of the PA6 family (pa6, base pa, pa66) — same amide chemistry, overlapping melt windows. It does not bond to pla, petg, abs, asa, pc, pp, pctg, pvb or pet, and at 260-300 °C no breakaway PLA or PETG interface survives contact. Soluble supports are a non-starter: pva degrades roughly 60-100 °C below this nozzle range and bvoh sits below it too, so same-material breakaway supports are the standard workaround and PA6-CF is in practice printed single-material. It is a poor support for other polymers — it cross-bonds weakly and leaves a fiber-roughened interface."
+  },
+  "plate_recommendations": [
+    {
+      "plate_id": "pei-textured",
+      "rating": "usable",
+      "notes": "Same 'usable' rating as the pa6 grade, for a different reason: warp is far lower here, so edge lift is not the threat it is with unfilled PA6, but bare adhesion to textured PEI remains inconsistent and Bambu-forum consensus is that nylon 'certainly does not like' gold/textured PEI. A PA glue stick or PVA-based adhesive is applied as an adhesion PROMOTER, not a release layer. The preferred surface is a garolite / G10 phenolic laminate sheet — 'nylon sticks to G10 like PLA to a supertack plate' — with smooth plate plus hairspray or blue painter's tape as reported alternatives. No garolite plate entry exists in the catalog yet, so that recommendation is recorded here in notes."
+    }
+  ],
+  "emissions": {
+    "voc_level": "high",
+    "particulate_level": "moderate",
+    "primary_emissions": ["caprolactam", "amide-family degradation VOCs", "ultrafine particles", "respirable carbon fiber dust (post-processing)"],
+    "ventilation": "recommended",
+    "notes": "Nylon-first hazard profile, carried unchanged from the pa6 grade: caprolactam is the marker compound and its emission rises steeply above ~250 °C nozzle, which is the entire working range here. The delta vs pa6 is at the bench rather than the nozzle — sanding, drilling or machining printed CF parts liberates respirable carbon fiber fines. Use an enclosed printer with HEPA plus activated-carbon filtration or external exhaust, feed from a drybox, and wet-sand with respiratory protection."
+  },
+  "safety_notes": "Abrasive: chopped carbon fiber can visibly wear a brass nozzle within one spool, so hardened steel, ruby or carbide is mandatory. Do not dry-sand, drill or machine printed parts without a respirator and dust capture — carbon fiber fines are a respiratory irritant. Keep drying below 90 °C to avoid deforming spools and accelerating caprolactam off-gassing; anneal (80-140 °C) in a ventilated oven. Not food-contact suitable: no FDA-listed grade was found, the fiber-roughened surface traps bacteria, and fiber fragments can shed.",
+  "additional_notes": "Annealing is close to mandatory for structural use rather than optional. CNC Kitchen found un-annealed PA6-CF crept so badly that bolted joints needed daily retightening, where annealed samples held; vendor schedules span 80-140 °C for 1-16 h. The choice against pa12-cf is best framed as datasheet versus shop floor: PA6-CF wins on dry stiffness, dry strength and heat, but loses 44 % of tensile and two-thirds of stiffness once the part equilibrates with humid air, while PA12-CF's numbers barely move. Fiber loading is disclosed only by Polymaker/Fiberon (20 %), so treat all mechanical figures as brand-specific.",
+  "provenance": {
+    "sources": [
+      "https://bambulab.com/en-us/filament/pa6-cf",
+      "https://us.store.bambulab.com/products/pa6-cf",
+      "https://www.3djake.com/bambu-lab/pa6-cf-black",
+      "https://cdn.webshopapp.com/shops/296832/files/318384333/polymaker-polymide-pa6-cf-tds-v4.pdf",
+      "https://wiki.polymaker.com/polymaker-products/polymaker-filaments/fiberon-tm/fiberon-tm-pa6-cf20",
+      "https://www.3dxtech.com/blogs/featured/pa6-cf-vs-pa12-cf-carbon-fiber-nylon-comparison",
+      "https://www.cnckitchen.com/blog/carbon-fiber-nylon-in-3d-printing-pa6-vs-pa12-tested",
+      "https://filamentspecs.com/bambu-ams-filament-compatibility-guide/",
+      "https://forum.bambulab.com/t/best-build-plate-for-pa6-nylon-fiber-impregnated-or-not/109196"
+    ],
+    "last_verified": "2026-07-31",
+    "confidence": "medium",
+    "conflicts": "HDT@0.45 MPa is the widest disagreement: Polymaker 215 °C against Bambu 186 °C and 3DXTech Obsidian PA6-CF V2 175 °C — plausibly different CF loadings and test methods; 190 °C is recorded as a midpoint, not a datasheet value. Bed temperature disagrees just as sharply: Polymaker specifies 25-50 °C while Bambu says 80-100 °C and 3DXTech 90-110 °C; the recorded 100 °C follows the majority and contradicts Polymaker. Tensile spans 105 MPa (Polymaker), 109 MPa (Fiberon) and ~140 MPa measured by CNC Kitchen against a ~170 MPa marketing claim. Drying time spans 6 h (3DXTech) to 20 h (CNC Kitchen practice). Fiber loading is undisclosed by Bambu and most brands, so cross-brand mechanical comparison is unsound. Max service temperature 140 °C is inferred from pa12-cf's published 120 °C CUT scaled by HDT and is unverified. Budget-brand pricing ($40-60/kg) was reported but not verified against a listing. Annealing schedules span 80-140 °C for 1-16 h across sources with no agreement on the optimum."
+  }
+}
