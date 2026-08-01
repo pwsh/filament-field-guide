@@ -13,7 +13,6 @@
   ],
   "endpoints": {
     "website": "https://addnorth.com/",
-    "store": "https://addnorth.com/shop",
     "support": "https://addnorth.com/en/contact/",
     "social": {
       "facebook": "https://www.facebook.com/addnorth/",
@@ -162,6 +161,6 @@
     ],
     "last_verified": "2026-07-31",
     "confidence": "medium",
-    "conflicts": "The 'Made in Sweden' claim comes from the brand's own marketing; no direct statement of owned extrusion capacity was found, so manufacturing_countries rests on marketing rather than a primary facility source. No OEM counterparty could be named, so oem_relationships is omitted. The base polymer of Rigid X is unconfirmed and its filament_ids entry is a guess."
+    "conflicts": "The 'Made in Sweden' claim comes from the brand's own marketing; no direct statement of owned extrusion capacity was found, so manufacturing_countries rests on marketing rather than a primary facility source. No OEM counterparty could be named, so oem_relationships is omitted. The base polymer of Rigid X is unconfirmed and its filament_ids entry is a guess. Endpoint corrected 2026-08-01: store https://addnorth.com/shop -> removed (returns HTTP 404, as do /shop/, /en/shop/, /custom-filaments and other catalogue paths; the site root and /en/contact/ still load, but no live add:north webshop path could be verified, so the field is dropped rather than pointed at a dead or guessed URL)."
   }
 }

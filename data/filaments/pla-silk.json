@@ -210,6 +210,11 @@
       "plate_id": "supertack",
       "rating": "avoid",
       "notes": "Backfilled from plate entry (Phase E reciprocity): Bambu's own wiki warns that its PLA Silk bonds so hard to SuperTack that removal may damage the printed model. Third-party silk PLAs vary but should be treated the same until teste"
+    },
+    {
+      "plate_id": "pex-sheet",
+      "rating": "recommended",
+      "notes": "Backfilled from plate entry (reciprocity)"
     }
   ],
   "emissions": {

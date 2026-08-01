@@ -142,6 +142,8 @@
       "bvoh",
       "cpe",
       "pctg",
+      "pctg-cf",
+      "pctg-gf",
       "pet",
       "petg",
       "petg-cf",
@@ -171,6 +173,8 @@
       "cpe",
       "lw-pla",
       "pctg",
+      "pctg-cf",
+      "pctg-gf",
       "pet",
       "petg-cf",
       "petg-esd",
@@ -192,6 +196,7 @@
       "pla-wood",
       "tpu-60d",
       "tpu-68d",
+      "tpu-72d",
       "tpu-gf"
     ],
     "notes": "Welds cleanly to itself and to PCTG (same copolyester family); some TPU formulations bond to PETG but the weld is weaker than a same-family joint, so treat flex/rigid PETG-TPU as semi-compatible only. Does not weld to PLA — deliberately, so PLA makes a clean breakaway support for PETG and vice versa. BVOH is the soluble support of choice (PVA pairs better with PLA). PETG plus ABS/ASA is not a standard combination: the chemistry, nozzle windows and warp behaviour clash even though bed temperatures overlap."
@@ -251,6 +256,11 @@
       "plate_id": "pc-plate",
       "rating": "avoid",
       "notes": "Backfilled from plate entry (Phase E reciprocity): Bambu explicitly warns of bubbling and sticking on the plain Cool Plate — the PC sheet is damaged, not merely over-adhered. Note that PETG IS listed as acceptable on the Cool Plate"
+    },
+    {
+      "plate_id": "pex-sheet",
+      "rating": "usable",
+      "notes": "Backfilled from plate entry (reciprocity)"
     }
   ],
   "emissions": {

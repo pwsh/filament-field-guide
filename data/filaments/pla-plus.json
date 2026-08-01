@@ -202,6 +202,11 @@
       "plate_id": "pei-patterned",
       "rating": "recommended",
       "notes": "Backfilled from plate entry (Phase E reciprocity): As base PLA."
+    },
+    {
+      "plate_id": "pex-sheet",
+      "rating": "recommended",
+      "notes": "Backfilled from plate entry (reciprocity)"
     }
   ],
   "emissions": {

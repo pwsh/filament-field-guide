@@ -138,8 +138,10 @@
       "tpu-60a",
       "tpu-60d",
       "tpu-68d",
+      "tpu-72d",
       "tpu-85a",
       "tpu-90a",
+      "tpu-98a",
       "tpu-gf"
     ],
     "support_materials": [
@@ -203,6 +205,11 @@
       "plate_id": "buildtak-polymer",
       "rating": "avoid",
       "notes": "Backfilled from plate entry (Phase E reciprocity): The hardest common grade and the least bad case, but still inside the vendor's fusion warning."
+    },
+    {
+      "plate_id": "pex-sheet",
+      "rating": "recommended",
+      "notes": "Backfilled from plate entry (reciprocity)"
     }
   ],
   "emissions": {
@@ -266,11 +273,6 @@
       "product": "TPU 95A"
     },
     {
-      "manufacturer": "chckx3d",
-      "product": "TPU Filament (Shore 98A)",
-      "notes": "98A, firm end of the 95A-class grade band. From $15.99; listed 210-230C nozzle, unheated bed."
-    },
-    {
       "manufacturer": "colorfabb",
       "product": "TPU 95A",
       "notes": "Fixed-hardness grade, exact match"
@@ -304,11 +306,6 @@
       "manufacturer": "filament-pm",
       "product": "TPU 96",
       "notes": "SPEC DELTA: Shore ~96A implied by product name only; TDS confirmation pending"
-    },
-    {
-      "manufacturer": "filamentive",
-      "product": "TPU 98A",
-      "notes": "SPEC DELTA: actual Shore 98A, mapped to the 95A grade band; elongation to 500%"
     },
     {
       "manufacturer": "forward-am",
@@ -374,11 +371,6 @@
       "manufacturer": "snapmaker",
       "product": "TPU / TPU 95A HF",
       "notes": "Snapmaker spec explicitly states 'Hardness >= 95 Shore A'; HF variant is the same durometer"
-    },
-    {
-      "manufacturer": "spectrum-filaments",
-      "product": "S-Flex 98A",
-      "notes": "SPEC DELTA: actual Shore 98A, mapped to the 95A hard-TPU grade band; elongation up to 510%"
     },
     {
       "manufacturer": "spectrum-filaments",

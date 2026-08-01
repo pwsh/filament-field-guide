@@ -137,6 +137,8 @@
     "bonds_with": [
       "cpe",
       "pctg",
+      "pctg-cf",
+      "pctg-gf",
       "petg",
       "petg-cf",
       "petg-gf",

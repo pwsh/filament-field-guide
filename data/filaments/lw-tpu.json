@@ -141,9 +141,11 @@
       "tpu-60a",
       "tpu-60d",
       "tpu-68d",
+      "tpu-72d",
       "tpu-85a",
       "tpu-90a",
       "tpu-95a",
+      "tpu-98a",
       "tpu-gf"
     ],
     "support_materials": [

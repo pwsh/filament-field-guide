@@ -175,6 +175,7 @@
       "cpe",
       "lw-pla",
       "lw-tpu",
+      "pbat",
       "pctg",
       "pet",
       "petg",
@@ -200,9 +201,11 @@
       "tpu-60a",
       "tpu-60d",
       "tpu-68d",
+      "tpu-72d",
       "tpu-85a",
       "tpu-90a",
       "tpu-95a",
+      "tpu-98a",
       "tpu-gf"
     ],
     "notes": "PLA does not chemically weld to PETG, ABS, ASA, PC, PA or PP — that non-bonding is deliberately exploited so PLA and PETG each release cleanly as breakaway support for the other. PVA is the classic dissolvable support/interface for PLA (water-soluble, similar print temperatures); BVOH also works. PLA is not usable with ABS/ASA in either direction: their 90-110 °C bed temperatures deform PLA."
@@ -262,6 +265,11 @@
       "plate_id": "pei-patterned",
       "rating": "recommended",
       "notes": "Backfilled from plate entry (Phase E reciprocity): The intended use case. Natural, translucent and semi-transparent PLA show the holographic effect most strongly on the bottom face."
+    },
+    {
+      "plate_id": "pex-sheet",
+      "rating": "recommended",
+      "notes": "Backfilled from plate entry (reciprocity)"
     }
   ],
   "emissions": {

@@ -223,6 +223,11 @@
       "plate_id": "pei-patterned",
       "rating": "avoid",
       "notes": "Backfilled from plate entry (Phase E reciprocity): As ABS — thermal and adhesion envelope both exceeded in practice."
+    },
+    {
+      "plate_id": "pex-sheet",
+      "rating": "usable",
+      "notes": "Backfilled from plate entry (reciprocity)"
     }
   ],
   "emissions": {

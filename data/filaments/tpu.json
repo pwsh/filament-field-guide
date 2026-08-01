@@ -142,9 +142,11 @@
       "tpu-60a",
       "tpu-60d",
       "tpu-68d",
+      "tpu-72d",
       "tpu-85a",
       "tpu-90a",
       "tpu-95a",
+      "tpu-98a",
       "tpu-gf"
     ],
     "support_materials": [
@@ -212,6 +214,11 @@
       "plate_id": "buildtak-polymer",
       "rating": "avoid",
       "notes": "Backfilled from plate entry (Phase E reciprocity): The vendor states flexibles typically fuse with the surface on large parts. Small flexible parts are more manageable but the threshold is not documented — treat anything with a sub"
+    },
+    {
+      "plate_id": "pex-sheet",
+      "rating": "recommended",
+      "notes": "Backfilled from plate entry (reciprocity)"
     }
   ],
   "emissions": {
@@ -270,16 +277,6 @@
       "notes": "No Shore durometer published; generic tpu id."
     },
     {
-      "manufacturer": "Yoline Lab",
-      "product": "TPU 72D",
-      "notes": "No tpu-72d id and 68D is the nearest lower grade; generic tpu used rather than misfiling (see gaps)."
-    },
-    {
-      "manufacturer": "Yoline Lab",
-      "product": "TPU 98A",
-      "notes": "No tpu-98a id; 95A is a materially different hardness, so generic tpu used (see gaps)."
-    },
-    {
       "manufacturer": "amolen",
       "product": "TPU (Basic/Glow/Rainbow/Transparent)",
       "notes": "Shore hardness not published per variant, so no Shore-grade id asserted."
@@ -330,11 +327,6 @@
       "notes": "Shore 92A falls between the tpu-90a and tpu-95a grades, inside the base 85A-95A band"
     },
     {
-      "manufacturer": "fillamentum",
-      "product": "Flexfill TPU 98A",
-      "notes": "Shore 98A sits above the base entry's 85A-95A band; no tpu-98a grade exists"
-    },
-    {
       "manufacturer": "formfutura",
       "product": "TPU",
       "notes": "Standard TPU; grade hardnesses not enumerated in public listings"
@@ -373,11 +365,6 @@
       "manufacturer": "jayo",
       "product": "TPU",
       "notes": "Shore hardness not stated on the collection listing"
-    },
-    {
-      "manufacturer": "jayo",
-      "product": "TPU Silk (98A)",
-      "notes": "Shore 98A — harder than tpu-95a and above the base 85A-95A band, so no shore-specific id fits"
     },
     {
       "manufacturer": "matterhackers",

@@ -557,6 +557,20 @@ function suitabilityBadges(suitability) {
  * 6. Shared layout components
  * ========================================================================== */
 
+/**
+ * Two side-by-side column stacks. Empty columns are dropped rather than left as
+ * blank grid tracks (sparse entries like a purge consumable have whole groups
+ * of properties that legitimately do not apply).
+ */
+function twoColumns(left, right) {
+  const cols = [left, right]
+    .map((items) => items.filter(Boolean))
+    .filter((items) => items.length);
+  if (!cols.length) return null;
+  if (cols.length === 1) return frag(...cols[0]);
+  return el('div', { class: 'grid-2' }, ...cols.map((items) => el('div', {}, ...items)));
+}
+
 function section(title, titleKey, ...content) {
   const body = content.flat(Infinity).filter(Boolean);
   if (!body.length) return null;
@@ -959,9 +973,14 @@ function filterFilaments(rows, s) {
       if (!isNum(lo) || lo > s.maxp) return false;
     }
     if (s.vent) {
-      // "at most this much ventilation": optional <= recommended <= required
+      // optional/recommended are "at most this much ventilation" (optional <=
+      // recommended <= required); 'required' is an exact match, since "at most
+      // required" would match everything and be a dead option.
       const have = pick(f, 'emissions.ventilation');
-      if (!has(have) || VENT_ORDER.indexOf(have) > VENT_ORDER.indexOf(s.vent)) return false;
+      if (!has(have)) return false;
+      if (s.vent === 'required') {
+        if (have !== 'required') return false;
+      } else if (VENT_ORDER.indexOf(have) > VENT_ORDER.indexOf(s.vent)) return false;
     }
     if (s.ams) {
       // "at least this much material-station compatibility": no < conditional < yes
@@ -1052,8 +1071,8 @@ async function viewFilaments(route) {
         field('Ventilation', selectControl('f-vent', [
           ['', 'any'],
           ['optional', 'optional only'],
-          ['recommended', 'recommended or less'],
-          ['required', 'including required'],
+          ['recommended', 'optional or recommended'],
+          ['required', 'required only'],
         ], s.vent, (v) => set({ vent: v })), { key: 'emissions.ventilation' })),
       classes.length ? field('Polymer class', chipGroup(classes, s.cls, (value, on) => {
         const cur = readFilamentState(route.params).cls;
@@ -1705,9 +1724,9 @@ async function viewFilamentDetail(id) {
     ])) : null,
     printingSection(f),
     dryingSection(f),
-    el('div', { class: 'grid-2' },
-      el('div', {}, propertiesSection(f), suitabilitySection(f)),
-      el('div', {}, scoresSection(f.scores), priceSection(f))),
+    twoColumns(
+      [propertiesSection(f), suitabilitySection(f)],
+      [scoresSection(f.scores), priceSection(f)]),
     useCasesSection(f),
     compatibilitySection(f),
     plateRecommendationsSection(f),

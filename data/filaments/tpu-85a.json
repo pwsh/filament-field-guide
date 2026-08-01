@@ -133,8 +133,10 @@
       "tpu-60a",
       "tpu-60d",
       "tpu-68d",
+      "tpu-72d",
       "tpu-90a",
       "tpu-95a",
+      "tpu-98a",
       "tpu-gf"
     ],
     "support_materials": [
@@ -198,6 +200,11 @@
       "plate_id": "buildtak-polymer",
       "rating": "avoid",
       "notes": "Backfilled from plate entry (Phase E reciprocity): NinjaFlex-class material is the specific example the vendor cites as fusing."
+    },
+    {
+      "plate_id": "pex-sheet",
+      "rating": "recommended",
+      "notes": "Backfilled from plate entry (reciprocity)"
     }
   ],
   "emissions": {

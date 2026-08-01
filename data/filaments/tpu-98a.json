@@ -1,0 +1,281 @@
+{
+  "id": "tpu-98a",
+  "name": "TPU 98A (hard flexible)",
+  "aliases": [
+    "TPU 98A",
+    "Shore 98A TPU",
+    "Flexfill TPU 98A",
+    "S-Flex 98A",
+    "Hard TPU"
+  ],
+  "status": "researched",
+  "base_type": "tpu",
+  "variation_kind": "shore-grade",
+  "polymer_class": "elastomer",
+  "chemical_makeup": "Thermoplastic polyurethane at Shore 98A — the top of the Shore A scale, roughly equivalent to 58-60D, with a higher hard-segment ratio than any A-grade in the catalog. Reference products are Fillamentum Flexfill TPU 98A and BCN3D TPU 98A, with CHCKX, PRILINE, Spectrum S-Flex 98A and Filamentive TPU 98A selling the same durometer.",
+  "summary": "The hard-rubber end of the Shore A family: 98A feels like a hockey puck rather than a rubber band, and is valued for impact and abrasion resistance more than for genuine elasticity. Delta vs base TPU and vs tpu-95a: this is the easiest and fastest-printing Shore A grade — a short Bowden path is genuinely workable, cooling can run high, and the bed is optional on some vendors' guidance. What it does not buy is the AMS: Bambu's own TPU guide draws its material-station line above the Shore A scale entirely, so 98A is excluded alongside 95A and 90A, and only the D-scale grades (tpu-68d, tpu-72d) get in. Hardness-wise it overlaps tpu-60d, which is why the two score alike.",
+  "printing": {
+    "nozzle_temp_c": {
+      "min": 220,
+      "max": 245,
+      "recommended": 235
+    },
+    "bed_temp_c": {
+      "min": 25,
+      "max": 60,
+      "recommended": 50
+    },
+    "ambient_temp_c": {
+      "min": 18,
+      "max": 30,
+      "recommended": 22
+    },
+    "speed_mm_s": {
+      "min": 30,
+      "max": 50,
+      "recommended": 40
+    },
+    "enclosure_recommended": false,
+    "heated_chamber_required": false,
+    "enclosure_open_for_cooling": true,
+    "requires_hardened_nozzle": false,
+    "part_cooling_fan_pct": {
+      "min": 30,
+      "max": 100,
+      "recommended": 70
+    },
+    "notes": "Brand windows agree unusually well here: Fillamentum Flexfill 98A gives 220-240 °C and BCN3D TPU 98A gives 235 ± 10 °C, so the recorded 220-245 °C spans both with 235 °C as the consensus. Bed 50-60 °C is the reliable setting, but this is the one TPU grade where vendors note it can be printed straight onto clean glass without a heated bed — hence the 25 °C floor. The genuine outlier against the rest of the family is cooling: Fillamentum specifies 70-100 % part cooling, where tpu-95a runs 0-50 % and the soft grades near zero; the harder polymer tolerates the cooling without the layer bond collapsing, and 98A's whole selling point is print quality at speed. Speed 30-50 mm/s is the fastest of the Shore A grades. Not abrasive — standard brass nozzle."
+  },
+  "feeding": {
+    "drive_system": "direct-drive-recommended",
+    "ams_compatible": "no",
+    "feeding_assistant_recommended": false,
+    "notes": "The easiest-feeding grade on the Shore A scale: hard enough that a short, well-constrained Bowden path works in practice rather than merely limping, which is one notch better than tpu-95a's already-relaxed position and the reason ease_of_print reaches 6 here. Direct drive is still recorded as recommended because it is still an A-scale elastomer and buckling under compressive load remains the failure mode on a long path. AMS is a firm 'no' and this is the key thing to know about the grade: Bambu's TPU printing guide lists only the D-scale grades (77D, 55D-class) as AMS-compatible and explicitly warns that softer TPU bends inside the AMS and causes feeding failures, with 98A on the excluded side of that line alongside 95A, 90A and 85A. Use an external spool holder with a sealed, desiccated box. No spool-side feeding assistant is needed at this durometer."
+  },
+  "drying": {
+    "required_before_use": "always",
+    "temp_c": {
+      "min": 65,
+      "max": 80,
+      "recommended": 70
+    },
+    "time_hours": {
+      "min": 6,
+      "max": 12,
+      "recommended": 8
+    },
+    "methods": [
+      "dedicated filament dryer at 70 °C for 8 h",
+      "hot-air or vacuum oven at 70 °C",
+      "heated-bed method at 80-90 °C for 12 h",
+      "print directly from a drybox with desiccant"
+    ],
+    "dryness_validation": "No popping or crackling at the nozzle, no foamy or bubbly extrudate, and no rise in stringing on a retraction test — the stringing check is at its most reliable at this hardness, more so than at 95A and far more than on the soft grades.",
+    "notes": "No 98A-specific drying spec was published by either reference brand, so the general TPU regime is carried across from the base entry and tpu-95a (unverified for this grade). That is defensible because TPU drying is set by urethane chemistry rather than by durometer, and no source suggests hardness shifts the schedule — only the tolerance for skipping it, which improves with hardness."
+  },
+  "storage": {
+    "recommendations": "Sealed with desiccant under 20 % RH. The most forgiving Shore A grade for open-air exposure, but a damp spool still prints with popping and rough surfaces, so keep the drybox habit — and note that the AMS exclusion means this filament lives on an external spool holder, where a sealed box is the only protection it gets.",
+    "max_humidity_pct": 20,
+    "hygroscopy": "high"
+  },
+  "price": {
+    "usd_per_kg_low": 16,
+    "usd_per_kg_high": 58,
+    "notes": "The widest brand spread in the TPU family: CHCKX sells 98A at roughly $15.99/kg on Amazon, while Fillamentum Flexfill 98A runs about €29.17 per 500 g, i.e. roughly €58/kg — a 3-4x gap at the same nominal durometer, consistent with CHCKX's general position as a budget Amazon-first label. Cheaper at the bottom than tpu-95a because hard grades extrude more easily; more expensive at the top because Flexfill is premium branded stock."
+  },
+  "use_cases": {
+    "recommended": [
+      "tough wheels, castors and rollers",
+      "impact-resistant housings and semi-rigid protective parts",
+      "phone-case-adjacent parts needing more stiffness than 95A but some cushioning",
+      "abrasion-exposed mechanical parts",
+      "flexible parts that need to print fast and clean on a Bowden machine",
+      "the bridge case between flexible TPU and rigid engineering plastics"
+    ],
+    "not_recommended": [
+      "AMS or other material-station slots — excluded by Bambu's own hardness cutoff",
+      "genuinely rubbery, squishy or high-stretch parts (use 85A or 60A)",
+      "seals and gaskets needing compression recovery",
+      "near-rigid or semi-structural parts (use tpu-68d or tpu-72d)",
+      "tight-tolerance press fits",
+      "high-temperature service"
+    ]
+  },
+  "suitability": {
+    "food_contact": "no",
+    "load_bearing": "light",
+    "high_temperature": "no",
+    "outdoor": "limited"
+  },
+  "properties": {
+    "shore_hardness": "98A",
+    "density_g_cm3": 1.2,
+    "grams_per_100cm3": 120,
+    "cm3_per_100g": 83.3,
+    "glass_transition_c": -16,
+    "max_service_temp_c": 75,
+    "tensile_strength_mpa": {
+      "min": 50,
+      "max": 53.7,
+      "recommended": 52
+    },
+    "notes": "One of the better-documented grades in the family, with two independent datasheets. BCN3D TPU 98A: tensile strength 50 MPa, elongation at break 450 %, tensile modulus 150 MPa, density 1.16 g/cm³, melting point ~225 °C, Tg -16 °C, Vicat softening 138 °C. Fillamentum Flexfill 98A: tensile strength 53.7 MPa, elongation at break 318 %, density 1.23 g/cm³. Density is recorded as the 1.20 g/cm³ midpoint of those two figures, with the derived 120 g/100 cm³ and 83.3 cm³/100 g following from it; the 1.16-1.23 spread is ordinary brand variance at one nominal durometer and straddles the family's 1.22. Tensile is the highest recorded for any TPU grade in this catalog — above tpu-95a's 25-49 MPa band and far above tpu-68d's 22.4 MPa — while elongation of 318-450 % is the lowest of the Shore A grades against 95A's 550-580 % and 60A's ~950 %, which is the stiffness-for-stretch trade stated as cleanly as the family ever states it. Tg -16 °C is BCN3D's measured figure and sits above the family's -25 °C default, consistent with the higher hard-segment ratio. Max service temperature of 75 °C is an unverified estimate placed between tpu-95a's 72 °C and tpu-60d's 80 °C; the 138 °C Vicat softening figure is a short-term indentation test, not a service rating, and should not be read as one."
+  },
+  "scores": {
+    "ease_of_print": 6,
+    "dimensional_stability": 5,
+    "warp_tendency": 1,
+    "layer_adhesion": 4,
+    "compression_strength": 4,
+    "temperature_tolerance": 5,
+    "uv_tolerance": 4,
+    "weather_tolerance": 4,
+    "water_tolerance": 6
+  },
+  "compatibility": {
+    "bonds_with": [
+      "lw-tpu",
+      "tpe",
+      "tpu",
+      "tpu-60a",
+      "tpu-60d",
+      "tpu-68d",
+      "tpu-72d",
+      "tpu-85a",
+      "tpu-90a",
+      "tpu-95a",
+      "tpu-98a",
+      "tpu-gf"
+    ],
+    "support_materials": [
+      "pla"
+    ],
+    "usable_as_support_for": [],
+    "notes": "Welds to base TPU and every sibling grade; the common multi-durometer pattern is a 98A structural body with 85A or 60A soft zones, and the hardness step from 98A to a soft A-grade concentrates strain at the boundary less severely than tpu-60d's D-to-A transition does. Rigid-material bonding is unchanged from the base entry: PLA and PETG joints rely on mechanical interlock, with PETG the more reliable of the two, and there is no useful weld to ABS, ASA, PC or PA. PLA is the practical breakaway support because it releases cleanly and survives this grade's 220-245 °C window; PVA and HIPS are not documented as reliable TPU interfaces. Note that the sibling entries were written before this id existed, so their bonds_with lists do not yet name tpu-98a — the relationship is symmetric in fact and should be backfilled."
+  },
+  "plate_recommendations": [
+    {
+      "plate_id": "pei-textured",
+      "rating": "recommended",
+      "notes": "The default for this grade, working from room temperature to a 60 °C bed. Over-adhesion rather than lifting is still the family failure mode, but 98A is the firmest A-grade and releases without tearing more reliably than 95A does — the same reasoning that rates textured PEI 'recommended' rather than 'usable' from 95A upward."
+    },
+    {
+      "plate_id": "pp-sheet",
+      "rating": "recommended",
+      "notes": "Inferred from tpu-95a and the base entry: the hardest A-grade is the easiest case for a release-oriented surface (unverified)."
+    },
+    {
+      "plate_id": "g10-garolite",
+      "rating": "recommended",
+      "notes": "Inferred from tpu-95a: firmer TPU grades release cleanly from garolite, which is the main reason flexible printers pick G10 over PEI (unverified)."
+    },
+    {
+      "plate_id": "carbon-fiber-plate",
+      "rating": "recommended",
+      "notes": "Inferred from tpu-95a: firmer grades release readily by flexing the steel backing (unverified)."
+    },
+    {
+      "plate_id": "pei-smooth",
+      "rating": "usable",
+      "notes": "Inferred from tpu-95a: the hardest A-grade and the most survivable on smooth PEI, but still use a separator (unverified)."
+    },
+    {
+      "plate_id": "glass-borosilicate",
+      "rating": "usable",
+      "notes": "Vendors note this grade can be printed straight onto clean glass, which is unusual for a TPU — but bare glass is unheated-adhesion-dependent and a rigid plate cannot flex to release, so this is recorded 'usable' rather than 'recommended'."
+    },
+    {
+      "plate_id": "pei-satin",
+      "rating": "usable",
+      "notes": "Inferred from tpu-95a: hardest common A-grade; still follow the glue-stick guidance (unverified)."
+    },
+    {
+      "plate_id": "pei-patterned",
+      "rating": "usable",
+      "notes": "Inferred from tpu-95a: the most predictable of the TPUs here (unverified)."
+    },
+    {
+      "plate_id": "buildtak-polymer",
+      "rating": "usable",
+      "notes": "A documented divergence from tpu-95a, which rates this 'avoid': Fillamentum recommends adhesion aids including BuildTak for Flexfill 98A specifically, against the plate vendor's blanket TPU fusion warning. Recorded 'usable' on the strength of the filament vendor's own guidance, with the fusion risk still real — test on a small part and do not leave a large flat part bonded overnight."
+    },
+    {
+      "plate_id": "supertack",
+      "rating": "avoid",
+      "notes": "Inferred from tpu-95a: the hardest common grade and the one most often attempted anyway, but still covered by the blanket TPU warning on high-tack coatings (unverified)."
+    },
+    {
+      "plate_id": "pc-plate",
+      "rating": "avoid",
+      "notes": "Inferred from tpu-95a: firmer grades are no exception; use textured PEI, G10 or a carbon plate for flexibles (unverified)."
+    }
+  ],
+  "emissions": {
+    "voc_level": "low",
+    "particulate_level": "low",
+    "primary_emissions": [
+      "ultrafine particles",
+      "isocyanate residues (unverified)",
+      "urethane decomposition byproducts (unverified)"
+    ],
+    "ventilation": "recommended",
+    "notes": "Standard TPU-family profile carried from the base entry — moderate ultrafine particles, some VOCs including possible isocyanates, no styrene. No source differentiates TPU emissions by Shore grade and no 98A-specific chamber test was found (unverified). The one grade-relevant point is favourable: at 220-245 °C this window stays below the ~250 °C region where urethane decomposition becomes more likely, unlike tpu-60d's 260 °C ceiling, so this is one of the cooler-running grades in the family."
+  },
+  "trade_names": [
+    {
+      "manufacturer": "BCN3D",
+      "product": "TPU 98A",
+      "notes": "The other reference datasheet: tensile 50 MPa, elongation 450 %, tensile modulus 150 MPa, density 1.16 g/cm³, melting ~225 °C, Tg -16 °C, Vicat 138 °C, nozzle 235 ± 10 °C. Manufacturer not currently in the catalog, so a display name is used."
+    },
+    {
+      "manufacturer": "PRILINE",
+      "product": "TPU 98A",
+      "notes": "Shore 98A flexible filament, 1 kg spools. Manufacturer not currently in the catalog, so a display name is used; specs not independently verified."
+    },
+    {
+      "manufacturer": "chckx3d",
+      "product": "TPU Filament (Shore 98A)",
+      "notes": "Shore 98A from about $15.99/kg; listed 210-230 °C nozzle, unheated bed. CONFLICT: currently also listed under tpu-95a as '98A, firm end of the 95A-class grade band' — that mapping predates this entry and should be moved here, not duplicated."
+    },
+    {
+      "manufacturer": "filamentive",
+      "product": "TPU 98A",
+      "notes": "Shore 98A, elongation to 500 %. CONFLICT: currently also listed under tpu-95a with a 'SPEC DELTA: actual Shore 98A' note; should move here."
+    },
+    {
+      "manufacturer": "fillamentum",
+      "product": "Flexfill TPU 98A",
+      "notes": "A reference product for this entry: Shore 98A, tensile 53.7 MPa, elongation 318 %, density 1.23 g/cm³, nozzle 220-240 °C, part cooling 70-100 %, adhesion aids (Magigoo, BuildTak) recommended. Roughly €29.17 per 500 g. Previously mapped to the base tpu id with a 'no tpu-98a grade exists' note — retarget here."
+    },
+    {
+      "manufacturer": "jayo",
+      "product": "TPU Silk (98A)",
+      "notes": "Shore 98A — harder than tpu-95a and above the base 85A-95A band, so no shore-specific id fits [Relocated from tpu — 98A grade entry now exists; 2026-08-01]"
+    },
+    {
+      "manufacturer": "spectrum-filaments",
+      "product": "S-Flex 98A",
+      "notes": "Shore 98A, elongation up to 510 % — higher than either reference datasheet, so brand variance at this durometer is real. CONFLICT: currently also listed under tpu-95a with a 'SPEC DELTA: actual Shore 98A' note; should move here."
+    },
+    {
+      "manufacturer": "yoline-lab",
+      "product": "TPU 98A",
+      "notes": "No tpu-98a id; 95A is a materially different hardness, so generic tpu used (see gaps). [Relocated from tpu — 98A grade entry now exists; 2026-08-01]"
+    }
+  ],
+  "safety_notes": "Urethane chemistry can in principle release isocyanate residues at print temperature, but this grade's 220-245 °C window stays clear of the ~250 °C decomposition concern that applies to the hotter-running TPU grades. Not food-contact certified as printed — verify per SKU. No hardened nozzle, no all-metal-hotend requirement and no fibre dust.",
+  "additional_notes": "Two things separate this grade from its neighbours. First, hardness parity: 98A is roughly 58-60D, so it overlaps tpu-60d rather than sitting between 95A and the D-scale — the scores are placed accordingly (ease 6 matching 60D, between 95A's 5 and 68D's 7), and if you are choosing between a 98A and a 60D spool the practical difference is brand and price, not durometer. Second, the AMS line: it is tempting to assume that the hardest A-grade must be AMS-safe, and Bambu's guide says otherwise in as many words. The material-station cutoff sits at the D-scale, so 98A is an external-spool material even though it feeds a Bowden extruder happily. Anisotropy remains the design constraint inherited from the base entry — Z strength is roughly a quarter of XY across TPU — so orient bends to load layers in-plane.",
+  "provenance": {
+    "sources": [
+      "https://wiki.bambulab.com/en/knowledge-sharing/tpu-printing-guide",
+      "https://spoolhound.com/tpu-hardness-guide",
+      "https://bcn3d.com/wp-content/uploads/2023/01/BCN3D-Filaments-Technical-Data-Sheet-TPU-98A.pdf",
+      "https://filament2print.com/en/flexible-tpe-tpu/1140-flexfill-98a-tpu.html",
+      "https://www.amazon.com/CHCKX-Filament-Resistant-%EF%BC%8CDimensional-Printers/dp/B0GC5DT9X4",
+      "https://wiki.bambulab.com/en/general/troubleshooting/tpu-feed-assist-module"
+    ],
+    "last_verified": "2026-08-01",
+    "confidence": "medium",
+    "conflicts": "The two available datasheets disagree materially on elongation at break — BCN3D 450 % against Fillamentum 318 % — and on density (1.16 vs 1.23 g/cm³), which is ordinary formulation variance at one nominal durometer but means neither figure should be quoted as 'the' 98A value; density is recorded as the 1.20 midpoint and elongation is described in prose as a 318-450 % band rather than pinned. Spectrum's S-Flex 98A claims elongation up to 510 %, wider still. Nozzle range disagrees at the bottom: CHCKX lists 210-230 °C against the 220-245 °C recorded from the two datasheets. Drying, storage, emissions and most plate ratings are carried from tpu-95a and the base entry with no 98A-specific source. Max service temperature is an unverified estimate; the 138 °C Vicat figure is not a service rating. THREE TRADE-NAME COLLISIONS: CHCKX 'TPU Filament (Shore 98A)', Spectrum 'S-Flex 98A' and Filamentive 'TPU 98A' are currently mapped to tpu-95a with SPEC DELTA notes because no 98A id existed; they belong here and the tpu-95a entry needs a matching removal in a merge pass. Fillamentum Flexfill 98A and Yoline TPU 98A are likewise mapped to the base tpu id with 'no tpu-98a grade exists' notes. Score placement: ease_of_print 6 ties tpu-60d rather than exceeding it, on the hardness-parity argument (98A ≈ 58-60D); the ladder 60A 2, 85A 3, 90A 4, 95A 5, 98A 6, 60D 6, 68D 7, 72D 7 is non-decreasing with ties where durometers overlap."
+  }
+}

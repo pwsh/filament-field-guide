@@ -170,6 +170,11 @@
       "plate_id": "pei-satin",
       "rating": "avoid",
       "notes": "As textured PEI. Inferred from base pp; no PE-specific source."
+    },
+    {
+      "plate_id": "pex-sheet",
+      "rating": "usable",
+      "notes": "Backfilled from plate entry (reciprocity)"
     }
   ],
   "emissions": {
@@ -188,12 +193,13 @@
       "https://www.3dsourced.com/3d-printer-materials/hdpe-3d-printing/",
       "https://filaments.ca/blogs/3d-printing/a-complete-guide-to-hdpe-filaments",
       "https://spectrumfilaments.com/wp-content/uploads/2025/11/en_tds_spectrum_hdpe.pdf",
+      "https://3d.nice-cdn.com/upload/file/EN_TDS_Spectrum_HDPE.pdf",
       "https://www.3devo.com/blog/versatility-hdpe-filament-3d-printing",
       "http://k-mac-plastics.com/data-sheets/hdpe.htm"
     ],
     "last_verified": "2026-08-01",
     "confidence": "low",
-    "conflicts": "Density is the headline conflict and is unresolved: Spectrum's HDPE TDS states 1.1 g/cm³ while bulk-HDPE literature (k-mac) gives 0.948 g/cm³ and industrial HDPE runs 0.941-0.965. The recorded 0.95 follows the resin literature on the reasoning that Spectrum's figure reflects its 'Low Warp technology' additive package, but a second filament-specific TDS is needed before either number is trusted — this matters because density drives the volume-per-spool figures. Hardened nozzle is a single-source claim (Spectrum, 'abrasion resistance') that no other source corroborates and that is unusual for an unfilled polymer; recorded true to follow the only TDS available, but treat as brand-specific. Nozzle temperature spans 90 °C across sources (200-290 °C) and bed 50 °C (80-130 °C) with no consensus. Shrinkage percentage, Tg, HDT and any print-tested tensile figure beyond Spectrum's single 29 MPa are unpublished. Tensile is split between a filament figure (29 MPa, 18 % elongation) and bulk-resin figures (15-45 MPa, 500-1000 % elongation) that are not achievable in an FDM part. AMS compatibility is omitted rather than guessed — no statement exists in any direction. Drying protocol, emissions levels and every plate rating are extrapolated from the base pp entry rather than sourced for PE. Price rests on one qualitative 'under $30/kg' remark. Food-contact suitability is a brand claim (Spectrum, FDA-approved raw material), not a property of PE filament generally."
+    "conflicts": "Density is the headline conflict and is unresolved: Spectrum's HDPE TDS states 1.1 g/cm³ while bulk-HDPE literature (k-mac) gives 0.948 g/cm³ and industrial HDPE runs 0.941-0.965. The recorded 0.95 follows the resin literature on the reasoning that Spectrum's figure reflects its 'Low Warp technology' additive package, but a second filament-specific TDS is needed before either number is trusted — this matters because density drives the volume-per-spool figures. Hardened nozzle is a single-source claim (Spectrum, 'abrasion resistance') that no other source corroborates and that is unusual for an unfilled polymer; recorded true to follow the only TDS available, but treat as brand-specific. Nozzle temperature spans 90 °C across sources (200-290 °C) and bed 50 °C (80-130 °C) with no consensus. Shrinkage percentage, Tg, HDT and any print-tested tensile figure beyond Spectrum's single 29 MPa are unpublished. Tensile is split between a filament figure (29 MPa, 18 % elongation) and bulk-resin figures (15-45 MPa, 500-1000 % elongation) that are not achievable in an FDM part. AMS compatibility is omitted rather than guessed — no statement exists in any direction. Drying protocol, emissions levels and every plate rating are extrapolated from the base pp entry rather than sourced for PE. Price rests on one qualitative 'under $30/kg' remark. Food-contact suitability is a brand claim (Spectrum, FDA-approved raw material), not a property of PE filament generally. Re-verification 2026-08-01 — density conflict STILL OPEN, values unchanged: Spectrum's 1.1 g/cm³ was re-confirmed from the live TDS and from an identical third-party CDN mirror (3d.nice-cdn.com), so it is what Spectrum publishes and not a scrape error. The same TDS lists Young's modulus 3.5 GPa and flexural modulus 3.2 GPa, roughly 2-3x typical unfilled HDPE resin (~0.8-1.5 GPa); elevated density and elevated modulus together are the signature of a filled or compounded HDPE (mineral/talc, for instance) rather than neat resin, even though the datasheet discloses no filler and describes only proprietary 'Low Warp technology'. No competing brand publishes an HDPE filament datasheet — Spectrum appears to be the only mainstream producer of an HDPE-branded FFF filament — so there is no same-material independent cross-check available, and a Prusa forum thread on Spectrum HDPE discusses shrinkage only, not composition. The recorded 0.95 therefore stays as the bulk-HDPE figure for generic PE, with 1.1 retained as the correct number for a Spectrum spool specifically; treat the two as describing different compounds rather than as a disagreement about one. Confidence stays low."
   },
   "trade_names": [
     {

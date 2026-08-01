@@ -133,6 +133,8 @@
     "bonds_with": [
       "cpe",
       "pctg",
+      "pctg-cf",
+      "pctg-gf",
       "pet",
       "petg",
       "petg-cf",
@@ -215,14 +217,14 @@
   },
   "trade_names": [
     {
-      "manufacturer": "ultimaker",
-      "product": "CPE / CPE+",
-      "notes": "Two tiers; CPE+ is the hotter and tougher, TDS v5.00 measuring Tg 105.9 °C and HDT 100 °C @0.455 MPa. Ships on NFC-tagged UltiMaker spools."
-    },
-    {
       "manufacturer": "fillamentum",
       "product": "CPE HG100",
       "notes": "Marketed as 'modified PETG'/Advanced PETG: Tg 90 °C, HDT 80 °C, notched Izod no-break, clear grades at 90 % transmittance. A CF25 carbon-filled variant exists and is not covered by this entry."
+    },
+    {
+      "manufacturer": "ultimaker",
+      "product": "CPE / CPE+",
+      "notes": "Two tiers; CPE+ is the hotter and tougher, TDS v5.00 measuring Tg 105.9 °C and HDT 100 °C @0.455 MPa. Ships on NFC-tagged UltiMaker spools."
     }
   ]
 }

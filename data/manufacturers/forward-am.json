@@ -26,7 +26,7 @@
   "endpoints": {
     "website": "https://www.ultrafusefff.com/",
     "store": "https://i-am-marketplace.com/",
-    "docs": "https://3dgbire.com/pages/forward-am"
+    "docs": "https://forward-am.com/material-portfolio/ultrafuse-filaments-for-fused-filaments-fabrication-fff/"
   },
   "product_lines": [
     {
@@ -176,6 +176,6 @@
     ],
     "last_verified": "2026-07-31",
     "confidence": "medium",
-    "conflicts": "Corporate structure is in flux and only partly resolved. The BASF carve-out is confirmed but the independent entity's HQ and manufacturing sites are not stated in any source found — Germany is carried forward from the BASF era for both fields. The iAM Marketplace consolidation (iSQUARED + Forward AM + AM Marketplace GmbH, sharing a storefront with the former Essentium business) is observed via redirect but the legal relationships behind it are unverified. Metal-filament premium pricing is industry knowledge, not confirmed with $/kg figures."
+    "conflicts": "Corporate structure is in flux and only partly resolved. The BASF carve-out is confirmed but the independent entity's HQ and manufacturing sites are not stated in any source found — Germany is carried forward from the BASF era for both fields. The iAM Marketplace consolidation (iSQUARED + Forward AM + AM Marketplace GmbH, sharing a storefront with the former Essentium business) is observed via redirect but the legal relationships behind it are unverified. Metal-filament premium pricing is industry knowledge, not confirmed with $/kg figures. Endpoint corrected 2026-08-01: docs https://3dgbire.com/pages/forward-am -> https://forward-am.com/material-portfolio/ultrafuse-filaments-for-fused-filaments-fabrication-fff/ (old URL was a third-party UK reseller page, not Forward AM's own material documentation)."
   }
 }

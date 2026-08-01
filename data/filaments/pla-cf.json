@@ -215,6 +215,11 @@
       "plate_id": "pei-patterned",
       "rating": "usable",
       "notes": "Backfilled from plate entry (Phase E reciprocity): Adhesion is fine, but the opaque fibre-filled surface will not show the pattern."
+    },
+    {
+      "plate_id": "pex-sheet",
+      "rating": "usable",
+      "notes": "Backfilled from plate entry (reciprocity)"
     }
   ],
   "emissions": {

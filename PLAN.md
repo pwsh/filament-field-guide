@@ -140,6 +140,15 @@ every property sourced from the glossary.
   finds preserved in conflicts: eSUN PETG+ measures 15x LESS ductile than their base
   PETG (contradicts 'high toughness' marketing); Spectrum HDPE density outlier; SBS
   ships with no published shore hardness anywhere.
+- 2026-08-01 — **Final research sweep complete**: pctg-cf, pctg-gf, pbat, tpu-98a,
+  tpu-72d, cleaning entries + pex-sheet plate → 90 filaments / 71 manufacturers /
+  14 plates. Re-verification pass applied to 7 flagged anomalies (eSUN PETG+ TDS
+  measurements confirmed as the anomaly; PBT units error corroborated and noted;
+  others resolved or documented open). Endpoint link check completed via WebFetch:
+  66/71 OK, 5 corrected, voxelab flagged (expired cert, correct domain). Tyson T-95
+  and DarkMoon LUX/BIQU SSS coatings remain unidentifiable from public information —
+  documented as such. All planned research phases (A-F initial pass) are now COMPLETE;
+  the catalog enters maintenance mode (Phase F refresh cadence).
 ## Changelog
 
 - 2026-08-01 — **Tranche 2 + plate vendor cross-walk complete** (owner requests):

@@ -355,3 +355,20 @@ folds into tpu-95a-class), cleaning filament (recurring non-print category).
 Data-quality follow-ups: eSUN PETG+ ductility contradiction (15x less ductile than
 their base PETG — needs independent testing), Spectrum HDPE density outlier, SBS shore
 hardness unpublished, PBT single-source with suspected units error.
+
+
+## Final sweep close-out — 2026-08-01
+
+Added: pctg-cf, pctg-gf, pbat (existence caveat: no verified pure-PBAT retail spool —
+entry documents blend-study data only), tpu-98a, tpu-72d, cleaning (purge consumable),
+pex-sheet plate (Wham Bam Smooth PEX). 7 trade names migrated to the new TPU grade
+entries. Data re-verification applied to petg-plus, pe, sbs, pbt, asa-gf, pc-gf,
+chckx3d; endpoint corrections applied to 5 manufacturers (jayo, iemai-3d, forward-am,
+kimya, addnorth); voxelab left flagged (expired TLS cert on correct domain, transient).
+
+REMAINING (unresolvable with current public information):
+- Tyson T-95 coating identity — vendor discloses nothing; no teardowns found
+- DarkMoon LUX / BIQU SSS coating identity — same
+- SBS shore hardness — unpublished across the whole category
+- PBAT retail product verification (CC3D names PBAT but ships PBT)
+These stay open until vendors publish or the community tears them down.

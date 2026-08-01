@@ -221,6 +221,11 @@
       "plate_id": "pei-patterned",
       "rating": "avoid",
       "notes": "Backfilled from plate entry (Phase E reciprocity): PEO/PEY-class coatings are typically rated only to about 120 degC and are not intended for high-temp engineering filaments; sustained ABS bed temps degrade the pattern."
+    },
+    {
+      "plate_id": "pex-sheet",
+      "rating": "usable",
+      "notes": "Backfilled from plate entry (reciprocity)"
     }
   ],
   "emissions": {

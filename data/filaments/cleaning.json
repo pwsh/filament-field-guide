@@ -1,0 +1,100 @@
+{
+  "id": "cleaning",
+  "name": "Cleaning / Purge Filament (hot-end maintenance consumable)",
+  "aliases": [
+    "Cleaning filament",
+    "Purge filament",
+    "Purging compound",
+    "Nozzle cleaning filament",
+    "eSUN Clean",
+    "eClean",
+    "3D Clean",
+    "Dyna-Purge"
+  ],
+  "status": "researched",
+  "base_type": null,
+  "variation_kind": null,
+  "polymer_class": "composite-other",
+  "chemical_makeup": "Not disclosed by any manufacturer. Product pages describe it only functionally — 3D-Fuel calls it a 'non-chemical, non-abrasive thermoplastic purging/cleaning compound' — which places it as a proprietary thermoplastic blend engineered for melt viscosity and tack rather than for mechanical properties. It works by mechanical displacement: the melt grips carbonised residue, degraded polymer and leftover pigment and drags them out of the flow path. It is not a solvent, not chemically reactive, and not abrasive. Filed under composite-other because its composition is undisclosed and it belongs to no polymer family this catalog tracks.",
+  "summary": "NOT A PRINT MATERIAL. Cleaning filament is a maintenance consumable extruded through a hot end to scrub out residue between colours and material families — it is never used to build a part, never touches a build plate, and has no mechanical properties worth recording. Most of this catalog's fields (mechanical properties, scores, plate behaviour, load and outdoor suitability) genuinely do not apply and are deliberately absent from this entry. The only meaningful fields are what it is, what temperature to purge at, how to run it, what it costs, and — importantly — what it cannot fix: it is a preventive transition aid, not a clog-clearing repair.",
+  "printing": {
+    "nozzle_temp_c": {
+      "min": 160,
+      "max": 300,
+      "recommended": 230
+    },
+    "enclosure_recommended": false,
+    "heated_chamber_required": false,
+    "requires_hardened_nozzle": false,
+    "notes": "Read this range as a purge window, not a print profile. eSUN rates eClean across 160-300 °C deliberately, so one product can bridge cleaning between low-temperature materials (PLA) and hot, abrasive ones (carbon-filled nylon); 3D-Fuel recommends around 230 °C for 3D Clean and says to go higher as the material being purged demands. THE RULE: purge at the temperature of the dirtiest material being displaced, or at the higher of the two materials in a transition, and never above the hot end's own rated ceiling. Procedure: at the end of a print, load the cleaning filament and extrude until the strand runs clear of the previous colour and free of specks, then load the next material and purge again until its own colour runs true. NO BED TEMPERATURE, SPEED, COOLING OR ENCLOSURE VALUES ARE RECORDED — nothing is being printed onto a plate, so those fields have no meaning here rather than being unknown."
+  },
+  "feeding": {
+    "drive_system": "any",
+    "ams_compatible": "no",
+    "feeding_assistant_recommended": false,
+    "notes": "Rigid and non-abrasive, so any extruder pushes it; in practice it is hand-fed or run as a short segment rather than loaded as a spool job. 3D-Fuel sells it as 8-inch sticks (50-packs in 1.75 mm) alongside small 25 g and 100 g coils in 1.75 mm and 2.85 mm, which is the giveaway that this is not a filament you leave loaded. AMS is recorded 'no' for a purpose reason rather than a mechanical one: cleaning filament is run manually at the moment of a material transition, an automatic material station has no concept of a purge slot, and dedicating one to a consumable that is measured in grams is not how any of these systems work. Feed it from the extruder inlet by hand."
+  },
+  "price": {
+    "notes": "Sold by the stick or the small coil rather than by the kilogram, so a $/kg figure would be misleading and none is recorded. 3D-Fuel 3D Clean runs about $18.00 per unit, where a unit is a 25 g coil, a 100 g coil or a 50-stick pack depending on format. eSUN's eClean price was not confirmed — the product page showed it discontinued or out of stock at time of research (unverified). In practical terms the cost per purge is small: a transition consumes a few grams."
+  },
+  "use_cases": {
+    "recommended": [
+      "colour changes, especially light after dark or dark after light",
+      "transitions between chemically or thermally different materials (PLA to nylon-CF, PETG to ABS)",
+      "flushing the flow path after any filled or abrasive filament (CF, GF, wood-fill, metal-fill)",
+      "routine preventive maintenance to reduce clog risk when switching material families",
+      "clearing residual pigment before a print where colour fidelity matters"
+    ],
+    "not_recommended": [
+      "printing parts of any kind — this is not a build material",
+      "clearing an actual clog: it does not fix a partial or full blockage from carbonised buildup, debris or a failed heat break (do a cold pull, or atomise/replace the nozzle)",
+      "restoring a nozzle worn oversize by abrasive filament — that is permanent damage",
+      "fixing mechanical extruder faults such as a worn drive gear, grinding or under-extrusion",
+      "use above the hot end's rated temperature in pursuit of a stubborn residue"
+    ]
+  },
+  "compatibility": {
+    "bonds_with": [],
+    "support_materials": [],
+    "usable_as_support_for": [],
+    "notes": "All three lists are deliberately empty: this material is never co-printed, never welded to anything and never used as a support. Its relationship to other filaments is the opposite of bonding — it is designed to release and carry away residue rather than adhere to it. It is compatible with every material in the catalog in the only sense that matters, namely that it can be run through the same hot end at that material's temperature, provided the hot end is rated for it."
+  },
+  "emissions": {
+    "voc_level": "moderate",
+    "particulate_level": "moderate",
+    "primary_emissions": [
+      "thermally degraded residue of whatever material is being purged",
+      "ultrafine particles",
+      "undisclosed proprietary blend decomposition products (unverified)"
+    ],
+    "ventilation": "recommended",
+    "notes": "No emissions testing of any cleaning filament was located, and because the composition is undisclosed there is no polymer family to reason from (unverified). The levels recorded are precautionary and reflect the use case rather than the material: purging deliberately expels carbonised and thermally degraded polymer, and it is normally done at the top of a material's temperature window — which is exactly the condition under which emissions from the material being displaced are highest. Treat a purge as at least as emissive as printing whatever is being purged out, ventilate accordingly, and do not stand over the nozzle while the dark residue comes through."
+  },
+  "trade_names": [
+    {
+      "manufacturer": "esun",
+      "product": "Clean / eClean (Cleaning Filament)",
+      "notes": "Rated 160-300 °C extruder temperature, deliberately wide so one product covers PLA-tier through carbon-filled-nylon-tier cleaning. eSUN's instruction is to run it after printing to clean the nozzle before switching colour or material type. VERIFY AVAILABILITY: the product page showed discontinued or out of stock at time of research. The eSUN manufacturer entry already lists this product with an empty filament_ids array and the note 'purge/cleaning compound, not a print material' — it can now be mapped here."
+    },
+    {
+      "manufacturer": "3d-fuel",
+      "product": "3D Clean (Dyna-Purge)",
+      "notes": "Described by the vendor as a non-chemical, non-abrasive thermoplastic purging compound; recommended purge temperature around 230 °C, higher as the purged material requires. Sold as 8-inch sticks (50-pack, 1.75 mm) and as 25 g and 100 g coils in 1.75 mm and 2.85 mm, roughly $18.00 per unit. '3D-Clean' is one of 3D-Fuel's registered brands. The 3D-Fuel manufacturer entry lists this product with an empty filament_ids array and the note that no cleaning-filament id exists — it can now be mapped here."
+    }
+  ],
+  "safety_notes": "The purge stream is hot, thin and unpredictable in direction, and it carries thermally degraded material that can spit — wear eye protection and keep hands clear of the nozzle. Never exceed the hot end's rated temperature chasing a stubborn residue: a PTFE-lined hot end degrades and releases fluoropolymer decomposition products above roughly 250 °C, which is inside this material's nominal 160-300 °C range, so the high end of that range belongs to all-metal hot ends only. Ventilate as for the dirtiest material being displaced. Purge waste is contaminated mixed plastic and is not recyclable with clean scrap.",
+  "additional_notes": "WHAT THIS ENTRY DELIBERATELY OMITS, and why: no mechanical properties (it is not a structural material and no manufacturer publishes any), no scores (the rubrics measure part performance — layer adhesion, compression, UV, weather — none of which exist for a material that never becomes a part), no plate recommendations or bed temperature (it never touches a build plate), no drying block (no manufacturer specifies pre-drying; treat as unknown rather than unnecessary), no storage block, and no suitability block (load-bearing, outdoor and food-contact are meaningless for a consumable). Blank fields here mean not-applicable, not not-yet-researched. On what it actually does: the action is mechanical displacement, not chemical dissolution — the melt grips residue and carries it out. That distinction is the source of the most common disappointment with these products, namely the expectation that they clear clogs. They do not. A genuine blockage needs a cold pull, a nozzle-atomising step or a nozzle replacement; cleaning filament is what you run so you need those less often. Composition is undisclosed across the category, which is why polymer_class is composite-other and why this entry makes no chemistry claims beyond what vendors state.",
+  "provenance": {
+    "sources": [
+      "https://www.esun3d.com/eclean-product/",
+      "https://www.3dfuel.com/products/3d-clean-1-75mm",
+      "https://buy.lulzbot.com/products/3d-fuel-dyna-purge-cleaning-filament",
+      "https://www.amazon.com/eSUN-Cleaning-Filament-Extruders-Clogging/dp/B08RSCP95X",
+      "https://3dfilamentinsider.com/how-to-use-esun-cleaning-filament/",
+      "https://patents.google.com/patent/US10722927"
+    ],
+    "last_verified": "2026-08-01",
+    "confidence": "medium",
+    "conflicts": "Composition is undisclosed by every manufacturer, so chemical_makeup is a functional description rather than a chemistry statement and no polymer family can be assigned — hence composite-other. The two reference products state very different temperatures (eSUN 160-300 °C as a rated range, 3D-Fuel ~230 °C as a recommendation), which is not a contradiction: one is a capability envelope and the other a starting point, and the entry records the union with 3D-Fuel's figure as recommended. eSUN's eClean showed as discontinued or out of stock during research, so the category may be down to one widely available product in some markets (unverified). No emissions, drying or shelf-life data exists for any cleaning filament, and the emissions levels recorded are precautionary inferences from the purge use case rather than measurements. Confidence is 'medium' rather than 'low' because the things that matter for this entry — what it is for, how to run it, what temperature, what it costs, and what it cannot fix — are consistently documented across vendor pages, a patent and practitioner guides, even though the material's composition is not. This entry is intentionally sparse: absent fields are not-applicable rather than unresearched, and a completeness audit should not flag them as gaps."
+  }
+}

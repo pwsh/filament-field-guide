@@ -196,6 +196,11 @@
       "plate_id": "pei-patterned",
       "rating": "usable",
       "notes": "Backfilled from plate entry (Phase E reciprocity): Adheres normally, but matte pigment scatters light and largely cancels the holographic effect, defeating the point of the plate."
+    },
+    {
+      "plate_id": "pex-sheet",
+      "rating": "recommended",
+      "notes": "Backfilled from plate entry (reciprocity)"
     }
   ],
   "emissions": {

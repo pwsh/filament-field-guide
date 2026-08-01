@@ -19,7 +19,7 @@
   ],
   "endpoints": {
     "website": "https://www.kimya.fr/en/",
-    "store": "https://www.matterhackers.com/store/c/browse-by-filament-manufacturer",
+    "store": "https://www.matterhackers.com/store/c/kimya-3d-printing-filament-by-armor-group",
     "docs": "https://www.armor-group.com/en/"
   },
   "product_lines": [
@@ -156,6 +156,6 @@
     ],
     "last_verified": "2026-07-31",
     "confidence": "low",
-    "conflicts": "Corporate structure is genuinely unresolved: older sources and current distributor copy describe Kimya as an ARMOR Group brand, but ARMOR's own site division list (ARMOR-IIMAK, ARMOR Battery Films, ALTKIN) does not name Kimya — so Kimya may have been divested, renamed or restructured out of ARMOR. Could not be settled in this research session; flagged for follow-up. Secondary gaps: no Kimya-controlled source was reachable, so the product range beyond ABS-R, the manufacturing site and the official URL are all unverified."
+    "conflicts": "Corporate structure is genuinely unresolved: older sources and current distributor copy describe Kimya as an ARMOR Group brand, but ARMOR's own site division list (ARMOR-IIMAK, ARMOR Battery Films, ALTKIN) does not name Kimya — so Kimya may have been divested, renamed or restructured out of ARMOR. Could not be settled in this research session; flagged for follow-up. Secondary gaps: no Kimya-controlled source was reachable, so the product range beyond ABS-R, the manufacturing site and the official URL are all unverified. Endpoint corrected 2026-08-01: store https://www.matterhackers.com/store/c/browse-by-filament-manufacturer -> https://www.matterhackers.com/store/c/kimya-3d-printing-filament-by-armor-group (old URL was MatterHackers' generic all-brands directory, not a Kimya-specific listing)."
   }
 }

@@ -1,0 +1,221 @@
+{
+  "id": "pex-sheet",
+  "name": "PEX sheet (cross-linked polyethylene print surface)",
+  "aliases": [
+    "Wham Bam Smooth PEX",
+    "Wham Bam PEX Build Surface",
+    "Smooth PEX",
+    "PEX build surface",
+    "PEX print surface",
+    "Cross-linked polyethylene build surface",
+    "XLPE print sheet"
+  ],
+  "status": "researched",
+  "summary": "The rare aftermarket surface whose chemistry is genuinely different rather than a differently-finished PEI. PEX is cross-linked polyethylene — the same base polymer family as PEX plumbing tubing, formulated as a print surface — so it behaves like a polyolefin, not like an amorphous engineering thermoplastic. In practice it is a high-grip smooth sheet: parts pop off cleanly once fully cool, but PETG and ASA bond to it hard enough that a glue-stick barrier is a requirement rather than an optimisation, and prying either off bare is the documented way to destroy the sheet. Maintenance is unusual too — a ten-second pass with steel wool or a scrub pad between prints, then IPA on fresh paper towels, explicitly not microfibre. Wham Bam Systems is effectively the only vendor, and its claim that PEX has a higher melt point than PEI sits awkwardly against what cross-linked polyethylene is known to do thermally; treat the high-temperature end of this entry as the soft part.",
+  "surface_makeup": "Cross-linked polyethylene (PEX / XLPE) formed as a flexible sheet surface, mounted on a magnetic spring-steel base in Wham Bam's Flexible Build System or supplied as a standalone surface. Cross-linking is achieved industrially either by peroxide chemistry or by radiation; Wham Bam does not state which route its sheet uses. The vendor's own description is 'a specially formulated polymer with a higher melt point than PEI'. This is a base-chemistry difference rather than a coating variant: PEI sheets are amorphous polyetherimide, while PEX is a semi-crystalline polyolefin whose cross-links stop it flowing above its crystalline melt. The practical consequence is that PEX's grip comes from polyolefin surface chemistry plus a smooth high-contact-area finish, not from PEI's characteristic temperature-dependent tack.",
+  "texture": "smooth",
+  "manufacturers": [
+    "Wham Bam Systems"
+  ],
+  "filament_compatibility": [
+    {
+      "filament_id": "pla",
+      "rating": "recommended",
+      "bed_temp_c": { "min": 55, "max": 65 },
+      "adhesion_aid": "none",
+      "notes": "The core use case. No glue stick, no hairspray. Wham Bam's guidance is to start the first layer conservatively — roughly 215 degC nozzle rather than the top of the filament's rated 200-230 degC band — and raise it only if adhesion is short, because PEX rewards a light first layer rather than a squished one. Parts release when fully cool and lightly flexed."
+    },
+    {
+      "filament_id": "pla-plus",
+      "rating": "recommended",
+      "bed_temp_c": { "min": 55, "max": 65 },
+      "adhesion_aid": "none",
+      "notes": "As base PLA. No separate vendor characterisation (unverified)."
+    },
+    {
+      "filament_id": "pla-matte",
+      "rating": "recommended",
+      "bed_temp_c": { "min": 55, "max": 65 },
+      "adhesion_aid": "none",
+      "notes": "As base PLA. The smooth surface gives a glossy first layer that contrasts with the matte body of the part — a cosmetic consideration, not an adhesion one (unverified)."
+    },
+    {
+      "filament_id": "pla-silk",
+      "rating": "recommended",
+      "bed_temp_c": { "min": 55, "max": 65 },
+      "adhesion_aid": "none",
+      "notes": "As base PLA; the smooth face produces the high-gloss bottom that silk filaments are bought for (unverified)."
+    },
+    {
+      "filament_id": "pla-cf",
+      "rating": "usable-with-prep",
+      "bed_temp_c": { "min": 55, "max": 65 },
+      "adhesion_aid": "brim on small footprints",
+      "notes": "Not separately characterised (unverified). Stiff CF-filled parts do not bend with the sheet, so the flex-to-release technique that this surface depends on works less well; brim generously and give the plate a full cool-down rather than flexing harder."
+    },
+    {
+      "filament_id": "petg",
+      "rating": "usable-with-prep",
+      "bed_temp_c": { "min": 70, "max": 85 },
+      "adhesion_aid": "glue stick as a release barrier — required, not optional",
+      "notes": "The headline hazard. Wham Bam flags PETG as sticking too well and specifies a barrier or release layer to keep the print from ripping the sheet. Treat glue stick here the way you would on smooth PEI: it is there to stop a bond forming, not to help one form. Skipping it and then prying is the single documented way owners destroy a PEX sheet."
+    },
+    {
+      "filament_id": "petg-cf",
+      "rating": "usable-with-prep",
+      "bed_temp_c": { "min": 70, "max": 85 },
+      "adhesion_aid": "glue stick as a release barrier — required, not optional",
+      "notes": "Same barrier requirement as base PETG, compounded by CF stiffness defeating flex release (unverified as a separate case)."
+    },
+    {
+      "filament_id": "petg-plus",
+      "rating": "usable-with-prep",
+      "bed_temp_c": { "min": 70, "max": 85 },
+      "adhesion_aid": "glue stick as a release barrier — required, not optional",
+      "notes": "As base PETG (unverified as a separate case)."
+    },
+    {
+      "filament_id": "pctg",
+      "rating": "usable-with-prep",
+      "bed_temp_c": { "min": 70, "max": 85 },
+      "adhesion_aid": "glue stick as a release barrier",
+      "notes": "Not addressed by any source; extrapolated from PETG's documented over-adhesion given the closely related copolyester chemistry (unverified). Use the barrier."
+    },
+    {
+      "filament_id": "asa",
+      "rating": "usable-with-prep",
+      "bed_temp_c": { "min": 90, "max": 100 },
+      "adhesion_aid": "glue stick as a release barrier — required, not optional",
+      "notes": "The second material Wham Bam calls out as sticking too well and needing a barrier layer to avoid tearing the sheet. ASA also wants a bed hot enough to sit near the least certain part of this entry's thermal envelope, so keep the bed at the low end of the ASA range and use an enclosure for warp control rather than more bed heat."
+    },
+    {
+      "filament_id": "asa-cf",
+      "rating": "usable-with-prep",
+      "bed_temp_c": { "min": 90, "max": 100 },
+      "adhesion_aid": "glue stick as a release barrier",
+      "notes": "As base ASA, with CF stiffness working against flex release (unverified as a separate case)."
+    },
+    {
+      "filament_id": "abs",
+      "rating": "usable-with-prep",
+      "bed_temp_c": { "min": 90, "max": 100 },
+      "adhesion_aid": "none required per vendor; glue stick is a cheap insurance policy",
+      "notes": "Listed as usable. Unlike PETG and ASA it is not flagged for over-adhesion, so the concern is the opposite one — ABS wants bed heat, and the top of ABS's usual 90-110 degC band pushes into territory this surface has no published ceiling for. Stay at the low end and enclose the printer."
+    },
+    {
+      "filament_id": "abs-plus",
+      "rating": "usable-with-prep",
+      "bed_temp_c": { "min": 90, "max": 100 },
+      "adhesion_aid": "none required per vendor",
+      "notes": "As base ABS (unverified as a separate case)."
+    },
+    {
+      "filament_id": "tpu",
+      "rating": "recommended",
+      "bed_temp_c": { "min": 40, "max": 60 },
+      "adhesion_aid": "none",
+      "notes": "Flexibles suit this surface well: the sheet flexes, the part flexes, and release is by peel rather than by shear. Keep the bed low — TPU needs very little heat here and excess bed temperature only pushes the sheet toward its uncertain thermal limit for no adhesion benefit."
+    },
+    {
+      "filament_id": "tpu-95a",
+      "rating": "recommended",
+      "bed_temp_c": { "min": 40, "max": 60 },
+      "adhesion_aid": "none",
+      "notes": "As base TPU; the most common shore grade and the easiest case on this surface (unverified as a separate case)."
+    },
+    {
+      "filament_id": "tpu-85a",
+      "rating": "recommended",
+      "bed_temp_c": { "min": 40, "max": 60 },
+      "adhesion_aid": "none",
+      "notes": "As base TPU. Softer grades are more prone to stretching during removal than to failing to stick — peel slowly from a corner (unverified as a separate case)."
+    },
+    {
+      "filament_id": "pc",
+      "rating": "usable-with-prep",
+      "bed_temp_c": { "min": 90, "max": 105 },
+      "adhesion_aid": "glue stick",
+      "notes": "Wham Bam includes PC-type materials in the usable set, but PC is the worst thermal fit on this sheet: it wants the hottest bed of anything listed and it warps hard, which loads the surface exactly where the vendor's melt-point claim is least substantiated. If you print PC regularly, a PEI or garolite surface is the safer plate."
+    },
+    {
+      "filament_id": "pe",
+      "rating": "usable-with-prep",
+      "bed_temp_c": { "min": 60, "max": 90 },
+      "adhesion_aid": "unknown — test on a corner first",
+      "notes": "No source addresses PE on this surface; the rating is extrapolated (unverified) from the like-sticks-to-like principle that governs PP on a PP-coated sheet. PEX is cross-linked polyethylene and PE filament is polyethylene, so a strong or even fusing bond is plausible rather than merely possible. Do not commit a full plate to this combination without a small test print."
+    }
+  ],
+  "preparation": "Out of the box the sheet needs no priming, activation or break-in: mount it on the magnetic base and print. Per-print prep is the maintenance cycle described below rather than anything applied to the surface — this is a bare-surface plate, and the only thing you deliberately add is a release barrier for PETG and ASA. When you do use glue stick, understand that you are applying it as a barrier to prevent a bond, not as an adhesion promoter; a thin even film over the print footprint is enough, and more does not help. For first layers, Wham Bam's advice is to start cool and creep up: begin around 215 degC nozzle even when the filament is rated for 200-230 degC, print a small test, and raise temperature only if the first layer is lifting. Starting at the top of the range is the common way people over-bond a first layer on this surface and then discover the removal problem the hard way.",
+  "cleaning": "Between prints the routine is abrasion first, solvent second — the reverse emphasis of most plate care. Give the surface roughly ten seconds of light abrasion with fine steel wool or a composite scrub pad, then wipe down with 90% or stronger isopropyl alcohol using fresh paper towels. Wham Bam is explicit that microfibre cloths and rags are not to be used: they shed lint and leave residue that shows up as first-layer defects on a smooth surface. The abrasion step is not aggressive resurfacing; it is knocking back the polish and the invisible film of oils and release-agent residue that accumulate on a polyolefin. Ten seconds means ten seconds — repeatedly scouring the same sheet thins it and is not a documented revival procedure. There is no published deep-clean protocol beyond this, and no acetone allowance of the kind some PEI sheets get: soap and water is a reasonable fallback for visible grease, dried completely before remounting, but the vendor's sanctioned solvent is IPA and nothing stronger.",
+  "model_removal": "Cold flex release, and the emphasis on cold is the whole technique. Let the bed and the sheet come fully down to room temperature, lift the sheet off the magnetic base, and bow it gently from one edge so the part peels progressively rather than popping free all at once. Wham Bam's instructions warn specifically against forcing removal or flexing the sheet while it is still warm — warm PEX is softer and the part is still contracting, so the combination risks warping the print, tearing the sheet, or both. Patience is the tool: if a part is not letting go, the answer is more cooling time, not more force. Keep sharp metal tools away from a smooth polyolefin surface; if something must go under a corner, use a thin plastic edge at a shallow angle.",
+  "stuck_print_recovery": "Escalate in this order. First, more cooling — genuinely room temperature, not merely off; PEX release is strongly temperature dependent and most 'stuck' parts on this surface are simply warm parts. Second, flex the unmounted sheet harder and from several directions, working corners and edges rather than pushing on the middle. Third, wick 90%+ IPA around the perimeter of the footprint and give it a minute or two to creep under. Fourth, saw unwaxed dental floss or thin wire under the part footprint — shear across a wide line rather than a point load, which is the safest mechanical option on a soft surface. What is not documented and should not be improvised: freezer cycling is untested on this sheet, and no heat-then-cool procedure is published. If a bare PETG or ASA part has genuinely fused, accept that the sheet may be the casualty and prioritise removing the part without gouging a fresh crater — then treat the missing barrier layer as the lesson rather than the removal technique.",
+  "damage_avoidance": [
+    {
+      "item": "Printing PETG or ASA without a glue-stick barrier layer, then prying the part off",
+      "reason": "The primary documented failure mode for this surface. Wham Bam flags both materials as sticking too well and specifies a barrier or release layer precisely because a bare bond can rip material out of the sheet when the part is levered off. The damage is not a scratch but a torn patch that will never hold a first layer again.",
+      "severity": "destroys"
+    },
+    {
+      "item": "Removing prints, or flexing the sheet, while it is still warm",
+      "reason": "Wham Bam's instructions warn explicitly never to force removal or flex the sheet before it has cooled. Warm PEX is softer and more easily deformed, and the part is still shrinking, so the same flex that releases cleanly at room temperature can warp the print, permanently distort the sheet, or tear it.",
+      "severity": "destroys"
+    },
+    {
+      "item": "Microfibre cloths and rags for the IPA wipe",
+      "reason": "Called out by name in the vendor's maintenance instructions as what not to use. Both shed lint and leave residue on a smooth surface, and on a plate whose adhesion depends on uniform contact that residue prints straight through into the first layer as patchy bonding.",
+      "severity": "degrades"
+    },
+    {
+      "item": "Over-abrading — scouring well past the ten-second maintenance pass",
+      "reason": "Light abrasion with steel wool or a scrub pad is the sanctioned between-print step, but it is a refresh, not a resurfacing. PEX is a soft polyolefin sheet rather than a hard coating on a substrate, so material removed is not coming back and there is no published recoating or revival procedure. Repeated heavy scouring thins the working surface.",
+      "severity": "degrades"
+    },
+    {
+      "item": "Acetone and solvents stronger than isopropyl alcohol",
+      "reason": "The vendor sanctions 90%+ IPA and nothing else, and publishes no acetone allowance of the kind granted to some PEI sheets. No source establishes PEX as acetone-tolerant on this product, so the honest position is that stronger solvents are unvalidated rather than known-safe — a distinction that matters on a sheet you cannot recoat. Treated here as degrades on precautionary grounds (unverified).",
+      "severity": "degrades"
+    },
+    {
+      "item": "Metal scrapers, spatulas and sharp-edged tools",
+      "reason": "Extrapolated rather than vendor-stated (unverified). The removal method this surface is built around is cold flex, and the sheet is a soft cross-linked polyolefin — softer than PEI and far softer than a ceramic-like coating — so a sharp edge driven under a part gouges the working surface rather than sliding along it. Use a thin plastic edge at a shallow angle if anything at all.",
+      "severity": "destroys"
+    },
+    {
+      "item": "Running high-temperature materials at the top of their bed range",
+      "reason": "Wham Bam claims PEX has a higher melt point than PEI but publishes no numeric ceiling, and cross-linked polyethylene is thermally nothing like polyetherimide — this is the least substantiated claim attached to the product. ABS, ASA and PC all want beds at or above 100 degC, which is exactly where the missing number would matter. Keep such prints at the low end of their bed range and treat any softening, gloss change or imprinting as a signal to stop.",
+      "severity": "destroys"
+    },
+    {
+      "item": "Leaving the sheet damp or remounting it wet after a soap wash",
+      "reason": "Extrapolated from standard magnetic spring-steel flex-plate practice rather than stated for this product (unverified). The polymer surface itself is unbothered by water, but the steel carrier and the magnetic base underneath are not; trapped moisture between sheet and base is a corrosion and flatness problem rather than a surface-chemistry one.",
+      "severity": "degrades"
+    }
+  ],
+  "temperature_limits_c": {
+    "max": 110
+  },
+  "lifespan_notes": "Framed by the vendor as a durable, reusable, abrasion-tolerant surface with no stated replacement interval — the between-print steel-wool pass is itself evidence that the sheet is expected to survive routine abrasion rather than be babied. In practice the wear pattern to watch for on a smooth polyolefin is progressive polishing and glazing of the high-traffic centre, showing up as prints that hold at the edges and lift in the middle; the light abrasion step is the counter to exactly that. The failures that actually end a PEX sheet's life are acute rather than gradual: a torn patch from prying a bare PETG or ASA part off, a gouge from a metal scraper, or heat deformation. None of those are recoverable and there is no recoating option, so replacement is the only remedy. At USD 14 for the 258x258 mm size this is among the cheapest surfaces to replace outright, which changes the calculus — a sheet that is glazing in the middle is worth replacing rather than nursing.",
+  "price": {
+    "usd_low": 14.0,
+    "usd_high": 14.0,
+    "notes": "USD 14.00 for the 258x258 mm sheet cut for Bambu Lab X1, X1C, X1E, P1P and P1S. Other sizes are priced separately by collection and were not captured, so this is a single confirmed data point rather than a range across the product line. Even so it places PEX at the budget end of aftermarket surfaces — roughly a third of a Prusa powder-coated steel sheet."
+  },
+  "additional_notes": "PEX earns its own entry rather than a line under PEI because the chemistry genuinely differs: polyetherimide is an amorphous high-Tg engineering thermoplastic, while PEX is semi-crystalline polyethylene with covalent cross-links that stop it flowing above its melt. That difference explains the behaviour profile — strong grip on polar-ish materials like PETG and ASA to the point of being a hazard, easy clean release on PLA, excellent behaviour with flexibles, and a maintenance routine built around abrasion rather than solvent. It also explains the entry's weak spot. Wham Bam's marketing claim of a higher melt point than PEI is the one assertion here that no independent source supports and that runs against what cross-linked polyethylene is generally understood to do thermally; the vendor conspicuously declines to publish a number, and the 110 degC ceiling recorded in temperature_limits_c is an inference for safety rather than a datasheet figure. Wham Bam Systems is effectively the sole vendor of this surface — it is sold both as a standalone sheet and as the PEX option within the company's Flexible Build System for FDM, which pairs a magnetic base with an interchangeable surface. There is no OEM equivalent from Bambu Lab, Prusa or Creality, and no third-party teardown or independent chemical characterisation of the specific formulation was located.",
+  "trade_names": [
+    {
+      "manufacturer": "Wham Bam Systems",
+      "product": "Wham Bam Smooth PEX Build Surface",
+      "notes": "The canonical and effectively only product under this id. Sold per-size by printer model — the 258x258 mm cut for Bambu Lab X1/X1C/X1E/P1P/P1S is the documented USD 14.00 data point — and also offered as the PEX surface option within Wham Bam's Flexible Build System for FDM. Vendor copy describes it as 'a specially formulated polymer with a higher melt point than PEI', which is the only chemistry statement published and the source of the unresolved thermal claim recorded in provenance.conflicts."
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "Wham Bam Systems - PEX Build Surface, 258x258 mm (Bambu Lab X1/X1C/X1E/P1P/P1S) product page: https://www.whambamsystems.com/products/pex-build-surface-258-x-258-bambu-lab-x1-x1-carbon-or-x1c-x1e-p1p-and-p1ps_",
+      "Wham Bam Systems - PEX Build Surface collection page: https://www.whambamsystems.com/collections/pex-build-surface",
+      "Wham Bam Systems - Flexible Build System for FDM overview page: https://www.whambamsystems.com/pages/flexible-build-system"
+    ],
+    "last_verified": "2026-08-01",
+    "confidence": "medium",
+    "conflicts": "The central unresolved item is thermal. Wham Bam states PEX has a higher melt point than PEI but publishes no number, and the claim is difficult to reconcile with cross-linked polyethylene as a material class — PEI is an amorphous polyetherimide with a glass transition well above 200 degC, while PEX is a semi-crystalline polyolefin whose cross-links raise its service ceiling without turning it into a high-temperature engineering plastic. No independent source, teardown or third-party test was located that either confirms or refutes the vendor's claim. The 110 degC value in temperature_limits_c is therefore an inference chosen to sit above the bed temperatures of the materials the vendor markets the sheet for, not a published specification, and it is the least certain number in this entry; every high-temperature rating here (abs, abs-plus, asa, asa-cf, pc) inherits that uncertainty. Second, all three sources are the vendor's own pages — there is no independent review, forum teardown or owner primary data in this entry, so the over-adhesion warnings for PETG and ASA and the release behaviour for PLA and TPU are all self-reported. Third, solvent tolerance beyond IPA is unaddressed rather than prohibited: the vendor's silence on acetone has been recorded as a precautionary 'degrades' rather than a documented prohibition, which may be stricter than reality. Fourth, several filament ratings are extrapolated rather than sourced and are flagged inline as unverified — pctg, petg-plus, abs-plus, asa-cf, petg-cf, pla-cf, pla-plus, pla-matte, pla-silk, tpu-95a and tpu-85a follow their base materials, while pe is reasoned purely from like-sticks-to-like polyolefin chemistry and has no vendor support at all; a PE-on-PEX fusion risk is plausible but entirely untested here. Fifth, the price is a single size data point, not a range. Sixth, no lifespan figure, replacement interval or maximum flex count is published, and no cross-linking route (peroxide versus radiation) is disclosed for this specific formulation."
+  }
+}

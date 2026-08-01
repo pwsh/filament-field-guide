@@ -26,7 +26,7 @@
     }
   ],
   "endpoints": {
-    "website": "https://store.iemai3d.com/",
+    "website": "https://www.iemai3d.com/",
     "store": "https://www.isanmate.com/",
     "social": {
       "facebook": "https://www.facebook.com/iemai3d.china/",
@@ -244,6 +244,6 @@
     ],
     "last_verified": "2026-07-31",
     "confidence": "medium",
-    "conflicts": "The relationship between IEMAI and 'Songhu Plastic' is inferred only from a Facebook page titled 'IEMAI 3D & Songhu Plastic' and is unverified. Claimed industrial-sector OEM scope comes from company self-description with no named clients. A single price_tier cannot express the iSanghu (budget) vs iSanmate (specialty/mid) split."
+    "conflicts": "The relationship between IEMAI and 'Songhu Plastic' is inferred only from a Facebook page titled 'IEMAI 3D & Songhu Plastic' and is unverified. Claimed industrial-sector OEM scope comes from company self-description with no named clients. A single price_tier cannot express the iSanghu (budget) vs iSanmate (specialty/mid) split. Endpoint corrected 2026-08-01: website https://store.iemai3d.com/ -> https://www.iemai3d.com/ (old host failed TLS with a certificate hostname mismatch; www.iemai3d.com verified as the live corporate site)."
   }
 }

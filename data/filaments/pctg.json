@@ -135,6 +135,8 @@
     "bonds_with": [
       "cpe",
       "pctg",
+      "pctg-cf",
+      "pctg-gf",
       "pet",
       "petg",
       "petg-cf",
@@ -204,6 +206,11 @@
       "plate_id": "pc-plate",
       "rating": "avoid",
       "notes": "Backfilled from plate entry (Phase E reciprocity): Same copolyester chemistry and same bed-temperature requirement as PETG; assume the same bubbling/sticking damage."
+    },
+    {
+      "plate_id": "pex-sheet",
+      "rating": "usable",
+      "notes": "Backfilled from plate entry (reciprocity)"
     }
   ],
   "emissions": {

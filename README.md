@@ -48,7 +48,7 @@ parameters against current manufacturer datasheets.
 Phases A–E complete, plus two variant tranches, a build-plate vendor cross-walk,
 and a trade-name cross-walk of every manufacturer catalog. The catalog holds:
 
-- **84 filaments** — 15 base chemistries plus researched variant entries for
+- **90 filaments** — 15 base chemistries plus researched variant entries for
   aesthetic/functional PLA grades, fiber-filled composites (CF/GF across nine base
   polymers), polyamide grades (PA6/PA12/PA66/PPA + composites), six TPU shore grades
   with per-grade AMS/drive-system data, blends (CoPE, PC-ABS, PC-PBT), specialty
@@ -57,9 +57,9 @@ and a trade-name cross-walk of every manufacturer catalog. The catalog holds:
 - **71 manufacturers** — brands, OEM/white-label relationships (including owner-verified
   mappings), countries of manufacture, endpoints, product lines, and 1,150+ trade-name
   mappings so marketing names (NinjaFlex, PolyTerra, PAHT-CF…) resolve to entries.
-- **13 build plates** — full compatibility matrices, prep/cleaning/removal/stuck-print
+- **14 build plates** — full compatibility matrices, prep/cleaning/removal/stuck-print
   guidance, severity-rated damage-avoidance lists, and vendor trade names.
 
 Every entry carries per-source provenance (`sources`, `last_verified`, `confidence`)
 with source disagreements preserved in `provenance.conflicts` rather than silently
-resolved. Remaining queues live in `research/coverage-gaps.md` (remaining: PCTG composites, PBAT, explicit tpu-98a/72d grade ids, proprietary plate surfaces, data-quality re-verifications).
+resolved. Remaining queues live in `research/coverage-gaps.md` (all research phases complete; the short unresolvable list — proprietary coating identities, SBS shore hardness — is documented there).
