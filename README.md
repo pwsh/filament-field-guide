@@ -35,6 +35,14 @@ The site is pure static files; every push to `main` redeploys automatically. The
 | `scripts/validate.py` | Schema validation, cross-ref checks, manifest generation |
 | `index.html`, `assets/` | The site — vanilla JS, no build step |
 
+## License
+
+Dual-licensed: code under [MIT](LICENSE), data and written content under
+[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) — reuse freely with
+attribution to the Filament Field Guide. Dataset values are compiled from cited
+public sources (see each entry's `provenance.sources`); verify critical
+parameters against current manufacturer datasheets.
+
 ## Current state
 
 Skeleton + reference model complete. Entries marked `status: "example"` /
