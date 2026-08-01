@@ -139,10 +139,12 @@
   },
   "compatibility": {
     "bonds_with": [
+      "copa",
       "pa",
       "pa12",
       "pa12-cf",
-      "pa6"
+      "pa6",
+      "pa612"
     ],
     "support_materials": [
       "pa12",
@@ -211,6 +213,11 @@
       "manufacturer": "3dxtech",
       "product": "CarbonX PA12+CF",
       "notes": "PA12 + chopped CF; loading % not disclosed."
+    },
+    {
+      "manufacturer": "Siddament",
+      "product": "PA12-CF Nylon",
+      "notes": "Carbon-fibre-filled PA12."
     },
     {
       "manufacturer": "esun",

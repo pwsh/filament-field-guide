@@ -120,8 +120,10 @@
     },
     {
       "name": "PLA-Cast",
-      "filament_ids": [],
-      "notes": "Castable burnout PLA — no catalog id covers castable/burnout formulations."
+      "filament_ids": [
+        "pla-cast"
+      ],
+      "notes": "Castable burnout PLA — no catalog id covers castable/burnout formulations. Remapped [] -> ['pla-cast'] 2026-08-01 (now maps to pla-cast)."
     },
     {
       "name": "PETG / PETG-Basic / PETG+",
@@ -140,14 +142,16 @@
     {
       "name": "ABS+HS",
       "filament_ids": [
-        "abs"
+        "abs-plus"
       ],
-      "notes": "High-strength ABS grade."
+      "notes": "High-strength ABS grade. Remapped ['abs'] -> ['abs-plus'] 2026-08-01 (high-strength/toughened tier now maps to abs-plus)."
     },
     {
       "name": "ABS-ESD",
-      "filament_ids": [],
-      "notes": "ABS + conductive filler for static dissipation; catalog has petg-esd but no ABS ESD id."
+      "filament_ids": [
+        "abs-esd"
+      ],
+      "notes": "ABS + conductive filler for static dissipation; catalog has petg-esd but no ABS ESD id. Remapped [] -> ['abs-esd'] 2026-08-01 (now maps to abs-esd)."
     },
     {
       "name": "ASA",
@@ -207,13 +211,17 @@
     },
     {
       "name": "PEBA-90A / PEBA-85A",
-      "filament_ids": [],
-      "notes": "Polyether block amide elastomer (Pebax-class), not TPU or SEBS TPE; high-rebound footwear/sports material. No catalog id."
+      "filament_ids": [
+        "peba"
+      ],
+      "notes": "Polyether block amide elastomer (Pebax-class), not TPU or SEBS TPE; high-rebound footwear/sports material. No catalog id. Remapped [] -> ['peba'] 2026-08-01 (now maps to peba)."
     },
     {
       "name": "PEBA-LW",
-      "filament_ids": [],
-      "notes": "Foamed lightweight PEBA; no catalog id."
+      "filament_ids": [
+        "peba"
+      ],
+      "notes": "Foamed lightweight PEBA; no catalog id. Remapped [] -> ['peba'] 2026-08-01 (foamed lightweight PEBA; maps to peba pending an lw variant id)."
     },
     {
       "name": "PVA",

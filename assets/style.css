@@ -427,6 +427,9 @@ td.cell-name .sub { display: block; font-weight: 400; font-size: .82rem; color: 
 .sheet .fine { font-size: .8rem; }
 .sheet .vent-headline { margin: 0 0 .3rem; }
 .sheet .vent-headline .badge { font-size: .8rem; padding: .12rem .55rem; }
+/* detail-page emissions headline reads larger than a table row */
+.card > .vent-headline { margin: 0 0 .6rem; }
+.card > .vent-headline .badge { font-size: .92rem; padding: .2rem .7rem; }
 .sheet ul { padding-left: 1.1em; }
 
 /* ---------- print ---------- */

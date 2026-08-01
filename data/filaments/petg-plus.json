@@ -1,0 +1,254 @@
+{
+  "id": "petg-plus",
+  "name": "PETG+ (High-Toughness PETG)",
+  "aliases": [
+    "PETG Plus",
+    "PETG Pro",
+    "eSUN PETG+",
+    "Tough PETG"
+  ],
+  "status": "researched",
+  "base_type": "petg",
+  "variation_kind": "toughened",
+  "polymer_class": "polyester-copolyester",
+  "chemical_makeup": "Glycol-modified PET copolyester — the same CHDM-modified backbone as base petg — compounded with an undisclosed toughening and UV-stabiliser additive package. eSUN markets the grade as 'High Toughness & UV Resistant'; no filler, co-monomer ratio or modifier chemistry is disclosed.",
+  "summary": "The '+'-tier PETG, marketed as tougher and UV-resistant. Unlike pla-plus, the published datasheet does not support the toughness claim: eSUN's own numbers put PETG+ at 5.56 % elongation and 2.21 kJ/m² IZOD against base eSUN PETG's 83 % and 4.7 kJ/m², i.e. stiffer and more brittle on paper, not tougher. The one confirmed gain is heat — HDT 70 °C against base PETG's 64 °C — and the confirmed cost is printability: eSUN flags the grade as prone to sticking to the nozzle and needing tighter retraction and reduced flow. Treat the toughness claim as unverified pending independent testing.",
+  "printing": {
+    "nozzle_temp_c": {
+      "min": 230,
+      "max": 250,
+      "recommended": 240
+    },
+    "bed_temp_c": {
+      "min": 75,
+      "max": 90,
+      "recommended": 85
+    },
+    "ambient_temp_c": {
+      "min": 18,
+      "max": 35,
+      "recommended": 25
+    },
+    "speed_mm_s": {
+      "min": 40,
+      "max": 250,
+      "recommended": 80
+    },
+    "enclosure_recommended": false,
+    "heated_chamber_required": false,
+    "requires_hardened_nozzle": false,
+    "part_cooling_fan_pct": {
+      "min": 50,
+      "max": 100,
+      "recommended": 60
+    },
+    "enclosure_open_for_cooling": false,
+    "notes": "Delta vs base petg: the nozzle window is identical (230-250 °C) and the bed only marginally tighter (75-90 °C vs 70-90 °C). Two real deltas. First, cooling: eSUN specifies 50-100 % on PETG+ against 100 % on its base PETG, so the floor is higher than base petg's 30-50 % catalog band — start around 60 % and back off if Z strength suffers. Second, the speed ceiling is unusually aggressive at 250 mm/s max with no recommended figure published, so the 80 mm/s recommendation is carried from base petg rather than from the TDS (unverified). eSUN also flags the grade as 'relatively prone to sticking to the nozzle', calling for adjusted retraction and reduced flow — a genuine printability regression versus base PETG, not a pure upgrade. Open-frame printable, no chamber, stock brass nozzle."
+  },
+  "feeding": {
+    "drive_system": "any",
+    "ams_compatible": "yes",
+    "feeding_assistant_recommended": false,
+    "notes": "Rigid, unfilled and non-abrasive; feeds like base petg through Bowden or direct drive on standard gears. AMS compatibility is carried from base PETG, which Bambu lists as compatible, rather than certified for this SKU (unverified). Enclosure: as with base petg the cover can stay on — Tg is high enough that chamber heat helps rather than hurts — so enclosure_open_for_cooling is false. No Shore rating applies; this is a rigid grade."
+  },
+  "drying": {
+    "required_before_use": "if-exposed",
+    "temp_c": {
+      "min": 55,
+      "max": 65,
+      "recommended": 60
+    },
+    "time_hours": {
+      "min": 8,
+      "max": 12,
+      "recommended": 8
+    },
+    "methods": [
+      "dedicated filament dryer",
+      "convection oven at low temperature",
+      "drybox with desiccant"
+    ],
+    "dryness_validation": "No popping or hissing and no visible steam at the nozzle tip; glossy rather than foggy extrudate; no bubbles or voids in the extruded strand; markedly reduced stringing on a retraction test",
+    "notes": "Delta vs base petg (50-65 °C / 4-8 h): eSUN specifies 60 °C for more than 8 hours after extended storage and explicitly describes this grade as having 'slightly stronger water absorption' than base PETG, so the minimum time is longer. Do not exceed ~65-70 °C — spools deform."
+  },
+  "storage": {
+    "recommendations": "Sealed container or drybox with desiccant between prints, not only before them — eSUN describes moisture uptake as stronger than base PETG's, which is already routine-drying territory",
+    "max_humidity_pct": 30,
+    "hygroscopy": "moderate"
+  },
+  "price": {
+    "usd_per_kg_low": 20,
+    "usd_per_kg_high": 30,
+    "notes": "No live retail listing for eSUN PETG+ / 'PETG Pro' was confirmed in research (unverified). Base eSUN PETG runs ~$15-18/kg and '+'-tier grades across the market typically sit $5-8/kg above their base, which is where the recorded band comes from — an estimate from the general market pattern, not a sourced price point for this SKU."
+  },
+  "use_cases": {
+    "recommended": [
+      "UV-exposed outdoor brackets and signage (per the manufacturer's UV-resistance claim)",
+      "functional parts wanting PETG chemical and water resistance with a slightly higher heat ceiling",
+      "enclosures and covers",
+      "parts where stiffness matters more than impact toughness"
+    ],
+    "not_recommended": [
+      "impact-critical parts selected on the toughness marketing claim alone (the datasheet contradicts it)",
+      "prints where stringing and nozzle build-up are hard to tolerate — this grade is fussier than base PETG",
+      "food-contact items",
+      "high-temperature parts (HDT 70 °C)",
+      "beginners looking for an easier PETG"
+    ]
+  },
+  "suitability": {
+    "food_contact": "no",
+    "load_bearing": "moderate",
+    "high_temperature": "no",
+    "outdoor": "limited"
+  },
+  "properties": {
+    "density_g_cm3": 1.27,
+    "grams_per_100cm3": 127,
+    "cm3_per_100g": 78.7,
+    "heat_deflection_c": 70,
+    "tensile_strength_mpa": {
+      "min": 38,
+      "max": 58,
+      "recommended": 48
+    },
+    "notes": "eSUN PETG+ / 'PETG Pro' TDS, XY / Z: density 1.27 g/cm³ (identical to base eSUN PETG); HDT 70 °C @0.45 MPa (base eSUN PETG 64 °C — a real gain, and the recorded tensile range is the XY 48±10 MPa figure); tensile 48±10 MPa XY / 26±5 MPa Z; elongation at break 5.56±0.2 % XY / 3.31±0.2 % Z; flexural strength 83.2±10 MPa XY / 53.2±10 MPa Z; flexural modulus 1993.6±300 MPa XY / 1687.6±100 MPa Z; IZOD 2.21±0.2 kJ/m² XY / 2.02±0.2 kJ/m² Z; MFI 15 g/10 min (250 °C/2.16 kg). The Z/XY tensile ratio of ~54 % and elongation ratio of ~60 % are what set the layer-adhesion score, and they are distinctly worse than base petg's near-isotropic behaviour. Tg is not published (unverified); the PETG family sits at ~80-85 °C per the base petg entry. Shrinkage and max service temperature are likewise unpublished and deliberately omitted. See provenance.conflicts for the elongation/impact discrepancy against eSUN's own base PETG sheet."
+  },
+  "scores": {
+    "ease_of_print": 5,
+    "dimensional_stability": 7,
+    "warp_tendency": 3,
+    "layer_adhesion": 5,
+    "compression_strength": 7,
+    "temperature_tolerance": 6,
+    "uv_tolerance": 6,
+    "weather_tolerance": 6,
+    "water_tolerance": 9
+  },
+  "compatibility": {
+    "bonds_with": [
+      "cpe",
+      "pctg",
+      "pet",
+      "petg",
+      "petg-cf",
+      "petg-esd",
+      "petg-gf",
+      "petg-plus"
+    ],
+    "support_materials": [
+      "bvoh",
+      "pla",
+      "pla-plus",
+      "support-breakaway"
+    ],
+    "usable_as_support_for": [
+      "pla",
+      "pla-plus"
+    ],
+    "notes": "Same copolyester backbone as base petg, so it welds to itself, to base PETG and across the PETG/PCTG/PET family; bonding to cpe is on chemistry grounds rather than a tested pairing (unverified). Does not weld to PLA, which is the useful property: PLA and PLA+ make clean breakaway supports for this grade and it does the same for them. BVOH is the soluble support of choice, as for base PETG. PVA is a poor pairing — the moisture sensitivity of both materials compounds, and this grade already absorbs more water than base PETG. Does not bond usefully to ABS, ASA, PC, PA, PP or TPE."
+  },
+  "plate_recommendations": [
+    {
+      "plate_id": "pei-textured",
+      "rating": "usable",
+      "notes": "PETG-family adhesion is strong to excessive; the risk is surface pull-out damage on removal if the bed runs hot. Use a release agent — glue stick applied sparingly, PVA release or Magigoo PET. Inferred from general PETG-on-PEI practice rather than documented for this SKU (unverified)."
+    },
+    {
+      "plate_id": "pp-sheet",
+      "rating": "recommended",
+      "notes": "As base PETG — releases cleanly without a release agent."
+    },
+    {
+      "plate_id": "g10-garolite",
+      "rating": "recommended",
+      "notes": "As base PETG."
+    },
+    {
+      "plate_id": "pei-satin",
+      "rating": "recommended",
+      "notes": "As base PETG."
+    },
+    {
+      "plate_id": "carbon-fiber-plate",
+      "rating": "recommended",
+      "notes": "As base PETG."
+    },
+    {
+      "plate_id": "pei-smooth",
+      "rating": "usable",
+      "notes": "As base PETG — a release agent is advisable to protect the sheet."
+    },
+    {
+      "plate_id": "glass-borosilicate",
+      "rating": "usable",
+      "notes": "As base PETG, with glue stick as a release layer."
+    },
+    {
+      "plate_id": "supertack",
+      "rating": "usable",
+      "notes": "As base PETG."
+    },
+    {
+      "plate_id": "buildtak-polymer",
+      "rating": "usable",
+      "notes": "As base PETG."
+    },
+    {
+      "plate_id": "pei-patterned",
+      "rating": "usable",
+      "notes": "As base PETG."
+    },
+    {
+      "plate_id": "pc-plate",
+      "rating": "avoid",
+      "notes": "As base PETG."
+    }
+  ],
+  "emissions": {
+    "voc_level": "low",
+    "particulate_level": "moderate",
+    "primary_emissions": [
+      "ultrafine particles",
+      "trace acetaldehyde / terephthalate-related compounds (unverified)"
+    ],
+    "ventilation": "recommended",
+    "notes": "No emissions study covers this SKU (unverified); the profile is carried from the base petg entry, which is defensible because the nozzle window is identical (230-250 °C) and emission rates scale mainly with processing temperature. No styrene, mild odour. Ventilation optional for occasional open-air printing, recommended for long or enclosed jobs."
+  },
+  "safety_notes": "No FDA or food-contact certification was found for this grade, and the toughening and UV-stabiliser package is undisclosed — recorded as not food-safe, a stricter call than base petg's 'conditional'.",
+  "additional_notes": "PETG+ does not follow the pla-plus pattern. PLA+ shows a uniform toughness gain for a small printability cost; PETG+ as published shows a heat gain (HDT 70 vs 64 °C), a stiffness gain (flexural modulus ~1994 MPa XY), a printability *regression* (nozzle sticking, retraction fussiness) and an apparent toughness *regression*. If an application needs a genuinely tougher copolyester, pctg is the better-evidenced choice — it measures ~24 kJ/m² XY impact against this grade's 2.21 kJ/m².",
+  "provenance": {
+    "sources": [
+      "https://www.esun3d.com/petg-pro-product/",
+      "https://www.esun3d.com/uploads/eSUN_PETG-Filament_TDS_V4.0.pdf",
+      "https://www.esun3d.com/uploads/eSUN_PETG+HS-Filament_TDS_V1.0.pdf",
+      "data/filaments/petg.json (internal calibration reference, not an independent source)",
+      "data/filaments/pla-plus.json (internal calibration reference for the '+' tier pattern)"
+    ],
+    "last_verified": "2026-08-01",
+    "confidence": "medium",
+    "conflicts": "Primary unresolved discrepancy: eSUN's PETG+ / 'PETG Pro' sheet lists elongation at break 5.56 % and IZOD 2.21 kJ/m², while eSUN's own base PETG TDS V4.0 lists 83 % and 4.7 kJ/m². On the manufacturer's own published numbers the '+' grade is roughly 15x less ductile and half as impact-resistant as the base grade it is sold above, directly contradicting the 'High Toughness' marketing claim. This may reflect print-orientation or test-condition differences not captured in the fetched tables, but it is recorded as published rather than silently corrected. The layer_adhesion score of 5 is anchored to the measured Z/XY ratios (~54 % tensile, ~60 % elongation) per the glossary rubric, not to the marketing claim; base petg scores 9. Independent third-party mechanical testing is recommended before relying on the toughness claim. Secondary gaps: the UV-resistance claim is manufacturer marketing with no independent confirmation (unverified), which is why suitability.outdoor is 'limited' rather than 'yes'; no recommended print speed is published (80 mm/s carried from base petg); no price listing was confirmed; Tg, shrinkage and max service temperature are unpublished. Note also that the research pass suggested enclosure_open_for_cooling: true on the grounds that no chamber is required; that is recorded as false here to match base petg and pctg, because the field means 'prints better with the door open' and this grade's 70 °C HDT gives no heat-creep reason to vent the chamber."
+  },
+  "trade_names": [
+    {
+      "manufacturer": "VoxelPLA",
+      "product": "VOXEL GALAXY PETG+ HS (Pro)",
+      "notes": "Sparkle version of PETG+ HS; no glitter-PETG id exists, so the base line's id is reused."
+    },
+    {
+      "manufacturer": "VoxelPLA",
+      "product": "VOXEL PETG+ HS (Pro)",
+      "notes": "Mapped on the brand's own '+' designation; no disclosed chemistry departure from base PETG."
+    },
+    {
+      "manufacturer": "esun",
+      "product": "PETG+ (marketed as \"PETG Pro\")",
+      "notes": "The reference product for this entry: 'High Toughness & UV Resistant' PETG, density 1.27 g/cm³, HDT 70 °C. See conflicts — the published mechanical numbers do not support the toughness claim."
+    },
+    {
+      "manufacturer": "polymaker",
+      "product": "PolyMax PETG",
+      "notes": "Impact-toughened PETG [Remapped from earlier gap 2026-08-01]"
+    }
+  ]
+}

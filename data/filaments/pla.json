@@ -140,6 +140,7 @@
     "bonds_with": [
       "bvoh",
       "lw-pla",
+      "pha",
       "pla",
       "pla-cast",
       "pla-cf",
@@ -164,11 +165,14 @@
       "cope",
       "hips",
       "petg",
+      "petg-plus",
+      "pha",
       "pva",
       "support-breakaway"
     ],
     "usable_as_support_for": [
       "cope",
+      "cpe",
       "lw-pla",
       "lw-tpu",
       "pctg",
@@ -176,6 +180,8 @@
       "petg",
       "petg-cf",
       "petg-esd",
+      "petg-plus",
+      "pha",
       "pla-cast",
       "pla-cf",
       "pla-gf",
@@ -309,6 +315,86 @@
       "notes": "Unmodified PLA; ECOMAX is the economy tier."
     },
     {
+      "manufacturer": "Amazon Basics",
+      "product": "Premium PLA",
+      "notes": "Launch SKU, 1.75mm 1kg; private label, OEM undisclosed."
+    },
+    {
+      "manufacturer": "CC3D",
+      "product": "Brown to Green Color Change PLA",
+      "notes": "Thermochromic-pigment PLA; no thermochromic id exists, base chemistry used."
+    },
+    {
+      "manufacturer": "CC3D",
+      "product": "Marble PLA",
+      "notes": "Marble-look pigment; no mineral loading evidence, so pla-stone not asserted."
+    },
+    {
+      "manufacturer": "CC3D",
+      "product": "PLA",
+      "notes": "Standard PLA."
+    },
+    {
+      "manufacturer": "CC3D",
+      "product": "PLA MAX",
+      "notes": "Safe base chemistry alongside pla-plus."
+    },
+    {
+      "manufacturer": "Cookiecad",
+      "product": "Chip PLA (Mint Chip, Pink Chip, Vanilla Chip)",
+      "notes": "Speckled/fleck pigment; no fleck id exists."
+    },
+    {
+      "manufacturer": "Cookiecad",
+      "product": "Dual PLA (Granite, Sunrise, Moonstone, Midnight Magic)",
+      "notes": "Two-colour co-extrusion; chemistry unchanged."
+    },
+    {
+      "manufacturer": "Cookiecad",
+      "product": "Elixir PLA",
+      "notes": "Mixed colour-shift/sparkle effect sub-line; only base chemistry asserted."
+    },
+    {
+      "manufacturer": "Cookiecad",
+      "product": "PLA",
+      "notes": "Standard PLA, described as industrially compostable."
+    },
+    {
+      "manufacturer": "Hobby Lobby",
+      "product": "3D Printing Filament (standard PLA)",
+      "notes": "1.75mm, 2.2lb/330m, 200-220C, $14.99. 'Wood', 'Marble' and 'Golden' are colourway names on this SKU — no fill evidence, so pla-wood/pla-stone/pla-metal are NOT asserted."
+    },
+    {
+      "manufacturer": "MarsWork",
+      "product": "PLA Basic",
+      "notes": "30+ colours, 1kg refill (no spool) for reusable/AMS spools, marketed pre-dried."
+    },
+    {
+      "manufacturer": "Numakers",
+      "product": "PLA Marble",
+      "notes": "Marble-look pigment; no stated mineral filler, so pla-stone not asserted."
+    },
+    {
+      "manufacturer": "Numakers",
+      "product": "PLA Metallic",
+      "notes": "Metallic appearance only; no metal-powder loading evidence, so pla-metal not asserted."
+    },
+    {
+      "manufacturer": "Siddament",
+      "product": "Infused PLA",
+      "notes": "Filler undisclosed by the line name, so no wood/metal/stone/glitter id can be assigned; base chemistry only."
+    },
+    {
+      "manufacturer": "Siddament",
+      "product": "PLA (Normal, incl. Translucent and Tri/Dual Colour)",
+      "notes": "Translucent and multi-colour are pigment/coextrusion variants of the same base."
+    },
+    {
+      "manufacturer": "Yoline Lab",
+      "product": "PLA",
+      "notes": "Standard Series."
+    },
+    {
       "manufacturer": "addnorth",
       "product": "E-PLA",
       "notes": "density 1.23-1.25"
@@ -330,16 +416,6 @@
     },
     {
       "manufacturer": "amolen",
-      "product": "PLA Galaxy / PLA Shiny Glitter",
-      "notes": "Glitter particulate on a PLA base; no glitter id exists."
-    },
-    {
-      "manufacturer": "amolen",
-      "product": "PLA Marble",
-      "notes": "Mineral/stone-look filler on a PLA base; no stone-filled PLA id exists, so only the base id is asserted."
-    },
-    {
-      "manufacturer": "amolen",
       "product": "PLA Temp Color Change",
       "notes": "Thermochromic pigment on a PLA base; no colour-change id exists."
     },
@@ -355,23 +431,13 @@
     },
     {
       "manufacturer": "anycubic",
-      "product": "PLA Galaxy",
-      "notes": "Glitter particulate; no glitter-PLA id exists"
-    },
-    {
-      "manufacturer": "anycubic",
-      "product": "PLA Marble",
-      "notes": "Mineral filler; no marble id exists"
-    },
-    {
-      "manufacturer": "anycubic",
       "product": "PLA Special",
       "notes": "Confirmed NOT a distinct chemistry - PLA Basic in special/limited colourways"
     },
     {
       "manufacturer": "atomic-filament",
       "product": "PLA (standard opaque, MeltMiser Economy Series, Translucent, Gemstone Translucent, Neon UV Reactive, Pearlescent, Metallic, Marble, Shade-Shifting, Iridescent, Extreme JET Black)",
-      "notes": "All standard PLA base + colourant/effect packages. 'Metallic' and 'Marble' are pigment effects — do NOT merge into pla-metal or any stone-filled grade."
+      "notes": "Catch-all color/effect listing; Marble variant also listed on pla-stone."
     },
     {
       "manufacturer": "azurefilm",
@@ -392,16 +458,6 @@
       "manufacturer": "bambu-lab",
       "product": "PLA Basic",
       "notes": "Standard PLA homopolymer, no functional filler; RFID-tagged AMS spools"
-    },
-    {
-      "manufacturer": "bambu-lab",
-      "product": "PLA Galaxy / PLA Sparkle",
-      "notes": "PLA base with glitter/mica particulate; mapped at base chemistry because no glitter-PLA id exists"
-    },
-    {
-      "manufacturer": "bambu-lab",
-      "product": "PLA Marble",
-      "notes": "PLA base with mineral marble-effect filler; no marble id exists"
     },
     {
       "manufacturer": "chckx3d",
@@ -472,16 +528,6 @@
       "product": "PLA / PLA Basic"
     },
     {
-      "manufacturer": "elegoo",
-      "product": "PLA Galaxy / PLA Sparkle",
-      "notes": "Glitter particulate; no glitter-PLA id exists"
-    },
-    {
-      "manufacturer": "elegoo",
-      "product": "PLA Marble",
-      "notes": "Mineral marble-effect filler; no marble id exists"
-    },
-    {
       "manufacturer": "eryone",
       "product": "PLA",
       "notes": "Plain PLA; consumer retail around $27.99/kg."
@@ -490,16 +536,6 @@
       "manufacturer": "eryone",
       "product": "PLA Burnt Titanium (one-colour/Rainbow/Dual/Tri-colour)",
       "notes": "Marketed as 'Glitter PLA Filament' - glitter/colour-shift silk-type PLA; base resin is PLA."
-    },
-    {
-      "manufacturer": "eryone",
-      "product": "PLA Galaxy",
-      "notes": "Sparkle/glitter particulate on a PLA base; no glitter id exists."
-    },
-    {
-      "manufacturer": "eryone",
-      "product": "PLA Marble",
-      "notes": "Mineral-filled marble-look PLA; no marble/stone id exists."
     },
     {
       "manufacturer": "eryone",
@@ -520,11 +556,6 @@
       "manufacturer": "esun",
       "product": "PLA-Coffee",
       "notes": "Coffee-residue organic filler, not wood flour, so pla-wood does not apply"
-    },
-    {
-      "manufacturer": "esun",
-      "product": "PLA-Marble",
-      "notes": "Marble-effect pigment/filler; no marble id in catalog"
     },
     {
       "manufacturer": "extrudr",
@@ -550,11 +581,6 @@
       "manufacturer": "fiberlogy",
       "product": "HD-PLA",
       "notes": "High-crystallinity PLA for post-print annealing (ABS-like after heat treatment); base polymer is PLA, the annealable grade itself has no id"
-    },
-    {
-      "manufacturer": "filament-pm",
-      "product": "MARBLEJET",
-      "notes": "marble-effect mineral-filled PLA; base polymer only, see gaps"
     },
     {
       "manufacturer": "filament-pm",
@@ -660,11 +686,6 @@
       "notes": "Plain PLA; wiki describes corn-starch-derived feedstock."
     },
     {
-      "manufacturer": "geeetech",
-      "product": "PLA Marble",
-      "notes": "PLA 'mixed with stone powder or other additives to simulate marble'; only the base id is asserted."
-    },
-    {
       "manufacturer": "hatchbox",
       "product": "Metallic Finish PLA (PLA Metal)",
       "notes": "Metallic-sheen pigment with no confirmed metal-powder loading - deliberately NOT pla-metal, which covers genuinely metal-filled grades."
@@ -725,34 +746,14 @@
       "notes": "Base PLA; Micro Center staff describe it as low in temperature resistance and relatively brittle."
     },
     {
-      "manufacturer": "inland",
-      "product": "PLA Glitter Rainbow",
-      "notes": "Glitter particulate on a PLA base; no glitter id exists."
-    },
-    {
       "manufacturer": "jamg-he",
       "product": "Eco-Friendly PLA Filament",
       "notes": "Base PLA marketed on biodegradability"
     },
     {
-      "manufacturer": "jamg-he",
-      "product": "Marble PLA Filament",
-      "notes": "Marble-effect pigment"
-    },
-    {
       "manufacturer": "jayo",
       "product": "JAYO PLA / PLA Classic",
       "notes": "Base PLA line"
-    },
-    {
-      "manufacturer": "jayo",
-      "product": "Marble PLA / High Speed Marble PLA",
-      "notes": "Marble-effect pigment"
-    },
-    {
-      "manufacturer": "jayo",
-      "product": "PLA Galaxy",
-      "notes": "Glitter/sparkle pigment"
     },
     {
       "manufacturer": "jayo",
@@ -767,7 +768,7 @@
     {
       "manufacturer": "keene-village-plastics",
       "product": "PLA (Bold Black, Stellar Black, Blue, Deep Blue, Deep Red, Purple, Red, Orange, Yellow, Green, Neon Green, Black Sparkle, Strawberry Pearl, Evergreen Pearl, Pearl Blueberry)",
-      "notes": "Sparkle and pearl colours are glitter/mica effect packages on the same PLA base."
+      "notes": "Color list incl. Sparkle/Pearl effects; also listed on pla-glitter."
     },
     {
       "manufacturer": "kexcelled",
@@ -831,7 +832,7 @@
     {
       "manufacturer": "polymaker",
       "product": "Panchroma PLA (standard, translucent, neon, UV-shift, marble, galaxy, starlight, celestial, metallic)",
-      "notes": "Cosmetic additives on a base PLA; no chemistry change"
+      "notes": "Multi-effect line: base entries stay here; marble/galaxy variants also listed on pla-stone/pla-glitter."
     },
     {
       "manufacturer": "polymaker",
@@ -918,22 +919,12 @@
     },
     {
       "manufacturer": "spectrum-filaments",
-      "product": "PLA Glitter",
-      "notes": "glitter-particle-filled; no glitter-specific id exists"
-    },
-    {
-      "manufacturer": "spectrum-filaments",
       "product": "PLA Nature",
       "notes": "PLA + bio-filler; base polymer only"
     },
     {
       "manufacturer": "spectrum-filaments",
       "product": "PLA Premium"
-    },
-    {
-      "manufacturer": "spectrum-filaments",
-      "product": "PLA Stone Age",
-      "notes": "PLA + mineral filler (stone look); base polymer only, see gaps"
     },
     {
       "manufacturer": "spectrum-filaments",
@@ -967,28 +958,13 @@
     },
     {
       "manufacturer": "sunlu",
-      "product": "PLA Marble",
-      "notes": "Marble-effect pigment/filler"
-    },
-    {
-      "manufacturer": "sunlu",
       "product": "PLA Meta (Macaron Colors)",
       "notes": "Pastel pigment only"
     },
     {
       "manufacturer": "sunlu",
-      "product": "PLA Twinkling / PLA Galaxy",
-      "notes": "Glitter/pearlescent pigment; no glitter id in catalog"
-    },
-    {
-      "manufacturer": "sunlu",
       "product": "SUNLU PLA",
       "notes": "Standard PLA"
-    },
-    {
-      "manufacturer": "tinmorry",
-      "product": "Galaxy PLA",
-      "notes": "Glitter/sparkle pigment"
     },
     {
       "manufacturer": "tinmorry",
@@ -1016,18 +992,8 @@
     },
     {
       "manufacturer": "ziro",
-      "product": "Effect PLA (Diamond, Mystical, Twinkling, Firefly, Chameleon, Iridescent)",
-      "notes": "Glitter/pearlescent/colour-shift pigments on base PLA"
-    },
-    {
-      "manufacturer": "ziro",
       "product": "Fluorescent PLA",
       "notes": "Fluorescent/UV-reactive pigment, which is not the phosphorescent chemistry behind pla-glow"
-    },
-    {
-      "manufacturer": "ziro",
-      "product": "Stone PLA",
-      "notes": "Mineral-filler stone texture; no mineral-filled PLA id in catalog"
     },
     {
       "manufacturer": "ziro",

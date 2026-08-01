@@ -137,17 +137,17 @@
   "compatibility": {
     "bonds_with": [
       "pla",
-      "pla-ht",
-      "pla-plus",
       "pla-cf",
       "pla-gf",
-      "pla-matte"
+      "pla-ht",
+      "pla-matte",
+      "pla-plus"
     ],
     "support_materials": [
-      "pla",
+      "bvoh",
       "petg",
-      "pva",
-      "bvoh"
+      "pla",
+      "pva"
     ],
     "usable_as_support_for": [],
     "notes": "Prints and bonds as base PLA does before annealing — welds to itself and other PLA grades, does not weld to PETG/ABS/ASA/PC/PA/PP. One workflow rule dominates multi-material use: remove every support before the part goes in the oven. Support material that is not itself annealable softens, slumps and fuses into the interface at 80-115 °C, and soluble supports must be dissolved first because a wet part cannot be baked. Breakaway PLA or PETG supports removed pre-bake are the practical pairing. Do not co-print HT-PLA with a material you intend to keep on the part through the anneal unless that material also tolerates the bake temperature."
@@ -192,6 +192,36 @@
   },
   "trade_names": [
     {
+      "manufacturer": "Siddament",
+      "product": "HTPLA",
+      "notes": "High-temperature / annealable PLA grade."
+    },
+    {
+      "manufacturer": "fiberlogy",
+      "product": "HD-PLA",
+      "notes": "High-crystallinity PLA for post-print annealing, marketed as reaching near-ABS heat resistance after heat treatment"
+    },
+    {
+      "manufacturer": "formfutura",
+      "product": "Volcano PLA (incl. Volcano PLA 150C)",
+      "notes": "High-crystallinity annealable PLA, density 1.27 g/cm³, HDT ~95 °C annealed against ~55-60 °C unannealed; TDS confirms a plain PLA base with no PHA blend"
+    },
+    {
+      "manufacturer": "fusion-filaments",
+      "product": "HT-PLA (3D870) / HTPLA+",
+      "notes": "NatureWorks Ingeo 3D870 fast-crystallising annealable resin; HTPLA+ is the retail colourway naming"
+    },
+    {
+      "manufacturer": "keene-village-plastics",
+      "product": "P-PLA (Performance Polylactide)",
+      "notes": "High-heat, high-impact fast-crystallising PLA marketed as a biodegradable ABS alternative — the same annealable category under KVP's own name"
+    },
+    {
+      "manufacturer": "polymaker",
+      "product": "HT-PLA",
+      "notes": "Annealable heat-resistant PLA [Remapped from earlier gap 2026-08-01]"
+    },
+    {
       "manufacturer": "polymaker",
       "product": "HT-PLA (and HT-PLA-GF)",
       "notes": "The most fully documented grade: 210-230 °C, up to 300 mm/s (350 for GF), anneal 80-100 °C for 30 min. The GF variant is 12 % fibreglass, exceeds 150 °C HDT annealed, ~42.8 MPa X-axis tensile, and requires a hardened nozzle"
@@ -202,29 +232,9 @@
       "notes": "Covers all HTPLA colourways including the glitter, metallic and translucent effect grades. Unfilled HTPLA shrinks ~1.8 % X/Y on annealing; HTPLA-CF shrinks ~0.6 % and needs a hardened nozzle"
     },
     {
-      "manufacturer": "formfutura",
-      "product": "Volcano PLA (incl. Volcano PLA 150C)",
-      "notes": "High-crystallinity annealable PLA, density 1.27 g/cm³, HDT ~95 °C annealed against ~55-60 °C unannealed; TDS confirms a plain PLA base with no PHA blend"
-    },
-    {
-      "manufacturer": "fiberlogy",
-      "product": "HD-PLA",
-      "notes": "High-crystallinity PLA for post-print annealing, marketed as reaching near-ABS heat resistance after heat treatment"
-    },
-    {
-      "manufacturer": "fusion-filaments",
-      "product": "HT-PLA (3D870) / HTPLA+",
-      "notes": "NatureWorks Ingeo 3D870 fast-crystallising annealable resin; HTPLA+ is the retail colourway naming"
-    },
-    {
       "manufacturer": "push-plastic",
       "product": "High Heat + Tough PLA (HH+T PLA — 3D870)",
       "notes": "Same Ingeo 3D870 annealable resin. Deliberately not mapped to pla-plus: the toughness claim comes from the resin grade, not a documented impact modifier"
-    },
-    {
-      "manufacturer": "keene-village-plastics",
-      "product": "P-PLA (Performance Polylactide)",
-      "notes": "High-heat, high-impact fast-crystallising PLA marketed as a biodegradable ABS alternative — the same annealable category under KVP's own name"
     },
     {
       "manufacturer": "spectrum-filaments",

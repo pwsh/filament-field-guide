@@ -134,16 +134,16 @@
   "compatibility": {
     "bonds_with": [
       "pla",
-      "pla-stone",
-      "pla-matte",
       "pla-gradient",
-      "pla-plus"
+      "pla-matte",
+      "pla-plus",
+      "pla-stone"
     ],
     "support_materials": [
-      "pla",
+      "bvoh",
       "petg",
-      "pva",
-      "bvoh"
+      "pla",
+      "pva"
     ],
     "usable_as_support_for": [],
     "notes": "Same PLA-family bonding as the base entry — welds to itself and to other PLA grades at identical temperatures, does not weld to PETG/ABS/ASA/PC/PA/PP. Standard PLA or breakaway-PLA supports work because the print temperatures match; PVA/BVOH remain the soluble options. Not listed as usable support for anything: the gritty, mineral-loaded surface leaves a poor interface finish and the material is both abrasive and expensive to waste on scaffolding."
@@ -187,29 +187,9 @@
   },
   "trade_names": [
     {
-      "manufacturer": "formfutura",
-      "product": "StoneFil",
-      "notes": "The reference product for this entry: explicitly 50 % powdered stone filling, density 1.70 g/cm³, 185-225 °C, hardened nozzle recommended"
-    },
-    {
-      "manufacturer": "overture",
-      "product": "Rock PLA (incl. Rock PLA Gradient)",
-      "notes": "Described by the vendor as a stone-filled composite — a real particulate filler that raises density and abrasiveness, not a pigment. The Gradient SKU is the same composite with a colour transition"
-    },
-    {
-      "manufacturer": "colorfabb",
-      "product": "stoneFill",
-      "notes": "PLA/PHA carrier plus mineral/stone filler; matrix is a PLA blend rather than neat PLA, as with colorFabb's woodFill"
-    },
-    {
-      "manufacturer": "spectrum-filaments",
-      "product": "PLA Stone Age",
-      "notes": "PLA plus mineral/stone powder giving a stone-like matte texture"
-    },
-    {
-      "manufacturer": "geeetech",
-      "product": "PLA Marble",
-      "notes": "The only manufacturer statement in the cluster that names stone powder explicitly as the filler ('mixed with stone powder or other additives to simulate marble')"
+      "manufacturer": "OVV3D",
+      "product": "Gradient Stone PLA (2-colour)",
+      "notes": "Mapped on the marketed stone finish; mineral filler content is not disclosed."
     },
     {
       "manufacturer": "amolen",
@@ -217,24 +197,14 @@
       "notes": "Mineral/stone-look filler on a PLA base; loading unpublished"
     },
     {
-      "manufacturer": "eryone",
+      "manufacturer": "anycubic",
       "product": "PLA Marble",
-      "notes": "Mineral-filled marble-look PLA; loading unpublished"
+      "notes": "Mineral filler; no marble id exists [Migrated from pla 2026-08-01]"
     },
     {
-      "manufacturer": "filament-pm",
-      "product": "MARBLEJET",
-      "notes": "Marble-effect mineral-filled PLA"
-    },
-    {
-      "manufacturer": "rosa3d",
-      "product": "PLA Speed Matt Marble (Ivory / Sandstone / Carrara)",
-      "notes": "Mineral-filled marble/stone-look PLA on the high-speed matte base"
-    },
-    {
-      "manufacturer": "extrudr",
-      "product": "FLAX",
-      "notes": "Bio-based matrix plus mineral filler with a sandstone-like matte finish; density 1.45 g/cm³, VICAT A 48 °C. Matrix is not confirmed to be neat PLA, so this is a category match rather than a chemistry match"
+      "manufacturer": "atomic-filament",
+      "product": "PLA (standard opaque, MeltMiser Economy Series, Translucent, Gemstone Translucent, Neon UV Reactive, Pearlescent, Metallic, Marble, Shade-Shifting, Iridescent, Extreme JET Black)",
+      "notes": "All standard PLA base + colourant/effect packages. 'Metallic' and 'Marble' are pigment effects — do NOT merge into pla-metal or any stone-filled grade. [Migrated from pla 2026-08-01]"
     },
     {
       "manufacturer": "bambu-lab",
@@ -242,9 +212,79 @@
       "notes": "Mainstream marble-effect PLA; Bambu's own guidance recommends a hardened nozzle, which implies genuine mineral content, but no filler percentage or density is published. Still listed under base pla as well — needs a reciprocity decision"
     },
     {
+      "manufacturer": "colorfabb",
+      "product": "stoneFill",
+      "notes": "PLA/PHA carrier plus mineral/stone filler; matrix is a PLA blend rather than neat PLA, as with colorFabb's woodFill"
+    },
+    {
       "manufacturer": "elegoo",
       "product": "PLA Marble",
       "notes": "Marketed as non-abrasive and brass-safe despite the mineral-fill positioning — the source of this entry's hardened-nozzle conflict. Still listed under base pla as well"
+    },
+    {
+      "manufacturer": "eryone",
+      "product": "PLA Marble",
+      "notes": "Mineral-filled marble-look PLA; loading unpublished"
+    },
+    {
+      "manufacturer": "esun",
+      "product": "PLA-Marble",
+      "notes": "Marble-effect pigment/filler; no marble id in catalog [Migrated from pla 2026-08-01]"
+    },
+    {
+      "manufacturer": "extrudr",
+      "product": "FLAX",
+      "notes": "Bio-based matrix plus mineral filler with a sandstone-like matte finish; density 1.45 g/cm³, VICAT A 48 °C. Matrix is not confirmed to be neat PLA, so this is a category match rather than a chemistry match"
+    },
+    {
+      "manufacturer": "filament-pm",
+      "product": "MARBLEJET",
+      "notes": "Marble-effect mineral-filled PLA"
+    },
+    {
+      "manufacturer": "formfutura",
+      "product": "StoneFil",
+      "notes": "The reference product for this entry: explicitly 50 % powdered stone filling, density 1.70 g/cm³, 185-225 °C, hardened nozzle recommended"
+    },
+    {
+      "manufacturer": "geeetech",
+      "product": "PLA Marble",
+      "notes": "The only manufacturer statement in the cluster that names stone powder explicitly as the filler ('mixed with stone powder or other additives to simulate marble')"
+    },
+    {
+      "manufacturer": "jamg-he",
+      "product": "Marble PLA Filament",
+      "notes": "Marble-effect pigment [Migrated from pla 2026-08-01]"
+    },
+    {
+      "manufacturer": "jayo",
+      "product": "Marble PLA / High Speed Marble PLA",
+      "notes": "Marble-effect pigment [Migrated from pla 2026-08-01]"
+    },
+    {
+      "manufacturer": "overture",
+      "product": "Rock PLA (incl. Rock PLA Gradient)",
+      "notes": "Described by the vendor as a stone-filled composite — a real particulate filler that raises density and abrasiveness, not a pigment. The Gradient SKU is the same composite with a colour transition"
+    },
+    {
+      "manufacturer": "polymaker",
+      "product": "Panchroma PLA (standard, translucent, neon, UV-shift, marble, galaxy, starlight, celestial, metallic)",
+      "notes": "Cosmetic additives on a base PLA; no chemistry change [Migrated from pla 2026-08-01]"
+    },
+    {
+      "manufacturer": "rosa3d",
+      "product": "PLA Speed Matt Marble (Ivory / Sandstone / Carrara)",
+      "notes": "Mineral-filled marble/stone-look PLA on the high-speed matte base"
+    },
+    {
+      "manufacturer": "spectrum-filaments",
+      "product": "PLA Stone Age",
+      "notes": "PLA plus mineral/stone powder giving a stone-like matte texture"
+    },
+    {
+      "manufacturer": "sunlu",
+      "product": "PLA Marble",
+      "notes": "Marble-effect pigment/filler [Migrated from pla 2026-08-01]"
     },
     {
       "manufacturer": "ziro",

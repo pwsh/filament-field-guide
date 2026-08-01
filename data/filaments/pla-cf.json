@@ -138,6 +138,7 @@
   "compatibility": {
     "bonds_with": [
       "lw-pla",
+      "pha",
       "pla",
       "pla-cf",
       "pla-gf",
@@ -251,6 +252,21 @@
       "manufacturer": "3dxtech",
       "product": "CarbonX PLA+CF",
       "notes": "PLA + chopped CF."
+    },
+    {
+      "manufacturer": "IIID Max",
+      "product": "High Speed Carbon Fiber PLA+",
+      "notes": "Chopped-carbon-fibre PLA."
+    },
+    {
+      "manufacturer": "Numakers",
+      "product": "PLA-CF",
+      "notes": "Chopped-carbon-fibre PLA."
+    },
+    {
+      "manufacturer": "Siddament",
+      "product": "Carbon Fiber PLA",
+      "notes": "Chopped-carbon-fibre PLA."
     },
     {
       "manufacturer": "anycubic",

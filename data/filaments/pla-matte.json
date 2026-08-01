@@ -135,6 +135,7 @@
   "compatibility": {
     "bonds_with": [
       "lw-pla",
+      "pha",
       "pla",
       "pla-cf",
       "pla-gf",
@@ -226,6 +227,51 @@
     {
       "manufacturer": "3djake",
       "product": "mattePLA"
+    },
+    {
+      "manufacturer": "Hobby Lobby",
+      "product": "Matte 3D Printing Filament",
+      "notes": "Separate SKU line; colour range not fully surfaced, PLA base assumed in line with the rest of the label."
+    },
+    {
+      "manufacturer": "IIID Max",
+      "product": "Fremover Matte PLA+",
+      "notes": "Fremover secondary label; same ownership caveat."
+    },
+    {
+      "manufacturer": "MarsWork",
+      "product": "PLA Matte",
+      "notes": "26+ colours, same refill format. MarsWork's catalogue is PLA only."
+    },
+    {
+      "manufacturer": "Numakers",
+      "product": "PLA Matte",
+      "notes": "Matte-additive PLA."
+    },
+    {
+      "manufacturer": "OVV3D",
+      "product": "Basic PLA Rainbow Matte (Blue/Green/Pink/Purple)",
+      "notes": "Entry matte tier."
+    },
+    {
+      "manufacturer": "OVV3D",
+      "product": "Gradient 'Dreamy Macaron' Matte PLA",
+      "notes": "Matte base."
+    },
+    {
+      "manufacturer": "OVV3D",
+      "product": "Matte PLA (tri-colour Macaron, dual-colour, rainbow Macaron)",
+      "notes": "Pastel multi-colour matte range."
+    },
+    {
+      "manufacturer": "Siddament",
+      "product": "Matte PLA / Matte PLA V2",
+      "notes": "Two generations; Matte Marble and Matte Cotton White are colourways, not filled grades."
+    },
+    {
+      "manufacturer": "Yoline Lab",
+      "product": "Matte PLA",
+      "notes": "Aesthetic Series."
     },
     {
       "manufacturer": "addnorth",

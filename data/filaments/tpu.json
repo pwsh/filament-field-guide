@@ -255,6 +255,31 @@
       "notes": "Shore grade not disclosed on the product page, so base tpu rather than a graded id."
     },
     {
+      "manufacturer": "Amazon Basics",
+      "product": "TPU",
+      "notes": "Post-launch addition; no Shore durometer in listings."
+    },
+    {
+      "manufacturer": "CC3D",
+      "product": "TPU",
+      "notes": "No Shore durometer disclosed, so generic tpu rather than a graded id."
+    },
+    {
+      "manufacturer": "Cookiecad",
+      "product": "TPU",
+      "notes": "No Shore durometer published; generic tpu id."
+    },
+    {
+      "manufacturer": "Yoline Lab",
+      "product": "TPU 72D",
+      "notes": "No tpu-72d id and 68D is the nearest lower grade; generic tpu used rather than misfiling (see gaps)."
+    },
+    {
+      "manufacturer": "Yoline Lab",
+      "product": "TPU 98A",
+      "notes": "No tpu-98a id; 95A is a materially different hardness, so generic tpu used (see gaps)."
+    },
+    {
       "manufacturer": "amolen",
       "product": "TPU (Basic/Glow/Rainbow/Transparent)",
       "notes": "Shore hardness not published per variant, so no Shore-grade id asserted."

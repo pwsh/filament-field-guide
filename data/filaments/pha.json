@@ -1,0 +1,237 @@
+{
+  "id": "pha",
+  "name": "PHA (Polyhydroxyalkanoate / PLA-PHA blends)",
+  "aliases": [
+    "Polyhydroxyalkanoate",
+    "PLA/PHA",
+    "PLA-PHA",
+    "PHA blend",
+    "PHB/PHA"
+  ],
+  "status": "researched",
+  "base_type": null,
+  "variation_kind": null,
+  "polymer_class": "polylactide",
+  "chemical_makeup": "Polyhydroxyalkanoate — a bio-polyester synthesised inside bacteria by fermentation of plant sugars or fats rather than from petrochemical feedstock. Almost every spool sold as 'PHA filament' is a PLA-majority blend in which PHA acts as a toughening/impact-modifying phase (colorFabb PLA/PHA is the reference product); 100 % PHA filaments exist (EcoGenesis GenPHA) but are rare. Filed under polylactide because the commercially dominant form is a polylactide matrix, not because PHA is a lactide polymer.",
+  "summary": "A bio-fermented polyester sold almost exclusively as a PLA/PHA blend: PLA's process window with less brittleness. Prints at 195-220 °C on an unheated-to-warm bed with no enclosure, so it is a drop-in for PLA workflows, and the practical delta is toughness rather than heat resistance — Tg and softening behaviour stay in PLA territory. The marketing delta (marine/home biodegradability) is the least verified thing about it: no certification was located for the blend, and a PLA-majority blend degrades on PLA's terms, not pure PHA's.",
+  "printing": {
+    "nozzle_temp_c": {
+      "min": 195,
+      "max": 220,
+      "recommended": 210
+    },
+    "bed_temp_c": {
+      "min": 50,
+      "max": 60,
+      "recommended": 55
+    },
+    "ambient_temp_c": {
+      "min": 15,
+      "max": 30,
+      "recommended": 22
+    },
+    "speed_mm_s": {
+      "min": 40,
+      "max": 100,
+      "recommended": 50
+    },
+    "enclosure_recommended": false,
+    "heated_chamber_required": false,
+    "requires_hardened_nozzle": false,
+    "part_cooling_fan_pct": {
+      "min": 0,
+      "max": 100,
+      "recommended": 50
+    },
+    "enclosure_open_for_cooling": true,
+    "notes": "colorFabb's PLA/PHA TDS gives 195-220 °C nozzle and 50-60 °C bed; the material prints on an unheated bed with reduced adhesion. Deltas vs base pla: the usable nozzle band is narrower and sits ~10 °C lower at the top (220 °C vs 230 °C), the recommended speed is more conservative (40-60 mm/s in practice against PLA's 100+ mm/s on modern hardware), and part cooling starts around 50 % rather than 100 % — the fan window is genuinely wide (0-100 %), so raise it for overhangs and fine detail and drop it if layer bonds look weak. No enclosure, no heated chamber, no hardened nozzle (unfilled). As with all PLA-class materials, run an enclosed printer with the door or lid open to avoid heat creep. Pure-PHA (non-blend) grades are reported to need a post-print cure — 48 h passive or 6-8 h at 70-80 °C — to reach final properties; that comes from a single writeup on a non-colorFabb product and does not apply to the PLA/PHA blend (unverified)."
+  },
+  "feeding": {
+    "drive_system": "any",
+    "ams_compatible": "yes",
+    "feeding_assistant_recommended": false,
+    "notes": "Rigid, unfilled and non-abrasive — any extruder feeds it, Bowden or direct drive, with standard brass-compatible drive gears and PTFE. No shore hardness applies (not an elastomer) and no spool-side feeding assistant is needed. AMS/MMU rating is recorded 'yes' by inference from PLA-class flow and a 210 °C nozzle, and because the PHA phase makes the strand less brittle than base PLA rather than more; no vendor has published an AMS compatibility statement for PLA/PHA, so this is unverified."
+  },
+  "drying": {
+    "required_before_use": "if-exposed",
+    "temp_c": {
+      "min": 45,
+      "max": 50,
+      "recommended": 50
+    },
+    "time_hours": {
+      "min": 4,
+      "max": 6,
+      "recommended": 6
+    },
+    "methods": [
+      "filament dryer",
+      "food dehydrator",
+      "convection oven at lowest setting",
+      "drybox with desiccant"
+    ],
+    "dryness_validation": "PLA-tier checks, applied by analogy rather than vendor instruction: no popping/crackling or visible steam at the nozzle, glossy rather than matte or blistered extrudate, minimal stringing on a retraction tower. colorFabb publishes no dryness-validation method and no moisture-content threshold for this product (unverified).",
+    "notes": "45-50 °C for 4-6 h comes from a practitioner guide, not the formal colorFabb TDS, which is silent on drying. Treat hygroscopy as PLA-tier in the absence of vendor data: dry only if a spool has sat out in humid air or a purge line starts popping."
+  },
+  "storage": {
+    "recommendations": "Sealed bag or drybox with desiccant between prints, as for base PLA. This is standard industry practice for PLA blends rather than a colorFabb instruction — the datasheet does not cover storage (unverified).",
+    "max_humidity_pct": 40,
+    "hygroscopy": "low"
+  },
+  "price": {
+    "usd_per_kg_low": 46,
+    "usd_per_kg_high": 61,
+    "notes": "colorFabb PLA/PHA sells at roughly $34-46 for a 750 g spool (3DJake listings across standard and effect variants), i.e. ~$46-61/kg — a clear premium over base PLA's $14-35/kg and above pla-plus's $22-45/kg. Pure-PHA filaments are described as prohibitively expensive relative to PLA with cost tied to production scale; no specific $/kg figure was confirmed for them (unverified)."
+  },
+  "use_cases": {
+    "recommended": [
+      "functional PLA-class parts that need impact toughness rather than heat resistance",
+      "snap-fits, clips and drop-prone household items",
+      "drone and RC parts printed in a PLA workflow",
+      "eco-marketed consumer and display pieces",
+      "prints on open-frame printers where an enclosure is not available",
+      "large decorative parts where PLA's low warp matters"
+    ],
+    "not_recommended": [
+      "anything with sustained heat exposure — softening stays in the PLA 55-60 °C band",
+      "load-bearing or thermally stressed parts (petg, abs and the nylons are all stronger here)",
+      "parts relied on to biodegrade in soil, home compost or seawater — the claim is uncertified for this blend",
+      "sustained-load structural parts (PLA-family creep)",
+      "outdoor parts exposed to UV",
+      "budget projects — 2-3x the cost of base PLA"
+    ]
+  },
+  "suitability": {
+    "food_contact": "no",
+    "load_bearing": "light",
+    "high_temperature": "no",
+    "outdoor": "no"
+  },
+  "properties": {
+    "density_g_cm3": 1.2,
+    "grams_per_100cm3": 120,
+    "cm3_per_100g": 83.3,
+    "glass_transition_c": 58,
+    "max_service_temp_c": 50,
+    "tensile_strength_mpa": {
+      "recommended": 64
+    },
+    "notes": "Density 1.2 g/cm³ (colorFabb) is marginally below base PLA's 1.24, so 100 g yields 83.3 cm³ against PLA's 80.6. Tensile strength 64 MPa and elongation at break 4 % are colorFabb's 3D-printed figures — a single-source pair, recorded as a recommended value with no range because no second datasheet was found. Tg is NOT published by colorFabb; 58 °C is recorded from third-party reports of PLA-like softening at 55-60 °C and should be read as an assumption inherited from the PLA matrix (unverified). HDT is listed N/A by the vendor, and shrinkage is unpublished — both omitted rather than guessed. Max service temperature is inferred from the assumed Tg minus margin, matching how the base pla entry handles the same gap, not a datasheet figure."
+  },
+  "scores": {
+    "ease_of_print": 9,
+    "dimensional_stability": 8,
+    "warp_tendency": 1,
+    "layer_adhesion": 8,
+    "compression_strength": 7,
+    "temperature_tolerance": 2,
+    "uv_tolerance": 3,
+    "weather_tolerance": 2,
+    "water_tolerance": 5
+  },
+  "compatibility": {
+    "bonds_with": [
+      "lw-pla",
+      "pha",
+      "pla",
+      "pla-cf",
+      "pla-gf",
+      "pla-hf",
+      "pla-matte",
+      "pla-plus",
+      "pla-silk",
+      "pla-wood"
+    ],
+    "support_materials": [
+      "bvoh",
+      "petg",
+      "pla",
+      "pva",
+      "support-breakaway"
+    ],
+    "usable_as_support_for": [
+      "petg",
+      "pla"
+    ],
+    "notes": "Behaves as a PLA grade for bonding: welds to itself and to the PLA family, and does not weld to petg, abs, asa, pc, pa or pp. PVA and BVOH soluble supports and PLA/PETG breakaway pairings are expected to work on the same non-bonding logic that makes PLA and PETG mutual breakaway supports, but colorFabb confirms no support pairing for this blend specifically (unverified). The PHA phase does not change interface chemistry in any documented way."
+  },
+  "plate_recommendations": [
+    {
+      "plate_id": "pei-textured",
+      "rating": "recommended",
+      "notes": "Adheres and releases like base PLA at 50-60 °C with no adhesive; low PLA-family shrinkage keeps corners down. Inferred from PLA-family behaviour — colorFabb does not name build surfaces (unverified)."
+    },
+    {
+      "plate_id": "pei-smooth",
+      "rating": "recommended",
+      "notes": "As base PLA: strong direct bond and a glossy bottom finish, no release agent needed (inferred from PLA-family behaviour, unverified)."
+    },
+    {
+      "plate_id": "pei-satin",
+      "rating": "recommended",
+      "notes": "As base PLA; a brim helps small footprints because satin grips slightly less than smooth PEI (inferred, unverified)."
+    },
+    {
+      "plate_id": "pei-patterned",
+      "rating": "recommended",
+      "notes": "As base PLA (inferred from PLA-family behaviour, unverified)."
+    },
+    {
+      "plate_id": "supertack",
+      "rating": "recommended",
+      "notes": "As base PLA; the PHA toughening phase makes no documented difference to release behaviour (inferred, unverified)."
+    },
+    {
+      "plate_id": "glass-borosilicate",
+      "rating": "usable",
+      "notes": "Bare glass is usually too slick for PLA-class materials; a thin PVA glue-stick film is the standard fix and gives the glossy underside glass is used for (inferred from PLA guidance, unverified)."
+    },
+    {
+      "plate_id": "pp-sheet",
+      "rating": "usable",
+      "notes": "Release-oriented coating: adhesion is adequate rather than tenacious, so use a brim for tall parts on small footprints (inferred from base PLA, unverified)."
+    },
+    {
+      "plate_id": "pc-plate",
+      "rating": "usable",
+      "notes": "Within this material's 50-60 °C bed band, so the plate's low thermal ceiling is not a problem; rated one step below the PEI surfaces only because nothing is documented for this blend (unverified)."
+    }
+  ],
+  "emissions": {
+    "voc_level": "low",
+    "particulate_level": "low",
+    "primary_emissions": [
+      "lactide (from the PLA matrix)",
+      "ultrafine particles"
+    ],
+    "ventilation": "optional",
+    "notes": "No PHA- or PLA/PHA-specific chamber study was located. Rated with base PLA because the matrix is PLA and the nozzle temperature is identical — general FDM emissions literature puts PLA-class materials one to three orders of magnitude below ABS on ultrafine particles. Whether the PHA phase contributes its own species is untested (unverified). Ordinary room ventilation suffices for occasional printing; move air for continuous printing in an occupied room."
+  },
+  "safety_notes": "Nothing beyond ordinary PLA-class handling: no styrene, no caprolactam, no fibre dust, no hardened nozzle. The one non-obvious caution is behavioural rather than chemical — 'fully biodegradable' marketing invites disposal in the environment, and community commentary has flagged the littering risk directly. Dispose of prints as plastic waste unless a specific certified end-of-life route exists.",
+  "additional_notes": "Read the spool before assuming what you have: 'PHA' covers two materially different products. colorFabb PLA/PHA (and the woodFill / corkFill / metal-filled colorFabb lines built on the same carrier) is a PLA-majority blend where PHA is the impact modifier — process-identical to PLA, and closest in behaviour to the pla-plus entry, which is the same idea with an undisclosed petrochemical modifier instead. 100 % PHA filaments (EcoGenesis GenPHA and similar) are a genuinely different material with a reported post-print cure step and far less published data; this entry's numbers describe the blend. MARINE/HOME BIODEGRADABILITY — VERIFY: vendor and advocacy sources claim PHA degrades in uncontrolled environments including seawater, unlike PLA which needs industrial composting. No certificate or standard test report (ASTM D6691 marine, ASTM D6400 / EN 13432 compostability) was located for the colorFabb PLA/PHA blend or for any specific product in this research pass, and a PLA-majority blend plausibly degrades far closer to PLA's terms than pure PHA resin's. Treat the claim as unverified marketing until a certificate number is produced.",
+  "provenance": {
+    "sources": [
+      "https://colorfabb.com/media/datasheets/tds/colorfabb/TDS_E_ColorFabb_PLA_PHA.pdf",
+      "https://support.colorfabb.com/hc/en-150/articles/14729133442577-PLA-PHA-Printer-Settings",
+      "https://www.nozzlehub.com/blog/067-colorfabb-pla-pha/",
+      "https://www.3djake.com/colorfabb/pla-pha",
+      "https://hackaday.com/2025/12/14/printing-with-pha-filament-as-potential-alternative-to-pla/",
+      "https://ecogenesisbiopolymers.com/genpha-3d-filament/"
+    ],
+    "last_verified": "2026-08-01",
+    "confidence": "low",
+    "conflicts": "The entry covers two product classes with one set of numbers: every quantitative figure here (1.2 g/cm³, 64 MPa, 4 % elongation, 195-220 °C) comes from colorFabb's PLA/PHA blend TDS, while pure-PHA products such as EcoGenesis GenPHA are a different material with no comparable published data and a reported 48 h passive / 6-8 h at 70-80 °C post-print cure that the blend does not need. Tg is unpublished by colorFabb; 58 °C is a third-party PLA-analogue figure. HDT is listed N/A and shrinkage is unpublished — neither is recorded. Drying parameters (45-50 °C / 4-6 h) come from a practitioner guide, not the TDS, which is silent on drying and storage. AMS compatibility, support pairings, plate behaviour and emissions are all inferred from PLA-family behaviour with no product-specific source. The marine/home-biodegradability claim is the largest open item: no certification against ASTM D6691, ASTM D6400 or EN 13432 was located for this blend. Price is derived from 3DJake 750 g listings converted to $/kg, not a vendor price list."
+  },
+  "trade_names": [
+    {
+      "manufacturer": "colorfabb",
+      "product": "PLA/PHA",
+      "notes": "The reference product for this entry: PLA-majority blend with PHA as impact modifier, 195-220 °C nozzle, density 1.2 g/cm³, tensile 64 MPa printed. colorFabb's woodFill, corkFill and metal-filled lines use the same PLA/PHA carrier but map to their filler-specific ids (pla-wood, pla-metal)."
+    },
+    {
+      "manufacturer": "EcoGenesis Biopolymers",
+      "product": "GenPHA 3D Filament",
+      "notes": "SPEC DELTA: marketed as 100 % PHA rather than a PLA blend — different material class from the colorFabb reference, with a reported post-print cure requirement and marine-degradability claims that this entry records as unverified. Manufacturer not yet in the catalog, so listed by display name."
+    }
+  ]
+}

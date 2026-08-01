@@ -1,0 +1,116 @@
+{
+  "id": "3d-fuel",
+  "name": "3D-Fuel",
+  "status": "researched",
+  "summary": "US filament extruder based in Fargo, North Dakota, operating since 2014 out of the Fargo 3D Printing / Filament Innovations family of businesses. Notable for a genuinely domestic supply chain — NatureWorks Ingeo PLA resin from Blair, Nebraska, spools injection-moulded domestically from recycled plastic, US-sourced packaging and labels. Acquired by Nexa3D on 12 March 2024 and now part of Nexa3D's materials portfolio, so brand direction may shift under the new parent.",
+  "headquarters_country": "United States",
+  "manufacturing_countries": [
+    "United States"
+  ],
+  "brands": [
+    "3D-Fuel",
+    "ReFuel",
+    "3D-Clean"
+  ],
+  "oem_relationships": [
+    {
+      "company": "Nexa3D",
+      "relationship": "parent-company",
+      "notes": "Acquired 3D-Fuel on 12 March 2024 (Nexa3D CEO Avi Reichental), adding it to a materials portfolio that already included Essentium. Reported by VoxelMatters; not a white-label relationship — 3D-Fuel continues to extrude under its own brand."
+    },
+    {
+      "company": "Filament Innovations LLC",
+      "relationship": "parent-company",
+      "notes": "Historic operating entity; 3D-Fuel grew out of the Filament Innovations / Fargo 3D Printing group before the Nexa3D acquisition. Current legal structure post-acquisition was not verified."
+    }
+  ],
+  "endpoints": {
+    "website": "https://www.3dfuel.com/",
+    "store": "https://www.3dfuel.com/collections/3d-printer-filament",
+    "support": "https://www.3dfuel.com/pages/contact-us",
+    "social": {
+      "facebook": "https://www.facebook.com/3dfuel/",
+      "linkedin": "https://www.linkedin.com/company/3d-fuel"
+    }
+  },
+  "product_lines": [
+    {
+      "name": "Standard PLA+",
+      "filament_ids": [
+        "pla-plus"
+      ],
+      "notes": "Base toughened PLA line, $25.95/kg."
+    },
+    {
+      "name": "Tough Pro PLA+",
+      "filament_ids": [
+        "pla-plus"
+      ],
+      "notes": "Higher-impact PLA+ tier, $32.95/kg."
+    },
+    {
+      "name": "ReFuel Recycled PLA+",
+      "filament_ids": [
+        "pla-plus"
+      ],
+      "notes": "Recycled-content PLA+ sold at a discount ($14.98-$19.90); recycled feedstock is a sourcing attribute, not a separate chemistry."
+    },
+    {
+      "name": "Pro PCTG",
+      "filament_ids": [
+        "pctg"
+      ],
+      "notes": "Glycol-modified copolyester (PCTG); 1 kg, 4 kg and 25 lb/11 kg formats plus 50 g sample coils."
+    },
+    {
+      "name": "ReFuel Recycled Pro PCTG",
+      "filament_ids": [
+        "pctg"
+      ],
+      "notes": "Recycled-content PCTG."
+    },
+    {
+      "name": "Pro PCTG-CF",
+      "filament_ids": [
+        "pctg"
+      ],
+      "notes": "Carbon-fibre-filled PCTG. The catalog has no pctg-cf id, so only the base chemistry pctg is asserted — see gaps."
+    },
+    {
+      "name": "Pro PCTG-GF",
+      "filament_ids": [
+        "pctg"
+      ],
+      "notes": "Glass-fibre-filled PCTG. The catalog has no pctg-gf id, so only the base chemistry pctg is asserted — see gaps."
+    },
+    {
+      "name": "Pro PETG",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "Standard PETG."
+    },
+    {
+      "name": "3D-Clean",
+      "filament_ids": [],
+      "notes": "Nozzle cleaning / purging filament. Not a printable structural material and the catalog has no cleaning-filament id, so no mapping is asserted."
+    }
+  ],
+  "price_tier": "premium",
+  "additional_notes": "HQ and plant: 2222 7th Ave N, Fargo, ND 58102. Roughly 172 SKUs across 1 kg, 4/4.5 kg and 25 lb/11 kg bulk spools plus 50 g Pro PCTG samples. Pricing sits mid-to-premium ($25.95-$32.95/kg) with the recycled ReFuel line as the value tier, so price_tier premium is the closest single bucket. Legacy line names cited elsewhere in the community (Buzzed, Workday, Entwined, Pro-D) did not appear anywhere in current site content and are treated as discontinued or rebranded rather than active — they are deliberately excluded from product_lines. Build plates: none found, so makes_plates is left unset. CEO attribution differs between sources (John Machacek as founder-side figure, John Schneider as CEO in the Fargo INC! profile) and was not resolved.",
+  "provenance": {
+    "sources": [
+      "https://www.3dfuel.com/",
+      "https://www.3dfuel.com/pages/made-in-usa",
+      "https://www.3dfuel.com/collections/3d-printer-filament",
+      "https://www.3dfuel.com/pages/why-3d-fuel",
+      "https://www.3dfuel.com/pages/location",
+      "https://www.voxelmatters.com/nexa3d-acquires-filament-manufacturer-3d-fuel/",
+      "https://3dprintingindustry.com/news/3d-fuel-expands-u-s-manufacturing-and-reduces-filament-prices-245988/",
+      "https://fargoinc.com/10-questions-with-john-machacek-3d-fuel-and-fargo-3d-printing/"
+    ],
+    "last_verified": "2026-08-01",
+    "confidence": "high",
+    "conflicts": "Post-acquisition legal entity naming (3D-Fuel vs Filament Innovations LLC vs a Nexa3D subsidiary) is not stated by any source. Historic branded lines (Buzzed, Workday, Entwined, Pro-D) appear in third-party writeups but not in current site content, so their status is unresolved."
+  }
+}

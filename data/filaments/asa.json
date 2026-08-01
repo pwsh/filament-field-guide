@@ -142,6 +142,7 @@
       "abs-esd",
       "abs-fr",
       "abs-gf",
+      "abs-plus",
       "asa",
       "asa-cf",
       "asa-gf",
@@ -155,11 +156,13 @@
     ],
     "support_materials": [
       "abs",
+      "abs-plus",
       "bvoh",
       "hips"
     ],
     "usable_as_support_for": [
       "abs",
+      "abs-plus",
       "asa-cf",
       "asa-gf"
     ],
@@ -273,6 +276,26 @@
       "manufacturer": "3dxtech",
       "product": "Triton3D ASA (Stratasys-compatible)",
       "notes": "Repackaged/certified 3DXTECH base material."
+    },
+    {
+      "manufacturer": "Cookiecad",
+      "product": "ASA",
+      "notes": "Standard ASA."
+    },
+    {
+      "manufacturer": "Numakers",
+      "product": "ASA",
+      "notes": "Standard ASA."
+    },
+    {
+      "manufacturer": "Siddament",
+      "product": "ASA",
+      "notes": "Black and white."
+    },
+    {
+      "manufacturer": "Yoline Lab",
+      "product": "ASA",
+      "notes": "Engineering Series."
     },
     {
       "manufacturer": "anycubic",

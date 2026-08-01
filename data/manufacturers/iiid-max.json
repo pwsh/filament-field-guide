@@ -1,0 +1,187 @@
+{
+  "id": "iiid-max",
+  "name": "IIID Max",
+  "status": "researched",
+  "summary": "US-fronted filament brand operated by IIID Max LLC of Medley/Miami, Florida, selling a house line of PLA+, high-speed PLA+, silk, glow, PETG, ABS and TPU alongside a second in-house label (Fremover) and resold third-party brands. The brand presents itself as American and cites NatureWorks Ingeo resin for its Classic PLA+, but the only documented import shipments for IIID Max LLC are finished PLA filament from an Argentine supplier, so the extrusion origin is contested rather than confirmed.",
+  "headquarters_country": "United States",
+  "manufacturing_countries": [
+    "Argentina"
+  ],
+  "brands": [
+    "IIID Max",
+    "Fremover"
+  ],
+  "oem_relationships": [
+    {
+      "company": "Cabana Bosch SAS",
+      "relationship": "suspected-manufactured-by",
+      "notes": "Volza import records list IIID Max LLC's only documented shipments (2 shipments, described as 20 pallets / 7,200 boxes / 5,640 reels of PLA filament) as arriving from supplier Cabana Bosch SAS via the Port of Buenos Aires, Argentina. This is finished filament, not resin, which points to contract extrusion rather than in-house US production. The relationship is inferred from shipping records only — neither company states it publicly, and the records cover PLA alone, so the engineering lines (FiberX PA6/66-CF, ABS-CF) may come from a different source entirely."
+    },
+    {
+      "company": "Amolen",
+      "relationship": "distributes",
+      "notes": "Sold on the IIID Max storefront as a third-party brand, not produced by IIID Max."
+    },
+    {
+      "company": "Cookiecad",
+      "relationship": "distributes",
+      "notes": "Sold on the IIID Max storefront as a third-party brand, not produced by IIID Max."
+    },
+    {
+      "company": "West3D / Ambrosia",
+      "relationship": "distributes",
+      "notes": "Sold on the IIID Max storefront as a third-party brand."
+    },
+    {
+      "company": "The Virtual Foundry",
+      "relationship": "distributes",
+      "notes": "Filamet Titanium metal-filled filament resold on the IIID Max storefront."
+    }
+  ],
+  "endpoints": {
+    "website": "https://iiidmax.com/",
+    "store": "https://iiidmax.com/shop/",
+    "support": "mailto:sales@iiidmax.com",
+    "social": {
+      "facebook": "https://www.facebook.com/iiidmaxfilament/",
+      "instagram": "https://www.instagram.com/iiidmaxfilament",
+      "tiktok": "https://www.tiktok.com/@iiidmaxfilament",
+      "youtube": "https://www.youtube.com/@iiidmaxfilament",
+      "discord": "https://discord.gg/43gR5MZx53"
+    }
+  },
+  "product_lines": [
+    {
+      "name": "Classic PLA+",
+      "filament_ids": [
+        "pla-plus"
+      ],
+      "notes": "Flagship line, ~35 colours, 1.75 mm +/-0.03 mm, 190-230 C nozzle / 50-70 C bed; product copy claims premium NatureWorks Ingeo pellets as the base resin."
+    },
+    {
+      "name": "High Speed PLA+",
+      "filament_ids": [
+        "pla-plus",
+        "pla-hf"
+      ],
+      "notes": "50+ colours. pla-plus is the stated chemistry; pla-hf is listed for the high-speed marketing claim, which no published TDS independently confirms."
+    },
+    {
+      "name": "High Speed Silk PLA+",
+      "filament_ids": [
+        "pla-silk"
+      ],
+      "notes": "Silk-luster version of the high-speed PLA+ base."
+    },
+    {
+      "name": "High Speed Carbon Fiber PLA+",
+      "filament_ids": [
+        "pla-cf"
+      ],
+      "notes": "Chopped-carbon-fibre PLA."
+    },
+    {
+      "name": "Glow in the Dark PLA+",
+      "filament_ids": [
+        "pla-glow"
+      ],
+      "notes": "Phosphorescent PLA in neon green and neon sky blue."
+    },
+    {
+      "name": "High Speed PETG",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "Standard PETG, 10+ colours; the high-speed claim is marketing and no distinct chemistry is disclosed."
+    },
+    {
+      "name": "High Speed TPU 95A Flexible",
+      "filament_ids": [
+        "tpu-95a"
+      ],
+      "notes": "Shore 95A flexible TPU, 6 colours."
+    },
+    {
+      "name": "IIID Max ABS",
+      "filament_ids": [
+        "abs"
+      ],
+      "notes": "Standard ABS, 7 colours."
+    },
+    {
+      "name": "FiberX PA6/66+CF15",
+      "filament_ids": [
+        "pa-cf"
+      ],
+      "notes": "500 g spools of 15% carbon-fibre-filled PA6/66 copolyamide. Mapped to the generic pa-cf id rather than pa6-cf because the base is a 6/66 copolymer, not straight PA6, and the catalog has no pa66-cf or copa-cf id."
+    },
+    {
+      "name": "FiberX ABS+CF",
+      "filament_ids": [
+        "abs-cf"
+      ],
+      "notes": "Carbon-fibre-filled ABS."
+    },
+    {
+      "name": "Fremover PLA+",
+      "filament_ids": [
+        "pla-plus"
+      ],
+      "notes": "Fremover is presented as a second in-house label on the IIID Max storefront rather than a resold outside brand; that ownership claim is not independently corroborated."
+    },
+    {
+      "name": "Fremover Matte PLA+",
+      "filament_ids": [
+        "pla-matte"
+      ],
+      "notes": "Matte-additive PLA under the Fremover secondary label."
+    },
+    {
+      "name": "Fremover Silk / Dual Silk / Rainbow Silk / Tri-Color Silk PLA",
+      "filament_ids": [
+        "pla-silk"
+      ],
+      "notes": "Single-, dual-, rainbow- and tri-colour silk PLA; the catalog has no multi-colour coextrusion id, so all variants map to pla-silk."
+    },
+    {
+      "name": "Fremover PETG",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "Standard PETG under the Fremover secondary label."
+    },
+    {
+      "name": "Fremover ABS",
+      "filament_ids": [
+        "abs"
+      ],
+      "notes": "Standard ABS under the Fremover secondary label."
+    },
+    {
+      "name": "Fremover Mystery Glow",
+      "filament_ids": [
+        "pla-glow"
+      ],
+      "notes": "Glow-in-the-dark PLA sold as an undisclosed colour; base chemistry assumed PLA in line with the rest of the Fremover line."
+    }
+  ],
+  "makes_plates": false,
+  "price_tier": "mid",
+  "additional_notes": "Bundles (3/6/8/10/16/20/30/32-packs) are packaging SKUs of the PLA+, PETG, Silk PLA+, TPU, ABS and Glow lines, not separate materials, so they are not listed as product lines. Accessories are Magigoo adhesives and MK8/MK10/E3D-V6-style hardened steel nozzles (0.6/0.8/1.0 mm) plus resin printers — no build plates or print sheets were found, so makes_plates is false. Pricing is mid-tier consumer: Classic PLA+ $19.90 per spool singly, $11.21-$14.47 per spool in volume packs. The storefront is multi-brand (house line plus resold Amolen, Cookiecad, West3D/Ambrosia and The Virtual Foundry), so IIID Max functions as much as a retailer as a filament brand. A user thread on 3dprintingspace.com reported diameter drifting between 1.65 and 1.80 mm, messy winding, and inconsistent labelling (box marked PLA+, spool unlabelled) — quality-control complaints independent of the origin question. Instagram, TikTok and YouTube URLs are constructed from the published @iiidmaxfilament handle rather than links found on the site.",
+  "provenance": {
+    "sources": [
+      "https://iiidmax.com/",
+      "https://iiidmax.com/shop/",
+      "https://iiidmax.com/collections/all-products",
+      "https://iiidmax.com/products/iiid-max-classic-pla",
+      "https://iiidmax.com/collections/pla-pla",
+      "https://iiidmax.com/collections/all-bundles",
+      "https://www.volza.com/company-profile/iiid-max-llc-88952025/",
+      "https://3dprintingspace.com/t/iiid-max-pla-made-in-usa/1974",
+      "https://www.facebook.com/iiidmaxfilament/"
+    ],
+    "last_verified": "2026-08-01",
+    "confidence": "low",
+    "conflicts": "Manufacturing origin is directly contested. The brand markets itself as American ('from the USA') and cites US-made NatureWorks Ingeo resin, but makes no explicit 'Made in USA' claim on product pages, while import records show its only documented inbound shipments are finished PLA filament from Argentina. manufacturing_countries records Argentina because that is the only documented physical origin of product, but it rests on two shipment records covering PLA alone and may not describe the PETG, ABS, TPU or FiberX lines. Whether Fremover is genuinely an IIID Max house brand or a third-party line carried by the store is unverified."
+  }
+}

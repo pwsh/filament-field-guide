@@ -141,6 +141,7 @@
       "abs",
       "abs-cf",
       "abs-gf",
+      "abs-plus",
       "asa",
       "asa-cf",
       "asa-gf",
@@ -219,6 +220,11 @@
       "manufacturer": "3dxtech",
       "product": "CarbonX ASA+CF",
       "notes": "ASA + chopped CF."
+    },
+    {
+      "manufacturer": "Siddament",
+      "product": "ASA Carbon Fiber",
+      "notes": "Carbon-fibre-filled ASA."
     },
     {
       "manufacturer": "atomic-filament",

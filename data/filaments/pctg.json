@@ -133,12 +133,14 @@
   },
   "compatibility": {
     "bonds_with": [
+      "cpe",
       "pctg",
       "pet",
       "petg",
       "petg-cf",
       "petg-esd",
-      "petg-gf"
+      "petg-gf",
+      "petg-plus"
     ],
     "support_materials": [
       "petg",
@@ -237,6 +239,26 @@
   },
   "trade_names": [
     {
+      "manufacturer": "3D-Fuel",
+      "product": "Pro PCTG",
+      "notes": "Glycol-modified copolyester; 1kg, 4kg, 25lb formats plus 50g samples."
+    },
+    {
+      "manufacturer": "3D-Fuel",
+      "product": "Pro PCTG-CF",
+      "notes": "Carbon-fibre PCTG mapped to base chemistry only - no pctg-cf id exists (see gaps)."
+    },
+    {
+      "manufacturer": "3D-Fuel",
+      "product": "Pro PCTG-GF",
+      "notes": "Glass-fibre PCTG mapped to base chemistry only - no pctg-gf id exists (see gaps)."
+    },
+    {
+      "manufacturer": "3D-Fuel",
+      "product": "ReFuel Recycled Pro PCTG",
+      "notes": "Recycled-content PCTG."
+    },
+    {
       "manufacturer": "3djake",
       "product": "PCTG"
     },
@@ -244,6 +266,11 @@
       "manufacturer": "3dxtech",
       "product": "MAX-G PCTG",
       "notes": "CHDM-modified copolyester; tougher/clearer than the PETG in the same MAX-G family."
+    },
+    {
+      "manufacturer": "Yoline Lab",
+      "product": "PCTG",
+      "notes": "Engineering Series."
     },
     {
       "manufacturer": "atomic-filament",

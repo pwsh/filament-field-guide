@@ -1,0 +1,284 @@
+{
+  "id": "copa",
+  "name": "CoPA (Copolyamide Nylon)",
+  "aliases": [
+    "Copolyamide",
+    "Co-polyamide",
+    "PA6/66 copolymer",
+    "PA 6/69",
+    "Nylon copolymer",
+    "CoPA Nylon"
+  ],
+  "status": "researched",
+  "base_type": "pa",
+  "variation_kind": "grade",
+  "polymer_class": "polyamide",
+  "chemical_makeup": "Copolyamide — a nylon copolymer rather than a homopolymer, most commonly PA6/PA66 (Polymaker PolyMide CoPA) or PA6/69 (taulman Alloy 910). Interleaving two monomer systems in one chain disrupts crystallisation relative to neat PA6 or PA66, which lowers crystallisation shrinkage and therefore warp; the amide content, and with it the moisture uptake, is essentially unchanged.",
+  "summary": "The low-warp nylon: a PA6/PA66-class copolymer whose disrupted crystallinity makes it print far calmer than homopolymer nylon — warp behaviour closer to a filled grade than to pa6 — while keeping nylon toughness and chemical resistance. The trap is that low warp is not low moisture: Polymaker still requires storage below 20 % RH and a 100 °C / 8 h dry, so this is a 'first nylon' on process discipline, not an easy material. Heat performance is mid-pack (Tg 66 °C, HDT@0.45 MPa 111 °C), clearly behind CF-reinforced high-temp nylons such as pa612.",
+  "printing": {
+    "nozzle_temp_c": {
+      "min": 250,
+      "max": 270,
+      "recommended": 260
+    },
+    "bed_temp_c": {
+      "min": 25,
+      "max": 100,
+      "recommended": 50
+    },
+    "ambient_temp_c": {
+      "min": 30,
+      "max": 50,
+      "recommended": 40
+    },
+    "speed_mm_s": {
+      "min": 50,
+      "max": 200,
+      "recommended": 60
+    },
+    "enclosure_recommended": true,
+    "heated_chamber_required": false,
+    "requires_hardened_nozzle": true,
+    "part_cooling_fan_pct": {
+      "min": 0,
+      "max": 10,
+      "recommended": 0
+    },
+    "enclosure_open_for_cooling": false,
+    "notes": "Nozzle windows agree across brands (Polymaker PolyMide CoPA 250-270 °C, taulman Bridge 255-270 °C, Alloy 910 250-255 °C), but BED TEMPERATURE DOES NOT — Polymaker specifies 25-50 °C while taulman Bridge specifies a heated bed at 80-100 °C. That is a formulation difference, not brand noise: check the spool's own datasheet before assuming either. The recorded 25-100 °C range is the union with 50 °C as the Polymaker-side starting point. Part cooling off, as for all nylons, and never run this with an enclosure open. Polymaker states the enclosure requirement explicitly (ambient temperature control); Bridge cites a 30-100 °C ambient range. Hardened nozzle is recorded true because Polymaker explicitly recommends 'a wear-resistant nozzle, such as hardened steel and ruby' for PolyMide CoPA even though the material is unfilled — an unusually strong recommendation for a neat nylon, and the reason for the flag; brass will survive light use, taulman makes no equivalent statement (unverified), so treat this as fail-safe rather than absolute."
+  },
+  "feeding": {
+    "drive_system": "any",
+    "ams_compatible": "conditional",
+    "feeding_assistant_recommended": false,
+    "notes": "Rigid and mechanically unproblematic — any extruder feeds it, and no shore hardness or feeding assistant applies (not an elastomer). AMS/MMU is 'conditional' for the same reason as pa6 and pa66: not mechanics but moisture. With a vendor-stated <20 % RH storage requirement, this material only belongs in a sealed, actively desiccated station (AMS 2 Pro / AMS HT class) or fed from a heated drybox; an open feed path will take it from printable to bubbling over a long job. No vendor AMS certification exists either way for these SKUs (unverified)."
+  },
+  "drying": {
+    "required_before_use": "always",
+    "temp_c": {
+      "min": 80,
+      "max": 100,
+      "recommended": 100
+    },
+    "time_hours": {
+      "min": 6,
+      "max": 12,
+      "recommended": 8
+    },
+    "methods": [
+      "blast/convection oven at 100 °C",
+      "high-temperature filament dryer",
+      "print directly from a heated drybox",
+      "sealed drybox with desiccant while printing"
+    ],
+    "dryness_validation": "No numeric threshold is published for these SKUs. General nylon practice: dry until consecutive weigh-ins stop dropping or a filament moisture meter reads below ~0.2 %; at the nozzle, no popping, crackling or steam, a glossy void-free purge line, and stringing back to baseline on a retraction tower (industry norm, unverified for CoPA specifically).",
+    "notes": "Polymaker specifies 100 °C for 8 h for PolyMide CoPA, plus an anneal at 80 °C for 6 h for peak mechanical and dimensional performance — annealing is a separate post-print operation, not part of drying. 100 °C is above the ceiling of most consumer filament dryers, so plan for an oven. taulman publishes no drying schedule in the retrieved Bridge or Alloy 910 excerpts (unverified) — apply the same schedule as a default."
+  },
+  "storage": {
+    "recommendations": "Airtight with fresh desiccant at all times, including between prints on the same day. Polymaker's wording is unambiguous: the material 'is sensitive to moisture and should always be stored and used under dry conditions (relative humidity below 20 %)'. Do not let the low-warp marketing imply relaxed storage — those are independent properties.",
+    "max_humidity_pct": 20,
+    "hygroscopy": "high"
+  },
+  "price": {
+    "notes": "No current $/kg figure was confirmed in this research pass for PolyMide CoPA, taulman Bridge or Alloy 910 — the numeric fields are deliberately left empty rather than estimated. For orientation only, the base pa entry records Polymaker PolyMide CoPA at roughly $50-67/kg on 0.75-1 kg spools from an earlier pass, and unfilled nylons generally run $35-90/kg. Flagged for a retailer price pull."
+  },
+  "use_cases": {
+    "recommended": [
+      "a first nylon project on a printer without a heated chamber",
+      "gears, snap-fits and print-in-place mechanisms needing nylon toughness",
+      "brackets and mechanical parts where pa6/pa66 warp off the plate",
+      "tough thin-walled or high-elongation parts (taulman Bridge specifically)",
+      "chemical- and oil-exposed functional parts",
+      "end-use tooling and fixtures at moderate temperature"
+    ],
+    "not_recommended": [
+      "anything above ~110 °C under load, or sustained load above Tg 66 °C — use pa612 or a CF nylon",
+      "humid or wet-service parts (still a full-hygroscopy nylon)",
+      "workflows without a drying oven or heated drybox",
+      "dimensionally critical fits measured straight off the plate",
+      "open AMS/multi-material feed paths",
+      "food-contact items"
+    ]
+  },
+  "suitability": {
+    "food_contact": "no",
+    "load_bearing": "moderate",
+    "high_temperature": "moderate",
+    "outdoor": "no"
+  },
+  "properties": {
+    "density_g_cm3": 1.12,
+    "grams_per_100cm3": 112,
+    "cm3_per_100g": 89.3,
+    "glass_transition_c": 66,
+    "heat_deflection_c": 111,
+    "tensile_strength_mpa": {
+      "min": 33,
+      "max": 78,
+      "recommended": 78
+    },
+    "notes": "Polymaker PolyMide CoPA (dry, 3D-printed): density 1.12 g/cm³ at 23 °C — between pa6's 1.13 and pa12's 1.01, so 100 g yields 89.3 cm³; Tg 66 °C; HDT 111 °C at 0.45 MPa; tensile 78.0 ± 0.7 MPa XY; elongation at break 12.7 ± 2.1 % XY. taulman Bridge reads very differently as printed: Tg 52 °C, melting point 217 °C, thermal degradation onset 360 °C, shrinkage 0.0061 in/in (~0.6 %), UTS ~33 MPa (4800 psi), modulus ~183 MPa (26,544 psi) and elongation at break 248 % printed against 401 % for the raw resin — a large process-versus-resin gap worth noting whenever a nylon datasheet quotes resin numbers. The 33-78 MPa tensile range spans those two products rather than averaging them; the recommended value is Polymaker's printed XY figure. Alloy 910 publishes an '82 °C working range' qualitatively but no numeric tensile, Tg, HDT or density in the retrieved excerpt. Shrinkage is left unrecorded because only Bridge publishes it and the grades differ; the low-warp behaviour is nonetheless the family's defining trait."
+  },
+  "scores": {
+    "ease_of_print": 5,
+    "dimensional_stability": 5,
+    "warp_tendency": 3,
+    "layer_adhesion": 9,
+    "compression_strength": 7,
+    "temperature_tolerance": 5,
+    "uv_tolerance": 2,
+    "weather_tolerance": 3,
+    "water_tolerance": 2
+  },
+  "compatibility": {
+    "bonds_with": [
+      "copa",
+      "pa",
+      "pa-cf",
+      "pa12",
+      "pa12-cf",
+      "pa6",
+      "pa6-cf",
+      "pa6-gf",
+      "pa612",
+      "pa66"
+    ],
+    "support_materials": [
+      "copa",
+      "pa",
+      "support-breakaway"
+    ],
+    "usable_as_support_for": [
+      "copa",
+      "pa6",
+      "pa66"
+    ],
+    "notes": "Welds to itself and to the aliphatic polyamide family — the PA6 and PA66 interfaces are the strongest of them because those are literally the co-monomers, and the overlapping 250-270 °C windows help. No useful bond to pla, petg, abs, asa, pc, pp, pctg or pet. Support materials are the open question: Polymaker recommends PolySupport (mapped here to support-breakaway) for its PA12 and PA612 nylons, but no explicit support recommendation was retrieved for PolyMide CoPA, so same-material breakaway remains the safe default (unverified). Soluble supports are impractical — pva and bvoh both degrade below this print window. Build-plate chemistry matters more than support choice for nylons; see the plate list."
+  },
+  "plate_recommendations": [
+    {
+      "plate_id": "g10-garolite",
+      "rating": "recommended",
+      "notes": "General nylon guidance rather than a vendor instruction: garolite/G10 holds nylon without adhesive and releases cleanly, and CoPA's low shrinkage makes it one of the easier nylons on that surface. Neither Polymaker nor taulman names a plate for these SKUs (unverified)."
+    },
+    {
+      "plate_id": "pei-textured",
+      "rating": "usable",
+      "notes": "Workable, with the standard nylon caveat that adhesion swings with filament moisture; a PA glue stick doubles as adhesion promoter and release layer. Lower warp than pa6 means edge lift is much less of a threat here. Unverified for these SKUs."
+    },
+    {
+      "plate_id": "glass-borosilicate",
+      "rating": "usable",
+      "notes": "Bare glass is unreliable for nylon; a PVA glue-stick film makes it workable and gives a glossy underside. General nylon practice, unverified."
+    },
+    {
+      "plate_id": "carbon-fiber-plate",
+      "rating": "usable",
+      "notes": "Plausible by analogy with the rest of the PA family; nothing SKU-specific was published (unverified)."
+    },
+    {
+      "plate_id": "pei-smooth",
+      "rating": "avoid",
+      "notes": "Nylon on smooth PEI swings between erratic adhesion and over-bonding that tears the sheet — the same call recorded on pa6 and pa12."
+    },
+    {
+      "plate_id": "pp-sheet",
+      "rating": "avoid",
+      "notes": "Release-oriented coating under a shrinking nylon; as with the rest of the PA family, expect detachment."
+    },
+    {
+      "plate_id": "supertack",
+      "rating": "avoid",
+      "notes": "Outside the coating's characterised envelope for nylons, per the base pa entry."
+    },
+    {
+      "plate_id": "pc-plate",
+      "rating": "avoid",
+      "notes": "Polymaker's low 25-50 °C bed would fit thermally, but taulman Bridge's 80-100 °C bed does not, and vendor guidance routes nylons to engineering plates regardless."
+    }
+  ],
+  "emissions": {
+    "voc_level": "moderate",
+    "particulate_level": "moderate",
+    "primary_emissions": [
+      "amide-family VOCs",
+      "caprolactam (plausible from the PA6 co-monomer, not measured)",
+      "ultrafine particles"
+    ],
+    "ventilation": "recommended",
+    "notes": "No CoPA-specific emissions study was found. Because PA6 is one of the co-monomers, caprolactam is a plausible marker compound as it is for pa6 — but the copolymer's residual monomer content is undocumented, so this entry is rated 'moderate' rather than inheriting pa6's 'high' (unverified either way). Ultrafine-particle output tracks the 250-270 °C nozzle temperature, which is the hot end of desktop printing. Source-capture extraction or a HEPA+carbon filter for long jobs; do not run these in an unventilated occupied room."
+  },
+  "safety_notes": "Keep drying and annealing ovens vented — amide off-gassing rises with temperature, and 100 °C drying sits above what most spools and dryers are rated for. Do not clear a clog by hand at nylon hotend temperatures. Not food-contact suitable: FDM layer crevices harbour bacteria regardless of the polymer's industrial status, and residual monomer is present in the print. Unfilled, so there is no fibre-dust hazard in post-processing.",
+  "additional_notes": "NAME DISAMBIGUATION — CoPA is a COPOLYAMIDE (nylon) and is unrelated to two similarly abbreviated catalog entries: cope (copolyester elastomer, a flexible polyester) and cpe (chlorinated polyethylene / the UltiMaker-Fillamentum engineering copolyester class). Same 'co-' prefix, three different chemistries; a spool labelled CoPA that prints at 250-270 °C with the fan off is this entry. The defining trade against homopolymer nylon, stated so it is not oversold: warp drops sharply (vendor-consistent across both flagship brands, roughly a 3/10 against pa6/pa66's 8-10/10) because copolymerisation suppresses crystallinity, while moisture sensitivity barely improves — Polymaker's own <20 % RH storage requirement puts CoPA close to pa6 on that axis and nowhere near pa12. Heat resistance is mid-pack: 111 °C HDT@0.45 MPa against pa612-CF's 175 °C. Two further products are behaviourally in this family but were not seeded as trade names here, pending the central trade-name migration: add:north Adura, whose TDS self-describes as 'high performance Nylon filament made from co-polyamide' (chemistry confirmed), and Overture Easy Nylon, whose 'low-warp, no enclosure needed' marketing is consistent with CoPA but whose PA6/66 copolymer chemistry was NOT confirmed in this pass (verify before seeding).",
+  "provenance": {
+    "sources": [
+      "https://wiki.polymaker.com/polymaker-products/more-about-our-products/documents/technical-data-sheets/nylon/polymide-tm-copa",
+      "https://airwolf3d.com/wp-content/uploads/2018/03/3D-Printer-Filament-Technical-Specifications-Data-Sheet-BRIDGE-NYLON-V.1.200.pdf",
+      "https://www.solidxperts.com/wp-content/uploads/2023/04/Alloy-910-_TDS.pdf",
+      "https://www.knowde.com/stores/taulman-3d/products/taulman-3d-alloy-910",
+      "https://storage.googleapis.com/addnorth-com.appspot.com/imgix/assets/production/Adura_TDS_KRM71m.pdf",
+      "https://wiki.overture3d.com/en/Filament/EASYNylon",
+      "https://www.matterhackers.com/articles/how-to-3d-print-nylon-on-garolite-print-beds"
+    ],
+    "last_verified": "2026-08-01",
+    "confidence": "medium",
+    "conflicts": "The two flagship products are not interchangeable and the entry ranges span them rather than reconciling them. Bed temperature is the sharpest split: Polymaker PolyMide CoPA 25-50 °C versus taulman Bridge 80-100 °C — a real formulation difference. Mechanical figures likewise: Polymaker 78 MPa tensile / 12.7 % elongation / Tg 66 °C / HDT 111 °C against Bridge's ~33 MPa UTS / 248 % elongation printed (401 % as raw resin) / Tg 52 °C, with no HDT published; Alloy 910 contributes almost no numeric data beyond a 250-255 °C nozzle range and a qualitative '82 °C working range'. Chemistry differs too — Polymaker states PA6/PA66, Knowde lists Alloy 910 as PA6/69. The PolyMide CoPA TDS v5.2 PDF returned 404 in this pass, so Polymaker's figures come from the wiki mirror and density/shrinkage could not be cross-checked; shrinkage is recorded only by Bridge and is therefore omitted. No $/kg was confirmed for any of the three products, so the price numeric fields are empty. PolySupport's applicability to CoPA (as opposed to Polymaker's PA12/PA612 grades) is unconfirmed, as is any AMS position, plate rating and the whole emissions block. Overture Easy Nylon's copolyamide chemistry was not confirmed and it is deliberately not seeded as a trade name."
+  },
+  "trade_names": [
+    {
+      "manufacturer": "addnorth",
+      "product": "Adura",
+      "notes": "copolyamide (Addlantis family), density 1.1, HDT 0.45MPa 105C, tensile 50 MPa; exact copolyamide type unspecified so only the generic pa id is asserted [Migrated from pa — copolyamide chemistry; 2026-08-01]"
+    },
+    {
+      "manufacturer": "addnorth",
+      "product": "Adura FDA",
+      "notes": "FDA-compliant copolyamide variant [Migrated from pa — copolyamide chemistry; 2026-08-01]"
+    },
+    {
+      "manufacturer": "jayo",
+      "product": "Easy Nylon (E-PA)",
+      "notes": "Low-warp nylon; PA type not specified [Migrated from pa — copolyamide chemistry; 2026-08-01]"
+    },
+    {
+      "manufacturer": "overture",
+      "product": "Easy Nylon",
+      "notes": "PA6/PA66 copolymer, unfilled - a copolymer of both, so not mapped to pa6 or pa66. Vicat 181.2 C, elongation 8.4%, drying 95 C / 7 h. [Migrated from pa — copolyamide chemistry; 2026-08-01]"
+    },
+    {
+      "manufacturer": "polymaker",
+      "product": "PolyMide CoPA",
+      "notes": "The reference product: vendor-confirmed PA6/PA66 copolymer. 250-270 °C nozzle, 25-50 °C bed, fan off, enclosure required, wear-resistant nozzle recommended despite being unfilled; density 1.12 g/cm³, Tg 66 °C, HDT@0.45 MPa 111 °C, tensile 78 MPa XY dry, storage below 20 % RH."
+    },
+    {
+      "manufacturer": "taulman3d",
+      "product": "Alloy 910 / Nylon 910",
+      "notes": "SPEC DELTA: listed as a PA6/69 copolymer (Knowde), a different blend ratio again from Polymaker's PA6/66. Only 250-255 °C nozzle and a qualitative '82 °C working range' were retrieved; bed, fan, enclosure and mechanical figures unverified."
+    },
+    {
+      "manufacturer": "taulman3d",
+      "product": "Bridge Nylon (645 Rev B)",
+      "notes": "SPEC DELTA: same copolyamide category but a distinct formulation — heated bed 80-100 °C (against Polymaker's 25-50 °C), Tg 52 °C, melting point 217 °C, UTS ~33 MPa printed with elongation at break 248 %, shrinkage 0.0061 in/in. Marketed for very high toughness in thin features."
+    },
+    {
+      "manufacturer": "taulman3d",
+      "product": "Nylon 230 (n)vent",
+      "notes": "Lower-melt nylon copolymer that prints on standard brass nozzles without an all-metal hotend. [Migrated from pa — copolyamide chemistry; 2026-08-01]"
+    },
+    {
+      "manufacturer": "taulman3d",
+      "product": "Nylon 618",
+      "notes": "PA6-type nylon copolymer, low warp, dyeable. A copolymer rather than straight PA6, so base pa. [Migrated from pa — copolyamide chemistry; 2026-08-01]"
+    },
+    {
+      "manufacturer": "taulman3d",
+      "product": "Nylon 645",
+      "notes": "Nylon copolymer, stiffer/stronger than 618, natural translucent. [Migrated from pa — copolyamide chemistry; 2026-08-01]"
+    },
+    {
+      "manufacturer": "taulman3d",
+      "product": "Nylon 680 / Nylon 680 FDA",
+      "notes": "645-family nylon copolymer in an FDA-compliant food-contact grade. [Migrated from pa — copolyamide chemistry; 2026-08-01]"
+    }
+  ]
+}

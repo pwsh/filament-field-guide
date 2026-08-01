@@ -126,6 +126,7 @@
   "compatibility": {
     "bonds_with": [
       "abs",
+      "abs-plus",
       "pa",
       "petg",
       "pla"
@@ -133,14 +134,21 @@
     "support_materials": [],
     "usable_as_support_for": [
       "abs",
+      "abs-plus",
+      "copa",
+      "cpe",
       "lw-asa",
       "pa",
       "pa-cf",
       "pa12",
       "pa6-cf",
       "pa6-gf",
+      "pa612",
+      "pbt",
       "pet-cf",
       "petg",
+      "petg-plus",
+      "pha",
       "pla",
       "pla-plus"
     ],

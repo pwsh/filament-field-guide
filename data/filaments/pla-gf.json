@@ -142,6 +142,7 @@
   "compatibility": {
     "bonds_with": [
       "lw-pla",
+      "pha",
       "pla",
       "pla-cf",
       "pla-gf",

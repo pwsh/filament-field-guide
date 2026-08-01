@@ -121,8 +121,10 @@
     },
     {
       "name": "PP-CF Filament",
-      "filament_ids": [],
-      "notes": "pp-cf — coverage gap, no catalog id yet. Carbon-fiber polypropylene, $19.98; listed 230-280C nozzle, 80-110C bed."
+      "filament_ids": [
+        "pp-cf"
+      ],
+      "notes": "pp-cf — coverage gap, no catalog id yet. Carbon-fiber polypropylene, $19.98; listed 230-280C nozzle, 80-110C bed. Remapped [] -> ['pp-cf'] 2026-08-01 (now maps to pp-cf)."
     },
     {
       "name": "PPA-CF Filament",

@@ -1,0 +1,161 @@
+{
+  "id": "ovv3d",
+  "name": "OVV3D",
+  "status": "researched",
+  "summary": "Novelty-focused PLA brand selling dual-, tri- and quad-colour silk, matte, wood-fill, gradient and glow filaments plus filament storage and drying accessories. It fronts a Brooklyn, New York storefront address, but the OVV3D word mark is registered to Shenzhen Hanyuan Technology Co., Ltd. in China, so the US address reads as a distribution front over Chinese production.",
+  "headquarters_country": "United States",
+  "manufacturing_countries": [
+    "China"
+  ],
+  "brands": [
+    "OVV3D"
+  ],
+  "oem_relationships": [
+    {
+      "company": "Shenzhen Hanyuan Technology Co., Ltd.",
+      "relationship": "suspected-manufactured-by",
+      "notes": "USPTO application serial 97525156 for the OVV3D word mark, filed July 2022 in International Class 017 (plastics, including filament), names Shenzhen Hanyuan Technology Co., Ltd. of Shenzhen, China as applicant/owner. Trademark ownership establishes who controls the brand, not conclusively who extrudes the filament, but combined with the absence of any US manufacturing claim it is the strongest available origin signal."
+    }
+  ],
+  "endpoints": {
+    "website": "https://theovv3d.com/",
+    "store": "https://www.amazon.com/stores/OVV3D/page/0285590C-25A0-48F2-90E1-612C68A0074D"
+  },
+  "product_lines": [
+    {
+      "name": "Silk PLA (single colour)",
+      "filament_ids": [
+        "pla-silk"
+      ],
+      "notes": "Single-colour silk-luster PLA, the core of the catalogue."
+    },
+    {
+      "name": "Dual-Color Silk PLA",
+      "filament_ids": [
+        "pla-silk"
+      ],
+      "notes": "Two-tone coextruded silk PLA in 10+ combinations (Black/Green, Black/Red, Blue/Green, Purple/Blue, Red/Gold, Tiffany Blue/Pink and others); the catalog has no multi-colour coextrusion id, so the silk base id is used."
+    },
+    {
+      "name": "Tri-Color / Triple Silk PLA",
+      "filament_ids": [
+        "pla-silk"
+      ],
+      "notes": "Three-tone coextruded silk PLA (Black/Red/Gold, Red/Blue/Green, Red/Yellow/Blue and others)."
+    },
+    {
+      "name": "Quad Color-Change Silk PLA 'Galaxy'",
+      "filament_ids": [
+        "pla-silk"
+      ],
+      "notes": "Four-colour changing silk PLA. Despite the Galaxy name this is a colour-transition product, not a glitter-loaded one, so pla-glitter is not asserted."
+    },
+    {
+      "name": "Rainbow Tri-Color Silk PLA",
+      "filament_ids": [
+        "pla-silk",
+        "pla-gradient"
+      ],
+      "notes": "Rainbow colour-transitioning silk PLA; both the silk finish and the along-spool colour transition are recorded."
+    },
+    {
+      "name": "Color-Changing Silk PLA (Black-to-Purple)",
+      "filament_ids": [
+        "pla-silk",
+        "pla-gradient"
+      ],
+      "notes": "Silk PLA that shifts colour along the spool; there is no thermochromic id in the catalog and no evidence the shift is temperature-driven, so it is treated as a gradient."
+    },
+    {
+      "name": "Metallic Silk PLA (Copper / Gold / Silver)",
+      "filament_ids": [
+        "pla-silk"
+      ],
+      "notes": "Metallic-look silk PLA; pigment effect only, no evidence of metal powder loading, so pla-metal is not asserted."
+    },
+    {
+      "name": "Matte PLA (tri-colour Macaron, dual-colour, rainbow Macaron)",
+      "filament_ids": [
+        "pla-matte"
+      ],
+      "notes": "Matte-additive PLA in multi-colour pastel combinations (Pink/Blue, Pink/Yellow, Purple/Blue, rainbow Macaron)."
+    },
+    {
+      "name": "Gradient 'Dreamy Macaron' Matte PLA",
+      "filament_ids": [
+        "pla-matte",
+        "pla-gradient"
+      ],
+      "notes": "Matte PLA with a colour transition along the spool."
+    },
+    {
+      "name": "Wood-Fill PLA",
+      "filament_ids": [
+        "pla-wood"
+      ],
+      "notes": "Wood-filled PLA in Black Walnut, Cherry Wood, Oakwood, Teakwood and Walnut Wood."
+    },
+    {
+      "name": "Gradient Wood PLA (4-colour)",
+      "filament_ids": [
+        "pla-wood",
+        "pla-gradient"
+      ],
+      "notes": "Wood-fill PLA with a four-stage colour transition."
+    },
+    {
+      "name": "Gradient Stone PLA (2-colour)",
+      "filament_ids": [
+        "pla-stone",
+        "pla-gradient"
+      ],
+      "notes": "Stone-effect PLA with a two-stage transition; mapped to pla-stone on the marketed stone finish, though mineral filler content is not disclosed."
+    },
+    {
+      "name": "Rainbow Glow PLA (4-colour)",
+      "filament_ids": [
+        "pla-glow",
+        "pla-gradient"
+      ],
+      "notes": "Phosphorescent PLA with four glow colours transitioning along the spool."
+    },
+    {
+      "name": "PLA+ / Pro Pure",
+      "filament_ids": [
+        "pla-plus"
+      ],
+      "notes": "Toughened PLA tier in solid colours (Light Orange/Skin, Soft Sage Green)."
+    },
+    {
+      "name": "PLA+ / Pro Wood (Bois Noyer, Cherry)",
+      "filament_ids": [
+        "pla-wood"
+      ],
+      "notes": "Wood-filled variant sold under the PLA+/Pro label; pla-wood is the fill chemistry, pla-plus is not additionally asserted because no toughening spec is published for the wood grade."
+    },
+    {
+      "name": "Basic PLA Rainbow Matte (Blue/Green/Pink/Purple)",
+      "filament_ids": [
+        "pla-matte",
+        "pla-gradient"
+      ],
+      "notes": "Entry matte PLA with a four-colour rainbow transition."
+    }
+  ],
+  "makes_plates": false,
+  "price_tier": "budget",
+  "additional_notes": "Storefront address is 392A Van Brunt St, Brooklyn, NY 11231, phone (212) 228-5166; no manufacturing statement or country-of-origin claim appears anywhere on the site, and no manufacturer-operated social accounts were found (thin evidence flag). The site's about copy claims general ABS, PETG, TPU, wood and silk categories, but the only SKUs actually surfaced across the site, Amazon store and third-party catalogues are PLA and PLA variants — the non-PLA claims are unsubstantiated and are not recorded as product lines. Accessories are filament storage and drying rather than build surfaces (a 30-pack desiccant/storage bag set with auto pump, drying and storage solutions), so makes_plates is false. Bundle packs of 4 x 200 g are common; the site self-reports 39,607+ annual sales and 2,910+ reviews, which is an unaudited vendor claim. Also distributed via Newegg and reseller The Makers Den.",
+  "provenance": {
+    "sources": [
+      "https://theovv3d.com/",
+      "https://trademarks.justia.com/975/25/ovv3d-97525156.html",
+      "https://3dfilamentprofiles.com/filaments/ovv3d",
+      "https://www.amazon.com/stores/OVV3D/page/0285590C-25A0-48F2-90E1-612C68A0074D",
+      "https://www.newegg.com/p/298-00MP-00049",
+      "https://themakersden.com/products/ovv3d"
+    ],
+    "last_verified": "2026-08-01",
+    "confidence": "low",
+    "conflicts": "The Brooklyn storefront address and the Shenzhen trademark ownership point in opposite directions; headquarters_country records the US storefront while manufacturing_countries records China from the trademark filing, and neither is confirmed by a company statement. The catalogue described in the site's own about text (ABS, PETG, TPU) does not match the PLA-only SKU set actually observable, so either the copy is boilerplate or part of the range is unlisted. No social presence and no TDS were found, so specifications rest entirely on retail listings."
+  }
+}

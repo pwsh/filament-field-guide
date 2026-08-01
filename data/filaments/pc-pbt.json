@@ -129,6 +129,7 @@
   },
   "compatibility": {
     "bonds_with": [
+      "pbt",
       "pc",
       "pc-abs",
       "pc-gf",

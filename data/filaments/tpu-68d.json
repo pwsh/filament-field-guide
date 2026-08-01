@@ -182,6 +182,11 @@
   },
   "trade_names": [
     {
+      "manufacturer": "Siddament",
+      "product": "TPU 68D",
+      "notes": "Shore 68D semi-rigid."
+    },
+    {
       "manufacturer": "anycubic",
       "product": "TPU 68D",
       "notes": "Shore D scale semi-rigid grade, marketed soft-hard hybrid / high-speed / wear-resistant - the uncommon rigid TPU, not an 85A/95A Shore-A generic"

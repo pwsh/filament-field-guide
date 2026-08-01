@@ -130,11 +130,13 @@
   },
   "compatibility": {
     "bonds_with": [
+      "cpe",
       "pctg",
       "pet",
       "pet-cf",
       "pet-gf",
-      "petg"
+      "petg",
+      "petg-plus"
     ],
     "support_materials": [
       "petg",

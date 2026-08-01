@@ -228,6 +228,16 @@
   },
   "trade_names": [
     {
+      "manufacturer": "Siddament",
+      "product": "TPU 85A",
+      "notes": "Shore 85A."
+    },
+    {
+      "manufacturer": "Yoline Lab",
+      "product": "TPU 85A",
+      "notes": "Direct Shore-grade match."
+    },
+    {
       "manufacturer": "colorfabb",
       "product": "TPU 85A",
       "notes": "Fixed-hardness grade, exact match"

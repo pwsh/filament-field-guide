@@ -238,6 +238,21 @@
       "notes": "Shore A95 per SKU name; TDS/density not independently confirmed"
     },
     {
+      "manufacturer": "IIID Max",
+      "product": "High Speed TPU 95A Flexible",
+      "notes": "Shore 95A, 6 colours."
+    },
+    {
+      "manufacturer": "Siddament",
+      "product": "TPU 95A",
+      "notes": "Shore 95A."
+    },
+    {
+      "manufacturer": "Yoline Lab",
+      "product": "TPU 95A",
+      "notes": "Direct Shore-grade match."
+    },
+    {
       "manufacturer": "addnorth",
       "product": "EasyFlex",
       "notes": "Shore 95A"

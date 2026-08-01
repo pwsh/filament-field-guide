@@ -142,9 +142,9 @@
     {
       "name": "Easy Nylon",
       "filament_ids": [
-        "pa"
+        "copa"
       ],
-      "notes": "Unfilled PA6/PA66 copolymer, so it maps to the generic pa id rather than pa6 or pa66. Vicat 181.2 C, elongation 8.4%, drying 95 C / 7 h."
+      "notes": "Unfilled PA6/PA66 copolymer, so it maps to the generic pa id rather than pa6 or pa66. Vicat 181.2 C, elongation 8.4%, drying 95 C / 7 h. Remapped pa→copa (copolyamide) 2026-08-01."
     },
     {
       "name": "PC Professional",

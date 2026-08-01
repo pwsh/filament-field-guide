@@ -4,10 +4,10 @@
   "aliases": [
     "PPA CF",
     "Polyphthalamide Carbon Fiber",
-    "PAHT-CF",
     "HTN-CF",
     "CarbonX HTN+CF",
-    "High-temperature nylon CF"
+    "High-temperature nylon CF",
+    "PAHT-CF (vendor-dependent: only PPA-based PAHT products, e.g. Siraya Fibreheart)"
   ],
   "status": "researched",
   "base_type": "pa",
@@ -212,14 +212,9 @@
     ],
     "last_verified": "2026-07-31",
     "confidence": "medium",
-    "conflicts": "Bambu and 3DXTech disagree by more than 50 % on the headline mechanicals: Bambu gives XY tensile 168±4 MPa and HDT 227 °C @0.45 MPa, 3DXTech's CarbonX HTN+CF gives 106 MPa and 200 °C. Neither discloses fiber loading, so the gap cannot be attributed to matrix or filler with any confidence; the recorded range spans both and the 'recommended' tensile follows Bambu. Max service temperature 180 °C is a conservative editorial reading — the only supporting claim is a community review asserting prolonged exposure to ~227 °C, which is the HDT rather than a continuous-use rating, and no vendor publishes a CUT. Tg ~125 °C is a class-typical semi-aromatic polyamide value, not a datasheet figure for either product. heated_chamber_required is recorded false despite Bambu's explicit 50-80 °C chamber specification, following the catalog convention that reserves true for PEEK/PEI-class hardware; a reviewer may reasonably disagree, and the requirement is instead expressed through ambient_temp_c and the ease_of_print score. Price spans $172-266/kg across three sources with no single consensus figure. Shrinkage is reasoned, not published."
+    "conflicts": "Bambu and 3DXTech disagree by more than 50 % on the headline mechanicals: Bambu gives XY tensile 168±4 MPa and HDT 227 °C @0.45 MPa, 3DXTech's CarbonX HTN+CF gives 106 MPa and 200 °C. Neither discloses fiber loading, so the gap cannot be attributed to matrix or filler with any confidence; the recorded range spans both and the 'recommended' tensile follows Bambu. Max service temperature 180 °C is a conservative editorial reading — the only supporting claim is a community review asserting prolonged exposure to ~227 °C, which is the HDT rather than a continuous-use rating, and no vendor publishes a CUT. Tg ~125 °C is a class-typical semi-aromatic polyamide value, not a datasheet figure for either product. heated_chamber_required is recorded false despite Bambu's explicit 50-80 °C chamber specification, following the catalog convention that reserves true for PEEK/PEI-class hardware; a reviewer may reasonably disagree, and the requirement is instead expressed through ambient_temp_c and the ease_of_print score. Price spans $172-266/kg across three sources with no single consensus figure. Shrinkage is reasoned, not published. 2026-08-01 ambiguity resolution: 'PAHT' is a marketing category spanning PPA/PA6/PA12/PA612 bases. Bambu's PAHT-CF is PA12/long-chain aliphatic per Bambu's own TDS (Tm 225C/Tg 70C, no PPA) and was relocated to pa-cf; Siraya-class PPA-based PAHT products still map here."
   },
   "trade_names": [
-    {
-      "manufacturer": "bambu-lab",
-      "product": "PAHT-CF",
-      "notes": "ppa-cf lists PAHT-CF as an explicit alias"
-    },
     {
       "manufacturer": "bambu-lab",
       "product": "PPA-CF"

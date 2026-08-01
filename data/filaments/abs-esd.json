@@ -135,14 +135,16 @@
   "compatibility": {
     "bonds_with": [
       "abs",
-      "abs-esd",
       "abs-cf",
-      "abs-gf",
+      "abs-esd",
       "abs-fr",
+      "abs-gf",
+      "abs-plus",
       "asa"
     ],
     "support_materials": [
       "abs",
+      "abs-plus",
       "hips"
     ],
     "usable_as_support_for": [],
@@ -208,14 +210,14 @@
   },
   "trade_names": [
     {
-      "manufacturer": "esun",
-      "product": "ABS-ESD",
-      "notes": "Permanent antistatic modified ABS, surface resistance as low as 10⁵ Ω; the primary datasheet behind this entry."
-    },
-    {
       "manufacturer": "3dxtech",
       "product": "3DXSTAT ESD-ABS",
       "notes": "Multi-wall carbon nanotube additive in a premium ABS base; prints 220-240 °C, well below eSUN's window."
+    },
+    {
+      "manufacturer": "esun",
+      "product": "ABS-ESD",
+      "notes": "Permanent antistatic modified ABS, surface resistance as low as 10⁵ Ω; the primary datasheet behind this entry."
     },
     {
       "manufacturer": "iemai-3d",

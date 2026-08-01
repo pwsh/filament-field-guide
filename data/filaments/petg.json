@@ -2,9 +2,10 @@
   "id": "petg",
   "name": "PETG (Glycol-Modified PET)",
   "aliases": [
+    "Copolyester",
     "PET-G",
-    "Polyethylene terephthalate glycol-modified",
-    "Copolyester"
+    "PIPG (post-industrial recycled PETG)",
+    "Polyethylene terephthalate glycol-modified"
   ],
   "status": "researched",
   "base_type": null,
@@ -139,12 +140,14 @@
     "bonds_with": [
       "asa",
       "bvoh",
+      "cpe",
       "pctg",
       "pet",
       "petg",
       "petg-cf",
       "petg-esd",
       "petg-gf",
+      "petg-plus",
       "pva",
       "support-breakaway",
       "tpu"
@@ -152,6 +155,7 @@
     "support_materials": [
       "bvoh",
       "hips",
+      "pha",
       "pla",
       "pla-cf",
       "pla-gf",
@@ -164,12 +168,14 @@
       "support-breakaway"
     ],
     "usable_as_support_for": [
+      "cpe",
       "lw-pla",
       "pctg",
       "pet",
       "petg-cf",
       "petg-esd",
       "petg-gf",
+      "pha",
       "pla",
       "pla-cf",
       "pla-gf",
@@ -258,7 +264,7 @@
     "notes": "No styrene, and odour is mild. Azimi et al. (2016) placed PET-based filament (T-Glase) around 5×10⁹ particles/min — above PLA but well below ABS, PC and HIPS; a precise figure for generic PETG is unverified. Ventilation is optional for occasional open-air printing and recommended for long or enclosed jobs."
   },
   "safety_notes": "Carbon- and glass-filled PETG grades are abrasive and require a hardened nozzle; fibre dust from sanding filled grades should not be inhaled.",
-  "additional_notes": "Base PETG resin is used for injection-moulded food packaging and some filament lines are sold as food-contact certified, but a printed part's layer crevices and unverified nozzle/additive contamination mean an FDM PETG part is not food-safe without sealing or single-use handling.",
+  "additional_notes": "Base PETG resin is used for injection-moulded food packaging and some filament lines are sold as food-contact certified, but a printed part's layer crevices and unverified nozzle/additive contamination mean an FDM PETG part is not food-safe without sealing or single-use handling. PIPG ('Post-Industrial PET-G', MCPP) is ~70% recycled PETG resin sold mainly as pellets for large-format printing — chemically PETG-class, aliased here rather than a separate entry.",
   "provenance": {
     "sources": [
       "https://help.prusa3d.com/article/petg_2059",
@@ -280,6 +286,11 @@
   },
   "trade_names": [
     {
+      "manufacturer": "3D-Fuel",
+      "product": "Pro PETG",
+      "notes": "Standard PETG."
+    },
+    {
       "manufacturer": "3djake",
       "product": "easyPETG"
     },
@@ -297,6 +308,61 @@
       "manufacturer": "3dxtech",
       "product": "MAX-G PETG",
       "notes": "Standard glycol-modified PET copolyester."
+    },
+    {
+      "manufacturer": "Amazon Basics",
+      "product": "PETG",
+      "notes": "Standard PETG."
+    },
+    {
+      "manufacturer": "CC3D",
+      "product": "PETG",
+      "notes": "Own product category (e.g. Silver PETG)."
+    },
+    {
+      "manufacturer": "Cookiecad",
+      "product": "PETG",
+      "notes": "Transparent, sparkle and iridescent colourways."
+    },
+    {
+      "manufacturer": "IIID Max",
+      "product": "Fremover PETG",
+      "notes": "Fremover secondary label."
+    },
+    {
+      "manufacturer": "IIID Max",
+      "product": "High Speed PETG",
+      "notes": "10+ colours; no chemistry departure from base PETG disclosed."
+    },
+    {
+      "manufacturer": "Numakers",
+      "product": "PETG Translucent",
+      "notes": "Translucent-pigment PETG."
+    },
+    {
+      "manufacturer": "Numakers",
+      "product": "PETG-HS",
+      "notes": "High-speed marketing claim with no supporting TDS; base petg used."
+    },
+    {
+      "manufacturer": "Siddament",
+      "product": "PETG (Normal, V2, Matte, Metallic)",
+      "notes": "Matte and Metallic are cosmetic-additive variants; catalog has no matte or metallic PETG id."
+    },
+    {
+      "manufacturer": "Yoline Lab",
+      "product": "Glitter PETG",
+      "notes": "No glitter-PETG id exists; base petg used."
+    },
+    {
+      "manufacturer": "Yoline Lab",
+      "product": "PETG",
+      "notes": "Standard Series."
+    },
+    {
+      "manufacturer": "Yoline Lab",
+      "product": "Transparent PETG",
+      "notes": "Unpigmented/translucent PETG."
     },
     {
       "manufacturer": "addnorth",

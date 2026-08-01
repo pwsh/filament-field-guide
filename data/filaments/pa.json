@@ -5,8 +5,7 @@
     "Nylon",
     "Polyamide",
     "PA6",
-    "PA12",
-    "CoPA"
+    "PA12"
   ],
   "status": "researched",
   "base_type": null,
@@ -143,6 +142,7 @@
   "compatibility": {
     "bonds_with": [
       "bvoh",
+      "copa",
       "pa",
       "pa-cf",
       "pa12",
@@ -150,6 +150,7 @@
       "pa6",
       "pa6-cf",
       "pa6-gf",
+      "pa612",
       "pa66",
       "ppa-cf",
       "pva",
@@ -162,6 +163,7 @@
       "support-breakaway"
     ],
     "usable_as_support_for": [
+      "copa",
       "pa",
       "pa-cf",
       "pa12",
@@ -238,7 +240,7 @@
     "notes": "Caprolactam is the named marker compound for PA6 and has been reported at levels exceeding some chronic-exposure limits at close range in poorly ventilated spaces; Prusa's own knowledge base flags a strong odour. UFP emission is material- and temperature-dependent and sits between PLA's low baseline and ABS's high baseline. Use an enclosure plus active ventilation or a HEPA+carbon filter for extended prints, and do not run long nylon jobs in an unventilated occupied room."
   },
   "safety_notes": "Drying ovens set above 90 °C can deform spools and, at nylon's higher drying temperatures, accelerate off-gassing — keep drying under 90 °C and ventilate the dryer. Carbon- and glass-filled PA variants are abrasive and produce respirable fibre dust when sanded or machined; wear a respirator and use wet sanding.",
-  "additional_notes": "Nylon parts continue to move after printing: they absorb ambient moisture and grow, then shrink again when dried, which is why precision fits should be conditioned (soaked to equilibrium or dried and sealed) before final measurement. Choosing between PA6 and PA12 is the main design decision — PA6 for stiffness and heat, PA12 for dimensional calm and easier printing.",
+  "additional_notes": "Nylon parts continue to move after printing: they absorb ambient moisture and grow, then shrink again when dried, which is why precision fits should be conditioned (soaked to equilibrium or dried and sealed) before final measurement. Choosing between PA6 and PA12 is the main design decision — PA6 for stiffness and heat, PA12 for dimensional calm and easier printing. CoPA-class copolymer products migrated to the dedicated copa entry 2026-08-01.",
   "provenance": {
     "sources": [
       "https://help.prusa3d.com/article/polyamide-nylon_167188",
@@ -257,16 +259,6 @@
     "conflicts": "HDT@0.45 MPa is the largest unresolved disagreement: eSUN's ePA12 TDS cites 100 °C while unfilled PA6 is commonly listed at 55-65 °C unless annealed; 80 °C is a recorded mid-point rather than a measured figure. Density (1.01-1.14) and Tg (40-60 °C) both vary with PA6 vs PA12 grade rather than between sources, so single values here are grade-averaged. Nozzle temperature differs by grade: eSUN ePA12 240-290 °C vs Prusa's 285 °C for a PA blend. Price range is extrapolated from spool listings and is unverified against current retail. Max continuous service temperature (80-100 °C) is a community/aggregator figure, not a datasheet value."
   },
   "trade_names": [
-    {
-      "manufacturer": "addnorth",
-      "product": "Adura",
-      "notes": "copolyamide (Addlantis family), density 1.1, HDT 0.45MPa 105C, tensile 50 MPa; exact copolyamide type unspecified so only the generic pa id is asserted"
-    },
-    {
-      "manufacturer": "addnorth",
-      "product": "Adura FDA",
-      "notes": "FDA-compliant copolyamide variant"
-    },
     {
       "manufacturer": "atomic-filament",
       "product": "Nuclear Nylon v3",
@@ -328,21 +320,6 @@
       "notes": "'Self-lubricating', highly moisture-sensitive; polyamide grade undisclosed and multiple blends have shipped, so only the generic id."
     },
     {
-      "manufacturer": "jayo",
-      "product": "Easy Nylon (E-PA)",
-      "notes": "Low-warp nylon; PA type not specified"
-    },
-    {
-      "manufacturer": "overture",
-      "product": "Easy Nylon",
-      "notes": "PA6/PA66 copolymer, unfilled - a copolymer of both, so not mapped to pa6 or pa66. Vicat 181.2 C, elongation 8.4%, drying 95 C / 7 h."
-    },
-    {
-      "manufacturer": "polymaker",
-      "product": "PolyMide CoPA",
-      "notes": "Co-polyamide blend, not a straight PA6/PA66/PA12; 'CoPA' is a pa alias"
-    },
-    {
       "manufacturer": "push-plastic",
       "product": "Nylon",
       "notes": "Unfilled nylon; PA type not confirmed in public copy, so pa6/pa12 are not asserted."
@@ -361,36 +338,6 @@
       "manufacturer": "sunlu",
       "product": "Easy PA",
       "notes": "Unfilled low-warp nylon; PA type not specified"
-    },
-    {
-      "manufacturer": "taulman3d",
-      "product": "Alloy 910 / Nylon 910",
-      "notes": "Alloyed nylon copolymer; not simply PA6 or PA12, so base pa."
-    },
-    {
-      "manufacturer": "taulman3d",
-      "product": "Bridge Nylon (645 Rev B)",
-      "notes": "More flexible revision of 645 at similar strength; same nylon-copolymer family."
-    },
-    {
-      "manufacturer": "taulman3d",
-      "product": "Nylon 230 (n)vent",
-      "notes": "Lower-melt nylon copolymer that prints on standard brass nozzles without an all-metal hotend."
-    },
-    {
-      "manufacturer": "taulman3d",
-      "product": "Nylon 618",
-      "notes": "PA6-type nylon copolymer, low warp, dyeable. A copolymer rather than straight PA6, so base pa."
-    },
-    {
-      "manufacturer": "taulman3d",
-      "product": "Nylon 645",
-      "notes": "Nylon copolymer, stiffer/stronger than 618, natural translucent."
-    },
-    {
-      "manufacturer": "taulman3d",
-      "product": "Nylon 680 / Nylon 680 FDA",
-      "notes": "645-family nylon copolymer in an FDA-compliant food-contact grade."
     },
     {
       "manufacturer": "tinmorry",

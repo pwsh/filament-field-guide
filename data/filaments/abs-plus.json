@@ -1,0 +1,257 @@
+{
+  "id": "abs-plus",
+  "name": "ABS+ (Toughened ABS)",
+  "aliases": [
+    "ABS Plus",
+    "ABS Pro",
+    "Modified ABS",
+    "Tough ABS",
+    "eSUN ABS+"
+  ],
+  "status": "researched",
+  "base_type": "abs",
+  "variation_kind": "toughened",
+  "polymer_class": "styrenic",
+  "chemical_makeup": "Amorphous acrylonitrile-butadiene-styrene terpolymer — the same backbone as base abs — compounded with an undisclosed impact-modifier / rubber-toughening additive package and a low-odour formulation. No manufacturer publishes the modifier chemistry or any filler content, so this is a 'modified ABS' marketing claim structurally identical to how pla-plus sits over pla.",
+  "summary": "The PLA+-equivalent marketing tier for ABS: same terpolymer chemistry as base abs with a proprietary toughening package and a low-odour claim, at a modest premium. Deltas vs abs: markedly higher impact (eSUN IZOD 42 kJ/m² against plain ABS's typical mid-teens-to-20s) and elongation (30 % vs ~15-25 %), but a lower published HDT (73 °C vs base ABS's 99 °C BCN3D figure) and a slower recommended speed. Everything else — high shrinkage, closed chamber, styrene emissions, no UV life — is unchanged, so the '+' does not buy beginner-friendliness the way PLA+ does.",
+  "printing": {
+    "nozzle_temp_c": {
+      "min": 230,
+      "max": 270,
+      "recommended": 250
+    },
+    "bed_temp_c": {
+      "min": 80,
+      "max": 110,
+      "recommended": 95
+    },
+    "ambient_temp_c": {
+      "min": 40,
+      "max": 60,
+      "recommended": 50
+    },
+    "speed_mm_s": {
+      "min": 40,
+      "max": 100,
+      "recommended": 45
+    },
+    "enclosure_recommended": true,
+    "heated_chamber_required": false,
+    "requires_hardened_nozzle": false,
+    "part_cooling_fan_pct": {
+      "min": 0,
+      "max": 20,
+      "recommended": 0
+    },
+    "enclosure_open_for_cooling": false,
+    "notes": "Delta vs base abs: the nozzle band is identical (eSUN ABS+ TDS 230-270 °C; Sunlu's nearest ABS proxy 250-260 °C) but the recommended speed is notably conservative — eSUN recommends 40 mm/s within a 40-100 mm/s tested band, against base ABS's 60 mm/s recommendation and 150 mm/s ceiling on enclosed machines. Bed is eSUN 95-110 °C (95 °C recommended); the Sunlu proxy runs cooler at 80-100 °C, which sets the recorded minimum. Part cooling off (0 % per the eSUN TDS), light fan for bridges only. The eSUN TDS explicitly calls for a closed-chamber printer and heat preservation because of the 'large shrinkage rate', so a passive or heated enclosure is effectively required for anything beyond small parts — but active chamber heating is not specified, so heated_chamber_required stays false as it is for base abs. Unfilled, so a stock brass nozzle is fine."
+  },
+  "feeding": {
+    "drive_system": "any",
+    "ams_compatible": "yes",
+    "feeding_assistant_recommended": false,
+    "notes": "Rigid, unfilled and non-abrasive, so it feeds exactly like base abs: any extruder, standard drive gears and PTFE, no spool-side assistant. AMS/material-station compatibility is carried from base ABS rather than documented for this grade specifically (unverified) — the mechanical properties in the feed path are unchanged by the impact modifier. The enclosure must stay closed during multi-material work, so enclosure_open_for_cooling is false. No Shore rating applies; this is a rigid grade."
+  },
+  "drying": {
+    "required_before_use": "if-exposed",
+    "temp_c": {
+      "min": 70,
+      "max": 80,
+      "recommended": 75
+    },
+    "time_hours": {
+      "min": 4,
+      "max": 6,
+      "recommended": 5
+    },
+    "methods": [
+      "filament dryer",
+      "convection oven",
+      "print directly from a heated drybox"
+    ],
+    "dryness_validation": "No popping or crackling at the nozzle and no visible steam; glossy extrusion free of micro-bubbles; no layer splitting or delamination partway up a tall test print",
+    "notes": "The eSUN ABS+ TDS publishes no drying schedule (unverified), so the recorded 70-80 °C / 4-6 h is base ABS practice carried over on the grounds that the resin family is unchanged — base abs records 70-85 °C / 4-8 h with Bambu's 80 °C/8 h at the top. Wet ABS+ bubbles and bonds poorly between layers exactly as base ABS does."
+  },
+  "storage": {
+    "recommendations": "Airtight box or drybox with desiccant on an ongoing basis, not only before printing — ABS keeps absorbing moisture on the shelf and the toughening package does not change that",
+    "max_humidity_pct": 30,
+    "hygroscopy": "moderate"
+  },
+  "price": {
+    "usd_per_kg_low": 15,
+    "usd_per_kg_high": 25,
+    "notes": "eSUN ABS+ Black listed at $14.76/kg excl. VAT on the 3DJake US storefront — a single-retailer snapshot (unverified breadth). Broader US retail for the ABS+ tier generally runs ~$18-25/kg (unverified aggregate estimate), i.e. the same band as base abs ($18-35/kg) rather than a meaningful premium over it."
+  },
+  "use_cases": {
+    "recommended": [
+      "functional brackets and mounts needing more impact resistance than plain ABS",
+      "enclosures and housings",
+      "automotive and under-hood-adjacent interior parts",
+      "tool and jig bodies",
+      "acetone-smoothed cosmetic parts",
+      "drop-prone functional parts in warm environments"
+    ],
+    "not_recommended": [
+      "outdoor or UV-exposed parts (styrenic UV degradation is unchanged)",
+      "food-contact items",
+      "printing on an open-frame machine beyond small parts",
+      "unventilated occupied rooms",
+      "parts needing base ABS's full 99 °C HDT (this grade's published HDT is 73 °C)"
+    ]
+  },
+  "suitability": {
+    "food_contact": "no",
+    "load_bearing": "moderate",
+    "high_temperature": "yes",
+    "outdoor": "no"
+  },
+  "properties": {
+    "density_g_cm3": 1.06,
+    "grams_per_100cm3": 106,
+    "cm3_per_100g": 94.3,
+    "heat_deflection_c": 73,
+    "tensile_strength_mpa": {
+      "min": 40,
+      "max": 42,
+      "recommended": 40
+    },
+    "notes": "eSUN ABS+ TDS: density 1.06 g/cm³, tensile 40 MPa, elongation at break 30 %, flexural strength 68 MPa, flexural modulus 1203 MPa, IZOD impact 42 kJ/m², HDT 73 °C, MFI 15 g/10 min (220 °C/10 kg). The elongation and IZOD figures are the toughening signature — plain ABS TDS figures typically sit at ~15-25 % elongation and 15-25 kJ/m² on comparable scales, so this is a large claimed toughness gain. The Sunlu ABS proxy disagrees sharply (density 1.02, tensile 42 MPa, elongation only 7.8 %, flexural strength 55 MPa, Vicat 86 °C, Shore 85D) and reads like standard brittle ABS rather than a toughened grade; the recorded tensile range brackets both. Tg is not published by either source (unverified) and is deliberately omitted — base abs records 103 °C and the same resin family should be similar, but no ABS+ figure exists to confirm it. Shrinkage is likewise unpublished (unverified); the eSUN TDS only describes it qualitatively as a 'large shrinkage rate', consistent with base abs's 0.5-1.5 %. Max service temperature is omitted for the same reason — base abs's 85 °C figure sits above this grade's own 73 °C HDT and cannot simply be carried over."
+  },
+  "scores": {
+    "ease_of_print": 5,
+    "dimensional_stability": 5,
+    "warp_tendency": 7,
+    "layer_adhesion": 7,
+    "compression_strength": 7,
+    "temperature_tolerance": 6,
+    "uv_tolerance": 2,
+    "weather_tolerance": 2,
+    "water_tolerance": 5
+  },
+  "compatibility": {
+    "bonds_with": [
+      "abs",
+      "abs-cf",
+      "abs-esd",
+      "abs-fr",
+      "abs-gf",
+      "abs-plus",
+      "asa",
+      "asa-cf",
+      "asa-gf",
+      "hips",
+      "lw-asa",
+      "pc",
+      "pc-abs",
+      "pc-gf",
+      "support-breakaway"
+    ],
+    "support_materials": [
+      "asa",
+      "hips",
+      "support-breakaway"
+    ],
+    "usable_as_support_for": [
+      "abs",
+      "abs-cf",
+      "abs-esd",
+      "abs-gf",
+      "asa"
+    ],
+    "notes": "Chemistry is unchanged from base abs, so the bonding table is carried over wholesale: welds to itself and to plain ABS (mixed prints and repairs are fine), welds permanently to ASA, bonds moderately to PC. HIPS is the classic breakaway support — the acetone-differential trick works identically to base ABS — with soluble supports available on dual-extrusion machines rated for ABS temperatures. As with the base entry, the same-family pairings listed under usable_as_support_for are structural weld pairings rather than clean-release ones. Does not bond to PLA or PETG in either direction: the 95-110 °C bed and 250 °C nozzle deform them and the chemistries do not fuse."
+  },
+  "plate_recommendations": [
+    {
+      "plate_id": "pei-smooth",
+      "rating": "recommended",
+      "notes": "As base ABS — the preferred surface for warp-prone large flats, with an adhesion aid (glue stick or ABS slurry) in an unheated room."
+    },
+    {
+      "plate_id": "pei-satin",
+      "rating": "recommended",
+      "notes": "As base ABS."
+    },
+    {
+      "plate_id": "carbon-fiber-plate",
+      "rating": "recommended",
+      "notes": "As base ABS; high-temperature-tolerant surface suits the 95-110 °C bed."
+    },
+    {
+      "plate_id": "buildtak-polymer",
+      "rating": "recommended",
+      "notes": "As base ABS."
+    },
+    {
+      "plate_id": "pei-textured",
+      "rating": "usable",
+      "notes": "Moderate-to-strong adhesion; apply glue stick or ABS slurry for large parts in an unheated room, and watch for elephant's foot if the bed runs at the top of the range. Smooth PEI or glass with an adhesive is generally the better choice for large flat parts, same as base ABS."
+    },
+    {
+      "plate_id": "glass-borosilicate",
+      "rating": "usable",
+      "notes": "As base ABS — works well with ABS slurry or glue stick."
+    },
+    {
+      "plate_id": "g10-garolite",
+      "rating": "usable",
+      "notes": "As base ABS."
+    },
+    {
+      "plate_id": "pp-sheet",
+      "rating": "avoid",
+      "notes": "As base ABS."
+    },
+    {
+      "plate_id": "supertack",
+      "rating": "avoid",
+      "notes": "As base ABS."
+    },
+    {
+      "plate_id": "pc-plate",
+      "rating": "avoid",
+      "notes": "As base ABS — the plate's thermal ceiling sits below this grade's bed range, and acetone from smoothing crazes PC."
+    },
+    {
+      "plate_id": "pei-patterned",
+      "rating": "avoid",
+      "notes": "As base ABS."
+    }
+  ],
+  "emissions": {
+    "voc_level": "high",
+    "particulate_level": "high",
+    "primary_emissions": [
+      "styrene",
+      "ultrafine particles"
+    ],
+    "ventilation": "required",
+    "notes": "Same emission class as base abs: styrene monomer plus a high ultrafine-particle rate (Azimi et al. 2016 measured ABS UFP roughly 100-1000x PLA). eSUN's 'low odour / low VOC' marketing reduces perceived smell but there is no independent measurement showing it lowers UFP or VOC output versus plain ABS (unverified) — do not treat the low-odour claim as an emissions improvement. Enclose and vent externally, or filter with HEPA plus carbon."
+  },
+  "safety_notes": "Styrene is a respiratory irritant and a suspected carcinogen on chronic exposure; the low-odour formulation removes the warning smell without a demonstrated reduction in exposure, which arguably makes ventilation discipline more important rather than less. Acetone vapour smoothing works as it does on base ABS and carries its own flammability and ventilation hazards.",
+  "additional_notes": "ABS+ is a compounded grade, not a different base resin. As with PLA+, 'ABS+' and 'ABS Pro' are marketing names over undisclosed and probably differing formulations, which is why the eSUN and Sunlu figures diverge so sharply. Note that the one clear regression against base abs is heat: eSUN's own 73 °C HDT trails typical ABS TDS figures of 80-100 °C, the same direction as PLA+ trading heat and stiffness for toughness.",
+  "provenance": {
+    "sources": [
+      "https://www.esun3d.com/uploads/eSUN_ABS+-Filament_TDS_V4.01.pdf",
+      "https://www.spoolscout.com/data-sheets/sunlu/abs-abs",
+      "https://www.3djake.com/esun/absblack",
+      "https://www.esun3d.com/abs-product/",
+      "data/filaments/abs.json (internal calibration reference, not an independent source)",
+      "data/filaments/pla-plus.json (internal calibration reference for the '+' tier pattern)"
+    ],
+    "last_verified": "2026-08-01",
+    "confidence": "medium",
+    "conflicts": "Only one manufacturer TDS exists for a genuinely '+'-branded ABS (eSUN); Sunlu markets no distinct ABS+ TDS, so the Sunlu ABS sheet was used as the nearest proxy and disagrees materially — elongation 7.8 % against eSUN's 30 %, density 1.02 vs 1.06 g/cm³, flexural strength 55 vs 68 MPa. On the Sunlu numbers this would not be a toughened grade at all. eSUN's own HDT (73 °C) is also *below* typical plain-ABS datasheet figures (80-100 °C; base abs records 99 °C from BCN3D), so the toughening appears to cost heat resistance — recorded as-published rather than reconciled. Drying schedule, Tg, shrinkage and max service temperature are all carried from base ABS because no ABS+-specific figures are published (unverified). Price is a single-retailer snapshot plus a market estimate. eSUN's 'low odour' claim is unverified against any independent emissions measurement. Sunlu was deliberately not seeded as a trade name for this reason."
+  },
+  "trade_names": [
+    {
+      "manufacturer": "esun",
+      "product": "ABS+",
+      "notes": "The reference product for this entry: impact-modified low-odour ABS, density 1.06 g/cm³, IZOD 42 kJ/m², HDT 73 °C (TDS V4.01)."
+    },
+    {
+      "manufacturer": "esun",
+      "product": "ABS+HS",
+      "notes": "High-strength toughened ABS [Remapped from earlier gap 2026-08-01]"
+    }
+  ]
+}

@@ -1,0 +1,238 @@
+{
+  "id": "siddament",
+  "name": "Siddament",
+  "status": "researched",
+  "summary": "Australian filament brand operated by SIDDAMENT PTY LTD of North Parramatta, NSW, with the broadest catalogue of its peer group — PLA in a dozen finishes, PETG including fibre-filled grades, ABS/ASA, PC, PA6-CF/PA12-CF, PVA and four TPU durometers — alongside resold Proto-Pasta and Prusa product, printers and its own tooling. The company does not extrude in Australia: the site openly states its stock originates in China, with an on-site banner announcing 'SIDD'S IN CHINA - 3-4 DAY LEAD TIME', so it is an Australian-HQ importer and retailer rather than a manufacturer.",
+  "headquarters_country": "Australia",
+  "manufacturing_countries": [
+    "China"
+  ],
+  "brands": [
+    "Siddament",
+    "SIDD"
+  ],
+  "oem_relationships": [
+    {
+      "company": "Unidentified Chinese contract manufacturer",
+      "relationship": "suspected-manufactured-by",
+      "notes": "Siddament's own site places its sourcing and lead times in China, but names no factory, mill or supplier for any line. The house filament is therefore contract-produced by one or more undisclosed Chinese extruders; no specific company is recorded because none was identified."
+    },
+    {
+      "company": "Proto-Pasta",
+      "relationship": "distributes",
+      "notes": "Third-party brand resold through the Siddament store, not produced by Siddament."
+    },
+    {
+      "company": "Prusa Research",
+      "relationship": "distributes",
+      "notes": "Prusament filament (e.g. PETG Tungsten 75%, PETG Clear), Prusa pellets and Prusa printers are resold through the Siddament store."
+    }
+  ],
+  "endpoints": {
+    "website": "https://siddament.com.au/en-us",
+    "store": "https://siddament.com.au/en-us/collections/all",
+    "docs": "https://siddament.com.au/en-us/pages/tds",
+    "support": "https://siddament.com.au/en-us/pages/contact",
+    "social": {
+      "discord": "https://discord.gg/5j4TzmRVJx",
+      "facebook": "https://www.facebook.com/profile.php?id=100092683344270",
+      "instagram": "https://www.instagram.com/siddament",
+      "reddit": "https://www.reddit.com/r/Siddament/"
+    }
+  },
+  "product_lines": [
+    {
+      "name": "PLA (Normal)",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Standard PLA; also covers the Translucent and Tri/Dual Colour colourways, which are pigment and coextrusion variants of the same base with no separate id in the catalog."
+    },
+    {
+      "name": "PLA+",
+      "filament_ids": [
+        "pla-plus"
+      ],
+      "notes": "Toughened PLA tier."
+    },
+    {
+      "name": "Matte PLA / Matte PLA V2",
+      "filament_ids": [
+        "pla-matte"
+      ],
+      "notes": "Matte-additive PLA, two generations; colourways include Matte Black/White/Grey/Red/Orange/Green/Yellow/Blue/Purple, Matte Cotton White and Matte Marble. Marble here is a matte colourway, not a mineral-filled grade, so pla-stone is not asserted."
+    },
+    {
+      "name": "Silk PLA",
+      "filament_ids": [
+        "pla-silk"
+      ],
+      "notes": "Silk-luster PLA including Silk Gold."
+    },
+    {
+      "name": "Gradient PLA",
+      "filament_ids": [
+        "pla-gradient"
+      ],
+      "notes": "Colour-transitioning PLA."
+    },
+    {
+      "name": "Sparkle PLA",
+      "filament_ids": [
+        "pla-glitter"
+      ],
+      "notes": "Glitter-particle PLA."
+    },
+    {
+      "name": "HTPLA",
+      "filament_ids": [
+        "pla-ht"
+      ],
+      "notes": "High-temperature / annealable PLA grade."
+    },
+    {
+      "name": "Fluro / Glow PLA",
+      "filament_ids": [
+        "pla-glow"
+      ],
+      "notes": "Sold as a combined fluorescent and glow line; pla-glow covers the phosphorescent variants, while the purely fluorescent colours are pigment-only PLA with no distinct id."
+    },
+    {
+      "name": "Carbon Fiber PLA",
+      "filament_ids": [
+        "pla-cf"
+      ],
+      "notes": "Chopped-carbon-fibre PLA."
+    },
+    {
+      "name": "Infused PLA",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Line name discloses no filler; without knowing what it is infused with, no wood, metal, stone or glitter id can be assigned and the base chemistry id is used."
+    },
+    {
+      "name": "PETG (Normal, V2)",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "Standard PETG in Black, White, Grey and Transparent plus a V2 Black; the Matte and Metallic PETG variants are cosmetic-additive versions of the same base and the catalog has no matte or metallic PETG id."
+    },
+    {
+      "name": "Carbon Fiber PETG",
+      "filament_ids": [
+        "petg-cf"
+      ],
+      "notes": "Carbon-fibre-filled PETG."
+    },
+    {
+      "name": "Glass Fiber PETG",
+      "filament_ids": [
+        "petg-gf"
+      ],
+      "notes": "Glass-fibre-filled PETG."
+    },
+    {
+      "name": "ABS",
+      "filament_ids": [
+        "abs"
+      ],
+      "notes": "Standard ABS, black only."
+    },
+    {
+      "name": "ASA",
+      "filament_ids": [
+        "asa"
+      ],
+      "notes": "Weatherable ASA in black and white."
+    },
+    {
+      "name": "ASA Carbon Fiber",
+      "filament_ids": [
+        "asa-cf"
+      ],
+      "notes": "Carbon-fibre-filled ASA."
+    },
+    {
+      "name": "PC (Polycarbonate)",
+      "filament_ids": [
+        "pc"
+      ],
+      "notes": "Unfilled polycarbonate."
+    },
+    {
+      "name": "PCCF (Polycarbonate Carbon Fiber)",
+      "filament_ids": [
+        "pc"
+      ],
+      "notes": "Carbon-fibre-filled polycarbonate. The catalog has pc-gf but no pc-cf id, so this maps to the base pc chemistry pending a dedicated id; see gaps."
+    },
+    {
+      "name": "PA6-CF Nylon",
+      "filament_ids": [
+        "pa6-cf"
+      ],
+      "notes": "Carbon-fibre-filled PA6."
+    },
+    {
+      "name": "PA12-CF Nylon",
+      "filament_ids": [
+        "pa12-cf"
+      ],
+      "notes": "Carbon-fibre-filled PA12."
+    },
+    {
+      "name": "PVA",
+      "filament_ids": [
+        "pva"
+      ],
+      "notes": "Water-soluble support material."
+    },
+    {
+      "name": "TPU 95A",
+      "filament_ids": [
+        "tpu-95a"
+      ],
+      "notes": "Shore 95A flexible TPU."
+    },
+    {
+      "name": "TPU 90A",
+      "filament_ids": [
+        "tpu-90a"
+      ],
+      "notes": "Shore 90A flexible TPU."
+    },
+    {
+      "name": "TPU 85A",
+      "filament_ids": [
+        "tpu-85a"
+      ],
+      "notes": "Shore 85A flexible TPU."
+    },
+    {
+      "name": "TPU 68D",
+      "filament_ids": [
+        "tpu-68d"
+      ],
+      "notes": "Shore 68D semi-rigid TPU."
+    }
+  ],
+  "price_tier": "mid",
+  "additional_notes": "Legal entity SIDDAMENT PTY LTD is confirmed through the buy.nsw.gov.au supplier registry and a Cylex Australia business listing, both placing it in North Parramatta, NSW. Trial rolls start at $8.99 AUD with full spools scaling up; the storefront spans roughly 1,245 SKUs once colours and formats are counted. Own-brand tooling includes the 'Cuttament' filament cutter and 'Stringum Obliterus' stringing remedy, plus bed-adhesion powder/glue, hotends and spare parts; build plates and print sheets are stocked but there is no evidence they are Siddament-manufactured rather than resold, so makes_plates is deliberately left unset. Printers sold (Core One+, Core One L XL, Prusa Pro HT90, BIQU units) are third-party hardware. A Creality forum thread raised a customer-service complaint — filament shipped in vacuum bags rather than boxes as a cost saving, a blunt reply to the complaint, and the complaint reportedly reposted publicly to the company's Facebook page; no filament quality defect was alleged in that thread, so it is a service reputation flag only.",
+  "provenance": {
+    "sources": [
+      "https://siddament.com.au/en-us",
+      "https://siddament.com.au/en-us/collections/all",
+      "https://siddament.com.au/en-us/pages/pla",
+      "https://siddament.com.au/en-us/pages/tds",
+      "https://buy.nsw.gov.au/supplier/profile/12441795",
+      "https://www.cylex-australia.com/company/siddament-3d-printer-filament-25103080.html",
+      "https://forum.creality.com/t/warning-regards-australian-filament-supplier/35290",
+      "https://filament.baby/brand/siddament",
+      "https://au.trustpilot.com/review/siddament.com.au"
+    ],
+    "last_verified": "2026-08-01",
+    "confidence": "medium",
+    "conflicts": "China origin is stated by the company in shipping copy rather than as a formal country-of-origin declaration, and no factory or supplier is named, so the actual extruder is unknown and per-line origin may vary. The line between house-brand and resold stock is blurry — Proto-Pasta, Prusament, Prusa pellets, printers and probably the build plates are third-party, and only the Siddament-branded filament is recorded in product_lines. Trustpilot returned 403 and filament.uno's manufacturer page was fetch-blocked, so third-party reputation data could not be independently verified. The 'Infused' PLA line's filler is undisclosed."
+  }
+}

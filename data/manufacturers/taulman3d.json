@@ -34,44 +34,44 @@
     {
       "name": "Nylon 618",
       "filament_ids": [
-        "pa"
+        "copa"
       ],
-      "notes": "Nylon co-polymer (PA6-copolymer type) engineered for FDM: low warp, dyeable, bonds to cellulose fibers. A copolymer rather than straight PA6, so mapped to base pa."
+      "notes": "Nylon co-polymer (PA6-copolymer type) engineered for FDM: low warp, dyeable, bonds to cellulose fibers. A copolymer rather than straight PA6, so mapped to base pa. Remapped pa→copa (copolyamide) 2026-08-01."
     },
     {
       "name": "Nylon 645",
       "filament_ids": [
-        "pa"
+        "copa"
       ],
-      "notes": "Nylon co-polymer, stiffer and stronger than 618, natural translucent."
+      "notes": "Nylon co-polymer, stiffer and stronger than 618, natural translucent. Remapped pa→copa (copolyamide) 2026-08-01."
     },
     {
       "name": "Nylon 680 / Nylon 680 FDA",
       "filament_ids": [
-        "pa"
+        "copa"
       ],
-      "notes": "645-family nylon co-polymer in an FDA-compliant food-contact grade."
+      "notes": "645-family nylon co-polymer in an FDA-compliant food-contact grade. Remapped pa→copa (copolyamide) 2026-08-01."
     },
     {
       "name": "Bridge Nylon (645 Rev B)",
       "filament_ids": [
-        "pa"
+        "copa"
       ],
-      "notes": "More flexible revision of 645 at similar strength; same nylon-copolymer family."
+      "notes": "More flexible revision of 645 at similar strength; same nylon-copolymer family. Remapped pa→copa (copolyamide) 2026-08-01."
     },
     {
       "name": "Nylon 230 (n)vent",
       "filament_ids": [
-        "pa"
+        "copa"
       ],
-      "notes": "Lower-melt-point nylon copolymer formulated to print on standard brass nozzles without an all-metal hotend."
+      "notes": "Lower-melt-point nylon copolymer formulated to print on standard brass nozzles without an all-metal hotend. Remapped pa→copa (copolyamide) 2026-08-01."
     },
     {
       "name": "Alloy 910 / Nylon 910",
       "filament_ids": [
-        "pa"
+        "copa"
       ],
-      "notes": "Alloyed nylon copolymer for high tensile strength, minimal shrinkage and broad chemical resistance; not simply PA6 or PA12."
+      "notes": "Alloyed nylon copolymer for high tensile strength, minimal shrinkage and broad chemical resistance; not simply PA6 or PA12. Remapped pa→copa (copolyamide) 2026-08-01."
     },
     {
       "name": "T-glase",

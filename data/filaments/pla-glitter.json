@@ -140,17 +140,17 @@
     "bonds_with": [
       "pla",
       "pla-glitter",
-      "pla-silk",
-      "pla-matte",
-      "pla-gradient",
       "pla-glow",
-      "pla-plus"
+      "pla-gradient",
+      "pla-matte",
+      "pla-plus",
+      "pla-silk"
     ],
     "support_materials": [
-      "pla",
+      "bvoh",
       "petg",
-      "pva",
-      "bvoh"
+      "pla",
+      "pva"
     ],
     "usable_as_support_for": [],
     "notes": "Standard PLA-family behaviour with no caveats: welds to base PLA and other PLA grades at identical temperatures, does not weld to PETG/ABS/ASA/PC/PA/PP. Unlike pla-wood and pla-metal, the interface is not a weak point — the flake load is too small to disrupt the weld — so multi-material seams can sit anywhere the geometry wants. Standard PLA or PETG breakaway supports work; PVA/BVOH where a sparkling underside must be preserved. Not listed as a support material itself, purely on cost."
@@ -199,19 +199,29 @@
   },
   "trade_names": [
     {
-      "manufacturer": "bambu-lab",
-      "product": "PLA Sparkle (also sold as PLA Galaxy)",
-      "notes": "The reference product for this entry — the only published datasheet: density 1.26 g/cm³, XY 39±3 MPa, Z 32±2 MPa, 190-230 °C, dry 55 °C/8 h, no 0.2 mm nozzles"
+      "manufacturer": "3djake",
+      "product": "ecoPLA Sparkling",
+      "notes": "Glitter PLA on the ecoPLA base"
     },
     {
-      "manufacturer": "proto-pasta",
-      "product": "Stardust HTPLA (Glitter Flake HTPLA)",
-      "notes": "Silver glitter flake in a translucent HTPLA matrix; explicitly no abrasive fillers, normal brass wear expected. Sold in 50 g coils. Matrix is annealable HTPLA, so it also belongs to pla-ht"
+      "manufacturer": "Cookiecad",
+      "product": "Glitter PLA (Star Dust, Funfetti, Star Stuff)",
+      "notes": "Glitter-particle PLA."
     },
     {
-      "manufacturer": "overture",
-      "product": "Shimmer PLA",
-      "notes": "PLA with glitter/sparkle particulate"
+      "manufacturer": "Numakers",
+      "product": "PLA Starlight",
+      "notes": "Glitter/sparkle-particle PLA."
+    },
+    {
+      "manufacturer": "Siddament",
+      "product": "Sparkle PLA",
+      "notes": "Glitter-particle PLA."
+    },
+    {
+      "manufacturer": "VoxelPLA",
+      "product": "VOXEL GALAXY PLA+ HS (Pro)",
+      "notes": "Sparkle version of the PLA+ HS base, $24.99/kg."
     },
     {
       "manufacturer": "amolen",
@@ -219,9 +229,19 @@
       "notes": "Glitter/sparkle particulate on a PLA base"
     },
     {
-      "manufacturer": "inland",
-      "product": "PLA Glitter Rainbow",
-      "notes": "Glitter particulate on a PLA base; also a multi-colour spool"
+      "manufacturer": "anycubic",
+      "product": "PLA Galaxy",
+      "notes": "Glitter particulate on a PLA base"
+    },
+    {
+      "manufacturer": "bambu-lab",
+      "product": "PLA Galaxy / PLA Sparkle",
+      "notes": "PLA base with glitter/mica particulate; mapped at base chemistry because no glitter-PLA id exists [Migrated from pla 2026-08-01]"
+    },
+    {
+      "manufacturer": "bambu-lab",
+      "product": "PLA Sparkle (also sold as PLA Galaxy)",
+      "notes": "The reference product for this entry — the only published datasheet: density 1.26 g/cm³, XY 39±3 MPa, Z 32±2 MPa, 190-230 °C, dry 55 °C/8 h, no 0.2 mm nozzles"
     },
     {
       "manufacturer": "colorfabb",
@@ -229,24 +249,9 @@
       "notes": "PLA plus glitter/sparkle flake; shares the formulation family with FormFutura Galaxy PLA"
     },
     {
-      "manufacturer": "formfutura",
-      "product": "Galaxy PLA",
-      "notes": "PLA plus sparkle/glitter flake; shares the formulation family with colorFabb PLA Vibers"
-    },
-    {
-      "manufacturer": "eryone",
-      "product": "PLA Galaxy / PLA Burnt Titanium",
-      "notes": "Burnt Titanium is explicitly marketed as 'Glitter PLA Filament'; the one-colour, Rainbow, Dual and Tri-colour SKUs share the base"
-    },
-    {
       "manufacturer": "creality",
       "product": "Hyper PLA RFID Stardust",
       "notes": "Glitter PLA on the high-speed Hyper base, RFID-tagged for CFS auto-detection"
-    },
-    {
-      "manufacturer": "spectrum-filaments",
-      "product": "PLA Glitter",
-      "notes": "Glitter-particle-filled PLA"
     },
     {
       "manufacturer": "elegoo",
@@ -254,19 +259,69 @@
       "notes": "Glitter particulate; still listed under base pla as well, pending a reciprocity decision"
     },
     {
+      "manufacturer": "eryone",
+      "product": "PLA Galaxy",
+      "notes": "Sparkle/glitter particulate on a PLA base; no glitter id exists. [Migrated from pla 2026-08-01]"
+    },
+    {
+      "manufacturer": "eryone",
+      "product": "PLA Galaxy / PLA Burnt Titanium",
+      "notes": "Burnt Titanium is explicitly marketed as 'Glitter PLA Filament'; the one-colour, Rainbow, Dual and Tri-colour SKUs share the base"
+    },
+    {
+      "manufacturer": "formfutura",
+      "product": "Galaxy PLA",
+      "notes": "PLA plus sparkle/glitter flake; shares the formulation family with colorFabb PLA Vibers"
+    },
+    {
+      "manufacturer": "inland",
+      "product": "PLA Glitter Rainbow",
+      "notes": "Glitter particulate on a PLA base; also a multi-colour spool"
+    },
+    {
+      "manufacturer": "jayo",
+      "product": "PLA Galaxy",
+      "notes": "Glitter/sparkle pigment [Migrated from pla 2026-08-01]"
+    },
+    {
+      "manufacturer": "keene-village-plastics",
+      "product": "PLA (Bold Black, Stellar Black, Blue, Deep Blue, Deep Red, Purple, Red, Orange, Yellow, Green, Neon Green, Black Sparkle, Strawberry Pearl, Evergreen Pearl, Pearl Blueberry)",
+      "notes": "Sparkle and pearl colours are glitter/mica effect packages on the same PLA base. [Migrated from pla 2026-08-01]"
+    },
+    {
+      "manufacturer": "overture",
+      "product": "Shimmer PLA",
+      "notes": "PLA with glitter/sparkle particulate"
+    },
+    {
+      "manufacturer": "polymaker",
+      "product": "Panchroma PLA (standard, translucent, neon, UV-shift, marble, galaxy, starlight, celestial, metallic)",
+      "notes": "Cosmetic additives on a base PLA; no chemistry change [Migrated from pla 2026-08-01]"
+    },
+    {
+      "manufacturer": "proto-pasta",
+      "product": "Stardust HTPLA (Glitter Flake HTPLA)",
+      "notes": "Silver glitter flake in a translucent HTPLA matrix; explicitly no abrasive fillers, normal brass wear expected. Sold in 50 g coils. Matrix is annealable HTPLA, so it also belongs to pla-ht"
+    },
+    {
+      "manufacturer": "spectrum-filaments",
+      "product": "PLA Glitter",
+      "notes": "Glitter-particle-filled PLA"
+    },
+    {
       "manufacturer": "sunlu",
       "product": "PLA Twinkling / PLA Galaxy",
       "notes": "Glitter/pearlescent particulate; the pearlescent colourways may be pigment rather than flake"
     },
     {
-      "manufacturer": "anycubic",
-      "product": "PLA Galaxy",
-      "notes": "Glitter particulate on a PLA base"
+      "manufacturer": "tinmorry",
+      "product": "Galaxy PLA",
+      "notes": "Glitter/sparkle pigment [Migrated from pla 2026-08-01]"
     },
     {
-      "manufacturer": "3djake",
-      "product": "ecoPLA Sparkling",
-      "notes": "Glitter PLA on the ecoPLA base"
+      "manufacturer": "ziro",
+      "product": "Effect PLA (Diamond, Mystical, Twinkling, Firefly, Chameleon, Iridescent)",
+      "notes": "Glitter/pearlescent/colour-shift pigments on base PLA [Migrated from pla 2026-08-01]"
     }
   ]
 }

@@ -1,0 +1,126 @@
+{
+  "id": "cookiecad",
+  "name": "Cookiecad",
+  "status": "researched",
+  "summary": "Boutique novelty-colour filament brand owned by Lil' Miss Cakes LLC, which began as a custom cookie-cutter design business before moving into 3D printing materials. The catalogue is built around visual effect — glitter, gradient, ombre, dual-colour and fast colour-change PLA — rather than engineering performance, with PETG, ABS, ASA and TPU rounding it out. Sold direct, on Amazon and through Micro Center. Where the filament is actually extruded is not disclosed anywhere.",
+  "headquarters_country": "United States",
+  "brands": [
+    "Cookiecad"
+  ],
+  "endpoints": {
+    "website": "https://cookiecad.com/",
+    "store": "https://cookiecad.com/shop",
+    "social": {
+      "instagram": "https://www.instagram.com/cookie.cad/",
+      "linkedin": "https://www.linkedin.com/company/cookiecad"
+    }
+  },
+  "product_lines": [
+    {
+      "name": "PLA (Solid colours)",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Standard PLA, described as industrially compostable; transparent and sparkle variants exist."
+    },
+    {
+      "name": "Silk PLA",
+      "filament_ids": [
+        "pla-silk"
+      ],
+      "notes": "Silk-luster PLA."
+    },
+    {
+      "name": "Glitter PLA (Star Dust, Funfetti, Star Stuff)",
+      "filament_ids": [
+        "pla-glitter"
+      ],
+      "notes": "Glitter-particle PLA."
+    },
+    {
+      "name": "Gradient PLA",
+      "filament_ids": [
+        "pla-gradient"
+      ],
+      "notes": "Colour transitions along the spool length."
+    },
+    {
+      "name": "Ombre PLA",
+      "filament_ids": [
+        "pla-gradient"
+      ],
+      "notes": "Same gradient chemistry, marketed as a separate colour family."
+    },
+    {
+      "name": "Mermaid / Unicorn Fast Change PLA",
+      "filament_ids": [
+        "pla-gradient"
+      ],
+      "notes": "Short-period colour-change PLA sold on 500 g spools; mapped to pla-gradient as the closest id — the effect is a rapid length-wise colour transition, not a thermochromic pigment."
+    },
+    {
+      "name": "Elixir PLA (Witchcraft, Dark Magic, Sunrise, Unicorn, Mermaid)",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Translucent/effect PLA sub-line combining colour-shift and sparkle; the individual colourways mix effects, so only the base pla chemistry is asserted."
+    },
+    {
+      "name": "Chip PLA (Mint Chip, Pink Chip, Vanilla Chip)",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Speckled/fleck-pigment PLA; no id exists for fleck effects."
+    },
+    {
+      "name": "Dual PLA (Granite, Sunrise, Moonstone, Midnight Magic)",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Two-colour co-extruded PLA; chemistry unchanged."
+    },
+    {
+      "name": "PETG",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "Standard PETG in transparent, sparkle and iridescent colourways."
+    },
+    {
+      "name": "ABS",
+      "filament_ids": [
+        "abs"
+      ],
+      "notes": "Standard ABS."
+    },
+    {
+      "name": "ASA",
+      "filament_ids": [
+        "asa"
+      ],
+      "notes": "Standard ASA."
+    },
+    {
+      "name": "TPU",
+      "filament_ids": [
+        "tpu"
+      ],
+      "notes": "Flexible elastomer in transparent and sparkle colours; no Shore durometer published, so the generic tpu id is used."
+    }
+  ],
+  "price_tier": "premium",
+  "additional_notes": "Trademark COOKIECAD filed 21 July 2022 by Lil' Miss Cakes LLC (Serial No. 97513360), covering plastic filaments and semi-worked PLA/thermoplastic. Typical pricing $29.95-$34.95 per 1 kg for specialty colourways and $19.95 for 500 g Fast Change spools — premium boutique positioning. Filament Cheat Sheet gives the brand an overall Tier A- rating, which is community-sourced and not manufacturer-verified. Corporate street address, state of registration and the extrusion location are all undisclosed; headquarters_country United States rests on the US trademark filing and US-only retail footprint, and manufacturing_countries is deliberately omitted rather than guessed. A low-quality third-party listing site claimed China-based sourcing but is not a credible source and is excluded. Non-filament items (gift cards, custom case builder, merchandise) are excluded from product_lines. No build plates found, so makes_plates is left unset.",
+  "provenance": {
+    "sources": [
+      "https://cookiecad.com/shop",
+      "https://cookiecad.com/filaments",
+      "https://trademarks.justia.com/owners/lil-miss-cakes-llc-5256955",
+      "https://filamentcheatsheet.com/database/brand/cookiecad/",
+      "https://www.microcenter.com/brand/4294805333/cookiecad",
+      "https://www.amazon.com/stores/COOKIECAD/page/F203A527-CF86-4CA0-BCDA-D1A64E62C7A5"
+    ],
+    "last_verified": "2026-08-01",
+    "confidence": "medium",
+    "conflicts": "Manufacturing country is unknown — no source states where Cookiecad filament is extruded, and manufacturing_countries is therefore omitted entirely. No street address or state of incorporation was found for Lil' Miss Cakes LLC. Novelty sub-line names on the shop do not map cleanly onto the chemistries listed in third-party databases, so several colourways are recorded at base-polymer granularity only."
+  }
+}

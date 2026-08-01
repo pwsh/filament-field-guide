@@ -141,6 +141,7 @@
   "compatibility": {
     "bonds_with": [
       "pp",
+      "pp-cf",
       "pp-gf"
     ],
     "support_materials": [

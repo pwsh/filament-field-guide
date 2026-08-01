@@ -135,12 +135,14 @@
   },
   "compatibility": {
     "bonds_with": [
+      "copa",
       "pa",
       "pa-cf",
       "pa12",
       "pa6",
       "pa6-cf",
       "pa6-gf",
+      "pa612",
       "pa66"
     ],
     "support_materials": [
@@ -215,6 +217,11 @@
   },
   "trade_names": [
     {
+      "manufacturer": "IIID Max",
+      "product": "FiberX PA6/66+CF15",
+      "notes": "500g spools, 15% CF. Generic pa-cf used because the base is a PA6/66 copolyamide, not straight PA6; no pa66-cf or copa-cf id exists."
+    },
+    {
       "manufacturer": "addnorth",
       "product": "Adura X",
       "notes": "Carbon-fibre-reinforced copolyamide; PA type unspecified."
@@ -228,6 +235,11 @@
       "manufacturer": "azurefilm",
       "product": "Carbon Fiber PAHT",
       "notes": "Heat-stabilised polyamide + carbon fibre rated to 160 °C continuous; PA6 vs PA6/66 undisclosed, and 160 °C is below PPA territory, so ppa-cf would overstate it."
+    },
+    {
+      "manufacturer": "bambu-lab",
+      "product": "PAHT-CF",
+      "notes": "Relocated from ppa-cf: Bambu's own TDS states PA12 + long-chain aliphatic PA base (Tm 225C, Tg 70C), not polyphthalamide. Other vendors' 'PAHT-CF' may be true PPA — check per product. Fable review 2026-08-01."
     },
     {
       "manufacturer": "colorfabb",

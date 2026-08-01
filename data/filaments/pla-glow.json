@@ -193,6 +193,31 @@
   },
   "trade_names": [
     {
+      "manufacturer": "IIID Max",
+      "product": "Fremover Mystery Glow",
+      "notes": "Undisclosed-colour glow filament; PLA base assumed from the rest of the line."
+    },
+    {
+      "manufacturer": "IIID Max",
+      "product": "Glow in the Dark PLA+",
+      "notes": "Neon green and neon sky blue phosphorescent PLA."
+    },
+    {
+      "manufacturer": "Numakers",
+      "product": "PLA Glow in the Dark",
+      "notes": "Phosphorescent-pigment PLA."
+    },
+    {
+      "manufacturer": "OVV3D",
+      "product": "Rainbow Glow PLA (4-colour)",
+      "notes": "Phosphorescent base."
+    },
+    {
+      "manufacturer": "Siddament",
+      "product": "Fluro / Glow PLA",
+      "notes": "Combined line; pla-glow covers the phosphorescent variants, the purely fluorescent colours are pigment-only PLA with no distinct id."
+    },
+    {
       "manufacturer": "amolen",
       "product": "PLA Glow",
       "notes": "Phosphorescent pigment."

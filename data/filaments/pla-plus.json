@@ -2,10 +2,12 @@
   "id": "pla-plus",
   "name": "PLA+ (Toughened PLA)",
   "aliases": [
+    "APLA",
+    "Advanced PLA",
     "PLA Plus",
     "PLA Pro",
-    "Tough PLA",
     "PLA Tough+",
+    "Tough PLA",
     "eSUN PLA+"
   ],
   "status": "researched",
@@ -137,6 +139,7 @@
   "compatibility": {
     "bonds_with": [
       "lw-pla",
+      "pha",
       "pla",
       "pla-cf",
       "pla-gf",
@@ -152,12 +155,14 @@
     "support_materials": [
       "bvoh",
       "petg",
+      "petg-plus",
       "pla",
       "pva",
       "support-breakaway"
     ],
     "usable_as_support_for": [
       "petg",
+      "petg-plus",
       "tpu"
     ],
     "notes": "Same PLA-family bonding behaviour as the base entry: welds to itself and other PLA grades, does not weld to PETG/ABS/ASA/PC/PA/PP. Commonly paired with lw-pla (tough ribs inside foamed skins) and with base PLA for multi-colour work. Standard PLA breakaway or water-soluble PVA/BVOH supports, as recommended by colorFabb and Polymaker for their tough PLA lines."
@@ -225,6 +230,71 @@
     "conflicts": "Tensile strength disagrees by a factor of ~1.8 across brands (eSUN 63 MPa injection-moulded, colorFabb 55 MPa printed X-Y, Bambu 34.9 MPa X-Y) because the test specimens differ — recorded as a 35-63 MPa range rather than reconciled. Impact strength is reported in incompatible tests (IZOD 9 kJ/m², Charpy notched 5.8 kJ/m², Bambu 80.6 kJ/m²) and cannot be compared. Nozzle temperature is brand-split: 210-230 °C for eSUN/colorFabb vs 220-250 °C for Bambu. HDT: Bambu 58 °C at 1.8 MPa vs eSUN 53 °C (load unstated) vs colorFabb N/A. Drying parameters exist only for Bambu; eSUN/colorFabb values are assumed from base PLA (unverified). Prices for Bambu and colorFabb are estimates, not confirmed store figures."
   },
   "trade_names": [
+    {
+      "manufacturer": "3D-Fuel",
+      "product": "Advanced PLA (APLA)",
+      "notes": "Heat/impact-resistant modified-PLA blend; brand pending tranche-3 manufacturer entry."
+    },
+    {
+      "manufacturer": "3D-Fuel",
+      "product": "ReFuel Recycled PLA+",
+      "notes": "Recycled feedstock is a sourcing attribute, not a distinct chemistry."
+    },
+    {
+      "manufacturer": "3D-Fuel",
+      "product": "Standard PLA+",
+      "notes": "Core toughened PLA line, $25.95/kg, NatureWorks Ingeo resin."
+    },
+    {
+      "manufacturer": "3D-Fuel",
+      "product": "Tough Pro PLA+",
+      "notes": "Higher-impact PLA+ tier, $32.95/kg."
+    },
+    {
+      "manufacturer": "CC3D",
+      "product": "PLA MAX",
+      "notes": "Marketed as stronger than normal PLA - standard toughened-PLA positioning; no TDS confirms the formulation, so pla is also listed on the product line as the safe base."
+    },
+    {
+      "manufacturer": "IIID Max",
+      "product": "Classic PLA+",
+      "notes": "Flagship line, ~35 colours, 1.75mm +/-0.03mm; claims NatureWorks Ingeo base resin."
+    },
+    {
+      "manufacturer": "IIID Max",
+      "product": "Fremover PLA+",
+      "notes": "Fremover is presented as an IIID Max in-house secondary label; that ownership claim is uncorroborated — flag before merging into trade_names if Fremover later proves to be a separate brand."
+    },
+    {
+      "manufacturer": "IIID Max",
+      "product": "High Speed PLA+",
+      "notes": "50+ colours; pla-plus is the stated chemistry."
+    },
+    {
+      "manufacturer": "Numakers",
+      "product": "PLA+",
+      "notes": "Core line, 39 colours."
+    },
+    {
+      "manufacturer": "OVV3D",
+      "product": "PLA+ / Pro Pure (Light Orange/Skin, Soft Sage Green)",
+      "notes": "Toughened PLA tier in solid colours."
+    },
+    {
+      "manufacturer": "Siddament",
+      "product": "PLA+",
+      "notes": "Toughened PLA tier."
+    },
+    {
+      "manufacturer": "VoxelPLA",
+      "product": "VOXEL PLA+ HS (Pro)",
+      "notes": "Primary chemistry; 1.75mm, ~27 colours, $16.99/kg."
+    },
+    {
+      "manufacturer": "Yoline Lab",
+      "product": "PLA+",
+      "notes": "Standard Series toughened tier."
+    },
     {
       "manufacturer": "anycubic",
       "product": "PLA+ / PLA+ Refill"
@@ -410,6 +480,11 @@
       "manufacturer": "spectrum-filaments",
       "product": "PLA Tough",
       "notes": "impact-modified PLA"
+    },
+    {
+      "manufacturer": "sunlu",
+      "product": "APLA Basic",
+      "notes": "Toughened low-stringing PLA tier; standard PLA-class processing (205-215C). Ambiguity resolution 2026-08-01."
     },
     {
       "manufacturer": "sunlu",

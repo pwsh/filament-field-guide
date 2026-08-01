@@ -138,6 +138,7 @@
       "lw-pla",
       "pa",
       "petg",
+      "pha",
       "pla",
       "pla-cf",
       "pla-gf",
@@ -248,6 +249,11 @@
       "manufacturer": "3dxtech",
       "product": "AquaTek PVA",
       "notes": "Standard water-soluble PVA support."
+    },
+    {
+      "manufacturer": "Siddament",
+      "product": "PVA",
+      "notes": "Water-soluble support."
     },
     {
       "manufacturer": "bambu-lab",

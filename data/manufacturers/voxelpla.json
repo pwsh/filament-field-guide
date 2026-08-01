@@ -1,0 +1,71 @@
+{
+  "id": "voxelpla",
+  "name": "VoxelPLA",
+  "status": "researched",
+  "summary": "Southern California filament brand that grew out of a ~250-machine production print farm: the operator says it developed its own materials after finding other brands inadequate at volume, and still runs the farm exclusively on its own filament as a QA testbed. Catalogue is narrow and high-speed focused — PLA+ HS, PETG+ HS and Galaxy sparkle versions of both — sold at aggressive prices, plus a small line of Bambu-ecosystem filtration and anti-vibration accessories. VoxelPLA is UNRELATED to Voxelab: despite the similar 'Voxel' naming they are separate companies with no corporate, ownership or supply link.",
+  "headquarters_country": "United States",
+  "manufacturing_countries": [
+    "United States"
+  ],
+  "brands": [
+    "VOXELPLA",
+    "VOXELPETG"
+  ],
+  "endpoints": {
+    "website": "https://voxelpla.com/",
+    "store": "https://voxelpla.com/",
+    "support": "https://voxelpla.com/pages/contact",
+    "social": {
+      "x": "https://x.com/VoxelPla",
+      "facebook": "https://www.facebook.com/realvoxelpla",
+      "instagram": "https://www.instagram.com/voxelpla",
+      "youtube": "https://www.youtube.com/@voxelpla"
+    }
+  },
+  "product_lines": [
+    {
+      "name": "VOXEL PLA+ HS (Pro)",
+      "filament_ids": [
+        "pla-plus",
+        "pla-hf"
+      ],
+      "notes": "1.75 mm toughened PLA marketed for high-speed printing, ~27 colours. pla-plus is the primary chemistry; pla-hf is listed for the high-speed claim, which no TDS independently confirms."
+    },
+    {
+      "name": "VOXEL GALAXY PLA+ HS (Pro)",
+      "filament_ids": [
+        "pla-glitter"
+      ],
+      "notes": "Sparkle/galaxy-effect version of the PLA+ HS base (Midnight Blue, Emerald Gold, Gioiello Purple, Aurora Green); glitter-particle PLA."
+    },
+    {
+      "name": "VOXEL PETG+ HS (Pro)",
+      "filament_ids": [
+        "petg-plus"
+      ],
+      "notes": "High-speed-marketed enhanced PETG in 11 colours; mapped to petg-plus on the brand's own '+' designation, with no disclosed chemistry departure from base PETG."
+    },
+    {
+      "name": "VOXEL GALAXY PETG+ HS (Pro)",
+      "filament_ids": [
+        "petg-plus"
+      ],
+      "notes": "Sparkle version of the PETG+ HS base; the catalog has no glitter PETG id, so the base line's id is reused."
+    }
+  ],
+  "makes_plates": false,
+  "price_tier": "budget",
+  "additional_notes": "UNRELATED TO VOXELAB: Voxelab (voxelab3dp.com) is a Flashforge-affiliated Chinese printer and resin hardware sub-brand; VoxelPLA is an independent Southern California filament maker. Neither VoxelPLA's homepage, About Us page nor any product page mentions Voxelab or Flashforge, and searches for a link returned nothing — the only connection is the shared 'Voxel' string, and the two entries must not be merged or cross-referenced as related companies. Pricing is $16.99 per 1 kg for standard PLA+/PETG+, $24.99 for the Galaxy sparkle line and $98.99 for bundles, undercutting most US-made filament, hence price_tier budget despite the domestic manufacturing claim. Accessories are filtration and vibration damping rather than build surfaces — VOXEL Bento Box 2-Stage Filter ($39.99), HULA Anti-Vibration Damper Feet (from $9.99), Bambu Lab X-Filter compatible part (from $5.99), Bambu Lab P2S VentoBox 2-Stage Filter ($39.99), Bambu Lab Vento H2 Series 2-Stage Filter ($29.99) — so makes_plates is false. The 'engineered and manufactured in the United States' claim is the company's own and is not independently corroborated.",
+  "provenance": {
+    "sources": [
+      "https://voxelpla.com/",
+      "https://voxelpla.com/pages/about-us",
+      "https://voxelpla.com/products/voxelpetg-pro-black-1-75mm-filament-1kg-petg",
+      "https://filamentcolors.xyz/library/manufacturer/voxelpla/",
+      "https://www.voxelab3dp.com/aboutUs"
+    ],
+    "last_verified": "2026-08-01",
+    "confidence": "medium",
+    "conflicts": "US manufacturing is a self-claim with no plant address, resin supplier or third-party confirmation. No legal entity name was found. The similar naming to Voxelab (Flashforge) invites confusion; searches found no relationship, so the brands are recorded as unrelated, but the absence of a link is evidence of absence only to the depth searched."
+  }
+}

@@ -141,15 +141,17 @@
     "bonds_with": [
       "abs",
       "abs-cf",
-      "abs-gf",
-      "abs-fr",
       "abs-esd",
+      "abs-fr",
+      "abs-gf",
+      "abs-plus",
       "asa",
       "asa-cf",
       "asa-gf"
     ],
     "support_materials": [
       "abs",
+      "abs-plus",
       "hips"
     ],
     "usable_as_support_for": [],
@@ -224,6 +226,11 @@
       "manufacturer": "3djake",
       "product": "ABS CF",
       "notes": "ABS + chopped carbon fibre."
+    },
+    {
+      "manufacturer": "IIID Max",
+      "product": "FiberX ABS+CF",
+      "notes": "Carbon-fibre-filled ABS."
     },
     {
       "manufacturer": "atomic-filament",

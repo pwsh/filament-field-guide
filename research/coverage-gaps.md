@@ -313,18 +313,18 @@ Candidates for future variant entries, ranked by how many manufacturers sell the
 
 | Their name | Suggested id | Notes |
 |---|---|---|
-| ABS+ (173) | abs-plus | Toughened ABS, same tier as pla-plus |
-| PETG+ (110) | petg-plus | Toughened/blended PETG |
+| ABS+ (173) | abs-plus ✅ done 2026-08-01 | Toughened ABS, same tier as pla-plus |
+| PETG+ (110) | petg-plus ✅ done 2026-08-01 | Toughened/blended PETG |
 | HT-PLA (95) | pla-ht | ✅ done 2026-08-01 |
 | PEBA (19) | peba | ✅ done 2026-08-01 |
-| PHA (14) | pha | Biopolymer / PLA-PHA blends |
-| PBT (7) | pbt | Standalone (we only have pc-pbt blend) |
-| PA612 (6) | pa612 | Nylon 6/12 copolymer |
-| SBS (6) | sbs | Styrenic elastomer |
-| PMMA (4) | pmma | Acrylic |
-| PE (3) | pe | Polyethylene |
-| CoPA (3) | copa | Flexible copolyamide (taulman Bridge/910 family) — note our pa entry already aliases CoPA; decide merge-vs-split |
-| MABS (1) | mabs | Transparent ABS — low priority |
+| PHA (14) | pha ✅ done 2026-08-01 | Biopolymer / PLA-PHA blends |
+| PBT (7) | pbt ✅ done 2026-08-01 | Standalone (we only have pc-pbt blend) |
+| PA612 (6) | pa612 ✅ done 2026-08-01 | Nylon 6/12 copolymer |
+| SBS (6) | sbs ✅ done 2026-08-01 | Styrenic elastomer |
+| PMMA (4) | pmma ✅ done 2026-08-01 | Acrylic |
+| PE (3) | pe ✅ done 2026-08-01 | Polyethylene |
+| CoPA (3) | copa ✅ done 2026-08-01 (split from pa) | Flexible copolyamide (taulman Bridge/910 family) — note our pa entry already aliases CoPA; decide merge-vs-split |
+| MABS (1) | mabs ✅ done 2026-08-01 | Transparent ABS — low priority |
 
 Ambiguous, resolve before adding: CPE vs cope/pctg (likely same family), PAHT vs ppa (likely same tier), APLA (10), PIPG (2).
 
@@ -340,3 +340,18 @@ Proprietary surfaces with undisclosed chemistry, queued pending identification:
 - Mapped by functional class instead (see supertack trade names): BIQU CryoGrip Pro, DarkMoon ICE
 
 Out of scope, dropped: MatterHackers LayerLock SLA resin surface (not FDM), DarkMoon REJECTED clearance bin (mixed surfaces).
+
+
+## Tranche 3 outcomes + new queue — 2026-08-01
+
+All 12 tranche-3 chemistries and 12 brands added (incl. VoxelPLA, verified independent
+of Voxelab). Ambiguities resolved: CPE = distinct entry; PAHT = vendor-dependent
+(Bambu's is PA12-class → pa-cf); APLA → pla-plus alias; PIPG → petg alias; CoPA split
+from pa (11 trade names migrated).
+
+New gaps surfaced by tranche-3 brand catalogs: pctg-cf, pctg-gf (3D-Fuel Pro),
+pbat (CC3D), tpu-98a and tpu-72d as explicit grade ids (Yoline Lab; 98A currently
+folds into tpu-95a-class), cleaning filament (recurring non-print category).
+Data-quality follow-ups: eSUN PETG+ ductility contradiction (15x less ductile than
+their base PETG — needs independent testing), Spectrum HDPE density outlier, SBS shore
+hardness unpublished, PBT single-source with suspected units error.

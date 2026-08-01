@@ -142,12 +142,14 @@
       "abs-cf",
       "abs-esd",
       "abs-gf",
+      "abs-plus",
       "asa",
       "asa-cf",
       "asa-gf"
     ],
     "support_materials": [
       "abs",
+      "abs-plus",
       "hips"
     ],
     "usable_as_support_for": [],

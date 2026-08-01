@@ -1,0 +1,63 @@
+{
+  "id": "hobby-lobby",
+  "name": "Hobby Lobby",
+  "status": "researched",
+  "summary": "Pure private label. Hobby Lobby filament is the craft retailer's own store brand, sold only through its ~1,000 US stores and hobbylobby.com — there is no brand site, no TDS, no social presence and no manufacturer, factory or country-of-origin statement of any kind. Hobby Lobby does not extrude filament and the contract producer has never been disclosed. The line is PLA only: standard, silk and matte, on non-reusable plastic AMS-compatible spools at entry-level pricing.",
+  "headquarters_country": "United States",
+  "brands": [
+    "Hobby Lobby"
+  ],
+  "oem_relationships": [
+    {
+      "company": "Unidentified contract manufacturer",
+      "relationship": "suspected-manufactured-by",
+      "notes": "Hobby Lobby is a retailer and private label, not an extruder. A Bambu Lab community thread describes the product as effectively unbranded white-label filament, quality 'a small step below Sunlu or Elegoo'. Shenzhen TronHoo Intelligent Technology Co., Ltd. (Bao'an District, Shenzhen) hosts a page titled 'Hobby Lobby 3d Printer Filament - China Manufacturers, Suppliers, Factory', but that reads as templated SEO keyword copy of the kind that Chinese B2B sites generate for arbitrary search terms, not as evidence of an exclusive supply agreement. TronHoo is therefore deliberately not recorded as the manufacturer; the producing factory is genuinely unknown."
+    }
+  ],
+  "endpoints": {
+    "store": "https://www.hobbylobby.com/crafts-hobbies/kids-crafts-activities/arts-crafts-supplies/3d-printing-filament/p/p81250144"
+  },
+  "product_lines": [
+    {
+      "name": "3D Printing Filament (standard PLA)",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "1.75 mm, 2.2 lb / 330 m spool, print temperature 392-428 F (200-220 C), $14.99. Colours include Black, Red, Yellow, Purple, White, Blue, Gray, Pink, Orange, Wood, Marble, Golden and Green — Wood and Marble are colourway names on the standard PLA SKU, and nothing in the listings indicates wood flour or mineral fill, so pla-wood and pla-stone are not asserted."
+    },
+    {
+      "name": "Silk 3D Printing Filament",
+      "filament_ids": [
+        "pla-silk"
+      ],
+      "notes": "Silk-luster PLA, $19.99, same 1.75 mm / 2.2 lb format. Colours include Silver, Black, Rainbow, Black & Pink, Red/Blue, Red/Blue/Green, Candy Black/Silver and Red/Gold; multi-tone variants are coextruded silk and there is no multi-colour id in the catalog."
+    },
+    {
+      "name": "Matte 3D Printing Filament",
+      "filament_ids": [
+        "pla-matte"
+      ],
+      "notes": "Separate matte SKU line; colour range was not fully surfaced and no separate spec sheet exists, chemistry assumed PLA in line with the rest of the label."
+    }
+  ],
+  "makes_plates": false,
+  "price_tier": "budget",
+  "additional_notes": "Encoded as a pure private label following the Amazon Basics pattern: headquarters_country is the retailer's corporate home (Oklahoma City, United States) and manufacturing_countries is deliberately omitted because Hobby Lobby manufactures nothing and no supplier or origin is disclosed on packaging or product pages. There is no filament microsite, brand social account, documentation page or TDS — endpoints therefore carries only a representative retail product URL and the remaining SKU pages are recorded in provenance. No PETG, ABS, TPU or engineering materials were found under the label, and no Hobby Lobby branded spools, plates or tools exist. Pricing is $14.99 standard / $19.99 silk, roughly 40% under Bambu-brand filament per community commentary and comparable to budget Amazon brands. The notable fact here is distribution rather than manufacturing: Hobby Lobby is the first major general-merchandise retail chain to stock 3D printing filament on shelves, letting buyers inspect spools before purchase.",
+  "provenance": {
+    "sources": [
+      "https://www.hobbylobby.com/crafts-hobbies/kids-crafts-activities/arts-crafts-supplies/3d-printing-filament/p/p81250144",
+      "https://www.hobbylobby.com/crafts-hobbies/kids-crafts-activities/arts-crafts-supplies/red---3d-printing-filament/p/81250146",
+      "https://www.hobbylobby.com/crafts-hobbies/kids-crafts-activities/arts-crafts-supplies/wood---3d-printing-filament/p/81250153",
+      "https://www.hobbylobby.com/crafts-hobbies/kids-crafts-activities/arts-crafts-supplies/silver-silk-3d-printing-filament/p/81250156",
+      "https://www.hobbylobby.com/crafts-hobbies/kids-crafts-activities/arts-crafts-supplies/silk-3d-printing-filament/p/p81250157",
+      "https://www.hobbylobby.com/crafts-hobbies/kids-crafts-activities/arts-crafts-supplies/rainbow-silk-3d-printing-filament/p/81250154",
+      "https://www.hobbylobby.com/crafts-hobbies/kids-crafts-activities/arts-crafts-supplies/matte-3d-printing-filament/p/p81274573",
+      "https://forum.bambulab.com/t/hobby-lobby-now-stocks-3d-filament/198177",
+      "https://www.tronhoo3d.com/hobby-lobby-3d-printer-filament/",
+      "https://www.youtube.com/watch?v=b3cuF4L8gkk"
+    ],
+    "last_verified": "2026-08-01",
+    "confidence": "low",
+    "conflicts": "The OEM behind Hobby Lobby filament is unknown. The only named candidate, Shenzhen TronHoo, appears solely through a self-published SEO page that names the retailer as a keyword and asserts no relationship, so it is recorded as a non-confirmation rather than as a supplier; manufacturing_countries is omitted rather than guessed at China. Product data comes entirely from live retail listings with no TDS, so the SKU list and the matte line's colour range may be incomplete or vary by store. Quality assessment rests on a single community forum thread and one YouTube test."
+  }
+}

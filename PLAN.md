@@ -128,6 +128,18 @@ every property sourced from the glossary.
 - Regional price variance and availability — candidate for Phase F.
 - Safety/VOC emissions per material (styrene, particulates) — candidate property.
 
+- 2026-08-01 — **Tranche 3 + ambiguity resolution complete** (owner request): 12
+  chemistries (abs-plus, petg-plus, cpe, pbt, pe, pmma, sbs, mabs, pp-cf, pha, pa612,
+  copa) and 12 brands (CC3D, 3D-Fuel, Numakers, Cookiecad, Yoline Lab, Amazon Basics,
+  VoxelPLA, IIID Max, MarsWork, OVV3D, Siddament, Hobby Lobby) added → 84 filaments /
+  71 manufacturers / 13 plates. Ambiguities: CPE distinct (≠CoPE, ≠PETG/PCTG); PAHT
+  vendor-dependent (Bambu→pa-cf); APLA→pla-plus; PIPG→petg; VoxelPLA independent of
+  Voxelab; CoPA split from pa (11 trade names + 10 product lines migrated). Glitter/
+  stone products migrated off base pla (13+15, catch-all rows preserved). 144 brand
+  mappings merged; 8 stale product lines remapped to new ids. Notable data-quality
+  finds preserved in conflicts: eSUN PETG+ measures 15x LESS ductile than their base
+  PETG (contradicts 'high toughness' marketing); Spectrum HDPE density outlier; SBS
+  ships with no published shore hardness anywhere.
 ## Changelog
 
 - 2026-08-01 — **Tranche 2 + plate vendor cross-walk complete** (owner requests):

@@ -1,0 +1,107 @@
+{
+  "id": "cc3d",
+  "name": "CC3D",
+  "status": "researched",
+  "summary": "Chinese factory-direct filament brand operated by Hangzhou Zhuopu New Material Technology Co., Ltd. (trading as CC3D NEW MATERIAL), self-described as established in 2015 and ISO9001:2015 certified. CC3D sells its own branded spools while openly soliciting OEM/private-label business ('Accept the OEM inquiry on package and weight'), so CC3D-labelled material and material sold under other labels may share the same extrusion lines. Best known outside China for PLA MAX and colour-change PLA.",
+  "headquarters_country": "China",
+  "manufacturing_countries": [
+    "China"
+  ],
+  "brands": [
+    "CC3D",
+    "CC3D NEW MATERIAL"
+  ],
+  "endpoints": {
+    "website": "https://cc3dglobal.com/",
+    "store": "https://cc3dglobal.com/products/"
+  },
+  "product_lines": [
+    {
+      "name": "PLA MAX",
+      "filament_ids": [
+        "pla-plus",
+        "pla"
+      ],
+      "notes": "Marketed as 'stronger than normal PLA', the standard toughened-PLA positioning, so pla-plus is listed with pla as the safe base. No TDS or mechanical data was published to confirm a modified formulation."
+    },
+    {
+      "name": "PLA",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Standard PLA."
+    },
+    {
+      "name": "Colour-change PLA (e.g. Brown to Green)",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Thermochromic pigment PLA; the catalog has no thermochromic id, so the base chemistry pla is used."
+    },
+    {
+      "name": "Silk PLA (Gold Silk)",
+      "filament_ids": [
+        "pla-silk"
+      ],
+      "notes": "Named in on-site customer testimonials rather than a spec'd product page; chemistry is silk-luster PLA."
+    },
+    {
+      "name": "Marble PLA",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Marble-look pigmented PLA; no evidence of mineral loading, so pla-stone is not asserted."
+    },
+    {
+      "name": "PETG",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "Standard PETG, own product category."
+    },
+    {
+      "name": "TPU",
+      "filament_ids": [
+        "tpu"
+      ],
+      "notes": "Flexible elastomer; no Shore durometer disclosed, so the generic tpu id is used rather than a graded id."
+    },
+    {
+      "name": "ABS",
+      "filament_ids": [
+        "abs"
+      ],
+      "notes": "Listed in the About-page material range only; no dedicated product category was reachable."
+    },
+    {
+      "name": "PC",
+      "filament_ids": [
+        "pc"
+      ],
+      "notes": "Listed in the About-page material range only; no dedicated product category was reachable."
+    },
+    {
+      "name": "PBAT",
+      "filament_ids": [],
+      "notes": "Biodegradable polyester (polybutylene adipate terephthalate) named in the About-page material range. The filament catalog has no pbat id, so no mapping is asserted."
+    }
+  ],
+  "price_tier": "budget",
+  "additional_notes": "B2B/wholesale-oriented: MOQ 1 kg, prepayment required under 500 pcs, container-based deposit structure for bulk, with no retail price list published — consistent with a low-cost factory-direct supplier rather than a consumer price point. The /products/ index was repeatedly blocked by robots.txt, so the catalog here is assembled from category, tag and individual product pages and should be treated as partial. The site advertises private-label packaging and custom colour/material work but names no partner brands, so no oem_relationships entry could be recorded; any CC3D-branded spool seen under a third-party label plausibly shares this factory, unverified. No factory address, workshop certificate numbers or verified social accounts were captured. 3D printing pens are also sold (device, not filament). No build plates found, so makes_plates is left unset.",
+  "provenance": {
+    "sources": [
+      "https://cc3dglobal.com/",
+      "https://cc3dglobal.com/about/",
+      "https://cc3dglobal.com/product-category/pla-max-filament/",
+      "https://cc3dglobal.com/product-category/petg-filament/",
+      "https://cc3dglobal.com/product-category/tpu/",
+      "https://cc3dglobal.com/product-tag/3d-filament/",
+      "https://cc3dglobal.com/product/silver-petg-filament/",
+      "https://cc3dglobal.com/product/blue-pla-max-filament/",
+      "https://cc3dglobal.com/product/brown-to-green-color-change-3d-printer-pla-filament/"
+    ],
+    "last_verified": "2026-08-01",
+    "confidence": "low",
+    "conflicts": "Catalog is incomplete: the products index is robots-blocked, so ABS, PC and PBAT rest solely on an About-page claim while only PLA MAX, PLA, PETG and TPU have verifiable product pages. Company claims 'established 2015' and 'over 8 years' of manufacturing but publishes no address or patent numbers; the OEM/private-label business is advertised without naming a single client brand."
+  }
+}

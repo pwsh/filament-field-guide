@@ -114,16 +114,16 @@
     {
       "name": "Adura",
       "filament_ids": [
-        "pa"
+        "copa"
       ],
-      "notes": "Copolyamide nylon (Addlantis family), density 1.1, HDT 0.45 MPa 105 C, tensile 50 MPa; exact copolyamide type unspecified so the generic pa id is used"
+      "notes": "Copolyamide nylon (Addlantis family), density 1.1, HDT 0.45 MPa 105 C, tensile 50 MPa; exact copolyamide type unspecified so the generic pa id is used Remapped pa→copa (copolyamide) 2026-08-01."
     },
     {
       "name": "Adura FDA",
       "filament_ids": [
-        "pa"
+        "copa"
       ],
-      "notes": "FDA-compliant copolyamide variant"
+      "notes": "FDA-compliant copolyamide variant Remapped pa→copa (copolyamide) 2026-08-01."
     },
     {
       "name": "Adura X",

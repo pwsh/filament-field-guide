@@ -132,6 +132,7 @@
   "compatibility": {
     "bonds_with": [
       "lw-pla",
+      "pha",
       "pla",
       "pla-cf",
       "pla-gf",
@@ -191,6 +192,16 @@
     "conflicts": "Confidence is 'low' rather than 'medium' because the core physical data is missing: no fetched source publishes density, Tg, HDT or shrinkage for any high-speed PLA grade, so density is inherited from base PLA and thermal properties are omitted entirely. The speed ceiling also disagrees by source: Polymaker rates PolySonic PLA Pro at 100-300 mm/s while community and vendor marketing for the class cites 250-600+ mm/s — the range recorded spans both, but the upper end is hardware-dependent, not a material property. Naming is unresolved: 'PLA-HF' is a community label, not a manufacturer SKU, and Bambu's 'HF' means high-flow hardware rather than a filament grade."
   },
   "trade_names": [
+    {
+      "manufacturer": "IIID Max",
+      "product": "High Speed PLA+",
+      "notes": "Secondary id for the high-speed marketing claim; no TDS confirms a distinct high-flow rheology."
+    },
+    {
+      "manufacturer": "VoxelPLA",
+      "product": "VOXEL PLA+ HS (Pro)",
+      "notes": "Secondary id for the high-speed claim, which no TDS independently confirms."
+    },
     {
       "manufacturer": "anycubic",
       "product": "PLA High Speed"

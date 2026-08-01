@@ -185,6 +185,16 @@
   },
   "trade_names": [
     {
+      "manufacturer": "Siddament",
+      "product": "TPU 90A",
+      "notes": "Shore 90A."
+    },
+    {
+      "manufacturer": "Yoline Lab",
+      "product": "TPU 90A",
+      "notes": "Direct Shore-grade match."
+    },
+    {
       "manufacturer": "eryone",
       "product": "TPU 90A",
       "notes": "Shore 90A - softer than the 95A that dominates this cluster; the only sub-95A grade found across all eight brands."

@@ -141,11 +141,13 @@
   },
   "compatibility": {
     "bonds_with": [
+      "copa",
       "pa",
       "pa-cf",
       "pa6",
       "pa6-cf",
       "pa6-gf",
+      "pa612",
       "pa66"
     ],
     "support_materials": [
@@ -255,6 +257,11 @@
       "manufacturer": "3dxtech",
       "product": "OBSIDIAN Nylon 6+CF v2",
       "notes": "Markforged Onyx alternative; same PA6+CF chemistry class."
+    },
+    {
+      "manufacturer": "Siddament",
+      "product": "PA6-CF Nylon",
+      "notes": "Carbon-fibre-filled PA6."
     },
     {
       "manufacturer": "bambu-lab",

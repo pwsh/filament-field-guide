@@ -131,15 +131,17 @@
   },
   "compatibility": {
     "bonds_with": [
-      "petg-esd",
-      "petg",
+      "cpe",
       "pctg",
-      "petg-cf"
+      "petg",
+      "petg-cf",
+      "petg-esd",
+      "petg-plus"
     ],
     "support_materials": [
-      "pla",
       "bvoh",
-      "petg"
+      "petg",
+      "pla"
     ],
     "usable_as_support_for": [],
     "notes": "Same copolyester matrix as base petg, so it welds to itself and to the rest of the family — useful for printing an ESD-safe contact surface on an otherwise plain PETG fixture and spending the expensive filament only where charge control matters (the mechanical soundness of that joint is inferred from shared chemistry, unverified). PLA remains the clean breakaway support it is for base PETG, and BVOH the soluble option. Same-material supports fuse hard, exactly as with base PETG. Not listed as a support for other materials — far too expensive for the role."

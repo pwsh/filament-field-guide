@@ -140,15 +140,18 @@
   },
   "compatibility": {
     "bonds_with": [
+      "copa",
       "pa",
       "pa-cf",
       "pa12",
       "pa6",
       "pa6-cf",
       "pa6-gf",
+      "pa612",
       "pa66"
     ],
     "support_materials": [
+      "copa",
       "pa",
       "pa6",
       "pa66"

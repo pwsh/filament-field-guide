@@ -1,0 +1,60 @@
+{
+  "id": "marswork",
+  "name": "MarsWork",
+  "status": "researched",
+  "summary": "Narrow PLA-only brand ('MarsWork' / 'MarsWork 3D') built around the Bambu Lab ecosystem, selling pre-dried PLA Basic and PLA Matte as 1 kg refills for reusable spools plus its own reusable spool hardware. No legal entity, headquarters address or manufacturing location is disclosed anywhere on its site. MarsWork is UNRELATED to Elegoo and its Mars resin printer line: the shared 'Mars' string is the only connection and no corporate, ownership or supply link to Shenzhen Elegoo Technology was found.",
+  "brands": [
+    "MarsWork",
+    "MarsWork 3D"
+  ],
+  "oem_relationships": [
+    {
+      "company": "Unidentified contract manufacturer",
+      "relationship": "suspected-manufactured-by",
+      "notes": "MarsWork discloses no factory. A German community thread on drucktipps3d.de observed that MarsWork spools match Bambu Lab's own filament closely in packaging, cardboard spool design and notch geometry, and in print profile and results, and asked outright whether it is a rebrand; the thread's consensus was that Bambu Lab does not extrude its own filament either and that both brands plausibly draw on the same Chinese contract producer. That is community inference from packaging, not documentary evidence, and no supplier is named here because none was identified."
+    }
+  ],
+  "endpoints": {
+    "website": "https://www.marswork3d.com/",
+    "store": "https://www.amazon.com/MarsWork-Filament-Reusable-Printing-Printers/dp/B0DK7MVPCP",
+    "support": "https://www.marswork3d.com/pages/contact",
+    "social": {
+      "instagram": "https://www.instagram.com/marswork3d/",
+      "tiktok": "https://www.tiktok.com/@marswork3d",
+      "youtube": "https://www.youtube.com/@MarsWork3D"
+    }
+  },
+  "product_lines": [
+    {
+      "name": "PLA Basic",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Standard PLA, 30+ colours, sold as 1 kg refills (no plastic spool) sized for reusable and AMS-compatible spools; marketed as pre-dried."
+    },
+    {
+      "name": "PLA Matte",
+      "filament_ids": [
+        "pla-matte"
+      ],
+      "notes": "Matte-additive PLA, 26+ colours, same 1 kg refill format."
+    }
+  ],
+  "makes_plates": false,
+  "price_tier": "budget",
+  "additional_notes": "Catalogue is PLA only — no PETG, ABS, ASA, TPU or engineering materials were found under this brand. Accessories are spool hardware rather than build surfaces: the S1 plastic reusable spool, the MS2 aluminium reusable spool and a Filament Management Kit, hence makes_plates false. Pricing runs $12.50-$22.99 per kg depending on pack size, with 2/4/8-spool multipacks common; positioning is an explicit value alternative 'Compatible with Bambu Lab 3D Printers'. headquarters_country and manufacturing_countries are deliberately omitted: the site's About and contact pages carry no corporate registration, address or country-of-origin statement, and Chinese production is only a community inference. A USPTO registration for MARSWORK (Reg. 6514785, filed October 2020, owner Liu Xueyong) exists but covers arcade, toy and sporting goods classes rather than plastics or filament, so it is very likely a different and unrelated mark and is not recorded as this brand's trademark. Also sold through Amazon.",
+  "provenance": {
+    "sources": [
+      "https://www.marswork3d.com/",
+      "https://www.marswork3d.com/pages/contact",
+      "https://3dfilamentprofiles.com/filaments/marswork",
+      "https://filamenthound.com/brand/marswork",
+      "https://forum.drucktipps3d.de/forum/thread/45648-kann-es-sein-das-das-marswork-das-gleiche-ist-wie-das-bambufilament/",
+      "https://www.amazon.com/MarsWork-Filament-Reusable-Printing-Printers/dp/B0DK7MVPCP",
+      "https://trademarks.justia.com/902/56/marswork-90256165.html"
+    ],
+    "last_verified": "2026-08-01",
+    "confidence": "low",
+    "conflicts": "No corporate identity of any kind was established: no legal entity, no HQ, no factory, no country of origin. The only trademark found under the name is in an unrelated goods class and is probably a different owner, so it neither confirms nor refutes anything about the filament brand. The Bambu Lab lookalike observation is uncorroborated community speculation and must not be read as a confirmed shared OEM. The name invites confusion with Elegoo's Mars printers; searches found no link, so the two are recorded as unrelated, but absence of a link is evidence of absence only to the depth searched."
+  }
+}

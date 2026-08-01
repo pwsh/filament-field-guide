@@ -1517,9 +1517,8 @@ function emissionsSection(f) {
   const e = f.emissions;
   if (!has(e)) return null;
   return section('Emissions & ventilation', 'emissions.ventilation',
-    has(e.ventilation) ? el('p', {}, ventilationBadge(e.ventilation)) : null,
+    has(e.ventilation) ? el('p', { class: 'vent-headline' }, ventilationBadge(e.ventilation)) : null,
     kvTable([
-      ['emissions.ventilation', has(e.ventilation) ? badge(prettyEnum(e.ventilation), ventTone(e.ventilation)) : null],
       ['emissions.voc_level', has(e.voc_level) ? badge(prettyEnum(e.voc_level), levelTone(e.voc_level)) : null],
       ['emissions.particulate_level', has(e.particulate_level) ? badge(prettyEnum(e.particulate_level), levelTone(e.particulate_level)) : null],
       ['emissions.primary_emissions', tagList(e.primary_emissions), { label: 'Primary emissions' }],
@@ -2222,6 +2221,10 @@ const FILAMENT_COMPARE_ROWS = [
     key: 'emissions.voc_level',
     get: (f) => (has(pick(f, 'emissions.voc_level'))
       ? badge(prettyEnum(pick(f, 'emissions.voc_level')), levelTone(pick(f, 'emissions.voc_level'))) : null),
+  }, {
+    key: 'emissions.particulate_level',
+    get: (f) => (has(pick(f, 'emissions.particulate_level'))
+      ? badge(prettyEnum(pick(f, 'emissions.particulate_level')), levelTone(pick(f, 'emissions.particulate_level'))) : null),
   },
   { key: 'safety_notes', label: 'Safety', get: (f) => f.safety_notes },
   { key: 'provenance.confidence', label: 'Confidence', get: (f) => confidenceBadge(pick(f, 'provenance.confidence')) },

@@ -1,0 +1,73 @@
+{
+  "id": "amazon-basics",
+  "name": "Amazon Basics",
+  "status": "researched",
+  "summary": "Pure private label. Amazon Basics filament is a retail brand of Amazon.com, Inc., launched in early July 2018 and sold only as Amazon listings — there is no brand site, no documentation, no social presence and no manufacturing claim of any kind. Amazon does not extrude filament; the actual contract manufacturer has never been disclosed. The line covers PLA, silk PLA, PETG, ABS and TPU at entry-level pricing and remains listed today.",
+  "headquarters_country": "United States",
+  "brands": [
+    "Amazon Basics",
+    "AmazonBasics"
+  ],
+  "oem_relationships": [
+    {
+      "company": "Unidentified contract manufacturer",
+      "relationship": "suspected-manufactured-by",
+      "notes": "Amazon Basics is a private label and does not manufacture. 3D Printing Industry's 2018 launch coverage repeated Amazon's general AmazonBasics sourcing statement that products are made in Taiwan and China — a brand-wide claim, not filament-specific. Reddit community speculation named Hatchbox and AMZ3D as possible OEMs, and the source itself flagged this as unconfirmed; neither is recorded as a company here because no evidence supports naming them. The producing factory is genuinely unknown."
+    }
+  ],
+  "endpoints": {
+    "store": "https://www.amazon.com/amazonbasics-filament/s?k=amazonbasics+filament"
+  },
+  "product_lines": [
+    {
+      "name": "Premium PLA",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Standard PLA, 1.75 mm 1 kg spools; the launch SKU."
+    },
+    {
+      "name": "Silk PLA",
+      "filament_ids": [
+        "pla-silk"
+      ],
+      "notes": "Silk-luster PLA."
+    },
+    {
+      "name": "PETG",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "Standard PETG."
+    },
+    {
+      "name": "ABS",
+      "filament_ids": [
+        "abs"
+      ],
+      "notes": "Standard ABS."
+    },
+    {
+      "name": "TPU",
+      "filament_ids": [
+        "tpu"
+      ],
+      "notes": "Flexible elastomer added after launch; no Shore durometer published in the listings, so the generic tpu id is used."
+    }
+  ],
+  "makes_plates": false,
+  "price_tier": "budget",
+  "additional_notes": "Encoded as a pure private label: headquarters_country is Amazon's corporate home (Seattle, WA, United States) and manufacturing_countries is deliberately omitted because Amazon manufactures nothing and the supplier is undisclosed — a 2018 blanket 'Taiwan and China' AmazonBasics sourcing line is too weak to record as filament origin. Launch pricing was $19.99 per 1 kg spool or $79.99 for a five-pack; formats are 1.75 mm, 1 kg, sold singly or in multipacks. There is no dedicated microsite, so endpoints has only a store search URL and representative listings are recorded in provenance. Amazon has published nothing about the line since the 2018 launch coverage, but current listings including TPU and silk PLA indicate it is still active rather than discontinued. Spools carry no manufacturer identification, so sourcing is opaque to buyers.",
+  "provenance": {
+    "sources": [
+      "https://3dprintingindustry.com/news/amazon-now-selling-own-brand-3d-printer-filament-136806/",
+      "https://www.amazon.com/AmazonBasics-Printer-Filament-1-75mm-Spool/dp/B07X1YH7C1",
+      "https://www.amazon.com/AmazonBasics-Premium-Printer-Filament-1-75mm/dp/B07HHFXYPS",
+      "https://www.amazon.com/AmazonBasics-Printer-Filament-1-75mm-Spool/dp/B088986RMD",
+      "https://all3dp.com/2/amazonbasics-pla-3d-printer-filament-review/"
+    ],
+    "last_verified": "2026-08-01",
+    "confidence": "low",
+    "conflicts": "The OEM behind Amazon Basics filament is unknown. The only sourcing datapoint is a 2018 brand-wide 'made in Taiwan and China' statement covering all AmazonBasics products, and community speculation naming Hatchbox or AMZ3D was explicitly unverified in its own source; manufacturing_countries is therefore omitted rather than guessed. Amazon publishes no TDS, spec sheet or catalogue page, so the product list is assembled from live retail listings and may be incomplete or vary by marketplace."
+  }
+}

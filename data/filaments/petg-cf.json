@@ -138,11 +138,13 @@
   },
   "compatibility": {
     "bonds_with": [
+      "cpe",
       "pctg",
       "petg",
       "petg-cf",
       "petg-esd",
-      "petg-gf"
+      "petg-gf",
+      "petg-plus"
     ],
     "support_materials": [
       "bvoh",
@@ -240,6 +242,16 @@
       "manufacturer": "3dxtech",
       "product": "CarbonX PETG+CF",
       "notes": "PETG + chopped CF."
+    },
+    {
+      "manufacturer": "Numakers",
+      "product": "PETG-CF",
+      "notes": "Carbon-fibre PETG."
+    },
+    {
+      "manufacturer": "Siddament",
+      "product": "Carbon Fiber PETG",
+      "notes": "Carbon-fibre-filled PETG."
     },
     {
       "manufacturer": "addnorth",

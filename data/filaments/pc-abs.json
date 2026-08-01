@@ -125,6 +125,7 @@
   "compatibility": {
     "bonds_with": [
       "abs",
+      "abs-plus",
       "asa",
       "pc",
       "pc-abs",

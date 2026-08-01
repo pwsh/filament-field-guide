@@ -140,6 +140,7 @@
     "bonds_with": [
       "abs",
       "abs-fr",
+      "abs-plus",
       "asa",
       "pc",
       "pc-abs",
@@ -252,6 +253,26 @@
       "manufacturer": "3dxtech",
       "product": "ezPC Polycarbonate",
       "notes": "Modified easy-print PC - lower warp than straight PC, same base chemistry."
+    },
+    {
+      "manufacturer": "CC3D",
+      "product": "PC",
+      "notes": "About-page material range only; no product page reachable."
+    },
+    {
+      "manufacturer": "Siddament",
+      "product": "PC (Polycarbonate)",
+      "notes": "Unfilled polycarbonate."
+    },
+    {
+      "manufacturer": "Siddament",
+      "product": "PCCF (Polycarbonate Carbon Fiber)",
+      "notes": "Mapped to base pc because the catalog has pc-gf but no pc-cf id — see gaps; do not read this as an unfilled grade."
+    },
+    {
+      "manufacturer": "Yoline Lab",
+      "product": "PC",
+      "notes": "Engineering Series polycarbonate."
     },
     {
       "manufacturer": "anycubic",

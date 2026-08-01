@@ -141,6 +141,7 @@
       "abs-esd",
       "abs-fr",
       "abs-gf",
+      "abs-plus",
       "asa",
       "asa-cf",
       "asa-gf",
@@ -152,6 +153,7 @@
       "support-breakaway"
     ],
     "support_materials": [
+      "abs-plus",
       "asa",
       "hips",
       "support-breakaway"
@@ -265,6 +267,46 @@
       "manufacturer": "3dxtech",
       "product": "Triton3D ABS (Stratasys-compatible)",
       "notes": "Repackaged/certified 3DXTECH base material on Stratasys-compatible spools."
+    },
+    {
+      "manufacturer": "Amazon Basics",
+      "product": "ABS",
+      "notes": "Standard ABS."
+    },
+    {
+      "manufacturer": "CC3D",
+      "product": "ABS",
+      "notes": "About-page material range only; no product page reachable (products index robots-blocked)."
+    },
+    {
+      "manufacturer": "Cookiecad",
+      "product": "ABS",
+      "notes": "Standard ABS."
+    },
+    {
+      "manufacturer": "IIID Max",
+      "product": "Fremover ABS",
+      "notes": "Fremover secondary label."
+    },
+    {
+      "manufacturer": "IIID Max",
+      "product": "IIID Max ABS",
+      "notes": "Standard ABS, 7 colours."
+    },
+    {
+      "manufacturer": "Numakers",
+      "product": "ABS",
+      "notes": "Standard ABS."
+    },
+    {
+      "manufacturer": "Siddament",
+      "product": "ABS",
+      "notes": "Black only."
+    },
+    {
+      "manufacturer": "Yoline Lab",
+      "product": "ABS",
+      "notes": "Engineering Series."
     },
     {
       "manufacturer": "addnorth",

@@ -1,0 +1,197 @@
+{
+  "id": "pbt",
+  "name": "PBT (Polybutylene Terephthalate)",
+  "aliases": [
+    "PBT",
+    "Polybutylene terephthalate",
+    "Polybutylene terephthalate homopolymer"
+  ],
+  "status": "researched",
+  "base_type": null,
+  "variation_kind": null,
+  "polymer_class": "polyester-copolyester",
+  "chemical_makeup": "Polybutylene terephthalate (CAS 24968-12-5) — a semi-crystalline polyester of terephthalic acid and 1,4-butanediol. Chemically a relative of PET/PETG, but the butanediol unit and the retained crystallinity give lower moisture uptake, better fatigue and creep resistance and a higher continuous-use temperature than the amorphous PET-family copolyesters, at the cost of crystalline shrinkage that behaves more like nylon or POM than like PETG.",
+  "summary": "A niche standalone semi-crystalline polyester, distinct from the catalog's pc-pbt blend. Its selling points are impact toughness that survives the cold (IZOD 80 J/m at 23 °C, still 60 J/m at -30 °C), 170 % elongation and low moisture pickup. Its costs are a 100-130 °C bed, semi-crystalline shrinkage that makes large flats warp-prone, and very thin documentation — one dedicated filament TDS and a glass-filled Amazon SKU are essentially the whole market. Heat resistance is real but modest: Vicat 110 °C, well below the pc-pbt blend's 140 °C HDT.",
+  "printing": {
+    "nozzle_temp_c": {
+      "min": 235,
+      "max": 265,
+      "recommended": 250
+    },
+    "bed_temp_c": {
+      "min": 100,
+      "max": 130,
+      "recommended": 110
+    },
+    "enclosure_recommended": true,
+    "heated_chamber_required": false,
+    "requires_hardened_nozzle": false,
+    "part_cooling_fan_pct": {
+      "min": 0,
+      "max": 20,
+      "recommended": 0
+    },
+    "enclosure_open_for_cooling": false,
+    "notes": "Nozzle 235-265 °C and bed 100-130 °C are from the help3d.it PBT TDS (which also notes melt temperature can be as low as 270 °C). That bed range is the headline number: it sits above base abs's 90-110 °C and far above any PETG-family material, and it is a direct consequence of semi-crystalline shrinkage and the adhesion needed to fight it. A capable high-temperature bed and PEI sheet rated for sustained 120 °C+ service are prerequisites. Fan, enclosure and speed are not specified in the sourced TDS (unverified): the recorded fan-off setting and enclosure_recommended: true are inferred by analogy with other semi-crystalline engineering filaments (nylon, POM), where cooling splits layers and a draft-free warm chamber is what keeps large parts flat. heated_chamber_required is left false because no manufacturer specifies an actively heated chamber; treat that as untested rather than confirmed. Print speed is deliberately omitted — no figure is published. Unfilled PBT is not abrasive and runs on brass; CC3D's glass-filled 'PBT Pro' would need a hardened nozzle and is not this entry."
+  },
+  "feeding": {
+    "drive_system": "any",
+    "ams_compatible": "conditional",
+    "feeding_assistant_recommended": false,
+    "notes": "Rigid and non-abrasive in unfilled form, so any extruder feeds it and no spool-side assistant is needed. AMS status is recorded conditional rather than yes because no vendor documents this material in a consumer material station (unverified) and the practical obstacle is thermal: a 100-130 °C bed radiates heat that most AMS units are not intended to sit beside, and the enclosure wants to stay warm and closed. Mechanically there is no known feed-path risk. CC3D's glass-filled 'PBT Pro' variant is abrasive and would wear AMS PTFE (general GF practice, not confirmed for that SKU — unverified). No Shore rating applies; this is a rigid grade."
+  },
+  "drying": {
+    "required_before_use": "if-exposed",
+    "temp_c": {
+      "min": 70,
+      "max": 90,
+      "recommended": 80
+    },
+    "time_hours": {
+      "min": 4,
+      "max": 6,
+      "recommended": 4
+    },
+    "methods": [
+      "filament dryer",
+      "convection oven at low temperature",
+      "drybox with desiccant"
+    ],
+    "dryness_validation": "No popping or crackling and no visible steam at the nozzle; consistent glossy extrusion without bubbles; no delamination or brittle snapping in a tall test coupon",
+    "notes": "The sourced help3d.it TDS publishes no drying schedule (unverified). Industrial PBT resin practice runs hot — commonly ~120 °C for 3-4 h — but that is a resin-dryer figure and exceeds what filament spools tolerate, so the recorded 70-90 °C / 4-6 h is the practical filament-scale adaptation rather than a manufacturer specification. PBT absorbs less water than PET-family amorphous copolyesters, so drying is a recovery step after exposure rather than routine practice."
+  },
+  "storage": {
+    "recommendations": "Airtight bag or drybox with desiccant as standard polyester-filament practice, though tolerance for open-air storage is better than PETG's given PBT's lower moisture uptake",
+    "max_humidity_pct": 40,
+    "hygroscopy": "low"
+  },
+  "price": {
+    "usd_per_kg_low": 40,
+    "usd_per_kg_high": 70,
+    "notes": "No live retail price page was successfully confirmed in research (unverified). CC3D's glass-filled PBT Pro is listed on Amazon in the general specialty-engineering tier and Polymaker's PC-PBT showed as discontinued at one retailer. The recorded band is an estimate for niche engineering filaments of this class, not a sourced figure — treat it as indicative only."
+  },
+  "use_cases": {
+    "recommended": [
+      "snap-fits and connectors needing fatigue resistance",
+      "parts that must stay tough at sub-zero temperatures",
+      "under-hood-adjacent brackets and housings",
+      "components exposed to oils, fuels and solvents",
+      "parts where PETG's moisture pickup is a problem"
+    ],
+    "not_recommended": [
+      "large flat parts (semi-crystalline shrinkage warps them)",
+      "printers without a bed capable of a sustained 100-130 °C",
+      "food-contact items",
+      "projects needing colour choice or community profiles — the market is a handful of SKUs",
+      "applications needing the pc-pbt blend's 140 °C HDT"
+    ]
+  },
+  "suitability": {
+    "food_contact": "no",
+    "load_bearing": "moderate",
+    "high_temperature": "moderate",
+    "outdoor": "limited"
+  },
+  "properties": {
+    "density_g_cm3": 1.25,
+    "grams_per_100cm3": 125,
+    "cm3_per_100g": 80,
+    "tensile_strength_mpa": {
+      "min": 46,
+      "max": 50,
+      "recommended": 50
+    },
+    "notes": "help3d.it PBT TDS, ASTM methods: density 1.25 g/cm³; tensile 50 MPa at yield / 46 MPa at break (D638); elongation at break 170 % (D638), notably higher than PETG, CPE or ABS and consistent with PBT's fatigue-toughness reputation; tensile modulus 2.2 GPa (D790); flexural strength 80 MPa; IZOD 80 J/m at 23 °C and 60 J/m at -30 °C (D256) — the cold-temperature retention is a PBT hallmark and the main reason to choose it; Vicat softening 110 °C (Method B, 50 °C/h, 50 N). The same sheet lists flexural modulus as '2.1 MPa', which is almost certainly a units error for 2.1 GPa given the 2.2 GPa tensile modulus; it is flagged here rather than silently corrected (unverified). HDT is not published (unverified) and is deliberately omitted — Vicat 110 °C is the closest available proxy but is not the same measurement, so writing it into heat_deflection_c would misrepresent it. Tg is likewise omitted: general polymer literature places PBT's Tg at roughly 40-60 °C against a melting point near 220-225 °C, but no filament datasheet confirms it, and for a semi-crystalline polymer service temperature is governed by crystallinity rather than Tg the way it is for amorphous PETG or CPE. Max service temperature is unpublished; for contrast the catalog's pc-pbt blend measures HDT 107 °C @0.45 MPa with Polymaker quoting 140 °C in its own literature, meaningfully above pure PBT because the PC phase carries the heat resistance. Shrinkage is unpublished but is qualitatively the material's main handling problem."
+  },
+  "scores": {
+    "ease_of_print": 4,
+    "dimensional_stability": 5,
+    "warp_tendency": 7,
+    "layer_adhesion": 6,
+    "compression_strength": 7,
+    "temperature_tolerance": 5,
+    "uv_tolerance": 4,
+    "weather_tolerance": 5,
+    "water_tolerance": 8
+  },
+  "compatibility": {
+    "bonds_with": [
+      "pbt",
+      "pc-pbt"
+    ],
+    "support_materials": [
+      "hips",
+      "support-breakaway"
+    ],
+    "usable_as_support_for": [],
+    "notes": "No co-printing behaviour is documented for pure PBT in any sourced material (unverified). Self-bonding is assumed, and bonding to the pc-pbt blend is plausible because that blend contains a PBT phase — but the blend prints in a 100-110 °C chamber and neither pairing has been tested. Bonding to the amorphous polyester family (pet, petg, pctg, cpe) is chemically arguable but practically doubtful given the crystallinity difference and the 100-130 °C bed, so it is deliberately not listed. Does not bond to PLA. HIPS is the practical breakaway support at these bed temperatures, carried from the pc-pbt entry rather than documented for PBT (unverified); PVA and BVOH degrade well below the print window."
+  },
+  "plate_recommendations": [
+    {
+      "plate_id": "pei-textured",
+      "rating": "usable",
+      "notes": "Requires a sheet rated for sustained 100-130 °C service. Adhesion behaviour for PBT specifically is not documented in the available TDS (unverified) — expect to need an adhesion promoter and a brim given semi-crystalline shrinkage."
+    },
+    {
+      "plate_id": "pei-smooth",
+      "rating": "usable",
+      "notes": "High-temperature-rated smooth PEI with an adhesion aid is the reasonable default for a warp-prone semi-crystalline material, by analogy with nylon and PC practice (unverified for PBT)."
+    },
+    {
+      "plate_id": "g10-garolite",
+      "rating": "usable",
+      "notes": "Tolerates the bed temperature; adhesion for PBT is undocumented (unverified)."
+    },
+    {
+      "plate_id": "carbon-fiber-plate",
+      "rating": "usable",
+      "notes": "Suits the high bed range; PBT-specific adhesion is undocumented (unverified)."
+    },
+    {
+      "plate_id": "pc-plate",
+      "rating": "avoid",
+      "notes": "The plate's thermal ceiling sits below this material's 100-130 °C bed range."
+    },
+    {
+      "plate_id": "pp-sheet",
+      "rating": "avoid",
+      "notes": "Polypropylene sheet is not rated for a sustained 100-130 °C bed."
+    }
+  ],
+  "emissions": {
+    "voc_level": "low",
+    "particulate_level": "moderate",
+    "primary_emissions": [
+      "ultrafine particles",
+      "terephthalate-related decomposition compounds (extrapolated from the polyester family, unverified)"
+    ],
+    "ventilation": "recommended",
+    "notes": "No emissions measurement for filament-grade PBT was found (unverified). As a polyester processed at 235-265 °C the species profile should resemble PETG's — no styrene, mild odour — but the higher processing and bed temperatures push particulate output above the PETG baseline, and a warm closed enclosure concentrates whatever is emitted until the door opens. Standard room ventilation is a reasonable precaution pending better data."
+  },
+  "safety_notes": "The 100-130 °C bed is a genuine burn hazard well beyond typical hobby printing and needs a bed and magnetic sheet rated for it — running an unrated PEI sheet at 130 °C can delaminate the coating. CC3D's glass-filled PBT variant is abrasive, requires a hardened nozzle, and its sanding dust should not be inhaled.",
+  "additional_notes": "Distinct from the catalog's pc-pbt entry, which is a PC/PBT alloy in the polycarbonate family: that blend is stiffer, hotter (HDT 107 °C @0.45 MPa) and needs a 100-110 °C heated chamber, whereas pure PBT is the cheaper, tougher, more elastic and more warp-prone half of that pairing. The dedicated-filament market for pure PBT is very small — help3d.it's PBT filament and CC3D's glass-filled 'PBT Pro' were the only SKUs surfaced in research — so expect little community tuning knowledge and no vendor slicer profiles.",
+  "provenance": {
+    "sources": [
+      "https://help3d.it/wp-content/uploads/2016/10/PBT-3D-Printing-Filament-Data-Sheet.pdf",
+      "https://www.amazon.com/CC3D-Filament-Printing-Temperature-Resistance/dp/B0CHW5NJ94",
+      "https://www.goodfellow.com/global/material/polymers/pbt-polybutylene-terephthalate/pbt-filament",
+      "https://www.poly-maker.jp/download/TDS/Polymaker_PC-PBT_TDS_EN_V4.2.pdf",
+      "data/filaments/pc-pbt.json (internal calibration reference, not an independent source)"
+    ],
+    "last_verified": "2026-08-01",
+    "confidence": "low",
+    "conflicts": "Confidence is low because a single niche filament TDS (help3d.it) supplies essentially all the mechanical and thermal data, with no second manufacturer to cross-check it. Specific gaps and flags: (1) that TDS lists flexural modulus as '2.1 MPa', which is almost certainly a transcription or units error for 2.1 GPa given the stated 2.2 GPa tensile modulus — recorded in properties.notes as a flagged discrepancy rather than corrected; (2) fan setting, enclosure requirement and print speed are not specified and are inferred from semi-crystalline-engineering-filament practice (nylon, POM); (3) no drying schedule is published — the recorded 70-90 °C / 4-6 h is a filament-scale adaptation of industrial ~120 °C resin-drying practice, which spools cannot survive; (4) HDT, Tg and max service temperature are all unpublished and deliberately omitted rather than proxied from the Vicat figure or from general polymer literature; (5) hygroscopy 'low' rests on general PBT polymer literature, not a filament-specific statement; (6) no co-printing, support-material or build-plate behaviour is documented for PBT at all, so the compatibility and plate sections are analogy-based; (7) no live retail price was confirmed; (8) outdoor suitability is 'limited' as a polyester-family default with no UV data published. Anyone relying on this entry for a load-bearing or thermal application should re-verify against a second source."
+  },
+  "trade_names": [
+    {
+      "manufacturer": "help3d",
+      "product": "PBT Filament",
+      "notes": "The reference product for this entry: unfilled PBT, density 1.25 g/cm³, tensile 50 MPa yield, elongation 170 %, Vicat 110 °C. Manufacturer not yet in the catalog."
+    },
+    {
+      "manufacturer": "CC3D",
+      "product": "PBT Pro",
+      "notes": "Glass-fibre-filled PBT marketed for high-temperature resistance — a filled variant rather than this unfilled entry; print parameters unconfirmed (unverified) and a hardened nozzle would be required. Manufacturer not yet in the catalog."
+    }
+  ]
+}

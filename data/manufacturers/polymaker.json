@@ -109,8 +109,10 @@
     },
     {
       "name": "HT-PLA",
-      "filament_ids": [],
-      "notes": "Heat-resistant crystallizable/annealable PLA — an annealed-crystallinity grade with no catalog id."
+      "filament_ids": [
+        "pla-ht"
+      ],
+      "notes": "Heat-resistant crystallizable/annealable PLA — an annealed-crystallinity grade with no catalog id. Remapped [] -> ['pla-ht'] 2026-08-01 (now maps to pla-ht (annealable) — note HT-PLA-GF stays pla-gf)."
     },
     {
       "name": "HT-PLA-GF",
@@ -186,9 +188,9 @@
     {
       "name": "PolyMax™ PETG",
       "filament_ids": [
-        "petg"
+        "petg-plus"
       ],
-      "notes": "Impact-toughened PETG; no toughened-PETG id in catalog."
+      "notes": "Impact-toughened PETG; no toughened-PETG id in catalog. Remapped ['petg'] -> ['petg-plus'] 2026-08-01 (impact-toughened PETG now maps to petg-plus)."
     },
     {
       "name": "PolyLite™ ABS / Polymaker™ ABS Pro / ABS Max",
@@ -235,9 +237,9 @@
     {
       "name": "PolyMide™ CoPA",
       "filament_ids": [
-        "pa"
+        "copa"
       ],
-      "notes": "Co-polyamide nylon blend, not a straight PA6/PA66/PA12 grade; \"CoPA\" is a pa alias."
+      "notes": "Co-polyamide nylon blend, not a straight PA6/PA66/PA12 grade; \"CoPA\" is a pa alias. Remapped pa→copa (copolyamide) 2026-08-01."
     },
     {
       "name": "Fiberon™ PA6-CF20",

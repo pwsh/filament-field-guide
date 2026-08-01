@@ -137,6 +137,7 @@
   "compatibility": {
     "bonds_with": [
       "lw-pla",
+      "pha",
       "pla",
       "pla-cf",
       "pla-gf",
@@ -240,6 +241,91 @@
     {
       "manufacturer": "3djake",
       "product": "ecoPLA Silk"
+    },
+    {
+      "manufacturer": "Amazon Basics",
+      "product": "Silk PLA",
+      "notes": "Silk-luster PLA."
+    },
+    {
+      "manufacturer": "CC3D",
+      "product": "Gold Silk PLA",
+      "notes": "Named in on-site testimonials rather than a spec'd product page."
+    },
+    {
+      "manufacturer": "Cookiecad",
+      "product": "Silk PLA",
+      "notes": "Silk-luster PLA."
+    },
+    {
+      "manufacturer": "Hobby Lobby",
+      "product": "Silk 3D Printing Filament",
+      "notes": "$19.99; multi-tone variants (Black & Pink, Red/Gold, Candy Black/Silver, Rainbow) are coextruded silk with no multi-colour id available."
+    },
+    {
+      "manufacturer": "IIID Max",
+      "product": "Fremover Silk PLA (incl. Dual Silk, Rainbow Silk, Tri-Color Silk)",
+      "notes": "All multi-tone silk variants collapse to pla-silk; no multi-colour coextrusion id exists. Fremover ownership caveat applies."
+    },
+    {
+      "manufacturer": "IIID Max",
+      "product": "High Speed Silk PLA+",
+      "notes": "Silk-luster version of the high-speed PLA+ base."
+    },
+    {
+      "manufacturer": "Numakers",
+      "product": "Dual/Tri-Color Silk PLA",
+      "notes": "Co-extruded multi-colour silk; chemistry unchanged."
+    },
+    {
+      "manufacturer": "Numakers",
+      "product": "PLA Silk",
+      "notes": "Silk-luster PLA."
+    },
+    {
+      "manufacturer": "OVV3D",
+      "product": "Color-Changing Silk PLA (Black-to-Purple)",
+      "notes": "Silk base."
+    },
+    {
+      "manufacturer": "OVV3D",
+      "product": "Dual-Color Silk PLA",
+      "notes": "10+ two-tone combos (Black/Green, Red/Gold, Tiffany Blue/Pink...); no multi-colour coextrusion id exists."
+    },
+    {
+      "manufacturer": "OVV3D",
+      "product": "Metallic Silk PLA (Copper / Gold / Silver)",
+      "notes": "Pigment effect only; no evidence of metal powder loading, so pla-metal is not asserted."
+    },
+    {
+      "manufacturer": "OVV3D",
+      "product": "Quad Color-Change Silk PLA 'Galaxy'",
+      "notes": "Galaxy is a colour-transition name here, not glitter loading, so pla-glitter is not asserted."
+    },
+    {
+      "manufacturer": "OVV3D",
+      "product": "Rainbow Tri-Color Silk PLA",
+      "notes": "Silk finish component of a rainbow-transition product."
+    },
+    {
+      "manufacturer": "OVV3D",
+      "product": "Silk PLA (single colour)",
+      "notes": "Core of the catalogue."
+    },
+    {
+      "manufacturer": "OVV3D",
+      "product": "Tri-Color / Triple Silk PLA",
+      "notes": "Three-tone coextruded silk (Black/Red/Gold, Red/Blue/Green...)."
+    },
+    {
+      "manufacturer": "Siddament",
+      "product": "Silk PLA",
+      "notes": "Includes Silk Gold."
+    },
+    {
+      "manufacturer": "Yoline Lab",
+      "product": "Silk PLA",
+      "notes": "Aesthetic Series."
     },
     {
       "manufacturer": "amolen",

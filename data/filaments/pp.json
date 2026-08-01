@@ -138,6 +138,7 @@
   "compatibility": {
     "bonds_with": [
       "pp",
+      "pp-cf",
       "pp-gf"
     ],
     "support_materials": [
@@ -145,6 +146,7 @@
     ],
     "usable_as_support_for": [
       "pp",
+      "pp-cf",
       "pp-gf"
     ],
     "notes": "PP's defining trait is near-universal non-adhesion: it bonds only to itself and will not weld to pla, petg, abs, asa, pa, pc, pva, hips, bvoh, pctg, pvb, pet, tpu or tpe. That is precisely why plain PP packing tape is a popular release-friendly print surface for other materials. No soluble support pairs with it — PP is inert to water and to most solvents — so supports must be same-material PP breakaway. It is a poor support material for other polymers because it will not bond to them, but the same non-stick property is exploited deliberately as a bed release layer or interface sheet for ABS and PETG."

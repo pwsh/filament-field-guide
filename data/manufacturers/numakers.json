@@ -1,0 +1,155 @@
+{
+  "id": "numakers",
+  "name": "Numakers",
+  "status": "researched",
+  "summary": "US-facing filament brand run by Numakers LLC out of Richmond, Virginia, with a broad decorative PLA range (silk, marble, starlight glitter, glow, wood, dual/tri-colour) alongside PLA+, PLA-CF, PETG variants, ABS and ASA. A same-named registered manufacturer, Numakers Asia LLP of Surat, Gujarat, India, exports 3D printer filament including PLA Plus; the naming overlap and export profile strongly suggest it is the production arm behind the US brand, but neither company states the link, so the relationship is inferred rather than confirmed.",
+  "headquarters_country": "United States",
+  "manufacturing_countries": [
+    "India"
+  ],
+  "brands": [
+    "Numakers",
+    "NuBox"
+  ],
+  "oem_relationships": [
+    {
+      "company": "Numakers Asia LLP",
+      "relationship": "suspected-manufactured-by",
+      "notes": "Registered LLP at Block No. 376, Moje Abrama, Abrama, Kamrej, Surat 394105, Gujarat, India; listed on IndiaMART, Volza, Tofler and Panjiva as a manufacturer/exporter of 3D printer filament including PLA Plus. Neither numakers.com nor numakers.co.in states an ownership or supply relationship with the Richmond, VA entity — the link is inferred from the shared name, shared product range and export-manufacturer profile, and is unconfirmed."
+    }
+  ],
+  "endpoints": {
+    "website": "https://numakers.com/",
+    "store": "https://numakers.com/",
+    "support": "https://numakers.com/pages/about-us",
+    "social": {
+      "facebook": "https://www.facebook.com/numakers",
+      "instagram": "https://www.instagram.com/numakers_official",
+      "youtube": "https://www.youtube.com/channel/UCr5zgtvx1GH0Xim-p-tvBFg"
+    }
+  },
+  "product_lines": [
+    {
+      "name": "PLA+",
+      "filament_ids": [
+        "pla-plus"
+      ],
+      "notes": "Core toughened PLA line, 39 colours."
+    },
+    {
+      "name": "PLA Matte",
+      "filament_ids": [
+        "pla-matte"
+      ],
+      "notes": "Matte-additive PLA."
+    },
+    {
+      "name": "PLA-CF",
+      "filament_ids": [
+        "pla-cf"
+      ],
+      "notes": "Chopped-carbon-fibre PLA."
+    },
+    {
+      "name": "PLA Silk",
+      "filament_ids": [
+        "pla-silk"
+      ],
+      "notes": "Silk-luster PLA."
+    },
+    {
+      "name": "Dual/Tri-Color Silk PLA",
+      "filament_ids": [
+        "pla-silk"
+      ],
+      "notes": "Co-extruded two- and three-colour silk PLA; chemistry is unchanged silk PLA."
+    },
+    {
+      "name": "PLA Metallic",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Metallic-appearance PLA. No evidence of metal-powder loading, so pla-metal is not asserted."
+    },
+    {
+      "name": "PLA Marble",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Marble-look PLA. No stated mineral filler, so pla-stone is not asserted."
+    },
+    {
+      "name": "PLA Starlight",
+      "filament_ids": [
+        "pla-glitter"
+      ],
+      "notes": "Glitter/sparkle-particle PLA."
+    },
+    {
+      "name": "PLA Glow in the Dark",
+      "filament_ids": [
+        "pla-glow"
+      ],
+      "notes": "Phosphorescent-pigment PLA."
+    },
+    {
+      "name": "PLA Wood",
+      "filament_ids": [
+        "pla-wood"
+      ],
+      "notes": "Wood-fibre-filled PLA."
+    },
+    {
+      "name": "PETG-HS",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "High-speed-marketed PETG; no TDS establishes a distinct rheology, so the base petg id is used."
+    },
+    {
+      "name": "PETG Translucent",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "Translucent-pigment PETG."
+    },
+    {
+      "name": "PETG-CF",
+      "filament_ids": [
+        "petg-cf"
+      ],
+      "notes": "Carbon-fibre PETG."
+    },
+    {
+      "name": "ABS",
+      "filament_ids": [
+        "abs"
+      ],
+      "notes": "Standard ABS."
+    },
+    {
+      "name": "ASA",
+      "filament_ids": [
+        "asa"
+      ],
+      "notes": "Standard ASA."
+    }
+  ],
+  "makes_plates": true,
+  "plate_ids": [],
+  "price_tier": "mid",
+  "additional_notes": "US address: 2601 Maury St, Building 15, Richmond, VA 23220; support@numakers.com, +1 804-509-1640, WhatsApp +1 (434) 277-3093. Trademark held by Numakers LLC per Justia. Numakers-branded build plates are sold, so makes_plates is true, but no plate model detail was captured and plate_ids is empty. Bundles and merchandising (NuBox subscription, HueForge packs, NuBox Surplus discount boxes, gift cards, wholesale programme) are not separate chemistries and are excluded from product_lines. No retail price list was captured; price_tier mid follows the brand's own 'high-quality and affordable' positioning and is a judgement call. No OEM-for-others language was found on numakers.com.",
+  "provenance": {
+    "sources": [
+      "https://numakers.com/",
+      "https://numakers.com/pages/about-us",
+      "https://www.numakers.co.in/",
+      "https://www.numakers.co.in/profile.html",
+      "https://www.volza.com/company-profile/numakers-asia-llp-50471314/",
+      "https://www.tofler.in/numakers-asia-llp/company/AAY-4637"
+    ],
+    "last_verified": "2026-08-01",
+    "confidence": "medium",
+    "conflicts": "The relationship between Numakers LLC (Richmond, VA) and Numakers Asia LLP (Surat, India) is inferred from the shared name and export-manufacturer profile and is stated by neither party. manufacturing_countries therefore lists India on that inference alone — if the two are unrelated, the true production country is unknown. Price tier is not published."
+  }
+}

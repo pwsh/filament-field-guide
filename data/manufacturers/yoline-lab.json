@@ -1,0 +1,162 @@
+{
+  "id": "yoline-lab",
+  "name": "Yoline Lab",
+  "status": "researched",
+  "summary": "Low-transparency direct-to-consumer filament brand with an unusually broad catalogue for its public footprint: five TPU hardness grades (72D, 85A, 90A, 95A, 98A) plus PCTG, PC, ABS, ASA and carbon-fibre, glass-fibre and ESD composites. The site claims to be a 'direct factory with full in-house manufacturing capabilities' and over a decade of R&D, but discloses no legal entity, address, city or country, making this the thinnest-evidence entry in its research batch.",
+  "brands": [
+    "Yoline Lab",
+    "YOLINE"
+  ],
+  "endpoints": {
+    "website": "https://yolinelab.com/",
+    "store": "https://yolinelab.com/collections/all"
+  },
+  "product_lines": [
+    {
+      "name": "PLA (Standard Series)",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Standard PLA."
+    },
+    {
+      "name": "PLA+ (Standard Series)",
+      "filament_ids": [
+        "pla-plus"
+      ],
+      "notes": "Toughened PLA tier."
+    },
+    {
+      "name": "PETG (Standard Series)",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "Standard PETG."
+    },
+    {
+      "name": "Silk PLA",
+      "filament_ids": [
+        "pla-silk"
+      ],
+      "notes": "Silk-luster PLA."
+    },
+    {
+      "name": "Matte PLA",
+      "filament_ids": [
+        "pla-matte"
+      ],
+      "notes": "Matte-additive PLA."
+    },
+    {
+      "name": "Wood PLA",
+      "filament_ids": [
+        "pla-wood"
+      ],
+      "notes": "Wood-fibre-filled PLA."
+    },
+    {
+      "name": "Glitter PETG",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "Glitter-particle PETG; the catalog has no glitter PETG id, so base petg is used."
+    },
+    {
+      "name": "Transparent PETG",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "Unpigmented/translucent PETG."
+    },
+    {
+      "name": "TPU 85A",
+      "filament_ids": [
+        "tpu-85a"
+      ],
+      "notes": "Shore 85A flexible TPU."
+    },
+    {
+      "name": "TPU 90A",
+      "filament_ids": [
+        "tpu-90a"
+      ],
+      "notes": "Shore 90A flexible TPU."
+    },
+    {
+      "name": "TPU 95A",
+      "filament_ids": [
+        "tpu-95a"
+      ],
+      "notes": "Shore 95A flexible TPU."
+    },
+    {
+      "name": "TPU 98A",
+      "filament_ids": [
+        "tpu"
+      ],
+      "notes": "Shore 98A semi-rigid TPU. No tpu-98a id exists and 95A is a materially different hardness, so the generic tpu id is used — see gaps."
+    },
+    {
+      "name": "TPU 72D",
+      "filament_ids": [
+        "tpu"
+      ],
+      "notes": "Shore 72D rigid TPU. Falls between the tpu-68d id and nothing above it; rather than misfile it under 68D the generic tpu id is used — see gaps."
+    },
+    {
+      "name": "PCTG (Engineering Series)",
+      "filament_ids": [
+        "pctg"
+      ],
+      "notes": "Glycol-modified copolyester."
+    },
+    {
+      "name": "PC (Engineering Series)",
+      "filament_ids": [
+        "pc"
+      ],
+      "notes": "Polycarbonate."
+    },
+    {
+      "name": "ABS (Engineering Series)",
+      "filament_ids": [
+        "abs"
+      ],
+      "notes": "Standard ABS."
+    },
+    {
+      "name": "ASA (Engineering Series)",
+      "filament_ids": [
+        "asa"
+      ],
+      "notes": "Standard ASA."
+    },
+    {
+      "name": "Composite Series - Carbon Fiber",
+      "filament_ids": [],
+      "notes": "Carbon-fibre composite advertised without naming the base polymer, so no id (pla-cf / petg-cf / pa6-cf / asa-cf) can be assigned. Left unmapped rather than guessed."
+    },
+    {
+      "name": "Composite Series - Glass Fiber",
+      "filament_ids": [],
+      "notes": "Glass-fibre composite with no stated base polymer; no id assigned."
+    },
+    {
+      "name": "Composite Series - ESD",
+      "filament_ids": [],
+      "notes": "Static-dissipative grade with no stated base polymer; petg-esd and abs-esd both exist but neither can be selected without knowing the matrix."
+    }
+  ],
+  "price_tier": "premium",
+  "additional_notes": "Flat pricing of roughly $39.99 across most SKUs, which is above typical mid-tier retail, so price_tier is recorded as premium; this is a judgement call from list price alone with no third-party review data. No headquarters country or manufacturing country is asserted — the site gives no address, city or country, and both fields are deliberately omitted. A China-based factory-direct operation is plausible given the 'direct factory' claim, the self-developed-materials framing and a chemistry range typical of Chinese extruders, but this is inference and is not encoded. A separate Chinese company, Tianjin Yolin Technology Co., Ltd., surfaced in search; the name resemblance is coincidental and unconfirmed, and the two must not be conflated. Social icons for Facebook, Instagram, YouTube, TikTok and Pinterest appear on the site but the destination URLs were not captured, so endpoints.social is omitted. The site simultaneously claims 'established 2015', 'over a decade' of manufacturing and self-developed modified materials dated 2026, which reads as refreshed branding on an older factory but is unverified. No build plates found, so makes_plates is left unset.",
+  "provenance": {
+    "sources": [
+      "https://yolinelab.com/",
+      "https://yolinelab.com/collections/all",
+      "https://yolinelab.com/pages/about-us"
+    ],
+    "last_verified": "2026-08-01",
+    "confidence": "low",
+    "conflicts": "No legal entity, headquarters location or manufacturing address could be found for Yoline Lab, so headquarters_country and manufacturing_countries are both omitted. The About page's founding-date and experience claims are internally inconsistent ('established 2015' vs 'over a decade' of manufacturing). The composite series (CF, GF, ESD) never names a base polymer, leaving three product lines unmappable. Only the brand's own site could be used as a source; no independent review, retailer or registry coverage was found."
+  }
+}

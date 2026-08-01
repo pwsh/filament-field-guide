@@ -194,6 +194,66 @@
   },
   "trade_names": [
     {
+      "manufacturer": "Cookiecad",
+      "product": "Gradient PLA",
+      "notes": "Length-wise colour transition."
+    },
+    {
+      "manufacturer": "Cookiecad",
+      "product": "Mermaid Fast Change PLA",
+      "notes": "Short-period colour-change on 500g spools; a rapid length-wise transition, not thermochromic."
+    },
+    {
+      "manufacturer": "Cookiecad",
+      "product": "Ombre PLA",
+      "notes": "Same gradient chemistry, separate colour family."
+    },
+    {
+      "manufacturer": "Cookiecad",
+      "product": "Unicorn Fast Change PLA",
+      "notes": "As Mermaid Fast Change."
+    },
+    {
+      "manufacturer": "OVV3D",
+      "product": "Basic PLA Rainbow Matte (Blue/Green/Pink/Purple)",
+      "notes": "Four-colour rainbow transition."
+    },
+    {
+      "manufacturer": "OVV3D",
+      "product": "Color-Changing Silk PLA (Black-to-Purple)",
+      "notes": "Treated as a spool-length gradient; no evidence the shift is thermochromic and no thermochromic id exists."
+    },
+    {
+      "manufacturer": "OVV3D",
+      "product": "Gradient 'Dreamy Macaron' Matte PLA",
+      "notes": "Colour transition along the spool."
+    },
+    {
+      "manufacturer": "OVV3D",
+      "product": "Gradient Stone PLA (2-colour)",
+      "notes": "Two-stage transition."
+    },
+    {
+      "manufacturer": "OVV3D",
+      "product": "Gradient Wood PLA (4-colour)",
+      "notes": "Four-stage colour transition."
+    },
+    {
+      "manufacturer": "OVV3D",
+      "product": "Rainbow Glow PLA (4-colour)",
+      "notes": "Four glow colours transitioning along the spool."
+    },
+    {
+      "manufacturer": "OVV3D",
+      "product": "Rainbow Tri-Color Silk PLA",
+      "notes": "Along-spool colour transition component."
+    },
+    {
+      "manufacturer": "Siddament",
+      "product": "Gradient PLA",
+      "notes": "Colour-transitioning PLA."
+    },
+    {
       "manufacturer": "chckx3d",
       "product": "Crystal Rainbow PLA Filament",
       "notes": "Color-changing multicolor PLA, $14.99; mapped to pla-gradient as the transitioning multicolor grade."
