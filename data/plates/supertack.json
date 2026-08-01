@@ -370,6 +370,58 @@
   "cleaning": "Wash with water and a mild detergent or dish soap, using a soft cloth or sponge, then dry completely before remounting so nothing is trapped against the steel. That is the whole officially sanctioned procedure. Explicitly avoid organic solvents — acetone in particular is called out as damaging to the coating, and there is no evidence the coating tolerates the routine IPA wipe that PEI users take for granted, so treat alcohol as a last resort rather than the default. Never use abrasive pads, scouring powder, wire brushes or blades: the tack layer is only about 0.05 mm thick and anything that abrades it removes adhesion permanently in that spot. Baked-on filament from a nozzle crash should be softened by warming the bed to that material's print bed temperature and lifted with a plastic tool, never chiselled cold.",
   "model_removal": "Let the bed cool fully to room temperature and most PLA prints release on their own or with a light flex of the sheet off the magnet — that is the intended workflow and the one that preserves the coating. Do not remove parts while the bed is warm: SuperTack's bond is strongest hot, which is the opposite intuition from PEI users who pry ABS off warm. When a part still holds, use the supplied plastic scraper at a shallow angle from a corner rather than levering from above. Bambu acknowledges the coating is comparatively soft and that scraper scratches are cosmetic and do not affect function, but every scratch is a place where future first layers behave differently, so minimise them. Rigid parts with large flat footprints — CF-filled PLA especially — should be released by flexing the sheet progressively from one edge instead of trying to pop the whole footprint at once.",
   "stuck_print_recovery": "Bambu's official first move is counter-intuitive but effective: reheat the bed to roughly 50 degC, which softens the tack layer enough to let a stubborn part shear off, then lift it immediately. If that fails, the generic toolkit applies with caveats — freezer cooling for 10-15 minutes exploits the steel/polymer contraction mismatch and works, and unwaxed dental floss or thin wire sawed under the footprint is the safest mechanical option because it applies shear rather than a point load. IPA wicking under the perimeter is the technique to be most careful with here, since alcohol is outside the vendor's sanctioned cleaning regime for this coating; if you use it, keep it at the part edge and wash the plate afterwards. Whatever you do, do not escalate to a metal blade or heavy prying — on a 0.05 mm coating that trades a stuck print for a permanently dead patch of plate. Over-adhered PETG and Bambu PLA Silk are the two cases most likely to reach this point, and both are better prevented than recovered.",
+  "damage_avoidance": [
+    {
+      "item": "Acetone and organic solvents",
+      "reason": "Bambu calls acetone out specifically as damaging to the coating. The chemistry is undisclosed and roughly 0.05 mm thick, so there is no margin and no way to reason about what a given solvent will do; the only officially sanctioned cleaning agent is water with a mild detergent.",
+      "severity": "destroys"
+    },
+    {
+      "item": "Isopropyl alcohol as a routine wipe",
+      "reason": "The habit every PEI owner brings to this plate and the one Bambu's documentation does not support. Water and mild detergent is the entire sanctioned procedure, and there is no published evidence the coating tolerates repeated alcohol. Treat IPA as a last resort confined to the edge of a stuck part, and wash the plate afterwards rather than adopting it as the pre-print routine.",
+      "severity": "degrades"
+    },
+    {
+      "item": "Abrasive pads, scouring powder, wire brushes and sandpaper",
+      "reason": "The exact opposite of the PEI rule. On powder-coated or laminated PEI, a light uniform abrasive pass is a documented way to expose fresh material and restore grip; on a 0.05 mm tack layer with nothing equivalent underneath, anything abrasive removes adhesion permanently in that spot and there is no restoration path or recoating service.",
+      "severity": "destroys"
+    },
+    {
+      "item": "Metal blades and heavy prying",
+      "reason": "On a coating this thin, forcing a stuck print with steel trades one print for a permanently dead patch of plate. Bambu supplies a plastic scraper and expects it to enter at a shallow angle from a corner; floss or thin wire drawn under the footprint is safer still because it applies shear rather than a point load.",
+      "severity": "destroys"
+    },
+    {
+      "item": "Removing parts at full bed temperature",
+      "reason": "SuperTack's bond is strongest hot, which inverts the intuition of PEI users accustomed to lifting ABS warm. Note the careful distinction from Bambu's own recovery advice: a deliberate reheat to roughly 50 degC softens the tack layer enough to shear a stubborn part off and is sanctioned, but pulling at a plate still at printing temperature is not.",
+      "severity": "destroys"
+    },
+    {
+      "item": "Raising bed temperature to rescue a first layer, or exceeding roughly 70 degC",
+      "reason": "The coating grips at 35-45 degC, and on this plate a hotter bed makes over-adhesion worse rather than better, so the reflex fix makes the problem it was meant to solve. First-layer trouble here is almost always Z-offset or a dirty nozzle. No maximum surface temperature is published, so the ceiling in this entry is inferred from the supported PLA and PETG envelope.",
+      "severity": "degrades"
+    },
+    {
+      "item": "Over-adhesion events with PETG or silk PLA",
+      "reason": "The failure that actually retires these plates. When a PETG or Bambu PLA Silk footprint bonds harder than the coating adheres to the steel, the part lifts coating away in a patch: instant, localised and permanent. Bambu publishes a PETG-on-SuperTack guide and lists it as supported while forum reports describe exactly this damage, so the risk is disputed in degree rather than in kind and is better prevented than recovered.",
+      "severity": "destroys"
+    },
+    {
+      "item": "Skipping the nozzle wipe, and wear in the wiping zone itself",
+      "reason": "Two sides of the same instruction. Bambu requires repeated nozzle wiping in the plate's dedicated strip before every print and before auto-levelling, because a bead of cooled filament corrupts the bed-mesh probe and drags through the first layer. The cost is that the wiping strip is where repeated metal-on-coating contact abrades the layer earliest; that is expected consumable behaviour rather than misuse, but it is the first place to watch for wear.",
+      "severity": "degrades"
+    },
+    {
+      "item": "Bleach and chlorinated cleaners",
+      "reason": "Not addressed by Bambu, and flagged here on substrate grounds. Sodium hypochlorite attacks the chromium oxide passive layer that protects stainless and spring steel, producing pitting and rust that is not reversible by cleaning. On a plate that is a 0.4 mm steel sheet with a 0.05 mm coating, any pinhole, scratch or cut edge is a route to the metal.",
+      "severity": "degrades"
+    },
+    {
+      "item": "Plastic scraper marks in the coating",
+      "reason": "Recorded for calibration rather than alarm. Bambu acknowledges the coating is comparatively soft and that scraper scratches are cosmetic and do not affect function. They are still worth minimising, because each one is a place where future first layers behave slightly differently, but a scuffed SuperTack plate is not a failed one.",
+      "severity": "cosmetic"
+    }
+  ],
   "temperature_limits_c": {
     "max": 70
   },
@@ -389,7 +441,9 @@
       "Bambu Lab Forum - New SuperTack plate is a complete failure: https://forum.bambulab.com/t/new-supertack-plate-is-a-complete-failure/129001",
       "Bambu Lab Forum - Struggling with new Cool Plate SuperTack using PETG: https://forum.bambulab.com/t/struggling-with-new-cool-plate-supertack-using-petg/234062",
       "Digitmakers - Bambu Lab build plate comparison: textured PEI vs smooth PEI vs Cool Plate SuperTack: https://www.digitmakers.ca/blogs/news/bambu-lab-build-plate-comparison-textured-pei-vs-smooth-pei-vs-cool-plate-supertack",
-      "Digitmakers - Bambu Cool Plate SuperTack Pro, what makes it different: https://www.digitmakers.ca/blogs/news/bambu-cool-plate-supertack-pro-what-makes-it-different-from-other-build-plates"
+      "Digitmakers - Bambu Cool Plate SuperTack Pro, what makes it different: https://www.digitmakers.ca/blogs/news/bambu-cool-plate-supertack-pro-what-makes-it-different-from-other-build-plates",
+      "Armadillo - Bleach on stainless steel (sodium hypochlorite attacks the chromium oxide passive layer, causing pitting and rust): https://www.armadillo.one/resources/bleach-on-stainless-steel-what-it-does-and-how-to-fix-it/",
+      "Bambu Lab Wiki - Textured PEI Plate Cleaning Guide (contrasting abrasive-restoration guidance that does not transfer to the SuperTack coating): https://wiki.bambulab.com/en/filament-acc/acc/pei-plate-clean-guide"
     ],
     "last_verified": "2026-08-01",
     "confidence": "medium",

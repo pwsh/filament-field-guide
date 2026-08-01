@@ -489,6 +489,58 @@
   "cleaning": "Routine: cold IPA wipe with a lint-free cloth. Deep: warm water and unscented dish soap with a soft sponge, worked over the whole surface, then rinsed and dried completely before remounting so no water is trapped against the steel. Do not use acetone — Prusa explicitly warns it deteriorates the coating. Do not use metal scrapers, blades or wire brushes: they catch on the texture and gouge the powder coat, and gouges become permanent adhesion dead-zones. Baked-on filament residue from a Z-offset crash is best removed by warming the bed to that material's bed temperature and lifting it with a plastic scraper.",
   "model_removal": "This surface is designed to self-release. Let the plate cool to room temperature and most prints audibly pop free on their own as the steel and coating contract away from the printed polymer; lifting the sheet off the magnet and flexing it finishes the job for anything still attached. Reserve a plastic spatula for stubborn corners and brimmed prints, and slide it in at a shallow angle rather than levering. Never remove parts hot — the bond peaks at temperature and forcing it there is how the powder coat gets pulled off. Note that once a print pops loose during cooling it cannot be resumed, so paused or interrupted jobs need to be kept at bed temperature.",
   "stuck_print_recovery": "The freezer trick works quickly and reliably here: put the sheet with the print attached into a freezer for 10-15 minutes and flex it afterwards. For stubborn PETG or ABS footprints, drip 90%+ IPA at the part/plate interface and let it wick under the perimeter for a minute before flexing again. Unwaxed dental floss or thin wire sawed under a corner and drawn across the footprint is a gentle mechanical assist that will not damage the coating. Prints that do not release on the first cool-down — common with ASA and PC, where the sheet holds residual heat unevenly — usually free up after a full reheat to bed temperature followed by an undisturbed slow cool. Avoid ice or cold water directly on a hot plate.",
+  "damage_avoidance": [
+    {
+      "item": "Acetone",
+      "reason": "Prusa's textured-sheet page is unambiguous: never clean the sheet with acetone, it will deteriorate the surface. A powder coat is a formulated thermoset film with flow additives rather than pure Ultem stock, so vendor guidance here is stricter than for bulk PEI resin and stricter than Prusa's own allowance for occasional acetone on the smooth laminated sheet.",
+      "severity": "degrades"
+    },
+    {
+      "item": "ABS juice or acetone-ABS slurry as an adhesion aid",
+      "reason": "Called out by name in Prusa's textured-sheet documentation as something never to apply. It combines the solvent the coating cannot tolerate with a residue that soaks into the micro-texture, and the affected zone never fully recovers its release behaviour.",
+      "severity": "destroys"
+    },
+    {
+      "item": "Metal spatulas, blades and wire brushes",
+      "reason": "Prusa states plainly that the sheet is not scratch-resistant. A blade catches in the powder-coat texture rather than sliding over it, so it tears out coating in flakes instead of leaving a clean score. Those bare patches are permanent adhesion dead-zones, and cosmetic damage of exactly this kind is excluded from warranty.",
+      "severity": "destroys"
+    },
+    {
+      "item": "Hand soap, bar soap and skin-care products",
+      "reason": "Prusa specifies plain dish soap and warns against anything made for skin because it carries oils and sugars that ruin adhesion. Sugars are the worse half: they survive the rinse, then caramelise on the next heat cycle into a glazed film in the texture valleys that neither IPA nor a normal soap wash lifts.",
+      "severity": "degrades"
+    },
+    {
+      "item": "Soaking, submerging in hot water, or dishwasher cycles",
+      "reason": "Prusa allows an occasional warm soapy wash but says it should not be done often and never to submerge the sheet completely in hot water, because the coating is not waterproof. Add a dishwasher's alkaline detergent and long humid dry cycle and you also risk corrosion of the spring-steel carrier at the sheet edges, which the Prusa forum flags as the main objection to the practice.",
+      "severity": "degrades"
+    },
+    {
+      "item": "Freezer thermal shock",
+      "reason": "Genuinely disputed and brand-dependent. Prusa states never put the sheet in the freezer, which covers its powder-coated sheets; the wider Bambu-ecosystem community treats a 10-15 minute freezer cycle as the standard stuck-print fix on textured PEI and reports no coating damage. This catalogue's own recovery guidance follows the community reading for third-party and Bambu plates while honouring Prusa's prohibition on Prusa sheets. Either way, freeze only a fully cooled sheet and dry off the condensation afterwards.",
+      "severity": "degrades"
+    },
+    {
+      "item": "Abrasive pads and sandpaper",
+      "reason": "Vendor guidance splits here. Bambu's own PEI plate cleaning guide sanctions grinding the surface with fine sandpaper or steel wool to expose a fresh, clean layer once detergent stops working, and requires the sanding debris to be washed off afterwards. Prusa says the opposite for its sheets: no sandpaper, not scratch-resistant. What both agree on is that coarse scouring pads and spot-scrubbing a single stubborn patch are destructive, because they polish the micro-texture flat in a localised zone and that zone stops gripping while the rest of the plate still works.",
+      "severity": "degrades"
+    },
+    {
+      "item": "Over-flexing or bowing the whole sheet at once",
+      "reason": "Powder-coated PEI lives on spring steel and flexing is the intended release, but MatterHackers' plate guidance is that minor flexing should suffice and that repeated heavy flexing permanently warps the plate. Work progressively from one corner on large footprints instead of bending the sheet double.",
+      "severity": "degrades"
+    },
+    {
+      "item": "Removing parts hot, and over-squished PETG or TPU first layers",
+      "reason": "The bond peaks at bed temperature, so forcing a part off hot is how the powder coat gets pulled away in a patch. The same failure arrives without any tool if the first layer is driven too low with PETG, TPU or TPE, which can fuse into the coating and take it with them; MatterHackers describes this as irreversible damage requiring plate replacement, and it is the reason to recalibrate nozzle height before switching to those materials.",
+      "severity": "destroys"
+    },
+    {
+      "item": "Sustained bed temperatures above roughly 130 degC",
+      "reason": "No manufacturer publishes a hard maximum for powder-coated PEI, so the ceiling in this entry is inferred from the supported material range rather than a datasheet. What is well reported is that long ABS and ASA runs at the top of the bed range accelerate texture wear and adhesion decay noticeably faster than PLA and PETG work at 60-80 degC.",
+      "severity": "degrades"
+    }
+  ],
   "temperature_limits_c": {
     "max": 130
   },
@@ -507,7 +559,11 @@
       "Wham Bam Systems - PEI Build Surface: https://www.whambamsystems.com/collections/pei-build-surface",
       "LayerGrade - Smooth vs Textured PEI: https://layergrade.com/guides/smooth-vs-textured-pei-build-plate/",
       "PC Macgicians - Bambu PEI Sheet Replacement: https://pcmacgicians.co.uk/support-centre/it-support-blogs/bambu-build-plate-pei-sheet-replacement/",
-      "Prusa Forum - Polycarbonate printing on FYSETC textured sheet: https://forum.prusa3d.com/forum/original-prusa-i3-mk3s-mk3-general-discussion-announcements-and-releases/polycarbonate-printing-on-fysetc-textured-sheet-review/"
+      "Prusa Forum - Polycarbonate printing on FYSETC textured sheet: https://forum.prusa3d.com/forum/original-prusa-i3-mk3s-mk3-general-discussion-announcements-and-releases/polycarbonate-printing-on-fysetc-textured-sheet-review/",
+      "Prusa Knowledge Base - Textured steel sheet (no acetone, no ABS juice, no freezer, not scratch-resistant, oils/sugars warning): https://help.prusa3d.com/article/textured-steel-sheet_196534",
+      "Bambu Lab Wiki - Textured PEI Plate Cleaning Guide (detergent over alcohol; fine sandpaper or steel wool as a surface reset): https://wiki.bambulab.com/en/filament-acc/acc/pei-plate-clean-guide",
+      "MatterHackers - How To Succeed with LayerLock Powder Coated PEI Build Plates (over-flexing, scraper damage, PETG/TPU fusing): https://www.matterhackers.com/articles/how-to-succeed-with-layerlock-powder-coated-pei-build-plates",
+      "Prusa Forum - Dishwasher (steel sheet washing, rust and detergent concerns): https://forum.prusa3d.com/forum/original-prusa-i3-mk3s-mk3-general-discussion-announcements-and-releases/dishwasher-2/"
     ],
     "last_verified": "2026-08-01",
     "confidence": "medium",

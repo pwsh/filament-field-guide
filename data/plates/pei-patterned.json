@@ -385,6 +385,48 @@
   "cleaning": "Routine cleaning is a light 90%+ IPA wipe when cold, using minimal pressure. Avoid acetone and every other aggressive solvent — the general PEI-family caution applies and these films are thinner and more delicate than a powder coat. Avoid metal scrapers entirely. Notably, glue stick is discouraged here for cosmetic rather than functional reasons: it visibly dulls the holographic effect even where it helps release (per 3DBite; unverified independently), so if a material needs a separator, that is usually a sign it belongs on a different plate. For baked-on residue, warm the bed and lift with a plastic scraper rather than cutting cold.",
   "model_removal": "Cool and flex, like the rest of the PEI family: let the plate reach room temperature, lift it off the magnet, and flex gently until the part releases. Two differences matter. First, some PEO-based variants are reported by their own vendors not to self-release on cooling, so expect to flex manually more than you would on textured PEI. Second, the coating is a thin film rather than a thick powder coat and is reported to peel or delaminate under aggressive prying (unverified severity), so use a plastic scraper sparingly, at a shallow angle, and never lever against the film. Removing parts hot is the fastest way to ruin one of these plates.",
   "stuck_print_recovery": "Work gently and prefer the least mechanical option available. Start with a full cool-down and repeated gentle flexing. Alcohol wicking at the perimeter works as it does on other PEI-family surfaces and puts no mechanical stress on the film. Unwaxed dental floss or thin wire drawn under a corner is the preferred mechanical assist, since it distributes force instead of concentrating it under a blade tip. The freezer trick is reported to work but should be used cautiously given the thinner coating and its adhesive layer; community reports flag the holographic layer lifting or peeling when parts are pried aggressively, so accept a slower recovery rather than risk the surface.",
+  "damage_avoidance": [
+    {
+      "item": "Steel wool, sandpaper and abrasive pads",
+      "reason": "The restoration trick that works on PEI is fatal here. The holographic effect comes from diffraction ridges at roughly 500-1500 nm spacing; any abrasive flattens them on first contact, and unlike a powder coat there is no fresh layer underneath to expose. Both the pattern and the adhesion consistency go at the same time, permanently.",
+      "severity": "destroys"
+    },
+    {
+      "item": "Acetone and other aggressive solvents",
+      "reason": "The general PEI-family caution applies with less margin, because these plates are usually not PEI at all. Vendors use PEI, PEO and PEY interchangeably for demonstrably different polymers, the working layer is a thin film rather than a thermoset coat, and there is an adhesive lamination underneath that solvent reaches quickly at the sheet edges. No manufacturer publishes a chemical-resistance spec for the holographic layer.",
+      "severity": "destroys"
+    },
+    {
+      "item": "Metal scrapers and levering with any tool",
+      "reason": "Community reports describe the holographic layer lifting or peeling when parts are pried aggressively, though the severity varies between brands and no vendor documents it. Because the film is thin and laminated rather than bonded into a coat, a blade does not merely score it, it starts a peel that keeps running. Use floss or wire under a corner instead.",
+      "severity": "destroys"
+    },
+    {
+      "item": "Removing parts while the plate is hot",
+      "reason": "The fastest way to ruin one of these plates. Grip is highest at bed temperature and the film has the least mechanical reserve of any surface in this catalogue, so hot removal peels rather than releases. Complicating this, some PEO-based variants are described by their own vendors as not self-releasing on cooling, so expect to flex manually and be patient rather than reaching for heat.",
+      "severity": "destroys"
+    },
+    {
+      "item": "High-temperature filaments and bed temperatures above roughly 120 degC",
+      "reason": "PEO, PEY and PET plates are commonly quoted at up to 120 degC, and vendor guidance is that ABS, PA and PC belong on PEI or high-temperature plates rather than these. The 120 degC figure is a repeated marketplace number, not a datasheet value, and it varies by vendor, so treat it as soft. Running hot shortens the already brief window in which the pattern stays vivid.",
+      "severity": "degrades"
+    },
+    {
+      "item": "Glue stick and other separators",
+      "reason": "Discouraged here for appearance rather than function: glue visibly dulls the holographic effect even where it improves release (per 3DBite, unverified independently). Since the pattern is the entire reason to own this plate, a material that needs a separator is a signal it belongs on a different surface.",
+      "severity": "cosmetic"
+    },
+    {
+      "item": "Freezer thermal shock",
+      "reason": "Reported to work, but riskier than on a powder-coated sheet. The stack is a thin film over an adhesive layer over steel, and each of those interfaces has a different contraction rate, so cold-shock adds peel stress exactly where the failure mode already is. Accept a slower recovery with alcohol wicking or floss before reaching for the freezer.",
+      "severity": "degrades"
+    },
+    {
+      "item": "Soaking, or letting liquid pool at the sheet edges",
+      "reason": "On a laminated film the perimeter is the weak point. Liquid that wicks under an edge attacks the adhesion layer and starts a lift that spreads with every subsequent heat cycle. Wipe with a barely damp cloth rather than washing these plates under a tap.",
+      "severity": "degrades"
+    }
+  ],
   "temperature_limits_c": {
     "max": 120
   },
@@ -400,7 +442,8 @@
       "3DBite - How Holographic Build Plates Actually Work: https://3dbite.com/holographic-build-plates-how-they-work-3d-printing/",
       "P3D - What is PEI, PEO, PEY, PET, PEX Build Plates?: https://p3d.mx/blogs/how-to-3d-print/what-is-pei-peo-pey-pex-pet-build-plates",
       "Embrace Making - Creality K1 Max PEY/PEI Rainbow Pattern Magnetic Flex Build Plate: https://embracemaking.com/products/creality-k1-max-pey-pei-rainbow-pattern-magnetic-flex-build-plate",
-      "Bambu Lab Forum - BIQU Plate Textured PEI / Smooth PEO problems: https://forum.bambulab.com/t/biqu-plate-textured-pei-smooth-peo-problems/123233"
+      "Bambu Lab Forum - BIQU Plate Textured PEI / Smooth PEO problems: https://forum.bambulab.com/t/biqu-plate-textured-pei-smooth-peo-problems/123233",
+      "3DTechValley - How to clean a 3D printer bed (abrasives, metal scrapers and solvents on coated surfaces): https://www.3dtechvalley.com/how-to-clean-3d-printer-bed/"
     ],
     "last_verified": "2026-08-01",
     "confidence": "low",

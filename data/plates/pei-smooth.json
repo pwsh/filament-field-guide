@@ -489,6 +489,58 @@
   "cleaning": "Routine cleaning is a cold 90-99% IPA wipe with a lint-free cloth or paper towel. Deep cleaning is warm water plus unscented dish soap, scrubbed with a soft sponge or cloth, rinsed and dried completely before the sheet goes back on the magnet — trapped water under a magnetic sheet causes corrosion of the steel carrier. Do not use acetone: Prusa and multiple plate vendors state it deteriorates PEI surfaces, and on laminated film it can also attack the adhesive layer. Skip abrasive scouring pads, wire brushes and metal scrapers, all of which leave scratches that become permanent adhesion dead-zones. Baked-on filament from a crashed Z-offset is best softened by heating the bed to that material's bed temperature and lifting the residue with a plastic scraper rather than cutting at it cold.",
   "model_removal": "Smooth PEI is a cold-release surface: let the bed drop to room temperature (below roughly 40 degC) so the differential contraction between the steel/PEI stack and the printed polymer breaks the bond, then lift the flexible sheet off the magnet and flex it in both directions until the part cracks free. Unlike textured plates, smooth PEI rarely self-releases on cooling — expect to flex actively, and expect large flat PLA or PETG footprints to need progressive flexing from one corner across the part. Use a plastic or nylon spatula only for stubborn small parts and only at a shallow angle to a corner; a metal blade will gouge the film and every gouge is a future adhesion failure. Never pry a part off a hot plate: the bond is at its strongest at temperature and that is when film tearing happens.",
   "stuck_print_recovery": "First, be patient — put the sheet aside and let it reach true room temperature, which resolves most cases. If the part still will not budge, put the whole flexible plate (print attached) in a freezer for 10-20 minutes; the further contraction differential pops most prints free. For PETG, PC and ASA parts that have chemically bonded, drip 90%+ IPA at the print/plate interface and let it wick underneath for a minute or two to break the bond, repeating at several edges (skip this on PVB, which IPA dissolves). Mechanically, unwaxed dental floss or a thin steel wire sawed under a corner and drawn across the footprint is far gentler on the film than a scraper. If nothing works, reheat the bed to the material's print bed temperature, then let it cool fully and undisturbed and retry — but do not shock a hot plate with ice or cold water, which can crack the film or delaminate it from the steel.",
+  "damage_avoidance": [
+    {
+      "item": "Acetone",
+      "reason": "Disputed and sheet-dependent. Prusa's own smooth-sheet page permits acetone once or twice a month when IPA is no longer sufficient, while Prusa prohibits it outright on its coated satin and textured sheets, and most plate vendors repeat a blanket 'no acetone' rule for the PEI family. Bulk PEI resin tolerates alcohols and aliphatics well, but this plate is a thin film over 3M 468MP-class transfer adhesive: solvent that runs to an edge wicks into that adhesive layer and starts delamination, which is the failure the blanket rule is really guarding against. Treat occasional whole-surface use as the outer limit and keep it off the edges.",
+      "severity": "degrades"
+    },
+    {
+      "item": "Metal scrapers, razor blades and wire brushes",
+      "reason": "The working surface is an unfilled PEI film only a few tenths of a millimetre thick. A blade gouges through it in one pass, and every gouge becomes a permanent adhesion dead-zone that prints will lift from for the rest of the sheet's life. There is no fill-and-polish repair path on a laminated film.",
+      "severity": "destroys"
+    },
+    {
+      "item": "Coarse abrasives, scouring pads and localised scrubbing",
+      "reason": "Not the same as sanctioned restoration. Prusa documents reviving smooth PEI with light, uniform 600-1000 grit sanding, and this catalogue records the equivalent #0000 steel-wool pass, both of which bring fresh PEI to the surface. What kills the sheet is coarse or localised abrasion: scouring pads and spot-scrubbing a stubborn patch cut a shallow crater that reads as a permanently different Z datum and a locally different gloss.",
+      "severity": "degrades"
+    },
+    {
+      "item": "Prying parts off while the plate is hot",
+      "reason": "Smooth PEI's bond is at maximum strength at bed temperature; that is exactly when the film tears rather than releases. Cold release plus flexing the sheet off the magnet is the intended workflow, and hot removal is the single most common way a smooth sheet is ruined in its first month.",
+      "severity": "destroys"
+    },
+    {
+      "item": "Ice, cold water or a wet cloth on a hot plate",
+      "reason": "Thermal shocking a hot laminated stack cracks the PEI film and can pop it loose from the steel at the adhesive line. Note this is not the same as the freezer trick, which is applied to a fully cooled sheet and is standard community practice on smooth PEI; Prusa nonetheless discourages freezing its coated sheets, so the guidance is construction-dependent rather than universal.",
+      "severity": "destroys"
+    },
+    {
+      "item": "IPA on or near PVB prints",
+      "reason": "IPA is the routine cleaner here and is harmless to the film, but PVB is IPA-soluble, so wicking alcohol under a PVB footprint softens the print into a gum that smears into the surface and then has to be washed out with soap and water before adhesion returns. Use water and patience on PVB instead.",
+      "severity": "degrades"
+    },
+    {
+      "item": "Bar soap, scented or moisturising soaps, and bare-hand handling",
+      "reason": "Prusa's instruction is explicit: do not use anything made for skin, because it contains oils that ruin adhesion. Skin oils themselves are worse on smooth PEI than on any textured surface, because there is no micro-texture to key into around a fingerprint, so the contaminated patch simply fails. Deep cleaning wants plain unscented dish soap and handling by the tabs.",
+      "severity": "degrades"
+    },
+    {
+      "item": "Dishwasher cycles",
+      "reason": "Combines everything the sheet dislikes: alkaline detergent with abrasive builders against a soft film, a long hot-and-humid dry cycle against the exposed spring-steel carrier, and water forced into the film-to-steel bond line. Prusa forum consensus is hand-washing with immediate drying; one member's single-cycle test showed no immediate harm, but nobody published long-term results.",
+      "severity": "degrades"
+    },
+    {
+      "item": "Repeated hard flexing, especially of thin budget sheets",
+      "reason": "Flexing is the intended release mechanism, but bowing the whole sheet aggressively rather than working progressively from a corner permanently warps thin steel. A sheet that no longer lies flat cannot be recovered by cleaning and shows up as first-layer variation across large footprints long before the PEI itself wears out.",
+      "severity": "degrades"
+    },
+    {
+      "item": "Bed temperatures above roughly 150 degC",
+      "reason": "The polymer is not the limit here; the lamination is. PEI resin has continuous service well above any FDM bed temperature, but the 3M-class transfer adhesive holding the film to the steel softens first, showing up as bubbling, edge lift or a sheet that will not sit flat. No vendor publishes a rated maximum for a laminated sheet, so the ceiling recorded in this entry is a conservative estimate rather than a datasheet figure.",
+      "severity": "degrades"
+    }
+  ],
   "temperature_limits_c": {
     "max": 150
   },
@@ -507,7 +559,12 @@
       "LayerGrade - Smooth vs Textured PEI: https://layergrade.com/guides/smooth-vs-textured-pei-build-plate/",
       "MatterHackers - 3D Printing Essentials: Bed Surface: https://www.matterhackers.com/articles/3d-printing-essentials-bed-surface",
       "Prusa Knowledge Base - Water-Soluble Materials (PVA/BVOH): https://help.prusa3d.com/article/water-soluble-materials-pva-bvoh_162860",
-      "PC Macgicians - Bambu PEI Sheet Replacement: https://pcmacgicians.co.uk/support-centre/it-support-blogs/bambu-build-plate-pei-sheet-replacement/"
+      "PC Macgicians - Bambu PEI Sheet Replacement: https://pcmacgicians.co.uk/support-centre/it-support-blogs/bambu-build-plate-pei-sheet-replacement/",
+      "Prusa Knowledge Base - Smooth Steel Sheet (acetone 1-2x monthly, 600-1000 grit revival, no skin products): https://help.prusa3d.com/article/smooth-steel-sheet_196550",
+      "Prusa Knowledge Base - PVB (IPA solubility and recommended sheets): https://help.prusa3d.com/article/pvb_196708",
+      "Drake Plastics - Polyetherimide (PEI/Ultem) chemical and stress-crack resistance: https://drakeplastics.com/ultra-high-performance-plastic-materials-solutions-for-your-most-demanding-applications/polyetherimide-pei/",
+      "Prusa Forum - Dishwasher (steel sheet washing, rust and detergent concerns): https://forum.prusa3d.com/forum/original-prusa-i3-mk3s-mk3-general-discussion-announcements-and-releases/dishwasher-2/",
+      "3DTechValley - How to clean a 3D printer bed (PEI, glass, magnetic, Bambu): https://www.3dtechvalley.com/how-to-clean-3d-printer-bed/"
     ],
     "last_verified": "2026-08-01",
     "confidence": "medium",

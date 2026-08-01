@@ -352,6 +352,58 @@
   "cleaning": "Cold IPA at around 90% for routine cleaning; dish soap and warm water for a degrease, dried fully before use. Never use acetone — it damages the coating, as with Prusa's other powder-coated sheets. Never put this sheet in a freezer: Prusa warns against it explicitly, which is a genuine departure from the freezer-release trick that is standard advice on PEI and steel plates, so unlearn that habit when you switch sheets. Avoid metal spatulas and any sharp-edged tool; the coating is a thin wearable layer rather than a hard ceramic-like film, and gouges become permanent dead spots. Do not use abrasives or scouring pads, which polish out the matte texture that provides part of the mechanical grip.",
   "model_removal": "Cold release by flexing the sheet, exactly as with any spring-steel system: let the bed cool, lift the sheet off the magnetic base by its tabs, and bow it progressively from one edge so the part peels off rather than popping all at once. Most parts should come free with a gentle flex — the coating's whole design intent is low peel adhesion, so if a part is genuinely fighting you, that is a signal about first-layer squish rather than a cue to apply more force. Keep sharp metal tools away from the surface; if a plastic scraper is needed, slide it in at a shallow angle at a corner. PP parts in particular deserve patience, because the failure mode when they do not release is not a scratch but a fused footprint that takes coating with it.",
   "stuck_print_recovery": "Start with the sheet off the magnet and flex it harder and from multiple directions — that resolves most cases. Then IPA wicked under the part perimeter, given a minute or two to creep in. Then unwaxed dental floss or thin wire sawed under the footprint, which applies shear rather than a point load and is the safest mechanical escalation. What you must not do is the freezer, which Prusa specifically prohibits for this sheet even though it is the standard trick elsewhere. Heat-then-slow-cool cycling to break stubborn PP-on-PP fusion is not documented and should be regarded as untested (unverified). The honest guidance from both Prusa's documentation and the broader community is that PP-coated surfaces are a prevention problem, not a recovery problem: a correctly set Z-offset and a bed that is not running hotter than needed will keep you out of this situation, and once PP has genuinely welded to a PP coating there may be no non-destructive way back.",
+  "damage_avoidance": [
+    {
+      "item": "Acetone",
+      "reason": "Prusa's PP sheet page states it directly: never clean the PP sheet with acetone, this will damage the surface. The same prohibition Prusa applies to its powder-coated PEI sheets applies here, and there is no occasional-use allowance of the kind granted to the smooth laminated sheet.",
+      "severity": "degrades"
+    },
+    {
+      "item": "Freezer cycles",
+      "reason": "Prusa prohibits putting this sheet in the freezer. This is a genuine departure from the freezer-release trick that is standard advice on PEI and steel plates, so it is a habit to unlearn deliberately when switching sheets rather than a soft preference. Harder flexing and IPA wicking are the sanctioned escalations instead.",
+      "severity": "degrades"
+    },
+    {
+      "item": "Metal spatulas and sharp-edged tools",
+      "reason": "Prusa states the sheet is not scratch-resistant and to avoid metal spatulas with sharp edges. The PP coating is a thin wearable layer rather than a hard ceramic-like film, so a gouge is not a scratch in a durable surface but a hole through the working material, and it becomes a permanent dead spot.",
+      "severity": "destroys"
+    },
+    {
+      "item": "Abrasive pads and scouring",
+      "reason": "The matte texture supplies part of the mechanical grip on a coating whose whole design intent is low peel adhesion, so polishing it out removes what little grip there is. Unlike powder-coated PEI, where fine abrasion is a documented reset on at least some brands, there is no published revival procedure for a PP coating.",
+      "severity": "destroys"
+    },
+    {
+      "item": "Leaving the sheet wet, or soaking it",
+      "reason": "Prusa's instruction is do not leave the sheet wet, because moisture compromises the anti-corrosion layer beneath the coating. That layer protects the steel; it is not waterproofing. Dry immediately after a soap wash and never remount a damp sheet on the magnet.",
+      "severity": "degrades"
+    },
+    {
+      "item": "Over-squishing the first layer when printing PP",
+      "reason": "The defining hazard of this surface and the reason it exists. Like sticks to like: PP-on-PP contact under first-layer pressure can fuse permanently, and the failure is not a scratch but a welded footprint that takes coating with it when it finally comes off. No heat-then-cool recovery for genuine PP-on-PP fusion is documented, so this is a prevention problem rather than a recovery problem.",
+      "severity": "destroys"
+    },
+    {
+      "item": "All liquids, including IPA and plain water, on BuildTak Plus+ PP",
+      "reason": "Product-dependent and directly contradictory within this entry. Prusa instructs an IPA wipe before every print on its powder-coated PP sheet; BuildTak's adhesive-backed Plus+ PP prohibits all solvents and all liquids including water, specifying a dry microfibre cloth only, because solvents damage the Bond PP coating and liquid at the perimeter creeps under the adhesive. Check which product you own before cleaning it.",
+      "severity": "destroys"
+    },
+    {
+      "item": "Bed temperatures above roughly 110 degC",
+      "reason": "Prusa publishes no numeric maximum for this sheet, so the ceiling in this entry is inferred from PP's normal 90-100 degC bed range plus headroom and is the least certain figure recorded for this plate. Running above the rated bed temperature is also named among the accelerators of coating wear generally.",
+      "severity": "degrades"
+    },
+    {
+      "item": "Ammoniated window cleaner used to reduce tack",
+      "reason": "Circulates as a community fix for the over-grippy PP variants some users report, and it is anecdotal, not vendor-sanctioned. It also runs against Prusa's framing of the surface as low-tack by design, which means a plate that needs de-tacking probably has a first-layer calibration problem instead. Ammoniated cleaners on a polyolefin coating are undocumented, and any residue left behind lowers adhesion unpredictably.",
+      "severity": "degrades"
+    },
+    {
+      "item": "Paper towels that shed fibres",
+      "reason": "Prusa notes that some paper towels leave fibre traces on this sheet. Trapped fibres under a first layer read as adhesion failure and get misdiagnosed as coating wear; use a lint-free cloth for the pre-print IPA wipe.",
+      "severity": "cosmetic"
+    }
+  ],
   "temperature_limits_c": {
     "max": 110
   },
@@ -369,7 +421,9 @@
       "Prusa Knowledge Base - Polypropylene (PP) material guide: https://help.prusa3d.com/article/polypropylene-pp_167126",
       "BuildTak Plus+ PP product page: https://buildtak.com/products/buildtak-plus-pp",
       "Bambu Lab Forum - Anyone tried polypropylene as a build plate for printing PETG: https://forum.bambulab.com/t/anyone-tried-polypropylene-as-a-build-plate-for-printing-petg/150949",
-      "Duet3D Forum - Polypropylene build surface review: https://forum.duet3d.com/topic/17667/polypropylene-build-surface-review"
+      "Duet3D Forum - Polypropylene build surface review: https://forum.duet3d.com/topic/17667/polypropylene-build-surface-review",
+      "Prusa Knowledge Base - Textured steel sheet (comparison of Prusa's prohibitions across its sheet range): https://help.prusa3d.com/article/textured-steel-sheet_196534",
+      "BuildTak FAQ - cleaning and removal guidance for BuildTak surfaces (nothing stronger than rubbing alcohol, no sharp-cornered tools): https://buildtak.com/pages/faq"
     ],
     "last_verified": "2026-08-01",
     "confidence": "medium",

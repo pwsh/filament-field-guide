@@ -1,51 +1,300 @@
 {
   "id": "pc-plate",
   "name": "PC sheet plate (Cool Plate class)",
-  "aliases": ["Cool Plate", "Bambu Cool Plate", "Anycubic Cool Plate", "Cold plate", "Low-temperature PLA plate"],
+  "aliases": [
+    "Cool Plate",
+    "Bambu Cool Plate",
+    "Anycubic Cool Plate",
+    "Cold plate",
+    "Low-temperature PLA plate"
+  ],
   "status": "researched",
   "summary": "A polycarbonate film taped to spring steel, sold as the low-temperature PLA specialist. It gives the best PLA adhesion in its ecosystem at bed temperatures as low as 35-45 C, and that is essentially all it does: the PC sheet cannot survive the bed temperatures PETG, ABS, nylon or PC filament require, so nearly everything else on this list is an explicit avoid.",
   "surface_makeup": "A smooth glassy polycarbonate thermoplastic sheet bonded with 3M high-heat double-sided tape to a spring-steel backing plate. Important caveat: the 'Cool Plate' family name covers at least two materially different constructions — the plain Cool Plate is this PC sheet, while the Cool Plate SuperTack is a coated spring steel sheet with a proprietary tacky surface treatment and is not polycarbonate at all. Anycubic's Cool Plate is described only as having a 'special surface treatment' with no stated composition.",
   "texture": "smooth",
-  "manufacturers": ["Bambu Lab", "Anycubic"],
+  "manufacturers": [
+    "Bambu Lab",
+    "Anycubic"
+  ],
   "filament_compatibility": [
-    { "filament_id": "pla", "rating": "recommended", "bed_temp_c": { "min": 35, "max": 45 }, "adhesion_aid": "thin glue stick coat", "notes": "The plate's whole purpose. Best PLA adhesion in the Bambu plate lineup, and Anycubic runs PLA at ~45 C here versus 60 C on a textured plate. Glue stick is applied to protect the surface and ease release, not because grip is lacking." },
-    { "filament_id": "pla-matte", "rating": "recommended", "bed_temp_c": { "min": 35, "max": 45 }, "adhesion_aid": "thin glue stick coat", "notes": "Behaves as base PLA; the glossy PC sheet gives a mirror bottom that contrasts with the matte top surface." },
-    { "filament_id": "pla-silk", "rating": "usable-with-prep", "bed_temp_c": { "min": 35, "max": 45 }, "adhesion_aid": "glue stick REQUIRED as a release barrier", "notes": "Bambu explicitly flags PLA Silk as a strong-adhesion risk on the Cool Plate SuperTack — it can damage or tear the model on removal. Use a full glue-stick barrier and let the plate cool completely." },
-    { "filament_id": "pla-cf", "rating": "usable-with-prep", "bed_temp_c": { "min": 35, "max": 50 }, "adhesion_aid": "thin glue stick coat", "notes": "Thermally fine, but a filled abrasive PLA on a soft PC film is a scratch risk on removal; not separately documented by vendors." },
-    { "filament_id": "pla-plus", "rating": "recommended", "bed_temp_c": { "min": 35, "max": 50 }, "adhesion_aid": "thin glue stick coat", "notes": "Toughened PLA blends sometimes want the upper end of the range; stay under the plate's low thermal ceiling." },
-    { "filament_id": "pvb", "rating": "usable-with-prep", "bed_temp_c": { "min": 45, "max": 60 }, "adhesion_aid": "glue stick", "notes": "Not covered by vendors. Thermally within reach at the low end of PVB's bed range, but keep IPA away from the plate — it dissolves PVB and will also lift the glue layer." },
-    { "filament_id": "pva", "rating": "usable-with-prep", "bed_temp_c": { "min": 40, "max": 55 }, "adhesion_aid": "glue stick", "notes": "Not documented for this plate. Thermally compatible and normally only present as a support material alongside PLA, which is the one job this plate does well. Wash residue off promptly." },
-    { "filament_id": "bvoh", "rating": "usable-with-prep", "bed_temp_c": { "min": 40, "max": 55 }, "adhesion_aid": "glue stick", "notes": "Undocumented; treated as PVA-equivalent, relevant only as a co-printed support interface." },
-    { "filament_id": "petg", "rating": "avoid", "adhesion_aid": "n/a", "notes": "Bambu explicitly warns of bubbling and sticking on the plain Cool Plate — the PC sheet is damaged, not merely over-adhered. Note that PETG IS listed as acceptable on the Cool Plate SuperTack (coated steel, a different construction) and on Anycubic's Cool Plate at ~70 C, so check which variant you own." },
-    { "filament_id": "pctg", "rating": "avoid", "adhesion_aid": "n/a", "notes": "Same copolyester chemistry and same bed-temperature requirement as PETG; assume the same bubbling/sticking damage." },
-    { "filament_id": "pet", "rating": "avoid", "adhesion_aid": "n/a", "notes": "Requires bed temperatures above the PC sheet's usable range. Not separately documented." },
-    { "filament_id": "petg-cf", "rating": "avoid", "adhesion_aid": "n/a", "notes": "Same as PETG, with added corner-lift force on a smooth low-temperature film." },
-    { "filament_id": "abs", "rating": "avoid", "adhesion_aid": "n/a", "notes": "Same bubbling and sticking failure as PETG. Vendor guidance directs ABS to an Engineering or High-Temp plate instead." },
-    { "filament_id": "asa", "rating": "avoid", "adhesion_aid": "n/a", "notes": "Same as ABS — the required 90-110 C bed exceeds what the PC sheet tolerates without surface damage." },
-    { "filament_id": "abs-gf", "rating": "avoid", "adhesion_aid": "n/a", "notes": "Same thermal exclusion as ABS." },
-    { "filament_id": "hips", "rating": "avoid", "adhesion_aid": "n/a", "notes": "Not separately documented, but HIPS bed temperatures sit in the same 95-110 C band that damages this surface." },
-    { "filament_id": "tpu", "rating": "avoid", "adhesion_aid": "n/a", "notes": "Explicitly called out as damaging to the Cool Plate SuperTack and not recommended on the class. TPU's low bed temperature is not the problem — the tacky/smooth low-temperature surface bonds to the elastomer and tears." },
-    { "filament_id": "tpu-95a", "rating": "avoid", "adhesion_aid": "n/a", "notes": "Firmer grades are no exception; use a textured PEI, G10 or carbon plate for flexibles." },
-    { "filament_id": "tpu-85a", "rating": "avoid", "adhesion_aid": "n/a", "notes": "Soft grades are the worst case for plate damage on this surface." },
-    { "filament_id": "tpe", "rating": "avoid", "adhesion_aid": "n/a", "notes": "Extrapolated from the explicit TPU warning; same elastomer bonding failure mode." },
-    { "filament_id": "cope", "rating": "avoid", "adhesion_aid": "n/a", "notes": "Copolyester elastomer combines the PETG bubbling risk with the elastomer bonding risk. Undocumented but doubly contraindicated." },
-    { "filament_id": "pa", "rating": "avoid", "adhesion_aid": "n/a", "notes": "Needs bed temperatures far above the PC sheet's limit. Vendor guidance routes all nylons to the Engineering or High-Temp plate." },
-    { "filament_id": "pa6", "rating": "avoid", "adhesion_aid": "n/a", "notes": "Same thermal exclusion as PA generally." },
-    { "filament_id": "pa12", "rating": "avoid", "adhesion_aid": "n/a", "notes": "Even the lowest-temperature nylons sit above this plate's usable band." },
-    { "filament_id": "pa6-cf", "rating": "avoid", "adhesion_aid": "n/a", "notes": "Same as PA6; CF-filled nylons want 100-120 C beds." },
-    { "filament_id": "pc", "rating": "avoid", "adhesion_aid": "n/a", "notes": "Printing PC filament on a PC plate is self-defeating: the substrate is the same polymer with a ~150 C glass transition, and PC filament's 90-120 C bed brings the sheet toward its own softening range while inviting a weld between print and plate. Not stated outright by any vendor but strongly implied by the PLA-only guidance." },
-    { "filament_id": "pc-abs", "rating": "avoid", "adhesion_aid": "n/a", "notes": "Same thermal exclusion and same substrate-welding concern as PC." },
-    { "filament_id": "pp", "rating": "avoid", "adhesion_aid": "n/a", "notes": "Requires both a high bed temperature and a dedicated adhesion promoter; the plate tolerates neither. Directed to Engineering/High-Temp plates." },
-    { "filament_id": "pp-gf", "rating": "avoid", "adhesion_aid": "n/a", "notes": "Same as PP." },
-    { "filament_id": "peek", "rating": "avoid", "adhesion_aid": "n/a", "notes": "Far outside the plate's thermal envelope — PEEK beds run 130-160 C in a heated chamber. Categorically unsuitable." }
+    {
+      "filament_id": "pla",
+      "rating": "recommended",
+      "bed_temp_c": {
+        "min": 35,
+        "max": 45
+      },
+      "adhesion_aid": "thin glue stick coat",
+      "notes": "The plate's whole purpose. Best PLA adhesion in the Bambu plate lineup, and Anycubic runs PLA at ~45 C here versus 60 C on a textured plate. Glue stick is applied to protect the surface and ease release, not because grip is lacking."
+    },
+    {
+      "filament_id": "pla-matte",
+      "rating": "recommended",
+      "bed_temp_c": {
+        "min": 35,
+        "max": 45
+      },
+      "adhesion_aid": "thin glue stick coat",
+      "notes": "Behaves as base PLA; the glossy PC sheet gives a mirror bottom that contrasts with the matte top surface."
+    },
+    {
+      "filament_id": "pla-silk",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 35,
+        "max": 45
+      },
+      "adhesion_aid": "glue stick REQUIRED as a release barrier",
+      "notes": "Bambu explicitly flags PLA Silk as a strong-adhesion risk on the Cool Plate SuperTack — it can damage or tear the model on removal. Use a full glue-stick barrier and let the plate cool completely."
+    },
+    {
+      "filament_id": "pla-cf",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 35,
+        "max": 50
+      },
+      "adhesion_aid": "thin glue stick coat",
+      "notes": "Thermally fine, but a filled abrasive PLA on a soft PC film is a scratch risk on removal; not separately documented by vendors."
+    },
+    {
+      "filament_id": "pla-plus",
+      "rating": "recommended",
+      "bed_temp_c": {
+        "min": 35,
+        "max": 50
+      },
+      "adhesion_aid": "thin glue stick coat",
+      "notes": "Toughened PLA blends sometimes want the upper end of the range; stay under the plate's low thermal ceiling."
+    },
+    {
+      "filament_id": "pvb",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 45,
+        "max": 60
+      },
+      "adhesion_aid": "glue stick",
+      "notes": "Not covered by vendors. Thermally within reach at the low end of PVB's bed range, but keep IPA away from the plate — it dissolves PVB and will also lift the glue layer."
+    },
+    {
+      "filament_id": "pva",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 40,
+        "max": 55
+      },
+      "adhesion_aid": "glue stick",
+      "notes": "Not documented for this plate. Thermally compatible and normally only present as a support material alongside PLA, which is the one job this plate does well. Wash residue off promptly."
+    },
+    {
+      "filament_id": "bvoh",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 40,
+        "max": 55
+      },
+      "adhesion_aid": "glue stick",
+      "notes": "Undocumented; treated as PVA-equivalent, relevant only as a co-printed support interface."
+    },
+    {
+      "filament_id": "petg",
+      "rating": "avoid",
+      "adhesion_aid": "n/a",
+      "notes": "Bambu explicitly warns of bubbling and sticking on the plain Cool Plate — the PC sheet is damaged, not merely over-adhered. Note that PETG IS listed as acceptable on the Cool Plate SuperTack (coated steel, a different construction) and on Anycubic's Cool Plate at ~70 C, so check which variant you own."
+    },
+    {
+      "filament_id": "pctg",
+      "rating": "avoid",
+      "adhesion_aid": "n/a",
+      "notes": "Same copolyester chemistry and same bed-temperature requirement as PETG; assume the same bubbling/sticking damage."
+    },
+    {
+      "filament_id": "pet",
+      "rating": "avoid",
+      "adhesion_aid": "n/a",
+      "notes": "Requires bed temperatures above the PC sheet's usable range. Not separately documented."
+    },
+    {
+      "filament_id": "petg-cf",
+      "rating": "avoid",
+      "adhesion_aid": "n/a",
+      "notes": "Same as PETG, with added corner-lift force on a smooth low-temperature film."
+    },
+    {
+      "filament_id": "abs",
+      "rating": "avoid",
+      "adhesion_aid": "n/a",
+      "notes": "Same bubbling and sticking failure as PETG. Vendor guidance directs ABS to an Engineering or High-Temp plate instead."
+    },
+    {
+      "filament_id": "asa",
+      "rating": "avoid",
+      "adhesion_aid": "n/a",
+      "notes": "Same as ABS — the required 90-110 C bed exceeds what the PC sheet tolerates without surface damage."
+    },
+    {
+      "filament_id": "abs-gf",
+      "rating": "avoid",
+      "adhesion_aid": "n/a",
+      "notes": "Same thermal exclusion as ABS."
+    },
+    {
+      "filament_id": "hips",
+      "rating": "avoid",
+      "adhesion_aid": "n/a",
+      "notes": "Not separately documented, but HIPS bed temperatures sit in the same 95-110 C band that damages this surface."
+    },
+    {
+      "filament_id": "tpu",
+      "rating": "avoid",
+      "adhesion_aid": "n/a",
+      "notes": "Explicitly called out as damaging to the Cool Plate SuperTack and not recommended on the class. TPU's low bed temperature is not the problem — the tacky/smooth low-temperature surface bonds to the elastomer and tears."
+    },
+    {
+      "filament_id": "tpu-95a",
+      "rating": "avoid",
+      "adhesion_aid": "n/a",
+      "notes": "Firmer grades are no exception; use a textured PEI, G10 or carbon plate for flexibles."
+    },
+    {
+      "filament_id": "tpu-85a",
+      "rating": "avoid",
+      "adhesion_aid": "n/a",
+      "notes": "Soft grades are the worst case for plate damage on this surface."
+    },
+    {
+      "filament_id": "tpe",
+      "rating": "avoid",
+      "adhesion_aid": "n/a",
+      "notes": "Extrapolated from the explicit TPU warning; same elastomer bonding failure mode."
+    },
+    {
+      "filament_id": "cope",
+      "rating": "avoid",
+      "adhesion_aid": "n/a",
+      "notes": "Copolyester elastomer combines the PETG bubbling risk with the elastomer bonding risk. Undocumented but doubly contraindicated."
+    },
+    {
+      "filament_id": "pa",
+      "rating": "avoid",
+      "adhesion_aid": "n/a",
+      "notes": "Needs bed temperatures far above the PC sheet's limit. Vendor guidance routes all nylons to the Engineering or High-Temp plate."
+    },
+    {
+      "filament_id": "pa6",
+      "rating": "avoid",
+      "adhesion_aid": "n/a",
+      "notes": "Same thermal exclusion as PA generally."
+    },
+    {
+      "filament_id": "pa12",
+      "rating": "avoid",
+      "adhesion_aid": "n/a",
+      "notes": "Even the lowest-temperature nylons sit above this plate's usable band."
+    },
+    {
+      "filament_id": "pa6-cf",
+      "rating": "avoid",
+      "adhesion_aid": "n/a",
+      "notes": "Same as PA6; CF-filled nylons want 100-120 C beds."
+    },
+    {
+      "filament_id": "pc",
+      "rating": "avoid",
+      "adhesion_aid": "n/a",
+      "notes": "Printing PC filament on a PC plate is self-defeating: the substrate is the same polymer with a ~150 C glass transition, and PC filament's 90-120 C bed brings the sheet toward its own softening range while inviting a weld between print and plate. Not stated outright by any vendor but strongly implied by the PLA-only guidance."
+    },
+    {
+      "filament_id": "pc-abs",
+      "rating": "avoid",
+      "adhesion_aid": "n/a",
+      "notes": "Same thermal exclusion and same substrate-welding concern as PC."
+    },
+    {
+      "filament_id": "pp",
+      "rating": "avoid",
+      "adhesion_aid": "n/a",
+      "notes": "Requires both a high bed temperature and a dedicated adhesion promoter; the plate tolerates neither. Directed to Engineering/High-Temp plates."
+    },
+    {
+      "filament_id": "pp-gf",
+      "rating": "avoid",
+      "adhesion_aid": "n/a",
+      "notes": "Same as PP."
+    },
+    {
+      "filament_id": "peek",
+      "rating": "avoid",
+      "adhesion_aid": "n/a",
+      "notes": "Far outside the plate's thermal envelope — PEEK beds run 130-160 C in a heated chamber. Categorically unsuitable."
+    }
   ],
   "preparation": "Apply a thin, even coat of glue stick to the cold printing surface before printing. This is not optional housekeeping on this plate — the glue layer protects the PC sheet (and, on variants that use one, the replaceable printed sticker layer) and is what makes removal easy without stressing the film. Cover the print footprint evenly rather than dabbing, and let it dry before heating. Reapply roughly every two or three prints, and more often if you can see the glue wearing away in the high-use zone. Never apply glue to a hot plate: it goes on unevenly, cooks into a ridge, and that ridge becomes a first-layer defect. Set the slicer's bed temperature to the low end for PLA (35-45 C on Bambu, ~45 C on Anycubic) rather than the 60 C you would use on a textured plate — running this plate hot is how people damage it, and the low temperature is the entire point of owning one.",
   "cleaning": "Before each glue reapplication, remove the old glue-stick residue rather than layering on top of it: warm water and a soft cloth dissolve PVA glue readily, and the plate can be washed off the printer in the sink. Dry it fully before remounting, since water under a magnetically mounted sheet will steam on the next heat cycle. Avoid organic solvents — Anycubic explicitly calls out acetone as damaging to the surface treatment, and acetone attacks polycarbonate directly, crazing and clouding the sheet. IPA is likewise best used sparingly or not at all: it is unnecessary here because the glue layer is water-soluble, and repeated solvent exposure is a known stress-cracking risk for PC. No metal scrapers and no abrasive pads; the smooth surface is the functional part and any scratch prints into every part made afterward.",
   "model_removal": "Let the plate cool completely, lift it off the magnetic base, and bend it from the sides — the spring-steel backing means flexing is the primary technique, and with a glue-stick layer most PLA parts release with almost no force. For a stubborn corner, slide a scraper under the edge while gently bending the sheet with the other hand so the bond peels rather than shears. The Cool Plate SuperTack variant reverses the usual advice in a way worth remembering: when adhesion is excessive, reheat the plate to about 50 C to loosen the bond before removal, so heat rather than cold is what helps release on that specific surface. On the plain PC sheet, cold release plus flex is the norm. Do not pry a warm print, and do not attack from the center of a large part.",
   "stuck_print_recovery": "Escalate gently, because the surface is softer than any other plate in this catalog and damage is permanent. Cool fully and flex the sheet progressively from a corner first. If that fails on a SuperTack plate, reheat the bed to roughly 50 C — the vendor's own recommendation — and try again while it is warm rather than forcing it cold; on the plain PC sheet, stay cold and keep flexing. Run water or a very small amount of IPA under the print edge to attack the glue layer rather than the bond itself; because the adhesion here is largely mediated by water-soluble glue stick, warm water is unusually effective on this plate compared with others. For large flat parts, saw dental floss or fishing line under one edge. Use a plastic spatula only as a last resort, entering flat at a corner. Never a metal blade, never a chisel, and never force from the center. If a print genuinely will not release, sacrificing the print is the right call — replacing the plate costs far more.",
-  "temperature_limits_c": { "max": 80 },
+  "damage_avoidance": [
+    {
+      "item": "Acetone",
+      "reason": "Acetone is a direct solvent for polycarbonate, not merely a coating hazard: it crazes and clouds the sheet on contact and there is no recovery, because on this plate the smooth optical surface is the functional part. Anycubic explicitly calls acetone out as damaging to its Cool Plate surface treatment, and the plain PC-sheet construction gives it a second target in the 3M high-heat tape bonding the sheet to the steel.",
+      "severity": "destroys"
+    },
+    {
+      "item": "Isopropyl alcohol and other alcohols",
+      "reason": "The non-obvious one, and the reason this plate breaks the catalogue's usual IPA-before-every-print rule. Polycarbonate is susceptible to environmental stress cracking in isopropyl alcohol at a measured critical strain of about 1.21%, with almost no weight gain, meaning the mechanism is surface crazing under strain rather than dissolution. A spring-steel-backed plate that is deliberately flexed to release every print supplies exactly that strain, so alcohol plus flexing is the textbook ESC condition. IPA is also unnecessary here, since the glue-stick layer this plate depends on is water-soluble.",
+      "severity": "degrades"
+    },
+    {
+      "item": "Ammonia-based glass cleaner (Windex, 409 and similar)",
+      "reason": "Polycarbonate suppliers put this at the top of their do-not-use lists, in the words of one: never, ever use cleaners containing ammonia. It attacks the sheet rather than cleaning it, and the resulting haze is permanent. Worth flagging because ammoniated window cleaner circulates in printer communities as a general bed-cleaning shortcut and as an anecdotal de-tacking wipe for other plate types.",
+      "severity": "destroys"
+    },
+    {
+      "item": "Metal scrapers, blades and abrasive pads",
+      "reason": "This is the softest working surface in the catalogue. There is no texture to hide a scratch and no coating layer with material below it to expose, so every mark is transferred into the bottom of every part printed afterwards, and abrasives simply frost the sheet. Plastic tools only, entering flat at a corner.",
+      "severity": "destroys"
+    },
+    {
+      "item": "Any bed temperature beyond the low-temperature PLA envelope",
+      "reason": "The whole point of this plate is 35-45 degC printing, and heat is its main enemy. Running it hot produces bubbling, clouding or delamination of the PC sheet from its tape backing, and that damage is terminal rather than cosmetic: it means the plate has already seen a temperature it should not have. No vendor publishes a numeric maximum, so the ceiling in this entry is inferred from the PLA-only material guidance rather than a datasheet.",
+      "severity": "destroys"
+    },
+    {
+      "item": "Raising bed temperature to fix a poor first layer",
+      "reason": "A habit imported from PEI plates that does real damage here. The correct response on a Cool Plate is more glue and a better Z-offset, not more heat, and the temperature increase that fixes nothing is exactly the one that hazes the sheet.",
+      "severity": "destroys"
+    },
+    {
+      "item": "Applying glue stick to a hot plate",
+      "reason": "Glue goes on unevenly on a warm surface, cooks into a ridge instead of a film, and that ridge becomes a first-layer defect that then invites over-squishing to compensate. Apply to a cold plate, cover the print footprint evenly rather than dabbing, and let it dry before heating.",
+      "severity": "degrades"
+    },
+    {
+      "item": "Layering fresh glue over old, and letting PVA or sugar-based residue bake on",
+      "reason": "The glue layer here is protective as well as adhesive, so it needs to be stripped and renewed rather than built up. Warm water dissolves fresh PVA readily; left through repeated heat cycles it and any sugar-containing adhesion product carbonise into a hard haze on a surface where the only safe removal tools are water and a soft cloth.",
+      "severity": "degrades"
+    },
+    {
+      "item": "PETG directly on the bare PC sheet",
+      "reason": "Brand-dependent and one of the sharpest disagreements in this entry. On the plain PC-sheet Cool Plate, PETG is an explicit avoid because it bubbles and sticks, while the Cool Plate SuperTack and Anycubic's Cool Plate both list PETG as acceptable at around 70 degC. Since the three products share a marketing name, advice found online has to be checked against which plate the writer actually owned.",
+      "severity": "destroys"
+    },
+    {
+      "item": "Freezer cycles and thermal shock",
+      "reason": "Undocumented for this plate. Polycarbonate itself stays tough at low temperature, but the vulnerable parts are the 3M tape bond and, on variants that use one, the printed sticker layer, both of which see peel stress from differential contraction. Condensation on a soft glossy surface is a second reason to prefer water under the glue line, which works unusually well here, over cold-shock.",
+      "severity": "degrades"
+    }
+  ],
+  "temperature_limits_c": {
+    "max": 80
+  },
   "lifespan_notes": "Wear behavior differs by variant. The Cool Plate SuperTack is the best-documented plate in this catalog for longevity: rated to retain its sticky properties past 300 prints with under 20% adhesion loss, with the nozzle-wiping zone wearing gradually as normal, expected consumable behavior. Anycubic quotes a similar figure, roughly 20% adhesion reduction over repeated print cycles. The plain PC-sheet Cool Plate has no published wear figure. Practically, it degrades by scratching, glue build-up in the texture-free smooth surface, and eventual clouding or bubbling if run too hot even once. The PC film is bonded on with 3M tape and some versions carry a replaceable printed sticker layer, so the repair path is replacing the sheet or the sticker rather than recoating. Treat any bubbling, hazing or delamination as terminal — it means the plate has seen a bed temperature it should not have.",
-  "price": { "usd_low": 30, "usd_high": 40, "notes": "~250 mm class. Anycubic Cool Plate listed at $34.99 for 250x250 mm. Bambu Cool Plate and Cool Plate SuperTack sit in a comparable band per ecosystem norms, but current pricing was not independently confirmed in this research pass." },
+  "price": {
+    "usd_low": 30,
+    "usd_high": 40,
+    "notes": "~250 mm class. Anycubic Cool Plate listed at $34.99 for 250x250 mm. Bambu Cool Plate and Cool Plate SuperTack sit in a comparable band per ecosystem norms, but current pricing was not independently confirmed in this research pass."
+  },
   "additional_notes": "The most important thing to know about this entry is that 'Cool Plate' is a marketing family, not a single chemistry. At minimum it covers a plain polycarbonate sheet on steel and a proprietary-coated spring steel SuperTack sheet, and those two disagree on PETG (avoid vs. acceptable), on TPU (SuperTack explicitly warns against it), and on removal technique (cold release vs. reheat to 50 C). Anycubic uses the same name for a surface of unstated composition. Any advice found online for 'Cool Plate' should be checked against which variant the writer owned. Both are spring-steel-backed and mount on standard Bambu/Anycubic magnetic quick-swap bases. Prusa offers no equivalent — its lineup is satin, smooth and textured PEI-coated steel only — and Creality's low-temperature plate offerings were not confirmed in this pass. Whether either Cool Plate variant is single- or double-sided is not clearly stated in the sources, though Bambu's ecosystem generally treats one plate as one surface, unlike Prusa's double-sided sheets. As a class this is the counter-example in the catalog: a plate defined by what it cannot do, bought specifically for quiet low-temperature PLA printing.",
   "provenance": {
     "sources": [
@@ -53,7 +302,10 @@
       "https://wiki.bambulab.com/en/filament-acc/acc/bambu-cool-plate-supertack",
       "https://wiki.bambulab.com/en/x1/manual/printing-on-cool-plate",
       "https://store.anycubic.com/products/cool-plate",
-      "https://wiki.polymaker.com/the-basics/3d-printing-materials/pc"
+      "https://wiki.polymaker.com/the-basics/3d-printing-materials/pc",
+      "Fayolle et al. / Monopol - Environmental stress cracking resistance of polycarbonate in different chemicals (isopropyl alcohol critical strain approx. 1.21%, surface-void mechanism with minimal weight gain): https://www.nbi.dk/~kell/publ/2003_PolymDegradStab_Monopol.pdf",
+      "ePlastics - Cleaning Lexan polycarbonate sheet (never use ammonia-based cleaners such as Windex or 409): https://www.eplastics.com/blog/lexan-polycarbonate-cleaning",
+      "3DX - Beyond IPA: advanced cleaning for stubborn residues (carbonised glue-stick, hairspray and sugar-based adhesive removal): https://3dx.info/beyond-ipa-advanced-cleaning-techniques-for-stubborn-residues-on-your-glass-print-bed/"
     ],
     "last_verified": "2026-08-01",
     "confidence": "medium",

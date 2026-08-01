@@ -33,6 +33,20 @@
     "cleaning": { "type": "string", "description": "Routine and deep cleaning procedures" },
     "model_removal": { "type": "string", "description": "Recommended removal technique" },
     "stuck_print_recovery": { "type": "string", "description": "What to do when a print will not release" },
+    "damage_avoidance": {
+      "type": "array",
+      "description": "Chemicals, tools, and practices that damage this surface",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["item", "reason"],
+        "properties": {
+          "item": { "type": "string", "description": "The chemical, tool, or practice to avoid, e.g. 'acetone', 'metal scraper', 'freezer thermal shock'" },
+          "reason": { "type": "string", "description": "What damage it causes to this specific surface" },
+          "severity": { "enum": ["destroys", "degrades", "cosmetic"], "description": "destroys = surface ruined; degrades = shortens life/reduces adhesion; cosmetic = appearance only" }
+        }
+      }
+    },
     "temperature_limits_c": { "$ref": "filament.schema.json#/$defs/rangeRec" },
     "lifespan_notes": { "type": "string", "description": "Wear patterns, when to replace, recoating options" },
     "price": {

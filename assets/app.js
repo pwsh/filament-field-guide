@@ -467,6 +467,44 @@ const ventTone = (v) => ({ optional: 'good', recommended: 'mid', required: 'bad'
 /** Emission levels: less is better. */
 const levelTone = (v) => ({ minimal: 'good', low: 'good', moderate: 'mid', high: 'bad' }[v] || 'neutral');
 
+/* --- damage avoidance (plates) ---------------------------------------- */
+
+/** Worst first: what ruins the plate outranks what merely marks it. */
+const SEVERITY_ORDER = ['destroys', 'degrades', 'cosmetic'];
+const severityTone = (v) => ({ destroys: 'bad', degrades: 'mid', cosmetic: 'neutral' }[v] || 'neutral');
+
+function severityBadge(v) {
+  if (!has(v)) return null;
+  return badge(prettyEnum(v), severityTone(v), 'How bad the damage is');
+}
+
+/** [['destroys', 6], ['degrades', 4]] — ordered worst first, unknowns last. */
+function severityCounts(list) {
+  const rows = Array.isArray(list) ? list : [];
+  const counts = new Map();
+  for (const row of rows) {
+    const key = has(row && row.severity) ? row.severity : 'unrated';
+    counts.set(key, (counts.get(key) || 0) + 1);
+  }
+  const ordered = [];
+  for (const key of SEVERITY_ORDER) if (counts.has(key)) ordered.push([key, counts.get(key)]);
+  for (const [key, n] of counts) if (!SEVERITY_ORDER.includes(key)) ordered.push([key, n]);
+  return ordered;
+}
+
+/** Items sorted worst-first for display. */
+function sortBySeverity(list) {
+  const rank = (row) => {
+    const i = SEVERITY_ORDER.indexOf(row && row.severity);
+    return i < 0 ? SEVERITY_ORDER.length : i;
+  };
+  return (Array.isArray(list) ? list.slice() : []).sort((a, b) => rank(a) - rank(b));
+}
+
+const destroysItems = (list) => (Array.isArray(list) ? list : [])
+  .filter((row) => row && row.severity === 'destroys' && has(row.item))
+  .map((row) => row.item);
+
 const AMS_ORDER = ['no', 'conditional', 'yes'];
 /** AMS/material-station compatibility: yes = green, conditional = amber, no = red. */
 const amsTone = (v) => ({ yes: 'good', conditional: 'mid', no: 'bad' }[v] || 'neutral');
@@ -1766,6 +1804,38 @@ function plateCompatSection(p) {
     blocks);
 }
 
+/**
+ * "Do not use" table: what damages this specific surface and why, worst first.
+ * Severity is optional in the schema, so unrated rows still render.
+ */
+function damageAvoidanceSection(p) {
+  const rows = sortBySeverity(p.damage_avoidance);
+  if (!rows.length) return null;
+
+  const body = el('tbody');
+  for (const row of rows) {
+    body.appendChild(el('tr', { class: `sev-${row.severity || 'unrated'}` },
+      el('td', { 'data-label': 'Do not use', class: 'cell-name' }, row.item || '—'),
+      el('td', { 'data-label': 'Severity' }, severityBadge(row.severity) || el('span', { class: 'faint', text: '—' })),
+      el('td', { 'data-label': 'Why' }, row.reason || '—')));
+  }
+
+  const tally = el('span', { class: 'badge-group' });
+  for (const [severity, n] of severityCounts(rows)) {
+    tally.appendChild(badge(`${n} ${severity}`, severityTone(severity)));
+  }
+
+  return section('Do not use — damage avoidance', 'damage_avoidance',
+    el('p', { class: 'small' }, tally),
+    el('div', { class: 'table-wrap' },
+      el('table', { class: 'responsive-table damage-table' },
+        el('thead', {}, el('tr', {},
+          el('th', { scope: 'col' }, 'Item'),
+          el('th', { scope: 'col' }, 'Severity'),
+          el('th', { scope: 'col' }, 'Why it damages this surface'))),
+        body)));
+}
+
 async function viewPlateDetail(id) {
   /*
    * One fetch: the plate's own filament_compatibility table is the authoritative
@@ -1802,6 +1872,7 @@ async function viewPlateDetail(id) {
       ['preparation', p.preparation],
       ['cleaning', p.cleaning],
     ])) : null,
+    damageAvoidanceSection(p),
     (has(p.model_removal) || has(p.stuck_print_recovery)) ? section('Removal & recovery', null, kvTable([
       ['model_removal', p.model_removal, { label: 'Model removal' }],
       ['stuck_print_recovery', p.stuck_print_recovery, { label: 'Stuck print recovery' }],
@@ -2013,6 +2084,15 @@ async function viewPlateSheet(id) {
               ['Avoid', names('avoid')],
             ]));
         })() : null,
+        /*
+         * Sheet carries only the plate-killers: the full reasons run to
+         * paragraphs and live on the detail page. Item names alone are the
+         * actionable part at the printer.
+         */
+        destroysItems(p.damage_avoidance).length
+          ? sheetBlock('Do not use', el('p', { class: 'fine never-line' },
+            el('strong', { text: 'Never: ' }),
+            txt(destroysItems(p.damage_avoidance).join(' · ')))) : null,
         p.preparation ? sheetBlock('Preparation', el('p', { class: 'fine', text: trimText(p.preparation, 320) })) : null,
         p.cleaning ? sheetBlock('Cleaning', el('p', { class: 'fine', text: trimText(p.cleaning, 320) })) : null,
         p.model_removal ? sheetBlock('Model removal', el('p', { class: 'fine', text: trimText(p.model_removal, 320) })) : null,
@@ -2110,6 +2190,25 @@ const PLATE_COMPARE_ROWS = [
   { key: 'temperature_limits_c', label: 'Temperature limits', get: (p) => fmtRange(p.temperature_limits_c, '°C') },
   { key: 'price', label: 'Price', get: (p) => fmtPricePlate(p.price) },
   { key: 'manufacturers', label: 'Offered by', get: (p) => (Array.isArray(p.manufacturers) ? p.manufacturers.join(', ') : null) },
+  {
+    key: 'damage_avoidance',
+    label: 'Damage avoidance',
+    get: (p) => {
+      const counts = severityCounts(p.damage_avoidance);
+      if (!counts.length) return null;
+      const group = el('span', { class: 'badge-group' });
+      for (const [severity, n] of counts) group.appendChild(badge(`${n} ${severity}`, severityTone(severity)));
+      return group;
+    },
+  },
+  {
+    key: 'damage_avoidance.destroys',
+    label: 'Never use',
+    get: (p) => {
+      const items = destroysItems(p.damage_avoidance);
+      return items.length ? bulletList(items) : null;
+    },
+  },
   {
     key: 'filament_compatibility',
     label: 'Materials rated',

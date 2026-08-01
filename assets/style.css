@@ -347,6 +347,16 @@ td.cell-name .sub { display: block; font-weight: 400; font-size: .82rem; color: 
 .pros li::marker { color: var(--ok); }
 .cons li::marker { color: var(--danger); }
 .sources { font-size: .85rem; word-break: break-word; }
+/* damage avoidance: worst-first table, severity carried by a left rule */
+.damage-table td.cell-name { min-width: 12rem; font-weight: 600; }
+.damage-table tbody tr { border-left: 3px solid transparent; }
+.damage-table tr.sev-destroys { border-left-color: var(--danger); }
+.damage-table tr.sev-degrades { border-left-color: var(--warn); }
+.damage-table tr.sev-cosmetic { border-left-color: var(--border-strong); }
+.damage-table td:last-child { min-width: 22rem; }
+.sheet .never-line { margin: 0; }
+.sheet .never-line strong { color: var(--danger); }
+
 .rating-recommended { color: var(--ok); font-weight: 650; }
 .rating-usable, .rating-usable-with-prep { color: var(--warn); font-weight: 650; }
 .rating-avoid { color: var(--danger); font-weight: 650; }
@@ -442,6 +452,9 @@ td.cell-name .sub { display: block; font-weight: 400; font-size: .82rem; color: 
   .sheet-block h2 { margin-bottom: .2rem; }
   /* the trailing provenance line must not be what pushes a sheet to page 2 */
   .sheet-foot { margin: .2rem 0 0 !important; font-size: 7.5pt; }
+  .sheet .never-line { break-inside: avoid; }
+  .sheet .never-line strong { color: #000 !important; text-transform: uppercase; }
+  .damage-table td:last-child { min-width: 0; }
   .sheet table th, .sheet table td { padding: .06rem .25rem; }
   .sheet-block h2 { font-size: .72rem; letter-spacing: .05em; }
   .sheet .fine { font-size: .78rem; }

@@ -1,51 +1,375 @@
 {
   "id": "carbon-fiber-plate",
   "name": "Carbon fiber composite plate",
-  "aliases": ["Flexi Plate with Carbon Fiber", "CFX plate", "Woven carbon build plate", "CF flex plate"],
+  "aliases": [
+    "Flexi Plate with Carbon Fiber",
+    "CFX plate",
+    "Woven carbon build plate",
+    "CF flex plate"
+  ],
   "status": "researched",
   "summary": "A genuine woven carbon-fiber/epoxy laminate bonded to spring steel, topped with a high-temperature release resin. It grips hot and pops cold like PEI, but without PEI's tendency to over-bond PETG and TPU, and it leaves a fabric weave imprint on part bottoms. The most expensive surface in the catalog, aftermarket only, and single-sided by necessity.",
   "surface_makeup": "Woven carbon-fiber cloth (typically 3K weave) impregnated with epoxy resin and cured — autoclave-pressed on premium versions — into a true carbon-fiber-reinforced composite, not a carbon filler in a plastic coating. It is a thermoset, cured chemically rather than heat-formed like PEI or PC thermoplastic sheets. The laminate (~0.4 mm) is bonded with high-temperature adhesive to a black-oxide-coated spring steel backing for magnetic mounting, and a specialized high-temperature resin layer on top actually governs adhesion: tacky when hot, releasing on cooling. The composite gives even heat distribution and imprints the weave into part undersides.",
   "texture": "patterned",
-  "manufacturers": ["Wham Bam Systems", "Darkmoon3D", "POJECITY (carbon-look PET variant, not true composite)"],
+  "manufacturers": [
+    "Wham Bam Systems",
+    "Darkmoon3D",
+    "POJECITY (carbon-look PET variant, not true composite)"
+  ],
   "filament_compatibility": [
-    { "filament_id": "pla", "rating": "recommended", "bed_temp_c": { "min": 50, "max": 65 }, "adhesion_aid": "none", "notes": "No release agent needed; parts audibly pop free once the plate cools." },
-    { "filament_id": "pla-silk", "rating": "recommended", "bed_temp_c": { "min": 50, "max": 65 }, "adhesion_aid": "none", "notes": "Silk grades that over-bond on tacky low-temp plates behave normally here — thermal release does the work, not surface tack." },
-    { "filament_id": "pla-cf", "rating": "recommended", "bed_temp_c": { "min": 50, "max": 65 }, "adhesion_aid": "none", "notes": "Abrasive fills do not threaten a solid laminate the way they wear thin sprayed coatings." },
-    { "filament_id": "petg", "rating": "recommended", "bed_temp_c": { "min": 70, "max": 80 }, "adhesion_aid": "none", "notes": "A standout use case — vendors specifically call out that PETG does not bond excessively here, unlike smooth PEI or PEX where it can weld on and tear the surface." },
-    { "filament_id": "pctg", "rating": "recommended", "bed_temp_c": { "min": 70, "max": 80 }, "adhesion_aid": "none", "notes": "Same copolyester family as PETG; same non-over-bonding behavior." },
-    { "filament_id": "pet", "rating": "usable-with-prep", "bed_temp_c": { "min": 70, "max": 90 }, "adhesion_aid": "none", "notes": "Unfilled PET is not separately documented; extrapolated from PETG guidance, runs hotter and stiffer." },
-    { "filament_id": "petg-cf", "rating": "recommended", "bed_temp_c": { "min": 70, "max": 90 }, "adhesion_aid": "none", "notes": "Filled copolyesters are a common target for this plate; brim on large flats since CF raises corner-lift force." },
-    { "filament_id": "pvb", "rating": "usable-with-prep", "bed_temp_c": { "min": 60, "max": 75 }, "adhesion_aid": "none", "notes": "Undocumented on this surface; treated as PLA-adjacent. Do not use IPA around an attached PVB part — IPA dissolves PVB." },
-    { "filament_id": "abs", "rating": "recommended", "bed_temp_c": { "min": 100, "max": 120 }, "adhesion_aid": "none for small parts; adhesion promoter on large flats", "notes": "Vendor engineering profiles cover ABS directly at 100-120 C. Enclosure remains the dominant warp variable." },
-    { "filament_id": "asa", "rating": "recommended", "bed_temp_c": { "min": 100, "max": 120 }, "adhesion_aid": "Magigoo or equivalent suggested by some vendors", "notes": "Some vendors recommend an adhesion promoter for ASA specifically even though bare adhesion is generally adequate." },
-    { "filament_id": "abs-gf", "rating": "usable-with-prep", "bed_temp_c": { "min": 100, "max": 120 }, "adhesion_aid": "adhesion promoter, brim recommended", "notes": "Not separately documented; filled ABS pulls harder at the corners." },
-    { "filament_id": "hips", "rating": "usable-with-prep", "bed_temp_c": { "min": 95, "max": 110 }, "adhesion_aid": "none to brim", "notes": "Undocumented for this surface; extrapolated from ABS/styrenic behavior." },
-    { "filament_id": "tpu", "rating": "recommended", "bed_temp_c": { "min": 40, "max": 80 }, "adhesion_aid": "none, though some vendors suggest Magigoo Original", "notes": "Low fusing risk versus PEI, which is a main selling point. Bed-temp guidance varies widely by vendor (one lists ~40 C, another up to 80 C in an engineering profile) — start low." },
-    { "filament_id": "tpu-95a", "rating": "recommended", "bed_temp_c": { "min": 40, "max": 70 }, "adhesion_aid": "none", "notes": "Firmer grades release readily by flexing the steel backing." },
-    { "filament_id": "tpu-85a", "rating": "recommended", "bed_temp_c": { "min": 35, "max": 60 }, "adhesion_aid": "none", "notes": "Soft grades are the ones that fuse into PEI; keep the bed at the low end here and flex to release." },
-    { "filament_id": "tpe", "rating": "usable-with-prep", "bed_temp_c": { "min": 35, "max": 60 }, "adhesion_aid": "none", "notes": "Softer TPE compounds are not documented for this plate; start unheated-to-cool and add heat only if the first layer lifts." },
-    { "filament_id": "cope", "rating": "usable-with-prep", "bed_temp_c": { "min": 50, "max": 80 }, "adhesion_aid": "none", "notes": "TPEE-class copolyester elastomer; undocumented, behaves between PETG and TPU." },
-    { "filament_id": "pa", "rating": "usable-with-prep", "bed_temp_c": { "min": 100, "max": 120 }, "adhesion_aid": "Magigoo PA commonly used", "notes": "Vendors cover nylon in engineering profiles at 100-120 C, typically with a PA-specific promoter used as a combined adhesion and release layer." },
-    { "filament_id": "pa6", "rating": "usable-with-prep", "bed_temp_c": { "min": 100, "max": 120 }, "adhesion_aid": "Magigoo PA", "notes": "Dry the filament thoroughly; moisture failures present as adhesion failures." },
-    { "filament_id": "pa12", "rating": "usable-with-prep", "bed_temp_c": { "min": 90, "max": 110 }, "adhesion_aid": "Magigoo PA", "notes": "Lower-moisture, lower-warp nylon; not separately documented." },
-    { "filament_id": "pa6-cf", "rating": "usable-with-prep", "bed_temp_c": { "min": 100, "max": 120 }, "adhesion_aid": "Magigoo PA", "notes": "PAHT-CF class is explicitly among the materials these plates are marketed for; promoter recommended for CF-filled nylons." },
-    { "filament_id": "pa12-cf", "rating": "usable-with-prep", "bed_temp_c": { "min": 90, "max": 120 }, "adhesion_aid": "Magigoo PA", "notes": "Same handling as other CF nylons." },
-    { "filament_id": "pc", "rating": "usable-with-prep", "bed_temp_c": { "min": 110, "max": 120 }, "adhesion_aid": "Magigoo PC or equivalent recommended", "notes": "Within the plate's thermal envelope but wants a promoter; PC's shrinkage makes a brim and an enclosure worthwhile." },
-    { "filament_id": "pc-abs", "rating": "usable-with-prep", "bed_temp_c": { "min": 100, "max": 120 }, "adhesion_aid": "Magigoo PC or equivalent", "notes": "Not separately documented; sits between ABS and PC." },
-    { "filament_id": "pp", "rating": "usable-with-prep", "bed_temp_c": { "min": 80, "max": 100 }, "adhesion_aid": "dedicated PP adhesion promoter REQUIRED", "notes": "Vendor spec is explicit: PP is not usable bare on this surface and needs a PP-specific promoter." },
-    { "filament_id": "pp-gf", "rating": "usable-with-prep", "bed_temp_c": { "min": 80, "max": 100 }, "adhesion_aid": "dedicated PP adhesion promoter REQUIRED", "notes": "Glass fill lowers warp but does not change the adhesion requirement." },
-    { "filament_id": "pva", "rating": "usable-with-prep", "bed_temp_c": { "min": 45, "max": 60 }, "adhesion_aid": "none", "notes": "Not covered in sources. Wash any PVA residue off the laminate — it goes tacky in humid air and will haze the release resin." },
-    { "filament_id": "bvoh", "rating": "usable-with-prep", "bed_temp_c": { "min": 45, "max": 60 }, "adhesion_aid": "none", "notes": "Undocumented; treated as PVA-equivalent and usually only present as a support interface." },
-    { "filament_id": "peek", "rating": "avoid", "adhesion_aid": "n/a", "notes": "Generic vendor listings sometimes name-drop PEEK/PEKK/ULTEM but publish no data, and PEEK bed temps (130-160 C) exceed the vendor-stated ~140 C operational ceiling. Treat as unsupported." },
-    { "filament_id": "pei-ultem", "rating": "avoid", "adhesion_aid": "n/a", "notes": "Same as PEEK — marketing mentions without supporting specs, and bed requirements sit at or above the plate's stated limit." }
+    {
+      "filament_id": "pla",
+      "rating": "recommended",
+      "bed_temp_c": {
+        "min": 50,
+        "max": 65
+      },
+      "adhesion_aid": "none",
+      "notes": "No release agent needed; parts audibly pop free once the plate cools."
+    },
+    {
+      "filament_id": "pla-silk",
+      "rating": "recommended",
+      "bed_temp_c": {
+        "min": 50,
+        "max": 65
+      },
+      "adhesion_aid": "none",
+      "notes": "Silk grades that over-bond on tacky low-temp plates behave normally here — thermal release does the work, not surface tack."
+    },
+    {
+      "filament_id": "pla-cf",
+      "rating": "recommended",
+      "bed_temp_c": {
+        "min": 50,
+        "max": 65
+      },
+      "adhesion_aid": "none",
+      "notes": "Abrasive fills do not threaten a solid laminate the way they wear thin sprayed coatings."
+    },
+    {
+      "filament_id": "petg",
+      "rating": "recommended",
+      "bed_temp_c": {
+        "min": 70,
+        "max": 80
+      },
+      "adhesion_aid": "none",
+      "notes": "A standout use case — vendors specifically call out that PETG does not bond excessively here, unlike smooth PEI or PEX where it can weld on and tear the surface."
+    },
+    {
+      "filament_id": "pctg",
+      "rating": "recommended",
+      "bed_temp_c": {
+        "min": 70,
+        "max": 80
+      },
+      "adhesion_aid": "none",
+      "notes": "Same copolyester family as PETG; same non-over-bonding behavior."
+    },
+    {
+      "filament_id": "pet",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 70,
+        "max": 90
+      },
+      "adhesion_aid": "none",
+      "notes": "Unfilled PET is not separately documented; extrapolated from PETG guidance, runs hotter and stiffer."
+    },
+    {
+      "filament_id": "petg-cf",
+      "rating": "recommended",
+      "bed_temp_c": {
+        "min": 70,
+        "max": 90
+      },
+      "adhesion_aid": "none",
+      "notes": "Filled copolyesters are a common target for this plate; brim on large flats since CF raises corner-lift force."
+    },
+    {
+      "filament_id": "pvb",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 60,
+        "max": 75
+      },
+      "adhesion_aid": "none",
+      "notes": "Undocumented on this surface; treated as PLA-adjacent. Do not use IPA around an attached PVB part — IPA dissolves PVB."
+    },
+    {
+      "filament_id": "abs",
+      "rating": "recommended",
+      "bed_temp_c": {
+        "min": 100,
+        "max": 120
+      },
+      "adhesion_aid": "none for small parts; adhesion promoter on large flats",
+      "notes": "Vendor engineering profiles cover ABS directly at 100-120 C. Enclosure remains the dominant warp variable."
+    },
+    {
+      "filament_id": "asa",
+      "rating": "recommended",
+      "bed_temp_c": {
+        "min": 100,
+        "max": 120
+      },
+      "adhesion_aid": "Magigoo or equivalent suggested by some vendors",
+      "notes": "Some vendors recommend an adhesion promoter for ASA specifically even though bare adhesion is generally adequate."
+    },
+    {
+      "filament_id": "abs-gf",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 100,
+        "max": 120
+      },
+      "adhesion_aid": "adhesion promoter, brim recommended",
+      "notes": "Not separately documented; filled ABS pulls harder at the corners."
+    },
+    {
+      "filament_id": "hips",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 95,
+        "max": 110
+      },
+      "adhesion_aid": "none to brim",
+      "notes": "Undocumented for this surface; extrapolated from ABS/styrenic behavior."
+    },
+    {
+      "filament_id": "tpu",
+      "rating": "recommended",
+      "bed_temp_c": {
+        "min": 40,
+        "max": 80
+      },
+      "adhesion_aid": "none, though some vendors suggest Magigoo Original",
+      "notes": "Low fusing risk versus PEI, which is a main selling point. Bed-temp guidance varies widely by vendor (one lists ~40 C, another up to 80 C in an engineering profile) — start low."
+    },
+    {
+      "filament_id": "tpu-95a",
+      "rating": "recommended",
+      "bed_temp_c": {
+        "min": 40,
+        "max": 70
+      },
+      "adhesion_aid": "none",
+      "notes": "Firmer grades release readily by flexing the steel backing."
+    },
+    {
+      "filament_id": "tpu-85a",
+      "rating": "recommended",
+      "bed_temp_c": {
+        "min": 35,
+        "max": 60
+      },
+      "adhesion_aid": "none",
+      "notes": "Soft grades are the ones that fuse into PEI; keep the bed at the low end here and flex to release."
+    },
+    {
+      "filament_id": "tpe",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 35,
+        "max": 60
+      },
+      "adhesion_aid": "none",
+      "notes": "Softer TPE compounds are not documented for this plate; start unheated-to-cool and add heat only if the first layer lifts."
+    },
+    {
+      "filament_id": "cope",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 50,
+        "max": 80
+      },
+      "adhesion_aid": "none",
+      "notes": "TPEE-class copolyester elastomer; undocumented, behaves between PETG and TPU."
+    },
+    {
+      "filament_id": "pa",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 100,
+        "max": 120
+      },
+      "adhesion_aid": "Magigoo PA commonly used",
+      "notes": "Vendors cover nylon in engineering profiles at 100-120 C, typically with a PA-specific promoter used as a combined adhesion and release layer."
+    },
+    {
+      "filament_id": "pa6",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 100,
+        "max": 120
+      },
+      "adhesion_aid": "Magigoo PA",
+      "notes": "Dry the filament thoroughly; moisture failures present as adhesion failures."
+    },
+    {
+      "filament_id": "pa12",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 90,
+        "max": 110
+      },
+      "adhesion_aid": "Magigoo PA",
+      "notes": "Lower-moisture, lower-warp nylon; not separately documented."
+    },
+    {
+      "filament_id": "pa6-cf",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 100,
+        "max": 120
+      },
+      "adhesion_aid": "Magigoo PA",
+      "notes": "PAHT-CF class is explicitly among the materials these plates are marketed for; promoter recommended for CF-filled nylons."
+    },
+    {
+      "filament_id": "pa12-cf",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 90,
+        "max": 120
+      },
+      "adhesion_aid": "Magigoo PA",
+      "notes": "Same handling as other CF nylons."
+    },
+    {
+      "filament_id": "pc",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 110,
+        "max": 120
+      },
+      "adhesion_aid": "Magigoo PC or equivalent recommended",
+      "notes": "Within the plate's thermal envelope but wants a promoter; PC's shrinkage makes a brim and an enclosure worthwhile."
+    },
+    {
+      "filament_id": "pc-abs",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 100,
+        "max": 120
+      },
+      "adhesion_aid": "Magigoo PC or equivalent",
+      "notes": "Not separately documented; sits between ABS and PC."
+    },
+    {
+      "filament_id": "pp",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 80,
+        "max": 100
+      },
+      "adhesion_aid": "dedicated PP adhesion promoter REQUIRED",
+      "notes": "Vendor spec is explicit: PP is not usable bare on this surface and needs a PP-specific promoter."
+    },
+    {
+      "filament_id": "pp-gf",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 80,
+        "max": 100
+      },
+      "adhesion_aid": "dedicated PP adhesion promoter REQUIRED",
+      "notes": "Glass fill lowers warp but does not change the adhesion requirement."
+    },
+    {
+      "filament_id": "pva",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 45,
+        "max": 60
+      },
+      "adhesion_aid": "none",
+      "notes": "Not covered in sources. Wash any PVA residue off the laminate — it goes tacky in humid air and will haze the release resin."
+    },
+    {
+      "filament_id": "bvoh",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 45,
+        "max": 60
+      },
+      "adhesion_aid": "none",
+      "notes": "Undocumented; treated as PVA-equivalent and usually only present as a support interface."
+    },
+    {
+      "filament_id": "peek",
+      "rating": "avoid",
+      "adhesion_aid": "n/a",
+      "notes": "Generic vendor listings sometimes name-drop PEEK/PEKK/ULTEM but publish no data, and PEEK bed temps (130-160 C) exceed the vendor-stated ~140 C operational ceiling. Treat as unsupported."
+    },
+    {
+      "filament_id": "pei-ultem",
+      "rating": "avoid",
+      "adhesion_aid": "n/a",
+      "notes": "Same as PEEK — marketing mentions without supporting specs, and bed requirements sit at or above the plate's stated limit."
+    }
   ],
   "preparation": "First use and routine prep are the same and are pleasantly simple: wipe the surface with 90%+ IPA, or wash it with a strong dish soap, rinse thoroughly and dry completely. There is no glue to apply for the materials this plate is bought for, and vendors are clear that a release agent is unnecessary for PLA, PETG, ABS/ASA and TPU. The one preparation step unique to this surface is thermal: the composite is noticeably slower to heat than metal or PEI-on-steel, so vendors recommend preheating the bed roughly five minutes before starting a print to let the laminate come up to target evenly. Skipping the soak is the most common cause of a poor first layer on a new carbon plate, and it is easy to mistake for a leveling problem. For engineering materials (nylon, PC, PP), apply the appropriate promoter — Magigoo PA, Magigoo PC, or a PP-specific product — as a thin even coat on the cold plate rather than assuming bare adhesion will hold.",
   "cleaning": "Routine cleaning is an IPA wipe (90%+, on a cold plate) between prints or whenever adhesion drops; skin oils are the usual culprit and IPA removes them. For a deep clean, wash with strong dish soap, rinse thoroughly and dry fully — do not soak, since the laminate is bonded to the steel backing with a high-temperature adhesive and that bond, not the composite, is the vulnerable part. Remove promoter residue (Magigoo and similar) with warm water before it builds into a haze that changes release behavior. What to avoid is not spelled out by vendors for this surface specifically, so apply the standard composite-surface caution: no acetone or aggressive solvents, which attack epoxy binders, and no metal scrapers or blades, which will cut into the resin layer and expose the weave. Once the top release resin is scored, that patch of the plate behaves differently for the rest of its life.",
   "model_removal": "Cold release, using the flex. Let the plate cool fully — vendors describe prints audibly popping off as it comes down to temperature — then lift the spring-steel-backed plate off the magnetic bed and flex it. Because the composite is laminated to spring steel, flexing is the primary and intended removal technique, and it is gentler on both the part and the surface than any tool. Work the flex progressively from one corner for thin, wide parts rather than bowing the whole sheet at once. A plastic spatula is a backup for stubborn spots only, entering at a corner and never levered from the center. Do not remove parts hot: at bed temperature the release resin is at maximum tack, which is exactly the wrong moment to apply force. Note the weave texture transfers to part bottoms, so a part that looks 'stuck' by texture is usually just keyed into the pattern and will release normally on cooling.",
   "stuck_print_recovery": "No carbon-fiber-specific recovery procedure appears in the vendor documentation, so use the general ladder, adapted to a flexible plate. Wait for full cooling first — most stuck prints on a thermal-release surface are prints pulled too early. Then flex the sheet progressively from a corner, reversing direction and working around the perimeter rather than bowing the middle. If it still holds, run IPA around the print edge and let it wick under the first layer for a minute. For a large flat footprint, saw dental floss or fishing line under one edge along the bond line. A freezer cycle of 10-15 minutes is a reasonable next step for a flex plate, though it is undocumented here and worth drying the plate afterward so condensation does not sit on the laminate. Escalate last to a thin plastic spatula from a corner. Never use a metal blade, never chisel, and never force from the center — damage to the top release resin is permanent and there is no recoating path.",
-  "temperature_limits_c": { "max": 140 },
+  "damage_avoidance": [
+    {
+      "item": "Metal blades and scrapers",
+      "reason": "What governs adhesion on this plate is not the weave but a specialised high-temperature release resin sitting on top of it, and that layer is thin. A blade scores through it and exposes the composite underneath, after which that patch grips and releases differently for the rest of the plate's life. There is no recoating or refurbishment path, and replacement is whole-plate at the top of this catalogue's price range.",
+      "severity": "destroys"
+    },
+    {
+      "item": "Acetone and aggressive solvents",
+      "reason": "Not stated by any vendor for this surface, so this is extrapolated from general composite-surface guidance rather than documented. The concern is twofold: solvents attack epoxy binders, and the laminate is joined to its black-oxide spring-steel backing by a high-temperature adhesive that is the acknowledged weak point of the construction. Wham Bam sanctions only 90%+ IPA or strong dish soap.",
+      "severity": "degrades"
+    },
+    {
+      "item": "Soaking or immersing the plate",
+      "reason": "Delamination of the laminate from the spring-steel backing is one of only two real failure modes for this surface, and soaking is the named cause. Wash and rinse quickly, then dry completely; do not leave the plate submerged while you deal with something else.",
+      "severity": "degrades"
+    },
+    {
+      "item": "Hot nozzle contact above roughly 140 degC during levelling, or first layers above 270 degC",
+      "reason": "Unusually specific vendor limits and the most likely way to damage a new carbon plate. Wham Bam caps nozzle temperature at 140 degC during levelling and warns that a hot nozzle pressed onto the surface with force above 150 degC risks damage, noting that some systems tap lightly and survive to 170 degC while others leave marks as low as 150 degC. First-layer hot-end temperature is capped at 270 degC for the same reason.",
+      "severity": "destroys"
+    },
+    {
+      "item": "Removing parts while the plate is hot",
+      "reason": "This is a thermal-release surface: the top resin is tacky when hot and lets go on cooling, so bed temperature is precisely the wrong moment to apply force. Vendors describe parts audibly popping off during cool-down. A part that feels stuck warm is usually just keyed into the weave texture and will release normally once cold.",
+      "severity": "destroys"
+    },
+    {
+      "item": "Bowing the whole sheet at once on large rigid footprints",
+      "reason": "Flexing is the intended removal technique, but a single hard bow across a wide CF-filled or otherwise rigid part concentrates peel stress at the laminate-to-steel adhesive line rather than at the print. Work the flex progressively from one corner and reverse direction around the perimeter.",
+      "severity": "degrades"
+    },
+    {
+      "item": "Microfibre rags and linting cloths",
+      "reason": "Wham Bam's own cleaning instruction is to avoid microfibre rags and fabric materials on this surface. Fibres shed into the weave texture and end up under the next first layer, which reads as an adhesion problem and gets misdiagnosed as plate wear.",
+      "severity": "degrades"
+    },
+    {
+      "item": "Bare-hand handling of the print area",
+      "reason": "Skin oils are the usual cause of a sudden adhesion drop on this plate, and the vendor calls out fingerprints specifically. There is no glue layer to mask a contaminated patch here, since the surface is bought precisely to run adhesive-free.",
+      "severity": "degrades"
+    },
+    {
+      "item": "Bed temperatures above roughly 140 degC",
+      "reason": "The composite pedigree is misleading: this is not a plate for high-temperature engineering polymers. Vendor guidance caps operational temperature near 140 degC with an unexplained parenthetical that some systems tolerate 170 degC, and generic listings claiming PEEK, PEKK or ULTEM compatibility contradict that ceiling with no data behind them. Running hot stresses the adhesive bond to the steel backing rather than the laminate.",
+      "severity": "degrades"
+    }
+  ],
+  "temperature_limits_c": {
+    "max": 140
+  },
   "lifespan_notes": "Marketed as unusually durable, and the construction supports the claim: this is a solid cured composite rather than a thin sprayed or powder-applied coating, so there is no layer to wear through and expose bare steel. No vendor publishes a print count or adhesion-decay figure, which is a gap compared with the wear data available for some coated plates. Practical wear shows up as gradual polishing of the weave texture in the high-use center of the plate and, in the failure case, scoring or gouging of the top release resin from metal tools — that damage is localized, permanent and the usual reason a plate gets retired. The other failure mode is delamination of the laminate from the spring-steel backing, driven by soaking the plate or running it above its rated ceiling. There is no recoating or refurbishment option; replacement is whole-plate, which stings more here than elsewhere given the price.",
-  "price": { "usd_low": 60, "usd_high": 65, "notes": "~250 mm class: Wham Bam 258x258 mm at $63.00; Darkmoon CFX 256 mm at $59.99 sale / $64.99 regular. Roughly two to four times the cost of a PEI, G10 or glass equivalent, which is the main argument against it." },
+  "price": {
+    "usd_low": 60,
+    "usd_high": 65,
+    "notes": "~250 mm class: Wham Bam 258x258 mm at $63.00; Darkmoon CFX 256 mm at $59.99 sale / $64.99 regular. Roughly two to four times the cost of a PEI, G10 or glass equivalent, which is the main argument against it."
+  },
   "additional_notes": "Because carbon fiber is electrically conductive and acts as a magnetic shield, the Wham Bam version is explicitly single-sided — flipping it would interfere with the magnetic bed connection. That is a meaningful difference from double-sided PEI or satin steel sheets, and it halves the effective value per dollar. Vendors also cap the nozzle-leveling temperature at roughly 140 C (some systems tolerate up to 170 C) and recommend keeping first-layer hot-end temperature at or below 270 C, so this is not a plate for high-temperature engineering polymers despite its aerospace-composite pedigree. Catalog accuracy warning: not everything sold as a 'carbon fiber plate' is a genuine woven composite. Some listings (e.g. POJECITY) pair a carbon-fiber-look smooth PET film with a textured PEI reverse side as a double-sided combo, which is a completely different construction with different chemistry, different temperature limits and different adhesion behavior — check for the words 'woven' or a stated weave (3K) before assuming this entry applies. Available in fitments for Bambu A1/X1/P1/P2S/X2D, H2C, H2D/H2S, Prusa XL and i3/Core, Creality K1/K1C, and UltiMaker S5.",
   "provenance": {
     "sources": [
@@ -53,7 +377,8 @@
       "https://darkmoon3d.com/products/darkmoon-cfx-carbon-fiber-bambu-lab",
       "https://forum.bambulab.com/t/psa-how-to-use-wham-bam-carbon-fiber-plate-for-bbl/101080/15",
       "https://www.amazon.com/Printing-Smooth-Carbon-Textured-257x257mm/dp/B0CC85WRP8",
-      "https://www.whambamsystems.com/pages/flexible-build-system"
+      "https://www.whambamsystems.com/pages/flexible-build-system",
+      "Atlas Fibre - G-10 material specification (glass-epoxy laminate service temperature and chemical resistance, as the closest published analogue for a cured epoxy composite plate): https://www.atlasfibre.com/material/g-10/"
     ],
     "last_verified": "2026-08-01",
     "confidence": "medium",

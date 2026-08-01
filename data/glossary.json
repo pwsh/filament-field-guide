@@ -289,6 +289,13 @@
       "see_also": ["emissions.voc_level", "emissions.particulate_level"]
     },
     {
+      "key": "damage_avoidance",
+      "term": "Damage avoidance (plates)",
+      "definition": "Chemicals, tools, and practices that harm a specific build surface, each with the damage mechanism and a severity: 'destroys' (surface ruined outright), 'degrades' (shortens life or permanently reduces adhesion), 'cosmetic' (appearance only).",
+      "why_it_matters": "Most plate deaths are self-inflicted: acetone crazes PC and some PEI coatings, metal scrapers gouge powder coat, thermal shock cracks glass and delaminates coated sheets, and aggressive solvents strip adhesive layers. Cleaning habits that are safe on one surface chemistry ruin another — check this list before applying any solvent, tool, or trick learned on a different plate.",
+      "see_also": ["provenance.confidence"]
+    },
+    {
       "key": "provenance.confidence",
       "term": "Data confidence",
       "definition": "Maturity of an entry's data: placeholder, low, medium, or high.",

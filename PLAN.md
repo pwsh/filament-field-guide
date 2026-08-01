@@ -187,3 +187,11 @@ every property sourced from the glossary.
   pla-stone (10), abs-cf (7), peba (6), pla-glitter (6), lw-asa (5), pla-ht (5),
   lw-tpu (4), pet-gf (4), abs-esd (4), plus castable/burnout PLA and cleaning filament
   as non-print categories. These are the Phase B tranche-2 queue.
+- 2026-08-01 — **Plate damage-avoidance model** (owner request): plate schema gains
+  `damage_avoidance` [{item, reason, severity: destroys|degrades|cosmetic}] + glossary
+  entry; all 11 plates populated (8-10 surface-specific rows each — acetone/solvent
+  attack per polymer, scraper/abrasive rules that differ by surface, thermal-shock and
+  flexing limits, overtemperature). Notable: PC-plate IPA environmental-stress-cracking
+  hazard sourced to a peer-reviewed study; abrasives are maintenance on G10/smooth-PEI
+  but terminal on satin/SuperTack/patterned. Site renders severity-badged sections,
+  "Never:" lines on sheets, and severity counts in plate compare.

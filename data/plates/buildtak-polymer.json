@@ -351,6 +351,58 @@
   "cleaning": "Wipe with a lint-free cloth between prints; for anything more, isopropyl alcohol is the strongest thing the vendor sanctions for the classic sheet. Acetone is explicitly prohibited and heavy-duty solvents in general will attack the film and can creep under it to the adhesive layer. Avoid soaking the sheet or flooding the edges, since liquid that wicks under the perimeter starts the peeling that eventually kills it. BuildTak Plus+ PP is stricter still: the vendor says no solvents and no liquids at all, including IPA and plain water, and specifies a dry microfiber cloth only, because solvents will damage the Bond PP coating. Do not use abrasive pads or metal blades on either product — surface texture is what makes it work, and once it is polished smooth or gouged, it does not come back.",
   "model_removal": "Use a spatula or putty knife with smooth, rounded corners — BuildTak sells a matching branded scraper for exactly this reason, because a sharp corner is the single fastest way to nick the film and start a tear. Slide in at a shallow angle from the part edge rather than levering downward. With first-layer height calibrated correctly, parts should pop off with much less prying than an over-squished first layer demands, so persistent difficulty is usually a Z-offset problem rather than a surface problem. PLA releases best after the bed has cooled. ABS is the exception: remove it immediately after the print while residual heat remains, or reheat the bed to loosen it, since a fully cold ABS footprint on this film is one of the harder combinations to separate.",
   "stuck_print_recovery": "The important thing about a stuck print on an adhesive-backed film is what the failure mode is: unlike glass or steel, an over-adhered part that finally lets go can take the surface with it, peeling the sheet off the bed rather than releasing cleanly. So escalate gently and never brute-force it. Try the freezer method first — 10-15 minutes with the whole bed plate or carrier chilled, which is particularly effective on ABS. Next, drip isopropyl alcohol at the part perimeter and let it wick underneath for around 15 minutes before trying again; keep the alcohol at the part edge rather than flooding the sheet, and skip this step entirely on BuildTak Plus+ PP, where no liquids are permitted. Unwaxed dental floss or thin wire drawn under the footprint is the gentlest mechanical option and the one least likely to lift the film. If a part still will not release, accept the sheet as spent and peel it deliberately rather than fighting it — a replacement sheet is around USD 10-12 and cheaper than a damaged bed.",
+  "damage_avoidance": [
+    {
+      "item": "Acetone and heavy-duty solvents",
+      "reason": "Explicitly prohibited in BuildTak's own FAQ, which says to avoid solvents such as acetone and to use nothing stronger than rubbing alcohol. The base polymer is undisclosed, so there is no chemistry to reason from, and solvent that reaches the perimeter attacks the permanent pressure-sensitive adhesive underneath as well as the film itself.",
+      "severity": "destroys"
+    },
+    {
+      "item": "Soaking the sheet or flooding its edges",
+      "reason": "The dominant failure mode of any adhesive-backed surface. Liquid that wicks under the perimeter starts a peel that every subsequent heat cycle extends, and once the edge lifts the sheet cannot be re-bonded. Keep IPA at the edge of a stuck part rather than pouring it across the plate, and never wash the surface in a sink the way you would a steel sheet.",
+      "severity": "destroys"
+    },
+    {
+      "item": "Any liquid at all, including IPA and water, on BuildTak Plus+ PP",
+      "reason": "Product-dependent within this entry. IPA is sanctioned on the classic textured sheet but the Plus+ PP variant prohibits all solvents and all liquids including plain water, specifying a dry microfibre cloth only, because liquids damage the Bond PP coating. The two products share a brand, a format and this catalogue id, so the cleaning rule has to be selected per product.",
+      "severity": "destroys"
+    },
+    {
+      "item": "Spatulas and putty knives with sharp or square corners",
+      "reason": "BuildTak sells a matching rounded-corner scraper for exactly this reason and warns against objects with sharp edges or corners that accelerate wear. A square corner nicks the film, and on a thin sheet a nick is a tear initiation point rather than a scratch.",
+      "severity": "destroys"
+    },
+    {
+      "item": "Digging down into the sheet or prying with force",
+      "reason": "Called out by the vendor directly. The failure mode is specific to adhesive-backed film: an over-adhered part that finally lets go takes the surface with it, peeling the sheet off the bed instead of releasing cleanly. Persistent removal difficulty is normally an over-squished first layer, so fix the Z-offset rather than escalating the force.",
+      "severity": "destroys"
+    },
+    {
+      "item": "Abrasive pads and sanding",
+      "reason": "The surface texture is the working mechanism and there is no material reserve beneath it, so once it is polished smooth or gouged it does not come back. This is the point where BuildTak diverges from PEI: there is no fine-grit revival pass here, only replacement of the whole sheet.",
+      "severity": "destroys"
+    },
+    {
+      "item": "Bed temperatures beyond the 110-125 degC band",
+      "reason": "BuildTak states the sheet is designed to withstand a 110-125 degC heated bed. What the vendor does not clarify is whether the top of that band is a hard damage threshold or a recommended operating ceiling, so treat it as the latter with no margin assumed. Heat also softens the pressure-sensitive adhesive, which is why the sheet peels more easily when warm.",
+      "severity": "degrades"
+    },
+    {
+      "item": "Letting ABS cool completely before removal",
+      "reason": "Inverts the cool-and-flex rule that governs almost every other surface in this catalogue. BuildTak's guidance is to remove ABS immediately after the print while residual heat remains, or to reheat the bed to loosen it, because a fully cold ABS footprint on this film is one of the hardest combinations to separate and is where people reach for a tool and tear the sheet. PLA still releases best cold.",
+      "severity": "degrades"
+    },
+    {
+      "item": "Bar soap, skin-care products and bare-hand contact",
+      "reason": "The classic sheet tolerates a rubbing-alcohol wipe and nothing stronger, so a contaminant that alcohol does not lift is a real problem here. Soaps formulated for skin leave oils and sugars behind, and the sugars caramelise into the texture on the next heat cycle rather than washing out.",
+      "severity": "degrades"
+    },
+    {
+      "item": "Applying the sheet over a dirty substrate, or trapping bubbles during application",
+      "reason": "First use is an application job, and the adhesive is permanent. A misaligned sheet is a wasted sheet, a trapped bubble cannot be worked out afterwards because the film is more rigid than tape, and the surface inherits its flatness entirely from whatever it is stuck to. Degrease the bed or carrier to bare metal and lay the sheet from one edge, chasing air out ahead of the adhesive.",
+      "severity": "destroys"
+    }
+  ],
   "temperature_limits_c": {
     "max": 125
   },
@@ -368,7 +420,8 @@
       "filament2print - BuildTak product listing and sizes: https://filament2print.com/en/bed-adhesion/685-buildtak.html",
       "MatterHackers - BuildTak store category: https://www.matterhackers.com/store/c/BuildTak",
       "MatterHackers - BuildTak Plus+ build surfaces for Bambu Lab P1/X1 series: https://www.matterhackers.com/store/l/buildtak-plus-build-surfaces-for-bambu-lab-p1-x1-series/sk/MA3Z2JDY",
-      "3DPrinterly - How to remove 3D prints from the print bed: https://3dprinterly.com/how-to-remove-3d-prints-from-print-bed/"
+      "3DPrinterly - How to remove 3D prints from the print bed: https://3dprinterly.com/how-to-remove-3d-prints-from-print-bed/",
+      "3DTechValley - How to clean a 3D printer bed (strong solvents on BuildTak and coated surfaces, abrasives, skin-oil contamination): https://www.3dtechvalley.com/how-to-clean-3d-printer-bed/"
     ],
     "last_verified": "2026-08-01",
     "confidence": "medium",

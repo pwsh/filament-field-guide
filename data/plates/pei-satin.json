@@ -482,6 +482,53 @@
   "cleaning": "Routine cleaning is a cold IPA wipe with a lint-free cloth; do it before every print rather than between batches, since the fine coat picks up skin oils readily. Deep cleaning is warm water with dish soap and a soft cloth or sponge, rinsed and dried completely. Prusa states explicitly that acetone will deteriorate the surface — do not use it, or any other aggressive solvent. Metal spatulas, blades and abrasive pads scratch the coat and are equally off-limits. Never store the sheet wet or leave it damp on the magnetic bed.",
   "model_removal": "Satin is tuned to self-release: let the bed cool to room temperature and prints generally pop off on their own, with a light flex of the removed sheet finishing anything stubborn. Prusa provides printable plastic scraper designs and recommends only plastic tools — a metal spatula will scar the coating. Because satin's peak grip is below smooth PEI's, small PLA parts are better served by adding a brim than by cranking the bed temperature. Prusa explicitly warns against putting the satin sheet in a freezer, so cold-shock removal is not part of the recommended workflow for this surface.",
   "stuck_print_recovery": "In most cases patience is the whole procedure: leave the sheet aside until it is fully at room temperature and the part will release. If it does not, drip 90% IPA at the print/plate interface and let it wick under the perimeter, then flex again. Unwaxed dental floss or a thin wire sawed under a corner and drawn across the footprint is the safest mechanical option. A brief reheat to the material's bed temperature followed by a slow, undisturbed cool frees most remaining cases. Do not use the freezer trick here — Prusa discourages freezing this coated sheet, and its warranty excludes cosmetic and consumable damage, so a cracked or crazed coating from thermal shock is on you.",
+  "damage_avoidance": [
+    {
+      "item": "Acetone",
+      "reason": "Prusa's satin sheet page states it directly: never clean the sheet with acetone, it will deteriorate the surface. This is first-party guidance for this exact product rather than an extrapolation from PEI resin chemistry, and it is stricter than Prusa's own allowance of occasional acetone on the smooth laminated sheet.",
+      "severity": "degrades"
+    },
+    {
+      "item": "Freezer thermal shock",
+      "reason": "Prusa explicitly instructs never to put the satin sheet in the freezer. This is the sharpest contradiction in the plate catalogue, because a 10-15 minute freezer cycle is the standard stuck-print remedy recommended almost everywhere else in the PEI family. Follow Prusa here: the fine coat is the thinnest of its three sheets, cosmetic and consumable damage is excluded from warranty, and a crazed coating from cold-shock is not recoverable.",
+      "severity": "degrades"
+    },
+    {
+      "item": "Sandpaper and abrasive pads",
+      "reason": "Prusa flags the satin sheet as not scratch-resistant and does not offer the light-sanding revival path it documents for smooth PEI. The fine powder-coat grain is what produces satin's grip and its finish; abrading it polishes that grain away in the treated zone permanently, and there is no recoating option at home.",
+      "severity": "destroys"
+    },
+    {
+      "item": "Metal spatulas and sharp-edged tools",
+      "reason": "Prusa recommends plastic tools only and publishes printable scraper designs precisely so owners are not reaching for steel. A metal edge scars the coat, and every scar is a spot where subsequent first layers behave differently. Warranty explicitly excludes scratches, dents and cracks.",
+      "severity": "destroys"
+    },
+    {
+      "item": "Dishwasher cycles",
+      "reason": "Prusa advises against the dishwasher for this sheet. Detergent builders are mildly abrasive against a fine coat, and the long hot humid cycle works against the anti-corrosion protection on the exposed steel.",
+      "severity": "degrades"
+    },
+    {
+      "item": "Leaving the sheet wet or storing it damp on the magnet",
+      "reason": "Prusa's instruction is do not leave the sheet wet. Water trapped between a damp sheet and the magnetic bed corrodes the steel from the underside and steams on the next heat cycle, lifting coating at the edges. Dry immediately after a soap wash rather than letting it air-dry.",
+      "severity": "degrades"
+    },
+    {
+      "item": "Finger grease and skin-care products",
+      "reason": "Prusa is emphatic that grease greatly reduces adhesion and that this is the biggest single adhesion killer on satin. The fine coat picks up skin oils readily and holds them in the grain, so handle by the tabs only and clean before every print rather than between batches.",
+      "severity": "degrades"
+    },
+    {
+      "item": "Removing parts while the bed is still warm",
+      "reason": "Satin is tuned to self-release on cooling and its peak grip is below smooth PEI's, so there is never a good reason to force a warm part. Prying at temperature is where the coating gets pulled rather than the part released, and small PLA parts that resist are better handled with a brim than with force or a hotter bed.",
+      "severity": "destroys"
+    },
+    {
+      "item": "High-adhesion materials without a separator, and sustained work near 130 degC",
+      "reason": "Prusa notes ASA, PC Blend, TPU and TPEE may need a glue-stick separation layer on this sheet. Running those materials bare, at the top of the bed range, is what produces the over-adhesion events that lift coating in patches. No separate thermal ceiling is published for satin versus textured, so the limit recorded in this entry is inferred from supported material bed temperatures.",
+      "severity": "degrades"
+    }
+  ],
   "temperature_limits_c": {
     "max": 130
   },
@@ -498,7 +545,10 @@
       "Prusa3D Store - Satin Powder-Coated Print Sheet: https://www.prusa3d.com/product/satin-powder-coated-print-sheet/",
       "All3DP - Prusa PEI Sheet Differences: https://all3dp.com/2/prusa-pei-sheet-textured-powder-coated-steel/",
       "DREMC Knowledge Base - Texture / Smooth PEI / Satin Build Plate: https://support.dremc.com.au/support/solutions/articles/51000300850-dremc-texture-smooth-pei-satin-build-plate",
-      "DarkMoon3D - Satin Build Plate User Guide: https://darkmoon3d.com/pages/darkmoon-satin-build-plate-user-guide"
+      "DarkMoon3D - Satin Build Plate User Guide: https://darkmoon3d.com/pages/darkmoon-satin-build-plate-user-guide",
+      "Prusa Knowledge Base - Textured steel sheet (comparison of prohibitions across Prusa sheets): https://help.prusa3d.com/article/textured-steel-sheet_196534",
+      "Prusa Knowledge Base - Smooth Steel Sheet (contrasting acetone and sanding allowances): https://help.prusa3d.com/article/smooth-steel-sheet_196550",
+      "MatterHackers - How To Succeed with LayerLock Powder Coated PEI Build Plates (flexing and scraper damage on powder-coated steel): https://www.matterhackers.com/articles/how-to-succeed-with-layerlock-powder-coated-pei-build-plates"
     ],
     "last_verified": "2026-08-01",
     "confidence": "medium",
