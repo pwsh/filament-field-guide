@@ -346,13 +346,26 @@ function propLabel(key, opts) {
   const o = opts || {};
   const entry = glossaryFor(key);
   const label = o.label || (entry && entry.term) || humanizeKey(key);
-  if (!entry) return el('span', { class: 'lbl-plain', text: label });
+  // No glossary entry: plain text, and nothing at all in icon-only mode.
+  if (!entry) return o.iconOnly ? null : el('span', { class: 'lbl-plain', text: label });
 
-  const a = el('a', {
-    class: 'lbl',
-    href: `#/glossary#${anchorId(entry.key)}`,
-    'aria-describedby': 'tooltip',
-  }, label, el('span', { class: 'lbl-i', 'aria-hidden': 'true' }, '?'));
+  /*
+   * iconOnly renders just the "?" affordance, for form labels: there the label
+   * text must stay clickable as a label (toggling the control) instead of
+   * navigating to the glossary.
+   */
+  const a = o.iconOnly
+    ? el('a', {
+      class: 'lbl lbl-icon',
+      href: `#/glossary#${anchorId(entry.key)}`,
+      'aria-label': `${label}: glossary definition`,
+      'aria-describedby': 'tooltip',
+    }, el('span', { class: 'lbl-i', 'aria-hidden': 'true' }, '?'))
+    : el('a', {
+      class: 'lbl',
+      href: `#/glossary#${anchorId(entry.key)}`,
+      'aria-describedby': 'tooltip',
+    }, label, el('span', { class: 'lbl-i', 'aria-hidden': 'true' }, '?'));
 
   TIP_DATA.set(a, { entry, value: o.value });
   a.addEventListener('mouseenter', () => Tooltip.show(a));
@@ -737,6 +750,7 @@ function selectCheckbox(kind, id, onChange) {
   const cb = el('input', {
     type: 'checkbox',
     'aria-label': `Select ${id} for comparison`,
+    dataset: { focusKey: `cmp:${kind}:${id}` },
     onchange: (e) => { toggleSelection(kind, id, e.target.checked); onChange(); },
   });
   cb.checked = selection[kind].has(id);
@@ -751,6 +765,9 @@ function selectCheckbox(kind, id, onChange) {
  * Update the query part of the current hash without triggering a re-route.
  * Values equal to `defaults` are omitted so shared URLs stay short.
  */
+/** Hash last written by the app itself; cleared whenever a real render runs. */
+let selfHash = null;
+
 function writeParams(route, state, defaults) {
   const params = new URLSearchParams();
   const dflt = defaults || {};
@@ -758,12 +775,16 @@ function writeParams(route, state, defaults) {
     const v = state[key];
     if (v === '' || v === null || v === undefined || v === false) continue;
     if (Array.isArray(v)) { if (v.length) params.set(key, v.join(',')); continue; }
+    if (v === true) { params.set(key, '1'); continue; }
     if (Object.prototype.hasOwnProperty.call(dflt, key) && v === dflt[key]) continue;
     params.set(key, String(v));
   }
   const qs = params.toString();
   const newHash = `#/${route.parts.join('/')}${qs ? '?' + qs : ''}`;
   if (location.hash !== newHash) {
+    // replaceState does not fire hashchange, but record the value anyway so a
+    // stray event can never re-render the page over the user's typing.
+    selfHash = newHash;
     history.replaceState(null, '', location.pathname + location.search + newHash);
   }
   route.params = params;
@@ -775,23 +796,23 @@ const paramNum = (p, key, dflt) => {
   const n = v === null || v === '' ? NaN : Number(v);
   return isNaN(n) ? (dflt !== undefined ? dflt : null) : n;
 };
-const paramBool = (p, key) => p.get(key) === '1';
+const paramBool = (p, key) => p.get(key) === '1' || p.get(key) === 'true';
 const paramList = (p, key) => (p.get(key) ? p.get(key).split(',').filter(Boolean) : []);
 
 function field(labelText, control, opts) {
   const o = opts || {};
-  const labelNode = o.key ? propLabel(o.key, { label: labelText }) : txt(labelText);
   const wrap = el('div', { class: 'field' });
-  const lab = el('label', { class: 'field-label' }, labelNode);
+  const lab = el('label', { class: 'field-label' }, txt(labelText));
   if (control.id) lab.setAttribute('for', control.id);
   wrap.appendChild(lab);
+  if (o.key) appendKids(lab, [propLabel(o.key, { label: labelText, iconOnly: true })]);
   wrap.appendChild(control);
   if (o.note) wrap.appendChild(el('span', { class: 'small faint', text: o.note }));
   return wrap;
 }
 
 function selectControl(id, options, value, onChange) {
-  const sel = el('select', { id, onchange: (e) => onChange(e.target.value) });
+  const sel = el('select', { id, dataset: { focusKey: id }, onchange: (e) => onChange(e.target.value) });
   for (const [val, label] of options) {
     const opt = el('option', { value: val, text: label });
     if (String(val) === String(value)) opt.selected = true;
@@ -804,12 +825,17 @@ function chipGroup(values, active, onToggle) {
   const wrap = el('div', { class: 'chips' });
   for (const value of values) {
     const on = active.includes(value);
+    const label = el('label', { class: `chip${on ? ' on' : ''}` });
     const input = el('input', {
       type: 'checkbox',
-      onchange: (e) => onToggle(value, e.target.checked),
+      dataset: { focusKey: `chip:${value}` },
+      // The chip updates its own styling: filter controls are not re-rendered
+      // while the user is working, so nothing else will do it.
+      onchange: (e) => { label.classList.toggle('on', e.target.checked); onToggle(value, e.target.checked); },
     });
     input.checked = on;
-    wrap.appendChild(el('label', { class: `chip${on ? ' on' : ''}` }, input, txt(prettyEnum(value))));
+    appendKids(label, [input, txt(prettyEnum(value))]);
+    wrap.appendChild(label);
   }
   return wrap;
 }
@@ -818,8 +844,11 @@ function rangeControl(id, value, min, max, onChange) {
   const out = el('output', { text: value > min ? `≥ ${value}` : 'any' });
   const input = el('input', {
     type: 'range', id, min: String(min), max: String(max), step: '1', value: String(value),
-    oninput: (e) => { out.textContent = Number(e.target.value) > min ? `≥ ${e.target.value}` : 'any'; },
-    onchange: (e) => onChange(Number(e.target.value)),
+    dataset: { focusKey: id },
+    oninput: (e) => {
+      out.textContent = Number(e.target.value) > min ? `≥ ${e.target.value}` : 'any';
+      onChange(Number(e.target.value));
+    },
   });
   return el('div', { class: 'range-wrap' }, input, el('div', { class: 'small faint' }, out));
 }
@@ -840,6 +869,7 @@ function sortableHeader(label, key, sortKey, sortDir, onSort, opts) {
   const sortBtn = el('button', {
     type: 'button',
     class: 'sort-btn',
+    dataset: { focusKey: `sort:${key}` },
     'aria-label': `Sort by ${label}${active && sortDir === 'asc' ? ' (descending)' : ''}`,
     onclick: () => onSort(key),
   }, active ? (sortDir === 'asc' ? '↑' : '↓') : '↕');
@@ -991,14 +1021,120 @@ function filterFilaments(rows, s) {
   });
 }
 
+/* --------------------------------------------------------------------------
+ * List-view scaffolding
+ *
+ * Filter controls are built ONCE and are never rebuilt while the user
+ * interacts with them, so a focused <input> is never destroyed mid-word and
+ * the caret never jumps. Only the results region (table/cards) and the count
+ * line re-render. The URL is kept in sync with a debounced
+ * history.replaceState, which the hashchange handler ignores as
+ * self-originated so it can never re-render over the user's typing.
+ * ------------------------------------------------------------------------ */
+
+/** Remember which control had focus so it can be restored after a re-render. */
+function activeFocusKey() {
+  const node = document.activeElement;
+  return node && node.dataset ? (node.dataset.focusKey || null) : null;
+}
+
+function restoreFocus(key) {
+  if (!key) return;
+  const escape = (typeof CSS !== 'undefined' && CSS.escape) ? CSS.escape : ((s) => s);
+  const node = document.querySelector(`[data-focus-key="${escape(key)}"]`);
+  if (node) node.focus();
+}
+
+/**
+ * Build a filterable list page.
+ * config: { route, state, defaults, readState, title, subtitle, total,
+ *           emptyText, compareKind, compute, buildControls, renderResults }
+ */
+function listView(config) {
+  const container = el('div', {});
+  const controlsHost = el('div', { class: 'filter-controls' });
+  const resultsHost = el('div', { class: 'results-host' });
+  const barHost = el('div', {});
+  const countNode = el('span', { class: 'result-count' });
+  const state = config.state;
+
+  const syncUrl = debounce(() => writeParams(config.route, state, config.defaults), 200);
+
+  const renderResults = () => {
+    const shown = config.compute(state);
+    countNode.textContent = `${shown.length} of ${config.total} shown`;
+    const focusKey = activeFocusKey();
+    clear(resultsHost);
+    resultsHost.appendChild(shown.length
+      ? config.renderResults(shown, state, api)
+      : el('p', { class: 'muted', text: config.emptyText }));
+    clear(barHost);
+    if (config.compareKind) barHost.appendChild(compareBar(config.compareKind, api.refresh));
+    restoreFocus(focusKey);
+  };
+  const renderResultsSoon = debounce(renderResults, 200);
+
+  const api = {
+    /** Discrete controls (select, checkbox, chip, sort): apply immediately. */
+    set(patch) { Object.assign(state, patch); renderResults(); syncUrl(); },
+    /**
+     * Live text inputs: state updates on every keystroke, but filtering is
+     * debounced and no control DOM is touched, so typing is never interrupted.
+     */
+    setLive(patch) { Object.assign(state, patch); renderResultsSoon(); syncUrl(); },
+    refresh() { renderResults(); },
+    sortBy(key) {
+      api.set({ sort: key, dir: state.sort === key && state.dir === 'asc' ? 'desc' : 'asc' });
+    },
+  };
+
+  const buildControls = () => {
+    clear(controlsHost);
+    appendKids(controlsHost, [config.buildControls(state, api)]);
+  };
+
+  /* Reset is an explicit action, so rebuilding the controls here is expected. */
+  const reset = () => {
+    Object.assign(state, config.readState(new URLSearchParams()));
+    buildControls();
+    renderResults();
+    writeParams(config.route, state, config.defaults);
+  };
+
+  buildControls();
+  container.appendChild(el('div', { class: 'page-head' },
+    el('h1', { text: config.title }),
+    config.subtitle ? el('p', { class: 'sub' }, config.subtitle) : null));
+  container.appendChild(el('section', { class: 'card filters no-print' },
+    controlsHost,
+    el('div', { class: 'filter-foot' },
+      countNode,
+      el('span', { class: 'spacer' }),
+      el('button', { class: 'btn-sm', onclick: reset }, 'Reset filters'))));
+  container.appendChild(resultsHost);
+  container.appendChild(barHost);
+  renderResults();
+  return container;
+}
+
+/** Search box wired for live typing: never rebuilt, filtering debounced. */
+function searchField(id, label, placeholder, state, api) {
+  const input = el('input', {
+    type: 'search', id, placeholder,
+    dataset: { focusKey: id },
+    oninput: (e) => api.setLive({ q: e.target.value }),
+  });
+  input.value = state.q || '';
+  return field(label, input);
+}
+
 async function viewFilaments(route) {
   const rows = listOf('filaments');
-  const container = el('div', {});
 
   /*
-   * `emissions` is expected in the index summary. If an older index.json lacks
-   * it, fall back to reading the entity files — but only when the ventilation
-   * filter is actually in use, so the common path stays a single fetch.
+   * `emissions` and `feeding` are expected in the index summary. If an older
+   * index.json lacks them, fall back to reading the entity files — but only
+   * when a filter that needs them is actually in use.
    */
   let extrasReady = rows.every((f) => has(pick(f, 'emissions')) && has(pick(f, 'feeding')));
   const ensureExtras = async () => {
@@ -1014,147 +1150,146 @@ async function viewFilaments(route) {
     }
     extrasReady = true;
   };
-  const initial = readFilamentState(route.params);
-  if (initial.vent || initial.ams) await ensureExtras();
 
-  const render = () => {
-    const s = readFilamentState(route.params);
-    const set = (patch) => {
-      writeParams(route, Object.assign(readFilamentState(route.params), patch), FILAMENT_DEFAULTS);
-      if ((patch.vent || patch.ams) && !extrasReady) { ensureExtras().then(render); return; }
-      render();
-    };
-    const onSort = (key) => {
-      const cur = readFilamentState(route.params);
-      set({ sort: key, dir: cur.sort === key && cur.dir === 'asc' ? 'desc' : 'asc' });
-    };
+  const state = readFilamentState(route.params);
+  if (state.vent || state.ams) await ensureExtras();
 
-    const classes = Array.from(new Set(rows.map((f) => f.polymer_class).filter(has))).sort();
-    const filtered = sortRows(filterFilaments(rows, s), FILAMENT_SORTS[s.sort] || FILAMENT_SORTS.name, s.dir);
-
-    clear(container);
-    container.appendChild(el('div', { class: 'page-head' },
-      el('h1', { text: 'Filaments' }),
-      el('p', { class: 'sub' },
-        txt(`${rows.length} material${rows.length === 1 ? '' : 's'} in the catalog. `),
-        txt('Hover any property label for its glossary definition.'))));
-
-    /* --- filters --- */
-    const filters = el('section', { class: 'card filters no-print' },
-      el('div', { class: 'filter-grid' },
-        field('Search', el('input', {
-          type: 'search', id: 'f-q', value: s.q, placeholder: 'name, alias, use case…',
-          oninput: debounce((e) => set({ q: e.target.value }), 250),
-        })),
-        field('Min ease of print', rangeControl('f-ease', s.ease, 1, 10, (v) => set({ ease: v === 1 ? '' : v })),
-          { key: 'scores.ease_of_print' }),
-        field('Min temperature tolerance', rangeControl('f-temp', s.temp, 1, 10, (v) => set({ temp: v === 1 ? '' : v })),
-          { key: 'scores.temperature_tolerance' }),
-        field('Max price (USD/kg)', el('input', {
-          type: 'number', id: 'f-maxp', min: '0', step: '1', value: isNum(s.maxp) ? String(s.maxp) : '',
-          placeholder: 'any',
-          onchange: (e) => set({ maxp: e.target.value === '' ? '' : Number(e.target.value) }),
-        })),
-        field('High temperature', selectControl('f-ht', [['', 'any'], ['moderate', 'moderate or better'], ['yes', 'yes']], s.ht, (v) => set({ ht: v })),
-          { key: 'suitability.high_temperature' }),
-        field('Outdoor', selectControl('f-out', [['', 'any'], ['limited', 'limited or better'], ['yes', 'yes']], s.out, (v) => set({ out: v })),
-          { key: 'suitability.outdoor' }),
-        field('Food contact', selectControl('f-food', [['', 'any'], ['conditional', 'conditional or better'], ['yes-certified-lines', 'certified lines']], s.food, (v) => set({ food: v })),
-          { key: 'suitability.food_contact' }),
-        field('Load bearing', selectControl('f-load', [['', 'any'], ['light', 'light or better'], ['moderate', 'moderate or better'], ['high', 'high']], s.load, (v) => set({ load: v })),
-          { key: 'suitability.load_bearing' }),
-        field('AMS compatible', selectControl('f-ams', [
-          ['', 'all'],
-          ['conditional', 'yes or conditional'],
-          ['yes', 'yes only'],
-        ], s.ams, (v) => set({ ams: v })), { key: 'feeding.ams_compatible' }),
-        field('Ventilation', selectControl('f-vent', [
-          ['', 'any'],
-          ['optional', 'optional only'],
-          ['recommended', 'optional or recommended'],
-          ['required', 'required only'],
-        ], s.vent, (v) => set({ vent: v })), { key: 'emissions.ventilation' })),
-      classes.length ? field('Polymer class', chipGroup(classes, s.cls, (value, on) => {
-        const cur = readFilamentState(route.params).cls;
-        const next = on ? cur.concat([value]) : cur.filter((c) => c !== value);
-        set({ cls: next });
-      }), { key: 'polymer_class' }) : null,
-      el('div', { class: 'checkline' },
-        checkbox('f-enc', 'Enclosure recommended', s.enc, (v) => set({ enc: v ? '1' : '' }), 'printing.enclosure_recommended'),
-        checkbox('f-chamber', 'Heated chamber required', s.chamber, (v) => set({ chamber: v ? '1' : '' }), 'printing.heated_chamber_required'),
-        checkbox('f-base', 'Base types only (no variations)', s.base, (v) => set({ base: v ? '1' : '' }))),
-      el('div', { class: 'filter-foot' },
-        el('span', { class: 'result-count', text: `${filtered.length} of ${rows.length} shown` }),
-        el('span', { class: 'spacer' }),
-        el('button', { class: 'btn-sm', onclick: () => { writeParams(route, {}); render(); } }, 'Reset filters')));
-    container.appendChild(filters);
-
-    /* --- table --- */
-    if (!filtered.length) {
-      container.appendChild(el('p', { class: 'muted', text: 'No filaments match these filters.' }));
-    } else {
-      const head = el('tr', {},
-        el('th', { scope: 'col', class: 'no-print', 'aria-label': 'Compare' }, ''),
-        sortableHeader('Name', 'name', s.sort, s.dir, onSort),
-        sortableHeader('Class', 'polymer_class', s.sort, s.dir, onSort, { tipKey: 'polymer_class' }),
-        sortableHeader('Ease', 'ease_of_print', s.sort, s.dir, onSort, { num: true, tipKey: 'scores.ease_of_print' }),
-        sortableHeader('Warp', 'warp_tendency', s.sort, s.dir, onSort, { num: true, tipKey: 'scores.warp_tendency' }),
-        sortableHeader('Heat', 'temperature_tolerance', s.sort, s.dir, onSort, { num: true, tipKey: 'scores.temperature_tolerance' }),
-        sortableHeader('Layers', 'layer_adhesion', s.sort, s.dir, onSort, { num: true, tipKey: 'scores.layer_adhesion' }),
-        sortableHeader('Dim.', 'dimensional_stability', s.sort, s.dir, onSort, { num: true, tipKey: 'scores.dimensional_stability' }),
-        sortableHeader('Weather', 'weather_tolerance', s.sort, s.dir, onSort, { num: true, tipKey: 'scores.weather_tolerance' }),
-        sortableHeader('Price', 'price', s.sort, s.dir, onSort, { num: true }),
-        el('th', { scope: 'col' }, 'Suitability'));
-
-      const body = el('tbody');
-      for (const f of filtered) {
-        const flags = el('span', { class: 'badge-group' });
-        if (f.enclosure_recommended) flags.appendChild(badge('enclosure', 'mid', 'Enclosure recommended'));
-        if (f.heated_chamber_required) flags.appendChild(badge('chamber', 'bad', 'Heated chamber required'));
-        if (has(f.base_type)) flags.appendChild(badge(`variation of ${f.base_type}`, 'neutral'));
-        if (pick(f, 'feeding.drive_system') === 'direct-drive-required') {
-          flags.appendChild(badge('direct drive required', 'bad', 'Needs a direct-drive extruder'));
-        }
-        if (pick(f, 'feeding.ams_compatible') === 'no') flags.appendChild(amsBadge('no'));
-        const shore = has(f.shore_hardness) ? f.shore_hardness : pick(f, 'properties.shore_hardness');
-        if (has(shore)) flags.appendChild(badge(`Shore ${shore}`, 'neutral', 'Shore hardness'));
-        if (pick(f, 'emissions.ventilation') === 'required') flags.appendChild(ventilationBadge('required'));
-        const products = Array.isArray(f.trade_names) ? f.trade_names.length : 0;
-        if (products) {
-          flags.appendChild(badge(`sold as ${products} product${products === 1 ? '' : 's'}`, 'neutral',
-            'Manufacturer product names that are this material chemically'));
-        }
-        if (isPlaceholder(f)) flags.appendChild(badge('example', 'example', 'Example data pending research'));
-
-        body.appendChild(el('tr', {},
-          el('td', { class: 'no-print', 'data-label': 'Compare' }, selectCheckbox('filaments', f.id, render)),
-          el('td', { class: 'cell-name', 'data-label': 'Name' },
-            el('a', { href: `#/filament/${encodeURIComponent(f.id)}` }, f.name || f.id),
-            flags.childNodes.length ? el('span', { class: 'sub' }, flags) : null),
-          el('td', { 'data-label': 'Class' }, el('span', { class: 'pill-class', text: prettyEnum(f.polymer_class) })),
-          el('td', { class: 'num', 'data-label': 'Ease of print' }, scoreInline('ease_of_print', pick(f, 'scores.ease_of_print'))),
-          el('td', { class: 'num', 'data-label': 'Warp tendency (10 = worst)' }, scoreInline('warp_tendency', pick(f, 'scores.warp_tendency'))),
-          el('td', { class: 'num', 'data-label': 'Temperature tolerance' }, scoreInline('temperature_tolerance', pick(f, 'scores.temperature_tolerance'))),
-          el('td', { class: 'num', 'data-label': 'Layer adhesion' }, scoreInline('layer_adhesion', pick(f, 'scores.layer_adhesion'))),
-          el('td', { class: 'num', 'data-label': 'Dimensional stability' }, scoreInline('dimensional_stability', pick(f, 'scores.dimensional_stability'))),
-          el('td', { class: 'num', 'data-label': 'Weather tolerance' }, scoreInline('weather_tolerance', pick(f, 'scores.weather_tolerance'))),
-          el('td', { class: 'num nowrap', 'data-label': 'Price' }, fmtPriceKg(f.price) || '—'),
-          el('td', { 'data-label': 'Suitability' }, suitabilityBadges(f.suitability))));
-      }
-      container.appendChild(el('div', { class: 'table-wrap' },
-        el('table', { class: 'responsive-table' }, el('thead', {}, head), body)));
-    }
-    container.appendChild(compareBar('filaments', render));
+  /** Filters that read fields the index may not carry load them on demand. */
+  const setExtra = (api, patch) => {
+    if (!extrasReady) { ensureExtras().then(() => api.set(patch)); return; }
+    api.set(patch);
   };
 
-  render();
-  return container;
+  return listView({
+    route,
+    state,
+    defaults: FILAMENT_DEFAULTS,
+    readState: readFilamentState,
+    title: 'Filaments',
+    subtitle: frag(
+      txt(`${rows.length} material${rows.length === 1 ? '' : 's'} in the catalog. `),
+      txt('Hover any property label for its glossary definition.')),
+    total: rows.length,
+    emptyText: 'No filaments match these filters.',
+    compareKind: 'filaments',
+    compute: (s) => sortRows(filterFilaments(rows, s), FILAMENT_SORTS[s.sort] || FILAMENT_SORTS.name, s.dir),
+    buildControls: (s, api) => filamentControls(rows, s, api, setExtra),
+    renderResults: (shown, s, api) => filamentTable(shown, s, api),
+  });
+}
+
+function filamentControls(rows, s, api, setExtra) {
+  const classes = Array.from(new Set(rows.map((f) => f.polymer_class).filter(has))).sort();
+  return frag(
+    el('div', { class: 'filter-grid' },
+      searchField('f-q', 'Search', 'name, alias, use case…', s, api),
+      field('Min ease of print', rangeControl('f-ease', s.ease, 1, 10, (v) => api.setLive({ ease: v })),
+        { key: 'scores.ease_of_print' }),
+      field('Min temperature tolerance', rangeControl('f-temp', s.temp, 1, 10, (v) => api.setLive({ temp: v })),
+        { key: 'scores.temperature_tolerance' }),
+      field('Max price (USD/kg)', numberField('f-maxp', isNum(s.maxp) ? s.maxp : '', 'any',
+        (v) => api.setLive({ maxp: v === '' ? null : Number(v) }))),
+      field('High temperature', selectControl('f-ht', [['', 'any'], ['moderate', 'moderate or better'], ['yes', 'yes']], s.ht, (v) => api.set({ ht: v })),
+        { key: 'suitability.high_temperature' }),
+      field('Outdoor', selectControl('f-out', [['', 'any'], ['limited', 'limited or better'], ['yes', 'yes']], s.out, (v) => api.set({ out: v })),
+        { key: 'suitability.outdoor' }),
+      field('Food contact', selectControl('f-food', [['', 'any'], ['conditional', 'conditional or better'], ['yes-certified-lines', 'certified lines']], s.food, (v) => api.set({ food: v })),
+        { key: 'suitability.food_contact' }),
+      field('Load bearing', selectControl('f-load', [['', 'any'], ['light', 'light or better'], ['moderate', 'moderate or better'], ['high', 'high']], s.load, (v) => api.set({ load: v })),
+        { key: 'suitability.load_bearing' }),
+      field('AMS compatible', selectControl('f-ams', [
+        ['', 'all'],
+        ['conditional', 'yes or conditional'],
+        ['yes', 'yes only'],
+      ], s.ams, (v) => setExtra(api, { ams: v })), { key: 'feeding.ams_compatible' }),
+      field('Ventilation', selectControl('f-vent', [
+        ['', 'any'],
+        ['optional', 'optional only'],
+        ['recommended', 'optional or recommended'],
+        ['required', 'required only'],
+      ], s.vent, (v) => setExtra(api, { vent: v })), { key: 'emissions.ventilation' })),
+    classes.length ? field('Polymer class', chipGroup(classes, s.cls, (value, on) => {
+      api.set({ cls: on ? s.cls.concat([value]) : s.cls.filter((c) => c !== value) });
+    }), { key: 'polymer_class' }) : null,
+    el('div', { class: 'checkline' },
+      checkbox('f-enc', 'Enclosure recommended', s.enc, (v) => api.set({ enc: v }), 'printing.enclosure_recommended'),
+      checkbox('f-chamber', 'Heated chamber required', s.chamber, (v) => api.set({ chamber: v }), 'printing.heated_chamber_required'),
+      checkbox('f-base', 'Base types only (no variations)', s.base, (v) => api.set({ base: v }))));
+}
+
+function filamentTable(shown, s, api) {
+  const onSort = (key) => api.sortBy(key);
+  const head = el('tr', {},
+    el('th', { scope: 'col', class: 'no-print', 'aria-label': 'Compare' }, ''),
+    sortableHeader('Name', 'name', s.sort, s.dir, onSort),
+    sortableHeader('Class', 'polymer_class', s.sort, s.dir, onSort, { tipKey: 'polymer_class' }),
+    sortableHeader('Ease', 'ease_of_print', s.sort, s.dir, onSort, { num: true, tipKey: 'scores.ease_of_print' }),
+    sortableHeader('Warp', 'warp_tendency', s.sort, s.dir, onSort, { num: true, tipKey: 'scores.warp_tendency' }),
+    sortableHeader('Heat', 'temperature_tolerance', s.sort, s.dir, onSort, { num: true, tipKey: 'scores.temperature_tolerance' }),
+    sortableHeader('Layers', 'layer_adhesion', s.sort, s.dir, onSort, { num: true, tipKey: 'scores.layer_adhesion' }),
+    sortableHeader('Dim.', 'dimensional_stability', s.sort, s.dir, onSort, { num: true, tipKey: 'scores.dimensional_stability' }),
+    sortableHeader('Weather', 'weather_tolerance', s.sort, s.dir, onSort, { num: true, tipKey: 'scores.weather_tolerance' }),
+    sortableHeader('Price', 'price', s.sort, s.dir, onSort, { num: true }),
+    el('th', { scope: 'col' }, 'Suitability'));
+
+  const body = el('tbody');
+  for (const f of shown) {
+    const flags = el('span', { class: 'badge-group' });
+    if (f.enclosure_recommended) flags.appendChild(badge('enclosure', 'mid', 'Enclosure recommended'));
+    if (f.heated_chamber_required) flags.appendChild(badge('chamber', 'bad', 'Heated chamber required'));
+    if (has(f.base_type)) flags.appendChild(badge(`variation of ${f.base_type}`, 'neutral'));
+    if (pick(f, 'feeding.drive_system') === 'direct-drive-required') {
+      flags.appendChild(badge('direct drive required', 'bad', 'Needs a direct-drive extruder'));
+    }
+    if (pick(f, 'feeding.ams_compatible') === 'no') flags.appendChild(amsBadge('no'));
+    const shore = has(f.shore_hardness) ? f.shore_hardness : pick(f, 'properties.shore_hardness');
+    if (has(shore)) flags.appendChild(badge(`Shore ${shore}`, 'neutral', 'Shore hardness'));
+    if (pick(f, 'emissions.ventilation') === 'required') flags.appendChild(ventilationBadge('required'));
+    const products = Array.isArray(f.trade_names) ? f.trade_names.length : 0;
+    if (products) {
+      flags.appendChild(badge(`sold as ${products} product${products === 1 ? '' : 's'}`, 'neutral',
+        'Manufacturer product names that are this material chemically'));
+    }
+    if (isPlaceholder(f)) flags.appendChild(badge('example', 'example', 'Example data pending research'));
+
+    body.appendChild(el('tr', {},
+      el('td', { class: 'no-print', 'data-label': 'Compare' }, selectCheckbox('filaments', f.id, api.refresh)),
+      el('td', { class: 'cell-name', 'data-label': 'Name' },
+        el('a', { href: `#/filament/${encodeURIComponent(f.id)}` }, f.name || f.id),
+        flags.childNodes.length ? el('span', { class: 'sub' }, flags) : null),
+      el('td', { 'data-label': 'Class' }, el('span', { class: 'pill-class', text: prettyEnum(f.polymer_class) })),
+      el('td', { class: 'num', 'data-label': 'Ease of print' }, scoreInline('ease_of_print', pick(f, 'scores.ease_of_print'))),
+      el('td', { class: 'num', 'data-label': 'Warp tendency (10 = worst)' }, scoreInline('warp_tendency', pick(f, 'scores.warp_tendency'))),
+      el('td', { class: 'num', 'data-label': 'Temperature tolerance' }, scoreInline('temperature_tolerance', pick(f, 'scores.temperature_tolerance'))),
+      el('td', { class: 'num', 'data-label': 'Layer adhesion' }, scoreInline('layer_adhesion', pick(f, 'scores.layer_adhesion'))),
+      el('td', { class: 'num', 'data-label': 'Dimensional stability' }, scoreInline('dimensional_stability', pick(f, 'scores.dimensional_stability'))),
+      el('td', { class: 'num', 'data-label': 'Weather tolerance' }, scoreInline('weather_tolerance', pick(f, 'scores.weather_tolerance'))),
+      el('td', { class: 'num nowrap', 'data-label': 'Price' }, fmtPriceKg(f.price) || '—'),
+      el('td', { 'data-label': 'Suitability' }, suitabilityBadges(f.suitability))));
+  }
+  return el('div', { class: 'table-wrap' },
+    el('table', { class: 'responsive-table' }, el('thead', {}, head), body));
 }
 
 function checkbox(id, labelText, checked, onChange, tipKey) {
-  const input = el('input', { type: 'checkbox', id, onchange: (e) => onChange(e.target.checked) });
+  const input = el('input', {
+    type: 'checkbox', id, dataset: { focusKey: id },
+    onchange: (e) => onChange(e.target.checked),
+  });
   input.checked = Boolean(checked);
-  return el('label', { for: id }, input, tipKey ? propLabel(tipKey, { label: labelText }) : txt(labelText));
+  return el('label', { for: id }, input, txt(labelText),
+    tipKey ? propLabel(tipKey, { label: labelText, iconOnly: true }) : null);
+}
+
+/** Number input that stays live while typing (no rebuild, debounced filter). */
+function numberField(id, value, placeholder, onInput) {
+  const input = el('input', {
+    type: 'number', id, min: '0', step: '1', placeholder,
+    dataset: { focusKey: id },
+    oninput: (e) => onInput(e.target.value),
+  });
+  input.value = value === '' || value === null || value === undefined ? '' : String(value);
+  return input;
 }
 
 function debounce(fn, ms) {
@@ -1169,228 +1304,220 @@ function debounce(fn, ms) {
  * 10. View: manufacturer list
  * ========================================================================== */
 
+function readManufacturerState(p) {
+  return {
+    q: paramStr(p, 'q'),
+    country: paramStr(p, 'country'),
+    tier: paramStr(p, 'tier'),
+    plates: paramBool(p, 'plates'),
+    sort: paramStr(p, 'sort', 'name'),
+    dir: paramStr(p, 'dir', 'asc'),
+  };
+}
+
+const MANUFACTURER_SORTS = {
+  name: (m) => m.name,
+  country: (m) => (m.manufacturing_countries || [])[0],
+  tier: (m) => ['budget', 'mid', 'premium', 'engineering'].indexOf(m.price_tier),
+  brands: (m) => (m.brands || []).length,
+};
+
 function viewManufacturers(route) {
   const rows = listOf('manufacturers');
-  const container = el('div', {});
+  const state = readManufacturerState(route.params);
 
-  const render = () => {
-    const p = route.params;
-    const s = {
-      q: paramStr(p, 'q'),
-      country: paramStr(p, 'country'),
-      tier: paramStr(p, 'tier'),
-      plates: paramBool(p, 'plates'),
-      sort: paramStr(p, 'sort', 'name'),
-      dir: paramStr(p, 'dir', 'asc'),
-    };
-    const set = (patch) => { writeParams(route, Object.assign({}, s, patch), LIST_DEFAULTS); render(); };
-    const onSort = (key) => set({ sort: key, dir: s.sort === key && s.dir === 'asc' ? 'desc' : 'asc' });
+  const filterRows = (s) => rows.filter((m) => {
+    if (!matchesText(s.q, [m.name, m.id, m.summary, (m.brands || []).join(' '),
+      (m.manufacturing_countries || []).join(' ')])) return false;
+    if (s.country && !(m.manufacturing_countries || []).includes(s.country)) return false;
+    if (s.tier && m.price_tier !== s.tier) return false;
+    if (s.plates && m.makes_plates !== true) return false;
+    return true;
+  });
 
-    const countries = Array.from(new Set(rows.flatMap((m) => m.manufacturing_countries || []))).sort();
-    const tiers = Array.from(new Set(rows.map((m) => m.price_tier).filter(has))).sort();
+  return listView({
+    route,
+    state,
+    defaults: LIST_DEFAULTS,
+    readState: readManufacturerState,
+    title: 'Manufacturers',
+    subtitle: txt(`${rows.length} compan${rows.length === 1 ? 'y' : 'ies'} in the catalog. ` +
+      'Countries listed are where filament is made, not where it is sold.'),
+    total: rows.length,
+    emptyText: 'No manufacturers match these filters.',
+    compute: (s) => sortRows(filterRows(s), MANUFACTURER_SORTS[s.sort] || MANUFACTURER_SORTS.name, s.dir),
+    buildControls: (s, api) => manufacturerControls(rows, s, api),
+    renderResults: (shown, s, api) => manufacturerTable(shown, s, api),
+  });
+}
 
-    const filtered = rows.filter((m) => {
-      if (!matchesText(s.q, [m.name, m.id, m.summary, (m.brands || []).join(' '), (m.manufacturing_countries || []).join(' ')])) return false;
-      if (s.country && !(m.manufacturing_countries || []).includes(s.country)) return false;
-      if (s.tier && m.price_tier !== s.tier) return false;
-      if (s.plates && m.makes_plates !== true) return false;
-      return true;
-    });
-    const getters = {
-      name: (m) => m.name,
-      country: (m) => (m.manufacturing_countries || [])[0],
-      tier: (m) => ['budget', 'mid', 'premium', 'engineering'].indexOf(m.price_tier),
-      brands: (m) => (m.brands || []).length,
-    };
-    const sorted = sortRows(filtered, getters[s.sort] || getters.name, s.dir);
+function manufacturerControls(rows, s, api) {
+  const countries = Array.from(new Set(rows.flatMap((m) => m.manufacturing_countries || []))).sort();
+  const tiers = Array.from(new Set(rows.map((m) => m.price_tier).filter(has))).sort();
+  return frag(
+    el('div', { class: 'filter-grid' },
+      searchField('m-q', 'Search', 'company or brand…', s, api),
+      field('Manufacturing country', selectControl('m-country',
+        [['', 'any']].concat(countries.map((c) => [c, c])), s.country, (v) => api.set({ country: v }))),
+      field('Price tier', selectControl('m-tier',
+        [['', 'any']].concat(tiers.map((t) => [t, prettyEnum(t)])), s.tier, (v) => api.set({ tier: v })))),
+    el('div', { class: 'checkline' },
+      checkbox('m-plates', 'Makes build plates', s.plates, (v) => api.set({ plates: v }))));
+}
 
-    clear(container);
-    container.appendChild(el('div', { class: 'page-head' },
-      el('h1', { text: 'Manufacturers' }),
-      el('p', { class: 'sub', text: `${rows.length} compan${rows.length === 1 ? 'y' : 'ies'} in the catalog. Countries listed are where filament is made, not where it is sold.` })));
-
-    container.appendChild(el('section', { class: 'card filters no-print' },
-      el('div', { class: 'filter-grid' },
-        field('Search', el('input', {
-          type: 'search', id: 'm-q', value: s.q, placeholder: 'company or brand…',
-          oninput: debounce((e) => set({ q: e.target.value }), 250),
-        })),
-        field('Manufacturing country', selectControl('m-country',
-          [['', 'any']].concat(countries.map((c) => [c, c])), s.country, (v) => set({ country: v }))),
-        field('Price tier', selectControl('m-tier',
-          [['', 'any']].concat(tiers.map((t) => [t, prettyEnum(t)])), s.tier, (v) => set({ tier: v })))),
-      el('div', { class: 'checkline' },
-        checkbox('m-plates', 'Makes build plates', s.plates, (v) => set({ plates: v ? '1' : '' }))),
-      el('div', { class: 'filter-foot' },
-        el('span', { class: 'result-count', text: `${sorted.length} of ${rows.length} shown` }),
-        el('span', { class: 'spacer' }),
-        el('button', { class: 'btn-sm', onclick: () => { writeParams(route, {}); render(); } }, 'Reset filters'))));
-
-    if (!sorted.length) {
-      container.appendChild(el('p', { class: 'muted', text: 'No manufacturers match these filters.' }));
-      return;
-    }
-
-    const body = el('tbody');
-    for (const m of sorted) {
-      body.appendChild(el('tr', {},
-        el('td', { class: 'cell-name', 'data-label': 'Name' },
-          el('a', { href: `#/manufacturer/${encodeURIComponent(m.id)}` }, m.name || m.id),
-          isPlaceholder(m) ? el('span', { class: 'sub' }, badge('example', 'example', 'Example data pending research')) : null,
-          m.summary ? el('span', { class: 'sub', text: m.summary }) : null),
-        el('td', { 'data-label': 'Brands' }, tagList((m.brands || []).slice(0, 8)) || txt('—')),
-        el('td', { 'data-label': 'Manufacturing countries' }, (m.manufacturing_countries || []).join(', ') || '—'),
-        el('td', { 'data-label': 'Price tier' }, m.price_tier ? badge(m.price_tier, 'neutral') : txt('—')),
-        el('td', { 'data-label': 'Plates' }, m.makes_plates === true ? badge('plates', 'good') : txt('—'))));
-    }
-    container.appendChild(el('div', { class: 'table-wrap' },
-      el('table', { class: 'responsive-table' },
-        el('thead', {}, el('tr', {},
-          sortableHeader('Name', 'name', s.sort, s.dir, onSort),
-          sortableHeader('Brands', 'brands', s.sort, s.dir, onSort),
-          sortableHeader('Made in', 'country', s.sort, s.dir, onSort),
-          sortableHeader('Price tier', 'tier', s.sort, s.dir, onSort),
-          el('th', { scope: 'col' }, 'Plates'))),
-        body)));
-  };
-
-  render();
-  return container;
+function manufacturerTable(shown, s, api) {
+  const onSort = (key) => api.sortBy(key);
+  const body = el('tbody');
+  for (const m of shown) {
+    body.appendChild(el('tr', {},
+      el('td', { class: 'cell-name', 'data-label': 'Name' },
+        el('a', { href: `#/manufacturer/${encodeURIComponent(m.id)}` }, m.name || m.id),
+        isPlaceholder(m) ? el('span', { class: 'sub' }, badge('example', 'example', 'Example data pending research')) : null,
+        m.summary ? el('span', { class: 'sub', text: m.summary }) : null),
+      el('td', { 'data-label': 'Brands' }, tagList((m.brands || []).slice(0, 8)) || txt('—')),
+      el('td', { 'data-label': 'Manufacturing countries' }, (m.manufacturing_countries || []).join(', ') || '—'),
+      el('td', { 'data-label': 'Price tier' }, m.price_tier ? badge(m.price_tier, 'neutral') : txt('—')),
+      el('td', { 'data-label': 'Plates' }, m.makes_plates === true ? badge('plates', 'good') : txt('—'))));
+  }
+  return el('div', { class: 'table-wrap' },
+    el('table', { class: 'responsive-table' },
+      el('thead', {}, el('tr', {},
+        sortableHeader('Name', 'name', s.sort, s.dir, onSort),
+        sortableHeader('Brands', 'brands', s.sort, s.dir, onSort),
+        sortableHeader('Made in', 'country', s.sort, s.dir, onSort),
+        sortableHeader('Price tier', 'tier', s.sort, s.dir, onSort),
+        el('th', { scope: 'col' }, 'Plates'))),
+      body));
 }
 
 /* ==========================================================================
  * 11. View: plate list
  * ========================================================================== */
 
+function readPlateState(p) {
+  return {
+    q: paramStr(p, 'q'),
+    texture: paramList(p, 'texture'),
+    compat: paramStr(p, 'compat'),
+    rating: paramStr(p, 'rating', 'recommended'),
+    sort: paramStr(p, 'sort', 'name'),
+    dir: paramStr(p, 'dir', 'asc'),
+  };
+}
+
 async function viewPlates(route) {
   const rows = listOf('plates');
   // Compatibility lives in the entity files, not in the index summary.
   const full = new Map((await loadAllEntities('plates')).map((p) => [p.id, p]));
-  const container = el('div', {});
+  const state = readPlateState(route.params);
 
-  const render = () => {
-    const p = route.params;
-    const s = {
-      q: paramStr(p, 'q'),
-      texture: paramList(p, 'texture'),
-      compat: paramStr(p, 'compat'),
-      rating: paramStr(p, 'rating', 'recommended'),
-      sort: paramStr(p, 'sort', 'name'),
-      dir: paramStr(p, 'dir', 'asc'),
-    };
-    const set = (patch) => { writeParams(route, Object.assign({}, s, patch), PLATE_DEFAULTS); render(); };
-    const onSort = (key) => set({ sort: key, dir: s.sort === key && s.dir === 'asc' ? 'desc' : 'asc' });
-
-    const textures = Array.from(new Set(rows.map((r) => r.texture).filter(has))).sort();
-    const filamentOptions = listOf('filaments').map((f) => [f.id, f.name || f.id]);
-
-    const compatOf = (id, filamentId) => {
-      const entity = full.get(id);
-      if (!entity || !Array.isArray(entity.filament_compatibility)) return null;
-      return entity.filament_compatibility.find((c) => c.filament_id === filamentId) || null;
-    };
-
-    const filtered = rows.filter((r) => {
-      if (!matchesText(s.q, [r.name, r.id, r.summary, r.surface_makeup, r.texture,
-        ((full.get(r.id) || {}).aliases || []).join(' '),
-        plateSearchBlob(r, full.get(r.id))])) return false;
-      if (s.texture.length && !s.texture.includes(r.texture)) return false;
-      if (s.compat) {
-        const c = compatOf(r.id, s.compat);
-        if (!c) return false;
-        if (s.rating === 'recommended' && c.rating !== 'recommended') return false;
-        if (s.rating === 'usable' && c.rating === 'avoid') return false;
-        if (s.rating === 'avoid' && c.rating !== 'avoid') return false;
-      }
-      return true;
-    });
-    const getters = { name: (r) => r.name, texture: (r) => r.texture };
-    const sorted = sortRows(filtered, getters[s.sort] || getters.name, s.dir);
-
-    clear(container);
-    container.appendChild(el('div', { class: 'page-head' },
-      el('h1', { text: 'Build plates' }),
-      el('p', { class: 'sub', text: `${rows.length} plate type${rows.length === 1 ? '' : 's'} in the catalog.` })));
-
-    container.appendChild(el('section', { class: 'card filters no-print' },
-      el('div', { class: 'filter-grid' },
-        field('Search', el('input', {
-          type: 'search', id: 'p-q', value: s.q, placeholder: 'name, surface, alias, product…',
-          oninput: debounce((e) => set({ q: e.target.value }), 250),
-        })),
-        field('Compatible with filament', selectControl('p-compat',
-          [['', 'any']].concat(filamentOptions), s.compat, (v) => set({ compat: v }))),
-        field('Compatibility rating', selectControl('p-rating',
-          [['recommended', 'recommended only'], ['usable', 'recommended or usable-with-prep'], ['avoid', 'avoid']],
-          s.rating, (v) => set({ rating: v })))),
-      textures.length ? field('Texture', chipGroup(textures, s.texture, (value, on) => {
-        const next = on ? s.texture.concat([value]) : s.texture.filter((t) => t !== value);
-        set({ texture: next });
-      }), { key: 'texture' }) : null,
-      el('div', { class: 'filter-foot' },
-        el('span', { class: 'result-count', text: `${sorted.length} of ${rows.length} shown` }),
-        el('span', { class: 'spacer' }),
-        el('button', { class: 'btn-sm', onclick: () => { writeParams(route, {}); render(); } }, 'Reset filters'))));
-
-    if (!sorted.length) {
-      container.appendChild(el('p', { class: 'muted', text: 'No plates match these filters.' }));
-    } else {
-      const body = el('tbody');
-      for (const r of sorted) {
-        const entity = full.get(r.id) || {};
-        const compat = Array.isArray(entity.filament_compatibility) ? entity.filament_compatibility : [];
-        /*
-         * Plates now rate 30-46 materials each. Show rating counts, plus the
-         * named materials for whichever rating the compatibility filter targets.
-         */
-        const compatCell = el('span', { class: 'badge-group' });
-        for (const [rating, group] of groupByRating(compat)) {
-          const tone = rating === 'recommended' ? 'good' : rating === 'avoid' ? 'bad' : 'mid';
-          compatCell.appendChild(badge(`${RATING_LABEL[rating] || rating}: ${group.length}`, tone,
-            group.map((c) => shortName('filaments', c.filament_id)).join(', ')));
-        }
-        if (s.compat) {
-          const hit = compat.find((c) => c.filament_id === s.compat);
-          if (hit) {
-            compatCell.appendChild(badge(
-              `${shortName('filaments', s.compat)}: ${RATING_LABEL[hit.rating] || hit.rating}`,
-              hit.rating === 'recommended' ? 'good' : hit.rating === 'avoid' ? 'bad' : 'mid',
-              hit.notes || null));
-          }
-        }
-        const nameFlags = el('span', { class: 'badge-group' });
-        if (isPlaceholder(r)) nameFlags.appendChild(badge('example', 'example', 'Example data pending research'));
-        const soldAs = tradeNameCount(r) || tradeNameCount(entity);
-        if (soldAs) {
-          nameFlags.appendChild(badge(`sold as ${soldAs}`, 'neutral',
-            `${soldAs} vendor product${soldAs === 1 ? '' : 's'} use this surface — searchable by product name`));
-        }
-
-        body.appendChild(el('tr', {},
-          el('td', { class: 'no-print', 'data-label': 'Compare' }, selectCheckbox('plates', r.id, render)),
-          el('td', { class: 'cell-name', 'data-label': 'Name' },
-            el('a', { href: `#/plate/${encodeURIComponent(r.id)}` }, r.name || r.id),
-            nameFlags.childNodes.length ? el('span', { class: 'sub' }, nameFlags) : null,
-            r.summary ? el('span', { class: 'sub', text: r.summary }) : null),
-          el('td', { 'data-label': 'Texture' }, r.texture ? el('span', { class: 'pill-class', text: prettyEnum(r.texture) }) : txt('—')),
-          el('td', { 'data-label': 'Surface' }, r.surface_makeup || '—'),
-          el('td', { 'data-label': 'Filament compatibility' }, compatCell.childNodes.length ? compatCell : txt('—'))));
-      }
-      container.appendChild(el('div', { class: 'table-wrap' },
-        el('table', { class: 'responsive-table' },
-          el('thead', {}, el('tr', {},
-            el('th', { scope: 'col', class: 'no-print' }, ''),
-            sortableHeader('Name', 'name', s.sort, s.dir, onSort),
-            sortableHeader('Texture', 'texture', s.sort, s.dir, onSort, { tipKey: 'texture' }),
-            el('th', { scope: 'col' }, 'Surface makeup'),
-            el('th', { scope: 'col' }, 'Filament compatibility'))),
-          body)));
-    }
-    container.appendChild(compareBar('plates', render));
+  const compatOf = (id, filamentId) => {
+    const entity = full.get(id);
+    if (!entity || !Array.isArray(entity.filament_compatibility)) return null;
+    return entity.filament_compatibility.find((c) => c.filament_id === filamentId) || null;
   };
 
-  render();
-  return container;
+  const filterRows = (s) => rows.filter((r) => {
+    if (!matchesText(s.q, [r.name, r.id, r.summary, r.surface_makeup, r.texture,
+      ((full.get(r.id) || {}).aliases || []).join(' '),
+      plateSearchBlob(r, full.get(r.id))])) return false;
+    if (s.texture.length && !s.texture.includes(r.texture)) return false;
+    if (s.compat) {
+      const c = compatOf(r.id, s.compat);
+      if (!c) return false;
+      if (s.rating === 'recommended' && c.rating !== 'recommended') return false;
+      if (s.rating === 'usable' && c.rating === 'avoid') return false;
+      if (s.rating === 'avoid' && c.rating !== 'avoid') return false;
+    }
+    return true;
+  });
+
+  const getters = { name: (r) => r.name, texture: (r) => r.texture };
+
+  return listView({
+    route,
+    state,
+    defaults: PLATE_DEFAULTS,
+    readState: readPlateState,
+    title: 'Build plates',
+    subtitle: txt(`${rows.length} plate type${rows.length === 1 ? '' : 's'} in the catalog.`),
+    total: rows.length,
+    emptyText: 'No plates match these filters.',
+    compareKind: 'plates',
+    compute: (s) => sortRows(filterRows(s), getters[s.sort] || getters.name, s.dir),
+    buildControls: (s, api) => plateControls(rows, s, api),
+    renderResults: (shown, s, api) => plateTable(shown, s, api, full),
+  });
+}
+
+function plateControls(rows, s, api) {
+  const textures = Array.from(new Set(rows.map((r) => r.texture).filter(has))).sort();
+  const filamentOptions = listOf('filaments').map((f) => [f.id, f.name || f.id]);
+  return frag(
+    el('div', { class: 'filter-grid' },
+      searchField('p-q', 'Search', 'name, surface, alias, product…', s, api),
+      field('Compatible with filament', selectControl('p-compat',
+        [['', 'any']].concat(filamentOptions), s.compat, (v) => api.set({ compat: v }))),
+      field('Compatibility rating', selectControl('p-rating',
+        [['recommended', 'recommended only'], ['usable', 'recommended or usable-with-prep'], ['avoid', 'avoid']],
+        s.rating, (v) => api.set({ rating: v })))),
+    textures.length ? field('Texture', chipGroup(textures, s.texture, (value, on) => {
+      api.set({ texture: on ? s.texture.concat([value]) : s.texture.filter((t) => t !== value) });
+    }), { key: 'texture' }) : null);
+}
+
+function plateTable(shown, s, api, full) {
+  const onSort = (key) => api.sortBy(key);
+  const body = el('tbody');
+  for (const r of shown) {
+    const entity = full.get(r.id) || {};
+    const compat = Array.isArray(entity.filament_compatibility) ? entity.filament_compatibility : [];
+    /*
+     * Plates now rate 30-46 materials each. Show rating counts, plus the
+     * named materials for whichever rating the compatibility filter targets.
+     */
+    const compatCell = el('span', { class: 'badge-group' });
+    for (const [rating, group] of groupByRating(compat)) {
+      const tone = rating === 'recommended' ? 'good' : rating === 'avoid' ? 'bad' : 'mid';
+      compatCell.appendChild(badge(`${RATING_LABEL[rating] || rating}: ${group.length}`, tone,
+        group.map((c) => shortName('filaments', c.filament_id)).join(', ')));
+    }
+    if (s.compat) {
+      const hit = compat.find((c) => c.filament_id === s.compat);
+      if (hit) {
+        compatCell.appendChild(badge(
+          `${shortName('filaments', s.compat)}: ${RATING_LABEL[hit.rating] || hit.rating}`,
+          hit.rating === 'recommended' ? 'good' : hit.rating === 'avoid' ? 'bad' : 'mid',
+          hit.notes || null));
+      }
+    }
+    const nameFlags = el('span', { class: 'badge-group' });
+    if (isPlaceholder(r)) nameFlags.appendChild(badge('example', 'example', 'Example data pending research'));
+    const soldAs = tradeNameCount(r) || tradeNameCount(entity);
+    if (soldAs) {
+      nameFlags.appendChild(badge(`sold as ${soldAs}`, 'neutral',
+        `${soldAs} vendor product${soldAs === 1 ? '' : 's'} use this surface — searchable by product name`));
+    }
+
+    body.appendChild(el('tr', {},
+      el('td', { class: 'no-print', 'data-label': 'Compare' }, selectCheckbox('plates', r.id, api.refresh)),
+      el('td', { class: 'cell-name', 'data-label': 'Name' },
+        el('a', { href: `#/plate/${encodeURIComponent(r.id)}` }, r.name || r.id),
+        nameFlags.childNodes.length ? el('span', { class: 'sub' }, nameFlags) : null,
+        r.summary ? el('span', { class: 'sub', text: r.summary }) : null),
+      el('td', { 'data-label': 'Texture' }, r.texture ? el('span', { class: 'pill-class', text: prettyEnum(r.texture) }) : txt('—')),
+      el('td', { 'data-label': 'Surface' }, r.surface_makeup || '—'),
+      el('td', { 'data-label': 'Filament compatibility' }, compatCell.childNodes.length ? compatCell : txt('—'))));
+  }
+  return el('div', { class: 'table-wrap' },
+    el('table', { class: 'responsive-table' },
+      el('thead', {}, el('tr', {},
+        el('th', { scope: 'col', class: 'no-print' }, ''),
+        sortableHeader('Name', 'name', s.sort, s.dir, onSort),
+        sortableHeader('Texture', 'texture', s.sort, s.dir, onSort, { tipKey: 'texture' }),
+        el('th', { scope: 'col' }, 'Surface makeup'),
+        el('th', { scope: 'col' }, 'Filament compatibility'))),
+      body));
 }
 
 /* ==========================================================================
@@ -2527,8 +2654,15 @@ function renderFetchError(err) {
 
 let renderToken = 0;
 
+/** hashchange entry point: ignores the app's own replaceState writes. */
+function onHashChange() {
+  if (selfHash !== null && location.hash === selfHash) return;
+  router();
+}
+
 async function router() {
   const token = ++renderToken;
+  selfHash = null;
   const route = parseHash();
   const app = document.getElementById('app');
   highlightNav(route.parts);
@@ -2581,7 +2715,7 @@ function setupPrintExpansion() {
 function boot() {
   Tooltip.init();
   setupPrintExpansion();
-  window.addEventListener('hashchange', router);
+  window.addEventListener('hashchange', onHashChange);
   if (!location.hash) location.replace('#/filaments');
   router();
 }

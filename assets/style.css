@@ -309,6 +309,12 @@ td.cell-name .sub { display: block; font-weight: 400; font-size: .82rem; color: 
 .lbl { color: inherit; text-decoration: none; border-bottom: 1px dotted var(--border-strong); cursor: help; }
 .lbl:hover, .lbl:focus-visible { border-bottom-color: var(--accent); color: var(--accent-text); }
 .lbl .lbl-i { font-size: .68em; vertical-align: super; color: var(--accent); margin-left: .15em; font-weight: 700; }
+/* glossary "?" used beside a form label, where the label text itself must stay
+   clickable as a label rather than becoming a link */
+.lbl-icon { border-bottom: 0; margin-left: .2em; }
+.lbl-icon .lbl-i { vertical-align: baseline; font-size: .85em; margin-left: 0; }
+.field-label .lbl-icon { margin-left: .25em; }
+.checkline label .lbl-icon { margin-left: .25em; }
 
 #tooltip {
   position: fixed; z-index: 100; max-width: min(340px, calc(100vw - 24px));
