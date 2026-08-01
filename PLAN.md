@@ -1,6 +1,6 @@
-# Filament Reference — Research & Build Plan
+# Filament Field Guide — Research & Build Plan
 
-A catalog of FDM 3D-printing materials, manufacturers, and build plates, published as a
+A practical field guide to FDM 3D-printing material selection and use — a catalog of materials, manufacturers, and build plates, published as a
 filterable GitHub Pages site, with a data model designed to be extended by future
 research sessions.
 
@@ -195,3 +195,6 @@ every property sourced from the glossary.
   hazard sourced to a peer-reviewed study; abrasives are maintenance on G10/smooth-PEI
   but terminal on satin/SuperTack/patterned. Site renders severity-badged sections,
   "Never:" lines on sheets, and severity counts in plate compare.
+- 2026-08-01 — **Named**: the project is now the **Filament Field Guide** (owner choice;
+  suggested GitHub repo name `filament-field-guide`). "Filament Atlas" was rejected due
+  to the existing Filamatlas project. Site title, header brand, README, and PLAN updated.

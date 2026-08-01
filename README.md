@@ -1,4 +1,4 @@
-# Filament Reference
+# Filament Field Guide
 
 A structured, research-driven catalog of FDM 3D-printing materials, manufacturers, and
 build plates — published as a filterable static site via GitHub Pages.

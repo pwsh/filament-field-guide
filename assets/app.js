@@ -1,5 +1,5 @@
 /* ==========================================================================
- * Filament Reference — static site application
+ * Filament Field Guide — static site application
  * Vanilla JS, zero dependencies, no build step, hash routing.
  *
  * Data contract: data/index.json (list/filter summaries) + per-entity files
@@ -2043,7 +2043,7 @@ async function viewFilamentSheet(id) {
           pick(f, 'emissions.notes') ? el('p', { class: 'fine', text: trimText(pick(f, 'emissions.notes'), 120) }) : null,
           f.safety_notes ? el('p', { class: 'fine', text: trimText(f.safety_notes, 110) }) : null) : null),
       el('p', { class: 'fine faint sheet-foot' },
-        txt(`Condensed sheet — see the full entry for complete notes. Confidence: ${pick(f, 'provenance.confidence') || 'unknown'}. Filament Reference — ${f.id}`))));
+        txt(`Condensed sheet — see the full entry for complete notes. Confidence: ${pick(f, 'provenance.confidence') || 'unknown'}. Filament Field Guide — ${f.id}`))));
 }
 
 async function viewPlateSheet(id) {
@@ -2099,7 +2099,7 @@ async function viewPlateSheet(id) {
         p.stuck_print_recovery ? sheetBlock('Stuck print recovery', el('p', { class: 'fine', text: trimText(p.stuck_print_recovery, 320) })) : null,
         p.lifespan_notes ? sheetBlock('Lifespan', el('p', { class: 'fine', text: trimText(p.lifespan_notes, 320) })) : null),
       el('p', { class: 'fine faint sheet-foot' },
-        txt(`Confidence: ${pick(p, 'provenance.confidence') || 'unknown'}. Filament Reference — ${p.id}`))));
+        txt(`Confidence: ${pick(p, 'provenance.confidence') || 'unknown'}. Filament Field Guide — ${p.id}`))));
 }
 
 /* ==========================================================================
