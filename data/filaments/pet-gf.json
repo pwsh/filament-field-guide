@@ -1,0 +1,224 @@
+{
+  "id": "pet-gf",
+  "name": "PET-GF (Glass-Fiber-Filled PET)",
+  "aliases": [
+    "Fiberon PET-GF15",
+    "Fibreheart PET-GF",
+    "Glass-filled PET",
+    "PET GF",
+    "PET Glass Fiber",
+    "PET-GF15"
+  ],
+  "status": "researched",
+  "base_type": "pet",
+  "variation_kind": "glass-fiber-filled",
+  "polymer_class": "composite-other",
+  "chemical_makeup": "Semi-crystalline polyethylene terephthalate — no CHDM glycol modification — compounded with roughly 15 wt% chopped or milled glass fiber (Siraya Tech states 15 %, Polymaker's grade is named PET-GF15). Glass rather than carbon is the whole point of the pairing: it restrains the crystallisation-driven shrinkage that makes base PET awkward while leaving more ductility than a carbon-filled grade of the same loading, and it is non-conductive and light-coloured, so the product is not confined to black.",
+  "summary": "The glass counterpart to pet-cf and the honest home for products the industry labels 'PET-GF' or 'PETG-GF' interchangeably. Deltas vs base pet: modulus roughly doubles to 4.2-4.3 GPa, tensile rises to ~67-71 MPa, water absorption is a low 0.5 %, and warp drops from 7 to 3 as the fiber restrains crystallisation — paid for with a mandatory hardened nozzle and a 280-300 °C nozzle window. The defining quirk is annealing: as printed, HDT@0.45 MPa is only 78 °C, barely above PETG; after 4 h at 95 °C it reaches 134 °C, at the cost of roughly half the Charpy impact strength. Deltas vs pet-cf: far easier to print and cheaper, with lower peak heat resistance and stiffness but better retained toughness.",
+  "printing": {
+    "nozzle_temp_c": {
+      "min": 280,
+      "max": 300,
+      "recommended": 290
+    },
+    "bed_temp_c": {
+      "min": 80,
+      "max": 100,
+      "recommended": 90
+    },
+    "ambient_temp_c": {
+      "min": 25,
+      "max": 50,
+      "recommended": 40
+    },
+    "speed_mm_s": {
+      "min": 30,
+      "max": 120,
+      "recommended": 60
+    },
+    "enclosure_recommended": true,
+    "heated_chamber_required": false,
+    "requires_hardened_nozzle": true,
+    "part_cooling_fan_pct": {
+      "min": 0,
+      "max": 50,
+      "recommended": 20
+    },
+    "enclosure_open_for_cooling": false,
+    "notes": "Runs hot: Siraya Fibreheart PET-GF specifies 300 °C nozzle / 80 °C bed, Raise3D Industrial PET GF 280-300 °C / 80-100 °C — 40-60 °C above a standard PETG profile, which is the clearest evidence that the base really is unmodified PET and not a glycol copolyester. An all-metal hotend is mandatory at these temperatures. Part cooling is the one direct contradiction between the two primary sources: Siraya says fan off, Raise3D says fan on, so the recorded 0-50 % band brackets both and 20 % is a compromise starting point rather than a consensus — set it from the spool's own datasheet. Siraya runs 30-120 mm/s. A hardened steel or higher-grade nozzle at 0.4-1.0 mm is explicitly required (Siraya); glass fiber is at least as abrasive as carbon. Neither vendor states an enclosure requirement, but both specify 80-100 °C beds and the material shares base PET's crystallisation-driven warp mechanism, so an enclosure is recorded as recommended by inference from the base entry (unverified). A passive enclosure suffices, so heated_chamber_required stays false."
+  },
+  "feeding": {
+    "drive_system": "any",
+    "ams_compatible": "conditional",
+    "feeding_assistant_recommended": false,
+    "notes": "Rigid, so any extruder feeds it; not an elastomer, so no shore hardness and no feeding assistant. Recorded 'conditional' rather than pet-cf's flat 'no': the limiting factor for a filled PET in a material station is fiber abrasion of the PTFE path, and glass grades are consistently treated more favourably than carbon ones because the strand stays more ductile and snaps less readily on tight bend radii — the same reasoning that puts abs-gf and petg-gf at 'conditional' while pet-cf and pa6-cf sit at 'no'. No vendor publishes an AMS verdict for PET-GF specifically (unverified), and Bambu bars filled PET generally outside its own optimised lines, so verify per product. Dry before loading: at 290 °C residual moisture hydrolyses the melt rather than merely bubbling it."
+  },
+  "drying": {
+    "required_before_use": "always",
+    "temp_c": {
+      "min": 70,
+      "max": 120,
+      "recommended": 80
+    },
+    "time_hours": {
+      "min": 4,
+      "max": 12,
+      "recommended": 8
+    },
+    "methods": [
+      "dedicated high-temperature filament dryer",
+      "blast/convection oven at 70-80 °C for 8-12 h",
+      "short high-temperature cycle at 100-120 °C for 4-6 h (Siraya)",
+      "print from a sealed drybox with desiccant"
+    ],
+    "dryness_validation": "No popping, crackling or steam at the nozzle and no frosting or foaming of the extruded strand. Neither vendor specifies a formal test (unverified). Treat a failed check the way pet-cf's entry does rather than pushing through: wet PET loses molecular weight permanently in the melt, and drying afterwards does not recover the strength.",
+    "notes": "The two primary sources disagree on both schedule and necessity. Raise3D specifies 70-80 °C for 8-12 h unconditionally; Siraya specifies 100-120 °C for 4-6 h and only 'if moisture is detected'. The recorded band spans both and 'always' follows Raise3D and the pet-cf precedent, because the 280-300 °C melt makes any residual water more damaging than the low 0.5 % absorption figure suggests. In storage terms this is a far lighter burden than pa-cf's — the resin picks up little — but the consequence of what it does pick up is worse."
+  },
+  "storage": {
+    "recommendations": "Sealed with desiccant between prints, and printed from a drybox on long jobs at these temperatures. Both vendors claim low absorption (Siraya specs 0.5 % water absorption), so this is closer to base PETG's storage-forgiving behaviour than to the nylon composites — but the high nozzle temperature means the tolerance for what does get absorbed is lower than the absorption number implies.",
+    "max_humidity_pct": 30,
+    "hygroscopy": "moderate"
+  },
+  "price": {
+    "usd_per_kg_low": 45,
+    "usd_per_kg_high": 55,
+    "notes": "Siraya Tech Fibreheart PET-GF at $48.99/kg (MatterHackers) is the one verified figure. Raise3D publishes no price for its Industrial PET GF and third-party retail for the class typically lands $45-55/kg (unverified). That puts it above petg-gf's $25-35/kg and above pet-cf's $35-45/kg — unusual, since glass normally undercuts carbon, and a sign this is a smaller specialist category rather than a commodity one."
+  },
+  "use_cases": {
+    "recommended": [
+      "jigs, fixtures and manufacturing tooling",
+      "automotive components and under-bonnet-adjacent brackets (annealed)",
+      "drone and robotics structural parts",
+      "electrical and electronics housings, where a non-conductive filler matters",
+      "outdoor equipment where the vendors' UV-stability claims and 0.5 % water absorption both help",
+      "parts that will be annealed to reach 105-134 °C service"
+    ],
+    "not_recommended": [
+      "as-printed parts expected to hold shape above ~78 °C — unannealed HDT is barely better than plain PETG",
+      "cosmetic or Class-A surfaces (glass fiber leaves a rougher finish than unfilled PETG)",
+      "food-contact items — unfilled PET often is food-contact grade, but no glass-filled product here carries that certification",
+      "printers without an all-metal hotend or a hardened nozzle",
+      "tight-tolerance parts printed without deciding the annealing question first — annealing changes dimensions",
+      "impact-critical parts after annealing (Charpy halves from 14 to 7.5 kJ/m²)"
+    ]
+  },
+  "suitability": {
+    "food_contact": "no",
+    "load_bearing": "moderate",
+    "high_temperature": "moderate",
+    "outdoor": "limited"
+  },
+  "properties": {
+    "density_g_cm3": 1.3,
+    "grams_per_100cm3": 130,
+    "cm3_per_100g": 76.9,
+    "shrinkage_pct": {
+      "min": 0.1,
+      "max": 0.4,
+      "recommended": 0.2
+    },
+    "heat_deflection_c": 78,
+    "max_service_temp_c": 70,
+    "tensile_strength_mpa": {
+      "min": 65,
+      "max": 75,
+      "recommended": 70
+    },
+    "notes": "Siraya Fibreheart PET-GF publishes unannealed/annealed pairs, and the gap between them is the most important thing in this entry. Density 1.3 g/cm³, just above base PET's 1.28 and pet-cf's 1.29, well below petg-gf's calculated 1.35. Tensile stress at break XY 67 MPa unannealed / 71 MPa annealed; Young's modulus XY 4300 MPa / 4200 MPa; bending strength 100 MPa / 119 MPa; Charpy impact 14 kJ/m² / 7.5 kJ/m² — annealing trades toughness for heat. HDT Method B (0.45 MPa) 78 °C unannealed and 134.1 °C annealed; Method A (1.8 MPa) 74 °C / 105 °C. The recorded 78 °C follows the schema's 0.45 MPa convention and the as-printed state, because most users do not anneal; anneal at 95 °C for 4 h in an aluminium-oxide sand bed and the figure roughly doubles. Melting point 250 °C, Vicat softening 150 °C, water absorption 0.5 %. Raise3D's grade differs slightly — tensile modulus >4.1 GPa, tensile strength >70 MPa, post-anneal heat resistance ~120 °C, Z-axis shrinkage max 0.1 % — consistent in kind. Max service temperature 70 °C is a reasoned as-printed figure below the unannealed HDT, not a datasheet value, and rises to roughly 105-120 °C annealed. Glass transition is deliberately omitted: Siraya lists 135 °C, which contradicts both base PET's omitted-but-67-81 °C literature range and pet-cf's 75 °C, and is more plausibly a crystallisation-related figure than a true Tg."
+  },
+  "scores": {
+    "ease_of_print": 5,
+    "dimensional_stability": 8,
+    "warp_tendency": 3,
+    "layer_adhesion": 6,
+    "compression_strength": 8,
+    "temperature_tolerance": 6,
+    "uv_tolerance": 6,
+    "weather_tolerance": 6,
+    "water_tolerance": 9
+  },
+  "compatibility": {
+    "bonds_with": [
+      "pet",
+      "pet-cf",
+      "pet-gf"
+    ],
+    "support_materials": [
+      "pet",
+      "pet-gf"
+    ],
+    "usable_as_support_for": [
+      "pet-gf"
+    ],
+    "notes": "Welds to itself and to base PET, and to pet-cf as the other unmodified-PET composite. Co-printing with the PETG family is not recommended despite the related chemistry: the nozzle windows are 40-60 °C apart and the shrink mechanisms differ (crystallisation here, purely thermal in PETG), so the interface is unreliable — the same reasoning recorded on pet-cf. Soluble supports are out at 280-300 °C: PVA degrades roughly 100 °C below this window and BVOH sits below it too. PLA breakaway, which works under base PETG, cannot survive contact either. Same-material or base-PET breakaway is the practical route; support pairings here are inherited from pet-cf rather than tested for this grade (unverified). Garolite is a polyamide-family surface and is not needed."
+  },
+  "plate_recommendations": [
+    {
+      "plate_id": "pei-textured",
+      "rating": "recommended",
+      "notes": "Textured PEI at 80-100 °C, as for base PET and pet-cf, and let the plate cool fully before removal. The PET/PETG family bonds strongly to PEI and the risk here is over-adhesion rather than lift, so a glue-stick separator is worth using on smooth sheets. Not vendor-documented for PET-GF specifically (unverified)."
+    },
+    {
+      "plate_id": "pei-smooth",
+      "rating": "usable",
+      "notes": "Workable with a glue-stick separator, which doubles as a release layer — bare PETG-family adhesion to smooth PEI can be strong enough to lift the coating, and a stiff glass-filled part gives nothing at the corners."
+    },
+    {
+      "plate_id": "g10-garolite",
+      "rating": "usable",
+      "notes": "Not vendor-documented for filled PET; a rigid plate plus a brim handles the residual corner-lift force. Carried from pet-cf."
+    },
+    {
+      "plate_id": "pc-plate",
+      "rating": "avoid",
+      "notes": "The 80-100 °C bed and 290 °C nozzle sit outside this plate's working range."
+    }
+  ],
+  "emissions": {
+    "voc_level": "moderate",
+    "particulate_level": "moderate",
+    "primary_emissions": [
+      "acetaldehyde",
+      "phthalic acid esters",
+      "ultrafine particles",
+      "glass fiber fines (post-processing)"
+    ],
+    "ventilation": "recommended",
+    "notes": "Chemically the low-styrene polyester profile of base PET and pet-cf — nothing like the styrene load of abs-cf or asa-cf — but emitted at a higher rate than a standard PETG profile because emission scales with extrusion temperature and this runs 280-300 °C against PETG's 230-250 °C. No PET-GF-specific emissions measurement exists (unverified); the figures are extrapolated from the PETG/PET family. Vent the enclosure externally or filter through HEPA plus activated carbon. Glass fiber dust from sanding, drilling or cutting is a separate skin and respiratory irritant."
+  },
+  "safety_notes": "Requires an all-metal hotend — a PTFE-lined hotend degrades in the 280-300 °C window and releases fluoropolymer decomposition products. Abrasive: hardened steel or higher-grade nozzle mandatory. Do not sand, drill or cut printed parts without a mask, gloves and dust capture; glass fiber fines irritate skin, eyes and airways. Annealing in a sand bed at 95 °C should be done in a ventilated space and away from anything the hot part can scorch. Not food-contact suitable, notwithstanding unfilled PET's usual food-contact status — no glass-filled product here carries that certification and the fiber-roughened surface traps bacteria.",
+  "additional_notes": "Two naming problems make this entry easy to mis-assign. First, 'PET-GF' and 'PETG-GF' are used interchangeably across the industry: if the product prints at 230-260 °C it is a glycol-modified copolyester and belongs on petg-gf, and if it needs 280-300 °C it is unmodified PET and belongs here. Second, petg-gf currently carries 'Fiberon PET-GF15' as an alias and draws its 133 °C annealed HDT figure from that product — which is a true PET-based grade and is mapped here — so those two entries should be reconciled. Position pet-gf against its neighbours by what you intend to do after printing: unannealed it is a stiffer, more dimensionally stable PETG with a hot nozzle requirement and no real heat gain; annealed it becomes a 105-134 °C material and starts to compete with pet-cf, which reaches further (205 °C HDT on Bambu's datasheet) but is a much harder print and gives up impact toughness the glass grade keeps.",
+  "provenance": {
+    "sources": [
+      "https://www.raise3d.com/filaments/glass-fiber-gf-reinforced-filament/pet-gf/",
+      "https://siraya.tech/pages/fibreheart-pet-gf-tds",
+      "https://www.matterhackers.com/store/l/siraya-tech-pet-gf-filament/sk/MHCZAYEX",
+      "https://www.3dxtech.com/products/glass-fiber-filaments/"
+    ],
+    "last_verified": "2026-08-01",
+    "confidence": "medium",
+    "conflicts": "Part cooling is a flat contradiction between the only two primary sources: Siraya specifies fan off, Raise3D fan on. Drying is nearly as bad — Siraya 100-120 °C for 4-6 h and only if moisture is suspected, Raise3D 70-80 °C for 8-12 h unconditionally — so both the schedule and the necessity are unsettled; the entry follows Raise3D on necessity. Base-resin labelling is unsettled across the whole category: the industry uses 'PET-GF' and 'PETG-GF' interchangeably and it is unverified whether every product mapped here is unmodified PET rather than a glycol copolyester, though the 280-300 °C windows strongly imply true PET for the two sourced grades. Glass transition is omitted because Siraya's stated 135 °C contradicts both base PET literature (67-81 °C) and pet-cf's 75 °C. Nearly every mechanical figure comes from a single vendor (Siraya) and exists in two states, annealed and not, differing by up to 70 °C of HDT and a factor of two in impact strength — the recorded values are the as-printed state. Max service temperature and shrinkage are reasoned, not published: only Raise3D's Z-axis 0.1 % figure is sourced. Pricing rests on one retail listing. UV and weather scores rest on Siraya's marketing claim of UV stability plus the measured 0.5 % water absorption, with no independent UV-ageing test found. Enclosure requirement is inferred from base PET, not stated by either vendor. Support pairings and plate ratings are inherited from pet-cf."
+  },
+  "trade_names": [
+    {
+      "manufacturer": "bambu-lab",
+      "product": "PET-GF",
+      "notes": "Glass-fibre-reinforced PET; loading not published on the fetched pages."
+    },
+    {
+      "manufacturer": "flashforge",
+      "product": "PET-GF",
+      "notes": "Glass-fibre-reinforced PET."
+    },
+    {
+      "manufacturer": "polymaker",
+      "product": "Fiberon PET-GF15",
+      "notes": "Semi-crystalline PET + 15 % glass fiber. Currently also listed as an alias on petg-gf, whose annealed 133 °C HDT figure comes from this product — the two entries should be reconciled in favour of this one."
+    },
+    {
+      "manufacturer": "qidi-tech",
+      "product": "PET-GF",
+      "notes": "Glass-fibre-reinforced PET."
+    }
+  ]
+}

@@ -137,19 +137,23 @@
     "bonds_with": [
       "abs",
       "asa",
-      "hips"
+      "hips",
+      "lw-asa"
     ],
     "support_materials": [
       "hips"
     ],
     "usable_as_support_for": [
       "abs",
+      "abs-cf",
+      "abs-esd",
       "abs-fr",
       "abs-gf",
       "asa",
       "asa-cf",
       "asa-gf",
       "hips",
+      "lw-asa",
       "pc",
       "pc-abs",
       "pc-pbt",

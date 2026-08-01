@@ -45,6 +45,22 @@ parameters against current manufacturer datasheets.
 
 ## Current state
 
-Skeleton + reference model complete. Entries marked `status: "example"` /
-`confidence: "placeholder"` are schema demonstrations awaiting Phase A–D research
-(see `PLAN.md` §4). The site renders whatever valid data lands in `data/`.
+Phases A–E complete, plus two variant tranches, a build-plate vendor cross-walk,
+and a trade-name cross-walk of every manufacturer catalog. The catalog holds:
+
+- **72 filaments** — 15 base chemistries plus researched variant entries for
+  aesthetic/functional PLA grades, fiber-filled composites (CF/GF across nine base
+  polymers), polyamide grades (PA6/PA12/PA66/PPA + composites), six TPU shore grades
+  with per-grade AMS/drive-system data, blends (CoPE, PC-ABS, PC-PBT), specialty
+  (ESD, FR, castable, annealable HT-PLA, stone/glitter, foaming LW grades, PEBA),
+  the high-performance tier (PEEK/PEKK/PEI-ULTEM/PPS/PPSU), and support materials.
+- **59 manufacturers** — brands, OEM/white-label relationships (including owner-verified
+  mappings), countries of manufacture, endpoints, product lines, and 1,000+ trade-name
+  mappings so marketing names (NinjaFlex, PolyTerra, PAHT-CF…) resolve to entries.
+- **13 build plates** — full compatibility matrices, prep/cleaning/removal/stuck-print
+  guidance, severity-rated damage-avoidance lists, and vendor trade names.
+
+Every entry carries per-source provenance (`sources`, `last_verified`, `confidence`)
+with source disagreements preserved in `provenance.conflicts` rather than silently
+resolved. Remaining queues live in `research/coverage-gaps.md` (tranche 3: ~10
+chemistries, 12 brands, proprietary plate surfaces).

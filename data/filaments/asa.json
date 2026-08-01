@@ -138,6 +138,8 @@
   "compatibility": {
     "bonds_with": [
       "abs",
+      "abs-cf",
+      "abs-esd",
       "abs-fr",
       "abs-gf",
       "asa",
@@ -145,6 +147,7 @@
       "asa-gf",
       "bvoh",
       "hips",
+      "lw-asa",
       "pc",
       "pc-abs",
       "pc-gf",
@@ -316,11 +319,6 @@
       "manufacturer": "eryone",
       "product": "ASA / ASA High-Speed",
       "notes": "Base ASA plus a flow-optimised grade."
-    },
-    {
-      "manufacturer": "eryone",
-      "product": "ASA Light-Weight",
-      "notes": "Foamed/lightweight ASA; base chemistry is ASA, the foaming behaviour has no catalog id (no LW-ASA equivalent to lw-pla)."
     },
     {
       "manufacturer": "esun",

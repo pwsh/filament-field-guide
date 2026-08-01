@@ -140,17 +140,21 @@
       "pla",
       "pla-cf",
       "pla-gf",
+      "pla-glitter",
       "pla-gradient",
       "pla-hf",
+      "pla-ht",
       "pla-matte",
       "pla-plus",
-      "pla-silk"
+      "pla-silk",
+      "pla-stone"
     ],
     "support_materials": [
       "bvoh",
       "petg",
       "pla",
-      "pva"
+      "pva",
+      "support-breakaway"
     ],
     "usable_as_support_for": [
       "petg",

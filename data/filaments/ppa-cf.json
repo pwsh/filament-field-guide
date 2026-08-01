@@ -225,6 +225,11 @@
       "product": "PPA-CF"
     },
     {
+      "manufacturer": "chckx3d",
+      "product": "PPA-CF Filament",
+      "notes": "Sold as 10% CF PPA (claimed HDT 195C). Chemistry DISPUTED: independent Prusa-forum testing found PA6-CF, not polyphthalamide. Mapping follows vendor labeling only."
+    },
+    {
       "manufacturer": "elegoo",
       "product": "PAHT-CF"
     },

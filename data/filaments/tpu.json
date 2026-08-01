@@ -135,6 +135,7 @@
   "compatibility": {
     "bonds_with": [
       "bvoh",
+      "lw-tpu",
       "petg",
       "pla",
       "tpu",
@@ -262,11 +263,6 @@
       "manufacturer": "azurefilm",
       "product": "Flexible filaments (TPU)",
       "notes": "Shore hardness not published on accessible pages"
-    },
-    {
-      "manufacturer": "colorfabb",
-      "product": "varioShore TPU",
-      "notes": "Nominal Shore 92A unfoamed but deliberately variable as it foams, so no fixed-durometer grade id fits; density 1.2 g/cm3 unfoamed, tensile 24 MPa at 100% flow / 12 MPa at 70%"
     },
     {
       "manufacturer": "creality",

@@ -125,6 +125,7 @@
   },
   "compatibility": {
     "bonds_with": [
+      "lw-tpu",
       "tpe",
       "tpu",
       "tpu-60a",

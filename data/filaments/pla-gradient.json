@@ -139,13 +139,15 @@
       "pla",
       "pla-cf",
       "pla-gf",
+      "pla-glitter",
       "pla-glow",
       "pla-gradient",
       "pla-hf",
       "pla-matte",
       "pla-metal",
       "pla-plus",
-      "pla-silk"
+      "pla-silk",
+      "pla-stone"
     ],
     "support_materials": [
       "bvoh",
@@ -191,6 +193,11 @@
     "conflicts": "No dedicated mechanical TDS exists for gradient PLA — every property and score in this entry is inferred from base-PLA equivalence rather than measured, which is why confidence is 'low' despite the deltas being small. Secondary risk: some vendors sell silk-gradient under the same 'gradient' label; if the spool is silk, the pla-silk entry applies instead (layer adhesion drops to roughly 4/10 and the nozzle temperature window shifts up)."
   },
   "trade_names": [
+    {
+      "manufacturer": "chckx3d",
+      "product": "Crystal Rainbow PLA Filament",
+      "notes": "Color-changing multicolor PLA, $14.99; mapped to pla-gradient as the transitioning multicolor grade."
+    },
     {
       "manufacturer": "creality",
       "product": "Hyper Rainbow PLA"

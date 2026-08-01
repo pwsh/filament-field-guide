@@ -4,9 +4,7 @@
   "aliases": [
     "PETG GF",
     "PETG Glass Fiber",
-    "Glass-filled PETG",
-    "PET-GF15",
-    "Fiberon PET-GF15"
+    "Glass-filled PETG"
   ],
   "status": "researched",
   "base_type": "petg",
@@ -190,7 +188,7 @@
     ],
     "last_verified": "2026-07-31",
     "confidence": "low",
-    "conflicts": "The category itself is the largest unresolved conflict: products branded 'PETG-GF' are variously built on PETG or on unmodified PET (Polymaker's Fiberon PET-GF15 is the latter), which splits the nozzle window between roughly 230-260 °C and roughly 300 °C and splits HDT between base PETG's ~72 °C and the annealed 133 °C recorded here. The recorded ranges deliberately span both; a single-product entry would be narrower. Density is not published by any sourced datasheet and is calculated, not measured. Tensile strength is inferred rather than sourced (only bending strength, 104 MPa, is published). Drying temperature and time are unpublished for this grade and are family defaults reasoned upward from base PETG on user reports of high moisture sensitivity. AMS status is contradictory: Fiberon markets PET-GF15 as AMS-compatible while Bambu's general guidance bars third-party fiber-filled filament — recorded 'conditional'. Confidence is 'low' rather than 'medium' because so much of the numeric data is estimated or product-specific."
+    "conflicts": "The category itself is the largest unresolved conflict: products branded 'PETG-GF' are variously built on PETG or on unmodified PET (Polymaker's Fiberon PET-GF15 is the latter), which splits the nozzle window between roughly 230-260 °C and roughly 300 °C and splits HDT between base PETG's ~72 °C and the annealed 133 °C recorded here. The recorded ranges deliberately span both; a single-product entry would be narrower. Density is not published by any sourced datasheet and is calculated, not measured. Tensile strength is inferred rather than sourced (only bending strength, 104 MPa, is published). Drying temperature and time are unpublished for this grade and are family defaults reasoned upward from base PETG on user reports of high moisture sensitivity. AMS status is contradictory: Fiberon markets PET-GF15 as AMS-compatible while Bambu's general guidance bars third-party fiber-filled filament — recorded 'conditional'. Confidence is 'low' rather than 'medium' because so much of the numeric data is estimated or product-specific. 2026-08-01: 'PET-GF15'/'Fiberon PET-GF15' aliases relocated to the new pet-gf entry (true PET-based grade); HDT/price figures drawn from that product should be re-verified against actual PETG-GF datasheets in a future pass."
   },
   "trade_names": [
     {

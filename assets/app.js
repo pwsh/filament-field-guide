@@ -862,6 +862,34 @@ const matchesText = (needle, haystackParts) => {
   return needle.toLowerCase().split(/\s+/).filter(Boolean).every((term) => hay.includes(term));
 };
 
+/**
+ * Trade-name lists run to hundreds of products per entry, so flatten each one
+ * once and reuse it for every keystroke instead of rebuilding on each filter pass.
+ */
+const TRADE_BLOBS = new Map();
+
+function tradeNameBlob(cacheKey, sources) {
+  if (!TRADE_BLOBS.has(cacheKey)) {
+    const parts = [];
+    for (const list of sources) {
+      if (!Array.isArray(list)) continue;
+      for (const t of list) {
+        if (!t) continue;
+        if (has(t.product)) parts.push(t.product);
+        if (has(t.manufacturer)) parts.push(t.manufacturer);
+      }
+    }
+    TRADE_BLOBS.set(cacheKey, parts.join(' '));
+  }
+  return TRADE_BLOBS.get(cacheKey);
+}
+
+/** Product names for a plate, from the index summary and the entity if loaded. */
+const plateSearchBlob = (summary, entity) =>
+  tradeNameBlob(`plate:${summary.id}`, [summary && summary.trade_names, entity && entity.trade_names]);
+
+const tradeNameCount = (entity) => (Array.isArray(entity && entity.trade_names) ? entity.trade_names.length : 0);
+
 /* ==========================================================================
  * 9. View: filament list
  * ========================================================================== */
@@ -1245,7 +1273,8 @@ async function viewPlates(route) {
 
     const filtered = rows.filter((r) => {
       if (!matchesText(s.q, [r.name, r.id, r.summary, r.surface_makeup, r.texture,
-        ((full.get(r.id) || {}).aliases || []).join(' ')])) return false;
+        ((full.get(r.id) || {}).aliases || []).join(' '),
+        plateSearchBlob(r, full.get(r.id))])) return false;
       if (s.texture.length && !s.texture.includes(r.texture)) return false;
       if (s.compat) {
         const c = compatOf(r.id, s.compat);
@@ -1267,7 +1296,7 @@ async function viewPlates(route) {
     container.appendChild(el('section', { class: 'card filters no-print' },
       el('div', { class: 'filter-grid' },
         field('Search', el('input', {
-          type: 'search', id: 'p-q', value: s.q, placeholder: 'name, surface, alias…',
+          type: 'search', id: 'p-q', value: s.q, placeholder: 'name, surface, alias, product…',
           oninput: debounce((e) => set({ q: e.target.value }), 250),
         })),
         field('Compatible with filament', selectControl('p-compat',
@@ -1310,11 +1339,19 @@ async function viewPlates(route) {
               hit.notes || null));
           }
         }
+        const nameFlags = el('span', { class: 'badge-group' });
+        if (isPlaceholder(r)) nameFlags.appendChild(badge('example', 'example', 'Example data pending research'));
+        const soldAs = tradeNameCount(r) || tradeNameCount(entity);
+        if (soldAs) {
+          nameFlags.appendChild(badge(`sold as ${soldAs}`, 'neutral',
+            `${soldAs} vendor product${soldAs === 1 ? '' : 's'} use this surface — searchable by product name`));
+        }
+
         body.appendChild(el('tr', {},
           el('td', { class: 'no-print', 'data-label': 'Compare' }, selectCheckbox('plates', r.id, render)),
           el('td', { class: 'cell-name', 'data-label': 'Name' },
             el('a', { href: `#/plate/${encodeURIComponent(r.id)}` }, r.name || r.id),
-            isPlaceholder(r) ? el('span', { class: 'sub' }, badge('example', 'example', 'Example data pending research')) : null,
+            nameFlags.childNodes.length ? el('span', { class: 'sub' }, nameFlags) : null,
             r.summary ? el('span', { class: 'sub', text: r.summary }) : null),
           el('td', { 'data-label': 'Texture' }, r.texture ? el('span', { class: 'pill-class', text: prettyEnum(r.texture) }) : txt('—')),
           el('td', { 'data-label': 'Surface' }, r.surface_makeup || '—'),
@@ -1552,27 +1589,41 @@ function plateRecommendationsSection(f) {
 }
 
 /**
- * "Sold as" — manufacturer product names that are chemically this material.
- * Grouped by manufacturer; collapses when a popular base material has dozens.
+ * "Sold as" — vendor product names that are this entity. Shared by filaments
+ * (chemically identical materials) and plates (same surface type).
+ *
+ * Grouped by *displayed* vendor name, not by the raw string: sources sometimes
+ * carry two spellings of one vendor (differing only in a parenthetical), which
+ * would otherwise render as two identical-looking rows. Products are
+ * de-duplicated within a group for the same reason.
  */
-function tradeNamesSection(f) {
+function tradeNamesSection(f, opts) {
+  const o = opts || {};
   const names = f.trade_names;
   if (!Array.isArray(names) || !names.length) return null;
 
   const byMaker = new Map();
   for (const t of names) {
     if (!t || !has(t.product)) continue;
-    const key = has(t.manufacturer) ? t.manufacturer : '';
-    if (!byMaker.has(key)) byMaker.set(key, []);
-    byMaker.get(key).push(t);
+    const raw = has(t.manufacturer) ? t.manufacturer : '';
+    const key = raw ? shortName('manufacturers', raw) : '';
+    if (!byMaker.has(key)) byMaker.set(key, { ids: [], products: [], seen: new Set() });
+    const group = byMaker.get(key);
+    // Prefer a raw id that resolves to a catalog manufacturer, so the row links.
+    if (raw && !group.ids.includes(raw)) group.ids.push(raw);
+    const dedupeKey = String(t.product).trim().toLowerCase();
+    if (group.seen.has(dedupeKey)) continue;
+    group.seen.add(dedupeKey);
+    group.products.push(t);
   }
-  const makers = Array.from(byMaker.keys()).sort((a, b) =>
-    shortName('manufacturers', a).localeCompare(shortName('manufacturers', b)));
+  const makers = Array.from(byMaker.keys()).sort((a, b) => a.localeCompare(b));
 
   const list = el('ul', { class: 'trade-list' });
-  for (const makerId of makers) {
+  for (const makerName of makers) {
+    const group = byMaker.get(makerName);
+    const makerId = group.ids.find((id) => entityExists('manufacturers', id)) || group.ids[0] || '';
     const products = el('ul', { class: 'taglist' });
-    for (const t of byMaker.get(makerId)) {
+    for (const t of group.products) {
       products.appendChild(el('li', {
         class: t.notes ? 'has-note' : null,
         title: t.notes || null,
@@ -1585,7 +1636,8 @@ function tradeNamesSection(f) {
       products));
   }
 
-  const total = names.length;
+  // Count what is actually shown, so the blurb matches the list after de-duplication.
+  const total = makers.reduce((n, m) => n + byMaker.get(m).products.length, 0);
   const withNotes = names.some((t) => has(t.notes));
   const body = frag(list, withNotes
     ? el('p', { class: 'small faint', text: '* hover a product for match notes and spec deltas.' }) : null);
@@ -1593,7 +1645,7 @@ function tradeNamesSection(f) {
   return section('Sold as', null,
     el('p', { class: 'small faint' },
       txt(`${total} product${total === 1 ? '' : 's'} from ${makers.length} manufacturer${makers.length === 1 ? '' : 's'} `),
-      txt('are this material chemically (matched by makeup and specs).')),
+      txt(o.blurb || 'are this material chemically (matched by makeup and specs).')),
     makers.length > 8 ? collapsible('Product names', `${total}`, body, { open: false }) : body);
 }
 
@@ -1867,6 +1919,7 @@ async function viewPlateDetail(id) {
       ['price.notes', pick(p, 'price.notes'), { label: 'Price notes' }],
       ['manufacturers', tagList(p.manufacturers), { label: 'Offered by' }],
     ])),
+    tradeNamesSection(p, { blurb: 'are this surface type (matched by makeup and behaviour).' }),
     plateCompatSection(p),
     (has(p.preparation) || has(p.cleaning)) ? section('Preparation & cleaning', null, kvTable([
       ['preparation', p.preparation],
@@ -2060,12 +2113,20 @@ async function viewPlateSheet(id) {
         isPlaceholder(p) ? txt(' · EXAMPLE DATA — pending research') : null),
       p.summary ? el('p', { class: 'fine', text: trimText(p.summary, 260) }) : null,
       el('div', { class: 'sheet-cols' },
+        /*
+         * Researched plates carry a paragraph-length surface_makeup and long
+         * vendor lists; untrimmed they push the sheet onto a second page.
+         * The detail page keeps the full text.
+         */
         sheetBlock('At a glance', miniTable([
           ['Texture', prettyEnum(p.texture)],
-          ['Surface', p.surface_makeup],
+          ['Surface', trimText(p.surface_makeup, 150)],
           ['Temp limits', fmtRange(p.temperature_limits_c, '°C')],
           ['Price', fmtPricePlate(p.price)],
-          ['Offered by', Array.isArray(p.manufacturers) ? p.manufacturers.join(', ') : null],
+          ['Offered by', trimText(Array.isArray(p.manufacturers) ? p.manufacturers.join(', ') : null, 110)],
+          // Product names help identify a plate at the printer; the full list is on the detail page.
+          ['Sold as', tradeNameCount(p)
+            ? trimText((p.trade_names || []).map((t) => t.product).filter(has).join(', '), 110) : null],
         ])),
         /*
          * A researched plate rates 30-46 materials — one row each would run to
@@ -2190,6 +2251,16 @@ const PLATE_COMPARE_ROWS = [
   { key: 'temperature_limits_c', label: 'Temperature limits', get: (p) => fmtRange(p.temperature_limits_c, '°C') },
   { key: 'price', label: 'Price', get: (p) => fmtPricePlate(p.price) },
   { key: 'manufacturers', label: 'Offered by', get: (p) => (Array.isArray(p.manufacturers) ? p.manufacturers.join(', ') : null) },
+  {
+    key: 'trade_names',
+    label: 'Sold as',
+    get: (p) => {
+      const n = tradeNameCount(p);
+      if (!n) return null;
+      const makers = new Set((p.trade_names || []).map((t) => t && t.manufacturer).filter(has));
+      return txt(`${n} product${n === 1 ? '' : 's'} from ${makers.size} vendor${makers.size === 1 ? '' : 's'}`);
+    },
+  },
   {
     key: 'damage_avoidance',
     label: 'Damage avoidance',

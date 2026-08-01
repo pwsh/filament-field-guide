@@ -1,0 +1,259 @@
+{
+  "id": "abs-cf",
+  "name": "ABS-CF (Carbon-Fiber-Filled ABS)",
+  "aliases": [
+    "ABS CF",
+    "ABS Carbon Fiber",
+    "CF-ABS",
+    "CarbonX ABS+CF",
+    "Carbon-filled ABS"
+  ],
+  "status": "researched",
+  "base_type": "abs",
+  "variation_kind": "carbon-fiber-filled",
+  "polymer_class": "composite-other",
+  "chemical_makeup": "The same amorphous acrylonitrile-butadiene-styrene terpolymer as base ABS, compounded with chopped carbon fiber at roughly 10-15 wt% — 3DXTech states 10 % high-modulus carbon fiber for CarbonX ABS+CF while third-party spec aggregators list 15 % for the same product, and most other brands disclose nothing. The fiber is physical reinforcement: the styrenic matrix, its solvent behaviour and its UV weakness are all unchanged, which is why acetone vapour smoothing still works on this grade where it does not on most composites.",
+  "summary": "The carbon counterpart to abs-gf and the ABS-family answer to asa-cf. Deltas vs abs: modulus roughly doubles (~2694 MPa), dimensional stability climbs from 4 to 8 as the fiber restrains shrinkage, and a hardened nozzle becomes mandatory — while HDT barely moves (97 °C against base ABS's 99 °C) and UV resistance does not move at all. Deltas vs the siblings: cheaper than asa-cf by a wide margin and dearer than abs-gf, better in Z than either measured composite here (Z/XY tensile 0.69), but still an indoor-only material and still, per its own datasheet, warp-prone enough to need an enclosure.",
+  "printing": {
+    "nozzle_temp_c": {
+      "min": 220,
+      "max": 270,
+      "recommended": 250
+    },
+    "bed_temp_c": {
+      "min": 90,
+      "max": 110,
+      "recommended": 100
+    },
+    "ambient_temp_c": {
+      "min": 40,
+      "max": 60,
+      "recommended": 50
+    },
+    "speed_mm_s": {
+      "min": 20,
+      "max": 200,
+      "recommended": 60
+    },
+    "enclosure_recommended": true,
+    "heated_chamber_required": false,
+    "requires_hardened_nozzle": true,
+    "part_cooling_fan_pct": {
+      "min": 0,
+      "max": 20,
+      "recommended": 0
+    },
+    "enclosure_open_for_cooling": false,
+    "notes": "The nozzle window is a 50 °C union of two disagreeing vendors — eSUN 240-270 °C, 3DXTech CarbonX ABS+CF 220-240 °C — which most likely reflects different fiber grades and loadings rather than one of them being wrong; read the spool's own datasheet before assuming a profile. Beds agree for once: both specify 100-110 °C, the top of base ABS's own range, because a stiffer filled matrix cracks rather than flexes if a corner lifts. Part cooling stays at 0 % (eSUN), as for base ABS and abs-gf. eSUN caps speed below 200 mm/s. 3DXTech recommends a layer height of 0.25 mm or greater, the same gating as pa12-cf — fiber-filled melt does not reliably fill thinner layers. A hardened steel nozzle at 0.4 mm minimum is mandatory (both vendors); base ABS needs none. eSUN calls for 'sealed box printing' and 3DXTech lists a heated chamber as recommended, but a passive enclosure is sufficient for typical parts, so heated_chamber_required stays false, matching abs and abs-gf."
+  },
+  "feeding": {
+    "drive_system": "any",
+    "ams_compatible": "conditional",
+    "feeding_assistant_recommended": false,
+    "notes": "Rigid, so any extruder drives it; not an elastomer, so no shore hardness and no feeding assistant. Recorded 'conditional' — a step down from base ABS's plain 'yes' and level with abs-gf and asa-cf — for the one reason that applies to every filled styrenic: chopped fiber abrades the PTFE feed path and the roller surfaces of a material station. The moisture problem that drives pa-cf's caveat does not apply here, since ABS absorbs far less than nylon and a station cannot dry filament in either case. No vendor publishes an AMS verdict for ABS-CF specifically (unverified), so this is reasoned from the category rather than sourced. Hardened steel nozzle required regardless of feed path."
+  },
+  "drying": {
+    "required_before_use": "if-exposed",
+    "temp_c": {
+      "min": 70,
+      "max": 80,
+      "recommended": 80
+    },
+    "time_hours": {
+      "min": 4,
+      "max": 8,
+      "recommended": 8
+    },
+    "methods": [
+      "dedicated filament dryer",
+      "convection oven at 70-80 °C",
+      "print from a drybox with desiccant"
+    ],
+    "dryness_validation": "No popping, crackling or steam at the nozzle and no bubbles or voids in a hand-pulled purge strand. As on abs-gf, base ABS's 'no fuzz on printed walls' check does not transfer — a fiber-filled wall is slightly fuzzy by nature — so judge by sound and by strand quality.",
+    "notes": "eSUN specifies 70 °C for over 8 h and 3DXTech 80 °C for 4 h, both inside base ABS's 70-85 °C / 4-8 h band: the carbon fiber adds no drying burden of its own. This is the clearest practical delta against pa-cf, which needs 80 °C for 8-16 h and cannot be left out of a dryer at all — abs-cf tolerates a shelf between prints and only needs a cycle after real exposure."
+  },
+  "storage": {
+    "recommendations": "Sealed box or drybox with desiccant, as for base ABS and abs-gf. Reabsorption is slow enough that a resealed spool survives weeks; the consequence of neglect shows as cracks and voids in the stiff filled matrix rather than as the cosmetic roughness unfilled ABS gets.",
+    "max_humidity_pct": 30,
+    "hygroscopy": "moderate"
+  },
+  "price": {
+    "usd_per_kg_low": 32,
+    "usd_per_kg_high": 70,
+    "notes": "A genuinely wide two-tier market. eSUN ABS-CF is $32.54/kg (3DJake) at the budget end; 3DXTech CarbonX ABS+CF is $48/750 g (~$64/kg) and $140/2 kg (~$70/kg), a 'Made in USA' premium. Against base ABS's $18-35/kg that is a 1.5-2x premium at the low end. It sits above abs-gf's $25-35/kg — glass is cheaper to compound than carbon — and well below asa-cf's $70-112/kg, which is the main argument for choosing this over asa-cf whenever the part stays indoors."
+  },
+  "use_cases": {
+    "recommended": [
+      "jigs, fixtures and manufacturing tooling",
+      "automotive and aerospace interior brackets",
+      "stiff lightweight structural components for indoor equipment",
+      "large flat ABS parts that would warp unfilled",
+      "parts that will be acetone-vapour smoothed — unusual for a composite, and possible here because the matrix still solvent-welds",
+      "cheaper indoor substitute for asa-cf where UV exposure is not a factor"
+    ],
+    "not_recommended": [
+      "sustained load much above ~97 °C — use pa-cf, whose HDT is 155 °C",
+      "outdoor or UV-exposed parts (inherits ABS's polybutadiene UV weakness; use asa-cf)",
+      "impact-critical or flexible parts — 3.5 kJ/m² Charpy is well down on unfilled ABS",
+      "cosmetic Class-A surfaces without post-processing (fiber print-through)",
+      "food-contact items",
+      "open-frame printers and unventilated occupied rooms",
+      "0.1 mm layer detail work — 3DXTech specifies 0.25 mm or greater"
+    ]
+  },
+  "suitability": {
+    "food_contact": "no",
+    "load_bearing": "moderate",
+    "high_temperature": "yes",
+    "outdoor": "no"
+  },
+  "properties": {
+    "density_g_cm3": 1.06,
+    "grams_per_100cm3": 106,
+    "cm3_per_100g": 94.3,
+    "shrinkage_pct": {
+      "min": 0.3,
+      "max": 0.9,
+      "recommended": 0.5
+    },
+    "glass_transition_c": 103,
+    "heat_deflection_c": 97,
+    "max_service_temp_c": 85,
+    "tensile_strength_mpa": {
+      "min": 30,
+      "max": 48,
+      "recommended": 43
+    },
+    "notes": "eSUN eABS-CF: density 1.06 g/cm³ (barely above base ABS's 1.05 and below abs-gf's 1.08 — carbon fiber is lighter than glass), tensile 43.3 MPa XY against 29.9 MPa Z (Z/XY ≈ 0.69), flexural 76.2 MPa XY, Charpy impact 3.5 kJ/m² XY, HDT@0.45 MPa 97.2 °C. A secondary listing gives 2694 MPa modulus, unverified against the primary TDS. Read this the same way as abs-gf: a stiffness upgrade, not a strength one. Tensile sits inside base ABS's own 30-45 MPa band and HDT is fractionally below base ABS's 99 °C, so nothing here buys heat resistance — only the modulus (~2694 MPa against roughly 2000-2300 MPa unfilled) and the warp behaviour move. The one place it beats its filled siblings is Z: 0.69 Z/XY is better than pet-cf's 0.47, petg-esd's 0.40 and asa-cf's 0.57, which is why layer_adhesion holds at base ABS's 5 rather than dropping. Tg and max service temperature are carried from the base abs entry; shrinkage is a reasoned reduction from base ABS's 0.5-1.5 % on the same basis as abs-gf, not a published figure."
+  },
+  "scores": {
+    "ease_of_print": 4,
+    "dimensional_stability": 8,
+    "warp_tendency": 5,
+    "layer_adhesion": 5,
+    "compression_strength": 7,
+    "temperature_tolerance": 7,
+    "uv_tolerance": 2,
+    "weather_tolerance": 2,
+    "water_tolerance": 5
+  },
+  "compatibility": {
+    "bonds_with": [
+      "abs",
+      "abs-cf",
+      "abs-gf",
+      "abs-fr",
+      "abs-esd",
+      "asa",
+      "asa-cf",
+      "asa-gf"
+    ],
+    "support_materials": [
+      "abs",
+      "hips"
+    ],
+    "usable_as_support_for": [],
+    "notes": "Welds to itself and across the styrenic family — base ABS, abs-gf, abs-fr, abs-esd, ASA and the filled ASAs all share the SAN matrix and one enclosed, hot-bed process environment. HIPS is the family's breakaway and D-limonene-soluble support; it is documented for base ABS and inferred here (unverified), exactly as on abs-gf. PLA and PETG pair badly in both directions: a 100 °C bed and 250 °C nozzle deform them and the chemistries do not fuse. PVA and BVOH are out on temperature. Not listed as a support for other materials — it welds to its own family rather than releasing from it, and leaves a fiber-roughened interface."
+  },
+  "plate_recommendations": [
+    {
+      "plate_id": "pei-textured",
+      "rating": "recommended",
+      "notes": "The default pairing at 100-110 °C, with an adhesion aid. As on abs-gf, the fiber cuts the corner-lift that makes unfilled ABS marginal on textured PEI, but general ABS-on-PEI practice still calls for a glue stick or ABS-specific promoter plus a brim on large footprints (unverified for this grade specifically). Let the plate cool before removal."
+    },
+    {
+      "plate_id": "pei-smooth",
+      "rating": "usable",
+      "notes": "Workable with glue, as for base ABS; textured is the better choice because the stiff filled part gives nothing at the corners."
+    },
+    {
+      "plate_id": "g10-garolite",
+      "rating": "usable",
+      "notes": "Not vendor-documented for filled ABS; a rigid plate plus a generous brim handles the corner-lift force the fiber does not remove. Garolite is a polyamide-family surface and is not needed here."
+    },
+    {
+      "plate_id": "carbon-fiber-plate",
+      "rating": "usable",
+      "notes": "Not separately documented for this grade; filled ABS pulls harder at the corners than unfilled, so brim accordingly."
+    },
+    {
+      "plate_id": "supertack",
+      "rating": "avoid",
+      "notes": "As base ABS and abs-gf: the coating is not rated for the 100-110 °C beds this material wants."
+    },
+    {
+      "plate_id": "pc-plate",
+      "rating": "avoid",
+      "notes": "Same thermal exclusion as base ABS."
+    },
+    {
+      "plate_id": "pp-sheet",
+      "rating": "avoid",
+      "notes": "As abs-gf: fiber fill reduces warp but does not make a polyolefin coating hold a styrenic."
+    }
+  ],
+  "emissions": {
+    "voc_level": "high",
+    "particulate_level": "high",
+    "primary_emissions": [
+      "styrene",
+      "ultrafine particles",
+      "butadiene-derived volatiles",
+      "carbon fiber fines (post-processing)"
+    ],
+    "ventilation": "required",
+    "notes": "Inherits base ABS's emission profile unchanged — styrene plus ultrafine-particle rates measured at roughly 100-1000x PLA's (Azimi et al., ES&T) — putting it in the worst tier alongside abs-gf and asa-cf and far above the PET/PETG-family composites, which emit no styrene at all. No CF-specific emissions measurement exists (unverified); the added filler surface area is a plausible but unproven particulate increase. Print in a vented enclosure or filter through HEPA plus activated carbon, never in an occupied unventilated room. Carbon fiber dust from sanding or drilling is a separate bench hazard."
+  },
+  "safety_notes": "Styrene is a respiratory irritant and a suspected carcinogen with chronic exposure — ventilation is not optional, and the enclosure is a containment measure as much as a warp-control one. Abrasive: hardened steel nozzle mandatory, and fiber wears extruder gears over time. Do not dry-sand, drill or cut printed CF parts without a respirator and dust capture. Acetone vapour smoothing works on this matrix but must be done in ventilation away from ignition sources, and it will expose fiber at the surface rather than dissolve it. Not food-contact suitable.",
+  "additional_notes": "Three filled styrenics now sit side by side and the choice between them is not about strength. Against abs-gf, carbon costs more and buys higher modulus, better measured Z performance and a black-only palette, while glass keeps the material non-conductive and cheaper. Against asa-cf the decision is UV alone: the two print almost identically, but ABS's polybutadiene rubber yellows and embrittles in sunlight while ASA's acrylate rubber does not — a 2-versus-9 gap that no fiber loading changes, at roughly half asa-cf's price for indoor work. Against pa-cf the decision is heat and moisture: pa-cf holds 155 °C HDT against this entry's 97 °C, but demands drybox discipline that abs-cf simply does not. Fiber loading is disclosed by only one brand here, so treat every mechanical number as brand-specific.",
+  "provenance": {
+    "sources": [
+      "https://www.esun3d.com/eabs-cf-product/",
+      "https://www.setterox.com/products/esun-eabs-cf",
+      "https://www.3djake.com/esun/abs-cf-black",
+      "https://www.3dxtech.com/products/carbonx-abs-cf-1",
+      "https://filascope.com/filament/carbonx-abs-cf-1",
+      "https://pubs.acs.org/doi/10.1021/acs.est.5b04983"
+    ],
+    "last_verified": "2026-08-01",
+    "confidence": "medium",
+    "conflicts": "Nozzle temperature is the headline disagreement: eSUN 240-270 °C against 3DXTech 220-240 °C, a 50 °C span with no overlap in the recommended values — almost certainly different fiber grades or loadings, but neither vendor explains it. Fiber content likewise: 3DXTech's own page says 10 % while third-party spec aggregators list 15 % for the same product, and the other five brands mapped here disclose nothing. Price splits more than twofold between the eSUN budget tier ($32.54/kg) and the 3DXTech premium tier (~$64-70/kg). The 2694 MPa modulus figure comes from a retail listing, not the primary TDS (unverified). Shrinkage is reasoned from the fiber's warp restraint rather than published, and Tg and max service temperature are carried from base ABS without independent confirmation for the filled grade. HIPS support pairing is inherited from base ABS chemistry, not tested for this grade. AMS status is reasoned from the abrasion mechanism, with no vendor statement either way. No UV data was found for any ABS-CF product; uv_tolerance 2 is carried from base ABS."
+  },
+  "trade_names": [
+    {
+      "manufacturer": "3djake",
+      "product": "ABS CF",
+      "notes": "ABS + chopped carbon fibre."
+    },
+    {
+      "manufacturer": "atomic-filament",
+      "product": "CARBON FIBER Ultra Black ABS",
+      "notes": "Also listed as Carbon Fiber ABS; loading undisclosed."
+    },
+    {
+      "manufacturer": "eryone",
+      "product": "ABS Carbon-Fiber",
+      "notes": "Carbon-fibre-filled ABS."
+    },
+    {
+      "manufacturer": "iemai-3d",
+      "product": "CF-ABS",
+      "notes": "Also sold as ABS-CF under the iSanghu label."
+    },
+    {
+      "manufacturer": "kimya",
+      "product": "ABS Carbon",
+      "notes": "Listed as ABS Carbon Black; Kimya does not separate fibre loading from black pigment in any listing found."
+    },
+    {
+      "manufacturer": "kingroon",
+      "product": "ABS-CF",
+      "notes": "Sold in the 2KG Carbon Fiber Black bundle alongside PETG-CF and PLA-CF."
+    },
+    {
+      "manufacturer": "ultimaker",
+      "product": "UltiMaker ABS Carbon Fiber (Method)",
+      "notes": "ABS + chopped carbon fibre for the Method platform."
+    }
+  ]
+}

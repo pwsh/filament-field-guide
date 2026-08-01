@@ -135,19 +135,20 @@
   },
   "compatibility": {
     "bonds_with": [
-      "tpu-gf",
+      "lw-tpu",
+      "tpe",
       "tpu",
       "tpu-60a",
+      "tpu-60d",
+      "tpu-68d",
       "tpu-85a",
       "tpu-90a",
       "tpu-95a",
-      "tpu-60d",
-      "tpu-68d",
-      "tpe"
+      "tpu-gf"
     ],
     "support_materials": [
-      "pla",
-      "petg"
+      "petg",
+      "pla"
     ],
     "usable_as_support_for": [],
     "notes": "Welds to itself and across the urethane family — same hard/soft-segment chemistry, overlapping melt windows — so a stiff GF shell over a soft 85A core is a workable multi-material design and the most interesting thing this material enables. PLA and PETG are the practical breakaway supports, matching the tpu-60d and tpu-68d grades: they release cleanly rather than welding, and the 40-60 °C bed does not deform them. It does not bond usefully to abs, asa, pc, pa or the polyolefins. Not usable as a support for anything — the fiber-roughened interface leaves a poor finish and the material is too expensive to sacrifice."
@@ -157,6 +158,16 @@
       "plate_id": "pei-textured",
       "rating": "recommended",
       "notes": "Upgraded from base TPU's 'usable' to 'recommended'. Base TPU's problem on textured PEI is over-adhesion — soft grades grip hard enough that removal tears the part, so a glue stick is applied as a RELEASE layer. At 67D that failure mode largely disappears: the part is rigid enough to lever off intact, and Siraya lists PEI film among its recommended surfaces alongside glass and PVP glue stick, with no special release-agent restriction. Run the bed at 40-60 °C. Glass and a PVP glue stick are the vendor's other named options; no plate entries exist for those yet."
+    },
+    {
+      "plate_id": "g11-garolite",
+      "rating": "usable",
+      "notes": "Backfilled from plate entry (reciprocity) — see plate page"
+    },
+    {
+      "plate_id": "geckotek-ez-stick",
+      "rating": "usable",
+      "notes": "Backfilled from plate entry (reciprocity) — see plate page"
     }
   ],
   "emissions": {

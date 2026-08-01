@@ -134,11 +134,13 @@
   "compatibility": {
     "bonds_with": [
       "pet",
-      "pet-cf"
+      "pet-cf",
+      "pet-gf"
     ],
     "support_materials": [
       "pet",
-      "pet-cf"
+      "pet-cf",
+      "support-breakaway"
     ],
     "usable_as_support_for": [
       "pet-cf"

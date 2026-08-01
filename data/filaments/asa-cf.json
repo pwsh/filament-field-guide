@@ -139,10 +139,12 @@
   "compatibility": {
     "bonds_with": [
       "abs",
+      "abs-cf",
       "abs-gf",
       "asa",
       "asa-cf",
-      "asa-gf"
+      "asa-gf",
+      "lw-asa"
     ],
     "support_materials": [
       "asa",

@@ -132,6 +132,8 @@
   "compatibility": {
     "bonds_with": [
       "abs",
+      "abs-cf",
+      "abs-esd",
       "abs-fr",
       "asa",
       "asa-gf",

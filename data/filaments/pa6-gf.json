@@ -139,15 +139,17 @@
   },
   "compatibility": {
     "bonds_with": [
-      "pa6-gf",
       "pa",
+      "pa-cf",
       "pa6",
-      "pa66",
-      "pa6-cf"
+      "pa6-cf",
+      "pa6-gf",
+      "pa66"
     ],
     "support_materials": [
       "pa6",
-      "pa6-gf"
+      "pa6-gf",
+      "support-breakaway"
     ],
     "usable_as_support_for": [
       "pa6-gf"
@@ -159,6 +161,16 @@
       "plate_id": "pei-textured",
       "rating": "recommended",
       "notes": "Upgraded from the pa6 grade's and pa6-cf's 'usable' to 'recommended' on the strength of Bambu's own guidance, which names smooth or textured PEI as the recommended plate for PA6-GF. Adhesion is strong and the fiber cuts the corner lift that makes unfilled PA6 marginal, but the base-entry caveats still stand: bare PEI adhesion to nylon is inconsistent enough that a PA glue stick is commonly applied as an adhesion PROMOTER rather than a release layer, and the enclosure is doing warp-control work the plate cannot. A garolite / G10 sheet remains the community-preferred surface for large nylon parts; a g10-garolite plate entry exists in the catalog but plate research beyond pei-textured is still pending for this entry, so only the textured-PEI rating is recorded here."
+    },
+    {
+      "plate_id": "g11-garolite",
+      "rating": "usable",
+      "notes": "Backfilled from plate entry (reciprocity) — see plate page"
+    },
+    {
+      "plate_id": "geckotek-ez-stick",
+      "rating": "usable",
+      "notes": "Backfilled from plate entry (reciprocity) — see plate page"
     }
   ],
   "emissions": {
@@ -204,6 +216,11 @@
       "manufacturer": "bambu-lab",
       "product": "PA6-GF (PA-GF)",
       "notes": "provisional id"
+    },
+    {
+      "manufacturer": "chckx3d",
+      "product": "PA6-GF Filament",
+      "notes": "10% glass-fiber PA6, $18.99; listed 260-290C nozzle, 100-120C bed."
     },
     {
       "manufacturer": "forward-am",

@@ -137,21 +137,28 @@
   "compatibility": {
     "bonds_with": [
       "abs",
+      "abs-cf",
+      "abs-esd",
       "abs-fr",
       "abs-gf",
       "asa",
       "asa-cf",
       "asa-gf",
       "hips",
+      "lw-asa",
       "pc",
       "pc-abs",
-      "pc-gf"
+      "pc-gf",
+      "support-breakaway"
     ],
     "support_materials": [
       "asa",
-      "hips"
+      "hips",
+      "support-breakaway"
     ],
     "usable_as_support_for": [
+      "abs-cf",
+      "abs-esd",
       "abs-gf",
       "asa"
     ],
@@ -286,6 +293,11 @@
     {
       "manufacturer": "bambu-lab",
       "product": "ABS"
+    },
+    {
+      "manufacturer": "chckx3d",
+      "product": "ABS Filament",
+      "notes": "Standard ABS, $13.99; listed 240-270C nozzle, 80-100C bed."
     },
     {
       "manufacturer": "coex-3d",

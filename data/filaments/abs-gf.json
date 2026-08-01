@@ -139,6 +139,8 @@
   "compatibility": {
     "bonds_with": [
       "abs",
+      "abs-cf",
+      "abs-esd",
       "abs-gf",
       "asa",
       "asa-cf",
@@ -234,6 +236,11 @@
     {
       "manufacturer": "bambu-lab",
       "product": "ABS-GF"
+    },
+    {
+      "manufacturer": "chckx3d",
+      "product": "GF-ABS Filament",
+      "notes": "10% glass-fiber ABS, $18.99; claimed HDT 100C and flexural modulus 3300 MPa are undocumented. Appears as ABS-GF in the 3dfilamentprofiles Amazon catalog."
     },
     {
       "manufacturer": "eryone",

@@ -1,0 +1,241 @@
+{
+  "id": "peba",
+  "name": "PEBA (Polyether Block Amide)",
+  "aliases": [
+    "PEBA",
+    "Polyether block amide",
+    "PEBAX",
+    "Pebax-type elastomer",
+    "PA-PE block copolymer",
+    "TPA (thermoplastic polyamide elastomer)"
+  ],
+  "status": "researched",
+  "base_type": null,
+  "variation_kind": null,
+  "polymer_class": "elastomer",
+  "chemical_makeup": "Polyether block amide — a thermoplastic elastomer of alternating rigid polyamide hard blocks (typically PA11 or PA12) and flexible polyether soft blocks, produced by polycondensation of a carboxylic-acid-terminated polyamide with an alcohol-terminated polyether. The commercial reference resin family is Arkema's Pebax. Chemically distinct from TPU (polyurethane hard/soft blocks) and from SEBS-based TPE (styrenic hard domains): the polyamide hard phase carries the oil and solvent resistance, the polyether soft phase the very high elastic rebound",
+  "summary": "The high-rebound elastomer: a polyamide/polyether block copolymer sold mostly at 85A-95A that returns roughly 70 % of the energy put into it instead of damping it like TPU, stays flexible to -60 °C, shrugs off automotive oils and solvents, and weighs ~17 % less than TPU at 1.01 g/cm³. It prints in the firm-TPU tier — direct drive preferred, moderate speeds, light cooling — but inherits nylon-adjacent moisture appetite from its polyamide blocks and costs roughly three times what standard TPU does.",
+  "printing": {
+    "nozzle_temp_c": {
+      "min": 225,
+      "max": 260,
+      "recommended": 240
+    },
+    "bed_temp_c": {
+      "min": 60,
+      "max": 90,
+      "recommended": 80
+    },
+    "ambient_temp_c": {
+      "min": 18,
+      "max": 35,
+      "recommended": 25
+    },
+    "speed_mm_s": {
+      "min": 25,
+      "max": 110,
+      "recommended": 40
+    },
+    "enclosure_recommended": false,
+    "heated_chamber_required": false,
+    "enclosure_open_for_cooling": false,
+    "requires_hardened_nozzle": false,
+    "part_cooling_fan_pct": {
+      "min": 10,
+      "max": 50,
+      "recommended": 20
+    },
+    "notes": "Brand windows agree closely: eSUN 230-260 °C (240 °C recommended) with a 60-90 °C bed, Fillamentum Flexfill PEBA 90A 225-245 °C at 70-90 °C, Kimya PEBA-S a fixed 240 °C at 85 °C. Note the bed runs markedly hotter than TPU's 20-60 °C — a real delta driven by the polyamide hard phase. eSUN's published speed range is unusually wide at 25-110 mm/s; treat the low end as the safe starting point, since elastomer flow and not the machine sets the ceiling. Light part cooling (eSUN 10-50 %) rather than TPU's 20-50 % or TPE's fan-off. No enclosure is needed at desktop scale for a 90A grade; large or thin-walled parts benefit from a warm draft-free chamber (unverified — no brand publishes a chamber spec). Unfilled, so a standard brass nozzle is fine. Foamed PEBA Air/LW sub-grades add a temperature-controlled expansion axis on top of this window and behave like the lw-tpu entry in that respect."
+  },
+  "feeding": {
+    "drive_system": "direct-drive-recommended",
+    "ams_compatible": "conditional",
+    "feeding_assistant_recommended": true,
+    "notes": "Deliberately one notch more permissive than base tpu on both fields, and both deltas are inferences rather than vendor statements. Drive system: PEBA ships mainly at 85A-95A, and at a given durometer its polyamide hard phase makes the strand less prone to buckling than urethane — sourced guidance is that direct drive is 'strongly preferred' and that Bowden setups work with a flexible-filament guide tube, which is 'recommended' rather than tpu's 'required' (unverified for PEBA specifically). AMS: no manufacturer publishes a pass/fail verdict. Applying Bambu's own TPU threshold logic (firm grades feed, soft grades bend and jam the feed tube), 90A-95A PEBA is workable at reduced feed speed while foamed PEBA Air/LW grades reaching 66A-80A effective hardness should be run from an external spool holder — hence 'conditional' rather than tpu's flat 'no'. A spool-side feeding assistant is worth it at the soft end and for the foamed grades, where spool drag stretches the filament into under-extrusion. Enclosure open for cooling: no PEBA-specific door-open guidance exists, so false is recorded rather than inherited from the TPU row (same treatment as the tpe entry)."
+  },
+  "drying": {
+    "required_before_use": "always",
+    "temp_c": {
+      "min": 70,
+      "max": 75,
+      "recommended": 70
+    },
+    "time_hours": {
+      "min": 6,
+      "max": 8,
+      "recommended": 8
+    },
+    "methods": [
+      "dedicated filament dryer at 70-75 °C",
+      "convection or hot-air oven at 70 °C",
+      "print directly from a drybox with desiccant",
+      "in-print drying for long jobs"
+    ],
+    "dryness_validation": "No popping, crackling or visible steam at the nozzle; no foamy or bubbled surface on a hand-pulled test strand; consistent elastic extrudate rather than surging flow; no rise in stringing on a retraction test. On foamed PEBA Air/LW grades the foam itself makes a bubbled extrudate normal, so judge by popping and by whether the expansion ratio is repeatable rather than by surface texture.",
+    "notes": "eSUN publishes 70-75 °C for 6-8 h for PEBA-90A — the only brand-published schedule found; Fillamentum and Kimya publish none (unverified). Treat drying as routine rather than occasional: the polyamide hard blocks are hygroscopic in the nylon sense, which is the main handling difference from TPU and the reason 'always' is recorded. For long prints, feeding from an active dryer is worthwhile."
+  },
+  "storage": {
+    "recommendations": "Sealed with fresh desiccant at all times, targeting under 20 % RH, and ideally printed straight from a drybox. No brand publishes storage specifics for PEBA (unverified); the polyamide content means nylon-grade discipline is the safe default rather than TPU-grade.",
+    "max_humidity_pct": 20,
+    "hygroscopy": "high"
+  },
+  "price": {
+    "usd_per_kg_low": 75,
+    "usd_per_kg_high": 110,
+    "notes": "Firm data point: eSUN PEBA-90A Black, 800 g spool at $71.77 (3DJake) works out to about $90/kg. Fillamentum Flexfill PEBA and Kimya PEBA-S are premium European lines and sit at or above that; no per-kg listing was confirmed for either (unverified), so the upper bound is an estimate. Roughly 2-3x standard TPU's $20-40/kg and among the most expensive non-high-performance filaments in the catalog."
+  },
+  "use_cases": {
+    "recommended": [
+      "footwear midsoles, insoles and soft-goods prototypes",
+      "sports equipment padding (cycling, golf, helmet liners)",
+      "high-cycle fatigue parts for drones and robotics",
+      "energy-return and rebound elements where TPU's damping is a drawback",
+      "prosthetics, orthotics and medical device components",
+      "vibration and impact isolation with fast recovery",
+      "parts exposed to automotive oils, toluene or acetone",
+      "cold-environment flexible parts (rated to -60 °C)",
+      "cushioning packaging and wearables"
+    ],
+    "not_recommended": [
+      "rigid structural or load-bearing parts",
+      "sustained service above roughly 80 °C",
+      "damping and shock-absorbing duty where energy should be dissipated rather than returned (use TPU)",
+      "budget-sensitive flexible parts where TPU would do (2-3x the cost)",
+      "tight-tolerance mating parts (elastic recovery causes dimensional drift)",
+      "unqualified food-contact use"
+    ]
+  },
+  "suitability": {
+    "food_contact": "conditional",
+    "load_bearing": "no",
+    "high_temperature": "no",
+    "outdoor": "limited"
+  },
+  "properties": {
+    "shore_hardness": "85A-95A",
+    "density_g_cm3": 1.01,
+    "grams_per_100cm3": 101,
+    "cm3_per_100g": 99.0,
+    "tensile_strength_mpa": {
+      "min": 7.5,
+      "max": 36,
+      "recommended": 30
+    },
+    "notes": "Density is the tightest-agreeing figure in the entry: Fillamentum 1.00, eSUN 1.01, Kimya 1.013 g/cm³ — 1.01 recorded, and the derived 101 g/100 cm³ and 99.0 cm³/100 g follow from it. That is 15-20 % below TPU's 1.22, so a PEBA spool yields ~21 % more printed volume than a TPU spool of the same weight, and finished parts are correspondingly lighter. Shore hardness clusters at 85A-95A across brands (eSUN PEBA-90A, Kimya PEBA-S measured 93A per ISO 868, Fillamentum Flexfill PEBA 90A); foamed Air/LW sub-grades reach 66A-95A by foaming ratio rather than by resin choice. Tensile strength is recorded as the full reported spread because test methods differ, not because grades do: eSUN reports 7.5 MPa in Z and >16.5 MPa in XY, while Fillamentum (36 MPa) and Kimya (32.8 MPa, ISO 37/2/500) use high-elongation dumbbell methods that are not directly comparable. Elongation at break likewise spans 150 % (eSUN Z) / >520 % (eSUN XY) / >550 % (Kimya) / >1000 % (Fillamentum). Resilience is the defining number: ~70 % energy return per eSUN, versus the hysteretic damping behaviour of TPU. Melting point 149 °C (Kimya). Tg is not published by any brand and is omitted rather than guessed; HDT is not meaningful for an elastomer and is likewise omitted. Low-temperature flexibility is rated to -60 °C (Fillamentum). Shrinkage is not published (unverified) but is low, as for all elastomers."
+  },
+  "scores": {
+    "ease_of_print": 4,
+    "dimensional_stability": 5,
+    "warp_tendency": 1,
+    "layer_adhesion": 4,
+    "compression_strength": 2,
+    "temperature_tolerance": 3,
+    "uv_tolerance": 4,
+    "weather_tolerance": 5,
+    "water_tolerance": 5
+  },
+  "compatibility": {
+    "bonds_with": [
+      "peba"
+    ],
+    "support_materials": [],
+    "usable_as_support_for": [],
+    "notes": "Deliberately sparse: no sourced page documents co-printing PEBA with anything. Same-material welding is the only claim made here. Chemically it is a polyamide block copolymer, so a weld to the pa family is plausible in principle — but PEBA prints at 225-260 °C against unfilled PA's 250-290 °C, and no source tests the joint, so pa is left out rather than asserted (unverified). Bonding to TPU and TPE is likewise undocumented despite all three being elastomers; urethane, styrenic and polyamide hard phases are not interchangeable. Supports: PEBA is normally printed single-material, and neither PVA nor BVOH nor HIPS is documented as a working interface for it (unverified). Cross-reference: eSUN's foamed PEBA-LW is chemically this material with a blowing agent, not a foamed TPU — see the lw-tpu entry, which explicitly excludes it."
+  },
+  "plate_recommendations": [
+    {
+      "plate_id": "pei-textured",
+      "rating": "usable",
+      "notes": "No PEBA-specific build-surface guidance was found in any sourced page (unverified); this is inferred from TPU practice. Textured PEI grips elastomers well at a 60-90 °C bed, and the usual failure mode is over-adhesion rather than lifting — a glue stick is often applied as a release layer so the soft first layer is not torn on removal. The heavy plate texture also prints through into the soft first layer more visibly than it does on rigid materials."
+    },
+    {
+      "plate_id": "pei-smooth",
+      "rating": "usable",
+      "notes": "Inferred from TPU behaviour (unverified). Smooth PEI at PEBA's 70-90 °C bed can fuse hard enough to damage the sheet on removal; lay down a full glue-stick separator if using it. Some elastomer users prefer smooth PEI plus glue precisely because it leaves a clean, untextured underside."
+    },
+    {
+      "plate_id": "g10-garolite",
+      "rating": "usable",
+      "notes": "Inferred from the TPU entry, where G10 is a standout because it grips elastomers without fusing and needs no release agent (unverified for PEBA). Start at a low bed temperature and raise only if the first layer lifts."
+    },
+    {
+      "plate_id": "supertack",
+      "rating": "avoid",
+      "notes": "Inferred from the explicit TPU prohibition (unverified for PEBA): the tacky coating bonds to soft elastomers and tears when the part is pulled. PEBA's 70-90 °C bed also sits above this surface's intended low-temperature range."
+    },
+    {
+      "plate_id": "buildtak-polymer",
+      "rating": "avoid",
+      "notes": "Inferred from the TPU entry (unverified): the vendor states flexibles typically fuse with the surface on large parts, and the film tears on removal."
+    }
+  ],
+  "emissions": {
+    "voc_level": "low",
+    "particulate_level": "low",
+    "primary_emissions": [
+      "ultrafine particles",
+      "polyamide/polyether thermal decomposition products (unverified)"
+    ],
+    "ventilation": "recommended",
+    "notes": "No VOC or ultrafine-particle measurement for PEBA was found in any sourced page, so both levels are estimates by chemistry and print temperature rather than measurements (unverified). PEBA is neither a styrenic nor a urethane: there is no styrene pathway as with ABS/ASA/HIPS and no isocyanate pathway as with TPU, and polyamide-based materials print with modest odour at 225-260 °C. Caprolactam — the named VOC for PA6 — is not expected here, since PEBA's hard blocks are PA11/PA12 rather than PA6. Ventilate as general FDM practice; this is well below styrenic territory."
+  },
+  "safety_notes": "Fillamentum offers food-contact declarations for Flexfill PEBA on request, which is why food contact is 'conditional' rather than 'no' — but certification is per SKU and does not transfer between brands, and FDM layer crevices harbour bacteria regardless of resin certification. Unfilled PEBA is not abrasive and needs no hardened nozzle; compounded or filled PEBA grades would. Avoid running far above 260 °C, where polyamide decomposition chemistry becomes unpredictable.",
+  "additional_notes": "The reason to choose PEBA over TPU is rebound, not flexibility: at the same durometer TPU absorbs and dissipates energy while PEBA returns roughly 70 % of it, which is why the entire commercial market for this filament sits in footwear, sports padding and high-cycle fatigue parts. Everything else about it is a trade — three times the price, nylon-grade drying, and thinner slicer-profile support than TPU enjoys. Its secondary advantages are genuine though: 1.01 g/cm³ (the lightest elastomer in this catalog), flexibility down to -60 °C, and resistance to automotive oils, toluene and acetone that neither TPU nor SEBS TPE matches. Foamed PEBA Air/LW grades add operator-controlled density on top, spanning roughly 66A-95A from a single spool.",
+  "provenance": {
+    "sources": [
+      "https://www.esun3d.com/uploads/PEBA90A-TDS-EN.pdf",
+      "https://www.esun3d.com/peba-product/",
+      "https://www.esun3d.com/peba-lw-product/",
+      "https://fillamentum.com/collections/flexfill-peba-filament/",
+      "https://3dee.at/wp-content/uploads/2023/05/kimya-peba-s-filament-tds.pdf",
+      "https://siraya.tech/blogs/news/what-is-peba-meet-the-super-tpu-revolutionizing-3d-printing",
+      "https://siraya.tech/products/siraya-tech-rebound-peba-air-70a-95a-foamed-elastic-filament",
+      "https://www.3djake.com/esun/peba-90a-black"
+    ],
+    "last_verified": "2026-08-01",
+    "confidence": "medium",
+    "conflicts": "Tensile strength and elongation disagree by method, not by grade: eSUN splits Z (7.5 MPa / 150 %) from XY (>16.5 MPa / >520 %) while Fillamentum (36 MPa, >1000 %) and Kimya (32.8 MPa, >550 %) publish single high-elongation dumbbell figures — no single number is meaningful without stating the axis and method, so the full spread is recorded. Suitability for high temperature is also unsettled: sourced material describes it as 'moderate', but with no HDT published anywhere and a 149 °C melting point, this entry records 'no' and a temperature_tolerance of 3 matching base TPU rather than crediting an unquantified claim. Drying is single-source (eSUN only); Fillamentum and Kimya publish nothing. Storage specifics, chamber requirement, build-plate behaviour, support pairings, bonding to any other material, shrinkage, Tg and the entire emissions profile are unverified or inferred from TPU/nylon practice rather than sourced for PEBA. The feeding fields are the most consequential inferences in the entry: 'direct-drive-recommended' and 'conditional' AMS are both one notch more permissive than base tpu on the strength of reasoning about durometer and hard-phase stiffness, with no vendor statement behind either."
+  },
+  "trade_names": [
+    {
+      "manufacturer": "3dxtech",
+      "product": "3DXLabs PEBA 90A",
+      "notes": "Shore 90A polyether-block-amide; marketed on higher rebound than TPU at equal hardness."
+    },
+    {
+      "manufacturer": "amolen",
+      "product": "PEBA Basic",
+      "notes": "Declared 100 % polyether block amide: Shore 90A ±1, density ~1.01 g/cm³, tensile ~30 MPa, elongation >500 %, 78 % energy return, elastic to -60 °C, melt 175-185 °C. The melt figure runs above Kimya's 149 °C — grade-dependent hard-block content."
+    },
+    {
+      "manufacturer": "esun",
+      "product": "PEBA-90A / PEBA-85A",
+      "notes": "The reference commodity grades for this entry; PEBA-90A TDS supplies the drying schedule, ~70 % resilience and the Z/XY tensile split."
+    },
+    {
+      "manufacturer": "esun",
+      "product": "PEBA-LW",
+      "notes": "Chemically foamed lightweight PEBA — eSUN's own product page names PEBA, not TPU, as the base polymer, so it belongs here rather than under lw-tpu despite the naming parallel with eSUN's PLA-LW and ASA-LW foam line. Adjustable ~66A-92A by foaming ratio. Tracked separately as candidate id peba-lw in the coverage-gap list."
+    },
+    {
+      "manufacturer": "fillamentum",
+      "product": "Flexfill PEBA 90A",
+      "notes": "Shore 90A, density 1.00 g/cm³, tensile 36 MPa, elongation >1000 %, rated to -60 °C, resistant to automotive oils, toluene and acetone; food-contact declaration available on request."
+    },
+    {
+      "manufacturer": "kimya",
+      "product": "PEBA-S",
+      "notes": "TDS explicitly identifies the resin as Arkema Pebax-based. Measured 93A (ISO 868), density 1.013 g/cm³, tensile 32.8 MPa (ISO 37/2/500), elongation >550 %, melt 149 °C, fixed 240 °C nozzle / 85 °C bed."
+    },
+    {
+      "manufacturer": "spectrum-filaments",
+      "product": "PEBA",
+      "notes": "Polyether block amide elastomer; distinct from this catalog's tpu, tpe and cope entries. Grade hardness not confirmed on the pages reviewed."
+    },
+    {
+      "manufacturer": "Siraya Tech",
+      "product": "Rebound PEBA Air (70A-95A)",
+      "notes": "Not a catalog manufacturer id — display name. Foamed PEBA with operator-set hardness across 70A-95A; Siraya's own marketing positions PEBA as the 'super TPU' and cites 15-20 % lower density than standard TPU, which matches the measured 1.01 vs 1.22 g/cm³ gap."
+    }
+  ]
+}

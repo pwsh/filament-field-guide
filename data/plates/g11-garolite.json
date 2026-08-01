@@ -1,0 +1,575 @@
+{
+  "id": "g11-garolite",
+  "name": "G11 / FR5 Garolite (high-temperature glass-epoxy laminate)",
+  "aliases": [
+    "G11",
+    "G-11",
+    "FR5",
+    "FR-5 glass-epoxy laminate",
+    "High-temp garolite topper",
+    "Rigid G11 Garolite (steel-backed)"
+  ],
+  "status": "researched",
+  "summary": "The high-temperature sibling of G10 garolite: the same woven-glass/epoxy laminate family built on a different resin system that holds its strength far higher up the temperature curve (~179 degC continuous versus G10's ~140 degC). Sold as a 1/32 in topper with a glossier finish than standard matte garolite, it is bought overwhelmingly for one job — TPU without glue — with Nylon 12 and carbon-filled nylon as the secondary cases. Aftermarket and largely custom-fabricated; none of the seven mainstream vendor catalogues surveyed on 2026-08-01 sells a plate branded 'G11'.",
+  "surface_makeup": "Woven glass cloth impregnated with an elevated-temperature epoxy resin system and cured under heat and pressure into a rigid composite laminate (NEMA grade G11, flame-retardant variant FR5). Chemically it is the same construction as G10/FR4 — glass fabric plus epoxy — differing in the resin formulation, which is optimised to retain mechanical and dielectric strength as temperature rises rather than to maximise room-temperature hardness. Owner-supplied primary data describes the printing product as a 1/32 in (~0.8 mm) topper bonded to a magnetic spring-steel carrier, with a noticeably glossier finish than the matte standard-garolite topper sold alongside it. Like G10 it is a solid sheet, not a sprayed or powder-applied coating, so there is no coating layer to wear through. A rigid variant laminates the same 1/32 in G11 to a thick steel plate instead of spring steel.",
+  "texture": "smooth",
+  "manufacturers": [
+    "Etsy custom build-plate fabricators (owner-cited multi-surface listing)",
+    "small-batch/custom composite plate sellers (eBay Prusa HT90 'G10, G11, Garolite, Kohlefaser, PP' listings)",
+    "industrial laminate suppliers (Atlas Fibre, American Micro and similar) selling bare G11/FR5 sheet for DIY cutting"
+  ],
+  "filament_compatibility": [
+    {
+      "filament_id": "tpu",
+      "rating": "recommended",
+      "bed_temp_c": {
+        "min": 20,
+        "max": 45
+      },
+      "adhesion_aid": "none",
+      "notes": "The headline use case and the reason to buy this over G10. Owner primary data: no adhesion glue is needed with TPU, and G11 is 'primarily chosen for TPU'. The laminate grips flexibles at ambient-to-warm bed temperatures without fusing into them the way PEI does."
+    },
+    {
+      "filament_id": "tpu-95a",
+      "rating": "recommended",
+      "bed_temp_c": {
+        "min": 20,
+        "max": 45
+      },
+      "adhesion_aid": "none",
+      "notes": "Firmest common grade and the easiest case; releases by cooling plus a light flex of the spring-steel carrier."
+    },
+    {
+      "filament_id": "tpu-90a",
+      "rating": "recommended",
+      "bed_temp_c": {
+        "min": 20,
+        "max": 45
+      },
+      "adhesion_aid": "none",
+      "notes": "Not separately called out by grade in the owner data; TPU guidance is given for the family. Behaves as 95A here."
+    },
+    {
+      "filament_id": "tpu-85a",
+      "rating": "recommended",
+      "bed_temp_c": {
+        "min": 20,
+        "max": 40
+      },
+      "adhesion_aid": "none",
+      "notes": "Soft grades are exactly the ones that embed themselves into textured PEI. Run the bed cool or unheated here — the grip does not depend on bed heat."
+    },
+    {
+      "filament_id": "tpu-60a",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 20,
+        "max": 40
+      },
+      "adhesion_aid": "none",
+      "notes": "Very soft grades are not separately documented (unverified). Expect the failure mode to invert versus PEI: under-adhesion of a floppy first layer rather than fusing."
+    },
+    {
+      "filament_id": "tpu-60d",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 30,
+        "max": 60
+      },
+      "adhesion_aid": "none",
+      "notes": "Shore-D TPU behaves more like a rigid engineering plastic than a flexible; higher corner-lift force, so a brim is worth using. Undocumented on G11."
+    },
+    {
+      "filament_id": "tpu-68d",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 30,
+        "max": 60
+      },
+      "adhesion_aid": "none",
+      "notes": "As 60D. The hardest TPU grades pull hardest at corners and benefit most from the laminate's grip."
+    },
+    {
+      "filament_id": "tpu-gf",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 25,
+        "max": 50
+      },
+      "adhesion_aid": "none",
+      "notes": "Filled flexibles are undocumented here, but a solid laminate is the right class of surface for abrasive fills — there is no thin coating for glass fibre to score through."
+    },
+    {
+      "filament_id": "tpe",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 20,
+        "max": 45
+      },
+      "adhesion_aid": "none",
+      "notes": "Softer TPE compounds are not addressed by the owner text (unverified); start unheated and add bed heat only if the first layer lifts."
+    },
+    {
+      "filament_id": "cope",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 50,
+        "max": 80
+      },
+      "adhesion_aid": "none",
+      "notes": "Copolyester elastomer (TPEE class) sits between PETG and TPU in behaviour; not documented for G11."
+    },
+    {
+      "filament_id": "pa12",
+      "rating": "recommended",
+      "bed_temp_c": {
+        "min": 60,
+        "max": 90
+      },
+      "adhesion_aid": "none",
+      "notes": "Named explicitly in the owner data: no adhesion glue is needed with Nylon 12. PA12's low moisture uptake makes it the easiest nylon on any garolite-family surface."
+    },
+    {
+      "filament_id": "pa12-cf",
+      "rating": "recommended",
+      "bed_temp_c": {
+        "min": 70,
+        "max": 100
+      },
+      "adhesion_aid": "none",
+      "notes": "Carbon-filled nylon is the owner's second named use case. No coating to abrade, and the fill lowers warp force."
+    },
+    {
+      "filament_id": "pa6-cf",
+      "rating": "recommended",
+      "bed_temp_c": {
+        "min": 80,
+        "max": 100
+      },
+      "adhesion_aid": "none",
+      "notes": "PAHT-CF class. Owner covers 'Carbon Fiber Nylon' generically without splitting PA6 from PA12; treated as directly supported."
+    },
+    {
+      "filament_id": "pa",
+      "rating": "recommended",
+      "bed_temp_c": {
+        "min": 70,
+        "max": 100
+      },
+      "adhesion_aid": "none",
+      "notes": "Generic nylon inherits garolite-family behaviour — strong bond hot, clean release cold, no glue. Note the owner steers unfilled/difficult nylon toward the thicker standard Garolite topper (with Elmer's purple glue stick) rather than G11, so G11 is the nylon choice mainly when you also print TPU."
+    },
+    {
+      "filament_id": "pa6",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 70,
+        "max": 100
+      },
+      "adhesion_aid": "none, purple PVP glue stick on difficult parts",
+      "notes": "PA6 is not among the grades the owner names for G11 (they name Nylon 12 and CF nylon), so this row is extrapolated. PA6's higher shrinkage and moisture sensitivity make it the harder nylon; dry the filament thoroughly before blaming the plate."
+    },
+    {
+      "filament_id": "pa66",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 80,
+        "max": 110
+      },
+      "adhesion_aid": "purple PVP glue stick on large flats",
+      "notes": "Undocumented on G11. PA66 warps harder than PA6 or PA12; the rigid steel-backed G11 variant exists precisely for this class of part."
+    },
+    {
+      "filament_id": "pa6-gf",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 80,
+        "max": 100
+      },
+      "adhesion_aid": "none",
+      "notes": "Glass-filled nylon is not separately documented (unverified), but the owner's 'nylon blends such as glass fiber and carbon filled' language for the garolite family reads across."
+    },
+    {
+      "filament_id": "ppa",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 90,
+        "max": 120
+      },
+      "adhesion_aid": "adhesion promoter recommended",
+      "notes": "High-performance polyamide; undocumented on G11. This is where G11's extra thermal headroom over G10 actually matters — a 120 degC bed sits comfortably inside the laminate's rating."
+    },
+    {
+      "filament_id": "ppa-cf",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 90,
+        "max": 120
+      },
+      "adhesion_aid": "adhesion promoter recommended",
+      "notes": "As PPA; carbon fill reduces warp but raises stiffness, so brim large footprints."
+    },
+    {
+      "filament_id": "pctg",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 65,
+        "max": 80
+      },
+      "adhesion_aid": "none",
+      "notes": "Works, but this is not the surface to buy for copolyesters — the owner routes PETG/PCTG to the thinner glossy G10 topper, which they call the best smooth cool-release surface for that family."
+    },
+    {
+      "filament_id": "petg",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 65,
+        "max": 80
+      },
+      "adhesion_aid": "none",
+      "notes": "As PCTG. No glue needed and no over-bonding of the kind smooth PEI produces, but G10 is the owner's recommendation for this material."
+    },
+    {
+      "filament_id": "petg-cf",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 70,
+        "max": 90
+      },
+      "adhesion_aid": "none",
+      "notes": "Undocumented on G11; extrapolated from PETG. Fibre fill raises corner-lift force — use a brim on large flats."
+    },
+    {
+      "filament_id": "petg-gf",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 70,
+        "max": 90
+      },
+      "adhesion_aid": "none",
+      "notes": "As PETG-CF; undocumented."
+    },
+    {
+      "filament_id": "pet",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 70,
+        "max": 90
+      },
+      "adhesion_aid": "none",
+      "notes": "Unfilled PET runs hotter and stiffer than PETG and is not covered by any G11 source (unverified)."
+    },
+    {
+      "filament_id": "pet-cf",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 70,
+        "max": 90
+      },
+      "adhesion_aid": "none",
+      "notes": "Extrapolated from PETG-CF; brim recommended."
+    },
+    {
+      "filament_id": "pla",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 50,
+        "max": 70
+      },
+      "adhesion_aid": "none",
+      "notes": "Not a listed use case for G11 and something of a waste of the plate — but there is no mechanism by which PLA would fail on a garolite laminate. Expect a glossier bottom than the matte standard-garolite topper gives."
+    },
+    {
+      "filament_id": "pla-cf",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 50,
+        "max": 70
+      },
+      "adhesion_aid": "none",
+      "notes": "Abrasive fills are a non-issue on a solid laminate. Undocumented for G11 specifically."
+    },
+    {
+      "filament_id": "pla-gf",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 50,
+        "max": 70
+      },
+      "adhesion_aid": "none",
+      "notes": "As PLA-CF."
+    },
+    {
+      "filament_id": "abs",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 100,
+        "max": 120
+      },
+      "adhesion_aid": "brim; adhesion promoter on large flats",
+      "notes": "Not addressed for G11 by the owner or any vendor (unverified), and inherited from G10 guidance. G11's higher rated service temperature means the laminate itself is untroubled at 120 degC — enclosure, not plate, remains the dominant warp variable."
+    },
+    {
+      "filament_id": "abs-gf",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 100,
+        "max": 120
+      },
+      "adhesion_aid": "brim recommended",
+      "notes": "Glass-filled ABS warps less but pulls harder at corners. Undocumented on G11."
+    },
+    {
+      "filament_id": "abs-fr",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 100,
+        "max": 120
+      },
+      "adhesion_aid": "brim; adhesion promoter on large flats",
+      "notes": "As base ABS; flame-retardant grades are not separately characterised on any garolite surface."
+    },
+    {
+      "filament_id": "asa",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 100,
+        "max": 120
+      },
+      "adhesion_aid": "Vision Miner Nano Polymer Adhesive (by analogy with G10 and carbon-fibre plates)",
+      "notes": "The owner documents the ASA-plus-Nano-Polymer-Adhesive pattern for G10, Rigid G10 and carbon fibre but not for G11 (unverified read-across). Vision Miner lists garolite among its directly supported surfaces, and the pattern is the same: spread thin, activate above 60 degC bed, and the part self-releases clean once cool."
+    },
+    {
+      "filament_id": "asa-cf",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 100,
+        "max": 120
+      },
+      "adhesion_aid": "Vision Miner Nano Polymer Adhesive",
+      "notes": "As ASA; fibre fill reduces warp but does not remove the need for a promoter."
+    },
+    {
+      "filament_id": "hips",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 95,
+        "max": 110
+      },
+      "adhesion_aid": "none to brim",
+      "notes": "Undocumented; extrapolated from styrenic behaviour on G10."
+    },
+    {
+      "filament_id": "pc",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 110,
+        "max": 125
+      },
+      "adhesion_aid": "adhesion promoter (Magigoo PC or Vision Miner) recommended",
+      "notes": "Not documented for G11. The genuine G11 advantage here is thermal: a 125 degC bed is well inside a 179 degC laminate rating and marginal on G10's 140 degC. Adhesion still wants a promoter and the part still wants an enclosure."
+    },
+    {
+      "filament_id": "pc-abs",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 100,
+        "max": 120
+      },
+      "adhesion_aid": "adhesion promoter on large flats",
+      "notes": "Sits between ABS and PC in warp force; undocumented on G11."
+    },
+    {
+      "filament_id": "pc-gf",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 110,
+        "max": 125
+      },
+      "adhesion_aid": "adhesion promoter recommended",
+      "notes": "As PC; glass fill lowers shrinkage but raises stiffness."
+    },
+    {
+      "filament_id": "pp",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 80,
+        "max": 100
+      },
+      "adhesion_aid": "PP-specific promoter (Magigoo PP) or a dedicated PP surface required",
+      "notes": "Not covered by any G11 source. Polypropylene bonds reliably only to itself or a dedicated promoter on essentially every surface in this catalogue — assume the same here."
+    },
+    {
+      "filament_id": "pp-gf",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 80,
+        "max": 100
+      },
+      "adhesion_aid": "PP-specific promoter required",
+      "notes": "Glass fill reduces warp but does not change the surface-energy mismatch."
+    },
+    {
+      "filament_id": "pva",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 45,
+        "max": 60
+      },
+      "adhesion_aid": "none",
+      "notes": "Undocumented. Keep the laminate dry — PVA residue left on a composite surface goes tacky in humid air."
+    },
+    {
+      "filament_id": "bvoh",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 45,
+        "max": 60
+      },
+      "adhesion_aid": "none",
+      "notes": "As PVA; normally only contacts the plate as a support interface."
+    },
+    {
+      "filament_id": "peek",
+      "rating": "avoid",
+      "adhesion_aid": "n/a",
+      "notes": "Recorded as avoid pending evidence, but for a different reason than on G10. The laminate's ~179 degC continuous rating actually clears PEEK's 130-160 degC bed range, which G10's ~140 degC does not — so the material is not the blocker. What is missing is any adhesion data at all, plus a rating for the adhesive bonding the topper to its steel carrier, which is the real ceiling on an assembled plate."
+    },
+    {
+      "filament_id": "pekk",
+      "rating": "avoid",
+      "adhesion_aid": "n/a",
+      "notes": "As PEEK — thermal headroom exists on paper, published data does not."
+    },
+    {
+      "filament_id": "pei-ultem",
+      "rating": "avoid",
+      "adhesion_aid": "n/a",
+      "notes": "As PEEK. No source describes printing ULTEM on a G11 topper."
+    },
+    {
+      "filament_id": "pps",
+      "rating": "avoid",
+      "adhesion_aid": "n/a",
+      "notes": "No data. Bed temperatures of 120-150 degC are within the laminate rating but the assembled plate's adhesive is unrated at those temperatures."
+    },
+    {
+      "filament_id": "pps-cf",
+      "rating": "avoid",
+      "adhesion_aid": "n/a",
+      "notes": "As PPS."
+    },
+    {
+      "filament_id": "ppsu",
+      "rating": "avoid",
+      "adhesion_aid": "n/a",
+      "notes": "As PPS; no source addresses it on any garolite grade."
+    }
+  ],
+  "preparation": "Nothing beyond a wash before first use: soap and warm water or an IPA wipe to remove handling oils and shipping residue, then dry fully before mounting on the magnetic base. The distinguishing prep instruction for G11 is a negative one — the owner explicitly recommends light sanding for the thicker standard Garolite topper to increase adhesion, and explicitly does not for G11, whose selling point is a glossier, harder, more wear-resistant face. Treat that omission as deliberate rather than an oversight: sanding a glossy G11 topper trades away the finish it was bought for. Per-print prep is likewise minimal, because the core use cases (TPU, Nylon 12, carbon-filled nylon) are all documented as needing no adhesion glue at all. Resist pre-coating out of habit; an adhesive layer negates the cold self-release behaviour that is the point of the surface. Do check first-layer Z after mounting — a 1/32 in topper is roughly twice the thickness of the 1/64 in G10 sheet and moves the datum accordingly. On Bambu machines, disable automatic plate detection or select a compatible plate profile, since the printer cannot identify a third-party composite topper.",
+  "cleaning": "No G11-specific cleaning procedure is published by any source, so this is the G10 routine applied by analogy (unverified for G11). Wipe cold with 90%+ IPA to lift finger oils, or wash with warm water and unscented dish soap for a deeper reset, then dry completely — trapped moisture on a glass-epoxy composite shows up as first-layer inconsistency. Lift stray plastic flecks with a plastic scraper or a fingernail rather than a steel blade. Skip acetone and other aggressive solvents: cured glass-epoxy tolerates brief contact better than any PEI coating, but the exposure that matters is at the perimeter, where solvent reaches the adhesive bonding the laminate to its steel carrier. Never soak a flex-mounted topper. Because the G11 face is glossy rather than matte, contamination shows more readily than on standard garolite — which is a diagnostic advantage, not a problem.",
+  "model_removal": "Cool-then-release, and on the spring-steel version a light flex finishes the job. The laminate grips hard at bed temperature and lets go as the plate comes down to ambient, so patience is the technique: let the bed reach room temperature and most parts either self-release or come free with a progressive bow of the carrier from one corner. Do not pry hot — at bed temperature the surface is at peak grip. On the rigid steel-backed G11 variant the mechanics change fundamentally and this is the single most important thing to understand about that product: the plate cannot flex, so there is no mechanical peel available at all. Release depends entirely on differential thermal contraction between part and laminate as the plate cools, which means waiting longer, not pulling harder. Users coming from spring-steel plates habitually reach for the flex that is not there and then escalate to a tool; the correct move is to walk away until the plate is genuinely cold. A thin plastic spatula entered at a corner is the only tool that should ever touch either version.",
+  "stuck_print_recovery": "No G11-specific recovery procedure exists in the owner text or in any vendor source (unverified), so use the garolite-family ladder and stop at the first step that works. Wait for full room temperature first, because most 'stuck' prints on this surface are prints lifted too early. On a spring-steel-backed topper, flex progressively from one corner and reverse around the perimeter. Wick IPA under the print edge and give it a minute to creep beneath the first layer. For a large flat footprint, draw unwaxed dental floss or fishing line under one edge and saw along the bond line — shear rather than a point load. Escalate last to a thin plastic spatula entered at a corner. On the rigid variant, skip the flex step entirely and lean harder on cooling time and IPA wicking. Never use a metal blade or a chisel: glass-epoxy laminate chips, and unlike a coating there is no touch-up path. A 10-15 minute freezer cycle is a plausible last resort on a flex-mounted topper but is undocumented for G11 and puts condensation on a composite, so dry it thoroughly before the next print.",
+  "damage_avoidance": [
+    {
+      "item": "Metal blades, chisels and sharp scrapers",
+      "reason": "Extrapolated from G10 guidance, which is documented (unverified for G11 specifically). On a glass-epoxy laminate a blade does not score a coating, it chips the resin-rich top layer away from the woven glass beneath, and that damage cannot be touched up or re-covered. On G11 the loss is larger because the glossy face is the differentiating property being paid for.",
+      "severity": "destroys"
+    },
+    {
+      "item": "Sanding or scuffing the surface",
+      "reason": "Inverts the advice given for standard matte garolite, and that inversion is the point. The owner recommends light sanding on the thicker standard Garolite topper to increase adhesion, and pointedly does not recommend it for G11, which is sold on a glossier finish and best-in-class wear resistance. Sanding a G11 topper destroys the finish that distinguishes it, and cutting past the resin into the glass weave leaves a zone with different adhesion and a different Z datum permanently.",
+      "severity": "destroys"
+    },
+    {
+      "item": "Adhesion glues applied out of habit",
+      "reason": "Not corrosive, just self-defeating. The owner states plainly that no adhesion glue is needed with Nylon 12 or TPU, which are the two materials the plate exists for. A glue layer negates the cold self-release behaviour, and residue builds into a haze on a glossy face that then has to be washed out before release behaviour returns to normal.",
+      "severity": "degrades"
+    },
+    {
+      "item": "Acetone and other aggressive solvents",
+      "reason": "Extrapolated from G10 rather than vendor-stated for G11. Cured glass-epoxy is itself chemically resistant; the vulnerable joint is at the perimeter, where solvent reaches the adhesive bonding the laminate to its spring-steel or plate-steel backing. That bond is the documented weak link on every mounted composite topper in this catalogue.",
+      "severity": "degrades"
+    },
+    {
+      "item": "Soaking or prolonged immersion",
+      "reason": "The laminate itself has very low water absorption and is not the problem; the mounting adhesive is. Repeated soaking is the named accelerator of laminate-to-steel bond failure on G10 and applies equally here. Wash quickly, dry fully, and never leave a mounted topper sitting in water.",
+      "severity": "degrades"
+    },
+    {
+      "item": "Over-flexing the spring-steel-backed version",
+      "reason": "Garolite is rigid, not springy, and a 1/32 in topper is thicker and less forgiving than a 1/64 in G10 sheet. Over-flexing thin garolite is documented as cracking the sheet — a different failure from the permanent set you get by over-bending spring steel. Bow progressively from a corner and let cold release do the work.",
+      "severity": "destroys"
+    },
+    {
+      "item": "Trying to flex the rigid steel-backed variant",
+      "reason": "It will not flex — that is the entire design intent, so that high-warp parts cannot curl the plate 'like a potato chip'. Attempting to bend it either does nothing or damages the laminate-to-plate bond at the edges. Release on the rigid version comes from cooling alone, so the fix for a stubborn part is time, not force.",
+      "severity": "destroys"
+    },
+    {
+      "item": "Printing the first layer too low",
+      "reason": "Called out across garolite guidance as making prints extremely difficult and sometimes impossible to remove. On a surface bought precisely because it grips TPU and nylon without glue, an over-squished first layer pushes that grip past the point of clean separation — and freeing the part is what puts a blade on the plate in the first place.",
+      "severity": "destroys"
+    },
+    {
+      "item": "Assuming the 179 degC laminate rating is the plate's rating",
+      "reason": "G11/FR5 stock is rated around 179 degC continuous service versus roughly 140 degC for G10/FR4, and that headroom is the material's main technical advantage. It is not the assembled plate's limit: no vendor publishes a maximum bed temperature for a G11 topper, and the adhesive bonding it to steel is the binding constraint. Running an assembled plate near the bare-laminate figure on the strength of a datasheet is the most likely way to delaminate one.",
+      "severity": "degrades"
+    },
+    {
+      "item": "Freezer cycles",
+      "reason": "Undocumented for G11. Plausible as a last resort on a flex-mounted topper, but a composite pulled from a freezer condenses moisture across the face and into any exposed edge of the laminate stack. Dry thoroughly before remounting rather than putting a damp plate back on the magnet.",
+      "severity": "degrades"
+    }
+  ],
+  "temperature_limits_c": {
+    "max": 179,
+    "recommended": 120
+  },
+  "lifespan_notes": "The owner's central durability claim is that this is the most wear-resistant surface they offer — 'like glass as far as durability', with thousands of prints over the same area without degradation. That claim is unverified quantitatively; no independent print-count data exists for G11 toppers. It is at least directionally consistent with the material: a solid cured laminate has no coating to wear through, and industrial sources agree that G11 holds mechanical and dielectric properties under heat better than G10 while G10 is marginally harder at room temperature. Practical wear should therefore appear as slow polishing and eventual loss of gloss in the high-use centre zone, then resin loss exposing glass fibres, at which point adhesion drops and the topper is replaced outright — there is no recoating path. On mounted versions the adhesive bond to the steel carrier remains the likeliest first failure, especially with repeated soaking or sustained high bed temperatures. No vendor publishes a replacement interval, so the practical rule is the same as for G10: replace when adhesion no longer returns after a proper degrease.",
+  "price": {
+    "notes": "No per-unit price could be established. None of the seven vendor catalogues surveyed on 2026-08-01 (DarkMoon3D, BIQU, Sliceworx, Wham Bam, BuildTak, MatterHackers LayerLock, Tyson Build) sells a plate branded G11 or FR5, and the owner's product is sold through a custom Etsy build-plate listing whose pricing is not disclosed in the research. Industrial laminate sources note that G11/FR5 stock costs more than G10/FR4 and is harder to machine accurately, so G11 toppers should be expected to price above the USD 25-40 seen for the 250 mm-class G10 sheets in this catalogue — but that is an inference from raw-material economics, not an observed price."
+  },
+  "additional_notes": "G11 is best understood as G10 with the resin system swapped for high-temperature performance, and in practice it is sold and bought as a TPU plate rather than as a high-temperature plate — the owner's own framing is 'if you print with TPU a lot, then you absolutely need this'. Two things separate it from the G10 entry in this catalogue: it ships as a thicker 1/32 in topper with a glossy rather than matte face, and its 179 degC continuous rating gives roughly 40 degC more material headroom than G10's 140 degC, which matters for PC, PPA and high-temperature nylons even though nobody has published adhesion data at those temperatures. A rigid steel-backed variant exists alongside the spring-steel one: the same 1/32 in G11 laminated to a thick steel plate that deliberately will not flex, aimed at high-warp parts that would otherwise curl a spring-steel plate like a potato chip. That variant changes the removal mechanics completely, since cooling rather than flexing becomes the only release mechanism. Rigid composite plates appear to be a niche custom-fabrication segment — Etsy sellers and eBay listings for Prusa HT90-class custom plates offering 'G10, G11, Garolite, Kohlefaser, PP' — rather than a mainstream vendor SKU, and no third-party spec sheet for a rigid G11 printing plate was found. Bare G11/FR5 sheet is available from industrial laminate suppliers and can be cut to size, which is the same DIY route that exists for G10.",
+  "trade_names": [
+    {
+      "manufacturer": "Etsy custom build-plate fabricator (owner listing 4299347986)",
+      "product": "G11 Garolite (1/32 in topper)",
+      "notes": "ALREADY PRESENT in g11-garolite.trade_names - skip on merge to avoid a duplicate."
+    },
+    {
+      "manufacturer": "Etsy custom build-plate fabricator (owner listing 4299347986)",
+      "product": "Rigid G11 Garolite",
+      "notes": "ALREADY PRESENT in g11-garolite.trade_names - skip on merge to avoid a duplicate."
+    },
+    {
+      "manufacturer": "Etsy custom build-plate fabricator (owner-cited multi-surface listing, listing 4299347986)",
+      "product": "G11 Garolite (1/32 in topper)",
+      "notes": "Owner-supplied primary description: glossier than the standard Garolite topper, most wear-resistant surface offered, no glue for Nylon 12, CF nylon or TPU."
+    },
+    {
+      "manufacturer": "Etsy custom build-plate fabricator (owner-cited multi-surface listing, listing 4299347986)",
+      "product": "Rigid G11 Garolite",
+      "notes": "Standard 1/32 in G11 laminated to a thick steel plate; will not flex, aimed at high-warp parts. Release is by cooling only."
+    },
+    {
+      "manufacturer": "small-batch custom plate sellers (eBay Prusa HT90 custom plate listings)",
+      "product": "G11 custom build plate",
+      "notes": "Surfaced during research as one option in a 'G10, G11, Garolite, Kohlefaser, PP' menu; no detailed spec page found, listing-level evidence only (unverified)."
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "Owner-provided vendor build-surface descriptions (primary): /home/claude/filament-repo/research/vendor-plate-descriptions.md, quoting https://www.etsy.com/listing/4299347986/bambu-lab-h2d-custom-build-plate — G11 Garolite and Rigid G11 Garolite entries",
+      "American Micro Industries - Guide to Garolite laminates (glass-fabric/epoxy construction, PA and high-temperature polymer tooling as classic use cases): https://www.americanmicroinc.com/resources/guide-garolite-laminates/",
+      "Atlas Fibre - G10 vs G11 key differences explained (resin system difference, elevated-temperature strength retention, higher cost, machining difficulty): https://www.atlasfibre.com/g10-vs-g11-key-differences-explained/",
+      "Dielectric Manufacturing - G11/FR5 material properties (~355 degF / 179 degC continuous service temperature vs ~285 degF / 140 degC for G10/FR4): https://dielectricmfg.com/",
+      "Atlas Fibre - G-10 material specification (140 degC maximum service temperature, water absorption, chemical resistance; used as the comparison baseline): https://www.atlasfibre.com/material/g-10/",
+      "MatterHackers - How To Succeed with LayerLock Garolite Build Surfaces (garolite-family handling: sharp tools cause grooves, over-flexing cracks thin sheets, printing too low): https://www.matterhackers.com/articles/how-to-succeed-with-layerlock-garolite-build-surfaces",
+      "Vision Miner - Nano Polymer Adhesive (garolite listed among directly supported surfaces; application procedure and cool self-release behaviour, cited for the ASA read-across): https://visionminer.com/products/nano-polymer-adhesive"
+    ],
+    "last_verified": "2026-08-01",
+    "confidence": "low",
+    "conflicts": "This entry rests on a single primary source for everything print-related. The owner document is the only source describing G11 as a 3D printing surface at all; every industrial citation here describes G11/FR5 as a laminate material, not as a build plate, and none of the seven vendor catalogues surveyed on 2026-08-01 sells a G11 plate. Specific gaps: the 'glossier finish' and 'most wear resistant / thousands of prints without degradation' claims are owner-only and quantitatively unverified, with no head-to-head wear comparison against G10 published anywhere. The 179 degC figure is the bare laminate's continuous service rating from industrial datasheets, not a plate-level bed-temperature spec; the assembled plate is limited lower by the adhesive to its steel backing, and the 120 degC 'recommended' value recorded here is a conservative working figure rather than a published one. Cleaning, stuck-print recovery, damage avoidance and every filament rating outside TPU, PA12 and CF nylon are extrapolated from the G10 entry rather than documented for G11. The ASA + Vision Miner Nano Polymer Adhesive pattern is documented by the owner for G10, Rigid G10 and carbon fibre but not for G11 — it is read across here and flagged in the row. PEEK/PEKK/PEI/PPS/PPSU are recorded as avoid despite the laminate having nominal thermal headroom for them, because no adhesion data exists; that is a deliberately conservative call, not a documented incompatibility. Rigid steel-backed G11 has no third-party spec sheet at all and is corroborated only circumstantially by custom-plate marketplace listings. Finally, the owner distinguishes three garolite products by thickness and finish (standard Garolite 1/32 in matte, G10 1/64 in glossy, G11 1/32 in glossier) where this catalogue currently carries only g10-garolite and this entry; the plain 'Garolite' topper has no id of its own and its guidance (light sanding, Elmer's purple glue stick) is currently folded into g10-garolite."
+  }
+}

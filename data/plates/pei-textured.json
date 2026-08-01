@@ -568,5 +568,37 @@
     "last_verified": "2026-08-01",
     "confidence": "medium",
     "conflicts": "No manufacturer publishes a hard maximum bed temperature for powder-coated PEI; Bambu rates its Textured PEI Plate across PLA through ABS and PETG-CF without a high-temp designation, so the 130 degC ceiling recorded here is inferred from supported material ranges rather than a datasheet figure. Nylon is contested: some plate vendors advertise textured PEI as nylon-compatible, while Prusa and the bulk of community experience push users to G10/garolite — recorded as avoid. Polycarbonate is likewise contested: forum reports of successful PC on textured FYSETC sheets exist alongside reports of coating pull-out, so it is recorded as usable-with-prep. PLA is occasionally reported to lift on very aggressive textures, which conflicts with its otherwise universal 'recommended' status. Bambu's USD 29 plate price is unverified against the manufacturer store."
-  }
+  },
+  "trade_names": [
+    {
+      "manufacturer": "BIQU",
+      "product": "BIQU Panda Build Plate - textured face",
+      "notes": "Double-sided textured + smooth PEI on spring steel; this row covers the textured face."
+    },
+    {
+      "manufacturer": "BIQU",
+      "product": "BIQU Pyrogrip Build Plate (H2D/H2S/H2C)",
+      "notes": "Double-sided textured PEI with a grid pattern. Mapped to pei-textured rather than pei-patterned because the grid is a macro texture, not the sub-micron diffraction grating that defines the patterned/holographic category."
+    },
+    {
+      "manufacturer": "MatterHackers",
+      "product": "LayerLock Powder Coated PEI Build Plates",
+      "notes": "Powder-coated PEI on flexible spring steel."
+    },
+    {
+      "manufacturer": "Sliceworx",
+      "product": "Bambulab Compatible PEI Textured Spring Steel Sheet 184x184mm (A1 Mini)",
+      "notes": "Same coating process, smaller format."
+    },
+    {
+      "manufacturer": "Sliceworx",
+      "product": "Bambulab Compatible Textured Spring Steel Sheet 257x257mm (X1C/X1E/P1P/P1S/P2S/A1)",
+      "notes": "0.125 mm PEI powder spray then polymer flex-dip on 0.5 mm spring steel. Vendor explicitly warns TPU, nylon and PC can permanently fuse to it - worth carrying into pei-textured notes if not already present."
+    },
+    {
+      "manufacturer": "Wham Bam Systems",
+      "product": "Textured ULTEM PEI",
+      "notes": "Kiln-cured authentic ULTEM-brand PEI, double-side coated for two-sided use."
+    }
+  ]
 }

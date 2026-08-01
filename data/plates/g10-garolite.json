@@ -5,11 +5,14 @@
     "Garolite",
     "G-10",
     "FR4-style fiberglass sheet",
-    "Glass-epoxy laminate plate"
+    "Glass-epoxy laminate plate",
+    "Rigid G10 Garolite (steel-backed, no-flex variant)",
+    "Industrial-grade G10 topper (1/64 in)",
+    "PETG/PCTG cool-release garolite"
   ],
   "status": "researched",
-  "summary": "A solid fiberglass-reinforced epoxy laminate sheet — the same class of material as circuit-board substrate — used as a build surface rather than a coating. Its standout property is gripping nylon and TPU without any glue while still self-releasing on cooling. Aftermarket only; no major printer OEM ships it as a stock plate.",
-  "surface_makeup": "Woven glass cloth impregnated with epoxy resin and cured under heat and pressure into a rigid composite laminate (typically ~0.5 mm when mounted on a magnetic flex plate). Non-conductive, low water absorption, low thermal expansion. It is a solid sheet, not a sprayed or powder-applied coating, so there is no coating layer to wear through.",
+  "summary": "A solid fiberglass-reinforced epoxy laminate sheet — the same class of material as circuit-board substrate — used as a build surface rather than a coating. Its standout property is gripping nylon and TPU without any glue while still self-releasing on cooling. Owner-side vendor data frames the headline use case differently again — the best smooth cool-to-release surface on the market for PETG and PCTG, with nylon as the strong secondary case — and both framings are recorded here rather than reconciled. Aftermarket only; no major printer OEM ships it as a stock plate.",
+  "surface_makeup": "Woven glass cloth impregnated with epoxy resin and cured under heat and pressure into a rigid composite laminate (commonly sold as a 1/64 in / ~0.4 mm topper bonded to a magnetic flex plate, or ~0.5 mm in other listings). Non-conductive, low water absorption, low thermal expansion. It is a solid sheet, not a sprayed or powder-applied coating, so there is no coating layer to wear through. Owner primary data adds two construction details vendors rarely publish: the material grade matters, with true industrial-grade G10 explicitly distinguished from cheaper sheet sold under the same name, and the finish of a genuine G10 topper is glossier than the matte face of the thicker 1/32 in standard-garolite topper it is sold alongside.",
   "texture": "textured",
   "manufacturers": [
     "Darkmoon3D",
@@ -58,7 +61,7 @@
         "max": 80
       },
       "adhesion_aid": "none",
-      "notes": "Generally no glue needed — G10 does not develop the aggressive chemical bond PETG forms with smooth PEI or bare glass."
+      "notes": "Generally no glue needed — G10 does not develop the aggressive chemical bond PETG forms with smooth PEI or bare glass. Owner primary data goes further and makes this the plate's headline claim rather than a side benefit: the best smooth cool-to-release surface on the market for PETG, with no adhesion glue needed at all. Note this conflicts with the texture field, which records G10 as textured on the strength of other vendor descriptions."
     },
     {
       "filament_id": "pctg",
@@ -68,7 +71,7 @@
         "max": 80
       },
       "adhesion_aid": "none",
-      "notes": "Treated as PETG-equivalent; not separately documented by vendors (inferred from copolyester behavior)."
+      "notes": "Named explicitly alongside PETG in owner primary data as a headline use case — no adhesion glue needed, cool-release. Previously inferred from copolyester behaviour; now directly vendor-stated."
     },
     {
       "filament_id": "pet",
@@ -117,8 +120,8 @@
         "min": 100,
         "max": 120
       },
-      "adhesion_aid": "none to brim; adhesion promoter on large flats",
-      "notes": "Same conflicting-source caveat as ABS. Use a brim on large footprints."
+      "adhesion_aid": "Vision Miner Nano Polymer Adhesive (owner-specified); brim on large flats",
+      "notes": "Same conflicting-source caveat as ABS for bed temperature. Owner primary data is specific about the process: ASA works on G10 but requires Vision Miner's Nano Polymer Adhesive, after which the part self-releases clean once cool. Vision Miner independently lists garolite among its directly supported surfaces and describes the same behaviour — spread evenly on a cleaned plate, activate above 60 degC bed, and for sub-300 degC nozzle materials parts usually pop themselves off once cold, with water around the part base as an optional assist. This is the one documented exception to the plate's otherwise glue-free positioning."
     },
     {
       "filament_id": "abs-gf",
@@ -197,8 +200,8 @@
         "min": 70,
         "max": 100
       },
-      "adhesion_aid": "none (optional thin PVA for a smoother bottom)",
-      "notes": "The headline use case. Multiple community reports state garolite prints nylon with no glue at all, where PEI plates need Magigoo PA or a glue stick. A thin PVA layer is optional purely for surface finish, not adhesion."
+      "adhesion_aid": "none for most nylon; Elmer's purple glue stick for difficult parts (owner-recommended)",
+      "notes": "The headline use case. Multiple community reports state garolite prints nylon with no glue at all, where PEI plates need Magigoo PA or a glue stick. A thin PVA layer is optional purely for surface finish, not adhesion. Owner primary data refines the no-glue rule: most nylon needs nothing, but difficult nylon parts are recommended to run with an Elmer's purple glue stick — 'may not need glue at all' is the vendor's own hedge. Treat glue as a warp-and-footprint escalation on this surface, not a default."
     },
     {
       "filament_id": "pa6",
@@ -207,8 +210,8 @@
         "min": 70,
         "max": 100
       },
-      "adhesion_aid": "none",
-      "notes": "PA6 grades adhere directly; dry the filament thoroughly — moisture, not the plate, is the usual first-layer failure with nylon."
+      "adhesion_aid": "none for most nylon; Elmer's purple glue stick for difficult parts (owner-recommended)",
+      "notes": "PA6 grades adhere directly; dry the filament thoroughly — moisture, not the plate, is the usual first-layer failure with nylon. Owner primary data refines the no-glue rule: most nylon needs nothing, but difficult nylon parts are recommended to run with an Elmer's purple glue stick — 'may not need glue at all' is the vendor's own hedge. Treat glue as a warp-and-footprint escalation on this surface, not a default."
     },
     {
       "filament_id": "pa12",
@@ -217,8 +220,8 @@
         "min": 60,
         "max": 90
       },
-      "adhesion_aid": "none",
-      "notes": "Lower-moisture PA12 runs cooler and is one of the easiest nylons on this surface."
+      "adhesion_aid": "none for most nylon; Elmer's purple glue stick for difficult parts (owner-recommended)",
+      "notes": "Lower-moisture PA12 runs cooler and is one of the easiest nylons on this surface. Owner primary data refines the no-glue rule: most nylon needs nothing, but difficult nylon parts are recommended to run with an Elmer's purple glue stick — 'may not need glue at all' is the vendor's own hedge. Treat glue as a warp-and-footprint escalation on this surface, not a default."
     },
     {
       "filament_id": "pa6-cf",
@@ -313,9 +316,9 @@
       "notes": "Same as PEEK — marketing mentions exist, verified data does not."
     }
   ],
-  "preparation": "First use needs nothing beyond a wash: soap and warm water or an IPA wipe to remove handling oils and shipping residue, then dry fully before mounting on the magnetic base. Vendors consistently state no glue is required for the materials G10 is bought for (PLA, PETG, TPU, nylon), so resist the urge to pre-coat it — an adhesive layer mostly negates the self-release behavior you paid for. Per-print prep is just a check that the surface is dry and free of stray plastic flecks; the texture hides light debris but a fragment under the first layer still shows. Note that a scuff-and-sand routine is often recommended for garolite in community lore, but no vendor documentation confirming a sanding grit or interval was found, so treat sanding as unverified rather than standard practice. On Bambu machines, disable automatic plate detection or select a compatible plate code (vendors suggest a High Temp/Smooth PEI profile as a workaround) — the printer cannot identify a third-party G10 sheet and will otherwise refuse or mis-profile the job.",
+  "preparation": "First use needs nothing beyond a wash: soap and warm water or an IPA wipe to remove handling oils and shipping residue, then dry fully before mounting on the magnetic base. Vendors consistently state no glue is required for the materials G10 is bought for (PLA, PETG, TPU, nylon), so resist the urge to pre-coat it — an adhesive layer mostly negates the self-release behavior you paid for. Per-print prep is just a check that the surface is dry and free of stray plastic flecks; the texture hides light debris but a fragment under the first layer still shows. Note that a scuff-and-sand routine is often recommended for garolite in community lore, but no vendor documentation confirming a sanding grit or interval was found, so treat sanding as unverified rather than standard practice. On Bambu machines, disable automatic plate detection or select a compatible plate code (vendors suggest a High Temp/Smooth PEI profile as a workaround) — the printer cannot identify a third-party G10 sheet and will otherwise refuse or mis-profile the job. Two documented exceptions sit against the no-glue rule and are worth knowing before you start, because both come from the plate's own vendor rather than from community habit. Difficult nylon parts are recommended to run with an Elmer's purple glue stick, though the same source hedges that they may not need glue at all — so start bare and escalate. ASA is the harder case: it works on G10 but requires Vision Miner's Nano Polymer Adhesive, applied to a cleaned surface (water, glass cleaner or alcohol), spread evenly across the print area, and activated by taking the bed above 60 degC before first-layer calibration. Neither exception applies to PETG or PCTG, which are the materials this surface is most strongly recommended for and which need nothing at all.",
   "cleaning": "Routine cleaning is light-duty by design; vendors describe the textured laminate as low-maintenance and needing little cleanup between prints. Wipe cold with 90%+ IPA to lift finger oils, or wash with warm water and unscented dish soap for a deeper reset, then dry completely — this is a glass-epoxy composite and trapped moisture in the texture will show up as first-layer inconsistency. Remove stuck plastic flecks with a plastic scraper or a fingernail; avoid steel blades, which can gouge the resin-rich top layer between glass fibers. No G10-specific solvent guidance exists in the sources, so apply the same caution used for other composite surfaces: skip acetone and other aggressive solvents, which attack epoxy binders, and never soak the plate if it is bonded to a steel flex sheet — the mounting adhesive is the weak link, not the laminate.",
-  "model_removal": "Cold release is the whole trick with this surface: vendors describe it as sticky when heated and letting go 'like magic' once cool, with parts self-releasing below roughly 70 C. Let the bed drop to room temperature and most prints either pop off on their own or come free with a light flex of the sheet if it is mounted on a magnetic spring-steel carrier. For a part that is still holding at ambient, run a bead of IPA around the print's corners and let it wick under the perimeter — it breaks the seal in seconds. A spatula is rarely needed; if you reach for one, use plastic and enter at a corner rather than prying from the middle. Do not try to remove parts hot — at bed temperature the laminate is at peak grip and you will either tear the part or lever against the plate.",
+  "model_removal": "Cold release is the whole trick with this surface: vendors describe it as sticky when heated and letting go 'like magic' once cool, with parts self-releasing below roughly 70 C. Let the bed drop to room temperature and most prints either pop off on their own or come free with a light flex of the sheet if it is mounted on a magnetic spring-steel carrier. For a part that is still holding at ambient, run a bead of IPA around the print's corners and let it wick under the perimeter — it breaks the seal in seconds. A spatula is rarely needed; if you reach for one, use plastic and enter at a corner rather than prying from the middle. Do not try to remove parts hot — at bed temperature the laminate is at peak grip and you will either tear the part or lever against the plate. A rigid steel-backed variant of this surface exists and changes the removal mechanics completely: the same 1/64 in G10 laminated to a thick steel plate that deliberately will not flex, sold for high-warp parts that would otherwise curl a spring-steel plate like a potato chip. With no flex available there is no mechanical peel step at all — release depends entirely on differential thermal contraction as the plate cools, so the technique is to wait longer rather than pull harder. The vendor's own phrasing is that parts come off with little effort once the plate has reached room temperature, and that 'depending on the material' caveat is doing real work: users arriving from spring-steel plates reach for a flex that does not exist and then escalate straight to a tool. On the rigid version, cooling time is the tool. The ASA-plus-Vision-Miner combination is documented as self-releasing clean once cool on both the flexible and rigid versions.",
   "stuck_print_recovery": "No G10-specific recovery procedure is documented, so use the general escalation ladder and stop at the first thing that works. Start by simply waiting: let the plate reach full room temperature, because most 'stuck' prints on this surface are just prints removed too early. Next, flex the sheet progressively from one corner if it is on a magnetic flex plate, which is the fastest release for anything with a large footprint. If it still holds, wick IPA under the print edge and give it a minute to creep under the first layer. For big flat parts, work a length of dental floss or fishing line under one edge and saw side-to-side along the bond line. Only then reach for a thin plastic spatula, entering at a corner and never forcing from the center. Do not use a metal blade or a hammer-and-chisel approach — the glass-epoxy laminate will chip, and unlike a coating it cannot be touched up. A freezer cycle of 10-15 minutes is a reasonable last resort for a flex-mounted sheet, though it is undocumented for G10 specifically and risks condensation on a composite plate.",
   "damage_avoidance": [
     {
@@ -355,7 +358,7 @@
     },
     {
       "item": "Glue sticks and adhesion promoters applied out of habit",
-      "reason": "Not corrosive, just self-defeating and messy. Vendors state no glue is needed for the materials G10 is bought for, and an adhesive layer largely negates the cold self-release behaviour that is the point of the surface. Residue also builds into a haze in the texture that changes release behaviour and then has to be washed out.",
+      "reason": "Not corrosive, just self-defeating and messy. Vendors state no glue is needed for the materials G10 is bought for, and an adhesive layer largely negates the cold self-release behaviour that is the point of the surface. Residue also builds into a haze in the texture that changes release behaviour and then has to be washed out. Two documented exceptions exist and are not 'habit': owner vendor data recommends an Elmer's purple glue stick for difficult nylon parts, and requires Vision Miner's Nano Polymer Adhesive for ASA. Outside those two cases — and specifically for PETG and PCTG, the materials this plate is most recommended for — the rule stands.",
       "severity": "degrades"
     },
     {
@@ -367,15 +370,16 @@
   "temperature_limits_c": {
     "max": 130
   },
-  "lifespan_notes": "Durability is one of the reasons buyers choose this surface — comparison sources call out excellent longevity with high-temperature materials, and because the plate is a solid laminate rather than a coating there is nothing to wear through and expose a different substrate underneath. Wear shows as gradual polishing of the texture in the high-use center zone and, eventually, resin loss that exposes glass fibers; at that point adhesion drops and the sheet is replaced outright since recoating is not an option. On flex-mounted versions the adhesive bond to the steel carrier tends to fail before the laminate does, particularly if the plate is repeatedly soaked or run above its rated bed temperature. No vendor publishes a print-count or replacement interval, so treat 'replace when adhesion no longer returns after a soap wash' as the practical rule.",
+  "lifespan_notes": "Durability is one of the reasons buyers choose this surface — comparison sources call out excellent longevity with high-temperature materials, and because the plate is a solid laminate rather than a coating there is nothing to wear through and expose a different substrate underneath. Wear shows as gradual polishing of the texture in the high-use center zone and, eventually, resin loss that exposes glass fibers; at that point adhesion drops and the sheet is replaced outright since recoating is not an option. On flex-mounted versions the adhesive bond to the steel carrier tends to fail before the laminate does, particularly if the plate is repeatedly soaked or run above its rated bed temperature. No vendor publishes a print-count or replacement interval, so treat 'replace when adhesion no longer returns after a soap wash' as the practical rule. Owner primary data is far more bullish than any other source in this entry, describing G10 as the most wear-resistant surface they offer, 'like glass as far as durability', and claiming thousands of prints over the same area without degradation. That figure is unverified and has no independent corroboration, but it is at least directionally consistent with the material argument above — a solid cured laminate has no coating to wear through — and it is recorded here as the optimistic bound rather than as a specification. The same source attaches the claim to true industrial-grade G10 specifically and explicitly distinguishes that from cheaper sheet sold under the G10 name, so grade is a variable in any durability expectation.",
   "price": {
     "usd_low": 25,
     "usd_high": 40,
     "notes": "~250 mm class. Darkmoon3D G10 plate listed at $38.99 (184/256/320/350 mm sizes); generic Amazon/AliExpress fiberglass sheets commonly $20-30 for 220-257 mm. Bare sheets are cheaper than magnet-mounted flex plate versions."
   },
-  "additional_notes": "Notably lighter than glass or steel alternatives, and commonly sold pre-mounted to a magnetic flex plate for quick-swap use on Bambu, Creality and Ender-style beds. The material is the same class used for printed circuit boards, so bare sheets are also widely available from industrial plastics suppliers and can be cut to size — a common DIY route. Bambu printers' automatic plate detection cannot identify third-party G10, so the feature has to be disabled or spoofed with another plate code. The single biggest reason to own one is nylon: multiple independent community reports describe printing any nylon with no adhesive at all, which is the one job PEI cannot do without Magigoo PA or a glue stick.",
+  "additional_notes": "Notably lighter than glass or steel alternatives, and commonly sold pre-mounted to a magnetic flex plate for quick-swap use on Bambu, Creality and Ender-style beds. The material is the same class used for printed circuit boards, so bare sheets are also widely available from industrial plastics suppliers and can be cut to size — a common DIY route. Bambu printers' automatic plate detection cannot identify third-party G10, so the feature has to be disabled or spoofed with another plate code. The single biggest reason to own one is nylon: multiple independent community reports describe printing any nylon with no adhesive at all, which is the one job PEI cannot do without Magigoo PA or a glue stick. Owner primary data adds a rigid mounting variant to the picture: standard 1/64 in G10 laminated to a thick steel plate rather than spring steel, deliberately non-flexing, and sold for high-warp parts that can curl a spring-steel plate like a potato chip. It is the same surface chemistry with a different release mechanism — cooling instead of flexing — and it is a niche custom-fabrication product (Etsy and eBay custom-plate sellers) rather than a mainstream vendor SKU. The same source also insists that material grade is not a formality, marketing its topper as true industrial-grade G10 and explicitly distinguishing it from a competitor's cheaper sheet sold under the same G10 name; no independent test data exists to adjudicate that claim, but it is a reminder that 'G10' on a listing is a material family, not a quality guarantee. Finally, the owner's own product ladder places three garolite surfaces side by side — a 1/32 in matte standard Garolite topper for nylon (lightly sandable, Elmer's purple glue stick recommended), this 1/64 in glossier G10 for PETG/PCTG and general engineering polymers, and a 1/32 in G11 for TPU — which is a more granular split than this catalogue currently models.",
   "provenance": {
     "sources": [
+      "Owner-provided vendor build-surface descriptions (primary): /home/claude/filament-repo/research/vendor-plate-descriptions.md, quoting https://www.etsy.com/listing/4299347986/bambu-lab-h2d-custom-build-plate — 'G10 Garolite' and 'Rigid G10 Garolite' entries",
       "https://wilbursfinest.com/blogs/news/everything-you-need-to-know-about-g10",
       "https://darkmoon3d.com/products/bambu-lab-g10-build-plate",
       "https://forum.bambulab.com/t/paht-cf-adhesion/172201",
@@ -383,10 +387,38 @@
       "https://www.amazon.com/G10-Printer-Platform-Black-Color/dp/B0C3B75N2M",
       "MatterHackers - How To Succeed with LayerLock Garolite Build Surfaces (220 grit whole-surface sanding as maintenance, mask while sanding, over-flexing cracks thin sheets, sharp tools cause grooves, printing too low): https://www.matterhackers.com/articles/how-to-succeed-with-layerlock-garolite-build-surfaces",
       "Atlas Fibre - G-10 material specification (140 degC maximum service temperature, 0.11% 24h water absorption, chemical and thermal-shock resistance): https://www.atlasfibre.com/material/g-10/",
-      "Hackaday - G10 is the 3D print surface you crave (220 grit scuff plus alcohol as community prep; glass and epoxy dust hazard when machining): https://hackaday.com/2021/10/13/g10-is-the-3d-print-surface-you-crave/"
+      "Hackaday - G10 is the 3D print surface you crave (220 grit scuff plus alcohol as community prep; glass and epoxy dust hazard when machining): https://hackaday.com/2021/10/13/g10-is-the-3d-print-surface-you-crave/",
+      "Vision Miner - Nano Polymer Adhesive (application procedure, garolite and carbon fibre listed among directly supported surfaces, self-release on cooling for sub-300 degC materials, 50 ml USD 19 / 120 ml USD 45): https://visionminer.com/products/nano-polymer-adhesive"
     ],
     "last_verified": "2026-08-01",
     "confidence": "medium",
-    "conflicts": "ABS/ASA bed temperature: one vendor lists 100-120 C for its G10-family plate while another documents G10 only for PLA/PETG/nylon at 55-70 C and does not address ABS/ASA at all; it is unclear whether the 100-120 C figure came from a carbon-blended sibling product rather than plain G10. The same ambiguity applies to the PC 110-120 C figure. No source gives a hard maximum surface temperature for the laminate — the 130 C value recorded here is the generic continuous rating for glass-epoxy laminate, not a vendor-published plate spec. Vendor 'high-temp upgrade' G10 sheets name-drop PEEK/PEKK/ULTEM with no supporting data; recorded as avoid pending evidence. Prep (scuffing/sanding), cleaning solvents, and stuck-print recovery are not documented for G10 anywhere in the sources and the guidance here is extrapolated from comparable composite surfaces. PP, PVA and BVOH compatibility is entirely inferred. UPDATE 2026-08-01: the sanding-regimen gap is partly resolved — MatterHackers' LayerLock Garolite guide documents 220-grit whole-surface sanding as maintenance (cited in sources, encoded in damage_avoidance)."
-  }
+    "conflicts": "ABS/ASA bed temperature: one vendor lists 100-120 C for its G10-family plate while another documents G10 only for PLA/PETG/nylon at 55-70 C and does not address ABS/ASA at all; it is unclear whether the 100-120 C figure came from a carbon-blended sibling product rather than plain G10. The same ambiguity applies to the PC 110-120 C figure. No source gives a hard maximum surface temperature for the laminate — the 130 C value recorded here is the generic continuous rating for glass-epoxy laminate, not a vendor-published plate spec. Vendor 'high-temp upgrade' G10 sheets name-drop PEEK/PEKK/ULTEM with no supporting data; recorded as avoid pending evidence. Prep (scuffing/sanding), cleaning solvents, and stuck-print recovery are not documented for G10 anywhere in the sources and the guidance here is extrapolated from comparable composite surfaces. PP, PVA and BVOH compatibility is entirely inferred. UPDATE 2026-08-01: the sanding-regimen gap is partly resolved — MatterHackers' LayerLock Garolite guide documents 220-grit whole-surface sanding as maintenance (cited in sources, encoded in damage_avoidance). UPDATE 2026-08-01 (owner primary data): several direct conflicts are recorded rather than resolved. (1) Headline material: this entry was built around nylon and TPU as the standout use case, while the owner's vendor description names PETG/PCTG as what G10 is 'primarily known for' and calls it the best smooth cool-to-release surface on the market for them; both are kept. (2) Texture and finish: this entry records texture as 'textured' from other vendor descriptions, whereas the owner describes G10 as smooth and glossier than the matte standard-garolite topper sold alongside it — the texture field is left as 'textured' pending a tiebreaker, and the disagreement is flagged in the PETG row. (3) Thickness: owner specifies a 1/64 in (~0.4 mm) topper against the ~0.5 mm previously recorded. (4) Glue policy: this entry told users to resist pre-coating, while the owner recommends an Elmer's purple glue stick for difficult nylon and requires Vision Miner Nano Polymer Adhesive for ASA; the no-glue rule is now scoped to PETG/PCTG and ordinary nylon rather than stated absolutely. (5) Material grade: the owner claims true industrial-grade G10 and explicitly says a named competitor's 'G10' is not the same material, which is an unadjudicated commercial claim between two vendors both cited in this entry's sources. (6) Durability: the owner's 'thousands of prints over the same area without degradation' is far stronger than anything else on record and is unverified. The ASA/Vision Miner pattern is the one owner claim with independent corroboration, since Vision Miner's own product page lists garolite as a supported surface and describes the same cool self-release."
+  },
+  "trade_names": [
+    {
+      "manufacturer": "DarkMoon3D",
+      "product": "Darkmoon G10 Garolite Build Plate",
+      "notes": "Marketed as 'true industrial grade G10'. Note the owner's Etsy listing explicitly disputes this, claiming its own G10 differs from Darkmoon's; recorded in g10-garolite provenance.conflicts as an unadjudicated vendor-vs-vendor claim."
+    },
+    {
+      "manufacturer": "Etsy custom build-plate fabricator (owner listing 4299347986)",
+      "product": "G10 Garolite (1/64 in topper)",
+      "notes": "Owner's headline claim: best smooth cool-to-release surface for PETG/PCTG. Now encoded in the g10-garolite summary and PETG/PCTG rows."
+    },
+    {
+      "manufacturer": "Etsy custom build-plate fabricator (owner listing 4299347986)",
+      "product": "Garolite (1/32 in matte topper)",
+      "notes": "Owner treats plain Garolite as a THIRD product distinct from both G10 and G11 - thicker (1/32 in), matte, lightly sandable, Elmer's purple glue stick recommended, nylon-focused. This catalogue has no separate id for it and folds it into g10-garolite; splitting it out is a reasonable future call."
+    },
+    {
+      "manufacturer": "Etsy custom build-plate fabricator (owner listing 4299347986)",
+      "product": "Rigid G10 Garolite (steel-backed, no-flex)",
+      "notes": "Already an alias on g10-garolite; the no-flex removal mechanics are now written into model_removal and additional_notes."
+    },
+    {
+      "manufacturer": "MatterHackers",
+      "product": "LayerLock Garolite Build Surface",
+      "notes": "Not present on the /store/c/layerlock collection page fetched 2026-08-01, but MatterHackers publishes a dedicated 'How To Succeed with LayerLock Garolite Build Surfaces' guide that is already cited in g10-garolite sources, and the plate schema names this exact mapping as its worked example. Include unless the SKU is confirmed discontinued."
+    }
+  ]
 }

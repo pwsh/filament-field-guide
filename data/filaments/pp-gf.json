@@ -226,6 +226,11 @@
   },
   "trade_names": [
     {
+      "manufacturer": "chckx3d",
+      "product": "PP-GF Filament",
+      "notes": "10% glass-fiber polypropylene, $19.99; listed 220-250C nozzle, 85-100C bed."
+    },
+    {
       "manufacturer": "forward-am",
       "product": "Ultrafuse PP GF30",
       "notes": "PP + 30% glass fiber."

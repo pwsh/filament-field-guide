@@ -141,21 +141,22 @@
   },
   "compatibility": {
     "bonds_with": [
-      "pla-gf",
+      "lw-pla",
       "pla",
       "pla-cf",
-      "pla-plus",
-      "pla-hf",
-      "pla-matte",
-      "pla-silk",
+      "pla-gf",
       "pla-gradient",
-      "lw-pla"
+      "pla-hf",
+      "pla-ht",
+      "pla-matte",
+      "pla-plus",
+      "pla-silk"
     ],
     "support_materials": [
-      "pva",
       "bvoh",
       "petg",
-      "pla"
+      "pla",
+      "pva"
     ],
     "usable_as_support_for": [
       "petg"
@@ -167,6 +168,16 @@
       "plate_id": "pei-textured",
       "rating": "recommended",
       "notes": "Carried at base PLA's 'recommended' and, if anything, easier: textured PEI at 45-60 °C bed needs no release agent, and the fiber's reduced shrinkage means GF-PLA parts typically release even more cleanly than unfilled PLA rather than gripping. Glass, smooth PEI and blue painter's tape are all reported to work as well. A glue stick remains optional and only for awkward geometry."
+    },
+    {
+      "plate_id": "g11-garolite",
+      "rating": "usable",
+      "notes": "Backfilled from plate entry (reciprocity) — see plate page"
+    },
+    {
+      "plate_id": "geckotek-ez-stick",
+      "rating": "recommended",
+      "notes": "Backfilled from plate entry (reciprocity) — see plate page"
     }
   ],
   "emissions": {
@@ -200,6 +211,11 @@
       "manufacturer": "bambu-lab",
       "product": "PLA-GF",
       "notes": "provisional id"
+    },
+    {
+      "manufacturer": "chckx3d",
+      "product": "PLA-GF Filament",
+      "notes": "10% glass-fiber PLA, $14.99. Fiber loading is a marketing claim; no TDS exists."
     },
     {
       "manufacturer": "polymaker",

@@ -448,5 +448,17 @@
     "last_verified": "2026-08-01",
     "confidence": "low",
     "conflicts": "The central unresolved issue is chemical identity: vendors use 'PEI', 'PEO' and 'PEY' interchangeably for plates that are demonstrably different polymers with different temperature ceilings, and no manufacturer publishes a technical spec for the holographic layer. The roughly 120 degC ceiling is a commonly cited figure for PEO/PEY coatings, not a datasheet value, and it varies by vendor. Self-release behaviour is contradictory: some listings claim clean cool-down release while other PEO variants are explicitly described as not self-releasing. The 50-100 cycle effect-lifespan figure is community anecdote with no controlled testing behind it. Reports of the film peeling under prying vary in severity and may be brand-specific. No first-party Bambu or Prusa product was identified, which is an absence of evidence rather than confirmation none exists. Every specific in this entry should be treated as vendor-dependent."
-  }
+  },
+  "trade_names": [
+    {
+      "manufacturer": "BIQU",
+      "product": "BIQU Panda BuildPlate Designer Series (honeycomb / houndstooth)",
+      "notes": "Dual-textured decorative patterns; chemistry stated only as 'textured' (unverified whether PEI, PEO or PEY), which is exactly the ambiguity the pei-patterned entry is scoped to cover."
+    },
+    {
+      "manufacturer": "BIQU",
+      "product": "BIQU Panda Buildplate Designer (H2D/H2S, PEO+PET)",
+      "notes": "Double-sided PEO+PET spring steel. pei-patterned explicitly covers PEO and PEY films alongside PEI; flag on merge that PEO has a materially lower temperature ceiling than PEI."
+    }
+  ]
 }

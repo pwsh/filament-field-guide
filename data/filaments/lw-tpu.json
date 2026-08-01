@@ -1,0 +1,241 @@
+{
+  "id": "lw-tpu",
+  "name": "LW-TPU (Lightweight Foaming TPU)",
+  "aliases": [
+    "LW-TPU",
+    "Lightweight TPU",
+    "Foaming TPU",
+    "varioShore TPU",
+    "TPU-Aero",
+    "TPU Air",
+    "Variable-hardness TPU"
+  ],
+  "status": "researched",
+  "base_type": "tpu",
+  "variation_kind": "foaming",
+  "polymer_class": "elastomer",
+  "chemical_makeup": "Thermoplastic polyurethane compounded with a chemical foaming/blowing agent (a bicarbonate-type agent in colorFabb varioShore per CNC Kitchen's teardown) that decomposes thermally in the hot end and expands the melt into a closed-cell elastomeric foam. Base resin is nominally Shore 92A; the foam cells, not a different resin, produce the softer effective durometer",
+  "summary": "The one filament where Shore hardness is a slider rather than a spec: foaming TPU whose printed parts land anywhere from 92A unfoamed to a measured 65A fully expanded, set by nozzle temperature and flow. Foaming starts near 230 °C and roughly doubles volume, halving tensile strength while leaving elongation nearly intact. Its most useful and least obvious trait is that the foamed melt fills the nozzle better and needs less push force, so it feeds through Bowden setups that solid TPU of the same nominal hardness cannot — paid for with unavoidable stringing, poor bridging, and per-model calibration.",
+  "printing": {
+    "nozzle_temp_c": {
+      "min": 195,
+      "max": 260,
+      "recommended": 230
+    },
+    "bed_temp_c": {
+      "min": 50,
+      "max": 60,
+      "recommended": 55
+    },
+    "ambient_temp_c": {
+      "min": 18,
+      "max": 30,
+      "recommended": 22
+    },
+    "speed_mm_s": {
+      "min": 10,
+      "max": 40,
+      "recommended": 20
+    },
+    "enclosure_recommended": false,
+    "heated_chamber_required": false,
+    "enclosure_open_for_cooling": true,
+    "requires_hardened_nozzle": false,
+    "part_cooling_fan_pct": {
+      "min": 0,
+      "max": 30,
+      "recommended": 0
+    },
+    "notes": "Delta vs base TPU: nozzle temperature is a control input, not a setting. colorFabb varioShore — the reference product — is rated 195-260 °C, with foaming activating near 230 °C and the datasheet claiming up to 1.6x volume expansion; CNC Kitchen independently measured close to 2x (~100 % expansion) at 220 °C on their machine, so the onset and ceiling are printer- and flow-dependent rather than fixed. Print at ~195-210 °C for solid 92A behaviour, ramp toward 230-250 °C for maximum softness and lightness, and cut flow to match (colorFabb's own solid/foamed comparison uses 100 % flow at 210 °C versus 70 % at 230 °C). Bed 50-60 °C, a little warmer than base TPU's 20-60 °C. Speed is capped lower than base TPU's 10-80 mm/s because foam expansion needs time and consistency; low speed is also what makes the Bowden tolerance work. The datasheet lists no active cooling fan, matching elastomer practice and unlike base TPU's 20-50 %. No enclosure or chamber is specified (unverified); run enclosed machines with the lid open as for the TPU family. Unfilled, so no hardened nozzle — but as with every foaming grade, mismatched temperature and flow packs the nozzle with expanded melt."
+  },
+  "feeding": {
+    "drive_system": "direct-drive-recommended",
+    "ams_compatible": "no",
+    "feeding_assistant_recommended": false,
+    "notes": "The headline delta versus base tpu, and it goes the counterintuitive direction: CNC Kitchen found varioShore prints unusually well through Bowden extruders at low speed, because the foaming melt fills more of the nozzle volume and therefore needs less push force from the extruder than solid TPU does. That downgrades the requirement from base tpu's 'direct-drive-required' to 'recommended' — direct drive is still the better setup and still what every brand assumes, but a Bowden machine is genuinely usable here, which is not true of any other flexible in this catalog. AMS stays 'no', matching base tpu: the spool feeds as firm 92A filament, but Bambu's AMS exclusion covers TPU as a class and the foamed material's effective 65A hardness sits well inside the range that bends and jams the feed tube (no AMS test for foaming TPU was found — unverified). A spool-side feeding assistant is not needed, since the unmelted filament is firm 92A and does not stretch under spool drag."
+  },
+  "drying": {
+    "required_before_use": "always",
+    "temp_c": {
+      "min": 65,
+      "max": 80,
+      "recommended": 70
+    },
+    "time_hours": {
+      "min": 5,
+      "max": 12,
+      "recommended": 8
+    },
+    "methods": [
+      "dedicated filament dryer at 70 °C",
+      "hot-air or vacuum oven at 70 °C",
+      "print directly from a drybox with desiccant"
+    ],
+    "dryness_validation": "Unusually hard to judge, because the material foams by design — a bubbled or matte extrudate is normal, not a moisture signal. Judge instead by extruding below the ~230 °C foaming onset (around 200 °C) and checking for popping, steam and voids there, and by whether a calibration cube's measured density and thickness repeat between runs. Stringing is useless as a dryness test here: CNC Kitchen found stringing on travel moves essentially unavoidable even with dry material.",
+    "notes": "No drying schedule is published in the varioShore TDS or on any sourced foaming-TPU page (unverified). The figures recorded are base-TPU practice (65-80 °C, 5-12 h). 'Always' is carried over from base TPU, and there is an extra mechanism reason to be strict that no source measures: moisture flashing to steam competes with the blowing agent, so a damp spool plausibly makes the foam ratio — and therefore part density and hardness — unrepeatable."
+  },
+  "storage": {
+    "recommendations": "Sealed with fresh desiccant under 20 % RH, ideally printed from a drybox, as for base TPU. No brand publishes LW-specific storage guidance (unverified); treat it more strictly than solid TPU because density and hardness repeatability, not just surface quality, depend on it.",
+    "max_humidity_pct": 20,
+    "hygroscopy": "high"
+  },
+  "price": {
+    "usd_per_kg_low": 65,
+    "usd_per_kg_high": 85,
+    "notes": "Firm data point: colorFabb varioShore TPU Black, 700 g at $51.19 is about $73/kg. Roughly 2-3x standard TPU's $20-70/kg band and comparable to premium NinjaTek grades. No per-kg listing was confirmed for the Siraya Tech, Fiberlogy, QIDI or Rosa3D foaming-flexible lines (unverified), so the bounds are anchored on colorFabb alone. Per printed volume the premium shrinks, since a spool yields up to ~2x the part volume at maximum expansion."
+  },
+  "use_cases": {
+    "recommended": [
+      "lightweight cushioned pads, grips and soft-touch surfaces",
+      "parts with a deliberate hardness gradient printed in one job (varying nozzle temperature by zone)",
+      "shoe midsoles and insole prototypes at tunable firmness",
+      "seat, saddle and helmet padding",
+      "lightweight vibration and impact isolation",
+      "prototyping a durometer before committing to a fixed-grade TPU"
+    ],
+    "not_recommended": [
+      "any load-bearing or structural part",
+      "parts loaded in Z (foaming roughly halves tensile strength)",
+      "bridges and unsupported spans (CNC Kitchen rates bridging performance poor)",
+      "geometry with heavy travel moves (stringing is essentially unavoidable)",
+      "tight-tolerance or dimensionally critical parts",
+      "sealing gaskets (closed-cell foam compresses and leaks differently from solid elastomer)",
+      "high-temperature, outdoor or food-contact use"
+    ]
+  },
+  "suitability": {
+    "food_contact": "no",
+    "load_bearing": "no",
+    "high_temperature": "no",
+    "outdoor": "no"
+  },
+  "properties": {
+    "shore_hardness": "65A-92A",
+    "density_g_cm3": 1.2,
+    "grams_per_100cm3": 120,
+    "cm3_per_100g": 83.3,
+    "glass_transition_c": -25,
+    "max_service_temp_c": 70,
+    "tensile_strength_mpa": {
+      "min": 12,
+      "max": 24,
+      "recommended": 12
+    },
+    "notes": "IMPORTANT — the recorded 1.2 g/cm³ is the SOLID/unfoamed reference density from the varioShore datasheet, and the derived 120 g/100 cm³ and 83.3 cm³/100 g follow from it. It is NOT the density of a printed part. No brand publishes an absolute foamed density; from the expansion figures (1.6x datasheet, ~2x measured by CNC Kitchen at 220 °C) a maximally foamed part lands roughly at 0.6-0.75 g/cm³ — derived, not published (unverified). Shore hardness is the same story: 92A is the base resin, while CNC Kitchen measured printed samples at 65A when foamed at 220 °C, a ~27-point drop from foam structure alone. Tensile follows the density axis and halves: 24 MPa printed solid (210 °C / 100 % flow) against 12 MPa foamed (230 °C / 70 % flow), with elongation almost unchanged at 465 % versus 450 % — so foaming costs strength but not stretch. The softness loss is steeper than the density loss and clearly non-linear: indentation depth goes 0.21 mm unfoamed (190 °C) to 0.87 mm at maximum foam (220 °C), more than 4x softer for roughly 2x volume, which is classic cellular-solid scaling and the reason foamed elastomer should never be substituted into a geometry designed around solid TPU. Tg -25 °C and a ~70 °C max service temperature are carried from the base tpu entry and are unverified for the foamed grade; shrinkage and HDT are not published for either (unverified)."
+  },
+  "scores": {
+    "ease_of_print": 3,
+    "dimensional_stability": 3,
+    "warp_tendency": 1,
+    "layer_adhesion": 2,
+    "compression_strength": 1,
+    "temperature_tolerance": 2,
+    "uv_tolerance": 3,
+    "weather_tolerance": 3,
+    "water_tolerance": 5
+  },
+  "compatibility": {
+    "bonds_with": [
+      "lw-tpu",
+      "tpu",
+      "tpu-60a",
+      "tpu-60d",
+      "tpu-68d",
+      "tpu-85a",
+      "tpu-90a",
+      "tpu-95a",
+      "tpu-gf"
+    ],
+    "support_materials": [
+      "pla"
+    ],
+    "usable_as_support_for": [],
+    "notes": "Same urethane chemistry as base TPU, so it welds to base tpu and every graded sibling — which makes the obvious design pattern a solid-TPU core or mounting boss with a foamed cushioning layer printed over it, all in one chemistry. Rigid-material bonding is unchanged from the base entry: PLA and PETG joints are mechanical interlock only, and there is no useful bond to ABS, ASA, PC or PA. Soluble supports remain impractical (PVA and BVOH are not documented as reliable TPU interfaces), leaving PLA as the practical breakaway option because it releases cleanly. Not usable as a support for anything. Chemistry caveat that matters for this id: eSUN's PEBA-LW is named like a foaming-TPU product and sits in eSUN's LW line beside PLA-LW and ASA-LW, but eSUN's own product page identifies the base polymer as PEBA — it is a foamed polyether block amide and belongs to the peba entry, not here. The functional difference is not cosmetic: PEBA rebounds where TPU damps."
+  },
+  "plate_recommendations": [
+    {
+      "plate_id": "pei-textured",
+      "rating": "usable",
+      "notes": "No foaming-TPU-specific build-surface guidance was published (unverified); inferred from base TPU, which works on textured PEI at 50-60 °C with over-adhesion rather than lifting as the failure mode. CNC Kitchen notes the printed surface is tacky enough that first-layer settings need care. Because flow is cut in the foaming window, print the first layer unfoamed (around 200 °C) at full flow for adhesion, then ramp."
+    },
+    {
+      "plate_id": "g10-garolite",
+      "rating": "usable",
+      "notes": "Base TPU rates G10 'recommended' because it grips elastomers at low temperature without fusing and needs no release agent; downgraded to 'usable' here because nothing documents the foamed grade on this surface (unverified) and its low-flow first layer has less material to grip with."
+    },
+    {
+      "plate_id": "pei-smooth",
+      "rating": "avoid",
+      "notes": "As base TPU: solid TPU fuses aggressively to smooth PEI and can tear the coating on removal, and a tacky foamed surface gives no reason to expect better. Use a textured plate, or a full glue-stick separator if there is no alternative."
+    },
+    {
+      "plate_id": "supertack",
+      "rating": "avoid",
+      "notes": "As base TPU, where this is the one explicit vendor prohibition: the tacky coating bonds to soft elastomer and tears when the part is pulled."
+    },
+    {
+      "plate_id": "buildtak-polymer",
+      "rating": "avoid",
+      "notes": "As base TPU: the vendor states flexibles typically fuse with the surface on large parts, and foamed elastomer works into the texture at least as readily."
+    }
+  ],
+  "emissions": {
+    "voc_level": "low",
+    "particulate_level": "moderate",
+    "primary_emissions": [
+      "ultrafine particles",
+      "chemical foaming/blowing-agent decomposition products (bicarbonate-type; CO2-generating)",
+      "isocyanate residues (unverified)",
+      "urethane decomposition byproducts (unverified)"
+    ],
+    "ventilation": "recommended",
+    "notes": "No emissions measurement exists for foaming TPU, and none exists for solid TPU either, so this is entirely by mechanism (unverified). VOC level stays 'low' as on the base entry — no styrene pathway, and a bicarbonate-type blowing agent decomposes mainly to CO2 and water rather than to a named toxic species. Particulate is raised one step to 'moderate' against base TPU's 'low' for two reasons: the grade runs up to 260 °C rather than 230 °C, and ultrafine-particle emission from FDM rises steeply with nozzle temperature. Ventilation stays 'recommended' — the general urethane precaution about isocyanate residues at high nozzle temperature applies here more than to base TPU, since this material is deliberately run hot."
+  },
+  "safety_notes": "Urethane chemistry can in principle release isocyanate residues at print temperature, and this grade is deliberately pushed toward the top of the TPU window (up to 260 °C) to maximise foaming — so the general 'do not run TPU hot' caution is harder to observe here. Ventilate, and do not exceed the brand's stated ceiling chasing more expansion. The blowing agent's exact composition is undisclosed by every brand. No food-contact certification was found for any foaming flexible, and the open cell structure at fracture surfaces makes food contact a firmer 'no' than for solid TPU.",
+  "additional_notes": "Two things separate this from every other elastomer entry. First, hardness is a print setting: the same spool gives 92A at 195-210 °C and a measured 65A at 220-230 °C, so a single part can carry a stiffness gradient by varying nozzle temperature zone by zone — genuinely useful for midsoles, grips and padding, and impossible with fixed-durometer TPU. Second, the softness gain outruns the weight loss (4x softer for ~2x volume), so foamed TPU should never be substituted into a geometry designed around solid TPU; pick the target hardness first and design to it. Practical caveats from independent testing: stringing on travel moves is essentially unavoidable, and bridging is poor — design with minimal travel and no unsupported spans. Note also that the category is chemically mixed in the market: colorFabb varioShore and Siraya's TPU Air lines are genuine foamed urethanes, while eSUN's similarly named PEBA-LW is a foamed polyether block amide and is filed under peba.",
+  "provenance": {
+    "sources": [
+      "https://colorfabb.com/media/datasheets/tds/colorfabb/TDS_E_ColorFabb_varioShore_TPU.pdf",
+      "https://www.cnckitchen.com/blog/testing-colorfabb-varioshore-tpu-foaming-3d-printing-filament",
+      "https://colorfabb.com/varioshore-tpu-black",
+      "https://www.3djake.com/colorfabb/varioshore-tpu-black",
+      "https://siraya.tech/products/flex-tpu-air-65a-82a-foaming-flexible-filament",
+      "https://www.esun3d.com/peba-lw-product/"
+    ],
+    "last_verified": "2026-08-01",
+    "confidence": "low",
+    "conflicts": "Expansion ratio disagrees between the datasheet and independent measurement: colorFabb states up to 1.6x volume, CNC Kitchen measured roughly 2x (~100 %) at 220 °C on their setup — the gap is real and printer-dependent, so both are recorded rather than averaged. Foamed density is derived from those expansion figures (~0.6-0.75 g/cm³) and is published by nobody. Category chemistry is the other unresolved item: eSUN PEBA-LW is named like a foaming TPU and was originally grouped with this category, but eSUN's own page identifies PEBA as the base polymer, so it is excluded here and cross-referenced to peba — a decision that rests on one manufacturer page. A fourth genuine foaming-TPU manufacturer beyond colorFabb and Siraya Tech was not independently confirmed in this pass; the Fiberlogy, QIDI and Rosa3D products listed as trade names come from the catalog's own coverage-gap cross-walk rather than from datasheets read in this research (unverified). Drying schedule, storage, enclosure/chamber behaviour, shrinkage, HDT, max service temperature, Tg, AMS behaviour, build-plate behaviour, UV/weather/water tolerance and the whole emissions profile are unverified — inherited from base TPU or inferred by mechanism. Confidence is 'low' on that basis, despite the unusually good independent mechanical data from CNC Kitchen."
+  },
+  "trade_names": [
+    {
+      "manufacturer": "Siraya Tech",
+      "product": "Flex TPU Air (65A-82A)",
+      "notes": "Not a catalog manufacturer id — display name. Genuine foamed TPU with an operator-set 65A-82A range, directly comparable to varioShore."
+    },
+    {
+      "manufacturer": "Siraya Tech",
+      "product": "Roamr TPU Air HR (85A)",
+      "notes": "Not a catalog manufacturer id — display name. Higher-rebound foamed TPU at 85A; sits at the firm end of the foaming-flexible category."
+    },
+    {
+      "manufacturer": "colorfabb",
+      "product": "varioShore TPU",
+      "notes": "The reference product for this entry: nominal 92A unfoamed, 1.2 g/cm³ solid, 195-260 °C with foaming from ~230 °C, up to 1.6x expansion per TDS (~2x measured independently), tensile 24 MPa solid / 12 MPa foamed at 465 % / 450 % elongation, measured 65A when foamed. Currently also listed as a trade name on the base tpu entry with a note that no fixed-durometer id fitted — that listing is superseded by this entry and should be moved here."
+    },
+    {
+      "manufacturer": "fiberlogy",
+      "product": "FiberFlex Aero",
+      "notes": "Foaming lightweight flexible with operator-set density, per the catalog's trade-name cross-walk. Whether the base resin is TPU or a TPE-class elastomer is not confirmed from a datasheet in this pass (unverified) — Fiberlogy's other FiberFlex grades are described only as 'TPU or TPE of comparable Shore hardness'."
+    },
+    {
+      "manufacturer": "qidi-tech",
+      "product": "TPU-Aero",
+      "notes": "Foamable TPU where the operator sets flexibility via foaming ratio at print time, so no fixed Shore-graded id fits. Datasheet not read in this pass (unverified)."
+    },
+    {
+      "manufacturer": "rosa3d",
+      "product": "TPU Flex LW",
+      "notes": "Foamed lightweight TPU — blowing agent in a polyurethane matrix. Datasheet not read in this pass (unverified)."
+    }
+  ]
+}

@@ -142,6 +142,7 @@
   "compatibility": {
     "bonds_with": [
       "pa",
+      "pa-cf",
       "pa6",
       "pa6-cf",
       "pa6-gf",
@@ -149,7 +150,8 @@
     ],
     "support_materials": [
       "pa6",
-      "pa6-cf"
+      "pa6-cf",
+      "support-breakaway"
     ],
     "usable_as_support_for": [
       "pa6-cf"
@@ -263,11 +265,6 @@
       "manufacturer": "coex-3d",
       "product": "CoexNylex PA6-CF",
       "notes": "Explicitly named PA6 + carbon fibre — one of the few PA-type-confirmed CF nylons in this cluster."
-    },
-    {
-      "manufacturer": "esun",
-      "product": "ePA-CF (PA-CF)",
-      "notes": "Nylon 6/66 copolymer + 20% CF; tensile 84.05 MPa XY / 50.34 MPa Z, density 1.24 g/cm3. Copolymer base, not straight PA6"
     },
     {
       "manufacturer": "fillamentum",

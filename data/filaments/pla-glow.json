@@ -139,16 +139,17 @@
   "compatibility": {
     "bonds_with": [
       "pla",
+      "pla-glitter",
       "pla-glow",
+      "pla-gradient",
       "pla-matte",
-      "pla-silk",
-      "pla-gradient"
+      "pla-silk"
     ],
     "support_materials": [
-      "pla",
-      "pva",
       "bvoh",
-      "petg"
+      "petg",
+      "pla",
+      "pva"
     ],
     "usable_as_support_for": [],
     "notes": "Standard PLA-family bonding: welds to base PLA and other PLA grades, does not weld to PETG/ABS/ASA/PC/PA/PP. Practical workflow note — if you fit a hardened nozzle for glow, that nozzle stays in for the support material too, so plan a nozzle swap only if a finer nozzle is genuinely required for interface quality. Not recommended as a support material itself: it wastes an abrasive, expensive filament."

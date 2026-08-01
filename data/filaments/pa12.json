@@ -139,6 +139,7 @@
   "compatibility": {
     "bonds_with": [
       "pa",
+      "pa-cf",
       "pa12",
       "pa12-cf",
       "pa6",
@@ -146,7 +147,8 @@
     ],
     "support_materials": [
       "pa",
-      "pa12"
+      "pa12",
+      "support-breakaway"
     ],
     "usable_as_support_for": [
       "pa12",

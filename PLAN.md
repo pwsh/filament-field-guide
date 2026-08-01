@@ -130,6 +130,17 @@ every property sourced from the glossary.
 
 ## Changelog
 
+- 2026-08-01 — **Tranche 2 + plate vendor cross-walk complete** (owner requests):
+  12 coverage-gap filaments added (pa-cf, abs-cf, pet-gf, abs-esd, pla-stone,
+  pla-glitter, pla-ht, pla-cast, peba, lw-asa, lw-tpu, support-breakaway → 72 total);
+  2 new plates (g11-garolite, geckotek-ez-stick → 13) with owner-provided vendor
+  descriptions as primary sources; 34 plate trade names merged (7 vendors; CryoGrip/
+  ICE class-mapped to supertack); CHCKX3D mappings merged; Fable relocations: eSUN
+  ePA-CF → pa-cf, Fiberon PET-GF15 → pet-gf, Eryone ASA-LW → lw-asa, varioShore →
+  lw-tpu. Plate gaps queued (Tyson T-95, Wham Bam PEX, CryoGrip chemistry). README
+  current-state rewritten. Note: both workflows died silently overnight mid-collation
+  and were resumed from cache — future long runs should expect this and resume.
+
 - 2026-07-31 — Initial plan, schemas, skeleton site (this session).
 - 2026-07-31 — Added `emissions` block to filament schema (VOC level, particulate level,
   primary emissions, ventilation requirement) + glossary entries, per owner request.
@@ -187,6 +198,18 @@ every property sourced from the glossary.
   pla-stone (10), abs-cf (7), peba (6), pla-glitter (6), lw-asa (5), pla-ht (5),
   lw-tpu (4), pet-gf (4), abs-esd (4), plus castable/burnout PLA and cleaning filament
   as non-print categories. These are the Phase B tranche-2 queue.
+- 2026-08-01 — **3dfilamentprofiles.com coverage diff** (owner request): 12 missing
+  brands identified (CC3D 273 profiles, 3D-Fuel 200, Numakers 193, Cookiecad 171,
+  Yoline Lab 121, Amazon Basics 81, IIID Max 64, MarsWork 56, OVV3D 54, plus 3
+  unresolved) and 10 base-chemistry material gaps beyond tranche 2 (abs-plus, petg-plus,
+  pha, pbt, pa612, sbs, pmma, pe, copa, mabs) — queued in research/coverage-gaps.md as
+  **tranche 3** (brands → Phase C tranche 2; materials → Phase B tranche 3). Ambiguities
+  to resolve first: CPE↔cope/pctg, PAHT↔ppa, VOXELPLA↔voxelab, APLA, PIPG. Diff also
+  confirmed our high-performance and PA-grade coverage exceeds theirs.
+- 2026-08-01 — **CHCKX3D added** (owner request): 59th manufacturer; 15 product
+  mappings staged; identity heavily caveated (claimed US manufacturer, evidence points
+  to undisclosed OEM rebrand; two independently-documented mislabeled products recorded
+  in provenance.conflicts). PP-CF added to gap queue.
 - 2026-08-01 — **Plate damage-avoidance model** (owner request): plate schema gains
   `damage_avoidance` [{item, reason, severity: destroys|degrades|cosmetic}] + glossary
   entry; all 11 plates populated (8-10 surface-specific rows each — acetone/solvent

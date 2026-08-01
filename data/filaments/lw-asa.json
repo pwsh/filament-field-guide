@@ -1,0 +1,242 @@
+{
+  "id": "lw-asa",
+  "name": "LW-ASA (Lightweight Foaming ASA)",
+  "aliases": [
+    "LW-ASA",
+    "Lightweight ASA",
+    "Foaming ASA",
+    "ASA-LW",
+    "ASA Aero",
+    "ASA-Aero"
+  ],
+  "status": "researched",
+  "base_type": "asa",
+  "variation_kind": "foaming",
+  "polymer_class": "styrenic",
+  "chemical_makeup": "Base acrylonitrile styrene acrylate compounded with a chemical foaming/blowing agent that decomposes thermally in the hot end, expanding the melt into a closed-cell structure as it leaves the nozzle. Same active-foaming mechanism as LW-PLA, on a styrenic backbone that keeps ASA's UV-stable acrylate rubber phase and ~100 °C glass transition",
+  "summary": "LW-PLA's outdoor-capable counterpart: foamed ASA that trades ~35-50 % of its printed weight for a material that still survives sunlight and heat. Foaming starts around 230 °C and peaks at 270-285 °C, taking printed density from ASA's 1.07 g/cm³ down to roughly 0.33-0.43 g/cm³ with flow cut to ~40 %. The catch is that it inherits both problems at once — ASA's warping and enclosure requirement, plus the per-model temperature/flow calibration foaming demands — which makes it the harder of the two lightweight grades to print by a clear margin.",
+  "printing": {
+    "nozzle_temp_c": {
+      "min": 220,
+      "max": 285,
+      "recommended": 250
+    },
+    "bed_temp_c": {
+      "min": 50,
+      "max": 100,
+      "recommended": 90
+    },
+    "ambient_temp_c": {
+      "min": 30,
+      "max": 55,
+      "recommended": 45
+    },
+    "speed_mm_s": {
+      "min": 30,
+      "max": 185,
+      "recommended": 45
+    },
+    "enclosure_recommended": true,
+    "heated_chamber_required": false,
+    "enclosure_open_for_cooling": false,
+    "requires_hardened_nozzle": false,
+    "part_cooling_fan_pct": {
+      "min": 0,
+      "max": 50,
+      "recommended": 10
+    },
+    "notes": "Delta vs base ASA: nozzle temperature is a control input, not a setting. Foaming activates around 230-240 °C and expansion rises with temperature — Spectrum's LW-ASA UltraFoam is rated 220-285 °C with peak expansion at 270-285 °C, and colorFabb's published method is to print test cubes across 230-260 °C to find the maximum-expansion temperature, then cut flow (to roughly 40 %) to set the final density. The two brands disagree on bed and cooling: colorFabb specifies 90-100 °C bed with minimum cooling for warp and adhesion control, Spectrum a much lower 50-80 °C bed with 0-100 % cooling. The recorded ranges are the union, with the recommended values following colorFabb's warp-conservative guidance; the low fan setting also matches base ASA, where heavy cooling splits layers. Speed likewise splits by brand: colorFabb 30-50 mm/s, Spectrum 37-185 mm/s (the top end reflecting solid, non-foamed perimeter passes rather than foamed extrusion). An enclosure is recommended as for any ASA and is explicitly called for on larger parts; a heated chamber is not required. Unfilled, so a standard brass nozzle is fine — but as with LW-PLA, mismatched temperature and flow clogs a nozzle with expanded melt, which is a different failure mode from abrasion."
+  },
+  "feeding": {
+    "drive_system": "any",
+    "ams_compatible": "conditional",
+    "feeding_assistant_recommended": false,
+    "notes": "The unmelted filament is ordinary rigid ASA and feeds through any extruder — no abrasion, no elastomer buckling, no spool-side assistant. Rated 'conditional' rather than base ASA's 'yes' for the same reason lw-pla is: no source documents an AMS restriction for foamed ASA (unverified), but the grade's density depends on a specific nozzle temperature and a heavily reduced flow, and a shared temperature across tools in an automated multi-material job would silently change the foam ratio. The extruder must also support fine flow / extrusion-multiplier control, since flow rate is the primary density knob. Enclosure: ASA needs its retained chamber heat, so enclosure_open_for_cooling is false as on the base entry."
+  },
+  "drying": {
+    "required_before_use": "if-exposed",
+    "temp_c": {
+      "min": 65,
+      "max": 80,
+      "recommended": 75
+    },
+    "time_hours": {
+      "min": 4,
+      "max": 8,
+      "recommended": 6
+    },
+    "methods": [
+      "dedicated filament dryer",
+      "convection oven at 70-80 °C",
+      "drybox with desiccant"
+    ],
+    "dryness_validation": "Harder to read than base ASA, because the material foams by design: a bubbled or matte extrudate is not itself a moisture signal. Judge instead by popping or crackling at a fixed test temperature, by voids in a hand-pulled strand printed below the ~230 °C foaming onset, and by whether the calibration cube's measured density is repeatable between runs.",
+    "notes": "No brand publishes a numeric schedule — eSUN, colorFabb and Spectrum all say drying is recommended and stop there (unverified). The figures recorded are base-ASA practice trimmed slightly cooler and shorter than the asa entry's 75-85 °C / 8-12 h, because the reduced-flow, thin-walled prints this grade is used for are less forgiving of a heat-softened spool. Drying matters more here than for solid ASA for a mechanism reason no source measures: moisture flashing to steam competes with the blowing agent and can make the expansion ratio, and therefore the part's density, unrepeatable."
+  },
+  "storage": {
+    "recommendations": "Sealed bag or drybox with desiccant under 20 % RH, as for base ASA — but treat it more strictly, since density repeatability rather than just surface quality is at stake. No brand publishes LW-specific storage guidance (unverified).",
+    "max_humidity_pct": 20,
+    "hygroscopy": "moderate"
+  },
+  "price": {
+    "usd_per_kg_low": 45,
+    "usd_per_kg_high": 60,
+    "notes": "Firm data point: Spectrum LW-ASA UltraFoam Light Grey, 750 g at $38.28 (3DJake) is about $51/kg. colorFabb lists LW-ASA 'starting from $28.61' but the unit is ambiguous on the page and is probably per spool rather than per kg (unverified). Roughly 1.5-2x base ASA's $18-45/kg — though per printed volume the gap closes sharply, since a spool yields up to ~2.5-3x the part volume at full expansion."
+  },
+  "use_cases": {
+    "recommended": [
+      "RC aircraft and drone airframes that live outdoors",
+      "UV-exposed lightweight shells and fairings",
+      "cosplay props and wearables needing more heat tolerance than LW-PLA",
+      "large display and signage parts where weight matters",
+      "sandwich structures pairing foamed skins with solid ASA or ASA-CF ribs",
+      "vehicle-mounted lightweight trim exposed to sun and cabin heat"
+    ],
+    "not_recommended": [
+      "precision engineering parts needing full-density ASA strength",
+      "parts loaded in Z (foaming collapses layer adhesion)",
+      "tight-tolerance parts printed without per-model flow calibration",
+      "food-contact items (foam voids trap contaminants on top of ASA's own disqualification)",
+      "large flat parts printed without an enclosure",
+      "printing in unenclosed, unventilated occupied rooms (styrene VOCs)"
+    ]
+  },
+  "suitability": {
+    "food_contact": "no",
+    "load_bearing": "light",
+    "high_temperature": "moderate",
+    "outdoor": "yes"
+  },
+  "properties": {
+    "density_g_cm3": 1.07,
+    "grams_per_100cm3": 107,
+    "cm3_per_100g": 93.5,
+    "glass_transition_c": 100,
+    "max_service_temp_c": 85,
+    "notes": "IMPORTANT — the recorded 1.07 g/cm³ is the SOLID FILAMENT density (colorFabb's published unfoamed figure, matching the base asa entry), and the derived 107 g/100 cm³ and 93.5 cm³/100 g follow from it. It is NOT the density of a printed part. Effective printed density is operator-selected: colorFabb measures ~0.43 g/cm³ at 40 % flow rate and Spectrum cites ~0.33 g/cm³ fully expanded, so a part can land anywhere between roughly 0.33 and 1.07 g/cm³ on the same spool. Expansion reaches ~2.5x volume (colorFabb) and up to 3x material yield per spool in Spectrum's extreme case. Published weight-savings claims disagree because they assume different foaming aggressiveness: colorFabb 'up to 40 %', Spectrum '34 %', eSUN 'to just 50 % of standard ASA'. Thermal behaviour is inherited from base ASA — Tg ~100 °C and a max service temperature of ~85 °C are the base entry's values, recorded here because foaming changes cell structure rather than polymer chemistry. colorFabb separately advertises 96 °C 'temperature resistance' for LW-ASA; the test method behind that number is not stated (unverified), so it is noted rather than recorded as HDT. Whichever figure is used, the heat headroom over LW-PLA's Tg-limited ~58 °C is the entry's whole point. Tensile strength and shrinkage are not published for the foamed grade (unverified); colorFabb notes only that LW-ASA warps more readily than LW-PLA but less severely than solid ABS."
+  },
+  "scores": {
+    "ease_of_print": 4,
+    "dimensional_stability": 5,
+    "warp_tendency": 7,
+    "layer_adhesion": 2,
+    "compression_strength": 2,
+    "temperature_tolerance": 6,
+    "uv_tolerance": 8,
+    "weather_tolerance": 8,
+    "water_tolerance": 6
+  },
+  "compatibility": {
+    "bonds_with": [
+      "abs",
+      "asa",
+      "asa-cf",
+      "asa-gf",
+      "hips",
+      "lw-asa"
+    ],
+    "support_materials": [
+      "hips",
+      "support-breakaway"
+    ],
+    "usable_as_support_for": [],
+    "notes": "Bonding is inherited from the base entry's styrenic SAN-matrix chemistry — the acrylate rubber phase and the blowing agent do not change what the material welds to — but the foamed side is always the weak side of any interface, exactly as with lw-pla. The structurally useful pairing is a sandwich: solid ASA or asa-cf ribs and spars inside foamed skins, since the foamed material carries almost no Z load. Supports: PVA and BVOH are unusable because they degrade below this material's 230-285 °C nozzle window, which rules out the base asa entry's bvoh listing here; HIPS remains the conventional styrenic-family breakaway route, and a high-temperature dedicated breakaway grade (support-breakaway) is the other option. Neither is confirmed against foamed ASA specifically (unverified — inferred from base-ASA support practice). Not usable as a support for anything: too soft at temperature and too dimensionally variable to make a reliable interface."
+  },
+  "plate_recommendations": [
+    {
+      "plate_id": "pei-textured",
+      "rating": "recommended",
+      "notes": "Follows base ASA, which works well on textured PEI at 90-110 °C bed. Two LW-specific cautions: Spectrum's TDS recommends an adhesion promoter (Dimafix/3DLac/Magigoo class), which suggests textured PEI alone may not be enough at these bed temperatures on larger footprints; and because flow is cut to ~40 %, the first layer is thinner than usual — print it unfoamed (below ~230 °C) at normal flow for adhesion, then ramp into the foaming window."
+    },
+    {
+      "plate_id": "pei-satin",
+      "rating": "usable",
+      "notes": "Inherited from the base asa entry, where satin adhesion is somewhat lower than for PLA or PETG and a brim plus draft shield covers the gap. Not separately documented for the foamed grade (unverified); the reduced first-layer flow makes a brim more important, not less."
+    },
+    {
+      "plate_id": "carbon-fiber-plate",
+      "rating": "usable",
+      "notes": "Base ASA rates this 'recommended' with an adhesion promoter suggested; downgraded to 'usable' here because no source covers the foamed grade and its thin, low-flow first layer has less material to grip with (unverified)."
+    },
+    {
+      "plate_id": "glass-borosilicate",
+      "rating": "usable",
+      "notes": "As base ASA: workable with a brim and an enclosure, but on a rigid plate a lifted corner cannot be rescued by flexing the sheet. Foamed prints are usually large and thin-walled, which is the worst case for corner lift."
+    },
+    {
+      "plate_id": "supertack",
+      "rating": "avoid",
+      "notes": "As base ASA — the required bed temperature alone puts this outside the coating's intended range."
+    },
+    {
+      "plate_id": "pc-plate",
+      "rating": "avoid",
+      "notes": "As base ASA — a 90-100 °C bed exceeds what the PC sheet tolerates without surface damage."
+    },
+    {
+      "plate_id": "pei-patterned",
+      "rating": "avoid",
+      "notes": "As base ASA — thermal and adhesion envelope both exceeded in practice; use a textured PEI plate instead."
+    }
+  ],
+  "emissions": {
+    "voc_level": "high",
+    "particulate_level": "high",
+    "primary_emissions": [
+      "styrene",
+      "ethylbenzene",
+      "acetophenone",
+      "chemical foaming/blowing-agent decomposition products (undisclosed; typically CO2/N2-generating chemistry)",
+      "ultrafine particles"
+    ],
+    "ventilation": "required",
+    "notes": "Inherits base ASA's styrene-dominated profile, which is among the highest-VOC in the catalog, and adds two aggravating factors that no source has measured for the LW grade specifically (unverified). First, the grade works by thermally decomposing an undisclosed blowing agent, which by mechanism releases gaseous decomposition products. Second, peak foaming runs at 270-285 °C against base ASA's 240-280 °C, and ultrafine-particle emission from FDM rises steeply with nozzle temperature. Ventilation stays 'required' as on the base entry: print in an enclosure vented externally, or through HEPA plus activated carbon, and never in an occupied unventilated room."
+  },
+  "safety_notes": "Styrene is a respiratory irritant and a suspected carcinogen on chronic exposure; the enclosure this material needs for warp control also concentrates fumes, so vent it. Because the foaming agent's composition is undisclosed by every brand, avoid running far above the 285 °C ceiling, where its decomposition chemistry is unpredictable. Food contact is a firmer 'no' than for base ASA: the undisclosed additive and the open porosity of foamed surfaces both count against it. Sanding foamed styrenics produces fine dust — wet-sand or wear a mask.",
+  "additional_notes": "Choose between the two lightweight grades on environment, not on weight saved: both foam to a similar degree (roughly 8/10 weight-savings potential), but LW-ASA keeps ASA's UV stability and ~100 °C Tg while LW-PLA softens near 58 °C and chalks in sunlight. The price is printability — LW-ASA scores 4 on ease against LW-PLA's 5 because it stacks foaming calibration on top of ASA's enclosure and warp requirements, and unlike LW-PLA it cannot be printed on an open frame. Design consequence is the same as for LW-PLA: pick the target density first and engineer the part around the strength that density gives, rather than substituting foamed material into a geometry designed for solid ASA. The market is small — colorFabb, Spectrum, eSUN, Bambu (ASA Aero), QIDI and Eryone are essentially it.",
+  "provenance": {
+    "sources": [
+      "https://www.esun3d.com/asa-lw-product/",
+      "https://colorfabb.us/3d-printing-lightweight-asa-parts",
+      "https://colorfabb.us/lw-asa-black",
+      "https://spectrumfilaments.com/en/filament/lw-asa-ultrafoam/",
+      "https://www.3djake.com/spectrum/lw-asa-ultrafoam-light-grey",
+      "https://www.fabbaloo.com/news/colorfabbs-lightweight-asa-3d-printing-material"
+    ],
+    "last_verified": "2026-08-01",
+    "confidence": "low",
+    "conflicts": "Weight savings disagree across all three brands that publish a number — colorFabb 'up to 40 %', Spectrum '34 %', eSUN 'to just 50 % of standard ASA' — which reflects different foaming aggressiveness and print settings rather than different materials; the density figures (colorFabb ~0.43 g/cm³ at 40 % flow, Spectrum ~0.33 g/cm³ fully expanded) agree better than the percentages do. Bed temperature is the sharpest process conflict: colorFabb 90-100 °C against Spectrum 50-80 °C. Cooling likewise: colorFabb says use minimum cooling, Spectrum publishes a 0-100 % range. Speed splits 30-50 mm/s (colorFabb) against 37-185 mm/s (Spectrum). colorFabb's 96 °C 'temperature resistance' claim has no stated test method and is not recorded as HDT. Drying schedule, storage, tensile strength, shrinkage, build-plate behaviour, support pairings, AMS compatibility and the LW-specific emissions delta are all unverified — inherited from base ASA or inferred by mechanism. Confidence is 'low' because so many process fields are inherited assumptions and the two brands that do publish numbers contradict each other on half of them."
+  },
+  "trade_names": [
+    {
+      "manufacturer": "bambu-lab",
+      "product": "ASA Aero",
+      "notes": "Foaming lightweight ASA, the styrenic sibling of Bambu's PLA Aero (which maps to lw-pla). Foams during printing to cut printed-part density."
+    },
+    {
+      "manufacturer": "colorfabb",
+      "product": "LW-ASA",
+      "notes": "The reference product for this entry: solid density 1.07 g/cm³, ~0.43 g/cm³ at 40 % flow, ~2.5x expansion, 90-100 °C bed, 30-50 mm/s, minimum cooling, 96 °C claimed temperature resistance."
+    },
+    {
+      "manufacturer": "eryone",
+      "product": "ASA Light-Weight",
+      "notes": "Chemical blowing agent in an ASA base. Currently also listed as a trade name on the base asa entry with a note that the foaming behaviour had no catalog id — that listing is superseded by this entry and should be moved here."
+    },
+    {
+      "manufacturer": "esun",
+      "product": "ASA-LW",
+      "notes": "eSUN's foaming ASA, sibling to its PLA-LW; claims weight reduced to ~50 % of standard ASA. No numeric drying or process schedule published."
+    },
+    {
+      "manufacturer": "qidi-tech",
+      "product": "ASA-Aero",
+      "notes": "Foaming lightweight ASA, same in-print foaming concept as Bambu ASA Aero."
+    },
+    {
+      "manufacturer": "spectrum-filaments",
+      "product": "LW-ASA UltraFoam",
+      "notes": "Nozzle 220-285 °C (foaming onset ~230 °C, peak expansion 270-285 °C), bed 50-80 °C, 37-185 mm/s, cooling 0-100 %, ~0.33 g/cm³ fully expanded, up to 3x material yield, 34 % weight reduction claimed; enclosure recommended for larger prints and an adhesion promoter recommended."
+    }
+  ]
+}

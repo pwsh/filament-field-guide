@@ -141,6 +141,7 @@
   "compatibility": {
     "bonds_with": [
       "pa",
+      "pa-cf",
       "pa12",
       "pa6",
       "pa6-cf",

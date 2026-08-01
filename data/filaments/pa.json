@@ -144,6 +144,7 @@
     "bonds_with": [
       "bvoh",
       "pa",
+      "pa-cf",
       "pa12",
       "pa12-cf",
       "pa6",
@@ -151,15 +152,18 @@
       "pa6-gf",
       "pa66",
       "ppa-cf",
-      "pva"
+      "pva",
+      "support-breakaway"
     ],
     "support_materials": [
       "bvoh",
       "pa",
-      "pva"
+      "pva",
+      "support-breakaway"
     ],
     "usable_as_support_for": [
       "pa",
+      "pa-cf",
       "pa12",
       "pa6",
       "pa66"

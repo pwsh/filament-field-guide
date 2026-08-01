@@ -171,6 +171,9 @@ def summary_min(e: dict, kind: str) -> dict:
     else:
         out["texture"] = e.get("texture")
         out["surface_makeup"] = e.get("surface_makeup")
+        tn = e.get("trade_names", [])
+        if tn:
+            out["trade_names"] = [{"manufacturer": t.get("manufacturer"), "product": t.get("product")} for t in tn]
     out["confidence"] = e.get("provenance", {}).get("confidence")
     return out
 

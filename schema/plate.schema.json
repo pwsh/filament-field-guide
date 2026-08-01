@@ -33,6 +33,20 @@
     "cleaning": { "type": "string", "description": "Routine and deep cleaning procedures" },
     "model_removal": { "type": "string", "description": "Recommended removal technique" },
     "stuck_print_recovery": { "type": "string", "description": "What to do when a print will not release" },
+    "trade_names": {
+      "type": "array",
+      "description": "Vendor-specific product names that are this surface type, e.g. 'LayerLock Garolite' -> g10-garolite",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["manufacturer", "product"],
+        "properties": {
+          "manufacturer": { "type": "string" },
+          "product": { "type": "string" },
+          "notes": { "type": "string" }
+        }
+      }
+    },
     "damage_avoidance": {
       "type": "array",
       "description": "Chemicals, tools, and practices that damage this surface",

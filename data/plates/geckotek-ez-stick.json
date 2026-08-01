@@ -1,0 +1,623 @@
+{
+  "id": "geckotek-ez-stick",
+  "name": "GeckoTek EZ-Stik (proprietary coated build surface)",
+  "aliases": [
+    "GeckoTek EZ-Stik Hot",
+    "GeckoTek EZ-Stick Hot",
+    "EZ-Stik",
+    "GeckoTek build surface",
+    "GeckoTek EZ-Stik Cold"
+  ],
+  "status": "researched",
+  "summary": "An adhesive-backed sheet carrying GeckoTek's undisclosed 'Advanced Coating Technology' — a high-grip, low-temperature surface with the tightest published thermal ceiling in this catalogue (110 degC bed, 240 degC first-layer nozzle) and a hard no-glue rule. Its grip on nylon and PETG is extreme, and that is both the selling point and the wear mechanism: the coating comes off in the print area after a handful of aggressive prints. For PLA it is a different product entirely — no measurable coating loss and a glass-like part bottom.",
+  "surface_makeup": "Proprietary coating on a thin adhesive-backed sheet, applied to a bed or magnetic steel carrier. GeckoTek publishes no chemistry, describing it only as 'Advanced Coating Technology', so the composition is genuinely unknown rather than merely undocumented (unverified). Owner-supplied primary data confirms the adhesive-backed topper form factor. The line has two members with different thermal envelopes: EZ-Stik Hot for heated beds (the variant this entry describes) and EZ-Stik Cold for unheated beds. Functionally the working layer behaves as a sacrificial high-tack film rather than a durable structural surface — it is thin enough that repeated high-shrinkage prints strip it locally, which is the defining behavioural fact about this surface and is not disclosed in GeckoTek's own marketing.",
+  "texture": "smooth",
+  "manufacturers": [
+    "GeckoTek",
+    "Etsy custom build-plate fabricators (offered as a topper option on owner-cited multi-surface listing)"
+  ],
+  "filament_compatibility": [
+    {
+      "filament_id": "pla",
+      "rating": "recommended",
+      "bed_temp_c": {
+        "min": 50,
+        "max": 60,
+        "recommended": 55
+      },
+      "adhesion_aid": "none (adhesive glues prohibited on this surface)",
+      "notes": "The best case and the owner's explicit recommendation for this topper. GeckoTek's own processing table gives 50-60 degC bed with a 200 degC extruder. PLA is the one material the owner reports as not degrading the coating at all, and it yields a glass-like bottom finish."
+    },
+    {
+      "filament_id": "pla-cf",
+      "rating": "recommended",
+      "bed_temp_c": {
+        "min": 50,
+        "max": 60
+      },
+      "adhesion_aid": "none",
+      "notes": "Not separately characterised (unverified). Filled PLA grades are chemically PLA to the coating; the fill matters at the nozzle, not here."
+    },
+    {
+      "filament_id": "pla-gf",
+      "rating": "recommended",
+      "bed_temp_c": {
+        "min": 50,
+        "max": 60
+      },
+      "adhesion_aid": "none",
+      "notes": "As PLA-CF; undocumented but expected to behave as base PLA."
+    },
+    {
+      "filament_id": "pvb",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 60,
+        "max": 75
+      },
+      "adhesion_aid": "none",
+      "notes": "Not addressed by GeckoTek (unverified); treated as PLA-adjacent. Do not use the routine IPA wipe while a PVB part is still attached — PVB dissolves in alcohol."
+    },
+    {
+      "filament_id": "petg",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 70,
+        "max": 80
+      },
+      "adhesion_aid": "none (glue prohibited); accept coating wear instead",
+      "notes": "Adheres extremely well — GeckoTek lists 70-80 degC bed with a 230 degC extruder — but the owner's real-world data is the important part: PETG degrades the coating after roughly a dozen prints in the same area. Rotate placement across the sheet and treat the topper as a consumable if PETG is your main material."
+    },
+    {
+      "filament_id": "pctg",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 70,
+        "max": 80
+      },
+      "adhesion_aid": "none",
+      "notes": "Treated as PETG-equivalent (unverified); assume the same grip and the same coating wear."
+    },
+    {
+      "filament_id": "pet",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 70,
+        "max": 85
+      },
+      "adhesion_aid": "none",
+      "notes": "Unfilled PET runs hotter and stiffer than PETG; undocumented here and still comfortably under the 110 degC ceiling."
+    },
+    {
+      "filament_id": "petg-cf",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 70,
+        "max": 85
+      },
+      "adhesion_aid": "none",
+      "notes": "As PETG. Fibre fill raises corner-lift force but does not reduce the coating-wear problem."
+    },
+    {
+      "filament_id": "petg-gf",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 70,
+        "max": 85
+      },
+      "adhesion_aid": "none",
+      "notes": "As PETG-CF; undocumented."
+    },
+    {
+      "filament_id": "pet-cf",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 70,
+        "max": 85
+      },
+      "adhesion_aid": "none",
+      "notes": "Extrapolated from PETG-CF."
+    },
+    {
+      "filament_id": "petg-esd",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 70,
+        "max": 85
+      },
+      "adhesion_aid": "none",
+      "notes": "ESD-modified copolyester is not addressed by GeckoTek; assume base PETG behaviour including coating wear."
+    },
+    {
+      "filament_id": "pa",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 30,
+        "max": 50
+      },
+      "adhesion_aid": "none (glue prohibited)",
+      "notes": "The most extreme grip on this surface and the most extreme wear. GeckoTek's own table is unusual — 30-50 degC bed with a 230 degC extruder, far cooler than nylon is normally run — and the owner's use case is narrow but valuable: a one-off print of a very high-warping nylon part. Expect the coating to be stripped in that area after a few prints."
+    },
+    {
+      "filament_id": "pa6",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 30,
+        "max": 50
+      },
+      "adhesion_aid": "none",
+      "notes": "As base PA. GeckoTek does not split nylon by grade; the low bed temperature in their table applies to the family."
+    },
+    {
+      "filament_id": "pa12",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 30,
+        "max": 50
+      },
+      "adhesion_aid": "none",
+      "notes": "As base PA; lower moisture uptake makes PA12 the easier grade, but coating wear is a function of shrinkage force, not grade."
+    },
+    {
+      "filament_id": "pa66",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 30,
+        "max": 50
+      },
+      "adhesion_aid": "none",
+      "notes": "Undocumented. PA66 shrinks hardest of the common nylons, so expect the fastest coating loss of any material on this list."
+    },
+    {
+      "filament_id": "pa6-cf",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 30,
+        "max": 50
+      },
+      "adhesion_aid": "none",
+      "notes": "Filled nylon warps less than unfilled, which should slow coating loss somewhat; not separately documented (unverified)."
+    },
+    {
+      "filament_id": "pa6-gf",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 30,
+        "max": 50
+      },
+      "adhesion_aid": "none",
+      "notes": "As PA6-CF; undocumented."
+    },
+    {
+      "filament_id": "pa12-cf",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 30,
+        "max": 50
+      },
+      "adhesion_aid": "none",
+      "notes": "As PA6-CF."
+    },
+    {
+      "filament_id": "abs",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 100,
+        "max": 110
+      },
+      "adhesion_aid": "none; enclosure strongly recommended",
+      "notes": "GeckoTek lists 100-110 degC bed with a 230 degC extruder — which puts ABS at the absolute top of the surface's 110 degC ceiling with zero headroom. Their own troubleshooting guidance for ABS lifting is to fix ambient temperature and block drafts with an enclosure rather than to raise the bed further, and that is the correct reading: you cannot turn the bed up on this plate."
+    },
+    {
+      "filament_id": "abs-fr",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 100,
+        "max": 110
+      },
+      "adhesion_aid": "none; enclosure recommended",
+      "notes": "As base ABS; flame-retardant grades are not separately characterised."
+    },
+    {
+      "filament_id": "abs-gf",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 100,
+        "max": 110
+      },
+      "adhesion_aid": "none; enclosure recommended",
+      "notes": "Glass fill lowers warp, which helps at a bed temperature that cannot be raised. Undocumented on this surface."
+    },
+    {
+      "filament_id": "asa",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 100,
+        "max": 110
+      },
+      "adhesion_aid": "none (glue prohibited); enclosure recommended",
+      "notes": "Not in GeckoTek's published table (unverified); read across from ABS, which it matches thermally. Same zero-headroom caveat — ASA normally benefits from a hotter bed and that option does not exist here."
+    },
+    {
+      "filament_id": "asa-cf",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 100,
+        "max": 110
+      },
+      "adhesion_aid": "none; enclosure recommended",
+      "notes": "As ASA."
+    },
+    {
+      "filament_id": "hips",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 95,
+        "max": 110
+      },
+      "adhesion_aid": "none",
+      "notes": "Undocumented; extrapolated from ABS, with which it is usually co-printed."
+    },
+    {
+      "filament_id": "tpu",
+      "rating": "recommended",
+      "bed_temp_c": {
+        "min": 40,
+        "max": 50,
+        "recommended": 50
+      },
+      "adhesion_aid": "none",
+      "notes": "GeckoTek publishes 50 degC bed with a 230 degC extruder for flexibles. A high-tack coating is a sensible match for TPU, which struggles to stay down on release-oriented surfaces; no coating-wear data exists for flexibles either way (unverified)."
+    },
+    {
+      "filament_id": "tpu-95a",
+      "rating": "recommended",
+      "bed_temp_c": {
+        "min": 40,
+        "max": 50
+      },
+      "adhesion_aid": "none",
+      "notes": "As base TPU; the firmest grade and the easiest to lift off once cold."
+    },
+    {
+      "filament_id": "tpu-90a",
+      "rating": "recommended",
+      "bed_temp_c": {
+        "min": 40,
+        "max": 50
+      },
+      "adhesion_aid": "none",
+      "notes": "As base TPU; GeckoTek does not split flexibles by grade."
+    },
+    {
+      "filament_id": "tpu-85a",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 40,
+        "max": 50
+      },
+      "adhesion_aid": "none",
+      "notes": "Soft grades plus a deliberately high-tack coating is the combination most likely to tear coating away on removal. Cool fully and lift from a corner with a plastic tool; undocumented (unverified)."
+    },
+    {
+      "filament_id": "tpu-60a",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 30,
+        "max": 50
+      },
+      "adhesion_aid": "none",
+      "notes": "As 85A, more so. Very soft flexibles on a high-grip surface are a removal problem rather than an adhesion problem."
+    },
+    {
+      "filament_id": "tpu-60d",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 40,
+        "max": 60
+      },
+      "adhesion_aid": "none",
+      "notes": "Shore-D grades behave as rigid engineering plastics; higher corner-lift force, undocumented here."
+    },
+    {
+      "filament_id": "tpu-68d",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 40,
+        "max": 60
+      },
+      "adhesion_aid": "none",
+      "notes": "As 60D."
+    },
+    {
+      "filament_id": "tpu-gf",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 40,
+        "max": 50
+      },
+      "adhesion_aid": "none",
+      "notes": "Filled flexibles are undocumented. Abrasive fill against a thin sacrificial coating is a reason for caution, not confidence."
+    },
+    {
+      "filament_id": "tpe",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 30,
+        "max": 50
+      },
+      "adhesion_aid": "none",
+      "notes": "GeckoTek's table covers 'TPU/Flexible' generically; TPE compounds are assumed to follow but are not named (unverified)."
+    },
+    {
+      "filament_id": "cope",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 50,
+        "max": 75
+      },
+      "adhesion_aid": "none",
+      "notes": "Copolyester elastomer sits between PETG and TPU; undocumented, and should be assumed to wear the coating like PETG does."
+    },
+    {
+      "filament_id": "pva",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 45,
+        "max": 60
+      },
+      "adhesion_aid": "none",
+      "notes": "Undocumented. A water-soluble polymer on a surface that is cleaned with a 70:30 water/IPA mix needs care — wipe residue off promptly rather than letting it go tacky in humid air."
+    },
+    {
+      "filament_id": "bvoh",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 45,
+        "max": 60
+      },
+      "adhesion_aid": "none",
+      "notes": "As PVA; normally only present as a support interface layer."
+    },
+    {
+      "filament_id": "pp",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 80,
+        "max": 100
+      },
+      "adhesion_aid": "use a dedicated PP surface instead",
+      "notes": "Not in GeckoTek's compatibility list, and the surface's blanket prohibition on adhesive glues removes the only tool that normally makes PP printable on a general-purpose surface. Use a PP-coated sheet."
+    },
+    {
+      "filament_id": "pp-gf",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 80,
+        "max": 100
+      },
+      "adhesion_aid": "use a dedicated PP surface instead",
+      "notes": "As PP; glass fill lowers warp but does not change the surface-energy mismatch."
+    },
+    {
+      "filament_id": "pc",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 110,
+        "max": 120
+      },
+      "adhesion_aid": "use a PEI, garolite or carbon-fibre plate instead",
+      "notes": "PC's normal bed range starts at the surface's absolute maximum and goes past it. GeckoTek states plainly: do not exceed 110 degC bed. There is no configuration of PC that respects that limit and still prints reliably."
+    },
+    {
+      "filament_id": "pc-abs",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 100,
+        "max": 120
+      },
+      "adhesion_aid": "use a PEI or garolite plate instead",
+      "notes": "The blend is gentler than straight PC but still wants a bed above this surface's ceiling for anything with a large footprint."
+    },
+    {
+      "filament_id": "pc-gf",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 110,
+        "max": 125
+      },
+      "adhesion_aid": "use a high-temperature plate instead",
+      "notes": "As PC."
+    },
+    {
+      "filament_id": "pc-pbt",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 100,
+        "max": 120
+      },
+      "adhesion_aid": "use a high-temperature plate instead",
+      "notes": "As PC-ABS; above the published ceiling."
+    },
+    {
+      "filament_id": "ppa",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 90,
+        "max": 120
+      },
+      "adhesion_aid": "use a garolite or high-temperature plate instead",
+      "notes": "Crowds or exceeds the 110 degC ceiling, and the extruder temperatures involved are far above the 240 degC first-layer limit."
+    },
+    {
+      "filament_id": "ppa-cf",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 90,
+        "max": 120
+      },
+      "adhesion_aid": "use a garolite or high-temperature plate instead",
+      "notes": "As PPA."
+    },
+    {
+      "filament_id": "peek",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 130,
+        "max": 160
+      },
+      "adhesion_aid": "dedicated high-temperature surface required",
+      "notes": "Bed and nozzle temperatures are both far beyond the published limits (110 degC bed, 240 degC first-layer nozzle). This is the tightest thermal ceiling of any surface in this catalogue."
+    },
+    {
+      "filament_id": "pekk",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 130,
+        "max": 160
+      },
+      "adhesion_aid": "dedicated high-temperature surface required",
+      "notes": "As PEEK."
+    },
+    {
+      "filament_id": "pei-ultem",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 130,
+        "max": 160
+      },
+      "adhesion_aid": "dedicated high-temperature surface required",
+      "notes": "As PEEK."
+    },
+    {
+      "filament_id": "pps",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 120,
+        "max": 150
+      },
+      "adhesion_aid": "dedicated high-temperature surface required",
+      "notes": "Above the ceiling."
+    },
+    {
+      "filament_id": "pps-cf",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 120,
+        "max": 150
+      },
+      "adhesion_aid": "dedicated high-temperature surface required",
+      "notes": "As PPS."
+    },
+    {
+      "filament_id": "ppsu",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 120,
+        "max": 150
+      },
+      "adhesion_aid": "dedicated high-temperature surface required",
+      "notes": "As PPS."
+    }
+  ],
+  "preparation": "There is no preparation, and that is the rule rather than an omission. No sanding, no seasoning, no glue, no release agent — both GeckoTek and the owner are explicit that the surface is used bare, and the owner goes further: no adhesive glues are to be used with this topper at all, regardless of material. Applying a glue stick or promoter here defeats the coating that provides the adhesion and gives you a worse surface than the one you bought. First use is an application job, since this is an adhesive-backed sheet: degrease the bed or steel carrier to bare metal, align before contact because the adhesive is permanent, and lay the sheet from one edge smoothing outward to chase air ahead of it. Re-check first-layer Z afterwards, since the sheet adds its own thickness to the datum. The one tuning knob GeckoTek does give is bed temperature: raise it by 10 degC if a print peels, lower it by 10 degC if removal is too hard, staying under the 110 degC ceiling in either direction. Per-print prep is only cleanliness, plus a deliberate decision about where on the sheet to place the part if you are printing nylon or PETG.",
+  "cleaning": "GeckoTek's published routine is a 70:30 water/isopropyl-alcohol mix wiped over the surface every five to ten prints, or whenever adhesion drops; a quick pass with an alcohol pad is the same thing in a more convenient form. Acetone is explicitly prohibited in their troubleshooting guidance. Do not sand the surface at any grit — on a coated sheet that is not maintenance, it is removal of the working layer. Do not use metal blades or abrasive pads. Keep liquid at the surface rather than flooding the perimeter, because this is an adhesive-backed sheet and solvent that wicks under the edge attacks the adhesive rather than cleaning the coating. Note that the sanctioned cleaner is deliberately dilute — 70:30 water to IPA, which is weaker than the 90%+ IPA used on PEI and composite plates — so treat stronger solvents as unsanctioned rather than merely undocumented.",
+  "model_removal": "Cool completely, then lift at a corner. GeckoTek's instruction is unambiguous on both halves: never remove parts while they are still warm, and once the plate is fully cool it is common to be able to lift a part free by hand at a corner with no tool at all. For stubborn parts, work a plastic tool under the edge with a wiggling motion rather than a shove; metal scrapers are explicitly discouraged, and on a thin sacrificial coating a metal edge does not scratch the surface so much as remove it. The removal-difficulty knob is bed temperature, not force: GeckoTek's tuning advice is to drop the bed 10 degC if parts are too hard to get off, and raise it 10 degC if they peel during the print. Nylon and PETG parts are the ones that will fight you, and forcing them is precisely what strips coating out of the print area — if a nylon part genuinely will not come free, the coating in that spot is probably already committed.",
+  "stuck_print_recovery": "Wait for full cooling first; GeckoTek treats warm removal as the primary user error and most stuck prints on this surface are simply premature ones. Then try lifting by hand from a corner, then a plastic tool worked under the edge with a wiggling motion — the wiggle matters, because a steady shove concentrates force on one line of coating. There is no sanctioned solvent step: acetone is prohibited, and while the 70:30 water/IPA cleaning mix is safe on the surface, flooding it at the perimeter of a stuck part risks the adhesive backing rather than the print. Two failure modes have their own procedures in GeckoTek's troubleshooting guidance. If prints are lifting or peeling during the job — the classic ABS case — the fix is ambient: enclose the printer and block cool drafts, and nudge the bed up 10 degC, rather than pressing the first layer harder. If the surface itself bubbles or delaminates mid-print and warps the part, make small razor incisions in the bubble and press the surface back down flat against the bed. Do not sand, do not use metal blades, and do not resort to glue on the next attempt. If a nylon or PETG part has genuinely welded itself into the coating, accept that the coating in that area is spent, remove the part however you must, and rotate future prints to a fresh part of the sheet.",
+  "damage_avoidance": [
+    {
+      "item": "Bed above 110 degC or first-layer nozzle above 240 degC",
+      "reason": "GeckoTek's own hard limit, published as a ceiling rather than a recommendation, and the tightest thermal envelope of any surface in this catalogue. It is what rules out PC, PPA, PEEK and the whole high-temperature family, and it leaves ABS and ASA at 100-110 degC with literally no headroom — you cannot turn the bed up to fix an ABS warp on this plate, which is why GeckoTek's own answer to ABS lifting is an enclosure instead.",
+      "severity": "destroys"
+    },
+    {
+      "item": "Any adhesive glue, glue stick or release agent",
+      "reason": "A prohibition, not a preference. The owner states flatly that no adhesive glues are to be used with this surface at all regardless of material, and GeckoTek's product design assumes a bare coating providing the adhesion. Adding glue masks the coating and gives worse results than the surface delivers unaided, and residue then has to be cleaned off a coating that tolerates only a dilute water/IPA wipe.",
+      "severity": "degrades"
+    },
+    {
+      "item": "Acetone",
+      "reason": "Named directly in GeckoTek's troubleshooting page as something not to clean with. The coating chemistry is undisclosed, so there is nothing to reason from and no safe exposure to estimate; the sanctioned cleaner is a deliberately dilute 70:30 water/IPA mix, which sets the expectation for how gentle this surface wants to be treated.",
+      "severity": "destroys"
+    },
+    {
+      "item": "Sanding at any grit",
+      "reason": "GeckoTek says not to sand the surface. This is where a coated sheet diverges sharply from garolite, where light whole-surface sanding is documented maintenance: here there is no material reserve beneath the working layer, so abrasion is not refreshing the surface, it is removing it. Once sanded through, that area of the sheet is finished.",
+      "severity": "destroys"
+    },
+    {
+      "item": "Metal scrapers, blades and prying tools",
+      "reason": "Explicitly discouraged by GeckoTek in favour of a plastic tool worked under the edge with a wiggling motion. On a thin sacrificial coating a metal edge lifts the coating rather than scratching it, and the damage is immediately visible as a bare patch that no longer holds prints.",
+      "severity": "destroys"
+    },
+    {
+      "item": "Removing parts while still warm",
+      "reason": "Listed among GeckoTek's explicit don'ts. The coating is at peak grip at temperature, so warm removal applies maximum force to the bond exactly when the coating is softest — this is the fastest way to pull coating off with the part, and it is the most common user error on this surface.",
+      "severity": "destroys"
+    },
+    {
+      "item": "Repeated nylon or PETG prints in the same area of the sheet",
+      "reason": "The wear behaviour GeckoTek's marketing does not disclose and the owner's primary data does. Grip on nylon and PETG is extreme, and the coating wears off in that area — after a few prints with nylon, after roughly a dozen with PETG, with nylon degrading it faster. Treat placement as a consumable-management decision: rotate parts across the sheet, or reserve the surface for one-off high-warp nylon jobs rather than production runs.",
+      "severity": "degrades"
+    },
+    {
+      "item": "Flooding the sheet edges with liquid",
+      "reason": "This is an adhesive-backed sheet, so the perimeter is the vulnerable joint. Liquid that wicks under the edge attacks the pressure-sensitive adhesive, and every subsequent heat cycle extends the resulting peel until the sheet lifts. Wipe the surface with the 70:30 mix rather than pouring it, and never wash this sheet the way you would a steel plate.",
+      "severity": "destroys"
+    },
+    {
+      "item": "Ignoring a surface bubble mid-print",
+      "reason": "GeckoTek documents bubbling and delamination as a real failure mode that warps the part above it. Their sanctioned fix is small razor incisions in the bubble followed by pressing the surface flat against the bed. Left alone, the bubble grows with each heat cycle and takes the sheet with it — this is one of the very few times a blade is allowed anywhere near this surface, and only for that specific purpose.",
+      "severity": "degrades"
+    },
+    {
+      "item": "Pressing the first layer harder to fix adhesion problems",
+      "reason": "The reflex fix on most surfaces and the wrong one here, because the surface already grips harder than almost anything else in this catalogue. GeckoTek's documented tuning knob is bed temperature in 10 degC steps — up if a print peels, down if removal is too hard — and over-squishing simply drives the part deeper into a coating that then comes off with it.",
+      "severity": "degrades"
+    }
+  ],
+  "temperature_limits_c": {
+    "max": 110,
+    "recommended": 60
+  },
+  "lifespan_notes": "This is the entry where vendor marketing and real-world data disagree most sharply, and the disagreement is not resolved in the vendor's favour. GeckoTek's general marketing claims the surface remains effective for over 100 prints. Owner primary data, material by material, tells a different story: extreme grip with nylon and PETG, but the coating wears off in that area after a few prints with nylon and after roughly a dozen with PETG, with nylon degrading it fastest. Only PLA matches the optimistic picture — the owner reports no coating degradation at all with PLA, plus a glass-like bottom finish. The most defensible reading is that GeckoTek's 100-print figure is a best-case, mixed-material, whole-sheet aggregate rather than a per-spot guarantee for high-shrinkage materials, and that effective life is dominated by which material you run and how much you rotate part placement. Practical consequences: budget for replacement rather than refurbishment (there is no recoating or sanding path — sanding is explicitly prohibited), rotate nylon and PETG prints across the sheet rather than reusing the centre, and consider dedicating a sheet to PLA if that is your main material, where it should genuinely last. The other end-of-life mode is mechanical: as an adhesive-backed sheet, edge peel from liquid ingress or a bubble left uncorrected will retire a sheet that still has good coating on it.",
+  "price": {
+    "usd_low": 7,
+    "notes": "GeckoTek lists EZ-Stik Hot sheets from USD 7.00 in single and 3-pack tiers, which reflects small-format sizes such as the 160x160 mm sheet seen in Amazon listings. Pricing for larger Bambu-bed-class formats was not directly confirmed and no upper bound is recorded here (unverified). As an adhesive-backed consumable rather than a steel plate, unit price is the wrong number to plan around — replacement frequency under nylon or PETG matters far more."
+  },
+  "additional_notes": "Two things make this surface unusual enough to be worth owning deliberately rather than by default. First, the thermal envelope is inverted relative to most of this catalogue: GeckoTek's published processing temperatures run nylon at a 30-50 degC bed, far cooler than nylon is normally printed, and cap everything at 110 degC bed and 240 degC first-layer nozzle. That makes it a low-temperature specialist and rules out the entire high-temperature engineering family. Second, the no-glue rule is absolute rather than advisory, which is rare — most surfaces tolerate a glue stick as a fallback, and here it is the one thing you must not reach for. The line also includes an EZ-Stik Cold variant for unheated beds (PLA at 210 degC nozzle, nylon at 200-220 degC, wood- and brick-filled blends at 200-230 degC), which is a different product with a different envelope and is not covered by this entry's ratings. Because the working coating is thin and sacrificial rather than structural, the honest way to think about this surface is as a consumable film with an unusually good grip, not as a durable plate: excellent as a PLA finish surface and as a rescue plate for one-off high-warp nylon parts, poor value as a general-purpose production surface if nylon or PETG is your staple.",
+  "trade_names": [
+    {
+      "manufacturer": "Etsy custom build-plate fabricator (owner listing 4299347986)",
+      "product": "GeckoTek EZ-Stick Hot",
+      "notes": "ALREADY PRESENT in geckotek-ez-stick.trade_names - skip on merge to avoid a duplicate."
+    },
+    {
+      "manufacturer": "Etsy custom build-plate fabricator (owner-cited multi-surface listing, listing 4299347986)",
+      "product": "GeckoTek EZ-Stick Hot",
+      "notes": "Offered as a topper option on a custom multi-surface build plate. Source of the material-specific coating-wear data that GeckoTek's own marketing does not publish."
+    },
+    {
+      "manufacturer": "GeckoTek",
+      "product": "EZ-Stik Cold 3D Printer Build Surface",
+      "notes": "Unheated-bed sibling product with its own processing temperatures (PLA 210 degC nozzle, nylon 200-220 degC, wood/brick-fill 200-230 degC). Same product family and presumed related coating, but not covered by the ratings in this entry (unverified)."
+    },
+    {
+      "manufacturer": "GeckoTek",
+      "product": "EZ-Stik Hot 3D Printer Build Surface",
+      "notes": "The heated-bed variant this entry describes. Published processing table and the 110 degC bed / 240 degC first-layer nozzle ceiling come from GeckoTek's own product page and user guide."
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "Owner-provided vendor build-surface descriptions (primary): /home/claude/filament-repo/research/vendor-plate-descriptions.md, quoting https://www.etsy.com/listing/4299347986/bambu-lab-h2d-custom-build-plate — GeckoTek EZ-Stick Hot entry (material-specific coating wear, absolute no-glue rule, PLA glass-like bottom)",
+      "GeckoTek - EZ-Stik Hot 3D printer build surface product page (processing temperature table, 110 degC bed / 240 degC first-layer nozzle ceiling, pricing from USD 7.00): https://geckotek.co/products/ez-stik-hot-3d-printer-build-surface",
+      "GeckoTek - EZ-Stik user guide (70:30 water/IPA wipe every 5-10 prints, cool-then-lift-at-a-corner removal, plastic tool with a wiggling motion, +/-10 degC bed tuning): https://geckotek.co/pages/ez-stik-user-guide",
+      "GeckoTek - troubleshooting guidance (do not use acetone, do not sand, do not remove warm parts, enclosure for ABS lifting, razor incisions to reseat a bubbled surface)",
+      "GeckoTek marketing copy - 'Advanced Coating Technology' positioning and the 'effective for over 100 prints' claim"
+    ],
+    "last_verified": "2026-08-01",
+    "confidence": "medium",
+    "conflicts": "Lifespan is the headline conflict and is deliberately left unresolved in this entry: GeckoTek's marketing claims the surface stays effective for over 100 prints, while the owner's primary data reports the coating wearing off in the print area after a few nylon prints or roughly a dozen PETG prints, with PLA alone causing no degradation. Both are recorded; the entry treats the vendor figure as a best-case mixed-material aggregate rather than accepting it at face value. Secondary gaps: the coating chemistry is genuinely undisclosed, so surface_makeup is descriptive only and no solvent compatibility can be reasoned from first principles. GeckoTek's nylon bed range of 30-50 degC is far below normal nylon practice and is recorded as published without independent corroboration. ASA, HIPS, PVB, PVA, BVOH, PCTG, all filled variants and every TPU grade split are absent from GeckoTek's table and are extrapolated from the nearest documented material. Whether the coating-wear behaviour extends to flexibles is unknown in either direction. Pricing is confirmed only for small-format sheets from USD 7.00; larger Bambu-class formats are unverified and no upper bound is recorded. The EZ-Stik Cold variant shares the product family and is listed as a trade name, but whether it uses the same coating is not stated by the vendor. Finally, the texture is recorded as smooth on the strength of the owner's 'glass like bottom' description for PLA; GeckoTek does not publish a finish specification."
+  }
+}

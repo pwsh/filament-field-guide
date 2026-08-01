@@ -553,5 +553,17 @@
     "last_verified": "2026-08-01",
     "confidence": "medium",
     "conflicts": "Prusa explicitly discourages freezing the satin sheet, which contradicts the freezer trick recommended almost universally for other PEI-family plates including smooth and textured — the guidance here follows Prusa for this sheet only. No separate thermal ceiling is published for satin versus textured, so the 130 degC max is inferred from supported material bed temps (PLA through PC blend) rather than a datasheet. The 12-18 month lifespan figure is borrowed from Bambu-ecosystem community reporting on PEI coatings and is not Prusa-specific or verified for satin. Nylon behaviour on satin specifically is unverified; the avoid rating is carried over from general PEI guidance. Outside Prusa, the 'satin' label is applied inconsistently by small vendors (including to PEO films), so third-party satin plates may not match this entry. Bambu markets no satin-branded plate and Creality has no identified dedicated satin SKU (unverified)."
-  }
+  },
+  "trade_names": [
+    {
+      "manufacturer": "DarkMoon3D",
+      "product": "Darkmoon DUO (CFX x Satin) - Satin face",
+      "notes": "Double-sided plate; this row covers the satin face only. Pair with the carbon-fiber-plate row above."
+    },
+    {
+      "manufacturer": "DarkMoon3D",
+      "product": "Darkmoon Satin Build Plate",
+      "notes": "Satin coated spring steel, smooth-ish cool-release; matches the fine powder-coated PEI satin category."
+    }
+  ]
 }

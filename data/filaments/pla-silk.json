@@ -140,6 +140,7 @@
       "pla",
       "pla-cf",
       "pla-gf",
+      "pla-glitter",
       "pla-glow",
       "pla-gradient",
       "pla-hf",
@@ -264,6 +265,11 @@
       "manufacturer": "bambu-lab",
       "product": "PLA Silk / Silk+ / Silk Dual Color",
       "notes": "Dual Color is a coextruded two-tone strand; chemistry unchanged from silk PLA"
+    },
+    {
+      "manufacturer": "chckx3d",
+      "product": "Silk PLA Filament",
+      "notes": "Silk-luster PLA, $14.99, 28 colorways."
     },
     {
       "manufacturer": "coex-3d",

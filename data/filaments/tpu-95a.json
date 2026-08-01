@@ -132,6 +132,7 @@
   },
   "compatibility": {
     "bonds_with": [
+      "lw-tpu",
       "tpe",
       "tpu",
       "tpu-60a",
@@ -248,6 +249,11 @@
     {
       "manufacturer": "bambu-lab",
       "product": "TPU 95A"
+    },
+    {
+      "manufacturer": "chckx3d",
+      "product": "TPU Filament (Shore 98A)",
+      "notes": "98A, firm end of the 95A-class grade band. From $15.99; listed 210-230C nozzle, unheated bed."
     },
     {
       "manufacturer": "colorfabb",

@@ -1,0 +1,272 @@
+{
+  "id": "pla-glitter",
+  "name": "Glitter PLA",
+  "aliases": [
+    "Sparkle PLA",
+    "PLA Sparkle",
+    "Galaxy PLA",
+    "Shimmer PLA",
+    "Twinkling PLA",
+    "Stardust PLA",
+    "Glitter Flake PLA"
+  ],
+  "status": "researched",
+  "base_type": "pla",
+  "variation_kind": "glitter",
+  "polymer_class": "polylactide",
+  "chemical_makeup": "PLA carrying suspended reflective flake — metallic, PET or mica-type glitter — in a translucent-to-opaque matrix. Bambu's PLA Sparkle datasheet lists the additive as metal particles; Proto-pasta's Stardust suspends silver glitter flake in a translucent HTPLA matrix and states explicitly that it contains no abrasive fillers. Flake size and chemistry are otherwise undisclosed across the category",
+  "summary": "Base PLA with reflective flake suspended in it — an aesthetic-only variant that, unusually for a filled PLA, keeps base-PLA mechanicals (XY 39 MPa, Z 32 MPa) and needs no hardened nozzle. The single real constraint is orifice size: the flake bridges fine nozzles, so 0.4 mm is the floor and Bambu explicitly bars 0.2 mm. Drying is stricter than base PLA at 55 °C for 8 h.",
+  "printing": {
+    "nozzle_temp_c": {
+      "min": 190,
+      "max": 230,
+      "recommended": 220
+    },
+    "bed_temp_c": {
+      "min": 35,
+      "max": 45,
+      "recommended": 40
+    },
+    "ambient_temp_c": {
+      "min": 15,
+      "max": 30,
+      "recommended": 22
+    },
+    "speed_mm_s": {
+      "min": 40,
+      "max": 250,
+      "recommended": 120
+    },
+    "enclosure_recommended": false,
+    "heated_chamber_required": false,
+    "requires_hardened_nozzle": false,
+    "part_cooling_fan_pct": {
+      "min": 80,
+      "max": 100,
+      "recommended": 100
+    },
+    "enclosure_open_for_cooling": true,
+    "notes": "Thermally and rheologically this is base PLA: Bambu Sparkle is 190-230 °C tested at 220 °C with a 35 °C bed, Proto-pasta Stardust is 190-230 °C and does not even require a heated bed (up to 70 °C is fine). There is no speed penalty, unlike pla-wood, pla-stone or heavy pla-metal. The one hard rule is nozzle diameter — Bambu explicitly warns against 0.2 mm nozzles on the Sparkle line because the particles jam small orifices, so run 0.4 mm or larger. No hardened nozzle: Proto-pasta states normal brass wear is expected because there are no abrasive fillers, and CNC Kitchen's abrasion testing never covered glitter grades, so this variant is deliberately flagged non-abrasive against pla-glow and pla-stone, which are not. As with base PLA, open the door/lid on an enclosed machine. In practice this is base PLA plus one care item (orifice size), which is why it sits a single rung below base PLA rather than alongside pla-silk, whose gloss-versus-temperature tuning is a genuinely narrower window."
+  },
+  "feeding": {
+    "drive_system": "any",
+    "ams_compatible": "yes",
+    "feeding_assistant_recommended": false,
+    "notes": "The only filled-look PLA variant in this cluster that keeps base PLA's plain 'yes' for material stations. Bambu sells PLA Sparkle as mainline AMS-compatible consumer stock and Creality badges its Stardust equivalent as RFID smart filament for CFS auto-detection. No fibre-wear or brittleness bar is published, none is warranted — the flake is neither abrasive enough to chew PTFE (unlike pla-glow) nor does the strand embrittle in the buffer (unlike pla-silk, which is rated conditional for exactly that reason). Rigid filament, so any extruder feeds it and no spool-side assistant is needed. The 0.4 mm nozzle floor is a hotend constraint, not a feed-path one."
+  },
+  "drying": {
+    "required_before_use": "if-exposed",
+    "temp_c": {
+      "min": 45,
+      "max": 55,
+      "recommended": 55
+    },
+    "time_hours": {
+      "min": 6,
+      "max": 8,
+      "recommended": 8
+    },
+    "methods": [
+      "filament dryer",
+      "blast oven at 55 °C",
+      "food dehydrator",
+      "drybox with desiccant"
+    ],
+    "dryness_validation": "No popping or steam at the nozzle and minimal stringing on a retraction test. Inspect a curved test surface under raking light: micro-bubbles dull the sparkle before they weaken the part, so the visual check is the sensitive one here.",
+    "notes": "Bambu's PLA Sparkle datasheet specifies 55 °C for 8 h and storage below 20 % RH — the top of base PLA's range rather than its midpoint, so it is recorded as a slight delta. The flake itself is not hygroscopic; the tighter schedule reflects that moisture damage is cosmetically obvious on a filament bought entirely for its finish."
+  },
+  "storage": {
+    "recommendations": "Sealed bag or drybox with desiccant between prints; Bambu specifies below 20 % RH for the Sparkle line, which is stricter than base PLA's open-shelf tolerance",
+    "max_humidity_pct": 20,
+    "hygroscopy": "low"
+  },
+  "price": {
+    "usd_per_kg_low": 22,
+    "usd_per_kg_high": 30,
+    "notes": "Mainstream 1 kg spools (Bambu PLA Sparkle tier) run $25-30/kg, a modest premium over base PLA at $18-20/kg and in line with pla-silk and pla-glow. Proto-pasta's Stardust HTPLA is sold in 50 g specialty coils at $5.00 each — about $100/kg equivalent, but that is small-coil packaging economics rather than a materials premium and is excluded from the range"
+  },
+  "use_cases": {
+    "recommended": [
+      "ornaments and holiday decor",
+      "cosplay and costume accents",
+      "light diffusers, lamp shades and luminaires",
+      "jewellery and giftware",
+      "novelty and party props",
+      "display models where finish sells the part"
+    ],
+    "not_recommended": [
+      "0.2 mm nozzle detail work (flake bridges the orifice)",
+      "fine miniature detail where flake size rivals feature size",
+      "sustained-load structural parts (base-PLA creep limits apply)",
+      "food-contact items",
+      "hot-environment parts (softens near 55-60 °C like base PLA)",
+      "outdoor parts"
+    ]
+  },
+  "suitability": {
+    "food_contact": "no",
+    "load_bearing": "light",
+    "high_temperature": "no",
+    "outdoor": "no"
+  },
+  "properties": {
+    "density_g_cm3": 1.26,
+    "grams_per_100cm3": 126,
+    "cm3_per_100g": 79.4,
+    "shrinkage_pct": {
+      "min": 0.3,
+      "max": 0.5,
+      "recommended": 0.4
+    },
+    "tensile_strength_mpa": {
+      "min": 32,
+      "max": 42,
+      "recommended": 39
+    },
+    "notes": "Bambu PLA Sparkle TDS: density 1.26 g/cm³ (barely above base PLA's 1.24, so the flake load is small by mass), tensile XY 39±3 MPa and Z 32±2 MPa. The Z/XY ratio of about 0.82 matches pla-glow and is far better than pla-silk's 0.76 or pla-wood's 0.58 — this is the aesthetic PLA variant that costs the least structurally. Tg, HDT and max service temperature are not published for any glitter grade and are left blank rather than guessed; treat them as base-PLA-equivalent (Tg ~58 °C). One exception sits outside those numbers: Proto-pasta Stardust uses an HTPLA matrix, so an annealed Stardust part can reach ~120 °C HDT after baking at 110 °C, at the cost of up to 2.5 % shrinkage — see pla-ht for that process, and do not apply it to ordinary glitter PLA."
+  },
+  "scores": {
+    "ease_of_print": 9,
+    "dimensional_stability": 8,
+    "warp_tendency": 1,
+    "layer_adhesion": 6,
+    "compression_strength": 7,
+    "temperature_tolerance": 2,
+    "uv_tolerance": 3,
+    "weather_tolerance": 2,
+    "water_tolerance": 6
+  },
+  "compatibility": {
+    "bonds_with": [
+      "pla",
+      "pla-glitter",
+      "pla-silk",
+      "pla-matte",
+      "pla-gradient",
+      "pla-glow",
+      "pla-plus"
+    ],
+    "support_materials": [
+      "pla",
+      "petg",
+      "pva",
+      "bvoh"
+    ],
+    "usable_as_support_for": [],
+    "notes": "Standard PLA-family behaviour with no caveats: welds to base PLA and other PLA grades at identical temperatures, does not weld to PETG/ABS/ASA/PC/PA/PP. Unlike pla-wood and pla-metal, the interface is not a weak point — the flake load is too small to disrupt the weld — so multi-material seams can sit anywhere the geometry wants. Standard PLA or PETG breakaway supports work; PVA/BVOH where a sparkling underside must be preserved. Not listed as a support material itself, purely on cost."
+  },
+  "plate_recommendations": [
+    {
+      "plate_id": "pei-smooth",
+      "rating": "recommended",
+      "notes": "The best pairing: a mirror-flat bottom face reflects like the rest of the part, so the sparkle reads consistently on every surface."
+    },
+    {
+      "plate_id": "pei-textured",
+      "rating": "recommended",
+      "notes": "Adheres normally at 35-45 °C with no release agent. The grain diffuses the bottom face slightly, but glitter hides plate texture far better than pla-silk does, so this is a genuine default rather than a compromise."
+    },
+    {
+      "plate_id": "pei-patterned",
+      "rating": "usable",
+      "notes": "Reflective bases carry the holographic pattern well, as with silk and metallic PLA, but a bottom face already full of flake competes with the diffraction effect rather than amplifying it. Extrapolated from the silk/metallic pairing rather than directly reported."
+    }
+  ],
+  "emissions": {
+    "voc_level": "low",
+    "particulate_level": "low",
+    "primary_emissions": [
+      "lactide",
+      "ultrafine particles"
+    ],
+    "ventilation": "optional",
+    "notes": "No emissions delta from base PLA. The flake is inert at PLA extrusion temperatures and no glitter-specific fume species is documented in any source. Standard good-practice ventilation for continuous printing still applies."
+  },
+  "safety_notes": "Not food-contact certified in any grade — the flake and colourant package is uncertified and FDM layer crevices defeat food safety regardless. Sanding produces plastic fines mixed with reflective flake; wear a mask. No hardened nozzle is required, but running below 0.4 mm risks a hard clog that takes a cold pull or nozzle change to clear.",
+  "additional_notes": "Glitter reads best on translucent and dark bases, where flake catches light against depth; on pale opaque colours it can disappear. Because the effect is a suspended particle rather than a surface treatment, it survives sanding — unlike pla-silk's gloss, which is destroyed by it. Note the naming overlap across the catalog: 'Galaxy', 'Sparkle', 'Shimmer', 'Twinkling' and 'Stardust' are all this material, while 'Metallic' usually is not (see pla-metal) and colour-shift 'Chameleon' products are pigment effects on base pla.",
+  "provenance": {
+    "sources": [
+      "https://store.bblcdn.com/169532c9ce4d4610a9e85d92c0222bb9.pdf",
+      "https://us.store.bambulab.com/products/pla-sparkle",
+      "https://proto-pasta.com/products/glitter-flake-htpla-stardust",
+      "https://store.creality.com/products/hyper-pla-rfid-stardust-3d-printing-filament-1kg",
+      "https://www.cnckitchen.com/blog/how-much-abrasive-filaments-damage-your-nozzle",
+      "https://wiki.bambulab.com/en/general/filament-guide-material-table"
+    ],
+    "last_verified": "2026-08-01",
+    "confidence": "medium",
+    "conflicts": "Flake chemistry is inconsistent between the two brands with published data: Bambu describes metal particles, Proto-pasta describes glitter flake with explicitly no abrasive fillers, and neither publishes particle size or loading — so 'requires_hardened_nozzle: false' rests on Proto-pasta's statement plus the absence of any wear report, not on measurement. CNC Kitchen's nozzle-wear study, the standard reference for abrasion in this catalog, did not test glitter filament at all; if a future test finds Bambu's metal-particle formulation abrasive, that flag flips. Only one full datasheet (Bambu PLA Sparkle) underpins the density and tensile figures, so they describe that product rather than the category. Tg/HDT are unpublished across the category and omitted. Proto-pasta Stardust is a genuine outlier — its matrix is HTPLA, not base PLA, so its annealed heat resistance belongs to pla-ht and does not generalise here. Trade-name mapping overlap: the base pla entry still lists roughly a dozen galaxy/sparkle/glitter products with the note 'no glitter id exists'; that note is now stale and a Phase E reciprocity pass should move the genuinely flake-filled ones here while leaving pearlescent and colour-shift pigment products on base pla."
+  },
+  "trade_names": [
+    {
+      "manufacturer": "bambu-lab",
+      "product": "PLA Sparkle (also sold as PLA Galaxy)",
+      "notes": "The reference product for this entry — the only published datasheet: density 1.26 g/cm³, XY 39±3 MPa, Z 32±2 MPa, 190-230 °C, dry 55 °C/8 h, no 0.2 mm nozzles"
+    },
+    {
+      "manufacturer": "proto-pasta",
+      "product": "Stardust HTPLA (Glitter Flake HTPLA)",
+      "notes": "Silver glitter flake in a translucent HTPLA matrix; explicitly no abrasive fillers, normal brass wear expected. Sold in 50 g coils. Matrix is annealable HTPLA, so it also belongs to pla-ht"
+    },
+    {
+      "manufacturer": "overture",
+      "product": "Shimmer PLA",
+      "notes": "PLA with glitter/sparkle particulate"
+    },
+    {
+      "manufacturer": "amolen",
+      "product": "PLA Galaxy / PLA Shiny Glitter",
+      "notes": "Glitter/sparkle particulate on a PLA base"
+    },
+    {
+      "manufacturer": "inland",
+      "product": "PLA Glitter Rainbow",
+      "notes": "Glitter particulate on a PLA base; also a multi-colour spool"
+    },
+    {
+      "manufacturer": "colorfabb",
+      "product": "PLA Vibers",
+      "notes": "PLA plus glitter/sparkle flake; shares the formulation family with FormFutura Galaxy PLA"
+    },
+    {
+      "manufacturer": "formfutura",
+      "product": "Galaxy PLA",
+      "notes": "PLA plus sparkle/glitter flake; shares the formulation family with colorFabb PLA Vibers"
+    },
+    {
+      "manufacturer": "eryone",
+      "product": "PLA Galaxy / PLA Burnt Titanium",
+      "notes": "Burnt Titanium is explicitly marketed as 'Glitter PLA Filament'; the one-colour, Rainbow, Dual and Tri-colour SKUs share the base"
+    },
+    {
+      "manufacturer": "creality",
+      "product": "Hyper PLA RFID Stardust",
+      "notes": "Glitter PLA on the high-speed Hyper base, RFID-tagged for CFS auto-detection"
+    },
+    {
+      "manufacturer": "spectrum-filaments",
+      "product": "PLA Glitter",
+      "notes": "Glitter-particle-filled PLA"
+    },
+    {
+      "manufacturer": "elegoo",
+      "product": "PLA Galaxy / PLA Sparkle",
+      "notes": "Glitter particulate; still listed under base pla as well, pending a reciprocity decision"
+    },
+    {
+      "manufacturer": "sunlu",
+      "product": "PLA Twinkling / PLA Galaxy",
+      "notes": "Glitter/pearlescent particulate; the pearlescent colourways may be pigment rather than flake"
+    },
+    {
+      "manufacturer": "anycubic",
+      "product": "PLA Galaxy",
+      "notes": "Glitter particulate on a PLA base"
+    },
+    {
+      "manufacturer": "3djake",
+      "product": "ecoPLA Sparkling",
+      "notes": "Glitter PLA on the ecoPLA base"
+    }
+  ]
+}

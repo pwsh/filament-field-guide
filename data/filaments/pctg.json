@@ -251,6 +251,16 @@
       "notes": "Opaque, translucent/clear, marble, metallic and neon colourways; the CF variant is excluded (see gaps)."
     },
     {
+      "manufacturer": "chckx3d",
+      "product": "PCTG Blend",
+      "notes": "Amazon-catalog variant per 3dfilamentprofiles; blend undescribed, base pctg id used."
+    },
+    {
+      "manufacturer": "chckx3d",
+      "product": "PCTG Filament",
+      "notes": "PCTG from $16.99; listed 220-260C nozzle, 50-70C bed."
+    },
+    {
       "manufacturer": "coex-3d",
       "product": "PCTG Prime",
       "notes": "Premium-tier glycol-modified copolyester."

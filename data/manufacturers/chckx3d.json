@@ -1,0 +1,152 @@
+{
+  "id": "chckx3d",
+  "name": "CHCKX Filament",
+  "status": "researched",
+  "summary": "Amazon-first budget filament label with a WooCommerce storefront at chckx3d.com, spanning PLA and specialty PLA through engineering grades (ABS, PETG, PCTG, TPU, PA6-GF, PP-CF/PP-GF, PPA-CF) at prices three to four times below market for the engineering materials. The about page claims in-house vertically-integrated US production and ISO-certified quality control, but no certificate number, factory, plant photo or legal entity is given, and no TDS or SDS exists for any product. The stated headquarters, 1234 N Spring St, Los Angeles CA 90012, resolves to a residential condo unit per Redfin; the only contact is a personal Gmail address (yinchangfeng86@gmail.com); no social profiles exist; and one product page (PETG) still contains placeholder text reading \"Test\". The evidence therefore points to a reseller or rebrand of undisclosed third-party OEM production rather than a manufacturer. Independent testing reported in a Prusa community forum thread found two products materially mislabeled: a \"PPS-CF\" that was ABS-based and a \"PPA-CF\" that was PA6-CF. The same thread describes PC spools and thermally printed labels that smear. Treat all chemistry claims on this brand as unverified.",
+  "headquarters_country": "United States",
+  "manufacturing_countries": [],
+  "brands": [
+    "CHCKX"
+  ],
+  "oem_relationships": [
+    {
+      "company": "Undisclosed OEM (likely China-based)",
+      "relationship": "suspected-manufactured-by",
+      "notes": "No factory, plant, legal entity or ISO certificate number is disclosed anywhere on the site or in listings. The residential-condo headquarters address, personal Gmail contact, Amazon-first distribution, absence of any TDS/SDS, and engineering-grade pricing three to four times below market are all consistent with rebranded imported spools rather than in-house extrusion. China origin is inferred from the distribution and pricing pattern only; the actual producer is unidentified and the relationship is suspected, not confirmed."
+    }
+  ],
+  "endpoints": {
+    "website": "https://chckx3d.com/",
+    "store": "https://chckx3d.com/shop/",
+    "support": "https://chckx3d.com/contact-us/"
+  },
+  "product_lines": [
+    {
+      "name": "PLA Filament",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Standard PLA, $12.99; listed 200-220C nozzle, 70-80C bed."
+    },
+    {
+      "name": "Silk PLA Filament",
+      "filament_ids": [
+        "pla-silk"
+      ],
+      "notes": "Silk-luster PLA, $14.99, 28 colorways."
+    },
+    {
+      "name": "Crystal Rainbow PLA Filament",
+      "filament_ids": [
+        "pla-gradient"
+      ],
+      "notes": "Color-changing multicolor PLA, $14.99; mapped to pla-gradient as the coextruded/transitioning multicolor grade."
+    },
+    {
+      "name": "PLA-CF Filament",
+      "filament_ids": [
+        "pla-cf"
+      ],
+      "notes": "10% carbon-fiber PLA, $18.99. Fiber loading is a marketing claim; no TDS."
+    },
+    {
+      "name": "PLA-GF Filament",
+      "filament_ids": [
+        "pla-gf"
+      ],
+      "notes": "10% glass-fiber PLA, $14.99. Fiber loading is a marketing claim; no TDS."
+    },
+    {
+      "name": "ABS Filament",
+      "filament_ids": [
+        "abs"
+      ],
+      "notes": "Standard ABS, $13.99; listed 240-270C nozzle, 80-100C bed."
+    },
+    {
+      "name": "GF-ABS Filament",
+      "filament_ids": [
+        "abs-gf"
+      ],
+      "notes": "10% glass-fiber ABS, $18.99; claimed HDT 100C and flexural modulus 3300 MPa, unsupported by any datasheet. Also appears in the 3dfilamentprofiles Amazon catalog as ABS-GF."
+    },
+    {
+      "name": "PETG Filament",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "Standard PETG, $12.00. Product page is unfinished and still contains placeholder body text reading \"Test\"; no print parameters are published."
+    },
+    {
+      "name": "PETG Blend",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "Amazon-catalog variant listed on 3dfilamentprofiles alongside PETG Basic; the blend is undescribed, so the base petg id is used."
+    },
+    {
+      "name": "PCTG Filament",
+      "filament_ids": [
+        "pctg"
+      ],
+      "notes": "PCTG from $16.99; listed 220-260C nozzle, 50-70C bed."
+    },
+    {
+      "name": "PCTG Blend",
+      "filament_ids": [
+        "pctg"
+      ],
+      "notes": "Amazon-catalog variant listed on 3dfilamentprofiles alongside PCTG Basic; the blend is undescribed, so the base pctg id is used."
+    },
+    {
+      "name": "TPU Filament (Shore 98A)",
+      "filament_ids": [
+        "tpu-95a"
+      ],
+      "notes": "98A, firm end of the 95A-class grade band. From $15.99; listed 210-230C nozzle, unheated bed."
+    },
+    {
+      "name": "PA6-GF Filament",
+      "filament_ids": [
+        "pa6-gf"
+      ],
+      "notes": "10% glass-fiber PA6, $18.99; listed 260-290C nozzle, 100-120C bed."
+    },
+    {
+      "name": "PP-GF Filament",
+      "filament_ids": [
+        "pp-gf"
+      ],
+      "notes": "10% glass-fiber polypropylene, $19.99; listed 220-250C nozzle, 85-100C bed."
+    },
+    {
+      "name": "PP-CF Filament",
+      "filament_ids": [],
+      "notes": "pp-cf — coverage gap, no catalog id yet. Carbon-fiber polypropylene, $19.98; listed 230-280C nozzle, 80-110C bed."
+    },
+    {
+      "name": "PPA-CF Filament",
+      "filament_ids": [
+        "ppa-cf"
+      ],
+      "notes": "Sold as 10% carbon-fiber PPA at $22.79 with a claimed HDT of 195C and 280-310C nozzle / 100-120C bed. Chemistry is disputed: independent testing reported in the Prusa forum thread found this product to be PA6-CF, not a polyphthalamide. The ppa-cf id follows the vendor's labeling only and should not be relied on; if the forum finding holds, pa6-cf is the correct chemistry."
+    }
+  ],
+  "price_tier": "budget",
+  "additional_notes": "Origin is unresolved and manufacturing_countries is deliberately left empty. headquarters_country is set to United States because that is the storefront's claimed base (1234 N Spring St, Los Angeles CA 90012), but Redfin shows that address as a residential condo unit, not an industrial or warehouse site, so it is best read as a mail/registration address rather than a plant. No factory location, corporate entity, ISO certificate number, TDS or SDS was found anywhere, so the country where the filament is actually extruded cannot be asserted in either direction; China is a suspicion recorded under oem_relationships, not a finding. Distribution is primarily Amazon (ASINs B0FLK2KDSX, B0FLK15JP8, B0FLJXQH5D, B0FLK1NRN9), where 3dfilamentprofiles.com catalogs 150+ SKU/color combinations, a range far wider than the 14 SKUs on the company storefront. The Prusa forum thread additionally notes PC spools and thermally printed labels that smear in handling. Build plates: none found, so makes_plates is left unset. All quoted fiber loadings, HDT and modulus figures are vendor marketing claims with no supporting documentation.",
+  "provenance": {
+    "sources": [
+      "https://chckx3d.com/",
+      "https://chckx3d.com/shop/",
+      "https://chckx3d.com/about-us-3/",
+      "https://chckx3d.com/contact-us/",
+      "https://chckx3d.com/blog/",
+      "https://forum.prusa3d.com/forum/filament-materials-and-techniques/how-to-pick-up-chckx/",
+      "https://3dfilamentprofiles.com/filaments/chckx",
+      "https://www.redfin.com/"
+    ],
+    "last_verified": "2026-08-01",
+    "confidence": "low",
+    "conflicts": "Identity is contested. The about page claims in-house, vertically integrated US manufacturing with ISO-certified quality control, but supplies no certificate number, factory, plant imagery or legal entity, and no TDS or SDS exists for any SKU. Against that claim: the stated Los Angeles headquarters resolves to a residential condo unit per Redfin, the only contact is a personal Gmail address, distribution is Amazon-first with a catalog several times larger than the storefront, no social presence exists, and one product page still carries placeholder text. Engineering-grade filaments are priced three to four times below market. The weight of evidence favours a reseller/rebrand of undisclosed third-party OEM production, likely China-based, over the claimed US manufacturer; neither is proven. Product labeling is separately contested: independent testing reported in the Prusa forum thread found a product sold as \"PPS-CF\" to be ABS-based and the \"PPA-CF\" to be PA6-CF, so the PPA-CF mapping in product_lines follows vendor labeling that testing contradicts. headquarters_country (claimed storefront base) and manufacturing_countries (left empty) should not be read as verified."
+  }
+}

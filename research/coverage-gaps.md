@@ -5,18 +5,18 @@ Candidates for future variant entries, ranked by how many manufacturers sell the
 
 | Suggested id | Count | Example products |
 |---|---|---|
-| pa-cf | 11 | kingroon: PA-CF; snapmaker: PA-CF; qidi-tech: UltraPA-CF25 |
-| pla-stone | 10 | overture: Rock PLA (incl. Rock PLA Gradient); amolen: PLA Marble; geeetech: PLA Marble |
-| abs-cf | 7 | kingroon: ABS-CF; iemai-3d: CF-ABS (also sold as ABS-CF under the iSanghu label); eryone: ABS Carbon-Fiber |
+| pa-cf ✅ done 2026-08-01 | 11 | kingroon: PA-CF; snapmaker: PA-CF; qidi-tech: UltraPA-CF25 |
+| pla-stone ✅ done 2026-08-01 | 10 | overture: Rock PLA (incl. Rock PLA Gradient); amolen: PLA Marble; geeetech: PLA Marble |
+| abs-cf ✅ done 2026-08-01 | 7 | kingroon: ABS-CF; iemai-3d: CF-ABS (also sold as ABS-CF under the iSanghu label); eryone: ABS Carbon-Fiber |
 | (none) | 7 | push-plastic: Soluble Support; matterhackers: PRO Series Ryno; matterhackers: Ionic Hi-Temp Hybrid Support Material |
-| peba | 6 | esun: PEBA-90A / PEBA-85A; amolen: PEBA Basic; fillamentum: Flexfill PEBA |
-| pla-glitter | 6 | overture: Shimmer PLA; amolen: PLA Galaxy / PLA Shiny Glitter; inland: PLA Glitter Rainbow |
-| lw-asa | 5 | bambu-lab: ASA Aero; qidi-tech: ASA-Aero; eryone: ASA Light-Weight |
-| pla-ht | 5 | polymaker: HT-PLA; proto-pasta: HTPLA (also Fusion Filaments HT-PLA 3D870 / HTPLA+, Push Plastic High Heat + Tough PLA - 3D870, Keene Village Plastics P-PLA); formfutura: Volcano PLA |
-| lw-tpu | 4 | qidi-tech: TPU-Aero; colorfabb: varioShore TPU; fiberlogy: FiberFlex Aero |
-| pet-gf | 4 | bambu-lab: PET-GF; flashforge: PET-GF; qidi-tech: PET-GF |
-| support-breakaway | 4 | snapmaker: Breakaway Support for PLA; qidi-tech: S-White; polymaker: PolySupport |
-| abs-esd | 4 | esun: ABS-ESD; iemai-3d: ESD-ABS; 3dxtech: 3DXSTAT ESD-ABS |
+| peba ✅ done 2026-08-01 | 6 | esun: PEBA-90A / PEBA-85A; amolen: PEBA Basic; fillamentum: Flexfill PEBA |
+| pla-glitter ✅ done 2026-08-01 | 6 | overture: Shimmer PLA; amolen: PLA Galaxy / PLA Shiny Glitter; inland: PLA Glitter Rainbow |
+| lw-asa ✅ done 2026-08-01 | 5 | bambu-lab: ASA Aero; qidi-tech: ASA-Aero; eryone: ASA Light-Weight |
+| pla-ht ✅ done 2026-08-01 | 5 | polymaker: HT-PLA; proto-pasta: HTPLA (also Fusion Filaments HT-PLA 3D870 / HTPLA+, Push Plastic High Heat + Tough PLA - 3D870, Keene Village Plastics P-PLA); formfutura: Volcano PLA |
+| lw-tpu ✅ done 2026-08-01 | 4 | qidi-tech: TPU-Aero; colorfabb: varioShore TPU; fiberlogy: FiberFlex Aero |
+| pet-gf ✅ done 2026-08-01 | 4 | bambu-lab: PET-GF; flashforge: PET-GF; qidi-tech: PET-GF |
+| support-breakaway ✅ done 2026-08-01 | 4 | snapmaker: Breakaway Support for PLA; qidi-tech: S-White; polymaker: PolySupport |
+| abs-esd ✅ done 2026-08-01 | 4 | esun: ABS-ESD; iemai-3d: ESD-ABS; 3dxtech: 3DXSTAT ESD-ABS |
 | pc-cf | 4 | iemai-3d: CF-PC; prusa-research: Prusament PC Blend Carbon Fiber; spectrum-filaments: PC CF |
 | petg-matte | 4 | extrudr: XPETG MATT; addnorth: PETG Pro Series Matte; 3djake: easyPETG Matte |
 | pa-gf | 3 | snapmaker: PA-GF; eryone: PA Fiberglass; matterhackers: PRO Series NylonG |
@@ -291,3 +291,52 @@ Candidates for future variant entries, ranked by how many manufacturers sell the
 - **matterhackers / Ionic Hi-Temp Hybrid Support Material** — Proprietary water/solvent-assisted high-temperature support material; base chemistry undisclosed. Not a structural filament and not assignable to pva, bvoh or hips.
 - **push-plastic / Soluble Support** — Water/solvent-soluble support filament; base polymer not stated on the pages reviewed, so it cannot be assigned to pva, bvoh or hips. Needs a datasheet before mapping — probably not a new id.
 - **ultimaker / UltiMaker SR-30 / RapidRinse (Method)** — Proprietary soluble supports for ABS-family builds; distinct from PVA and BVOH
+
+## 3dfilamentprofiles.com diff — 2026-08-01 (owner-requested review)
+
+### Missing brands (by their profile count)
+
+| Brand | Profiles | Nature |
+|---|---|---|
+| CC3D | 273 | Chinese OEM/manufacturer, Amazon-first |
+| 3D-Fuel | 200 | Established US brand (Filament Innovations) — notable legacy gap |
+| Numakers | 193 | Manufacturer, global + India-specific SKUs |
+| Cookiecad | 171 | Specialty-color niche (glitter/gradient/color-change) |
+| Yoline Lab | 121 | Manufacturer, broad range incl. CF/GF |
+| Amazon Basics | 81 | Amazon private label |
+| IIID Max | 64 | Established Amazon-channel brand |
+| MarsWork | 56 | Independent (unrelated to Elegoo Mars — verified) |
+| OVV3D | 54 | Specialty PLA brand |
+| Siddament / Hobby Lobby / VOXELPLA | n/a | Counts unavailable (client-rendered); VOXELPLA vs our voxelab unresolved — verify before creating |
+
+### Missing materials (base-chemistry tier; their sub-type tags map to our variation ids)
+
+| Their name | Suggested id | Notes |
+|---|---|---|
+| ABS+ (173) | abs-plus | Toughened ABS, same tier as pla-plus |
+| PETG+ (110) | petg-plus | Toughened/blended PETG |
+| HT-PLA (95) | pla-ht | ✅ done 2026-08-01 |
+| PEBA (19) | peba | ✅ done 2026-08-01 |
+| PHA (14) | pha | Biopolymer / PLA-PHA blends |
+| PBT (7) | pbt | Standalone (we only have pc-pbt blend) |
+| PA612 (6) | pa612 | Nylon 6/12 copolymer |
+| SBS (6) | sbs | Styrenic elastomer |
+| PMMA (4) | pmma | Acrylic |
+| PE (3) | pe | Polyethylene |
+| CoPA (3) | copa | Flexible copolyamide (taulman Bridge/910 family) — note our pa entry already aliases CoPA; decide merge-vs-split |
+| MABS (1) | mabs | Transparent ABS — low priority |
+
+Ambiguous, resolve before adding: CPE vs cope/pctg (likely same family), PAHT vs ppa (likely same tier), APLA (10), PIPG (2).
+
+Completeness signals in our favor: dedicated pa66 (they lump into generic PA), deep high-performance coverage (their PEEK=2/PEI=1/PEKK=0/PPS=8 profiles), and variation-kinds as first-class scored entries rather than tags.
+
+## Plate gaps — 2026-08-01 vendor cross-walk
+
+Proprietary surfaces with undisclosed chemistry, queued pending identification:
+
+- **Tyson Build T-95** — proprietary double-sided coating on 1 mm tempered 1095 spring steel (suggested id if it proves distinct: coated-steel class)
+- **Wham Bam Smooth PEX** — cross-linked polyethylene surface, explicitly not PEI (suggested id: pex-sheet)
+- **DarkMoon LUX / BIQU SSS** — undisclosed coatings, not identifiable even to a functional class
+- Mapped by functional class instead (see supertack trade names): BIQU CryoGrip Pro, DarkMoon ICE
+
+Out of scope, dropped: MatterHackers LayerLock SLA resin surface (not FDM), DarkMoon REJECTED clearance bin (mixed surfaces).

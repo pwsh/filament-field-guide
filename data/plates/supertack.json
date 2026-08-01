@@ -448,5 +448,17 @@
     "last_verified": "2026-08-01",
     "confidence": "medium",
     "conflicts": "Bambu does not disclose the coating chemistry, so surface_makeup is descriptive rather than analytical. No maximum surface temperature is published; the 70 degC ceiling recorded here is inferred from the supported PLA/PETG envelope, not from a datasheet. PETG is the sharpest disagreement in the sources: Bambu publishes a dedicated PETG-on-SuperTack guide and lists it as supported, while multiple forum threads report over-adhesion, plate damage and unusable first layers — recorded as usable-with-prep rather than either extreme. ABS, ASA, HIPS, nylon, PC and PP are recorded as avoid by absence from the compatibility list rather than by explicit prohibition (only TPU is explicitly prohibited), so those ratings are inference. PVA/BVOH have no vendor guidance at all. Reseller blogs conflate SuperTack with the discontinued bare-polycarbonate Cool Plate, which contaminates several secondary write-ups. Whether any third-party clone of the coating exists is unverified; no plate-only vendor was found making one. SuperTack Pro pricing and its exact coating difference versus the base plate are unverified."
-  }
+  },
+  "trade_names": [
+    {
+      "manufacturer": "BIQU",
+      "product": "Panda CryoGrip Pro (all fitments)",
+      "notes": "Fable class-mapping: proprietary 7-layer low-temperature high-tack coating, functionally the SuperTack/cool-plate class; chemistry undisclosed."
+    },
+    {
+      "manufacturer": "DarkMoon3D",
+      "product": "Darkmoon ICE Build Plate",
+      "notes": "Fable class-mapping: proprietary cool-plate coating in the low-temp high-tack class; chemistry undisclosed."
+    }
+  ]
 }

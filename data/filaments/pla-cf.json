@@ -143,6 +143,7 @@
       "pla-gf",
       "pla-gradient",
       "pla-hf",
+      "pla-ht",
       "pla-matte",
       "pla-plus",
       "pla-silk"
@@ -263,6 +264,11 @@
     {
       "manufacturer": "bambu-lab",
       "product": "PLA-CF"
+    },
+    {
+      "manufacturer": "chckx3d",
+      "product": "PLA-CF Filament",
+      "notes": "10% carbon-fiber PLA, $18.99. Fiber loading is a marketing claim; no TDS exists."
     },
     {
       "manufacturer": "coex-3d",

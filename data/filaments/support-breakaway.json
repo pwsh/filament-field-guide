@@ -1,0 +1,224 @@
+{
+  "id": "support-breakaway",
+  "name": "Breakaway Support (dedicated mechanical-removal support)",
+  "aliases": [
+    "Breakaway support",
+    "Peel-away support",
+    "Non-soluble support",
+    "Support W",
+    "PolySupport",
+    "Snap-off support material"
+  ],
+  "status": "researched",
+  "base_type": null,
+  "variation_kind": null,
+  "polymer_class": "support-breakaway",
+  "chemical_makeup": "Not one chemistry — a functional class of purpose-built sacrificial filaments engineered for mechanical removal, spanning at least three formulations: PLA/TPU blends (UltiMaker Breakaway declares a 'PLA / TPU mixture'), straight PLA-based grades (Bambu Support for PLA, declared polylactic acid), and a distinct high-temperature grade for filled engineering polymers (Bambu Support for PA/PET, melting point 255 °C). A fourth line marketed as breakaway — Bambu Support for ABS — is HIPS by its own datasheet and is therefore chemically the hips entry rather than this one",
+  "summary": "Sacrificial filament designed to snap and peel off by hand, with no solvent bath and no water soak. That is the whole proposition against PVA and BVOH: no dissolving time, no extreme-hygroscopy storage regime, and no water-tolerance problem — traded for the requirement that a human hand can physically reach every support face. It is a class rather than a material: a low-temperature PLA-blend grade covers PLA/PETG/nylon work, and a separate 280-300 °C grade exists purely for carbon- and glass-filled nylons and PET-CF.",
+  "printing": {
+    "nozzle_temp_c": {
+      "min": 220,
+      "max": 300,
+      "recommended": 230
+    },
+    "bed_temp_c": {
+      "min": 35,
+      "max": 110,
+      "recommended": 45
+    },
+    "ambient_temp_c": {
+      "min": 15,
+      "max": 45,
+      "recommended": 25
+    },
+    "speed_mm_s": {
+      "min": 20,
+      "max": 60,
+      "recommended": 30
+    },
+    "enclosure_recommended": false,
+    "heated_chamber_required": false,
+    "enclosure_open_for_cooling": false,
+    "requires_hardened_nozzle": false,
+    "part_cooling_fan_pct": {
+      "min": 0,
+      "max": 100
+    },
+    "notes": "The recorded ranges are the union across a class that splits cleanly in two, and the recommended values describe the common low-temperature grade. Bambu Support for PLA: 220-230 °C nozzle, 35-45 °C bed. Bambu Support for PA/PET: 280-300 °C nozzle, 80-110 °C bed — a completely different regime, used only alongside PAHT-CF, PA6-CF, PET-CF and PA-GF. Bambu Support for ABS (which is HIPS by its own TDS): 240-270 °C, 80-100 °C bed, 25-45 °C chamber. UltiMaker Breakaway publishes no process temperatures at all (unverified). In practice the support prints inside the base material's job, so enclosure, chamber and part-cooling settings follow whatever model material is being printed rather than this filament — no meaningful class-wide fan figure exists, which is why only bounds are recorded with no recommended value. Speed is a moderate estimate rather than a published figure (unverified); support extrusions are short and interface-heavy, so throughput is rarely the limit. Hardened nozzle is false for the filament itself — none of these grades is filled — but the high-temperature grade is co-printed with carbon- and glass-filled nylons, which do require one, so most machines running it will have a hardened nozzle for the other material's sake."
+  },
+  "feeding": {
+    "drive_system": "any",
+    "ams_compatible": "conditional",
+    "feeding_assistant_recommended": false,
+    "notes": "Rigid, unfilled, non-abrasive and not hygroscopic to the PVA/BVOH degree, so the filament itself feeds through any extruder. 'Conditional' rather than 'yes' because the practical constraints are unit-specific rather than chemical: Bambu Support for PA/PET is RFID-tagged and AMS-compatible but explicitly incompatible with the AMS Lite, and Bambu Support for PLA assumes either dual extruders or an AMS to be usable at all. Unlike PVA and BVOH, a mildly damp spool does not turn brittle enough to snap in the buffer, which is why this class rates conditional-for-hardware-reasons rather than conditional-on-dryness. Enclosure open for cooling: recorded false because the setting belongs to the model material, not to the support — with the high-temperature grade the chamber must stay closed for the filled nylon it accompanies."
+  },
+  "drying": {
+    "required_before_use": "if-exposed",
+    "temp_c": {
+      "min": 55,
+      "max": 90,
+      "recommended": 80
+    },
+    "time_hours": {
+      "min": 4,
+      "max": 10,
+      "recommended": 8
+    },
+    "methods": [
+      "dedicated filament dryer",
+      "blast/convection oven at the grade's rated temperature",
+      "heated-bed method (90 °C for 10 h, per Bambu for the PA/PET grade)",
+      "drybox with desiccant"
+    ],
+    "dryness_validation": "No popping or crackling at the nozzle; clean, consistent support extrusions and interface layers rather than stringy or blobby ones; supports that snap cleanly instead of crumbling or smearing. On the high-temperature grade, damp material shows up first as poor interface adhesion — supports that detach mid-print rather than at removal time.",
+    "notes": "Schedules are published per grade and differ substantially: Bambu Support for PLA 55 °C for 8 h; Bambu Support for PA/PET 80 °C for 8 h in a blast oven or 90 °C for 10 h on a heated bed; Bambu Support for ABS (HIPS chemistry) 80 °C for 4 h. UltiMaker publishes no numbers but notes Breakaway has a longer shelf life and less moisture sensitivity than water-soluble supports — a comparative claim, not a quantified one. Recorded as 'if-exposed' rather than PVA/BVOH's 'always': that lower moisture burden is one of the class's genuine advantages. The important handling constraint is a different one and has no analogue elsewhere in the catalog — Bambu specifies removing PA/PET supports within about 2 hours of the print finishing, before the part picks up moisture and support removal becomes difficult."
+  },
+  "storage": {
+    "recommendations": "Sealed with desiccant below 20 % RH per Bambu's guidance for every grade in its support line. Materially easier to live with than PVA or BVOH — UltiMaker markets Breakaway's longer shelf life and lower moisture sensitivity as a headline advantage over water-soluble supports — but not a material that tolerates open-air storage indefinitely.",
+    "max_humidity_pct": 20,
+    "hygroscopy": "moderate"
+  },
+  "price": {
+    "notes": "No confirmed per-kilogram figure: the Bambu store price fetch failed (HTTP 402) during this research and no retail listing for UltiMaker Breakaway was verified (unverified). Directionally, Bambu's support spools sit in the same general band as its standard PLA and PETG, while UltiMaker Breakaway is priced as a premium OEM material. Both are cheaper per spool than PVA or BVOH, which is a secondary reason the class displaced soluble supports for hand-reachable geometry. No low/high bounds are recorded rather than guessed."
+  },
+  "use_cases": {
+    "recommended": [
+      "supports and support interfaces for PLA, PETG and nylon where every face is hand-reachable",
+      "support for carbon- and glass-filled engineering filaments (PAHT-CF, PA6-CF, PET-CF, PA-GF) using the 280-300 °C grade",
+      "clean, dimensionally accurate downward-facing surfaces without a solvent or water bath",
+      "workshops with no solvent handling, no ultrasonic bath and no waste-water route",
+      "large parts where a PVA soak would take days",
+      "jobs where the model material would be attacked by limonene or softened by a long water soak"
+    ],
+    "not_recommended": [
+      "enclosed cavities and internal channels a hand or tool cannot reach (use pva or bvoh)",
+      "lattice, foam-fill and other geometries with thousands of tiny support contacts",
+      "single-extruder printers with no material station",
+      "any structural, load-bearing or cosmetic use — this is sacrificial material",
+      "food-contact, outdoor or elevated-temperature parts",
+      "leaving the high-temperature grade on a finished part overnight before removal"
+    ]
+  },
+  "suitability": {
+    "food_contact": "no",
+    "load_bearing": "no",
+    "high_temperature": "no",
+    "outdoor": "no"
+  },
+  "properties": {
+    "density_g_cm3": 1.22,
+    "grams_per_100cm3": 122,
+    "cm3_per_100g": 82.0,
+    "glass_transition_c": 59.7,
+    "notes": "Density is consistent across the class within a narrow band: 1.22 g/cm³ for both UltiMaker Breakaway and Bambu Support for PLA, 1.17 for Bambu Support for PA/PET and 1.16 for the HIPS-chemistry Support for ABS. 1.22 is recorded as the general-purpose figure, with the derived 122 g/100 cm³ and 82.0 cm³/100 g following from it — use 1.17 when estimating high-temperature support consumption. Tg 59.7 °C and a melting temperature of 151.8 °C come from the UltiMaker Breakaway TDS (PLA/TPU blend) along with a melt flow rate of 3-6 g/10 min at 220 °C; the other grades sit far from these numbers, with melting points of 195 °C (HIPS-chemistry ABS support) and 255 °C (PA/PET support, melt index 29.2 ± 2.1 g/10 min). Tensile strength, HDT, shrinkage and max service temperature are published for none of these grades (unverified) — expected rather than a gap, since support material is never asked to carry structural load and the properties that actually matter (interface adhesion strength, snap behaviour, surface release) have no standard datasheet field."
+  },
+  "scores": {
+    "ease_of_print": 6,
+    "dimensional_stability": 5,
+    "warp_tendency": 3,
+    "layer_adhesion": 3,
+    "compression_strength": 3,
+    "temperature_tolerance": 3,
+    "uv_tolerance": 1,
+    "weather_tolerance": 1,
+    "water_tolerance": 8
+  },
+  "compatibility": {
+    "bonds_with": [
+      "abs",
+      "pa",
+      "petg",
+      "pla"
+    ],
+    "support_materials": [],
+    "usable_as_support_for": [
+      "abs",
+      "lw-asa",
+      "pa",
+      "pa-cf",
+      "pa12",
+      "pa6-cf",
+      "pa6-gf",
+      "pet-cf",
+      "petg",
+      "pla",
+      "pla-plus"
+    ],
+    "notes": "Read bonds_with carefully here: adhesion is deliberately calibrated to be strong enough that supports stay attached during the print and weak enough that they peel afterwards. UltiMaker's TDS reports good adhesion to PLA, PETG, nylon and ABS-based filaments for the PLA/TPU-blend grade, which is what the list records — it is a controlled, breakable interface rather than a weld, and a genuine weld would defeat the purpose. Pairings split by grade: the low-temperature PLA-blend grades (Bambu Support for PLA, UltiMaker Breakaway, Snapmaker's breakaway, Polymaker PolySupport — the last explicitly for PLA and PA12) cover the PLA/PETG/nylon range, while Bambu's 280-300 °C Support for PA/PET is specified for PAHT-CF, PA6-CF, PET-CF and PA-GF and is the only route in the list for filled engineering nylons. ASA is left out of usable_as_support_for despite the ABS listing, because Bambu's ABS-side product is HIPS chemistry and its TDS does not confirm ASA (unverified) — the lw-asa and asa entries list support-breakaway as an option from their side on the strength of styrenic-family inference, which is a weaker claim than this list should assert. support_materials is deliberately empty: a support material is not itself supported. Note the class boundary against hips: Bambu's own 'Support for ABS' is HIPS by datasheet, so a spool marketed as dedicated breakaway can chemically be the hips entry."
+  },
+  "plate_recommendations": [
+    {
+      "plate_id": "pei-textured",
+      "rating": "usable",
+      "notes": "Build-plate behaviour is largely inherited rather than intrinsic: support material is normally printed on top of, or alongside, the model material's own first layer and raft, so the plate interaction that matters is the base material's. No plate-specific guidance for any breakaway grade was found (unverified). Where the support does touch the plate directly — perimeter towers, purge blocks, prime lines — textured PEI at the base material's usual bed temperature is the safe default, and the low-temperature PLA-blend grades behave like PLA on it."
+    }
+  ],
+  "emissions": {
+    "voc_level": "low",
+    "particulate_level": "low",
+    "primary_emissions": [
+      "lactide (PLA-based and PLA/TPU-blend grades)",
+      "styrene (HIPS-chemistry grades marketed as ABS breakaway support)",
+      "ultrafine particles"
+    ],
+    "ventilation": "recommended",
+    "notes": "No emissions study covers breakaway support materials specifically (unverified), and the class is chemically mixed, so this is a by-analogy assessment. The PLA-based and PLA/TPU-blend grades should sit near the pla entry's low-emission profile at 220-230 °C. Two caveats pull the other way and are the reason ventilation is 'recommended' rather than 'optional'. First, any grade that is HIPS chemistry inherits the styrene-dominated, ventilation-required profile of the hips entry — Bambu's Support for ABS TDS itself notes a 'light pungent combustion odour'. Second, the 280-300 °C high-temperature grade prints hotter than anything else in this class, and ultrafine-particle emission rises steeply with nozzle temperature. In practice the support is always co-printed with a model material whose own emissions usually dominate the job."
+  },
+  "safety_notes": "Removal is the hazard, not printing: breakaway supports are meant to be snapped and peeled, which produces sharp shards and needs eye protection and gloves — pliers and a flush cutter beat fingers. The high-temperature grade must be removed within roughly 2 hours of print completion per Bambu, before moisture pickup makes removal difficult and encourages more forceful methods that damage the part. Grades that are HIPS chemistry carry the styrenic cautions of the hips entry (flammable, styrene fumes when overheated, fine dust when sanded). No grade in this class is food-contact rated, and none should be left in a finished part as a permanent internal element.",
+  "additional_notes": "The single most useful thing to know about this category is that 'breakaway' names a removal method, not a polymer — and the spool in front of you could be a PLA/TPU blend, straight PLA, a proprietary high-temperature formulation, or plain HIPS wearing a breakaway label. Bambu's Support for ABS is the clearest case: its own TDS declares HIPS, so it is chemically this catalog's hips entry rather than a distinct breakaway polymer. Choosing between this class and the soluble ones is a geometry question, not a quality one: breakaway wins on time, storage and cost wherever a hand or a pair of pliers can reach every support face, and loses outright on enclosed cavities, internal channels and dense lattices, where pva or bvoh remain the only workable answer. The class's own worst handling trait is counterintuitive — the high-temperature grade is less forgiving than HIPS about when you remove it (about a 2-hour window), even though it needs no solvent at all. One product widely assumed to belong here does not appear to exist: no 'eBreak' product was found in eSUN's catalog, whose support lineup is PVA and HIPS.",
+  "provenance": {
+    "sources": [
+      "https://um-support-files.ultimaker.com/materials/2.85mm/tds/BREAKAWAY/Ultimaker-Breakaway-TDS-v2.00.pdf",
+      "https://www.additive-x.com/shop/media/mageplaza/product_attachments/attachment_file/b/a/bambu_support_for_pla_technical_data_sheet.pdf",
+      "https://eu.store.bambulab.com/en-cy/products/support-for-pa-pet",
+      "https://store.bblcdn.eu/s8/default/3971a666363d43b8a2fe852b04832f93/Bambus_Support_for_ABS_Technical_Data_Sheet.pdf",
+      "https://forum.bambulab.com/t/can-the-bambu-lab-support-g-filament-be-used-with-the-pc-filament/3042",
+      "https://www.esun3d.com/filaments/"
+    ],
+    "last_verified": "2026-08-01",
+    "confidence": "medium",
+    "conflicts": "The category boundary is the main unresolved item. Bambu's 'Support for ABS' (Support G) is HIPS by its own TDS, meaning a product sold as dedicated breakaway is chemically the hips entry — recorded here as a class note rather than by splitting the entry, but it makes any class-wide chemistry statement approximate. eSUN 'eBreak' could not be confirmed to exist: eSUN's own catalogue page shows PVA and HIPS as its only support lines, so the product is treated as unverified or miscategorised and is deliberately absent from trade_names. A Bambu forum thread (single-user anecdote, unverified) reports that Support G was once recommended for PLA in an older product table and leaves residue on PC, contradicting its current ABS-only positioning. Price is unverified outright — the Bambu store returned HTTP 402 and no UltiMaker retail listing was confirmed — so the price object carries notes with no numeric bounds. UltiMaker Breakaway publishes no nozzle, bed or drying figures at all, so the class-wide process ranges rest on Bambu's three datasheets. Tensile, HDT, shrinkage and max service temperature are published for no grade. Speed, ambient range, plate behaviour and the whole emissions profile are inferred rather than sourced. Confidence is 'medium' rather than 'low' because the numbers that do exist — density, drying schedules, melt temperatures, per-grade temperature windows, AMS Lite incompatibility, the 2-hour removal window — come from manufacturer datasheets and agree with each other."
+  },
+  "trade_names": [
+    {
+      "manufacturer": "bambu-lab",
+      "product": "Support for ABS ('Support G')",
+      "notes": "Listed for completeness with a chemistry caveat: the TDS declares HIPS, so this is chemically the hips entry rather than a distinct breakaway polymer. Nozzle 240-270 °C, bed 80-100 °C, chamber 25-45 °C, density 1.16 g/cm³, melting 195 °C, dry 80 °C for 4 h."
+    },
+    {
+      "manufacturer": "bambu-lab",
+      "product": "Support for PA/PET",
+      "notes": "The high-temperature member of the class and the only route here for filled engineering nylons: nozzle 280-300 °C, bed 80-110 °C, density 1.17 g/cm³, melting point 255 °C, melt index 29.2 ± 2.1 g/10 min, dry 80 °C for 8 h (blast oven) or 90 °C for 10 h (heated bed). Specified for PAHT-CF, PA6-CF, PET-CF and PA-GF. RFID-tagged and AMS-compatible but explicitly NOT compatible with AMS Lite. Remove supports within about 2 hours of print completion."
+    },
+    {
+      "manufacturer": "bambu-lab",
+      "product": "Support for PLA (new edition, 'Support W')",
+      "notes": "Declared polylactic acid. Density 1.22 g/cm³, nozzle 220-230 °C, bed 35-45 °C, dry 55 °C for 8 h, store below 20 % RH. Weak-bond breakaway behaviour, described as working with almost any PLA; needs dual extruders or an AMS. Community threads call this 'PLA-W', which appears to be the informal name behind the 'Support W' designation."
+    },
+    {
+      "manufacturer": "kexcelled",
+      "product": "Support (Functional series)",
+      "notes": "Support/breakaway material whose solubility is not stated on any public listing, so it fits neither pva nor bvoh. Mapped here on the absence of a solubility claim rather than on a positive one (unverified)."
+    },
+    {
+      "manufacturer": "polymaker",
+      "product": "PolySupport",
+      "notes": "Non-soluble breakaway/peel-away support, stated for PLA and PA12. Composition not published on the pages reviewed (unverified)."
+    },
+    {
+      "manufacturer": "qidi-tech",
+      "product": "S-White",
+      "notes": "Support material with composition undisclosed by QIDI — could be breakaway or a PVA-type soluble. Mapped here provisionally from the catalog's coverage-gap cross-walk; needs a TDS before the assignment is firm (unverified)."
+    },
+    {
+      "manufacturer": "snapmaker",
+      "product": "Breakaway Support for PLA",
+      "notes": "Mechanical breakaway support for PLA, explicitly distinguished from PVA by the vendor; exact composition undisclosed (unverified)."
+    },
+    {
+      "manufacturer": "ultimaker",
+      "product": "UltiMaker Breakaway (Method)",
+      "notes": "Declared a 'PLA / TPU mixture' in its own TDS — the clearest published chemistry in the class. Density 1.22 g/cm³, Tg 59.7 °C, melting 151.8 °C, MFR 3-6 g/10 min at 220 °C. TDS reports good adhesion to PLA, PETG, nylon and ABS-based filaments, and a longer shelf life with less moisture sensitivity than water-soluble supports. No process temperatures published."
+    }
+  ]
+}

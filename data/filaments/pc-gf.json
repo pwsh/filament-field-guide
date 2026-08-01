@@ -142,12 +142,12 @@
   },
   "compatibility": {
     "bonds_with": [
-      "pc-gf",
+      "abs",
+      "asa",
       "pc",
       "pc-abs",
-      "pc-pbt",
-      "abs",
-      "asa"
+      "pc-gf",
+      "pc-pbt"
     ],
     "support_materials": [
       "pc",
@@ -163,6 +163,16 @@
       "plate_id": "pei-textured",
       "rating": "recommended",
       "notes": "Carried at base PC's 'recommended' rather than sourced: neither Owens Corning nor BASF names a build surface on the pages accessible during research, so this rating is industry practice plus the base entry rather than vendor guidance. Run the bed at 80-110 °C. Base PC's warnings still apply and matter more here, not less: PC bonds to PEI strongly enough to tear a smooth sheet, so use textured PEI with a glue stick as a SEPARATOR / release layer, and let the plate cool fully before removal. The fiber reduces corner lift substantially against unfilled PC, so a brim is helpful rather than essential on moderate footprints."
+    },
+    {
+      "plate_id": "g11-garolite",
+      "rating": "usable",
+      "notes": "Backfilled from plate entry (reciprocity) — see plate page"
+    },
+    {
+      "plate_id": "geckotek-ez-stick",
+      "rating": "avoid",
+      "notes": "Backfilled from plate entry (reciprocity) — see plate page"
     }
   ],
   "emissions": {

@@ -1,0 +1,255 @@
+{
+  "id": "pla-stone",
+  "name": "Stone-Filled PLA",
+  "aliases": [
+    "Marble PLA",
+    "Rock PLA",
+    "Granite PLA",
+    "StoneFil",
+    "stoneFill",
+    "PLA Stone Age",
+    "Mineral-Filled PLA"
+  ],
+  "status": "researched",
+  "base_type": "pla",
+  "variation_kind": "mineral-filled",
+  "polymer_class": "polylactide",
+  "chemical_makeup": "PLA matrix compounded with powdered mineral filler — marble, limestone or generic 'rock dust' — at loadings up to about 50 wt% in fully filled grades (FormFutura StoneFil states 50 % powdered stone). The filler is inert, non-fibrous and non-hygroscopic; it raises density sharply, adds a gritty matte stone texture, and interrupts polymer chain continuity, which is why parts are more brittle than base PLA",
+  "summary": "PLA loaded with real stone/marble powder for a heavy, gritty, convincingly mineral surface that takes paint and patina like cast stone. Versus base PLA it is far denser (1.70 vs 1.24 g/cm³ in fully filled grades), wants a hardened nozzle and 40-70 mm/s, and trades layer adhesion and impact resistance for looks. Beware the category split: many products sold as 'marble PLA' are pigment-speckle effects with no mineral filler at all and behave exactly like base PLA.",
+  "printing": {
+    "nozzle_temp_c": {
+      "min": 185,
+      "max": 230,
+      "recommended": 210
+    },
+    "bed_temp_c": {
+      "min": 50,
+      "max": 70,
+      "recommended": 60
+    },
+    "ambient_temp_c": {
+      "min": 15,
+      "max": 30,
+      "recommended": 22
+    },
+    "speed_mm_s": {
+      "min": 30,
+      "max": 120,
+      "recommended": 50
+    },
+    "enclosure_recommended": false,
+    "heated_chamber_required": false,
+    "requires_hardened_nozzle": true,
+    "part_cooling_fan_pct": {
+      "min": 80,
+      "max": 100,
+      "recommended": 100
+    },
+    "enclosure_open_for_cooling": true,
+    "notes": "Deltas vs base PLA: slower, hotter bed, bigger nozzle, hardened tip. FormFutura StoneFil runs 185-225 °C and most brands publish 190-220 °C, so the usable band is base-PLA-like but the flow is not — mineral loading thickens the melt and 40-70 mm/s is the practical ceiling before under-extrusion and packing appear. Bed runs warmer than the other filled PLA variants (50-70 °C; a few brands cite up to 100 °C, which is above what PLA needs and risks elephant's foot). Use 0.4 mm at minimum and 0.6 mm by preference — several brands and reviewers recommend 0.6 mm specifically to cut clog risk on 50 %-loaded material. FormFutura advises purging 15-20 cm of plain PLA through the hotend after a stone session so mineral powder does not sit and pack in the melt zone."
+  },
+  "feeding": {
+    "drive_system": "any",
+    "ams_compatible": "conditional",
+    "feeding_assistant_recommended": false,
+    "notes": "Rigid filament, so any extruder feeds it and no spool-side assistant is needed. AMS is 'conditional' for the same reason as pla-wood: Bambu's material table admits wood- and rock-filled PLA only 'when not very brittle, rough, or soft', and a 50 %-loaded stone filament is both rougher on PTFE feed tubes and more snap-prone in a tight buffer bend than base PLA. No manufacturer publishes a fibre-wear or brittleness bar specific to stone PLA (unlike CF/GF grades), so this is a precautionary, batch-dependent rating: run long or critical jobs from an external spool. Increase retraction slightly over your base-PLA profile — filled melts start and stop less cleanly."
+  },
+  "drying": {
+    "required_before_use": "if-exposed",
+    "temp_c": {
+      "min": 45,
+      "max": 55,
+      "recommended": 50
+    },
+    "time_hours": {
+      "min": 4,
+      "max": 8,
+      "recommended": 6
+    },
+    "methods": [
+      "filament dryer",
+      "food dehydrator",
+      "convection oven at lowest setting",
+      "drybox with desiccant"
+    ],
+    "dryness_validation": "No popping or steam at the nozzle on a purge line and consistent extrusion width. Surface finish is a poor indicator here: the material is intentionally rough and matte, so a dull extrudate does not mean wet filament the way it does for pla-silk.",
+    "notes": "No brand in the sourced set publishes a stone-specific drying schedule, so base-PLA practice (45-55 °C, 4-8 h) is recorded. Unlike pla-wood, the filler itself does not absorb water — powdered marble and limestone are non-hygroscopic — so the moisture burden is base-PLA-level rather than elevated."
+  },
+  "storage": {
+    "recommendations": "Sealed bag or drybox with desiccant between prints; tolerance is base-PLA-like since the mineral filler does not take up moisture on its own",
+    "max_humidity_pct": 40,
+    "hygroscopy": "low"
+  },
+  "price": {
+    "usd_per_kg_low": 20,
+    "usd_per_kg_high": 52,
+    "notes": "Wide spread across a split category: budget mineral-effect spools (Elegoo-tier) near $20/kg, mainstream genuinely-filled grades (Overture Rock, Spectrum Stone Age, FormFutura StoneFil, Sunlu, ZIRO) clustering $25-35/kg, and premium European lines (Fiberlogy, MatterHackers-tier) at $50+/kg"
+  },
+  "use_cases": {
+    "recommended": [
+      "decorative sculptures, busts and statuary replicas",
+      "vases, planters and lamp bases",
+      "coasters and desk objects",
+      "architectural and interior-design models",
+      "tabletop terrain and props needing convincing stone at low weight",
+      "parts intended to be painted, washed or patinated like cast stone"
+    ],
+    "not_recommended": [
+      "load-bearing or structural parts",
+      "single-wall vases and thin-wall geometry (layer adhesion is poor)",
+      "snap-fits, clips and impact-loaded parts",
+      "0.2 mm nozzle detail work (mineral powder bridges small orifices)",
+      "food-contact items",
+      "outdoor or hot-environment parts (base-PLA UV and heat limits still apply)"
+    ]
+  },
+  "suitability": {
+    "food_contact": "no",
+    "load_bearing": "no",
+    "high_temperature": "no",
+    "outdoor": "no"
+  },
+  "properties": {
+    "density_g_cm3": 1.7,
+    "grams_per_100cm3": 170,
+    "cm3_per_100g": 58.8,
+    "shrinkage_pct": {
+      "min": 0.3,
+      "max": 0.5,
+      "recommended": 0.4
+    },
+    "notes": "Density 1.70 g/cm³ is FormFutura StoneFil's published figure for a 50 wt% stone loading — the highest-confidence number in this category and dramatically above base PLA's 1.24, which is the fastest way to tell a genuinely filled product from a pigment imitation. Extrudr FLAX, another mineral-filled grade, sits at 1.45 g/cm³, and lightly loaded 'marble-effect' spools land near 1.24-1.31. The derived weight-per-volume and volume-per-weight figures therefore describe fully filled grades only: 100 g of StoneFil yields about 59 cm³ against base PLA's 81 cm³, so a stone spool prints roughly a quarter less part. Tg, HDT, max service temperature and tensile strength are not published by any sourced brand and are deliberately left blank rather than guessed — treat thermal behaviour as base-PLA-equivalent (Tg ~55-60 °C, useless above ~55 °C) and mechanical performance as base-PLA-or-worse, since both community reports and 3DInsider flag increased brittleness and weaker layer bonding from the filler interrupting chain continuity. Print shrinkage is recorded at PLA values because the filler is inert and non-fibrous; no brand publishes a measured figure."
+  },
+  "scores": {
+    "ease_of_print": 6,
+    "dimensional_stability": 8,
+    "warp_tendency": 1,
+    "layer_adhesion": 4,
+    "compression_strength": 6,
+    "temperature_tolerance": 2,
+    "uv_tolerance": 3,
+    "weather_tolerance": 2,
+    "water_tolerance": 5
+  },
+  "compatibility": {
+    "bonds_with": [
+      "pla",
+      "pla-stone",
+      "pla-matte",
+      "pla-gradient",
+      "pla-plus"
+    ],
+    "support_materials": [
+      "pla",
+      "petg",
+      "pva",
+      "bvoh"
+    ],
+    "usable_as_support_for": [],
+    "notes": "Same PLA-family bonding as the base entry — welds to itself and to other PLA grades at identical temperatures, does not weld to PETG/ABS/ASA/PC/PA/PP. Standard PLA or breakaway-PLA supports work because the print temperatures match; PVA/BVOH remain the soluble options. Not listed as usable support for anything: the gritty, mineral-loaded surface leaves a poor interface finish and the material is both abrasive and expensive to waste on scaffolding."
+  },
+  "plate_recommendations": [
+    {
+      "plate_id": "pei-textured",
+      "rating": "recommended",
+      "notes": "Adheres like base PLA with no release agent at 50-60 °C, and the plate grain is cosmetically free here — it disappears into a surface that is already deliberately stone-rough. The default choice for this material."
+    },
+    {
+      "plate_id": "pei-smooth",
+      "rating": "usable",
+      "notes": "Bonds fine, but a glossy bottom face reads as obviously plastic against the matte mineral texture of every other surface on the part. Choose it only when the underside will be sanded, painted or hidden."
+    }
+  ],
+  "emissions": {
+    "voc_level": "low",
+    "particulate_level": "low",
+    "primary_emissions": [
+      "lactide",
+      "ultrafine particles"
+    ],
+    "ventilation": "optional",
+    "notes": "No emissions delta from base PLA: powdered marble and limestone are inert at PLA extrusion temperatures and no source reports a stone-specific fume species. Unlike pla-wood, there is no filler pyrolysis and no burnt odour. Standard good-practice ventilation for continuous printing still applies."
+  },
+  "safety_notes": "Wear a mask and work wet or with extraction when sanding — the dust is mineral powder plus plastic fines, and stone feedstocks are not certified free of crystalline silica by any sourced brand. Not food-contact certified: eSUN's eMarble carries a food-safe marketing claim that no sourced datasheet substantiates, and FDM layer crevices defeat food safety regardless. Fit a hardened nozzle before printing rather than after — brass wear shows up as under-extrusion on the next, unrelated job.",
+  "additional_notes": "Check for the words 'stone powder', 'mineral filler' or a published density above ~1.4 g/cm³ before buying. A large share of products marketed as marble or granite PLA are colourant and speckle blends on plain PLA with no mineral content: they print exactly like base PLA, need no hardened nozzle, and none of the penalties in this entry apply to them. The catalog parks those under the base pla entry. Parts from genuinely filled grades sand to a chalky matte, take acrylic washes and dry-brushing beautifully, and feel convincingly heavy in the hand — the density is a feature, not just a spec.",
+  "provenance": {
+    "sources": [
+      "https://www.formfutura.com/product/stonefil/",
+      "https://3dinsider.com/marble-pla-filament/",
+      "https://all3dp.com/2/marble-pla-marble-filament-brands-compared/",
+      "https://eu.store.bambulab.com/en-it/products/pla-marble",
+      "https://facfox.com/docs/kb/marble-pla-marble-filament-brands-compared",
+      "https://wiki.bambulab.com/en/general/filament-guide-material-table"
+    ],
+    "last_verified": "2026-08-01",
+    "confidence": "low",
+    "conflicts": "This is a genuinely split product category and that drives the low confidence. Filler loading is published by exactly one brand (FormFutura, 50 wt%); for the other nine mapped manufacturers it is unverified, and several competing 'marble PLA' products contain pigment speckle rather than mineral powder — the recorded 1.70 g/cm³ describes fully filled grades only, with Extrudr FLAX at 1.45 and lightly loaded spools near 1.24. Hardened nozzle is directly disputed: FormFutura and Bambu both recommend hardened steel for stone-filled PLA, while Elegoo markets its mineral line as brass-safe; set true for the category as a precaution, matching how pla-wood and pla-metal are handled. No brand publishes Tg, HDT, tensile strength, shrinkage or a drying schedule for stone PLA, so those fields are either omitted or inherited from base PLA and flagged. Brittleness and weak layer adhesion are community-and-review-level findings, not datasheet measurements. AMS rating is inferred from Bambu's wood/rock-filled wording, not from a stone-specific statement. Trade-name mapping overlap: the base pla entry still lists several marble/stone products (bambu-lab PLA Marble, elegoo PLA Marble, esun PLA-Marble, sunlu PLA Marble, jayo Marble PLA, anycubic PLA Marble, jamg-he Marble PLA, atomic-filament Marble) under base pla with the note 'no marble id exists' — that note is now stale and a Phase E reciprocity pass should decide product-by-product which are genuinely mineral-filled and move them here."
+  },
+  "trade_names": [
+    {
+      "manufacturer": "formfutura",
+      "product": "StoneFil",
+      "notes": "The reference product for this entry: explicitly 50 % powdered stone filling, density 1.70 g/cm³, 185-225 °C, hardened nozzle recommended"
+    },
+    {
+      "manufacturer": "overture",
+      "product": "Rock PLA (incl. Rock PLA Gradient)",
+      "notes": "Described by the vendor as a stone-filled composite — a real particulate filler that raises density and abrasiveness, not a pigment. The Gradient SKU is the same composite with a colour transition"
+    },
+    {
+      "manufacturer": "colorfabb",
+      "product": "stoneFill",
+      "notes": "PLA/PHA carrier plus mineral/stone filler; matrix is a PLA blend rather than neat PLA, as with colorFabb's woodFill"
+    },
+    {
+      "manufacturer": "spectrum-filaments",
+      "product": "PLA Stone Age",
+      "notes": "PLA plus mineral/stone powder giving a stone-like matte texture"
+    },
+    {
+      "manufacturer": "geeetech",
+      "product": "PLA Marble",
+      "notes": "The only manufacturer statement in the cluster that names stone powder explicitly as the filler ('mixed with stone powder or other additives to simulate marble')"
+    },
+    {
+      "manufacturer": "amolen",
+      "product": "PLA Marble",
+      "notes": "Mineral/stone-look filler on a PLA base; loading unpublished"
+    },
+    {
+      "manufacturer": "eryone",
+      "product": "PLA Marble",
+      "notes": "Mineral-filled marble-look PLA; loading unpublished"
+    },
+    {
+      "manufacturer": "filament-pm",
+      "product": "MARBLEJET",
+      "notes": "Marble-effect mineral-filled PLA"
+    },
+    {
+      "manufacturer": "rosa3d",
+      "product": "PLA Speed Matt Marble (Ivory / Sandstone / Carrara)",
+      "notes": "Mineral-filled marble/stone-look PLA on the high-speed matte base"
+    },
+    {
+      "manufacturer": "extrudr",
+      "product": "FLAX",
+      "notes": "Bio-based matrix plus mineral filler with a sandstone-like matte finish; density 1.45 g/cm³, VICAT A 48 °C. Matrix is not confirmed to be neat PLA, so this is a category match rather than a chemistry match"
+    },
+    {
+      "manufacturer": "bambu-lab",
+      "product": "PLA Marble",
+      "notes": "Mainstream marble-effect PLA; Bambu's own guidance recommends a hardened nozzle, which implies genuine mineral content, but no filler percentage or density is published. Still listed under base pla as well — needs a reciprocity decision"
+    },
+    {
+      "manufacturer": "elegoo",
+      "product": "PLA Marble",
+      "notes": "Marketed as non-abrasive and brass-safe despite the mineral-fill positioning — the source of this entry's hardened-nozzle conflict. Still listed under base pla as well"
+    },
+    {
+      "manufacturer": "ziro",
+      "product": "Stone PLA",
+      "notes": "Mineral-filler stone texture; loading unpublished"
+    }
+  ]
+}

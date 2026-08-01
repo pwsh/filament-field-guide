@@ -146,6 +146,7 @@
       "petg-esd",
       "petg-gf",
       "pva",
+      "support-breakaway",
       "tpu"
     ],
     "support_materials": [
@@ -159,7 +160,8 @@
       "pla-matte",
       "pla-plus",
       "pla-silk",
-      "pva"
+      "pva",
+      "support-breakaway"
     ],
     "usable_as_support_for": [
       "lw-pla",
@@ -171,13 +173,16 @@
       "pla",
       "pla-cf",
       "pla-gf",
+      "pla-glitter",
       "pla-glow",
       "pla-gradient",
       "pla-hf",
+      "pla-ht",
       "pla-matte",
       "pla-metal",
       "pla-plus",
       "pla-silk",
+      "pla-stone",
       "pla-wood",
       "tpu-60d",
       "tpu-68d",
@@ -343,6 +348,16 @@
       "manufacturer": "bambu-lab",
       "product": "PETG Translucent",
       "notes": "Colour/opacity variant only"
+    },
+    {
+      "manufacturer": "chckx3d",
+      "product": "PETG Blend",
+      "notes": "Amazon-catalog variant per 3dfilamentprofiles; blend undescribed, base petg id used."
+    },
+    {
+      "manufacturer": "chckx3d",
+      "product": "PETG Filament",
+      "notes": "Standard PETG, $12.00. Product page unfinished (placeholder text); no print parameters published."
     },
     {
       "manufacturer": "coex-3d",

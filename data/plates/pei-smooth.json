@@ -569,5 +569,22 @@
     "last_verified": "2026-08-01",
     "confidence": "medium",
     "conflicts": "Surface thermal ceiling is unverified: PEI resin datasheets imply continuous service well above 150 degC, but no vendor publishes a rated max bed temperature for a laminated sheet, and the 3M-class adhesive or steel lamination is the real limit rather than the polymer — the 150 degC max recorded here is a conservative estimate, not a published figure. Bambu's Smooth PEI Plate price (USD 25-30) could not be confirmed against the manufacturer store. Sources also disagree on removal aids: general community practice endorses the freezer trick on smooth PEI, while Prusa discourages freezer use for its coated sheets, so the guidance differs by sheet construction rather than being universal. Vendor ratings for TPU and PC range from flat 'avoid' to 'fine with a glue stick'; recorded here as usable-with-prep with a mandatory separator, which is the conservative reading."
-  }
+  },
+  "trade_names": [
+    {
+      "manufacturer": "BIQU",
+      "product": "BIQU PEI Magnetic Spring Steel Build Plate",
+      "notes": "Listed only as 'plain PEI on magnetic spring steel'. Mapped to pei-smooth as the default reading of unqualified PEI film; if the SKU turns out to be powder-coated it belongs on pei-textured instead (unverified)."
+    },
+    {
+      "manufacturer": "BIQU",
+      "product": "BIQU Panda Build Plate - smooth face",
+      "notes": "Same SKU, smooth PEI face."
+    },
+    {
+      "manufacturer": "BuildTak",
+      "product": "BuildTak PEI 3D Printing Surface",
+      "notes": "Separate PEI film line, distinct from the classic textured sheet; from USD 6.59. Mapped smooth as the default for unqualified PEI film (unverified)."
+    }
+  ]
 }
