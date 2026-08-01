@@ -158,18 +158,10 @@
     ],
     "support_materials": [
       "bvoh",
-      "pa",
       "pva",
       "support-breakaway"
     ],
-    "usable_as_support_for": [
-      "copa",
-      "pa",
-      "pa-cf",
-      "pa12",
-      "pa6",
-      "pa66"
-    ],
+    "usable_as_support_for": [],
     "notes": "Nylon reliably welds only to itself. It does not bond usefully to pla, petg, abs, asa, pc, pp, pva, hips, bvoh, pctg, pvb or pet — the chemistry and the 240-290 °C print window are both mismatched. Some engineering TPUs are marketed as nylon-compatible and can reach marginal interlayer bonding, but that is brand-specific rather than a property of the class. Soluble supports are impractical: PVA degrades above ~200 °C and BVOH, while more heat-tolerant, still sits below nylon's range, so same-material PA breakaway supports are the standard workaround. PA is a poor support material for other polymers because it cross-bonds so weakly."
   },
   "plate_recommendations": [

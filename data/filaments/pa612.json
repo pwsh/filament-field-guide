@@ -147,12 +147,9 @@
       "pa66"
     ],
     "support_materials": [
-      "pa612",
       "support-breakaway"
     ],
-    "usable_as_support_for": [
-      "pa612"
-    ],
+    "usable_as_support_for": [],
     "notes": "Polymaker recommends PolySupport (their breakaway support, mapped here to support-breakaway) for Fiberon PA612-CF15 — a rare explicit support recommendation in this family, where same-material breakaway is usually the only option. Welds to itself and to the rest of the aliphatic polyamide family on shared amide chemistry and overlapping melt windows, though every cross-grade nylon interface is weaker than a same-grade one. Adhesion to pla, petg, abs, asa, pc or pp is not documented and is not expected (unverified). Water-soluble supports are impractical: pva and bvoh both degrade well below this grade's 250-300 °C window."
   },
   "plate_recommendations": [

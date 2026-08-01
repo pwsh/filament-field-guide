@@ -135,14 +135,8 @@
       "pps",
       "pps-cf"
     ],
-    "support_materials": [
-      "pps",
-      "pps-cf"
-    ],
-    "usable_as_support_for": [
-      "pps",
-      "pps-cf"
-    ],
+    "support_materials": [],
+    "usable_as_support_for": [],
     "notes": "Welds to itself and to the unfilled pps base — same matrix — though the published nozzle windows do not overlap cleanly (310-350 °C here vs 365-390 °C unfilled), so co-printing needs a compromise temperature. A PPS-GF20 glass-filled grade is the electrically insulating sibling with comparable thermal and mechanical performance, but has no catalog entry yet. No soluble support survives these temperatures: pva and bvoh are far out of range. No bonding to any commodity material."
   },
   "plate_recommendations": [

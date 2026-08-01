@@ -151,6 +151,23 @@ every property sourced from the glossary.
   the catalog enters maintenance mode (Phase F refresh cadence).
 ## Changelog
 
+- 2026-08-01 — **Support-interface data-quality review** (owner-caught defect): removed
+  158 invalid support edges — 60 self-references (PA listed as its own support etc.,
+  originating from Phase A same-material-support ambiguity and amplified by the Phase E
+  mechanical symmetric closure) plus 94 same-family pairs (variants/grades listed as
+  interfaces for their own base chemistry) and 4 pha↔PLA-family edges (PHA is a PLA
+  blend and fuses to PLA). Rule now codified: same or same-family chemistry welds and
+  can never be a removable support interface — glossary rewritten, RESEARCH_GUIDE §8
+  added, and scripts/validate.py enforces it as a hard error (self-tested). 17 entries
+  now honestly show empty support_materials (engineering polymers with no verified
+  interface). Future closure passes must respect the family rule.
+- 2026-08-01 — **3D-Fuel technical library mined** (owner-provided link): PCTG-CF/GF
+  TDSs do not exist yet (gap stays open, documented); base pctg independently confirmed
+  (density/HDT/tensile exact match); petg/abs/asa updated with confirmation notes and
+  a key finding — 3D-Fuel's PETG/ABS "TDSs" are the resin supplier's injection-moulding
+  datasheets (moulded-specimen values read high on tensile, low on HDT vs printed parts),
+  recorded as framing rather than merged as printed-part data.
+
 - 2026-08-01 — **Tranche 2 + plate vendor cross-walk complete** (owner requests):
   12 coverage-gap filaments added (pa-cf, abs-cf, pet-gf, abs-esd, pla-stone,
   pla-glitter, pla-ht, pla-cast, peba, lw-asa, lw-tpu, support-breakaway → 72 total);

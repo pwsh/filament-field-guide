@@ -123,7 +123,7 @@
       "max": 55,
       "recommended": 50
     },
-    "notes": "Prusament PETG measures HDT 68 °C and yield ~46-50 MPa; Polymaker PolyLite PETG reports 50.8 MPa and partmfg.com 52.2 MPa. Tg is not on the Prusament TDS; secondary sources put it at 80-85 °C. Max service temp is an estimate, not a datasheet value."
+    "notes": "Prusament PETG measures HDT 68 °C and yield ~46-50 MPa; Polymaker PolyLite PETG reports 50.8 MPa and partmfg.com 52.2 MPa. Tg is not on the Prusament TDS; secondary sources put it at 80-85 °C. Max service temp is an estimate, not a datasheet value. 3D-Fuel's Pro PETG TDS (technical library, read 2026-08-01) is a third manufacturer sheet but is plainly the base resin supplier's injection-moulding datasheet — 3.2 mm moulded specimens, ASTM D955 mould shrinkage, Rockwell hardness — not printed-part data, and it must be read that way. It confirms the recorded shrinkage low end exactly (0.002 mm/mm = 0.2 % parallel to flow, ASTM D955) and puts specific gravity at 1.28 against the 1.27 recorded. It adds flexural 75 MPa at 2,200 MPa modulus, notched Izod 69 J/m at 23 °C falling to 28 J/m at -40 °C with unnotched 2,600 J/m, Rockwell R106, and water absorption 0.13 % in 24 h. Two figures do not fit the recorded values: HDT 67/62 °C at 0.455/1.82 MPa, below the 72 °C recorded, and tensile 25 MPa which is a BREAK stress after 30 % drawing, not the yield strength the 40-55 MPa range is built from — the sheet gives no yield figure, so the two are not comparable. No Tg is given."
   },
   "scores": {
     "ease_of_print": 7,
@@ -176,9 +176,6 @@
       "pctg-cf",
       "pctg-gf",
       "pet",
-      "petg-cf",
-      "petg-esd",
-      "petg-gf",
       "pha",
       "pla",
       "pla-cf",
@@ -288,11 +285,13 @@
       "https://academy.cba.mit.edu/classes/scanning_printing/emissions.pdf",
       "https://tinkeratlas.com/tools/filament-compatibility",
       "https://wiki.bambulab.com/en/general/filament-guide-material-table",
-      "https://wiki.bambulab.com/en/filament-acc/filament/heat-creep"
+      "https://wiki.bambulab.com/en/filament-acc/filament/heat-creep",
+      "https://support.3dfuel.com/hc/en-us/articles/360055661154-Technical-Library-SDS-TDS",
+      "https://cdn.shopify.com/s/files/1/0027/5339/6848/files/TDS-3DFuel-PETG.pdf"
     ],
-    "last_verified": "2026-07-31",
+    "last_verified": "2026-08-01",
     "confidence": "medium",
-    "conflicts": "HDT: Prusament measures 68 °C while other property tables cite 78-80 °C — recorded as 72 °C with the 68-80 °C spread noted. Hygroscopy: the Prusament TDS reports only 0.07-0.10 % moisture uptake at 7 days for that formulation, while field consensus classes bulk PETG as a moderate-to-high absorber needing routine drying — 'moderate' recorded. Shrinkage: some sources place PETG slightly below PLA, others slightly above. The particulate figure is extrapolated from a PET-based filament (T-Glase), not measured for generic PETG."
+    "conflicts": "HDT: Prusament measures 68 °C while other property tables cite 78-80 °C — recorded as 72 °C with the 68-80 °C spread noted. Hygroscopy: the Prusament TDS reports only 0.07-0.10 % moisture uptake at 7 days for that formulation, while field consensus classes bulk PETG as a moderate-to-high absorber needing routine drying — 'moderate' recorded. Shrinkage: some sources place PETG slightly below PLA, others slightly above. The particulate figure is extrapolated from a PET-based filament (T-Glase), not measured for generic PETG. 2026-08-01 update (3D-Fuel technical library published — owner-provided link): the Pro PETG TDS was mined and NO recorded value was changed. HDT: it measures 67 °C at 0.455 MPa, which drops below the previously noted 68-80 °C spread and lands next to Prusament's 68 °C — two datasheets now cluster near 67-68 °C against the 78-80 °C property tables, so the recorded 72 °C is looking high, but it is retained pending a fourth source. Tensile: its 25 MPa is tensile at BREAK (30 % elongation), not at yield, so it does not contradict the 40-55 MPa yield range despite appearing to; flagged because a naive merge would corrupt the range. Density 1.28 vs the recorded 1.27 is inside normal brand spread. Nozzle temperature: 3D-Fuel specifies 245-265 °C (melt 249-271 °C), above the recorded 220-250 °C window and above even Prusament's 250±10 °C — the hottest PETG guidance found. Drying: 71 °C for 4-6 h exceeds the recorded 50-65 °C ceiling, but that is pellet drying on a resin datasheet, not spool drying, and should not be applied to a wound spool. Water absorption 0.13 % in 24 h (ASTM D570) sits above Prusament's 0.07-0.10 % at 7 days, mildly supporting the 'moderate' hygroscopy class rather than Prusament's low figure. Shrinkage 0.2 % confirms the recorded band's low end."
   },
   "trade_names": [
     {

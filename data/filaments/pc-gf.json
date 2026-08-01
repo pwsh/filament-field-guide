@@ -150,13 +150,8 @@
       "pc-gf",
       "pc-pbt"
     ],
-    "support_materials": [
-      "pc",
-      "pc-gf"
-    ],
-    "usable_as_support_for": [
-      "pc-gf"
-    ],
+    "support_materials": [],
+    "usable_as_support_for": [],
     "notes": "Welds to itself and to the polycarbonate family, and retains base PC's unusually good cross-affinity with the styrenics — PC-ABS is a commercial blend, so ABS and ASA interfaces partially fuse, with ASA the weaker of the two. The support list is deliberately narrower than base PC's: the base entry lists BVOH and HIPS on Prusa's authority at roughly 275 °C, but at this grade's 280-330 °C both degrade rather than release, so same-material PC or PC-GF breakaway is the only safe answer and this material is in practice printed single-material. PVA is out of the question. No bond to pla, petg, pa, pp, pctg, pvb, pet, tpu or tpe, and nothing in those families survives contact with a 300 °C nozzle. Not usable as a support for other polymers — it bonds too aggressively and leaves a fiber-roughened interface."
   },
   "plate_recommendations": [

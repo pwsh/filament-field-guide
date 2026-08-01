@@ -78,6 +78,26 @@ def main() -> int:
     fil_ids = set(entities["filaments"])
     plate_ids = set(entities["plates"])
 
+    # Support-interface rule: no self or same-family entries in support fields.
+    # Same-chemistry welds; a welding pair cannot be a removable interface (see RESEARCH_GUIDE §8).
+    FAMILY_OVERRIDES = {"pha": "pla"}  # chemically-blended families counted with their host family
+
+    def fam_root(i):
+        seen = set()
+        while i in entities["filaments"] and entities["filaments"][i].get("base_type") and i not in seen:
+            seen.add(i)
+            i = entities["filaments"][i]["base_type"]
+        return FAMILY_OVERRIDES.get(i, i)
+
+    for fid, f in entities["filaments"].items():
+        comp = f.get("compatibility", {})
+        for field in ("support_materials", "usable_as_support_for"):
+            for ref in comp.get(field, []):
+                if ref == fid:
+                    errors.append(f"data/filaments/{fid}.json: compatibility.{field} lists itself — same material welds to itself and can never be its own support interface")
+                elif ref in entities["filaments"] and fam_root(ref) == fam_root(fid):
+                    errors.append(f"data/filaments/{fid}.json: compatibility.{field} lists same-family material '{ref}' (family '{fam_root(fid)}') — same-chemistry pairs weld and cannot serve as a removable interface")
+
     # Cross-references and derived fields
     for fid, f in entities["filaments"].items():
         src = f"data/filaments/{fid}.json"

@@ -145,14 +145,8 @@
       "ppa",
       "ppa-cf"
     ],
-    "support_materials": [
-      "ppa",
-      "ppa-cf"
-    ],
-    "usable_as_support_for": [
-      "ppa",
-      "ppa-cf"
-    ],
+    "support_materials": [],
+    "usable_as_support_for": [],
     "notes": "Unlike the aliphatic grades, PPA does not usefully cross-bond within the family: pa6, pa12 and pa66 all melt 40-100 °C below PPA's ~305 °C, so an aliphatic nylon placed against PPA either degrades or fails to fuse — this is the compatibility delta that most distinguishes ppa from its siblings, which bond to each other freely. Same-material or ppa-cf breakaway supports are the only practical option. Soluble supports are out entirely: pva degrades above ~200 °C and bvoh not far above, both far below PPA's process temperatures. Build-plate chemistry needs a high-temperature adhesive; ordinary PA glue sticks are not characterised at a 160 °C bed (unverified)."
   },
   "plate_recommendations": [

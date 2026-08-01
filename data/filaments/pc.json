@@ -149,13 +149,9 @@
     ],
     "support_materials": [
       "bvoh",
-      "hips",
-      "pc"
+      "hips"
     ],
-    "usable_as_support_for": [
-      "pc",
-      "pc-gf"
-    ],
+    "usable_as_support_for": [],
     "notes": "PC has the best cross-material affinity of the engineering trio: it is chemically related to ABS (PC-ABS blends are a commercial product) and interfaces can partially fuse, with ASA a weaker second. It does not weld reliably to pla, petg, pa, pp, pctg, pvb, pet, tpu or tpe. Prusa explicitly notes BVOH and HIPS as compatible supports including via MMU2/3; PVA is unsuitable because it degrades well below PC's print temperature. PC is not used as a support for other polymers — its melt temperature is too high and it bonds too aggressively."
   },
   "plate_recommendations": [

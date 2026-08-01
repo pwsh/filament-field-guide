@@ -146,13 +146,9 @@
       "pa66"
     ],
     "support_materials": [
-      "pa",
-      "pa-cf",
       "support-breakaway"
     ],
-    "usable_as_support_for": [
-      "pa-cf"
-    ],
+    "usable_as_support_for": [],
     "notes": "Welds to itself and across the polyamide family — shared amide chemistry and overlapping melt windows — with the usual caveat that a copolymer base melts a little lower than PA6, so a PA6/PA-CF interface runs at the copolymer's ceiling. It does not bond to pla, petg, abs, asa, pc, pp or pet, and at 240-300 °C no PLA or PETG breakaway interface survives contact. Soluble supports are out: pva and bvoh both degrade well below this nozzle range. Same-material breakaway is the practical route and this class is normally printed single-material. Poor as a support for other polymers — weak cross-bonding and a fiber-roughened interface. Support pairings here are inherited from pa6-cf rather than tested for this class (unverified)."
   },
   "plate_recommendations": [

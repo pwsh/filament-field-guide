@@ -121,7 +121,7 @@
       "max": 45,
       "recommended": 42
     },
-    "notes": "Density 1.04-1.06 g/cm³ — the lightest of the commodity three, so a 1 kg spool yields noticeably more part volume. BCN3D TDS: HDT 99 °C, Vicat softening 105 °C, yield 45 MPa, operating limit 85 °C. Highest shrinkage of the three, and larger/thicker parts trend to the top of the band."
+    "notes": "Density 1.04-1.06 g/cm³ — the lightest of the commodity three, so a 1 kg spool yields noticeably more part volume. BCN3D TDS: HDT 99 °C, Vicat softening 105 °C, yield 45 MPa, operating limit 85 °C. Highest shrinkage of the three, and larger/thicker parts trend to the top of the band. 3D-Fuel's Pro ABS TDS (technical library, read 2026-08-01; still filed under the legacy 'Workday ABS' filename) is, like their PETG sheet, a resin-supplier injection-moulding datasheet in kg/cm² on 3.2/6.4 mm moulded bars rather than printed-part data. Converted: tensile 51 MPa at yield, tensile modulus 2,216 MPa, flexural 78.5 MPa at 2,746 MPa modulus, notched Izod 226 J/m at 23 °C (3.2 mm) falling to 78 J/m at -30 °C, Rockwell R110, MFR 23 g/10 min at 220 °C/10 kg, specific gravity 1.04. Its thermal figures run cooler than the recorded ones: HDT 90 °C at 0.451 MPa and 86 °C at 1.824 MPa against the 99 °C recorded, and Vicat 94 °C against BCN3D's 105 °C. Its D955 mould shrinkage of 0.4-0.7 % is an injection figure and is not the same quantity as the recorded 0.5-1.5 % print-shrinkage band. Print settings 240-260 °C nozzle, 100-110 °C bed, 10 % fan."
   },
   "scores": {
     "ease_of_print": 4,
@@ -153,15 +153,11 @@
       "support-breakaway"
     ],
     "support_materials": [
-      "abs-plus",
       "asa",
       "hips",
       "support-breakaway"
     ],
     "usable_as_support_for": [
-      "abs-cf",
-      "abs-esd",
-      "abs-gf",
       "asa"
     ],
     "notes": "Welds permanently to ASA (same styrenic family, near-identical bonding) and bonds moderately to PC — the basis of commercial PC/ABS blends and a common multi-material engineering pairing. HIPS is the classic breakaway/soluble support for ABS: matching print temperatures and dissolvable in D-limonene. Because ABS welds to ASA rather than releasing from it, ASA-supported-by-ABS is a structural pairing, not a clean-release one. ABS pairs badly with PLA and PETG in either direction — its 100 °C bed and 250 °C nozzle deform them, and the chemistries do not fuse."
@@ -252,11 +248,13 @@
       "https://academy.cba.mit.edu/classes/scanning_printing/emissions.pdf",
       "https://tinkeratlas.com/tools/filament-compatibility",
       "https://wiki.bambulab.com/en/general/filament-guide-material-table",
-      "https://wiki.bambulab.com/en/filament-acc/filament/heat-creep"
+      "https://wiki.bambulab.com/en/filament-acc/filament/heat-creep",
+      "https://support.3dfuel.com/hc/en-us/articles/360055661154-Technical-Library-SDS-TDS",
+      "https://cdn.shopify.com/s/files/1/0027/5339/6848/files/TDS-3DFuel-Workday-ABS.pdf"
     ],
-    "last_verified": "2026-07-31",
+    "last_verified": "2026-08-01",
     "confidence": "medium",
-    "conflicts": "Shrinkage: Prusa-cited ABS figures quote 1-2 % for large parts while property tables cite ~0.5 % — recorded as a 0.5-1.5 % consensus band with 0.8 % typical. HDT: BCN3D measures 99 °C, Polymaker's table spans 100-118 °C across grades — 99 °C recorded for plain ABS. Bed temperature: Prusa defaults ~100 °C, the BCN3D TDS says 90 °C. Heated chamber: sources describe an enclosure as 'effectively required' for large parts, but since a passive enclosure is normally sufficient, heated_chamber_required is set false and enclosure_recommended true. ABS/acetone slurry as an adhesion aid is community practice, unverified against the cited sources."
+    "conflicts": "Shrinkage: Prusa-cited ABS figures quote 1-2 % for large parts while property tables cite ~0.5 % — recorded as a 0.5-1.5 % consensus band with 0.8 % typical. HDT: BCN3D measures 99 °C, Polymaker's table spans 100-118 °C across grades — 99 °C recorded for plain ABS. Bed temperature: Prusa defaults ~100 °C, the BCN3D TDS says 90 °C. Heated chamber: sources describe an enclosure as 'effectively required' for large parts, but since a passive enclosure is normally sufficient, heated_chamber_required is set false and enclosure_recommended true. ABS/acetone slurry as an adhesion aid is community practice, unverified against the cited sources. 2026-08-01 update (3D-Fuel technical library published — owner-provided link): the Pro ABS TDS was mined and NO recorded value was changed, but it contradicts three of them and it is the low-thermal, high-mechanical outlier. Tensile: 51 MPa at yield sits ABOVE the recorded 30-45 MPa range, measured on an injection-moulded 3.2 mm bar — printed ABS does not reach it, and this is exactly the moulded-versus-printed gap that keeps the recorded ceiling at 45 MPa, so the range is retained. HDT: 90 °C at 0.451 MPa against BCN3D's 99 °C and Polymaker's 100-118 °C, widening the band downward to 90-118 °C; 99 °C retained as the middle datasheet value. Vicat: 94 °C against BCN3D's 105 °C, an 11 °C spread. Shrinkage: 0.4-0.7 % by ASTM D955 dips below the recorded 0.5 % minimum, but D955 mould shrinkage and FDM print shrinkage are different measurements and merging them would be a category error. Bed temperature is the one place it settles an open question — 3D-Fuel says 100-110 °C, siding with Prusa's ~100 °C against the BCN3D TDS's 90 °C and supporting the recorded 100 °C. Its drying spec (80 °C for 2-4 h) matches the recorded temperature but halves the recorded 4-8 h time."
   },
   "trade_names": [
     {

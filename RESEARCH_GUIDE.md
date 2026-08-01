@@ -25,6 +25,13 @@ updating data. Follow it exactly and the site updates itself.
    add a new property, add its glossary entry (definition, why it matters, units, rubric).
 7. **Derived fields**: `grams_per_100cm3` = density × 100; `cm3_per_100g` = 100 / density.
    The validator checks these for consistency.
+8. **Support-interface rule (added 2026-08-01 after a data-quality review):** never list a
+   material, its variants, or any same-base-family material in `support_materials` /
+   `usable_as_support_for`. Same-chemistry pairs weld — that is what `bonds_with` records —
+   and a welding pair cannot be a removable support interface. Slicer-default same-material
+   supports are breakaway-with-scarring, not an interface pairing, and do not belong in
+   these fields. Chemically-blended families count too (e.g. PLA/PHA blends are PLA-family
+   for this rule). The validator enforces self/same-family exclusion.
 
 ## Model delegation (per user policy)
 

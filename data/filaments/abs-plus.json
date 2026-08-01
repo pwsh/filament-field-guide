@@ -152,10 +152,6 @@
       "support-breakaway"
     ],
     "usable_as_support_for": [
-      "abs",
-      "abs-cf",
-      "abs-esd",
-      "abs-gf",
       "asa"
     ],
     "notes": "Chemistry is unchanged from base abs, so the bonding table is carried over wholesale: welds to itself and to plain ABS (mixed prints and repairs are fine), welds permanently to ASA, bonds moderately to PC. HIPS is the classic breakaway support — the acetone-differential trick works identically to base ABS — with soluble supports available on dual-extrusion machines rated for ABS temperatures. As with the base entry, the same-family pairings listed under usable_as_support_for are structural weld pairings rather than clean-release ones. Does not bond to PLA or PETG in either direction: the 95-110 °C bed and 250 °C nozzle deform them and the chemistries do not fuse."

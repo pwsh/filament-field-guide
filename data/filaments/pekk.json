@@ -125,12 +125,10 @@
       "pekk"
     ],
     "support_materials": [
-      "peek",
-      "pekk"
+      "peek"
     ],
     "usable_as_support_for": [
-      "peek",
-      "pekk"
+      "peek"
     ],
     "notes": "Identical constraint set to peek: no soluble support survives 345-375 °C, so self-supporting geometry or breakaway same-material/PAEK support is the answer. peek is listed as a plausible PAEK-family breakaway partner on shared-chemistry grounds, not on tested evidence (unverified). No bonding to pla, petg, abs, asa, pc, pa, pp or any other commodity material — they degrade on contact at this temperature."
   },

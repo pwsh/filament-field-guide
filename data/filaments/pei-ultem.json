@@ -125,12 +125,8 @@
     "bonds_with": [
       "pei-ultem"
     ],
-    "support_materials": [
-      "pei-ultem"
-    ],
-    "usable_as_support_for": [
-      "pei-ultem"
-    ],
+    "support_materials": [],
+    "usable_as_support_for": [],
     "notes": "Bonds well to itself — amorphous polymers weld cleanly, which is why layer adhesion scores 8 here against peek's 6. No soluble support chemistry exists at 350-420 °C; pva and bvoh are 150-200 °C out of range. Prusa's first-layer recipe is 2-3 layers of Magigoo HT plus a brim rather than a support-material trick. No bonding to any commodity material in the catalog."
   },
   "plate_recommendations": [

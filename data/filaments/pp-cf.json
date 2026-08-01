@@ -122,13 +122,8 @@
       "pp-gf",
       "pp-cf"
     ],
-    "support_materials": [
-      "pp",
-      "pp-cf"
-    ],
-    "usable_as_support_for": [
-      "pp-cf"
-    ],
+    "support_materials": [],
+    "usable_as_support_for": [],
     "notes": "Inherits base PP's near-universal non-adhesion completely unchanged — carbon fiber does nothing to raise the matrix's surface energy. It welds only to the polyolefin family already in the catalog (pp, pp-gf and itself) and will not bond to pla, petg, abs, asa, pa, pc, pva, hips, bvoh, pctg, pvb, pet, tpu or tpe. No soluble support pairs with it, since PP is inert to water and to most solvents, so supports must be same-family PP or PP-CF breakaway. Unlike base pp it is not useful as a deliberate release layer or interface sheet for other materials: the fiber-roughened surface leaves a poor finish where plain PP tape gives a clean one."
   },
   "plate_recommendations": [

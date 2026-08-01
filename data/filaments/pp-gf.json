@@ -144,13 +144,8 @@
       "pp-cf",
       "pp-gf"
     ],
-    "support_materials": [
-      "pp",
-      "pp-gf"
-    ],
-    "usable_as_support_for": [
-      "pp-gf"
-    ],
+    "support_materials": [],
+    "usable_as_support_for": [],
     "notes": "Inherits base PP's defining trait of near-universal non-adhesion unchanged — the glass fiber does nothing to raise the matrix's surface energy. It welds only to itself and to base pp, and will not bond to pla, petg, abs, asa, pa, pc, pva, hips, bvoh, pctg, pvb, pet, tpu or tpe. No soluble support pairs with it, since PP is inert to water and to most solvents, so supports must be same-material PP or PP-GF breakaway. Unlike base pp, it is not useful as a deliberate release layer or interface sheet for other materials: the fiber-roughened surface leaves a poor finish where plain PP tape gives a clean one."
   },
   "plate_recommendations": [

@@ -145,8 +145,7 @@
       "petg-plus"
     ],
     "support_materials": [
-      "bvoh",
-      "petg"
+      "bvoh"
     ],
     "usable_as_support_for": [],
     "notes": "Welds to itself and to the copolyester family (base petg, petg-cf, pctg). PLA is deliberately omitted from the support list even though it works for base PETG and petg-cf: the grades that need a ~300 °C nozzle will deform PLA supports, so same-family breakaway or BVOH is the safer default. The practical selection point against petg-cf is electrical: glass fiber is non-conductive, so this is the filled copolyester to put against circuit boards and inside electronics enclosures."

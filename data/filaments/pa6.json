@@ -151,17 +151,8 @@
       "pa612",
       "pa66"
     ],
-    "support_materials": [
-      "copa",
-      "pa",
-      "pa6"
-    ],
-    "usable_as_support_for": [
-      "pa6",
-      "pa6-cf",
-      "pa6-gf",
-      "pa66"
-    ],
+    "support_materials": [],
+    "usable_as_support_for": [],
     "notes": "Welds to itself and to the rest of the aliphatic polyamide family (pa, pa66, pa12 and the PA6 filled grades) — same amide chemistry and overlapping 240-280 °C windows, with the PA6/PA66 pairing the strongest because their melt ranges are closest. It does not bond usefully to pla, petg, abs, asa, pc, pp, pctg, pvb or pet. Soluble supports are impractical: pva degrades well below PA6's nozzle range and bvoh sits below it too, so same-material breakaway supports are the standard workaround. Build-plate chemistry matters more than support choice here — a PA-specific adhesive (Magigoo PA) or plain glue stick as an adhesion PROMOTER is normal practice."
   },
   "plate_recommendations": [

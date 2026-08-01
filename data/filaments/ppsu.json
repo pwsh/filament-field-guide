@@ -123,12 +123,8 @@
     "bonds_with": [
       "ppsu"
     ],
-    "support_materials": [
-      "ppsu"
-    ],
-    "usable_as_support_for": [
-      "ppsu"
-    ],
+    "support_materials": [],
+    "usable_as_support_for": [],
     "notes": "Bonds well to itself — amorphous polymers weld cleanly, hence layer adhesion 8 alongside pei-ultem and above peek's 6. No soluble support survives 360-410 °C; pva and bvoh are far out of range, so same-material breakaway support is the only option and Prusa notes that removing it is difficult, which is a real design constraint rather than a footnote. First-layer adhesion relies on multiple layers of a high-temperature adhesive such as Magigoo HT rather than on a support or plate trick. No bonding to commodity materials."
   },
   "plate_recommendations": [

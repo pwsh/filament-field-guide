@@ -123,7 +123,7 @@
       "max": 63,
       "recommended": 45
     },
-    "notes": "Density is brand-split but all within base-PLA range: eSUN 1.23, colorFabb 1.24, Bambu PLA Tough+ 1.21 g/cm³ — 1.23 recorded. Tensile figures do NOT agree across brands because the test methods differ: eSUN 63 MPa (injection-moulded spline, which overstates FDM-printed parts), colorFabb 55 MPa (printed X-Y), Bambu 34.9±1 MPa X-Y / 20.9±1 MPa Z. Elongation at break: eSUN 20 %, colorFabb 8.6 %, Bambu 5.1 % X-Y / 10.4 % Z — Bambu's Z elongation exceeding X-Y is the clearest evidence of the toughening package working on interlayer bonds. Impact: eSUN IZOD 9 kJ/m², colorFabb Charpy notched 5.8 kJ/m², Bambu 80.6±9.5 kJ/m² X-Y; different tests, not comparable. Thermal (Bambu): Tg 61 °C, HDT 58 °C at 1.8 MPa, melt 151 °C; eSUN HDT 53 °C; colorFabb lists Tg/HDT as N/A. HDT here is at 1.8 MPa, not the schema-default 0.45 MPa. Shrinkage not published by any brand (unverified) — assume base PLA's 0.3-0.5 %."
+    "notes": "Density is brand-split but all within base-PLA range: eSUN 1.23, colorFabb 1.24, Bambu PLA Tough+ 1.21 g/cm³ — 1.23 recorded. Tensile figures do NOT agree across brands because the test methods differ: eSUN 63 MPa (injection-moulded spline, which overstates FDM-printed parts), colorFabb 55 MPa (printed X-Y), Bambu 34.9±1 MPa X-Y / 20.9±1 MPa Z. Elongation at break: eSUN 20 %, colorFabb 8.6 %, Bambu 5.1 % X-Y / 10.4 % Z — Bambu's Z elongation exceeding X-Y is the clearest evidence of the toughening package working on interlayer bonds. Impact: eSUN IZOD 9 kJ/m², colorFabb Charpy notched 5.8 kJ/m², Bambu 80.6±9.5 kJ/m² X-Y; different tests, not comparable. Thermal (Bambu): Tg 61 °C, HDT 58 °C at 1.8 MPa, melt 151 °C; eSUN HDT 53 °C; colorFabb lists Tg/HDT as N/A. HDT here is at 1.8 MPa, not the schema-default 0.45 MPa. 3D-Fuel's technical library (read 2026-08-01) adds a fourth and fifth brand data point, both inside the recorded ranges. Standard PLA+ TDS: tensile 41 MPa maximum / 37 MPa at yield, tensile modulus 3.2 GPa, elongation 1.8 %, notched Izod 26 J/m (ASTM D256); no density, HDT or Tg given. Tough Pro PLA+ TDS (the grade formerly sold as Advanced PLA+/APLA+): specific gravity 1.22, MFR 9-15 g/10 min at 210 °C/2.16 kg, peak melt 165-180 °C, Tg 55-60 °C, and printed-and-annealed (110 °C/20 min, 100 % infill) tensile 40 MPa XY / 32 MPa YZ / 24 MPa ZX, tensile modulus 2,865 MPa XY, flexural 73 MPa at 2,414 MPa modulus XY, notched Izod 160 J/m XY amorphous rising to 233 J/m crystalline, and HDT 75-85 °C at 0.45 MPa. That HDT is an annealed-crystallised figure and is NOT comparable to the 58 °C recorded here (Bambu, as-printed at 1.8 MPa) — it measures what annealing buys, not what the filament does out of the printer. Shrinkage not published by any brand, 3D-Fuel included (unverified) — assume base PLA's 0.3-0.5 %."
   },
   "scores": {
     "ease_of_print": 8,
@@ -156,7 +156,6 @@
       "bvoh",
       "petg",
       "petg-plus",
-      "pla",
       "pva",
       "support-breakaway"
     ],
@@ -228,11 +227,14 @@
       "https://colorfabb.com/media/datasheets/tds/colorfabb/TDS_E_ColorFabb_Tough_PLA.pdf",
       "https://esun3dstore.com/products/pla-pro",
       "https://us.store.bambulab.com/products/pla-tough-upgrade",
-      "https://colorfabb.com/tough-pla"
+      "https://colorfabb.com/tough-pla",
+      "https://support.3dfuel.com/hc/en-us/articles/360055661154-Technical-Library-SDS-TDS",
+      "https://cdn.shopify.com/s/files/1/0027/5339/6848/files/TDS-3DFuel-Standard-PLA.pdf",
+      "https://cdn.shopify.com/s/files/1/0027/5339/6848/files/TDS-3DFuel-Pro-PLA.pdf"
     ],
-    "last_verified": "2026-07-31",
+    "last_verified": "2026-08-01",
     "confidence": "medium",
-    "conflicts": "Tensile strength disagrees by a factor of ~1.8 across brands (eSUN 63 MPa injection-moulded, colorFabb 55 MPa printed X-Y, Bambu 34.9 MPa X-Y) because the test specimens differ — recorded as a 35-63 MPa range rather than reconciled. Impact strength is reported in incompatible tests (IZOD 9 kJ/m², Charpy notched 5.8 kJ/m², Bambu 80.6 kJ/m²) and cannot be compared. Nozzle temperature is brand-split: 210-230 °C for eSUN/colorFabb vs 220-250 °C for Bambu. HDT: Bambu 58 °C at 1.8 MPa vs eSUN 53 °C (load unstated) vs colorFabb N/A. Drying parameters exist only for Bambu; eSUN/colorFabb values are assumed from base PLA (unverified). Prices for Bambu and colorFabb are estimates, not confirmed store figures."
+    "conflicts": "Tensile strength disagrees by a factor of ~1.8 across brands (eSUN 63 MPa injection-moulded, colorFabb 55 MPa printed X-Y, Bambu 34.9 MPa X-Y) because the test specimens differ — recorded as a 35-63 MPa range rather than reconciled. Impact strength is reported in incompatible tests (IZOD 9 kJ/m², Charpy notched 5.8 kJ/m², Bambu 80.6 kJ/m²) and cannot be compared. Nozzle temperature is brand-split: 210-230 °C for eSUN/colorFabb vs 220-250 °C for Bambu. HDT: Bambu 58 °C at 1.8 MPa vs eSUN 53 °C (load unstated) vs colorFabb N/A. Drying parameters exist only for Bambu; eSUN/colorFabb values are assumed from base PLA (unverified). Prices for Bambu and colorFabb are estimates, not confirmed store figures. 2026-08-01 update (3D-Fuel technical library published — owner-provided link): 3D-Fuel's Standard PLA+ and Tough Pro PLA+ TDS documents were read and change no recorded value — their tensile figures (40-41 MPa) and density (1.22 g/cm³) fall inside the existing 35-63 MPa and 1.21-1.24 g/cm³ spreads, and their Tg of 55-60 °C brackets just under the recorded 61 °C. The one figure that must not be merged naively is Tough Pro PLA+'s HDT of 75-85 °C at 0.45 MPa: it is measured on annealed, crystallised specimens (110 °C for 20 min), so it is not a like-for-like replacement for the 58 °C at 1.8 MPa recorded here and heat_deflection_c was left unchanged. 3D-Fuel's is also the only brand in this entry to publish Z-axis strength (24 MPa ZX against 40 MPa XY, a 40 % anisotropy penalty). Neither TDS gives elongation for Tough Pro PLA+ or any shrinkage figure."
   },
   "trade_names": [
     {

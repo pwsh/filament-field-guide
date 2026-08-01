@@ -134,12 +134,9 @@
     ],
     "support_materials": [
       "bvoh",
-      "hips",
-      "pc-abs"
+      "hips"
     ],
-    "usable_as_support_for": [
-      "pc-abs"
-    ],
+    "usable_as_support_for": [],
     "notes": "The blend is the commercial proof of PC-ABS affinity, so it welds to both parents: base pc and base abs, with asa a weaker styrenic second. HIPS is the natural breakaway support (it prints in the same bed/chamber window and matches the ABS phase), and BVOH survives where HIPS is too fusible; PVA degrades far below 260 °C and is unusable. Bonding to pc-pbt is plausible within the PC family but stated by no source (unverified). PLA and PETG supports melt at these bed temperatures."
   },
   "plate_recommendations": [

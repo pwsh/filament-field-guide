@@ -145,15 +145,13 @@
     "support_materials": [
       "bvoh",
       "petg",
-      "pla",
       "pva",
       "support-breakaway"
     ],
     "usable_as_support_for": [
-      "petg",
-      "pla"
+      "petg"
     ],
-    "notes": "Behaves as a PLA grade for bonding: welds to itself and to the PLA family, and does not weld to petg, abs, asa, pc, pa or pp. PVA and BVOH soluble supports and PLA/PETG breakaway pairings are expected to work on the same non-bonding logic that makes PLA and PETG mutual breakaway supports, but colorFabb confirms no support pairing for this blend specifically (unverified). The PHA phase does not change interface chemistry in any documented way."
+    "notes": "Behaves as a PLA grade for bonding: welds to itself and to the PLA family, and does not weld to petg, abs, asa, pc, pa or pp. PVA and BVOH soluble supports and PLA/PETG breakaway pairings are expected to work on the same non-bonding logic that makes PLA and PETG mutual breakaway supports, but colorFabb confirms no support pairing for this blend specifically (unverified). The PHA phase does not change interface chemistry in any documented way. Support-interface edges to the PLA family removed in the 2026-08-01 support review: PHA filaments are predominantly PLA/PHA blends and fuse to PLA — they cannot serve as a removable interface for it (bonds_with reflects this)."
   },
   "plate_recommendations": [
     {

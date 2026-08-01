@@ -27,6 +27,7 @@
   "endpoints": {
     "website": "https://www.3dfuel.com/",
     "store": "https://www.3dfuel.com/collections/3d-printer-filament",
+    "docs": "https://support.3dfuel.com/hc/en-us/articles/360055661154-Technical-Library-SDS-TDS",
     "support": "https://www.3dfuel.com/pages/contact-us",
     "social": {
       "facebook": "https://www.facebook.com/3dfuel/",
@@ -60,7 +61,7 @@
       "filament_ids": [
         "pctg"
       ],
-      "notes": "Glycol-modified copolyester (PCTG); 1 kg, 4 kg and 25 lb/11 kg formats plus 50 g sample coils."
+      "notes": "Glycol-modified copolyester (PCTG); 1 kg, 4 kg and 25 lb/11 kg formats plus 50 g sample coils. Covered by a full TDS (rev 9-2-25) and SDS (rev 2-16-25) in the technical library."
     },
     {
       "name": "ReFuel Recycled Pro PCTG",
@@ -74,14 +75,14 @@
       "filament_ids": [
         "pctg"
       ],
-      "notes": "Carbon-fibre-filled PCTG. The catalog has no pctg-cf id, so only the base chemistry pctg is asserted — see gaps."
+      "notes": "Carbon-fibre-filled PCTG. The catalog has no pctg-cf id, so only the base chemistry pctg is asserted — see gaps. The technical library publishes no TDS or SDS for this grade (checked 2026-08-01)."
     },
     {
       "name": "Pro PCTG-GF",
       "filament_ids": [
         "pctg"
       ],
-      "notes": "Glass-fibre-filled PCTG. The catalog has no pctg-gf id, so only the base chemistry pctg is asserted — see gaps."
+      "notes": "Glass-fibre-filled PCTG. The catalog has no pctg-gf id, so only the base chemistry pctg is asserted — see gaps. The technical library publishes no TDS or SDS for this grade (checked 2026-08-01)."
     },
     {
       "name": "Pro PETG",
@@ -97,7 +98,7 @@
     }
   ],
   "price_tier": "premium",
-  "additional_notes": "HQ and plant: 2222 7th Ave N, Fargo, ND 58102. Roughly 172 SKUs across 1 kg, 4/4.5 kg and 25 lb/11 kg bulk spools plus 50 g Pro PCTG samples. Pricing sits mid-to-premium ($25.95-$32.95/kg) with the recycled ReFuel line as the value tier, so price_tier premium is the closest single bucket. Legacy line names cited elsewhere in the community (Buzzed, Workday, Entwined, Pro-D) did not appear anywhere in current site content and are treated as discontinued or rebranded rather than active — they are deliberately excluded from product_lines. Build plates: none found, so makes_plates is left unset. CEO attribution differs between sources (John Machacek as founder-side figure, John Schneider as CEO in the Fargo INC! profile) and was not resolved.",
+  "additional_notes": "HQ and plant: 2222 7th Ave N, Fargo, ND 58102. Roughly 172 SKUs across 1 kg, 4/4.5 kg and 25 lb/11 kg bulk spools plus 50 g Pro PCTG samples. Pricing sits mid-to-premium ($25.95-$32.95/kg) with the recycled ReFuel line as the value tier, so price_tier premium is the closest single bucket. Legacy line names cited elsewhere in the community (Buzzed, Workday, Entwined, Pro-D) did not appear anywhere in current site content and are treated as discontinued or rebranded rather than active — they are deliberately excluded from product_lines. Build plates: none found, so makes_plates is left unset. CEO attribution differs between sources (John Machacek as founder-side figure, John Schneider as CEO in the Fargo INC! profile) and was not resolved. TDS/SDS AVAILABILITY (technical library, checked 2026-08-01): 3D-Fuel maintains a Zendesk technical library at support.3dfuel.com (now recorded in endpoints.docs) holding Shopify-CDN-hosted PDFs. Seven products are covered — Pro PCTG (SDS rev 2-16-25 + TDS rev 9-2-25, the most complete sheet they publish, with ASTM and ISO columns for tensile, flexural, Izod, HDT, hardness and transmittance), Tough Pro PLA+ (TDS with per-axis XY/YZ/ZX printed-and-annealed mechanicals), Standard PLA+, Pro ABS (filed under the legacy 'Workday ABS' filename), Pro ASA (TDS only, no SDS linked), Pro PETG, and 3D-Clean (one Dyna-Purge PDF serving as both SDS and TDS, and it is really only an SDS) — plus a RoHS compliance statement. Notably absent: no document of any kind for Pro PCTG-CF or Pro PCTG-GF, so those grades' mechanical properties remain unpublished, and nothing for the ReFuel recycled lines or the discontinued Wound Up / Buzzed / Entwined specialty filaments. All PDFs fetch anonymously with no paywall or login. DOCUMENT QUALITY VARIES SHARPLY across the library: the Pro PCTG and Tough Pro PLA+ sheets are genuine filament TDSs (the PLA one gives per-axis printed-and-annealed mechanicals, unusual candour for this market), whereas the Pro PETG and Pro ABS sheets are the base resin supplier's injection-moulding datasheets republished under 3D-Fuel branding — 3.2/6.4 mm moulded specimens, kg/cm² units, ASTM D955 mould shrinkage, Rockwell and Vicat — so their numbers describe the pellet, not the printed part, and read high on tensile and low on HDT accordingly. The Pro ASA sheet carries no test data at all, and the 3D-Clean \"TDS\" is the Dyna-Purge SDS again. Effectively two of seven products have real printed-filament data.",
   "provenance": {
     "sources": [
       "https://www.3dfuel.com/",
@@ -107,10 +108,15 @@
       "https://www.3dfuel.com/pages/location",
       "https://www.voxelmatters.com/nexa3d-acquires-filament-manufacturer-3d-fuel/",
       "https://3dprintingindustry.com/news/3d-fuel-expands-u-s-manufacturing-and-reduces-filament-prices-245988/",
-      "https://fargoinc.com/10-questions-with-john-machacek-3d-fuel-and-fargo-3d-printing/"
+      "https://fargoinc.com/10-questions-with-john-machacek-3d-fuel-and-fargo-3d-printing/",
+      "https://support.3dfuel.com/hc/en-us/articles/360055661154-Technical-Library-SDS-TDS",
+      "https://cdn.shopify.com/s/files/1/0027/5339/6848/files/3D-Fuel_Pro_PCTG_TDS_9-2-25.pdf",
+      "https://cdn.shopify.com/s/files/1/0027/5339/6848/files/TDS-3DFuel-Pro-PLA.pdf",
+      "https://cdn.shopify.com/s/files/1/0027/5339/6848/files/TDS-3DFuel-Standard-PLA.pdf",
+      "https://cdn.shopify.com/s/files/1/0027/5339/6848/files/Dyna-Purge_3D_Clean.pdf"
     ],
     "last_verified": "2026-08-01",
     "confidence": "high",
-    "conflicts": "Post-acquisition legal entity naming (3D-Fuel vs Filament Innovations LLC vs a Nexa3D subsidiary) is not stated by any source. Historic branded lines (Buzzed, Workday, Entwined, Pro-D) appear in third-party writeups but not in current site content, so their status is unresolved."
+    "conflicts": "Post-acquisition legal entity naming (3D-Fuel vs Filament Innovations LLC vs a Nexa3D subsidiary) is not stated by any source. Historic branded lines (Buzzed, Workday, Entwined, Pro-D) appear in third-party writeups but not in current site content, so their status is unresolved. The technical library (added 2026-08-01) resolves nothing about the legacy branded lines — Wound Up, Buzzed and Entwined have no documents there either, which is weak corroboration that they are discontinued. Its Pro ABS document is filed under the legacy 'Workday ABS' filename, the one place current 3D-Fuel material still carries a Workday name, suggesting Workday ABS was renamed Pro ABS rather than dropped."
   }
 }

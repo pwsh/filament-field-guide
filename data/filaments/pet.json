@@ -142,10 +142,7 @@
       "petg",
       "pla"
     ],
-    "usable_as_support_for": [
-      "pet-cf",
-      "pet-gf"
-    ],
+    "usable_as_support_for": [],
     "notes": "Shares the ester backbone with PETG and PCTG, so those are the plausible co-print partners; no direct multi-material fusion test was found, and the temperature mismatch (PET at 250-280 °C against PETG at 230-250 °C) complicates it in practice (unverified). No bond is documented to PLA, ABS, ASA, PA, PC, PP, TPU, TPE, HIPS, PVA or BVOH. No water-soluble support is confirmed to bond to PET, so breakaway and same-family mechanical supports are the practical route — Bambu explicitly lists PET-CF/GF as not AMS-compatible, which underlines how little soluble-support integration exists for this family. PET is not used as a support material for other filaments."
   },
   "plate_recommendations": [

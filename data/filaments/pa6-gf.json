@@ -149,13 +149,9 @@
       "pa66"
     ],
     "support_materials": [
-      "pa6",
-      "pa6-gf",
       "support-breakaway"
     ],
-    "usable_as_support_for": [
-      "pa6-gf"
-    ],
+    "usable_as_support_for": [],
     "notes": "Welds to itself and to the rest of the PA6 family (pa6, base pa, pa66, pa6-cf) — same amide chemistry, overlapping melt windows. It does not bond to pla, petg, abs, asa, pc, pp, pctg, pvb or pet, and at 260-300 °C no breakaway PLA or PETG interface survives contact. Soluble supports are a non-starter for the same reason as pa6-cf: pva degrades roughly 60-100 °C below this nozzle range and bvoh sits below it too, so same-material breakaway is the standard workaround and this material is in practice printed single-material. The one place it is a better co-print partner than pa6-cf is against pigmented nylon: glass fiber does not bleed carbon black into an adjacent colour."
   },
   "plate_recommendations": [

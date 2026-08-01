@@ -150,15 +150,8 @@
       "pa612",
       "pa66"
     ],
-    "support_materials": [
-      "copa",
-      "pa",
-      "pa6",
-      "pa66"
-    ],
-    "usable_as_support_for": [
-      "pa66"
-    ],
+    "support_materials": [],
+    "usable_as_support_for": [],
     "notes": "Welds to itself and to the aliphatic polyamide family; the PA66/PA6 pair is the strongest cross-grade bond here because their nozzle windows overlap most, while PA66/PA12 is the weakest of the family pairings given the ~80 °C melt-point gap. No bond to pla, petg, abs, asa, pc, pp, pctg, pvb or pet. Soluble supports are out — pva and bvoh both degrade well below 275 °C — so same-material breakaway supports are standard. Build-plate chemistry is the practical adhesion story: a PA-specific adhesive or glue stick as a promoter, and a garolite sheet for anything large."
   },
   "plate_recommendations": [

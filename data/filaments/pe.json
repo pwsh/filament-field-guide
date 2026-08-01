@@ -127,12 +127,8 @@
     "bonds_with": [
       "pe"
     ],
-    "support_materials": [
-      "pe"
-    ],
-    "usable_as_support_for": [
-      "pe"
-    ],
+    "support_materials": [],
+    "usable_as_support_for": [],
     "notes": "Bonds only to itself. It is tempting to assume PE welds to pp because both are polyolefins, but no source confirms cross-bonding and the two have different crystalline structures and melting points (~130 °C vs ~137 °C), so pp is deliberately left out of bonds_with. Nothing else in the catalog fuses to it: not pla, petg, abs, asa, pa, pc, pva, hips, bvoh, pctg, pvb, pet, tpu or tpe. No soluble support exists — PE is inert to water and to most solvents — so supports must be same-material PE breakaway. Like PP it is a poor support for other polymers precisely because it will not bond to them, though that same non-stick behaviour is what makes polyolefin tapes useful release layers."
   },
   "plate_recommendations": [

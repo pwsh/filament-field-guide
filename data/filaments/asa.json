@@ -122,7 +122,7 @@
       "max": 47,
       "recommended": 43
     },
-    "notes": "Density spans 1.05 (Bambu) to 1.08-1.09 (Polymaker/partmfg.com) with Prusament at 1.07 — 1.07 recorded. HDT from the Prusament TDS is 93 °C at 0.45 MPa and 86 °C at 1.8 MPa; Bambu cites 100 °C without stating a load. Tensile strength shows a notable brand spread: Bambu 37±3 MPa, Prusament 42-45 MPa, Polymaker/partmfg.com 47.1 MPa. Shrinkage and max service temperature are typical-for-styrenics estimates rather than datasheet values. CNC Kitchen measured a bending modulus of ~2300 MPa for ASA against ~3300 MPa for PLA, and ~30% impact energy absorbed versus 8% for PLA and 14% for PETG."
+    "notes": "Density spans 1.05 (Bambu) to 1.08-1.09 (Polymaker/partmfg.com) with Prusament at 1.07 — 1.07 recorded. HDT from the Prusament TDS is 93 °C at 0.45 MPa and 86 °C at 1.8 MPa; Bambu cites 100 °C without stating a load. Tensile strength shows a notable brand spread: Bambu 37±3 MPa, Prusament 42-45 MPa, Polymaker/partmfg.com 47.1 MPa. Shrinkage and max service temperature are typical-for-styrenics estimates rather than datasheet values. CNC Kitchen measured a bending modulus of ~2300 MPa for ASA against ~3300 MPa for PLA, and ~30% impact energy absorbed versus 8% for PLA and 14% for PETG. 3D-Fuel's Pro ASA sheet (technical library, read 2026-08-01, branded 'Workday ASA') adds NOTHING to this block: it is a one-page marketing-and-print-settings sheet with no density, tensile, flexural, impact, HDT, Tg, shrinkage or melt-flow figure and no ASTM/ISO method cited anywhere — the only ASA document in 3D-Fuel's library and the weakest of the seven. Its sole quantitative content is 230-260 °C nozzle and 110 °C bed."
   },
   "scores": {
     "ease_of_print": 5,
@@ -162,9 +162,7 @@
     ],
     "usable_as_support_for": [
       "abs",
-      "abs-plus",
-      "asa-cf",
-      "asa-gf"
+      "abs-plus"
     ],
     "notes": "Welds chemically to ABS — same SAN matrix family — which makes ABS/ASA the standard multi-material pairing for outdoor parts. The PETG joint is weaker and order-dependent: PETG printed first with ASA on top is stronger than the reverse, so treat it as semi-compatible rather than a true weld. No chemical bond to PLA, PC, PA, PP, TPU or TPE (mechanical interlock only; specifics unverified). PVA and BVOH are unusable as supports because they degrade below ASA's 240-280 °C nozzle window. HIPS is the conventional breakaway/limonene-soluble support for the ABS/ASA family, though the documentation is for ABS and only inferred for ASA."
   },
@@ -260,11 +258,13 @@
       "https://3dsolved.com/3d-filament-glass-transition-temperatures/",
       "https://tinkeratlas.com/tools/filament-compatibility",
       "https://wiki.bambulab.com/en/general/filament-guide-material-table",
-      "https://wiki.bambulab.com/en/filament-acc/filament/heat-creep"
+      "https://wiki.bambulab.com/en/filament-acc/filament/heat-creep",
+      "https://support.3dfuel.com/hc/en-us/articles/360055661154-Technical-Library-SDS-TDS",
+      "https://cdn.shopify.com/s/files/1/0027/5339/6848/files/TDS-3DFuel-ASA.pdf"
     ],
-    "last_verified": "2026-07-31",
+    "last_verified": "2026-08-01",
     "confidence": "medium",
-    "conflicts": "HDT: Prusament measures 93 °C at 0.45 MPa and 86 °C at 1.8 MPa while Bambu cites 100 °C without specifying the load basis — 93 °C recorded on the schema's 0.45 MPa basis. Density: Bambu 1.05, Prusament 1.07, Polymaker/partmfg.com 1.08-1.09. Tensile strength spans 37±3 MPa (Bambu) to 47.1 MPa (Polymaker/partmfg.com), a spread too wide to be measurement noise alone. Drying: Bambu's wiki says 75-85 °C while Bambu's own ASA product page says 80 °C. Shrinkage (~0.4-0.7%), max continuous service temperature (~80-90 °C) and the 'moderate' hygroscopy class are typical-for-class or community estimates, not datasheet figures. HIPS as an ASA support is documented for ABS and inferred for ASA."
+    "conflicts": "HDT: Prusament measures 93 °C at 0.45 MPa and 86 °C at 1.8 MPa while Bambu cites 100 °C without specifying the load basis — 93 °C recorded on the schema's 0.45 MPa basis. Density: Bambu 1.05, Prusament 1.07, Polymaker/partmfg.com 1.08-1.09. Tensile strength spans 37±3 MPa (Bambu) to 47.1 MPa (Polymaker/partmfg.com), a spread too wide to be measurement noise alone. Drying: Bambu's wiki says 75-85 °C while Bambu's own ASA product page says 80 °C. Shrinkage (~0.4-0.7%), max continuous service temperature (~80-90 °C) and the 'moderate' hygroscopy class are typical-for-class or community estimates, not datasheet figures. HIPS as an ASA support is documented for ABS and inferred for ASA. 2026-08-01 update (3D-Fuel technical library published — owner-provided link): 3D-Fuel's Pro ASA document was checked and contains NO mechanical or thermal data at all — no density, tensile, HDT, Tg or shrinkage, and no test methods — so it neither confirms nor contradicts anything here and no value changed. It is the only sheet in the library with no SDS counterpart and the only one carrying no test data, which is itself worth recording: the wide brand spreads in this entry (density 1.05-1.09, tensile 37-47 MPa, HDT 93-100 °C) get no help from a third manufacturer. Its 230 °C nozzle minimum is 10 °C below the recorded 240 °C floor and its 110 °C bed sits at the top of the recorded range, both consistent with Prusament's guidance."
   },
   "trade_names": [
     {

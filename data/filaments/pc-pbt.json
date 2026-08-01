@@ -136,12 +136,9 @@
       "pc-pbt"
     ],
     "support_materials": [
-      "hips",
-      "pc-pbt"
+      "hips"
     ],
-    "usable_as_support_for": [
-      "pc-pbt"
-    ],
+    "usable_as_support_for": [],
     "notes": "Welds to itself and, on shared PC chemistry, to base pc and pc-abs — the pc-abs pairing is chemically plausible and marketed as a family but is not documented by a source (unverified). HIPS is the practical breakaway support at these bed temperatures; BVOH is listed for base PC but its stability in a 100-110 °C chamber for a long job is unverified here, so it is omitted. PVA degrades far below the print temperature. Not usable as a support for other materials — the melt window is too hot and adhesion too aggressive."
   },
   "plate_recommendations": [

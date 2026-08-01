@@ -125,11 +125,9 @@
       "peek"
     ],
     "support_materials": [
-      "peek",
       "pekk"
     ],
     "usable_as_support_for": [
-      "peek",
       "pekk"
     ],
     "notes": "No soluble support chemistry survives anywhere near 375-410 °C — pva and bvoh degrade 200 °C+ below this window — so the options are self-supporting geometry or breakaway same-material/PAEK support. PEEK and pekk share the PAEK family and overlapping melt behaviour, which is why pekk is listed as a plausible breakaway support partner, but no source in this pass tested that interface directly (unverified). It bonds to nothing in the commodity half of the catalog: pla, petg, abs, asa, pc, pa, pp and the rest are all destroyed on contact at this temperature."

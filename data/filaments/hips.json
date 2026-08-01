@@ -141,9 +141,7 @@
       "hips",
       "lw-asa"
     ],
-    "support_materials": [
-      "hips"
-    ],
+    "support_materials": [],
     "usable_as_support_for": [
       "abs",
       "abs-cf",
@@ -154,7 +152,6 @@
       "asa",
       "asa-cf",
       "asa-gf",
-      "hips",
       "lw-asa",
       "pbt",
       "pc",

@@ -133,13 +133,8 @@
       "pla",
       "pla-cast"
     ],
-    "support_materials": [
-      "pla",
-      "pla-cast"
-    ],
-    "usable_as_support_for": [
-      "pla-cast"
-    ],
+    "support_materials": [],
+    "usable_as_support_for": [],
     "notes": "Chemically this welds to base PLA and other PLA grades like any PLA, but the casting workflow overrides ordinary compatibility logic: standard practice is to design patterns to avoid supports entirely, because any support material left on the pattern must also burn out cleanly and no supplier publishes a burnout-compatible support spec. Where supports are unavoidable, same-material PLA-Cast is the only pairing that certainly shares the low-ash profile — a dissimilar support, including ordinary PLA, risks depositing residue in the very cavity this filament exists to keep clean. PVA and BVOH are ruled out for a different reason: dissolving them soaks the pattern, and a wet pattern cannot be invested or burned out. Not usable as a support material for anything."
   },
   "plate_recommendations": [

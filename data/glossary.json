@@ -264,8 +264,8 @@
     {
       "key": "compatibility.support_materials",
       "term": "Support / interface materials",
-      "definition": "Materials usable as support or as a support-interface layer for this filament — either soluble (PVA, BVOH) or cleanly separable (PETG under PLA, HIPS under ABS).",
-      "why_it_matters": "The right support pairing gives perfect undersides and makes otherwise-unprintable geometry routine."
+      "definition": "Materials usable as support or as a support-interface layer for this filament — either soluble (PVA, BVOH) or cleanly separable (PETG under PLA, HIPS under ABS). HARD RULE: a material is never its own interface, and no same-family material (same base chemistry, e.g. any PLA variant for any other PLA variant, PA6 for PA12-class) qualifies — same-chemistry pairs weld, which is the opposite of a removable interface. Printing supports in the part's own material is a slicer default that works mechanically, but it is breakaway-with-scarring, not an interface choice, and is deliberately not recorded here.",
+      "why_it_matters": "The right support pairing gives perfect undersides and makes otherwise-unprintable geometry routine. Listing a welding pair as an interface would send users into supports they cannot remove."
     },
     {
       "key": "emissions.voc_level",
