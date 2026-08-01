@@ -4,30 +4,166 @@
   "status": "researched",
   "summary": "Shenzhen printer maker founded 2015 by Lu Ouyang (CEO) and James Ouyang, operating in both FDM (Kobra series) and resin/SLA. Sells house-brand filament and resin alongside its hardware. Whether Anycubic extrudes filament itself or contracts it out is unresolved: a single low-confidence company-profile source names eSUN as a filament supplier, but this is uncorroborated and absent from the owner-verified ground-truth table, so no OEM relationship is encoded.",
   "headquarters_country": "China",
-  "manufacturing_countries": ["China"],
-  "brands": ["ANYCUBIC", "Kobra", "Photon"],
+  "manufacturing_countries": [
+    "China"
+  ],
+  "brands": [
+    "ANYCUBIC",
+    "Kobra",
+    "Photon"
+  ],
   "oem_relationships": [],
   "endpoints": {
     "website": "https://www.anycubic.com",
     "store": "https://store.anycubic.com"
   },
   "product_lines": [
-    { "name": "PLA", "filament_ids": ["pla"], "notes": "PLA and PLA+" },
-    { "name": "PETG", "filament_ids": ["petg"] },
-    { "name": "ABS / ASA", "filament_ids": ["abs", "asa"], "notes": "Includes a High-Performance ASA line" },
-    { "name": "TPU", "filament_ids": ["tpu"] },
-    { "name": "Engineering / composites", "filament_ids": ["pa", "pla-cf"], "notes": "Nylon PA and carbon-fiber filled variants; exact base polymer of the 'Carbon Fiber' SKU unverified" }
+    {
+      "name": "PLA Basic / PLA Basic Refill",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Standard PLA; Refill is a spool-less reload of the same resin"
+    },
+    {
+      "name": "PLA Special",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Not a distinct chemistry - confirmed to be PLA Basic in special/limited colourways"
+    },
+    {
+      "name": "PLA+ / PLA+ Refill",
+      "filament_ids": [
+        "pla-plus"
+      ],
+      "notes": "Toughened/impact-modified PLA"
+    },
+    {
+      "name": "PLA High Speed",
+      "filament_ids": [
+        "pla-hf"
+      ],
+      "notes": "High-flow PLA tuned for fast printers"
+    },
+    {
+      "name": "PLA Silk / PLA Silk Dual & Tri-Color",
+      "filament_ids": [
+        "pla-silk"
+      ],
+      "notes": "Gloss-additive PLA; dual/tri-colour variants are coextruded strands, chemistry unchanged"
+    },
+    {
+      "name": "PLA Matte",
+      "filament_ids": [
+        "pla-matte"
+      ],
+      "notes": "Matting-filler PLA"
+    },
+    {
+      "name": "PLA Glow",
+      "filament_ids": [
+        "pla-glow"
+      ],
+      "notes": "Phosphorescent-pigment PLA"
+    },
+    {
+      "name": "PLA Galaxy",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "PLA with glitter particulate; no dedicated glitter-PLA id in catalog"
+    },
+    {
+      "name": "PLA Marble",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "PLA with mineral marble-effect filler; no dedicated marble id in catalog"
+    },
+    {
+      "name": "PLA Metal",
+      "filament_ids": [
+        "pla-metal"
+      ],
+      "notes": "Metal-powder-filled PLA"
+    },
+    {
+      "name": "PLA-CF",
+      "filament_ids": [
+        "pla-cf"
+      ],
+      "notes": "PLA + carbon fibre"
+    },
+    {
+      "name": "PETG / PETG Refill",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "Standard PETG"
+    },
+    {
+      "name": "PETG Translucent",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "Semi-transparent PETG"
+    },
+    {
+      "name": "PETG-CF",
+      "filament_ids": [
+        "petg-cf"
+      ],
+      "notes": "Carbon-fibre-filled PETG"
+    },
+    {
+      "name": "ABS",
+      "filament_ids": [
+        "abs"
+      ],
+      "notes": "Standard ABS"
+    },
+    {
+      "name": "ASA",
+      "filament_ids": [
+        "asa"
+      ],
+      "notes": "Weatherable ASA"
+    },
+    {
+      "name": "PC",
+      "filament_ids": [
+        "pc"
+      ],
+      "notes": "Unfilled polycarbonate; 270-290 C nozzle range consistent with unfilled PC"
+    },
+    {
+      "name": "TPU 95A",
+      "filament_ids": [
+        "tpu-95a"
+      ],
+      "notes": "Shore 95A flexible TPU"
+    },
+    {
+      "name": "TPU 68D",
+      "filament_ids": [
+        "tpu-68d"
+      ],
+      "notes": "Shore 68D (Shore D scale) semi-rigid TPU marketed as a soft-hard hybrid, high-speed and wear-resistant - the uncommon rigid grade, not an 85A/95A Shore-A generic"
+    }
   ],
   "makes_plates": true,
   "plate_ids": [],
   "price_tier": "budget",
-  "additional_notes": "Also runs a substantial UV resin business for its SLA printers, which is out of scope for this filament catalog. Sells PEI Spring Steel Magnetic Platforms and a double-sided smooth PEI plate for the Kobra series. Regional storefronts include eu.anycubic.com and anycubic.biz. Social profiles on YouTube, Facebook, Instagram, X and Reddit exist but exact handles were not verified, so none are recorded.",
+  "additional_notes": "The 2026 filament catalog is broader than earlier passes recorded: no nylon/PA line is offered, and the carbon-fibre SKUs resolve to PLA-CF and PETG-CF. Also runs a substantial UV resin business for its SLA printers, which is out of scope for this filament catalog. Sells PEI Spring Steel Magnetic Platforms and a double-sided smooth PEI plate for the Kobra series. Regional storefronts include eu.anycubic.com and anycubic.biz. Social profiles on YouTube, Facebook, Instagram, X and Reddit exist but exact handles were not verified, so none are recorded.",
   "provenance": {
     "sources": [
       "https://anycubic.biz/o-kompanii",
       "https://store.anycubic.com/collections/filaments",
       "https://store.anycubic.com/products/smooth-plate",
-      "https://www.cbinsights.com/company/anycubic"
+      "https://www.cbinsights.com/company/anycubic",
+      "https://store.anycubic.com/products/pla-basic-special-color-filament",
+      "https://eu.anycubic.com/products/tpu-68d"
     ],
     "last_verified": "2026-07-31",
     "confidence": "low",

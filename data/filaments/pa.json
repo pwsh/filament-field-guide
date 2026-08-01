@@ -1,7 +1,13 @@
 {
   "id": "pa",
   "name": "PA (Nylon / Polyamide)",
-  "aliases": ["Nylon", "Polyamide", "PA6", "PA12", "CoPA"],
+  "aliases": [
+    "Nylon",
+    "Polyamide",
+    "PA6",
+    "PA12",
+    "CoPA"
+  ],
   "status": "researched",
   "base_type": null,
   "variation_kind": null,
@@ -9,15 +15,35 @@
   "chemical_makeup": "Aliphatic polyamide — unfilled PA6 or PA12 semi-crystalline engineering thermoplastic. PA6 is stiffer, higher-melting and more hygroscopic; PA12 is lower density, absorbs less moisture and is more dimensionally stable at a lower melting point",
   "summary": "The toughest common engineering filament: outstanding layer adhesion, wear and impact resistance, and low friction, which is why it dominates gears, bushings and living mechanical parts. It is also the most demanding material here — extremely hygroscopic, high-warping, and dimensionally restless as humidity changes, so it needs constant drying, an enclosure and a forgiving build surface.",
   "printing": {
-    "nozzle_temp_c": { "min": 240, "max": 290, "recommended": 265 },
-    "bed_temp_c": { "min": 70, "max": 110, "recommended": 90 },
-    "ambient_temp_c": { "min": 35, "max": 55, "recommended": 45 },
-    "speed_mm_s": { "min": 30, "max": 80, "recommended": 50 },
+    "nozzle_temp_c": {
+      "min": 240,
+      "max": 290,
+      "recommended": 265
+    },
+    "bed_temp_c": {
+      "min": 70,
+      "max": 110,
+      "recommended": 90
+    },
+    "ambient_temp_c": {
+      "min": 35,
+      "max": 55,
+      "recommended": 45
+    },
+    "speed_mm_s": {
+      "min": 30,
+      "max": 80,
+      "recommended": 50
+    },
     "enclosure_recommended": true,
     "heated_chamber_required": false,
     "enclosure_open_for_cooling": false,
     "requires_hardened_nozzle": false,
-    "part_cooling_fan_pct": { "min": 0, "max": 20, "recommended": 10 },
+    "part_cooling_fan_pct": {
+      "min": 0,
+      "max": 20,
+      "recommended": 10
+    },
     "notes": "PA12 grades run roughly 240-290 °C (eSUN ePA12 TDS); PA6 grades usually 260-290 °C, and Prusa cites 285 °C for its PA blend. Keep part cooling near zero — aggressive cooling degrades layer adhesion and amplifies warping. An enclosure is effectively required for anything but small parts, and community practice targets ~45 °C+ ambient; an actively heated chamber is strongly beneficial for large parts but is not the hard prerequisite it is for PEEK-class polymers, so heated_chamber_required is recorded as false. Unfilled PA does not require a hardened nozzle, though stainless/hardened is commonly preferred; CF/GF-filled variants do require one."
   },
   "feeding": {
@@ -28,9 +54,23 @@
   },
   "drying": {
     "required_before_use": "always",
-    "temp_c": { "min": 60, "max": 90, "recommended": 70 },
-    "time_hours": { "min": 4, "max": 24, "recommended": 12 },
-    "methods": ["filament dryer", "food dehydrator", "convection oven at low temperature", "print directly from a heated dryer", "drybox with desiccant while printing"],
+    "temp_c": {
+      "min": 60,
+      "max": 90,
+      "recommended": 70
+    },
+    "time_hours": {
+      "min": 4,
+      "max": 24,
+      "recommended": 12
+    },
+    "methods": [
+      "filament dryer",
+      "food dehydrator",
+      "convection oven at low temperature",
+      "print directly from a heated dryer",
+      "drybox with desiccant while printing"
+    ],
     "dryness_validation": "Clean, crisp extrusion with a glossy (not matte or fuzzy) surface finish; no audible popping or crackling at the nozzle; no steam, bubbles or foaming in the extrudate; stringing collapses back to normal; the snap-test brittleness of a saturated spool disappears",
     "notes": "Nylon is the most hygroscopic common filament and degrades visibly — bubbling, stringing, brittleness — within hours of ambient exposure. eSUN specifies >12 h at 70 °C; Prusa says keep below 90 °C. Badly saturated spools can need 24-48 h. Printing from a heated dryer or sealed drybox is the practical default rather than an optional extra."
   },
@@ -74,11 +114,19 @@
     "density_g_cm3": 1.08,
     "grams_per_100cm3": 108,
     "cm3_per_100g": 92.6,
-    "shrinkage_pct": { "min": 1.0, "max": 2.5, "recommended": 1.5 },
+    "shrinkage_pct": {
+      "min": 1.0,
+      "max": 2.5,
+      "recommended": 1.5
+    },
     "glass_transition_c": 50,
     "heat_deflection_c": 80,
     "max_service_temp_c": 90,
-    "tensile_strength_mpa": { "min": 40, "max": 80, "recommended": 52 },
+    "tensile_strength_mpa": {
+      "min": 40,
+      "max": 80,
+      "recommended": 52
+    },
     "notes": "Density spans the PA12 (~1.01-1.04) to PA6 (~1.12-1.14) range; 1.08 is recorded as the mid-point for an unfilled generic PA. Tg is 40-60 °C depending on grade and drops further when the part is wet. HDT@0.45 MPa is the widest disagreement in the sources: eSUN ePA12 cites 100 °C while unfilled PA6 is often listed at 55-65 °C unless annealed — 80 °C is the recorded mid-point, not a datasheet value. Tensile: eSUN ePA12 50.8 MPa, partmfg table 52.45 MPa, general range 40-80 MPa."
   },
   "scores": {
@@ -93,22 +141,95 @@
     "water_tolerance": 1
   },
   "compatibility": {
-    "bonds_with": ["pa"],
-    "support_materials": ["pa"],
-    "usable_as_support_for": [],
+    "bonds_with": [
+      "bvoh",
+      "pa",
+      "pa12",
+      "pa12-cf",
+      "pa6",
+      "pa6-cf",
+      "pa6-gf",
+      "pa66",
+      "ppa-cf",
+      "pva"
+    ],
+    "support_materials": [
+      "bvoh",
+      "pa",
+      "pva"
+    ],
+    "usable_as_support_for": [
+      "pa",
+      "pa12",
+      "pa6",
+      "pa66"
+    ],
     "notes": "Nylon reliably welds only to itself. It does not bond usefully to pla, petg, abs, asa, pc, pp, pva, hips, bvoh, pctg, pvb or pet — the chemistry and the 240-290 °C print window are both mismatched. Some engineering TPUs are marketed as nylon-compatible and can reach marginal interlayer bonding, but that is brand-specific rather than a property of the class. Soluble supports are impractical: PVA degrades above ~200 °C and BVOH, while more heat-tolerant, still sits below nylon's range, so same-material PA breakaway supports are the standard workaround. PA is a poor support material for other polymers because it cross-bonds so weakly."
   },
   "plate_recommendations": [
     {
+      "plate_id": "g10-garolite",
+      "rating": "recommended",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): The headline use case. Multiple community reports state garolite prints nylon with no glue at all, where PEI plates need Magigoo PA or a glue stick. A thin PVA layer is optional pu"
+    },
+    {
       "plate_id": "pei-textured",
       "rating": "usable",
       "notes": "Textured PEI works at ~80-110 °C bed and is preferred over smooth PEI, which nylon can over-bond to and tear on removal. Adhesion on bare PEI is still inconsistent, so a glue stick is commonly applied as an adhesion PROMOTER here — the opposite of its release-layer role for PC/PETG/TPU. A dedicated PA sheet or garolite (G10) plate outperforms textured PEI for large parts."
+    },
+    {
+      "plate_id": "glass-borosilicate",
+      "rating": "usable",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Not well documented for bare glass in the sources; nylon adhesion aids are discussed for PEI and garolite instead. Nylon on bare glass is generally reported as unreliable — use the"
+    },
+    {
+      "plate_id": "carbon-fiber-plate",
+      "rating": "usable",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Vendors cover nylon in engineering profiles at 100-120 C, typically with a PA-specific promoter used as a combined adhesion and release layer."
+    },
+    {
+      "plate_id": "buildtak-polymer",
+      "rating": "usable",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): The vendor's position is that nylon adheres when a thin washable glue stick is applied — not recommended bare. Bed temperatures near 100 degC are also close to the sheet's ceiling."
+    },
+    {
+      "plate_id": "pei-smooth",
+      "rating": "avoid",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Adhesion is erratic on smooth PEI and swings with filament moisture content; Prusa and community consensus both point to G10/garolite for nylon."
+    },
+    {
+      "plate_id": "pp-sheet",
+      "rating": "avoid",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Not in the compatible list. Nylon's high shrinkage against a release-oriented surface is a detachment failure waiting to happen."
+    },
+    {
+      "plate_id": "pei-satin",
+      "rating": "avoid",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Not a Prusa-recommended surface for nylon; garolite remains the standard choice."
+    },
+    {
+      "plate_id": "supertack",
+      "rating": "avoid",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Not a listed material. Bed temperature is out of range and nylon's adhesion behaviour on this coating is uncharacterised."
+    },
+    {
+      "plate_id": "pc-plate",
+      "rating": "avoid",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Needs bed temperatures far above the PC sheet's limit. Vendor guidance routes all nylons to the Engineering or High-Temp plate."
+    },
+    {
+      "plate_id": "pei-patterned",
+      "rating": "avoid",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Outside the coating's adhesion and temperature envelope; use garolite or textured PEI."
     }
   ],
   "emissions": {
     "voc_level": "high",
     "particulate_level": "moderate",
-    "primary_emissions": ["caprolactam (~2-180 µg/min, from PA6)", "ultrafine particles (~10⁸-10¹¹ particles/min)"],
+    "primary_emissions": [
+      "caprolactam (~2-180 µg/min, from PA6)",
+      "ultrafine particles (~10⁸-10¹¹ particles/min)"
+    ],
     "ventilation": "recommended",
     "notes": "Caprolactam is the named marker compound for PA6 and has been reported at levels exceeding some chronic-exposure limits at close range in poorly ventilated spaces; Prusa's own knowledge base flags a strong odour. UFP emission is material- and temperature-dependent and sits between PLA's low baseline and ABS's high baseline. Use an enclosure plus active ventilation or a HEPA+carbon filter for extended prints, and do not run long nylon jobs in an unventilated occupied room."
   },
@@ -130,5 +251,152 @@
     "last_verified": "2026-07-31",
     "confidence": "medium",
     "conflicts": "HDT@0.45 MPa is the largest unresolved disagreement: eSUN's ePA12 TDS cites 100 °C while unfilled PA6 is commonly listed at 55-65 °C unless annealed; 80 °C is a recorded mid-point rather than a measured figure. Density (1.01-1.14) and Tg (40-60 °C) both vary with PA6 vs PA12 grade rather than between sources, so single values here are grade-averaged. Nozzle temperature differs by grade: eSUN ePA12 240-290 °C vs Prusa's 285 °C for a PA blend. Price range is extrapolated from spool listings and is unverified against current retail. Max continuous service temperature (80-100 °C) is a community/aggregator figure, not a datasheet value."
-  }
+  },
+  "trade_names": [
+    {
+      "manufacturer": "addnorth",
+      "product": "Adura",
+      "notes": "copolyamide (Addlantis family), density 1.1, HDT 0.45MPa 105C, tensile 50 MPa; exact copolyamide type unspecified so only the generic pa id is asserted"
+    },
+    {
+      "manufacturer": "addnorth",
+      "product": "Adura FDA",
+      "notes": "FDA-compliant copolyamide variant"
+    },
+    {
+      "manufacturer": "atomic-filament",
+      "product": "Nuclear Nylon v3",
+      "notes": "Engineering-grade alloyed PA copolymer with adhesion promoters/impact modifiers; PA type (6/12/66) undisclosed, so generic pa rather than pa6/pa12."
+    },
+    {
+      "manufacturer": "azurefilm",
+      "product": "Nylon",
+      "notes": "Standard nylon; subtype not disclosed"
+    },
+    {
+      "manufacturer": "bambu-lab",
+      "product": "PA11",
+      "notes": "Bio-based nylon 11, unfilled. Catalog has pa6/pa12/pa66 grades but no pa11, so mapped to the generic pa entry - a pa11 id would be the precise home"
+    },
+    {
+      "manufacturer": "coex-3d",
+      "product": "CoexNylex Unfilled Nylon (Natural/Black/White)",
+      "notes": "PA type (6 vs 12) not confirmed on the collection page, so the generic pa entry rather than pa6/pa12."
+    },
+    {
+      "manufacturer": "colorfabb",
+      "product": "PA",
+      "notes": "Standard nylon; subtype not disclosed"
+    },
+    {
+      "manufacturer": "eryone",
+      "product": "PA (Standard Nylon)",
+      "notes": "Polyamide grade undisclosed, so only the generic id."
+    },
+    {
+      "manufacturer": "esun",
+      "product": "PA",
+      "notes": "Unfilled polyamide; PA type not stated, so no pa6/pa12 grade id"
+    },
+    {
+      "manufacturer": "fiberlogy",
+      "product": "Nylon (PA)",
+      "notes": "Standard nylon"
+    },
+    {
+      "manufacturer": "filament-pm",
+      "product": "PAJET NYLON",
+      "notes": "exact polyamide type not stated in the TDS extract, so only the generic pa id is asserted"
+    },
+    {
+      "manufacturer": "fillamentum",
+      "product": "Nylon FX256",
+      "notes": "Standard nylon; aramid-reinforced siblings have no dedicated id"
+    },
+    {
+      "manufacturer": "formfutura",
+      "product": "PA (Nylon)",
+      "notes": "Standard nylon; subtype not enumerated"
+    },
+    {
+      "manufacturer": "inland",
+      "product": "Nylon (PA)",
+      "notes": "'Self-lubricating', highly moisture-sensitive; polyamide grade undisclosed and multiple blends have shipped, so only the generic id."
+    },
+    {
+      "manufacturer": "jayo",
+      "product": "Easy Nylon (E-PA)",
+      "notes": "Low-warp nylon; PA type not specified"
+    },
+    {
+      "manufacturer": "overture",
+      "product": "Easy Nylon",
+      "notes": "PA6/PA66 copolymer, unfilled - a copolymer of both, so not mapped to pa6 or pa66. Vicat 181.2 C, elongation 8.4%, drying 95 C / 7 h."
+    },
+    {
+      "manufacturer": "polymaker",
+      "product": "PolyMide CoPA",
+      "notes": "Co-polyamide blend, not a straight PA6/PA66/PA12; 'CoPA' is a pa alias"
+    },
+    {
+      "manufacturer": "push-plastic",
+      "product": "Nylon",
+      "notes": "Unfilled nylon; PA type not confirmed in public copy, so pa6/pa12 are not asserted."
+    },
+    {
+      "manufacturer": "qidi-tech",
+      "product": "Ultra PA Nylon",
+      "notes": "Premium unfilled polyamide; PA6/PA12/CoPA grade undisclosed, so generic pa"
+    },
+    {
+      "manufacturer": "snapmaker",
+      "product": "Black Nylon (PA)",
+      "notes": "Unfilled polyamide, specific grade undisclosed"
+    },
+    {
+      "manufacturer": "sunlu",
+      "product": "Easy PA",
+      "notes": "Unfilled low-warp nylon; PA type not specified"
+    },
+    {
+      "manufacturer": "taulman3d",
+      "product": "Alloy 910 / Nylon 910",
+      "notes": "Alloyed nylon copolymer; not simply PA6 or PA12, so base pa."
+    },
+    {
+      "manufacturer": "taulman3d",
+      "product": "Bridge Nylon (645 Rev B)",
+      "notes": "More flexible revision of 645 at similar strength; same nylon-copolymer family."
+    },
+    {
+      "manufacturer": "taulman3d",
+      "product": "Nylon 230 (n)vent",
+      "notes": "Lower-melt nylon copolymer that prints on standard brass nozzles without an all-metal hotend."
+    },
+    {
+      "manufacturer": "taulman3d",
+      "product": "Nylon 618",
+      "notes": "PA6-type nylon copolymer, low warp, dyeable. A copolymer rather than straight PA6, so base pa."
+    },
+    {
+      "manufacturer": "taulman3d",
+      "product": "Nylon 645",
+      "notes": "Nylon copolymer, stiffer/stronger than 618, natural translucent."
+    },
+    {
+      "manufacturer": "taulman3d",
+      "product": "Nylon 680 / Nylon 680 FDA",
+      "notes": "645-family nylon copolymer in an FDA-compliant food-contact grade."
+    },
+    {
+      "manufacturer": "tinmorry",
+      "product": "PA Reinforced Filament",
+      "notes": "Neither PA type nor fiber type stated, so no pa6-cf/pa6-gf/pa12-cf grade id can be assigned"
+    },
+    {
+      "manufacturer": "ultimaker",
+      "product": "UltiMaker Nylon",
+      "notes": "PA6-vs-PA12 split not disclosed (community references point at the 12-family), so base pa."
+    }
+  ]
 }

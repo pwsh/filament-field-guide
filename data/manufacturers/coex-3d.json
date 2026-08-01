@@ -27,53 +27,102 @@
   },
   "product_lines": [
     {
-      "name": "PLA",
+      "name": "Standard PLA / COEX Next PLA",
       "filament_ids": [
-        "pla",
-        "pla-cf"
+        "pla"
       ],
-      "notes": "Standard, COEX Next, +Silk, PLA Prime and a carbon-filled grade."
+      "notes": "Both are virgin NatureWorks Ingeo 4043D with colourant only; COEX Next differs solely by being blended with production-scrap regrind, not by performance."
     },
     {
-      "name": "ABS",
+      "name": "PLA Prime",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Virgin NatureWorks Ingeo 3D850, a general-purpose PLA extrusion grade — a different resin SKU from the 4043D lines, not a toughened, high-flow or silk grade."
+    },
+    {
+      "name": "PLA+SILK",
+      "filament_ids": [
+        "pla-silk"
+      ],
+      "notes": "PLA base plus a silk-effect gloss additive."
+    },
+    {
+      "name": "Carbon Filled PLA",
+      "filament_ids": [
+        "pla-cf"
+      ],
+      "notes": "PLA + carbon fibre filler."
+    },
+    {
+      "name": "ABS / ABS Prime",
       "filament_ids": [
         "abs"
       ],
-      "notes": "Standard, ABS Prime and a flame-retardant grade."
+      "notes": "Standard and premium resin/QC tiers of the same base polymer."
+    },
+    {
+      "name": "Flame Retardant Black ABS",
+      "filament_ids": [
+        "abs-fr"
+      ],
+      "notes": "Flame-retardant ABS; specific FR resin grade not disclosed."
     },
     {
       "name": "ASA Prime",
       "filament_ids": [
         "asa"
-      ]
+      ],
+      "notes": "Premium-tier standard ASA."
     },
     {
-      "name": "PETG and PCTG Prime",
+      "name": "PETG",
       "filament_ids": [
-        "petg",
-        "pctg"
-      ]
+        "petg"
+      ],
+      "notes": "Standard copolyester PETG."
     },
     {
-      "name": "CoexFlex",
+      "name": "PCTG Prime",
+      "filament_ids": [
+        "pctg"
+      ],
+      "notes": "Premium-tier glycol-modified copolyester."
+    },
+    {
+      "name": "CoexFlex TPE (90A / 30D / 40D / 60D)",
       "filament_ids": [
         "tpe"
       ],
-      "notes": "House flexible/TPE line."
+      "notes": "Broad-category placement only: COEX states these are derived from DuPont Hytrel base material, i.e. a thermoplastic co-polyester elastomer (TPC-ET) — chemically distinct from urethane-based TPU and from the SEBS-type grades behind the tpe entry."
     },
     {
-      "name": "CoexNylex",
+      "name": "DuPont Hytrel 3D4000FL (NC010 natural, BK513 black)",
+      "filament_ids": [
+        "tpe"
+      ],
+      "notes": "Genuine DuPont Hytrel 3D4000FL resin; COEX states it is the contract manufacturer of Hytrel filament. TPC-ET copolyester elastomer, not TPU or SEBS-TPE — same caveat as CoexFlex."
+    },
+    {
+      "name": "CoexNylex Unfilled Nylon",
       "filament_ids": [
         "pa"
       ],
-      "notes": "House nylon line."
+      "notes": "Natural/Black/White unfilled nylon; PA type (6 vs 12) not confirmed on the collection page."
     },
     {
-      "name": "HIPS",
+      "name": "CoexNylex PA6-CF",
+      "filament_ids": [
+        "pa6-cf"
+      ],
+      "notes": "Explicitly PA6 + carbon fibre."
+    },
+    {
+      "name": "Support Filament / HIPS",
       "filament_ids": [
         "hips"
       ],
-      "notes": "Sold as a support material."
+      "notes": "HIPS-based sacrificial support material."
     }
   ],
   "makes_plates": false,
@@ -85,7 +134,12 @@
       "https://coex3d.com/",
       "https://greenbayinnovationgroup.com/introducing-coex-3d-a-green-bay-manufacturer-of-3d-printing-filaments/",
       "https://www.instagram.com/coex3d/",
-      "https://www.linkedin.com/company/coex-llc"
+      "https://www.linkedin.com/company/coex-llc",
+      "https://coex3d.com/collections/coexflex%E2%84%A2-tpe-flexible-filament",
+      "https://coex3d.com/collections/dupont-filament",
+      "https://coex3d.com/collections/coexnylex-natural",
+      "https://coex3d.com/products/coex-next-1-75mm",
+      "https://coex3d.com/collections/pla-prime"
     ],
     "last_verified": "2026-07-31",
     "confidence": "medium",

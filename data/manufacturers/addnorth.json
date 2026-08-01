@@ -26,41 +26,124 @@
       "name": "X-PLA",
       "filament_ids": [
         "pla"
-      ]
+      ],
+      "notes": "Flagship general-purpose PLA, described as a 100% biodegradable PLA-mix, density 1.24-1.26"
+    },
+    {
+      "name": "PLA Economy",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Budget 100% corn-based PLA"
     },
     {
       "name": "E-PLA",
       "filament_ids": [
         "pla"
       ],
-      "notes": "Marketed as easy and reliable, 'Made in Sweden'"
+      "notes": "Biodegradable PLA, density 1.23-1.25"
+    },
+    {
+      "name": "PLA Wood",
+      "filament_ids": [
+        "pla-wood"
+      ],
+      "notes": "40% wood fibre + 60% bio-based PLA"
+    },
+    {
+      "name": "Textura",
+      "filament_ids": [
+        "pla-matte"
+      ],
+      "notes": "Matte bio-based PLA with plant fibres, density 1.24-1.27; the plant-fibre filler has no dedicated id"
     },
     {
       "name": "PETG",
       "filament_ids": [
         "petg"
       ],
-      "notes": "Includes PETG Economy and, per a third-party review site, an Advanced PETG"
+      "notes": "Standard PETG, density 1.27"
+    },
+    {
+      "name": "PETG Economy",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "Budget PETG"
+    },
+    {
+      "name": "PETG Pro Series Matte",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "Matte PETG, density 1.3; no petg-matte id exists"
+    },
+    {
+      "name": "ESD PETG",
+      "filament_ids": [
+        "petg-esd"
+      ],
+      "notes": "Conductive PETG, target surface resistivity 1e6-1e9 ohm-cm"
     },
     {
       "name": "Rigid X",
       "filament_ids": [
-        "pla"
+        "petg-cf"
       ],
-      "notes": "Engineering-oriented rigid grade; base polymer not confirmed in sources, PLA assumed"
+      "notes": "Carbon-fibre-reinforced PETG, density 1.3, working temperature 90 C - corrects the earlier PLA assumption"
     },
     {
-      "name": "TPU",
+      "name": "EasyFlex",
       "filament_ids": [
-        "tpu"
-      ]
+        "tpu-95a"
+      ],
+      "notes": "TPU, Shore 95A"
     },
     {
-      "name": "Addlantis",
+      "name": "rABS",
+      "filament_ids": [
+        "abs"
+      ],
+      "notes": "100% recycled ABS, density 1.03-1.05"
+    },
+    {
+      "name": "OBC Polyethylene",
+      "filament_ids": [],
+      "notes": "Engineering-grade polyethylene, chemically an olefin block copolymer, density 0.905; no polyethylene/OBC id exists"
+    },
+    {
+      "name": "Adura",
       "filament_ids": [
         "pa"
       ],
-      "notes": "Nylon/PA line, listed as a product line rather than a separate brand"
+      "notes": "Copolyamide nylon (Addlantis family), density 1.1, HDT 0.45 MPa 105 C, tensile 50 MPa; exact copolyamide type unspecified so the generic pa id is used"
+    },
+    {
+      "name": "Adura FDA",
+      "filament_ids": [
+        "pa"
+      ],
+      "notes": "FDA-compliant copolyamide variant"
+    },
+    {
+      "name": "Adura X",
+      "filament_ids": [],
+      "notes": "Carbon-fibre-reinforced copolyamide; no generic pa-cf id exists and the copolyamide type is unspecified"
+    },
+    {
+      "name": "Addbor N25",
+      "filament_ids": [],
+      "notes": "Copolyamide + 25 wt% boron carbide, density 1.3, for neutron shielding/wear resistance; no equivalent id"
+    },
+    {
+      "name": "Adamant S1",
+      "filament_ids": [],
+      "notes": "100% PVDF fluoropolymer, density 1.8, UL94 V-0; no PVDF id exists"
+    },
+    {
+      "name": "Koltron G1",
+      "filament_ids": [],
+      "notes": "Graphene-enhanced electrically/thermally conductive compound, density 1.76, volume resistivity ~2.0 ohm-cm; base polymer undisclosed"
     }
   ],
   "makes_plates": false,
@@ -72,7 +155,10 @@
       "https://addnorth.com/shop",
       "https://filamentcheatsheet.com/brands/add_north/",
       "https://www.youtube.com/watch?v=5m4icGgBdyk",
-      "https://filament2print.com/en/brand/62-addnorth"
+      "https://filament2print.com/en/brand/62-addnorth",
+      "https://storage.googleapis.com/addnorth-com-public/catalog/addnorth_product_catalogue_2022.pdf",
+      "https://storage.googleapis.com/addnorth-com.appspot.com/imgix/assets/production/Adura_TDS_KRM71m.pdf",
+      "https://filamentworld.de/fact-sheets/AddNorth_Adura-FDA_Datenblatt_EN.pdf"
     ],
     "last_verified": "2026-07-31",
     "confidence": "medium",

@@ -1,7 +1,13 @@
 {
   "id": "pla-plus",
   "name": "PLA+ (Toughened PLA)",
-  "aliases": ["PLA Plus", "PLA Pro", "Tough PLA", "PLA Tough+", "eSUN PLA+"],
+  "aliases": [
+    "PLA Plus",
+    "PLA Pro",
+    "Tough PLA",
+    "PLA Tough+",
+    "eSUN PLA+"
+  ],
   "status": "researched",
   "base_type": "pla",
   "variation_kind": "toughened",
@@ -9,14 +15,34 @@
   "chemical_makeup": "PLA-majority blend (PLLA/PDLA polylactide) compounded with an undisclosed impact modifier / elastomeric toughening additive; manufacturers describe it only as 'modified based on PLA material' and publish no filler or co-monomer content",
   "summary": "Base PLA plus a proprietary impact modifier — same lactide chemistry, mechanical delta only. Versus base PLA it trades some stiffness and tensile strength for markedly better impact toughness and layer adhesion (Bambu measures higher elongation in Z than in XY, the toughening signature), runs hotter at the top of the range (210-250 °C vs 190-230 °C), wants a hotter/longer dry (55 °C/8 h vs 45-55 °C/6 h) and prints slower than base PLA (eSUN and colorFabb recommend 40-50 mm/s). Heat resistance is unchanged: HDT still ~53-58 °C.",
   "printing": {
-    "nozzle_temp_c": { "min": 210, "max": 250, "recommended": 225 },
-    "bed_temp_c": { "min": 35, "max": 65, "recommended": 55 },
-    "ambient_temp_c": { "min": 15, "max": 45, "recommended": 25 },
-    "speed_mm_s": { "min": 30, "max": 100, "recommended": 45 },
+    "nozzle_temp_c": {
+      "min": 210,
+      "max": 250,
+      "recommended": 225
+    },
+    "bed_temp_c": {
+      "min": 35,
+      "max": 65,
+      "recommended": 55
+    },
+    "ambient_temp_c": {
+      "min": 15,
+      "max": 45,
+      "recommended": 25
+    },
+    "speed_mm_s": {
+      "min": 30,
+      "max": 100,
+      "recommended": 45
+    },
     "enclosure_recommended": false,
     "heated_chamber_required": false,
     "requires_hardened_nozzle": false,
-    "part_cooling_fan_pct": { "min": 80, "max": 100, "recommended": 100 },
+    "part_cooling_fan_pct": {
+      "min": 80,
+      "max": 100,
+      "recommended": 100
+    },
     "enclosure_open_for_cooling": true,
     "notes": "Delta vs base PLA: the usable nozzle band extends higher and is brand-split — eSUN PLA+ 210-230 °C and colorFabb Tough PLA 210-230 °C sit on top of base PLA, while Bambu PLA Tough+ specifies 220-250 °C with spec samples printed at 245 °C, notably hotter than base PLA and probably a different toughening compound. Bed 35-65 °C (eSUN rec 45 °C, colorFabb 50-60 °C, Bambu rec 55 °C). Full part cooling as with base PLA. The other real delta is speed: eSUN recommends 40 mm/s (tested to 100 mm/s) and colorFabb 40-50 mm/s, well below base PLA's 100+ mm/s, so this is not the grade to pick for throughput — see pla-hf. Bambu lists an optional 25-45 °C chamber for dimensional consistency; it is not a requirement, and as with all PLA grades an enclosed machine should be run with the door/lid open to avoid heat creep."
   },
@@ -28,9 +54,23 @@
   },
   "drying": {
     "required_before_use": "if-exposed",
-    "temp_c": { "min": 45, "max": 65, "recommended": 55 },
-    "time_hours": { "min": 4, "max": 12, "recommended": 8 },
-    "methods": ["filament dryer", "blast oven at 55 °C", "heated bed at 65-75 °C for 12 h", "food dehydrator", "drybox with desiccant"],
+    "temp_c": {
+      "min": 45,
+      "max": 65,
+      "recommended": 55
+    },
+    "time_hours": {
+      "min": 4,
+      "max": 12,
+      "recommended": 8
+    },
+    "methods": [
+      "filament dryer",
+      "blast oven at 55 °C",
+      "heated bed at 65-75 °C for 12 h",
+      "food dehydrator",
+      "drybox with desiccant"
+    ],
     "dryness_validation": "No popping/crackling or visible steam at the nozzle; glossy, consistent extrudate; minimal stringing on a retraction test — same checks as base PLA",
     "notes": "Delta vs base PLA (45-55 °C / 4-8 h): Bambu specifies 55 °C for 8 h in a blast/dry-box oven or 65-75 °C for 12 h using the printer heatbed, hotter and longer than typical base-PLA practice. eSUN and colorFabb publish no drying parameters, so for those brands standard PLA drying is the working assumption (unverified). Separately, Bambu recommends post-print annealing at 50-60 °C for 6-12 h to raise heat resistance — a post-process, not a drying step, and the opposite of lw-pla, where annealing is actively harmful."
   },
@@ -76,7 +116,11 @@
     "glass_transition_c": 61,
     "heat_deflection_c": 58,
     "max_service_temp_c": 52,
-    "tensile_strength_mpa": { "min": 35, "max": 63, "recommended": 45 },
+    "tensile_strength_mpa": {
+      "min": 35,
+      "max": 63,
+      "recommended": 45
+    },
     "notes": "Density is brand-split but all within base-PLA range: eSUN 1.23, colorFabb 1.24, Bambu PLA Tough+ 1.21 g/cm³ — 1.23 recorded. Tensile figures do NOT agree across brands because the test methods differ: eSUN 63 MPa (injection-moulded spline, which overstates FDM-printed parts), colorFabb 55 MPa (printed X-Y), Bambu 34.9±1 MPa X-Y / 20.9±1 MPa Z. Elongation at break: eSUN 20 %, colorFabb 8.6 %, Bambu 5.1 % X-Y / 10.4 % Z — Bambu's Z elongation exceeding X-Y is the clearest evidence of the toughening package working on interlayer bonds. Impact: eSUN IZOD 9 kJ/m², colorFabb Charpy notched 5.8 kJ/m², Bambu 80.6±9.5 kJ/m² X-Y; different tests, not comparable. Thermal (Bambu): Tg 61 °C, HDT 58 °C at 1.8 MPa, melt 151 °C; eSUN HDT 53 °C; colorFabb lists Tg/HDT as N/A. HDT here is at 1.8 MPa, not the schema-default 0.45 MPa. Shrinkage not published by any brand (unverified) — assume base PLA's 0.3-0.5 %."
   },
   "scores": {
@@ -91,9 +135,27 @@
     "water_tolerance": 6
   },
   "compatibility": {
-    "bonds_with": ["pla", "pla-plus", "pla-hf", "lw-pla", "pla-cf", "pla-silk", "pla-matte", "pla-gradient"],
-    "support_materials": ["pva", "bvoh", "petg", "pla"],
-    "usable_as_support_for": ["petg", "tpu"],
+    "bonds_with": [
+      "lw-pla",
+      "pla",
+      "pla-cf",
+      "pla-gf",
+      "pla-gradient",
+      "pla-hf",
+      "pla-matte",
+      "pla-plus",
+      "pla-silk"
+    ],
+    "support_materials": [
+      "bvoh",
+      "petg",
+      "pla",
+      "pva"
+    ],
+    "usable_as_support_for": [
+      "petg",
+      "tpu"
+    ],
     "notes": "Same PLA-family bonding behaviour as the base entry: welds to itself and other PLA grades, does not weld to PETG/ABS/ASA/PC/PA/PP. Commonly paired with lw-pla (tough ribs inside foamed skins) and with base PLA for multi-colour work. Standard PLA breakaway or water-soluble PVA/BVOH supports, as recommended by colorFabb and Polymaker for their tough PLA lines."
   },
   "plate_recommendations": [
@@ -101,12 +163,45 @@
       "plate_id": "pei-textured",
       "rating": "recommended",
       "notes": "Same as base PLA — adheres at 45-60 °C with no release agent, and the textured grain suits the grade's naturally matte finish. No special surface needed."
+    },
+    {
+      "plate_id": "pei-smooth",
+      "rating": "recommended",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Behaves as base PLA; no aid needed."
+    },
+    {
+      "plate_id": "pp-sheet",
+      "rating": "recommended",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): As base PLA."
+    },
+    {
+      "plate_id": "pei-satin",
+      "rating": "recommended",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): As base PLA."
+    },
+    {
+      "plate_id": "supertack",
+      "rating": "recommended",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): As base PLA; toughened blends make no measurable difference to release behaviour."
+    },
+    {
+      "plate_id": "pc-plate",
+      "rating": "recommended",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Toughened PLA blends sometimes want the upper end of the range; stay under the plate's low thermal ceiling."
+    },
+    {
+      "plate_id": "pei-patterned",
+      "rating": "recommended",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): As base PLA."
     }
   ],
   "emissions": {
     "voc_level": "low",
     "particulate_level": "low",
-    "primary_emissions": ["lactide", "ultrafine particles"],
+    "primary_emissions": [
+      "lactide",
+      "ultrafine particles"
+    ],
     "ventilation": "optional",
     "notes": "No measured difference from base PLA — no styrene, caprolactam or foaming agent involved, and the emission class stays far below ABS/ASA. The one caveat is that Bambu's grade runs up to 250 °C, ~20 °C hotter than base PLA, which nudges particulate output up; and because the impact-modifier chemistry is undisclosed, any trace difference in emitted species is unverified. Ventilate for continuous printing in an occupied room."
   },
@@ -124,5 +219,208 @@
     "last_verified": "2026-07-31",
     "confidence": "medium",
     "conflicts": "Tensile strength disagrees by a factor of ~1.8 across brands (eSUN 63 MPa injection-moulded, colorFabb 55 MPa printed X-Y, Bambu 34.9 MPa X-Y) because the test specimens differ — recorded as a 35-63 MPa range rather than reconciled. Impact strength is reported in incompatible tests (IZOD 9 kJ/m², Charpy notched 5.8 kJ/m², Bambu 80.6 kJ/m²) and cannot be compared. Nozzle temperature is brand-split: 210-230 °C for eSUN/colorFabb vs 220-250 °C for Bambu. HDT: Bambu 58 °C at 1.8 MPa vs eSUN 53 °C (load unstated) vs colorFabb N/A. Drying parameters exist only for Bambu; eSUN/colorFabb values are assumed from base PLA (unverified). Prices for Bambu and colorFabb are estimates, not confirmed store figures."
-  }
+  },
+  "trade_names": [
+    {
+      "manufacturer": "anycubic",
+      "product": "PLA+ / PLA+ Refill"
+    },
+    {
+      "manufacturer": "atomic-filament",
+      "product": "Extreme Impact PLA / Ultra Impact Modified PLA",
+      "notes": "PLA + impact modifier; the toughened 'Tough PLA' category."
+    },
+    {
+      "manufacturer": "bambu-lab",
+      "product": "PLA Tough",
+      "notes": "Impact-modified PLA, i.e. the PLA+ class rather than base PLA"
+    },
+    {
+      "manufacturer": "duramic-3d",
+      "product": "PLA Plus",
+      "notes": "Toughened PLA marketed as '8 Times Strength' vs base PLA (marketing figure, unverified)."
+    },
+    {
+      "manufacturer": "elegoo",
+      "product": "PLA Plus"
+    },
+    {
+      "manufacturer": "elegoo",
+      "product": "PLA Pro",
+      "notes": "Elegoo markets PLA Pro as a second toughened tier above PLA Plus; same PLA+ class, distinct SKU"
+    },
+    {
+      "manufacturer": "elegoo",
+      "product": "Rapid PLA Plus",
+      "notes": "Toughened PLA on a high-flow rheology - fits both pla-plus and pla-hf"
+    },
+    {
+      "manufacturer": "eryone",
+      "product": "High-Speed PLA+",
+      "notes": "Toughened base, so it carries pla-plus in addition to pla-hf."
+    },
+    {
+      "manufacturer": "eryone",
+      "product": "PLA Plus",
+      "notes": "Toughened PLA."
+    },
+    {
+      "manufacturer": "esun",
+      "product": "PLA+",
+      "notes": "Impact-modifier-toughened PLA, density 1.24 g/cm3 (TDS V4.0); same lactide chemistry as base PLA"
+    },
+    {
+      "manufacturer": "esun",
+      "product": "PLA-ST",
+      "notes": "'Specialized technical' PLA positioned above PLA+; impact/heat-modified toughened PLA"
+    },
+    {
+      "manufacturer": "fiberlogy",
+      "product": "Impact PLA",
+      "notes": "PLA-based blend marketed at up to 800% higher impact resistance than standard PLA; modifier/copolymer undisclosed"
+    },
+    {
+      "manufacturer": "filament-pm",
+      "product": "PLA+",
+      "notes": "toughened PLA"
+    },
+    {
+      "manufacturer": "filament-pm",
+      "product": "RePLA / RePLA+",
+      "notes": "RePLA+ is the toughened recycled grade"
+    },
+    {
+      "manufacturer": "filamentive",
+      "product": "Tough PLA",
+      "notes": "impact-modified recycled PLA"
+    },
+    {
+      "manufacturer": "formfutura",
+      "product": "Tough PLA",
+      "notes": "Impact-modified PLA; modifier undisclosed, matching pla-plus's proprietary-impact-modifier definition"
+    },
+    {
+      "manufacturer": "forward-am",
+      "product": "Ultrafuse PLA PRO1",
+      "notes": "Toughened engineering PLA grade."
+    },
+    {
+      "manufacturer": "forward-am",
+      "product": "Ultrafuse PLA Tough",
+      "notes": "Impact-modified/toughened PLA."
+    },
+    {
+      "manufacturer": "hatchbox",
+      "product": "PLA PRO+",
+      "notes": "Toughened/enhanced-performance PLA tier."
+    },
+    {
+      "manufacturer": "ic3d",
+      "product": "Impact Modified PLA",
+      "notes": "NatureWorks 4043D + undisclosed impact modifier; density 1.24 g/cm3."
+    },
+    {
+      "manufacturer": "ic3d",
+      "product": "Matte Impact Modified PLA",
+      "notes": "Impact-modified PLA base; also carries a matting agent, so it maps to pla-matte as well."
+    },
+    {
+      "manufacturer": "inland",
+      "product": "High Speed PLA+",
+      "notes": "Toughened base."
+    },
+    {
+      "manufacturer": "inland",
+      "product": "PLA+",
+      "notes": "Impact-toughening agent added; community-identified as eSUN PLA+."
+    },
+    {
+      "manufacturer": "inland",
+      "product": "Tough PLA",
+      "notes": "Toughened PLA line; modifier not itemised."
+    },
+    {
+      "manufacturer": "jamg-he",
+      "product": "Jamghe Premium PLA Plus Filament",
+      "notes": "Impact-modified toughened PLA"
+    },
+    {
+      "manufacturer": "jayo",
+      "product": "PLA+ / PLA+2.0",
+      "notes": "Toughened PLA; mirrors Sunlu grades, consistent with shared production"
+    },
+    {
+      "manufacturer": "kingroon",
+      "product": "PLA Plus (PLA+)"
+    },
+    {
+      "manufacturer": "landu",
+      "product": "Hyper PLA+",
+      "notes": "Toughened base"
+    },
+    {
+      "manufacturer": "landu",
+      "product": "PLA+",
+      "notes": "Impact-modified toughened PLA"
+    },
+    {
+      "manufacturer": "matterhackers",
+      "product": "PRO Series Tough PLA",
+      "notes": "Impact-modified/toughened PLA."
+    },
+    {
+      "manufacturer": "overture",
+      "product": "PLA Professional (PLA Pro)",
+      "notes": "High-toughness PLA marketed as distinct from PLA+, but chemically the same impact-modified PLA class; relative modifier loading not published."
+    },
+    {
+      "manufacturer": "overture",
+      "product": "PLA+ (PLA Plus)",
+      "notes": "PLA with impact-toughening additive."
+    },
+    {
+      "manufacturer": "overture",
+      "product": "Super PLA+",
+      "notes": "Further toughness-enhanced PLA+; same modifier category, higher marketed tier."
+    },
+    {
+      "manufacturer": "polymaker",
+      "product": "PolyLite PLA Pro / Polymaker PLA Pro",
+      "notes": "Toughened PLA grades; 'PLA Pro' is a pla-plus alias"
+    },
+    {
+      "manufacturer": "polymaker",
+      "product": "PolyMax PLA",
+      "notes": "Nano-reinforced toughened PLA: tensile 41.3 MPa XY / 32.4 MPa Z, elongation 5.7%/4.7%, Charpy 38.9 kJ/m2, Tg 61 C, HDT 52.3 C @1.8MPa"
+    },
+    {
+      "manufacturer": "rosa3d",
+      "product": "PLA Plus ProSpeed"
+    },
+    {
+      "manufacturer": "spectrum-filaments",
+      "product": "PLA Pro",
+      "notes": "styrene-replacement toughened PLA"
+    },
+    {
+      "manufacturer": "spectrum-filaments",
+      "product": "PLA Tough",
+      "notes": "impact-modified PLA"
+    },
+    {
+      "manufacturer": "sunlu",
+      "product": "PLA+ / PLA+ 2.0",
+      "notes": "Impact-modified toughened PLA"
+    },
+    {
+      "manufacturer": "ultimaker",
+      "product": "UltiMaker Tough PLA",
+      "notes": "Impact-modified PLA positioned against ABS; the Sketch-series 'Tough' filament is the same chemistry."
+    },
+    {
+      "manufacturer": "voxelab",
+      "product": "PLA Pro (marketed as \"PLA+\")",
+      "notes": "Limited public spec disclosure; classification from retailer listing marketing"
+    }
+  ]
 }

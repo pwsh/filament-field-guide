@@ -25,36 +25,73 @@
   },
   "product_lines": [
     {
-      "name": "PETG",
-      "filament_ids": [
-        "petg"
-      ],
-      "notes": "Standard, recycled and UV-resistant grades."
-    },
-    {
-      "name": "Carbon Fiber PETG",
-      "filament_ids": [
-        "petg-cf"
-      ]
-    },
-    {
       "name": "PLA",
       "filament_ids": [
         "pla"
       ],
-      "notes": "Includes impact-modified variants."
+      "notes": "Standard PLA line."
+    },
+    {
+      "name": "Impact Modified PLA",
+      "filament_ids": [
+        "pla-plus"
+      ],
+      "notes": "NatureWorks 4043D PLA + undisclosed impact modifier; density 1.24 g/cm3."
+    },
+    {
+      "name": "Matte Impact Modified PLA",
+      "filament_ids": [
+        "pla-plus",
+        "pla-matte"
+      ],
+      "notes": "Impact-modified PLA with an added matting agent."
+    },
+    {
+      "name": "PETG (standard / Recycled / UV-PETG)",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "Standard copolyester PETG, a recycled-content grade and a UV-resistant pigmented variant."
+    },
+    {
+      "name": "Matte Recycled PETG",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "Recycled PETG plus a matting additive; the catalog has no petg-matte id."
+    },
+    {
+      "name": "Carbon Fiber PETG (CF-PETG)",
+      "filament_ids": [
+        "petg-cf"
+      ],
+      "notes": "PETG + carbon fibre."
+    },
+    {
+      "name": "PolyHex (HT PETG)",
+      "filament_ids": [],
+      "notes": "Next-generation copolyester developed with the US Army as a PC replacement: Tg 110 C, HDT 90 C at 66 psi, density 1.18 g/cm3 — far above standard PETG (~80 C Tg, ~65-70 C HDT). Closest analogue is a high-heat PCTG-class copolyester, but it matches neither petg nor pctg cleanly."
     },
     {
       "name": "ABS",
       "filament_ids": [
         "abs"
-      ]
+      ],
+      "notes": "Standard ABS line."
     },
     {
-      "name": "Flexibles",
+      "name": "Nylon",
+      "filament_ids": [
+        "pa"
+      ],
+      "notes": "Listed in category navigation but the product page errored at time of research; PA type unconfirmed and the line may be discontinued. Flagged for follow-up."
+    },
+    {
+      "name": "TPE-SEBS-95A",
       "filament_ids": [
         "tpe"
-      ]
+      ],
+      "notes": "Explicitly a styrenic block copolymer (SEBS) thermoplastic elastomer, not TPU. Shore 95A, i.e. firmer than the 85A TPU flexibles."
     }
   ],
   "price_tier": "mid",
@@ -64,7 +101,12 @@
       "https://www.ic3dprinters.com/about-us/",
       "https://www.ic3dprinters.com/shop/pla-filaments/",
       "https://www.instagram.com/ic3d_printers/",
-      "https://columbusunderground.com/3d-printers/"
+      "https://columbusunderground.com/3d-printers/",
+      "https://www.ic3dprinters.com/shop/impact-modified-pla/",
+      "https://www.ic3dprinters.com/shop/polyhex/",
+      "https://www.ic3dprinters.com/ic3d/wp-content/uploads/2022/02/TPE-SEBS-95A_IC3D_TDS_2022.02.pdf",
+      "https://www.ic3dprinters.com/product-category/filament/nylon/",
+      "https://www.ic3dprinters.com/shop/"
     ],
     "last_verified": "2026-07-31",
     "confidence": "medium",

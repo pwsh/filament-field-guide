@@ -24,70 +24,247 @@
   },
   "product_lines": [
     {
-      "name": "EasyFil",
+      "name": "EasyFil PLA",
       "filament_ids": [
-        "pla",
+        "pla"
+      ],
+      "notes": "Standard PLA, budget consumer line"
+    },
+    {
+      "name": "EasyFil ePLA",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "The 'e' is marketing positioning (economical/European/eco-packaged), not a chemistry marker; TDS shows plain PLA at 1.24 g/cc"
+    },
+    {
+      "name": "EasyFil ePLA Matt",
+      "filament_ids": [
+        "pla-matte"
+      ],
+      "notes": "Matte-additive ePLA"
+    },
+    {
+      "name": "Bulk PLA",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Standard PLA in bulk packaging"
+    },
+    {
+      "name": "Premium PLA",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Standard PLA"
+    },
+    {
+      "name": "Tough PLA",
+      "filament_ids": [
+        "pla-plus"
+      ],
+      "notes": "Impact-modified PLA marketed for higher impact resistance"
+    },
+    {
+      "name": "Premium PLA Flame Retardant",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "PLA + flame-retardant package; abs-fr has no PLA equivalent"
+    },
+    {
+      "name": "Premium PLA CF03",
+      "filament_ids": [
+        "pla-cf"
+      ],
+      "notes": "PLA + carbon-fibre filler"
+    },
+    {
+      "name": "Volcano PLA / Volcano PLA 150C",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "High-crystallinity PLA (density 1.27 g/cc) formulated for post-print annealing - HDT rises to ~95 C annealed vs ~55-60 C unannealed; base polymer is still PLA per TDS, no annealable-PLA grade id exists"
+    },
+    {
+      "name": "Matt PLA",
+      "filament_ids": [
+        "pla-matte"
+      ],
+      "notes": "Matte-additive PLA"
+    },
+    {
+      "name": "Transparent PLA",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Optical variant on the same base polymer"
+    },
+    {
+      "name": "High Gloss PLA / High Gloss PLA ColorMorph",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Cosmetic gloss and colour-shift variants; not confirmed to be a silk-additive or gradient formulation, so pla-silk/pla-gradient are not assigned"
+    },
+    {
+      "name": "Galaxy PLA",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Sparkle/glitter-effect PLA; no glitter-filled PLA id exists"
+    },
+    {
+      "name": "EasyFil PLA Glow in the Dark",
+      "filament_ids": [
+        "pla-glow"
+      ],
+      "notes": "PLA + phosphorescent pigment"
+    },
+    {
+      "name": "ReForm rPLA / ReFill PLA",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Recycled PLA, also sold as pellets"
+    },
+    {
+      "name": "StoneFil",
+      "notes": "PLA matrix + stone/mineral filler; no stone-filled PLA id exists"
+    },
+    {
+      "name": "BioFil Wood / EasyWood",
+      "filament_ids": [
+        "pla-wood"
+      ],
+      "notes": "PLA matrix + wood-fibre filler"
+    },
+    {
+      "name": "MetalFil Classic Copper",
+      "filament_ids": [
+        "pla-metal"
+      ],
+      "notes": "PLA matrix + copper powder"
+    },
+    {
+      "name": "EasyFil ePETG",
+      "filament_ids": [
         "petg"
       ],
-      "notes": "Consumer/value line: EasyFil PLA, EasyFil ePLA, EasyFil ePETG; also offered on Bambu-compatible coils"
+      "notes": "Standard consumer-grade PETG"
+    },
+    {
+      "name": "ReForm rPETG",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "Recycled PETG"
     },
     {
       "name": "ApolloX",
       "filament_ids": [
         "asa"
       ],
-      "notes": "ASA-based engineering line"
+      "notes": "Engineering-tuned ASA - higher impact strength and lower warp than commodity ASA; modifier undisclosed"
     },
     {
-      "name": "ReForm",
-      "filament_ids": [
-        "pla",
-        "petg"
-      ],
-      "notes": "Recycled line - ReForm rPLA and rPETG, also sold as pellets"
-    },
-    {
-      "name": "Centaur",
+      "name": "Centaur (PP)",
       "filament_ids": [
         "pp"
       ],
-      "notes": "Polypropylene pellets including a medical grade"
+      "notes": "Polypropylene including a medical-grade pellet variant"
     },
     {
-      "name": "Styrenics and standard engineering",
+      "name": "ABS",
       "filament_ids": [
-        "abs",
-        "hips",
-        "pc",
-        "pctg",
-        "pcl"
-      ]
-    },
-    {
-      "name": "Nylon and flexibles",
-      "filament_ids": [
-        "pa",
-        "tpu",
-        "tpc"
-      ]
-    },
-    {
-      "name": "High-temperature polymers",
-      "filament_ids": [
-        "peek",
-        "pei",
-        "pekk",
-        "ppsu",
-        "pps"
-      ]
-    },
-    {
-      "name": "Composites and specialty",
-      "filament_ids": [
-        "pla-cf",
-        "pa-cf"
+        "abs"
       ],
-      "notes": "Carbon-fiber, glass-fiber, metal-fill, wood-fill and stone-fill grades, plus flame-retardant, food-safe and chemical/UV/water-resistant specialty filaments"
+      "notes": "Standard ABS"
+    },
+    {
+      "name": "HIPS",
+      "filament_ids": [
+        "hips"
+      ],
+      "notes": "Standard high-impact polystyrene"
+    },
+    {
+      "name": "PC",
+      "filament_ids": [
+        "pc"
+      ],
+      "notes": "Standard polycarbonate"
+    },
+    {
+      "name": "PCTG",
+      "filament_ids": [
+        "pctg"
+      ],
+      "notes": "Glycol-modified PCT copolyester"
+    },
+    {
+      "name": "PCL",
+      "notes": "Polycaprolactone, a low-melting biodegradable polyester for hand-mouldable/low-temp use; no pcl id exists"
+    },
+    {
+      "name": "PA (Nylon)",
+      "filament_ids": [
+        "pa"
+      ],
+      "notes": "Standard nylon"
+    },
+    {
+      "name": "TPU",
+      "filament_ids": [
+        "tpu"
+      ],
+      "notes": "Standard thermoplastic polyurethane; grade hardnesses not enumerated this pass"
+    },
+    {
+      "name": "TPC",
+      "notes": "Thermoplastic copolyester elastomer (TPE-E); the cope entry is a rigid high-speed copolyester, not an elastomer, so no TPC id exists"
+    },
+    {
+      "name": "PEEK",
+      "filament_ids": [
+        "peek"
+      ],
+      "notes": "High-temperature engineering polymer"
+    },
+    {
+      "name": "PEI",
+      "filament_ids": [
+        "pei-ultem"
+      ],
+      "notes": "Polyetherimide / ULTEM"
+    },
+    {
+      "name": "PEKK",
+      "filament_ids": [
+        "pekk"
+      ],
+      "notes": "High-temperature engineering polymer"
+    },
+    {
+      "name": "PPSU",
+      "filament_ids": [
+        "ppsu"
+      ],
+      "notes": "High-temperature engineering polymer"
+    },
+    {
+      "name": "PPS",
+      "filament_ids": [
+        "pps"
+      ],
+      "notes": "High-temperature engineering polymer"
+    },
+    {
+      "name": "Composite and specialty grades",
+      "filament_ids": [
+        "pla-cf"
+      ],
+      "notes": "Carbon-fibre, glass-fibre, metal-fill, wood-fill and stone-fill grades plus flame-retardant, food-safe and chemical/UV/water-resistant specialties layered onto the base chemistries; individual CF/GF matrix subtypes beyond Premium PLA CF03 were not enumerated this pass"
     },
     {
       "name": "Resins",
@@ -102,7 +279,12 @@
       "https://www.facebook.com/Formfutura/",
       "https://3dprintingcenter.net/interview-with-arnold-medenblik-co-founder-of-dutch-filament-masters-formfutura/",
       "https://formfutura.com/blog/easyfil-epla-easyfil-epetg-en-apollox-avilable-on-bambu-coils",
-      "https://3dprint.com/210666/formfutura-thibra3d-filaments/"
+      "https://3dprint.com/210666/formfutura-thibra3d-filaments/",
+      "https://www.formfutura.com/filaments",
+      "https://www.formfutura.com/easyfil-pla",
+      "https://www.formfutura.com/easyfil-epla",
+      "https://www.formfutura.com/volcano-pla",
+      "https://www.dhm-online.com/en/399-apollox-asa"
     ],
     "last_verified": "2026-07-31",
     "confidence": "medium",

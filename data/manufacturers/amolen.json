@@ -19,29 +19,103 @@
   },
   "product_lines": [
     {
-      "name": "PLA",
+      "name": "PLA Basic",
       "filament_ids": [
         "pla"
       ],
-      "notes": "Basic/High-Speed at $21.99/kg plus Galaxy Series, Silk S-Series, wood, marble/granite, glow-in-the-dark and colour-changing variants"
+      "notes": "Plain PLA; Basic/High-Speed at about $21.99/kg."
     },
     {
-      "name": "PETG",
+      "name": "PLA Silk (Basic/Dual/Triple/Quad/S-Series/Rainbow/Shiny)",
+      "filament_ids": [
+        "pla-silk"
+      ],
+      "notes": "Silk-additive PLA; the Dual/Triple/Quad/Rainbow suffixes are multi-colour spool variants of the same chemistry."
+    },
+    {
+      "name": "PLA Matte (Basic/Dual/Triple/Rainbow)",
+      "filament_ids": [
+        "pla-matte"
+      ],
+      "notes": "Matte-finish PLA in single and multi-colour spools."
+    },
+    {
+      "name": "PLA Transparent",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Clear base PLA."
+    },
+    {
+      "name": "PLA Glow",
+      "filament_ids": [
+        "pla-glow"
+      ],
+      "notes": "Phosphorescent-pigment PLA."
+    },
+    {
+      "name": "PLA Wood",
+      "filament_ids": [
+        "pla-wood"
+      ],
+      "notes": "PLA with real wood fibre filler."
+    },
+    {
+      "name": "PLA Marble",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "PLA with a mineral/stone-look filler. No marble/stone-filled PLA id exists in the catalog, so only the base id is asserted (see gaps)."
+    },
+    {
+      "name": "PLA Galaxy / PLA Shiny Glitter",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Glitter/sparkle-particulate PLA; no glitter-PLA id exists (see gaps)."
+    },
+    {
+      "name": "PLA Metal",
+      "filament_ids": [
+        "pla-metal"
+      ],
+      "notes": "Genuine metal-powder (iron) filled PLA composite, which is what separates it from the metallic-pigment products of other brands."
+    },
+    {
+      "name": "PLA Conductive",
+      "notes": "Carbon-filled electrically conductive PLA composite. Base resin is PLA but the functional category (volume-resistivity-specified conductive compound) has no catalog id, so no id is asserted (see gaps)."
+    },
+    {
+      "name": "PLA Temp Color Change",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Thermochromic-pigment PLA; no colour-change id exists in the catalog (see gaps)."
+    },
+    {
+      "name": "TPU (Basic/Glow/Rainbow/Transparent)",
+      "filament_ids": [
+        "tpu"
+      ],
+      "notes": "Standard flexible TPU; Shore hardness is not published per variant, so no Shore-grade id is asserted."
+    },
+    {
+      "name": "PEBA Basic",
+      "notes": "100% polyether block amide (Pebax-type), NOT TPU or TPE-generic: Shore 90A +/- 1, density ~1.01 g/cm3, tensile ~30 MPa, elongation at break >500%, 78% energy return, elastic to -60 C, melt 175-185 C. No PEBA id exists in the catalog (see gaps)."
+    },
+    {
+      "name": "PETG Basic / PETG Transparent",
       "filament_ids": [
         "petg"
-      ]
+      ],
+      "notes": "Standard PETG."
     },
     {
       "name": "ABS",
       "filament_ids": [
         "abs"
-      ]
-    },
-    {
-      "name": "TPU",
-      "filament_ids": [
-        "tpu"
-      ]
+      ],
+      "notes": "Carried from earlier research; ABS did not appear in the current catalog snapshot, so this line may be discontinued and is not included in the trade-name mappings."
     }
   ],
   "price_tier": "mid",
@@ -52,7 +126,13 @@
       "https://rocketreach.co/amolen-profile_b73b6973c7ebd906",
       "https://www.maijietextiles.com/amolen-filament/",
       "https://www.amolen.com/products/pla-basic-high-speed",
-      "https://www.facebook.com/Amolentech/"
+      "https://www.facebook.com/Amolentech/",
+      "https://www.amolen.com/pages/catalog",
+      "https://www.amolen.com/products/pla-wood",
+      "https://www.amolen.com/collections/all/pla-filament-1-75mm",
+      "https://www.amolen.com/collections/tpu-filament",
+      "https://www.amolen.com/products/peba-basic",
+      "https://www.amolen.com/collections/petg"
     ],
     "last_verified": "2026-07-31",
     "confidence": "low",

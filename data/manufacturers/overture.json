@@ -30,44 +30,128 @@
   },
   "product_lines": [
     {
-      "name": "PLA family",
+      "name": "PLA",
       "filament_ids": [
         "pla"
       ],
-      "notes": "Regular, Aesthetic, Functional, Professional, Plus, Super Plus, Gradient, Matte, Silk, Rock, Shimmer and Glow variants"
+      "notes": "Pure PLA homopolymer, no filler. TDS: density 1.21 g/cm3 (ISO 1183), Vicat 64.2 C (ISO 306), XY tensile 47.1 +/- 1.2 MPa (ISO 527)."
+    },
+    {
+      "name": "PLA Refill / Easy PLA / PLA 2Kg / PLA 3Kg",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Same base PLA formulation as the standard PLA; packaging/spool-size variants only, not a distinct chemistry."
+    },
+    {
+      "name": "PLA+ (PLA Plus)",
+      "filament_ids": [
+        "pla-plus"
+      ],
+      "notes": "PLA with an impact-toughening additive ('Stronger & More Durable, Professional Toughness')."
+    },
+    {
+      "name": "Super PLA+",
+      "filament_ids": [
+        "pla-plus"
+      ],
+      "notes": "Further toughness-enhanced PLA+ formulation; same modifier category as PLA+, marketed one step above it."
+    },
+    {
+      "name": "PLA Professional (PLA Pro)",
+      "filament_ids": [
+        "pla-plus"
+      ],
+      "notes": "High-toughness PLA grade marketed as distinct from PLA+; chemically still an impact-modified PLA, so it shares the pla-plus id. Relative modifier loading vs PLA+/Super PLA+ is not published."
+    },
+    {
+      "name": "Matte PLA",
+      "filament_ids": [
+        "pla-matte"
+      ],
+      "notes": "PLA plus matting/de-glossing filler."
+    },
+    {
+      "name": "Silk PLA",
+      "filament_ids": [
+        "pla-silk"
+      ],
+      "notes": "PLA plus high-gloss 'silk' luster additive."
+    },
+    {
+      "name": "Rock PLA",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "PLA with a stone/mineral filler ('stone-filled composite'). Base resin is PLA; the catalog has no stone/marble-filled PLA id, so only the base id is asserted (see gaps)."
+    },
+    {
+      "name": "Shimmer PLA",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "PLA with glitter/sparkle particulate. Base resin is PLA; no glitter-PLA id exists in the catalog (see gaps)."
+    },
+    {
+      "name": "Glow PLA",
+      "filament_ids": [
+        "pla-glow"
+      ],
+      "notes": "PLA with phosphorescent pigment."
+    },
+    {
+      "name": "Gradient series (PLA Gradient, Matte PLA Gradient, PLA Pro Gradient, Silk PLA Gradient, Rock PLA Gradient)",
+      "filament_ids": [
+        "pla-gradient",
+        "pla-matte",
+        "pla-silk",
+        "pla-plus",
+        "pla"
+      ],
+      "notes": "Colour-graded spools of the chemistries already listed above rather than a separate formulation; each variant keeps its base chemistry's id in addition to pla-gradient."
     },
     {
       "name": "PETG",
       "filament_ids": [
         "petg"
       ],
-      "notes": "Includes a High Speed grade"
+      "notes": "Pure PETG. TDS: density 1.30 g/cm3, Vicat 75 C, XY tensile 47.9 +/- 4.8 MPa. A High Speed grade is sold on the same resin."
     },
     {
-      "name": "TPU",
+      "name": "TPU 95A / High Speed TPU 95A",
       "filament_ids": [
-        "tpu"
+        "tpu",
+        "tpu-95a"
       ],
-      "notes": "95A and High Speed grades"
+      "notes": "Shore 95A (ISO 7619), density 1.18 g/cm3, tensile 30.1 MPa, elongation at break 332% +/- 16%. Also sold in 2 kg spools."
     },
     {
-      "name": "ABS / ASA",
+      "name": "ABS",
       "filament_ids": [
-        "abs",
+        "abs"
+      ],
+      "notes": "'Specialty ABS resin' formulated for lower VOC/odour. Density 1.15 g/cm3, Vicat 103.4 C, XY tensile 25.1 MPa."
+    },
+    {
+      "name": "ASA",
+      "filament_ids": [
         "asa"
-      ]
+      ],
+      "notes": "Weather-resistant ABS alternative. Density 1.14 g/cm3, Vicat 106.2 C, XY tensile 45.1 MPa."
     },
     {
       "name": "Easy Nylon",
       "filament_ids": [
         "pa"
-      ]
+      ],
+      "notes": "Unfilled PA6/PA66 copolymer, so it maps to the generic pa id rather than pa6 or pa66. Vicat 181.2 C, elongation 8.4%, drying 95 C / 7 h."
     },
     {
       "name": "PC Professional",
       "filament_ids": [
         "pc"
-      ]
+      ],
+      "notes": "Polycarbonate; the page does not disclose whether it is neat PC or a blend, so pc-abs is not asserted. Print 250-270 C, thermal stability quoted to 110 C."
     }
   ],
   "price_tier": "budget",
@@ -77,7 +161,20 @@
       "https://overture3d.com/pages/about-us",
       "https://overture3d.com/",
       "https://trademarks.justia.com/owners/overture-3d-technologies-llc-4111517",
-      "/home/claude/filament-repo/research/verified-oem-relationships.md (project-owner verified)"
+      "/home/claude/filament-repo/research/verified-oem-relationships.md (project-owner verified)",
+      "https://overture3d.com/pages/download",
+      "https://wiki.overture3d.com/pla_tds.pdf",
+      "https://wiki.overture3d.com/petg_tds.pdf",
+      "https://wiki.overture3d.com/tpu_tds.pdf",
+      "https://wiki.overture3d.com/abs_tds.pdf",
+      "https://wiki.overture3d.com/asa_tds.pdf",
+      "https://overture3d.com/collections/all",
+      "https://overture3d.com/collections/pla-series",
+      "https://overture3d.com/products/overture-pla-professional-1-75mm",
+      "https://overture3d.com/products/overture-super-pla-3d-printer-filament-1-75mm",
+      "https://overture3d.com/products/overture-pla-professional-3d-printer-filament-1-75mm",
+      "https://overture3d.com/products/easy-nylon-filament",
+      "https://overture3d.com/products/overture-pc-professional-filament"
     ],
     "last_verified": "2026-07-31",
     "confidence": "medium",

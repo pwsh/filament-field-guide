@@ -1,7 +1,12 @@
 {
   "id": "peek",
   "name": "PEEK (Polyetheretherketone)",
-  "aliases": ["Polyetheretherketone", "PAEK", "Victrex PEEK", "3DXTech ThermaX PEEK"],
+  "aliases": [
+    "Polyetheretherketone",
+    "PAEK",
+    "Victrex PEEK",
+    "3DXTech ThermaX PEEK"
+  ],
   "status": "researched",
   "base_type": null,
   "variation_kind": null,
@@ -9,14 +14,30 @@
   "chemical_makeup": "Unfilled semi-crystalline polyaryletherketone — an aromatic backbone of alternating ether and ketone linkages. The ketone-to-ether ratio is what separates it from pekk: PEEK carries more ether linkages and crystallises faster and more sharply, while PEKK's two ketone linkages slow crystallisation down. Fully ketone/ether aromatic chemistry also distinguishes it from the aryl sulfide backbone of pps and the amorphous imide and sulfone backbones of pei-ultem and ppsu.",
   "summary": "The ceiling of FDM materials and the hardest thing in this catalog to print. Continuous-use temperature of 240-260 °C, Tg 143 °C and Tm 343 °C put it above every other entry here, and its chemical resistance is near-total. The cost is total hardware gating: a 375-410 °C industrial hotend that no Bambu machine (not even the X1E high-temp hotend at ~350 °C) can reach, an actively heated 70-140 °C chamber that is genuinely mandatory rather than merely helpful, non-standard build surfaces, and ~$400-900/kg. Deltas vs siblings: it beats pekk on peak temperature but loses to it on printability, layer adhesion and warp; it beats pei-ultem and ppsu on service temperature but loses to both on dimensional stability because it is semi-crystalline; and it loses to pps on raw chemical/solvent resistance while beating it comprehensively on Tg.",
   "printing": {
-    "nozzle_temp_c": { "min": 375, "max": 410, "recommended": 400 },
-    "bed_temp_c": { "min": 130, "max": 145, "recommended": 140 },
-    "ambient_temp_c": { "min": 70, "max": 140, "recommended": 120 },
+    "nozzle_temp_c": {
+      "min": 375,
+      "max": 410,
+      "recommended": 400
+    },
+    "bed_temp_c": {
+      "min": 130,
+      "max": 145,
+      "recommended": 140
+    },
+    "ambient_temp_c": {
+      "min": 70,
+      "max": 140,
+      "recommended": 120
+    },
     "enclosure_recommended": true,
     "heated_chamber_required": true,
     "enclosure_open_for_cooling": false,
     "requires_hardened_nozzle": false,
-    "part_cooling_fan_pct": { "min": 0, "max": 5, "recommended": 0 },
+    "part_cooling_fan_pct": {
+      "min": 0,
+      "max": 5,
+      "recommended": 0
+    },
     "notes": "The single hardest hardware gate in the catalog: 375-410 °C requires an industrial-class hotend with a titanium or steel heat-break rated to 400 °C or above. This exceeds Bambu's stock hotend and also exceeds the X1E/H2D high-temp hotend's ~350 °C ceiling, so PEEK is not printable on any current Bambu hardware — a delta shared with pekk, pei-ultem and ppsu but NOT with pps-cf, which runs at 310-350 °C. heated_chamber_required is true and means it: PEEK crystallises almost immediately on cooling, and without 70-140 °C ambient the resulting shrinkage causes severe warp and delamination rather than merely poor cosmetics. Part cooling stays at or near zero for the same reason. Unfilled, so a hardened nozzle is not strictly required, but many operators fit one anyway for wear life at these temperatures — recorded as false to match the material rather than the habit."
   },
   "feeding": {
@@ -27,9 +48,21 @@
   },
   "drying": {
     "required_before_use": "always",
-    "temp_c": { "min": 120, "max": 120, "recommended": 120 },
-    "time_hours": { "min": 4, "max": 8, "recommended": 4 },
-    "methods": ["high-temperature filament dryer rated to 120 °C", "convection/blast oven at 120 °C", "print directly from a heated drybox"],
+    "temp_c": {
+      "min": 120,
+      "max": 120,
+      "recommended": 120
+    },
+    "time_hours": {
+      "min": 4,
+      "max": 8,
+      "recommended": 4
+    },
+    "methods": [
+      "high-temperature filament dryer rated to 120 °C",
+      "convection/blast oven at 120 °C",
+      "print directly from a heated drybox"
+    ],
     "dryness_validation": "No popping, hissing or visible steam at the nozzle and no bubbles or foaming in the purge — at 400 °C even trace moisture flashes to steam violently, so the audible test is unusually reliable here. Extrudate should be a continuous glossy strand, not a blistered one.",
     "notes": "3DXTech specifies 120 °C for 4 hours. Same regimen as pekk; less aggressive than pei-ultem 1010's 150 °C spec and hotter than ppsu's and pps's 110 °C. The practical delta vs lower-temperature materials is that brief ambient exposure matters more, not less: moisture that would merely string in PETG bubbles catastrophically at 400 °C, so PEEK is stored and printed from a dry box rather than dried once and left out."
   },
@@ -88,9 +121,17 @@
     "water_tolerance": 9
   },
   "compatibility": {
-    "bonds_with": ["peek"],
-    "support_materials": ["peek", "pekk"],
-    "usable_as_support_for": [],
+    "bonds_with": [
+      "peek"
+    ],
+    "support_materials": [
+      "peek",
+      "pekk"
+    ],
+    "usable_as_support_for": [
+      "peek",
+      "pekk"
+    ],
     "notes": "No soluble support chemistry survives anywhere near 375-410 °C — pva and bvoh degrade 200 °C+ below this window — so the options are self-supporting geometry or breakaway same-material/PAEK support. PEEK and pekk share the PAEK family and overlapping melt behaviour, which is why pekk is listed as a plausible breakaway support partner, but no source in this pass tested that interface directly (unverified). It bonds to nothing in the commodity half of the catalog: pla, petg, abs, asa, pc, pa, pp and the rest are all destroyed on contact at this temperature."
   },
   "plate_recommendations": [
@@ -98,12 +139,65 @@
       "plate_id": "pei-textured",
       "rating": "avoid",
       "notes": "Standard textured PEI spring steel is not recommended for PEEK, on two grounds: adhesion is poor, and the sheet's own PEI chemistry (Tg ~217 °C) is pushed toward its limit by a 130-145 °C bed plus radiant heat from a 400 °C nozzle. Industry practice is polyimide (Kapton) tape, garolite/G10 laminate, or a high-temperature adhesive layer such as Magigoo HT or PEI 'juice'. No garolite or polyimide plate entry exists in the catalog yet, so those recommendations live here in notes."
+    },
+    {
+      "plate_id": "pei-smooth",
+      "rating": "avoid",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Processing bed temps exceed what a laminated PEI sheet and its adhesive are rated for."
+    },
+    {
+      "plate_id": "glass-borosilicate",
+      "rating": "avoid",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Not covered in sources. PEEK needs 130-160 C beds and a heated chamber; the glass itself would cope but no adhesion route on glass is documented and the thermal-shock risk in a hot"
+    },
+    {
+      "plate_id": "pp-sheet",
+      "rating": "avoid",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Bed temperature is far above the softening range of a polypropylene coating; the surface would deform before the print succeeded."
+    },
+    {
+      "plate_id": "g10-garolite",
+      "rating": "avoid",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Some vendors market a 'high-temp upgrade' G10 sheet alongside PEEK/PEKK/ULTEM name-drops, but no bed-temp or adhesion data was found and PEEK bed temps (130-160 C) exceed anything "
+    },
+    {
+      "plate_id": "pei-satin",
+      "rating": "avoid",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Outside the satin sheet's rated range."
+    },
+    {
+      "plate_id": "supertack",
+      "rating": "avoid",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Bed temperatures roughly three times the plate's design point; the coating would be destroyed."
+    },
+    {
+      "plate_id": "pc-plate",
+      "rating": "avoid",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Far outside the plate's thermal envelope — PEEK beds run 130-160 C in a heated chamber. Categorically unsuitable."
+    },
+    {
+      "plate_id": "carbon-fiber-plate",
+      "rating": "avoid",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Generic vendor listings sometimes name-drop PEEK/PEKK/ULTEM but publish no data, and PEEK bed temps (130-160 C) exceed the vendor-stated ~140 C operational ceiling. Treat as unsupp"
+    },
+    {
+      "plate_id": "buildtak-polymer",
+      "rating": "avoid",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Bed temperature exceeds the sheet's 125 degC ceiling outright."
+    },
+    {
+      "plate_id": "pei-patterned",
+      "rating": "avoid",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Far outside the rated range."
     }
   ],
   "emissions": {
     "voc_level": "moderate",
     "particulate_level": "high",
-    "primary_emissions": ["ultrafine particles", "unspecified high-temperature process VOCs (no PEEK-specific speciation found in this research pass)"],
+    "primary_emissions": [
+      "ultrafine particles",
+      "unspecified high-temperature process VOCs (no PEEK-specific speciation found in this research pass)"
+    ],
     "ventilation": "required",
     "notes": "No PEEK-specific VOC or particulate study was found. The general finding that VOC and ultrafine-particle emission scales steeply with process temperature puts PEEK at the top of this catalog's range at 375-410 °C, so ventilation is recorded as required — enclosure plus outdoor exhaust or serious HEPA-plus-carbon filtration, at or above the level appropriate for pc. VOC is recorded as moderate rather than high because PEEK is thermally stable at its own processing window (that stability is why it can be processed there at all); the particulate figure is the one driving the requirement. Both levels are inferred, not measured (unverified)."
   },
@@ -121,5 +215,32 @@
     "last_verified": "2026-07-31",
     "confidence": "medium",
     "conflicts": "HDT is the main disagreement: the cluster's comparative source gives ~145 °C for unfilled PEEK while industrial moulding datasheets commonly show ~152-160 °C; 145 °C is recorded and the discrepancy is flagged rather than resolved. Continuous-use temperature is cited as a 240-260 °C band and recorded at the 250 °C midpoint. Density 1.30 g/cm³ is a literature value, not a filament datasheet figure (unverified for any specific spool). Price spans a wide $400-900/kg across brands; only the 3DXTech listing was verified. Emissions levels are inferred entirely from the temperature-scaling rule with no PEEK-specific measurement found (unverified). Food-contact status is unresolved: FDA-compliant resin but no evidence for printed parts. The pekk breakaway-support pairing is reasoned from shared PAEK chemistry, not tested in any source reviewed."
-  }
+  },
+  "trade_names": [
+    {
+      "manufacturer": "3dxtech",
+      "product": "ThermaX PEEK",
+      "notes": "Ultra-performance line; observed site pricing $158-$1175 per spool across this tier."
+    },
+    {
+      "manufacturer": "filamentive",
+      "product": "3F PEEK 9581",
+      "notes": "unfilled PEEK, 260C, biocompatible"
+    },
+    {
+      "manufacturer": "formfutura",
+      "product": "PEEK",
+      "notes": "High-temperature engineering polymer"
+    },
+    {
+      "manufacturer": "iemai-3d",
+      "product": "PEEK",
+      "notes": "Unfilled PEEK"
+    },
+    {
+      "manufacturer": "sunlu",
+      "product": "PEEK",
+      "notes": "Unusual for this brand tier but listed on the official store"
+    }
+  ]
 }

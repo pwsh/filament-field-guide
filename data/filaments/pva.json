@@ -1,7 +1,12 @@
 {
   "id": "pva",
   "name": "PVA (Polyvinyl Alcohol)",
-  "aliases": ["Polyvinyl alcohol", "PVA", "PVOH", "PVA+"],
+  "aliases": [
+    "Polyvinyl alcohol",
+    "PVA",
+    "PVOH",
+    "PVA+"
+  ],
   "status": "researched",
   "base_type": null,
   "variation_kind": null,
@@ -9,15 +14,35 @@
   "chemical_makeup": "Polyvinyl alcohol — a water-soluble synthetic polymer produced by hydrolysis of polyvinyl acetate; biodegradable",
   "summary": "The classic water-dissolvable support material, used almost exclusively as the second extruder in multi-material prints rather than as a build material. It pairs best with PLA at similar print temperatures, but it is extremely hygroscopic: unprotected filament can absorb enough moisture in a couple of hours to clog, string, or fail mid-print.",
   "printing": {
-    "nozzle_temp_c": { "min": 180, "max": 230, "recommended": 210 },
-    "bed_temp_c": { "min": 45, "max": 60, "recommended": 55 },
-    "ambient_temp_c": { "min": 15, "max": 30, "recommended": 22 },
-    "speed_mm_s": { "min": 20, "max": 50, "recommended": 30 },
+    "nozzle_temp_c": {
+      "min": 180,
+      "max": 230,
+      "recommended": 210
+    },
+    "bed_temp_c": {
+      "min": 45,
+      "max": 60,
+      "recommended": 55
+    },
+    "ambient_temp_c": {
+      "min": 15,
+      "max": 30,
+      "recommended": 22
+    },
+    "speed_mm_s": {
+      "min": 20,
+      "max": 50,
+      "recommended": 30
+    },
     "enclosure_recommended": false,
     "heated_chamber_required": false,
     "enclosure_open_for_cooling": true,
     "requires_hardened_nozzle": false,
-    "part_cooling_fan_pct": { "min": 50, "max": 100, "recommended": 100 },
+    "part_cooling_fan_pct": {
+      "min": 50,
+      "max": 100,
+      "recommended": 100
+    },
     "notes": "Prints fine on standard open-frame machines; no enclosure or chamber heat needed. Throughput is the real limit — Prusa rates PVA/PVA+ at roughly 4 mm³/s maximum volumetric flow versus ~15 mm³/s for PLA, so raising the nominal speed will not help. Sources disagree on part cooling: eSUN's TDS specifies 100 %, the Filament Cheat Sheet calls for moderate cooling only; both are plausible depending on the brand's additive package (unverified). Feed from a dry box or AMS at all times."
   },
   "feeding": {
@@ -28,9 +53,22 @@
   },
   "drying": {
     "required_before_use": "always",
-    "temp_c": { "min": 45, "max": 55, "recommended": 45 },
-    "time_hours": { "min": 10, "max": 12, "recommended": 10 },
-    "methods": ["filament dryer", "food dehydrator", "convection oven at lowest setting", "drybox with desiccant (print directly from it)"],
+    "temp_c": {
+      "min": 45,
+      "max": 55,
+      "recommended": 45
+    },
+    "time_hours": {
+      "min": 10,
+      "max": 12,
+      "recommended": 10
+    },
+    "methods": [
+      "filament dryer",
+      "food dehydrator",
+      "convection oven at lowest setting",
+      "drybox with desiccant (print directly from it)"
+    ],
     "dryness_validation": "Filament feels hard and rigid rather than soft, tacky or rubbery; no popping, sizzling or visible steam at the nozzle tip; no stringing or bubbling in the extruded strand; consistent glassy extrusion rather than fuzzy or frosted",
     "notes": "eSUN specifies 45 °C for more than 10 hours. Move the spool straight from the dryer into a sealed dry box or AMS — leaving it out to cool in room air undoes the dry."
   },
@@ -72,7 +110,10 @@
     "cm3_per_100g": 80.6,
     "glass_transition_c": 85,
     "max_service_temp_c": 75,
-    "tensile_strength_mpa": { "min": 22, "max": 78 },
+    "tensile_strength_mpa": {
+      "min": 22,
+      "max": 78
+    },
     "notes": "Density reported 1.23-1.25 g/cm³ (eSUN 1.25, Xometry 1.23); 1.24 recorded as the midpoint. Tg ~85 °C is general polymer-science/RepRap wiki data rather than a filament datasheet figure. Max continuous service temperature ~75 °C is a single Xometry figure (unverified); the polymer decomposes/pyrolyses above roughly 200 °C, which is why the usable nozzle window is narrow. Tensile strength is recorded as the full reported spread because eSUN's TDS (22 MPa) and Xometry (78 MPa) disagree by more than 3x — both are treated as unverified. Flexural strength 360 MPa (eSUN). Shrinkage and HDT are not commonly published for PVA support grades (unverified)."
   },
   "scores": {
@@ -87,9 +128,29 @@
     "water_tolerance": 1
   },
   "compatibility": {
-    "bonds_with": ["pla", "petg", "pa"],
+    "bonds_with": [
+      "pa",
+      "petg",
+      "pla"
+    ],
     "support_materials": [],
-    "usable_as_support_for": ["pla", "petg", "pa"],
+    "usable_as_support_for": [
+      "lw-pla",
+      "pa",
+      "petg",
+      "pla",
+      "pla-cf",
+      "pla-gf",
+      "pla-glow",
+      "pla-gradient",
+      "pla-hf",
+      "pla-matte",
+      "pla-metal",
+      "pla-plus",
+      "pla-silk",
+      "pla-wood",
+      "pvb"
+    ],
     "notes": "PVA functions only as a support material — it is not itself supported by another material in normal use, so support_materials is deliberately empty. PLA is the best and most common pairing (matched print temperatures, clean interface). PETG and PA work with reduced reliability; Ultimaker documents PVA support for PLA, Tough PLA, Nylon and CPE (a PETG-family copolyester) on their systems. Not recommended with ABS and ASA (adhesion problems and mismatched bed/nozzle temperatures) or PC. No established guidance was found for PP, TPU, TPE, HIPS, BVOH, PCTG, PVB or PET (unverified)."
   },
   "plate_recommendations": [
@@ -97,12 +158,64 @@
       "plate_id": "pei-textured",
       "rating": "usable",
       "notes": "Bed temperatures of 45-60 °C sit comfortably inside the normal PEI operating range. No release agent is typically needed, since PVA is printed as a co-material alongside the primary part and the primary material governs first-layer strategy."
+    },
+    {
+      "plate_id": "glass-borosilicate",
+      "rating": "usable",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Not covered in sources. PVA sticks to glass readily — the risk is the opposite one, residue left behind that goes tacky in humid air. Wash the plate after PVA contact."
+    },
+    {
+      "plate_id": "g10-garolite",
+      "rating": "usable",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Not covered in G10 sources. Keep the plate dry — PVA is water-soluble and residue left on a laminate surface will go tacky in humid air."
+    },
+    {
+      "plate_id": "supertack",
+      "rating": "usable",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): No official Bambu guidance found (unverified). Given the plate's documented sensitivity to support material contacting the first layer, keep soluble supports off the coating entire"
+    },
+    {
+      "plate_id": "pc-plate",
+      "rating": "usable",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Not documented for this plate. Thermally compatible and normally only present as a support material alongside PLA, which is the one job this plate does well. Wash residue off promp"
+    },
+    {
+      "plate_id": "carbon-fiber-plate",
+      "rating": "usable",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Not covered in sources. Wash any PVA residue off the laminate — it goes tacky in humid air and will haze the release resin."
+    },
+    {
+      "plate_id": "buildtak-polymer",
+      "rating": "usable",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): No vendor guidance found (unverified). Soluble supports on an adhesive film are also a cleaning hazard, since dissolved PVA residue cannot be washed off aggressively."
+    },
+    {
+      "plate_id": "pei-smooth",
+      "rating": "avoid",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Per Prusa, PVA adheres poorly directly to PEI; use it only as a soluble interface above a first layer of another material."
+    },
+    {
+      "plate_id": "pp-sheet",
+      "rating": "avoid",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): No data found (unverified). A coating engineered to release a notoriously non-stick polymer is a poor bet for a material that already adheres badly to bare sheets."
+    },
+    {
+      "plate_id": "pei-satin",
+      "rating": "avoid",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Same limitation as other PEI finishes per Prusa's soluble-materials guidance."
+    },
+    {
+      "plate_id": "pei-patterned",
+      "rating": "avoid",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Not designed for or documented with soluble supports; use as a soluble interface only."
     }
   ],
   "emissions": {
     "voc_level": "low",
     "particulate_level": "low",
-    "primary_emissions": ["ultrafine particles"],
+    "primary_emissions": [
+      "ultrafine particles"
+    ],
     "ventilation": "optional",
     "notes": "Generally regarded as lower-VOC and lower-UFP than the ABS/HIPS styrenic and nylon families, with no major named toxic monomer commonly cited (unlike styrene or caprolactam). PVA-specific emissions chamber-study data is sparse, so this assessment is by class analogy and low print temperature rather than direct measurement (unverified). General FDM ventilation best practice still applies."
   },
@@ -126,5 +239,46 @@
     "last_verified": "2026-07-31",
     "confidence": "medium",
     "conflicts": "Tensile strength: eSUN TDS reports 22 MPa, Xometry reports 78 MPa — a >3x disagreement that most likely reflects different PVA grades and test conditions; both retained as the recorded spread pending a single authoritative source. Nozzle temperature: eSUN 180-230 °C, Filament Cheat Sheet 180-220 °C, Xometry 215-225 °C — the union is recorded with a mid-range recommendation. Part cooling: eSUN specifies 100 %, Filament Cheat Sheet says moderate only; unresolved. Density: eSUN 1.25 vs Xometry 1.23 g/cm³, 1.24 used. Shrinkage, HDT and max service temperature are not well documented for support grades; the 75 °C service figure is single-source (Xometry)."
-  }
+  },
+  "trade_names": [
+    {
+      "manufacturer": "3dxtech",
+      "product": "AquaTek PVA",
+      "notes": "Standard water-soluble PVA support."
+    },
+    {
+      "manufacturer": "bambu-lab",
+      "product": "PVA / BVOH support"
+    },
+    {
+      "manufacturer": "colorfabb",
+      "product": "PVOH",
+      "notes": "Water-soluble support"
+    },
+    {
+      "manufacturer": "esun",
+      "product": "PVA",
+      "notes": "Water-soluble support"
+    },
+    {
+      "manufacturer": "polymaker",
+      "product": "PolyDissolve S1",
+      "notes": "Water-soluble support, PVA-class"
+    },
+    {
+      "manufacturer": "real-filament",
+      "product": "PVA (\"Soluble Filament\")",
+      "notes": "density 0.6-0.9, MFI 14-20, melting ~62C"
+    },
+    {
+      "manufacturer": "snapmaker",
+      "product": "PVA",
+      "notes": "500 g spools"
+    },
+    {
+      "manufacturer": "ultimaker",
+      "product": "UltiMaker PVA",
+      "notes": "Water-soluble polyvinyl alcohol support."
+    }
+  ]
 }

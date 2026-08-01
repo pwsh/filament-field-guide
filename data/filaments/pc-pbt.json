@@ -1,7 +1,11 @@
 {
   "id": "pc-pbt",
   "name": "PC-PBT (Polycarbonate/PBT Blend)",
-  "aliases": ["PC/PBT", "PC PBT", "Polycarbonate-polybutylene terephthalate alloy"],
+  "aliases": [
+    "PC/PBT",
+    "PC PBT",
+    "Polycarbonate-polybutylene terephthalate alloy"
+  ],
   "status": "researched",
   "base_type": "pc",
   "variation_kind": "blend",
@@ -9,15 +13,35 @@
   "chemical_makeup": "Alloy of bisphenol-A polycarbonate with polybutylene terephthalate, a semicrystalline polyester. The PBT phase supplies solvent, oil and fuel resistance plus sub-ambient toughness; the PC phase supplies stiffness and heat resistance. The semicrystalline second phase is what separates this blend from the fully amorphous pc and pc-abs.",
   "summary": "The chemical- and cold-resistant member of the PC family. Deltas vs pc: markedly better resistance to solvents, oils and fuels, retained impact down to -30 °C (15.7 kJ/m² notched Charpy against 33.0 at room temperature), tensile 50.4 MPa, but a 100-110 °C maintained chamber and 100-115 °C bed make it the hardest of the three to print. Deltas vs pc-abs: denser (1.2 vs 1.1 g/cm³), stronger (50.4 vs 39.9 MPa), higher measured HDT (107 vs ~100 °C at 0.45 MPa), no styrene in the emissions profile — paid for with a stricter chamber and a longer 75 °C/6 h drying cycle. A 90 °C/2 h anneal is recommended to relieve print stress.",
   "printing": {
-    "nozzle_temp_c": { "min": 250, "max": 280, "recommended": 270 },
-    "bed_temp_c": { "min": 80, "max": 115, "recommended": 105 },
-    "ambient_temp_c": { "min": 100, "max": 110, "recommended": 105 },
-    "speed_mm_s": { "min": 20, "max": 60, "recommended": 40 },
+    "nozzle_temp_c": {
+      "min": 250,
+      "max": 280,
+      "recommended": 270
+    },
+    "bed_temp_c": {
+      "min": 80,
+      "max": 115,
+      "recommended": 105
+    },
+    "ambient_temp_c": {
+      "min": 100,
+      "max": 110,
+      "recommended": 105
+    },
+    "speed_mm_s": {
+      "min": 20,
+      "max": 60,
+      "recommended": 40
+    },
     "enclosure_recommended": true,
     "heated_chamber_required": true,
     "enclosure_open_for_cooling": false,
     "requires_hardened_nozzle": false,
-    "part_cooling_fan_pct": { "min": 0, "max": 15, "recommended": 0 },
+    "part_cooling_fan_pct": {
+      "min": 0,
+      "max": 15,
+      "recommended": 0
+    },
     "notes": "Polymaker's grade specifies a chamber held at 100-110 °C, which is stricter than the 90-100 °C its own PC-ABS asks for and is the reason heated_chamber_required is true here while it is false for base pc and pc-abs — this is the one entry in the PC family that genuinely needs active chamber heating rather than a passive box. Filamentcheatsheet's cross-brand figures are looser (250-270 °C nozzle, 80-100 °C bed, enclosure 'recommended'), so the recorded ranges bracket both and the recommended values follow Polymaker. Part cooling essentially off. Post-print annealing at 90 °C for 2 h is recommended to relieve internal stress. Unfilled, so a stock nozzle is fine. Speed is carried from base PC (20-60 mm/s); no PC-PBT-specific figure is published (unverified)."
   },
   "feeding": {
@@ -28,9 +52,22 @@
   },
   "drying": {
     "required_before_use": "always",
-    "temp_c": { "min": 70, "max": 80, "recommended": 75 },
-    "time_hours": { "min": 6, "max": 8, "recommended": 6 },
-    "methods": ["filament dryer", "convection oven at low temperature", "print directly from a heated dryer", "drybox with desiccant while printing"],
+    "temp_c": {
+      "min": 70,
+      "max": 80,
+      "recommended": 75
+    },
+    "time_hours": {
+      "min": 6,
+      "max": 8,
+      "recommended": 6
+    },
+    "methods": [
+      "filament dryer",
+      "convection oven at low temperature",
+      "print directly from a heated dryer",
+      "drybox with desiccant while printing"
+    ],
     "dryness_validation": "Clear, glossy extrudate rather than hazy or bubbly; no popping at the nozzle; a test coupon that does not snap brittly. Polymaker publishes no explicit check for this grade (unverified) — these are the base PC criteria.",
     "notes": "Polymaker specifies 75 °C for 6 h, matching the base PC schedule exactly and running hotter and twice as long as pc-abs's 80 °C/3 h. Recorded 'always' for the same reason base PC is: the PC phase dominates moisture behaviour and the ABS-derived relief that softens pc-abs's requirement is absent here."
   },
@@ -72,7 +109,11 @@
     "cm3_per_100g": 83.3,
     "glass_transition_c": 140,
     "heat_deflection_c": 107,
-    "tensile_strength_mpa": { "min": 49.8, "max": 51, "recommended": 50.4 },
+    "tensile_strength_mpa": {
+      "min": 49.8,
+      "max": 51,
+      "recommended": 50.4
+    },
     "notes": "Density 1.2 g/cm³, matching base PC and above pc-abs's 1.1. Polymaker measures Tg 140 °C, HDT 107 °C at 0.45 MPa (91 °C at 1.8 MPa), a melting point of 223 °C from the semicrystalline PBT phase, tensile XY 50.4 ± 0.6 MPa and Young's modulus 1940.2 ± 76.5 MPa. Notched Charpy is the standout: 33.0 ± 0.3 kJ/m² at room temperature and 15.7 ± 2.9 kJ/m² at -30 °C, i.e. roughly half the toughness retained at automotive cold-soak temperatures. HDT at 1.8 MPa (91 °C) sits just below base PC's 99 °C, which is the honest measure of the heat-resistance trade. Shrinkage is not published; the semicrystalline PBT phase means it should not be assumed equal to base PC's 0.5-0.8 % (unverified)."
   },
   "scores": {
@@ -87,9 +128,19 @@
     "water_tolerance": 7
   },
   "compatibility": {
-    "bonds_with": ["pc-pbt", "pc", "pc-abs"],
-    "support_materials": ["hips", "pc-pbt"],
-    "usable_as_support_for": [],
+    "bonds_with": [
+      "pc",
+      "pc-abs",
+      "pc-gf",
+      "pc-pbt"
+    ],
+    "support_materials": [
+      "hips",
+      "pc-pbt"
+    ],
+    "usable_as_support_for": [
+      "pc-pbt"
+    ],
     "notes": "Welds to itself and, on shared PC chemistry, to base pc and pc-abs — the pc-abs pairing is chemically plausible and marketed as a family but is not documented by a source (unverified). HIPS is the practical breakaway support at these bed temperatures; BVOH is listed for base PC but its stability in a 100-110 °C chamber for a long job is unverified here, so it is omitted. PVA degrades far below the print temperature. Not usable as a support for other materials — the melt window is too hot and adhesion too aggressive."
   },
   "plate_recommendations": [
@@ -97,12 +148,25 @@
       "plate_id": "pei-textured",
       "rating": "recommended",
       "notes": "Textured PEI at 100-115 °C, following base PC practice, which explicitly prefers textured over smooth PEI because PC-family adhesion can tear a smooth sheet. No vendor names a specific adhesion promoter for this grade (unverified), but the very high bed temperature and large-part warp risk make a brim and a glue-stick separator the sensible default."
+    },
+    {
+      "plate_id": "pei-smooth",
+      "rating": "usable",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): As PC-ABS; separator strongly advised."
+    },
+    {
+      "plate_id": "pei-satin",
+      "rating": "usable",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): As PC-ABS."
     }
   ],
   "emissions": {
     "voc_level": "moderate",
     "particulate_level": "high",
-    "primary_emissions": ["ultrafine particles", "unspecified high-temperature PC/PBT decomposition VOCs"],
+    "primary_emissions": [
+      "ultrafine particles",
+      "unspecified high-temperature PC/PBT decomposition VOCs"
+    ],
     "ventilation": "recommended",
     "notes": "No styrene: the ABS phase that pushes pc-abs into 'required' ventilation is absent here, so the VOC profile follows base PC's moderate rating. Particulates are rated high rather than PC's moderate because the 250-280 °C nozzle runs inside a 100-110 °C chamber, and hot enclosed printing concentrates ultrafine particles that all escape when the door opens. No measurement covers this blend (unverified) — vent or filter, and let the enclosure clear before opening."
   },
@@ -120,5 +184,17 @@
     "last_verified": "2026-07-31",
     "confidence": "medium",
     "conflicts": "Cold-impact performance is the substantive disagreement: Polymaker's own FDM data shows 15.7 kJ/m² notched Charpy retained at -30 °C and markets the grade specifically for cold toughness, while the Madison Group / Plastics Technology injection-moulding comparisons rate PC-ABS the better performer at sub-ambient temperatures because of its butadiene phase. Both are recorded; the entry follows Polymaker for the FDM grade and flags the literature position. Process figures also split by source: Polymaker 260-280 °C nozzle, 100-115 °C bed and a required 100-110 °C chamber, against filamentcheatsheet's 250-270 °C, 80-100 °C and 'enclosure recommended'. heated_chamber_required is set true on Polymaker's explicit chamber specification, making this the only PC-family entry with that flag — a deliberate deviation from base pc's false that reviewers should check against a second vendor's grade. AMS compatibility, shrinkage, adhesion promoters, BVOH support viability and print speed are all undocumented for this material; speed is carried from base PC. Price is one Canadian retailer converted to USD."
-  }
+  },
+  "trade_names": [
+    {
+      "manufacturer": "extrudr",
+      "product": "DuraPro PC/PBT",
+      "notes": "Polycarbonate/PBT alloy; density 1.20 g/cm3, VICAT A 126 C / HDT-B 85-110 C"
+    },
+    {
+      "manufacturer": "push-plastic",
+      "product": "PC+PBT",
+      "notes": "TDS: specific gravity 1.18 (ASTM D792), tensile yield ~15,000 psi (ASTM D638). The CF-reinforced variant is excluded (see gaps)."
+    }
+  ]
 }

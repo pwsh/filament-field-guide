@@ -25,17 +25,169 @@
   },
   "product_lines": [
     {
-      "name": "PLA family",
+      "name": "JAYO PLA / PLA Classic",
       "filament_ids": [
         "pla"
       ],
-      "notes": "PLA, PLA+, PLA Meta, Silk PLA — mirrors Sunlu's material range, consistent with shared production"
+      "notes": "Base PLA line."
     },
     {
-      "name": "PETG",
+      "name": "PLA+ / PLA+2.0",
+      "filament_ids": [
+        "pla-plus"
+      ],
+      "notes": "Toughened PLA; mirrors Sunlu grades, consistent with shared production."
+    },
+    {
+      "name": "High Speed PLA / High Speed PLA+",
+      "filament_ids": [
+        "pla-hf"
+      ],
+      "notes": "High-flow reformulation for high-speed printers."
+    },
+    {
+      "name": "PLA Matte / High Speed Matte PLA",
+      "filament_ids": [
+        "pla-matte"
+      ],
+      "notes": "Matte-additive PLA."
+    },
+    {
+      "name": "Dual-Color Matte PLA",
+      "filament_ids": [
+        "pla-matte"
+      ],
+      "notes": "Two-tone matte PLA; dual colour is coextrusion, not a chemistry change."
+    },
+    {
+      "name": "Silk PLA+ / Multi-Color SILK / Silk PLA Rainbow",
+      "filament_ids": [
+        "pla-silk",
+        "pla-gradient"
+      ],
+      "notes": "Silk-luster PLA+; dual/tri/quad-colour and rainbow SKUs add gradient dyeing."
+    },
+    {
+      "name": "Wood PLA",
+      "filament_ids": [
+        "pla-wood"
+      ],
+      "notes": "Wood-fiber-filled PLA."
+    },
+    {
+      "name": "PLA Glow In The Dark",
+      "filament_ids": [
+        "pla-glow"
+      ],
+      "notes": "Phosphorescent-pigment PLA."
+    },
+    {
+      "name": "PLA Rainbow",
+      "filament_ids": [
+        "pla-gradient"
+      ],
+      "notes": "Along-strand gradient dyed PLA."
+    },
+    {
+      "name": "PLA Galaxy",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Glitter/sparkle pigment PLA."
+    },
+    {
+      "name": "PLA Meta",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Metallic-pigment PLA; same PLA base, naming parallels eSUN/Bambu \"Meta\"."
+    },
+    {
+      "name": "Marble PLA / High Speed Marble PLA",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Marble-effect pigment PLA."
+    },
+    {
+      "name": "Carbon Fiber PLA",
+      "filament_ids": [
+        "pla-cf"
+      ],
+      "notes": "Chopped-carbon-fiber PLA."
+    },
+    {
+      "name": "PETG / High Speed Matte PETG",
       "filament_ids": [
         "petg"
-      ]
+      ],
+      "notes": "Standard and matte PETG; matte is an additive, chemistry is petg."
+    },
+    {
+      "name": "ABS",
+      "filament_ids": [
+        "abs"
+      ],
+      "notes": "Standard ABS."
+    },
+    {
+      "name": "ASA",
+      "filament_ids": [
+        "asa"
+      ],
+      "notes": "Weather-resistant ASA."
+    },
+    {
+      "name": "TPU",
+      "filament_ids": [
+        "tpu"
+      ],
+      "notes": "Flexible TPU; shore hardness not stated on the collection listing."
+    },
+    {
+      "name": "TPU Silk (98A)",
+      "filament_ids": [
+        "tpu"
+      ],
+      "notes": "Shore 98A silk-finish TPU — harder than the tpu-95a grade and above the base 85A-95A band, so no shore-specific id fits."
+    },
+    {
+      "name": "PA6-CF",
+      "filament_ids": [
+        "pa6-cf"
+      ],
+      "notes": "Carbon-fiber PA6."
+    },
+    {
+      "name": "PA12-CF",
+      "filament_ids": [
+        "pa12-cf"
+      ],
+      "notes": "Carbon-fiber PA12."
+    },
+    {
+      "name": "PA6-GF",
+      "filament_ids": [
+        "pa6-gf"
+      ],
+      "notes": "Glass-fiber PA6; pa6-gf id is provisional."
+    },
+    {
+      "name": "Easy Nylon (E-PA)",
+      "filament_ids": [
+        "pa"
+      ],
+      "notes": "Simplified low-warp nylon; PA type not specified."
+    },
+    {
+      "name": "5KG bulk spools (PLA / PLA+ / PETG / Matte PLA)",
+      "filament_ids": [
+        "pla",
+        "pla-plus",
+        "petg",
+        "pla-matte"
+      ],
+      "notes": "Repackaging of existing grades, not distinct chemistries."
     }
   ],
   "price_tier": "budget",
@@ -46,7 +198,10 @@
       "https://jayo3d.com/",
       "https://www.aliexpress.com/store/1103589253",
       "https://www.amazon.com/stores/JAYO/",
-      "/home/claude/filament-repo/research/verified-oem-relationships.md (project-owner verified)"
+      "/home/claude/filament-repo/research/verified-oem-relationships.md (project-owner verified)",
+      "https://jayo3d.com/collections/all-products",
+      "https://jayo3d.com/collections/filament",
+      "https://jayo3d.com/products/jayo-pla-meta-1-1kg-3d-printer-filament-cardboard-spool"
     ],
     "last_verified": "2026-07-31",
     "confidence": "medium",

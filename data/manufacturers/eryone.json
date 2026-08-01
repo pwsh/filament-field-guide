@@ -31,51 +31,220 @@
   },
   "product_lines": [
     {
-      "name": "PLA family",
+      "name": "PLA",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Plain PLA; consumer retail around $27.99/kg."
+    },
+    {
+      "name": "PLA Plus",
+      "filament_ids": [
+        "pla-plus"
+      ],
+      "notes": "Toughened PLA."
+    },
+    {
+      "name": "High-Speed Standard PLA / High-Speed PLA+",
+      "filament_ids": [
+        "pla-hf",
+        "pla-plus"
+      ],
+      "notes": "Flow-optimised variants; the PLA+ version is both toughened and high-flow, the standard version is high-flow only."
+    },
+    {
+      "name": "PLA Silk (standard, Dual/Triple/Ultra/Rainbow, High-Speed Dual/Triple/Quadruple)",
+      "filament_ids": [
+        "pla-silk"
+      ],
+      "notes": "Silk-additive PLA across many multi-colour and high-speed combinations; multi-colour is a spool feature."
+    },
+    {
+      "name": "PLA Matte (one-colour, Rainbow, Dual, Gradient Multi, High-Speed, 'Rock Rainbow')",
+      "filament_ids": [
+        "pla-matte",
+        "pla-gradient"
+      ],
+      "notes": "Matte family; the Gradient Multi variants additionally carry pla-gradient."
+    },
+    {
+      "name": "PLA Rainbow",
       "filament_ids": [
         "pla",
+        "pla-gradient"
+      ],
+      "notes": "Multi-pigment spool of base PLA; where the colour transitions along the strand it is a gradient spool rather than a distinct chemistry."
+    },
+    {
+      "name": "PLA Galaxy",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Sparkle/glitter-particulate PLA; no glitter-PLA id exists in the catalog (see gaps)."
+    },
+    {
+      "name": "PLA Burnt Titanium (one-colour/Rainbow/Dual/Tri-colour)",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Marketed as 'Glitter PLA Filament' - a glitter/colour-shift silk-type PLA. Base resin is PLA; no glitter id exists (see gaps)."
+    },
+    {
+      "name": "PLA Carbon Fiber",
+      "filament_ids": [
         "pla-cf"
       ],
-      "notes": "Standard, silk, matte, high-speed, rainbow/multi-colour, glow-in-the-dark and carbon-fibre filled; consumer retail around $27.99/kg"
+      "notes": "CF-filled PLA."
     },
     {
-      "name": "PETG",
+      "name": "PLA Wood",
       "filament_ids": [
-        "petg",
-        "petg-cf"
+        "pla-wood"
       ],
-      "notes": "Standard, high-speed and carbon-fibre grades"
+      "notes": "Wood-fibre-filled PLA."
     },
     {
-      "name": "ABS",
+      "name": "PLA Metallic",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Metallic-pigment PLA with no published metal-powder loading, so it is NOT mapped to pla-metal."
+    },
+    {
+      "name": "PLA Marble",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Mineral-filled marble-look PLA; no marble/stone-filled id exists in the catalog (see gaps)."
+    },
+    {
+      "name": "PLA Glow in Dark",
+      "filament_ids": [
+        "pla-glow"
+      ],
+      "notes": "Phosphorescent PLA."
+    },
+    {
+      "name": "PLA Light-Weight",
+      "filament_ids": [
+        "lw-pla"
+      ],
+      "notes": "Foaming lightweight PLA (LW-PLA analogue)."
+    },
+    {
+      "name": "ABS / ABS+ / ABS High-Speed",
       "filament_ids": [
         "abs"
-      ]
+      ],
+      "notes": "Plain, impact-modified and flow-optimised ABS all on the same base chemistry."
     },
     {
-      "name": "ASA",
+      "name": "ABS Carbon-Fiber",
+      "notes": "Carbon-fibre-filled ABS composite. The catalog has abs-gf but no CF-filled ABS id, so none is asserted (see gaps)."
+    },
+    {
+      "name": "ABS Fiberglass",
+      "filament_ids": [
+        "abs-gf"
+      ],
+      "notes": "Glass-fibre-filled ABS."
+    },
+    {
+      "name": "ABS-PC Alloy",
+      "filament_ids": [
+        "pc-abs"
+      ],
+      "notes": "Genuine ABS/polycarbonate polymer blend sold as its own material line; maps to the pc-abs blend id, not to abs or pc."
+    },
+    {
+      "name": "ASA / ASA High-Speed",
       "filament_ids": [
         "asa"
-      ]
+      ],
+      "notes": "Base ASA plus a flow-optimised grade."
     },
     {
-      "name": "TPU",
+      "name": "ASA Carbon-Fiber",
+      "filament_ids": [
+        "asa-cf"
+      ],
+      "notes": "Carbon-fibre-filled ASA."
+    },
+    {
+      "name": "ASA Fiberglass",
+      "filament_ids": [
+        "asa-gf"
+      ],
+      "notes": "Glass-fibre-filled ASA. asa-gf is a provisional catalog id being researched in parallel."
+    },
+    {
+      "name": "ASA Light-Weight",
+      "filament_ids": [
+        "asa"
+      ],
+      "notes": "Foamed/lightweight ASA. Base chemistry is ASA; the catalog has a foaming-PLA id (lw-pla) but no foaming-ASA equivalent (see gaps)."
+    },
+    {
+      "name": "PETG / PETG High-Speed",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "Base PETG plus a flow-optimised grade."
+    },
+    {
+      "name": "PETG Carbon Fiber",
+      "filament_ids": [
+        "petg-cf"
+      ],
+      "notes": "Carbon-fibre-filled PETG."
+    },
+    {
+      "name": "PETG Fiberglass",
+      "filament_ids": [
+        "petg-gf"
+      ],
+      "notes": "Glass-fibre-filled PETG."
+    },
+    {
+      "name": "TPU / TPU Rainbow / TPU High-Speed",
       "filament_ids": [
         "tpu"
       ],
-      "notes": "Flexible and high-speed grades"
+      "notes": "Flexible TPU family; Shore hardness not published for these variants, so no Shore-grade id is asserted."
     },
     {
-      "name": "Nylon",
+      "name": "TPU 90A",
+      "filament_ids": [
+        "tpu",
+        "tpu-90a"
+      ],
+      "notes": "Shore 90A, a softer grade than the common 95A."
+    },
+    {
+      "name": "PA (Standard Nylon)",
       "filament_ids": [
         "pa"
-      ]
+      ],
+      "notes": "Nylon base of undisclosed polyamide grade, so only the generic pa id is asserted."
+    },
+    {
+      "name": "PA Fiberglass",
+      "notes": "Glass-fibre-filled nylon of undisclosed polyamide grade; the catalog only has pa6-gf (provisional), which cannot be confidently assigned (see gaps)."
+    },
+    {
+      "name": "PA Carbon-Fiber",
+      "notes": "Carbon-fibre-filled nylon of undisclosed polyamide grade; the catalog only has grade-specific pa6-cf/pa12-cf/ppa-cf (see gaps)."
     },
     {
       "name": "PP",
       "filament_ids": [
         "pp"
-      ]
+      ],
+      "notes": "True polypropylene."
+    },
+    {
+      "name": "PP Carbon-Fiber",
+      "notes": "Carbon-fibre-filled polypropylene. The catalog has pp-gf but no CF-filled PP id (see gaps)."
     }
   ],
   "makes_plates": true,
@@ -87,7 +256,16 @@
       "https://www.eryone.com/about-us/",
       "https://www.eryoneb2b.com/filament-3d/",
       "https://eryone3d.com/pages/eryone",
-      "https://www.eryoneb2b.com/bambu-lab-filament/"
+      "https://www.eryoneb2b.com/bambu-lab-filament/",
+      "https://eryone3d.com/collections/pla",
+      "https://eryone3d.com/collections/all",
+      "https://eryone3d.com/products/silk-pla",
+      "https://eryone3d.com/collections/abs",
+      "https://eryone3d.com/collections/abs-asa",
+      "https://eryone3d.com/products/abs-pc-alloy-material-filament",
+      "https://eryone3d.com/collections/tpu",
+      "https://eryone3d.com/pages/filament-files",
+      "https://www.amazon.com/ERYONE-Titanium-Filament-0-03mm-Printer/dp/B0CHDRXLK4"
     ],
     "last_verified": "2026-07-31",
     "confidence": "medium",

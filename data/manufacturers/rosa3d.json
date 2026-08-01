@@ -22,80 +22,164 @@
   },
   "product_lines": [
     {
-      "name": "PLA",
+      "name": "PLA Starter",
       "filament_ids": [
         "pla"
-      ]
+      ],
+      "notes": "Basic PLA"
     },
     {
-      "name": "PET-G",
+      "name": "PLA Speed Matt",
+      "filament_ids": [
+        "pla-matte",
+        "pla-hf"
+      ],
+      "notes": "Matte high-speed PLA; Marble sub-variants (Ivory, Sandstone, Carrara) are mineral-filled stone-look grades with no dedicated id"
+    },
+    {
+      "name": "PLA Plus ProSpeed",
+      "filament_ids": [
+        "pla-plus",
+        "pla-hf"
+      ],
+      "notes": "Impact-modified toughened high-speed PLA"
+    },
+    {
+      "name": "PLA-Silk",
+      "filament_ids": [
+        "pla-silk"
+      ],
+      "notes": "Silk-finish PLA"
+    },
+    {
+      "name": "PLA Pastel",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Pastel-finish PLA; matte vs gloss finish not confirmed"
+    },
+    {
+      "name": "BioWOOD",
+      "filament_ids": [
+        "pla-wood"
+      ],
+      "notes": "PLA + wood-fibre composite"
+    },
+    {
+      "name": "PET-G Standard HS",
       "filament_ids": [
         "petg"
       ],
-      "notes": "Standard and Standard HS (high speed); a PTFE-infused PET-G is also offered"
+      "notes": "High-speed PETG; no petg-hf id exists"
+    },
+    {
+      "name": "PET-G Galaxy",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "Sparkle-effect PETG"
+    },
+    {
+      "name": "PETG ESD",
+      "filament_ids": [
+        "petg-esd"
+      ],
+      "notes": "Static-dissipative PETG"
+    },
+    {
+      "name": "PET-G-PTFE Sliding",
+      "filament_ids": [],
+      "notes": "PETG + PTFE low-friction compound; no PTFE-filled id exists"
     },
     {
       "name": "PCTG",
       "filament_ids": [
         "pctg"
-      ]
+      ],
+      "notes": "Copolyester, transparent variants"
     },
     {
-      "name": "ABS / ASA",
+      "name": "ABS-X",
       "filament_ids": [
-        "abs",
+        "abs"
+      ],
+      "notes": "Standard engineering ABS"
+    },
+    {
+      "name": "ABS+ Matt",
+      "filament_ids": [
+        "abs"
+      ],
+      "notes": "Matte-finish toughened ABS"
+    },
+    {
+      "name": "ABS-STI",
+      "filament_ids": [
+        "abs"
+      ],
+      "notes": "ABS variant sold under the OneFIL3D sub-brand"
+    },
+    {
+      "name": "ABS Medical",
+      "filament_ids": [
+        "abs"
+      ],
+      "notes": "Biocompatible ABS"
+    },
+    {
+      "name": "ASA",
+      "filament_ids": [
         "asa"
       ],
-      "notes": "Includes a medical-grade ABS"
-    },
-    {
-      "name": "PC",
-      "filament_ids": [
-        "pc"
-      ]
-    },
-    {
-      "name": "TPU",
-      "filament_ids": [
-        "tpu"
-      ]
-    },
-    {
-      "name": "PA (Nylon)",
-      "filament_ids": [
-        "pa",
-        "pa-cf"
-      ],
-      "notes": "Includes PA12 with carbon fibre"
-    },
-    {
-      "name": "PP",
-      "filament_ids": [
-        "pp",
-        "pp-gf"
-      ],
-      "notes": "Includes PP GF30 glass-filled"
+      "notes": "UV-resistant ASA"
     },
     {
       "name": "HIPS",
       "filament_ids": [
         "hips"
-      ]
+      ],
+      "notes": "High-impact polystyrene"
     },
     {
-      "name": "BIO / BioWOOD",
+      "name": "PA12 + 15CF",
       "filament_ids": [
-        "pla-wood"
+        "pa12-cf"
       ],
-      "notes": "Wood-filled bio line; base polymer assumed PLA, not explicitly confirmed"
+      "notes": "Nylon 12 + 15% carbon fibre"
     },
     {
-      "name": "R-Series (recycled)",
+      "name": "PP GF30",
       "filament_ids": [
-        "r-pla",
-        "r-petg"
+        "pp-gf"
       ],
-      "notes": "R-PLA, R-PET-G and R-PET-G Impact made from recycled feedstock"
+      "notes": "Polypropylene + 30% glass fibre"
+    },
+    {
+      "name": "ROSA-Flex 96A",
+      "filament_ids": [
+        "tpu-95a"
+      ],
+      "notes": "TPU Shore 96A - mapped to the 95A grade band, actual hardness 96A"
+    },
+    {
+      "name": "TPU Flex LW",
+      "filament_ids": [],
+      "notes": "Foamed lightweight TPU; no lw-tpu id exists and foamed TPU has no common generic"
+    },
+    {
+      "name": "R-Series",
+      "filament_ids": [
+        "pla",
+        "petg"
+      ],
+      "notes": "Recycled-content PLA and PET-G; R-PET-G Impact is an impact-modified recycled PETG"
+    },
+    {
+      "name": "PC",
+      "filament_ids": [
+        "pc"
+      ],
+      "notes": "Polycarbonate; listed in earlier research but not seen in the latest catalogue crawl, so unconfirmed"
     }
   ],
   "makes_plates": false,
@@ -107,7 +191,9 @@
       "https://www.rosa3d.pl/en/about-the-company",
       "https://www.rosa3d.pl/en/filaments",
       "https://www.instagram.com/rosa3dfilaments/",
-      "https://www.tiktok.com/@atome3d/video/7497568924083703062"
+      "https://www.tiktok.com/@atome3d/video/7497568924083703062",
+      "https://www.rosa3d.pl/en/pla-speed-matt",
+      "https://www.rosa3d.pl/en/rosa-3d-filaments"
     ],
     "last_verified": "2026-07-31",
     "confidence": "medium",

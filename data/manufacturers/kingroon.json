@@ -4,8 +4,13 @@
   "status": "researched",
   "summary": "Budget Chinese printer brand (KP3S, KLP1) that also sells a wide house filament catalog. Kingroon does not extrude its own filament: per owner-verified records it is manufactured by Landu in China, and a third-party review source independently characterises Kingroon filament as an OEM brand attached to the printers, corroborating the contract-manufacture pattern without naming Landu. Positioning is firmly budget, with bulk 10kg pricing and occasional batch-to-batch variability reported.",
   "headquarters_country": "China",
-  "manufacturing_countries": ["China"],
-  "brands": ["Kingroon", "Kingroon 3D"],
+  "manufacturing_countries": [
+    "China"
+  ],
+  "brands": [
+    "Kingroon",
+    "Kingroon 3D"
+  ],
   "oem_relationships": [
     {
       "company": "Landu",
@@ -18,20 +23,124 @@
     "store": "https://kingroon.com"
   },
   "product_lines": [
-    { "name": "PLA", "filament_ids": ["pla"], "notes": "PLA, PLA+ and Silk PLA including tri-color lines; wide color catalog" },
-    { "name": "PETG", "filament_ids": ["petg"] },
-    { "name": "TPU", "filament_ids": ["tpu"] },
-    { "name": "Nylon", "filament_ids": ["pa"] }
+    {
+      "name": "PLA Basic",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Standard PLA"
+    },
+    {
+      "name": "PLA Plus (PLA+)",
+      "filament_ids": [
+        "pla-plus"
+      ],
+      "notes": "Toughened PLA"
+    },
+    {
+      "name": "Matte PLA",
+      "filament_ids": [
+        "pla-matte"
+      ],
+      "notes": "Matting-filler PLA"
+    },
+    {
+      "name": "Silk PLA (single color)",
+      "filament_ids": [
+        "pla-silk"
+      ],
+      "notes": "Gloss-additive silk PLA"
+    },
+    {
+      "name": "Silk Multicolor",
+      "filament_ids": [
+        "pla-silk"
+      ],
+      "notes": "Coextruded multi-tone silk PLA"
+    },
+    {
+      "name": "Rainbow-Silk Multicolor",
+      "filament_ids": [
+        "pla-silk",
+        "pla-gradient"
+      ],
+      "notes": "Silk PLA in a rainbow/gradient colour transition"
+    },
+    {
+      "name": "Glow-in-the-Dark PLA",
+      "filament_ids": [
+        "pla-glow"
+      ],
+      "notes": "Phosphorescent-pigment PLA"
+    },
+    {
+      "name": "Rapid / High-Speed PLA",
+      "filament_ids": [
+        "pla-hf"
+      ],
+      "notes": "High-flow PLA"
+    },
+    {
+      "name": "PETG (Basic)",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "Standard PETG"
+    },
+    {
+      "name": "PETG-CF (PETG Carbon Fiber Basic/Black)",
+      "filament_ids": [
+        "petg-cf"
+      ],
+      "notes": "Carbon-fibre-filled PETG"
+    },
+    {
+      "name": "PLA-CF",
+      "filament_ids": [
+        "pla-cf"
+      ],
+      "notes": "PLA + carbon fibre; sold in the 2KG Carbon Fiber Black bundle"
+    },
+    {
+      "name": "ABS-CF",
+      "filament_ids": [],
+      "notes": "Carbon-fibre-filled ABS listed in the carbon-fibre bundle; catalog has abs-gf and asa-cf but no abs-cf - reported as a gap"
+    },
+    {
+      "name": "ABS",
+      "filament_ids": [
+        "abs"
+      ],
+      "notes": "Standard ABS"
+    },
+    {
+      "name": "TPU 95A",
+      "filament_ids": [
+        "tpu-95a"
+      ],
+      "notes": "Shore 95A TPU, durometer confirmed on the product listing"
+    },
+    {
+      "name": "PA-CF",
+      "filament_ids": [],
+      "notes": "\"Specialty nylon copolymer + high-modulus carbon fibre\" with the base grade and CF loading undisclosed; catalog has pa6-cf/pa12-cf/ppa-cf but no generic pa-cf, so not confidently mappable - reported as a gap"
+    }
   ],
   "makes_plates": true,
   "plate_ids": [],
   "price_tier": "budget",
-  "additional_notes": "Roughly $10-18/kg, with bulk 10kg packs around $100. Also sells replacement parts, nozzles, build plates and filament dryers, including Bambu Lab-compatible replacement parts per a Formnext 2025 listing. Rated 'Tier B' (about 4.0/5) by one review aggregator, with occasional batch and diameter variability reported. Founding year and exact HQ city were not confirmed in this pass — a follow-up deep dive is recommended.",
+  "additional_notes": "Catalog is wider than an earlier pass recorded: PLA (Basic/Plus/Matte/Silk/Rainbow-Silk/Glow/Rapid), PETG, PETG-CF, PLA-CF, ABS, ABS-CF and TPU 95A, plus a PA-CF whose base nylon grade is undisclosed. Roughly $10-18/kg, with bulk 10kg packs around $100. Also sells replacement parts, nozzles, build plates and filament dryers, including Bambu Lab-compatible replacement parts per a Formnext 2025 listing. Rated 'Tier B' (about 4.0/5) by one review aggregator, with occasional batch and diameter variability reported. Founding year and exact HQ city were not confirmed in this pass — a follow-up deep dive is recommended.",
   "provenance": {
     "sources": [
       "https://kingroon.com/",
       "https://filamentcheatsheet.com/brands/kingroon/",
-      "research/verified-oem-relationships.md"
+      "research/verified-oem-relationships.md",
+      "https://kingroon.com/collections/3d-printer-filament",
+      "https://wiki.kingroon.com/en/PETG",
+      "https://kingroon.com/products/kingroon-petg-carbon-fiber-black-filament",
+      "https://www.spoolscout.com/data-sheets/kingroon/petg-petg-cf",
+      "https://kingroon.com/products/kingroon-pa-cf-carbon-fiber-nylon-filament",
+      "https://kingroon.com/collections/carbon-fiber-filament"
     ],
     "last_verified": "2026-07-31",
     "confidence": "low",

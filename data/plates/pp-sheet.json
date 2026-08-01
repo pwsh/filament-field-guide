@@ -1,0 +1,378 @@
+{
+  "id": "pp-sheet",
+  "name": "Polypropylene-coated sheet (PP powder-coated spring steel)",
+  "aliases": [
+    "PP print sheet",
+    "Prusa PP Powder-Coated Print Sheet",
+    "Double-sided powder-coated PP spring steel sheet",
+    "BuildTak Plus+ PP",
+    "Polypropylene build surface"
+  ],
+  "status": "researched",
+  "summary": "A purpose-built surface for the one filament nothing else will hold: polypropylene. A PP-based powder coating on flexible spring steel exploits like-sticks-to-like chemistry to grip PP without glue, tape or release agents, and incidentally handles PLA, PETG and TPU well. The same chemistry is its main hazard — a PP part pressed too hard into a PP coating can weld permanently, so first-layer calibration matters more here than on any other surface.",
+  "surface_makeup": "Polypropylene-based powder coating applied to both faces of a flexible spring-steel carrier sheet, with an anti-corrosion layer beneath. The finish is a matte texture comparable to a satin PEI sheet. This is a formulated powder coating, not raw PP film or PP packing tape — the DIY alternatives it replaces. BuildTak's equivalent, Plus+ PP, is an adhesive-backed sheet pre-coated with a proprietary 'Bond PP' formula rather than a steel plate.",
+  "texture": "satin",
+  "manufacturers": [
+    "Prusa Research",
+    "BuildTak"
+  ],
+  "filament_compatibility": [
+    {
+      "filament_id": "pp",
+      "rating": "recommended",
+      "bed_temp_c": {
+        "min": 90,
+        "max": 100
+      },
+      "adhesion_aid": "none",
+      "notes": "The reason the sheet exists. No separation layer, no glue stick, no PP packing tape — the surface is formulated to bond PP directly. Prusa validates Prusament PP Carbon Fiber Black on it specifically. Get the first-layer Z right: this is the one material that can weld permanently to this coating."
+    },
+    {
+      "filament_id": "pp-gf",
+      "rating": "recommended",
+      "bed_temp_c": {
+        "min": 90,
+        "max": 100
+      },
+      "adhesion_aid": "none",
+      "notes": "Filled PP grades are the validated case; glass or carbon fill lowers shrinkage and makes large PP footprints far more practical than neat PP."
+    },
+    {
+      "filament_id": "pla",
+      "rating": "recommended",
+      "bed_temp_c": {
+        "min": 55,
+        "max": 65
+      },
+      "adhesion_aid": "none",
+      "notes": "Listed compatible by Prusa. Adhesion is adequate rather than tenacious — this is a release-oriented coating, so add a brim for tall parts on small footprints instead of raising bed temperature."
+    },
+    {
+      "filament_id": "pla-plus",
+      "rating": "recommended",
+      "bed_temp_c": {
+        "min": 55,
+        "max": 65
+      },
+      "adhesion_aid": "none",
+      "notes": "As base PLA."
+    },
+    {
+      "filament_id": "pla-matte",
+      "rating": "recommended",
+      "bed_temp_c": {
+        "min": 55,
+        "max": 65
+      },
+      "adhesion_aid": "none",
+      "notes": "As base PLA; the matte texture of the coating suits matte filament well."
+    },
+    {
+      "filament_id": "pla-cf",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 55,
+        "max": 65
+      },
+      "adhesion_aid": "brim on small footprints",
+      "notes": "Not separately characterised (unverified). Stiff CF parts do not flex with the sheet and, on a lower-tack surface, are also more prone to lifting mid-print — brim generously."
+    },
+    {
+      "filament_id": "petg",
+      "rating": "recommended",
+      "bed_temp_c": {
+        "min": 70,
+        "max": 85
+      },
+      "adhesion_aid": "none",
+      "notes": "Explicitly listed compatible by Prusa, and one of the quiet advantages of this sheet: no separation layer is needed, unlike smooth PEI where PETG fusing is a standing hazard."
+    },
+    {
+      "filament_id": "pctg",
+      "rating": "recommended",
+      "bed_temp_c": {
+        "min": 70,
+        "max": 85
+      },
+      "adhesion_aid": "none",
+      "notes": "Behaves as PETG; direct print."
+    },
+    {
+      "filament_id": "pet",
+      "rating": "recommended",
+      "bed_temp_c": {
+        "min": 70,
+        "max": 90
+      },
+      "adhesion_aid": "none",
+      "notes": "As PETG, with a slightly higher bed helping large footprints stay down on a low-tack surface."
+    },
+    {
+      "filament_id": "petg-cf",
+      "rating": "recommended",
+      "bed_temp_c": {
+        "min": 70,
+        "max": 85
+      },
+      "adhesion_aid": "none",
+      "notes": "As PETG; fibre fill makes release easier still."
+    },
+    {
+      "filament_id": "tpu",
+      "rating": "recommended",
+      "bed_temp_c": {
+        "min": 40,
+        "max": 60
+      },
+      "adhesion_aid": "none",
+      "notes": "Explicitly listed compatible by Prusa, which is unusual — most surfaces need a glue-stick barrier for flexibles. The PP coating's low surface energy is what makes soft TPU release cleanly instead of welding in."
+    },
+    {
+      "filament_id": "tpu-95a",
+      "rating": "recommended",
+      "bed_temp_c": {
+        "min": 40,
+        "max": 60
+      },
+      "adhesion_aid": "none",
+      "notes": "As base TPU; the hardest grade and the easiest case."
+    },
+    {
+      "filament_id": "tpu-85a",
+      "rating": "recommended",
+      "bed_temp_c": {
+        "min": 40,
+        "max": 60
+      },
+      "adhesion_aid": "none",
+      "notes": "Softer grades that would embed themselves in textured PEI release from this coating."
+    },
+    {
+      "filament_id": "tpu-60a",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 30,
+        "max": 50
+      },
+      "adhesion_aid": "brim; watch for under-adhesion rather than over-adhesion",
+      "notes": "Very soft grades release fine but may struggle to stay attached on a low-tack surface — the failure mode inverts relative to PEI."
+    },
+    {
+      "filament_id": "tpe",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 30,
+        "max": 50
+      },
+      "adhesion_aid": "brim if the first layer lifts",
+      "notes": "Not separately listed (unverified); expected to follow soft TPU, with adhesion rather than release as the limiting factor."
+    },
+    {
+      "filament_id": "cope",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 45,
+        "max": 70
+      },
+      "adhesion_aid": "brim if the first layer lifts",
+      "notes": "Copolyester elastomer; grips harder than TPU of the same hardness, which on this surface is an advantage rather than a risk."
+    },
+    {
+      "filament_id": "pvb",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 70,
+        "max": 80
+      },
+      "adhesion_aid": "brim on small footprints",
+      "notes": "Not in Prusa's compatible list for this sheet (unverified). Copolyester-adjacent behaviour suggests it works, but note the sheet's routine IPA cleaning regime and PVB's solubility in alcohol do not mix — clean the sheet, not the part."
+    },
+    {
+      "filament_id": "abs",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 100,
+        "max": 110
+      },
+      "adhesion_aid": "use a PEI sheet instead",
+      "notes": "Prusa's product guidance is that materials outside the PP/PLA/PETG/TPU set tend to detach mid-print on this sheet, and directs users to standard PEI. ABS's warping force against a deliberately low-tack coating is the textbook case of that."
+    },
+    {
+      "filament_id": "abs-gf",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 100,
+        "max": 110
+      },
+      "adhesion_aid": "use a PEI sheet instead",
+      "notes": "Glass fill reduces warp but does not make the coating hold styrenics."
+    },
+    {
+      "filament_id": "asa",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 100,
+        "max": 110
+      },
+      "adhesion_aid": "use a PEI sheet instead",
+      "notes": "As ABS; the bed temperature also runs near the practical ceiling of a PP-based coating."
+    },
+    {
+      "filament_id": "hips",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 100,
+        "max": 110
+      },
+      "adhesion_aid": "use a PEI sheet instead",
+      "notes": "As ABS, with which it is normally co-printed."
+    },
+    {
+      "filament_id": "pa",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 70,
+        "max": 100
+      },
+      "adhesion_aid": "use garolite/G10 or PEI instead",
+      "notes": "Not in the compatible list. Nylon's high shrinkage against a release-oriented surface is a detachment failure waiting to happen."
+    },
+    {
+      "filament_id": "pa6",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 70,
+        "max": 100
+      },
+      "adhesion_aid": "use garolite/G10 or PEI instead",
+      "notes": "As base PA."
+    },
+    {
+      "filament_id": "pa12",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 70,
+        "max": 100
+      },
+      "adhesion_aid": "use garolite/G10 or PEI instead",
+      "notes": "As base PA."
+    },
+    {
+      "filament_id": "pa6-cf",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 70,
+        "max": 100
+      },
+      "adhesion_aid": "use garolite/G10 or PEI instead",
+      "notes": "Lower warp than unfilled nylon, but garolite remains the correct surface."
+    },
+    {
+      "filament_id": "ppa-cf",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 90,
+        "max": 120
+      },
+      "adhesion_aid": "high-temperature sheet required",
+      "notes": "Bed temperature is above what a PP-based coating tolerates."
+    },
+    {
+      "filament_id": "pc",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 100,
+        "max": 120
+      },
+      "adhesion_aid": "use a PEI sheet instead",
+      "notes": "Not listed compatible. Both the required bed temperature and PC's poor chemical affinity to polyolefins rule it out."
+    },
+    {
+      "filament_id": "pc-abs",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 100,
+        "max": 120
+      },
+      "adhesion_aid": "use a PEI sheet instead",
+      "notes": "As PC."
+    },
+    {
+      "filament_id": "pva",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 45,
+        "max": 60
+      },
+      "adhesion_aid": "print soluble supports on top of model layers, not on the sheet",
+      "notes": "No data found (unverified). A coating engineered to release a notoriously non-stick polymer is a poor bet for a material that already adheres badly to bare sheets."
+    },
+    {
+      "filament_id": "bvoh",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 45,
+        "max": 60
+      },
+      "adhesion_aid": "print soluble supports on top of model layers, not on the sheet",
+      "notes": "As PVA."
+    },
+    {
+      "filament_id": "peek",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 130,
+        "max": 160
+      },
+      "adhesion_aid": "dedicated high-temperature sheet required",
+      "notes": "Bed temperature is far above the softening range of a polypropylene coating; the surface would deform before the print succeeded."
+    },
+    {
+      "filament_id": "pei-ultem",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 130,
+        "max": 160
+      },
+      "adhesion_aid": "dedicated high-temperature sheet required",
+      "notes": "As PEEK."
+    },
+    {
+      "filament_id": "pps-cf",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 120,
+        "max": 150
+      },
+      "adhesion_aid": "dedicated high-temperature sheet required",
+      "notes": "As PEEK."
+    }
+  ],
+  "preparation": "First use and routine prep are the same procedure: wipe the sheet with roughly 90% isopropyl alcohol while it is cold, before every print. If IPA alone is not cutting the grease — usually visible as a shiny patch where fingers have been — follow with dish soap and warm water, rinse, and dry completely; never leave the sheet damp or remount it wet, since the anti-corrosion layer protects the steel but does not make it waterproof. The step that actually determines success here is first-layer calibration, not cleaning. This surface is not meant to be forced into holding a part by over-squishing the first layer, and with PP that habit is actively dangerous, because PP-on-PP contact under pressure can fuse permanently. Dial the Z-offset with a dedicated first-layer test after mounting, and re-run it when swapping from a PEI sheet, since the coating thickness and effective datum differ.",
+  "cleaning": "Cold IPA at around 90% for routine cleaning; dish soap and warm water for a degrease, dried fully before use. Never use acetone — it damages the coating, as with Prusa's other powder-coated sheets. Never put this sheet in a freezer: Prusa warns against it explicitly, which is a genuine departure from the freezer-release trick that is standard advice on PEI and steel plates, so unlearn that habit when you switch sheets. Avoid metal spatulas and any sharp-edged tool; the coating is a thin wearable layer rather than a hard ceramic-like film, and gouges become permanent dead spots. Do not use abrasives or scouring pads, which polish out the matte texture that provides part of the mechanical grip.",
+  "model_removal": "Cold release by flexing the sheet, exactly as with any spring-steel system: let the bed cool, lift the sheet off the magnetic base by its tabs, and bow it progressively from one edge so the part peels off rather than popping all at once. Most parts should come free with a gentle flex — the coating's whole design intent is low peel adhesion, so if a part is genuinely fighting you, that is a signal about first-layer squish rather than a cue to apply more force. Keep sharp metal tools away from the surface; if a plastic scraper is needed, slide it in at a shallow angle at a corner. PP parts in particular deserve patience, because the failure mode when they do not release is not a scratch but a fused footprint that takes coating with it.",
+  "stuck_print_recovery": "Start with the sheet off the magnet and flex it harder and from multiple directions — that resolves most cases. Then IPA wicked under the part perimeter, given a minute or two to creep in. Then unwaxed dental floss or thin wire sawed under the footprint, which applies shear rather than a point load and is the safest mechanical escalation. What you must not do is the freezer, which Prusa specifically prohibits for this sheet even though it is the standard trick elsewhere. Heat-then-slow-cool cycling to break stubborn PP-on-PP fusion is not documented and should be regarded as untested (unverified). The honest guidance from both Prusa's documentation and the broader community is that PP-coated surfaces are a prevention problem, not a recovery problem: a correctly set Z-offset and a bed that is not running hotter than needed will keep you out of this situation, and once PP has genuinely welded to a PP coating there may be no non-destructive way back.",
+  "temperature_limits_c": {
+    "max": 110
+  },
+  "lifespan_notes": "An explicit consumable. Prusa states that surface coatings diminish over time and that its warranty covers manufacturing defects present on arrival, not wear or cosmetic damage from use. Expect the matte texture to polish smooth in the high-traffic centre first, showing up as prints that hold at the edges and lift in the middle. Wear is accelerated by metal tools, acetone or other solvents, and any over-adhesion event that pulls coating away in a patch. Being double-sided effectively doubles usable life — flip the sheet when the first face degrades. There is no recoating option; replace the sheet when adhesion no longer recovers after a proper degrease.",
+  "price": {
+    "usd_low": 9.9,
+    "usd_high": 46.99,
+    "notes": "Prusa's official double-sided PP Powder-Coated Print Sheet lists at USD 46.99. BuildTak Plus+ PP, the adhesive-backed alternative, spans USD 9.90 (A1 mini size) to USD 26.75 (Raise3D Pro3 size); the exact price of the ~254x254 mm Bambu P1/X1/A1 class was not captured, so the top of this range reflects the Prusa steel sheet rather than a like-for-like comparison."
+  },
+  "additional_notes": "Prusa's version is a double-sided powder-coated spring steel sheet mounting on the same magnetic bases as its PEI sheets (MK4, MK3.9, XL, CORE One). BuildTak Plus+ PP covers the same need in adhesive-film form and is cut for Bambu Lab (A1 mini, P1/P2/X1/A1/X2D), Prusa (MK3, CORE One), Creality (CR-10) and other beds — which is how Creality and Bambu owners get a PP surface at all, since neither vendor sells an official one. Bambu users otherwise improvise with PP packing tape over a textured PEI plate. The defining characteristic of this whole surface category is that like-sticks-to-like cuts both ways: the same chemistry that finally makes PP printable is what makes under-calibrated PP prints fuse irreversibly, and that trade-off is called out repeatedly in Prusa's own documentation. A secondary quirk worth knowing is that some users report the opposite problem — over-grippy PP variants — and wipe the sheet with window cleaner to reduce tack, which is anecdotal and not vendor-sanctioned.",
+  "provenance": {
+    "sources": [
+      "Prusa Knowledge Base - PP steel sheet: https://help.prusa3d.com/article/pp-steel-sheet_815373",
+      "Prusa Research - PP Powder-Coated Print Sheet product page: https://www.prusa3d.com/product/pp-powder-coated-print-sheet/",
+      "Prusa Knowledge Base - Polypropylene (PP) material guide: https://help.prusa3d.com/article/polypropylene-pp_167126",
+      "BuildTak Plus+ PP product page: https://buildtak.com/products/buildtak-plus-pp",
+      "Bambu Lab Forum - Anyone tried polypropylene as a build plate for printing PETG: https://forum.bambulab.com/t/anyone-tried-polypropylene-as-a-build-plate-for-printing-petg/150949",
+      "Duet3D Forum - Polypropylene build surface review: https://forum.duet3d.com/topic/17667/polypropylene-build-surface-review"
+    ],
+    "last_verified": "2026-08-01",
+    "confidence": "medium",
+    "conflicts": "Prusa publishes no numeric maximum surface temperature for the PP sheet; the 110 degC ceiling recorded here is inferred from PP's normal 90-100 degC bed range plus headroom, not from a datasheet, and is the least certain number in this entry. The compatible-material list (PP, PLA, PETG, TPU) is stated positively; every 'avoid' rating here is inferred from the product page's warning that other materials tend to detach mid-print rather than from an explicit prohibition. PVB, TPE, COPE and PLA-CF are not addressed by any source and are extrapolated. This entry covers two physically different products under one id — Prusa's double-sided powder-coated spring steel sheet and BuildTak's adhesive-backed Plus+ PP film — which differ in mounting, price and cleaning rules (Plus+ PP prohibits all liquids including IPA and water, directly contradicting Prusa's IPA-before-every-print instruction); splitting them may be warranted. Whether BuildTak's Plus+ PP carries the same PP-on-PP fusion warning could not be verified, as some vendor pages returned fetch errors. Anecdotal community reports of over-adhesion needing a window-cleaner wipe conflict with Prusa's framing of the surface as release-oriented and low-tack. No evidence was found that Bambu Lab sells an OEM PP plate. The Duet3D thread cited returned 403 during research and its content is unverified; the Bambu forum thread was identified by title and context only."
+  }
+}

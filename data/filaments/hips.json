@@ -143,6 +143,16 @@
       "hips"
     ],
     "usable_as_support_for": [
+      "abs",
+      "abs-fr",
+      "abs-gf",
+      "asa",
+      "asa-cf",
+      "asa-gf",
+      "hips",
+      "pc",
+      "pc-abs",
+      "pc-pbt",
       "petg",
       "pla"
     ],
@@ -153,6 +163,56 @@
       "plate_id": "pei-textured",
       "rating": "recommended",
       "notes": "Prusa's knowledge base notes good adhesion to PEI, and the 100-110 °C bed sits within the normal high-temperature PEI operating range. No release agent is generally required; a glue stick or an ABS-in-acetone slurry helps first-layer adhesion on marginal setups or very large footprints."
+    },
+    {
+      "plate_id": "pei-smooth",
+      "rating": "recommended",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Prints and releases like ABS; commonly used as a breakaway support next to ABS."
+    },
+    {
+      "plate_id": "pei-satin",
+      "rating": "recommended",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): As ABS; common breakaway support partner."
+    },
+    {
+      "plate_id": "buildtak-polymer",
+      "rating": "recommended",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Prints and releases like ABS, which is the material it is usually co-printed with as breakaway support."
+    },
+    {
+      "plate_id": "glass-borosilicate",
+      "rating": "usable",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Not covered in glass sources; extrapolated from ABS behavior as a styrenic."
+    },
+    {
+      "plate_id": "g10-garolite",
+      "rating": "usable",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Not covered in G10 sources; extrapolated from ABS/styrenic behavior."
+    },
+    {
+      "plate_id": "carbon-fiber-plate",
+      "rating": "usable",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Undocumented for this surface; extrapolated from ABS/styrenic behavior."
+    },
+    {
+      "plate_id": "pp-sheet",
+      "rating": "avoid",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): As ABS, with which it is normally co-printed."
+    },
+    {
+      "plate_id": "supertack",
+      "rating": "avoid",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Same envelope problem as ABS, with which it is normally co-printed."
+    },
+    {
+      "plate_id": "pc-plate",
+      "rating": "avoid",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Not separately documented, but HIPS bed temperatures sit in the same 95-110 C band that damages this surface."
+    },
+    {
+      "plate_id": "pei-patterned",
+      "rating": "avoid",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Bed temp sits at the top of the coating's rated band with no benefit — use a textured PEI plate instead."
     }
   ],
   "emissions": {
@@ -186,5 +246,68 @@
     "last_verified": "2026-07-31",
     "confidence": "medium",
     "conflicts": "Support pairing is the major unresolved conflict: traditional guidance (hobbyist guides, 3DXTech) presents HIPS as the dissolvable support for ABS, while Prusa's current knowledge base advises against HIPS under ABS/ASA because limonene attacks those surfaces, recommending PETG instead. Both positions are recorded — bonds_with keeps ABS/ASA, usable_as_support_for follows Prusa. Elongation at break: eSUN 39 % vs Flashforge 6-6.5 % — a ~6x disagreement, likely grade or test-direction dependent; omitted from properties. Tensile strength spread 27-45 MPa across eSUN, Flashforge and Xometry-cited tables. Nozzle temperature spans 220-270 °C across brands. Food contact: filamentz.nl markets HIPS as 'FDA safe' while 3dtechvalley explicitly advises against direct food contact for printed parts (layer-line bacterial harbouring, unverified filament additives) — recorded as 'no' for printed parts even though the base resin appears in food packaging. Drying schedule is extrapolated, not brand-published."
-  }
+  },
+  "trade_names": [
+    {
+      "manufacturer": "3dxtech",
+      "product": "HIPS",
+      "notes": "Also used as breakaway support."
+    },
+    {
+      "manufacturer": "coex-3d",
+      "product": "Support Filament / HIPS",
+      "notes": "HIPS-based sacrificial support material."
+    },
+    {
+      "manufacturer": "devil-design",
+      "product": "HIPS"
+    },
+    {
+      "manufacturer": "esun",
+      "product": "HIPS",
+      "notes": "Support/sacrificial use"
+    },
+    {
+      "manufacturer": "filament-pm",
+      "product": "HiPS"
+    },
+    {
+      "manufacturer": "fillamentum",
+      "product": "HIPS",
+      "notes": "Standard high-impact polystyrene"
+    },
+    {
+      "manufacturer": "formfutura",
+      "product": "HIPS",
+      "notes": "Standard HIPS"
+    },
+    {
+      "manufacturer": "keene-village-plastics",
+      "product": "HIPS",
+      "notes": "Support/sacrificial material line."
+    },
+    {
+      "manufacturer": "kimya",
+      "product": "HIPS-R",
+      "notes": "Recycled-content HIPS, support/sacrificial."
+    },
+    {
+      "manufacturer": "push-plastic",
+      "product": "HIPS",
+      "notes": "Typically used as a sacrificial support for ABS."
+    },
+    {
+      "manufacturer": "real-filament",
+      "product": "HIPS (\"Support Material\")",
+      "notes": "D-limonene soluble, ABS support"
+    },
+    {
+      "manufacturer": "rosa3d",
+      "product": "HIPS"
+    },
+    {
+      "manufacturer": "spectrum-filaments",
+      "product": "HIPS-X"
+    }
+  ]
 }

@@ -1,7 +1,12 @@
 {
   "id": "tpu-95a",
   "name": "TPU 95A (standard flexible)",
-  "aliases": ["TPU 95A", "Shore 95A TPU", "NinjaTek Cheetah", "PolyFlex TPU95"],
+  "aliases": [
+    "TPU 95A",
+    "Shore 95A TPU",
+    "NinjaTek Cheetah",
+    "PolyFlex TPU95"
+  ],
   "status": "researched",
   "base_type": "tpu",
   "variation_kind": "shore-grade",
@@ -9,15 +14,35 @@
   "chemical_makeup": "Thermoplastic polyurethane at Shore 95A — the highest hard-segment ratio of the Shore A filament grades, giving firm-rubber behaviour. Reference products are NinjaTek Cheetah 95A and Polymaker PolyFlex TPU95",
   "summary": "The industry-standard flexible and the grade most people mean when they say 'TPU': firm shoe-sole feel, the best balance of flexibility against printability in the Shore A family. Delta vs base TPU: this is the firm end of the base entry's 85A-95A band and is where its caveats relax — speed climbs to 25-45 mm/s, limited retraction of 0.5-2 mm works, and a short well-constrained Bowden path is survivable, so drive_system is recorded as recommended rather than required. Still barred from the AMS, and still the best-documented grade for actual numbers.",
   "printing": {
-    "nozzle_temp_c": { "min": 210, "max": 250, "recommended": 230 },
-    "bed_temp_c": { "min": 25, "max": 60, "recommended": 50 },
-    "ambient_temp_c": { "min": 18, "max": 30, "recommended": 22 },
-    "speed_mm_s": { "min": 25, "max": 45, "recommended": 35 },
+    "nozzle_temp_c": {
+      "min": 210,
+      "max": 250,
+      "recommended": 230
+    },
+    "bed_temp_c": {
+      "min": 25,
+      "max": 60,
+      "recommended": 50
+    },
+    "ambient_temp_c": {
+      "min": 18,
+      "max": 30,
+      "recommended": 22
+    },
+    "speed_mm_s": {
+      "min": 25,
+      "max": 45,
+      "recommended": 35
+    },
     "enclosure_recommended": false,
     "heated_chamber_required": false,
     "enclosure_open_for_cooling": true,
     "requires_hardened_nozzle": false,
-    "part_cooling_fan_pct": { "min": 0, "max": 50, "recommended": 30 },
+    "part_cooling_fan_pct": {
+      "min": 0,
+      "max": 50,
+      "recommended": 30
+    },
     "notes": "Brand windows: Polymaker PolyFlex TPU95 210-230 °C on a 25-60 °C plate, NinjaTek Cheetah 225-250 °C — the recorded 210-250 °C range spans both. Bed 50-60 °C gives the best adhesion though room temperature works. Speed 25-45 mm/s is the fastest of the common Shore A grades and roughly triple what 60A tolerates; many tuned direct-drive machines run this grade without extensive profile work. Limited retraction of 0.5-2 mm is usable, unlike the softer grades that need it off. No enclosure required; on an enclosed printer run with the lid open as for base TPU. Not abrasive — standard brass nozzle."
   },
   "feeding": {
@@ -28,9 +53,22 @@
   },
   "drying": {
     "required_before_use": "always",
-    "temp_c": { "min": 65, "max": 80, "recommended": 70 },
-    "time_hours": { "min": 6, "max": 12, "recommended": 8 },
-    "methods": ["dedicated filament dryer at 70 °C for 8 h", "hot-air or vacuum oven at 70 °C", "heated-bed method at 80-90 °C for 12 h", "print directly from a drybox with desiccant"],
+    "temp_c": {
+      "min": 65,
+      "max": 80,
+      "recommended": 70
+    },
+    "time_hours": {
+      "min": 6,
+      "max": 12,
+      "recommended": 8
+    },
+    "methods": [
+      "dedicated filament dryer at 70 °C for 8 h",
+      "hot-air or vacuum oven at 70 °C",
+      "heated-bed method at 80-90 °C for 12 h",
+      "print directly from a drybox with desiccant"
+    ],
     "dryness_validation": "No popping or crackling at the nozzle, no foamy or bubbly extrudate, and no rise in stringing on a retraction test — this last check is genuinely usable at 95A, unlike the softer grades that string when dry",
     "notes": "Polymaker specifies 70 °C for 8 h for PolyFlex TPU95, consistent with the general TPU regime and with the base entry. Hardness does not shift the drying window; what differs is tolerance — 95A survives a skipped drying cycle more often than the softer grades, though the base entry's 'always' still applies."
   },
@@ -74,7 +112,11 @@
     "cm3_per_100g": 82.0,
     "glass_transition_c": -25,
     "max_service_temp_c": 72,
-    "tensile_strength_mpa": { "min": 25, "max": 49, "recommended": 39 },
+    "tensile_strength_mpa": {
+      "min": 25,
+      "max": 49,
+      "recommended": 39
+    },
     "notes": "The best-documented grade in the family. NinjaTek Cheetah 95A: density 1.22 g/cm³, tensile yield 9 MPa and ultimate 39 MPa, elongation 55% at yield and 580% at break. Polymaker PolyFlex TPU95: density 1.20-1.24 g/cm³, 25.8±0.4 MPa at 400% strain, elongation at break 551.2±23.5%. Fillamentum Flexfill 92A (near sibling): density 1.20 g/cm³, tensile 49 MPa on a differing test basis, likely ultimate. Density of 1.22 is the NinjaTek figure and coincides with the base entry's recorded value. Elongation of roughly 550-580% is dramatically below tpu-60a's ~950%, and tensile correspondingly higher — the clearest quantitative statement of the stiffness-for-stretch trade across the Shore A grades. Max service temperature of 72 °C is an unverified estimate, marginally above the base entry's 70 °C because this is the firmest A-grade."
   },
   "scores": {
@@ -89,8 +131,19 @@
     "water_tolerance": 6
   },
   "compatibility": {
-    "bonds_with": ["tpu", "tpu-60a", "tpu-85a", "tpu-90a", "tpu-60d", "tpu-68d", "tpe"],
-    "support_materials": ["pla"],
+    "bonds_with": [
+      "tpe",
+      "tpu",
+      "tpu-60a",
+      "tpu-60d",
+      "tpu-68d",
+      "tpu-85a",
+      "tpu-90a",
+      "tpu-gf"
+    ],
+    "support_materials": [
+      "pla"
+    ],
     "usable_as_support_for": [],
     "notes": "Welds to base TPU and all sibling grades — the usual multi-durometer pattern is a 95A structural body with 60A or 85A soft zones. Bonding to rigid materials is unchanged from the base entry: PLA and PETG joints rely on mechanical interlock, with PETG the more reliable of the two; no useful bond to ABS, ASA, PC or PA. PLA is the practical breakaway support because it releases cleanly; PVA and HIPS are not documented as reliable TPU interfaces."
   },
@@ -99,12 +152,66 @@
       "plate_id": "pei-textured",
       "rating": "recommended",
       "notes": "Textured PEI is the default for this grade and works well from room temperature to a 60 °C bed, per community consensus and Bambu's plate compatibility notes. Over-adhesion is still the failure mode rather than lifting, but 95A is firm enough that parts usually release without tearing — the reason this grade rates 'recommended' where the softer siblings rate 'usable'."
+    },
+    {
+      "plate_id": "pp-sheet",
+      "rating": "recommended",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): As base TPU; the hardest grade and the easiest case."
+    },
+    {
+      "plate_id": "g10-garolite",
+      "rating": "recommended",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Firmer TPU grades release cleanly; the low-fusing behavior is the main reason flexible printers pick G10 over PEI."
+    },
+    {
+      "plate_id": "carbon-fiber-plate",
+      "rating": "recommended",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Firmer grades release readily by flexing the steel backing."
+    },
+    {
+      "plate_id": "pei-smooth",
+      "rating": "usable",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): The hardest common grade and the most survivable on smooth PEI, but still needs a separator."
+    },
+    {
+      "plate_id": "glass-borosilicate",
+      "rating": "usable",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Firmer grades peel off a rigid plate more easily than soft ones, which want to stretch rather than release."
+    },
+    {
+      "plate_id": "pei-satin",
+      "rating": "usable",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Hardest common grade; still follow the glue-stick guidance."
+    },
+    {
+      "plate_id": "pei-patterned",
+      "rating": "usable",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Hardest common grade; the most predictable of the TPUs here."
+    },
+    {
+      "plate_id": "supertack",
+      "rating": "avoid",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): The hardest common grade and the one most often attempted anyway; still covered by the blanket TPU warning."
+    },
+    {
+      "plate_id": "pc-plate",
+      "rating": "avoid",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Firmer grades are no exception; use a textured PEI, G10 or carbon plate for flexibles."
+    },
+    {
+      "plate_id": "buildtak-polymer",
+      "rating": "avoid",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): The hardest common grade and the least bad case, but still inside the vendor's fusion warning."
     }
   ],
   "emissions": {
     "voc_level": "low",
     "particulate_level": "low",
-    "primary_emissions": ["ultrafine particles", "isocyanate residues (unverified)", "urethane decomposition byproducts (unverified)"],
+    "primary_emissions": [
+      "ultrafine particles",
+      "isocyanate residues (unverified)",
+      "urethane decomposition byproducts (unverified)"
+    ],
     "ventilation": "recommended",
     "notes": "Standard TPU-family profile as recorded in the base entry — moderate ultrafine particles, some VOCs including possible isocyanates, minimal styrene. No source differentiates emissions by Shore grade (unverified). Brand nozzle windows for this grade reach 250 °C (NinjaTek Cheetah), and emissions rise with nozzle temperature, so ventilation matters more when running the top of the range than the 210 °C bottom."
   },
@@ -122,5 +229,160 @@
     "last_verified": "2026-07-31",
     "confidence": "medium",
     "conflicts": "Tensile figures are not directly comparable across sources because the test bases differ: NinjaTek reports 39 MPa ultimate, Polymaker 25.8 MPa at 400% strain (a stress-at-strain figure, not ultimate), Fillamentum 49 MPa on an unstated basis — the recorded 25-49 MPa range spans all three rather than pretending they measure the same thing. Nozzle temperature disagrees by 40 °C between Polymaker (210-230) and NinjaTek (225-250). Density spans 1.20-1.24 across the same three brands. Drive system is recorded as 'recommended' where the base entry records 'required' for the range; this is a deliberate grade-level relaxation based on community reports of short-Bowden success, not a datasheet claim. Max service temperature is unverified. Scoring note: the research notes rated 'compression recovery' 6/10 here, but this catalog's compression_strength score measures resistance to crushing loads, which is the inverse — 95A scores 3, above the softer siblings for exactly the reason it recovers less."
-  }
+  },
+  "trade_names": [
+    {
+      "manufacturer": "3djake",
+      "product": "TPU A95",
+      "notes": "Shore A95 per SKU name; TDS/density not independently confirmed"
+    },
+    {
+      "manufacturer": "addnorth",
+      "product": "EasyFlex",
+      "notes": "Shore 95A"
+    },
+    {
+      "manufacturer": "anycubic",
+      "product": "TPU 95A"
+    },
+    {
+      "manufacturer": "bambu-lab",
+      "product": "TPU 95A"
+    },
+    {
+      "manufacturer": "colorfabb",
+      "product": "TPU 95A",
+      "notes": "Fixed-hardness grade, exact match"
+    },
+    {
+      "manufacturer": "comgrow",
+      "product": "TPU 95A",
+      "notes": "Shore 95A stated on the listing."
+    },
+    {
+      "manufacturer": "duramic-3d",
+      "product": "TPU Flexible Filament 95A",
+      "notes": "Shore 95A stated in the line name; $23.99-$39.99."
+    },
+    {
+      "manufacturer": "elegoo",
+      "product": "TPU 95A / Rapid TPU 95A",
+      "notes": "Rapid variant is the same 95A durometer in a high-flow formulation"
+    },
+    {
+      "manufacturer": "esun",
+      "product": "TPU-95A",
+      "notes": "Shore 95A"
+    },
+    {
+      "manufacturer": "extrudr",
+      "product": "FLEX MEDIUM ESD",
+      "notes": "Shore 95A TPU with ESD-conductive package (0.7-0.9 MOhm), density 1.20 g/cm3; base polymer and hardness match tpu-95a, the ESD modification has no id (petg-esd is PETG-only)"
+    },
+    {
+      "manufacturer": "filament-pm",
+      "product": "TPU 96",
+      "notes": "SPEC DELTA: Shore ~96A implied by product name only; TDS confirmation pending"
+    },
+    {
+      "manufacturer": "filamentive",
+      "product": "TPU 98A",
+      "notes": "SPEC DELTA: actual Shore 98A, mapped to the 95A grade band; elongation to 500%"
+    },
+    {
+      "manufacturer": "forward-am",
+      "product": "Ultrafuse TPU 95A",
+      "notes": "Shore 95A."
+    },
+    {
+      "manufacturer": "geeetech",
+      "product": "TPU",
+      "notes": "Shore 95A confirmed on the Geeetech wiki, so the grade id applies as well."
+    },
+    {
+      "manufacturer": "hatchbox",
+      "product": "TPU",
+      "notes": "Shore 95A confirmed on all colourway listings, so the grade id applies despite the generic product name."
+    },
+    {
+      "manufacturer": "kexcelled",
+      "product": "High Speed TPU 95A-HF",
+      "notes": "Shore 95A, high-flow reformulation"
+    },
+    {
+      "manufacturer": "kingroon",
+      "product": "TPU 95A",
+      "notes": "Durometer confirmed on the product listing"
+    },
+    {
+      "manufacturer": "landu",
+      "product": "Hyper TPU 95A",
+      "notes": "Shore 95A, high-speed reformulated"
+    },
+    {
+      "manufacturer": "ninjatek",
+      "product": "Cheetah",
+      "notes": "TPU Shore 95A, firmer/faster-printing grade."
+    },
+    {
+      "manufacturer": "overture",
+      "product": "TPU 95A / High Speed TPU 95A",
+      "notes": "Shore 95A (ISO 7619), density 1.18 g/cm3, tensile 30.1 MPa, elongation at break 332% +/- 16%."
+    },
+    {
+      "manufacturer": "polymaker",
+      "product": "PolyFlex TPU95 / TPU95-HF",
+      "notes": "'PolyFlex TPU95' is already a tpu-95a alias; HF is a high-flow reformulation at the same hardness"
+    },
+    {
+      "manufacturer": "prusa-research",
+      "product": "Prusament TPU 95A",
+      "notes": "Shore 95A exactly; firm end of the mainstream flexible band"
+    },
+    {
+      "manufacturer": "qidi-tech",
+      "product": "TPU95A-HF",
+      "notes": "Shore 95A in a high-flow formulation"
+    },
+    {
+      "manufacturer": "rosa3d",
+      "product": "ROSA-Flex 96A",
+      "notes": "SPEC DELTA: actual Shore 96A, mapped to the 95A grade band"
+    },
+    {
+      "manufacturer": "snapmaker",
+      "product": "TPU / TPU 95A HF",
+      "notes": "Snapmaker spec explicitly states 'Hardness >= 95 Shore A'; HF variant is the same durometer"
+    },
+    {
+      "manufacturer": "spectrum-filaments",
+      "product": "S-Flex 98A",
+      "notes": "SPEC DELTA: actual Shore 98A, mapped to the 95A hard-TPU grade band; elongation up to 510%"
+    },
+    {
+      "manufacturer": "spectrum-filaments",
+      "product": "The Filament TPU 95A",
+      "notes": "recycled content"
+    },
+    {
+      "manufacturer": "sunlu",
+      "product": "TPU 95A",
+      "notes": "Shore 95A"
+    },
+    {
+      "manufacturer": "tinmorry",
+      "product": "95A TPU",
+      "notes": "Shore 95A"
+    },
+    {
+      "manufacturer": "ultimaker",
+      "product": "UltiMaker TPU 95A",
+      "notes": "Shore 95A TPU."
+    },
+    {
+      "manufacturer": "ziro",
+      "product": "TPU (incl. gradient-color TPU)",
+      "notes": "Shore 95A; gradient SKUs are the same polymer with graded pigment"
+    }
+  ]
 }

@@ -1,7 +1,13 @@
 {
   "id": "abs-gf",
   "name": "ABS-GF (Glass-Fiber-Filled ABS)",
-  "aliases": ["ABS GF", "ABS Glass Fiber", "ABS-GF25", "Fibreheart ABS-GF", "Glass-filled ABS"],
+  "aliases": [
+    "ABS GF",
+    "ABS Glass Fiber",
+    "ABS-GF25",
+    "Fibreheart ABS-GF",
+    "Glass-filled ABS"
+  ],
   "status": "researched",
   "base_type": "abs",
   "variation_kind": "glass-fiber-filled",
@@ -9,15 +15,35 @@
   "chemical_makeup": "The same amorphous acrylonitrile-butadiene-styrene terpolymer as base ABS, compounded with chopped glass fiber — around 10 wt% in most consumer grades (Siraya Fibreheart ABS-GF), though some third-party lines are branded 'ABS-GF25' implying up to 25 %. Glass fiber is electrically non-conductive and light-coloured, so unlike a carbon-filled grade it does not restrict the product to black.",
   "summary": "ABS with its worst habit partly cured. Deltas vs abs: glass fiber suppresses the shrinkage-driven warp that dominates unfilled ABS printing, lifting dimensional stability from 4 to 7, at the cost of a mandatory hardened nozzle and a slightly weaker interlayer bond. Heat resistance barely moves (HDT 99-106 °C against base ABS's 99 °C) and UV resistance does not move at all — this stays a poor outdoor material, which is the whole reason asa-cf exists alongside it.",
   "printing": {
-    "nozzle_temp_c": { "min": 240, "max": 270, "recommended": 260 },
-    "bed_temp_c": { "min": 80, "max": 110, "recommended": 100 },
-    "ambient_temp_c": { "min": 40, "max": 60, "recommended": 50 },
-    "speed_mm_s": { "min": 20, "max": 150, "recommended": 60 },
+    "nozzle_temp_c": {
+      "min": 240,
+      "max": 270,
+      "recommended": 260
+    },
+    "bed_temp_c": {
+      "min": 80,
+      "max": 110,
+      "recommended": 100
+    },
+    "ambient_temp_c": {
+      "min": 40,
+      "max": 60,
+      "recommended": 50
+    },
+    "speed_mm_s": {
+      "min": 20,
+      "max": 150,
+      "recommended": 60
+    },
     "enclosure_recommended": true,
     "heated_chamber_required": false,
     "enclosure_open_for_cooling": false,
     "requires_hardened_nozzle": true,
-    "part_cooling_fan_pct": { "min": 0, "max": 20, "recommended": 0 },
+    "part_cooling_fan_pct": {
+      "min": 0,
+      "max": 20,
+      "recommended": 0
+    },
     "notes": "Deltas vs base ABS: hardened nozzle now mandatory, and the nozzle window shifts slightly up (Bambu 240-270 °C, Siraya Fibreheart 250-270 °C, against base ABS's 230-270 °C). Bed guidance splits by vendor — Bambu 80-100 °C with glue, Siraya 100-110 °C — with the higher figures needed because a stiffer filled matrix cracks rather than flexes if a corner does lift. Part cooling stays essentially off, as for base ABS. Bambu states outright that an enclosed printer is required; a passive enclosure is normally sufficient, so heated_chamber_required stays false, matching the base entry. Nozzles of 0.4/0.6/0.8 mm are supported and 0.2 mm is not."
   },
   "feeding": {
@@ -28,9 +54,21 @@
   },
   "drying": {
     "required_before_use": "if-exposed",
-    "temp_c": { "min": 65, "max": 80, "recommended": 80 },
-    "time_hours": { "min": 4, "max": 8, "recommended": 8 },
-    "methods": ["filament dryer", "convection oven at 65-80 °C", "print from a heated drybox"],
+    "temp_c": {
+      "min": 65,
+      "max": 80,
+      "recommended": 80
+    },
+    "time_hours": {
+      "min": 4,
+      "max": 8,
+      "recommended": 8
+    },
+    "methods": [
+      "filament dryer",
+      "convection oven at 65-80 °C",
+      "print from a heated drybox"
+    ],
     "dryness_validation": "No popping, crackling or steam at the nozzle and no micro-bubbles in the extrudate. Base ABS's 'no fine hairs or fuzz on printed walls' check is unreliable here — a fiber-filled wall is slightly fuzzy by nature — so rely on sound and on strand quality instead.",
     "notes": "Bambu specifies 80 °C for 8 h; Siraya's Fibreheart grade asks for only 65 °C for 4-6 h. Both sit inside base ABS's 70-85 °C / 4-8 h band, so the glass fiber adds essentially no drying burden of its own; as with base ABS, the real practice is desiccant storage between prints rather than a pre-print ritual."
   },
@@ -72,11 +110,19 @@
     "density_g_cm3": 1.08,
     "grams_per_100cm3": 108,
     "cm3_per_100g": 92.6,
-    "shrinkage_pct": { "min": 0.3, "max": 0.9, "recommended": 0.5 },
+    "shrinkage_pct": {
+      "min": 0.3,
+      "max": 0.9,
+      "recommended": 0.5
+    },
     "glass_transition_c": 103,
     "heat_deflection_c": 99,
     "max_service_temp_c": 85,
-    "tensile_strength_mpa": { "min": 33, "max": 47, "recommended": 40 },
+    "tensile_strength_mpa": {
+      "min": 33,
+      "max": 47,
+      "recommended": 40
+    },
     "notes": "Density 1.08 g/cm³ — Bambu and Siraya Fibreheart agree — barely above base ABS's 1.05, since glass fiber is dense but the loading is low. Bambu: tensile 36±3 MPa, bending modulus 2860±130 MPa, HDT 99 °C, Vicat softening 103 °C. Siraya Fibreheart: tensile 44±3 MPa, softening 106 °C. Read the numbers as a stiffness-and-stability upgrade rather than a strength one: tensile sits inside base ABS's own 30-45 MPa band, HDT is identical to base ABS's 99 °C, and only the bending modulus (2860 MPa against roughly 2000-2300 MPa for unfilled ABS) and the warp behaviour move meaningfully. Shrinkage is a reasoned reduction from base ABS's 0.5-1.5 % on the strength of Bambu's 'minimal warping' claim, not a datasheet figure; Tg and max service temp are carried from the base entry."
   },
   "scores": {
@@ -91,8 +137,17 @@
     "water_tolerance": 5
   },
   "compatibility": {
-    "bonds_with": ["abs-gf", "abs", "asa", "asa-cf"],
-    "support_materials": ["hips", "abs"],
+    "bonds_with": [
+      "abs",
+      "abs-gf",
+      "asa",
+      "asa-cf",
+      "asa-gf"
+    ],
+    "support_materials": [
+      "abs",
+      "hips"
+    ],
     "usable_as_support_for": [],
     "notes": "Welds to itself and across the styrenic family — base ABS, base ASA and asa-cf — sharing one enclosed, hot-bed process environment. HIPS is the classic breakaway and D-limonene-soluble support for the ABS family; it is documented for base ABS and only inferred for this filled grade (unverified). PLA and PETG pair badly in either direction, as for base ABS: a 100 °C bed and 260 °C nozzle deform them and the chemistries do not fuse. Not listed as a support for other materials — it welds to its own family rather than releasing from it."
   },
@@ -101,12 +156,62 @@
       "plate_id": "pei-textured",
       "rating": "recommended",
       "notes": "Upgraded from base ABS's 'usable' to 'recommended' because the fiber cuts the corner-lift that makes unfilled ABS marginal on textured PEI — but still use an adhesion aid. Bambu's 80-100 °C bed guidance explicitly assumes glue, and vendor listings in this category commonly specify glue-assisted adhesion at the 80-110 °C bed range. Brims help on large footprints."
+    },
+    {
+      "plate_id": "pei-smooth",
+      "rating": "recommended",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Glass fill reduces warp; plate behaviour unchanged from ABS."
+    },
+    {
+      "plate_id": "pei-satin",
+      "rating": "recommended",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): As ABS with less warp."
+    },
+    {
+      "plate_id": "glass-borosilicate",
+      "rating": "usable",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Not separately documented; filled ABS pulls harder at corners than unfilled."
+    },
+    {
+      "plate_id": "g10-garolite",
+      "rating": "usable",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Glass-filled ABS warps less but pulls harder at corners; not vendor-documented on G10."
+    },
+    {
+      "plate_id": "carbon-fiber-plate",
+      "rating": "usable",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Not separately documented; filled ABS pulls harder at the corners."
+    },
+    {
+      "plate_id": "pp-sheet",
+      "rating": "avoid",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Glass fill reduces warp but does not make the coating hold styrenics."
+    },
+    {
+      "plate_id": "supertack",
+      "rating": "avoid",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): As ABS."
+    },
+    {
+      "plate_id": "pc-plate",
+      "rating": "avoid",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Same thermal exclusion as ABS."
+    },
+    {
+      "plate_id": "pei-patterned",
+      "rating": "avoid",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): As ABS."
     }
   ],
   "emissions": {
     "voc_level": "high",
     "particulate_level": "high",
-    "primary_emissions": ["styrene", "ultrafine particles", "butadiene-derived volatiles", "glass fiber fines (post-processing)"],
+    "primary_emissions": [
+      "styrene",
+      "ultrafine particles",
+      "butadiene-derived volatiles",
+      "glass fiber fines (post-processing)"
+    ],
     "ventilation": "required",
     "notes": "Inherits base ABS's emission profile unchanged — styrene plus very high ultrafine-particle rates, the worst class in this cluster alongside asa-cf and far above the PET/PETG-family entries. Print in a vented enclosure or filter through HEPA plus activated carbon, and never in an occupied unventilated room. Siraya claims 'minimized odour' for its Fibreheart grade specifically; that is a brand claim, not an independently verified or general glass-fiber effect, and should not change how the material is ventilated. Glass fiber dust from sanding or drilling is a separate skin and respiratory irritant."
   },
@@ -124,5 +229,31 @@
     "last_verified": "2026-07-31",
     "confidence": "medium",
     "conflicts": "Tensile strength disagrees between the two primary vendors — Bambu 36±3 MPa, Siraya Fibreheart 44±3 MPa — a spread wide enough that it most likely reflects different glass loadings or test methods rather than noise; the recorded 33-47 MPa band spans both. Bed temperature likewise splits (Bambu 80-100 °C with glue, Siraya 100-110 °C) and softening/HDT splits 99-103 °C (Bambu) against 106 °C (Siraya). Glass-fiber content is genuinely unclear across the category: ~10 % is documented for Fibreheart while 'ABS-GF25' branding implies 25 % without substantiation. Bambu's ABS-GF technical data sheet returned 402 on fetch, so its figures come from cached search results and the store page rather than the PDF itself. AMS status is unusual and brand-specific — Bambu allows its own grade on AMS and AMS lite while third-party fiber-filled filament is generally barred — recorded 'conditional'. HIPS as a support is documented for base ABS and inferred here. Shrinkage is reasoned from the 'minimal warping' marketing claim, not measured."
-  }
+  },
+  "trade_names": [
+    {
+      "manufacturer": "bambu-lab",
+      "product": "ABS-GF"
+    },
+    {
+      "manufacturer": "eryone",
+      "product": "ABS Fiberglass",
+      "notes": "Glass-fibre-filled ABS; loading not published."
+    },
+    {
+      "manufacturer": "qidi-tech",
+      "product": "ABS-GF25",
+      "notes": "25% glass fibre loading stated"
+    },
+    {
+      "manufacturer": "sunlu",
+      "product": "ABS-GF",
+      "notes": "Glass-fiber ABS"
+    },
+    {
+      "manufacturer": "tinmorry",
+      "product": "ABS Reinforced Filament (glass fiber)",
+      "notes": "Glass-fiber ABS"
+    }
+  ]
 }

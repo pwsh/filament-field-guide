@@ -1,7 +1,9 @@
 {
   "id": "abs",
   "name": "ABS (Acrylonitrile Butadiene Styrene)",
-  "aliases": ["ABS"],
+  "aliases": [
+    "ABS"
+  ],
   "status": "researched",
   "base_type": null,
   "variation_kind": null,
@@ -9,15 +11,35 @@
   "chemical_makeup": "Acrylonitrile butadiene styrene — an amorphous terpolymer of acrylonitrile (chemical resistance, rigidity), polybutadiene rubber (impact toughness) and styrene (processability and gloss)",
   "summary": "The classic engineering thermoplastic: tough, impact-resistant, usable near 95-100 °C and uniquely acetone-smoothable. In exchange it is the hardest of the commodity three to print — high shrinkage, real warping and delamination without a heated enclosure, poor UV life, and styrene fumes that demand ventilation.",
   "printing": {
-    "nozzle_temp_c": { "min": 230, "max": 270, "recommended": 255 },
-    "bed_temp_c": { "min": 90, "max": 110, "recommended": 100 },
-    "ambient_temp_c": { "min": 40, "max": 60, "recommended": 50 },
-    "speed_mm_s": { "min": 20, "max": 150, "recommended": 60 },
+    "nozzle_temp_c": {
+      "min": 230,
+      "max": 270,
+      "recommended": 255
+    },
+    "bed_temp_c": {
+      "min": 90,
+      "max": 110,
+      "recommended": 100
+    },
+    "ambient_temp_c": {
+      "min": 40,
+      "max": 60,
+      "recommended": 50
+    },
+    "speed_mm_s": {
+      "min": 20,
+      "max": 150,
+      "recommended": 60
+    },
     "enclosure_recommended": true,
     "heated_chamber_required": false,
     "enclosure_open_for_cooling": false,
     "requires_hardened_nozzle": false,
-    "part_cooling_fan_pct": { "min": 0, "max": 20, "recommended": 0 },
+    "part_cooling_fan_pct": {
+      "min": 0,
+      "max": 20,
+      "recommended": 0
+    },
     "notes": "Print with part cooling essentially off (the BCN3D TDS specifies fan off); active cooling causes warping and interlayer cracking, so use light fan only for bridges and steep overhangs. A heated, draft-free enclosure is effectively mandatory for anything beyond small parts — a passive enclosure suffices for most hobby work, which is why heated_chamber_required is false rather than true. Legacy profiles run 20-60 mm/s; enclosed modern machines push 80-150 mm/s, still slower than PLA/PETG to manage shrinkage. Bed temperature scales with part footprint. Hardened nozzle only for filled ABS grades."
   },
   "feeding": {
@@ -28,9 +50,21 @@
   },
   "drying": {
     "required_before_use": "if-exposed",
-    "temp_c": { "min": 70, "max": 85, "recommended": 80 },
-    "time_hours": { "min": 4, "max": 8, "recommended": 7 },
-    "methods": ["filament dryer", "convection oven", "print directly from a heated drybox"],
+    "temp_c": {
+      "min": 70,
+      "max": 85,
+      "recommended": 80
+    },
+    "time_hours": {
+      "min": 4,
+      "max": 8,
+      "recommended": 7
+    },
+    "methods": [
+      "filament dryer",
+      "convection oven",
+      "print directly from a heated drybox"
+    ],
     "dryness_validation": "No popping/crackling or steam at the nozzle; smooth glossy extrusion free of micro-bubbles; no fine hairs or fuzz on printed walls",
     "notes": "Bambu recommends 80 °C for 8 h. Because ABS keeps absorbing moisture on the shelf, desiccant storage is an ongoing practice rather than a pre-print step; wet ABS bubbles and bonds poorly between layers."
   },
@@ -74,11 +108,19 @@
     "density_g_cm3": 1.05,
     "grams_per_100cm3": 105,
     "cm3_per_100g": 95.2,
-    "shrinkage_pct": { "min": 0.5, "max": 1.5, "recommended": 0.8 },
+    "shrinkage_pct": {
+      "min": 0.5,
+      "max": 1.5,
+      "recommended": 0.8
+    },
     "glass_transition_c": 103,
     "heat_deflection_c": 99,
     "max_service_temp_c": 85,
-    "tensile_strength_mpa": { "min": 30, "max": 45, "recommended": 42 },
+    "tensile_strength_mpa": {
+      "min": 30,
+      "max": 45,
+      "recommended": 42
+    },
     "notes": "Density 1.04-1.06 g/cm³ — the lightest of the commodity three, so a 1 kg spool yields noticeably more part volume. BCN3D TDS: HDT 99 °C, Vicat softening 105 °C, yield 45 MPa, operating limit 85 °C. Highest shrinkage of the three, and larger/thicker parts trend to the top of the band."
   },
   "scores": {
@@ -93,22 +135,92 @@
     "water_tolerance": 5
   },
   "compatibility": {
-    "bonds_with": ["abs", "asa", "pc"],
-    "support_materials": ["hips"],
-    "usable_as_support_for": ["asa"],
+    "bonds_with": [
+      "abs",
+      "abs-fr",
+      "abs-gf",
+      "asa",
+      "asa-cf",
+      "asa-gf",
+      "hips",
+      "pc",
+      "pc-abs",
+      "pc-gf"
+    ],
+    "support_materials": [
+      "asa",
+      "hips"
+    ],
+    "usable_as_support_for": [
+      "abs-gf",
+      "asa"
+    ],
     "notes": "Welds permanently to ASA (same styrenic family, near-identical bonding) and bonds moderately to PC — the basis of commercial PC/ABS blends and a common multi-material engineering pairing. HIPS is the classic breakaway/soluble support for ABS: matching print temperatures and dissolvable in D-limonene. Because ABS welds to ASA rather than releasing from it, ASA-supported-by-ABS is a structural pairing, not a clean-release one. ABS pairs badly with PLA and PETG in either direction — its 100 °C bed and 250 °C nozzle deform them, and the chemistries do not fuse."
   },
   "plate_recommendations": [
     {
+      "plate_id": "pei-smooth",
+      "rating": "recommended",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Good, releasable bond at 100-110 degC. Enclosure and draft control matter far more than the plate for ABS warp."
+    },
+    {
+      "plate_id": "pei-satin",
+      "rating": "recommended",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Good adhesion at standard ABS bed temps; enclosure remains the dominant variable."
+    },
+    {
+      "plate_id": "carbon-fiber-plate",
+      "rating": "recommended",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Vendor engineering profiles cover ABS directly at 100-120 C. Enclosure remains the dominant warp variable."
+    },
+    {
+      "plate_id": "buildtak-polymer",
+      "rating": "recommended",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): One of the few adhesive-backed surfaces that handles ABS bare, within the sheet's 110-125 degC rating. Remove parts promptly at the end of the print while some heat remains, or reh"
+    },
+    {
       "plate_id": "pei-textured",
       "rating": "usable",
       "notes": "Works at 90-110 °C bed but wants an adhesion aid — Prusa's standard advice is a glue-stick layer on the PEI sheet. Community practice also uses an ABS/acetone slurry as a first-layer promoter (unverified against primary sources). Textured PEI plus a brim and an enclosure is the reliable combination for large flat parts."
+    },
+    {
+      "plate_id": "glass-borosilicate",
+      "rating": "usable",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Glass takes ABS bed temps without complaint; the difficulty is warp, not the surface. ABS/acetone slurry is a traditional glass-specific adhesion trick."
+    },
+    {
+      "plate_id": "g10-garolite",
+      "rating": "usable",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Sources conflict: one vendor lists ABS/ASA at 100-120 C on its G10-family plate, another documents G10 only for PLA/PETG/nylon at 55-70 C and does not cover ABS at all. Enclosure m"
+    },
+    {
+      "plate_id": "pp-sheet",
+      "rating": "avoid",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Prusa's product guidance is that materials outside the PP/PLA/PETG/TPU set tend to detach mid-print on this sheet, and directs users to standard PEI. ABS's warping force against a "
+    },
+    {
+      "plate_id": "supertack",
+      "rating": "avoid",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Absent from the supported material list and well above the plate's low-temperature design point. Bambu directs styrenics to the Engineering, High-Temp or Textured PEI plates."
+    },
+    {
+      "plate_id": "pc-plate",
+      "rating": "avoid",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Same bubbling and sticking failure as PETG. Vendor guidance directs ABS to an Engineering or High-Temp plate instead."
+    },
+    {
+      "plate_id": "pei-patterned",
+      "rating": "avoid",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): PEO/PEY-class coatings are typically rated only to about 120 degC and are not intended for high-temp engineering filaments; sustained ABS bed temps degrade the pattern."
     }
   ],
   "emissions": {
     "voc_level": "high",
     "particulate_level": "high",
-    "primary_emissions": ["styrene (~12-113 µg/min)", "ultrafine particles (~2×10¹⁰ to 9×10¹⁰ particles/min)"],
+    "primary_emissions": [
+      "styrene (~12-113 µg/min)",
+      "ultrafine particles (~2×10¹⁰ to 9×10¹⁰ particles/min)"
+    ],
     "ventilation": "required",
     "notes": "The highest-emitting of the three by a wide margin: Azimi et al. (2016) measured UFP rates roughly 100-1000x those of PLA, with styrene as the named VOC of concern. Print in a well-ventilated space; the ideal setup is an enclosure that contains fumes plus external venting or HEPA+carbon filtration. Ventilate the room without blowing a draft across the print itself."
   },
@@ -131,5 +243,312 @@
     "last_verified": "2026-07-31",
     "confidence": "medium",
     "conflicts": "Shrinkage: Prusa-cited ABS figures quote 1-2 % for large parts while property tables cite ~0.5 % — recorded as a 0.5-1.5 % consensus band with 0.8 % typical. HDT: BCN3D measures 99 °C, Polymaker's table spans 100-118 °C across grades — 99 °C recorded for plain ABS. Bed temperature: Prusa defaults ~100 °C, the BCN3D TDS says 90 °C. Heated chamber: sources describe an enclosure as 'effectively required' for large parts, but since a passive enclosure is normally sufficient, heated_chamber_required is set false and enclosure_recommended true. ABS/acetone slurry as an adhesion aid is community practice, unverified against the cited sources."
-  }
+  },
+  "trade_names": [
+    {
+      "manufacturer": "3djake",
+      "product": "ABS"
+    },
+    {
+      "manufacturer": "3dxtech",
+      "product": "3DXTECH ABS",
+      "notes": "Generic ABS."
+    },
+    {
+      "manufacturer": "3dxtech",
+      "product": "Triton3D ABS (Stratasys-compatible)",
+      "notes": "Repackaged/certified 3DXTECH base material on Stratasys-compatible spools."
+    },
+    {
+      "manufacturer": "addnorth",
+      "product": "rABS",
+      "notes": "100% recycled, density 1.03-1.05"
+    },
+    {
+      "manufacturer": "anycubic",
+      "product": "ABS"
+    },
+    {
+      "manufacturer": "atomic-filament",
+      "product": "ABS",
+      "notes": "Standard multi-colour ABS."
+    },
+    {
+      "manufacturer": "azurefilm",
+      "product": "ABS Plus",
+      "notes": "Likely impact-modified ABS; the modification is not confirmed from public sources"
+    },
+    {
+      "manufacturer": "azurefilm",
+      "product": "ABS Prime",
+      "notes": "Standard ABS"
+    },
+    {
+      "manufacturer": "bambu-lab",
+      "product": "ABS"
+    },
+    {
+      "manufacturer": "coex-3d",
+      "product": "ABS / ABS Prime",
+      "notes": "Standard and premium resin/QC tiers of the same base polymer."
+    },
+    {
+      "manufacturer": "creality",
+      "product": "Hyper ABS"
+    },
+    {
+      "manufacturer": "devil-design",
+      "product": "ABS+",
+      "notes": "modified/toughened ABS"
+    },
+    {
+      "manufacturer": "elegoo",
+      "product": "ABS"
+    },
+    {
+      "manufacturer": "eryone",
+      "product": "ABS / ABS+ / ABS High-Speed",
+      "notes": "Plain, impact-modified and flow-optimised grades on one base chemistry."
+    },
+    {
+      "manufacturer": "esun",
+      "product": "ABS+HS",
+      "notes": "High-strength ABS grade"
+    },
+    {
+      "manufacturer": "extrudr",
+      "product": "DuraPro ABS",
+      "notes": "Low-warp ABS; density 1.06 g/cm3, VICAT A 92 C / HDT-B 85 C"
+    },
+    {
+      "manufacturer": "fiberlogy",
+      "product": "Easy ABS",
+      "notes": "Standard ABS; plain 'ABS' is the same chemistry"
+    },
+    {
+      "manufacturer": "filament-pm",
+      "product": "ABS \"NOT DEAD\""
+    },
+    {
+      "manufacturer": "filament-pm",
+      "product": "ABS-T",
+      "notes": "modified/toughened ABS"
+    },
+    {
+      "manufacturer": "filamentive",
+      "product": "ABS (rABS)",
+      "notes": "recycled, 2.85 mm only"
+    },
+    {
+      "manufacturer": "fillamentum",
+      "product": "ABS eXTRAFILL",
+      "notes": "Standard ABS"
+    },
+    {
+      "manufacturer": "flashforge",
+      "product": "ABS"
+    },
+    {
+      "manufacturer": "formfutura",
+      "product": "ABS",
+      "notes": "Standard ABS"
+    },
+    {
+      "manufacturer": "forward-am",
+      "product": "Ultrafuse ABS",
+      "notes": "Generic ABS."
+    },
+    {
+      "manufacturer": "forward-am",
+      "product": "Ultrafuse ABS Fusion+",
+      "notes": "Low-warp, high-layer-adhesion modified ABS - not plain ABS."
+    },
+    {
+      "manufacturer": "fusion-filaments",
+      "product": "ABS MATTE / ABS GLOSS / ABS Hi-Temp Matte",
+      "notes": "Finish-additive and higher-heat-grade variants of the same base ABS."
+    },
+    {
+      "manufacturer": "geeetech",
+      "product": "ABS+",
+      "notes": "Impact-enhanced ABS on the standard chemistry."
+    },
+    {
+      "manufacturer": "hatchbox",
+      "product": "ABS",
+      "notes": "Standard ABS per SDS."
+    },
+    {
+      "manufacturer": "hatchbox",
+      "product": "Glow ABS",
+      "notes": "Phosphorescent pigment in an ABS base; maps to abs only since there is no glow-ABS id."
+    },
+    {
+      "manufacturer": "ic3d",
+      "product": "ABS",
+      "notes": "Standard ABS line."
+    },
+    {
+      "manufacturer": "iemai-3d",
+      "product": "ABS",
+      "notes": "Standard ABS"
+    },
+    {
+      "manufacturer": "inland",
+      "product": "ABS",
+      "notes": "Plain ABS."
+    },
+    {
+      "manufacturer": "jamg-he",
+      "product": "3D Printer ABS Filament",
+      "notes": "Standard ABS"
+    },
+    {
+      "manufacturer": "jayo",
+      "product": "ABS",
+      "notes": "Standard ABS"
+    },
+    {
+      "manufacturer": "keene-village-plastics",
+      "product": "ABS (Battleship Gray, Black, Crimson, Fluorescent Green, Glow-in-the-Dark Blue, Metallic Silver, Proper Purple, Sea Blue, Stellar Black, Stellar Blue, Voron Red)",
+      "notes": "Colourant/effect variation only; the glow colour adds a phosphor to the same ABS base and has no dedicated id."
+    },
+    {
+      "manufacturer": "kexcelled",
+      "product": "ABS (General series)",
+      "notes": "Standard ABS"
+    },
+    {
+      "manufacturer": "kimya",
+      "product": "ABS-EC",
+      "notes": "ABS grade engineered for larger/complex parts."
+    },
+    {
+      "manufacturer": "kimya",
+      "product": "ABS-R",
+      "notes": "Recycled-content impact-modified ABS; $22.65 observed for a black spool at MatterHackers."
+    },
+    {
+      "manufacturer": "kimya",
+      "product": "ABS-S",
+      "notes": "Standard ABS."
+    },
+    {
+      "manufacturer": "kingroon",
+      "product": "ABS"
+    },
+    {
+      "manufacturer": "landu",
+      "product": "ABS / Hyper ABS / Refill Hyper ABS",
+      "notes": "Standard and high-flow ABS"
+    },
+    {
+      "manufacturer": "matterhackers",
+      "product": "MH Build Series ABS",
+      "notes": "Value-tier standard ABS."
+    },
+    {
+      "manufacturer": "matterhackers",
+      "product": "PRO Series ABS",
+      "notes": "Professional tier of the same base ABS."
+    },
+    {
+      "manufacturer": "matterhackers",
+      "product": "ThriftyMake ABS",
+      "notes": "Cost-reduced standard ABS."
+    },
+    {
+      "manufacturer": "overture",
+      "product": "ABS",
+      "notes": "Low-VOC 'specialty ABS resin'. Density 1.15 g/cm3, Vicat 103.4 C, XY tensile 25.1 MPa (low vs typical ABS)."
+    },
+    {
+      "manufacturer": "polymaker",
+      "product": "PolyLite ABS / Polymaker ABS Pro / ABS Max",
+      "notes": "Standard and impact-enhanced ABS"
+    },
+    {
+      "manufacturer": "push-plastic",
+      "product": "ABS / Matte ABS",
+      "notes": "Standard ABS plus a matte-finish variant."
+    },
+    {
+      "manufacturer": "qidi-tech",
+      "product": "ABS Rapido"
+    },
+    {
+      "manufacturer": "qidi-tech",
+      "product": "ABS Rapido Metal",
+      "notes": "Metallic-effect finish; base polymer unchanged"
+    },
+    {
+      "manufacturer": "qidi-tech",
+      "product": "Odorless-ABS Rapido",
+      "notes": "Low-odour variant; base polymer unchanged"
+    },
+    {
+      "manufacturer": "real-filament",
+      "product": "ABS (\"Multi-Purpose Filament\")",
+      "notes": "NEW: identifies the previously unresolved multifunctional durable product. density 1.05, tensile modulus 2280 MPa, Vicat ~97C"
+    },
+    {
+      "manufacturer": "rosa3d",
+      "product": "ABS Medical",
+      "notes": "biocompatible"
+    },
+    {
+      "manufacturer": "rosa3d",
+      "product": "ABS+ Matt",
+      "notes": "matte toughened ABS"
+    },
+    {
+      "manufacturer": "rosa3d",
+      "product": "ABS-STI",
+      "notes": "sold under the OneFIL3D sub-brand"
+    },
+    {
+      "manufacturer": "rosa3d",
+      "product": "ABS-X",
+      "notes": "engineering ABS"
+    },
+    {
+      "manufacturer": "snapmaker",
+      "product": "ABS"
+    },
+    {
+      "manufacturer": "spectrum-filaments",
+      "product": "ABS GP450",
+      "notes": "high-speed ABS"
+    },
+    {
+      "manufacturer": "spectrum-filaments",
+      "product": "ABS Medical",
+      "notes": "biocompatible 30-day, FDA"
+    },
+    {
+      "manufacturer": "spectrum-filaments",
+      "product": "smart ABS",
+      "notes": "easily post-processable"
+    },
+    {
+      "manufacturer": "sunlu",
+      "product": "ABS / Easy ABS",
+      "notes": "'Easy' grade formulated for low warp on open-frame printers"
+    },
+    {
+      "manufacturer": "tinmorry",
+      "product": "ABS-Pro",
+      "notes": "Enhanced ABS"
+    },
+    {
+      "manufacturer": "ultimaker",
+      "product": "UltiMaker ABS",
+      "notes": "Generic ABS."
+    },
+    {
+      "manufacturer": "ultimaker",
+      "product": "UltiMaker ABS-R",
+      "notes": "Recycled/reground ABS, standard ABS chemistry (Method series)."
+    }
+  ]
 }

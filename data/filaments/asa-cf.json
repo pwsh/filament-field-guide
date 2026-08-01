@@ -1,7 +1,13 @@
 {
   "id": "asa-cf",
   "name": "ASA-CF (Carbon-Fiber-Filled ASA)",
-  "aliases": ["ASA CF", "ASA Carbon Fiber", "ASA-CF08", "CarbonX ASA CF15", "Carbon-filled ASA"],
+  "aliases": [
+    "ASA CF",
+    "ASA Carbon Fiber",
+    "ASA-CF08",
+    "CarbonX ASA CF15",
+    "Carbon-filled ASA"
+  ],
   "status": "researched",
   "base_type": "asa",
   "variation_kind": "carbon-fiber-filled",
@@ -9,15 +15,35 @@
   "chemical_makeup": "The same styrenic terpolymer as base ASA — a saturated acrylate-ester rubber phase grafted into a styrene-acrylonitrile matrix — compounded with chopped carbon fiber at roughly 8-15 wt% (Polymaker Fiberon ASA-CF08 is 8 %, 3DXTech CarbonX ASA CF15 is 15 %). The acrylate rubber is what gives the base its UV stability; the fiber adds stiffness and restrains the styrenic shrinkage that makes base ASA warp.",
   "summary": "The outdoor member of the filled set: base ASA's best-in-class UV and weather resistance, with carbon fiber cutting its worst trait — corner lift and warp — and roughly doubling stiffness (Young's modulus 3600-5400 MPa). Deltas vs asa: hardened nozzle mandatory, nozzle up to 250-280 °C, bed 90-110 °C, and layer bonding worse still on a base that was already weak in Z. Deltas vs the other CF grades: far better UV life, moderate heat resistance (HDT ~97-103 °C), and the highest price in this cluster.",
   "printing": {
-    "nozzle_temp_c": { "min": 250, "max": 280, "recommended": 265 },
-    "bed_temp_c": { "min": 90, "max": 110, "recommended": 100 },
-    "ambient_temp_c": { "min": 40, "max": 60, "recommended": 55 },
-    "speed_mm_s": { "min": 30, "max": 150, "recommended": 60 },
+    "nozzle_temp_c": {
+      "min": 250,
+      "max": 280,
+      "recommended": 265
+    },
+    "bed_temp_c": {
+      "min": 90,
+      "max": 110,
+      "recommended": 100
+    },
+    "ambient_temp_c": {
+      "min": 40,
+      "max": 60,
+      "recommended": 55
+    },
+    "speed_mm_s": {
+      "min": 30,
+      "max": 150,
+      "recommended": 60
+    },
     "enclosure_recommended": true,
     "heated_chamber_required": false,
     "enclosure_open_for_cooling": false,
     "requires_hardened_nozzle": true,
-    "part_cooling_fan_pct": { "min": 0, "max": 25, "recommended": 10 },
+    "part_cooling_fan_pct": {
+      "min": 0,
+      "max": 25,
+      "recommended": 10
+    },
     "notes": "Deltas vs base ASA: nozzle window narrowed and shifted up (Fiberon ASA-CF08 260-280 °C, CarbonX ASA CF15 around 250 °C, against base ASA's 240-280 °C starting near 250-255 °C), bed pushed to the top of the base range (Fiberon 90-100 °C, CarbonX 110 °C), a hardened nozzle now mandatory, and the speed ceiling pulled below base ASA's 200-250 mm/s to avoid fiber packing. Part cooling stays essentially off, as for base ASA — cooling splits styrenic layers and the fiber has already weakened the interlayer weld. The enclosure requirement carries over unchanged and Fiberon states it explicitly; a passive enclosure suffices for typical parts, so heated_chamber_required stays false, matching the base entry."
   },
   "feeding": {
@@ -28,9 +54,21 @@
   },
   "drying": {
     "required_before_use": "if-exposed",
-    "temp_c": { "min": 75, "max": 85, "recommended": 80 },
-    "time_hours": { "min": 4, "max": 8, "recommended": 4 },
-    "methods": ["dedicated filament dryer", "convection or blast oven at 80 °C", "drybox with desiccant"],
+    "temp_c": {
+      "min": 75,
+      "max": 85,
+      "recommended": 80
+    },
+    "time_hours": {
+      "min": 4,
+      "max": 8,
+      "recommended": 4
+    },
+    "methods": [
+      "dedicated filament dryer",
+      "convection or blast oven at 80 °C",
+      "drybox with desiccant"
+    ],
     "dryness_validation": "No popping or crackling while extruding and no bubbles or voids in a hand-pulled strand. As with every fiber-filled grade, surface gloss is not a usable indicator — the finish is matte by design — so judge by sound and by voids.",
     "notes": "Both Fiberon and 3DXTech specify 80 °C for 4 h, a shorter schedule than base ASA's 8-12 h at the same temperature. The carbon fiber adds little hygroscopicity of its own, so the delta is mostly vendor practice rather than chemistry; if a spool has sat open for months, base ASA's longer 8 h cycle is the safer choice."
   },
@@ -72,11 +110,19 @@
     "density_g_cm3": 1.11,
     "grams_per_100cm3": 111,
     "cm3_per_100g": 90.1,
-    "shrinkage_pct": { "min": 0.2, "max": 0.5, "recommended": 0.35 },
+    "shrinkage_pct": {
+      "min": 0.2,
+      "max": 0.5,
+      "recommended": 0.35
+    },
     "glass_transition_c": 100,
     "heat_deflection_c": 103,
     "max_service_temp_c": 90,
-    "tensile_strength_mpa": { "min": 40, "max": 50, "recommended": 44 },
+    "tensile_strength_mpa": {
+      "min": 40,
+      "max": 50,
+      "recommended": 44
+    },
     "notes": "Two well-documented grades bracket this entry. Polymaker Fiberon ASA-CF08 (8 % CF): HDT 103 °C at 0.45 MPa, Young's modulus 3612 MPa dry, tensile 43.5 MPa XY and 25.0 MPa Z (Z/XY ≈ 0.57), bending modulus 3265 MPa XY against 1743 MPa Z, Charpy notched impact 5.46 kJ/m² XY. 3DXTech CarbonX ASA CF15 (15 % CF): density 1.11 g/cm³, tensile 48 MPa, tensile modulus 5355 MPa, flexural 78 MPa, softening 97 °C. Density is recorded from the CarbonX figure; an 8 % grade will sit nearer base ASA's 1.07. The mechanical story is stiffness, not strength — tensile is barely above base ASA's 37-47 MPa while modulus roughly doubles against the ~2300 MPa bending modulus CNC Kitchen measured for unfilled ASA. HDT gains only about 10 °C over base ASA's 93 °C. Shrinkage is a reasoned reduction from base ASA's 0.4-0.7 %, reflecting fiber restraint, not a datasheet figure; Tg and max service temp are carried from the base entry."
   },
   "scores": {
@@ -91,8 +137,17 @@
     "water_tolerance": 8
   },
   "compatibility": {
-    "bonds_with": ["asa-cf", "asa", "abs", "abs-gf"],
-    "support_materials": ["hips", "asa"],
+    "bonds_with": [
+      "abs",
+      "abs-gf",
+      "asa",
+      "asa-cf",
+      "asa-gf"
+    ],
+    "support_materials": [
+      "asa",
+      "hips"
+    ],
     "usable_as_support_for": [],
     "notes": "Welds to itself and, through the shared SAN matrix, to base ASA, base ABS and abs-gf — the styrenic family co-prints cleanly and shares one enclosed, hot-bed process environment. HIPS remains the breakaway and limonene-soluble support option inherited from the ABS/ASA family, and same-material breakaway works. PLA and PVA/BVOH supports are unusable: they deform or degrade well below a 250-280 °C nozzle. Not listed as a support for other materials — it welds to its own family rather than releasing from it, and the fiber-roughened interface finishes poorly."
   },
@@ -101,12 +156,40 @@
       "plate_id": "pei-textured",
       "rating": "recommended",
       "notes": "Textured PEI at 90-110 °C, as for base ASA, and still worth backing with a glue stick or adhesion promoter plus a brim — the fiber reduces warp but does not remove the styrenic shrinkage that lifts large footprints. Let the plate cool before removal. No special surface is needed; garolite is a polyamide concern."
+    },
+    {
+      "plate_id": "pei-satin",
+      "rating": "recommended",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): As ASA."
+    },
+    {
+      "plate_id": "pei-smooth",
+      "rating": "usable",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): As ASA, with slightly lower shrinkage."
+    },
+    {
+      "plate_id": "supertack",
+      "rating": "avoid",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): As ASA."
+    },
+    {
+      "plate_id": "pei-patterned",
+      "rating": "avoid",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): As ASA."
     }
   ],
   "emissions": {
     "voc_level": "high",
     "particulate_level": "high",
-    "primary_emissions": ["styrene", "benzaldehyde", "acetophenone", "ethylbenzene", "toluene", "ultrafine particles", "carbon fiber fines (post-processing)"],
+    "primary_emissions": [
+      "styrene",
+      "benzaldehyde",
+      "acetophenone",
+      "ethylbenzene",
+      "toluene",
+      "ultrafine particles",
+      "carbon fiber fines (post-processing)"
+    ],
     "ventilation": "required",
     "notes": "Inherits base ASA's styrene-dominated emission profile in full — the highest-emitting material in this cluster, and far above the PET/PETG-family entries, which release no styrene at all. Printing 10-25 °C hotter than base ASA should if anything raise the rate. Print in an enclosure vented externally or filtered through HEPA plus activated carbon, and do not run it in an occupied unventilated room. Carbon fiber dust adds the usual post-processing caution on top."
   },
@@ -124,5 +207,59 @@
     "last_verified": "2026-07-31",
     "confidence": "medium",
     "conflicts": "Fiber loading differs almost twofold between the two documented grades (Fiberon 8 %, CarbonX 15 %) and the mechanical figures follow it — tensile 43.5 vs 48 MPa, modulus 3612 vs 5355 MPa, HDT/softening 103 vs 97 °C — so the recorded values bracket two products rather than describing one. Density 1.11 g/cm³ comes from the 15 % grade only; the 8 % grade is unpublished and will sit lower, nearer base ASA's 1.07. Nozzle temperature disagrees by 30 °C between the same two brands (250 vs 260-280 °C). Bambu's ASA-CF store and wiki pages returned 402/paywall and could not be fetched, so its AMS status and pricing rest on search snippets and are unverified. Shrinkage, Tg and max service temperature are inherited or reasoned from base ASA rather than measured for the filled grade. UV performance is scored from vendor marketing claims (UV-stable, minimal colour shift) plus base ASA's well-documented chemistry, not from independent weathering tests of a filled grade."
-  }
+  },
+  "trade_names": [
+    {
+      "manufacturer": "3djake",
+      "product": "ASA CF"
+    },
+    {
+      "manufacturer": "3dxtech",
+      "product": "CarbonX ASA+CF",
+      "notes": "ASA + chopped CF."
+    },
+    {
+      "manufacturer": "atomic-filament",
+      "product": "CARBON FIBER Black ASA",
+      "notes": "ASA + carbon fibre."
+    },
+    {
+      "manufacturer": "eryone",
+      "product": "ASA Carbon-Fiber",
+      "notes": "Carbon-fibre-filled ASA."
+    },
+    {
+      "manufacturer": "extrudr",
+      "product": "DuraPro ASA CF",
+      "notes": "ASA + carbon fibre; density 1.14 g/cm3, VICAT A 101 C / HDT-B 96 C"
+    },
+    {
+      "manufacturer": "flashforge",
+      "product": "ASA-CF"
+    },
+    {
+      "manufacturer": "iemai-3d",
+      "product": "CF-ASA",
+      "notes": "Carbon-fiber ASA"
+    },
+    {
+      "manufacturer": "polymaker",
+      "product": "Fiberon ASA-CF08",
+      "notes": "ASA + 8% carbon fiber"
+    },
+    {
+      "manufacturer": "spectrum-filaments",
+      "product": "ASA-X CF10",
+      "notes": "10% carbon fibre"
+    },
+    {
+      "manufacturer": "spectrum-filaments",
+      "product": "The Filament ASA CF"
+    },
+    {
+      "manufacturer": "tinmorry",
+      "product": "ASA Reinforced Filament (carbon fiber)",
+      "notes": "Carbon-fiber ASA"
+    }
+  ]
 }

@@ -1,7 +1,11 @@
 {
   "id": "pc-abs",
   "name": "PC-ABS (Polycarbonate/ABS Blend)",
-  "aliases": ["PC/ABS", "PC ABS", "Polycarbonate-ABS alloy"],
+  "aliases": [
+    "PC/ABS",
+    "PC ABS",
+    "Polycarbonate-ABS alloy"
+  ],
   "status": "researched",
   "base_type": "pc",
   "variation_kind": "blend",
@@ -9,15 +13,34 @@
   "chemical_makeup": "Amorphous alloy of bisphenol-A polycarbonate with acrylonitrile butadiene styrene, typically PC-majority; the exact ratio is proprietary and differs by brand. The PC phase carries heat resistance and stiffness, the ABS phase carries melt flow, processability and lower cost.",
   "summary": "The pragmatic middle of the PC family: ABS content buys back melt flow and cuts the shrinkage stress that makes pure PC delaminate, at the cost of heat resistance and stiffness. Deltas vs pc: nozzle drops to 250-280 °C from 250-310 °C, density 1.1 vs 1.2 g/cm³, tensile 39.9 vs ~53 MPa, HDT around 100 °C rather than 114 °C, and moisture uptake is lower so drying is 80 °C/3 h instead of PC's mandatory 75 °C/6 h. Deltas vs abs: markedly higher heat resistance and strength, higher temperatures throughout, and roughly double the price. Unfilled, so no hardened nozzle.",
   "printing": {
-    "nozzle_temp_c": { "min": 250, "max": 280, "recommended": 260 },
-    "bed_temp_c": { "min": 90, "max": 110, "recommended": 100 },
-    "ambient_temp_c": { "min": 90, "max": 100 },
-    "speed_mm_s": { "min": 30, "max": 55, "recommended": 45 },
+    "nozzle_temp_c": {
+      "min": 250,
+      "max": 280,
+      "recommended": 260
+    },
+    "bed_temp_c": {
+      "min": 90,
+      "max": 110,
+      "recommended": 100
+    },
+    "ambient_temp_c": {
+      "min": 90,
+      "max": 100
+    },
+    "speed_mm_s": {
+      "min": 30,
+      "max": 55,
+      "recommended": 45
+    },
     "enclosure_recommended": true,
     "heated_chamber_required": false,
     "enclosure_open_for_cooling": false,
     "requires_hardened_nozzle": false,
-    "part_cooling_fan_pct": { "min": 0, "max": 15, "recommended": 5 },
+    "part_cooling_fan_pct": {
+      "min": 0,
+      "max": 15,
+      "recommended": 5
+    },
     "notes": "Nozzle sources split by brand: Polymaker 250-270 °C (recommending 260 °C), Fillamentum 260-280 °C — 260 °C is the safe start. Bed 90-110 °C with a 5-10 mm brim; Magigoo PC or 3DLac help on stubborn footprints. Keep part cooling near zero as with base PC — cooling is what splits PC-family layers. The ambient range recorded is Polymaker's 90-100 °C chamber specification for best results, which is an industrial figure; Fillamentum calls a heated enclosure merely 'recommended', so heated_chamber_required is false and a passive enclosure is what most desktop users actually run (the practical ambient of such a setup is nearer 50-60 °C, unverified). Speed 30-55 mm/s, similar to base PC and well below ABS."
   },
   "feeding": {
@@ -28,9 +51,21 @@
   },
   "drying": {
     "required_before_use": "if-exposed",
-    "temp_c": { "min": 75, "max": 85, "recommended": 80 },
-    "time_hours": { "min": 3, "max": 6, "recommended": 3 },
-    "methods": ["filament dryer", "convection oven", "print directly from a heated drybox"],
+    "temp_c": {
+      "min": 75,
+      "max": 85,
+      "recommended": 80
+    },
+    "time_hours": {
+      "min": 3,
+      "max": 6,
+      "recommended": 3
+    },
+    "methods": [
+      "filament dryer",
+      "convection oven",
+      "print directly from a heated drybox"
+    ],
     "dryness_validation": "No popping or steam at the nozzle; glossy, bubble-free extrudate; no stringing on a retraction test; a test coupon that bends rather than snapping brittly.",
     "notes": "Fillamentum specifies 80 °C for 3 h. The delta versus base PC is the requirement level, not the temperature: PC is recorded 'always' because it is extremely hygroscopic, whereas the ABS content of the blend lowers uptake enough that drying is an if-exposed step — consistent with the base PC entry's own note that PC blends absorb less moisture. Wet material still shows the classic PC failure set: brittleness, poor layer adhesion and stringing."
   },
@@ -71,7 +106,9 @@
     "grams_per_100cm3": 110,
     "cm3_per_100g": 90.9,
     "heat_deflection_c": 100,
-    "tensile_strength_mpa": { "recommended": 39.9 },
+    "tensile_strength_mpa": {
+      "recommended": 39.9
+    },
     "notes": "Density 1.1 g/cm³ (Polymaker) sits between base ABS's 1.05 and base PC's 1.2, so a spool yields more part volume than PC. Tensile 39.9 MPa and flexural 66.3 MPa (Polymaker) — below base PC's ~53 MPa XY but with better flexural performance than plain ABS. HDT is the weak spot in the data: no fetched datasheet publishes one, and the 100 °C recorded here is the low end of general PC-ABS engineering literature (HDT ~100-110 °C at 0.45 MPa, Tg ~110-130 °C) rather than a measured value for any specific filament (unverified). Glass transition and shrinkage are not recorded for the same reason."
   },
   "scores": {
@@ -86,9 +123,22 @@
     "water_tolerance": 6
   },
   "compatibility": {
-    "bonds_with": ["pc-abs", "pc", "abs", "asa"],
-    "support_materials": ["hips", "bvoh", "pc-abs"],
-    "usable_as_support_for": [],
+    "bonds_with": [
+      "abs",
+      "asa",
+      "pc",
+      "pc-abs",
+      "pc-gf",
+      "pc-pbt"
+    ],
+    "support_materials": [
+      "bvoh",
+      "hips",
+      "pc-abs"
+    ],
+    "usable_as_support_for": [
+      "pc-abs"
+    ],
     "notes": "The blend is the commercial proof of PC-ABS affinity, so it welds to both parents: base pc and base abs, with asa a weaker styrenic second. HIPS is the natural breakaway support (it prints in the same bed/chamber window and matches the ABS phase), and BVOH survives where HIPS is too fusible; PVA degrades far below 260 °C and is unusable. Bonding to pc-pbt is plausible within the PC family but stated by no source (unverified). PLA and PETG supports melt at these bed temperatures."
   },
   "plate_recommendations": [
@@ -96,12 +146,66 @@
       "plate_id": "pei-textured",
       "rating": "recommended",
       "notes": "Textured PEI at 90-110 °C with a 5-10 mm brim is the standard pairing, matching base PC. Adhesion promoters (Magigoo PC, 3DLac) are worth using on large footprints. Unlike base PC, the vendor guidance here does not warn against smooth PEI, but the same tear risk applies at these bed temperatures — use a separator on smooth sheets."
+    },
+    {
+      "plate_id": "pei-smooth",
+      "rating": "usable",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Less aggressive than straight PC but still capable of pulling the film."
+    },
+    {
+      "plate_id": "glass-borosilicate",
+      "rating": "usable",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Not separately documented; sits between ABS and PC in behavior."
+    },
+    {
+      "plate_id": "g10-garolite",
+      "rating": "usable",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Blend sits between ABS and PC in warp force; not separately documented on G10."
+    },
+    {
+      "plate_id": "pei-satin",
+      "rating": "usable",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): As PC blend guidance."
+    },
+    {
+      "plate_id": "carbon-fiber-plate",
+      "rating": "usable",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Not separately documented; sits between ABS and PC."
+    },
+    {
+      "plate_id": "buildtak-polymer",
+      "rating": "usable",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Gentler than straight PC and slightly further from the temperature ceiling, but the same fusion caution applies."
+    },
+    {
+      "plate_id": "pp-sheet",
+      "rating": "avoid",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): As PC."
+    },
+    {
+      "plate_id": "supertack",
+      "rating": "avoid",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): As PC."
+    },
+    {
+      "plate_id": "pc-plate",
+      "rating": "avoid",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Same thermal exclusion and same substrate-welding concern as PC."
+    },
+    {
+      "plate_id": "pei-patterned",
+      "rating": "avoid",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): As PC."
     }
   ],
   "emissions": {
     "voc_level": "high",
     "particulate_level": "high",
-    "primary_emissions": ["styrene (from the ABS phase)", "ultrafine particles", "unspecified high-temperature PC decomposition VOCs"],
+    "primary_emissions": [
+      "styrene (from the ABS phase)",
+      "ultrafine particles",
+      "unspecified high-temperature PC decomposition VOCs"
+    ],
     "ventilation": "required",
     "notes": "Worse than either parent on the emissions axis: the ABS phase contributes styrene, which base PC does not emit, and the 250-280 °C nozzle drives ultrafine-particle output above what plain ABS produces at 230-255 °C. Treat it as base ABS's 'required' ventilation rather than base PC's 'recommended'. Vent externally or filter with HEPA plus carbon, and let a hot enclosure clear before opening the door. No emissions study covers this blend specifically (unverified) — the classification is the union of the two parents' profiles."
   },
@@ -119,5 +223,61 @@
     "last_verified": "2026-07-31",
     "confidence": "medium",
     "conflicts": "Chamber requirement is the sharpest disagreement: Polymaker specifies a 90-100 °C chamber for best results while Fillamentum calls a heated enclosure merely 'recommended' — recorded as enclosure_recommended true / heated_chamber_required false to stay consistent with the base pc entry, with Polymaker's figure preserved in ambient_temp_c. Nozzle splits 250-270 °C (Polymaker) against 260-280 °C (Fillamentum), bed 90-105 °C against 90-110 °C. No fetched datasheet publishes HDT or Tg, so heat_deflection_c 100 comes from general PC-ABS literature and is brand-agnostic (unverified); expect real grades to span 100-110 °C. Tensile is a single Polymaker figure with no cross-brand check. Scores were recalibrated against this catalog's fixed anchors rather than the raw research figures: the research proposed ease 6 and warp 6 on the assumption ABS scores about 5 and 8 respectively, but this catalog anchors abs at ease 4 / warp 8 and pc at ease 3 / warp 8, so pc-abs is recorded at ease 4 and warp 7 — between the parents on the catalog's own scale. Temperature tolerance 7 likewise reflects an HDT near base ABS's 99 °C rather than the marketing position midway to PC. Bambu's wiki page was not fully fetchable and is cited for context only. Price is a single retailer data point."
-  }
+  },
+  "trade_names": [
+    {
+      "manufacturer": "azurefilm",
+      "product": "PC-ABS",
+      "notes": "Polycarbonate/ABS alloy"
+    },
+    {
+      "manufacturer": "eryone",
+      "product": "ABS-PC Alloy",
+      "notes": "Genuine ABS/PC polymer blend sold as its own line - maps to the blend id, not to abs or pc."
+    },
+    {
+      "manufacturer": "filament-pm",
+      "product": "PC/ABS"
+    },
+    {
+      "manufacturer": "fillamentum",
+      "product": "PC/ABS",
+      "notes": "Polycarbonate/ABS alloy - previously mis-mapped to pc in this catalog"
+    },
+    {
+      "manufacturer": "forward-am",
+      "product": "Ultrafuse PC/ABS FR",
+      "notes": "PC/ABS blend with a flame-retardant package; the FR aspect is not captured by pc-abs."
+    },
+    {
+      "manufacturer": "polymaker",
+      "product": "Polymaker PC-ABS",
+      "notes": "PC/ABS alloy"
+    },
+    {
+      "manufacturer": "push-plastic",
+      "product": "PC/ABS",
+      "notes": "Bayblend-class PC/ABS blend, distinct from plain ABS or plain PC."
+    },
+    {
+      "manufacturer": "qidi-tech",
+      "product": "PC/ABS-FR",
+      "notes": "Base chemistry is a PC/ABS alloy; the flame-retardant package has no dedicated id (catalog has abs-fr only)"
+    },
+    {
+      "manufacturer": "spectrum-filaments",
+      "product": "PC/ABS FR V0",
+      "notes": "SPEC DELTA: UL94 V0 flame-retardant grade of the blend"
+    },
+    {
+      "manufacturer": "sunlu",
+      "product": "PC-ABS",
+      "notes": "PC/ABS alloy"
+    },
+    {
+      "manufacturer": "ultimaker",
+      "product": "UltiMaker PC-ABS",
+      "notes": "Polycarbonate/ABS blend (Method series)."
+    }
+  ]
 }

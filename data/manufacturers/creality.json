@@ -4,8 +4,19 @@
   "status": "researched",
   "summary": "Founded 2014 in Shenzhen and one of the largest consumer FDM hardware makers in the world (Ender, CR, K-series, Sermoon, HALOT resin). Unlike most printer brands, Creality extrudes its own filament in-house at scale and also acts as the OEM behind the Soleyin filament label. Catalog spans budget commodity PLA through Hyper high-speed lines and filled specialty variants.",
   "headquarters_country": "China",
-  "manufacturing_countries": ["China"],
-  "brands": ["Creality", "Ender", "CR-Series", "K-Series", "Sermoon", "HALOT", "Creality Cloud", "Soleyin"],
+  "manufacturing_countries": [
+    "China"
+  ],
+  "brands": [
+    "Creality",
+    "Ender",
+    "CR-Series",
+    "K-Series",
+    "Sermoon",
+    "HALOT",
+    "Creality Cloud",
+    "Soleyin"
+  ],
   "oem_relationships": [
     {
       "company": "Soleyin",
@@ -29,10 +40,104 @@
     }
   },
   "product_lines": [
-    { "name": "Standard", "filament_ids": ["pla", "petg", "abs", "asa", "tpu"], "notes": "Commodity lines priced around $15-20/kg for PLA" },
-    { "name": "Hyper Series", "filament_ids": ["pla", "petg", "abs"], "notes": "High-speed formulations tuned for Creality's K-series and other fast printers" },
-    { "name": "CR-Silk PLA", "filament_ids": ["pla"], "notes": "Silk/lustre PLA line" },
-    { "name": "Specialty / filled", "filament_ids": ["pla", "pla-cf", "pva"], "notes": "Wood-filled and carbon-fiber-filled variants plus PVA support; exact SKU list unverified" }
+    {
+      "name": "Ender PLA",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Standard commodity PLA, roughly $15-20/kg"
+    },
+    {
+      "name": "Ender Fast PLA",
+      "filament_ids": [
+        "pla-hf"
+      ],
+      "notes": "High-flow/high-speed PLA formulation"
+    },
+    {
+      "name": "Hyper PLA / Hyper PLA RFID",
+      "filament_ids": [
+        "pla-hf"
+      ],
+      "notes": "Creality \"Hyper\" high-speed PLA tuned for 500+ mm/s K-series printers; RFID-tagged spool variant is the same resin"
+    },
+    {
+      "name": "Hyper PLA Stardust RFID",
+      "filament_ids": [
+        "pla-hf"
+      ],
+      "notes": "Hyper high-speed PLA base with glitter/sparkle particulate; no dedicated glitter-PLA id in catalog"
+    },
+    {
+      "name": "Hyper PLA CF",
+      "filament_ids": [
+        "pla-cf"
+      ],
+      "notes": "High-speed PLA + carbon fibre"
+    },
+    {
+      "name": "Hyper Rainbow PLA",
+      "filament_ids": [
+        "pla-gradient"
+      ],
+      "notes": "Multicolour/gradient PLA on the high-speed base; colour-transition process, no chemistry change"
+    },
+    {
+      "name": "CR-Silk PLA",
+      "filament_ids": [
+        "pla-silk"
+      ],
+      "notes": "Silk/lustre gloss-additive PLA"
+    },
+    {
+      "name": "Soleyin Ultra PLA",
+      "filament_ids": [
+        "pla-hf"
+      ],
+      "notes": "Creality-manufactured Soleyin sub-brand PLA rated 30-600 mm/s; a high-speed formulation, not a chemistry departure"
+    },
+    {
+      "name": "Hyper PETG",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "High-flow PETG; process delta only, no petg-hf id in catalog"
+    },
+    {
+      "name": "Hyper ABS",
+      "filament_ids": [
+        "abs"
+      ],
+      "notes": "High-speed ABS formulation"
+    },
+    {
+      "name": "HP ASA",
+      "filament_ids": [
+        "asa"
+      ],
+      "notes": "High-performance/high-speed weatherable ASA"
+    },
+    {
+      "name": "Hyper PC",
+      "filament_ids": [
+        "pc"
+      ],
+      "notes": "High-speed unfilled polycarbonate"
+    },
+    {
+      "name": "HP-TPU",
+      "filament_ids": [
+        "tpu"
+      ],
+      "notes": "TPU elastomer; Shore durometer not disclosed on the collection page, so mapped to the generic tpu entry rather than a graded id"
+    },
+    {
+      "name": "CR-Wood",
+      "filament_ids": [
+        "pla-wood"
+      ],
+      "notes": "Wood-fibre-filled PLA"
+    }
   ],
   "makes_plates": true,
   "plate_ids": [],
@@ -43,7 +148,10 @@
       "https://en.wikipedia.org/wiki/Creality",
       "https://store.creality.com/about",
       "https://www.creality.com/products/creality-filament-resin",
-      "research/verified-oem-relationships.md"
+      "research/verified-oem-relationships.md",
+      "https://store.creality.com/collections/filament",
+      "https://store.creality.com/collections/materials",
+      "https://3dprinting.com/news/creality-unveils-soleyin-filament-brand-for-faster-and-eco-friendly-3d-printing/"
     ],
     "last_verified": "2026-07-31",
     "confidence": "medium",

@@ -1,7 +1,12 @@
 {
   "id": "tpu",
   "name": "TPU (Thermoplastic Polyurethane)",
-  "aliases": ["TPU", "Thermoplastic Polyurethane", "Flexible filament", "TPU 95A"],
+  "aliases": [
+    "TPU",
+    "Thermoplastic Polyurethane",
+    "Flexible filament",
+    "TPU 95A"
+  ],
   "status": "researched",
   "base_type": null,
   "variation_kind": null,
@@ -9,15 +14,35 @@
   "chemical_makeup": "Thermoplastic polyurethane — a block copolymer alternating rigid hard segments (diisocyanate plus a short chain extender) with flexible soft segments (polyester or polyether polyol). Ether-based grades resist hydrolysis better; ester-based grades resist oil and abrasion better. Filament grades cluster at Shore 85A-95A",
   "summary": "The default flexible filament: a rubbery block copolymer that prints on any direct-drive machine at room temperature with essentially no warp, and absorbs impact and vibration that rigid filaments transmit. The difficulties are all in feeding and tuning — it buckles in Bowden paths, needs slow speeds and retraction work, drinks moisture, and is markedly weaker in Z than XY.",
   "printing": {
-    "nozzle_temp_c": { "min": 210, "max": 250, "recommended": 230 },
-    "bed_temp_c": { "min": 20, "max": 60, "recommended": 45 },
-    "ambient_temp_c": { "min": 18, "max": 30, "recommended": 22 },
-    "speed_mm_s": { "min": 10, "max": 80, "recommended": 30 },
+    "nozzle_temp_c": {
+      "min": 210,
+      "max": 250,
+      "recommended": 230
+    },
+    "bed_temp_c": {
+      "min": 20,
+      "max": 60,
+      "recommended": 45
+    },
+    "ambient_temp_c": {
+      "min": 18,
+      "max": 30,
+      "recommended": 22
+    },
+    "speed_mm_s": {
+      "min": 10,
+      "max": 80,
+      "recommended": 30
+    },
     "enclosure_recommended": false,
     "heated_chamber_required": false,
     "enclosure_open_for_cooling": true,
     "requires_hardened_nozzle": false,
-    "part_cooling_fan_pct": { "min": 0, "max": 50, "recommended": 30 },
+    "part_cooling_fan_pct": {
+      "min": 0,
+      "max": 50,
+      "recommended": 30
+    },
     "notes": "Brand windows: Ultrafuse TPU 95A 210-230 °C with a 40 °C bed, NinjaTek Cheetah 225-250 °C at room temperature to 50 °C with glue recommended, Polymaker 210-250 °C (start 230) at 40-60 °C. Direct drive with a constrained filament path is effectively required; Bowden setups buckle the filament and need 10-25 mm/s. On tuned direct-drive/CoreXY machines 25-80 mm/s is realistic (NinjaTek: perimeters 25-45, infill 50-80); 'high-flow' TPU marketing claims of 150-250 mm/s are unverified. No enclosure or chamber needed."
   },
   "feeding": {
@@ -28,9 +53,22 @@
   },
   "drying": {
     "required_before_use": "always",
-    "temp_c": { "min": 65, "max": 80, "recommended": 70 },
-    "time_hours": { "min": 5, "max": 24, "recommended": 8 },
-    "methods": ["dedicated filament dryer", "hot-air or vacuum oven at 70 °C", "heated-bed method at 80-90 °C for 12 h", "print directly from a drybox with desiccant"],
+    "temp_c": {
+      "min": 65,
+      "max": 80,
+      "recommended": 70
+    },
+    "time_hours": {
+      "min": 5,
+      "max": 24,
+      "recommended": 8
+    },
+    "methods": [
+      "dedicated filament dryer",
+      "hot-air or vacuum oven at 70 °C",
+      "heated-bed method at 80-90 °C for 12 h",
+      "print directly from a drybox with desiccant"
+    ],
     "dryness_validation": "No popping or crackling at the nozzle; no foamy or bubbly surface on an extruded strand; smooth consistent extrusion without 'worming' or surging; no rise in stringing on a retraction test",
     "notes": "Ultrafuse specifies 70 °C for at least 5 h in a hot-air or vacuum oven; Bambu's wiki gives 65-75 °C for 8 h (oven) or 80-90 °C for 12 h (heated bed); some sources cite 24 h for softer grades. Treat drying as routine rather than occasional — softer Shore A grades in particular can re-absorb enough moisture to print badly within hours of open-air exposure, so 'always' is recorded even though hard 95A grades sometimes tolerate a skipped cycle."
   },
@@ -76,7 +114,11 @@
     "cm3_per_100g": 82.0,
     "glass_transition_c": -25,
     "max_service_temp_c": 70,
-    "tensile_strength_mpa": { "min": 6, "max": 44, "recommended": 30 },
+    "tensile_strength_mpa": {
+      "min": 6,
+      "max": 44,
+      "recommended": 30
+    },
     "notes": "Density spans 1.15 (Ultrafuse, 1149 kg/m³) to 1.24 (Polymaker wiki, 95A) with Ultimaker at 1.22 — 1.22 recorded. Tg is far below room temperature at about -25 °C (Ultrafuse), with a melting point near 144 °C; HDT is rarely published for elastomers and is almost certainly well under 50 °C, so it is omitted rather than guessed. Max service temperature of roughly 60-80 °C is an unverified estimate. The tensile range is dominated by print orientation, not grade: Ultimaker measured 23.7±2.1 MPa XY, 37.9±1.6 MPa YZ and only 6.4±0.5 MPa in Z; Ultrafuse reports 44.2 MPa XY and Polymaker 35 MPa. Shrinkage is very low to near zero but no source publishes a figure, so the field is omitted."
   },
   "scores": {
@@ -91,22 +133,94 @@
     "water_tolerance": 6
   },
   "compatibility": {
-    "bonds_with": ["tpu", "petg", "pla"],
-    "support_materials": ["pla"],
+    "bonds_with": [
+      "bvoh",
+      "petg",
+      "pla",
+      "tpu",
+      "tpu-60a",
+      "tpu-60d",
+      "tpu-68d",
+      "tpu-85a",
+      "tpu-90a",
+      "tpu-95a",
+      "tpu-gf"
+    ],
+    "support_materials": [
+      "bvoh",
+      "pla",
+      "pla-gradient",
+      "pla-hf",
+      "pla-plus"
+    ],
     "usable_as_support_for": [],
     "notes": "Joints to PLA and PETG rely mainly on mechanical interlocking rather than a chemical weld — design dovetails or keyed features, print the rigid material first, then TPU on top at a reduced 20-30 mm/s. The PETG pairing is the more reliable of the two but is still weaker than a same-family weld. Does not bond usefully to ABS, ASA, PC or PA. PLA is the practical breakaway support because it releases cleanly; PVA and HIPS are not documented as reliable supports or interfaces for TPU (temperature and adhesion mismatch, unverified). TPU is not used as a support material for anything."
   },
   "plate_recommendations": [
     {
+      "plate_id": "pp-sheet",
+      "rating": "recommended",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Explicitly listed compatible by Prusa, which is unusual — most surfaces need a glue-stick barrier for flexibles. The PP coating's low surface energy is what makes soft TPU release "
+    },
+    {
+      "plate_id": "g10-garolite",
+      "rating": "recommended",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Standout strength versus PEI: G10 grips TPU at room/ambient temperature and does not fuse to it, so no heat and no release agent are needed."
+    },
+    {
+      "plate_id": "carbon-fiber-plate",
+      "rating": "recommended",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Low fusing risk versus PEI, which is a main selling point. Bed-temp guidance varies widely by vendor (one lists ~40 C, another up to 80 C in an engineering profile) — start low."
+    },
+    {
       "plate_id": "pei-textured",
       "rating": "usable",
       "notes": "Powder-coated textured PEI works well at room temperature to 60 °C bed and per Prusa generally needs no separator. The failure mode is over-adhesion rather than lifting: soft grades can grip hard enough that removal tears the part, so a glue stick is often applied as a release layer rather than an adhesion aid. Very soft flex grades on smooth or satin sheets do need a separator (glue stick or Kapton)."
+    },
+    {
+      "plate_id": "pei-smooth",
+      "rating": "usable",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): TPU fuses aggressively to smooth PEI and can tear the surface on removal. Prefer a textured plate; if you must use smooth, lay down a full glue-stick separator."
+    },
+    {
+      "plate_id": "glass-borosilicate",
+      "rating": "usable",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Glass does not fuse with TPU the way hot PEI can, but bare glass grip is marginal — glue stick both adds grip and keeps release predictable. Bed temp for glass specifically is unve"
+    },
+    {
+      "plate_id": "pei-satin",
+      "rating": "usable",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Prusa specifically calls for a glue stick when printing TPU or TPE on the satin sheet — both as an adhesion aid and to protect the coating."
+    },
+    {
+      "plate_id": "pei-patterned",
+      "rating": "usable",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Several PEO/PEY vendors list TPU as compatible, but reported adhesion is variable and some PEO variants are noted as not self-releasing after cooling."
+    },
+    {
+      "plate_id": "supertack",
+      "rating": "avoid",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): The one explicit prohibition in Bambu's documentation: TPU will damage the build plate. The tacky coating bonds to soft elastomer and tears when the part is pulled."
+    },
+    {
+      "plate_id": "pc-plate",
+      "rating": "avoid",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Explicitly called out as damaging to the Cool Plate SuperTack and not recommended on the class. TPU's low bed temperature is not the problem — the tacky/smooth low-temperature surf"
+    },
+    {
+      "plate_id": "buildtak-polymer",
+      "rating": "avoid",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): The vendor states flexibles typically fuse with the surface on large parts. Small flexible parts are more manageable but the threshold is not documented — treat anything with a sub"
     }
   ],
   "emissions": {
     "voc_level": "low",
     "particulate_level": "low",
-    "primary_emissions": ["ultrafine particles", "isocyanate residues (unverified)", "urethane/plasticizer decomposition byproducts (unverified)"],
+    "primary_emissions": [
+      "ultrafine particles",
+      "isocyanate residues (unverified)",
+      "urethane/plasticizer decomposition byproducts (unverified)"
+    ],
     "ventilation": "recommended",
     "notes": "Not a styrenic, so TPU avoids the styrene that dominates ABS/ASA emissions and is generally regarded as a lower VOC and UFP emitter. No quantitative UFP or speciated VOC study for TPU was located in this research, and urethane chemistry can in principle release isocyanate residues at print temperature, so ventilate as a general precaution — less critical than for ASA/ABS but not dismissible."
   },
@@ -132,5 +246,152 @@
     "last_verified": "2026-07-31",
     "confidence": "medium",
     "conflicts": "Tensile strength: 6.4 MPa (Ultimaker Z) to 44.2 MPa (Ultrafuse XY) — the spread is mostly orientation, but grade and hardness differences add to it, so no single figure is meaningful without stating axis. Density: Ultrafuse 1.15, Ultimaker 1.22, Polymaker 1.24. Part cooling: Polymaker recommends 20-50% fan while other guides recommend the fan off for maximum layer adhesion. Drying time: Ultrafuse 5 h, Bambu 8-12 h, some community sources 24 h for soft grades. Bonding: this entry's sources describe PLA/PETG joints as mechanical interlock only, while the PETG entry cites sources reporting a genuine if weak TPU-PETG weld — unresolved. HDT, shrinkage %, max service temperature and the emissions profile are all unverified; no speciated emissions study for TPU was found."
-  }
+  },
+  "trade_names": [
+    {
+      "manufacturer": "3dxtech",
+      "product": "3DXTECH TPU",
+      "notes": "Shore grade not disclosed on the product page, so base tpu rather than a graded id."
+    },
+    {
+      "manufacturer": "amolen",
+      "product": "TPU (Basic/Glow/Rainbow/Transparent)",
+      "notes": "Shore hardness not published per variant, so no Shore-grade id asserted."
+    },
+    {
+      "manufacturer": "azurefilm",
+      "product": "Flexible filaments (TPU)",
+      "notes": "Shore hardness not published on accessible pages"
+    },
+    {
+      "manufacturer": "colorfabb",
+      "product": "varioShore TPU",
+      "notes": "Nominal Shore 92A unfoamed but deliberately variable as it foams, so no fixed-durometer grade id fits; density 1.2 g/cm3 unfoamed, tensile 24 MPa at 100% flow / 12 MPa at 70%"
+    },
+    {
+      "manufacturer": "creality",
+      "product": "HP-TPU",
+      "notes": "Shore durometer not disclosed - mapped to generic tpu rather than a graded id (not tpu-95a)"
+    },
+    {
+      "manufacturer": "das-filament",
+      "product": "TPU",
+      "notes": "UV-stable flexible TPU; Shore hardness not published, so no grade id can be assigned"
+    },
+    {
+      "manufacturer": "devil-design",
+      "product": "TPU",
+      "notes": "Shore 55D (ISO 868), a hard TPU roughly equal to ~98A; falls between tpu-95a and tpu-60d so the generic id is used. density 1.23, oil/grease resistant, not Bowden-friendly"
+    },
+    {
+      "manufacturer": "eryone",
+      "product": "TPU / TPU Rainbow / TPU High-Speed",
+      "notes": "Shore hardness not published for these variants, so no Shore-grade id asserted."
+    },
+    {
+      "manufacturer": "extrudr",
+      "product": "FLEX MEDIUM",
+      "notes": "Shore 98A - above the base entry's 85A-95A band, no tpu-98a grade exists; density 1.19 g/cm3, elongation to 470%"
+    },
+    {
+      "manufacturer": "fiberlogy",
+      "product": "FiberFlex 30D",
+      "notes": "Shore 30D (~80A), below the base entry's 85A-95A band; Fiberlogy describes it as 'similar to TPU or TPE of comparable Shore hardness', so the elastomer class is TPU-or-TPE"
+    },
+    {
+      "manufacturer": "fiberlogy",
+      "product": "FiberFlex 40D",
+      "notes": "Shore 40D (~90A), same elastomer family as 30D but harder"
+    },
+    {
+      "manufacturer": "fillamentum",
+      "product": "Flexfill TPU 92A",
+      "notes": "Shore 92A falls between the tpu-90a and tpu-95a grades, inside the base 85A-95A band"
+    },
+    {
+      "manufacturer": "fillamentum",
+      "product": "Flexfill TPU 98A",
+      "notes": "Shore 98A sits above the base entry's 85A-95A band; no tpu-98a grade exists"
+    },
+    {
+      "manufacturer": "formfutura",
+      "product": "TPU",
+      "notes": "Standard TPU; grade hardnesses not enumerated in public listings"
+    },
+    {
+      "manufacturer": "forward-am",
+      "product": "Ultrafuse TPU 64D",
+      "notes": "Shore 64D rigid-flex; sits between tpu-60d and tpu-68d, so base tpu only."
+    },
+    {
+      "manufacturer": "geeetech",
+      "product": "TPU",
+      "notes": "Generic product name."
+    },
+    {
+      "manufacturer": "hatchbox",
+      "product": "TPU",
+      "notes": "Generic product name; SDS confirms TPU."
+    },
+    {
+      "manufacturer": "iemai-3d",
+      "product": "TPU",
+      "notes": "Shore grade not stated in the catalog listing"
+    },
+    {
+      "manufacturer": "inland",
+      "product": "TPU",
+      "notes": "Shore hardness not published, so no Shore-grade id asserted."
+    },
+    {
+      "manufacturer": "jamg-he",
+      "product": "JAMG HE TPU Filament",
+      "notes": "Shore grade not stated in the catalog listing"
+    },
+    {
+      "manufacturer": "jayo",
+      "product": "TPU",
+      "notes": "Shore hardness not stated on the collection listing"
+    },
+    {
+      "manufacturer": "jayo",
+      "product": "TPU Silk (98A)",
+      "notes": "Shore 98A — harder than tpu-95a and above the base 85A-95A band, so no shore-specific id fits"
+    },
+    {
+      "manufacturer": "matterhackers",
+      "product": "MH Build Series TPU",
+      "notes": "True TPU per MatterHackers' own spec sheet ('Thermoplastic Polyurethene'); shore hardness unpublished."
+    },
+    {
+      "manufacturer": "ninjatek",
+      "product": "Armadillo",
+      "notes": "Rigid TPU Shore 75D, harder than the catalog's hardest graded entry (tpu-68d), so base tpu only."
+    },
+    {
+      "manufacturer": "ninjatek",
+      "product": "Chinchilla",
+      "notes": "NinjaTek's softest material, ~Shore 75A per third-party listings, skin-contact safe. Falls between tpu-60a and tpu-85a, so base tpu only."
+    },
+    {
+      "manufacturer": "proto-pasta",
+      "product": "Clear Flexible TPU / Recycled Black Flexible TPU / Clear Rigid TPU",
+      "notes": "True TPU; shore hardness unpublished so no durometer id. Rigid TPU is a higher-durometer grade of the same chemistry."
+    },
+    {
+      "manufacturer": "push-plastic",
+      "product": "TPU",
+      "notes": "True TPU; shore hardness not confirmed on the pages reviewed."
+    },
+    {
+      "manufacturer": "sunlu",
+      "product": "TPU Silk",
+      "notes": "Shore hardness not stated on the store listing, so no shore-graded id"
+    },
+    {
+      "manufacturer": "voxelab",
+      "product": "TPU",
+      "notes": "Shore durometer not confirmed in any available source - generic tpu, not tpu-95a"
+    }
+  ]
 }

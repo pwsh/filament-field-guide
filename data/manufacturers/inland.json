@@ -31,46 +31,160 @@
       "name": "PLA",
       "filament_ids": [
         "pla"
-      ]
+      ],
+      "notes": "Base PLA; Micro Center staff describe it as cheap, low in temperature resistance and relatively brittle."
     },
     {
-      "name": "PLA+ / HS-PLA+",
+      "name": "PLA+",
+      "filament_ids": [
+        "pla-plus"
+      ],
+      "notes": "PLA with an impact-toughening agent added. Community-identified as equivalent to eSUN PLA+."
+    },
+    {
+      "name": "High Speed PLA+",
+      "filament_ids": [
+        "pla-plus",
+        "pla-hf"
+      ],
+      "notes": "Flow-optimised PLA+, so it carries both the toughened and the high-flow ids."
+    },
+    {
+      "name": "Tough PLA",
+      "filament_ids": [
+        "pla-plus"
+      ],
+      "notes": "Toughened PLA line; impact modifier not itemised."
+    },
+    {
+      "name": "Silk PLA (incl. Mystic Silk, Silk Rainbow, Chameleon)",
+      "filament_ids": [
+        "pla-silk"
+      ],
+      "notes": "Described as 'a PLA polyester composite'; higher print temp 235-245 C, consistent with silk grades generally."
+    },
+    {
+      "name": "Matte PLA",
+      "filament_ids": [
+        "pla-matte"
+      ],
+      "notes": "Community-identified as equivalent to Polymaker Panchroma Matte PLA."
+    },
+    {
+      "name": "PLA Glitter Rainbow",
       "filament_ids": [
         "pla"
       ],
-      "notes": "Community-identified as equivalent to eSUN PLA+"
+      "notes": "Glitter-particulate PLA; no glitter-PLA id exists in the catalog (see gaps)."
     },
     {
-      "name": "PLA Matte",
+      "name": "Wood PLA",
+      "filament_ids": [
+        "pla-wood"
+      ],
+      "notes": "PLA with wood fibre filler."
+    },
+    {
+      "name": "PLA Carbon Fiber (PLA Pro / PLA-CF)",
+      "filament_ids": [
+        "pla-cf"
+      ],
+      "notes": "PLA with chopped carbon fibre."
+    },
+    {
+      "name": "Lite PLA (LW-PLA)",
+      "filament_ids": [
+        "lw-pla"
+      ],
+      "notes": "Lightweight foaming PLA - 'less PLA and more of a plant fiber filler', expands during printing to cut part mass."
+    },
+    {
+      "name": "Glass PLA",
       "filament_ids": [
         "pla"
       ],
-      "notes": "Community-identified as equivalent to Polymaker Panchroma Matte PLA"
-    },
-    {
-      "name": "Silk PLA",
-      "filament_ids": [
-        "pla"
-      ]
+      "notes": "Translucent 'glass-look' PLA. Deliberately NOT mapped to pla-gf: there is no glass-fibre reinforcement, the name refers to optical appearance."
     },
     {
       "name": "Cosplay PLA",
       "filament_ids": [
         "pla"
       ],
-      "notes": "Community-identified as equivalent to Polymaker CosPLA Type A"
+      "notes": "Community-identified as equivalent to Polymaker CosPLA Type A (a low-temperature, easily sandable/heat-formable PLA)."
     },
     {
       "name": "PETG / PETG+",
       "filament_ids": [
         "petg"
-      ]
+      ],
+      "notes": "PETG+ is an enhanced shelf-life/printability grade on the same base resin as the standard PETG."
+    },
+    {
+      "name": "PETG-CF",
+      "filament_ids": [
+        "petg-cf"
+      ],
+      "notes": "Carbon-fibre-filled PETG."
+    },
+    {
+      "name": "ABS",
+      "filament_ids": [
+        "abs"
+      ],
+      "notes": "Plain ABS."
+    },
+    {
+      "name": "ASA",
+      "filament_ids": [
+        "asa"
+      ],
+      "notes": "UV-stable ABS alternative."
+    },
+    {
+      "name": "PolyLite ASA",
+      "filament_ids": [
+        "asa"
+      ],
+      "notes": "Same ASA chemistry sold under the licensed 'PolyLite' sub-brand, consistent with the Polymaker OEM relationship."
+    },
+    {
+      "name": "PC (Polycarbonate)",
+      "filament_ids": [
+        "pc"
+      ],
+      "notes": "Plain PC."
+    },
+    {
+      "name": "Tough PC",
+      "filament_ids": [
+        "pc"
+      ],
+      "notes": "Impact-modified PC. Whether the modifier is an ABS blend is not disclosed, so pc-abs is not asserted."
+    },
+    {
+      "name": "Nylon (PA)",
+      "filament_ids": [
+        "pa"
+      ],
+      "notes": "'Self-lubricating', highly moisture-sensitive; the specific polyamide grade is undisclosed and multiple blends have shipped, so only the generic pa id is asserted."
+    },
+    {
+      "name": "Nylon Carbon Fiber (PA-CF)",
+      "notes": "Carbon-fibre-filled nylon of undisclosed polyamide grade. The catalog only has grade-specific CF nylons (pa6-cf, pa12-cf, ppa-cf), none of which can be confidently assigned (see gaps)."
     },
     {
       "name": "TPU",
       "filament_ids": [
         "tpu"
-      ]
+      ],
+      "notes": "Flexible TPU; Shore hardness not published, so no Shore-grade id is asserted."
+    },
+    {
+      "name": "PP (Polypropylene)",
+      "filament_ids": [
+        "pp"
+      ],
+      "notes": "True polypropylene: described as completely non-bioreactive, low hotend temperature (~160 C), flexible and chemical-resistant."
     }
   ],
   "makes_plates": false,
@@ -81,7 +195,20 @@
       "/home/claude/filament-repo/research/verified-oem-relationships.md (project-owner verified)",
       "https://forum.vorondesign.com/threads/inland-microcenter-filament-oems.17500/",
       "https://www.microcenter.com/site/content/inland%20filament.aspx",
-      "https://forum.bambulab.com/t/beware-inland-brand-microcenter-silk-pla/108737"
+      "https://forum.bambulab.com/t/beware-inland-brand-microcenter-silk-pla/108737",
+      "https://community.microcenter.com/discussion/7921/inland-filament-types-and-properties",
+      "https://www.microcenter.com/product/611541/inland-175mm-pla-3d-printer-filament-10-kg-(22-lbs)-spool-gray",
+      "https://www.microcenter.com/product/632373/inland-175mm-pla-wood-3d-printer-filament-05-kg-spool-(11-lbs)",
+      "https://www.microcenter.com/product/687094/inland-175mm-pla-carbon-fiber-3d-printer-filament-100-kg-(22-lbs)-cardboard-spool-black",
+      "https://www.microcenter.com/product/687104/inland-175mm-petg-cf-3d-printer-filament-1-kg-(22-lbs)-spool-black",
+      "https://www.microcenter.com/product/633299/inland-175mm-natural-asa-3d-printer-filament-1kg-spool-(22-lbs)",
+      "https://www.microcenter.com/product/633294/inland-polylite-175mm-black-asa-3d-printer-filament-1kg-spool-(22-lbs)",
+      "https://www.microcenter.com/product/633300/inland-175mm-pc-3d-printer-filament-1kg-(22-lbs)-spool-transparent",
+      "https://www.microcenter.com/product/633301/inland-175mm-black-tough-pc-3d-printer-filament-1kg-spool-(22-lbs)",
+      "https://www.microcenter.com/product/610044/inland-175mm-natural-nylon-3d-printer-filament-05kg-spool-(11-lbs)",
+      "https://www.microcenter.com/product/639677/inland-175mm-nylon-carbon-fiber-3d-printer-filament-05-kg-(11-lbs)-black",
+      "https://www.microcenter.com/product/610047/inland-175mm-tpu-3d-printer-filament-10-kg-(22-lbs)-spool-black",
+      "https://filamentcheatsheet.com/database/brand/inland/"
     ],
     "last_verified": "2026-07-31",
     "confidence": "medium",

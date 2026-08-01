@@ -24,91 +24,126 @@
   },
   "product_lines": [
     {
-      "name": "Extrafill PLA",
+      "name": "PLA Extrafill",
       "filament_ids": [
         "pla"
       ],
-      "notes": "Includes PLA Crystal Clear"
+      "notes": "Standard PLA"
     },
     {
-      "name": "PETG / CPE",
+      "name": "PLA Crystal Clear",
       "filament_ids": [
-        "petg",
-        "petg-cf"
+        "pla"
       ],
-      "notes": "PETG plus CPE HG100 (modified PETG) and CPE CF112 (carbon-fiber PETG)"
+      "notes": "Optically clear grade on the same base polymer"
     },
     {
-      "name": "ABS eXTRAFILL",
+      "name": "Timberfill",
       "filament_ids": [
-        "abs"
-      ]
-    },
-    {
-      "name": "ASA Extrafill",
-      "filament_ids": [
-        "asa"
-      ]
-    },
-    {
-      "name": "Flexfill",
-      "filament_ids": [
-        "tpu",
-        "tpe",
-        "peba"
+        "pla-wood"
       ],
-      "notes": "Flexfill TPU 98A and 92A, Flexfill TPE, Flexfill PEBA"
-    },
-    {
-      "name": "Nylon",
-      "filament_ids": [
-        "pa"
-      ],
-      "notes": "Includes aramid-reinforced grades"
-    },
-    {
-      "name": "0rCA",
-      "filament_ids": [
-        "pa-cf"
-      ],
-      "notes": "Nylon recycled from fishing nets, carbon-fiber reinforced"
-    },
-    {
-      "name": "HIPS",
-      "filament_ids": [
-        "hips"
-      ]
+      "notes": "PLA/biopolymer matrix + real wood fibre, fully biodegradable"
     },
     {
       "name": "NonOilen",
       "filament_ids": [
         "pla"
       ],
-      "notes": "Biodegradable engineering bioplastic marketed under the Nanoilen branding; a PLA-family blend rather than plain PLA"
+      "notes": "Bio-based 'non-oil' biopolymer described only as a macromolecule processed from biomass; PLA-family attribution is unconfirmed and mapped provisionally"
     },
     {
-      "name": "Timberfill",
+      "name": "PETG",
       "filament_ids": [
-        "pla"
+        "petg"
       ],
-      "notes": "Wood-fiber composite on a PLA base"
+      "notes": "Standard PETG"
+    },
+    {
+      "name": "CPE HG100",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "Modified/toughened PETG-family co-polyester, not identical to plain PETG"
+    },
+    {
+      "name": "CPE CF112 Carbon",
+      "filament_ids": [
+        "petg-cf"
+      ],
+      "notes": "CPE HG100 matrix + carbon fibre"
+    },
+    {
+      "name": "ABS eXTRAFILL",
+      "filament_ids": [
+        "abs"
+      ],
+      "notes": "Standard ABS"
+    },
+    {
+      "name": "ASA Extrafill",
+      "filament_ids": [
+        "asa"
+      ],
+      "notes": "Standard UV-stabilised ASA"
+    },
+    {
+      "name": "Flexfill TPU 92A",
+      "filament_ids": [
+        "tpu"
+      ],
+      "notes": "Shore 92A, between the tpu-90a and tpu-95a grades so only the base band id applies"
+    },
+    {
+      "name": "Flexfill TPU 98A",
+      "filament_ids": [
+        "tpu"
+      ],
+      "notes": "Shore 98A, above the 85A-95A band of the base tpu entry; no tpu-98a grade exists"
+    },
+    {
+      "name": "Flexfill PEBA",
+      "notes": "Polyether block amide - a nylon-elastomer block copolymer, chemically distinct from TPU; no peba id exists"
+    },
+    {
+      "name": "Flexfill TPE",
+      "filament_ids": [
+        "tpe"
+      ],
+      "notes": "Polyolefinic (TPO) thermoplastic elastomer, food-contact grade; the tpe entry is SEBS-centric, so chemistry differs inside the TPE label"
+    },
+    {
+      "name": "Nylon FX256 (PA)",
+      "filament_ids": [
+        "pa"
+      ],
+      "notes": "Standard nylon; aramid-reinforced grades in the same family have no dedicated id"
+    },
+    {
+      "name": "0rCA",
+      "filament_ids": [
+        "pa6-cf"
+      ],
+      "notes": "100% recycled polyamide 6 from fishing nets reinforced with ~10% carbon fibre (CF10)"
+    },
+    {
+      "name": "HIPS",
+      "filament_ids": [
+        "hips"
+      ],
+      "notes": "Standard high-impact polystyrene"
     },
     {
       "name": "vINYL 303",
-      "filament_ids": [
-        "pvc"
-      ]
+      "notes": "Rigid, self-extinguishing PVC; no pvc id exists"
     },
     {
       "name": "Fluorodur",
-      "filament_ids": [
-        "pvdf"
-      ]
+      "notes": "PVDF fluoropolymer with high chemical resistance; no pvdf id exists"
     },
     {
       "name": "PC/ABS",
       "filament_ids": [
-        "pc"
+        "pc-abs"
       ],
       "notes": "Polycarbonate/ABS alloy"
     },
@@ -116,11 +151,12 @@
       "name": "PP 2320",
       "filament_ids": [
         "pp"
-      ]
+      ],
+      "notes": "Commodity-grade polypropylene"
     },
     {
       "name": "OBC 905",
-      "notes": "Olefin block copolymer; no established filament type id"
+      "notes": "Olefin block copolymer (polyethylene-based elastomeric olefin); no established filament type id"
     }
   ],
   "price_tier": "premium",
@@ -131,7 +167,9 @@
       "https://www.pse.cz/en/detail/CZ0009007027",
       "https://fillamentum.com/blogs/news/from-now-on-parzlich-s-r-o-becomes-fillamentum-manufacturing-czech-s-r-o/",
       "https://fillamentum.com/collections/",
-      "https://www.youtube.com/@Fillamentum"
+      "https://www.youtube.com/@Fillamentum",
+      "https://fillamentumusa.com/products/orca",
+      "https://www.fillamentumnonoilen.com/eco-book/"
     ],
     "last_verified": "2026-07-31",
     "confidence": "medium",

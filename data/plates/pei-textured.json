@@ -1,28 +1,516 @@
 {
   "id": "pei-textured",
   "name": "Textured PEI (powder-coated spring steel)",
-  "aliases": ["Textured powder-coated plate", "Gold textured plate"],
-  "status": "example",
-  "summary": "The modern default build surface: powder-coated polyetherimide on flexible spring steel. Grips hot, releases cold, needs no adhesives for most materials, and leaves a uniform textured finish. Example entry pending Phase D research.",
-  "surface_makeup": "Polyetherimide (PEI) powder coating fused onto a spring-steel sheet",
-  "texture": "textured",
-  "manufacturers": ["Bambu Lab", "Prusa Research", "Wham Bam", "Energetic", "BIQU", "FYSETC", "Creality"],
-  "filament_compatibility": [
-    { "filament_id": "pla", "rating": "recommended", "bed_temp_c": { "min": 50, "max": 65 }, "adhesion_aid": "none", "notes": "Wash with dish soap if adhesion drops — skin oils are the usual culprit" },
-    { "filament_id": "petg", "rating": "recommended", "bed_temp_c": { "min": 70, "max": 90 }, "adhesion_aid": "none", "notes": "Texture prevents the PEI-fusing problem smooth sheets have with PETG" },
-    { "filament_id": "asa", "rating": "recommended", "bed_temp_c": { "min": 95, "max": 110 }, "adhesion_aid": "none or thin glue stick on large flats", "notes": "Enclosure matters more than the plate for ASA adhesion" }
+  "aliases": [
+    "Textured powder-coated plate",
+    "PEI powder-coated sheet",
+    "Gold textured plate",
+    "Textured ULTEM plate"
   ],
-  "preparation": "First use and periodically: wash with warm water and unscented dish soap, dry with a clean paper towel. Avoid touching the print area. IPA between prints removes light residue but eventually smears oils — soap wash beats IPA.",
-  "cleaning": "Routine: 91%+ IPA wipe when cold. Deep: dish-soap scrub. Never scrape with metal on the coating; acetone is unnecessary and can degrade some coatings.",
-  "model_removal": "Let the plate cool below ~40 °C, then flex the sheet — prints pop free. Cold-release is the design feature; prying hot defeats it.",
-  "stuck_print_recovery": "Put the plate (with print) in a freezer for 10–15 minutes, then flex. For thin flat prints, flex progressively from a corner. As a last resort slide a thin plastic spatula under an edge — never metal blades on the coating.",
-  "temperature_limits_c": { "max": 120 },
-  "lifespan_notes": "Coating wears glossy in high-use zones over months-to-years; adhesion loss that soap washing doesn't fix indicates wear. Sheets can be re-powder-coated by some vendors or replaced.",
-  "price": { "usd_low": 15, "usd_high": 60 },
-  "additional_notes": "TPU can bond aggressively if printed too hot on fresh coating — first candidate for a 'usable-with-prep' rating once TPU entry exists.",
+  "status": "researched",
+  "summary": "The modern default build surface: PEI resin electrostatically powder-coated and cured onto stainless or spring steel, leaving a fine sandy micro-texture instead of a laminated film. The texture raises contact area while lowering peak bond strength, so it grips hot and self-releases cold across PLA, PETG, ABS and ASA with no adhesives — at the cost of a matte, slightly orange-peel print bottom.",
+  "surface_makeup": "Polyetherimide (PEI) powder coating, electrostatically applied and thermoset onto a stainless or spring steel sheet (aluminium on budget plates); micro-texture is inherent to the powder coat, not embossed",
+  "texture": "textured",
+  "manufacturers": [
+    "Bambu Lab",
+    "Prusa Research",
+    "Creality",
+    "Wham Bam",
+    "FYSETC",
+    "BIQU",
+    "Energetic",
+    "HartSmart",
+    "TwoTrees",
+    "MetaFlex3D"
+  ],
+  "filament_compatibility": [
+    {
+      "filament_id": "pla",
+      "rating": "recommended",
+      "bed_temp_c": {
+        "min": 55,
+        "max": 65
+      },
+      "adhesion_aid": "none",
+      "notes": "Excellent general result, though very aggressive textures can let thin or small PLA parts lift at the corners — add a brim for those."
+    },
+    {
+      "filament_id": "pla-plus",
+      "rating": "recommended",
+      "bed_temp_c": {
+        "min": 55,
+        "max": 65
+      },
+      "adhesion_aid": "none",
+      "notes": "As base PLA."
+    },
+    {
+      "filament_id": "pla-silk",
+      "rating": "recommended",
+      "bed_temp_c": {
+        "min": 55,
+        "max": 65
+      },
+      "adhesion_aid": "none",
+      "notes": "Adhesion is fine, but the texture kills the silk sheen on the bottom face — use a smooth sheet if the underside is visible."
+    },
+    {
+      "filament_id": "pla-matte",
+      "rating": "recommended",
+      "bed_temp_c": {
+        "min": 55,
+        "max": 65
+      },
+      "adhesion_aid": "none",
+      "notes": "Texture and matte pigment give a uniform finish across all faces."
+    },
+    {
+      "filament_id": "pla-cf",
+      "rating": "recommended",
+      "bed_temp_c": {
+        "min": 55,
+        "max": 65
+      },
+      "adhesion_aid": "none",
+      "notes": "CF-filled PLA adheres at least as well as plain PLA; the coating is not damaged by the filler."
+    },
+    {
+      "filament_id": "pvb",
+      "rating": "recommended",
+      "bed_temp_c": {
+        "min": 70,
+        "max": 80
+      },
+      "adhesion_aid": "none",
+      "notes": "Good adhesion and clean release; keep IPA off the part itself, since PVB dissolves in alcohol."
+    },
+    {
+      "filament_id": "petg",
+      "rating": "recommended",
+      "bed_temp_c": {
+        "min": 70,
+        "max": 80
+      },
+      "adhesion_aid": "none",
+      "notes": "One of the best PETG surfaces there is: the texture prevents the chemical fusing that ruins smooth PEI, and parts release cleanly when cool."
+    },
+    {
+      "filament_id": "pctg",
+      "rating": "recommended",
+      "bed_temp_c": {
+        "min": 70,
+        "max": 80
+      },
+      "adhesion_aid": "none",
+      "notes": "Behaves as PETG; no separator needed."
+    },
+    {
+      "filament_id": "pet",
+      "rating": "recommended",
+      "bed_temp_c": {
+        "min": 70,
+        "max": 85
+      },
+      "adhesion_aid": "none",
+      "notes": "As PETG, slightly higher bed helps large footprints."
+    },
+    {
+      "filament_id": "petg-cf",
+      "rating": "recommended",
+      "bed_temp_c": {
+        "min": 70,
+        "max": 80
+      },
+      "adhesion_aid": "none",
+      "notes": "Fibre-filled copolyesters release very cleanly from powder-coated PEI."
+    },
+    {
+      "filament_id": "petg-gf",
+      "rating": "recommended",
+      "bed_temp_c": {
+        "min": 70,
+        "max": 80
+      },
+      "adhesion_aid": "none",
+      "notes": "As PETG-CF."
+    },
+    {
+      "filament_id": "petg-esd",
+      "rating": "recommended",
+      "bed_temp_c": {
+        "min": 70,
+        "max": 80
+      },
+      "adhesion_aid": "none",
+      "notes": "As PETG."
+    },
+    {
+      "filament_id": "abs",
+      "rating": "recommended",
+      "bed_temp_c": {
+        "min": 100,
+        "max": 110
+      },
+      "adhesion_aid": "none",
+      "notes": "Textured PEI handles ABS well without aids; enclosure and draft control remain the limiting factors."
+    },
+    {
+      "filament_id": "abs-gf",
+      "rating": "recommended",
+      "bed_temp_c": {
+        "min": 100,
+        "max": 110
+      },
+      "adhesion_aid": "none",
+      "notes": "Glass fill lowers warp; plate behaviour unchanged."
+    },
+    {
+      "filament_id": "abs-fr",
+      "rating": "recommended",
+      "bed_temp_c": {
+        "min": 100,
+        "max": 110
+      },
+      "adhesion_aid": "none",
+      "notes": "As ABS."
+    },
+    {
+      "filament_id": "asa",
+      "rating": "recommended",
+      "bed_temp_c": {
+        "min": 100,
+        "max": 110
+      },
+      "adhesion_aid": "none",
+      "notes": "Good grip and clean cold release; a brim helps on tall parts with small footprints."
+    },
+    {
+      "filament_id": "asa-cf",
+      "rating": "recommended",
+      "bed_temp_c": {
+        "min": 100,
+        "max": 110
+      },
+      "adhesion_aid": "none",
+      "notes": "As ASA."
+    },
+    {
+      "filament_id": "hips",
+      "rating": "recommended",
+      "bed_temp_c": {
+        "min": 100,
+        "max": 110
+      },
+      "adhesion_aid": "none",
+      "notes": "Prints and releases like ABS; common breakaway support material alongside it."
+    },
+    {
+      "filament_id": "tpu",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 40,
+        "max": 60
+      },
+      "adhesion_aid": "glue stick if release is inconsistent",
+      "notes": "The reduced contact area cuts the fusing risk versus smooth PEI, but soft TPU can still grab the texture and leave residue in it."
+    },
+    {
+      "filament_id": "tpu-95a",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 40,
+        "max": 60
+      },
+      "adhesion_aid": "none to glue stick",
+      "notes": "Hardest common grade; usually releases without help once fully cool."
+    },
+    {
+      "filament_id": "tpu-90a",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 40,
+        "max": 60
+      },
+      "adhesion_aid": "glue stick if release is inconsistent",
+      "notes": "Intermediate behaviour."
+    },
+    {
+      "filament_id": "tpu-85a",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 40,
+        "max": 60
+      },
+      "adhesion_aid": "glue stick recommended",
+      "notes": "Soft grades work into the texture and can tear at removal."
+    },
+    {
+      "filament_id": "tpu-60a",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 30,
+        "max": 50
+      },
+      "adhesion_aid": "glue stick required",
+      "notes": "Very soft grade; without a separator it can leave elastomer embedded in the powder coat."
+    },
+    {
+      "filament_id": "tpe",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 30,
+        "max": 50
+      },
+      "adhesion_aid": "glue stick required",
+      "notes": "As low-Shore TPU; separator both aids release and protects the coating."
+    },
+    {
+      "filament_id": "cope",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 45,
+        "max": 70
+      },
+      "adhesion_aid": "glue stick if release is inconsistent",
+      "notes": "Copolyester elastomer; grips harder than TPU of similar hardness."
+    },
+    {
+      "filament_id": "pa",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 70,
+        "max": 100
+      },
+      "adhesion_aid": "glue stick required if attempted",
+      "notes": "Adhesion is unpredictable and moisture-dependent; community consensus still favours G10/garolite for nylon over textured PEI."
+    },
+    {
+      "filament_id": "pa6",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 70,
+        "max": 100
+      },
+      "adhesion_aid": "glue stick required if attempted",
+      "notes": "As base PA."
+    },
+    {
+      "filament_id": "pa12",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 70,
+        "max": 100
+      },
+      "adhesion_aid": "glue stick required if attempted",
+      "notes": "Lower moisture sensitivity but the same adhesion mismatch."
+    },
+    {
+      "filament_id": "pa66",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 80,
+        "max": 110
+      },
+      "adhesion_aid": "glue stick required if attempted",
+      "notes": "High shrinkage compounds the weak bond."
+    },
+    {
+      "filament_id": "pa6-cf",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 70,
+        "max": 100
+      },
+      "adhesion_aid": "glue stick required if attempted",
+      "notes": "CF fill reduces warp, but garolite remains the recommended surface."
+    },
+    {
+      "filament_id": "pa12-cf",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 70,
+        "max": 100
+      },
+      "adhesion_aid": "glue stick required if attempted",
+      "notes": "As PA6-CF."
+    },
+    {
+      "filament_id": "ppa",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 90,
+        "max": 120
+      },
+      "adhesion_aid": "dedicated high-temp surface required",
+      "notes": "Bed temps and adhesion behaviour sit outside what powder-coated PEI is characterised for."
+    },
+    {
+      "filament_id": "ppa-cf",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 90,
+        "max": 120
+      },
+      "adhesion_aid": "dedicated high-temp surface required",
+      "notes": "As PPA."
+    },
+    {
+      "filament_id": "pc",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 110,
+        "max": 130
+      },
+      "adhesion_aid": "glue stick or hairspray plus a brim",
+      "notes": "Releases better than from smooth PEI, but PC can still pull powder coat off the steel; always use a separator if you print PC regularly."
+    },
+    {
+      "filament_id": "pc-abs",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 100,
+        "max": 120
+      },
+      "adhesion_aid": "glue stick or hairspray",
+      "notes": "Gentler than straight PC but the same coating-pull risk over time."
+    },
+    {
+      "filament_id": "pc-pbt",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 100,
+        "max": 120
+      },
+      "adhesion_aid": "glue stick or hairspray",
+      "notes": "As PC-ABS."
+    },
+    {
+      "filament_id": "pp",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 80,
+        "max": 100
+      },
+      "adhesion_aid": "PP-specific tape or sheet required",
+      "notes": "Polypropylene does not bond to PEI; use a PP sheet or packing tape."
+    },
+    {
+      "filament_id": "pp-gf",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 80,
+        "max": 100
+      },
+      "adhesion_aid": "PP-specific tape or sheet required",
+      "notes": "As PP."
+    },
+    {
+      "filament_id": "pva",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 45,
+        "max": 60
+      },
+      "adhesion_aid": "print on top of an existing PLA/PETG layer",
+      "notes": "Prusa notes poor direct adhesion of soluble materials to bare sheets; use PVA as a soluble interface only."
+    },
+    {
+      "filament_id": "bvoh",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 45,
+        "max": 60
+      },
+      "adhesion_aid": "print on top of an existing PLA/PETG layer",
+      "notes": "As PVA."
+    },
+    {
+      "filament_id": "peek",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 130,
+        "max": 160
+      },
+      "adhesion_aid": "dedicated high-temp sheet or garolite required",
+      "notes": "Bed temps exceed the characterised range of consumer powder-coated PEI."
+    },
+    {
+      "filament_id": "pekk",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 130,
+        "max": 160
+      },
+      "adhesion_aid": "dedicated high-temp sheet or garolite required",
+      "notes": "As PEEK."
+    },
+    {
+      "filament_id": "pei-ultem",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 130,
+        "max": 160
+      },
+      "adhesion_aid": "dedicated high-temp sheet or garolite required",
+      "notes": "Same polymer family as the coating; welding risk plus out-of-range bed temps."
+    },
+    {
+      "filament_id": "pps",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 120,
+        "max": 150
+      },
+      "adhesion_aid": "dedicated high-temp sheet required",
+      "notes": "Outside the rated envelope."
+    },
+    {
+      "filament_id": "pps-cf",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 120,
+        "max": 150
+      },
+      "adhesion_aid": "dedicated high-temp sheet required",
+      "notes": "As PPS."
+    },
+    {
+      "filament_id": "ppsu",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 130,
+        "max": 160
+      },
+      "adhesion_aid": "dedicated high-temp sheet required",
+      "notes": "Outside the rated envelope."
+    }
+  ],
+  "preparation": "On first use, wipe off factory handling oils with IPA or wash with warm soapy water and dry fully. Routine prep is a cold 90%+ IPA wipe before each print. The texture holds oils in its valleys more stubbornly than a smooth film does, so IPA alone gradually stops working — when first-layer adhesion degrades despite a fresh wipe, that is the signal for a warm soap-and-water deep clean rather than more alcohol. Handle by the tabs, keep fingers off the print area, and re-run first-layer calibration when switching from a smooth or satin sheet, since the effective Z datum differs. Textured PEI is more forgiving of a slightly high nozzle than smooth is, which makes it the easier surface for a first Z-offset tune.",
+  "cleaning": "Routine: cold IPA wipe with a lint-free cloth. Deep: warm water and unscented dish soap with a soft sponge, worked over the whole surface, then rinsed and dried completely before remounting so no water is trapped against the steel. Do not use acetone — Prusa explicitly warns it deteriorates the coating. Do not use metal scrapers, blades or wire brushes: they catch on the texture and gouge the powder coat, and gouges become permanent adhesion dead-zones. Baked-on filament residue from a Z-offset crash is best removed by warming the bed to that material's bed temperature and lifting it with a plastic scraper.",
+  "model_removal": "This surface is designed to self-release. Let the plate cool to room temperature and most prints audibly pop free on their own as the steel and coating contract away from the printed polymer; lifting the sheet off the magnet and flexing it finishes the job for anything still attached. Reserve a plastic spatula for stubborn corners and brimmed prints, and slide it in at a shallow angle rather than levering. Never remove parts hot — the bond peaks at temperature and forcing it there is how the powder coat gets pulled off. Note that once a print pops loose during cooling it cannot be resumed, so paused or interrupted jobs need to be kept at bed temperature.",
+  "stuck_print_recovery": "The freezer trick works quickly and reliably here: put the sheet with the print attached into a freezer for 10-15 minutes and flex it afterwards. For stubborn PETG or ABS footprints, drip 90%+ IPA at the part/plate interface and let it wick under the perimeter for a minute before flexing again. Unwaxed dental floss or thin wire sawed under a corner and drawn across the footprint is a gentle mechanical assist that will not damage the coating. Prints that do not release on the first cool-down — common with ASA and PC, where the sheet holds residual heat unevenly — usually free up after a full reheat to bed temperature followed by an undisturbed slow cool. Avoid ice or cold water directly on a hot plate.",
+  "temperature_limits_c": {
+    "max": 130
+  },
+  "lifespan_notes": "Roughly 12-18 months of regular use before the texture wears smooth in the high-traffic centre of the plate, per Bambu-ecosystem community reporting. The classic wear symptom is zonal: prints stick fine at the edges and fail in the middle. Wear is accelerated by metal-tool scraping, acetone and other solvents, long ABS/ASA runs at high bed temperature, and baked-on filament from bad Z-offsets. The powder coat is not field-recoatable — some vendors re-coat returned sheets, but for most users the plate is a consumable to be replaced.",
+  "price": {
+    "usd_low": 20,
+    "usd_high": 45,
+    "notes": "Prusa textured powder-coated steel sheet about USD 40; Bambu Textured PEI Plate about USD 29 (unverified current price); FYSETC/BIQU double-sided textured+smooth sheets USD 20-30 in 235-310 mm sizes."
+  },
+  "additional_notes": "Community consensus rates this the single most forgiving general-purpose surface for mixed PLA/PETG/ABS work without adhesives — the trade-offs are a matte, slightly rough print bottom and less precise Z-datum control than smooth PEI. Commonly sold double-sided with a smooth or satin reverse, and magnetically mounted across essentially every modern consumer printer. Bambu ships it as the default plate on the X1, P1 and A1 series.",
   "provenance": {
-    "sources": ["EXAMPLE ENTRY — verify manufacturers, temps, and care guidance in Phase D"],
-    "last_verified": "2026-07-31",
-    "confidence": "placeholder"
+    "sources": [
+      "Bambu Lab Wiki - Build Plates: https://wiki.bambulab.com/en/filament-acc/acc/plates",
+      "Prusa Knowledge Base - Flexible Steel Sheets: https://help.prusa3d.com/article/flexible-steel-sheets-guidepost_2195",
+      "All3DP - Prusa PEI Sheet Differences: https://all3dp.com/2/prusa-pei-sheet-textured-powder-coated-steel/",
+      "Wham Bam Systems - PEI Build Surface: https://www.whambamsystems.com/collections/pei-build-surface",
+      "LayerGrade - Smooth vs Textured PEI: https://layergrade.com/guides/smooth-vs-textured-pei-build-plate/",
+      "PC Macgicians - Bambu PEI Sheet Replacement: https://pcmacgicians.co.uk/support-centre/it-support-blogs/bambu-build-plate-pei-sheet-replacement/",
+      "Prusa Forum - Polycarbonate printing on FYSETC textured sheet: https://forum.prusa3d.com/forum/original-prusa-i3-mk3s-mk3-general-discussion-announcements-and-releases/polycarbonate-printing-on-fysetc-textured-sheet-review/"
+    ],
+    "last_verified": "2026-08-01",
+    "confidence": "medium",
+    "conflicts": "No manufacturer publishes a hard maximum bed temperature for powder-coated PEI; Bambu rates its Textured PEI Plate across PLA through ABS and PETG-CF without a high-temp designation, so the 130 degC ceiling recorded here is inferred from supported material ranges rather than a datasheet figure. Nylon is contested: some plate vendors advertise textured PEI as nylon-compatible, while Prusa and the bulk of community experience push users to G10/garolite — recorded as avoid. Polycarbonate is likewise contested: forum reports of successful PC on textured FYSETC sheets exist alongside reports of coating pull-out, so it is recorded as usable-with-prep. PLA is occasionally reported to lift on very aggressive textures, which conflicts with its otherwise universal 'recommended' status. Bambu's USD 29 plate price is unverified against the manufacturer store."
   }
 }

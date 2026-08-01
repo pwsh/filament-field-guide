@@ -17,6 +17,11 @@
       "company": "Prusa Polymers a.s.",
       "relationship": "manufactured-by",
       "notes": "Intra-group, not third-party white-labelling: Prusa Polymers is Prusa Research's wholly-owned filament subsidiary and is the actual extruder of Prusament. Recorded for completeness; Prusa Research does not appear in research/verified-oem-relationships.md."
+    },
+    {
+      "company": "Filament PM (Plasty Mladec)",
+      "relationship": "manufactured-by",
+      "notes": "Historical: Plasty Mladec was Prusa's official filament partner from 2014 until in-house Prusament production (2018). Reciprocal of filament-pm.json edge; added in Phase E reciprocity pass."
     }
   ],
   "endpoints": {
@@ -37,40 +42,127 @@
       "filament_ids": [
         "pla"
       ],
-      "notes": "40+ colors including blends, galaxy/silk-style effects and limited editions"
+      "notes": "Standard PLA; 40+ colours including blends, galaxy/silk-effect grades and limited editions"
     },
     {
       "name": "Prusament PETG",
       "filament_ids": [
         "petg"
-      ]
+      ],
+      "notes": "Standard glycol-modified PET copolyester"
+    },
+    {
+      "name": "Prusament PETG Recycled (rPETG)",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "Same PETG chemistry, post-consumer/post-industrial recycled feedstock"
+    },
+    {
+      "name": "Prusament PETG Carbon Fiber",
+      "filament_ids": [
+        "petg-cf"
+      ],
+      "notes": "PETG matrix + chopped carbon fibre"
+    },
+    {
+      "name": "Prusament PETG Tungsten 75%",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "PETG matrix loaded to ~75% tungsten powder for high-density parts; only the matrix id applies, there is no metal-filled PETG id (pla-metal is PLA-based)"
+    },
+    {
+      "name": "Prusament PETG Ultraglow",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "PETG + phosphorescent pigment; pla-glow is PLA-based so only the matrix id applies"
+    },
+    {
+      "name": "Prusament PETG V0",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "PETG + flame-retardant package, UL94 V0; abs-fr has no PETG equivalent"
+    },
+    {
+      "name": "Prusament PETG Magnetite 40%",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "PETG + 40% magnetite (iron-oxide) filler for weight and finish"
     },
     {
       "name": "Prusament ASA",
       "filament_ids": [
         "asa"
-      ]
+      ],
+      "notes": "Standard acrylonitrile styrene acrylate"
     },
     {
       "name": "Prusament PC Blend",
       "filament_ids": [
         "pc"
       ],
-      "notes": "Polycarbonate blend, also offered carbon-fiber filled"
+      "notes": "PC-based proprietary blend rather than commodity PC: density 1.22 g/cm3, HDT 113 C @0.45 MPa / 93 C @1.8 MPa (commodity PC is ~135-140 C), filament tensile yield 58+/-1 MPa - consistent with an undisclosed PC+copolyester or PC+ABS-type blend"
+    },
+    {
+      "name": "Prusament PC Blend Carbon Fiber",
+      "filament_ids": [
+        "pc"
+      ],
+      "notes": "Same PC Blend matrix + chopped carbon fibre; no pc-cf id exists (pc-gf is glass and provisional)"
+    },
+    {
+      "name": "Prusament PC Blend Space Grade",
+      "filament_ids": [
+        "pc"
+      ],
+      "notes": "Glitter/metallic-effect specialty grade on the same PC Blend chemistry"
     },
     {
       "name": "Prusament PA11 Carbon Fiber",
+      "notes": "Bio-based polyamide 11 (castor-oil derived) + carbon fibre: density 1.11 g/cm3 (ISO 1183), HDT 192 C @0.45 MPa / 152 C @1.8 MPa, tensile yield 61+/-3 MPa. Genuinely PA11, not PA6 or PA12, so pa6-cf/pa12-cf/ppa-cf all mis-describe it and no pa11-cf id exists"
+    },
+    {
+      "name": "Prusament PP Glass Fiber",
       "filament_ids": [
-        "pa-cf"
+        "pp-gf"
       ],
-      "notes": "Bio-based PA11 nylon with carbon fiber"
+      "notes": "Polypropylene + glass-fibre reinforcement"
+    },
+    {
+      "name": "Prusament PP Carbon Fiber",
+      "notes": "Polypropylene + carbon fibre; the catalog only has pp-gf, no pp-cf id exists"
     },
     {
       "name": "Prusament PVB",
       "filament_ids": [
         "pvb"
       ],
-      "notes": "Smoothable with isopropyl alcohol"
+      "notes": "Polyvinyl butyral, IPA-vapour smoothable"
+    },
+    {
+      "name": "Prusament TPU 95A",
+      "filament_ids": [
+        "tpu-95a"
+      ],
+      "notes": "Shore 95A, the firm end of the mainstream flexible band"
+    },
+    {
+      "name": "Prusament Woodfill",
+      "filament_ids": [
+        "pla-wood"
+      ],
+      "notes": "PLA matrix + wood-fibre filler"
+    },
+    {
+      "name": "Prusament PEI 1010",
+      "filament_ids": [
+        "pei-ultem"
+      ],
+      "notes": "ULTEM 1010-grade polyetherimide"
     },
     {
       "name": "Prusament Resin",
@@ -89,7 +181,11 @@
       "https://en.wikipedia.org/wiki/Prusa_Research",
       "https://www.prusa3d.com/page/contact-details_237176/",
       "https://prusament.com/materials/pla/",
-      "https://www.prusa3d.com/product/double-sided-textured-pei-powder-coated-spring-steel-sheet/"
+      "https://www.prusa3d.com/product/double-sided-textured-pei-powder-coated-spring-steel-sheet/",
+      "https://prusament.com/materials/",
+      "https://prusament.com/materials/petg/",
+      "https://prusament.com/wp-content/uploads/2022/10/PCBlend_Prusament_TDS_2022_16_EN.pdf",
+      "https://prusament.com/wp-content/uploads/2022/08/TDS_PA11CFB.pdf"
     ],
     "last_verified": "2026-07-31",
     "confidence": "medium",

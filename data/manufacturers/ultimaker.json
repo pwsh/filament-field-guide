@@ -44,44 +44,129 @@
   },
   "product_lines": [
     {
-      "name": "Standard polymers",
+      "name": "UltiMaker PLA",
       "filament_ids": [
-        "pla",
-        "petg",
-        "abs",
+        "pla"
+      ],
+      "notes": "Generic PLA; the MakerBot Sketch / Replicator+ PLA is the same chemistry repackaged."
+    },
+    {
+      "name": "UltiMaker Tough PLA",
+      "filament_ids": [
+        "pla-plus"
+      ],
+      "notes": "Impact-modified PLA positioned against ABS; the Sketch-series 'Tough' filament is the same chemistry."
+    },
+    {
+      "name": "UltiMaker ABS",
+      "filament_ids": [
+        "abs"
+      ],
+      "notes": "Generic ABS."
+    },
+    {
+      "name": "UltiMaker ABS-R (Method)",
+      "filament_ids": [
+        "abs"
+      ],
+      "notes": "Recycled/reground ABS; standard ABS chemistry. RapidRinse is its companion soluble support, not a base polymer."
+    },
+    {
+      "name": "UltiMaker ABS Carbon Fiber (Method)",
+      "notes": "ABS + chopped carbon fiber. This catalog has abs-gf but no abs-cf id, so the line is left unmapped."
+    },
+    {
+      "name": "UltiMaker ASA",
+      "filament_ids": [
+        "asa"
+      ],
+      "notes": "Generic ASA."
+    },
+    {
+      "name": "UltiMaker PETG (Method)",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "Generic PETG in the Method series."
+    },
+    {
+      "name": "UltiMaker CPE",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "'Co-polyester': TDS gives 1.27 g/cm3, ~38 MPa XY tensile and Shore 76D - PETG/PCTG-class glycol-modified copolyester, not a distinct polymer."
+    },
+    {
+      "name": "UltiMaker CPE+",
+      "notes": "Higher-temperature, higher-strength grade of the same co-polyester family as CPE. No TDS figures gathered this pass, so left unmapped rather than assumed identical to petg."
+    },
+    {
+      "name": "UltiMaker PP",
+      "filament_ids": [
         "pp"
       ],
-      "notes": "Includes Tough PLA, a toughened PLA grade positioned against ABS."
+      "notes": "Generic polypropylene."
     },
     {
-      "name": "CPE / CPE+",
+      "name": "UltiMaker Nylon",
       "filament_ids": [
-        "cpe"
+        "pa"
       ],
-      "notes": "Chemically resistant co-polyester; CPE+ is the higher-temperature variant."
+      "notes": "Generic polyamide; community and TDS references point at the 12-family but UltiMaker does not disclose the PA6/PA12 split, so mapped to base pa."
     },
     {
-      "name": "Engineering polymers",
+      "name": "UltiMaker Nylon 12 CF (Method)",
       "filament_ids": [
-        "pa",
-        "pc",
-        "tpu"
+        "pa12-cf"
       ],
-      "notes": "Nylon, polycarbonate and TPU 95A."
+      "notes": "PA12 + chopped carbon fiber."
     },
     {
-      "name": "Support",
+      "name": "UltiMaker PC",
+      "filament_ids": [
+        "pc"
+      ],
+      "notes": "Generic polycarbonate."
+    },
+    {
+      "name": "UltiMaker PC-ABS (Method)",
+      "filament_ids": [
+        "pc-abs"
+      ],
+      "notes": "Polycarbonate/ABS blend."
+    },
+    {
+      "name": "UltiMaker TPU 95A",
+      "filament_ids": [
+        "tpu-95a"
+      ],
+      "notes": "Shore 95A TPU."
+    },
+    {
+      "name": "Factor series PPS Carbon Fiber",
+      "filament_ids": [
+        "pps-cf"
+      ],
+      "notes": "Polyphenylene sulfide + carbon fiber, the industrial Factor/S-series high-temperature composite."
+    },
+    {
+      "name": "UltiMaker PVA",
       "filament_ids": [
         "pva"
       ],
-      "notes": "Dissolvable PVA support material."
+      "notes": "Water-soluble polyvinyl alcohol support."
     },
     {
-      "name": "Composites and metals",
-      "filament_ids": [
-        "petg-cf"
-      ],
-      "notes": "PET-CF carbon fiber, plus metal-filled materials supplied via the Metal Expansion Kit. Available through marketplace and expansion kits rather than the core certified range."
+      "name": "UltiMaker Breakaway (Method)",
+      "notes": "Mechanically-removed styrenic-blend support, not water-soluble - distinct chemistry from PVA and no matching id."
+    },
+    {
+      "name": "UltiMaker SR-30 / RapidRinse (Method)",
+      "notes": "Soluble supports for ABS-family builds; proprietary chemistry, no matching id."
+    },
+    {
+      "name": "UltiMaker Cleaning Filament",
+      "notes": "Purge/cleaning compound, not a build material."
     }
   ],
   "price_tier": "premium",
@@ -92,7 +177,17 @@
       "https://ultimaker.com/",
       "https://ultimaker.com/materials/",
       "https://www.dynamism.com/ultimaker/ultimaker-filament.html",
-      "https://www.matterhackers.com/store/c/ultimaker-petg-filament"
+      "https://www.matterhackers.com/store/c/ultimaker-petg-filament",
+      "https://ultimaker.com/materials/s-series-tough-pla/",
+      "https://um-support-files.ultimaker.com/materials/2.85mm/tds/TOUGH-PLA/UM220509-Tough-PLA-TDS-RB-v2.10.pdf",
+      "https://um-support-files.ultimaker.com/materials/2.85mm/tds/CPE/Ultimaker-CPE-TDS-v5.00.pdf",
+      "https://um-support-files.ultimaker.com/materials/2.85mm/tds/PP/Ultimaker-PP-TDS-v3.00.pdf",
+      "https://um-support-files.ultimaker.com/materials/2.85mm/tds/TPU-95A/Ultimaker-TPU95A-TDS-v5.00.pdf",
+      "https://ultimaker.com/materials/nylon/",
+      "https://marketplace.ultimaker.com/app/cura/materials/UltimakerPackages/ULTIMAKERNYLON12CFMETHOD",
+      "https://ultimaker.com/materials/factor-series-pps-carbon-fiber/",
+      "https://ultimaker.com/wp-content/uploads/2024/04/UltiMaker-PPSCF-TDS-RGB-EN-v1.00.pdf",
+      "https://store.ultimaker.com/3d-printer-materials/s-series-materials"
     ],
     "last_verified": "2026-07-31",
     "confidence": "medium",

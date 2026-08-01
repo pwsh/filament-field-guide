@@ -41,35 +41,96 @@
   },
   "product_lines": [
     {
-      "name": "PLA family",
+      "name": "PLA",
       "filament_ids": [
         "pla"
       ],
-      "notes": "Standard, silk, matte, dual-colour silk, marble, wood and glow-in-the-dark variants"
+      "notes": "Plain PLA; wiki describes it as made from natural materials such as corn starch."
+    },
+    {
+      "name": "PLA Silk (incl. Dual Color, Tri-Color, Rainbow)",
+      "filament_ids": [
+        "pla-silk"
+      ],
+      "notes": "PLA base with 'elastic additives' producing the silk/glossy finish; multi-colour variants are spool features."
+    },
+    {
+      "name": "PLA Matte",
+      "filament_ids": [
+        "pla-matte"
+      ],
+      "notes": "Matte-finish PLA."
+    },
+    {
+      "name": "PLA Marble",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "PLA 'mixed with stone powder or other additives to simulate marble'. No marble/stone-filled PLA id exists (see gaps)."
+    },
+    {
+      "name": "PLA Wood",
+      "filament_ids": [
+        "pla-wood"
+      ],
+      "notes": "Quantified composite: about 85% PLA / 15% wood fibre per the Geeetech wiki."
+    },
+    {
+      "name": "PLA Luminous (Glow)",
+      "filament_ids": [
+        "pla-glow"
+      ],
+      "notes": "PLA with fluorescent/phosphorescent powder."
+    },
+    {
+      "name": "Carbon Fiber PLA",
+      "filament_ids": [
+        "pla-cf"
+      ],
+      "notes": "PLA plus carbon fibre, documented on the wiki but not currently in the main storefront category list - possibly legacy or a limited SKU."
+    },
+    {
+      "name": "High Speed PLA",
+      "filament_ids": [
+        "pla-hf"
+      ],
+      "notes": "PLA reformulated for optimised melt index/Tg for faster flow; process delta only."
     },
     {
       "name": "PETG",
       "filament_ids": [
         "petg"
-      ]
+      ],
+      "notes": "Plain PETG."
     },
     {
-      "name": "ABS",
+      "name": "PETG Metal",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "Metallic-pigment PETG. Base resin is PETG; the catalog has no metallic/metal-filled PETG id (see gaps)."
+    },
+    {
+      "name": "ABS+",
       "filament_ids": [
         "abs"
-      ]
+      ],
+      "notes": "Impact-enhanced ABS on the standard ABS chemistry."
     },
     {
       "name": "ASA",
       "filament_ids": [
         "asa"
-      ]
+      ],
+      "notes": "Weather/UV-resistant ASA."
     },
     {
       "name": "TPU",
       "filament_ids": [
-        "tpu"
-      ]
+        "tpu",
+        "tpu-95a"
+      ],
+      "notes": "Shore 95A confirmed on the Geeetech wiki."
     }
   ],
   "makes_plates": true,
@@ -80,7 +141,9 @@
       "/home/claude/filament-repo/research/verified-oem-relationships.md (project-owner verified)",
       "https://www.geeetech.com/about-us-ezp-14.html",
       "https://en.everybodywiki.com/Geeetech",
-      "https://wiki.geeetech.com/"
+      "https://wiki.geeetech.com/",
+      "https://wiki.geeetech.com/index.php/Filament",
+      "https://www.geeetech.com/collections/filaments"
     ],
     "last_verified": "2026-07-31",
     "confidence": "medium",

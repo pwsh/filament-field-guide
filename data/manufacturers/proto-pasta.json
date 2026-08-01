@@ -24,38 +24,98 @@
   },
   "product_lines": [
     {
-      "name": "PLA and HTPLA",
+      "name": "HTPLA (High Temp PLA)",
       "filament_ids": [
         "pla"
       ],
-      "notes": "Standard PLA plus HTPLA, a heat-treatable (annealable) grade; also glitter and color-shift aesthetic variants."
+      "notes": "Annealable high-heat PLA: standard NatureWorks-type PLA resin plus a nucleating/crystallisation-promoter package, not a different base polymer. Covers all pigment/glitter/metallic/translucent colourways (Nebula Multicolor, Stardust Silver Glitter, Empire Strikes Black, Galactic Empire, Candy Apple, Cloverleaf, Mermaid's Tale, Iridescent Ice, Black Opaque). No dedicated high-heat-PLA id exists in this catalog."
     },
     {
-      "name": "Recycled PLA",
+      "name": "PLA (standard)",
       "filament_ids": [
         "pla"
       ],
-      "notes": "Recycled Black PLA made from in-house process scrap."
+      "notes": "Non-annealed standard PLA colours."
     },
     {
-      "name": "Carbon Fiber PLA",
+      "name": "Matte Fiber HTPLA",
+      "filament_ids": [
+        "pla-matte",
+        "pla-wood"
+      ],
+      "notes": "HTPLA base with fibre filler: Walnut/Mahogany/Daffodil-type colourways are wood-flour filled (pla-wood); plain Matte Black/White/Gray use a matting additive (pla-matte)."
+    },
+    {
+      "name": "Carbon Fiber Composite PLA / HTPLA (incl. Recycled Carbon Fiber PLA)",
       "filament_ids": [
         "pla-cf"
-      ]
+      ],
+      "notes": "PLA (NatureWorks 4043D family) + chopped/milled carbon fibre; Black, Light/Medium/Dark Gray colourways plus a recycled-content grade."
     },
     {
-      "name": "Metal-filled PLA",
+      "name": "Carbon Fiber PETG / Recycled Carbon Fiber PETG",
       "filament_ids": [
-        "pla"
+        "petg-cf"
       ],
-      "notes": "Five metal fills including Magnetic Iron and Stainless Steel; heavy, abrasive, polishable composites."
+      "notes": "PETG copolyester + carbon fibre; recycled-content variant is the same chemistry."
     },
     {
-      "name": "Conductive PLA",
+      "name": "Carbon Fiber PCTG (Black High-Strength / Gray High-Impact)",
       "filament_ids": [
-        "pla"
+        "pctg"
       ],
-      "notes": "Carbon-loaded conductive grade for low-current electronics experiments."
+      "notes": "PCTG + carbon fibre. Listed against pctg for family context only — no pctg-cf id exists in this catalog, so this is not a clean chemistry match."
+    },
+    {
+      "name": "Metal Composite PLA / HTPLA (Iron, Stainless Steel, Copper, Brass, Bronze)",
+      "filament_ids": [
+        "pla-metal"
+      ],
+      "notes": "PLA/HTPLA + powdered metal. Iron 1.8 g/cm3 (rustable, magnetic), stainless steel 2.4 g/cm3; High-Density grades are heavier still. Aesthetic/weight filler and polishable — not stronger than plain PLA and (steel grades) not electrically conductive."
+    },
+    {
+      "name": "Electrically Conductive Composite PLA",
+      "filament_ids": [],
+      "notes": "NatureWorks 4043D PLA + dispersant + conductive carbon black; density 1.15 g/cm3, volume resistivity ~15 ohm-cm moulded and ~30-115 ohm-cm printed (XY vs Z). True conductive range, well below ESD; no conductive-PLA id exists."
+    },
+    {
+      "name": "Static Dissipative PETG",
+      "filament_ids": [
+        "petg-esd"
+      ],
+      "notes": "PETG + conductive carbon black tuned into the 10^5-10^9 ohm ESD-safe band rather than the conductive range."
+    },
+    {
+      "name": "Static Dissipative PLA / Static Dissipative Carbon Fiber PLA",
+      "filament_ids": [],
+      "notes": "PLA (and PLA-CF) base tuned into the 10^5-10^9 ohm ESD band. No PLA-ESD id exists; petg-esd is PETG-specific."
+    },
+    {
+      "name": "Recycled PLA / Recycled PETG",
+      "filament_ids": [
+        "pla",
+        "petg"
+      ],
+      "notes": "Black Recycled PLA, Black Recycled PETG and Still Colorful Recycled PLA (018/033) — post-industrial/post-consumer regrind, no chemistry deviation from the virgin equivalents."
+    },
+    {
+      "name": "Polyketone composites (Glass Fiber Polyketone / Carbon Fiber Polyketone)",
+      "filament_ids": [],
+      "notes": "Base polymer is aliphatic polyketone (PK), an engineering resin marketed as nylon-like; glass- or carbon-fibre reinforced. No polyketone id exists in this catalog."
+    },
+    {
+      "name": "Flexible TPU / Rigid TPU",
+      "filament_ids": [
+        "tpu"
+      ],
+      "notes": "Clear Flexible TPU and Recycled Black Flexible TPU; Clear Rigid TPU is a higher-durometer grade of the same chemistry. Shore hardness not published, so no durometer-specific id is assigned."
+    },
+    {
+      "name": "Flexible TPE (Black)",
+      "filament_ids": [
+        "tpe"
+      ],
+      "notes": "Non-urethane thermoplastic elastomer, softer/more rubbery than the TPU line per Protopasta's own copy."
     }
   ],
   "makes_plates": false,
@@ -66,7 +126,22 @@
       "https://proto-pasta.com/pages/about-us",
       "https://proto-pasta.com/pages/general-faq",
       "https://filamentcheatsheet.com/brands/proto-pasta/",
-      "https://www.instagram.com/protopasta/"
+      "https://www.instagram.com/protopasta/",
+      "https://proto-pasta.com/pages/high-temp-pla",
+      "https://proto-pasta.com/products/carbon-fiber-pla",
+      "https://proto-pasta.com/products/carbon-fiber-petg",
+      "https://proto-pasta.com/products/black-high-strength-carbon-fiber-pctg",
+      "https://proto-pasta.com/pages/conductive-pla",
+      "https://proto-pasta.com/pages/magnetic-iron-pla",
+      "https://proto-pasta.com/pages/stainless-steel-pla",
+      "https://proto-pasta.com/products/carbon-fiber-polyketone",
+      "https://proto-pasta.com/products/glass-fiber-polyketone",
+      "https://proto-pasta.com/collections/tpe-tpu",
+      "https://proto-pasta.com/collections/fiber-filled",
+      "https://proto-pasta.com/collections/metal-filled",
+      "https://proto-pasta.com/collections/conductive",
+      "https://proto-pasta.com/collections/recycled",
+      "https://proto-pasta.com/collections/all"
     ],
     "last_verified": "2026-07-31",
     "confidence": "medium",

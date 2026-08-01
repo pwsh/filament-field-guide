@@ -24,47 +24,135 @@
   },
   "product_lines": [
     {
+      "name": "PLA-S",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Standard biosourced PLA."
+    },
+    {
+      "name": "PLA-R",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Recycled-content PLA."
+    },
+    {
+      "name": "ABS-S",
+      "filament_ids": [
+        "abs"
+      ],
+      "notes": "Standard ABS."
+    },
+    {
       "name": "ABS-R",
       "filament_ids": [
         "abs"
       ],
-      "notes": "Impact-modified ABS; the only Kimya product directly confirmed from a source in this research session. Sample price $22.65 for a black spool at MatterHackers."
+      "notes": "Recycled-content, impact-modified ABS. Sample price $22.65 for a black spool at MatterHackers."
     },
     {
-      "name": "Standard polymers",
+      "name": "ABS-EC",
       "filament_ids": [
-        "pla",
-        "petg",
-        "tpu"
+        "abs"
       ],
-      "notes": "Reported catalog breadth, not itemised from a Kimya-controlled source — treat as unverified."
+      "notes": "ABS grade engineered for larger and more complex parts."
     },
     {
-      "name": "Engineering polymers",
+      "name": "ABS Kevlar",
+      "notes": "ABS reinforced with aramid (Kevlar) fiber - an unusual filler with no carbon/glass equivalent id in this catalog."
+    },
+    {
+      "name": "ABS-ESD",
+      "notes": "ABS doped with conductive filler for static-dissipative use. No abs-esd id exists (only petg-esd)."
+    },
+    {
+      "name": "ABS Carbon / ABS Carbon Black",
+      "notes": "ABS + carbon fiber, sold partly through the Raise3D partner channel. No abs-cf id exists in this catalog."
+    },
+    {
+      "name": "HIPS-R",
       "filament_ids": [
-        "pa",
-        "pc"
+        "hips"
       ],
-      "notes": "Nylon including reinforced grades, and polycarbonate. Reported, not independently confirmed."
+      "notes": "Recycled-content high-impact polystyrene, support/sacrificial use."
     },
     {
-      "name": "Reinforced composites",
+      "name": "PETG-S",
       "filament_ids": [
-        "pa-cf",
-        "pa-gf",
+        "petg"
+      ],
+      "notes": "Standard PETG."
+    },
+    {
+      "name": "PETG-R",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "Recycled PETG made from post-consumer packaging waste."
+    },
+    {
+      "name": "PETG Carbon",
+      "filament_ids": [
         "petg-cf"
       ],
-      "notes": "Carbon- and glass-fiber-filled engineering filaments for functional end-use parts. Reported, not independently confirmed."
+      "notes": "PETG + carbon fiber filler."
+    },
+    {
+      "name": "PA6-CO",
+      "filament_ids": [
+        "pa6-cf"
+      ],
+      "notes": "Carbon-filled polyamide 6. Kimya does not separate fiber loading from black pigment in the listings found, so the -cf mapping rests on the product's reinforced positioning rather than a stated fiber %."
+    },
+    {
+      "name": "PEI-9085",
+      "filament_ids": [
+        "pei-ultem"
+      ],
+      "notes": "ULTEM 9085-grade polyetherimide (ivory)."
+    },
+    {
+      "name": "PEKK-A",
+      "filament_ids": [
+        "pekk"
+      ],
+      "notes": "Amorphous PEKK grade (amber)."
+    },
+    {
+      "name": "PEKK Semicrystalline",
+      "filament_ids": [
+        "pekk"
+      ],
+      "notes": "Semicrystalline-processed PEKK: higher HDT and different post-processing than the amorphous grade, same polymer."
+    },
+    {
+      "name": "PEKK Carbon",
+      "notes": "PEKK + carbon fiber. No pekk-cf id exists in this catalog."
+    },
+    {
+      "name": "PEBA-S",
+      "notes": "Pebax-type polyether-block-amide thermoplastic elastomer - higher rebound and lower compression set than TPU at comparable hardness, and chemically distinct from it. No peba id exists."
     }
   ],
   "price_tier": "engineering",
-  "additional_notes": "This entry rests largely on distributor listings: kimya.fr could not be fetched in this research session (robots/SSL blocks), so the website endpoint is the believed URL with unverified reachability, and filament2print's Kimya brand page returned 404. The product line list beyond ABS-R is industry-standard-knowledge rather than sourced itemisation. Whether Kimya's filament is extruded at ARMOR's Nantes HQ site (20 rue Chevreul, 44105 Nantes) or a separate ARMOR facility is unverified; manufacturing_countries is set to France on brand positioning and ARMOR's French base rather than a confirmed plant. Build-plate products not confirmed either way, so makes_plates is left unset. No social profiles confirmed. Price tier is recorded as engineering on positioning ('functional end-use parts'), though the one confirmed price point sits in mid territory.",
+  "additional_notes": "This entry rests largely on distributor listings: kimya.fr could not be fetched in this research session (robots/SSL blocks), so the website endpoint is the believed URL with unverified reachability, and filament2print's Kimya brand page returned 404. The product line list beyond ABS-R is industry-standard-knowledge rather than sourced itemisation. Whether Kimya's filament is extruded at ARMOR's Nantes HQ site (20 rue Chevreul, 44105 Nantes) or a separate ARMOR facility is unverified; manufacturing_countries is set to France on brand positioning and ARMOR's French base rather than a confirmed plant. Build-plate products not confirmed either way, so makes_plates is left unset. No social profiles confirmed. Price tier is recorded as engineering on positioning ('functional end-use parts'), though the one confirmed price point sits in mid territory. UPDATE (trade-name pass): the product line list is no longer inferred - it is now itemised from kimya.fr category/product pages plus the 3DGBIRE and Raise3D partner catalogs. Kimya's own site is partly protected by anti-bot measures, so the list is thorough but not guaranteed exhaustive at the colour/SKU level. The previously-listed TPU, PC, PA-GF and generic 'nylon' lines were removed because no source in this pass supports them; PEBA-S is Kimya's flexible offering.",
   "provenance": {
     "sources": [
       "https://www.armor-group.com/en/",
       "https://www.matterhackers.com/store/c/browse-by-filament-manufacturer",
       "https://filament2print.com/en/brand/9-kimya",
-      "https://www.kimya.fr/en/"
+      "https://www.kimya.fr/en/",
+      "https://www.kimya.fr/en/our-offer/kimya-materials/",
+      "https://www.kimya.fr/en/products-category/3d-filaments/basics-3d-filaments/pla-filament/",
+      "https://www.kimya.fr/en/products-category/3d-filaments/basics-3d-filaments/abs-filament/",
+      "https://www.kimya.fr/en/focus-on-materials-the-kimya-abs-ec-filament/",
+      "https://www.kimya.fr/en/product/abs-esd-3d-filament/",
+      "https://www.kimya.fr/en/product/3d-peba-s-filament-kimya/",
+      "https://3dgbire.com/pages/kimya",
+      "https://www.3d-printer.com/products/a07a4d7837/163943000033731441",
+      "https://www.crea3d.com/en/kimya/885-1134-kimya-peba-s-500g.html",
+      "https://www.raise3d.com/products/kimya-abs-carbon-3d-filament/"
     ],
     "last_verified": "2026-07-31",
     "confidence": "low",

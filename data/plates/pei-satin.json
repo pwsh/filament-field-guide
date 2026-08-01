@@ -1,0 +1,507 @@
+{
+  "id": "pei-satin",
+  "name": "Satin PEI (fine powder-coated spring steel)",
+  "aliases": [
+    "Satin powder-coated print sheet",
+    "Prusa satin sheet",
+    "Fine-textured PEI"
+  ],
+  "status": "researched",
+  "summary": "A finer-grained powder-coated PEI sheet, engineered as the middle ground between glossy smooth PEI and coarse textured PEI. Prusa originated and still defines the category, describing it as a fine powder-coated surface with a lightly textured matte finish, and markets it as the most versatile single sheet across material families — strong enough for PLA and PETG without glue, gentle enough to release PC blends, and finer than the standard textured coat so print bottoms look subtly satin rather than sandy.",
+  "surface_makeup": "Polyetherimide (PEI) powder coating on spring steel, applied with a finer particle size and lighter build than standard textured plates; chemically identical to textured PEI, differing in coating grain and application rather than composition",
+  "texture": "satin",
+  "manufacturers": [
+    "Prusa Research",
+    "DarkMoon3D",
+    "FYSETC",
+    "BIQU"
+  ],
+  "filament_compatibility": [
+    {
+      "filament_id": "pla",
+      "rating": "recommended",
+      "bed_temp_c": {
+        "min": 55,
+        "max": 60
+      },
+      "adhesion_aid": "none",
+      "notes": "Direct print with no aid; small or thin-walled parts benefit from a brim since satin's peak grip is below smooth PEI's."
+    },
+    {
+      "filament_id": "pla-plus",
+      "rating": "recommended",
+      "bed_temp_c": {
+        "min": 55,
+        "max": 60
+      },
+      "adhesion_aid": "none",
+      "notes": "As base PLA."
+    },
+    {
+      "filament_id": "pla-silk",
+      "rating": "recommended",
+      "bed_temp_c": {
+        "min": 55,
+        "max": 60
+      },
+      "adhesion_aid": "none",
+      "notes": "Bottom face reads as soft satin rather than mirror; use smooth PEI if you want the silk gloss underneath."
+    },
+    {
+      "filament_id": "pla-matte",
+      "rating": "recommended",
+      "bed_temp_c": {
+        "min": 55,
+        "max": 60
+      },
+      "adhesion_aid": "none",
+      "notes": "Finish matches the rest of the part closely."
+    },
+    {
+      "filament_id": "pla-cf",
+      "rating": "recommended",
+      "bed_temp_c": {
+        "min": 55,
+        "max": 60
+      },
+      "adhesion_aid": "none",
+      "notes": "Adheres as well as plain PLA; filler does not affect the coating."
+    },
+    {
+      "filament_id": "pvb",
+      "rating": "recommended",
+      "bed_temp_c": {
+        "min": 70,
+        "max": 80
+      },
+      "adhesion_aid": "none",
+      "notes": "Adheres and releases well; avoid alcohol on the part, as PVB dissolves in IPA."
+    },
+    {
+      "filament_id": "petg",
+      "rating": "recommended",
+      "bed_temp_c": {
+        "min": 70,
+        "max": 80
+      },
+      "adhesion_aid": "none",
+      "notes": "Prusa markets satin as an excellent PETG surface with no glue stick required — parts pop off cleanly once cold."
+    },
+    {
+      "filament_id": "pctg",
+      "rating": "recommended",
+      "bed_temp_c": {
+        "min": 70,
+        "max": 80
+      },
+      "adhesion_aid": "none",
+      "notes": "As PETG."
+    },
+    {
+      "filament_id": "pet",
+      "rating": "recommended",
+      "bed_temp_c": {
+        "min": 70,
+        "max": 85
+      },
+      "adhesion_aid": "none",
+      "notes": "As PETG."
+    },
+    {
+      "filament_id": "petg-cf",
+      "rating": "recommended",
+      "bed_temp_c": {
+        "min": 70,
+        "max": 80
+      },
+      "adhesion_aid": "none",
+      "notes": "Fibre-filled copolyesters release cleanly from the fine coat."
+    },
+    {
+      "filament_id": "petg-gf",
+      "rating": "recommended",
+      "bed_temp_c": {
+        "min": 70,
+        "max": 80
+      },
+      "adhesion_aid": "none",
+      "notes": "As PETG-CF."
+    },
+    {
+      "filament_id": "petg-esd",
+      "rating": "recommended",
+      "bed_temp_c": {
+        "min": 70,
+        "max": 80
+      },
+      "adhesion_aid": "none",
+      "notes": "As PETG."
+    },
+    {
+      "filament_id": "abs",
+      "rating": "recommended",
+      "bed_temp_c": {
+        "min": 100,
+        "max": 110
+      },
+      "adhesion_aid": "none",
+      "notes": "Good adhesion at standard ABS bed temps; enclosure remains the dominant variable."
+    },
+    {
+      "filament_id": "abs-gf",
+      "rating": "recommended",
+      "bed_temp_c": {
+        "min": 100,
+        "max": 110
+      },
+      "adhesion_aid": "none",
+      "notes": "As ABS with less warp."
+    },
+    {
+      "filament_id": "abs-fr",
+      "rating": "recommended",
+      "bed_temp_c": {
+        "min": 100,
+        "max": 110
+      },
+      "adhesion_aid": "none",
+      "notes": "As ABS."
+    },
+    {
+      "filament_id": "hips",
+      "rating": "recommended",
+      "bed_temp_c": {
+        "min": 100,
+        "max": 110
+      },
+      "adhesion_aid": "none",
+      "notes": "As ABS; common breakaway support partner."
+    },
+    {
+      "filament_id": "asa",
+      "rating": "recommended",
+      "bed_temp_c": {
+        "min": 100,
+        "max": 110
+      },
+      "adhesion_aid": "brim or draft shield on tall parts",
+      "notes": "Prusa notes ASA adhesion on satin is somewhat lower than PLA or PETG; a brim and draft shield cover the gap."
+    },
+    {
+      "filament_id": "asa-cf",
+      "rating": "recommended",
+      "bed_temp_c": {
+        "min": 100,
+        "max": 110
+      },
+      "adhesion_aid": "brim on tall parts",
+      "notes": "As ASA."
+    },
+    {
+      "filament_id": "tpu",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 40,
+        "max": 60
+      },
+      "adhesion_aid": "glue stick (explicitly recommended by Prusa)",
+      "notes": "Prusa specifically calls for a glue stick when printing TPU or TPE on the satin sheet — both as an adhesion aid and to protect the coating."
+    },
+    {
+      "filament_id": "tpu-95a",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 40,
+        "max": 60
+      },
+      "adhesion_aid": "glue stick",
+      "notes": "Hardest common grade; still follow the glue-stick guidance."
+    },
+    {
+      "filament_id": "tpu-90a",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 40,
+        "max": 60
+      },
+      "adhesion_aid": "glue stick",
+      "notes": "As TPU."
+    },
+    {
+      "filament_id": "tpu-85a",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 40,
+        "max": 60
+      },
+      "adhesion_aid": "glue stick",
+      "notes": "Softer grades work into the fine texture; the separator matters more here."
+    },
+    {
+      "filament_id": "tpu-60a",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 30,
+        "max": 50
+      },
+      "adhesion_aid": "glue stick required",
+      "notes": "Very soft grade; do not print it bare on the coating."
+    },
+    {
+      "filament_id": "tpe",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 30,
+        "max": 50
+      },
+      "adhesion_aid": "glue stick required",
+      "notes": "Prusa groups TPE with TPU for the glue-stick recommendation."
+    },
+    {
+      "filament_id": "cope",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 45,
+        "max": 70
+      },
+      "adhesion_aid": "glue stick",
+      "notes": "Copolyester elastomer; treat as TPE for release purposes."
+    },
+    {
+      "filament_id": "pa",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 70,
+        "max": 100
+      },
+      "adhesion_aid": "glue stick required if attempted",
+      "notes": "Not a Prusa-recommended surface for nylon; garolite remains the standard choice."
+    },
+    {
+      "filament_id": "pa6",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 70,
+        "max": 100
+      },
+      "adhesion_aid": "glue stick required if attempted",
+      "notes": "As base PA."
+    },
+    {
+      "filament_id": "pa12",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 70,
+        "max": 100
+      },
+      "adhesion_aid": "glue stick required if attempted",
+      "notes": "As base PA, with lower moisture sensitivity."
+    },
+    {
+      "filament_id": "pa66",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 80,
+        "max": 110
+      },
+      "adhesion_aid": "glue stick required if attempted",
+      "notes": "High shrinkage; garolite preferred."
+    },
+    {
+      "filament_id": "pa6-cf",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 70,
+        "max": 100
+      },
+      "adhesion_aid": "glue stick required if attempted",
+      "notes": "Fibre fill helps warp, not adhesion."
+    },
+    {
+      "filament_id": "pa12-cf",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 70,
+        "max": 100
+      },
+      "adhesion_aid": "glue stick required if attempted",
+      "notes": "As PA6-CF."
+    },
+    {
+      "filament_id": "ppa",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 90,
+        "max": 120
+      },
+      "adhesion_aid": "dedicated high-temp surface required",
+      "notes": "Outside the characterised range for the satin coat."
+    },
+    {
+      "filament_id": "ppa-cf",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 90,
+        "max": 120
+      },
+      "adhesion_aid": "dedicated high-temp surface required",
+      "notes": "As PPA."
+    },
+    {
+      "filament_id": "pc",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 110,
+        "max": 130
+      },
+      "adhesion_aid": "clean sheet works; glue stick advised for frequent printing",
+      "notes": "Prusa states a clean satin sheet handles PC blends well, and recommends a glue stick for frequent PC work specifically to prevent coating wear. Satin has the broadest PC compatibility of Prusa's three finishes."
+    },
+    {
+      "filament_id": "pc-abs",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 100,
+        "max": 120
+      },
+      "adhesion_aid": "glue stick for frequent printing",
+      "notes": "As PC blend guidance."
+    },
+    {
+      "filament_id": "pc-pbt",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 100,
+        "max": 120
+      },
+      "adhesion_aid": "glue stick for frequent printing",
+      "notes": "As PC-ABS."
+    },
+    {
+      "filament_id": "pp",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 80,
+        "max": 100
+      },
+      "adhesion_aid": "PP-specific tape or sheet required",
+      "notes": "No PP claim for satin; polypropylene needs its own surface."
+    },
+    {
+      "filament_id": "pp-gf",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 80,
+        "max": 100
+      },
+      "adhesion_aid": "PP-specific tape or sheet required",
+      "notes": "As PP."
+    },
+    {
+      "filament_id": "pva",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 45,
+        "max": 60
+      },
+      "adhesion_aid": "print on top of an existing PLA/PETG layer",
+      "notes": "Same limitation as other PEI finishes per Prusa's soluble-materials guidance."
+    },
+    {
+      "filament_id": "bvoh",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 45,
+        "max": 60
+      },
+      "adhesion_aid": "print on top of an existing PLA/PETG layer",
+      "notes": "As PVA."
+    },
+    {
+      "filament_id": "peek",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 130,
+        "max": 160
+      },
+      "adhesion_aid": "Prusa HighTemp sheet or garolite required",
+      "notes": "Outside the satin sheet's rated range."
+    },
+    {
+      "filament_id": "pekk",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 130,
+        "max": 160
+      },
+      "adhesion_aid": "Prusa HighTemp sheet or garolite required",
+      "notes": "As PEEK."
+    },
+    {
+      "filament_id": "pei-ultem",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 130,
+        "max": 160
+      },
+      "adhesion_aid": "Prusa HighTemp sheet or garolite required",
+      "notes": "Out of range, plus same-polymer welding risk."
+    },
+    {
+      "filament_id": "pps",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 120,
+        "max": 150
+      },
+      "adhesion_aid": "dedicated high-temp sheet required",
+      "notes": "Out of range."
+    },
+    {
+      "filament_id": "pps-cf",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 120,
+        "max": 150
+      },
+      "adhesion_aid": "dedicated high-temp sheet required",
+      "notes": "As PPS."
+    },
+    {
+      "filament_id": "ppsu",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 130,
+        "max": 160
+      },
+      "adhesion_aid": "dedicated high-temp sheet required",
+      "notes": "Out of range."
+    }
+  ],
+  "preparation": "On first use, wipe the sheet with IPA or wash it with warm soapy water to clear factory residue, and dry it fully. Before each print, clean the cold sheet with roughly 90% IPA — Prusa is emphatic that finger grease is the single biggest adhesion killer on this surface, so handle it by the tabs only. If IPA no longer restores the first layer, wash with dish soap and warm water, then dry immediately rather than letting the sheet air-dry with water sitting on the steel. Because satin's coating thickness differs from both smooth and textured sheets, re-run Live-Z / first-layer calibration whenever you swap sheet types; Prusa profiles treat satin as its own sheet.",
+  "cleaning": "Routine cleaning is a cold IPA wipe with a lint-free cloth; do it before every print rather than between batches, since the fine coat picks up skin oils readily. Deep cleaning is warm water with dish soap and a soft cloth or sponge, rinsed and dried completely. Prusa states explicitly that acetone will deteriorate the surface — do not use it, or any other aggressive solvent. Metal spatulas, blades and abrasive pads scratch the coat and are equally off-limits. Never store the sheet wet or leave it damp on the magnetic bed.",
+  "model_removal": "Satin is tuned to self-release: let the bed cool to room temperature and prints generally pop off on their own, with a light flex of the removed sheet finishing anything stubborn. Prusa provides printable plastic scraper designs and recommends only plastic tools — a metal spatula will scar the coating. Because satin's peak grip is below smooth PEI's, small PLA parts are better served by adding a brim than by cranking the bed temperature. Prusa explicitly warns against putting the satin sheet in a freezer, so cold-shock removal is not part of the recommended workflow for this surface.",
+  "stuck_print_recovery": "In most cases patience is the whole procedure: leave the sheet aside until it is fully at room temperature and the part will release. If it does not, drip 90% IPA at the print/plate interface and let it wick under the perimeter, then flex again. Unwaxed dental floss or a thin wire sawed under a corner and drawn across the footprint is the safest mechanical option. A brief reheat to the material's bed temperature followed by a slow, undisturbed cool frees most remaining cases. Do not use the freezer trick here — Prusa discourages freezing this coated sheet, and its warranty excludes cosmetic and consumable damage, so a cracked or crazed coating from thermal shock is on you.",
+  "temperature_limits_c": {
+    "max": 130
+  },
+  "lifespan_notes": "Prusa sells the satin sheet explicitly as a consumable and excludes consumable sheets and cosmetic damage from warranty coverage, which is the clearest signal available that it has a finite service life. No manufacturer-published cycle count exists; the rough 12-18 month figure circulating for PEI-coated sheets in the Bambu ecosystem is a reasonable planning number but is not Prusa-verified for satin. Wear is accelerated by scraping with metal tools, solvent exposure, frequent high-temperature PC or ASA work without a release aid, and accumulated finger grease, which degrades adhesion long before the coating physically wears out. Not recoatable at home.",
+  "price": {
+    "usd_low": 25,
+    "usd_high": 47,
+    "notes": "Prusa Satin Powder-Coated Print Sheet USD 46.99 in a single universal size covering CORE One / XL / MK4x / MK3.9x / MK3.5x / MK3 / MK2.5x / MINI beds — a premium over Prusa's smooth (about USD 35) and textured (about USD 40) sheets. Third-party 'satin' branded sheets from DarkMoon3D and others run cheaper but with less standardised specifications."
+  },
+  "additional_notes": "Double-sided and magnetically mounted like the rest of Prusa's steel-sheet system, with a first-layer recalibration required on every sheet swap. Prusa positions satin as the most versatile single sheet across material families, effectively removing the need to own separate smooth and textured sheets — the price premium buys that consolidation. Note that 'satin' is a Prusa-defined product category rather than an industry standard: outside Prusa, small vendors apply the label loosely to fine-textured PEI and even to PEO films, so the name alone does not guarantee this surface.",
+  "provenance": {
+    "sources": [
+      "Prusa Knowledge Base - Satin Steel Sheet: https://help.prusa3d.com/article/satin-steel-sheet_196526",
+      "Prusa3D Store - Satin Powder-Coated Print Sheet: https://www.prusa3d.com/product/satin-powder-coated-print-sheet/",
+      "All3DP - Prusa PEI Sheet Differences: https://all3dp.com/2/prusa-pei-sheet-textured-powder-coated-steel/",
+      "DREMC Knowledge Base - Texture / Smooth PEI / Satin Build Plate: https://support.dremc.com.au/support/solutions/articles/51000300850-dremc-texture-smooth-pei-satin-build-plate",
+      "DarkMoon3D - Satin Build Plate User Guide: https://darkmoon3d.com/pages/darkmoon-satin-build-plate-user-guide"
+    ],
+    "last_verified": "2026-08-01",
+    "confidence": "medium",
+    "conflicts": "Prusa explicitly discourages freezing the satin sheet, which contradicts the freezer trick recommended almost universally for other PEI-family plates including smooth and textured — the guidance here follows Prusa for this sheet only. No separate thermal ceiling is published for satin versus textured, so the 130 degC max is inferred from supported material bed temps (PLA through PC blend) rather than a datasheet. The 12-18 month lifespan figure is borrowed from Bambu-ecosystem community reporting on PEI coatings and is not Prusa-specific or verified for satin. Nylon behaviour on satin specifically is unverified; the avoid rating is carried over from general PEI guidance. Outside Prusa, the 'satin' label is applied inconsistently by small vendors (including to PEO films), so third-party satin plates may not match this entry. Bambu markets no satin-branded plate and Creality has no identified dedicated satin SKU (unverified)."
+  }
+}

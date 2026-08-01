@@ -19,31 +19,44 @@
   },
   "product_lines": [
     {
-      "name": "PLA",
+      "name": "PLA (\"Biodegradable Filament\")",
       "filament_ids": [
         "pla"
       ],
-      "notes": "Marketed as biodegradable and easy to print; a second, more pliable biodegradable PLA variant is also listed"
+      "notes": "Standard PLA; density 1.24 g/cc, HDT/Vicat ~60 C, tensile 16/21 kpsi MD/TD, elongation 160%/100%"
     },
     {
-      "name": "PETG",
+      "name": "PET-G (\"Gloss Filament\")",
       "filament_ids": [
         "petg"
       ],
-      "notes": "Glossy, water-resistant"
+      "notes": "Standard PETG; density 1.27 g/cc, tensile 50 MPa, Vicat ~85 C"
     },
     {
-      "name": "TPU",
+      "name": "ABS (\"Multi-Purpose Filament\")",
       "filament_ids": [
-        "tpu"
-      ]
+        "abs"
+      ],
+      "notes": "Standard ABS; density 1.05 g/cm3, tensile modulus 2280 MPa, Vicat ~97 C. This identifies the previously unclear multifunctional durable product"
     },
     {
-      "name": "PVA",
+      "name": "Flex (\"Flexible / Biodegradable Flexible Filament\")",
+      "filament_ids": [],
+      "notes": "Proprietary PLA-mix formulated to mimic TPC flexibility while avoiding TPU printing issues - not a TPU or TPE. Density 1.27 g/cc, tensile 20 MPa, modulus 730 MPa, no-break elongation, impact 83 kJ/m2, melt ~145 C"
+    },
+    {
+      "name": "HIPS (\"Support Material\")",
+      "filament_ids": [
+        "hips"
+      ],
+      "notes": "D-limonene-soluble HIPS used as ABS support"
+    },
+    {
+      "name": "PVA (\"Soluble Filament\")",
       "filament_ids": [
         "pva"
       ],
-      "notes": "Fully soluble, lightweight; a separate water-soluble support material is also listed"
+      "notes": "Polyvinyl alcohol, density 0.6-0.9 g/cm3, MFI 14-20, melting ~62 C, water-soluble support"
     }
   ],
   "makes_plates": false,
@@ -54,7 +67,13 @@
       "https://real-filament.com/",
       "https://www.instagram.com/realfilament/",
       "https://filamentz.nl/en/collections/real-filament",
-      "https://www.123-3d.co.uk/3D-filament/Filament-brand/REAL-filament-p19007.html"
+      "https://www.123-3d.co.uk/3D-filament/Filament-brand/REAL-filament-p19007.html",
+      "https://real-filament.com/3d-filament/pla",
+      "https://real-filament.com/3d-filament/petg",
+      "https://real-filament.com/3d-filament/abs",
+      "https://real-filament.com/3d-filament/flex",
+      "https://real-filament.com/3d-filament/hips",
+      "https://real-filament.com/3d-filament/pva"
     ],
     "last_verified": "2026-07-31",
     "confidence": "low",

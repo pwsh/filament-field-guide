@@ -4,8 +4,17 @@
   "status": "researched",
   "summary": "Shenzhen electronics and 3D printing company founded 2015 by Chris Hong (with co-founder Kevin Wang); the name combines 'ELE' (electronic) and 'GOO' (googol). Best known for the Mars/Saturn resin printers, with FDM (Neptune, Centauri Carbon) and filament as a newer expansion. Elegoo appears to produce its own-brand filament directly and is the owner-verified manufacturer behind the Deeplee label. Catalog is unusually broad for a printer brand, running from budget PLA to flame-retardant PC and carbon/glass-filled composites.",
   "headquarters_country": "China",
-  "manufacturing_countries": ["China"],
-  "brands": ["ELEGOO", "Neptune", "Centauri Carbon", "Mars", "Saturn", "Deeplee"],
+  "manufacturing_countries": [
+    "China"
+  ],
+  "brands": [
+    "ELEGOO",
+    "Neptune",
+    "Centauri Carbon",
+    "Mars",
+    "Saturn",
+    "Deeplee"
+  ],
   "oem_relationships": [
     {
       "company": "Deeplee",
@@ -21,12 +30,187 @@
     }
   },
   "product_lines": [
-    { "name": "PLA", "filament_ids": ["pla"], "notes": "Basic, Plus, Pro, Silk, Marble, Metallic, Matte, Sparkle, Galaxy, Wood, Glow, and Rapid PLA Plus" },
-    { "name": "PETG", "filament_ids": ["petg"], "notes": "PETG Rapid, Pro and Translucent" },
-    { "name": "ABS / ASA", "filament_ids": ["abs", "asa"] },
-    { "name": "TPU", "filament_ids": ["tpu"], "notes": "TPU 95A including a Rapid variant" },
-    { "name": "PC", "filament_ids": ["pc"], "notes": "PC and PC-FR (flame retardant)" },
-    { "name": "Composites", "filament_ids": ["pla-cf", "petg-cf", "petg-gf", "pa-cf", "pet-cf"], "notes": "PLA-CF, PETG-CF, PETG-GF, PAHT-CF and PET-CF; premium tier up to around $56/kg" }
+    {
+      "name": "PLA / PLA Basic",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Standard PLA"
+    },
+    {
+      "name": "PLA (RFID) / PLA (RFID) emoji Brand Edition",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "RFID-tagged standard PLA, same resin as PLA Basic"
+    },
+    {
+      "name": "PLA Plus",
+      "filament_ids": [
+        "pla-plus"
+      ],
+      "notes": "Impact-modified/toughened PLA"
+    },
+    {
+      "name": "PLA Pro",
+      "filament_ids": [
+        "pla-plus"
+      ],
+      "notes": "Second toughened tier marketed above PLA Plus for impact resistance; same PLA+ class chemistry, Elegoo positions the two as distinct grades"
+    },
+    {
+      "name": "Rapid PLA Plus",
+      "filament_ids": [
+        "pla-plus",
+        "pla-hf"
+      ],
+      "notes": "Toughened PLA on a high-flow/high-speed rheology - fits both the PLA+ and high-flow PLA descriptions"
+    },
+    {
+      "name": "PLA Silk",
+      "filament_ids": [
+        "pla-silk"
+      ],
+      "notes": "Gloss-additive PLA"
+    },
+    {
+      "name": "PLA Matte",
+      "filament_ids": [
+        "pla-matte"
+      ],
+      "notes": "Matting-filler PLA"
+    },
+    {
+      "name": "PLA Wood",
+      "filament_ids": [
+        "pla-wood"
+      ],
+      "notes": "Wood-fibre-filled PLA"
+    },
+    {
+      "name": "PLA Glow",
+      "filament_ids": [
+        "pla-glow"
+      ],
+      "notes": "Phosphorescent-pigment PLA"
+    },
+    {
+      "name": "PLA Metallic",
+      "filament_ids": [
+        "pla-metal"
+      ],
+      "notes": "Metal-powder-filled PLA"
+    },
+    {
+      "name": "PLA Copper Filled",
+      "filament_ids": [
+        "pla-metal"
+      ],
+      "notes": "Copper-powder-filled PLA; heavier-fill member of the metal-filled class"
+    },
+    {
+      "name": "PLA Marble",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "PLA with mineral marble-effect filler; no dedicated marble id in catalog"
+    },
+    {
+      "name": "PLA Galaxy / PLA Sparkle",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "PLA with glitter particulate; no dedicated glitter-PLA id in catalog"
+    },
+    {
+      "name": "PLA-CF",
+      "filament_ids": [
+        "pla-cf"
+      ],
+      "notes": "PLA + carbon fibre"
+    },
+    {
+      "name": "PETG Pro",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "Standard/enhanced PETG"
+    },
+    {
+      "name": "Rapid PETG",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "High-flow PETG for fast printing; process delta only"
+    },
+    {
+      "name": "PETG Translucent",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "Semi-transparent PETG"
+    },
+    {
+      "name": "PETG-CF",
+      "filament_ids": [
+        "petg-cf"
+      ],
+      "notes": "Carbon-fibre-filled PETG"
+    },
+    {
+      "name": "PETG-GF",
+      "filament_ids": [
+        "petg-gf"
+      ],
+      "notes": "Glass-fibre-filled PETG"
+    },
+    {
+      "name": "ABS",
+      "filament_ids": [
+        "abs"
+      ],
+      "notes": "Standard ABS, marketed water/heat resistant"
+    },
+    {
+      "name": "ASA",
+      "filament_ids": [
+        "asa"
+      ],
+      "notes": "Weatherable ASA"
+    },
+    {
+      "name": "TPU 95A / Rapid TPU 95A",
+      "filament_ids": [
+        "tpu-95a"
+      ],
+      "notes": "Shore 95A TPU; Rapid variant is a high-flow version of the same durometer"
+    },
+    {
+      "name": "PC",
+      "filament_ids": [
+        "pc"
+      ],
+      "notes": "Unfilled polycarbonate"
+    },
+    {
+      "name": "PC-FR",
+      "filament_ids": [],
+      "notes": "Flame-retardant polycarbonate. Catalog has abs-fr but no flame-retardant PC id - reported as a gap (suggested pc-fr)"
+    },
+    {
+      "name": "PAHT-CF",
+      "filament_ids": [
+        "ppa-cf"
+      ],
+      "notes": "High-temperature polyamide + carbon fibre; ppa-cf lists PAHT-CF as an alias"
+    },
+    {
+      "name": "PET-CF",
+      "filament_ids": [
+        "pet-cf"
+      ],
+      "notes": "Carbon-fibre-filled PET"
+    }
   ],
   "makes_plates": true,
   "plate_ids": [],
@@ -37,7 +221,12 @@
       "https://www.elegoo.com/pages/about",
       "https://us.elegoo.com/pages/elegoo-filaments",
       "https://deeplee3d.com/",
-      "research/verified-oem-relationships.md"
+      "research/verified-oem-relationships.md",
+      "https://us.elegoo.com/collections/filaments",
+      "https://us.elegoo.com/collections/petg-filaments",
+      "https://us.elegoo.com/collections/rapid-petg-filaments-for-fdm-3d-printers",
+      "https://www.elegoo.com/blogs/3d-printer-user-guide/three-new-high-performance-fiber-reinforced-3d-printing-filaments-from-elegoo-petg-cf-petg-gf-and-paht-cf",
+      "https://us.elegoo.com/products/abs-filament-1-75mm-colored-1kg"
     ],
     "last_verified": "2026-07-31",
     "confidence": "medium",

@@ -1,7 +1,11 @@
 {
   "id": "asa",
   "name": "ASA (Acrylonitrile Styrene Acrylate)",
-  "aliases": ["ASA", "Acrylonitrile Styrene Acrylate", "Acrylic Styrene Acrylonitrile"],
+  "aliases": [
+    "ASA",
+    "Acrylonitrile Styrene Acrylate",
+    "Acrylic Styrene Acrylonitrile"
+  ],
   "status": "researched",
   "base_type": null,
   "variation_kind": null,
@@ -9,15 +13,35 @@
   "chemical_makeup": "Acrylonitrile styrene acrylate — a styrenic terpolymer in which a grafted acrylate-ester rubber phase is dispersed in a styrene-acrylonitrile (SAN) matrix. The saturated acrylate rubber replaces ABS's polybutadiene, removing the double bonds UV attacks; amorphous engineering thermoplastic",
   "summary": "ABS reformulated for sunlight: the same styrenic stiffness, impact resistance and ~100 °C glass transition, but with a weather-stable acrylate rubber phase that makes it the best UV and outdoor performer among common filaments. The cost is ABS-grade warping that demands an enclosure, and high styrene-dominated emissions that demand ventilation.",
   "printing": {
-    "nozzle_temp_c": { "min": 240, "max": 280, "recommended": 255 },
-    "bed_temp_c": { "min": 80, "max": 110, "recommended": 100 },
-    "ambient_temp_c": { "min": 40, "max": 60, "recommended": 55 },
-    "speed_mm_s": { "min": 35, "max": 250, "recommended": 90 },
+    "nozzle_temp_c": {
+      "min": 240,
+      "max": 280,
+      "recommended": 255
+    },
+    "bed_temp_c": {
+      "min": 80,
+      "max": 110,
+      "recommended": 100
+    },
+    "ambient_temp_c": {
+      "min": 40,
+      "max": 60,
+      "recommended": 55
+    },
+    "speed_mm_s": {
+      "min": 35,
+      "max": 250,
+      "recommended": 90
+    },
     "enclosure_recommended": true,
     "heated_chamber_required": false,
     "enclosure_open_for_cooling": false,
     "requires_hardened_nozzle": false,
-    "part_cooling_fan_pct": { "min": 10, "max": 25, "recommended": 15 },
+    "part_cooling_fan_pct": {
+      "min": 10,
+      "max": 25,
+      "recommended": 15
+    },
     "notes": "Brand starting points differ: Polymaker 240-280 °C (start 250), Prusament 260±10 °C, Bambu 240-270 °C. Bed 90-110 °C (Polymaker), 110±5 °C (Prusament), 80-100 °C with glue (Bambu). Keep part cooling low — heavy cooling splits layers. An enclosed, draft-free ~60 °C chamber is the ideal; a passive enclosure suffices for small parts, while large flat parts effectively require active chamber heat. Modern enclosed CoreXY machines run 200-250 mm/s; legacy/Bowden setups sit at 35-70 mm/s. Hardened nozzle only for CF/GF-filled ASA."
   },
   "feeding": {
@@ -28,9 +52,22 @@
   },
   "drying": {
     "required_before_use": "if-exposed",
-    "temp_c": { "min": 75, "max": 85, "recommended": 80 },
-    "time_hours": { "min": 8, "max": 12, "recommended": 8 },
-    "methods": ["dedicated filament dryer", "convection oven at 75-85 °C", "heated-bed method at 90-100 °C for 12 h", "drybox with desiccant"],
+    "temp_c": {
+      "min": 75,
+      "max": 85,
+      "recommended": 80
+    },
+    "time_hours": {
+      "min": 8,
+      "max": 12,
+      "recommended": 8
+    },
+    "methods": [
+      "dedicated filament dryer",
+      "convection oven at 75-85 °C",
+      "heated-bed method at 90-100 °C for 12 h",
+      "drybox with desiccant"
+    ],
     "dryness_validation": "No popping or crackling while extruding; no bubbles or voids in a hand-pulled test strand; consistent glossy extrudate; no increase in stringing on a retraction test",
     "notes": "Bambu's drying wiki gives 75-85 °C for 8 h (oven) or 90-100 °C for 12 h (heated-bed method); Bambu's own ASA product page states 80 °C for 8 h. ASA does not need the routine drying nylon does, but it absorbs enough to matter after open-air storage."
   },
@@ -72,11 +109,19 @@
     "density_g_cm3": 1.07,
     "grams_per_100cm3": 107,
     "cm3_per_100g": 93.5,
-    "shrinkage_pct": { "min": 0.4, "max": 0.7, "recommended": 0.55 },
+    "shrinkage_pct": {
+      "min": 0.4,
+      "max": 0.7,
+      "recommended": 0.55
+    },
     "glass_transition_c": 100,
     "heat_deflection_c": 93,
     "max_service_temp_c": 85,
-    "tensile_strength_mpa": { "min": 37, "max": 47, "recommended": 43 },
+    "tensile_strength_mpa": {
+      "min": 37,
+      "max": 47,
+      "recommended": 43
+    },
     "notes": "Density spans 1.05 (Bambu) to 1.08-1.09 (Polymaker/partmfg.com) with Prusament at 1.07 — 1.07 recorded. HDT from the Prusament TDS is 93 °C at 0.45 MPa and 86 °C at 1.8 MPa; Bambu cites 100 °C without stating a load. Tensile strength shows a notable brand spread: Bambu 37±3 MPa, Prusament 42-45 MPa, Polymaker/partmfg.com 47.1 MPa. Shrinkage and max service temperature are typical-for-styrenics estimates rather than datasheet values. CNC Kitchen measured a bending modulus of ~2300 MPa for ASA against ~3300 MPa for PLA, and ~30% impact energy absorbed versus 8% for PLA and 14% for PETG."
   },
   "scores": {
@@ -91,9 +136,30 @@
     "water_tolerance": 8
   },
   "compatibility": {
-    "bonds_with": ["asa", "abs", "petg"],
-    "support_materials": ["hips"],
-    "usable_as_support_for": ["abs"],
+    "bonds_with": [
+      "abs",
+      "abs-fr",
+      "abs-gf",
+      "asa",
+      "asa-cf",
+      "asa-gf",
+      "bvoh",
+      "hips",
+      "pc",
+      "pc-abs",
+      "pc-gf",
+      "petg"
+    ],
+    "support_materials": [
+      "abs",
+      "bvoh",
+      "hips"
+    ],
+    "usable_as_support_for": [
+      "abs",
+      "asa-cf",
+      "asa-gf"
+    ],
     "notes": "Welds chemically to ABS — same SAN matrix family — which makes ABS/ASA the standard multi-material pairing for outdoor parts. The PETG joint is weaker and order-dependent: PETG printed first with ASA on top is stronger than the reverse, so treat it as semi-compatible rather than a true weld. No chemical bond to PLA, PC, PA, PP, TPU or TPE (mechanical interlock only; specifics unverified). PVA and BVOH are unusable as supports because they degrade below ASA's 240-280 °C nozzle window. HIPS is the conventional breakaway/limonene-soluble support for the ABS/ASA family, though the documentation is for ABS and only inferred for ASA."
   },
   "plate_recommendations": [
@@ -101,12 +167,70 @@
       "plate_id": "pei-textured",
       "rating": "recommended",
       "notes": "Works at 90-110 °C bed. ASA still lifts at the corners on larger footprints, so a glue stick or dedicated adhesion promoter (Magigoo-type) is commonly applied even on textured PEI, and brims help. Bambu's 80-100 °C bed guidance explicitly assumes glue."
+    },
+    {
+      "plate_id": "pei-satin",
+      "rating": "recommended",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Prusa notes ASA adhesion on satin is somewhat lower than PLA or PETG; a brim and draft shield cover the gap."
+    },
+    {
+      "plate_id": "carbon-fiber-plate",
+      "rating": "recommended",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Some vendors recommend an adhesion promoter for ASA specifically even though bare adhesion is generally adequate."
+    },
+    {
+      "plate_id": "pei-smooth",
+      "rating": "usable",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): ASA can over-adhere to smooth PEI much like PETG; a separator prevents film damage on big footprints."
+    },
+    {
+      "plate_id": "glass-borosilicate",
+      "rating": "usable",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Same as ABS. On a rigid plate a lifted corner cannot be rescued by flexing, so use a brim and an enclosure."
+    },
+    {
+      "plate_id": "g10-garolite",
+      "rating": "usable",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Same conflicting-source caveat as ABS. Use a brim on large footprints."
+    },
+    {
+      "plate_id": "buildtak-polymer",
+      "rating": "usable",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Not separately named by BuildTak (unverified), but chemically and thermally close enough to ABS that it behaves the same in practice — near the top of the sheet's rated bed range, "
+    },
+    {
+      "plate_id": "pp-sheet",
+      "rating": "avoid",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): As ABS; the bed temperature also runs near the practical ceiling of a PP-based coating."
+    },
+    {
+      "plate_id": "supertack",
+      "rating": "avoid",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): As ABS; the required bed temperature alone puts it outside the coating's intended range."
+    },
+    {
+      "plate_id": "pc-plate",
+      "rating": "avoid",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Same as ABS — the required 90-110 C bed exceeds what the PC sheet tolerates without surface damage."
+    },
+    {
+      "plate_id": "pei-patterned",
+      "rating": "avoid",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): As ABS — thermal and adhesion envelope both exceeded in practice."
     }
   ],
   "emissions": {
     "voc_level": "high",
     "particulate_level": "high",
-    "primary_emissions": ["styrene", "benzaldehyde", "acetophenone", "ethylbenzene", "toluene", "C3-benzenes", "ultrafine particles"],
+    "primary_emissions": [
+      "styrene",
+      "benzaldehyde",
+      "acetophenone",
+      "ethylbenzene",
+      "toluene",
+      "C3-benzenes",
+      "ultrafine particles"
+    ],
     "ventilation": "required",
     "notes": "Grouped with ABS and ULTRAT as the top VOC emitters among common filaments (irrgang.dev, citing an academic emissions study), dominated by styrene. Ultrafine particle emission is elevated and comparable to ABS. Print in an enclosure vented externally, or filtered through HEPA plus activated carbon; do not run ASA in an occupied unventilated room."
   },
@@ -130,5 +254,207 @@
     "last_verified": "2026-07-31",
     "confidence": "medium",
     "conflicts": "HDT: Prusament measures 93 °C at 0.45 MPa and 86 °C at 1.8 MPa while Bambu cites 100 °C without specifying the load basis — 93 °C recorded on the schema's 0.45 MPa basis. Density: Bambu 1.05, Prusament 1.07, Polymaker/partmfg.com 1.08-1.09. Tensile strength spans 37±3 MPa (Bambu) to 47.1 MPa (Polymaker/partmfg.com), a spread too wide to be measurement noise alone. Drying: Bambu's wiki says 75-85 °C while Bambu's own ASA product page says 80 °C. Shrinkage (~0.4-0.7%), max continuous service temperature (~80-90 °C) and the 'moderate' hygroscopy class are typical-for-class or community estimates, not datasheet figures. HIPS as an ASA support is documented for ABS and inferred for ASA."
-  }
+  },
+  "trade_names": [
+    {
+      "manufacturer": "3djake",
+      "product": "ASA",
+      "notes": "weatherproof/UV resistant"
+    },
+    {
+      "manufacturer": "3dxtech",
+      "product": "3DXMAX ASA",
+      "notes": "Generic weather-resistant styrenic."
+    },
+    {
+      "manufacturer": "3dxtech",
+      "product": "Triton3D ASA (Stratasys-compatible)",
+      "notes": "Repackaged/certified 3DXTECH base material."
+    },
+    {
+      "manufacturer": "anycubic",
+      "product": "ASA"
+    },
+    {
+      "manufacturer": "atomic-filament",
+      "product": "ASA",
+      "notes": "Natural, Black, White and colours."
+    },
+    {
+      "manufacturer": "azurefilm",
+      "product": "ASA Prime",
+      "notes": "Standard ASA"
+    },
+    {
+      "manufacturer": "bambu-lab",
+      "product": "ASA"
+    },
+    {
+      "manufacturer": "coex-3d",
+      "product": "ASA Prime",
+      "notes": "Premium-tier standard ASA."
+    },
+    {
+      "manufacturer": "colorfabb",
+      "product": "ASA",
+      "notes": "Standard ASA"
+    },
+    {
+      "manufacturer": "creality",
+      "product": "HP ASA"
+    },
+    {
+      "manufacturer": "devil-design",
+      "product": "ASA",
+      "notes": "density 1.07 (ASTM D792), Vicat 96C, yield ~500 kg/cm2 at 20% elongation"
+    },
+    {
+      "manufacturer": "elegoo",
+      "product": "ASA"
+    },
+    {
+      "manufacturer": "eryone",
+      "product": "ASA / ASA High-Speed",
+      "notes": "Base ASA plus a flow-optimised grade."
+    },
+    {
+      "manufacturer": "eryone",
+      "product": "ASA Light-Weight",
+      "notes": "Foamed/lightweight ASA; base chemistry is ASA, the foaming behaviour has no catalog id (no LW-ASA equivalent to lw-pla)."
+    },
+    {
+      "manufacturer": "esun",
+      "product": "ASA",
+      "notes": "Standard acrylonitrile styrene acrylate"
+    },
+    {
+      "manufacturer": "extrudr",
+      "product": "DuraPro ASA",
+      "notes": "UV/weather-resistant ASA; density 1.05 g/cm3, VICAT A 96 C / HDT-B 96 C"
+    },
+    {
+      "manufacturer": "fiberlogy",
+      "product": "ASA",
+      "notes": "Standard ASA"
+    },
+    {
+      "manufacturer": "filament-pm",
+      "product": "ASA"
+    },
+    {
+      "manufacturer": "filamentive",
+      "product": "ASA"
+    },
+    {
+      "manufacturer": "fillamentum",
+      "product": "ASA Extrafill",
+      "notes": "UV-stabilised standard ASA"
+    },
+    {
+      "manufacturer": "flashforge",
+      "product": "ASA"
+    },
+    {
+      "manufacturer": "formfutura",
+      "product": "ApolloX",
+      "notes": "Engineering-tuned ASA - higher impact strength and lower warp than commodity ASA; modifier not disclosed publicly"
+    },
+    {
+      "manufacturer": "forward-am",
+      "product": "Ultrafuse ASA",
+      "notes": "Generic ASA."
+    },
+    {
+      "manufacturer": "fusion-filaments",
+      "product": "ASA / EasyASA / Hi-Temp ASA",
+      "notes": "Standard weatherable ASA plus easier-printing and higher-heat tiers."
+    },
+    {
+      "manufacturer": "geeetech",
+      "product": "ASA",
+      "notes": "Weather/UV-resistant ASA."
+    },
+    {
+      "manufacturer": "iemai-3d",
+      "product": "ASA",
+      "notes": "Standard ASA"
+    },
+    {
+      "manufacturer": "inland",
+      "product": "ASA",
+      "notes": "UV-stable ABS alternative."
+    },
+    {
+      "manufacturer": "inland",
+      "product": "PolyLite ASA",
+      "notes": "Same ASA chemistry under the licensed PolyLite sub-brand, consistent with the Polymaker OEM relationship."
+    },
+    {
+      "manufacturer": "jayo",
+      "product": "ASA",
+      "notes": "Weather-resistant ASA"
+    },
+    {
+      "manufacturer": "kexcelled",
+      "product": "ASA (General series)",
+      "notes": "Standard ASA"
+    },
+    {
+      "manufacturer": "overture",
+      "product": "ASA",
+      "notes": "Density 1.14 g/cm3, Vicat 106.2 C, XY tensile 45.1 MPa."
+    },
+    {
+      "manufacturer": "polymaker",
+      "product": "Polymaker ASA",
+      "notes": "Standard ASA"
+    },
+    {
+      "manufacturer": "prusa-research",
+      "product": "Prusament ASA",
+      "notes": "Standard acrylonitrile styrene acrylate"
+    },
+    {
+      "manufacturer": "push-plastic",
+      "product": "ASA",
+      "notes": "Standard weatherable ASA."
+    },
+    {
+      "manufacturer": "qidi-tech",
+      "product": "ASA"
+    },
+    {
+      "manufacturer": "rosa3d",
+      "product": "ASA",
+      "notes": "UV resistant"
+    },
+    {
+      "manufacturer": "spectrum-filaments",
+      "product": "ASA 275"
+    },
+    {
+      "manufacturer": "spectrum-filaments",
+      "product": "The Filament ASA"
+    },
+    {
+      "manufacturer": "sunlu",
+      "product": "ASA",
+      "notes": "Standard ASA"
+    },
+    {
+      "manufacturer": "tinmorry",
+      "product": "ASA",
+      "notes": "Standard ASA"
+    },
+    {
+      "manufacturer": "ultimaker",
+      "product": "UltiMaker ASA",
+      "notes": "Generic ASA."
+    },
+    {
+      "manufacturer": "voxelab",
+      "product": "ASA",
+      "notes": "Marketed UV/rain/heat resistant; retained from prior pass (Amazon listing B0C8S4CD4L)"
+    }
+  ]
 }

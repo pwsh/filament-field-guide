@@ -168,3 +168,22 @@ every property sourced from the glossary.
   recorded per-entry; collator overrides accepted (pp-gf ease 6→4 uv 9→5; pc-abs rescaled
   to catalog anchors; abs-fr 132 °C melting-point datasheet claim rejected; pps bed-temp
   scrape error corrected). Validator: 0 errors, 0 warnings at 55/58/1 entities.
+- 2026-08-01 — **Phase D complete**: 11 plate entries (PEI smooth/textured/satin/patterned,
+  G10/garolite, borosilicate glass, carbon-fiber, PC/Cool-Plate class, SuperTack class,
+  BuildTak class, PP sheet) with 36-46 filament-compatibility rows each, prep/cleaning/
+  removal/stuck-print guidance. Patterned-PEI category has no manufacturer specs anywhere
+  (PEI/PEO/PEY naming chaos) — confidence low.
+- 2026-08-01 — **Phase E complete**: symmetric closure of bonds_with (82 fixed) and
+  support mirrors (129 fixed); OEM reciprocals (Comgrow↔Creality, Prusa↔Filament PM);
+  347+ plate_recommendations backfilled from plate matrices; TPU layer-adhesion rubric
+  clarified in glossary (score = Z/XY anisotropy by design).
+- 2026-08-01 — **GF addendum** (owner request): tpu-gf, pa6-gf, asa-gf, pc-gf, pla-gf
+  added (60 filaments total). All confirmed real products; several suspect datasheet
+  figures flagged (asa-gf density identical to base; pc-gf density below rule-of-mixtures).
+- 2026-08-01 — **Trade-name cross-walk** (owner request): all 58 manufacturer catalogs
+  reviewed; 991 product→filament mappings merged into `trade_names` (new schema field,
+  searchable on the site); product_lines fully populated. 190 unmapped products recorded
+  in `research/coverage-gaps.md`; top suggested new ids: pa-cf (generic, 11 mfrs),
+  pla-stone (10), abs-cf (7), peba (6), pla-glitter (6), lw-asa (5), pla-ht (5),
+  lw-tpu (4), pet-gf (4), abs-esd (4), plus castable/burnout PLA and cleaning filament
+  as non-print categories. These are the Phase B tranche-2 queue.

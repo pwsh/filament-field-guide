@@ -20,26 +20,117 @@
   },
   "product_lines": [
     {
-      "name": "PLA",
-      "filament_ids": [
-        "pla",
-        "pla-cf"
-      ],
-      "notes": "Basic plus 12+ specialty finishes: Fluorescent, Glow-in-Dark, High Speed, Metal, Translucent, Matte, Silk, Stone, Carbon Fiber, Diamond, Mystical, Twinkling, Firefly, Chameleon, Iridescent"
-    },
-    {
-      "name": "Multi-Color PLA",
+      "name": "Basic PLA (PLA Pro line)",
       "filament_ids": [
         "pla"
       ],
-      "notes": "Gradient, tri-color and striped coextrusions"
+      "notes": "Base PLA."
     },
     {
-      "name": "TPU",
+      "name": "High Speed PLA",
       "filament_ids": [
-        "tpu"
+        "pla-hf"
       ],
-      "notes": "95A Shore, standard and gradient"
+      "notes": "High-flow reformulated PLA."
+    },
+    {
+      "name": "Basic Matte PLA",
+      "filament_ids": [
+        "pla-matte"
+      ],
+      "notes": "Matte-additive PLA."
+    },
+    {
+      "name": "Basic Silk PLA",
+      "filament_ids": [
+        "pla-silk"
+      ],
+      "notes": "Silk-luster PLA."
+    },
+    {
+      "name": "Glow in Dark PLA",
+      "filament_ids": [
+        "pla-glow"
+      ],
+      "notes": "Phosphorescent-pigment PLA."
+    },
+    {
+      "name": "Fluorescent PLA",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Fluorescent (UV-reactive) pigment, which is not the same as the phosphorescent pigment behind pla-glow."
+    },
+    {
+      "name": "Metal PLA",
+      "filament_ids": [
+        "pla-metal"
+      ],
+      "notes": "Metal-powder-filled PLA."
+    },
+    {
+      "name": "Translucent PLA",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Clear/semi-clear PLA; no chemistry change."
+    },
+    {
+      "name": "Stone PLA",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Mineral-filler stone-texture PLA; no stone/mineral-filled id in catalog."
+    },
+    {
+      "name": "Effect PLA (Diamond, Mystical, Twinkling, Firefly, Chameleon, Iridescent)",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Glitter/pearlescent/colour-shift pigments on a base PLA."
+    },
+    {
+      "name": "Multi-color gradient PLA (Fast Gradient Silk, Gradient Twinkling, Gradient Translucent, Gradient Diamond)",
+      "filament_ids": [
+        "pla-gradient"
+      ],
+      "notes": "Along-strand gradient dyed PLA; Fast Gradient Silk also carries silk luster."
+    },
+    {
+      "name": "Fast Gradient Matte PLA / Gradient Matte PLA",
+      "filament_ids": [
+        "pla-gradient",
+        "pla-matte"
+      ],
+      "notes": "Matte-additive PLA with an along-strand colour gradient."
+    },
+    {
+      "name": "Tri-color / Stripes Matte PLA",
+      "filament_ids": [
+        "pla-matte"
+      ],
+      "notes": "Multi-filament coextrusion on a matte PLA base; striping is a coex effect, not a dye gradient."
+    },
+    {
+      "name": "Tri-color / Stripes Silk PLA",
+      "filament_ids": [
+        "pla-silk"
+      ],
+      "notes": "Multi-filament coextrusion on a silk PLA base."
+    },
+    {
+      "name": "CF-PLA",
+      "filament_ids": [
+        "pla-cf"
+      ],
+      "notes": "Carbon-fiber-filled PLA."
+    },
+    {
+      "name": "TPU (incl. gradient-color TPU)",
+      "filament_ids": [
+        "tpu-95a"
+      ],
+      "notes": "Shore 95A flexible TPU; gradient SKUs are the same polymer with graded pigment."
     }
   ],
   "price_tier": "budget",
@@ -49,7 +140,11 @@
       "https://ziro3d.com/pages/about",
       "https://ziro3dprint.en.alibaba.com/",
       "https://ziro3d.com/pages/oem-section",
-      "https://www.instagram.com/ziro3dprint/"
+      "https://www.instagram.com/ziro3dprint/",
+      "https://ziro3d.com/collections/all/pla-pro",
+      "https://ziro3d.com/collections",
+      "https://ziro3d.com/collections/tpu",
+      "https://www.amazon.com/dp/B01LX4K1QQ"
     ],
     "last_verified": "2026-07-31",
     "confidence": "medium",

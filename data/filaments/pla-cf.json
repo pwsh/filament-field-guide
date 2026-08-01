@@ -1,7 +1,13 @@
 {
   "id": "pla-cf",
   "name": "PLA-CF (Carbon-Fibre Reinforced PLA)",
-  "aliases": ["PLA-CF", "PLA CF", "Carbon Fiber PLA", "PolyLite PLA-CF", "PLA Carbon"],
+  "aliases": [
+    "PLA-CF",
+    "PLA CF",
+    "Carbon Fiber PLA",
+    "PolyLite PLA-CF",
+    "PLA Carbon"
+  ],
   "status": "researched",
   "base_type": "pla",
   "variation_kind": "carbon-fiber-filled",
@@ -9,14 +15,34 @@
   "chemical_makeup": "Polylactide matrix filled with chopped carbon fibre — Polymaker PolyLite PLA-CF discloses 8 wt% chopped fibre; Bambu does not publish a loading figure",
   "summary": "Base PLA filled with chopped carbon fibre — the stiffness-and-stability variant, and the only entry in this PLA set that is not a polylactide-class material. Versus base PLA it is denser (1.29 vs 1.24 g/cm³), stiffer (Young's modulus ~3280 MPa), warps less and holds dimensions better, and prints with a matte fibre texture that hides layer lines. The costs are a mandatory hardened nozzle, strongly reduced toughness, and the sharpest anisotropy in the PLA family (Bambu 38 MPa X-Y vs 26 MPa Z). Critically, it does NOT raise heat resistance: HDT is still ~54 °C.",
   "printing": {
-    "nozzle_temp_c": { "min": 190, "max": 240, "recommended": 230 },
-    "bed_temp_c": { "min": 25, "max": 65, "recommended": 45 },
-    "ambient_temp_c": { "min": 15, "max": 45, "recommended": 30 },
-    "speed_mm_s": { "min": 40, "max": 250, "recommended": 100 },
+    "nozzle_temp_c": {
+      "min": 190,
+      "max": 240,
+      "recommended": 230
+    },
+    "bed_temp_c": {
+      "min": 25,
+      "max": 65,
+      "recommended": 45
+    },
+    "ambient_temp_c": {
+      "min": 15,
+      "max": 45,
+      "recommended": 30
+    },
+    "speed_mm_s": {
+      "min": 40,
+      "max": 250,
+      "recommended": 100
+    },
     "enclosure_recommended": false,
     "heated_chamber_required": false,
     "requires_hardened_nozzle": true,
-    "part_cooling_fan_pct": { "min": 80, "max": 100, "recommended": 100 },
+    "part_cooling_fan_pct": {
+      "min": 80,
+      "max": 100,
+      "recommended": 100
+    },
     "enclosure_open_for_cooling": true,
     "notes": "Delta vs base PLA: temperatures are essentially PLA's — Polymaker says 'standard PLA settings', Bambu specifies 210-240 °C with spec samples at 230 °C — but the hardware requirement is not. A hardened steel, ruby or tungsten-carbide nozzle is required, not merely advised: Polymaker calls it 'strongly recommended due to the abrasive nature of the carbon fiber' and community practice treats brass as disposable on any CF grade. 0.4/0.6/0.8 mm nozzles are all supported per Bambu's TDS; larger diameters reduce clog risk with filled melt. Bed guidance is source-split (Bambu's TDS lists 35-45 °C for spec samples while its AMS/print guide table cites 45-65 °C depending on plate). Bambu suggests an enclosure for larger models to limit warping, since the higher stiffness and lower elongation make big parts more crack-prone under thermal stress — but it is not a requirement the way it is for ABS/ASA, and this remains a low-Tg PLA grade, so an enclosed machine should still be run open-door to avoid heat creep. Bambu also lists an optional 25-45 °C chamber."
   },
@@ -28,9 +54,22 @@
   },
   "drying": {
     "required_before_use": "if-exposed",
-    "temp_c": { "min": 50, "max": 60, "recommended": 55 },
-    "time_hours": { "min": 6, "max": 8, "recommended": 8 },
-    "methods": ["filament dryer", "blast oven at 55 °C", "food dehydrator", "drybox with desiccant"],
+    "temp_c": {
+      "min": 50,
+      "max": 60,
+      "recommended": 55
+    },
+    "time_hours": {
+      "min": 6,
+      "max": 8,
+      "recommended": 8
+    },
+    "methods": [
+      "filament dryer",
+      "blast oven at 55 °C",
+      "food dehydrator",
+      "drybox with desiccant"
+    ],
     "dryness_validation": "No popping/crackling or steam at the nozzle. The matte fibre surface hides the gloss cues used on unfilled PLA, so judge on extrusion sound and on wall consistency rather than sheen; stringing on a retraction test still reads normally.",
     "notes": "Bambu specifies 55 °C for 8 h in a blast/dry-box oven with storage below 20 % RH and desiccant; Polymaker specifies 55 °C for 6 h. Slightly hotter and longer than base PLA (45-55 °C / 4-8 h) but nowhere near the regimes needed for PA-CF/PPA-CF — carbon fibre does not meaningfully change PLA's hygroscopicity, and the drying figures reflect that."
   },
@@ -78,7 +117,11 @@
     "glass_transition_c": 63,
     "heat_deflection_c": 54,
     "max_service_temp_c": 50,
-    "tensile_strength_mpa": { "min": 26, "max": 38, "recommended": 38 },
+    "tensile_strength_mpa": {
+      "min": 26,
+      "max": 38,
+      "recommended": 38
+    },
     "notes": "Bambu PLA-CF: density 1.29 g/cm³ — higher than base PLA (1.24) and higher than pla-plus (1.21-1.24), as expected from the fibre filler, so a spool yields less part volume (77.5 vs 80.6 cm³/100 g). Tensile 38±4 MPa X-Y against 26±2 MPa Z, a ~32 % anisotropy gap and the clearest orientation-dependence in the PLA family; the recommended value is the X-Y figure. Polymaker's PLA-CF data gives Young's modulus 3280.7±79.6 MPa X-Y, a genuine stiffness gain over unfilled PLA's ~2300-3000 MPa — this is the property the filler actually buys. The property it does NOT buy is heat resistance: Bambu HDT 54 °C at 1.8 MPa and Tg 63 °C, essentially unchanged from unfilled PLA and pla-plus (58 °C), which contradicts the common assumption that carbon fibre implies a higher service temperature. HDT here is at 1.8 MPa, not the schema-default 0.45 MPa. Shrinkage is not disclosed by Bambu or Polymaker (unverified), though the practical warp behaviour is better than unfilled PLA. Fibre loading is 8 wt% for Polymaker; Bambu does not publish a figure."
   },
   "scores": {
@@ -93,9 +136,26 @@
     "water_tolerance": 6
   },
   "compatibility": {
-    "bonds_with": ["pla", "pla-cf", "pla-plus", "pla-hf", "lw-pla", "pla-silk", "pla-matte", "pla-gradient"],
-    "support_materials": ["pva", "bvoh", "petg", "pla"],
-    "usable_as_support_for": ["petg"],
+    "bonds_with": [
+      "lw-pla",
+      "pla",
+      "pla-cf",
+      "pla-gf",
+      "pla-gradient",
+      "pla-hf",
+      "pla-matte",
+      "pla-plus",
+      "pla-silk"
+    ],
+    "support_materials": [
+      "bvoh",
+      "petg",
+      "pla",
+      "pva"
+    ],
+    "usable_as_support_for": [
+      "petg"
+    ],
     "notes": "Same PLA-matrix bonding chemistry as the base entry despite the composite-other class: welds to itself and to other PLA grades, does not weld to PETG/ABS/ASA/PC/PA/PP. In multi-material work the CF side is always the weaker half of an interface, so keep boundaries out of load paths — pairing with pla-plus gives a tough-to-stiff transition but the joint inherits PLA-CF's poorer interlayer strength. Polymaker recommends PolySupport and PolyDissolve S1 for its PLA-CF line; PVA/BVOH work generally. A practical bonus of the filler: supports break away from PLA-CF unusually cleanly."
   },
   "plate_recommendations": [
@@ -103,12 +163,65 @@
       "plate_id": "pei-textured",
       "rating": "recommended",
       "notes": "Standard for PLA-CF per Bambu and general practice. Filled filaments are less tacky on the first layer than unfilled PLA, and the textured grain both grips and releases well while complementing the matte fibre finish. No special surface (garolite/G10 and similar) is needed here — that belongs to high-temp PA/PPA-CF grades, not PLA-CF."
+    },
+    {
+      "plate_id": "pei-smooth",
+      "rating": "recommended",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Filler is abrasive to nozzles, not to the plate; adhesion equals or exceeds plain PLA."
+    },
+    {
+      "plate_id": "glass-borosilicate",
+      "rating": "recommended",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Abrasive fills are a non-issue for glass — there is no coating for filler particles to score."
+    },
+    {
+      "plate_id": "g10-garolite",
+      "rating": "recommended",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Abrasive CF-filled PLA is a good match here: the laminate is a solid composite with no thin coating for filled filaments to score through."
+    },
+    {
+      "plate_id": "pei-satin",
+      "rating": "recommended",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Adheres as well as plain PLA; filler does not affect the coating."
+    },
+    {
+      "plate_id": "carbon-fiber-plate",
+      "rating": "recommended",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Abrasive fills do not threaten a solid laminate the way they wear thin sprayed coatings."
+    },
+    {
+      "plate_id": "buildtak-polymer",
+      "rating": "recommended",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Named by the vendor among the PLA blends that print directly. The abrasive fill does not attack the sheet the way it does a nozzle."
+    },
+    {
+      "plate_id": "pp-sheet",
+      "rating": "usable",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Not separately characterised (unverified). Stiff CF parts do not flex with the sheet and, on a lower-tack surface, are also more prone to lifting mid-print — brim generously."
+    },
+    {
+      "plate_id": "supertack",
+      "rating": "usable",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Not called out in Bambu's compatibility list. Adhesion follows base PLA, but stiff CF-filled parts do not flex with the sheet, so they lever against a soft coating during removal —"
+    },
+    {
+      "plate_id": "pc-plate",
+      "rating": "usable",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Thermally fine, but a filled abrasive PLA on a soft PC film is a scratch risk on removal; not separately documented by vendors."
+    },
+    {
+      "plate_id": "pei-patterned",
+      "rating": "usable",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Adhesion is fine, but the opaque fibre-filled surface will not show the pattern."
     }
   ],
   "emissions": {
     "voc_level": "low",
     "particulate_level": "low",
-    "primary_emissions": ["lactide", "ultrafine particles"],
+    "primary_emissions": [
+      "lactide",
+      "ultrafine particles"
+    ],
     "ventilation": "optional",
     "notes": "During printing the gas-phase profile is close to base PLA — no styrene, no caprolactam, no foaming agent — so ventilation guidance is unchanged from base PLA. The real hazard with this grade is particulate and it happens AFTER the print: see safety_notes. Bambu forum consensus is that carbon fibres stay bound in the polymer matrix during normal printing and handling."
   },
@@ -127,5 +240,140 @@
     "last_verified": "2026-07-31",
     "confidence": "medium",
     "conflicts": "Bed temperature is source-split within one manufacturer: Bambu's PLA-CF TDS lists 35-45 °C for its spec samples while Bambu's AMS/filament guide table cites 45-65 °C depending on plate type — the recorded 25-65 °C range spans both plus Polymaker's 'standard PLA settings'. Bambu's marketing claim of 20-115 % mechanical improvement over PLA Matte is not supported in magnitude by its own published tensile figures (unverified). Fibre loading is disclosed only by Polymaker (8 wt%); Bambu publishes none, so the two products are not assumed equivalent. AMS compatibility disagrees by scope: Bambu certifies its own PLA-CF while community guidance warns against assuming third-party CF spools are AMS-safe — recorded as 'conditional'. Shrinkage, UV/weather and water-absorption data were not found in any fetched source; UV/weather/water scores are inherited from base PLA on the reasoning that the filler does not address those mechanisms (unverified)."
-  }
+  },
+  "trade_names": [
+    {
+      "manufacturer": "3djake",
+      "product": "ecoPLA CF"
+    },
+    {
+      "manufacturer": "3dxtech",
+      "product": "CarbonX PLA+CF",
+      "notes": "PLA + chopped CF."
+    },
+    {
+      "manufacturer": "anycubic",
+      "product": "PLA-CF"
+    },
+    {
+      "manufacturer": "atomic-filament",
+      "product": "Carbon Fiber Extreme Black PLA",
+      "notes": "PLA + carbon fibre."
+    },
+    {
+      "manufacturer": "bambu-lab",
+      "product": "PLA-CF"
+    },
+    {
+      "manufacturer": "coex-3d",
+      "product": "Carbon Filled PLA",
+      "notes": "PLA + carbon fibre filler."
+    },
+    {
+      "manufacturer": "creality",
+      "product": "Hyper PLA CF",
+      "notes": "High-speed PLA base + carbon fibre"
+    },
+    {
+      "manufacturer": "elegoo",
+      "product": "PLA-CF"
+    },
+    {
+      "manufacturer": "eryone",
+      "product": "PLA Carbon Fiber",
+      "notes": "CF-filled PLA."
+    },
+    {
+      "manufacturer": "flashforge",
+      "product": "PLA-CF"
+    },
+    {
+      "manufacturer": "formfutura",
+      "product": "Premium PLA CF03",
+      "notes": "PLA + carbon fibre"
+    },
+    {
+      "manufacturer": "geeetech",
+      "product": "Carbon Fiber PLA",
+      "notes": "Documented on the wiki but absent from the current storefront category list - possibly legacy or limited SKU."
+    },
+    {
+      "manufacturer": "hatchbox",
+      "product": "PLA CF (Carbon Fiber)",
+      "notes": "Fibre loading not published."
+    },
+    {
+      "manufacturer": "iemai-3d",
+      "product": "CF-PLA",
+      "notes": "Carbon-fiber PLA"
+    },
+    {
+      "manufacturer": "iemai-3d",
+      "product": "iSanmate (retail label)",
+      "notes": "PLA-CF SKU"
+    },
+    {
+      "manufacturer": "inland",
+      "product": "PLA Carbon Fiber (PLA Pro / PLA-CF)",
+      "notes": "Chopped carbon fibre in PLA. Note the 'PLA Pro' alias is a CF product here, unlike other brands where 'Pro' means toughened."
+    },
+    {
+      "manufacturer": "jamg-he",
+      "product": "Jamghe Carbon Fiber PLA Filament",
+      "notes": "Carbon-fiber PLA"
+    },
+    {
+      "manufacturer": "jayo",
+      "product": "Carbon Fiber PLA",
+      "notes": "Chopped-CF PLA"
+    },
+    {
+      "manufacturer": "kingroon",
+      "product": "PLA-CF",
+      "notes": "Sold within the 2KG Carbon Fiber Black bundle"
+    },
+    {
+      "manufacturer": "landu",
+      "product": "Carbon Fiber PLA",
+      "notes": "Carbon-fiber PLA"
+    },
+    {
+      "manufacturer": "polymaker",
+      "product": "PLA-CF",
+      "notes": "Carbon-fiber PLA"
+    },
+    {
+      "manufacturer": "proto-pasta",
+      "product": "Original Carbon Fiber Composite PLA / Carbon Fiber Composite HTPLA (Black, Light/Medium/Dark Gray) and Recycled Carbon Fiber PLA",
+      "notes": "NatureWorks 4043D-family PLA + chopped/milled carbon fibre; recycled grade is the same chemistry with recyclate content."
+    },
+    {
+      "manufacturer": "qidi-tech",
+      "product": "PLA-CF"
+    },
+    {
+      "manufacturer": "spectrum-filaments",
+      "product": "PLA Carbon",
+      "notes": "10% carbon fibre"
+    },
+    {
+      "manufacturer": "spectrum-filaments",
+      "product": "The Filament PLA CF"
+    },
+    {
+      "manufacturer": "sunlu",
+      "product": "PLA Carbon Fiber",
+      "notes": "Chopped-CF PLA"
+    },
+    {
+      "manufacturer": "tinmorry",
+      "product": "Carbon Fiber PLA",
+      "notes": "Chopped-CF PLA"
+    },
+    {
+      "manufacturer": "ziro",
+      "product": "CF-PLA",
+      "notes": "Carbon-fiber PLA"
+    }
+  ]
 }

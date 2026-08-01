@@ -28,49 +28,114 @@
       "filament_ids": [
         "pla"
       ],
-      "notes": "Core 1 kg line; 1 kg black PLA listed at $21.99"
+      "notes": "SDS describes a 'biodegradable polymer-blend based on polylactic acid' (CAS 9051-89-2), i.e. a PLA blend rather than confirmed neat PLA. Core 1 kg line; 1 kg black listed at $21.99."
     },
     {
       "name": "PLA PRO+",
       "filament_ids": [
-        "pla"
-      ]
+        "pla-plus"
+      ],
+      "notes": "Enhanced-performance/toughened PLA line sitting above base PLA."
     },
     {
       "name": "PLA MAX",
       "filament_ids": [
         "pla"
       ],
-      "notes": "Explicitly marketed as USA-made and biobased; sold via the 'USA Made' collection"
+      "notes": "'USA Made' premium PLA line. Marketed as premium and biobased but no impact-modifier claim is published, so it is not mapped to pla-plus."
+    },
+    {
+      "name": "PLA CF (Carbon Fiber)",
+      "filament_ids": [
+        "pla-cf"
+      ],
+      "notes": "Carbon-fibre-filled PLA; fibre loading not published."
+    },
+    {
+      "name": "Matte PLA",
+      "filament_ids": [
+        "pla-matte"
+      ],
+      "notes": "PLA with matting agent."
+    },
+    {
+      "name": "Silk PLA",
+      "filament_ids": [
+        "pla-silk"
+      ],
+      "notes": "Silk-luster additive PLA."
+    },
+    {
+      "name": "Metallic Finish PLA (PLA Metal)",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Metallic-sheen pigmented PLA with no confirmed metal-powder loading, so it is deliberately NOT mapped to pla-metal (which covers genuinely metal-filled grades)."
+    },
+    {
+      "name": "Transparent PLA",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Clear/uncoloured base PLA."
+    },
+    {
+      "name": "UV Color Changing PLA",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Photochromic-pigment PLA; base resin is PLA and the catalog has no photochromic id (see gaps)."
+    },
+    {
+      "name": "Wood PLA",
+      "filament_ids": [
+        "pla-wood"
+      ],
+      "notes": "'Blending a mixture of plant-based materials and polymers' - PLA plus wood fibre. Wood percentage not published; no heated bed required."
+    },
+    {
+      "name": "Glow PLA",
+      "filament_ids": [
+        "pla-glow"
+      ],
+      "notes": "Phosphorescent pigment in a PLA base."
+    },
+    {
+      "name": "Glow ABS",
+      "filament_ids": [
+        "abs"
+      ],
+      "notes": "Phosphorescent pigment in an ABS base. Maps to abs only; the catalog has no glow-in-the-dark ABS id (see gaps)."
     },
     {
       "name": "ABS",
       "filament_ids": [
         "abs"
-      ]
+      ],
+      "notes": "Standard ABS per SDS."
     },
     {
       "name": "PETG",
       "filament_ids": [
         "petg"
-      ]
+      ],
+      "notes": "Standard PETG per SDS."
     },
     {
       "name": "TPU",
       "filament_ids": [
-        "tpu"
-      ]
+        "tpu",
+        "tpu-95a"
+      ],
+      "notes": "Shore 95A confirmed across all colourway listings, so the tpu-95a grade id applies as well as base tpu."
     },
     {
       "name": "Reload Series",
-      "filament_ids": [
-        "pla"
-      ],
-      "notes": "Refill/spool-reload packaging line"
+      "notes": "Spoolless refill packaging of the base chemistries above; no distinct resin, and the exact set of chemistries offered spoolless is not enumerated, so no filament_ids are asserted."
     },
     {
-      "name": "Cleaning filament",
-      "notes": "Nozzle cleaning filament; base polymer not specified"
+      "name": "Cleaning Filament",
+      "notes": "Abrasive purge/nozzle-cleaning compound, not a structural build material; base polymer not specified and no catalog id applies."
     }
   ],
   "price_tier": "mid",
@@ -81,7 +146,18 @@
       "https://www.hatchbox3d.com/collections/usa-made",
       "https://www.hatchbox3d.com/products/3d-pla-1kg1-75-blk",
       "https://www.printedsolid.com/blogs/news/a-note-concerning-availability-of-hatchbox",
-      "https://trademarks.justia.com/owners/hatchbox-inc-4052954"
+      "https://trademarks.justia.com/owners/hatchbox-inc-4052954",
+      "https://www.hatchbox3d.com/collections/all-filaments",
+      "https://cdn.shopify.com/s/files/1/0008/2457/4018/files/HATCHBOX_PLA_3D_Printer_Filament_SDS.pdf?1561",
+      "https://cdn.shopify.com/s/files/1/0008/2457/4018/files/HATCHBOX_ABS_3D_Printer_Filament_SDS.pdf?1561",
+      "https://cdn.shopify.com/s/files/1/0008/2457/4018/files/HATCHBOX_PETG_3D_Printer_Filament_SDS.pdf?1561",
+      "https://cdn.shopify.com/s/files/1/0008/2457/4018/files/HATCHBOX_TPU_3D_Printer_Filament_SDS.pdf?1561",
+      "https://www.hatchbox3d.com/products/3d-pla-1kg1-75-carbon",
+      "https://www.hatchbox3d.com/products/3d-wood-1kg1-75",
+      "https://www.hatchbox3d.com/products/3d-tpu-1kg1-75-blk",
+      "https://www.amazon.com/HATCHBOX-Printer-Filament-Diameter-Printing/dp/B0CXZYGYLN",
+      "https://www.amazon.com/HATCHBOX-Metallic-Filament-Dimensional-Accuracy/dp/B09T98ZJPQ",
+      "https://filamentcheatsheet.com/database/brand/hatchbox/"
     ],
     "last_verified": "2026-07-31",
     "confidence": "low",

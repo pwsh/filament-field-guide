@@ -1,7 +1,14 @@
 {
   "id": "pa66",
   "name": "PA66 (Nylon 6,6)",
-  "aliases": ["Nylon 66", "Nylon 6/6", "Nylon 6,6", "Polyamide 66", "PA 6.6", "PA6/66 (blend)"],
+  "aliases": [
+    "Nylon 66",
+    "Nylon 6/6",
+    "Nylon 6,6",
+    "Polyamide 66",
+    "PA 6.6",
+    "PA6/66 (blend)"
+  ],
   "status": "researched",
   "base_type": "pa",
   "variation_kind": "grade",
@@ -9,15 +16,35 @@
   "chemical_makeup": "Aliphatic polyamide condensation copolymer of hexamethylenediamine and adipic acid — two alternating six-carbon units rather than PA6's single ring-opened caprolactam repeat. The symmetric repeat packs into a tighter, higher-melting crystal (~255-265 °C vs PA6's ~220 °C), which is the origin of its extra stiffness, wear resistance and heat resistance, and of its extra shrinkage.",
   "summary": "The stiff, hot, hard-to-tame nylon. Deltas vs the base pa entry and vs pa6: melting point and processing temperatures climb (255-275 °C for low-warp grades, 285-315 °C and a 130 °C bed for high-performance grades), density rises to ~1.14, stiffness, wear resistance and creep resistance all improve, and service temperature reaches ~135 °C — while hygroscopicity stays as bad as PA6's and shrinkage gets worse. Rarer than PA6 on the hobby market and more expensive; many spools labelled 'PA6/66' are deliberately easier-printing copolymer blends rather than this homopolymer.",
   "printing": {
-    "nozzle_temp_c": { "min": 255, "max": 315, "recommended": 275 },
-    "bed_temp_c": { "min": 60, "max": 130, "recommended": 100 },
-    "ambient_temp_c": { "min": 40, "max": 60, "recommended": 50 },
-    "speed_mm_s": { "min": 25, "max": 100, "recommended": 50 },
+    "nozzle_temp_c": {
+      "min": 255,
+      "max": 315,
+      "recommended": 275
+    },
+    "bed_temp_c": {
+      "min": 60,
+      "max": 130,
+      "recommended": 100
+    },
+    "ambient_temp_c": {
+      "min": 40,
+      "max": 60,
+      "recommended": 50
+    },
+    "speed_mm_s": {
+      "min": 25,
+      "max": 100,
+      "recommended": 50
+    },
     "enclosure_recommended": true,
     "heated_chamber_required": false,
     "enclosure_open_for_cooling": false,
     "requires_hardened_nozzle": false,
-    "part_cooling_fan_pct": { "min": 0, "max": 30, "recommended": 0 },
+    "part_cooling_fan_pct": {
+      "min": 0,
+      "max": 30,
+      "recommended": 0
+    },
     "notes": "The widest nozzle window in this family and the largest unresolved disagreement: ABC3D's low-warp PA66 runs 255-275 °C on a 60-70 °C bed, while its high-performance PA66 wants 285-315 °C on a 130 °C bed — a spread that almost certainly reflects different formulations (possibly filled) rather than one material, so check the specific datasheet before trusting the recommended 275 °C. Deltas vs pa6: hotter at both ends, a hotter bed for the high-performance grades, and a slightly wider fan allowance (ABC3D permits 0-30 %, unusual for a nylon) — but 0 % remains the safe starting point since fan air amplifies this grade's already-high shrinkage. Enclosure effectively mandatory; ambient targeted a little higher than pa6 because of the higher melt point. Unfilled PA66 is not abrasive, so no hardened nozzle — a PA66-CF product does exist (ABC3D) and would require one."
   },
   "feeding": {
@@ -28,9 +55,22 @@
   },
   "drying": {
     "required_before_use": "always",
-    "temp_c": { "min": 85, "max": 90, "recommended": 90 },
-    "time_hours": { "min": 4, "max": 8, "recommended": 4 },
-    "methods": ["blast/convection oven at 90 °C", "dedicated high-temperature filament dryer", "print directly from a heated dryer", "sealed drybox with desiccant while printing"],
+    "temp_c": {
+      "min": 85,
+      "max": 90,
+      "recommended": 90
+    },
+    "time_hours": {
+      "min": 4,
+      "max": 8,
+      "recommended": 4
+    },
+    "methods": [
+      "blast/convection oven at 90 °C",
+      "dedicated high-temperature filament dryer",
+      "print directly from a heated dryer",
+      "sealed drybox with desiccant while printing"
+    ],
     "dryness_validation": "No popping, crackling or steam at the nozzle; a glossy, blister-free purge line; stringing back to baseline. Because PA66 re-absorbs within hours of opening, validate immediately before the print rather than after drying — a spool that passed yesterday will not necessarily pass today.",
     "notes": "Hotter but shorter than pa6's schedule: ABC3D specifies 90 °C for 4 h for both its low-warp and high-performance PA66 lines (alternatively 85 °C for 4-6 h). This is the second-highest drying temperature in the family, behind ppa's 100-140 °C and well above pa12's 70 °C / 4 h — the single clearest ranking of the four grades. Do not assume PA66's higher melting point implies better moisture stability: it does not, and this is the most common misconception about the grade."
   },
@@ -72,11 +112,19 @@
     "density_g_cm3": 1.14,
     "grams_per_100cm3": 114,
     "cm3_per_100g": 87.7,
-    "shrinkage_pct": { "min": 1.2, "max": 3.0, "recommended": 2.0 },
+    "shrinkage_pct": {
+      "min": 1.2,
+      "max": 3.0,
+      "recommended": 2.0
+    },
     "glass_transition_c": 70,
     "heat_deflection_c": 90,
     "max_service_temp_c": 135,
-    "tensile_strength_mpa": { "min": 55, "max": 85, "recommended": 75 },
+    "tensile_strength_mpa": {
+      "min": 55,
+      "max": 85,
+      "recommended": 75
+    },
     "notes": "Density is recorded at the literature homopolymer value of 1.14 g/cm³ — the heaviest unfilled grade in this family, consistent with PA66's tighter crystal packing — but the two product datasheets found read higher still (ABC3D low-warp 1.24, high-performance 1.19), which strongly suggests mineral or glass content in those formulations; see conflicts. Max service temp 135 °C with a service floor of -45 °C (ABC3D high-performance), the widest usable band of the four grades. Tg ~70 °C and HDT@0.45 MPa ~90 °C are literature figures for dry unfilled PA66, both modestly above pa6's 60 °C / 85 °C; as with all nylons they fall as the part takes up water. Tensile 55-85 MPa spans the grades; an Inslogic PA6/66 copolymer blend measures 79 MPa tensile and 103 MPa flexural but with a melt point of only 198 °C, confirming it is not this homopolymer. Shrinkage is reasoned upward from the base pa entry on crystallinity grounds, not a datasheet value."
   },
   "scores": {
@@ -91,9 +139,22 @@
     "water_tolerance": 2
   },
   "compatibility": {
-    "bonds_with": ["pa66", "pa", "pa6", "pa12"],
-    "support_materials": ["pa66", "pa", "pa6"],
-    "usable_as_support_for": [],
+    "bonds_with": [
+      "pa",
+      "pa12",
+      "pa6",
+      "pa6-cf",
+      "pa6-gf",
+      "pa66"
+    ],
+    "support_materials": [
+      "pa",
+      "pa6",
+      "pa66"
+    ],
+    "usable_as_support_for": [
+      "pa66"
+    ],
     "notes": "Welds to itself and to the aliphatic polyamide family; the PA66/PA6 pair is the strongest cross-grade bond here because their nozzle windows overlap most, while PA66/PA12 is the weakest of the family pairings given the ~80 °C melt-point gap. No bond to pla, petg, abs, asa, pc, pp, pctg, pvb or pet. Soluble supports are out — pva and bvoh both degrade well below 275 °C — so same-material breakaway supports are standard. Build-plate chemistry is the practical adhesion story: a PA-specific adhesive or glue stick as a promoter, and a garolite sheet for anything large."
   },
   "plate_recommendations": [
@@ -101,12 +162,26 @@
       "plate_id": "pei-textured",
       "rating": "usable",
       "notes": "Usable with a PA adhesive, but the weakest recommendation of the four grades: PA66's higher shrinkage plus bed temperatures up to 130 °C on the high-performance line make edge lift likelier than with pa6, and standard textured PEI sheets are not comfortable at the top of that bed range. Garolite / G10 is the safer surface for pure PA66 and for any large footprint; the low-warp and PA6/66-blend products are more forgiving and may hold on textured PEI with adhesive alone (unverified — two ABC3D datasheets were still marked 'coming soon'). No garolite plate entry exists in the catalog yet, so it is recorded here in notes."
+    },
+    {
+      "plate_id": "pei-smooth",
+      "rating": "avoid",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): High shrinkage plus unreliable PEI bond; use garolite."
+    },
+    {
+      "plate_id": "pei-satin",
+      "rating": "avoid",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): High shrinkage; garolite preferred."
     }
   ],
   "emissions": {
     "voc_level": "high",
     "particulate_level": "moderate",
-    "primary_emissions": ["amide-family VOCs", "ultrafine particles", "caprolactam (from PA6/66 blends only)"],
+    "primary_emissions": [
+      "amide-family VOCs",
+      "ultrafine particles",
+      "caprolactam (from PA6/66 blends only)"
+    ],
     "ventilation": "recommended",
     "notes": "Same amide-family VOC and ultrafine-particle profile as pa6, but likely worse in practice because the high-performance grades run at 285-315 °C — well above pa6's 220-270 °C — and nylon emissions scale steeply with nozzle temperature. Note the one chemistry delta: PA66 is not a caprolactam source (that is PA6's monomer), so a spool that smells strongly of caprolactam is probably a PA6/66 blend. Source-capture extraction is recommended and becomes near-essential at the top of the temperature range. No PA66-specific emissions measurement was found; this is general nylon-family guidance scaled for temperature (unverified)."
   },

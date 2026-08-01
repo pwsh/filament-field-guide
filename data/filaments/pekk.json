@@ -1,7 +1,13 @@
 {
   "id": "pekk",
   "name": "PEKK (Polyetherketoneketone)",
-  "aliases": ["Polyetherketoneketone", "PEKK-A", "PEKK-C", "Kepstan", "3DXTech ThermaX PEKK-A"],
+  "aliases": [
+    "Polyetherketoneketone",
+    "PEKK-A",
+    "PEKK-C",
+    "Kepstan",
+    "3DXTech ThermaX PEKK-A"
+  ],
   "status": "researched",
   "base_type": null,
   "variation_kind": null,
@@ -9,14 +15,30 @@
   "chemical_makeup": "Polyaryletherketone isomer of PEEK carrying two ketone linkages in place of PEEK's ether/ketone pair, typically from Arkema Kepstan resin. The ketone-to-ether ratio is the tuning knob: PEKK-A (about 60/40) crystallises slowly, PEKK-C is more amorphous still. Same aromatic ketone family as peek, chemically unrelated to the aryl sulfide of pps and the amorphous imide/sulfone backbones of pei-ultem and ppsu.",
   "summary": "PEEK's more printable cousin. The two-ketone structure crystallises far more slowly — roughly a 3.5-minute half-time at 250 °C against 1-2 minutes for PEEK — which is the whole story: lower internal stress, better layer welding, a genuinely wider processing window. Deltas vs peek: nozzle drops to 345-375 °C from 375-410 °C, Tg rises to 162 °C from 143 °C, warp and layer adhesion both improve markedly, and ease of print doubles from the catalog floor. It gives up a little peak stiffness and a little service temperature. Deltas vs the amorphous siblings: still warps more than pei-ultem and ppsu and still needs a chamber, but runs hotter in service than either. Like peek it is outside every consumer printer's hotend range, including Bambu's.",
   "printing": {
-    "nozzle_temp_c": { "min": 345, "max": 375, "recommended": 360 },
-    "bed_temp_c": { "min": 120, "max": 140, "recommended": 130 },
-    "ambient_temp_c": { "min": 70, "max": 150, "recommended": 110 },
+    "nozzle_temp_c": {
+      "min": 345,
+      "max": 375,
+      "recommended": 360
+    },
+    "bed_temp_c": {
+      "min": 120,
+      "max": 140,
+      "recommended": 130
+    },
+    "ambient_temp_c": {
+      "min": 70,
+      "max": 150,
+      "recommended": 110
+    },
     "enclosure_recommended": true,
     "heated_chamber_required": true,
     "enclosure_open_for_cooling": false,
     "requires_hardened_nozzle": false,
-    "part_cooling_fan_pct": { "min": 0, "max": 5, "recommended": 0 },
+    "part_cooling_fan_pct": {
+      "min": 0,
+      "max": 5,
+      "recommended": 0
+    },
     "notes": "The delta that matters vs peek is the 30-35 °C drop in nozzle temperature (345-375 °C against 375-410 °C) combined with slow crystallisation: 3DXTech describe the 'slower crystallization rate and lower internal stress' as producing better layer adhesion and a wider processing window, and that is exactly what the ease and warp scores reflect. It is still an industrial-hotend material — 345-375 °C is above Bambu's stock hotend and above the X1E/H2D high-temp hotend's ~350 °C ceiling for most of its range, so there is no consumer-printer path here either. Chamber 70-150 °C remains required rather than merely recommended; the wider window buys forgiveness, not chamber independence. Cooling stays off. Unfilled, so no hardened nozzle is required."
   },
   "feeding": {
@@ -27,9 +49,21 @@
   },
   "drying": {
     "required_before_use": "always",
-    "temp_c": { "min": 120, "max": 120, "recommended": 120 },
-    "time_hours": { "min": 4, "max": 8, "recommended": 4 },
-    "methods": ["high-temperature filament dryer rated to 120 °C", "convection/blast oven at 120 °C", "print directly from a heated drybox"],
+    "temp_c": {
+      "min": 120,
+      "max": 120,
+      "recommended": 120
+    },
+    "time_hours": {
+      "min": 4,
+      "max": 8,
+      "recommended": 4
+    },
+    "methods": [
+      "high-temperature filament dryer rated to 120 °C",
+      "convection/blast oven at 120 °C",
+      "print directly from a heated drybox"
+    ],
     "dryness_validation": "No popping or steam at the nozzle and no bubbling in the purge line; extrudate glossy and continuous. Slightly more forgiving than peek only because the melt is 30-40 °C cooler, so trace moisture flashes less violently — the requirement itself is unchanged.",
     "notes": "120 °C for 4 hours (3DXTech), identical to peek's regimen. Less aggressive than pei-ultem 1010's 150 °C, hotter than the 110 °C specified for ppsu and pps."
   },
@@ -87,9 +121,17 @@
     "water_tolerance": 9
   },
   "compatibility": {
-    "bonds_with": ["pekk"],
-    "support_materials": ["pekk", "peek"],
-    "usable_as_support_for": [],
+    "bonds_with": [
+      "pekk"
+    ],
+    "support_materials": [
+      "peek",
+      "pekk"
+    ],
+    "usable_as_support_for": [
+      "peek",
+      "pekk"
+    ],
     "notes": "Identical constraint set to peek: no soluble support survives 345-375 °C, so self-supporting geometry or breakaway same-material/PAEK support is the answer. peek is listed as a plausible PAEK-family breakaway partner on shared-chemistry grounds, not on tested evidence (unverified). No bonding to pla, petg, abs, asa, pc, pa, pp or any other commodity material — they degrade on contact at this temperature."
   },
   "plate_recommendations": [
@@ -97,12 +139,30 @@
       "plate_id": "pei-textured",
       "rating": "avoid",
       "notes": "Same verdict and same reasoning as peek: standard textured PEI spring steel is not the industry surface here, because adhesion is poor and the sheet's own PEI chemistry is stressed by a 120-140 °C bed under a 360 °C nozzle. Use polyimide (Kapton) tape, garolite/G10, or a high-temperature adhesive such as Magigoo HT. Those surfaces have no catalog plate entries yet, so the recommendation lives in notes."
+    },
+    {
+      "plate_id": "pei-smooth",
+      "rating": "avoid",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): As PEEK."
+    },
+    {
+      "plate_id": "pei-satin",
+      "rating": "avoid",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): As PEEK."
+    },
+    {
+      "plate_id": "pei-patterned",
+      "rating": "avoid",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): As PEEK."
     }
   ],
   "emissions": {
     "voc_level": "moderate",
     "particulate_level": "high",
-    "primary_emissions": ["ultrafine particles", "unspecified high-temperature process VOCs (no PEKK-specific speciation found in this research pass)"],
+    "primary_emissions": [
+      "ultrafine particles",
+      "unspecified high-temperature process VOCs (no PEKK-specific speciation found in this research pass)"
+    ],
     "ventilation": "required",
     "notes": "No PEKK-specific emissions data was found. Applying the temperature-scaling rule, PEKK should sit at or slightly below peek because it runs 30-40 °C cooler (345-375 °C against 375-410 °C) — but 'slightly below the worst in the catalog' is still enough that ventilation is recorded as required: enclosure plus outdoor exhaust or HEPA-plus-carbon filtration. VOC is recorded moderate rather than high on the same reasoning as peek — the polymer is thermally stable within its own window — while the particulate figure carries the requirement. Both inferred, not measured (unverified)."
   },
@@ -119,5 +179,32 @@
     "last_verified": "2026-07-31",
     "confidence": "medium",
     "conflicts": "The comparative source states PEEK's mechanical and thermal properties are 'arguably superior' while simultaneously giving PEKK the higher HDT (~160 °C vs ~145 °C) and the higher Tg (162 °C vs 143 °C) — an internal contradiction in the literature that this entry records rather than resolves; the scores split the difference by giving peek the higher compression and temperature scores and pekk the higher stability and adhesion scores. Pricing is the second disagreement: PEKK is widely described as more expensive than PEEK, yet 3DXTech's own 1 kg PEKK is cheaper than their 1 kg PEEK. Density 1.28 g/cm³ is a resin-family literature value, unverified against a filament datasheet. PEKK-C properties are unverified (datasheet unavailable at fetch time). Emissions are inferred from process temperature with no PEKK-specific measurement (unverified). The peek breakaway-support pairing is reasoned from shared PAEK chemistry, not tested."
-  }
+  },
+  "trade_names": [
+    {
+      "manufacturer": "3dxtech",
+      "product": "ThermaX PEKK",
+      "notes": "Polyetherketoneketone."
+    },
+    {
+      "manufacturer": "formfutura",
+      "product": "PEKK",
+      "notes": "High-temperature engineering polymer"
+    },
+    {
+      "manufacturer": "iemai-3d",
+      "product": "PEKK",
+      "notes": "Polyetherketoneketone"
+    },
+    {
+      "manufacturer": "kimya",
+      "product": "PEKK Semicrystalline",
+      "notes": "Semicrystalline-processed PEKK - higher HDT and different post-processing, same polymer."
+    },
+    {
+      "manufacturer": "kimya",
+      "product": "PEKK-A",
+      "notes": "Amorphous PEKK grade (amber)."
+    }
+  ]
 }

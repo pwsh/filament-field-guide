@@ -31,65 +31,263 @@
   },
   "product_lines": [
     {
-      "name": "General purpose",
+      "name": "Economy PLA / ECOMAX PLA",
       "filament_ids": [
-        "pla",
-        "petg",
-        "abs",
-        "asa",
+        "pla"
+      ],
+      "notes": "Unmodified general-purpose PLA; ECOMAX is the economy tier."
+    },
+    {
+      "name": "3DXTECH ABS",
+      "filament_ids": [
+        "abs"
+      ],
+      "notes": "Generic ABS."
+    },
+    {
+      "name": "3DXMAX ASA",
+      "filament_ids": [
+        "asa"
+      ],
+      "notes": "Generic weather-resistant styrenic ASA."
+    },
+    {
+      "name": "MAX-G PETG",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "Standard glycol-modified PET copolyester."
+    },
+    {
+      "name": "MAX-G PCTG",
+      "filament_ids": [
+        "pctg"
+      ],
+      "notes": "CHDM-modified copolyester: tougher and clearer than the PETG in the same MAX-G family."
+    },
+    {
+      "name": "ezPC Polycarbonate",
+      "filament_ids": [
+        "pc"
+      ],
+      "notes": "Modified easy-print PC formulation - lower warp than straight PC, same base chemistry."
+    },
+    {
+      "name": "CarbonX ezPC+CF",
+      "notes": "PC + chopped carbon fiber. This catalog has pc-gf but no pc-cf id, so the line is left unmapped rather than forced onto pc."
+    },
+    {
+      "name": "HIPS",
+      "filament_ids": [
         "hips"
       ],
-      "notes": "Also includes Simubone, a bone-simulant filament that has no generic material id in this catalog."
+      "notes": "High-impact polystyrene, also used as breakaway support."
     },
     {
-      "name": "Engineering",
+      "name": "PP",
       "filament_ids": [
-        "pa",
-        "pc",
-        "pctg",
-        "tpu",
-        "pvdf"
+        "pp"
       ],
-      "notes": "Nylon, polycarbonate, PC-ABS alloy, PCTG, PPE+PS blend, TPU and PVDF."
+      "notes": "Polypropylene."
     },
     {
-      "name": "ThermaX ultra-performance",
+      "name": "Simubone",
+      "notes": "Proprietary blend simulating human bone density/machinability for surgical-training models. No generic id fits."
+    },
+    {
+      "name": "3DXTECH TPU",
       "filament_ids": [
-        "peek",
-        "pekk",
-        "pei"
+        "tpu"
       ],
-      "notes": "PEEK, PEKK and PEI/Ultem. Site pricing observed at $158-$1175 for small to medium spools."
+      "notes": "Shore grade(s) not disclosed on the product page, so mapped to base tpu rather than a graded id."
     },
     {
-      "name": "High-performance polymers",
+      "name": "FIBREX Nylon PA6+GF30",
       "filament_ids": [
-        "pps",
-        "htn",
-        "psu",
-        "pes",
+        "pa6-gf"
+      ],
+      "notes": "PA6 + 30% glass fiber, loading stated in the product name. pa6-gf is provisional."
+    },
+    {
+      "name": "CarbonX Nylon 6+CF",
+      "filament_ids": [
+        "pa6-cf"
+      ],
+      "notes": "PA6 + chopped carbon fiber; loading % not disclosed on the product page."
+    },
+    {
+      "name": "CarbonX PA12+CF",
+      "filament_ids": [
+        "pa12-cf"
+      ],
+      "notes": "PA12 + chopped carbon fiber; loading % not disclosed on the product page."
+    },
+    {
+      "name": "OBSIDIAN Nylon 6+CF v2",
+      "filament_ids": [
+        "pa6-cf"
+      ],
+      "notes": "Positioned as a Markforged Onyx alternative; same PA6 + chopped CF chemistry class."
+    },
+    {
+      "name": "OBSIDIAN Nylon 6 Glass Fiber",
+      "filament_ids": [
+        "pa6-gf"
+      ],
+      "notes": "PA6 + chopped glass fiber, Onyx-alternative positioning. pa6-gf is provisional."
+    },
+    {
+      "name": "WearX PA6",
+      "filament_ids": [
+        "pa6"
+      ],
+      "notes": "Wear-resistant PA6, understood to be internally lubricated/filled; base polymer is PA6."
+    },
+    {
+      "name": "CarbonX PETG+CF",
+      "filament_ids": [
+        "petg-cf"
+      ],
+      "notes": "PETG + chopped carbon fiber."
+    },
+    {
+      "name": "CarbonX PLA+CF",
+      "filament_ids": [
+        "pla-cf"
+      ],
+      "notes": "PLA + chopped carbon fiber."
+    },
+    {
+      "name": "CarbonX ASA+CF",
+      "filament_ids": [
+        "asa-cf"
+      ],
+      "notes": "ASA + chopped carbon fiber."
+    },
+    {
+      "name": "CarbonX PEKK-A+CF15",
+      "notes": "Amorphous PEKK + 15% carbon fiber. No pekk-cf id exists in this catalog."
+    },
+    {
+      "name": "3DXSTAT ESD-PETG",
+      "filament_ids": [
+        "petg-esd"
+      ],
+      "notes": "PETG doped with conductive (carbon-based) filler for static-dissipative volume resistivity; exact filler and resistivity band not confirmed from the product page."
+    },
+    {
+      "name": "3DXSTAT ESD-PLA",
+      "notes": "PLA + conductive filler. No pla-esd id exists in this catalog."
+    },
+    {
+      "name": "3DXSTAT ESD-ABS",
+      "notes": "ABS + conductive filler. No abs-esd id exists in this catalog."
+    },
+    {
+      "name": "FR-ABS",
+      "filament_ids": [
+        "abs-fr"
+      ],
+      "notes": "Flame-retardant ABS with a halogen-free additive package."
+    },
+    {
+      "name": "FR-PC",
+      "notes": "Flame-retardant polycarbonate, sold under both the 3DXTECH and 3DXLabs banners. No pc-fr id exists."
+    },
+    {
+      "name": "FluorX PVDF",
+      "notes": "Polyvinylidene fluoride fluoropolymer - high chemical and UV resistance. No pvdf id exists in this catalog."
+    },
+    {
+      "name": "ThermaX PPE+PS",
+      "notes": "Polyphenylene-ether / polystyrene (Noryl-type) blend. No ppe-ps id exists."
+    },
+    {
+      "name": "ThermaX PPS",
+      "filament_ids": [
+        "pps"
+      ],
+      "notes": "Unfilled polyphenylene sulfide. A PPS-GF grade is implied by the line but was not confirmed from a product page."
+    },
+    {
+      "name": "ThermaX HTN",
+      "notes": "High-temperature polyarylamide - an amorphous engineering nylon distinct from PA6/PA12. No htn id exists."
+    },
+    {
+      "name": "ThermaX PPSU",
+      "filament_ids": [
         "ppsu"
-      ]
-    },
-    {
-      "name": "Composites and specialty",
-      "filament_ids": [
-        "pla-cf",
-        "petg-cf",
-        "abs-cf",
-        "pa-cf",
-        "pa-gf",
-        "peek-cf"
       ],
-      "notes": "CarbonX carbon-fiber-filled and glass-fiber-filled grades, 3DXSTAT ESD-safe, OBSIDIAN wear-resistant nylon+CF, chemical-resistant and flame-retardant formulations."
+      "notes": "Polyphenylsulfone."
     },
     {
-      "name": "Support materials",
+      "name": "ThermaX PSU / PES",
+      "notes": "Polysulfone and polyethersulfone. Neither psu nor pes exists as an id in this catalog."
+    },
+    {
+      "name": "ThermaX PEEK",
       "filament_ids": [
-        "hips",
+        "peek"
+      ],
+      "notes": "Polyetheretherketone. Site pricing observed at $158-$1175 for small to medium spools across the ultra-performance range."
+    },
+    {
+      "name": "ThermaX PEKK",
+      "filament_ids": [
+        "pekk"
+      ],
+      "notes": "Polyetherketoneketone."
+    },
+    {
+      "name": "ThermaX PEI 1010",
+      "filament_ids": [
+        "pei-ultem"
+      ],
+      "notes": "ULTEM-brand PEI 1010 resin."
+    },
+    {
+      "name": "AquaTek PVA",
+      "filament_ids": [
         "pva"
       ],
-      "notes": "Break-away and soluble support filaments; exact chemistry per SKU not itemised in the sources used."
+      "notes": "Standard water-soluble polyvinyl alcohol support."
+    },
+    {
+      "name": "Support: ThermaX HTS1 / HTS2 / MTS1, 3DXMAX LTS2",
+      "notes": "Proprietary high-, mid- and low-temp soluble or breakaway supports; chemistry undisclosed."
+    },
+    {
+      "name": "3DXLabs EMI-ABS",
+      "notes": "EMI-shielding filled ABS; filler undisclosed. No abs-emi id exists."
+    },
+    {
+      "name": "3DXLabs HT-PETG",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "High-temperature PETG formulation; PETG base chemistry."
+    },
+    {
+      "name": "3DXLabs PEBA 90A",
+      "notes": "Polyether-block-amide elastomer, Shore 90A - chemically distinct from TPU. No peba id exists."
+    },
+    {
+      "name": "3DXLabs PVDF+GF",
+      "notes": "Glass-filled PVDF. No pvdf id exists in this catalog."
+    },
+    {
+      "name": "Triton3D (Stratasys-compatible)",
+      "filament_ids": [
+        "abs",
+        "asa",
+        "pc",
+        "pei-ultem"
+      ],
+      "notes": "Repackaged/certified 3DXTECH base materials on Stratasys-compatible spools; the CF and ESD variants in this line follow the same mappings as their 3DXTECH-branded equivalents."
+    },
+    {
+      "name": "Pellets",
+      "notes": "Raw pellets in matching chemistries for large-format machines; out of scope for a filament catalog."
     }
   ],
   "makes_plates": false,
@@ -100,7 +298,15 @@
       "https://www.3dxtech.com/pages/about-us",
       "https://www.3dxtech.com/pages/frequently-asked-questions",
       "https://www.3dxtech.com/",
-      "https://www.sliceengineering.com/collections/3dxtech-3d-printer-filaments"
+      "https://www.sliceengineering.com/collections/3dxtech-3d-printer-filaments",
+      "https://www.3dxtech.com/products/",
+      "https://www.3dxtech.com/collections/all",
+      "https://www.3dxtech.com/collections",
+      "https://www.3dxtech.com/pages/tech-data-sheets-safety-data-sheets",
+      "https://www.3dxtech.com/blogs/featured/pctg-vs-petg-which-filament-delivers-superior-performance",
+      "https://www.3dxtech.com/products/carbonx-pekk-a-cf15-1",
+      "https://www.3dxtech.com/products/carbonx-petg-cf-1",
+      "https://www.3dxtech.com/products/3dxstat-esd-petg-1"
     ],
     "last_verified": "2026-07-31",
     "confidence": "medium",

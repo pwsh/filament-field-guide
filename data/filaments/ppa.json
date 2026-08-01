@@ -1,7 +1,16 @@
 {
   "id": "ppa",
   "name": "PPA (Polyphthalamide / High-Temp Nylon)",
-  "aliases": ["Polyphthalamide", "PPA-CF", "PPA-GF", "HTN", "High-Temperature Nylon", "PA6T", "PA10T", "PAHT"],
+  "aliases": [
+    "Polyphthalamide",
+    "PPA-CF",
+    "PPA-GF",
+    "HTN",
+    "High-Temperature Nylon",
+    "PA6T",
+    "PA10T",
+    "PAHT"
+  ],
   "status": "researched",
   "base_type": "pa",
   "variation_kind": "grade",
@@ -9,15 +18,35 @@
   "chemical_makeup": "Semi-aromatic polyamide in which part of the aliphatic diacid is replaced by a phthalic-acid-derived aromatic unit. The rigid aromatic ring in the backbone raises Tg from PA6's ~60 °C to ~125 °C and the melting point to ~305 °C, and simultaneously cuts moisture uptake — the whole property set follows from that one substitution. Commercial FDM PPA is almost always compounded with chopped carbon fiber (PPA-CF) or glass fiber (PPA-GF15/GF30).",
   "summary": "The high-temperature tier of the polyamide family and the hardest material in this catalog outside the PEEK class. Deltas vs the base pa entry: melting point ~305 °C against PA6's ~220 °C, Tg 125 °C against ~50 °C, HDT from 196 °C @1.8 MPa (Bambu PPA-CF) to 260 °C (3DXTech PPA-GF15), tensile up to 168 MPa X-Y, and saturated water absorption of only ~1.3 %. It pays for all of it with the family's most extreme process window: 280-390 °C nozzle, 100-160 °C bed, a heated chamber, a hardened nozzle and 100-140 °C drying — plus roughly triple the price of pa6.",
   "printing": {
-    "nozzle_temp_c": { "min": 280, "max": 390, "recommended": 300 },
-    "bed_temp_c": { "min": 100, "max": 160, "recommended": 120 },
-    "ambient_temp_c": { "min": 50, "max": 140, "recommended": 70 },
-    "speed_mm_s": { "min": 20, "max": 80, "recommended": 40 },
+    "nozzle_temp_c": {
+      "min": 280,
+      "max": 390,
+      "recommended": 300
+    },
+    "bed_temp_c": {
+      "min": 100,
+      "max": 160,
+      "recommended": 120
+    },
+    "ambient_temp_c": {
+      "min": 50,
+      "max": 140,
+      "recommended": 70
+    },
+    "speed_mm_s": {
+      "min": 20,
+      "max": 80,
+      "recommended": 40
+    },
     "enclosure_recommended": true,
     "heated_chamber_required": true,
     "enclosure_open_for_cooling": false,
     "requires_hardened_nozzle": true,
-    "part_cooling_fan_pct": { "min": 0, "max": 10, "recommended": 0 },
+    "part_cooling_fan_pct": {
+      "min": 0,
+      "max": 10,
+      "recommended": 0
+    },
     "notes": "Two very different hardware tiers hide inside this window and the recommended values follow the prosumer one. Bambu's PPA-CF runs 280-310 °C nozzle (0.6 mm recommended), 100-120 °C bed and a 50-80 °C chamber; 3DXTech's FibreX PPA-GF15 runs 365-390 °C nozzle, 140-160 °C bed and a chamber up to 140 °C on what it explicitly calls industrial-grade hardware. heated_chamber_required is recorded true — it is the only grade in this family to earn that, and the flag is what separates PPA from pa6/pa12/pa66, whose enclosures are passive. Chamber heat retention is critical against delamination, so never open the door: enclosure_open_for_cooling is false and part cooling stays at 0 %. requires_hardened_nozzle is true because essentially every commercial PPA filament is CF- or GF-filled, and fibre abrasion at these temperatures wears a nozzle faster than in any PA6/PA12 composite; neat unfilled PPA would not need one but is not realistically available."
   },
   "feeding": {
@@ -28,9 +57,22 @@
   },
   "drying": {
     "required_before_use": "always",
-    "temp_c": { "min": 100, "max": 140, "recommended": 120 },
-    "time_hours": { "min": 4, "max": 12, "recommended": 8 },
-    "methods": ["blast oven at 100-140 °C", "high-temperature industrial filament dryer", "heated-bed method at 110-120 °C for 12 h (less effective)", "sealed drybox with desiccant at <20 % RH while printing"],
+    "temp_c": {
+      "min": 100,
+      "max": 140,
+      "recommended": 120
+    },
+    "time_hours": {
+      "min": 4,
+      "max": 12,
+      "recommended": 8
+    },
+    "methods": [
+      "blast oven at 100-140 °C",
+      "high-temperature industrial filament dryer",
+      "heated-bed method at 110-120 °C for 12 h (less effective)",
+      "sealed drybox with desiccant at <20 % RH while printing"
+    ],
     "dryness_validation": "No popping or steam at the nozzle and no voids or fuzz in a purge line — gloss is a poor indicator because the fiber-filled extrudate is matte by design. At these nozzle temperatures residual moisture shows up as visible foaming almost immediately, so the purge line is a reliable test.",
     "notes": "The highest drying requirement in the catalog outside the PEEK class and the clearest quantitative separator in the PA family: Bambu specifies 100-140 °C for 8-12 h for PPA-CF and 3DXTech 120 °C for 4 h minimum for PPA-GF15, against pa66's 90 °C, pa6's 80 °C and pa12's 70 °C. PPA's high Tg (125 °C) is what both permits and requires drying this hot — the filament does not soften at temperatures that would slump a PA6 spool, and moisture will not fully desorb below them. Ordinary consumer filament dryers top out around 70-90 °C and are therefore not sufficient for this grade."
   },
@@ -72,11 +114,19 @@
     "density_g_cm3": 1.18,
     "grams_per_100cm3": 118,
     "cm3_per_100g": 84.7,
-    "shrinkage_pct": { "min": 0.3, "max": 1.2, "recommended": 0.6 },
+    "shrinkage_pct": {
+      "min": 0.3,
+      "max": 1.2,
+      "recommended": 0.6
+    },
     "glass_transition_c": 125,
     "heat_deflection_c": 260,
     "max_service_temp_c": 180,
-    "tensile_strength_mpa": { "min": 100, "max": 168, "recommended": 150 },
+    "tensile_strength_mpa": {
+      "min": 100,
+      "max": 168,
+      "recommended": 150
+    },
     "notes": "Density 1.18 g/cm³ is the neat semi-aromatic resin figure; the fiber-filled grades actually sold run heavier — Bambu's PPA-CF measures 1.25 g/cm³, the densest polyamide in this catalog — so budget part weight from 1.25 if buying a CF grade. Tg 125 °C (3DXTech FibreX PPA-GF15) against pa6's 60 °C and pa12's 40 °C is the headline number, and melting point ~305 °C against PA6's ~220 °C explains the process window. HDT is recorded at 260 °C @0.45 MPa from the GF15 datasheet; Bambu's PPA-CF reports 196 °C at the harsher 1.8 MPa load, against 164 °C for PA6-CF and 137 °C for PA12-CF at the same load — every comparison points the same way. Tensile X-Y 168 ± 4 MPa (Bambu PPA-CF) is roughly 1.6x PA6-CF's 102 MPa, but Z tensile is only 57 ± 5 MPa, about a third of X-Y — orient loads in plane. Saturated water absorption 1.30 % (Bambu). Max service temp and shrinkage are reasoned from Tg, HDT and the fiber loading rather than taken from a datasheet."
   },
   "scores": {
@@ -91,9 +141,18 @@
     "water_tolerance": 6
   },
   "compatibility": {
-    "bonds_with": ["ppa", "ppa-cf"],
-    "support_materials": ["ppa", "ppa-cf"],
-    "usable_as_support_for": [],
+    "bonds_with": [
+      "ppa",
+      "ppa-cf"
+    ],
+    "support_materials": [
+      "ppa",
+      "ppa-cf"
+    ],
+    "usable_as_support_for": [
+      "ppa",
+      "ppa-cf"
+    ],
     "notes": "Unlike the aliphatic grades, PPA does not usefully cross-bond within the family: pa6, pa12 and pa66 all melt 40-100 °C below PPA's ~305 °C, so an aliphatic nylon placed against PPA either degrades or fails to fuse — this is the compatibility delta that most distinguishes ppa from its siblings, which bond to each other freely. Same-material or ppa-cf breakaway supports are the only practical option. Soluble supports are out entirely: pva degrades above ~200 °C and bvoh not far above, both far below PPA's process temperatures. Build-plate chemistry needs a high-temperature adhesive; ordinary PA glue sticks are not characterised at a 160 °C bed (unverified)."
   },
   "plate_recommendations": [
@@ -101,12 +160,31 @@
       "plate_id": "pei-textured",
       "rating": "usable",
       "notes": "Usable at the Bambu PPA-CF end of the range (100-120 °C bed), which is within the normal comfort zone of a textured PEI sheet. It is the wrong surface for the 3DXTech GF15 end: bed 140-160 °C with a chamber to 140 °C exceeds what many PEI sheets and their adhesive backings are rated for sustained use at (unverified exact ratings, flagged as a likely failure point). Garolite / G10 or another high-temperature composite build surface is the recommendation for those grades — no such plate entry exists in the catalog yet, so it is recorded here in notes."
+    },
+    {
+      "plate_id": "pei-smooth",
+      "rating": "avoid",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): High-performance polyamide; bed temps push the lamination adhesive and adhesion is unreliable."
+    },
+    {
+      "plate_id": "pei-satin",
+      "rating": "avoid",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Outside the characterised range for the satin coat."
+    },
+    {
+      "plate_id": "pei-patterned",
+      "rating": "avoid",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Far outside the rated range."
     }
   ],
   "emissions": {
     "voc_level": "high",
     "particulate_level": "high",
-    "primary_emissions": ["amide-family VOCs", "ultrafine particles", "carbon/glass fiber fines (post-processing)"],
+    "primary_emissions": [
+      "amide-family VOCs",
+      "ultrafine particles",
+      "carbon/glass fiber fines (post-processing)"
+    ],
     "ventilation": "required",
     "notes": "Scored the worst in the polyamide family on both axes, and the only one at 'required'. Two compounding reasons: PPA processes at 280-390 °C — 60-120 °C above pa6 — and nylon VOC and ultrafine-particle emission rises steeply with nozzle temperature; and the mandatory heated chamber concentrates whatever is produced inside a sealed volume that is then vented into the room. Active extraction or HEPA+carbon filtration on the enclosure is not optional here. Post-processing filled PPA liberates respirable carbon or glass fibre dust — wet-sand with respiratory protection. No PPA-specific emissions study was found; this is inference from the general nylon temperature relationship plus the chamber requirement (unverified)."
   },

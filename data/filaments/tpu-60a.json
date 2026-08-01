@@ -1,7 +1,13 @@
 {
   "id": "tpu-60a",
   "name": "TPU 60A (ultra-soft flexible)",
-  "aliases": ["TPU 60A", "Shore 60A TPU", "Ultra-soft TPU", "Filaflex 60A", "65A ultra-soft TPU"],
+  "aliases": [
+    "TPU 60A",
+    "Shore 60A TPU",
+    "Ultra-soft TPU",
+    "Filaflex 60A",
+    "65A ultra-soft TPU"
+  ],
   "status": "researched",
   "base_type": "tpu",
   "variation_kind": "shore-grade",
@@ -9,15 +15,35 @@
   "chemical_makeup": "Thermoplastic polyurethane with the same polyester/polyether-polyurethane backbone as base TPU, formulated with a markedly lower hard-segment ratio. The reduced hard-segment content is what produces Shore 60A silicone/gel-like softness instead of the 85A-95A firmness of the generic grade",
   "summary": "The softest commonly sold FDM-printable TPU, and the hardest to print. Delta vs base TPU: hard-segment content drops to give a silicone-like 60A instead of the base entry's 85A-95A band, elongation at break roughly doubles to ~950%, print speed collapses to 10-20 mm/s, retraction must go to zero, and the nozzle runs hotter (~235 °C) than a typical 95A to keep the very-low-viscosity melt moving. Feeding is the whole problem: Bowden paths are ruled out entirely, a spool-side feeding assistant is close to mandatory, and Bambu's own guide puts 75A-and-below in the 'should not be printed' bucket, so this grade is off the table on those machines.",
   "printing": {
-    "nozzle_temp_c": { "min": 225, "max": 245, "recommended": 235 },
-    "bed_temp_c": { "min": 20, "max": 45, "recommended": 30 },
-    "ambient_temp_c": { "min": 18, "max": 30, "recommended": 22 },
-    "speed_mm_s": { "min": 10, "max": 20, "recommended": 15 },
+    "nozzle_temp_c": {
+      "min": 225,
+      "max": 245,
+      "recommended": 235
+    },
+    "bed_temp_c": {
+      "min": 20,
+      "max": 45,
+      "recommended": 30
+    },
+    "ambient_temp_c": {
+      "min": 18,
+      "max": 30,
+      "recommended": 22
+    },
+    "speed_mm_s": {
+      "min": 10,
+      "max": 20,
+      "recommended": 15
+    },
     "enclosure_recommended": false,
     "heated_chamber_required": false,
     "enclosure_open_for_cooling": true,
     "requires_hardened_nozzle": false,
-    "part_cooling_fan_pct": { "min": 0, "max": 50, "recommended": 25 },
+    "part_cooling_fan_pct": {
+      "min": 0,
+      "max": 50,
+      "recommended": 25
+    },
     "notes": "Recreus Filaflex 60A specifies 235 °C, hotter than the 210-230 °C typical of 95A, because the melt viscosity at this hardness is so low that a cooler nozzle produces inconsistent flow rather than cleaner detail. A heated bed is not strictly required — adhesion is good even unheated — but 40-45 °C helps on larger footprints. Speed is the hard constraint: above roughly 20 mm/s the filament compresses and buckles at the extruder inlet instead of advancing, so this grade prints at half to a third of the base entry's 30 mm/s recommendation. Retraction should be set to 0 mm; any retraction at this durometer stretches the filament in the drive gear and jams. Recreus also states Filaflex 60A is not compatible with all-metal hotends. No enclosure needed (low print temperature, no warp), and on an enclosed machine run with the lid off as for base TPU. Not abrasive — standard brass nozzle is fine."
   },
   "feeding": {
@@ -28,9 +54,22 @@
   },
   "drying": {
     "required_before_use": "always",
-    "temp_c": { "min": 65, "max": 75, "recommended": 70 },
-    "time_hours": { "min": 6, "max": 8, "recommended": 8 },
-    "methods": ["dedicated filament dryer", "hot-air oven at 70 °C", "heated-bed method at 80-90 °C for 12 h", "print directly from a drybox with desiccant"],
+    "temp_c": {
+      "min": 65,
+      "max": 75,
+      "recommended": 70
+    },
+    "time_hours": {
+      "min": 6,
+      "max": 8,
+      "recommended": 8
+    },
+    "methods": [
+      "dedicated filament dryer",
+      "hot-air oven at 70 °C",
+      "heated-bed method at 80-90 °C for 12 h",
+      "print directly from a drybox with desiccant"
+    ],
     "dryness_validation": "No popping or crackling at the nozzle and no foamy extrudate; note that a retraction/stringing test is a poor validator at this grade because 60A strings under normal dry conditions, so judge on extrusion sound and strand surface rather than on stringing",
     "notes": "Drying is not distinct from the rest of the TPU family — the chemistry is filler-free, so hardness does not shift the regime. Bambu's general TPU guidance (70 °C for 8 h forced-air, or 80-90 °C for 12 h on a heated bed) applies unchanged. Store under 20% RH with desiccant."
   },
@@ -89,8 +128,19 @@
     "water_tolerance": 6
   },
   "compatibility": {
-    "bonds_with": ["tpu", "tpu-85a", "tpu-90a", "tpu-95a", "tpu-60d", "tpu-68d", "tpe"],
-    "support_materials": ["pla"],
+    "bonds_with": [
+      "tpe",
+      "tpu",
+      "tpu-60d",
+      "tpu-68d",
+      "tpu-85a",
+      "tpu-90a",
+      "tpu-95a",
+      "tpu-gf"
+    ],
+    "support_materials": [
+      "pla"
+    ],
     "usable_as_support_for": [],
     "notes": "Welds cleanly to base TPU and every sibling grade — same chemistry family — which is what makes multi-durometer prints (soft 60A pads on a firmer 95A or 60D body) practical. The rigid-material story is unchanged from the base entry: joints to PLA and PETG are mechanical interlock only, and at 60A the compliance makes even that weaker. Soluble and breakaway supports are impractical: PVA and HIPS are not documented as reliable interfaces for TPU, and at this softness supports tear the part on removal, so design to avoid supports or use same-material minimal supports."
   },
@@ -99,12 +149,36 @@
       "plate_id": "pei-textured",
       "rating": "usable",
       "notes": "Textured PEI releases cleanly at this grade's low bed temperature and needs no special surface. The failure mode is over-adhesion, not lifting, and it is worse here than for the base entry: a 60A part can grip hard enough that removal tears it, so a glue stick applied as a release layer (not an adhesion aid) is the standard precaution."
+    },
+    {
+      "plate_id": "pp-sheet",
+      "rating": "usable",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Very soft grades release fine but may struggle to stay attached on a low-tack surface — the failure mode inverts relative to PEI."
+    },
+    {
+      "plate_id": "pei-satin",
+      "rating": "usable",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Very soft grade; do not print it bare on the coating."
+    },
+    {
+      "plate_id": "pei-smooth",
+      "rating": "avoid",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Softest common grade — effectively impossible to remove cleanly from bare smooth PEI."
+    },
+    {
+      "plate_id": "supertack",
+      "rating": "avoid",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Worst case of the TPU family on this surface."
     }
   ],
   "emissions": {
     "voc_level": "low",
     "particulate_level": "low",
-    "primary_emissions": ["ultrafine particles", "isocyanate residues (unverified)", "urethane decomposition byproducts (unverified)"],
+    "primary_emissions": [
+      "ultrafine particles",
+      "isocyanate residues (unverified)",
+      "urethane decomposition byproducts (unverified)"
+    ],
     "ventilation": "recommended",
     "notes": "Same profile as base TPU — moderate ultrafine particles and some VOCs including possible isocyanates, more than PLA and less than ABS, with essentially no styrene. No source differentiates TPU emissions by Shore grade (unverified). The one grade-specific consideration is temperature: emissions rise with nozzle temperature, and 60A needs a comparatively hot 235 °C, so ventilation or HEPA-plus-carbon filtration is worth more here than for a 95A running at 210-220 °C."
   },

@@ -1,7 +1,12 @@
 {
   "id": "petg-esd",
   "name": "PETG-ESD (Static-Dissipative PETG)",
-  "aliases": ["ESD PETG", "PETG ESD", "3DXSTAT ESD-PETG", "ESD-safe copolyester"],
+  "aliases": [
+    "ESD PETG",
+    "PETG ESD",
+    "3DXSTAT ESD-PETG",
+    "ESD-safe copolyester"
+  ],
   "status": "researched",
   "base_type": "petg",
   "variation_kind": "esd-safe",
@@ -9,15 +14,35 @@
   "chemical_makeup": "The same glycol-modified PET (CHDM-modified copolyester) matrix as base PETG, compounded with a carbon-based conductive additive — carbon nanotubes in 3DXTech's 3DXSTAT line, an undisclosed carbon filler for eSUN and Fiberon. Loading is low compared with structural CF grades, enough to set surface resistivity in the static-dissipative band without turning the material into a structural composite. Always black, because the filler is.",
   "summary": "Base PETG made static-dissipative for electronics work. Deltas vs petg: surface resistivity controlled to roughly 10⁴-10⁹ Ω, a hardened nozzle recommended because the conductive filler is mildly abrasive, a wider and hotter nozzle window (230-290 °C across brands against 220-250 °C), a pronounced Z-strength penalty (eSUN 48.1 MPa XY against 19.3 MPa Z), black only, and worse UV/ageing behaviour than base PETG's already-moderate rating. Price is the biggest delta of all: roughly $105-140/kg against base PETG's $18-42. Heat resistance is unchanged — HDT 76 °C.",
   "printing": {
-    "nozzle_temp_c": { "min": 230, "max": 290, "recommended": 250 },
-    "bed_temp_c": { "min": 60, "max": 90, "recommended": 75 },
-    "ambient_temp_c": { "min": 18, "max": 35, "recommended": 25 },
-    "speed_mm_s": { "min": 30, "max": 300, "recommended": 80 },
+    "nozzle_temp_c": {
+      "min": 230,
+      "max": 290,
+      "recommended": 250
+    },
+    "bed_temp_c": {
+      "min": 60,
+      "max": 90,
+      "recommended": 75
+    },
+    "ambient_temp_c": {
+      "min": 18,
+      "max": 35,
+      "recommended": 25
+    },
+    "speed_mm_s": {
+      "min": 30,
+      "max": 300,
+      "recommended": 80
+    },
     "enclosure_recommended": false,
     "heated_chamber_required": false,
     "enclosure_open_for_cooling": false,
     "requires_hardened_nozzle": true,
-    "part_cooling_fan_pct": { "min": 30, "max": 50, "recommended": 40 },
+    "part_cooling_fan_pct": {
+      "min": 30,
+      "max": 50,
+      "recommended": 40
+    },
     "notes": "The nozzle window is unusually brand-dependent: eSUN 240-260 °C, 3DXTech 230-260 °C, Fiberon (Polymaker) 250-290 °C — a far wider spread than base PETG's 220-250 °C, so read the specific spool's datasheet rather than using a generic profile. Beds are ordinary PETG territory (eSUN 70 °C, 3DXTech 60-90 °C, Fiberon 70-80 °C). 3DXTech states explicitly that no heated chamber is needed. eSUN rates the material to 300 mm/s. The one hardware delta versus base PETG is the nozzle: Fiberon recommends hardened steel because the conductive filler wears brass. Nozzle temperature also sets the electrical result — see properties.notes — so changing print temperature to fix a surface-finish problem can move the part out of its resistivity spec."
   },
   "feeding": {
@@ -28,9 +53,21 @@
   },
   "drying": {
     "required_before_use": "if-exposed",
-    "temp_c": { "min": 60, "max": 70, "recommended": 65 },
-    "time_hours": { "min": 4, "max": 8, "recommended": 6 },
-    "methods": ["dedicated filament dryer", "convection oven at low temperature", "drybox with desiccant"],
+    "temp_c": {
+      "min": 60,
+      "max": 70,
+      "recommended": 65
+    },
+    "time_hours": {
+      "min": 4,
+      "max": 8,
+      "recommended": 6
+    },
+    "methods": [
+      "dedicated filament dryer",
+      "convection oven at low temperature",
+      "drybox with desiccant"
+    ],
     "dryness_validation": "No popping, hissing or steam at the nozzle; no voids or fuzz on a purge line. Gloss is a weaker indicator than on base PETG because the carbon-loaded surface is darker and flatter — listen for pops and inspect the strand for bubbles rather than judging by shine.",
     "notes": "eSUN specifies 65 °C for over 8 h, 3DXTech 65 °C for 4 h — the same temperature as base PETG's schedule run at the longer end. 3DXTech notes the material absorbs roughly 3x less moisture than ABS, which is a comparison to a different family rather than a delta from base PETG."
   },
@@ -74,7 +111,11 @@
     "glass_transition_c": 80,
     "heat_deflection_c": 76,
     "max_service_temp_c": 65,
-    "tensile_strength_mpa": { "min": 36.1, "max": 48.1, "recommended": 43 },
+    "tensile_strength_mpa": {
+      "min": 36.1,
+      "max": 48.1,
+      "recommended": 43
+    },
     "notes": "Density 1.22 g/cm³ (eSUN), slightly below base PETG's 1.27 — the conductive loading is low enough not to raise it the way carbon fibre raises petg-cf to 1.30. Tensile spans brands: eSUN 48.11 ± 0.54 MPa XY with only 19.34 ± 5.80 MPa in Z (Z/XY ≈ 0.40, a markedly bigger anisotropy gap than unfilled PETG), Fiberon 36.1 MPa XY and 20.7 MPa Z dry, with Young's modulus 1983 MPa. Fiberon reports HDT 76 °C at 0.45 MPa — essentially base PETG's 72 °C, so the filler buys no heat resistance. eSUN's melt flow index is 18.1 (230 °C/5 kg). The electrical figures are the point of the material: eSUN rates 10⁹ Ω surface resistivity, 3DXTech targets 10⁴-10⁹ Ω, and Fiberon measured (1.6 ± 0.3)×10⁷ Ω on parts printed at 250 °C against (4.7 ± 0.8)×10⁵ Ω at 270 °C — resistivity moves with print temperature, which has no analogue in base PETG's specifications. Tg and max service temperature are carried from base PETG (unverified for the filled grade); shrinkage is not published."
   },
   "scores": {
@@ -89,8 +130,17 @@
     "water_tolerance": 8
   },
   "compatibility": {
-    "bonds_with": ["petg-esd", "petg", "pctg", "petg-cf"],
-    "support_materials": ["pla", "bvoh", "petg"],
+    "bonds_with": [
+      "petg-esd",
+      "petg",
+      "pctg",
+      "petg-cf"
+    ],
+    "support_materials": [
+      "pla",
+      "bvoh",
+      "petg"
+    ],
     "usable_as_support_for": [],
     "notes": "Same copolyester matrix as base petg, so it welds to itself and to the rest of the family — useful for printing an ESD-safe contact surface on an otherwise plain PETG fixture and spending the expensive filament only where charge control matters (the mechanical soundness of that joint is inferred from shared chemistry, unverified). PLA remains the clean breakaway support it is for base PETG, and BVOH the soluble option. Same-material supports fuse hard, exactly as with base PETG. Not listed as a support for other materials — far too expensive for the role."
   },
@@ -99,12 +149,26 @@
       "plate_id": "pei-textured",
       "rating": "recommended",
       "notes": "Textured PEI at 60-90 °C, the same pairing and the same reasoning as base PETG: strong reliable grip without the tear-the-coating over-adhesion that bare PETG shows on smooth PEI. Use a glue-stick separator if printing on a smooth sheet."
+    },
+    {
+      "plate_id": "pei-satin",
+      "rating": "recommended",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): As PETG."
+    },
+    {
+      "plate_id": "pei-smooth",
+      "rating": "usable",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): As PETG; separator layer also keeps conductive filler off the film."
     }
   ],
   "emissions": {
     "voc_level": "low",
     "particulate_level": "moderate",
-    "primary_emissions": ["ultrafine particles", "trace acetaldehyde / terephthalate-related compounds (unverified)", "carbon filler fines (post-processing)"],
+    "primary_emissions": [
+      "ultrafine particles",
+      "trace acetaldehyde / terephthalate-related compounds (unverified)",
+      "carbon filler fines (post-processing)"
+    ],
     "ventilation": "recommended",
     "notes": "At the nozzle this behaves like base PETG: no styrene, mild odour, particulates above PLA and well below ABS — though brands specifying up to 290 °C will emit more than a 240 °C base PETG profile. The additional exposure is at the bench rather than the printer: sanding or drilling carbon-loaded parts liberates fine conductive dust, so use a mask and dust capture. No emissions study covers ESD grades specifically (unverified)."
   },
@@ -122,5 +186,35 @@
     "last_verified": "2026-07-31",
     "confidence": "medium",
     "conflicts": "Brand spread is the dominant issue and is wider than for most variations. Nozzle temperature: eSUN 240-260 °C, 3DXTech 230-260 °C, Fiberon 250-290 °C. Tensile: eSUN 48.1 MPa XY, Fiberon 36.1 MPa XY — a 33 % gap that most likely reflects different filler systems (carbon nanotubes vs undisclosed carbon). Surface resistivity targets also differ by brand and, per Fiberon's own data, by print temperature within a brand, so the material has no single electrical specification. Additive chemistry is disclosed only by 3DXTech. Drying time splits 4 h (3DXTech) against 8+ h (eSUN) at the same temperature. Density is a single eSUN figure. Tg and max service temp are inherited from base PETG and unverified for the filled grade; shrinkage is unpublished. AMS compatibility is undocumented and recorded conditional on abrasion grounds rather than a vendor statement. Layer adhesion is scored 6 against base PETG's 9 on the strength of eSUN's Z/XY ratio of 0.40, which is a single-brand measurement with a large standard deviation (±5.8 MPa on the Z figure). UV tolerance is dropped below base PETG on eSUN's note that the material is 'not resistant to light and ageing', which no other source corroborates."
-  }
+  },
+  "trade_names": [
+    {
+      "manufacturer": "3dxtech",
+      "product": "3DXSTAT ESD-PETG",
+      "notes": "Carbon-doped static-dissipative PETG; exact filler and resistivity band not confirmed from the product page."
+    },
+    {
+      "manufacturer": "addnorth",
+      "product": "ESD PETG",
+      "notes": "target resistivity 1e6-1e9 ohm-cm"
+    },
+    {
+      "manufacturer": "polymaker",
+      "product": "Fiberon PETG-ESD",
+      "notes": "Static-dissipative PETG composite"
+    },
+    {
+      "manufacturer": "proto-pasta",
+      "product": "Static Dissipative PETG",
+      "notes": "Conductive carbon black at low loading tuned to 10^5-10^9 ohm; sits inside the catalog entry's 10^4-10^9 ohm band."
+    },
+    {
+      "manufacturer": "rosa3d",
+      "product": "PETG ESD"
+    },
+    {
+      "manufacturer": "spectrum-filaments",
+      "product": "PETG ESD"
+    }
+  ]
 }

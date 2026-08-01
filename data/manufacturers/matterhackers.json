@@ -25,27 +25,83 @@
   },
   "product_lines": [
     {
-      "name": "Pro Series",
+      "name": "MH Build Series (PLA / ABS / PETG)",
       "filament_ids": [
         "pla",
-        "petg",
         "abs",
-        "asa",
-        "tpu",
-        "pa",
-        "pa-cf",
-        "pc"
+        "petg"
       ],
-      "notes": "House engineering tier; Pro Series PLA product pages claim US manufacture and +/-0.02 mm diameter control."
+      "notes": "Value-tier house brand of standard PLA, ABS and PETG resins; sold as 'MatterHackers Filament' before the MH Build Series rename."
     },
     {
-      "name": "MH Build Series",
+      "name": "MH Build Series Silky PLA",
+      "filament_ids": [
+        "pla-silk"
+      ],
+      "notes": "Standard PLA plus a silk/pearlescent gloss additive."
+    },
+    {
+      "name": "MH Build Series TPU",
+      "filament_ids": [
+        "tpu"
+      ],
+      "notes": "True thermoplastic polyurethane per MatterHackers' own spec sheet; shore hardness not published, so no durometer-specific id is assigned."
+    },
+    {
+      "name": "ThriftyMake (PLA / PETG / ABS)",
       "filament_ids": [
         "pla",
         "petg",
         "abs"
       ],
-      "notes": "House budget tier, including multi-color PLA lines."
+      "notes": "Lowest-cost house tier, positioned below MH Build Series; same base chemistries."
+    },
+    {
+      "name": "PRO Series (PLA / ABS / PETG)",
+      "filament_ids": [
+        "pla",
+        "abs",
+        "petg"
+      ],
+      "notes": "Professional tier: same base chemistries as MH Build Series with tighter tolerance/QC claims and US-manufacture claims."
+    },
+    {
+      "name": "PRO Series Tough PLA",
+      "filament_ids": [
+        "pla-plus"
+      ],
+      "notes": "Impact-modified/toughened PLA."
+    },
+    {
+      "name": "PRO Series Flex",
+      "filament_ids": [
+        "tpe"
+      ],
+      "notes": "Labelled TPE by MatterHackers, not TPU: shore 98A/50D, elongation ~600%, density 1.23 g/cm3, 235 C print temp; explicitly sold as a firmer alternative to NinjaFlex (85A TPU). Harder than the typical TPE grade behind the tpe entry."
+    },
+    {
+      "name": "PRO Series Ryno",
+      "filament_ids": [],
+      "notes": "House-name 'professional-level copolyester' marketed as a PETG alternative; density 1.27 g/cm3 sits in the standard-PETG range but the formulation is undisclosed, so a petg mapping cannot be asserted."
+    },
+    {
+      "name": "PRO Series NylonX",
+      "filament_ids": [
+        "pa12-cf"
+      ],
+      "notes": "MatterHackers' own listing is titled 'NylonX Carbon Fiber PA12 Filament' — PA12 + chopped carbon fibre. This supersedes the additional_notes remark that NylonX is a third-party brand."
+    },
+    {
+      "name": "PRO Series NylonG",
+      "filament_ids": [
+        "pa"
+      ],
+      "notes": "Glass-fibre-infused nylon; PA type and GF loading undisclosed, so pa6-gf (provisional) cannot be asserted and the generic pa id is used for family context only."
+    },
+    {
+      "name": "Ionic Hi-Temp Hybrid Support Material",
+      "filament_ids": [],
+      "notes": "Water/solvent-assisted support material; base chemistry not disclosed publicly, so it maps to neither pva nor bvoh nor hips."
     },
     {
       "name": "Third-party marketplace catalog",
@@ -62,7 +118,14 @@
       "https://www.matterhackers.com/store/l/pro-series-pla/sk/M87TDNAD",
       "https://help.matterhackers.com",
       "https://www.yelp.com/biz/matterhackers-lake-forest",
-      "https://en.wikipedia.org/wiki/MatterHackers"
+      "https://en.wikipedia.org/wiki/MatterHackers",
+      "https://www.matterhackers.com/store/c/mh-build-series-tpu",
+      "https://www.matterhackers.com/store/l/pro-series-flex-flexible-tpe-05kg/sk/M9XNMJ2P",
+      "https://www.matterhackers.com/store/l/pro-series-ryno/sk/M6989PRZ",
+      "https://www.matterhackers.com/store/3d-printer-filament/nylonx-carbon-fiber-nylon-filament-1.75mm",
+      "https://www.matterhackers.com/store/c/nylong",
+      "https://www.matterhackers.com/store/c/matterhackers-3d-printer-filament",
+      "https://3dprint.com/200690/matterhackers-rebrands-filament/"
     ],
     "last_verified": "2026-07-31",
     "confidence": "medium",

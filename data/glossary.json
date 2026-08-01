@@ -205,8 +205,8 @@
     {
       "key": "scores.layer_adhesion",
       "term": "Layer adhesion (1–10)",
-      "definition": "Relative strength of the bond between printed layers versus the material's bulk strength.",
-      "why_it_matters": "FDM parts fail at layer lines first; a material with great tensile specs but poor layer adhesion is weak in practice, especially loaded in Z.",
+      "definition": "Relative strength of the bond between printed layers versus the material's bulk strength — scored on the measured Z-to-XY strength ratio where data exists, not on subjective toughness. Note for elastomers: TPU/TPE score low here (Z/XY ≈ 27-31% by elongation) even though their parts feel tough and rarely snap in casual use — the flexibility masks the anisotropy until a bend loads the layer lines directly. This is a deliberate rubric choice: the score answers 'how much weaker is Z than XY', not 'do parts feel sturdy'.",
+      "why_it_matters": "FDM parts fail at layer lines first; a material with great tensile specs but poor layer adhesion is weak in practice, especially loaded in Z. For flexibles, orient bends in-plane — a TPU part that flexes beautifully in XY can snap without warning when the same bend loads Z.",
       "rubric": {
         "10": "Near-isotropic; Z strength close to XY (PCTG, well-printed PETG)",
         "5": "Distinct Z weakness; orient loads in-plane",

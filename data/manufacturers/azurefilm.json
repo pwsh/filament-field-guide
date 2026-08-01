@@ -29,42 +29,103 @@
   },
   "product_lines": [
     {
-      "name": "PLA",
+      "name": "PLA Original",
       "filament_ids": [
         "pla"
       ],
-      "notes": "Standard PLA plus Silk PLA"
+      "notes": "Standard PLA"
     },
     {
-      "name": "Strongman PLA",
+      "name": "PLA Prime",
       "filament_ids": [
         "pla"
       ],
-      "notes": "Higher-toughness PLA variant; a product line, not a separate brand"
+      "notes": "Standard PLA"
+    },
+    {
+      "name": "PLA Strongman",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Marketed as a higher-toughness PLA; no TDS-level composition is published, so pla-plus cannot be confirmed"
+    },
+    {
+      "name": "PLA Silk",
+      "filament_ids": [
+        "pla-silk"
+      ],
+      "notes": "PLA + high-gloss/silk additive package"
+    },
+    {
+      "name": "PLA Matte",
+      "filament_ids": [
+        "pla-matte"
+      ],
+      "notes": "PLA + matte additive"
+    },
+    {
+      "name": "PLA Wood",
+      "filament_ids": [
+        "pla-wood"
+      ],
+      "notes": "PLA matrix + wood-fibre filler"
     },
     {
       "name": "PETG",
       "filament_ids": [
         "petg"
-      ]
+      ],
+      "notes": "Standard PETG line"
     },
     {
-      "name": "ABS",
+      "name": "ABS Prime / ABS Plus",
       "filament_ids": [
         "abs"
-      ]
+      ],
+      "notes": "Standard ABS; Plus is likely impact-modified but this is not confirmed from public sources"
     },
     {
-      "name": "ASA",
+      "name": "ASA Prime",
       "filament_ids": [
         "asa"
-      ]
+      ],
+      "notes": "Standard ASA"
     },
     {
-      "name": "TPU",
+      "name": "PC-ABS",
+      "filament_ids": [
+        "pc-abs"
+      ],
+      "notes": "Polycarbonate/ABS alloy"
+    },
+    {
+      "name": "Nylon",
+      "filament_ids": [
+        "pa"
+      ],
+      "notes": "Standard nylon line"
+    },
+    {
+      "name": "Carbon Fiber PET (PETG-CF)",
+      "filament_ids": [
+        "petg-cf"
+      ],
+      "notes": "PETG matrix + carbon fibre"
+    },
+    {
+      "name": "Carbon Fiber PAHT",
+      "notes": "High-temperature nylon + carbon fibre, rated for continuous use to 160 C; the PA subtype (PA6 vs PA6/66) is undisclosed, so pa6-cf and ppa-cf cannot be confirmed and no generic pa-cf id exists"
+    },
+    {
+      "name": "Flexible filaments (TPU)",
       "filament_ids": [
         "tpu"
-      ]
+      ],
+      "notes": "Standard TPU line; Shore hardness not published, so no grade id can be assigned"
+    },
+    {
+      "name": "Refill filaments",
+      "notes": "Same chemistries sold in refill spool format, not a distinct material"
     },
     {
       "name": "3D printers and spare parts",
@@ -80,7 +141,11 @@
       "https://filamentcheatsheet.com/brands/azurefilm/",
       "https://www.instagram.com/azurefilm3d/",
       "https://itis.siol.net/azurefilm-proizvodnja-3d-tiskalnikov-in-filamentov-poslovna-enota-ljubljana_trgovina",
-      "/home/claude/filament-repo/research/verified-oem-relationships.md (cross-checked; AzureFilm not listed)"
+      "/home/claude/filament-repo/research/verified-oem-relationships.md (cross-checked; AzureFilm not listed)",
+      "https://azurefilm.com/3d-filaments/",
+      "https://azurefilm.com/3d-filaments/pla-filaments/",
+      "https://azurefilm.com/technical-data-sheets/",
+      "https://azurefilm.com/product/carbon-fiber-paht-filament/"
     ],
     "last_verified": "2026-07-31",
     "confidence": "medium",

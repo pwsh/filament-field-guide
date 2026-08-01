@@ -4,8 +4,16 @@
   "status": "researched",
   "summary": "Shenzhen-based consumer 3D printer company founded August 2020, best known for the X1/P1/A1 series and the AMS multi-material system. Bambu-branded filament is not produced in Bambu's own extrusion plants: per owner-verified records it is OEM-produced/resold via Sunlu and eSUN/Polymaker, all of whom manufacture in China. Catalog is broad (PLA, PETG, ABS, ASA, TPU, PA/PA-CF, PC, PVA and dedicated support materials) and tightly integrated with Bambu's RFID/AMS ecosystem.",
   "headquarters_country": "China",
-  "manufacturing_countries": ["China"],
-  "brands": ["Bambu Lab", "MakerWorld", "Bambu Studio", "Bambu Handy", "Cyberbrick"],
+  "manufacturing_countries": [
+    "China"
+  ],
+  "brands": [
+    "Bambu Lab",
+    "MakerWorld",
+    "Bambu Studio",
+    "Bambu Handy",
+    "Cyberbrick"
+  ],
   "oem_relationships": [
     {
       "company": "Sunlu",
@@ -34,12 +42,239 @@
     }
   },
   "product_lines": [
-    { "name": "PLA", "filament_ids": ["pla"], "notes": "PLA Basic, Matte, Silk, Marble, Wood, Galaxy and other specialty colorways" },
-    { "name": "PETG", "filament_ids": ["petg"], "notes": "PETG Basic and PETG HF (high flow)" },
-    { "name": "ABS / ASA", "filament_ids": ["abs", "asa"] },
-    { "name": "TPU", "filament_ids": ["tpu"], "notes": "TPU 95A, AMS-compatible variants" },
-    { "name": "Engineering / composites", "filament_ids": ["pa", "pa-cf", "pc", "pet-cf"], "notes": "PAHT-CF, PA6-CF, PC, PET-CF" },
-    { "name": "Support materials", "filament_ids": ["pva"], "notes": "Support W and Support G interface materials plus water-soluble PVA" }
+    {
+      "name": "PLA Basic",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Standard PLA homopolymer, no functional filler; RFID-tagged AMS spools"
+    },
+    {
+      "name": "PLA Matte",
+      "filament_ids": [
+        "pla-matte"
+      ],
+      "notes": "PLA with matting/anti-gloss filler"
+    },
+    {
+      "name": "PLA Silk / Silk+ / Silk Dual Color",
+      "filament_ids": [
+        "pla-silk"
+      ],
+      "notes": "Gloss-modified PLA; Dual Color is a coextruded two-tone strand, chemistry unchanged"
+    },
+    {
+      "name": "PLA Galaxy / PLA Sparkle",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "PLA base with glitter/mica particulate; catalog has no dedicated glitter-PLA id, so mapped at base chemistry"
+    },
+    {
+      "name": "PLA Marble",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "PLA base with mineral marble-effect filler; no dedicated marble id in catalog"
+    },
+    {
+      "name": "PLA Metal",
+      "filament_ids": [
+        "pla-metal"
+      ],
+      "notes": "PLA with metal powder fill"
+    },
+    {
+      "name": "PLA Glow",
+      "filament_ids": [
+        "pla-glow"
+      ],
+      "notes": "PLA with phosphorescent (strontium-aluminate class) pigment"
+    },
+    {
+      "name": "PLA Wood",
+      "filament_ids": [
+        "pla-wood"
+      ],
+      "notes": "PLA with wood fibre fill"
+    },
+    {
+      "name": "PLA Tough",
+      "filament_ids": [
+        "pla-plus"
+      ],
+      "notes": "Impact-modified/toughened PLA blend, i.e. the PLA+ class rather than base PLA"
+    },
+    {
+      "name": "PLA Aero",
+      "filament_ids": [
+        "lw-pla"
+      ],
+      "notes": "Foaming lightweight PLA: 1.21 g/cm3 filament foaming at 190-270 C to 0.55-1.05 g/cm3 printed density; tensile 24+/-2 MPa, elongation 2.6+/-0.7%, bending 45+/-4 MPa, impact 28.8+/-1.3 kJ/m2. Matches lw-pla (alias \"LW PLA Aero\")"
+    },
+    {
+      "name": "PLA-CF",
+      "filament_ids": [
+        "pla-cf"
+      ],
+      "notes": "PLA with chopped carbon fibre; hardened nozzle required"
+    },
+    {
+      "name": "PLA-GF",
+      "filament_ids": [
+        "pla-gf"
+      ],
+      "notes": "PLA with glass fibre; maps to provisional id pla-gf"
+    },
+    {
+      "name": "PETG Basic",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "Standard PETG"
+    },
+    {
+      "name": "PETG HF",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "High-flow/high-speed PETG; process delta only, no dedicated petg-hf id in catalog"
+    },
+    {
+      "name": "PETG Translucent",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "Semi-transparent PETG, chemistry unchanged"
+    },
+    {
+      "name": "PETG-CF",
+      "filament_ids": [
+        "petg-cf"
+      ],
+      "notes": "Carbon-fibre-filled PETG"
+    },
+    {
+      "name": "ABS",
+      "filament_ids": [
+        "abs"
+      ],
+      "notes": "Standard ABS"
+    },
+    {
+      "name": "ABS-GF",
+      "filament_ids": [
+        "abs-gf"
+      ],
+      "notes": "Glass-fibre-reinforced ABS"
+    },
+    {
+      "name": "ASA",
+      "filament_ids": [
+        "asa"
+      ],
+      "notes": "Standard weatherable ASA"
+    },
+    {
+      "name": "ASA Aero",
+      "filament_ids": [],
+      "notes": "Foaming/lightweight ASA (marketed \"Lightweight ASA\"), foams during printing to cut part density. No foamed-ASA id exists in the catalog - reported as a gap (suggested lw-asa)"
+    },
+    {
+      "name": "PC",
+      "filament_ids": [
+        "pc"
+      ],
+      "notes": "Unfilled polycarbonate"
+    },
+    {
+      "name": "PA6-CF (PA-CF)",
+      "filament_ids": [
+        "pa6-cf"
+      ],
+      "notes": "Nylon 6 + carbon fibre"
+    },
+    {
+      "name": "PA6-GF (PA-GF)",
+      "filament_ids": [
+        "pa6-gf"
+      ],
+      "notes": "Nylon 6 + glass fibre; maps to provisional id pa6-gf"
+    },
+    {
+      "name": "PA11",
+      "filament_ids": [
+        "pa"
+      ],
+      "notes": "Bio-based nylon 11, unfilled. Catalog carries pa6/pa12/pa66 grades but no pa11, so mapped to the generic pa entry"
+    },
+    {
+      "name": "PAHT-CF",
+      "filament_ids": [
+        "ppa-cf"
+      ],
+      "notes": "High-temperature polyamide + carbon fibre; ppa-cf carries \"PAHT-CF\" as an explicit alias"
+    },
+    {
+      "name": "PET-CF",
+      "filament_ids": [
+        "pet-cf"
+      ],
+      "notes": "Carbon-fibre-filled PET"
+    },
+    {
+      "name": "PET-GF",
+      "filament_ids": [],
+      "notes": "Glass-fibre-filled PET; no pet-gf id exists (only pet-cf) - reported as a gap"
+    },
+    {
+      "name": "PPA-CF",
+      "filament_ids": [
+        "ppa-cf"
+      ],
+      "notes": "Polyphthalamide + carbon fibre"
+    },
+    {
+      "name": "PPA-GF",
+      "filament_ids": [],
+      "notes": "Polyphthalamide + glass fibre; no ppa-gf id exists - reported as a gap"
+    },
+    {
+      "name": "PPS",
+      "filament_ids": [
+        "pps"
+      ],
+      "notes": "Unfilled polyphenylene sulfide"
+    },
+    {
+      "name": "PPS-CF",
+      "filament_ids": [
+        "pps-cf"
+      ],
+      "notes": "Carbon-fibre-filled PPS"
+    },
+    {
+      "name": "TPU 95A",
+      "filament_ids": [
+        "tpu-95a"
+      ],
+      "notes": "Shore 95A TPU"
+    },
+    {
+      "name": "TPU for AMS",
+      "filament_ids": [
+        "tpu-68d"
+      ],
+      "notes": "AMS-feedable stiff TPU; tpu-68d lists \"TPU for AMS\" / \"AMS-compatible TPU\" as aliases"
+    },
+    {
+      "name": "PVA / BVOH support",
+      "filament_ids": [
+        "pva",
+        "bvoh"
+      ],
+      "notes": "Water-soluble support polymers; sold alongside the Support W / Support G interface materials"
+    }
   ],
   "makes_plates": true,
   "plate_ids": [],
@@ -52,7 +287,11 @@
       "https://wiki.bambulab.com/en/general/filament-guide-material-table",
       "https://wiki.bambulab.com/en/filament-acc/acc/plates",
       "https://forum.bambulab.com/t/who-makes-bambu-labs-filaments/4311",
-      "research/verified-oem-relationships.md"
+      "research/verified-oem-relationships.md",
+      "https://wiki.bambulab.com/en/filament-acc",
+      "https://us.store.bambulab.com/collections/bambu-lab-3d-printer-filament",
+      "https://us.store.bambulab.com/products/pla-aero",
+      "https://us.store.bambulab.com/products/asa-aero"
     ],
     "last_verified": "2026-07-31",
     "confidence": "medium",

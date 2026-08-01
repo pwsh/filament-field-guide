@@ -19,52 +19,215 @@
   },
   "product_lines": [
     {
-      "name": "Rapido",
+      "name": "PLA Basic",
       "filament_ids": [
-        "pla",
-        "abs"
+        "pla"
       ],
-      "notes": "High-speed Rapido PLA and Rapido ABS"
+      "notes": "Standard PLA"
     },
     {
-      "name": "PETG",
+      "name": "PLA Matte Basic",
+      "filament_ids": [
+        "pla-matte"
+      ],
+      "notes": "Matting-filler PLA"
+    },
+    {
+      "name": "PLA Rapido",
+      "filament_ids": [
+        "pla-hf"
+      ],
+      "notes": "High-speed/high-flow PLA"
+    },
+    {
+      "name": "PLA Rapido Matte",
+      "filament_ids": [
+        "pla-hf",
+        "pla-matte"
+      ],
+      "notes": "High-speed PLA base with matting filler - fits both descriptions"
+    },
+    {
+      "name": "PLA Rapido Silk",
+      "filament_ids": [
+        "pla-hf",
+        "pla-silk"
+      ],
+      "notes": "High-speed PLA base with gloss/silk additive"
+    },
+    {
+      "name": "PLA Rapido Metal",
+      "filament_ids": [
+        "pla-metal"
+      ],
+      "notes": "High-speed PLA base with metal-powder fill"
+    },
+    {
+      "name": "PLA Wood",
+      "filament_ids": [
+        "pla-wood"
+      ],
+      "notes": "Wood-fibre-filled PLA"
+    },
+    {
+      "name": "PLA-CF",
+      "filament_ids": [
+        "pla-cf"
+      ],
+      "notes": "PLA + carbon fibre"
+    },
+    {
+      "name": "PETG Basic",
       "filament_ids": [
         "petg"
       ],
-      "notes": "PETG and PETG-Tough"
+      "notes": "Standard PETG"
+    },
+    {
+      "name": "PETG Translucent",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "Semi-transparent PETG"
+    },
+    {
+      "name": "PETG-Tough",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "Impact-modified PETG blend; toughening additive only, still a PETG copolyester (not PCTG - no PCTG claim is made)"
+    },
+    {
+      "name": "ABS Rapido",
+      "filament_ids": [
+        "abs"
+      ],
+      "notes": "High-speed ABS"
+    },
+    {
+      "name": "ABS Rapido Metal",
+      "filament_ids": [
+        "abs"
+      ],
+      "notes": "High-speed ABS in a metallic-effect finish"
+    },
+    {
+      "name": "Odorless-ABS Rapido",
+      "filament_ids": [
+        "abs"
+      ],
+      "notes": "Low-odour high-speed ABS variant; base polymer unchanged"
+    },
+    {
+      "name": "ABS-GF25",
+      "filament_ids": [
+        "abs-gf"
+      ],
+      "notes": "ABS + 25% glass fibre"
     },
     {
       "name": "ASA",
       "filament_ids": [
         "asa"
-      ]
-    },
-    {
-      "name": "TPU",
-      "filament_ids": [
-        "tpu"
-      ]
-    },
-    {
-      "name": "Engineering composites",
-      "filament_ids": [
-        "pa-cf",
-        "pet-cf",
-        "pp-gf"
       ],
-      "notes": "PAHT-CF, PET-CF and PPGF glass-fiber; roughly $20-55/kg across the range"
+      "notes": "Standard weatherable ASA"
+    },
+    {
+      "name": "ASA-Aero",
+      "filament_ids": [],
+      "notes": "Foaming/lightweight ASA that foams during printing to cut part density, same concept as Bambu ASA Aero. No foamed-ASA id exists - reported as a gap (suggested lw-asa)"
+    },
+    {
+      "name": "TPU95A-HF",
+      "filament_ids": [
+        "tpu-95a"
+      ],
+      "notes": "Shore 95A TPU in a high-flow formulation"
+    },
+    {
+      "name": "TPU-Aero",
+      "filament_ids": [],
+      "notes": "Foamable TPU where the user sets flexibility via foaming ratio at print time; not a fixed Shore-graded generic. No foamed-TPU id exists - reported as a gap (suggested lw-tpu)"
+    },
+    {
+      "name": "PA12-CF",
+      "filament_ids": [
+        "pa12-cf"
+      ],
+      "notes": "Nylon 12 + carbon fibre"
+    },
+    {
+      "name": "PAHT-CF (PPA-CF)",
+      "filament_ids": [
+        "ppa-cf"
+      ],
+      "notes": "High-temperature polyamide/PPA + carbon fibre; ppa-cf lists PAHT-CF as an alias"
+    },
+    {
+      "name": "PAHT-GF",
+      "filament_ids": [],
+      "notes": "High-temperature polyamide/PPA + glass fibre; catalog has ppa and ppa-cf but no ppa-gf - reported as a gap"
+    },
+    {
+      "name": "Ultra PA Nylon",
+      "filament_ids": [
+        "pa"
+      ],
+      "notes": "Premium unfilled polyamide; specific grade (PA6/PA12/CoPA) not disclosed, so mapped to the generic pa entry"
+    },
+    {
+      "name": "UltraPA-CF25",
+      "filament_ids": [],
+      "notes": "High-performance nylon + 25% carbon fibre with the base polyamide grade undisclosed; catalog has pa6-cf/pa12-cf/ppa-cf but no generic pa-cf - reported as a gap"
+    },
+    {
+      "name": "PET-CF",
+      "filament_ids": [
+        "pet-cf"
+      ],
+      "notes": "Carbon-fibre-filled PET"
+    },
+    {
+      "name": "PET-GF",
+      "filament_ids": [],
+      "notes": "Glass-fibre-filled PET; no pet-gf id exists - reported as a gap"
+    },
+    {
+      "name": "PPS-CF",
+      "filament_ids": [
+        "pps-cf"
+      ],
+      "notes": "Carbon-fibre-filled polyphenylene sulfide"
+    },
+    {
+      "name": "PC/ABS-FR",
+      "filament_ids": [
+        "pc-abs"
+      ],
+      "notes": "Flame-retardant PC/ABS alloy. Base chemistry matches pc-abs; the FR package has no dedicated id (catalog has abs-fr only)"
+    },
+    {
+      "name": "S-White",
+      "filament_ids": [],
+      "notes": "Support material with composition undisclosed by QIDI (likely breakaway or PVA-type); not mapped for lack of a stated chemistry"
     }
   ],
   "makes_plates": true,
   "plate_ids": [],
   "price_tier": "mid",
-  "additional_notes": "Materials are positioned around ecosystem and slicer-profile integration with QIDI's own enclosed high-speed printers rather than universal cross-brand tuning. Build plates are very likely sold as printer accessories given the hardware business, but this was not independently confirmed in this research pass. Social profiles were not verified and are therefore not recorded.",
+  "additional_notes": "Earlier passes recorded a \"PPGF\" glass-fibre line; the 2026 catalog shows no polypropylene product and the glass-fibre SKUs resolve to PAHT-GF and PET-GF, so pp-gf has been removed. Materials are positioned around ecosystem and slicer-profile integration with QIDI's own enclosed high-speed printers rather than universal cross-brand tuning. Build plates are very likely sold as printer accessories given the hardware business, but this was not independently confirmed in this research pass. Social profiles were not verified and are therefore not recorded.",
   "provenance": {
     "sources": [
       "https://us.qidi3d.com/collections/qidi-3d-printer-filament",
       "https://filamentcheatsheet.com/brands/qidi_tech/",
       "https://trademarks.justia.com/976/46/qidi-97646032.html",
-      "https://discovery.patsnap.com/company/wenzhou-qidi-machinery/"
+      "https://discovery.patsnap.com/company/wenzhou-qidi-machinery/",
+      "https://us.qidi3d.com/products/qidi-tech-pla-filament",
+      "https://us.qidi3d.com/collections/high-performance-filaments",
+      "https://qidi3d.com/products/qidi-tech-asa-areo-filament",
+      "https://qidi3d.com/products/tpu-aero",
+      "https://all3dp.com/4/qidis-new-foaming-tpu-filament-lets-you-choose-your-level-of-flexibility/",
+      "https://us.qidi3d.com/products/qidi-tech-pc-abs-fr-filament"
     ],
     "last_verified": "2026-07-31",
     "confidence": "low",

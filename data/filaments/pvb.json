@@ -1,7 +1,12 @@
 {
   "id": "pvb",
   "name": "PVB (Polyvinyl Butyral)",
-  "aliases": ["PVB", "Polyvinyl butyral", "PolySmooth", "Prusament PVB"],
+  "aliases": [
+    "PVB",
+    "Polyvinyl butyral",
+    "PolySmooth",
+    "Prusament PVB"
+  ],
   "status": "researched",
   "base_type": null,
   "variation_kind": null,
@@ -9,15 +14,35 @@
   "chemical_makeup": "Polyvinyl butyral — a polyvinyl acetal made by reacting polyvinyl alcohol with butyraldehyde, industrially the interlayer of laminated safety glass. Filament grades (Polymaker PolySmooth, Prusament PVB) are blended rather than pure PVB to make them extrudable, which is why prints are translucent rather than glass-clear. The defining trait is solubility in isopropyl alcohol, enabling vapour or brush smoothing.",
   "summary": "A PLA-easy filament whose whole reason for existing is post-processing: brief exposure to isopropyl alcohol melts the layer lines into a glossy, near-glass finish, and the same solvent welds parts together seamlessly. In exchange it is brittle in Z, hygroscopic, heat-limited, and dissolves on contact with alcohol or many household cleaners.",
   "printing": {
-    "nozzle_temp_c": { "min": 190, "max": 225, "recommended": 215 },
-    "bed_temp_c": { "min": 25, "max": 85, "recommended": 70 },
-    "ambient_temp_c": { "min": 15, "max": 30, "recommended": 22 },
-    "speed_mm_s": { "min": 40, "max": 200, "recommended": 60 },
+    "nozzle_temp_c": {
+      "min": 190,
+      "max": 225,
+      "recommended": 215
+    },
+    "bed_temp_c": {
+      "min": 25,
+      "max": 85,
+      "recommended": 70
+    },
+    "ambient_temp_c": {
+      "min": 15,
+      "max": 30,
+      "recommended": 22
+    },
+    "speed_mm_s": {
+      "min": 40,
+      "max": 200,
+      "recommended": 60
+    },
     "enclosure_recommended": false,
     "heated_chamber_required": false,
     "enclosure_open_for_cooling": true,
     "requires_hardened_nozzle": false,
-    "part_cooling_fan_pct": { "min": 80, "max": 100, "recommended": 100 },
+    "part_cooling_fan_pct": {
+      "min": 80,
+      "max": 100,
+      "recommended": 100
+    },
     "notes": "Essentially a PLA profile. Polymaker quotes 190-220 °C and up to 200 mm/s at a 15 mm³/s volumetric ceiling; Prusa quotes 215 ± 10 °C and requires a heated bed at 65-85 °C. Open-frame machines are fine and an enclosure brings no benefit. Run full part cooling — surface quality before smoothing directly determines how good the smoothed finish is. Unfilled, so a brass nozzle is fine."
   },
   "feeding": {
@@ -28,9 +53,22 @@
   },
   "drying": {
     "required_before_use": "if-exposed",
-    "temp_c": { "min": 55, "max": 65, "recommended": 60 },
-    "time_hours": { "min": 4, "max": 6, "recommended": 4 },
-    "methods": ["filament dryer", "food dehydrator", "convection oven at lowest setting", "drybox with desiccant"],
+    "temp_c": {
+      "min": 55,
+      "max": 65,
+      "recommended": 60
+    },
+    "time_hours": {
+      "min": 4,
+      "max": 6,
+      "recommended": 4
+    },
+    "methods": [
+      "filament dryer",
+      "food dehydrator",
+      "convection oven at lowest setting",
+      "drybox with desiccant"
+    ],
     "dryness_validation": "No popping or crackling at the nozzle; no visible steam; a consistent glossy extrudate with no foaming or surface bubbles",
     "notes": "Polymaker describes PVB as more hygroscopic than PLA, and Prusa recommends 60 °C for 4 h whenever the spool has not been stored sealed. Wet PVB prints rough, which is doubly costly here because smoothing amplifies surface defects it cannot fill."
   },
@@ -76,7 +114,11 @@
     "glass_transition_c": 70,
     "heat_deflection_c": 68,
     "max_service_temp_c": 55,
-    "tensile_strength_mpa": { "min": 18, "max": 44, "recommended": 44 },
+    "tensile_strength_mpa": {
+      "min": 18,
+      "max": 44,
+      "recommended": 44
+    },
     "notes": "Density 1.10 g/cm³ at 23 °C and Tg 70 °C (Polymaker TDS). HDT 68.0 °C @0.45 MPa and 66.3 °C @1.8 MPa (Polymaker); Prusa and FacFox cite roughly 60 °C. The tensile range spans the anisotropy rather than a brand spread: Polymaker measured 44.1 ± 0.8 MPa in XY but only 18.4 ± 1.2 MPa in Z — the recommended value is the XY figure, and the minimum is the interlayer figure that governs real part strength. Max service temperature (~50-55 °C) is inferred from Tg, not measured. Shrinkage is not stated in any datasheet found; it is low in practice."
   },
   "scores": {
@@ -91,22 +133,79 @@
     "water_tolerance": 3
   },
   "compatibility": {
-    "bonds_with": ["pvb"],
-    "support_materials": ["pva"],
+    "bonds_with": [
+      "pvb"
+    ],
+    "support_materials": [
+      "pva"
+    ],
     "usable_as_support_for": [],
     "notes": "PVB welds to itself chemically rather than thermally: a wipe of isopropyl alcohol on both faces fuses printed parts into an effectively seamless assembly, which is the standard way to build objects larger than the build plate in this material. No vendor guidance was found recommending co-printing PVB with PLA, PETG, ABS, ASA, PA, PC, PP, TPU, TPE, HIPS, PVA, BVOH, PCTG or PET, and no structural bond to any of them is documented (unverified for every pairing). For soluble supports Polymaker documents PolyDissolve S1, a PVA-type material, as the pairing for PolySmooth. PVB is not used as a support for other filaments."
   },
   "plate_recommendations": [
     {
+      "plate_id": "pei-smooth",
+      "rating": "recommended",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Adheres well, but PVB is IPA-soluble: let the plate dry fully after an alcohol wipe, and never use the alcohol-wicking release trick on a PVB part."
+    },
+    {
+      "plate_id": "pei-satin",
+      "rating": "recommended",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Adheres and releases well; avoid alcohol on the part, as PVB dissolves in IPA."
+    },
+    {
       "plate_id": "pei-textured",
       "rating": "usable",
       "notes": "Polymaker lists textured and smooth PEI (and PC) as suitable. Bed 60-70 °C is the practical sweet spot, though up to 85 °C is tolerated. Glue is optional rather than required and no PVB-specific release agent guidance was found — if the part bonds too hard, fall back to the PETG-family remedies (thin glue-stick layer as a separator) and let the plate cool fully before removal."
+    },
+    {
+      "plate_id": "glass-borosilicate",
+      "rating": "usable",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Not covered in glass sources; treated as PLA-adjacent. Keep IPA off the plate while a PVB part is still attached — IPA dissolves PVB."
+    },
+    {
+      "plate_id": "pp-sheet",
+      "rating": "usable",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Not in Prusa's compatible list for this sheet (unverified). Copolyester-adjacent behaviour suggests it works, but note the sheet's routine IPA cleaning regime and PVB's solubility "
+    },
+    {
+      "plate_id": "g10-garolite",
+      "rating": "usable",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Not covered in G10 sources; treated as PLA-adjacent. Keep IPA away from the plate while a PVB part is still on it — PVB dissolves in IPA."
+    },
+    {
+      "plate_id": "supertack",
+      "rating": "usable",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Not on Bambu's supported list (unverified). Bed temperature is within the plate's envelope and adhesion is generally good, but do not use IPA to help release — it dissolves PVB and"
+    },
+    {
+      "plate_id": "pc-plate",
+      "rating": "usable",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Not covered by vendors. Thermally within reach at the low end of PVB's bed range, but keep IPA away from the plate — it dissolves PVB and will also lift the glue layer."
+    },
+    {
+      "plate_id": "carbon-fiber-plate",
+      "rating": "usable",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Undocumented on this surface; treated as PLA-adjacent. Do not use IPA around an attached PVB part — IPA dissolves PVB."
+    },
+    {
+      "plate_id": "buildtak-polymer",
+      "rating": "usable",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): No vendor guidance located (unverified). Bed temperature sits comfortably inside the sheet's range; keep IPA off the part when releasing, since PVB dissolves in alcohol."
+    },
+    {
+      "plate_id": "pei-patterned",
+      "rating": "usable",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Bed temp is within range and translucent PVB should show the pattern well, but no vendor documents PVB on these coatings (unverified). Keep IPA off the part."
     }
   ],
   "emissions": {
     "voc_level": "low",
     "particulate_level": "low",
-    "primary_emissions": ["ultrafine particles", "isopropyl alcohol vapour (during smoothing, not printing)"],
+    "primary_emissions": [
+      "ultrafine particles",
+      "isopropyl alcohol vapour (during smoothing, not printing)"
+    ],
     "ventilation": "recommended",
     "notes": "No dedicated UFP/VOC study of PVB printing was found; extrusion emissions are expected to be low and PLA-like given the 190-220 °C nozzle window (unverified). The real hazard here is post-processing rather than printing: Polymaker explicitly requires a well-ventilated area during isopropyl alcohol smoothing to avoid inhaling IPA vapour, which is also flammable. Ventilation is recorded as 'recommended' for the print itself and should be read as effectively required for the smoothing step, away from any ignition source."
   },
@@ -125,5 +224,27 @@
     "last_verified": "2026-07-31",
     "confidence": "medium",
     "conflicts": "HDT: Polymaker's TDS gives 68.0 °C @0.45 MPa (66.3 °C @1.8 MPa) while Prusa and FacFox cite ~60 °C — the datasheet value is recorded and the 60-68 °C spread noted. Tg: Polymaker states 70 °C; FacFox only describes it qualitatively as 'comparable to PLA', which would imply nearer 60 °C — the datasheet figure is treated as primary. Bed temperature: Polymaker allows 25-85 °C (heated bed optional) while Prusa requires a heated bed at 65-85 °C; the union is recorded with 70 °C recommended. Speed: Polymaker's 200 mm/s ceiling conflicts with community guidance of 40-60 mm/s for good surface finish. Strength: FacFox claims PVB tensile strength exceeds ABS and PETG, which is only defensible for XY values and directly contradicts the 18.4 MPa Z figure. Max service temperature is inferred, not measured, and no UV or weathering data exists for PVB at all — those scores are reasoned from the absence of any UV stabilisation plus the low heat ceiling."
-  }
+  },
+  "trade_names": [
+    {
+      "manufacturer": "polymaker",
+      "product": "PolyCast",
+      "notes": "Same PVB chemistry as PolySmooth, tuned for lost-wax burnout"
+    },
+    {
+      "manufacturer": "polymaker",
+      "product": "PolySmooth",
+      "notes": "PVB, alcohol/acetone vapour-smoothable"
+    },
+    {
+      "manufacturer": "prusa-research",
+      "product": "Prusament PVB",
+      "notes": "Polyvinyl butyral, IPA-vapour smoothable"
+    },
+    {
+      "manufacturer": "sunlu",
+      "product": "PVB",
+      "notes": "Polyvinyl butyral, vapour-smoothable"
+    }
+  ]
 }

@@ -23,47 +23,109 @@
       "name": "PLA",
       "filament_ids": [
         "pla"
-      ]
+      ],
+      "notes": "Standard PLA."
     },
     {
-      "name": "PETG and PCTG",
+      "name": "High Heat + Tough PLA (HH+T PLA - 3D870)",
       "filament_ids": [
-        "petg",
+        "pla"
+      ],
+      "notes": "Built on NatureWorks Ingeo 3D870, the fast-crystallising annealable high-heat PLA resin (same family as Fusion HT-PLA and Protopasta HTPLA). No dedicated high-heat-PLA id exists; not mapped to pla-plus because the toughness claim comes from the resin grade rather than a documented impact modifier."
+    },
+    {
+      "name": "PETG",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "Standard copolyester PETG."
+    },
+    {
+      "name": "PCTG",
+      "filament_ids": [
         "pctg"
-      ]
-    },
-    {
-      "name": "ABS / ASA / HIPS",
-      "filament_ids": [
-        "abs",
-        "asa",
-        "hips"
-      ]
-    },
-    {
-      "name": "Engineering polymers",
-      "filament_ids": [
-        "pc",
-        "pa",
-        "pei",
-        "pmma"
       ],
-      "notes": "PC+PBT blend, nylon, PEI (Ultem-class) and PMMA acrylic."
+      "notes": "Glycol-modified copolyester."
     },
     {
-      "name": "Carbon fiber composites",
+      "name": "ABS / Matte ABS",
       "filament_ids": [
-        "pla-cf",
-        "petg-cf",
-        "pa-cf"
+        "abs"
       ],
-      "notes": "Carbon-fiber composite line; base polymers inferred from the surrounding catalog rather than itemised in sources."
+      "notes": "Standard ABS plus a matte-finish variant."
     },
     {
-      "name": "Flexibles",
+      "name": "ASA",
+      "filament_ids": [
+        "asa"
+      ],
+      "notes": "Standard weatherable ASA."
+    },
+    {
+      "name": "PC+PBT",
+      "filament_ids": [
+        "pc-pbt"
+      ],
+      "notes": "Polycarbonate/PBT engineering blend; TDS gives specific gravity 1.18 (ASTM D792) and tensile yield ~15,000 psi (ASTM D638)."
+    },
+    {
+      "name": "Carbon Fiber PC+PBT",
+      "filament_ids": [
+        "pc-pbt"
+      ],
+      "notes": "Carbon-fibre-reinforced PC/PBT blend. Listed against pc-pbt for family context only — no pc-pbt-cf id exists."
+    },
+    {
+      "name": "PC/ABS",
+      "filament_ids": [
+        "pc-abs"
+      ],
+      "notes": "Polycarbonate/ABS blend, Bayblend-class chemistry."
+    },
+    {
+      "name": "Nylon",
+      "filament_ids": [
+        "pa"
+      ],
+      "notes": "Unfilled nylon; exact PA type not confirmed in public copy, so pa6/pa12 are not asserted."
+    },
+    {
+      "name": "Carbon Fiber Nylon",
+      "filament_ids": [
+        "pa"
+      ],
+      "notes": "Sold as 'Carbon Fiber Nylon Filament' — PA + carbon fibre, not PLA-CF or PETG-CF. PA type unconfirmed and no generic pa-cf id exists, so pa is listed for family context only."
+    },
+    {
+      "name": "PMMA (Acrylic)",
+      "filament_ids": [],
+      "notes": "True poly(methyl methacrylate) — a distinct polymer family with no id in this catalog; not a PETG or PLA rebrand."
+    },
+    {
+      "name": "PEI 1010",
+      "filament_ids": [
+        "pei-ultem"
+      ],
+      "notes": "Unfilled polyetherimide on ULTEM 1010 chemistry, the standard ultra-high-temp PEI grade."
+    },
+    {
+      "name": "TPU",
       "filament_ids": [
         "tpu"
-      ]
+      ],
+      "notes": "True TPU; shore hardness not confirmed on the pages reviewed, so no durometer-specific id is assigned."
+    },
+    {
+      "name": "HIPS",
+      "filament_ids": [
+        "hips"
+      ],
+      "notes": "High-impact polystyrene, typically used as a sacrificial support for ABS."
+    },
+    {
+      "name": "Soluble Support",
+      "filament_ids": [],
+      "notes": "Separate solvent/water-soluble support line; base chemistry (PVA vs BVOH vs HIPS) not confirmed on the pages reviewed."
     }
   ],
   "makes_plates": false,
@@ -74,7 +136,13 @@
       "https://www.pushplastic.com/pages/about-us",
       "https://filamentcheatsheet.com/brands/push_plastic/",
       "https://www.instagram.com/pushplastic/",
-      "https://www.teamfdm.com/links/link/17-push-plastic/"
+      "https://www.teamfdm.com/links/link/17-push-plastic/",
+      "https://www.pushplastic.com/pages/all-filament",
+      "https://www.pushplastic.com/products/high-heat-tough-pla-1kg",
+      "https://www.pushplastic.com/collections/cf-pc-pbt-1-75mm",
+      "https://cdn.mscdirect.com/global/images/ProductDataSheet/pds_cf_pc_pbt_tds_spec.pdf",
+      "https://www.pushplastic.com/products/pei-1010-filament-1-75mm-500g",
+      "https://www.pushplastic.com/products/carbon-fiber-nylon-filament-1-75mm-2kg"
     ],
     "last_verified": "2026-07-31",
     "confidence": "medium",

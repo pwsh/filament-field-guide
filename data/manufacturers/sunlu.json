@@ -44,29 +44,236 @@
   },
   "product_lines": [
     {
-      "name": "PLA family",
+      "name": "SUNLU PLA",
       "filament_ids": [
         "pla"
       ],
-      "notes": "PLA, PLA+, PLA Meta, Silk PLA, Wood PLA, Matte PLA"
+      "notes": "Standard PLA."
     },
     {
-      "name": "PETG",
+      "name": "PLA+ / PLA+ 2.0",
+      "filament_ids": [
+        "pla-plus"
+      ],
+      "notes": "Impact-modified toughened PLA grades."
+    },
+    {
+      "name": "High Speed PLA / High Speed PLA+ / PLA+2.0",
+      "filament_ids": [
+        "pla-hf"
+      ],
+      "notes": "Rheology-tuned high-flow PLA for high-speed printers."
+    },
+    {
+      "name": "Anti-string PLA",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Low-stringing PLA formulation; base chemistry unchanged."
+    },
+    {
+      "name": "PLA Meta (Macaron Colors)",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Pastel-pigmented PLA; cosmetic variant only."
+    },
+    {
+      "name": "Matte PLA (incl. Dual Color)",
+      "filament_ids": [
+        "pla-matte"
+      ],
+      "notes": "Matte-additive PLA; dual-colour SKUs are side-by-side coextrusion."
+    },
+    {
+      "name": "Silk PLA+ / Multi-Color Silk / PLA & SILK Rainbow",
+      "filament_ids": [
+        "pla-silk",
+        "pla-gradient"
+      ],
+      "notes": "Silk-luster PLA+ base; multi-colour and rainbow SKUs add along-strand gradient dyeing."
+    },
+    {
+      "name": "PLA Marble",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Marble-effect pigment/filler PLA."
+    },
+    {
+      "name": "PLA Wood",
+      "filament_ids": [
+        "pla-wood"
+      ],
+      "notes": "Wood-flour-filled PLA."
+    },
+    {
+      "name": "PLA Glow in Dark",
+      "filament_ids": [
+        "pla-glow"
+      ],
+      "notes": "Strontium-aluminate phosphor in PLA."
+    },
+    {
+      "name": "PLA Twinkling / PLA Galaxy",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Glitter/pearlescent pigment PLA; no dedicated glitter id."
+    },
+    {
+      "name": "PLA Carbon Fiber",
+      "filament_ids": [
+        "pla-cf"
+      ],
+      "notes": "Chopped-carbon-fiber PLA."
+    },
+    {
+      "name": "PETG / Easy PETG",
       "filament_ids": [
         "petg"
-      ]
+      ],
+      "notes": "Standard PETG; \"Easy\" grade tuned for lower stringing."
     },
     {
-      "name": "ABS",
+      "name": "Matte PETG / High Speed Matte PETG",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "Matte-additive PETG; catalog has no matte PETG id, chemistry is petg."
+    },
+    {
+      "name": "PETG Rainbow",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "Gradient-dyed PETG; pla-gradient is PLA-specific so it does not apply."
+    },
+    {
+      "name": "PETG Glow in Dark",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "Phosphor-loaded PETG; pla-glow is PLA-specific."
+    },
+    {
+      "name": "PETG Carbon Fiber",
+      "filament_ids": [
+        "petg-cf"
+      ],
+      "notes": "Chopped-carbon-fiber PETG."
+    },
+    {
+      "name": "ABS / Easy ABS",
       "filament_ids": [
         "abs"
-      ]
+      ],
+      "notes": "\"Easy\" grade formulated for low warp on open-frame printers."
     },
     {
-      "name": "Flexibles",
+      "name": "ABS-FR",
+      "filament_ids": [
+        "abs-fr"
+      ],
+      "notes": "Flame-retardant ABS."
+    },
+    {
+      "name": "ABS-GF",
+      "filament_ids": [
+        "abs-gf"
+      ],
+      "notes": "Glass-fiber-reinforced ABS."
+    },
+    {
+      "name": "ASA",
+      "filament_ids": [
+        "asa"
+      ],
+      "notes": "Standard ASA."
+    },
+    {
+      "name": "PA6-CF",
+      "filament_ids": [
+        "pa6-cf"
+      ],
+      "notes": "Carbon-fiber PA6."
+    },
+    {
+      "name": "PA12-CF",
+      "filament_ids": [
+        "pa12-cf"
+      ],
+      "notes": "Carbon-fiber PA12."
+    },
+    {
+      "name": "PA6-GF",
+      "filament_ids": [
+        "pa6-gf"
+      ],
+      "notes": "Glass-fiber PA6; pa6-gf id is provisional."
+    },
+    {
+      "name": "Easy PA",
+      "filament_ids": [
+        "pa"
+      ],
+      "notes": "Unfilled low-warp nylon; PA type not specified."
+    },
+    {
+      "name": "PC",
+      "filament_ids": [
+        "pc"
+      ],
+      "notes": "Polycarbonate."
+    },
+    {
+      "name": "PC-ABS",
+      "filament_ids": [
+        "pc-abs"
+      ],
+      "notes": "PC/ABS alloy."
+    },
+    {
+      "name": "PP",
+      "filament_ids": [
+        "pp"
+      ],
+      "notes": "Polypropylene."
+    },
+    {
+      "name": "PEEK",
+      "filament_ids": [
+        "peek"
+      ],
+      "notes": "Polyether ether ketone; high-temp industrial grade, unusual for this brand tier."
+    },
+    {
+      "name": "PVB",
+      "filament_ids": [
+        "pvb"
+      ],
+      "notes": "Polyvinyl butyral, alcohol/acetone vapour-smoothable."
+    },
+    {
+      "name": "TPU 90A",
+      "filament_ids": [
+        "tpu-90a"
+      ],
+      "notes": "Shore 90A flexible TPU."
+    },
+    {
+      "name": "TPU 95A",
+      "filament_ids": [
+        "tpu-95a"
+      ],
+      "notes": "Shore 95A flexible TPU."
+    },
+    {
+      "name": "TPU Silk",
       "filament_ids": [
         "tpu"
-      ]
+      ],
+      "notes": "Silk-finish TPU; shore hardness not stated on the store listing."
     }
   ],
   "makes_plates": true,
@@ -79,7 +286,8 @@
       "https://filamentcheatsheet.com/brands/sunlu/",
       "https://store.sunlu.com/",
       "https://www.linkedin.com/company/zhuhai-sunlu-industrial-co-ltd",
-      "/home/claude/filament-repo/research/verified-oem-relationships.md (project-owner verified)"
+      "/home/claude/filament-repo/research/verified-oem-relationships.md (project-owner verified)",
+      "https://store.sunlu.com/collections/3d-printer-filament"
     ],
     "last_verified": "2026-07-31",
     "confidence": "medium",

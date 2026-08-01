@@ -1,0 +1,211 @@
+{
+  "id": "asa-gf",
+  "name": "ASA-GF (Glass-Fiber-Filled ASA)",
+  "aliases": [
+    "ASA GF",
+    "ASA Glass Fiber",
+    "Glass-filled ASA",
+    "Fibreheart ASA-GF",
+    "N-ASA GF",
+    "aeWorthy ASA-GF"
+  ],
+  "status": "researched",
+  "base_type": "asa",
+  "variation_kind": "glass-fiber-filled",
+  "polymer_class": "composite-other",
+  "chemical_makeup": "The same styrene-acrylonitrile matrix with a grafted saturated acrylate-ester rubber phase as base ASA, compounded with chopped glass fiber — 10 wt% in the one grade that discloses it (Siraya Tech Fibreheart ASA-GF), undisclosed by Zyltech, Ambrosia, Phaetus, FilAlfa and Eryone. The UV-stable acrylate rubber that distinguishes ASA from ABS is untouched by the filler, and glass fiber is itself inert to sunlight, so the whole weatherability argument for ASA survives reinforcement. Glass is also non-conductive and light-coloured, so unlike asa-cf this grade can be pigmented rather than being locked to carbon black.",
+  "summary": "The outdoor filled styrenic that you can still get in a colour. Deltas vs base asa: the fiber cuts warp_tendency from 7 to 5 and lifts dimensional stability from 7 to 8, HDT edges from 93 °C to 97-99 °C and Tg from 100 °C to 106 °C, all bought with a mandatory hardened nozzle and a step down in layer adhesion. Vs asa-cf it is the toughness-and-colour trade: slightly less stiff and less warp-suppressed, but pigmentable and less abrasive. The one place it is clearly worse than base ASA is the feed path — Siraya explicitly bars it from the AMS because the fiber makes the strand brittle enough to snap inside, which is the opposite of the abs-gf result.",
+  "printing": {
+    "nozzle_temp_c": {
+      "min": 240,
+      "max": 280,
+      "recommended": 260
+    },
+    "bed_temp_c": {
+      "min": 90,
+      "max": 110,
+      "recommended": 100
+    },
+    "ambient_temp_c": {
+      "min": 40,
+      "max": 80,
+      "recommended": 60
+    },
+    "speed_mm_s": {
+      "min": 35,
+      "max": 200,
+      "recommended": 80
+    },
+    "enclosure_recommended": true,
+    "heated_chamber_required": false,
+    "enclosure_open_for_cooling": false,
+    "requires_hardened_nozzle": true,
+    "part_cooling_fan_pct": {
+      "min": 0,
+      "max": 20,
+      "recommended": 10
+    },
+    "notes": "The nozzle window is essentially base ASA's, split by brand: Siraya 250-270 °C, Zyltech 240-280 °C. Bed likewise — Siraya 100-110 °C, Zyltech 90-110 °C — running at or above the top of base ASA's bracket because a stiffer filled matrix cracks rather than flexes if a corner lifts. The chamber guidance is the widest disagreement and the recorded 40-80 °C span is a union: Siraya asks for 60-80 °C, Zyltech for only 40-60 °C. Part cooling drops slightly from base ASA's 10-25 % to Zyltech's 'minimal' — the fiber now does the shrink control that a little cooling was helping with, and fan air splits a fiber-weakened layer bond. The hard deltas against base ASA are abrasion and nozzle size: a hardened nozzle becomes mandatory where unfilled ASA needs none, Zyltech recommends 0.6 mm or larger, and Siraya recommends ruby or tungsten carbide for extended runs. Zyltech's 200 mm/s ceiling is a vendor claim on modern hardware; legacy machines sit far below it. heated_chamber_required stays false as on the base entry — a passive enclosure suffices for ordinary parts."
+  },
+  "feeding": {
+    "drive_system": "any",
+    "ams_compatible": "no",
+    "feeding_assistant_recommended": false,
+    "notes": "Rigid, so any extruder feeds it; not an elastomer, so no shore hardness and no feeding assistant. The AMS verdict is a hard, vendor-stated 'no' and the clearest feeding delta in this cluster: Siraya writes that the glass fiber makes the filament more brittle and it can break inside the AMS feed path, causing jams or failed prints, and recommends a direct-drive extruder or manual loading instead. That is a stronger statement than the generic 'third-party filled filament wears the PTFE' bar, and it points in the opposite direction to abs-gf, where Bambu documents its own grade as compatible with both AMS and AMS Lite — so do not generalise the ABS-GF result across the styrenic family. Feed from an external spool holder. Hardened steel is mandatory regardless of feed path; ruby or carbide for extended production."
+  },
+  "drying": {
+    "required_before_use": "always",
+    "temp_c": {
+      "min": 65,
+      "max": 80,
+      "recommended": 75
+    },
+    "time_hours": {
+      "min": 4,
+      "max": 24,
+      "recommended": 6
+    },
+    "methods": [
+      "dedicated filament dryer",
+      "convection oven at 65-80 °C",
+      "drybox with desiccant while printing"
+    ],
+    "dryness_validation": "No popping or crackling while extruding and no bubbles or voids in a hand-pulled test strand. Base ASA's 'consistent glossy extrudate' check does not transfer — a fiber-filled surface is matte by design — so judge by sound and by strand quality, and watch for the fine surface cracking that a damp filled styrenic produces where unfilled ASA merely roughens.",
+    "notes": "The recorded band is a union of two datasheets that disagree by a factor of four on time: Siraya 70-80 °C for 4-6 h, Zyltech 65-70 °C for 24 h. Both sit at or below base ASA's 75-85 °C but both are more insistent than the base entry, which records 'if-exposed' — this entry steps up to 'always' because two independent vendor datasheets specify a pre-print dry as routine, not corrective. ASA is only mildly hygroscopic as a chemistry, so the step-up is most likely about the filled strand's lower tolerance for moisture-driven voids rather than about higher uptake."
+  },
+  "storage": {
+    "recommendations": "Sealed with desiccant, targeting under 20 % RH, as for base ASA. Absorption behaviour is unchanged by the fiber, but a filled strand shows moisture defects as cracking and voids rather than as cosmetic roughness, and Zyltech's 24 h recovery schedule means a neglected spool costs a day rather than an afternoon.",
+    "max_humidity_pct": 20,
+    "hygroscopy": "moderate"
+  },
+  "price": {
+    "usd_per_kg_low": 34,
+    "usd_per_kg_high": 45,
+    "notes": "Siraya Tech Fibreheart ASA-GF at $33.99 on sale against a $39.99 list per kg is the one verified figure; Ambrosia, Phaetus and the other brands sit in a reported $35-45/kg band that was not verified against listings. That is a modest premium over base ASA's $18-45/kg, and dramatically below asa-cf — the same pattern as abs-gf against asa-cf, because glass fiber is far cheaper to compound than carbon."
+  },
+  "use_cases": {
+    "recommended": [
+      "outdoor durable parts — garden furniture, signage, fixtures",
+      "automotive exterior and under-bonnet components",
+      "industrial equipment housings and brackets",
+      "aerospace and drone parts needing stiffness with UV stability",
+      "high-heat environments within ASA's ~100 °C ceiling",
+      "large flat outdoor parts that would warp in unfilled ASA",
+      "pigmented weather-exposed parts, where asa-cf's carbon black is unacceptable"
+    ],
+    "not_recommended": [
+      "AMS-fed printers — the vendor explicitly warns of in-path breakage",
+      "flexible or impact-absorbing applications",
+      "open-frame printers without an enclosure",
+      "brass-nozzle printers, and 0.4 mm-only setups where Zyltech recommends 0.6 mm",
+      "printing in an unventilated occupied room (styrene fumes)",
+      "food-contact items",
+      "fine cosmetic detail — the surface is matte and fiber-flecked"
+    ]
+  },
+  "suitability": {
+    "food_contact": "no",
+    "load_bearing": "moderate",
+    "high_temperature": "moderate",
+    "outdoor": "yes"
+  },
+  "properties": {
+    "density_g_cm3": 1.07,
+    "grams_per_100cm3": 107,
+    "cm3_per_100g": 93.5,
+    "shrinkage_pct": {
+      "min": 0.2,
+      "max": 0.5,
+      "recommended": 0.35
+    },
+    "glass_transition_c": 106,
+    "heat_deflection_c": 98,
+    "max_service_temp_c": 90,
+    "tensile_strength_mpa": {
+      "min": 33,
+      "max": 36,
+      "recommended": 35
+    },
+    "notes": "Density 1.07 g/cm³ is Zyltech's published ISO 1183 figure and is recorded as sourced, but it deserves scepticism: it is identical to base ASA's 1.07, whereas abs-gf at a comparable ~10 % loading measures 1.08 against base ABS's 1.05. A 10 % glass loading should raise density by roughly 0.04-0.06 g/cm³, so either Zyltech's grade carries less fiber than assumed or the figure is inherited from an unfilled datasheet. Volume per spool is therefore unchanged from base ASA at 93.5 cm³ per 100 g, which is convenient but probably slightly optimistic. Tensile at break 33-36 MPa (Zyltech, ISO 527) sits at or just below base ASA's 37-47 MPa band and below asa-cf's 40-50 — read this material as a stiffness-and-stability upgrade, not a strength one, exactly as with abs-gf. HDT 97-99 °C at 1.8 MPa unannealed (Zyltech, ISO 75) is recorded as 98 °C, and note the load basis: 1.8 MPa is a harsher test than the schema's default 0.45 MPa, so the true 0.45 MPa figure would be higher still and the real heat-resistance gain over base ASA's 93 °C at 0.45 MPa is larger than the numbers make it look. Tg 106 °C (Siraya) against base ASA's 100 °C. Max service temperature 90 °C is carried from asa-cf rather than measured. Shrinkage is a reasoned reduction from base ASA's 0.4-0.7 %, set equal to asa-cf's 0.2-0.5 % on the strength of the qualitative warp-reduction claims; no source publishes a figure."
+  },
+  "scores": {
+    "ease_of_print": 4,
+    "dimensional_stability": 8,
+    "warp_tendency": 5,
+    "layer_adhesion": 3,
+    "compression_strength": 7,
+    "temperature_tolerance": 7,
+    "uv_tolerance": 9,
+    "weather_tolerance": 9,
+    "water_tolerance": 8
+  },
+  "compatibility": {
+    "bonds_with": [
+      "asa-gf",
+      "asa",
+      "asa-cf",
+      "abs",
+      "abs-gf",
+      "abs-fr"
+    ],
+    "support_materials": [
+      "hips",
+      "asa"
+    ],
+    "usable_as_support_for": [],
+    "notes": "Welds to itself and across the styrenic family — base ASA, asa-cf, ABS and its variants all share the SAN matrix and one enclosed, hot-bed process environment, so an ASA-GF structural core under an ASA cosmetic skin is a working multi-material design. HIPS is the conventional breakaway and limonene-soluble support for the ABS/ASA family; that pairing is documented for ABS and inferred here, as it is on the base asa entry. PVA and BVOH are unusable — both degrade below this 240-280 °C nozzle window. No chemical bond to pla, petg, pa, pc, pp, tpu or tpe, and a 100-110 °C bed deforms PLA and PETG outright. Not useful as a support for other materials: it welds to its own family rather than releasing from it, and leaves a fiber-roughened interface everywhere else."
+  },
+  "plate_recommendations": [
+    {
+      "plate_id": "pei-textured",
+      "rating": "recommended",
+      "notes": "Carried at base ASA's 'recommended' and reinforced by both vendors — Siraya names glass, PEI and PC film as compatible surfaces, Zyltech names a PEI plate directly. Run the bed at 90-110 °C; the high bed temperature is doing adhesion and warp-control work that the plate alone cannot. Corner lift is reduced against unfilled ASA but not eliminated, so a glue stick or Magigoo-type promoter and a brim remain worthwhile on large footprints, exactly as on the base entry. Unlike base ASA there is no reported over-adhesion or release-agent restriction for this grade."
+    }
+  ],
+  "emissions": {
+    "voc_level": "high",
+    "particulate_level": "high",
+    "primary_emissions": [
+      "styrene",
+      "benzaldehyde",
+      "acetophenone",
+      "ethylbenzene",
+      "ultrafine particles",
+      "glass fiber fines (post-processing)"
+    ],
+    "ventilation": "required",
+    "notes": "Inherits base ASA's emission profile unchanged — styrene-dominated VOCs and elevated ultrafine particles, the worst class in this catalog alongside ABS and asa-cf. No ASA-GF-specific measurement exists; the fiber is inert and does not change what comes off the nozzle. Print in an enclosure vented externally or filtered through HEPA plus activated carbon, and never in an occupied unventilated room. The separate bench-side hazard is glass fiber dust from sanding, drilling or cutting printed parts, which base ASA does not produce."
+  },
+  "safety_notes": "Styrene is a respiratory irritant and a suspected carcinogen on chronic exposure — the enclosure here is a containment measure as much as a warp-control one, and should be vented before it is opened. Abrasive: hardened steel is mandatory and Siraya recommends ruby or tungsten carbide for extended runs; brass will not survive a spool. Do not dry-sand, drill or machine printed parts without respiratory protection and dust capture — glass fiber fines irritate skin, eyes and airways. Not food-contact suitable.",
+  "additional_notes": "The selection logic across the four filled styrenics in this catalog is clean. Against abs-gf, choose ASA-GF whenever sunlight is involved: the acrylate rubber phase is the entire difference and it is decisive outdoors, for a price premium of a few dollars per kilogram. Against asa-cf, choose ASA-GF when the part must be a colour other than black, when impact matters more than peak stiffness, or when hotend wear is a running cost — and choose asa-cf when maximum rigidity and warp suppression justify the price. Against base ASA, the fiber buys warp control and stiffness at the cost of AMS eligibility, a hardened nozzle and some layer strength, which is a good trade for large flat outdoor parts and a poor one for small easy ones. Fiber loading is disclosed only by Siraya (10 %) and by no other brand, and '3DXTech ASA-GF' does not exist — 3DXTech's glass-fiber collection carries PA6, Nylon 12, ABS, PEI and PEEK grades but no ASA — so verify the product before relying on any mechanical number here.",
+  "provenance": {
+    "sources": [
+      "https://siraya.tech/products/siraya-tech-fibreheart-asa-gf-filament",
+      "https://zyltechfile.s3.us-east-1.amazonaws.com/TDS_ASA+GF+Filament_v1.pdf",
+      "https://kb-3d.com/store/ambrosia/1345-ambrosia-filament-of-the-gods-asa-gf-glass-filled-1kg-175mm-1722952628246.html",
+      "https://dfh.fm/products/phaetus-aeworthy%E2%84%A2-asa-gf-filament",
+      "https://www.filoalfa3d.com/gb/n-asa-gf/588-3998-n-asa-gf.html",
+      "https://www.3dxtech.com/products/glass-fiber-filaments/"
+    ],
+    "last_verified": "2026-08-01",
+    "confidence": "low",
+    "conflicts": "Drying is the widest disagreement and it is a factor of four: Siraya specifies 70-80 °C for 4-6 h while Zyltech's TDS specifies 65-70 °C for 24 h, with no way to reconcile them from the published data; the recorded 4-24 h band is a union rather than a consensus. Chamber temperature splits similarly, Siraya 60-80 °C against Zyltech 40-60 °C. Density 1.07 g/cm³ is published by Zyltech but is identical to base ASA's, which is implausible for a glass-filled compound and contradicts the abs-gf precedent where a comparable 10 % loading raised density measurably — the figure is recorded as sourced but flagged as suspect. HDT is published at 1.8 MPa (97-99 °C) rather than the schema's 0.45 MPa basis, so it is not directly comparable to base ASA's 93 °C @0.45 MPa and understates the real gain. Fiber loading is disclosed only by Siraya (10 %); every other brand in the category is silent, and mechanical figures here come from Zyltech while the loading figure comes from Siraya, so the two may describe different compounds. Tensile 33-36 MPa sits BELOW base ASA's 37-47 MPa band, which is either a genuine strength reduction or a test-method difference and is unresolved. Max service temperature and shrinkage are carried from asa-cf rather than sourced. Confidence is low rather than medium because two datasheets from different brands supply disjoint halves of the property set with no overlap to cross-check. ease_of_print is recorded 4 rather than base ASA's 5 and abs-gf's 5: the hardened-nozzle gate plus a vendor-stated feed-path breakage risk puts it alongside asa-cf, and abs-gf's higher score rests on Bambu documenting AMS and AMS Lite compatibility for its own grade, which no ASA-GF vendor does. '3DXTech ASA-GF' and any Bambu-branded ASA-GF are unconfirmed — no such SKU was found."
+  },
+  "trade_names": [
+    {
+      "manufacturer": "eryone",
+      "product": "ASA Fiberglass",
+      "notes": "Glass-fibre-filled ASA. asa-gf is one of the five provisional ids being researched in parallel."
+    },
+    {
+      "manufacturer": "extrudr",
+      "product": "DuraPro ASA GF",
+      "notes": "ASA + glass fibre; density 1.10 g/cm3, VICAT A 101 C / HDT-B 99 C. asa-gf is provisional (being researched in parallel)"
+    },
+    {
+      "manufacturer": "spectrum-filaments",
+      "product": "ASA-X GF10",
+      "notes": "10% glass fibre, UV resistant; asa-gf is provisional"
+    }
+  ]
+}

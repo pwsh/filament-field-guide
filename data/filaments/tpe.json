@@ -1,7 +1,13 @@
 {
   "id": "tpe",
   "name": "TPE (Thermoplastic Elastomer)",
-  "aliases": ["TPE", "Thermoplastic Elastomer", "TPE-S", "SEBS", "Flexible filament"],
+  "aliases": [
+    "TPE",
+    "Thermoplastic Elastomer",
+    "TPE-S",
+    "SEBS",
+    "Flexible filament"
+  ],
   "status": "researched",
   "base_type": null,
   "variation_kind": null,
@@ -9,15 +15,35 @@
   "chemical_makeup": "Umbrella term for the non-TPU thermoplastic elastomers used in FDM — predominantly SEBS (styrene-ethylene-butylene-styrene) block copolymer or polyolefin/SEBS blends (Fillamentum FlexFill is declared as 'polyolefin + SEBS'). Hard styrenic domains act as physical crosslinks in a rubbery matrix, giving a softer, more rubber-like feel than TPU",
   "summary": "The softer, cheaper, more rubbery sibling of TPU: SEBS-based grades feel closer to real rubber, resist water and mild chemicals well, and several lines carry food and skin-contact certification. In exchange they are much weaker in tension than TPU, want very slow speeds with the fan off, and the 'TPE' label covers formulations different enough that datasheet numbers barely agree.",
   "printing": {
-    "nozzle_temp_c": { "min": 210, "max": 245, "recommended": 230 },
-    "bed_temp_c": { "min": 40, "max": 80, "recommended": 55 },
-    "ambient_temp_c": { "min": 18, "max": 30, "recommended": 22 },
-    "speed_mm_s": { "min": 5, "max": 30, "recommended": 20 },
+    "nozzle_temp_c": {
+      "min": 210,
+      "max": 245,
+      "recommended": 230
+    },
+    "bed_temp_c": {
+      "min": 40,
+      "max": 80,
+      "recommended": 55
+    },
+    "ambient_temp_c": {
+      "min": 18,
+      "max": 30,
+      "recommended": 22
+    },
+    "speed_mm_s": {
+      "min": 5,
+      "max": 30,
+      "recommended": 20
+    },
     "enclosure_recommended": false,
     "heated_chamber_required": false,
     "enclosure_open_for_cooling": false,
     "requires_hardened_nozzle": false,
-    "part_cooling_fan_pct": { "min": 0, "max": 20, "recommended": 0 },
+    "part_cooling_fan_pct": {
+      "min": 0,
+      "max": 20,
+      "recommended": 0
+    },
     "notes": "3D Insider gives 210-230 °C at a 40-50 °C bed and warns against exceeding 60 °C; filamentspecs puts SEBS-type TPE nearer 245 °C with a 70-80 °C bed for larger parts. Speed is the real constraint: 10-20 mm/s typical, 30 mm/s maximum, and starting as low as 5 mm/s on an untuned machine. Run the fan off or very low for layer adhesion — the opposite of TPU's 20-50%. Direct drive strongly preferred. Interestingly, SEBS TPE tolerates a higher volumetric flow than TPU (~5.0 vs 3.2 mm³/s per filamentspecs), so throughput at these speeds is comparable or slightly better despite the lower linear limit."
   },
   "feeding": {
@@ -28,9 +54,22 @@
   },
   "drying": {
     "required_before_use": "if-exposed",
-    "temp_c": { "min": 40, "max": 55, "recommended": 50 },
-    "time_hours": { "min": 4, "max": 8, "recommended": 6 },
-    "methods": ["dedicated filament dryer", "food dehydrator", "convection oven at lowest setting", "drybox with desiccant"],
+    "temp_c": {
+      "min": 40,
+      "max": 55,
+      "recommended": 50
+    },
+    "time_hours": {
+      "min": 4,
+      "max": 8,
+      "recommended": 6
+    },
+    "methods": [
+      "dedicated filament dryer",
+      "food dehydrator",
+      "convection oven at lowest setting",
+      "drybox with desiccant"
+    ],
     "dryness_validation": "No popping or crackling at the nozzle; no foamy or bubbly surface on an extruded strand; consistent elastic extrudate rather than brittle or surging flow; no rise in stringing",
     "notes": "SEBS-based TPE is described by manufacturers as more water-repellent than TPU — Fillamentum cites 'low sensitivity to moisture' and 'low gas permeability' for FlexFill — so drying is genuinely occasional rather than routine. No brand publishes a specific temperature and time; the 40-55 °C for 4-8 h figures here are inferred from general flexible-filament practice and are unverified. Keep temperatures low: soft elastomer spools deform easily."
   },
@@ -75,7 +114,11 @@
     "grams_per_100cm3": 115,
     "cm3_per_100g": 87.0,
     "max_service_temp_c": 80,
-    "tensile_strength_mpa": { "min": 5, "max": 30, "recommended": 12 },
+    "tensile_strength_mpa": {
+      "min": 5,
+      "max": 30,
+      "recommended": 12
+    },
     "notes": "Density 1.15 g/cm³ per Fillamentum FlexFill, the only reliable published figure found. Max operating temperature of ~80 °C is Fillamentum's stated limit. Tensile strength is unresolved: Fillamentum FlexFill states 5 MPa while 3D Insider citing eSUN gives 30 MPa — a six-fold spread that reflects genuinely different formulations and hardness grades sharing the 'TPE' name, so the recommended value is a low-biased midpoint only. Elongation at break runs 250% (FlexFill) up to a claimed 660% for NinjaFlex-style grades. Glass transition is omitted: 3D Solved cites a 60-130 °C range for 'TPE' as a category, which reflects hard-segment variability across incompatible chemistries and is not a usable single number for an elastomer whose soft phase is rubbery far below room temperature. HDT is not commonly published for elastomeric TPE and shrinkage, while low like TPU's, has no published figure — both omitted rather than guessed."
   },
   "scores": {
@@ -90,7 +133,16 @@
     "water_tolerance": 7
   },
   "compatibility": {
-    "bonds_with": ["tpe"],
+    "bonds_with": [
+      "tpe",
+      "tpu-60a",
+      "tpu-60d",
+      "tpu-68d",
+      "tpu-85a",
+      "tpu-90a",
+      "tpu-95a",
+      "tpu-gf"
+    ],
     "support_materials": [],
     "usable_as_support_for": [],
     "notes": "Direct documentation is sparse. By analogy to TPU, TPE most likely joins PLA and PETG through mechanical interlocking rather than a chemical weld — design dovetails or keyed features and print the rigid material first — but no source confirms this for SEBS-based TPE specifically, so those ids are deliberately left out of bonds_with. Compatibility with ABS, ASA, PC, PA and PP is undocumented. TPE is not used as a support material, and neither PVA nor HIPS is established as a reliable support or interface for it."
@@ -100,12 +152,65 @@
       "plate_id": "pei-textured",
       "rating": "usable",
       "notes": "Behaves like TPU on textured PEI at a 40-80 °C bed depending on grade and part size. Per Prusa's flexible-material guidance, powder-coated textured sheets typically need no separator; a glue stick is used either as an adhesion aid on lower-tack smooth or satin surfaces, or as a release layer so soft parts can be removed without tearing."
+    },
+    {
+      "plate_id": "glass-borosilicate",
+      "rating": "usable",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Undocumented for glass; start cool and add glue rather than heat."
+    },
+    {
+      "plate_id": "pp-sheet",
+      "rating": "usable",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Not separately listed (unverified); expected to follow soft TPU, with adhesion rather than release as the limiting factor."
+    },
+    {
+      "plate_id": "g10-garolite",
+      "rating": "usable",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Softer TPE compounds are not separately documented on G10; start unheated and raise bed temp only if the first layer lifts."
+    },
+    {
+      "plate_id": "pei-satin",
+      "rating": "usable",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Prusa groups TPE with TPU for the glue-stick recommendation."
+    },
+    {
+      "plate_id": "carbon-fiber-plate",
+      "rating": "usable",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Softer TPE compounds are not documented for this plate; start unheated-to-cool and add heat only if the first layer lifts."
+    },
+    {
+      "plate_id": "pei-patterned",
+      "rating": "usable",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): As soft TPU; the coating is thin, so avoid aggressive prying."
+    },
+    {
+      "plate_id": "pei-smooth",
+      "rating": "avoid",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Same fusing behaviour as low-Shore TPU, worse elongation on removal."
+    },
+    {
+      "plate_id": "supertack",
+      "rating": "avoid",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Same failure mode as TPU: elastomer welds to the tack layer."
+    },
+    {
+      "plate_id": "pc-plate",
+      "rating": "avoid",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Extrapolated from the explicit TPU warning; same elastomer bonding failure mode."
+    },
+    {
+      "plate_id": "buildtak-polymer",
+      "rating": "avoid",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): As soft TPU; the elastomer works into the texture and tears the film on removal."
     }
   ],
   "emissions": {
     "voc_level": "low",
     "particulate_level": "low",
-    "primary_emissions": ["ultrafine particles", "trace styrene from the SEBS hard block (unverified, inferred from chemistry)"],
+    "primary_emissions": [
+      "ultrafine particles",
+      "trace styrene from the SEBS hard block (unverified, inferred from chemistry)"
+    ],
     "ventilation": "recommended",
     "notes": "No UFP or speciated VOC study for non-TPU TPE was located in this research, so both levels are estimates rather than measurements. Because most FDM TPE is SEBS-based it contains a styrenic block, making some styrene release at print temperature plausible in principle — though SEBS is saturated and prints 30-50 °C cooler than ASA, so ASA-like emission levels should not be assumed. Ventilate as a general precaution pending better data."
   },
@@ -126,5 +231,42 @@
     "last_verified": "2026-07-31",
     "confidence": "low",
     "conflicts": "Tensile strength is the headline disagreement: Fillamentum FlexFill 5 MPa against eSUN via 3D Insider 30 MPa, unresolved and probably not resolvable without fixing a hardness grade. Nozzle and bed: 3D Insider 210-230 °C / 40-50 °C bed (avoid above 60 °C) versus filamentspecs SEBS-type ~245 °C / 70-80 °C bed. Glass transition: 3D Solved's 60-130 °C 'TPE' range is internally inconsistent for an elastomer and was rejected rather than recorded. Moisture: Fillamentum claims low moisture sensitivity while community practice treats all flexibles as moisture-sensitive — 'moderate' hygroscopy is a compromise. Drying temperature/time, shrinkage, HDT, UV behaviour, compatibility with every other material, and the entire emissions profile are unverified or inferred rather than sourced; confidence is 'low' for that reason."
-  }
+  },
+  "trade_names": [
+    {
+      "manufacturer": "esun",
+      "product": "TPE-83A",
+      "notes": "Shore 83A elastomer, not a urethane; no 83A-specific TPE id"
+    },
+    {
+      "manufacturer": "filament-pm",
+      "product": "TPE 32 (RUBBERJET FLEX)",
+      "notes": "soft TPE grade; not a TPU"
+    },
+    {
+      "manufacturer": "filament-pm",
+      "product": "TPE 88",
+      "notes": "firmer TPE grade"
+    },
+    {
+      "manufacturer": "fillamentum",
+      "product": "Flexfill TPE",
+      "notes": "Polyolefinic (TPO) thermoplastic elastomer, food-contact grade - the tpe entry is SEBS-centric, so datasheet behaviour will differ"
+    },
+    {
+      "manufacturer": "ic3d",
+      "product": "TPE-SEBS-95A",
+      "notes": "Explicitly SEBS styrenic block copolymer, NOT TPU — shore 95A, firmer than 85A TPU flexibles. The strongest documented SEBS-TPE match in this cluster."
+    },
+    {
+      "manufacturer": "matterhackers",
+      "product": "PRO Series Flex",
+      "notes": "Manufacturer-labelled TPE, not TPU: shore 98A/50D, elongation ~600%, density 1.23 g/cm3, 235 C print temp; sold explicitly as a firmer alternative to NinjaFlex (85A TPU), so harder than the typical grade behind the tpe entry."
+    },
+    {
+      "manufacturer": "proto-pasta",
+      "product": "Black Flexible TPE",
+      "notes": "Non-urethane elastomer, softer/more rubbery than the TPU line per Protopasta's own copy."
+    }
+  ]
 }

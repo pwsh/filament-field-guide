@@ -159,6 +159,20 @@
         "notes": { "type": "string" }
       }
     },
+    "trade_names": {
+      "type": "array",
+      "description": "Manufacturer-specific product names that are this material chemically (matched by makeup/specs), e.g. NinjaFlex -> tpu-85a",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["manufacturer", "product"],
+        "properties": {
+          "manufacturer": { "type": "string", "description": "manufacturer id if in catalog, else display name" },
+          "product": { "type": "string" },
+          "notes": { "type": "string", "description": "Spec deltas or match caveats, e.g. 'slightly toughened formulation'" }
+        }
+      }
+    },
     "safety_notes": { "type": "string", "description": "Other safety guidance beyond emissions (handling, post-processing, additives)" },
     "additional_notes": { "type": "string" },
     "provenance": { "$ref": "#/$defs/provenance" }

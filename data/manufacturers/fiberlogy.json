@@ -22,72 +22,106 @@
   },
   "product_lines": [
     {
-      "name": "PLA family",
+      "name": "Easy PLA",
       "filament_ids": [
         "pla"
       ],
-      "notes": "Easy PLA, Impact PLA and HD-PLA"
+      "notes": "Standard PLA"
+    },
+    {
+      "name": "Impact PLA",
+      "filament_ids": [
+        "pla-plus"
+      ],
+      "notes": "PLA-based blend marketed at up to 800% higher impact resistance than standard PLA; modifier undisclosed"
+    },
+    {
+      "name": "HD-PLA",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "High-crystallinity PLA intended for post-print annealing (ABS-like properties after heat treatment); same concept as FormFutura Volcano PLA, no annealable-PLA grade id exists"
     },
     {
       "name": "FiberSilk",
       "filament_ids": [
-        "pla"
+        "pla-silk"
       ],
-      "notes": "Metallic-finish decorative PLA"
+      "notes": "Metallic/silk-finish decorative PLA, gloss additive on the same base polymer"
     },
     {
       "name": "Easy PET-G",
       "filament_ids": [
         "petg"
-      ]
+      ],
+      "notes": "Standard PETG"
     },
     {
       "name": "PCTG",
       "filament_ids": [
         "pctg"
       ],
-      "notes": "Marketed at 90 kJ/m2 impact strength"
+      "notes": "Glycol-modified PCT copolyester marketed at ~90 kJ/m2 impact strength"
     },
     {
-      "name": "ABS",
+      "name": "ABS / Easy ABS",
       "filament_ids": [
         "abs"
       ],
-      "notes": "ABS and Easy ABS"
+      "notes": "Standard ABS"
     },
     {
       "name": "ASA",
       "filament_ids": [
         "asa"
-      ]
+      ],
+      "notes": "Standard ASA"
     },
     {
       "name": "PP",
       "filament_ids": [
         "pp"
-      ]
+      ],
+      "notes": "Standard polypropylene"
     },
     {
-      "name": "FiberFlex",
+      "name": "FiberFlex 30D",
       "filament_ids": [
         "tpu"
       ],
-      "notes": "TPU in 30D and 40D shore grades"
+      "notes": "Shore 30D (~80A), described by Fiberlogy as TPU/TPE-class; below the base tpu 85A-95A band and there is no D-scale grade this soft"
     },
     {
-      "name": "Nylon",
+      "name": "FiberFlex 40D",
       "filament_ids": [
-        "pa",
-        "pa-cf"
+        "tpu"
       ],
-      "notes": "PA and PA12 carbon-fiber composites"
+      "notes": "Shore 40D (~90A), same elastomer family, harder than 30D"
+    },
+    {
+      "name": "FiberFlex Aero",
+      "notes": "Lightweight foaming flexible; no foaming-TPU id exists"
+    },
+    {
+      "name": "Nylon (PA)",
+      "filament_ids": [
+        "pa"
+      ],
+      "notes": "Standard nylon"
+    },
+    {
+      "name": "Nylon PA12+CF15",
+      "filament_ids": [
+        "pa12-cf"
+      ],
+      "notes": "PA12 + 15% carbon fibre"
     },
     {
       "name": "Soluble support",
       "filament_ids": [
         "pva"
       ],
-      "notes": "Water-soluble support material; exact chemistry (PVA vs BVOH) not confirmed"
+      "notes": "Water-soluble support; PVA vs BVOH not confirmed from public sources, mapped provisionally"
     }
   ],
   "makes_plates": false,
@@ -99,7 +133,10 @@
       "https://fiberlogy.com/en_US/contact",
       "https://spoolhound.com/fiberlogy-filament",
       "https://www.voxelmatters.directory/company/fiberlab/",
-      "https://www.youtube.com/@fiberlogy"
+      "https://www.youtube.com/@fiberlogy",
+      "https://fiberlogy.com/en/filaments/",
+      "https://fiberlogy.com/en/fiberlogy-filaments/filament-hd-pla/",
+      "https://fiberlogy.com/en_US/c/FiberFlex-30D/150"
     ],
     "last_verified": "2026-07-31",
     "confidence": "medium",

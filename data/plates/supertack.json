@@ -1,0 +1,398 @@
+{
+  "id": "supertack",
+  "name": "Bambu Cool Plate SuperTack (proprietary low-temp coating on spring steel)",
+  "aliases": [
+    "Cool Plate SuperTack",
+    "Bambu Cool Plate SuperTack",
+    "Cool Plate SuperTack Pro",
+    "SuperTack plate"
+  ],
+  "status": "researched",
+  "summary": "Bambu Lab's low-temperature adhesion plate: a ~0.05 mm proprietary 'SuperTack' polymer coating on a 0.4 mm spring-steel base, engineered to grip PLA hard at 35-45 degC bed temperatures instead of the 60 degC-plus a PEI sheet wants. It is not PEI and behaves nothing like one — adhesion is chemical tack rather than thermal-expansion mismatch, the coating is soft and scratch-prone, and materials outside the PLA/PETG envelope (notably TPU) are documented to damage it.",
+  "surface_makeup": "Undisclosed proprietary polymer coating approximately 0.05 mm thick, applied to a 0.4 mm spring-steel base sheet; Bambu describes it only as a 'specially designed coating' and does not publish the chemistry. Explicitly not polyetherimide, and distinct from the older bare polycarbonate Cool Plate it replaced. Single-sided (one coated face).",
+  "texture": "smooth",
+  "manufacturers": [
+    "Bambu Lab"
+  ],
+  "filament_compatibility": [
+    {
+      "filament_id": "pla",
+      "rating": "recommended",
+      "bed_temp_c": {
+        "min": 35,
+        "max": 45
+      },
+      "adhesion_aid": "none",
+      "notes": "The plate's entire reason to exist. Full adhesion at bed temperatures well below what PEI needs, which cuts warp on large flat parts and keeps the chamber cool. Parts normally pop free unaided once the bed drops to room temperature."
+    },
+    {
+      "filament_id": "pla-plus",
+      "rating": "recommended",
+      "bed_temp_c": {
+        "min": 35,
+        "max": 45
+      },
+      "adhesion_aid": "none",
+      "notes": "As base PLA; toughened blends make no measurable difference to release behaviour."
+    },
+    {
+      "filament_id": "pla-matte",
+      "rating": "recommended",
+      "bed_temp_c": {
+        "min": 35,
+        "max": 45
+      },
+      "adhesion_aid": "none",
+      "notes": "As base PLA, with a glossy bottom face since the coating is smooth rather than powder-textured."
+    },
+    {
+      "filament_id": "pla-hf",
+      "rating": "recommended",
+      "bed_temp_c": {
+        "min": 35,
+        "max": 45
+      },
+      "adhesion_aid": "none",
+      "notes": "High-flow PLA is the material this plate is marketed alongside on the A1/P1/X1 high-speed profiles; behaviour matches base PLA."
+    },
+    {
+      "filament_id": "pla-silk",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 35,
+        "max": 45
+      },
+      "adhesion_aid": "glue stick as a release barrier if attempted",
+      "notes": "Bambu's own wiki warns that its PLA Silk bonds so hard to SuperTack that removal may damage the printed model. Third-party silk PLAs vary but should be treated the same until tested on a scrap part."
+    },
+    {
+      "filament_id": "pla-cf",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 35,
+        "max": 50
+      },
+      "adhesion_aid": "none",
+      "notes": "Not called out in Bambu's compatibility list. Adhesion follows base PLA, but stiff CF-filled parts do not flex with the sheet, so they lever against a soft coating during removal — flex from the far edge and expect scratching."
+    },
+    {
+      "filament_id": "petg",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 60,
+        "max": 70
+      },
+      "adhesion_aid": "none on the part; PETG supports must never touch the plate",
+      "notes": "Officially supported and Bambu publishes a dedicated PETG-on-SuperTack guide, but this is the plate's most contested material: multiple forum threads report over-adhesion, torn coating and poor first layers. Bambu Studio blocks slicing when PETG support material would contact the first layer because it will damage the plate."
+    },
+    {
+      "filament_id": "pctg",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 60,
+        "max": 70
+      },
+      "adhesion_aid": "none",
+      "notes": "Treat exactly as PETG, including the rule that no copolyester support may print directly on the coating."
+    },
+    {
+      "filament_id": "pet",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 60,
+        "max": 75
+      },
+      "adhesion_aid": "none",
+      "notes": "As PETG; unmodified PET is not separately characterised by Bambu on this plate."
+    },
+    {
+      "filament_id": "petg-cf",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 60,
+        "max": 70
+      },
+      "adhesion_aid": "none",
+      "notes": "Fibre fill lowers peak bond strength slightly versus neat PETG, but the rigid part still risks lifting coating on removal."
+    },
+    {
+      "filament_id": "pvb",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 45,
+        "max": 60
+      },
+      "adhesion_aid": "none",
+      "notes": "Not on Bambu's supported list (unverified). Bed temperature is within the plate's envelope and adhesion is generally good, but do not use IPA to help release — it dissolves PVB and the plate's own cleaning guidance is water and detergent anyway."
+    },
+    {
+      "filament_id": "abs",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 90,
+        "max": 100
+      },
+      "adhesion_aid": "use a textured or engineering PEI plate instead",
+      "notes": "Absent from the supported material list and well above the plate's low-temperature design point. Bambu directs styrenics to the Engineering, High-Temp or Textured PEI plates."
+    },
+    {
+      "filament_id": "abs-gf",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 90,
+        "max": 100
+      },
+      "adhesion_aid": "use a textured or engineering PEI plate instead",
+      "notes": "As ABS."
+    },
+    {
+      "filament_id": "asa",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 90,
+        "max": 100
+      },
+      "adhesion_aid": "use a textured or engineering PEI plate instead",
+      "notes": "As ABS; the required bed temperature alone puts it outside the coating's intended range."
+    },
+    {
+      "filament_id": "asa-cf",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 90,
+        "max": 100
+      },
+      "adhesion_aid": "use a textured or engineering PEI plate instead",
+      "notes": "As ASA."
+    },
+    {
+      "filament_id": "hips",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 90,
+        "max": 110
+      },
+      "adhesion_aid": "use a textured or engineering PEI plate instead",
+      "notes": "Same envelope problem as ABS, with which it is normally co-printed."
+    },
+    {
+      "filament_id": "tpu",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 35,
+        "max": 50
+      },
+      "adhesion_aid": "none will help; use a textured PEI plate",
+      "notes": "The one explicit prohibition in Bambu's documentation: TPU will damage the build plate. The tacky coating bonds to soft elastomer and tears when the part is pulled."
+    },
+    {
+      "filament_id": "tpu-95a",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 35,
+        "max": 50
+      },
+      "adhesion_aid": "none will help; use a textured PEI plate",
+      "notes": "The hardest common grade and the one most often attempted anyway; still covered by the blanket TPU warning."
+    },
+    {
+      "filament_id": "tpu-85a",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 35,
+        "max": 50
+      },
+      "adhesion_aid": "none will help; use a textured PEI plate",
+      "notes": "Softer grades fuse into the coating and take it with them."
+    },
+    {
+      "filament_id": "tpu-60a",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 30,
+        "max": 45
+      },
+      "adhesion_aid": "none will help; use a textured PEI plate",
+      "notes": "Worst case of the TPU family on this surface."
+    },
+    {
+      "filament_id": "tpe",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 30,
+        "max": 45
+      },
+      "adhesion_aid": "none will help; use a textured PEI plate",
+      "notes": "Same failure mode as TPU: elastomer welds to the tack layer."
+    },
+    {
+      "filament_id": "cope",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 45,
+        "max": 70
+      },
+      "adhesion_aid": "none will help; use a textured PEI plate",
+      "notes": "Copolyester elastomer combines the PETG over-adhesion problem with elastomer tear behaviour."
+    },
+    {
+      "filament_id": "pa",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 70,
+        "max": 100
+      },
+      "adhesion_aid": "use garolite/G10 or the engineering plate",
+      "notes": "Not a listed material. Bed temperature is out of range and nylon's adhesion behaviour on this coating is uncharacterised."
+    },
+    {
+      "filament_id": "pa6",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 70,
+        "max": 100
+      },
+      "adhesion_aid": "use garolite/G10 or the engineering plate",
+      "notes": "As base PA."
+    },
+    {
+      "filament_id": "pa12",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 70,
+        "max": 100
+      },
+      "adhesion_aid": "use garolite/G10 or the engineering plate",
+      "notes": "As base PA."
+    },
+    {
+      "filament_id": "pa6-cf",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 70,
+        "max": 100
+      },
+      "adhesion_aid": "use garolite/G10 or the engineering plate",
+      "notes": "Bambu itself routes CF nylons to the Engineering Plate; the SuperTack coating is not rated for those bed temperatures."
+    },
+    {
+      "filament_id": "ppa-cf",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 90,
+        "max": 120
+      },
+      "adhesion_aid": "high-temperature plate required",
+      "notes": "Far outside the coating's thermal envelope."
+    },
+    {
+      "filament_id": "pc",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 100,
+        "max": 120
+      },
+      "adhesion_aid": "high-temperature plate required",
+      "notes": "Not listed; both the bed temperature and PC's tendency to pull surface coatings rule it out."
+    },
+    {
+      "filament_id": "pc-abs",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 100,
+        "max": 120
+      },
+      "adhesion_aid": "high-temperature plate required",
+      "notes": "As PC."
+    },
+    {
+      "filament_id": "pp",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 80,
+        "max": 100
+      },
+      "adhesion_aid": "dedicated PP sheet or PP packing tape required",
+      "notes": "No data and no vendor support. Polypropylene needs a chemically matched PP surface; nothing about a high-tack coating changes that."
+    },
+    {
+      "filament_id": "pva",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 45,
+        "max": 60
+      },
+      "adhesion_aid": "print soluble supports on top of model layers, not on the coating",
+      "notes": "No official Bambu guidance found (unverified). Given the plate's documented sensitivity to support material contacting the first layer, keep soluble supports off the coating entirely."
+    },
+    {
+      "filament_id": "bvoh",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 45,
+        "max": 60
+      },
+      "adhesion_aid": "print soluble supports on top of model layers, not on the coating",
+      "notes": "As PVA; no vendor guidance located."
+    },
+    {
+      "filament_id": "peek",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 130,
+        "max": 160
+      },
+      "adhesion_aid": "dedicated high-temperature sheet required",
+      "notes": "Bed temperatures roughly three times the plate's design point; the coating would be destroyed."
+    },
+    {
+      "filament_id": "pei-ultem",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 130,
+        "max": 160
+      },
+      "adhesion_aid": "dedicated high-temperature sheet required",
+      "notes": "As PEEK."
+    },
+    {
+      "filament_id": "pps-cf",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 120,
+        "max": 150
+      },
+      "adhesion_aid": "dedicated high-temperature sheet required",
+      "notes": "As PEEK."
+    }
+  ],
+  "preparation": "No seasoning or break-in is needed on first use; wash the factory coating with warm water and a mild detergent, dry it fully, and mount it coated-side up (it is single-sided). Routine prep is the same wash whenever first-layer adhesion softens — do not reach for solvents. The step people skip is Bambu's own instruction to wipe the nozzle repeatedly in the plate's dedicated wiping zone before every print and before auto-levelling, so that a bead of cooled filament on the nozzle tip does not corrupt the bed-mesh probe or drag through the fresh first layer. Because the coating grips at 35-45 degC, resist the habit of raising bed temperature to fix a bad first layer; on SuperTack a too-hot bed makes over-adhesion worse, not better, and first-layer problems are almost always Z-offset or a dirty nozzle instead.",
+  "cleaning": "Wash with water and a mild detergent or dish soap, using a soft cloth or sponge, then dry completely before remounting so nothing is trapped against the steel. That is the whole officially sanctioned procedure. Explicitly avoid organic solvents — acetone in particular is called out as damaging to the coating, and there is no evidence the coating tolerates the routine IPA wipe that PEI users take for granted, so treat alcohol as a last resort rather than the default. Never use abrasive pads, scouring powder, wire brushes or blades: the tack layer is only about 0.05 mm thick and anything that abrades it removes adhesion permanently in that spot. Baked-on filament from a nozzle crash should be softened by warming the bed to that material's print bed temperature and lifted with a plastic tool, never chiselled cold.",
+  "model_removal": "Let the bed cool fully to room temperature and most PLA prints release on their own or with a light flex of the sheet off the magnet — that is the intended workflow and the one that preserves the coating. Do not remove parts while the bed is warm: SuperTack's bond is strongest hot, which is the opposite intuition from PEI users who pry ABS off warm. When a part still holds, use the supplied plastic scraper at a shallow angle from a corner rather than levering from above. Bambu acknowledges the coating is comparatively soft and that scraper scratches are cosmetic and do not affect function, but every scratch is a place where future first layers behave differently, so minimise them. Rigid parts with large flat footprints — CF-filled PLA especially — should be released by flexing the sheet progressively from one edge instead of trying to pop the whole footprint at once.",
+  "stuck_print_recovery": "Bambu's official first move is counter-intuitive but effective: reheat the bed to roughly 50 degC, which softens the tack layer enough to let a stubborn part shear off, then lift it immediately. If that fails, the generic toolkit applies with caveats — freezer cooling for 10-15 minutes exploits the steel/polymer contraction mismatch and works, and unwaxed dental floss or thin wire sawed under the footprint is the safest mechanical option because it applies shear rather than a point load. IPA wicking under the perimeter is the technique to be most careful with here, since alcohol is outside the vendor's sanctioned cleaning regime for this coating; if you use it, keep it at the part edge and wash the plate afterwards. Whatever you do, do not escalate to a metal blade or heavy prying — on a 0.05 mm coating that trades a stuck print for a permanently dead patch of plate. Over-adhered PETG and Bambu PLA Silk are the two cases most likely to reach this point, and both are better prevented than recovered.",
+  "temperature_limits_c": {
+    "max": 70
+  },
+  "lifespan_notes": "Bambu rates the coating at less than 20% adhesion loss after 300 prints under normal use, which is the only published durability figure and assumes PLA at low bed temperatures. Real wear concentrates in two places: the nozzle-wiping strip, where repeated metal-on-coating contact abrades the layer early, and anywhere a scraper has been used. Over-adhesion events with PETG or silk PLA can lift coating in patches, which is instant, localised and permanent. There is no user recoating option and no refinishing service — the plate is a consumable replaced whole, which the roughly USD 15-18 price makes tolerable relative to PEI sheets.",
+  "price": {
+    "usd_low": 14.99,
+    "usd_high": 17.99,
+    "notes": "Bambu Lab store lists the 256x256 mm Cool Plate SuperTack at about USD 14.99 on sale against a USD 17.99 list price; the 180x180 mm A1 mini size is lower. Cool Plate SuperTack Pro is priced somewhat higher but the exact figure could not be retrieved (store page returned an access error during research)."
+  },
+  "additional_notes": "Single-sided and magnetically mounted on the X1, P1, A1 and A1 mini beds; the spring-steel substrate is the same class used under Bambu's PEI plates, so flatness is comparable. The naming is a persistent source of confusion: SuperTack replaced the older bare-polycarbonate 'Cool Plate', and a good deal of blog and reseller copy still describes the two interchangeably even though the chemistry, price and material compatibility differ. A 'SuperTack Pro' variant exists with a smoother, glossier finish aimed at the same low-temperature materials; Bambu does not publish how its coating formulation differs from the base plate. The honest summary of this surface is that it is excellent at exactly one job — cool, fast, adhesive-free PLA — and progressively worse the further a material sits from that job.",
+  "provenance": {
+    "sources": [
+      "Bambu Lab Wiki - Build Plates: https://wiki.bambulab.com/en/filament-acc/acc/plates",
+      "Bambu Lab Wiki - Bambu Cool Plate SuperTack: https://wiki.bambulab.com/en/filament-acc/acc/bambu-cool-plate-supertack",
+      "Bambu Lab Wiki - PLA/PETG with Bambu Cool Plate SuperTack: https://wiki.bambulab.com/en/PLA/PETG-with-bambu-bool-plate-supertack",
+      "Bambu Lab Store - Bambu Cool Plate SuperTack: https://us.store.bambulab.com/products/bambu-cool-plate-supertack",
+      "Bambu Lab Forum - New SuperTack plate is a complete failure: https://forum.bambulab.com/t/new-supertack-plate-is-a-complete-failure/129001",
+      "Bambu Lab Forum - Struggling with new Cool Plate SuperTack using PETG: https://forum.bambulab.com/t/struggling-with-new-cool-plate-supertack-using-petg/234062",
+      "Digitmakers - Bambu Lab build plate comparison: textured PEI vs smooth PEI vs Cool Plate SuperTack: https://www.digitmakers.ca/blogs/news/bambu-lab-build-plate-comparison-textured-pei-vs-smooth-pei-vs-cool-plate-supertack",
+      "Digitmakers - Bambu Cool Plate SuperTack Pro, what makes it different: https://www.digitmakers.ca/blogs/news/bambu-cool-plate-supertack-pro-what-makes-it-different-from-other-build-plates"
+    ],
+    "last_verified": "2026-08-01",
+    "confidence": "medium",
+    "conflicts": "Bambu does not disclose the coating chemistry, so surface_makeup is descriptive rather than analytical. No maximum surface temperature is published; the 70 degC ceiling recorded here is inferred from the supported PLA/PETG envelope, not from a datasheet. PETG is the sharpest disagreement in the sources: Bambu publishes a dedicated PETG-on-SuperTack guide and lists it as supported, while multiple forum threads report over-adhesion, plate damage and unusable first layers — recorded as usable-with-prep rather than either extreme. ABS, ASA, HIPS, nylon, PC and PP are recorded as avoid by absence from the compatibility list rather than by explicit prohibition (only TPU is explicitly prohibited), so those ratings are inference. PVA/BVOH have no vendor guidance at all. Reseller blogs conflate SuperTack with the discontinued bare-polycarbonate Cool Plate, which contaminates several secondary write-ups. Whether any third-party clone of the coating exists is unverified; no plate-only vendor was found making one. SuperTack Pro pricing and its exact coating difference versus the base plate are unverified."
+  }
+}

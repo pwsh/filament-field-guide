@@ -21,54 +21,182 @@
   },
   "product_lines": [
     {
-      "name": "PLA family",
+      "name": "PLA (standard)",
       "filament_ids": [
         "pla"
       ],
-      "notes": "High Speed Pro, PLA-HP, PLA-SILK, PLA Special Fill, Semi-Matte, Economy, and rPLA / PLA Regrind recycled grades"
+      "notes": "Plain PLA"
     },
     {
-      "name": "colorFabb_XT / PETG",
+      "name": "PLA Economy",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Value-grade PLA"
+    },
+    {
+      "name": "PLA-HP / PLA High Speed Pro",
+      "filament_ids": [
+        "pla-hf"
+      ],
+      "notes": "Toughened high-flow PLA: 23 mm3/s max volumetric flow, 27.9 kJ/m2 impact strength; exact copolymer/additive undisclosed, so it also has pla-plus character"
+    },
+    {
+      "name": "LW-PLA / LW-PLA-HT",
+      "filament_ids": [
+        "lw-pla"
+      ],
+      "notes": "Foaming lightweight PLA; HT variant foams at higher temperatures"
+    },
+    {
+      "name": "PLA Vibers",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Decorative sparkle/glitter-effect PLA; base polymer only, no glitter-filled PLA id exists"
+    },
+    {
+      "name": "PLA Regrind / rPLA",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Recycled PLA feedstock, same chemistry"
+    },
+    {
+      "name": "PLA/PHA",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Explicit PLA+PHA blend, majority PLA; distinct from pure PLA and there is no pha id"
+    },
+    {
+      "name": "woodFill",
+      "filament_ids": [
+        "pla-wood"
+      ],
+      "notes": "PLA/PHA carrier + wood-fibre filler, density 1.15 g/cm3 per TDS"
+    },
+    {
+      "name": "corkFill",
+      "filament_ids": [
+        "pla-wood"
+      ],
+      "notes": "PLA/PHA carrier + cork particles; nearest id is pla-wood but the filler is cork, not wood fibre"
+    },
+    {
+      "name": "bronzeFill",
+      "filament_ids": [
+        "pla-metal"
+      ],
+      "notes": "Real bronze powder in a PLA/PHA carrier"
+    },
+    {
+      "name": "copperFill",
+      "filament_ids": [
+        "pla-metal"
+      ],
+      "notes": "Real copper powder in a PLA/PHA carrier"
+    },
+    {
+      "name": "steelFill",
+      "filament_ids": [
+        "pla-metal"
+      ],
+      "notes": "Real steel powder in a PLA/PHA carrier"
+    },
+    {
+      "name": "stoneFill",
+      "notes": "PLA/PHA + mineral/stone filler; no stone-filled PLA id exists"
+    },
+    {
+      "name": "glowFill",
+      "filament_ids": [
+        "pla-glow"
+      ],
+      "notes": "PLA/PHA carrier + phosphorescent pigment"
+    },
+    {
+      "name": "colorFabb_XT",
       "filament_ids": [
         "petg"
       ],
-      "notes": "colorFabb_XT is an Amphora co-polyester in the PETG family; PETG Economy is the value grade"
+      "notes": "Eastman Amphora AN1050-type copolyester - PETG-family chemistry, marketed separately from the PETG line"
+    },
+    {
+      "name": "colorFabb_HT",
+      "notes": "Amphora-based high-temperature annealable copolyester, HDT above XT/PETG and outside the pctg window; no matching id"
+    },
+    {
+      "name": "nGen",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "Eastman Amphora AM1800-family copolyester, food-contact compliant; PETG-adjacent rather than identical"
+    },
+    {
+      "name": "nGen_FLEX",
+      "notes": "Flexible/impact-modified copolyester elastomer; not a TPU and not the rigid high-speed cope entry - no TPC/TPE-E id exists"
+    },
+    {
+      "name": "PETG (incl. Economy, Semi Matte, Regrind, rPETG)",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "Standard PETG family including matte-additive and recycled grades; no petg-matte id exists"
     },
     {
       "name": "allPHA",
-      "filament_ids": [
-        "pha"
-      ],
-      "notes": "Fully biodegradable PHA-based material"
-    },
-    {
-      "name": "Flexibles",
-      "filament_ids": [
-        "tpu"
-      ],
-      "notes": "varioShore TPU (foaming, variable density) plus TPU 95A and 85A"
+      "notes": "Genuine polyhydroxyalkanoate, marine-biodegradable and distinct from PLA; no pha id exists"
     },
     {
       "name": "ASA",
       "filament_ids": [
         "asa"
       ],
-      "notes": "Includes LW-ASA lightweight foaming grade"
+      "notes": "Standard ASA"
     },
     {
-      "name": "Nylon",
-      "filament_ids": [
-        "pa",
-        "pa-cf"
-      ],
-      "notes": "PA and PA-CF Low Warp"
+      "name": "LW-ASA",
+      "notes": "Foaming lightweight ASA; lw-pla is PLA-specific and no lw-asa id exists"
     },
     {
-      "name": "Specialty fills",
+      "name": "PA",
       "filament_ids": [
-        "pla"
+        "pa"
       ],
-      "notes": "woodFill, bronzeFill, copperFill, steelFill, stoneFill and glowFill - particle-filled PLA-based composites"
+      "notes": "Standard nylon"
+    },
+    {
+      "name": "PA-CF Low Warp",
+      "notes": "Carbon-fibre nylon with the PA subtype undisclosed, so pa6-cf/pa12-cf/ppa-cf cannot be confirmed and no generic pa-cf id exists"
+    },
+    {
+      "name": "varioShore TPU",
+      "filament_ids": [
+        "tpu"
+      ],
+      "notes": "Active-foaming TPU: nominal Shore 92A unfoamed and deliberately variable as it foams; density 1.2 g/cm3 unfoamed, tensile 24 MPa at 100% flow / 12 MPa at 70% flow"
+    },
+    {
+      "name": "TPU 85A",
+      "filament_ids": [
+        "tpu-85a"
+      ],
+      "notes": "Fixed-hardness Shore 85A"
+    },
+    {
+      "name": "TPU 95A",
+      "filament_ids": [
+        "tpu-95a"
+      ],
+      "notes": "Fixed-hardness Shore 95A"
+    },
+    {
+      "name": "PVOH (PVA)",
+      "filament_ids": [
+        "pva"
+      ],
+      "notes": "Water-soluble support material"
     }
   ],
   "price_tier": "premium",
@@ -78,7 +206,13 @@
       "https://colorfabb.com/",
       "https://colorfabb.us/about",
       "https://support.colorfabb.com/hc/en-150/articles/12854964336529-colorFabb-Company-Information-VAT-BIC-Coc",
-      "https://panjiva.com/Colorfabb/37658821"
+      "https://panjiva.com/Colorfabb/37658821",
+      "https://colorfabb.com/catalogue",
+      "https://colorfabb.com/pla-high-speed-pro",
+      "https://colorfabb.com/filaments/materials/co-polyester-filaments/colorfabb-xt",
+      "https://colorfabb.com/media/datasheets/tds/colorfabb/TDS_E_ColorFabb_varioShore_TPU.pdf",
+      "https://colorfabb.com/media/datasheets/tds/colorfabb/TDS_E_ColorFabb_woodFill.pdf",
+      "https://colorfabb.com/media/datasheets/tds/colorfabb/TDS_E_ColorFabb_BronzeFill.pdf"
     ],
     "last_verified": "2026-07-31",
     "confidence": "medium",

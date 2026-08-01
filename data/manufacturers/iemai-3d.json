@@ -35,22 +35,197 @@
   },
   "product_lines": [
     {
-      "name": "iSanghu",
+      "name": "PLA",
       "filament_ids": [
-        "pla",
-        "petg",
-        "abs-cf"
+        "pla"
       ],
-      "notes": "PLA, High-Speed PLA, Silk PLA, PETG, Transparent PETG, ABS-CF"
+      "notes": "Standard PLA."
     },
     {
-      "name": "iSanmate",
+      "name": "CF-PLA",
+      "filament_ids": [
+        "pla-cf"
+      ],
+      "notes": "Carbon-fiber PLA."
+    },
+    {
+      "name": "PETG / High Speed PETG",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "Standard PETG plus a high-flow grade rated to 300 mm/s; catalog has no high-flow PETG id."
+    },
+    {
+      "name": "CF-PETG",
+      "filament_ids": [
+        "petg-cf"
+      ],
+      "notes": "Carbon-fiber PETG."
+    },
+    {
+      "name": "ABS",
+      "filament_ids": [
+        "abs"
+      ],
+      "notes": "Standard ABS."
+    },
+    {
+      "name": "CF-ABS",
+      "filament_ids": [],
+      "notes": "Carbon-fiber ABS; catalog has abs-gf but no carbon-fiber ABS id."
+    },
+    {
+      "name": "ESD-ABS",
+      "filament_ids": [],
+      "notes": "Static-dissipative ABS; catalog has petg-esd but no ABS ESD id."
+    },
+    {
+      "name": "ASA",
+      "filament_ids": [
+        "asa"
+      ],
+      "notes": "Standard ASA."
+    },
+    {
+      "name": "CF-ASA",
+      "filament_ids": [
+        "asa-cf"
+      ],
+      "notes": "Carbon-fiber ASA."
+    },
+    {
+      "name": "PP",
+      "filament_ids": [
+        "pp"
+      ],
+      "notes": "Polypropylene."
+    },
+    {
+      "name": "TPU",
+      "filament_ids": [
+        "tpu"
+      ],
+      "notes": "Flexible TPU; shore grade not stated in the catalog listing."
+    },
+    {
+      "name": "PC",
+      "filament_ids": [
+        "pc"
+      ],
+      "notes": "Polycarbonate."
+    },
+    {
+      "name": "CF-PC",
+      "filament_ids": [],
+      "notes": "Carbon-fiber polycarbonate; catalog has pc-gf (provisional) but no carbon-fiber PC id."
+    },
+    {
+      "name": "PA12",
+      "filament_ids": [
+        "pa12"
+      ],
+      "notes": "Unfilled nylon 12."
+    },
+    {
+      "name": "CF-PA12",
+      "filament_ids": [
+        "pa12-cf"
+      ],
+      "notes": "Carbon-fiber PA12."
+    },
+    {
+      "name": "GF-PA12",
+      "filament_ids": [],
+      "notes": "Glass-fiber PA12; catalog has pa6-gf (provisional) and pa12-cf but no glass-fiber PA12 id."
+    },
+    {
+      "name": "CF-PA6",
+      "filament_ids": [
+        "pa6-cf"
+      ],
+      "notes": "Carbon-fiber PA6."
+    },
+    {
+      "name": "CF-PPA",
+      "filament_ids": [
+        "ppa-cf"
+      ],
+      "notes": "Carbon-fiber polyphthalamide, the high-temp nylon class Bambu markets as PAHT-CF."
+    },
+    {
+      "name": "PPS",
+      "filament_ids": [
+        "pps"
+      ],
+      "notes": "Polyphenylene sulfide."
+    },
+    {
+      "name": "CF-PPS",
+      "filament_ids": [
+        "pps-cf"
+      ],
+      "notes": "Carbon-fiber PPS."
+    },
+    {
+      "name": "PEEK",
+      "filament_ids": [
+        "peek"
+      ],
+      "notes": "Unfilled polyether ether ketone."
+    },
+    {
+      "name": "CF-PEEK",
+      "filament_ids": [],
+      "notes": "Carbon-fiber PEEK; catalog has peek but no filled PEEK grade ids."
+    },
+    {
+      "name": "GF-PEEK",
+      "filament_ids": [],
+      "notes": "Glass-fiber PEEK; no filled PEEK grade id in catalog."
+    },
+    {
+      "name": "PEKK",
+      "filament_ids": [
+        "pekk"
+      ],
+      "notes": "Polyetherketoneketone."
+    },
+    {
+      "name": "PEI 9085 / PEI 1010 (ULTEM-class)",
+      "filament_ids": [
+        "pei-ultem"
+      ],
+      "notes": "Polyetherimide; both ULTEM-equivalent grades map to the single pei-ultem entry."
+    },
+    {
+      "name": "PPSU",
+      "filament_ids": [
+        "ppsu"
+      ],
+      "notes": "Polyphenylsulfone."
+    },
+    {
+      "name": "iSanghu (retail label)",
       "filament_ids": [
         "pla",
+        "pla-hf",
+        "pla-silk",
+        "petg"
+      ],
+      "notes": "PLA, High-Speed PLA, Silk PLA, PETG and Transparent PETG; the line also includes an ABS-CF SKU for which no catalog id exists."
+    },
+    {
+      "name": "iSanmate (retail label)",
+      "filament_ids": [
+        "pla",
+        "pla-wood",
+        "pla-silk",
+        "pla-hf",
+        "pla-gradient",
         "pla-cf",
         "pc"
       ],
-      "notes": "Wood PLA, Rainbow PLA, Silk PLA, High-Speed PLA, PLA-CF, and a translucent PC lamp-shade filament"
+      "notes": "Wood PLA, Rainbow PLA, Silk PLA, High-Speed PLA, PLA-CF and a translucent PC lamp-shade filament."
     }
   ],
   "price_tier": "budget",
@@ -61,7 +236,11 @@
       "https://www.isanmate.com/about-us/",
       "https://filamentcheatsheet.com/brands/isanghu/",
       "https://filamentcheatsheet.com/brands/isanmate/",
-      "/home/claude/filament-repo/research/verified-oem-relationships.md (project-owner verified)"
+      "/home/claude/filament-repo/research/verified-oem-relationships.md (project-owner verified)",
+      "https://store.iemai3d.com/index.php/product/pla/",
+      "https://store.iemai3d.com/index.php/product/petg/",
+      "https://us.amazon.com/dp/B0GHDK5TJM",
+      "https://www.iemai3d.com/index.php/3d-printing-filament/"
     ],
     "last_verified": "2026-07-31",
     "confidence": "medium",

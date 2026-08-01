@@ -27,29 +27,83 @@
   },
   "product_lines": [
     {
-      "name": "PLA",
+      "name": "PLA / PLA Basic / Refill PLA Basic",
       "filament_ids": [
         "pla"
       ],
-      "notes": "Standard, Silk PLA and refill (spool-less) options"
+      "notes": "Base economy PLA; refill SKUs are spool-less packaging of the same material."
     },
     {
-      "name": "PETG",
+      "name": "PLA+",
+      "filament_ids": [
+        "pla-plus"
+      ],
+      "notes": "Impact-modified toughened PLA."
+    },
+    {
+      "name": "Hyper PLA+",
+      "filament_ids": [
+        "pla-plus",
+        "pla-hf"
+      ],
+      "notes": "Toughened PLA reformulated for high-speed printing — both the toughening and high-flow deltas apply."
+    },
+    {
+      "name": "Matte PLA",
+      "filament_ids": [
+        "pla-matte"
+      ],
+      "notes": "Matte-additive PLA."
+    },
+    {
+      "name": "Silk PLA (incl. Candy)",
+      "filament_ids": [
+        "pla-silk"
+      ],
+      "notes": "Silk-luster PLA."
+    },
+    {
+      "name": "Silk PLA Rainbow / Gradient / Tri Color / Dual Color",
+      "filament_ids": [
+        "pla-silk",
+        "pla-gradient"
+      ],
+      "notes": "Silk base with along-strand gradient dyeing; tri/dual-colour SKUs are coextrusions rather than pure gradients."
+    },
+    {
+      "name": "Carbon Fiber PLA",
+      "filament_ids": [
+        "pla-cf"
+      ],
+      "notes": "Carbon-fiber PLA."
+    },
+    {
+      "name": "PETG / Rapid PETG / Refill Hyper PETG",
       "filament_ids": [
         "petg"
-      ]
+      ],
+      "notes": "Standard and high-flow PETG; catalog has no high-flow PETG id."
     },
     {
-      "name": "ABS",
+      "name": "PETG Sparkling",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "Glitter-additive PETG."
+    },
+    {
+      "name": "ABS / Hyper ABS / Refill Hyper ABS",
       "filament_ids": [
         "abs"
-      ]
+      ],
+      "notes": "Standard and high-flow ABS."
     },
     {
-      "name": "Flexibles",
+      "name": "Hyper TPU 95A",
       "filament_ids": [
-        "tpu"
-      ]
+        "tpu-95a"
+      ],
+      "notes": "Shore 95A flexible TPU, high-speed reformulated."
     }
   ],
   "price_tier": "budget",
@@ -59,7 +113,8 @@
       "https://www.landustore.com/pages/about-us",
       "https://landu3d.en.alibaba.com/de_DE/index.html",
       "https://www.facebook.com/Landu3DOfficial/",
-      "/home/claude/filament-repo/research/verified-oem-relationships.md (project-owner verified)"
+      "/home/claude/filament-repo/research/verified-oem-relationships.md (project-owner verified)",
+      "https://www.landustore.com/collections/filaments"
     ],
     "last_verified": "2026-07-31",
     "confidence": "medium",

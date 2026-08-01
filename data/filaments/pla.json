@@ -1,7 +1,10 @@
 {
   "id": "pla",
   "name": "PLA (Polylactic Acid)",
-  "aliases": ["Polylactide", "PLA"],
+  "aliases": [
+    "Polylactide",
+    "PLA"
+  ],
   "status": "researched",
   "base_type": null,
   "variation_kind": null,
@@ -9,15 +12,35 @@
   "chemical_makeup": "Polylactic acid — an aliphatic polyester polymerised from lactic acid/lactide derived from fermented plant starch (corn, sugarcane); biodegradable under industrial composting conditions",
   "summary": "The default FDM material and the easiest polymer to print: no enclosure, almost no warp, excellent dimensional accuracy and the lowest emissions of the common filaments. The trade-off is heat and weather: parts soften near 55-60 °C, creep under sustained load, and embrittle in sunlight.",
   "printing": {
-    "nozzle_temp_c": { "min": 190, "max": 230, "recommended": 210 },
-    "bed_temp_c": { "min": 45, "max": 60, "recommended": 60 },
-    "ambient_temp_c": { "min": 15, "max": 30, "recommended": 22 },
-    "speed_mm_s": { "min": 40, "max": 300, "recommended": 100 },
+    "nozzle_temp_c": {
+      "min": 190,
+      "max": 230,
+      "recommended": 210
+    },
+    "bed_temp_c": {
+      "min": 45,
+      "max": 60,
+      "recommended": 60
+    },
+    "ambient_temp_c": {
+      "min": 15,
+      "max": 30,
+      "recommended": 22
+    },
+    "speed_mm_s": {
+      "min": 40,
+      "max": 300,
+      "recommended": 100
+    },
     "enclosure_recommended": false,
     "heated_chamber_required": false,
     "enclosure_open_for_cooling": true,
     "requires_hardened_nozzle": false,
-    "part_cooling_fan_pct": { "min": 80, "max": 100, "recommended": 100 },
+    "part_cooling_fan_pct": {
+      "min": 80,
+      "max": 100,
+      "recommended": 100
+    },
     "notes": "Heated bed is helpful but optional. Run part cooling at full after the first 1-2 layers. Modern CoreXY machines (Bambu, Prusa MK4) sustain 200-300 mm/s on PLA; legacy bedslingers sit at 40-150 mm/s. An enclosure is not just unnecessary but can be counterproductive — trapped heat promotes heat creep and clogs in some hotends. Hardened nozzles are only needed for abrasive filled PLA variants (wood, carbon, glow)."
   },
   "feeding": {
@@ -28,9 +51,22 @@
   },
   "drying": {
     "required_before_use": "if-exposed",
-    "temp_c": { "min": 45, "max": 55, "recommended": 50 },
-    "time_hours": { "min": 4, "max": 8, "recommended": 6 },
-    "methods": ["filament dryer", "food dehydrator", "convection oven at lowest setting", "drybox with desiccant"],
+    "temp_c": {
+      "min": 45,
+      "max": 55,
+      "recommended": 50
+    },
+    "time_hours": {
+      "min": 4,
+      "max": 8,
+      "recommended": 6
+    },
+    "methods": [
+      "filament dryer",
+      "food dehydrator",
+      "convection oven at lowest setting",
+      "drybox with desiccant"
+    ],
     "dryness_validation": "No popping/crackling or visible steam at the nozzle; glossy, consistent extrudate rather than matte or rough; no fine surface bubbles; minimal stringing on a retraction test",
     "notes": "Prusa recommends 45 °C for 6 h, Bambu 55 °C for 8 h. Lower drying temperatures than PETG/ABS mean less risk of spool deformation."
   },
@@ -74,11 +110,19 @@
     "density_g_cm3": 1.24,
     "grams_per_100cm3": 124,
     "cm3_per_100g": 80.6,
-    "shrinkage_pct": { "min": 0.3, "max": 0.5, "recommended": 0.4 },
+    "shrinkage_pct": {
+      "min": 0.3,
+      "max": 0.5,
+      "recommended": 0.4
+    },
     "glass_transition_c": 58,
     "heat_deflection_c": 57,
     "max_service_temp_c": 52,
-    "tensile_strength_mpa": { "min": 45, "max": 65, "recommended": 55 },
+    "tensile_strength_mpa": {
+      "min": 45,
+      "max": 65,
+      "recommended": 55
+    },
     "notes": "Prusament PLA cites 1.24 g/cm³ and XY tensile ~51-59 MPa; other property tables run to 65 MPa. Tg and HDT@0.45MPa both fall in the 55-60 °C band, which is why PLA is unusable in hot environments. Max service temp is an estimate (Tg minus margin), not a datasheet figure."
   },
   "scores": {
@@ -93,9 +137,57 @@
     "water_tolerance": 6
   },
   "compatibility": {
-    "bonds_with": ["pla"],
-    "support_materials": ["pva", "bvoh", "petg"],
-    "usable_as_support_for": ["petg", "tpu"],
+    "bonds_with": [
+      "bvoh",
+      "lw-pla",
+      "pla",
+      "pla-cf",
+      "pla-gf",
+      "pla-glow",
+      "pla-gradient",
+      "pla-hf",
+      "pla-matte",
+      "pla-metal",
+      "pla-plus",
+      "pla-silk",
+      "pla-wood",
+      "pva",
+      "tpu"
+    ],
+    "support_materials": [
+      "bvoh",
+      "cope",
+      "hips",
+      "petg",
+      "pva"
+    ],
+    "usable_as_support_for": [
+      "cope",
+      "lw-pla",
+      "pctg",
+      "pet",
+      "petg",
+      "petg-cf",
+      "petg-esd",
+      "pla-cf",
+      "pla-gf",
+      "pla-glow",
+      "pla-gradient",
+      "pla-hf",
+      "pla-matte",
+      "pla-metal",
+      "pla-plus",
+      "pla-silk",
+      "pla-wood",
+      "tpu",
+      "tpu-60a",
+      "tpu-60d",
+      "tpu-68d",
+      "tpu-85a",
+      "tpu-90a",
+      "tpu-95a",
+      "tpu-gf"
+    ],
     "notes": "PLA does not chemically weld to PETG, ABS, ASA, PC, PA or PP — that non-bonding is deliberately exploited so PLA and PETG each release cleanly as breakaway support for the other. PVA is the classic dissolvable support/interface for PLA (water-soluble, similar print temperatures); BVOH also works. PLA is not usable with ABS/ASA in either direction: their 90-110 °C bed temperatures deform PLA."
   },
   "plate_recommendations": [
@@ -103,12 +195,65 @@
       "plate_id": "pei-textured",
       "rating": "recommended",
       "notes": "Prints well on textured/satin PEI with no release agent at 45-60 °C bed. A glue stick is optional for awkward geometries only."
+    },
+    {
+      "plate_id": "pei-smooth",
+      "rating": "recommended",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): The reference use case: strong direct bond, glossiest and flattest bottom surface of any PEI finish."
+    },
+    {
+      "plate_id": "glass-borosilicate",
+      "rating": "recommended",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Bare borosilicate can be too slick for PLA on its own; a thin PVA glue-stick film is the standard fix and also gives the glossy bottom finish glass is prized for."
+    },
+    {
+      "plate_id": "pp-sheet",
+      "rating": "recommended",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Listed compatible by Prusa. Adhesion is adequate rather than tenacious — this is a release-oriented coating, so add a brim for tall parts on small footprints instead of raising bed"
+    },
+    {
+      "plate_id": "g10-garolite",
+      "rating": "recommended",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Vendors state no release agent needed; releases on cooling without a spatula."
+    },
+    {
+      "plate_id": "pei-satin",
+      "rating": "recommended",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Direct print with no aid; small or thin-walled parts benefit from a brim since satin's peak grip is below smooth PEI's."
+    },
+    {
+      "plate_id": "supertack",
+      "rating": "recommended",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): The plate's entire reason to exist. Full adhesion at bed temperatures well below what PEI needs, which cuts warp on large flat parts and keeps the chamber cool. Parts normally pop "
+    },
+    {
+      "plate_id": "pc-plate",
+      "rating": "recommended",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): The plate's whole purpose. Best PLA adhesion in the Bambu plate lineup, and Anycubic runs PLA at ~45 C here versus 60 C on a textured plate. Glue stick is applied to protect the su"
+    },
+    {
+      "plate_id": "carbon-fiber-plate",
+      "rating": "recommended",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): No release agent needed; parts audibly pop free once the plate cools."
+    },
+    {
+      "plate_id": "buildtak-polymer",
+      "rating": "recommended",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): The surface's core competency. Direct print, no adhesive, reliable first layers even on a marginal bed. Filled PLAs — carbon, metal, wood, brick — are explicitly covered by the sam"
+    },
+    {
+      "plate_id": "pei-patterned",
+      "rating": "recommended",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): The intended use case. Natural, translucent and semi-transparent PLA show the holographic effect most strongly on the bottom face."
     }
   ],
   "emissions": {
     "voc_level": "low",
     "particulate_level": "low",
-    "primary_emissions": ["lactide (~4-5 µg/min)", "ultrafine particles (~10⁸ particles/min)"],
+    "primary_emissions": [
+      "lactide (~4-5 µg/min)",
+      "ultrafine particles (~10⁸ particles/min)"
+    ],
     "ventilation": "optional",
     "notes": "Lowest-emission common filament. Azimi et al. (2016) measured median UFP emission around 10⁸ particles/min — roughly 100-1000x lower than ABS. The sweet odour is lactide. A normally ventilated room is sufficient for occasional printing; move air for continuous printing in an occupied space."
   },
@@ -131,5 +276,747 @@
     "last_verified": "2026-07-31",
     "confidence": "medium",
     "conflicts": "Density: Prusament states 1.24 g/cm³, other tables cite up to 1.25 — 1.24 used. Tensile strength: Prusament XY 51-59 MPa, comparison tables up to 65 MPa, partmfg.com an outlier at 72 MPa — the 72 MPa figure is rejected and 45-65 MPa recorded as consensus. Max continuous service temperature (~50-55 °C) is inferred from Tg, not measured in any cited datasheet."
-  }
+  },
+  "trade_names": [
+    {
+      "manufacturer": "3djake",
+      "product": "ecoPLA"
+    },
+    {
+      "manufacturer": "3djake",
+      "product": "ecoPLA Sparkling",
+      "notes": "glitter PLA; no glitter-specific id exists"
+    },
+    {
+      "manufacturer": "3djake",
+      "product": "mysteryPLA",
+      "notes": "random-colour assortment pack, not a distinct chemistry"
+    },
+    {
+      "manufacturer": "3dxtech",
+      "product": "Economy PLA / ECOMAX PLA",
+      "notes": "Unmodified PLA; ECOMAX is the economy tier."
+    },
+    {
+      "manufacturer": "addnorth",
+      "product": "E-PLA",
+      "notes": "density 1.23-1.25"
+    },
+    {
+      "manufacturer": "addnorth",
+      "product": "PLA Economy",
+      "notes": "100% corn-based, budget grade"
+    },
+    {
+      "manufacturer": "addnorth",
+      "product": "X-PLA",
+      "notes": "described as a 100% biodegradable PLA-mix, density 1.24-1.26"
+    },
+    {
+      "manufacturer": "amolen",
+      "product": "PLA Basic",
+      "notes": "Plain PLA; Basic/High-Speed around $21.99/kg."
+    },
+    {
+      "manufacturer": "amolen",
+      "product": "PLA Galaxy / PLA Shiny Glitter",
+      "notes": "Glitter particulate on a PLA base; no glitter id exists."
+    },
+    {
+      "manufacturer": "amolen",
+      "product": "PLA Marble",
+      "notes": "Mineral/stone-look filler on a PLA base; no stone-filled PLA id exists, so only the base id is asserted."
+    },
+    {
+      "manufacturer": "amolen",
+      "product": "PLA Temp Color Change",
+      "notes": "Thermochromic pigment on a PLA base; no colour-change id exists."
+    },
+    {
+      "manufacturer": "amolen",
+      "product": "PLA Transparent",
+      "notes": "Clear base PLA."
+    },
+    {
+      "manufacturer": "anycubic",
+      "product": "PLA Basic / PLA Basic Refill",
+      "notes": "Refill is a spool-less reload of the same resin"
+    },
+    {
+      "manufacturer": "anycubic",
+      "product": "PLA Galaxy",
+      "notes": "Glitter particulate; no glitter-PLA id exists"
+    },
+    {
+      "manufacturer": "anycubic",
+      "product": "PLA Marble",
+      "notes": "Mineral filler; no marble id exists"
+    },
+    {
+      "manufacturer": "anycubic",
+      "product": "PLA Special",
+      "notes": "Confirmed NOT a distinct chemistry - PLA Basic in special/limited colourways"
+    },
+    {
+      "manufacturer": "atomic-filament",
+      "product": "PLA (standard opaque, MeltMiser Economy Series, Translucent, Gemstone Translucent, Neon UV Reactive, Pearlescent, Metallic, Marble, Shade-Shifting, Iridescent, Extreme JET Black)",
+      "notes": "All standard PLA base + colourant/effect packages. 'Metallic' and 'Marble' are pigment effects — do NOT merge into pla-metal or any stone-filled grade."
+    },
+    {
+      "manufacturer": "azurefilm",
+      "product": "PLA Original",
+      "notes": "Standard PLA"
+    },
+    {
+      "manufacturer": "azurefilm",
+      "product": "PLA Prime",
+      "notes": "Standard PLA"
+    },
+    {
+      "manufacturer": "azurefilm",
+      "product": "PLA Strongman",
+      "notes": "Marketed as higher-toughness PLA but no TDS-level composition is published, so pla-plus cannot be confirmed - mapped to base pla"
+    },
+    {
+      "manufacturer": "bambu-lab",
+      "product": "PLA Basic",
+      "notes": "Standard PLA homopolymer, no functional filler; RFID-tagged AMS spools"
+    },
+    {
+      "manufacturer": "bambu-lab",
+      "product": "PLA Galaxy / PLA Sparkle",
+      "notes": "PLA base with glitter/mica particulate; mapped at base chemistry because no glitter-PLA id exists"
+    },
+    {
+      "manufacturer": "bambu-lab",
+      "product": "PLA Marble",
+      "notes": "PLA base with mineral marble-effect filler; no marble id exists"
+    },
+    {
+      "manufacturer": "coex-3d",
+      "product": "PLA Prime",
+      "notes": "Virgin NatureWorks Ingeo 3D850 — a different general-purpose resin SKU from the 4043D lines, not a toughened, high-flow or silk grade."
+    },
+    {
+      "manufacturer": "coex-3d",
+      "product": "Standard PLA / COEX Next PLA",
+      "notes": "Both virgin NatureWorks Ingeo 4043D with colourant only; COEX Next differs solely by production-scrap regrind content, not performance."
+    },
+    {
+      "manufacturer": "colorfabb",
+      "product": "PLA (standard)",
+      "notes": "Plain PLA"
+    },
+    {
+      "manufacturer": "colorfabb",
+      "product": "PLA Economy",
+      "notes": "Value grade, same base polymer"
+    },
+    {
+      "manufacturer": "colorfabb",
+      "product": "PLA Regrind / rPLA",
+      "notes": "Recycled feedstock, same chemistry"
+    },
+    {
+      "manufacturer": "colorfabb",
+      "product": "PLA Vibers",
+      "notes": "Sparkle/glitter effect only; base polymer unchanged (no glitter-PLA id exists)"
+    },
+    {
+      "manufacturer": "comgrow",
+      "product": "PLA",
+      "notes": "Comgrow-branded plain PLA, 6-pack primary colours. Silk/chameleon/glow stock in the store is largely resold Creality/Sovol."
+    },
+    {
+      "manufacturer": "creality",
+      "product": "Ender PLA"
+    },
+    {
+      "manufacturer": "das-filament",
+      "product": "PLA",
+      "notes": "Standard PLA in 1.75 and 2.85 mm; evidence is product-page level, not TDS"
+    },
+    {
+      "manufacturer": "devil-design",
+      "product": "PLA",
+      "notes": "density 1.24 g/cm3 (ASTM D1505), softening ~50C, elongation at break 160%, Spencer impact 2.5 J"
+    },
+    {
+      "manufacturer": "duramic-3d",
+      "product": "PLA",
+      "notes": "Plain PLA; from $15.99."
+    },
+    {
+      "manufacturer": "elegoo",
+      "product": "PLA (RFID) / PLA (RFID) emoji Brand Edition",
+      "notes": "RFID-tagged standard PLA, same resin as PLA Basic"
+    },
+    {
+      "manufacturer": "elegoo",
+      "product": "PLA / PLA Basic"
+    },
+    {
+      "manufacturer": "elegoo",
+      "product": "PLA Galaxy / PLA Sparkle",
+      "notes": "Glitter particulate; no glitter-PLA id exists"
+    },
+    {
+      "manufacturer": "elegoo",
+      "product": "PLA Marble",
+      "notes": "Mineral marble-effect filler; no marble id exists"
+    },
+    {
+      "manufacturer": "eryone",
+      "product": "PLA",
+      "notes": "Plain PLA; consumer retail around $27.99/kg."
+    },
+    {
+      "manufacturer": "eryone",
+      "product": "PLA Burnt Titanium (one-colour/Rainbow/Dual/Tri-colour)",
+      "notes": "Marketed as 'Glitter PLA Filament' - glitter/colour-shift silk-type PLA; base resin is PLA."
+    },
+    {
+      "manufacturer": "eryone",
+      "product": "PLA Galaxy",
+      "notes": "Sparkle/glitter particulate on a PLA base; no glitter id exists."
+    },
+    {
+      "manufacturer": "eryone",
+      "product": "PLA Marble",
+      "notes": "Mineral-filled marble-look PLA; no marble/stone id exists."
+    },
+    {
+      "manufacturer": "eryone",
+      "product": "PLA Metallic",
+      "notes": "Metallic pigment with no published metal-powder loading - NOT pla-metal."
+    },
+    {
+      "manufacturer": "eryone",
+      "product": "PLA Rainbow",
+      "notes": "Multi-pigment spool of base PLA; where the colour transitions along the strand it is also a gradient spool (pla-gradient)."
+    },
+    {
+      "manufacturer": "esun",
+      "product": "PLA-Basic",
+      "notes": "Unmodified economy PLA"
+    },
+    {
+      "manufacturer": "esun",
+      "product": "PLA-Coffee",
+      "notes": "Coffee-residue organic filler, not wood flour, so pla-wood does not apply"
+    },
+    {
+      "manufacturer": "esun",
+      "product": "PLA-Marble",
+      "notes": "Marble-effect pigment/filler; no marble id in catalog"
+    },
+    {
+      "manufacturer": "extrudr",
+      "product": "PEARL",
+      "notes": "Bio-based translucent pearlescent; density 1.25 g/cm3, VICAT A 58 C / HDT-B 51 C - specs are PLA-consistent, though Extrudr labels it only 'bio-based renewable'"
+    },
+    {
+      "manufacturer": "extrudr",
+      "product": "PLA BASIC",
+      "notes": "Bio-based, EN13432-biodegradable; density 1.24 g/cm3, VICAT A 55 C"
+    },
+    {
+      "manufacturer": "extrudr",
+      "product": "PLA NX2",
+      "notes": "'New generation' PLA, density 1.30 g/cm3 (vs pla 1.24), VICAT A 60 C - improved mechanicals but still PLA"
+    },
+    {
+      "manufacturer": "fiberlogy",
+      "product": "Easy PLA",
+      "notes": "Standard PLA"
+    },
+    {
+      "manufacturer": "fiberlogy",
+      "product": "HD-PLA",
+      "notes": "High-crystallinity PLA for post-print annealing (ABS-like after heat treatment); base polymer is PLA, the annealable grade itself has no id"
+    },
+    {
+      "manufacturer": "filament-pm",
+      "product": "MARBLEJET",
+      "notes": "marble-effect mineral-filled PLA; base polymer only, see gaps"
+    },
+    {
+      "manufacturer": "filament-pm",
+      "product": "PLA"
+    },
+    {
+      "manufacturer": "filament-pm",
+      "product": "RePLA / RePLA+",
+      "notes": "recycled content; previous r-pla id does not exist in the catalog"
+    },
+    {
+      "manufacturer": "filamentive",
+      "product": "Algae PLA",
+      "notes": "PLA + ~5-10% algae bio-filler; base polymer only, see gaps"
+    },
+    {
+      "manufacturer": "filamentive",
+      "product": "Cosmic PLA",
+      "notes": "glitter/metallic-flake effect, not metal powder, so pla-metal does not apply"
+    },
+    {
+      "manufacturer": "filamentive",
+      "product": "Hemp PLA",
+      "notes": "PLA + ~5-10% hemp bio-filler; base polymer only, see gaps"
+    },
+    {
+      "manufacturer": "filamentive",
+      "product": "PLA (rPLA)",
+      "notes": "recycled content; previous r-pla id does not exist in the catalog"
+    },
+    {
+      "manufacturer": "filamentive",
+      "product": "ReFill PLA",
+      "notes": "~50% recycled, AMS-compatible refill spool"
+    },
+    {
+      "manufacturer": "fillamentum",
+      "product": "PLA Crystal Clear",
+      "notes": "Optically clear grade, same base polymer"
+    },
+    {
+      "manufacturer": "fillamentum",
+      "product": "PLA Extrafill",
+      "notes": "Standard PLA"
+    },
+    {
+      "manufacturer": "flashforge",
+      "product": "PLA Basic"
+    },
+    {
+      "manufacturer": "formfutura",
+      "product": "Bulk PLA",
+      "notes": "Standard PLA in bulk packaging"
+    },
+    {
+      "manufacturer": "formfutura",
+      "product": "EasyFil PLA",
+      "notes": "Standard PLA, budget consumer line"
+    },
+    {
+      "manufacturer": "formfutura",
+      "product": "EasyFil ePLA",
+      "notes": "The 'e' is marketing positioning (economical/European/eco-packaged), not a chemistry marker; TDS shows plain PLA at 1.24 g/cc"
+    },
+    {
+      "manufacturer": "formfutura",
+      "product": "Premium PLA",
+      "notes": "Standard PLA"
+    },
+    {
+      "manufacturer": "formfutura",
+      "product": "ReForm rPLA",
+      "notes": "Recycled PLA, also sold as pellets; ReFill PLA is the same chemistry"
+    },
+    {
+      "manufacturer": "formfutura",
+      "product": "Transparent PLA",
+      "notes": "Optical variant, same base polymer"
+    },
+    {
+      "manufacturer": "formfutura",
+      "product": "Volcano PLA",
+      "notes": "High-crystallinity PLA (1.27 g/cc) for post-print annealing - HDT ~95 C annealed vs ~55-60 C; TDS confirms the base polymer is still plain PLA with no PHA/other blend. Volcano PLA 150C is the same family"
+    },
+    {
+      "manufacturer": "forward-am",
+      "product": "Ultrafuse PLA",
+      "notes": "Standard-filaments category; unmodified PLA."
+    },
+    {
+      "manufacturer": "fusion-filaments",
+      "product": "HT-PLA (3D870) / HTPLA+",
+      "notes": "NatureWorks Ingeo 3D870 fast-crystallising annealable PLA — same chemistry family as Protopasta HTPLA, Push Plastic HH+T PLA and KVP P-PLA. HTPLA+ is the colourway retail name (Carbon Rod Black, Alpha Particle Orange)."
+    },
+    {
+      "manufacturer": "fusion-filaments",
+      "product": "PLA (4043D)",
+      "notes": "NatureWorks Ingeo 4043D; includes the discounted 'Mystery' PLA."
+    },
+    {
+      "manufacturer": "geeetech",
+      "product": "PLA",
+      "notes": "Plain PLA; wiki describes corn-starch-derived feedstock."
+    },
+    {
+      "manufacturer": "geeetech",
+      "product": "PLA Marble",
+      "notes": "PLA 'mixed with stone powder or other additives to simulate marble'; only the base id is asserted."
+    },
+    {
+      "manufacturer": "hatchbox",
+      "product": "Metallic Finish PLA (PLA Metal)",
+      "notes": "Metallic-sheen pigment with no confirmed metal-powder loading - deliberately NOT pla-metal, which covers genuinely metal-filled grades."
+    },
+    {
+      "manufacturer": "hatchbox",
+      "product": "PLA",
+      "notes": "SDS wording is 'biodegradable polymer-blend based on polylactic acid' (CAS 9051-89-2) - a PLA blend, not confirmed neat PLA."
+    },
+    {
+      "manufacturer": "hatchbox",
+      "product": "PLA MAX",
+      "notes": "USA-made premium PLA; no impact-modifier claim published, so not mapped to pla-plus."
+    },
+    {
+      "manufacturer": "hatchbox",
+      "product": "Transparent PLA",
+      "notes": "Clear/uncoloured base PLA."
+    },
+    {
+      "manufacturer": "hatchbox",
+      "product": "UV Color Changing PLA",
+      "notes": "Photochromic pigment on a PLA base; catalog has no photochromic id."
+    },
+    {
+      "manufacturer": "ic3d",
+      "product": "PLA",
+      "notes": "Standard PLA line."
+    },
+    {
+      "manufacturer": "iemai-3d",
+      "product": "PLA",
+      "notes": "Standard PLA"
+    },
+    {
+      "manufacturer": "iemai-3d",
+      "product": "iSanghu (retail label)",
+      "notes": "IEMAI retail label; base PLA"
+    },
+    {
+      "manufacturer": "iemai-3d",
+      "product": "iSanmate (retail label)",
+      "notes": "IEMAI retail label; base PLA"
+    },
+    {
+      "manufacturer": "inland",
+      "product": "Cosplay PLA",
+      "notes": "Community-identified as Polymaker CosPLA Type A; low-temperature heat-formable/sandable PLA."
+    },
+    {
+      "manufacturer": "inland",
+      "product": "Glass PLA",
+      "notes": "Translucent 'glass-look' PLA - explicitly NOT pla-gf; the name is optical, there is no glass-fibre reinforcement."
+    },
+    {
+      "manufacturer": "inland",
+      "product": "PLA",
+      "notes": "Base PLA; Micro Center staff describe it as low in temperature resistance and relatively brittle."
+    },
+    {
+      "manufacturer": "inland",
+      "product": "PLA Glitter Rainbow",
+      "notes": "Glitter particulate on a PLA base; no glitter id exists."
+    },
+    {
+      "manufacturer": "jamg-he",
+      "product": "Eco-Friendly PLA Filament",
+      "notes": "Base PLA marketed on biodegradability"
+    },
+    {
+      "manufacturer": "jamg-he",
+      "product": "Marble PLA Filament",
+      "notes": "Marble-effect pigment"
+    },
+    {
+      "manufacturer": "jayo",
+      "product": "JAYO PLA / PLA Classic",
+      "notes": "Base PLA line"
+    },
+    {
+      "manufacturer": "jayo",
+      "product": "Marble PLA / High Speed Marble PLA",
+      "notes": "Marble-effect pigment"
+    },
+    {
+      "manufacturer": "jayo",
+      "product": "PLA Galaxy",
+      "notes": "Glitter/sparkle pigment"
+    },
+    {
+      "manufacturer": "jayo",
+      "product": "PLA Meta",
+      "notes": "Metallic pigment; naming parallels eSUN/Bambu 'Meta', same PLA base"
+    },
+    {
+      "manufacturer": "keene-village-plastics",
+      "product": "P-PLA (Performance Polylactide)",
+      "notes": "High-heat, high-impact fast-crystallising PLA marketed as an ABS alternative that stays biodegradable — the same annealable high-heat-PLA category as HTPLA/3D870-class products, under KVP's own name."
+    },
+    {
+      "manufacturer": "keene-village-plastics",
+      "product": "PLA (Bold Black, Stellar Black, Blue, Deep Blue, Deep Red, Purple, Red, Orange, Yellow, Green, Neon Green, Black Sparkle, Strawberry Pearl, Evergreen Pearl, Pearl Blueberry)",
+      "notes": "Sparkle and pearl colours are glitter/mica effect packages on the same PLA base."
+    },
+    {
+      "manufacturer": "kexcelled",
+      "product": "THE K5 PLA / PLA-P / PLA5",
+      "notes": "Base/economy PLA; no public TDS confirms a toughened (PLA+) formulation for PLA-P"
+    },
+    {
+      "manufacturer": "kimya",
+      "product": "PLA-R",
+      "notes": "Recycled-content PLA."
+    },
+    {
+      "manufacturer": "kimya",
+      "product": "PLA-S",
+      "notes": "Standard biosourced PLA."
+    },
+    {
+      "manufacturer": "kingroon",
+      "product": "PLA Basic"
+    },
+    {
+      "manufacturer": "landu",
+      "product": "PLA / PLA Basic / Refill PLA Basic",
+      "notes": "Refill SKUs are spool-less packaging of the same material"
+    },
+    {
+      "manufacturer": "matterhackers",
+      "product": "MH Build Series PLA",
+      "notes": "Value tier; sold as 'MatterHackers Filament' before the MH Build Series rename."
+    },
+    {
+      "manufacturer": "matterhackers",
+      "product": "PRO Series PLA",
+      "notes": "Same base chemistry as MH Build Series with tighter tolerance/QC claims."
+    },
+    {
+      "manufacturer": "matterhackers",
+      "product": "ThriftyMake PLA",
+      "notes": "Lowest-cost house tier, below MH Build Series."
+    },
+    {
+      "manufacturer": "overture",
+      "product": "PLA",
+      "notes": "Pure PLA homopolymer. TDS: density 1.21 g/cm3 (ISO 1183), Vicat 64.2 C (ISO 306), XY tensile 47.1 +/- 1.2 MPa (ISO 527)."
+    },
+    {
+      "manufacturer": "overture",
+      "product": "PLA Refill / Easy PLA / PLA 2Kg / PLA 3Kg",
+      "notes": "Same base PLA resin; packaging and spool-size variants only."
+    },
+    {
+      "manufacturer": "polymaker",
+      "product": "CosPLA",
+      "notes": "Cosplay/prop-oriented PLA variant"
+    },
+    {
+      "manufacturer": "polymaker",
+      "product": "Draft PLA",
+      "notes": "Fast low-precision draft grade; base chemistry unchanged"
+    },
+    {
+      "manufacturer": "polymaker",
+      "product": "Panchroma PLA (standard, translucent, neon, UV-shift, marble, galaxy, starlight, celestial, metallic)",
+      "notes": "Cosmetic additives on a base PLA; no chemistry change"
+    },
+    {
+      "manufacturer": "polymaker",
+      "product": "PolyLite PLA",
+      "notes": "Standard consumer-grade PLA"
+    },
+    {
+      "manufacturer": "polymaker",
+      "product": "PolyTerra PLA",
+      "notes": "Eco PLA line, largely folded into Panchroma"
+    },
+    {
+      "manufacturer": "proto-pasta",
+      "product": "HTPLA (High Temp PLA)",
+      "notes": "Annealable high-heat PLA: standard PLA resin + nucleating/crystallisation-promoter package, not a different base polymer. Covers all pigment/glitter/metallic/translucent colourways (Nebula Multicolor, Stardust Silver Glitter, Empire Strikes Black, Galactic Empire, Candy Apple, Cloverleaf, Mermaid's Tale, Iridescent Ice, Black Opaque)."
+    },
+    {
+      "manufacturer": "proto-pasta",
+      "product": "PLA (standard)",
+      "notes": "Non-annealed standard PLA colours."
+    },
+    {
+      "manufacturer": "proto-pasta",
+      "product": "Recycled PLA (Black Recycled PLA, Still Colorful Recycled PLA 018/033)",
+      "notes": "Post-industrial/post-consumer regrind; no chemistry deviation from virgin PLA."
+    },
+    {
+      "manufacturer": "prusa-research",
+      "product": "Prusament PLA",
+      "notes": "Standard PLA, no unusual chemistry"
+    },
+    {
+      "manufacturer": "push-plastic",
+      "product": "High Heat + Tough PLA (HH+T PLA - 3D870)",
+      "notes": "NatureWorks Ingeo 3D870 annealable high-heat PLA. Deliberately not mapped to pla-plus: the toughness claim comes from the resin grade, not a documented impact modifier."
+    },
+    {
+      "manufacturer": "push-plastic",
+      "product": "PLA",
+      "notes": "Standard PLA."
+    },
+    {
+      "manufacturer": "qidi-tech",
+      "product": "PLA Basic"
+    },
+    {
+      "manufacturer": "real-filament",
+      "product": "PLA (\"Biodegradable Filament\")",
+      "notes": "density 1.24 g/cc, Vicat ~60C, tensile 16/21 kpsi MD/TD, elongation 160%/100%"
+    },
+    {
+      "manufacturer": "rosa3d",
+      "product": "PLA Pastel",
+      "notes": "pastel finish; matte vs gloss not confirmed so pla-matte is not asserted"
+    },
+    {
+      "manufacturer": "rosa3d",
+      "product": "PLA Starter"
+    },
+    {
+      "manufacturer": "rosa3d",
+      "product": "R-Series",
+      "notes": "recycled PLA; previous r-pla id does not exist in the catalog"
+    },
+    {
+      "manufacturer": "snapmaker",
+      "product": "PLA (Basic)",
+      "notes": "RFID-tagged spools"
+    },
+    {
+      "manufacturer": "spectrum-filaments",
+      "product": "GreenyHT",
+      "notes": "biodegradable/compostable PLA"
+    },
+    {
+      "manufacturer": "spectrum-filaments",
+      "product": "GreenyPro",
+      "notes": "food-safe/FDA PLA"
+    },
+    {
+      "manufacturer": "spectrum-filaments",
+      "product": "PLA Crystal",
+      "notes": "clear/translucent"
+    },
+    {
+      "manufacturer": "spectrum-filaments",
+      "product": "PLA Glitter",
+      "notes": "glitter-particle-filled; no glitter-specific id exists"
+    },
+    {
+      "manufacturer": "spectrum-filaments",
+      "product": "PLA Nature",
+      "notes": "PLA + bio-filler; base polymer only"
+    },
+    {
+      "manufacturer": "spectrum-filaments",
+      "product": "PLA Premium"
+    },
+    {
+      "manufacturer": "spectrum-filaments",
+      "product": "PLA Stone Age",
+      "notes": "PLA + mineral filler (stone look); base polymer only, see gaps"
+    },
+    {
+      "manufacturer": "spectrum-filaments",
+      "product": "PLA Thermoactive",
+      "notes": "thermochromic, ~30C transition; base polymer only, see gaps"
+    },
+    {
+      "manufacturer": "spectrum-filaments",
+      "product": "Prografen PLA Graphene Light / Strong",
+      "notes": "graphene-additive PLA (PrograFen sub-brand)"
+    },
+    {
+      "manufacturer": "spectrum-filaments",
+      "product": "Safeguard PLA",
+      "notes": "antibacterial additive"
+    },
+    {
+      "manufacturer": "spectrum-filaments",
+      "product": "The Filament PLA Lite",
+      "notes": "budget sub-brand"
+    },
+    {
+      "manufacturer": "spectrum-filaments",
+      "product": "rPLA",
+      "notes": "recycled content"
+    },
+    {
+      "manufacturer": "sunlu",
+      "product": "Anti-string PLA",
+      "notes": "Low-stringing formulation; base chemistry unchanged"
+    },
+    {
+      "manufacturer": "sunlu",
+      "product": "PLA Marble",
+      "notes": "Marble-effect pigment/filler"
+    },
+    {
+      "manufacturer": "sunlu",
+      "product": "PLA Meta (Macaron Colors)",
+      "notes": "Pastel pigment only"
+    },
+    {
+      "manufacturer": "sunlu",
+      "product": "PLA Twinkling / PLA Galaxy",
+      "notes": "Glitter/pearlescent pigment; no glitter id in catalog"
+    },
+    {
+      "manufacturer": "sunlu",
+      "product": "SUNLU PLA",
+      "notes": "Standard PLA"
+    },
+    {
+      "manufacturer": "tinmorry",
+      "product": "Galaxy PLA",
+      "notes": "Glitter/sparkle pigment"
+    },
+    {
+      "manufacturer": "tinmorry",
+      "product": "Metallic PLA",
+      "notes": "Pigment effect only; no evidence of metal powder loading, so pla-metal is not asserted"
+    },
+    {
+      "manufacturer": "tinmorry",
+      "product": "Rapid PLA",
+      "notes": "Marketed as the standard line and rated for fast printing; no TDS confirms a distinct high-flow rheology, so pla-hf is listed in the manufacturer file but not asserted here"
+    },
+    {
+      "manufacturer": "ultimaker",
+      "product": "UltiMaker PLA",
+      "notes": "Generic PLA; MakerBot Sketch / Replicator+ PLA is the same chemistry repackaged."
+    },
+    {
+      "manufacturer": "voxelab",
+      "product": "PLA"
+    },
+    {
+      "manufacturer": "ziro",
+      "product": "Basic PLA (PLA Pro line)",
+      "notes": "Base PLA"
+    },
+    {
+      "manufacturer": "ziro",
+      "product": "Effect PLA (Diamond, Mystical, Twinkling, Firefly, Chameleon, Iridescent)",
+      "notes": "Glitter/pearlescent/colour-shift pigments on base PLA"
+    },
+    {
+      "manufacturer": "ziro",
+      "product": "Fluorescent PLA",
+      "notes": "Fluorescent/UV-reactive pigment, which is not the phosphorescent chemistry behind pla-glow"
+    },
+    {
+      "manufacturer": "ziro",
+      "product": "Stone PLA",
+      "notes": "Mineral-filler stone texture; no mineral-filled PLA id in catalog"
+    },
+    {
+      "manufacturer": "ziro",
+      "product": "Translucent PLA",
+      "notes": "Clear/semi-clear PLA, no chemistry change"
+    }
+  ]
 }

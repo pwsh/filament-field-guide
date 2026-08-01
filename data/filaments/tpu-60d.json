@@ -1,7 +1,13 @@
 {
   "id": "tpu-60d",
   "name": "TPU 60D (semi-rigid)",
-  "aliases": ["TPU 60D", "TPU 58D", "Shore 60D TPU", "Semi-rigid TPU", "TPU hard"],
+  "aliases": [
+    "TPU 60D",
+    "TPU 58D",
+    "Shore 60D TPU",
+    "Semi-rigid TPU",
+    "TPU hard"
+  ],
   "status": "researched",
   "base_type": "tpu",
   "variation_kind": "shore-grade",
@@ -9,15 +15,35 @@
   "chemical_makeup": "Thermoplastic polyurethane formulated with a high hard-segment ratio, placing it on the Shore D scale at roughly 58D-60D — beyond the top of the Shore A range rather than inside it. Represented by Extrudr TPU hard (58D) and generic TPU-60D SKUs",
   "summary": "Semi-rigid TPU that behaves more like a tough engineering plastic than a flexible: hockey-puck stiffness with TPU's impact resistance and a little flex left over. Delta vs base TPU: this sits above the base entry's entire 85A-95A band on a different hardness scale, so the feeding problems largely disappear — Bowden becomes viable, no feeding assistant, near-PETG speeds — while the bed runs hotter at 50-60 °C and rubbery compression recovery is traded away. It is the stiffest, most dimensionally stable grade in the family apart from 68D, and the cheapest.",
   "printing": {
-    "nozzle_temp_c": { "min": 220, "max": 260, "recommended": 235 },
-    "bed_temp_c": { "min": 45, "max": 60, "recommended": 55 },
-    "ambient_temp_c": { "min": 18, "max": 30, "recommended": 22 },
-    "speed_mm_s": { "min": 30, "max": 60, "recommended": 40 },
+    "nozzle_temp_c": {
+      "min": 220,
+      "max": 260,
+      "recommended": 235
+    },
+    "bed_temp_c": {
+      "min": 45,
+      "max": 60,
+      "recommended": 55
+    },
+    "ambient_temp_c": {
+      "min": 18,
+      "max": 30,
+      "recommended": 22
+    },
+    "speed_mm_s": {
+      "min": 30,
+      "max": 60,
+      "recommended": 40
+    },
     "enclosure_recommended": false,
     "heated_chamber_required": false,
     "enclosure_open_for_cooling": true,
     "requires_hardened_nozzle": false,
-    "part_cooling_fan_pct": { "min": 0, "max": 60, "recommended": 40 },
+    "part_cooling_fan_pct": {
+      "min": 0,
+      "max": 60,
+      "recommended": 40
+    },
     "notes": "Brand variance here is unusually wide: Extrudr TPU hard specifies 230-260 °C while Polar Filament's TPU-60D gives 220-230 °C, a 30 °C disagreement at the top end, so treat the recorded range as an envelope and start from the specific spool's datasheet. The bed runs at 50-60 °C, hotter than any Shore A grade and closer to PLA/PETG practice. Speed can be pushed well past every A-grade because the filament resists buckling under drive-gear force — the recorded 30-60 mm/s is a community-consensus estimate at ABS/PETG-like rates rather than a published figure, and is unverified. No enclosure; warp is minimal. Not abrasive — standard brass nozzle."
   },
   "feeding": {
@@ -28,9 +54,22 @@
   },
   "drying": {
     "required_before_use": "always",
-    "temp_c": { "min": 65, "max": 80, "recommended": 70 },
-    "time_hours": { "min": 6, "max": 12, "recommended": 8 },
-    "methods": ["dedicated filament dryer at 70 °C", "hot-air or vacuum oven at 70 °C", "heated-bed method at 80-90 °C for 12 h", "print directly from a drybox with desiccant"],
+    "temp_c": {
+      "min": 65,
+      "max": 80,
+      "recommended": 70
+    },
+    "time_hours": {
+      "min": 6,
+      "max": 12,
+      "recommended": 8
+    },
+    "methods": [
+      "dedicated filament dryer at 70 °C",
+      "hot-air or vacuum oven at 70 °C",
+      "heated-bed method at 80-90 °C for 12 h",
+      "print directly from a drybox with desiccant"
+    ],
     "dryness_validation": "No popping or crackling at the nozzle, no foamy extrudate, and no rise in stringing on a retraction test — stringing is a reliable indicator at this stiffness, unlike the Shore A grades",
     "notes": "No brand-specific drying spec was found for the 58D-60D range, so the general TPU regime from the base entry is carried over unchanged (unverified for this grade specifically). This is defensible because TPU drying is set by the urethane chemistry rather than by hardness or fillers, and no source suggests hardness shifts it."
   },
@@ -87,8 +126,20 @@
     "water_tolerance": 6
   },
   "compatibility": {
-    "bonds_with": ["tpu", "tpu-60a", "tpu-85a", "tpu-90a", "tpu-95a", "tpu-68d", "tpe"],
-    "support_materials": ["pla", "petg"],
+    "bonds_with": [
+      "tpe",
+      "tpu",
+      "tpu-60a",
+      "tpu-68d",
+      "tpu-85a",
+      "tpu-90a",
+      "tpu-95a",
+      "tpu-gf"
+    ],
+    "support_materials": [
+      "petg",
+      "pla"
+    ],
     "usable_as_support_for": [],
     "notes": "Chemically welds to base TPU and every sibling grade, but the mechanical mismatch at a rigid-to-soft interface is far more pronounced here than among the A-grades — a 60D-to-60A joint concentrates strain at the boundary in a way a 90A-to-95A joint does not, so design multi-durometer transitions with a gradient or an interlocking geometry rather than a flat butt joint. Rigid-material bonding is unchanged from the base entry (mechanical interlock with PLA/PETG only). Unlike the soft grades, standard breakaway supports are feasible because the part is rigid enough to survive removal; PETG is added as a support option on that basis, though the pairing is inferred from the grade's rigidity rather than documented (unverified)."
   },
@@ -102,7 +153,11 @@
   "emissions": {
     "voc_level": "low",
     "particulate_level": "moderate",
-    "primary_emissions": ["ultrafine particles", "isocyanate residues (unverified)", "urethane decomposition byproducts (unverified)"],
+    "primary_emissions": [
+      "ultrafine particles",
+      "isocyanate residues (unverified)",
+      "urethane decomposition byproducts (unverified)"
+    ],
     "ventilation": "recommended",
     "notes": "Standard TPU-family chemistry, but this is the hottest-running grade in the family — Extrudr's window reaches 260 °C, above the ~250 °C point at which urethane decomposition becomes more likely. Emissions correlate with nozzle temperature, so particulate level is recorded a step above the base entry's 'low' on that basis. This is an inference from the general temperature-emissions relationship, not a measurement for this grade (unverified); no source differentiates TPU emissions by Shore grade."
   },
@@ -119,5 +174,17 @@
     "last_verified": "2026-07-31",
     "confidence": "low",
     "conflicts": "Nozzle temperature disagrees by 30 °C at the top end between Extrudr TPU hard (230-260 °C) and Polar Filament TPU-60D (220-230 °C) — an unusually wide gap for the same nominal durometer, and the recorded range spans both. Price spreads nearly 2x between the same two products. No density, tensile, elongation or HDT figures are published for this range at all, so every property number here is an interpolation or estimate and is flagged as such. Print speed is community consensus only, with no published mm/s figure. AMS compatibility is recorded 'conditional' because Bambu's stated AMS-safe examples (77D and 55D) bracket this range without confirming it. A community review flagged a 58D product feeling closer to 95A, i.e. real durometer QC variance at this grade. Scoring note: the research notes rated 'compression/elastic recovery' 3/10 here, but this catalog's compression_strength score measures resistance to crushing loads, which is the inverse — 60D scores 5, the second highest in the family, precisely because it is the least rubbery."
-  }
+  },
+  "trade_names": [
+    {
+      "manufacturer": "extrudr",
+      "product": "FLEX HARD",
+      "notes": "Polycaprolactone-polyester TPU, Shore 58D against the grade's 60D nominal; density 1.20 g/cm3, elongation to 480%"
+    },
+    {
+      "manufacturer": "ninjatek",
+      "product": "Eel",
+      "notes": "TPU Shore 60D with conductive filler, 355% elongation at break. The conductive/static-dissipative aspect is not captured by tpu-60d."
+    }
+  ]
 }

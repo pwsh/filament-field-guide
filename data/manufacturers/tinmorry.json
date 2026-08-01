@@ -19,26 +19,152 @@
   },
   "product_lines": [
     {
-      "name": "PLA",
+      "name": "Rapid PLA",
+      "filament_ids": [
+        "pla",
+        "pla-hf"
+      ],
+      "notes": "Marketed as the standard PLA line and rated for fast printing; no TDS confirms a distinct high-flow rheology, so both ids are listed with pla as the safe base."
+    },
+    {
+      "name": "Silk PLA",
+      "filament_ids": [
+        "pla-silk"
+      ],
+      "notes": "Silk-luster PLA."
+    },
+    {
+      "name": "Matte PLA",
+      "filament_ids": [
+        "pla-matte"
+      ],
+      "notes": "Matte-additive PLA."
+    },
+    {
+      "name": "Galaxy PLA",
       "filament_ids": [
         "pla"
       ],
-      "notes": "Standard and Silk PLA"
+      "notes": "Glitter/sparkle pigment PLA."
     },
     {
-      "name": "PETG",
+      "name": "Metallic PLA",
       "filament_ids": [
-        "petg",
+        "pla"
+      ],
+      "notes": "Metallic-pigment PLA; pigment effect only, no evidence of metal powder loading, so pla-metal is not asserted."
+    },
+    {
+      "name": "PLA Glow in the Dark",
+      "filament_ids": [
+        "pla-glow"
+      ],
+      "notes": "Phosphorescent-pigment PLA."
+    },
+    {
+      "name": "Carbon Fiber PLA",
+      "filament_ids": [
+        "pla-cf"
+      ],
+      "notes": "Chopped-carbon-fiber PLA."
+    },
+    {
+      "name": "PETG-ECO",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "Standard PETG."
+    },
+    {
+      "name": "Metallic / Galaxy / Marble / Sparkly / Matte PETG, PETG Glowing in the Dark",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "Cosmetic-additive PETG variants; catalog has no matte/glow PETG ids, chemistry is petg."
+    },
+    {
+      "name": "Carbon Fiber PETG",
+      "filament_ids": [
         "petg-cf"
       ],
-      "notes": "Standard, Metallic PETG, PETG-CF and PETG-GF"
+      "notes": "Carbon-fiber PETG."
     },
     {
-      "name": "ABS",
+      "name": "Glass Fiber PETG",
+      "filament_ids": [
+        "petg-gf"
+      ],
+      "notes": "Glass-fiber PETG."
+    },
+    {
+      "name": "ABS-Pro",
       "filament_ids": [
         "abs"
       ],
-      "notes": "Listed under the site's abs-filament product category"
+      "notes": "Enhanced ABS."
+    },
+    {
+      "name": "ABS Reinforced Filament (glass fiber)",
+      "filament_ids": [
+        "abs-gf"
+      ],
+      "notes": "Glass-fiber ABS."
+    },
+    {
+      "name": "ASA",
+      "filament_ids": [
+        "asa"
+      ],
+      "notes": "Standard ASA."
+    },
+    {
+      "name": "ASA Reinforced Filament (carbon fiber)",
+      "filament_ids": [
+        "asa-cf"
+      ],
+      "notes": "Carbon-fiber ASA."
+    },
+    {
+      "name": "95A TPU",
+      "filament_ids": [
+        "tpu-95a"
+      ],
+      "notes": "Shore 95A flexible TPU."
+    },
+    {
+      "name": "TPU Reinforced Filament (glass fiber)",
+      "filament_ids": [
+        "tpu-gf"
+      ],
+      "notes": "Glass-fiber-filled TPU — an unusual semi-rigid elastomer composite; tpu-gf id is provisional."
+    },
+    {
+      "name": "PA Reinforced Filament",
+      "filament_ids": [
+        "pa"
+      ],
+      "notes": "Reinforced nylon; neither the PA type nor the fiber type is stated in the listing, so no pa6-cf/pa6-gf/pa12-cf grade id can be assigned."
+    },
+    {
+      "name": "PET Reinforced Filament",
+      "filament_ids": [
+        "pet"
+      ],
+      "notes": "Reinforced PET; filler type unspecified, so pet-cf is not asserted."
+    },
+    {
+      "name": "PP Reinforced Filament",
+      "filament_ids": [
+        "pp"
+      ],
+      "notes": "Reinforced polypropylene; filler type unspecified, so pp-gf is not asserted."
+    },
+    {
+      "name": "PC Reinforced Filament",
+      "filament_ids": [
+        "pc"
+      ],
+      "notes": "Reinforced polycarbonate; filler type unspecified, so pc-gf (provisional) is not asserted."
     }
   ],
   "price_tier": "budget",
@@ -48,7 +174,8 @@
       "https://filamentcheatsheet.com/brands/tinmorry/",
       "https://tinmorry.com/about-us/",
       "https://www.facebook.com/tinmorry.net/",
-      "https://www.amazon.com/stores/TINMORRY3DPrintingFilament/"
+      "https://www.amazon.com/stores/TINMORRY3DPrintingFilament/",
+      "https://tinmorry.net/en-us/collections/all"
     ],
     "last_verified": "2026-07-31",
     "confidence": "low",

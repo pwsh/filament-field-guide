@@ -30,36 +30,131 @@
   },
   "product_lines": [
     {
-      "name": "Ultrafuse standard polymers",
+      "name": "Ultrafuse PLA",
       "filament_ids": [
-        "pla",
-        "petg",
-        "abs",
+        "pla"
+      ],
+      "notes": "Standard-filaments category; unmodified PLA."
+    },
+    {
+      "name": "Ultrafuse PLA Tough",
+      "filament_ids": [
+        "pla-plus"
+      ],
+      "notes": "Impact-modified/toughened PLA grade."
+    },
+    {
+      "name": "Ultrafuse PLA PRO1",
+      "filament_ids": [
+        "pla-plus"
+      ],
+      "notes": "Toughened engineering PLA grade."
+    },
+    {
+      "name": "Ultrafuse PET",
+      "filament_ids": [
+        "pet"
+      ],
+      "notes": "Listed as PET in the standard-filaments category rather than as a glycol-modified PETG."
+    },
+    {
+      "name": "Ultrafuse ABS",
+      "filament_ids": [
+        "abs"
+      ],
+      "notes": "Generic ABS."
+    },
+    {
+      "name": "Ultrafuse ABS Fusion+",
+      "filament_ids": [
+        "abs"
+      ],
+      "notes": "Low-warp, high-layer-adhesion modified ABS - not plain ABS."
+    },
+    {
+      "name": "Ultrafuse ASA",
+      "filament_ids": [
         "asa"
-      ]
-    },
-    {
-      "name": "Ultrafuse engineering polymers",
-      "filament_ids": [
-        "tpu",
-        "pa",
-        "pc"
       ],
-      "notes": "TPU 85A, PA6 and PA12 nylon, and polycarbonate."
+      "notes": "Generic ASA."
     },
     {
-      "name": "Ultrafuse support",
+      "name": "Ultrafuse PP",
       "filament_ids": [
-        "pva"
-      ]
-    },
-    {
-      "name": "Ultrafuse metal",
-      "filament_ids": [
-        "316l",
-        "17-4ph"
+        "pp"
       ],
-      "notes": "Metal-filled print-then-sinter filaments: Ultrafuse 316L and Ultrafuse 17-4PH stainless steel. 17-4PH is explicitly confirmed as a retained flagship product post-carve-out. Priced well above polymer filament."
+      "notes": "Homopolymer polypropylene."
+    },
+    {
+      "name": "Ultrafuse PC/ABS FR",
+      "filament_ids": [
+        "pc-abs"
+      ],
+      "notes": "PC/ABS blend with a flame-retardant package; the FR aspect is not captured by pc-abs."
+    },
+    {
+      "name": "Ultrafuse TPU 85A",
+      "filament_ids": [
+        "tpu-85a"
+      ],
+      "notes": "Shore 85A TPU."
+    },
+    {
+      "name": "Ultrafuse TPU 95A",
+      "filament_ids": [
+        "tpu-95a"
+      ],
+      "notes": "Shore 95A TPU."
+    },
+    {
+      "name": "Ultrafuse TPU 64D",
+      "filament_ids": [
+        "tpu"
+      ],
+      "notes": "Shore 64D rigid-flex grade; sits between the tpu-60d and tpu-68d grade entries, so mapped to base tpu."
+    },
+    {
+      "name": "Ultrafuse PP GF30",
+      "filament_ids": [
+        "pp-gf"
+      ],
+      "notes": "Polypropylene + 30% glass fiber."
+    },
+    {
+      "name": "Ultrafuse PET CF15",
+      "filament_ids": [
+        "pet-cf"
+      ],
+      "notes": "PET + 15% carbon fiber."
+    },
+    {
+      "name": "Ultrafuse PAHT CF15",
+      "filament_ids": [
+        "ppa-cf"
+      ],
+      "notes": "High-temperature polyamide (PPA-class high-heat nylon) + 15% carbon fiber."
+    },
+    {
+      "name": "Ultrafuse PA6 GF30",
+      "filament_ids": [
+        "pa6-gf"
+      ],
+      "notes": "PA6 + 30% glass fiber. pa6-gf is provisional."
+    },
+    {
+      "name": "Ultrafuse BVOH",
+      "filament_ids": [
+        "bvoh"
+      ],
+      "notes": "Butenediol vinyl alcohol copolymer water-soluble support - functionally similar to PVA but chemically distinct, so it maps to bvoh, not pva."
+    },
+    {
+      "name": "Ultrafuse Metal (316L, 17-4 PH) and Support Layer",
+      "notes": "Stainless-steel-powder-loaded bound-metal-deposition filaments plus the interface support for that system: print-then-sinter composites, not plastic generics. Listed by Forward AM as discontinued as of this research pass."
+    },
+    {
+      "name": "Pellet lines (rPETG, PP GF30, PC GF30)",
+      "notes": "Pellet feedstock rather than filament; out of scope for this catalog."
     }
   ],
   "makes_plates": false,
@@ -71,7 +166,13 @@
       "https://www.ultrafusefff.com/",
       "https://www.businesswire.com/news/home/20210503005363/en/Nexa3D-Expands-Partnership-with-BASF-Forward-AM-to-Deliver-Ultrafast-Photoplastics-for-Rapid-Prototyping/",
       "https://3dgbire.com/collections/forward-am",
-      "https://i-am-marketplace.com/welcome-isquared-customers"
+      "https://i-am-marketplace.com/welcome-isquared-customers",
+      "https://forward-am.com/material-portfolio/ultrafuse-filaments-for-fused-filaments-fabrication-fff/",
+      "https://forward-am.com/material-portfolio/ultrafuse-filaments-for-fused-filaments-fabrication-fff/standard-filaments/",
+      "https://forward-am.com/material-portfolio/ultrafuse-filaments-for-fused-filaments-fabrication-fff/engineering-filaments/",
+      "https://forward-am.com/material-portfolio/ultrafuse-filaments-for-fused-filaments-fabrication-fff/flexible-filaments/",
+      "https://forward-am.com/material-portfolio/ultrafuse-filaments-for-fused-filaments-fabrication-fff/support-filaments/",
+      "https://forward-am.com/material-portfolio/ultrafuse-filaments-for-fused-filaments-fabrication-fff/metal-filaments/"
     ],
     "last_verified": "2026-07-31",
     "confidence": "medium",

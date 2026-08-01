@@ -20,32 +20,51 @@
   },
   "product_lines": [
     {
-      "name": "PLA and HT-PLA",
+      "name": "PLA (4043D)",
       "filament_ids": [
         "pla"
       ],
-      "notes": "Includes a discounted \"Mystery\" PLA at the bottom of the price range."
+      "notes": "Standard PLA on NatureWorks Ingeo 4043D, the common general-purpose extrusion grade. Includes the discounted 'Mystery' PLA at the bottom of the price range."
     },
     {
-      "name": "HT-PET and PCTG",
+      "name": "HT-PLA (3D870) / HTPLA+",
       "filament_ids": [
-        "petg",
+        "pla"
+      ],
+      "notes": "High-temperature PLA on NatureWorks Ingeo 3D870, a fast-crystallising annealable PLA resin — same chemistry family as Protopasta HTPLA, Push Plastic HH+T PLA and KVP P-PLA. HTPLA+ is the retail colourway name (Carbon Rod Black, Alpha Particle Orange). No dedicated high-heat-PLA id exists."
+    },
+    {
+      "name": "PETG",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "Standard PETG copolyester."
+    },
+    {
+      "name": "HT-PET+ / PurePET",
+      "filament_ids": [],
+      "notes": "Marketed as high-temperature PET and positioned as distinct from standard PETG; the exact copolyester modification is undisclosed and no Tg/HDT figures are published, so neither petg nor pet can be asserted confidently."
+    },
+    {
+      "name": "PCTG",
+      "filament_ids": [
         "pctg"
       ],
-      "notes": "HT-PET is marketed as distinct from ordinary PETG; mapped to the petg id pending a separate ht-pet entry."
+      "notes": "Standard glycol-modified copolyester, higher impact and clarity than PETG."
     },
     {
-      "name": "ASA and EasyASA",
-      "filament_ids": [
-        "asa"
-      ]
-    },
-    {
-      "name": "ABS",
+      "name": "ABS (Matte / Gloss / Hi-Temp Matte)",
       "filament_ids": [
         "abs"
       ],
-      "notes": "Matte and gloss variants."
+      "notes": "Standard ABS with matte or gloss finish packages plus a higher-heat-grade variant."
+    },
+    {
+      "name": "ASA / EasyASA / Hi-Temp ASA",
+      "filament_ids": [
+        "asa"
+      ],
+      "notes": "Standard weatherable ASA plus an easier-printing formulation and a higher-heat grade."
     }
   ],
   "makes_plates": false,
@@ -56,7 +75,10 @@
       "https://www.fusionfilaments.com/",
       "https://www.fusionfilaments.com/government-purchasing",
       "https://www.instagram.com/fusionfilaments/",
-      "https://www.facebook.com/fusionfilaments/"
+      "https://www.facebook.com/fusionfilaments/",
+      "https://www.fusionfilaments.com/technicaldatasheets",
+      "https://www.fusionfilaments.com/htpet",
+      "https://www.fusionfilaments.com/shop"
     ],
     "last_verified": "2026-07-31",
     "confidence": "low",

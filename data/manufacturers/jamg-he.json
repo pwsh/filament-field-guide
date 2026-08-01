@@ -24,22 +24,96 @@
   },
   "product_lines": [
     {
-      "name": "PLA",
+      "name": "Eco-Friendly PLA Filament",
       "filament_ids": [
         "pla"
       ],
-      "notes": "ECO PLA+, Hi-Speed PLA+, Premium PLA Plus and Light-Weight (LW-)PLA"
+      "notes": "Base PLA marketed on biodegradability."
     },
     {
-      "name": "PETG",
+      "name": "Jamghe Premium PLA Plus Filament",
+      "filament_ids": [
+        "pla-plus"
+      ],
+      "notes": "Impact-modified toughened PLA."
+    },
+    {
+      "name": "High-Speed PLA Filament",
+      "filament_ids": [
+        "pla-hf"
+      ],
+      "notes": "High-flow PLA."
+    },
+    {
+      "name": "Matt PLA / Ultra-Matte PLA",
+      "filament_ids": [
+        "pla-matte"
+      ],
+      "notes": "Matte-additive PLA; two separate SKUs on the site."
+    },
+    {
+      "name": "Silk PLA Filament",
+      "filament_ids": [
+        "pla-silk"
+      ],
+      "notes": "Silk-luster PLA."
+    },
+    {
+      "name": "Marble PLA Filament",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Marble-effect pigment PLA."
+    },
+    {
+      "name": "Jamghe Carbon Fiber PLA Filament",
+      "filament_ids": [
+        "pla-cf"
+      ],
+      "notes": "Carbon-fiber PLA."
+    },
+    {
+      "name": "Light Weight (LW-PLA)",
+      "filament_ids": [
+        "lw-pla"
+      ],
+      "notes": "Foamed lightweight PLA."
+    },
+    {
+      "name": "PETG / High-Speed PETG",
       "filament_ids": [
         "petg"
-      ]
+      ],
+      "notes": "Standard and high-flow PETG; no high-flow PETG id in catalog."
+    },
+    {
+      "name": "3D Printer ABS Filament",
+      "filament_ids": [
+        "abs"
+      ],
+      "notes": "Standard ABS."
+    },
+    {
+      "name": "JAMG HE TPU Filament",
+      "filament_ids": [
+        "tpu"
+      ],
+      "notes": "Flexible TPU; shore grade not stated in the catalog listing."
+    },
+    {
+      "name": "Glass Fiber 3D Printing Filament",
+      "filament_ids": [],
+      "notes": "Glass-fiber composite with the base polymer unstated on the listing — likely PLA or PA, but no id can be assigned without confirming the matrix."
+    },
+    {
+      "name": "Rainbow PLA / Wood PLA / Magic PLA",
+      "filament_ids": [],
+      "notes": "Referenced only in the site menu and not confirmed on a product page; if real they would be pla-gradient / pla-wood / cosmetic pla, but no id is asserted here."
     },
     {
       "name": "Functional Filament",
       "filament_ids": [],
-      "notes": "Named line on the company site; constituent materials not itemised in sources found"
+      "notes": "Named category on the company site; constituent materials still not itemised in any source found."
     }
   ],
   "price_tier": "mid",
@@ -49,7 +123,12 @@
       "https://www.jamghe.com/",
       "https://filament2print.com/en/brand/112-jamg-he",
       "https://www.amazon.com/stores/JamgHe/",
-      "/home/claude/filament-repo/research/verified-oem-relationships.md (project-owner verified)"
+      "/home/claude/filament-repo/research/verified-oem-relationships.md (project-owner verified)",
+      "https://www.jamghe.com/collections/3d-printer-filament",
+      "https://www.jamghe.com/products/matt-pla-3d-printer-filament",
+      "https://www.jamghe.com/products/matte-pla-3d-printer-filament",
+      "https://www.jamghe.com/products/jamg-he-silk-pla-filament-for-3d-printer",
+      "https://www.jamghe.com/products/lw-pla"
     ],
     "last_verified": "2026-07-31",
     "confidence": "low",

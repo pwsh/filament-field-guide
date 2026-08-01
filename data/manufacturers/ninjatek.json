@@ -39,47 +39,54 @@
     {
       "name": "NinjaFlex",
       "filament_ids": [
-        "tpu"
+        "tpu-85a"
       ],
-      "notes": "Flagship 85A flexible TPU, plus NinjaFlex Edge at 83A."
+      "notes": "Shore 85A TPU - the reference product the catalog's tpu-85a entry is modelled on."
+    },
+    {
+      "name": "NinjaFlex Edge",
+      "filament_ids": [
+        "tpu-85a"
+      ],
+      "notes": "Shore 83A TPU with a low-tack surface texture for reliable direct-drive feeding; 2 points softer than the 85A grade."
+    },
+    {
+      "name": "Cheetah",
+      "filament_ids": [
+        "tpu-95a"
+      ],
+      "notes": "Shore 95A TPU, the firmer/faster-printing grade."
     },
     {
       "name": "Chinchilla",
       "filament_ids": [
         "tpu"
       ],
-      "notes": "75A skin-safe soft TPU."
-    },
-    {
-      "name": "Cheetah",
-      "filament_ids": [
-        "tpu"
-      ],
-      "notes": "95A fast-printing flexible TPU."
-    },
-    {
-      "name": "Eel",
-      "filament_ids": [
-        "tpu"
-      ],
-      "notes": "60D conductive flexible TPU."
+      "notes": "NinjaTek's softest material, ~Shore 75A per third-party listings, skin-contact safe. Falls between the tpu-60a and tpu-85a grade entries, so mapped to base tpu."
     },
     {
       "name": "Armadillo",
       "filament_ids": [
         "tpu"
       ],
-      "notes": "75D abrasion-resistant rigid TPU."
+      "notes": "Shore 75D rigid TPU: low-warp and fracture-resistant, positioned as a PLA/ABS-stiffness alternative rather than a soft flex. Harder than the catalog's hardest graded entry (tpu-68d), so mapped to base tpu."
+    },
+    {
+      "name": "Eel",
+      "filament_ids": [
+        "tpu-60d"
+      ],
+      "notes": "Shore 60D TPU doped with conductive filler for static-dissipative/EMI use, 355% elongation at break. The conductive/ESD aspect is not captured by tpu-60d."
     },
     {
       "name": "colorFabb resale range",
       "filament_ids": [
+        "pla",
         "asa",
         "pa",
-        "pla",
         "petg"
       ],
-      "notes": "Stocked in NinjaTek's shop but formulated and branded by colorFabb, not NinjaTek: ASA, PA, PLA/PHA, co-polyesters and specialty fills."
+      "notes": "Stocked in NinjaTek's shop but formulated and branded by colorFabb, not NinjaTek: ASA, PA, PLA/PHA, co-polyesters and specialty fills (bronzeFill, copperFill, steelFill, woodFill, glowFill). Excluded from NinjaTek trade-name mappings for that reason."
     }
   ],
   "makes_plates": false,
@@ -92,7 +99,11 @@
       "https://ninjatek.ca/",
       "https://www.mromagazine.com/press-releases/fenner-drives-announces-creation-of-ninjatek-division-to-focus-on-value-added-3d-printing-materials-and-services/",
       "https://en.wikipedia.org/wiki/Fenner_(company)",
-      "https://www.matterhackers.com/store/c/browse-by-filament-manufacturer"
+      "https://www.matterhackers.com/store/c/browse-by-filament-manufacturer",
+      "https://ninjatek.com/shop/",
+      "https://www.fennerdrives.com/3DNinjaTek/",
+      "https://www.dynamism.com/ninjatek.html",
+      "https://3ders.org/articles/20160106-ninjatek-introduces-two-new-industrial-3d-printing-materials-cheetah-and-armadillo.html"
     ],
     "last_verified": "2026-07-31",
     "confidence": "medium",

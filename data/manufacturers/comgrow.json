@@ -21,6 +21,11 @@
       "company": "Sovol",
       "relationship": "joint-venture",
       "notes": "Comgrow's about page describes Sovol as 'developed by their parent company', making the two sibling brands rather than supplier and customer. A 2024 company TikTok post announced a Comgrow/Sovol merger with Comgrow links redirecting to Sovol; independently unverified."
+    },
+    {
+      "company": "Creality",
+      "relationship": "manufactured-by",
+      "notes": "Reciprocal of creality.json edge; user-verified (research/verified-oem-relationships.md) — Comgrow resells Creality filament. Added in Phase E reciprocity pass."
     }
   ],
   "endpoints": {
@@ -40,13 +45,37 @@
       "filament_ids": [
         "pla"
       ],
-      "notes": "Includes silk, chameleon and glow-in-the-dark variants"
+      "notes": "Plain Comgrow-branded PLA, sold as a 6-pack of primary colours. Silk/chameleon/glow variants seen in the store are largely resold Creality/Sovol stock rather than Comgrow-branded."
+    },
+    {
+      "name": "Hyper Filament PLA",
+      "filament_ids": [
+        "pla-hf",
+        "pla"
+      ],
+      "notes": "High-flow/high-speed PLA formulation marketed '10x Faster Print, High Speed 30-600mm/s'. 'Hyper' is Creality's high-speed naming, consistent with the Creality rebrand relationship."
+    },
+    {
+      "name": "Tri-Colors Silk PLA",
+      "filament_ids": [
+        "pla-silk"
+      ],
+      "notes": "Silk-additive PLA on a tri-colour spool; multi-colour is a spool feature, not a chemistry change."
     },
     {
       "name": "PETG",
       "filament_ids": [
         "petg"
-      ]
+      ],
+      "notes": "Plain PETG."
+    },
+    {
+      "name": "TPU 95A",
+      "filament_ids": [
+        "tpu",
+        "tpu-95a"
+      ],
+      "notes": "Flexible TPU, Shore 95A stated on the listing."
     }
   ],
   "makes_plates": true,
@@ -57,7 +86,11 @@
       "https://www.comgrow.com/pages/about-us",
       "https://www.comgrow.com/",
       "https://www.tiktok.com/@comgrow/video/7329698177408437546",
-      "/home/claude/filament-repo/research/verified-oem-relationships.md (project-owner verified)"
+      "/home/claude/filament-repo/research/verified-oem-relationships.md (project-owner verified)",
+      "https://www.comgrow.com/collections/filament",
+      "https://www.amazon.com/Comgrow-Filament-30-600mm-Ankermake-Flashforge/dp/B0C69Q2JFW",
+      "https://www.amazon.com/Comgrow-Filament-Precision-Dimensional-Accuracy/dp/B0DBDFGB5W",
+      "https://www.amazon.com/Comgrow-Filament-Printing-Flexible-Dimensional/dp/B0DF4TY2GD"
     ],
     "last_verified": "2026-07-31",
     "confidence": "medium",

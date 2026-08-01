@@ -1,7 +1,11 @@
 {
   "id": "petg",
   "name": "PETG (Glycol-Modified PET)",
-  "aliases": ["PET-G", "Polyethylene terephthalate glycol-modified", "Copolyester"],
+  "aliases": [
+    "PET-G",
+    "Polyethylene terephthalate glycol-modified",
+    "Copolyester"
+  ],
   "status": "researched",
   "base_type": null,
   "variation_kind": null,
@@ -9,15 +13,35 @@
   "chemical_makeup": "Polyethylene terephthalate glycol-modified — a copolyester of PET in which cyclohexanedimethanol (CHDM) replaces part of the ethylene glycol, suppressing crystallisation to give an amorphous, tough, easily printed polymer",
   "summary": "The workhorse step up from PLA: tougher, far better layer adhesion, genuinely water-resistant and usable to ~70 °C, with only mild warp and no enclosure requirement. Pays for it with stringing, oozing, softer detail and supports that fuse hard to the part.",
   "printing": {
-    "nozzle_temp_c": { "min": 220, "max": 250, "recommended": 240 },
-    "bed_temp_c": { "min": 70, "max": 90, "recommended": 85 },
-    "ambient_temp_c": { "min": 18, "max": 35, "recommended": 25 },
-    "speed_mm_s": { "min": 40, "max": 200, "recommended": 80 },
+    "nozzle_temp_c": {
+      "min": 220,
+      "max": 250,
+      "recommended": 240
+    },
+    "bed_temp_c": {
+      "min": 70,
+      "max": 90,
+      "recommended": 85
+    },
+    "ambient_temp_c": {
+      "min": 18,
+      "max": 35,
+      "recommended": 25
+    },
+    "speed_mm_s": {
+      "min": 40,
+      "max": 200,
+      "recommended": 80
+    },
     "enclosure_recommended": false,
     "heated_chamber_required": false,
     "enclosure_open_for_cooling": false,
     "requires_hardened_nozzle": false,
-    "part_cooling_fan_pct": { "min": 30, "max": 50, "recommended": 40 },
+    "part_cooling_fan_pct": {
+      "min": 30,
+      "max": 50,
+      "recommended": 40
+    },
     "notes": "Prusa profiles run 230 °C first layer / 240 °C for the rest; the Prusament TDS quotes 250±10 °C. Keep part cooling low — fan off for the first layers, then roughly half power; heavy cooling is the main cause of brittle, poorly bonded PETG. No chamber needed, but a draft-free room (or an enclosure on large parts) helps. Hardened nozzle only for CF/GF-filled PETG."
   },
   "feeding": {
@@ -28,9 +52,21 @@
   },
   "drying": {
     "required_before_use": "if-exposed",
-    "temp_c": { "min": 50, "max": 65, "recommended": 60 },
-    "time_hours": { "min": 4, "max": 8, "recommended": 6 },
-    "methods": ["dedicated filament dryer", "convection oven at low temperature", "drybox with desiccant"],
+    "temp_c": {
+      "min": 50,
+      "max": 65,
+      "recommended": 60
+    },
+    "time_hours": {
+      "min": 4,
+      "max": 8,
+      "recommended": 6
+    },
+    "methods": [
+      "dedicated filament dryer",
+      "convection oven at low temperature",
+      "drybox with desiccant"
+    ],
     "dryness_validation": "No popping/hissing or steam at the nozzle tip; glossy rather than foggy or matte extrudate; markedly reduced stringing; no surface bubbles or voids in the extruded strand",
     "notes": "Prusa recommends 55 °C for 6 h, Bambu 65 °C for 8 h; heavily soaked spools may need 6-10 h. Do not exceed ~65-70 °C — spools deform. Wet PETG bubbles and hydrolyses visibly, so drying is effectively routine rather than occasional."
   },
@@ -73,11 +109,19 @@
     "density_g_cm3": 1.27,
     "grams_per_100cm3": 127,
     "cm3_per_100g": 78.7,
-    "shrinkage_pct": { "min": 0.2, "max": 0.3, "recommended": 0.25 },
+    "shrinkage_pct": {
+      "min": 0.2,
+      "max": 0.3,
+      "recommended": 0.25
+    },
     "glass_transition_c": 82,
     "heat_deflection_c": 72,
     "max_service_temp_c": 65,
-    "tensile_strength_mpa": { "min": 40, "max": 55, "recommended": 50 },
+    "tensile_strength_mpa": {
+      "min": 40,
+      "max": 55,
+      "recommended": 50
+    },
     "notes": "Prusament PETG measures HDT 68 °C and yield ~46-50 MPa; Polymaker PolyLite PETG reports 50.8 MPa and partmfg.com 52.2 MPa. Tg is not on the Prusament TDS; secondary sources put it at 80-85 °C. Max service temp is an estimate, not a datasheet value."
   },
   "scores": {
@@ -92,9 +136,53 @@
     "water_tolerance": 9
   },
   "compatibility": {
-    "bonds_with": ["petg", "pctg", "tpu"],
-    "support_materials": ["bvoh", "pla"],
-    "usable_as_support_for": ["pla"],
+    "bonds_with": [
+      "asa",
+      "bvoh",
+      "pctg",
+      "pet",
+      "petg",
+      "petg-cf",
+      "petg-esd",
+      "petg-gf",
+      "pva",
+      "tpu"
+    ],
+    "support_materials": [
+      "bvoh",
+      "hips",
+      "pla",
+      "pla-cf",
+      "pla-gf",
+      "pla-gradient",
+      "pla-hf",
+      "pla-matte",
+      "pla-plus",
+      "pla-silk",
+      "pva"
+    ],
+    "usable_as_support_for": [
+      "lw-pla",
+      "pctg",
+      "pet",
+      "petg-cf",
+      "petg-esd",
+      "petg-gf",
+      "pla",
+      "pla-cf",
+      "pla-gf",
+      "pla-glow",
+      "pla-gradient",
+      "pla-hf",
+      "pla-matte",
+      "pla-metal",
+      "pla-plus",
+      "pla-silk",
+      "pla-wood",
+      "tpu-60d",
+      "tpu-68d",
+      "tpu-gf"
+    ],
     "notes": "Welds cleanly to itself and to PCTG (same copolyester family); some TPU formulations bond to PETG but the weld is weaker than a same-family joint, so treat flex/rigid PETG-TPU as semi-compatible only. Does not weld to PLA — deliberately, so PLA makes a clean breakaway support for PETG and vice versa. BVOH is the soluble support of choice (PVA pairs better with PLA). PETG plus ABS/ASA is not a standard combination: the chemistry, nozzle windows and warp behaviour clash even though bed temperatures overlap."
   },
   "plate_recommendations": [
@@ -102,12 +190,65 @@
       "plate_id": "pei-textured",
       "rating": "recommended",
       "notes": "Textured/satin or powder-coated PEI is the right surface for PETG at 70-90 °C bed. On SMOOTH PEI, always apply a glue stick as a separator — bare PETG bonds so hard it can tear the coating off the sheet on removal."
+    },
+    {
+      "plate_id": "pp-sheet",
+      "rating": "recommended",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Explicitly listed compatible by Prusa, and one of the quiet advantages of this sheet: no separation layer is needed, unlike smooth PEI where PETG fusing is a standing hazard."
+    },
+    {
+      "plate_id": "g10-garolite",
+      "rating": "recommended",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Generally no glue needed — G10 does not develop the aggressive chemical bond PETG forms with smooth PEI or bare glass."
+    },
+    {
+      "plate_id": "pei-satin",
+      "rating": "recommended",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Prusa markets satin as an excellent PETG surface with no glue stick required — parts pop off cleanly once cold."
+    },
+    {
+      "plate_id": "carbon-fiber-plate",
+      "rating": "recommended",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): A standout use case — vendors specifically call out that PETG does not bond excessively here, unlike smooth PEI or PEX where it can weld on and tear the surface."
+    },
+    {
+      "plate_id": "pei-smooth",
+      "rating": "usable",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): PETG chemically bonds to bare smooth PEI and routinely rips chunks of film out on removal. Treat the glue stick as a mandatory separator, not an adhesion aid."
+    },
+    {
+      "plate_id": "glass-borosilicate",
+      "rating": "usable",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): The classic glass hazard: PETG bonds chemically to bare glass and can pull a conchoidal chip out of the plate on removal. Glue stick is used here as a barrier, not for grip."
+    },
+    {
+      "plate_id": "supertack",
+      "rating": "usable",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Officially supported and Bambu publishes a dedicated PETG-on-SuperTack guide, but this is the plate's most contested material: multiple forum threads report over-adhesion, torn coa"
+    },
+    {
+      "plate_id": "buildtak-polymer",
+      "rating": "usable",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Works, but the vendor's own wording is that it requires special print settings to avoid fusion — copolyester chemically welds to this film if the first layer is squished hard or th"
+    },
+    {
+      "plate_id": "pei-patterned",
+      "rating": "usable",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Clear and translucent PETG shows the effect well and adhesion is generally adequate, but behaviour varies by vendor coating (unverified across brands)."
+    },
+    {
+      "plate_id": "pc-plate",
+      "rating": "avoid",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Bambu explicitly warns of bubbling and sticking on the plain Cool Plate — the PC sheet is damaged, not merely over-adhered. Note that PETG IS listed as acceptable on the Cool Plate"
     }
   ],
   "emissions": {
     "voc_level": "low",
     "particulate_level": "moderate",
-    "primary_emissions": ["ultrafine particles", "trace acetaldehyde / terephthalate-related compounds (unverified)"],
+    "primary_emissions": [
+      "ultrafine particles",
+      "trace acetaldehyde / terephthalate-related compounds (unverified)"
+    ],
     "ventilation": "recommended",
     "notes": "No styrene, and odour is mild. Azimi et al. (2016) placed PET-based filament (T-Glase) around 5×10⁹ particles/min — above PLA but well below ABS, PC and HIPS; a precise figure for generic PETG is unverified. Ventilation is optional for occasional open-air printing and recommended for long or enclosed jobs."
   },
@@ -131,5 +272,494 @@
     "last_verified": "2026-07-31",
     "confidence": "medium",
     "conflicts": "HDT: Prusament measures 68 °C while other property tables cite 78-80 °C — recorded as 72 °C with the 68-80 °C spread noted. Hygroscopy: the Prusament TDS reports only 0.07-0.10 % moisture uptake at 7 days for that formulation, while field consensus classes bulk PETG as a moderate-to-high absorber needing routine drying — 'moderate' recorded. Shrinkage: some sources place PETG slightly below PLA, others slightly above. The particulate figure is extrapolated from a PET-based filament (T-Glase), not measured for generic PETG."
-  }
+  },
+  "trade_names": [
+    {
+      "manufacturer": "3djake",
+      "product": "easyPETG"
+    },
+    {
+      "manufacturer": "3djake",
+      "product": "easyPETG Matte",
+      "notes": "matte; no petg-matte id exists, see gaps"
+    },
+    {
+      "manufacturer": "3dxtech",
+      "product": "3DXLabs HT-PETG",
+      "notes": "High-temperature PETG formulation; PETG base chemistry."
+    },
+    {
+      "manufacturer": "3dxtech",
+      "product": "MAX-G PETG",
+      "notes": "Standard glycol-modified PET copolyester."
+    },
+    {
+      "manufacturer": "addnorth",
+      "product": "PETG",
+      "notes": "density 1.27"
+    },
+    {
+      "manufacturer": "addnorth",
+      "product": "PETG Economy"
+    },
+    {
+      "manufacturer": "addnorth",
+      "product": "PETG Pro Series Matte",
+      "notes": "matte, density 1.3; no petg-matte id exists, see gaps"
+    },
+    {
+      "manufacturer": "amolen",
+      "product": "PETG Basic / PETG Transparent",
+      "notes": "Standard PETG."
+    },
+    {
+      "manufacturer": "anycubic",
+      "product": "PETG / PETG Refill"
+    },
+    {
+      "manufacturer": "anycubic",
+      "product": "PETG Translucent"
+    },
+    {
+      "manufacturer": "atomic-filament",
+      "product": "PETG PRO (opaque, Translucent, Neon UV-Reactive, Metallic, Shade-Shifting, Extreme JET Black)",
+      "notes": "Effect colourways share the base PETG chemistry."
+    },
+    {
+      "manufacturer": "azurefilm",
+      "product": "PETG",
+      "notes": "Standard PETG line"
+    },
+    {
+      "manufacturer": "bambu-lab",
+      "product": "PETG Basic"
+    },
+    {
+      "manufacturer": "bambu-lab",
+      "product": "PETG HF",
+      "notes": "High-flow/high-speed PETG; rheology delta only, no petg-hf id exists"
+    },
+    {
+      "manufacturer": "bambu-lab",
+      "product": "PETG Translucent",
+      "notes": "Colour/opacity variant only"
+    },
+    {
+      "manufacturer": "coex-3d",
+      "product": "PETG",
+      "notes": "Standard copolyester PETG."
+    },
+    {
+      "manufacturer": "colorfabb",
+      "product": "PETG",
+      "notes": "Includes Economy, Semi Matte, Regrind and rPETG; Semi Matte has no petg-matte id to land on"
+    },
+    {
+      "manufacturer": "colorfabb",
+      "product": "colorFabb_XT",
+      "notes": "Eastman Amphora AN1050-type copolyester - PETG-family chemistry, sold separately from colorFabb's own PETG line"
+    },
+    {
+      "manufacturer": "colorfabb",
+      "product": "nGen",
+      "notes": "Eastman Amphora AM1800-family copolyester, food-contact compliant; PETG-adjacent, not the identical resin"
+    },
+    {
+      "manufacturer": "comgrow",
+      "product": "PETG",
+      "notes": "Plain PETG."
+    },
+    {
+      "manufacturer": "creality",
+      "product": "Hyper PETG",
+      "notes": "High-flow PETG; no petg-hf id exists"
+    },
+    {
+      "manufacturer": "das-filament",
+      "product": "PETG",
+      "notes": "Standard PETG, 1.75/2.85 mm; evidence is product-page level, not TDS"
+    },
+    {
+      "manufacturer": "devil-design",
+      "product": "PET-G"
+    },
+    {
+      "manufacturer": "duramic-3d",
+      "product": "PETG (Premium PETG)",
+      "notes": "Plain PETG."
+    },
+    {
+      "manufacturer": "elegoo",
+      "product": "PETG Pro"
+    },
+    {
+      "manufacturer": "elegoo",
+      "product": "PETG Translucent"
+    },
+    {
+      "manufacturer": "elegoo",
+      "product": "Rapid PETG",
+      "notes": "High-flow PETG; no petg-hf id exists"
+    },
+    {
+      "manufacturer": "eryone",
+      "product": "PETG / PETG High-Speed",
+      "notes": "Base PETG plus a flow-optimised grade."
+    },
+    {
+      "manufacturer": "esun",
+      "product": "PETG / PETG-Basic / PETG+",
+      "notes": "Standard and enhanced amorphous copolyester grades"
+    },
+    {
+      "manufacturer": "esun",
+      "product": "PETG-UV Color Change",
+      "notes": "UV-photochromic pigment only; base chemistry unchanged"
+    },
+    {
+      "manufacturer": "extrudr",
+      "product": "PETG",
+      "notes": "Low-shrink formulation; density 1.29 g/cm3, VICAT A 78 C"
+    },
+    {
+      "manufacturer": "extrudr",
+      "product": "XPETG MATT",
+      "notes": "Modified matte PETG; density 1.41 g/cm3 (heavily filled), VICAT A 85 C / HDT-B 67 C - base chemistry is PETG, the matte grade has no id"
+    },
+    {
+      "manufacturer": "fiberlogy",
+      "product": "Easy PET-G",
+      "notes": "Standard PETG"
+    },
+    {
+      "manufacturer": "filament-pm",
+      "product": "PETG"
+    },
+    {
+      "manufacturer": "filament-pm",
+      "product": "RePETG",
+      "notes": "recycled content; previous r-petg id does not exist in the catalog"
+    },
+    {
+      "manufacturer": "filamentive",
+      "product": "PETg (rPETG)",
+      "notes": "100% recycled; previous r-petg id does not exist in the catalog"
+    },
+    {
+      "manufacturer": "filamentive",
+      "product": "ReFill PETg",
+      "notes": "100% recycled, AMS-compatible refill"
+    },
+    {
+      "manufacturer": "fillamentum",
+      "product": "CPE HG100",
+      "notes": "Fillamentum's CPE designation: a modified/toughened PETG-family co-polyester, not plain PETG"
+    },
+    {
+      "manufacturer": "fillamentum",
+      "product": "PETG",
+      "notes": "Standard PETG"
+    },
+    {
+      "manufacturer": "flashforge",
+      "product": "HS PETG / HS PETG Multicolor",
+      "notes": "High-speed PETG; no petg-hf id exists"
+    },
+    {
+      "manufacturer": "formfutura",
+      "product": "EasyFil ePETG",
+      "notes": "Standard consumer PETG"
+    },
+    {
+      "manufacturer": "formfutura",
+      "product": "ReForm rPETG",
+      "notes": "Recycled PETG"
+    },
+    {
+      "manufacturer": "fusion-filaments",
+      "product": "PETG",
+      "notes": "Standard copolyester."
+    },
+    {
+      "manufacturer": "geeetech",
+      "product": "PETG",
+      "notes": "Plain PETG."
+    },
+    {
+      "manufacturer": "geeetech",
+      "product": "PETG Metal",
+      "notes": "Metallic-pigment PETG, not metal-filled; base resin is PETG."
+    },
+    {
+      "manufacturer": "hatchbox",
+      "product": "PETG",
+      "notes": "Standard PETG per SDS."
+    },
+    {
+      "manufacturer": "ic3d",
+      "product": "Matte Recycled PETG",
+      "notes": "Recycled PETG + matting additive; no petg-matte id exists."
+    },
+    {
+      "manufacturer": "ic3d",
+      "product": "PETG / Recycled PETG / UV-PETG",
+      "notes": "UV-PETG is a UV-resistant pigmented formulation of the same copolyester; the recycled grade differs only in recyclate content."
+    },
+    {
+      "manufacturer": "iemai-3d",
+      "product": "PETG / High Speed PETG",
+      "notes": "High-speed grade rated to 300 mm/s; no high-flow PETG id in catalog"
+    },
+    {
+      "manufacturer": "iemai-3d",
+      "product": "iSanghu (retail label)",
+      "notes": "PETG and Transparent PETG SKUs"
+    },
+    {
+      "manufacturer": "inland",
+      "product": "PETG / PETG+",
+      "notes": "PETG+ is a shelf-life/printability grade on the same base resin."
+    },
+    {
+      "manufacturer": "jamg-he",
+      "product": "PETG / High-Speed PETG",
+      "notes": "No high-flow PETG id in catalog"
+    },
+    {
+      "manufacturer": "jayo",
+      "product": "PETG / High Speed Matte PETG",
+      "notes": "Matte is an additive; chemistry is petg"
+    },
+    {
+      "manufacturer": "keene-village-plastics",
+      "product": "PETG (Glass/clear, Yellow Edge Glow, Granite)",
+      "notes": "Granite is a speckled stone-look particulate fill, not structural reinforcement."
+    },
+    {
+      "manufacturer": "kexcelled",
+      "product": "THE K5 PETG-M",
+      "notes": "Standard/modified PETG"
+    },
+    {
+      "manufacturer": "kimya",
+      "product": "PETG-R",
+      "notes": "Recycled PETG from post-consumer packaging waste."
+    },
+    {
+      "manufacturer": "kimya",
+      "product": "PETG-S",
+      "notes": "Standard PETG."
+    },
+    {
+      "manufacturer": "kingroon",
+      "product": "PETG (Basic)"
+    },
+    {
+      "manufacturer": "landu",
+      "product": "PETG / Rapid PETG / Refill Hyper PETG",
+      "notes": "Standard and high-flow PETG; no high-flow PETG id in catalog"
+    },
+    {
+      "manufacturer": "landu",
+      "product": "PETG Sparkling",
+      "notes": "Glitter additive"
+    },
+    {
+      "manufacturer": "matterhackers",
+      "product": "MH Build Series PETG",
+      "notes": "Value-tier standard PETG."
+    },
+    {
+      "manufacturer": "matterhackers",
+      "product": "PRO Series PETG",
+      "notes": "Professional tier of the same base PETG."
+    },
+    {
+      "manufacturer": "matterhackers",
+      "product": "ThriftyMake PETG",
+      "notes": "Cost-reduced standard PETG."
+    },
+    {
+      "manufacturer": "overture",
+      "product": "PETG",
+      "notes": "TDS: density 1.30 g/cm3, Vicat 75 C, XY tensile 47.9 +/- 4.8 MPa. High Speed grade uses the same resin."
+    },
+    {
+      "manufacturer": "polymaker",
+      "product": "PolyLite PETG / Polymaker PETG",
+      "notes": "Standard amorphous copolyester"
+    },
+    {
+      "manufacturer": "polymaker",
+      "product": "PolyMax PETG",
+      "notes": "Impact-toughened PETG; no toughened-PETG id in catalog"
+    },
+    {
+      "manufacturer": "proto-pasta",
+      "product": "Black Recycled PETG",
+      "notes": "Recycled-content PETG, otherwise standard copolyester."
+    },
+    {
+      "manufacturer": "prusa-research",
+      "product": "Prusament PETG",
+      "notes": "Standard glycol-modified PET copolyester"
+    },
+    {
+      "manufacturer": "prusa-research",
+      "product": "Prusament PETG Recycled (rPETG)",
+      "notes": "Identical PETG chemistry, recycled feedstock"
+    },
+    {
+      "manufacturer": "push-plastic",
+      "product": "PETG",
+      "notes": "Standard copolyester PETG."
+    },
+    {
+      "manufacturer": "qidi-tech",
+      "product": "PETG Basic"
+    },
+    {
+      "manufacturer": "qidi-tech",
+      "product": "PETG Translucent"
+    },
+    {
+      "manufacturer": "qidi-tech",
+      "product": "PETG-Tough",
+      "notes": "Impact-modified PETG blend; QIDI makes no PCTG claim, so mapped to petg not pctg"
+    },
+    {
+      "manufacturer": "real-filament",
+      "product": "PET-G (\"Gloss Filament\")",
+      "notes": "density 1.27 g/cc, tensile 50 MPa, Vicat ~85C"
+    },
+    {
+      "manufacturer": "rosa3d",
+      "product": "PET-G Galaxy",
+      "notes": "sparkle effect"
+    },
+    {
+      "manufacturer": "rosa3d",
+      "product": "PET-G Standard HS",
+      "notes": "high-speed grade; no petg-hf id exists"
+    },
+    {
+      "manufacturer": "rosa3d",
+      "product": "R-Series",
+      "notes": "recycled PET-G incl. R-PET-G Impact; previous r-petg id does not exist in the catalog"
+    },
+    {
+      "manufacturer": "snapmaker",
+      "product": "PETG (Basic)"
+    },
+    {
+      "manufacturer": "snapmaker",
+      "product": "PETG HF",
+      "notes": "High-flow PETG; no petg-hf id exists"
+    },
+    {
+      "manufacturer": "spectrum-filaments",
+      "product": "PET-G Glitter"
+    },
+    {
+      "manufacturer": "spectrum-filaments",
+      "product": "PET-G Glow in the Dark",
+      "notes": "phosphorescent; no petg-glow id exists"
+    },
+    {
+      "manufacturer": "spectrum-filaments",
+      "product": "PET-G HT100",
+      "notes": "high-temp PETG rated 100C"
+    },
+    {
+      "manufacturer": "spectrum-filaments",
+      "product": "PET-G MATT",
+      "notes": "matte finish; no petg-matte id exists, see gaps"
+    },
+    {
+      "manufacturer": "spectrum-filaments",
+      "product": "PET-G Premium"
+    },
+    {
+      "manufacturer": "spectrum-filaments",
+      "product": "PETG Premium High Speed",
+      "notes": "800 mm/s; no petg-hf id exists"
+    },
+    {
+      "manufacturer": "spectrum-filaments",
+      "product": "Prografen PET-G Graphene Light / Strong",
+      "notes": "graphene-additive PETG"
+    },
+    {
+      "manufacturer": "spectrum-filaments",
+      "product": "The Filament PETG"
+    },
+    {
+      "manufacturer": "spectrum-filaments",
+      "product": "The Filament PETG Lite"
+    },
+    {
+      "manufacturer": "spectrum-filaments",
+      "product": "rPETG",
+      "notes": "recycled content"
+    },
+    {
+      "manufacturer": "sunlu",
+      "product": "Matte PETG / High Speed Matte PETG",
+      "notes": "Matte additive; no matte-PETG id exists"
+    },
+    {
+      "manufacturer": "sunlu",
+      "product": "PETG / Easy PETG",
+      "notes": "'Easy' grade tuned for lower stringing"
+    },
+    {
+      "manufacturer": "sunlu",
+      "product": "PETG Glow in Dark",
+      "notes": "Phosphor-loaded PETG; pla-glow is PLA-specific"
+    },
+    {
+      "manufacturer": "sunlu",
+      "product": "PETG Rainbow",
+      "notes": "Gradient-dyed PETG; pla-gradient is PLA-specific so it does not apply"
+    },
+    {
+      "manufacturer": "taulman3d",
+      "product": "T-glase",
+      "notes": "Glycol-modified PET copolyester (PETT): optically clear, low shrinkage. Often described as PETT/PET rather than strict PETG - mapped on the amorphous-copolyester property profile; flag if the catalog later wants it under pet."
+    },
+    {
+      "manufacturer": "taulman3d",
+      "product": "TECH-G",
+      "notes": "PETG-based grade tuned for large-format prints with low shrinkage."
+    },
+    {
+      "manufacturer": "tinmorry",
+      "product": "Metallic / Galaxy / Marble / Sparkly / Matte PETG, PETG Glowing in the Dark",
+      "notes": "Cosmetic additives; no matte/glow PETG ids exist"
+    },
+    {
+      "manufacturer": "tinmorry",
+      "product": "PETG-ECO",
+      "notes": "Standard PETG"
+    },
+    {
+      "manufacturer": "ultimaker",
+      "product": "UltiMaker CPE",
+      "notes": "'Co-polyester': TDS gives 1.27 g/cm3, ~38 MPa XY tensile, Shore 76D - PETG/PCTG-class, not a distinct polymer. CPE+ is the higher-temp grade of the same family but was left unmapped for lack of TDS figures."
+    },
+    {
+      "manufacturer": "ultimaker",
+      "product": "UltiMaker PETG",
+      "notes": "Method-series generic PETG."
+    },
+    {
+      "manufacturer": "voxelab",
+      "product": "PETG"
+    },
+    {
+      "manufacturer": "voxelab",
+      "product": "PETG Pro (marketed as \"PETG+\")",
+      "notes": "No disclosed chemistry departure from base PETG"
+    }
+  ]
 }

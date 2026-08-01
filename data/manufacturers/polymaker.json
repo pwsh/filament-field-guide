@@ -52,43 +52,294 @@
   },
   "product_lines": [
     {
-      "name": "PolyLite",
-      "filament_ids": [
-        "pla",
-        "petg",
-        "abs",
-        "asa"
-      ],
-      "notes": "Standard everyday line"
-    },
-    {
-      "name": "PolyTerra / Panchroma",
+      "name": "PolyLite™ PLA",
       "filament_ids": [
         "pla"
       ],
-      "notes": "Eco/aesthetic matte PLA line"
+      "notes": "Standard consumer-grade PLA."
     },
     {
-      "name": "PolyMax",
+      "name": "PolyLite™ PLA Pro / Polymaker™ PLA Pro",
+      "filament_ids": [
+        "pla-plus"
+      ],
+      "notes": "Toughened PLA grades."
+    },
+    {
+      "name": "PolyMax™ PLA",
+      "filament_ids": [
+        "pla-plus"
+      ],
+      "notes": "Nano-reinforced impact-toughened PLA: tensile 41.3 MPa XY / 32.4 MPa Z, elongation 5.7%/4.7%, Charpy 38.9 kJ/m2, Tg 61 C, HDT 52.3 C @1.8MPa."
+    },
+    {
+      "name": "PolySonic™ PLA / PLA Pro",
+      "filament_ids": [
+        "pla-hf"
+      ],
+      "notes": "High-flow PLA for high-speed printers; \"PolySonic PLA\" is a pla-hf alias."
+    },
+    {
+      "name": "Draft PLA",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Fast, low-precision draft PLA; base chemistry unchanged."
+    },
+    {
+      "name": "Matte PLA for Production",
+      "filament_ids": [
+        "pla-matte"
+      ],
+      "notes": "Matte-additive PLA."
+    },
+    {
+      "name": "PLA-CF",
+      "filament_ids": [
+        "pla-cf"
+      ],
+      "notes": "Carbon-fiber-filled PLA."
+    },
+    {
+      "name": "LW-PLA",
+      "filament_ids": [
+        "lw-pla"
+      ],
+      "notes": "Chemical-foaming lightweight PLA."
+    },
+    {
+      "name": "HT-PLA",
+      "filament_ids": [],
+      "notes": "Heat-resistant crystallizable/annealable PLA — an annealed-crystallinity grade with no catalog id."
+    },
+    {
+      "name": "HT-PLA-GF",
+      "filament_ids": [
+        "pla-gf"
+      ],
+      "notes": "Glass-fiber heat-resistant PLA; maps on the GF-PLA chemistry, pla-gf id is provisional. The HT (annealable) aspect is not captured by any id."
+    },
+    {
+      "name": "CosPLA",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Cosplay/prop-oriented PLA variant."
+    },
+    {
+      "name": "Panchroma™ PLA (standard, translucent, neon, UV-shift, marble, galaxy, starlight, celestial, metallic)",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Cosmetic-additive variants on a base PLA; no chemistry change."
+    },
+    {
+      "name": "Panchroma™ PLA Matte",
+      "filament_ids": [
+        "pla-matte"
+      ],
+      "notes": "Matte-additive PLA."
+    },
+    {
+      "name": "Panchroma™ PLA Silk / Satin",
+      "filament_ids": [
+        "pla-silk"
+      ],
+      "notes": "Luster-additive PLA."
+    },
+    {
+      "name": "Panchroma™ PLA Luminous (Glow)",
+      "filament_ids": [
+        "pla-glow"
+      ],
+      "notes": "Phosphorescent-pigment PLA."
+    },
+    {
+      "name": "Panchroma™ PLA Dual-Tone",
+      "filament_ids": [
+        "pla-gradient"
+      ],
+      "notes": "Two-tone coextruded PLA; colour-transition SKU rather than an along-strand dye gradient."
+    },
+    {
+      "name": "Panchroma™ CoPE",
+      "filament_ids": [
+        "cope"
+      ],
+      "notes": "High-speed copolyester; \"Panchroma CoPE\" is a cope alias."
+    },
+    {
+      "name": "PolyTerra™ PLA",
+      "filament_ids": [
+        "pla",
+        "pla-matte"
+      ],
+      "notes": "Eco/matte PLA line, since largely folded into Panchroma."
+    },
+    {
+      "name": "PolyLite™ PETG / Polymaker™ PETG",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "Standard amorphous PETG copolyester."
+    },
+    {
+      "name": "PolyMax™ PETG",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "Impact-toughened PETG; no toughened-PETG id in catalog."
+    },
+    {
+      "name": "PolyLite™ ABS / Polymaker™ ABS Pro / ABS Max",
+      "filament_ids": [
+        "abs"
+      ],
+      "notes": "Standard and impact-enhanced ABS."
+    },
+    {
+      "name": "Polymaker™ ASA",
+      "filament_ids": [
+        "asa"
+      ],
+      "notes": "Standard ASA."
+    },
+    {
+      "name": "PolyLite™ PC / PolyMax™ PC",
       "filament_ids": [
         "pc"
       ],
-      "notes": "Advanced PC blends including PC-FR; also PC-ABS and PC-PBT alloys"
+      "notes": "Standard and toughened polycarbonate; a flame-retardant PC-FR variant also exists. (A PC-PBT alloy was cited in an earlier pass but was not found in this catalog review.)"
     },
     {
-      "name": "Fiberon",
+      "name": "Polymaker™ PC-ABS",
       "filament_ids": [
-        "pa-cf",
+        "pc-abs"
+      ],
+      "notes": "PC/ABS alloy."
+    },
+    {
+      "name": "PolyFlex™ TPU90",
+      "filament_ids": [
+        "tpu-90a"
+      ],
+      "notes": "Shore 90A flexible TPU."
+    },
+    {
+      "name": "PolyFlex™ TPU95 / TPU95-HF",
+      "filament_ids": [
+        "tpu-95a"
+      ],
+      "notes": "Shore 95A flexible TPU; \"PolyFlex TPU95\" is a tpu-95a alias. HF is a high-flow reformulation, same hardness."
+    },
+    {
+      "name": "PolyMide™ CoPA",
+      "filament_ids": [
+        "pa"
+      ],
+      "notes": "Co-polyamide nylon blend, not a straight PA6/PA66/PA12 grade; \"CoPA\" is a pa alias."
+    },
+    {
+      "name": "Fiberon™ PA6-CF20",
+      "filament_ids": [
+        "pa6-cf"
+      ],
+      "notes": "PA6 + 20% carbon fiber."
+    },
+    {
+      "name": "Fiberon™ PA6-GF25",
+      "filament_ids": [
+        "pa6-gf"
+      ],
+      "notes": "PA6 + 25% glass fiber; pa6-gf id is provisional."
+    },
+    {
+      "name": "Fiberon™ PA12-CF10",
+      "filament_ids": [
+        "pa12-cf"
+      ],
+      "notes": "PA12 + 10% carbon fiber."
+    },
+    {
+      "name": "Fiberon™ PA612-CF15",
+      "filament_ids": [],
+      "notes": "PA612 + 15% carbon fiber; the catalog has pa6-cf/pa12-cf but no PA612 grade. Lower moisture uptake than PA6-CF."
+    },
+    {
+      "name": "Fiberon™ PET-CF17",
+      "filament_ids": [
+        "pet-cf"
+      ],
+      "notes": "PET + 17% carbon fiber."
+    },
+    {
+      "name": "Fiberon™ PET-GF15",
+      "filament_ids": [],
+      "notes": "PET + 15% glass fiber; no glass-fiber PET id exists (pet-cf only)."
+    },
+    {
+      "name": "Fiberon™ PETG-rCF08",
+      "filament_ids": [
         "petg-cf"
       ],
-      "notes": "Fiber-reinforced composites: PA6-CF, PA6-GF, PET-CF, PETG-rCF, PPS-CF"
+      "notes": "PETG + 8% recycled carbon fiber; recycled feedstock is the only delta vs petg-cf."
     },
     {
-      "name": "PolySmooth",
+      "name": "Fiberon™ PETG-ESD",
+      "filament_ids": [
+        "petg-esd"
+      ],
+      "notes": "Static-dissipative PETG composite."
+    },
+    {
+      "name": "Fiberon™ PA612-ESD",
+      "filament_ids": [],
+      "notes": "Static-dissipative PA612 composite; no PA612 and no nylon-ESD id in catalog."
+    },
+    {
+      "name": "Fiberon™ ASA-CF08",
+      "filament_ids": [
+        "asa-cf"
+      ],
+      "notes": "ASA + 8% carbon fiber."
+    },
+    {
+      "name": "Fiberon™ PPS-CF10",
+      "filament_ids": [
+        "pps-cf"
+      ],
+      "notes": "Polyphenylene sulfide + 10% carbon fiber."
+    },
+    {
+      "name": "Fiberon™ PPS-GF20",
+      "filament_ids": [],
+      "notes": "PPS + 20% glass fiber; catalog has pps and pps-cf but no glass-filled PPS id."
+    },
+    {
+      "name": "PolySmooth™",
       "filament_ids": [
         "pvb"
       ],
-      "notes": "PVB for vapour smoothing"
+      "notes": "PVB, alcohol/acetone vapour-smoothable."
+    },
+    {
+      "name": "PolyCast™",
+      "filament_ids": [
+        "pvb"
+      ],
+      "notes": "Same PVB chemistry as PolySmooth, tuned for lost-wax burnout casting."
+    },
+    {
+      "name": "PolyDissolve™ S1",
+      "filament_ids": [
+        "pva"
+      ],
+      "notes": "Water-soluble support, PVA-class chemistry."
+    },
+    {
+      "name": "PolySupport™",
+      "filament_ids": [],
+      "notes": "Breakaway (peel-away) support material for PLA/PA12; no breakaway-support id in catalog (only soluble pva/bvoh and hips)."
     }
   ],
   "price_tier": "premium",
@@ -98,7 +349,15 @@
       "https://wiki.polymaker.com/polymaker-products/about-polymaker",
       "https://polymaker.com/about-polymaker/",
       "https://www.linkedin.com/company/polymaker-3d",
-      "/home/claude/filament-repo/research/verified-oem-relationships.md (project-owner verified)"
+      "/home/claude/filament-repo/research/verified-oem-relationships.md (project-owner verified)",
+      "https://polymaker.com/material/pla/",
+      "https://polymaker.com/product/polymax-pla/",
+      "https://shop.polymaker.com/products/polymax-pla",
+      "https://polymaker.com/download-material/",
+      "https://wiki.polymaker.com/polymaker-products/polymaker-filaments",
+      "https://shop.polymaker.com/products/fiberon-pa6-cf20",
+      "https://polymaker.com/product/polymide-pa6-cf/",
+      "https://www.amazon.com/Polymaker-PA612-CF-Filament-Cardboard-Sensitive/dp/B0D4QF5QVL"
     ],
     "last_verified": "2026-07-31",
     "confidence": "medium",

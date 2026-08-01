@@ -1,7 +1,11 @@
 {
   "id": "tpu-90a",
   "name": "TPU 90A (medium-soft flexible)",
-  "aliases": ["TPU 90A", "Shore 90A TPU", "Bambu TPU 90A"],
+  "aliases": [
+    "TPU 90A",
+    "Shore 90A TPU",
+    "Bambu TPU 90A"
+  ],
   "status": "researched",
   "base_type": "tpu",
   "variation_kind": "shore-grade",
@@ -9,15 +13,35 @@
   "chemical_makeup": "Thermoplastic polyurethane with the base TPU hard/soft segment chemistry at a Shore 90A durometer — a higher hard-segment ratio than 85A, lower than 95A. Bambu Lab TPU 90A is the reference SKU, sold as one line with 85A",
   "summary": "The middle of the mainstream flexible range — gummy-bear to soft-shoe-sole firmness, and the point where TPU stops fighting the printer. Delta vs base TPU: it sits inside the base entry's 85A-95A band, but prints faster than 85A (20-30 mm/s), tolerates a small 0-1 mm retraction instead of none, and drops 85A's nozzle-diameter gate entirely — Bambu lists 90A as compatible with 0.4 mm, 0.6 mm and 0.8 mm nozzles. Still barred from the AMS, and still direct-drive.",
   "printing": {
-    "nozzle_temp_c": { "min": 220, "max": 235, "recommended": 230 },
-    "bed_temp_c": { "min": 40, "max": 55, "recommended": 50 },
-    "ambient_temp_c": { "min": 18, "max": 30, "recommended": 22 },
-    "speed_mm_s": { "min": 20, "max": 30, "recommended": 25 },
+    "nozzle_temp_c": {
+      "min": 220,
+      "max": 235,
+      "recommended": 230
+    },
+    "bed_temp_c": {
+      "min": 40,
+      "max": 55,
+      "recommended": 50
+    },
+    "ambient_temp_c": {
+      "min": 18,
+      "max": 30,
+      "recommended": 22
+    },
+    "speed_mm_s": {
+      "min": 20,
+      "max": 30,
+      "recommended": 25
+    },
     "enclosure_recommended": false,
     "heated_chamber_required": false,
     "enclosure_open_for_cooling": true,
     "requires_hardened_nozzle": false,
-    "part_cooling_fan_pct": { "min": 0, "max": 50, "recommended": 30 },
+    "part_cooling_fan_pct": {
+      "min": 0,
+      "max": 50,
+      "recommended": 30
+    },
     "notes": "220-235 °C nozzle with a 45-55 °C bed, a narrower and better-behaved window than 85A's brand-dependent 215-250 °C spread. Speed 20-30 mm/s — faster and more forgiving than 85A's 15-20, still below the base entry's 30 mm/s recommendation for the range as a whole. Retraction of 0-1 mm is workable, where 85A and 60A want it fully off; that alone removes a large share of the stringing tuning. The nozzle-diameter delta matters: unlike 85A, Bambu's TPU 90A is compatible with 0.4 mm as well as 0.6 mm and 0.8 mm, so it fits a standard printer setup without a nozzle swap. No enclosure; run enclosed machines with the lid open. Not abrasive."
   },
   "feeding": {
@@ -28,9 +52,22 @@
   },
   "drying": {
     "required_before_use": "always",
-    "temp_c": { "min": 70, "max": 85, "recommended": 70 },
-    "time_hours": { "min": 8, "max": 12, "recommended": 8 },
-    "methods": ["forced-air oven at 70 °C for 8 h", "compatible heated bed at 75-85 °C for 8 h", "dedicated filament dryer", "print directly from a drybox with desiccant"],
+    "temp_c": {
+      "min": 70,
+      "max": 85,
+      "recommended": 70
+    },
+    "time_hours": {
+      "min": 8,
+      "max": 12,
+      "recommended": 8
+    },
+    "methods": [
+      "forced-air oven at 70 °C for 8 h",
+      "compatible heated bed at 75-85 °C for 8 h",
+      "dedicated filament dryer",
+      "print directly from a drybox with desiccant"
+    ],
     "dryness_validation": "No popping or crackling at the nozzle, no foamy or bubbly extrudate, and — usable at this grade unlike the softer ones — no rise in stringing on a retraction test, since 90A tolerates retraction and strings less than 85A when dry",
     "notes": "Bambu specifies an identical regime for 90A and 85A: 70 °C for 8 h forced-air, or 75-85 °C for 8 h on a heatbed, stored under 20% RH with desiccant. Hardness does not shift TPU drying chemistry."
   },
@@ -87,8 +124,19 @@
     "water_tolerance": 6
   },
   "compatibility": {
-    "bonds_with": ["tpu", "tpu-60a", "tpu-85a", "tpu-95a", "tpu-60d", "tpu-68d", "tpe"],
-    "support_materials": ["pla"],
+    "bonds_with": [
+      "tpe",
+      "tpu",
+      "tpu-60a",
+      "tpu-60d",
+      "tpu-68d",
+      "tpu-85a",
+      "tpu-95a",
+      "tpu-gf"
+    ],
+    "support_materials": [
+      "pla"
+    ],
     "usable_as_support_for": [],
     "notes": "Welds to base TPU and all sibling grades, so multi-durometer parts pairing 90A with a softer 85A pad or a firmer 60D core work well. Rigid-material bonding is unchanged from the base entry: PLA and PETG joints are mechanical interlock only. Soluble supports remain impractical — PVA and HIPS are not documented as reliable TPU interfaces — and PLA is the usable breakaway option because it releases cleanly."
   },
@@ -97,12 +145,26 @@
       "plate_id": "pei-textured",
       "rating": "usable",
       "notes": "Compatible with cool, engineering and high-temp PEI plates per Bambu, excluding the supertack cool plate which over-adheres flexibles. As with base TPU, the risk on textured PEI is over-adhesion tearing the part, mitigated with a glue-stick release layer. No special surface needed."
+    },
+    {
+      "plate_id": "pei-smooth",
+      "rating": "usable",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Fusing risk rises as Shore hardness falls."
+    },
+    {
+      "plate_id": "pei-satin",
+      "rating": "usable",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): As TPU."
     }
   ],
   "emissions": {
     "voc_level": "low",
     "particulate_level": "low",
-    "primary_emissions": ["ultrafine particles", "isocyanate residues (unverified)", "urethane decomposition byproducts (unverified)"],
+    "primary_emissions": [
+      "ultrafine particles",
+      "isocyanate residues (unverified)",
+      "urethane decomposition byproducts (unverified)"
+    ],
     "ventilation": "recommended",
     "notes": "Standard TPU-family profile identical to the base entry — moderate ultrafine particles, some VOCs, minimal styrene. No source differentiates emissions by Shore grade (unverified). The tight 220-235 °C window means the temperature-driven variation that separates 60A (235 °C) and 60D (up to 260 °C) does not apply here."
   },
@@ -119,5 +181,32 @@
     "last_verified": "2026-07-31",
     "confidence": "low",
     "conflicts": "No mechanical or physical datasheet figures were found for any 90A product — density, tensile, elongation and service temperature are all unverified, positioned by interpolation between the documented 60A and 95A grades. Price is recorded identical to 85A because the two ship as one bundled Bambu line; whether generic 90A from other brands is cheaper was not established. Scoring note: the research notes rated 'compression recovery' 8/10 here, but this catalog's compression_strength score measures resistance to crushing loads, which is the inverse — 90A scores 2 there. Emissions are not grade-differentiated in any source found."
-  }
+  },
+  "trade_names": [
+    {
+      "manufacturer": "eryone",
+      "product": "TPU 90A",
+      "notes": "Shore 90A - softer than the 95A that dominates this cluster; the only sub-95A grade found across all eight brands."
+    },
+    {
+      "manufacturer": "filamentive",
+      "product": "TPU 90A",
+      "notes": "Shore 90A, UV/chemical resistant"
+    },
+    {
+      "manufacturer": "polymaker",
+      "product": "PolyFlex TPU90",
+      "notes": "Shore 90A"
+    },
+    {
+      "manufacturer": "spectrum-filaments",
+      "product": "S-Flex 90A",
+      "notes": "Shore 90A, elongation up to 500%, oil/chemical resistant"
+    },
+    {
+      "manufacturer": "sunlu",
+      "product": "TPU 90A",
+      "notes": "Shore 90A"
+    }
+  ]
 }

@@ -591,6 +591,64 @@ function backCrumb(href, label) {
   return el('nav', { class: 'crumbs no-print' }, el('a', { href }, `← ${label}`));
 }
 
+/** "PETG (Polyethylene Terephthalate Glycol)" -> "PETG" — for dense chip lists. */
+function shortName(kind, id) {
+  const entry = indexEntry(kind, id);
+  const name = (entry && entry.name) || String(id);
+  return name.split(' (')[0].trim();
+}
+
+/** Chip list of entity references using short names; links when the entity exists. */
+function refChips(kind, ids, opts) {
+  const o = opts || {};
+  if (!Array.isArray(ids) || !ids.length) return null;
+  const ul = el('ul', { class: 'taglist' });
+  for (const id of ids) {
+    ul.appendChild(el('li', { title: o.titles ? o.titles[id] || null : null },
+      refLink(kind, id, shortName(kind, id)) || txt(String(id))));
+  }
+  return ul;
+}
+
+/**
+ * Collapsible block. Open by default when small, collapsed when long, so pages
+ * stay scannable as the catalog grows. Uses native <details> (no state to keep).
+ */
+function collapsible(summaryText, countText, body, opts) {
+  const o = opts || {};
+  if (!body) return null;
+  const d = el('details', { class: 'group' });
+  if (o.open) d.setAttribute('open', '');
+  d.appendChild(el('summary', {},
+    el('span', { class: `group-title${o.tone ? ' rating-' + o.tone : ''}`, text: summaryText }),
+    has(countText) ? el('span', { class: 'group-count', text: String(countText) }) : null));
+  d.appendChild(el('div', { class: 'group-body' }, body));
+  return d;
+}
+
+/** Order and display metadata for the two rating vocabularies in the schemas. */
+const RATING_ORDER = ['recommended', 'usable', 'usable-with-prep', 'avoid'];
+const RATING_LABEL = {
+  recommended: 'Recommended',
+  usable: 'Usable',
+  'usable-with-prep': 'Usable with prep',
+  avoid: 'Avoid',
+};
+
+/** Group an array of {rating} rows into ordered [rating, rows] pairs. */
+function groupByRating(rows) {
+  const groups = new Map();
+  for (const row of rows) {
+    const key = has(row.rating) ? row.rating : 'unrated';
+    if (!groups.has(key)) groups.set(key, []);
+    groups.get(key).push(row);
+  }
+  const ordered = [];
+  for (const key of RATING_ORDER) if (groups.has(key)) ordered.push([key, groups.get(key)]);
+  for (const [key, val] of groups) if (!RATING_ORDER.includes(key)) ordered.push([key, val]);
+  return ordered;
+}
+
 /* ==========================================================================
  * 7. Compare selection (in-memory only — no localStorage)
  * ========================================================================== */
@@ -815,6 +873,8 @@ function filterFilaments(rows, s) {
       (f.aliases || []).join(' '),
       (pick(f, 'use_cases.recommended') || []).join(' '),
       (pick(f, 'use_cases.not_recommended') || []).join(' '),
+      // brand/product names: "ninjaflex" should find tpu-85a
+      (f.trade_names || []).map((t) => `${t.product || ''} ${t.manufacturer || ''}`).join(' '),
     ])) return false;
     if (s.cls.length && !s.cls.includes(f.polymer_class)) return false;
     if (s.ease > 1) { const v = pick(f, 'scores.ease_of_print'); if (!isNum(v) || v < s.ease) return false; }
@@ -974,6 +1034,11 @@ async function viewFilaments(route) {
         const shore = has(f.shore_hardness) ? f.shore_hardness : pick(f, 'properties.shore_hardness');
         if (has(shore)) flags.appendChild(badge(`Shore ${shore}`, 'neutral', 'Shore hardness'));
         if (pick(f, 'emissions.ventilation') === 'required') flags.appendChild(ventilationBadge('required'));
+        const products = Array.isArray(f.trade_names) ? f.trade_names.length : 0;
+        if (products) {
+          flags.appendChild(badge(`sold as ${products} product${products === 1 ? '' : 's'}`, 'neutral',
+            'Manufacturer product names that are this material chemically'));
+        }
         if (isPlaceholder(f)) flags.appendChild(badge('example', 'example', 'Example data pending research'));
 
         body.appendChild(el('tr', {},
@@ -1188,10 +1253,24 @@ async function viewPlates(route) {
       for (const r of sorted) {
         const entity = full.get(r.id) || {};
         const compat = Array.isArray(entity.filament_compatibility) ? entity.filament_compatibility : [];
+        /*
+         * Plates now rate 30-46 materials each. Show rating counts, plus the
+         * named materials for whichever rating the compatibility filter targets.
+         */
         const compatCell = el('span', { class: 'badge-group' });
-        for (const c of compat.slice(0, 10)) {
-          const tone = c.rating === 'recommended' ? 'good' : c.rating === 'avoid' ? 'bad' : 'mid';
-          compatCell.appendChild(badge(c.filament_id, tone, `${c.filament_id}: ${c.rating}`));
+        for (const [rating, group] of groupByRating(compat)) {
+          const tone = rating === 'recommended' ? 'good' : rating === 'avoid' ? 'bad' : 'mid';
+          compatCell.appendChild(badge(`${RATING_LABEL[rating] || rating}: ${group.length}`, tone,
+            group.map((c) => shortName('filaments', c.filament_id)).join(', ')));
+        }
+        if (s.compat) {
+          const hit = compat.find((c) => c.filament_id === s.compat);
+          if (hit) {
+            compatCell.appendChild(badge(
+              `${shortName('filaments', s.compat)}: ${RATING_LABEL[hit.rating] || hit.rating}`,
+              hit.rating === 'recommended' ? 'good' : hit.rating === 'avoid' ? 'bad' : 'mid',
+              hit.notes || null));
+          }
         }
         body.appendChild(el('tr', {},
           el('td', { class: 'no-print', 'data-label': 'Compare' }, selectCheckbox('plates', r.id, render)),
@@ -1403,21 +1482,81 @@ function compatibilitySection(f) {
   ]));
 }
 
+/**
+ * Build plates for one filament, grouped by rating. Every plate in the catalog
+ * can be rated for every material, so groups collapse once they get long.
+ */
 function plateRecommendationsSection(f) {
   const recs = f.plate_recommendations;
   if (!Array.isArray(recs) || !recs.length) return null;
-  const body = el('tbody');
-  for (const r of recs) {
-    body.appendChild(el('tr', {},
-      el('td', { 'data-label': 'Plate' }, refLink('plates', r.plate_id) || txt(String(r.plate_id))),
-      el('td', { 'data-label': 'Rating' }, el('span', { class: `rating-${r.rating}`, text: prettyEnum(r.rating) })),
-      el('td', { 'data-label': 'Notes' }, r.notes || '—')));
+  const groups = groupByRating(recs);
+
+  const blocks = groups.map(([rating, rows], i) => {
+    const body = el('tbody');
+    for (const r of rows) {
+      body.appendChild(el('tr', {},
+        el('td', { 'data-label': 'Plate' }, refLink('plates', r.plate_id) || txt(String(r.plate_id))),
+        el('td', { 'data-label': 'Notes' }, r.notes || '—')));
+    }
+    const table = el('div', { class: 'table-wrap' },
+      el('table', { class: 'responsive-table' },
+        el('thead', {}, el('tr', {},
+          el('th', { scope: 'col' }, 'Plate'), el('th', { scope: 'col' }, 'Notes'))),
+        body));
+    // First group (best rating) opens; the rest stay collapsed unless tiny.
+    return collapsible(RATING_LABEL[rating] || prettyEnum(rating), `${rows.length}`, table,
+      { open: i === 0 || recs.length <= 4, tone: rating });
+  });
+
+  return section('Build plates', null,
+    el('p', { class: 'small faint', text: `${recs.length} plate${recs.length === 1 ? '' : 's'} rated for this material.` }),
+    blocks);
+}
+
+/**
+ * "Sold as" — manufacturer product names that are chemically this material.
+ * Grouped by manufacturer; collapses when a popular base material has dozens.
+ */
+function tradeNamesSection(f) {
+  const names = f.trade_names;
+  if (!Array.isArray(names) || !names.length) return null;
+
+  const byMaker = new Map();
+  for (const t of names) {
+    if (!t || !has(t.product)) continue;
+    const key = has(t.manufacturer) ? t.manufacturer : '';
+    if (!byMaker.has(key)) byMaker.set(key, []);
+    byMaker.get(key).push(t);
   }
-  return section('Build plates', null, el('div', { class: 'table-wrap' },
-    el('table', { class: 'responsive-table' },
-      el('thead', {}, el('tr', {},
-        el('th', { scope: 'col' }, 'Plate'), el('th', { scope: 'col' }, 'Rating'), el('th', { scope: 'col' }, 'Notes'))),
-      body)));
+  const makers = Array.from(byMaker.keys()).sort((a, b) =>
+    shortName('manufacturers', a).localeCompare(shortName('manufacturers', b)));
+
+  const list = el('ul', { class: 'trade-list' });
+  for (const makerId of makers) {
+    const products = el('ul', { class: 'taglist' });
+    for (const t of byMaker.get(makerId)) {
+      products.appendChild(el('li', {
+        class: t.notes ? 'has-note' : null,
+        title: t.notes || null,
+      }, t.product, t.notes ? el('span', { class: 'note-dot', 'aria-hidden': 'true' }, '*') : null));
+    }
+    list.appendChild(el('li', { class: 'trade-row' },
+      el('span', { class: 'trade-maker' },
+        makerId ? (refLink('manufacturers', makerId, shortName('manufacturers', makerId)) || txt(makerId))
+          : txt('Unattributed')),
+      products));
+  }
+
+  const total = names.length;
+  const withNotes = names.some((t) => has(t.notes));
+  const body = frag(list, withNotes
+    ? el('p', { class: 'small faint', text: '* hover a product for match notes and spec deltas.' }) : null);
+
+  return section('Sold as', null,
+    el('p', { class: 'small faint' },
+      txt(`${total} product${total === 1 ? '' : 's'} from ${makers.length} manufacturer${makers.length === 1 ? '' : 's'} `),
+      txt('are this material chemically (matched by makeup and specs).')),
+    makers.length > 8 ? collapsible('Product names', `${total}`, body, { open: false }) : body);
 }
 
 function relatedFilaments(f) {
@@ -1443,7 +1582,13 @@ function madeBySection(id) {
 
 async function viewFilamentDetail(id) {
   const f = await loadEntity('filaments', id);
-  await loadAllEntities('manufacturers').catch(() => []);
+  /*
+   * `trade_names` names the manufacturers directly, so the page needs one fetch.
+   * Only fall back to scanning every manufacturer's product lines (58+ fetches)
+   * when an entry predates trade_names.
+   */
+  const hasTradeNames = Array.isArray(f.trade_names) && f.trade_names.length > 0;
+  if (!hasTradeNames) await loadAllEntities('manufacturers').catch(() => []);
   return frag(
     backCrumb('#/filaments', 'All filaments'),
     detailHeader(f, {
@@ -1478,7 +1623,8 @@ async function viewFilamentDetail(id) {
     compatibilitySection(f),
     plateRecommendationsSection(f),
     relatedFilaments(f),
-    madeBySection(f.id),
+    tradeNamesSection(f),
+    hasTradeNames ? null : madeBySection(f.id),
     feedingSection(f),
     emissionsSection(f),
     f.safety_notes ? section('Safety', null, el('p', { text: f.safety_notes })) : null,
@@ -1515,21 +1661,31 @@ async function viewManufacturerDetail(id) {
     })()
     : null;
 
-  const lines = Array.isArray(m.product_lines) && m.product_lines.length
+  const lineCount = Array.isArray(m.product_lines) ? m.product_lines.length : 0;
+  const lines = lineCount
     ? (() => {
       const body = el('tbody');
       for (const line of m.product_lines) {
         body.appendChild(el('tr', {},
           el('td', { 'data-label': 'Line' }, line.name || '—'),
-          el('td', { 'data-label': 'Materials' }, refList('filaments', line.filament_ids) || txt('—')),
+          // Materials link through to filament pages when the id is in the catalog.
+          el('td', { 'data-label': 'Materials' }, refChips('filaments', line.filament_ids) || txt('—')),
           el('td', { 'data-label': 'Notes' }, line.notes || '—')));
       }
-      return el('div', { class: 'table-wrap' }, el('table', { class: 'responsive-table' },
+      const table = el('div', { class: 'table-wrap' }, el('table', { class: 'responsive-table' },
         el('thead', {}, el('tr', {},
           el('th', { scope: 'col' }, 'Product line'), el('th', { scope: 'col' }, 'Materials'), el('th', { scope: 'col' }, 'Notes'))),
         body));
+      // Large catalogues (40+ lines) collapse so the rest of the page stays reachable.
+      return lineCount > 15
+        ? collapsible('All product lines', `${lineCount}`, table, { open: false })
+        : table;
     })()
     : null;
+
+  // Every distinct material this manufacturer's lines cover, as quick links.
+  const lineMaterials = Array.from(new Set((m.product_lines || [])
+    .flatMap((line) => line.filament_ids || []))).filter((fid) => entityExists('filaments', fid));
 
   const ep = m.endpoints || {};
   const social = ep.social && typeof ep.social === 'object' ? Object.keys(ep.social) : [];
@@ -1549,7 +1705,10 @@ async function viewManufacturerDetail(id) {
       ['plate_ids', refList('plates', m.plate_ids), { label: 'Plate products' }],
     ])),
     oem ? section('OEM & white-label relationships', null, oem) : null,
-    lines ? section('Product lines', null, lines) : null,
+    lines ? section('Product lines', null,
+      el('p', { class: 'small faint', text: `${lineCount} product line${lineCount === 1 ? '' : 's'}${lineMaterials.length ? ` covering ${lineMaterials.length} materials` : ''}.` }),
+      lineMaterials.length ? refChips('filaments', lineMaterials) : null,
+      lines) : null,
     (has(ep.website) || has(ep.store) || has(ep.docs) || has(ep.support) || socialList)
       ? section('Endpoints', null, kvTable([
         ['endpoints.website', externalLink(ep.website), { label: 'Website' }],
@@ -1565,14 +1724,12 @@ async function viewManufacturerDetail(id) {
 
 /* ---------- plate detail ---------- */
 
-function plateCompatTable(p) {
-  const rows = Array.isArray(p.filament_compatibility) ? p.filament_compatibility : [];
-  if (!rows.length) return null;
+/** One table of filament-compatibility rows (no rating column — the group is the rating). */
+function plateCompatGroupTable(rows) {
   const body = el('tbody');
   for (const c of rows) {
     body.appendChild(el('tr', {},
       el('td', { 'data-label': 'Filament' }, refLink('filaments', c.filament_id) || txt(String(c.filament_id))),
-      el('td', { 'data-label': 'Rating' }, el('span', { class: `rating-${c.rating}`, text: prettyEnum(c.rating) })),
       el('td', { 'data-label': 'Bed temperature' }, fmtRange(c.bed_temp_c, '°C') || '—'),
       el('td', { 'data-label': 'Adhesion aid' }, c.adhesion_aid || '—'),
       el('td', { 'data-label': 'Notes' }, c.notes || '—')));
@@ -1580,20 +1737,41 @@ function plateCompatTable(p) {
   return el('div', { class: 'table-wrap' }, el('table', { class: 'responsive-table' },
     el('thead', {}, el('tr', {},
       el('th', { scope: 'col' }, 'Filament'),
-      el('th', { scope: 'col' }, 'Rating'),
       el('th', { scope: 'col' }, propLabel('printing.bed_temp_c', { label: 'Bed temp' })),
       el('th', { scope: 'col' }, 'Adhesion aid'),
       el('th', { scope: 'col' }, 'Notes'))),
     body));
 }
 
+/**
+ * Plate compatibility, grouped by rating. A researched plate rates 30-46
+ * materials, so a flat table buries the useful part (what it is good at).
+ */
+function plateCompatSection(p) {
+  const rows = Array.isArray(p.filament_compatibility) ? p.filament_compatibility : [];
+  if (!rows.length) return null;
+  const groups = groupByRating(rows);
+  const blocks = groups.map(([rating, group], i) =>
+    collapsible(RATING_LABEL[rating] || prettyEnum(rating), `${group.length}`,
+      plateCompatGroupTable(group), { open: i === 0 || rows.length <= 8, tone: rating }));
+
+  const summary = el('span', { class: 'badge-group' });
+  for (const [rating, group] of groups) {
+    const tone = rating === 'recommended' ? 'good' : rating === 'avoid' ? 'bad' : 'mid';
+    summary.appendChild(badge(`${RATING_LABEL[rating] || rating}: ${group.length}`, tone));
+  }
+  return section('Filament compatibility', null,
+    el('p', {}, summary),
+    el('p', { class: 'small faint', text: `${rows.length} materials rated on this surface.` }),
+    blocks);
+}
+
 async function viewPlateDetail(id) {
+  /*
+   * One fetch: the plate's own filament_compatibility table is the authoritative
+   * (and reciprocal) list, so there is no need to scan every filament entity.
+   */
   const p = await loadEntity('plates', id);
-  await loadAllEntities('filaments').catch(() => []);
-  const referencing = listOf('filaments').filter((f) => {
-    const entity = DATA.entities.get(`filaments/${f.id}`);
-    return entity && (entity.plate_recommendations || []).some((r) => r.plate_id === id);
-  });
 
   return frag(
     backCrumb('#/plates', 'All plates'),
@@ -1619,7 +1797,7 @@ async function viewPlateDetail(id) {
       ['price.notes', pick(p, 'price.notes'), { label: 'Price notes' }],
       ['manufacturers', tagList(p.manufacturers), { label: 'Offered by' }],
     ])),
-    plateCompatTable(p) ? section('Filament compatibility', null, plateCompatTable(p)) : null,
+    plateCompatSection(p),
     (has(p.preparation) || has(p.cleaning)) ? section('Preparation & cleaning', null, kvTable([
       ['preparation', p.preparation],
       ['cleaning', p.cleaning],
@@ -1629,7 +1807,6 @@ async function viewPlateDetail(id) {
       ['stuck_print_recovery', p.stuck_print_recovery, { label: 'Stuck print recovery' }],
     ])) : null,
     p.lifespan_notes ? section('Lifespan & wear', null, el('p', { text: p.lifespan_notes })) : null,
-    referencing.length ? section('Recommended by materials', null, refList('filaments', referencing.map((f) => f.id))) : null,
     p.additional_notes ? section('Additional notes', null, el('p', { text: p.additional_notes })) : null,
     provenanceSection(p));
 }
@@ -1706,7 +1883,7 @@ async function viewFilamentSheet(id) {
         txt([prettyEnum(f.polymer_class), f.chemical_makeup].filter(has).join(' · ')),
         pick(f, 'provenance.last_verified') ? txt(` · verified ${pick(f, 'provenance.last_verified')}`) : null,
         isPlaceholder(f) ? txt(' · EXAMPLE DATA — pending research') : null),
-      f.summary ? el('p', { class: 'fine', text: trimText(f.summary, 210) }) : null,
+      f.summary ? el('p', { class: 'fine', text: trimText(f.summary, 170) }) : null,
       el('div', { class: 'sheet-cols' },
         sheetBlock('Print settings', miniTable([
           ['Nozzle', fmtRange(pr.nozzle_temp_c, '°C')],
@@ -1715,17 +1892,17 @@ async function viewFilamentSheet(id) {
           ['Speed', fmtRange(pr.speed_mm_s, 'mm/s')],
           ['Part cooling', fmtRange(pr.part_cooling_fan_pct, '%')],
           ['Hardware', flags.length ? flags.join('; ') : 'no special hardware'],
-        ]), pr.notes ? el('p', { class: 'fine', text: trimText(pr.notes, 190) }) : null),
+        ]), pr.notes ? el('p', { class: 'fine', text: trimText(pr.notes, 150) }) : null),
         sheetBlock('Drying & storage', miniTable([
           ['Dry before use', prettyEnum(d.required_before_use)],
           ['Dry at', fmtRange(d.temp_c, '°C')],
           ['For', fmtRange(d.time_hours, 'h')],
-          ['Methods', Array.isArray(d.methods) ? d.methods.join(', ') : null],
+          ['Methods', Array.isArray(d.methods) ? trimText(d.methods.join(', '), 90) : null],
           ['Hygroscopy', prettyEnum(st.hygroscopy)],
-          ['Store', trimText(st.recommendations, 120)],
+          ['Store', trimText(st.recommendations, 95)],
           ['Max humidity', fmtNum(st.max_humidity_pct, '% RH')],
         ]), d.dryness_validation
-          ? el('p', { class: 'fine' }, el('strong', { text: 'Dryness check: ' }), txt(trimText(d.dryness_validation, 140))) : null),
+          ? el('p', { class: 'fine' }, el('strong', { text: 'Dryness check: ' }), txt(trimText(d.dryness_validation, 115))) : null),
         sheetBlock('Key properties', miniTable([
           ['Density', fmtNum(props.density_g_cm3, 'g/cm³')],
           ['Per 100 cm³', fmtNum(props.grams_per_100cm3, 'g')],
@@ -1745,13 +1922,28 @@ async function viewFilamentSheet(id) {
             bulletList((pick(f, 'use_cases.recommended') || []).slice(0, 5), 'pros fine'),
             (pick(f, 'use_cases.not_recommended') || []).length
               ? frag(el('p', { class: 'fine', style: 'margin:.2rem 0 0' }, el('strong', { text: 'Avoid for: ' }),
-                txt(trimText((pick(f, 'use_cases.not_recommended') || []).join('; '), 150)))) : null)
+                txt(trimText((pick(f, 'use_cases.not_recommended') || []).join('; '), 120)))) : null)
           : null,
+        /*
+         * Every plate in the catalog is rated for every material, so the sheet
+         * carries the bench-relevant summary: which surfaces to reach for,
+         * which to avoid, and a count for everything in between.
+         */
         Array.isArray(f.plate_recommendations) && f.plate_recommendations.length
-          ? sheetBlock('Build plates', miniTable(f.plate_recommendations.map((r) => [
-            (indexEntry('plates', r.plate_id) || {}).name || r.plate_id,
-            `${prettyEnum(r.rating)}${r.notes ? ' — ' + trimText(r.notes, 95) : ''}`,
-          ]))) : null,
+          ? (() => {
+            const by = new Map(groupByRating(f.plate_recommendations));
+            const names = (rating) => (by.get(rating) || [])
+              .map((r) => shortName('plates', r.plate_id)).join(', ');
+            const middle = ['usable', 'usable-with-prep']
+              .reduce((n, k) => n + (by.get(k) || []).length, 0);
+            return sheetBlock('Build plates', miniTable([
+              ['Use', names('recommended')],
+              ['Avoid', names('avoid')],
+              ['Also usable', middle ? `${middle} other plate${middle === 1 ? '' : 's'}` : null],
+            ]),
+            (by.get('recommended') || [])[0] && (by.get('recommended') || [])[0].notes
+              ? el('p', { class: 'fine', text: trimText((by.get('recommended') || [])[0].notes, 105) }) : null);
+          })() : null,
         has(f.compatibility) ? sheetBlock('Compatibility', miniTable([
           ['Bonds with', (pick(f, 'compatibility.bonds_with') || []).join(', ')],
           ['Supports', (pick(f, 'compatibility.support_materials') || []).join(', ')],
@@ -1775,11 +1967,11 @@ async function viewFilamentSheet(id) {
               ? badge(prettyEnum(pick(f, 'emissions.voc_level')), levelTone(pick(f, 'emissions.voc_level'))) : null],
             ['Particulates', has(pick(f, 'emissions.particulate_level'))
               ? badge(prettyEnum(pick(f, 'emissions.particulate_level')), levelTone(pick(f, 'emissions.particulate_level'))) : null],
-            ['Emits', (pick(f, 'emissions.primary_emissions') || []).join(', ')],
+            ['Emits', trimText((pick(f, 'emissions.primary_emissions') || []).join(', '), 110)],
           ]),
-          pick(f, 'emissions.notes') ? el('p', { class: 'fine', text: trimText(pick(f, 'emissions.notes'), 160) }) : null,
-          f.safety_notes ? el('p', { class: 'fine', text: trimText(f.safety_notes, 140) }) : null) : null),
-      el('p', { class: 'fine faint', style: 'margin-top:.6rem' },
+          pick(f, 'emissions.notes') ? el('p', { class: 'fine', text: trimText(pick(f, 'emissions.notes'), 120) }) : null,
+          f.safety_notes ? el('p', { class: 'fine', text: trimText(f.safety_notes, 110) }) : null) : null),
+      el('p', { class: 'fine faint sheet-foot' },
         txt(`Condensed sheet — see the full entry for complete notes. Confidence: ${pick(f, 'provenance.confidence') || 'unknown'}. Filament Reference — ${f.id}`))));
 }
 
@@ -1804,17 +1996,29 @@ async function viewPlateSheet(id) {
           ['Price', fmtPricePlate(p.price)],
           ['Offered by', Array.isArray(p.manufacturers) ? p.manufacturers.join(', ') : null],
         ])),
-        compat.length ? sheetBlock('Filament compatibility', miniTable(compat.map((c) => [
-          (indexEntry('filaments', c.filament_id) || {}).name || c.filament_id,
-          `${prettyEnum(c.rating)}${fmtRange(c.bed_temp_c, '°C') ? ' @ ' + fmtRange(c.bed_temp_c, '°C') : ''}` +
-          `${c.adhesion_aid ? ' · aid: ' + trimText(c.adhesion_aid, 60) : ''}`,
-        ]))) : null,
+        /*
+         * A researched plate rates 30-46 materials — one row each would run to
+         * several pages. Group by rating and name the materials instead.
+         */
+        compat.length ? (() => {
+          const by = new Map(groupByRating(compat));
+          const names = (rating) => (by.get(rating) || [])
+            .map((c) => shortName('filaments', c.filament_id)).join(', ');
+          return sheetBlock('Filament compatibility',
+            el('p', { class: 'fine faint', style: 'margin:0 0 .2rem' },
+              txt(`${compat.length} materials rated`)),
+            miniTable([
+              ['Recommended', names('recommended')],
+              ['With prep', names('usable-with-prep') || names('usable')],
+              ['Avoid', names('avoid')],
+            ]));
+        })() : null,
         p.preparation ? sheetBlock('Preparation', el('p', { class: 'fine', text: trimText(p.preparation, 320) })) : null,
         p.cleaning ? sheetBlock('Cleaning', el('p', { class: 'fine', text: trimText(p.cleaning, 320) })) : null,
         p.model_removal ? sheetBlock('Model removal', el('p', { class: 'fine', text: trimText(p.model_removal, 320) })) : null,
         p.stuck_print_recovery ? sheetBlock('Stuck print recovery', el('p', { class: 'fine', text: trimText(p.stuck_print_recovery, 320) })) : null,
         p.lifespan_notes ? sheetBlock('Lifespan', el('p', { class: 'fine', text: trimText(p.lifespan_notes, 320) })) : null),
-      el('p', { class: 'fine faint', style: 'margin-top:.6rem' },
+      el('p', { class: 'fine faint sheet-foot' },
         txt(`Confidence: ${pick(p, 'provenance.confidence') || 'unknown'}. Filament Reference — ${p.id}`))));
 }
 
@@ -1882,6 +2086,23 @@ const FILAMENT_COMPARE_ROWS = [
   { key: 'provenance.confidence', label: 'Confidence', get: (f) => confidenceBadge(pick(f, 'provenance.confidence')) },
 ]);
 
+/** Filament ids a plate rates at a given level, in catalog order. */
+function plateRated(p, rating) {
+  return (Array.isArray(p.filament_compatibility) ? p.filament_compatibility : [])
+    .filter((c) => c.rating === rating)
+    .map((c) => c.filament_id);
+}
+
+/** Per-filament notes keyed by id, for chip tooltips in the compare view. */
+function plateCompatNotes(p) {
+  const out = {};
+  for (const c of (Array.isArray(p.filament_compatibility) ? p.filament_compatibility : [])) {
+    const parts = [fmtRange(c.bed_temp_c, '°C'), c.adhesion_aid ? `aid: ${c.adhesion_aid}` : null, c.notes];
+    out[c.filament_id] = parts.filter(has).join(' · ');
+  }
+  return out;
+}
+
 const PLATE_COMPARE_ROWS = [
   { key: 'texture', get: (p) => prettyEnum(p.texture) },
   { key: 'surface_makeup', get: (p) => p.surface_makeup },
@@ -1889,13 +2110,32 @@ const PLATE_COMPARE_ROWS = [
   { key: 'temperature_limits_c', label: 'Temperature limits', get: (p) => fmtRange(p.temperature_limits_c, '°C') },
   { key: 'price', label: 'Price', get: (p) => fmtPricePlate(p.price) },
   { key: 'manufacturers', label: 'Offered by', get: (p) => (Array.isArray(p.manufacturers) ? p.manufacturers.join(', ') : null) },
+  {
+    key: 'filament_compatibility',
+    label: 'Materials rated',
+    get: (p) => {
+      const rows = Array.isArray(p.filament_compatibility) ? p.filament_compatibility : [];
+      if (!rows.length) return null;
+      const group = el('span', { class: 'badge-group' });
+      for (const [rating, list] of groupByRating(rows)) {
+        const tone = rating === 'recommended' ? 'good' : rating === 'avoid' ? 'bad' : 'mid';
+        group.appendChild(badge(`${RATING_LABEL[rating] || rating}: ${list.length}`, tone));
+      }
+      return group;
+    },
+  },
+].concat(['recommended', 'usable-with-prep', 'avoid'].map((rating) => ({
+  key: `filament_compatibility.${rating}`,
+  label: RATING_LABEL[rating] || prettyEnum(rating),
+  get: (p) => refChips('filaments', plateRated(p, rating), { titles: plateCompatNotes(p) }),
+}))).concat([
   { key: 'preparation', get: (p) => p.preparation },
   { key: 'cleaning', get: (p) => p.cleaning },
   { key: 'model_removal', label: 'Model removal', get: (p) => p.model_removal },
   { key: 'stuck_print_recovery', label: 'Stuck print recovery', get: (p) => p.stuck_print_recovery },
   { key: 'lifespan_notes', label: 'Lifespan', get: (p) => p.lifespan_notes },
   { key: 'provenance.confidence', label: 'Confidence', get: (p) => confidenceBadge(pick(p, 'provenance.confidence')) },
-];
+]);
 
 function boolBadge(v, badIsTrue) {
   if (v === undefined || v === null) return null;
@@ -2130,8 +2370,25 @@ async function router() {
  * 17. Boot
  * ========================================================================== */
 
+/** Printing must show everything, including collapsed rating groups. */
+function setupPrintExpansion() {
+  window.addEventListener('beforeprint', () => {
+    for (const d of document.querySelectorAll('details.group:not([open])')) {
+      d.dataset.printExpanded = '1';
+      d.open = true;
+    }
+  });
+  window.addEventListener('afterprint', () => {
+    for (const d of document.querySelectorAll('details.group[data-print-expanded]')) {
+      d.open = false;
+      delete d.dataset.printExpanded;
+    }
+  });
+}
+
 function boot() {
   Tooltip.init();
+  setupPrintExpansion();
   window.addEventListener('hashchange', router);
   if (!location.hash) location.replace('#/filaments');
   router();

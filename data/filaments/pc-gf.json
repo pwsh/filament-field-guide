@@ -1,0 +1,193 @@
+{
+  "id": "pc-gf",
+  "name": "PC-GF (Glass-Fiber-Filled Polycarbonate)",
+  "aliases": [
+    "PC GF",
+    "PC-GF30",
+    "Glass-filled Polycarbonate",
+    "XSTRAND GF30-PC",
+    "Ultrafuse PC GF30"
+  ],
+  "status": "researched",
+  "base_type": "pc",
+  "variation_kind": "glass-fiber-filled",
+  "polymer_class": "composite-other",
+  "chemical_makeup": "The same bisphenol-A polycarbonate matrix as base PC, compounded with chopped glass fiber at 30 wt% — both grades that define this category are 'GF30' (Owens Corning XSTRAND GF30-PC and BASF Forward AM Ultrafuse PC GF30), which makes it the most consistently loaded glass-filled category in the catalog. Both are UL94-V0 flame rated and UV resistant as compounded. Glass fiber is non-conductive and light-coloured, so the filler does not force a carbon-black part, though at 30 % loading the result is opaque and fiber-textured either way — base PC's optical clarity is gone.",
+  "summary": "The stiffest and hottest-serving material in the glass-filled set, and the most industrial. Deltas vs base pc: tensile modulus reaches 5,400 MPa and flexural strength 113 MPa, HDT rises to 137 °C @1.8 MPa against base PC's 114 °C @0.45 MPa, and 30 % fiber suppresses PC's thermal-stress warping enough to cut warp_tendency from 8 to 4. It is also the only entry in this cluster where hardened extruder DRIVE GEARS are stated as mandatory alongside a hardened nozzle. The costs are severe: elongation at break collapses to 2.5 %, ZX tensile is 31 % of XY on the Ultrafuse grade, the nozzle window runs 280-330 °C, speed drops to 30-60 mm/s, and the material costs roughly $100-115/kg — two to three times base PC.",
+  "printing": {
+    "nozzle_temp_c": {
+      "min": 280,
+      "max": 330,
+      "recommended": 300
+    },
+    "bed_temp_c": {
+      "min": 80,
+      "max": 110,
+      "recommended": 100
+    },
+    "ambient_temp_c": {
+      "min": 45,
+      "max": 70,
+      "recommended": 55
+    },
+    "speed_mm_s": {
+      "min": 30,
+      "max": 100,
+      "recommended": 50
+    },
+    "enclosure_recommended": true,
+    "heated_chamber_required": false,
+    "enclosure_open_for_cooling": false,
+    "requires_hardened_nozzle": true,
+    "part_cooling_fan_pct": {
+      "min": 0,
+      "max": 20,
+      "recommended": 5
+    },
+    "notes": "Both brands agree closely on the window, which is unusual for this catalog: XSTRAND GF30-PC 280-330 °C nozzle with an 80-110 °C bed, Ultrafuse PC GF30 280-330 °C with 80-100 °C. That range starts 30 °C above base PC's 250 °C floor and requires an all-metal hotend without exception — a PTFE-lined hotend degrades and releases fluoropolymer decomposition products well below 330 °C. Nozzle diameter is gated: XSTRAND specifies 0.4 mm minimum hardened steel, Ultrafuse specifies 0.6 mm or larger. Speed is the sharpest disagreement, and it is internal to one brand — the XSTRAND product page says 30-100 mm/s while its own datasheet says 30-60 mm/s, with Ultrafuse also at 30-60; the recorded 50 mm/s recommendation follows the two datasheet figures rather than the product page. Part cooling stays near zero, carried from base PC: excessive cooling is the main cause of layer separation in polycarbonate and the fiber has already made the Z bond worse. Neither brand publishes a chamber temperature, so the recorded 45-70 °C ambient is carried from the base pc entry; an enclosure is effectively required for PC-class warp control regardless, and heated_chamber_required stays false as on the base entry."
+  },
+  "feeding": {
+    "drive_system": "any",
+    "ams_compatible": "no",
+    "feeding_assistant_recommended": false,
+    "notes": "Rigid and easy to push, so any extruder feeds it mechanically; not an elastomer, so no shore hardness and no feeding assistant. What IS gated is the extruder hardware rather than its topology: both Owens Corning and BASF state that hardened steel drive wheels are required alongside a hardened nozzle, which is the only entry in this cluster to make that demand explicitly. Neither brand addresses AMS or material-station compatibility at all — these are industrial and prosumer filaments that largely predate and sit outside the Bambu AMS ecosystem — so 'no' is recorded as an inference rather than a vendor statement, on three grounds: 30 % glass abrades PTFE feed tubes and roller surfaces, the elongation at break of 2.5 % means the strand is brittle enough to snap on a buffer bend radius, and a material station's feed gears are not the hardened drive wheels both vendors require. Feed from an external spool holder inside a drybox. The base pc entry's own note anticipates this, listing PC-CF/PC-GF as abrasive to AMS PTFE tubes."
+  },
+  "drying": {
+    "required_before_use": "always",
+    "temp_c": {
+      "min": 70,
+      "max": 100,
+      "recommended": 80
+    },
+    "time_hours": {
+      "min": 4,
+      "max": 12,
+      "recommended": 6
+    },
+    "methods": [
+      "blast/convection oven at 80 °C",
+      "dedicated filament dryer",
+      "print directly from a heated dryer",
+      "drybox with desiccant while printing"
+    ],
+    "dryness_validation": "No popping or hissing at the nozzle and no bubbles or voids in the purge strand; consistent extrusion width. Base PC's 'clear glossy extrudate' check does not transfer — a 30 % fiber-filled surface is opaque and matte by design — so judge by sound and by strand voids, or use a moisture meter. Layer splitting on a tall thin test coupon is the practical late warning that the spool was not dry enough.",
+    "notes": "Neither the XSTRAND nor the Ultrafuse pages accessible during research publish a drying schedule at all, so this entire section is inferred and should be treated as the weakest part of the entry. The recorded band widens base PC's 60-80 °C upward toward the 80-120 °C that industrial PC compounds conventionally receive, capped at 100 °C because plastic filament spools deform above that. 'Always' is carried from base PC because melt hydrolysis at 280-330 °C is the real risk and it is worse here than at base PC's 250-310 °C, not because uptake is high — see the hygroscopy note, which steps DOWN from the base entry."
+  },
+  "storage": {
+    "recommendations": "Airtight with desiccant and minimal ambient exposure, and print from a drybox for long jobs — the same practice as base PC even though the underlying uptake is lower, because the consequence at 330 °C is hydrolytic chain scission rather than mere surface roughness.",
+    "max_humidity_pct": 20,
+    "hygroscopy": "high"
+  },
+  "price": {
+    "usd_per_kg_low": 100,
+    "usd_per_kg_high": 115,
+    "notes": "XSTRAND GF30-PC at roughly EUR 104 (~$114) per 1 kg spool from Atome3D, EU pricing; the recorded $100-115/kg band brackets that single converted figure. BASF publishes no accessible price for Ultrafuse PC GF30. This is 2-3x base PC's $30-65/kg and the most expensive glass-filled entry in the catalog by a wide margin — these are industrial materials sold into tooling and automotive workflows rather than consumer spools, and the pricing reflects the channel as much as the compound."
+  },
+  "use_cases": {
+    "recommended": [
+      "functional prototyping needing high heat deflection and dimensional stability",
+      "tooling, fixturing and jigs for manufacturing",
+      "automotive manufacturing aids and under-bonnet components",
+      "electronics and small-appliance housings needing a UL94-V0 rated material",
+      "transportation enclosures exposed to heat and sunlight",
+      "stiff structural brackets where base PC would creep or deflect",
+      "large flat PC parts that would warp unfilled"
+    ],
+    "not_recommended": [
+      "impact-critical or drop-prone parts — 2.5 % elongation at break makes this brittle",
+      "parts loaded in Z (Ultrafuse ZX tensile is 31 % of XY)",
+      "PTFE-lined hotends and brass nozzles",
+      "printers without hardened extruder drive gears",
+      "material-station / AMS feed paths",
+      "optically clear parts — the fiber makes it opaque",
+      "food-contact items (BPA-based matrix, on top of the usual FDM objections)",
+      "budget or occasional printing at $100+/kg"
+    ]
+  },
+  "suitability": {
+    "food_contact": "no",
+    "load_bearing": "high",
+    "high_temperature": "yes",
+    "outdoor": "limited"
+  },
+  "properties": {
+    "density_g_cm3": 1.17,
+    "grams_per_100cm3": 117,
+    "cm3_per_100g": 85.5,
+    "shrinkage_pct": {
+      "min": 0.2,
+      "max": 0.5,
+      "recommended": 0.3
+    },
+    "glass_transition_c": 145,
+    "heat_deflection_c": 137,
+    "max_service_temp_c": 130,
+    "tensile_strength_mpa": {
+      "min": 36,
+      "max": 65,
+      "recommended": 50
+    },
+    "notes": "Figures are from the XSTRAND GF30-PC datasheet unless noted. Density 1.17 g/cm³ is LOWER than base PC's 1.20 despite 30 % of a 2.55 g/cm³ filler, which is counter-intuitive and worth flagging: rule of mixtures would predict roughly 1.42, so either the datasheet figure is a compound-supplier value for a different formulation or the printed-part porosity is being reported. It is recorded as published, but the derived 85.5 cm³ per 100 g should not be trusted for part-weight estimation without re-verification. Tensile modulus 5,400 MPa and flexural strength 113 MPa are the numbers that justify the material — roughly double base PC's stiffness — while elongation at break of 2.5 % is the number that disqualifies it from impact duty. HDT 137 °C at 1.8 MPa (XSTRAND); Ultrafuse publishes 134 °C at 0.45 MPa. Those are nearly the same number on very different load bases, which cannot both be right, and 137 °C is recorded on the schema's 0.45 MPa default with the caveat that XSTRAND's harsher basis makes it the more impressive of the two. Tg 145 °C matches base PC exactly and melting point is 270 °C. Moisture absorption is published at under 0.1 %, low for PC and the reason hygroscopy is recorded 'high' rather than the base entry's 'extreme'. Tensile strength is the widest brand split in the entry — XSTRAND 65 MPa against Ultrafuse 36.1 MPa XY and 11.2 MPa ZX — so the recorded 36-65 MPa band spans two products rather than describing one, and the 50 MPa recommendation is a midpoint, not a datasheet value. Max service temperature 130 °C is inferred from the HDT with margin, not published. Shrinkage is a reasoned reduction from base PC's 0.5-0.8 % consistent with the warp suppression 30 % fiber provides; no source publishes a figure."
+  },
+  "scores": {
+    "ease_of_print": 3,
+    "dimensional_stability": 8,
+    "warp_tendency": 4,
+    "layer_adhesion": 4,
+    "compression_strength": 9,
+    "temperature_tolerance": 9,
+    "uv_tolerance": 5,
+    "weather_tolerance": 5,
+    "water_tolerance": 6
+  },
+  "compatibility": {
+    "bonds_with": [
+      "pc-gf",
+      "pc",
+      "pc-abs",
+      "pc-pbt",
+      "abs",
+      "asa"
+    ],
+    "support_materials": [
+      "pc",
+      "pc-gf"
+    ],
+    "usable_as_support_for": [
+      "pc-gf"
+    ],
+    "notes": "Welds to itself and to the polycarbonate family, and retains base PC's unusually good cross-affinity with the styrenics — PC-ABS is a commercial blend, so ABS and ASA interfaces partially fuse, with ASA the weaker of the two. The support list is deliberately narrower than base PC's: the base entry lists BVOH and HIPS on Prusa's authority at roughly 275 °C, but at this grade's 280-330 °C both degrade rather than release, so same-material PC or PC-GF breakaway is the only safe answer and this material is in practice printed single-material. PVA is out of the question. No bond to pla, petg, pa, pp, pctg, pvb, pet, tpu or tpe, and nothing in those families survives contact with a 300 °C nozzle. Not usable as a support for other polymers — it bonds too aggressively and leaves a fiber-roughened interface."
+  },
+  "plate_recommendations": [
+    {
+      "plate_id": "pei-textured",
+      "rating": "recommended",
+      "notes": "Carried at base PC's 'recommended' rather than sourced: neither Owens Corning nor BASF names a build surface on the pages accessible during research, so this rating is industry practice plus the base entry rather than vendor guidance. Run the bed at 80-110 °C. Base PC's warnings still apply and matter more here, not less: PC bonds to PEI strongly enough to tear a smooth sheet, so use textured PEI with a glue stick as a SEPARATOR / release layer, and let the plate cool fully before removal. The fiber reduces corner lift substantially against unfilled PC, so a brim is helpful rather than essential on moderate footprints."
+    }
+  ],
+  "emissions": {
+    "voc_level": "moderate",
+    "particulate_level": "high",
+    "primary_emissions": [
+      "ultrafine particles",
+      "unspecified VOCs (no single dominant marker compound identified for PC in the sources reviewed)",
+      "glass fiber fines (post-processing)"
+    ],
+    "ventilation": "required",
+    "notes": "Two deltas against the base pc entry, both driven by temperature rather than by the filler. Particulate level is stepped up from 'moderate' to 'high' and ventilation from 'recommended' to 'required' because ultrafine-particle emission scales steeply with extrusion temperature and this material's entire working range (280-330 °C) sits above base PC's recommended 275 °C. VOC level stays 'moderate' — PC's VOC profile is poorly characterised in the literature compared with nylon's caprolactam or ABS's styrene, and no marker compound can honestly be named. Glass fiber dust from sanding, drilling or machining printed parts is a separate bench-side hazard the base entry does not carry. Vent the enclosure externally or filter through HEPA plus activated carbon, and vent before opening the door."
+  },
+  "safety_notes": "An all-metal hotend is mandatory, not advisory: a PTFE-lined hotend degrades below this grade's 330 °C ceiling and releases fluoropolymer decomposition products. Abrasive at 30 % loading — hardened steel nozzle AND hardened steel extruder drive wheels are required by both vendors, and brass will not survive. Do not dry-sand, drill or machine printed parts without respiratory protection and dust capture; glass fiber fines irritate skin, eyes and airways. The 280-330 °C hotend and 80-110 °C bed are serious burn hazards and a hot enclosure concentrates off-gassing. The matrix is bisphenol-A polycarbonate, which is a further reason beyond FDM layer hygiene to keep it away from food and drink contact.",
+  "additional_notes": "This is the industrial end of the catalog and the buying decision usually turns on whether the part needs 137 °C service or 2.5 % elongation is acceptable — if either answer is no, base PC or pc-abs will do the job for a third of the price and far less hardware. The two grades that define the category are not interchangeable despite both being nominally GF30: XSTRAND publishes 65 MPa tensile against Ultrafuse's 36.1 MPa XY, a spread far too wide to be measurement noise, so profiles and expectations must be set per product rather than per category. No true PC-CF entry exists in this catalog and no consumer PC-CF product was confirmed during research, so the research note's CF comparison is retained qualitatively only: a carbon-filled PC would be expected stiffer per unit weight, matte black, EMI-shielding and even more brittle. Note also that '3DXTech PC-GF' is not a real SKU — 3DXTech's glass-fiber collection carries PA6, Nylon 12, ABS, PEI and PEEK grades but no polycarbonate.",
+  "provenance": {
+    "sources": [
+      "https://asset.conrad.com/media10/add/160267/c1/-/en/002274577DS00/datasheet-2274577-owens-corning-fixd-1000-002-xstrand-gf30-filament-pc-uv-resistant-285-mm-500-g-black-1-pcs.pdf",
+      "https://www.matterhackers.com/store/l/owens-corning-xstrand-3d-printing-filament-gf30-pc-glass-filled-polycarbonate/sk/MPYQHK5P",
+      "https://www.atome3d.com/products/xstrand-gf30-pc-noir-black-1-kg-1-75-mm",
+      "https://forward-am.com/material-portfolio/ultrafuse-filaments-for-fused-filaments-fabrication-fff/reinforced-filaments/ultrafuse-pc-gf30/",
+      "https://filament2print.com/en/advanced/2759-16553-treed-pc-pbt-gf.html"
+    ],
+    "last_verified": "2026-08-01",
+    "confidence": "low",
+    "conflicts": "Tensile strength is the widest brand disagreement in this cluster: XSTRAND publishes 65 MPa while Ultrafuse publishes 36.1 MPa XY and 11.2 MPa ZX for a nominally identical GF30 loading — a 1.8x spread that must reflect different compounds or test methods, not noise, so the recorded 36-65 MPa band spans two products. HDT is internally incoherent across brands: XSTRAND 137 °C @1.8 MPa against Ultrafuse 134 °C @0.45 MPa, nearly equal numbers on very different load bases; 137 °C is recorded on the schema's 0.45 MPa default and is therefore conservative. Density 1.17 g/cm³ is published by XSTRAND but is LOWER than base PC's 1.20 despite 30 % glass, where rule of mixtures predicts ~1.42 — the derived volume-per-weight figures inherit that doubt and need re-verification. Print speed conflicts within a single brand: XSTRAND's product page says 30-100 mm/s and its own datasheet says 30-60 mm/s. Drying is entirely unsourced — neither vendor page publishes a schedule, so the recorded 70-100 °C / 4-12 h is inferred from base PC widened toward industrial PC-compound practice, and is the least trustworthy section of the entry. Chamber temperature is likewise unpublished by both brands and carried from base pc. AMS incompatibility is inferred from abrasiveness, 2.5 % elongation and the hardened-drive-gear requirement, not from any vendor statement — neither brand addresses material stations at all. Build-surface guidance is unsourced and carried from base pc. Max service temperature and shrinkage are reasoned, not published. uv_tolerance is recorded 5 rather than higher despite both grades being marketed UV resistant, following the pp-gf precedent: a UV-resistance claim about a stabilised industrial grade is not a property of the base polymer, and base PC scores 3. '3DXTech PC-GF' does not exist as a SKU."
+  }
+}

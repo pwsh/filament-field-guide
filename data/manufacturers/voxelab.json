@@ -4,8 +4,13 @@
   "status": "researched",
   "summary": "Budget consumer sub-brand of Zhejiang Flashforge 3D Technology Co., Ltd., best known historically for the Aquila printer line. Voxelab is a label rather than an independent extruder: its filament is manufactured by Flashforge in China, a relationship that is owner-verified, self-disclosed on Voxelab's own about page, and even visible in the brand's Amazon storefront name ('Voxelab Official: Flashforge 3D Printer'). Manufacturing countries here therefore reflect Flashforge's Zhejiang facilities.",
   "headquarters_country": "China",
-  "manufacturing_countries": ["China"],
-  "brands": ["Voxelab", "Aquila"],
+  "manufacturing_countries": [
+    "China"
+  ],
+  "brands": [
+    "Voxelab",
+    "Aquila"
+  ],
   "oem_relationships": [
     {
       "company": "Flashforge",
@@ -17,18 +22,69 @@
     "website": "https://www.voxelab3dp.com"
   },
   "product_lines": [
-    { "name": "PLA", "filament_ids": ["pla"] },
-    { "name": "ASA", "filament_ids": ["asa"], "notes": "Marketed as UV, rain and heat resistant" }
+    {
+      "name": "PLA",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Standard PLA"
+    },
+    {
+      "name": "PLA Pro (marketed as \"PLA+\")",
+      "filament_ids": [
+        "pla-plus"
+      ],
+      "notes": "Toughened PLA tier"
+    },
+    {
+      "name": "PETG",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "Standard PETG"
+    },
+    {
+      "name": "PETG Pro (marketed as \"PETG+\")",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "Enhanced PETG; no disclosed chemistry departure from base PETG"
+    },
+    {
+      "name": "PETG CF",
+      "filament_ids": [
+        "petg-cf"
+      ],
+      "notes": "Carbon-fibre-filled PETG"
+    },
+    {
+      "name": "ASA",
+      "filament_ids": [
+        "asa"
+      ],
+      "notes": "Weatherable ASA, marketed as UV, rain and heat resistant"
+    },
+    {
+      "name": "TPU",
+      "filament_ids": [
+        "tpu"
+      ],
+      "notes": "Flexible elastomer; Shore durometer not disclosed in any available source, so mapped to the generic tpu entry rather than a graded id"
+    }
   ],
   "makes_plates": true,
   "plate_ids": [],
   "price_tier": "budget",
-  "additional_notes": "Confirmed filament SKUs are limited to PLA and ASA in this research pass; a fuller PETG/ABS/TPU catalog is plausible given the Flashforge parent but was not confirmed. Aquila printers ship with and sell removable spring-steel build surfaces, consistent with the Flashforge accessory lineup. No separate registered corporate address was found — Voxelab operates under the Flashforge corporate umbrella.",
+  "additional_notes": "Confirmed filament SKUs now cover PLA, PLA Pro, PETG, PETG Pro, PETG CF, ASA and TPU; ABS remains unconfirmed. Voxelab publishes little spec detail and its own store pages are frequently robots-blocked, so several lines rest on retailer listings rather than a TDS. Aquila printers ship with and sell removable spring-steel build surfaces, consistent with the Flashforge accessory lineup. No separate registered corporate address was found — Voxelab operates under the Flashforge corporate umbrella.",
   "provenance": {
     "sources": [
       "https://www.voxelab3dp.com/aboutUs",
       "https://www.amazon.com/Filament-Resistant-Printing-Functional-Mechanical/dp/B0C8S4CD4L",
-      "research/verified-oem-relationships.md"
+      "research/verified-oem-relationships.md",
+      "https://www.voxelab3dp.com/category/filaments-and-resins",
+      "https://www.voxelab3dp.com/product/petg-cf-1-75-mm-1kg-filament-1kg-spool",
+      "https://www.amazon.com/dp/B08JTVQ116",
+      "https://www.amazon.com/dp/B09YTF5YT6"
     ],
     "last_verified": "2026-07-31",
     "confidence": "medium",

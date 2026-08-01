@@ -32,26 +32,72 @@
   },
   "product_lines": [
     {
-      "name": "Nylon",
+      "name": "Nylon 618",
       "filament_ids": [
         "pa"
       ],
-      "notes": "Nylon 230, Nylon 645, Nylon 680 FDA (food-contact), Alloy 910 nylon blend and Nylon Bridge easy-print nylon."
+      "notes": "Nylon co-polymer (PA6-copolymer type) engineered for FDM: low warp, dyeable, bonds to cellulose fibers. A copolymer rather than straight PA6, so mapped to base pa."
     },
     {
-      "name": "Reinforced nylon",
+      "name": "Nylon 645",
       "filament_ids": [
-        "pa-cf",
-        "pa-gf"
+        "pa"
       ],
-      "notes": "Carbon-fiber-reinforced nylon and Glass-Fiber-filled Nylon Alloy."
+      "notes": "Nylon co-polymer, stiffer and stronger than 618, natural translucent."
     },
     {
-      "name": "Copolyester",
+      "name": "Nylon 680 / Nylon 680 FDA",
+      "filament_ids": [
+        "pa"
+      ],
+      "notes": "645-family nylon co-polymer in an FDA-compliant food-contact grade."
+    },
+    {
+      "name": "Bridge Nylon (645 Rev B)",
+      "filament_ids": [
+        "pa"
+      ],
+      "notes": "More flexible revision of 645 at similar strength; same nylon-copolymer family."
+    },
+    {
+      "name": "Nylon 230 (n)vent",
+      "filament_ids": [
+        "pa"
+      ],
+      "notes": "Lower-melt-point nylon copolymer formulated to print on standard brass nozzles without an all-metal hotend."
+    },
+    {
+      "name": "Alloy 910 / Nylon 910",
+      "filament_ids": [
+        "pa"
+      ],
+      "notes": "Alloyed nylon copolymer for high tensile strength, minimal shrinkage and broad chemical resistance; not simply PA6 or PA12."
+    },
+    {
+      "name": "T-glase",
       "filament_ids": [
         "petg"
       ],
-      "notes": "T-Glase, T-lyne, Guideline, Enviro PETG and TECH-G. Grouped under petg as the nearest catalog material id; several are PET or PETT rather than strict PETG."
+      "notes": "Glycol-modified PET copolyester (PETT): optically clear, low shrinkage, stronger than ABS. Frequently described as PETT/PET rather than strict PETG; mapped to petg on the amorphous-copolyester property profile."
+    },
+    {
+      "name": "TECH-G",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "PETG-based grade optimised for large-format prints with low shrinkage."
+    },
+    {
+      "name": "PCTPE",
+      "notes": "'Plasticized Copolyamide TPE' - a nylon/TPE alloy giving a semi-flexible nylon-elastomer hybrid. Neither straight TPU nor straight nylon, so no id fits."
+    },
+    {
+      "name": "Carbon-fiber reinforced nylon (braskem3d listing)",
+      "notes": "Listed on braskem3d.com under the taulman3D name; nylon base grade and fiber loading are not stated, so left unmapped."
+    },
+    {
+      "name": "T-lyne / Guideline / Enviro PETG",
+      "notes": "Legacy specialty copolyester and monofilament SKUs still carried by distributors; chemistry not confirmed in this research pass, so left unmapped."
     }
   ],
   "makes_plates": false,
@@ -63,7 +109,13 @@
       "https://www.tctmagazine.com/braskem-acquires-taulman3d-expanding-its-portfolio-of-materials-for-additive-manufacturing-operations/",
       "https://braskem3d.com/taulman3d-carbon-fiber-reinforced-nylon-filament-na.html",
       "https://filament2print.com/en/brand/5-taulman3d",
-      "https://pitchbook.com/profiles/company/517666-06"
+      "https://pitchbook.com/profiles/company/517666-06",
+      "https://reprap.org/wiki/Taulman3D_618_Nylon",
+      "https://www.matterhackers.com/articles/tech-breakdown-taulman3d-high-strength-3d-printing-filament",
+      "https://nfil3d.com/en-us/product/bridge-nylon/",
+      "https://www.taulman3d.com/nylon-680-spec.html",
+      "https://filament2print.com/en/nylon-pa/640-taulman-680-fda.html",
+      "https://filament2print.com/en/blog/which-Taulman-3D-filament-choose"
     ],
     "last_verified": "2026-07-31",
     "confidence": "low",

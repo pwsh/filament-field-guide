@@ -1,0 +1,210 @@
+{
+  "id": "pla-gf",
+  "name": "PLA-GF (Glass-Fiber-Filled PLA)",
+  "aliases": [
+    "PLA GF",
+    "PLA Glass Fiber",
+    "Glass-filled PLA",
+    "eSUN PLA-GF",
+    "MH Build Series PLA-GF",
+    "Glass Fiber HTPLA-GF"
+  ],
+  "status": "researched",
+  "base_type": "pla",
+  "variation_kind": "glass-fiber-filled",
+  "polymer_class": "composite-other",
+  "chemical_makeup": "The same aliphatic polyester matrix as base PLA, compounded with chopped glass fiber — eSUN publishes 15-20 wt% on its TDS and 16 % on its product page, while MatterHackers and Proto-pasta disclose no loading. Proto-pasta's Glass Fiber HTPLA-GF is built on a heat-treatable PLA rather than standard PLA and can be annealed to roughly 150 °C service after printing, which makes it a materially different product sold under the same category label. Glass fiber is non-conductive and light-coloured, so unlike pla-cf this grade is available in natural, white and pigmented colours rather than being locked to matte black.",
+  "summary": "The easiest filled filament in the catalog. Deltas vs base pla: flexural modulus reaches 4,415 MPa and tensile 59.3 MPa, dimensional stability rises from 8 to 9, and the fiber further reduces already-negligible shrinkage — bought with almost nothing except a mandatory hardened nozzle, since eSUN's own TDS records drying as 'N/A' and no enclosure is needed. Vs pla-cf it is the ductile choice: less stiff and less matte-black, but noticeably tougher (impact 10.16 kJ/m²), less abrasive, colourable, and easier to print, which is why ease_of_print lands at 8 against pla-cf's 7. What glass fiber does NOT fix is the reason people leave PLA: HDT is 56 °C, UV resistance is unchanged, and a filled PLA part still fails in a parked car.",
+  "printing": {
+    "nozzle_temp_c": {
+      "min": 190,
+      "max": 240,
+      "recommended": 215
+    },
+    "bed_temp_c": {
+      "min": 45,
+      "max": 60,
+      "recommended": 55
+    },
+    "ambient_temp_c": {
+      "min": 15,
+      "max": 30,
+      "recommended": 22
+    },
+    "speed_mm_s": {
+      "min": 40,
+      "max": 150,
+      "recommended": 90
+    },
+    "enclosure_recommended": false,
+    "heated_chamber_required": false,
+    "enclosure_open_for_cooling": true,
+    "requires_hardened_nozzle": true,
+    "part_cooling_fan_pct": {
+      "min": 80,
+      "max": 100,
+      "recommended": 100
+    },
+    "notes": "eSUN specifies 190-230 °C nozzle and 45-60 °C bed — identical to base PLA — with a maximum print speed under 150 mm/s against base PLA's 300 mm/s ceiling on modern hardware, which is the one meaningful process cost besides the nozzle. The recorded 240 °C upper bound accommodates Proto-pasta's HTPLA-GF, which is run at 240 °C for up to 24 mm³/s volumetric flow. Part cooling stays at PLA-class full blast, unchanged from the base entry and the sharpest contrast with every other filled material in this catalog, all of which run their fans at or near zero. No enclosure is required and enclosure_open_for_cooling is carried true from base PLA — a sealed 35-45 °C chamber still sits close enough to PLA's ~58-63 °C Tg to cause heat creep, and the fiber does nothing about that. The single hard delta against base PLA is abrasion: eSUN states hardened steel or ruby, and the fiber will destroy a brass nozzle."
+  },
+  "feeding": {
+    "drive_system": "any",
+    "ams_compatible": "conditional",
+    "feeding_assistant_recommended": false,
+    "notes": "Rigid and unproblematic through any extruder; not an elastomer, so no shore hardness and no feeding assistant. AMS status is a genuine tension rather than a hedge. No PLA-GF vendor publishes an AMS caveat, and PLA-class filled filaments are lower risk than the nylon, ASA and PC glass grades because the strand stays comparatively ductile and the print temperature is low — but Bambu's AMS notes bar third-party PLA-GF BY NAME alongside PLA-CF, on the grounds that filled grades wear the PTFE feed tubes (see the base pla entry's feeding notes). 'Conditional' is recorded to match the pla-cf sibling, which faces the identical bar: the material is mechanically fine in a feed path, but the wear it causes is real and running it in an AMS is a decision about the machine, not the print. A hardened steel or ruby nozzle is mandatory regardless of feed path."
+  },
+  "drying": {
+    "required_before_use": "rarely",
+    "temp_c": {
+      "min": 45,
+      "max": 55,
+      "recommended": 50
+    },
+    "time_hours": {
+      "min": 4,
+      "max": 6,
+      "recommended": 4
+    },
+    "methods": [
+      "filament dryer",
+      "food dehydrator",
+      "convection oven at lowest setting",
+      "drybox with desiccant"
+    ],
+    "dryness_validation": "Largely a non-issue. Watch only for popping at the nozzle or fine surface bubbles as the rare sign a spool has taken on humidity in long open storage. Base PLA's glossy-extrudate check does not transfer — a fiber-filled surface is matte by design — so judge by sound and by strand voids.",
+    "notes": "This is the only entry in the glass-filled set that steps drying DOWN rather than up. eSUN's TDS records drying as 'N/A' outright and Proto-pasta describes HTPLA-GF as low moisture absorbing with no drying required, so 'rarely' is recorded against base PLA's 'if-exposed' — a rare case where a filled grade is less demanding than its base, because glass displaces absorbing matrix and PLA had little appetite for water to begin with. The recorded 45-55 °C / 4-6 h schedule is base PLA's, retained as the corrective procedure for a neglected spool rather than as a routine one."
+  },
+  "storage": {
+    "recommendations": "A sealed bag or drybox with desiccant between uses is good practice but not urgent, unchanged from base PLA. Tolerates weeks of open air in a dry room; the fiber-filled matrix grows brittle after prolonged humid exposure in the same way unfilled PLA does, and slightly sooner because the fiber gives cracks somewhere to start.",
+    "max_humidity_pct": 40,
+    "hygroscopy": "low"
+  },
+  "price": {
+    "usd_per_kg_low": 25,
+    "usd_per_kg_high": 40,
+    "notes": "MatterHackers MH Build Series PLA-GF at $33.99/kg, falling to $25.49/kg at 12+ units, is the one verified bulk figure and defines the recorded band. eSUN PLA-GF is shown out of stock or discontinued on eSUN's own product page with no current price. Proto-pasta sells Glass Fiber HTPLA-GF only in 50 g coils at $5.50, which works out near $110/kg — that is specialty small-coil pricing and is deliberately excluded from the range rather than treated as the category's high end. Against base PLA's $14-35/kg this is a modest premium, and the cheapest glass-filled entry in the catalog."
+  },
+  "use_cases": {
+    "recommended": [
+      "mechanical prototypes needing more rigidity than base PLA",
+      "gears and wear surfaces for light-duty mechanisms",
+      "jigs, fixtures and shop tooling used at room temperature",
+      "robotics, drone and RC structural components",
+      "temporary functional parts and test fixtures",
+      "electronics and automotive prototyping",
+      "large flat parts where base PLA's slight bow is unacceptable",
+      "pigmented or natural-coloured stiff parts, where pla-cf's matte black is unacceptable"
+    ],
+    "not_recommended": [
+      "anything hot — HDT is 56 °C, so a parked car still destroys it",
+      "outdoor or UV-exposed parts (base PLA's poor weather life carries over intact)",
+      "sustained-load structural parts (PLA creep is unchanged)",
+      "brass-nozzle printers",
+      "cosmetic parts — the surface is matte and fiber-flecked",
+      "food-contact items",
+      "high-impact parts, where a tougher polymer is the right answer"
+    ]
+  },
+  "suitability": {
+    "food_contact": "no",
+    "load_bearing": "moderate",
+    "high_temperature": "no",
+    "outdoor": "no"
+  },
+  "properties": {
+    "density_g_cm3": 1.31,
+    "grams_per_100cm3": 131,
+    "cm3_per_100g": 76.3,
+    "shrinkage_pct": {
+      "min": 0.1,
+      "max": 0.3,
+      "recommended": 0.2
+    },
+    "glass_transition_c": 60,
+    "heat_deflection_c": 56,
+    "max_service_temp_c": 52,
+    "tensile_strength_mpa": {
+      "recommended": 59.3
+    },
+    "notes": "Figures are eSUN PLA-GF TDS unless noted. Density 1.31 g/cm³ against base PLA's 1.24 and pla-cf's 1.29 — the expected rise from 15-20 wt% of ~2.55 g/cm³ glass, and the highest in the PLA family, yielding 76.3 cm³ per 100 g against base PLA's 80.6. MatterHackers publishes 1.25 g/cm³ for its MH Build Series grade, which is barely above unfilled PLA and suggests a much lower loading; that split is unresolved. Tensile 59.27 MPa sits at the top of base PLA's 45-65 MPa band and well above pla-cf's 26-38 MPa — glass-filled PLA keeps its strength where carbon-filled PLA gives it away. Flexural modulus 4,414.89 MPa is the headline stiffness figure, and impact strength 10.16 kJ/m² is the toughness that distinguishes it from the CF sibling. HDT 56 °C at 0.45 MPa is the number that limits the material and is essentially identical to base PLA's 57 °C — the fiber buys stiffness at room temperature and nothing above it. Tg 60 °C is not published for any PLA-GF grade and is interpolated between base PLA's 58 °C and pla-cf's 63 °C. Max service temperature 52 °C is carried from base PLA. Shrinkage is a reasoned reduction from base PLA's 0.3-0.5 % on the strength of Proto-pasta's statement that HTPLA-GF has less shrink and warp than the same HTPLA without fibers; no source publishes a figure. Proto-pasta's HTPLA-GF is separately annealable to about 150 °C service, which is a property of the heat-treatable base polymer and a post-processing step, NOT of glass-filled PLA generally — it is deliberately excluded from the recorded HDT and max service temperature."
+  },
+  "scores": {
+    "ease_of_print": 8,
+    "dimensional_stability": 9,
+    "warp_tendency": 1,
+    "layer_adhesion": 5,
+    "compression_strength": 9,
+    "temperature_tolerance": 2,
+    "uv_tolerance": 3,
+    "weather_tolerance": 2,
+    "water_tolerance": 6
+  },
+  "compatibility": {
+    "bonds_with": [
+      "pla-gf",
+      "pla",
+      "pla-cf",
+      "pla-plus",
+      "pla-hf",
+      "pla-matte",
+      "pla-silk",
+      "pla-gradient",
+      "lw-pla"
+    ],
+    "support_materials": [
+      "pva",
+      "bvoh",
+      "petg",
+      "pla"
+    ],
+    "usable_as_support_for": [
+      "petg"
+    ],
+    "notes": "Welds to itself and across the whole PLA family — same polyester chemistry, same 190-230 °C window, same bed temperature — so a stiff GF core inside a cosmetic silk or matte PLA shell is a straightforward multi-material design and one of the better reasons to own this material. Support pairing is inherited intact from base PLA and matches pla-cf: PVA and BVOH dissolve, PETG releases cleanly because PLA and PETG deliberately do not weld, and same-family PLA works as breakaway. That same non-bonding makes it usable as breakaway support under PETG, though the fiber-roughened interface leaves a rougher underside than plain PLA would — prefer unfilled PLA for that job if you have it. No bond to abs, asa, pc, pa, pp, pctg, pvb or pet, and their 90-110 °C beds deform it."
+  },
+  "plate_recommendations": [
+    {
+      "plate_id": "pei-textured",
+      "rating": "recommended",
+      "notes": "Carried at base PLA's 'recommended' and, if anything, easier: textured PEI at 45-60 °C bed needs no release agent, and the fiber's reduced shrinkage means GF-PLA parts typically release even more cleanly than unfilled PLA rather than gripping. Glass, smooth PEI and blue painter's tape are all reported to work as well. A glue stick remains optional and only for awkward geometry."
+    }
+  ],
+  "emissions": {
+    "voc_level": "low",
+    "particulate_level": "low",
+    "primary_emissions": [
+      "lactide",
+      "ultrafine particles",
+      "glass fiber fines (post-processing)"
+    ],
+    "ventilation": "recommended",
+    "notes": "Printing emissions are base PLA's essentially unchanged — lactide as the sweet-smelling marker compound and the lowest ultrafine-particle rate among common filaments, roughly two to three orders of magnitude below ABS. No PLA-GF-specific measurement exists. Ventilation is stepped up one notch from base PLA's 'optional' to 'recommended' for a bench-side reason rather than a nozzle-side one: the primary added hazard with any glass-filled grade is respirable fiber dust released during sanding, drilling or cutting, which unfilled PLA does not produce. For printing alone, a normally ventilated room remains sufficient."
+  },
+  "safety_notes": "Abrasive: eSUN specifies hardened steel or ruby, and a brass nozzle will not survive a spool. Do not dry-sand, drill or machine printed parts without respiratory protection and dust capture — glass fiber fines irritate skin, eyes and airways, and this is the one genuine hazard the material adds over base PLA. Post-print annealing of the heat-treatable HTPLA-GF grade to ~150 °C should be done in a ventilated oven with the part supported, since PLA distorts as it crystallises. Not food-contact suitable: the fiber-roughened surface compounds the usual FDM layer-crevice problem and no certified glass-filled PLA was found.",
+  "additional_notes": "PLA-GF is the rare filled filament that costs almost nothing in process difficulty — no enclosure, no drying, full part cooling, base PLA temperatures — so the buying decision reduces to whether a hardened nozzle and a ~$10/kg premium are worth roughly a 40 % gain in flexural modulus and better dimensional stability. Against pla-cf it wins on strength (59.3 MPa against 26-38 MPa), toughness, colour and printability, and loses only on peak stiffness per unit weight and the matte carbon aesthetic, which makes it the better default of the two filled PLAs for functional work. The category's real caveat is that it does not extend PLA's envelope: HDT 56 °C and unchanged UV behaviour mean every application PLA is wrong for, PLA-GF is also wrong for, and Proto-pasta's annealable HTPLA-GF is the only product in the category that addresses that — via its heat-treatable base polymer and a post-print anneal, not via the glass. Fiber loading is disclosed only by eSUN, inconsistently (15-20 % on the TDS, 16 % on the product page), and eSUN's grade appears discontinued, so the brand supplying nearly all the mechanical data here may no longer be purchasable.",
+  "provenance": {
+    "sources": [
+      "https://www.esun3d.com/uploads/eSUN_PLA-GF-Filament_TDS_V1.0.pdf",
+      "https://www.esun3d.com/epla-gf-product/",
+      "https://www.matterhackers.com/store/l/natural-mh-build-series-pla-gf-filament-175mm-1kg/sk/MMKS13Y4",
+      "https://proto-pasta.com/products/white-glass-fiber-htpla",
+      "https://www.amazon.com/PLA-GF-Filament-Filled-Polylactic-Printer/dp/B0D2DNX2F5",
+      "https://wiki.bambulab.com/en/knowledge-sharing/notes-ams"
+    ],
+    "last_verified": "2026-08-01",
+    "confidence": "low",
+    "conflicts": "Confidence is low despite the material being easy to print, because the data is thin and the one brand that publishes it appears to have left the market. eSUN contradicts itself on fiber loading — 15-20 % on the TDS against 16 % on the product page — and eSUN's PLA-GF is shown out of stock or discontinued on its own site, yet supplies every mechanical figure in this entry. Density splits sharply by brand: eSUN 1.31 g/cm³ against MatterHackers MH Build Series 1.25 g/cm³, a gap large enough to imply substantially different loadings, and the derived volume-per-weight figures follow eSUN only. Neither MatterHackers nor Proto-pasta discloses loading at all. Tensile strength has a single source (59.27 MPa, eSUN) and is recorded as a recommended value with no band rather than inventing one. Tg is unpublished for every PLA-GF grade and is interpolated between base PLA and pla-cf. Shrinkage is reasoned from Proto-pasta's qualitative 'less shrink and warp' statement, not measured. Proto-pasta's HTPLA-GF is arguably a different material sold in the same category — a heat-treatable PLA base annealable to ~150 °C — so its properties are noted but excluded from the recorded HDT and max service temperature. AMS status is genuinely contested: no PLA-GF vendor addresses it and the material is low risk on its merits, but Bambu bars third-party PLA-GF by name; 'conditional' matches the pla-cf sibling. Pricing excludes Proto-pasta's ~$110/kg small-coil equivalent as unrepresentative, and eSUN publishes no current price. Emissions are carried from base PLA; no PLA-GF measurement exists."
+  },
+  "trade_names": [
+    {
+      "manufacturer": "bambu-lab",
+      "product": "PLA-GF",
+      "notes": "provisional id"
+    },
+    {
+      "manufacturer": "polymaker",
+      "product": "HT-PLA-GF",
+      "notes": "Glass-fiber PLA; pla-gf id is provisional. The HT (annealable/crystallizable) aspect is not captured by any id"
+    }
+  ]
+}

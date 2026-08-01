@@ -1,0 +1,409 @@
+{
+  "id": "pei-patterned",
+  "name": "Patterned / holographic PEI-family plate (PEI, PEO or PEY)",
+  "aliases": [
+    "Holographic build plate",
+    "Rainbow plate",
+    "Galaxy plate",
+    "PEY plate",
+    "PEO holographic sheet",
+    "Patterned PEI"
+  ],
+  "status": "researched",
+  "summary": "A cosmetic novelty surface that transfers a rainbow diffraction pattern onto the bottom face of a print. The optical effect comes from microscopic grating ridges — roughly 500-1500 nm spacing — embossed or etched into the coating, not from pigment. The critical caveat is chemical: many plates marketed as 'patterned PEI' are not polyetherimide at all but PEO or PEY films, which top out far lower on temperature and wear out much faster than genuine PEI. Buy for the look, not for versatility.",
+  "surface_makeup": "Varies by vendor and is frequently mislabelled: either genuine polyetherimide with the diffraction pattern embossed or etched in, or (more often on budget plates) a PEO or PEY film laminated over an adhesion layer on spring steel. Diffraction-grating ridges at roughly 500-1500 nm spacing produce the holographic effect; related 'carbon-fibre-look' PET plates are purely cosmetic film with no actual carbon fibre",
+  "texture": "patterned",
+  "manufacturers": [
+    "Creality",
+    "FYSETC",
+    "BIQU",
+    "generic AliExpress and Amazon plate vendors"
+  ],
+  "filament_compatibility": [
+    {
+      "filament_id": "pla",
+      "rating": "recommended",
+      "bed_temp_c": {
+        "min": 55,
+        "max": 60
+      },
+      "adhesion_aid": "none",
+      "notes": "The intended use case. Natural, translucent and semi-transparent PLA show the holographic effect most strongly on the bottom face."
+    },
+    {
+      "filament_id": "pla-plus",
+      "rating": "recommended",
+      "bed_temp_c": {
+        "min": 55,
+        "max": 60
+      },
+      "adhesion_aid": "none",
+      "notes": "As base PLA."
+    },
+    {
+      "filament_id": "pla-silk",
+      "rating": "recommended",
+      "bed_temp_c": {
+        "min": 55,
+        "max": 60
+      },
+      "adhesion_aid": "none",
+      "notes": "Silk and metallic PLA are the standout pairing — the reflective surface amplifies the diffraction pattern."
+    },
+    {
+      "filament_id": "pla-matte",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 55,
+        "max": 60
+      },
+      "adhesion_aid": "none",
+      "notes": "Adheres normally, but matte pigment scatters light and largely cancels the holographic effect, defeating the point of the plate."
+    },
+    {
+      "filament_id": "pla-glow",
+      "rating": "recommended",
+      "bed_temp_c": {
+        "min": 55,
+        "max": 60
+      },
+      "adhesion_aid": "none",
+      "notes": "Adheres normally; translucent glow bases carry the pattern well."
+    },
+    {
+      "filament_id": "pla-cf",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 55,
+        "max": 60
+      },
+      "adhesion_aid": "none",
+      "notes": "Adhesion is fine, but the opaque fibre-filled surface will not show the pattern."
+    },
+    {
+      "filament_id": "petg",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 70,
+        "max": 80
+      },
+      "adhesion_aid": "none per vendor claims; glue stick if adhesion is inconsistent",
+      "notes": "Clear and translucent PETG shows the effect well and adhesion is generally adequate, but behaviour varies by vendor coating (unverified across brands)."
+    },
+    {
+      "filament_id": "pctg",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 70,
+        "max": 80
+      },
+      "adhesion_aid": "none to glue stick",
+      "notes": "As PETG."
+    },
+    {
+      "filament_id": "pet",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 70,
+        "max": 85
+      },
+      "adhesion_aid": "none to glue stick",
+      "notes": "As PETG."
+    },
+    {
+      "filament_id": "petg-cf",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 70,
+        "max": 80
+      },
+      "adhesion_aid": "none to glue stick",
+      "notes": "Adheres, but the pattern will not read on an opaque filled surface."
+    },
+    {
+      "filament_id": "pvb",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 70,
+        "max": 80
+      },
+      "adhesion_aid": "none",
+      "notes": "Bed temp is within range and translucent PVB should show the pattern well, but no vendor documents PVB on these coatings (unverified). Keep IPA off the part."
+    },
+    {
+      "filament_id": "tpu",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 40,
+        "max": 60
+      },
+      "adhesion_aid": "glue stick if release or adhesion is inconsistent",
+      "notes": "Several PEO/PEY vendors list TPU as compatible, but reported adhesion is variable and some PEO variants are noted as not self-releasing after cooling."
+    },
+    {
+      "filament_id": "tpu-95a",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 40,
+        "max": 60
+      },
+      "adhesion_aid": "glue stick if inconsistent",
+      "notes": "Hardest common grade; the most predictable of the TPUs here."
+    },
+    {
+      "filament_id": "tpu-85a",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 40,
+        "max": 60
+      },
+      "adhesion_aid": "glue stick recommended",
+      "notes": "Softer grades risk working into the micro-grating and dulling it permanently."
+    },
+    {
+      "filament_id": "tpe",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 30,
+        "max": 50
+      },
+      "adhesion_aid": "glue stick recommended",
+      "notes": "As soft TPU; the coating is thin, so avoid aggressive prying."
+    },
+    {
+      "filament_id": "abs",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 100,
+        "max": 110
+      },
+      "adhesion_aid": "not recommended on PEO/PEY coatings",
+      "notes": "PEO/PEY-class coatings are typically rated only to about 120 degC and are not intended for high-temp engineering filaments; sustained ABS bed temps degrade the pattern."
+    },
+    {
+      "filament_id": "asa",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 100,
+        "max": 110
+      },
+      "adhesion_aid": "not recommended on PEO/PEY coatings",
+      "notes": "As ABS — thermal and adhesion envelope both exceeded in practice."
+    },
+    {
+      "filament_id": "asa-cf",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 100,
+        "max": 110
+      },
+      "adhesion_aid": "not recommended",
+      "notes": "As ASA."
+    },
+    {
+      "filament_id": "abs-gf",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 100,
+        "max": 110
+      },
+      "adhesion_aid": "not recommended",
+      "notes": "As ABS."
+    },
+    {
+      "filament_id": "abs-fr",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 100,
+        "max": 110
+      },
+      "adhesion_aid": "not recommended",
+      "notes": "As ABS."
+    },
+    {
+      "filament_id": "hips",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 100,
+        "max": 110
+      },
+      "adhesion_aid": "not recommended",
+      "notes": "Bed temp sits at the top of the coating's rated band with no benefit — use a textured PEI plate instead."
+    },
+    {
+      "filament_id": "pa",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 70,
+        "max": 100
+      },
+      "adhesion_aid": "dedicated nylon surface required",
+      "notes": "Outside the coating's adhesion and temperature envelope; use garolite or textured PEI."
+    },
+    {
+      "filament_id": "pa6",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 70,
+        "max": 100
+      },
+      "adhesion_aid": "dedicated nylon surface required",
+      "notes": "As base PA."
+    },
+    {
+      "filament_id": "pa12",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 70,
+        "max": 100
+      },
+      "adhesion_aid": "dedicated nylon surface required",
+      "notes": "As base PA."
+    },
+    {
+      "filament_id": "pa6-cf",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 70,
+        "max": 100
+      },
+      "adhesion_aid": "dedicated nylon surface required",
+      "notes": "As PA."
+    },
+    {
+      "filament_id": "ppa",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 90,
+        "max": 120
+      },
+      "adhesion_aid": "dedicated high-temp surface required",
+      "notes": "Far outside the rated range."
+    },
+    {
+      "filament_id": "pc",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 110,
+        "max": 130
+      },
+      "adhesion_aid": "dedicated high-temp surface required",
+      "notes": "PC bed temps exceed the roughly 120 degC ceiling of PEO/PEY coatings, and PC's bond strength would lift a thin film."
+    },
+    {
+      "filament_id": "pc-abs",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 100,
+        "max": 120
+      },
+      "adhesion_aid": "dedicated high-temp surface required",
+      "notes": "As PC."
+    },
+    {
+      "filament_id": "pp",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 80,
+        "max": 100
+      },
+      "adhesion_aid": "PP-specific tape or sheet required",
+      "notes": "No support identified on any patterned coating."
+    },
+    {
+      "filament_id": "pva",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 45,
+        "max": 60
+      },
+      "adhesion_aid": "print on top of an existing PLA layer",
+      "notes": "Not designed for or documented with soluble supports; use as a soluble interface only."
+    },
+    {
+      "filament_id": "bvoh",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 45,
+        "max": 60
+      },
+      "adhesion_aid": "print on top of an existing PLA layer",
+      "notes": "As PVA."
+    },
+    {
+      "filament_id": "peek",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 130,
+        "max": 160
+      },
+      "adhesion_aid": "dedicated high-temp sheet required",
+      "notes": "Far outside the rated range."
+    },
+    {
+      "filament_id": "pekk",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 130,
+        "max": 160
+      },
+      "adhesion_aid": "dedicated high-temp sheet required",
+      "notes": "As PEEK."
+    },
+    {
+      "filament_id": "pei-ultem",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 130,
+        "max": 160
+      },
+      "adhesion_aid": "dedicated high-temp sheet required",
+      "notes": "Far outside the rated range."
+    },
+    {
+      "filament_id": "pps",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 120,
+        "max": 150
+      },
+      "adhesion_aid": "dedicated high-temp sheet required",
+      "notes": "Far outside the rated range."
+    },
+    {
+      "filament_id": "ppsu",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 130,
+        "max": 160
+      },
+      "adhesion_aid": "dedicated high-temp sheet required",
+      "notes": "Far outside the rated range."
+    }
+  ],
+  "preparation": "On first use, wipe gently with IPA on a soft lint-free cloth to remove manufacturing residue — gently is the operative word, because the diffraction ridges that create the effect are nanometre-scale and abrade easily. Routine prep is a light IPA wipe before printing; never scrub hard, and never use steel wool or an abrasive pad to 'restore' grip the way you would on smooth PEI, since flattening the ridges destroys the pattern permanently. Keep fingers off the print area and re-run first-layer calibration when swapping from another plate type. Because these coatings are thinner than powder-coated PEI, dial the Z-offset in slightly conservatively on the first print rather than pushing the nozzle in.",
+  "cleaning": "Routine cleaning is a light 90%+ IPA wipe when cold, using minimal pressure. Avoid acetone and every other aggressive solvent — the general PEI-family caution applies and these films are thinner and more delicate than a powder coat. Avoid metal scrapers entirely. Notably, glue stick is discouraged here for cosmetic rather than functional reasons: it visibly dulls the holographic effect even where it helps release (per 3DBite; unverified independently), so if a material needs a separator, that is usually a sign it belongs on a different plate. For baked-on residue, warm the bed and lift with a plastic scraper rather than cutting cold.",
+  "model_removal": "Cool and flex, like the rest of the PEI family: let the plate reach room temperature, lift it off the magnet, and flex gently until the part releases. Two differences matter. First, some PEO-based variants are reported by their own vendors not to self-release on cooling, so expect to flex manually more than you would on textured PEI. Second, the coating is a thin film rather than a thick powder coat and is reported to peel or delaminate under aggressive prying (unverified severity), so use a plastic scraper sparingly, at a shallow angle, and never lever against the film. Removing parts hot is the fastest way to ruin one of these plates.",
+  "stuck_print_recovery": "Work gently and prefer the least mechanical option available. Start with a full cool-down and repeated gentle flexing. Alcohol wicking at the perimeter works as it does on other PEI-family surfaces and puts no mechanical stress on the film. Unwaxed dental floss or thin wire drawn under a corner is the preferred mechanical assist, since it distributes force instead of concentrating it under a blade tip. The freezer trick is reported to work but should be used cautiously given the thinner coating and its adhesive layer; community reports flag the holographic layer lifting or peeling when parts are pried aggressively, so accept a slower recovery rather than risk the surface.",
+  "temperature_limits_c": {
+    "max": 120
+  },
+  "lifespan_notes": "Materially shorter-lived than standard PEI. Community reports put vivid holographic effect at roughly 50-100 print cycles before visible degradation, which is far faster than a powder-coated PEI plate wears. As the diffraction pattern flattens, both the cosmetic effect and adhesion consistency decline together. There is no recoating path — these are replaceable novelty consumables, and they are priced accordingly. Running high-temperature materials, applying glue stick, or scrubbing hard all shorten that window further.",
+  "price": {
+    "usd_low": 15,
+    "usd_high": 30,
+    "notes": "Roughly USD 15-30 for 220-310 mm class sheets from third-party AliExpress and Amazon sellers; Creality's PEY/PEI Rainbow magnetic flex plate for K1 Max-class beds falls in the same band (unverified exact figure)."
+  },
+  "additional_notes": "This is a cosmetic category first and a build surface second: it is chosen for the rainbow pattern transferred to a print's first layer, not for adhesion performance or material breadth. Treat the word 'PEI' in these listings with suspicion — PEO and PEY substitutions are common and carry materially different temperature and durability characteristics, and vendors use the three names interchangeably. Neither Bambu Lab nor Prusa Research sells a first-party holographic plate in their reviewed lineups (unverified). Plates are typically magnetic-mount with a single patterned side, the reverse being plain smooth or textured PEI, rather than patterned on both faces.",
+  "provenance": {
+    "sources": [
+      "3DBite - How Holographic Build Plates Actually Work: https://3dbite.com/holographic-build-plates-how-they-work-3d-printing/",
+      "P3D - What is PEI, PEO, PEY, PET, PEX Build Plates?: https://p3d.mx/blogs/how-to-3d-print/what-is-pei-peo-pey-pex-pet-build-plates",
+      "Embrace Making - Creality K1 Max PEY/PEI Rainbow Pattern Magnetic Flex Build Plate: https://embracemaking.com/products/creality-k1-max-pey-pei-rainbow-pattern-magnetic-flex-build-plate",
+      "Bambu Lab Forum - BIQU Plate Textured PEI / Smooth PEO problems: https://forum.bambulab.com/t/biqu-plate-textured-pei-smooth-peo-problems/123233"
+    ],
+    "last_verified": "2026-08-01",
+    "confidence": "low",
+    "conflicts": "The central unresolved issue is chemical identity: vendors use 'PEI', 'PEO' and 'PEY' interchangeably for plates that are demonstrably different polymers with different temperature ceilings, and no manufacturer publishes a technical spec for the holographic layer. The roughly 120 degC ceiling is a commonly cited figure for PEO/PEY coatings, not a datasheet value, and it varies by vendor. Self-release behaviour is contradictory: some listings claim clean cool-down release while other PEO variants are explicitly described as not self-releasing. The 50-100 cycle effect-lifespan figure is community anecdote with no controlled testing behind it. Reports of the film peeling under prying vary in severity and may be brand-specific. No first-party Bambu or Prusa product was identified, which is an absence of evidence rather than confirmation none exists. Every specific in this entry should be treated as vendor-dependent."
+  }
+}

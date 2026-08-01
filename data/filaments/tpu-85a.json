@@ -1,7 +1,12 @@
 {
   "id": "tpu-85a",
   "name": "TPU 85A (soft flexible)",
-  "aliases": ["TPU 85A", "Shore 85A TPU", "NinjaFlex", "Bambu TPU 85A"],
+  "aliases": [
+    "TPU 85A",
+    "Shore 85A TPU",
+    "NinjaFlex",
+    "Bambu TPU 85A"
+  ],
   "status": "researched",
   "base_type": "tpu",
   "variation_kind": "shore-grade",
@@ -9,15 +14,35 @@
   "chemical_makeup": "Thermoplastic polyurethane with the base TPU hard/soft segment chemistry, formulated to a Shore 85A durometer — more hard segment than 60A, less than 95A. Represented by NinjaTek NinjaFlex and Bambu Lab TPU 85A",
   "summary": "The soft end of the mainstream flexible range: gel-insole firmness, appreciably easier to feed than 60A but still the slowest and fussiest of the grades people actually buy in volume. Delta vs base TPU: this is the bottom of the base entry's 85A-95A band, so it prints slower (15-20 mm/s), wants retraction at or near zero, and adds a hardware gate the base entry does not record — Bambu's guide requires a 0.6 mm or 0.8 mm nozzle for TPU 85A and rules out 0.4 mm and 0.2 mm. Printable directly on Bambu machines unlike 60A, but still barred from the AMS.",
   "printing": {
-    "nozzle_temp_c": { "min": 215, "max": 250, "recommended": 225 },
-    "bed_temp_c": { "min": 25, "max": 50, "recommended": 45 },
-    "ambient_temp_c": { "min": 18, "max": 30, "recommended": 22 },
-    "speed_mm_s": { "min": 15, "max": 25, "recommended": 18 },
+    "nozzle_temp_c": {
+      "min": 215,
+      "max": 250,
+      "recommended": 225
+    },
+    "bed_temp_c": {
+      "min": 25,
+      "max": 50,
+      "recommended": 45
+    },
+    "ambient_temp_c": {
+      "min": 18,
+      "max": 30,
+      "recommended": 22
+    },
+    "speed_mm_s": {
+      "min": 15,
+      "max": 25,
+      "recommended": 18
+    },
     "enclosure_recommended": false,
     "heated_chamber_required": false,
     "enclosure_open_for_cooling": true,
     "requires_hardened_nozzle": false,
-    "part_cooling_fan_pct": { "min": 0, "max": 50, "recommended": 30 },
+    "part_cooling_fan_pct": {
+      "min": 0,
+      "max": 50,
+      "recommended": 30
+    },
     "notes": "Brand windows differ widely: NinjaFlex 85A specifies 225-250 °C with a room-temperature to 50 °C bed, while Bambu-guide-adjacent figures for TPU 85A sit at 215-230 °C. The important delta from the base entry is a nozzle-diameter gate: Bambu's official 85A/90A guide requires a 0.6 mm or 0.8 mm nozzle for 85A and states it is not compatible with 0.4 mm or 0.2 mm — the softer melt will not feed reliably through a small orifice. 90A carries no such restriction. Speed 15-20 mm/s, the slowest of the mainstream A-grades and well under the base entry's 30 mm/s. Retraction off or near zero. No enclosure; run an enclosed printer with the lid open as for base TPU. Not abrasive."
   },
   "feeding": {
@@ -28,9 +53,22 @@
   },
   "drying": {
     "required_before_use": "always",
-    "temp_c": { "min": 70, "max": 85, "recommended": 70 },
-    "time_hours": { "min": 8, "max": 12, "recommended": 8 },
-    "methods": ["forced-air oven at 70 °C for 8 h", "compatible heated bed at 75-85 °C for 8 h", "dedicated filament dryer", "print directly from a drybox with desiccant"],
+    "temp_c": {
+      "min": 70,
+      "max": 85,
+      "recommended": 70
+    },
+    "time_hours": {
+      "min": 8,
+      "max": 12,
+      "recommended": 8
+    },
+    "methods": [
+      "forced-air oven at 70 °C for 8 h",
+      "compatible heated bed at 75-85 °C for 8 h",
+      "dedicated filament dryer",
+      "print directly from a drybox with desiccant"
+    ],
     "dryness_validation": "No popping or crackling at the nozzle and no foamy or bubbly extrudate; stringing is a weak validator at this durometer because 85A strings when perfectly dry",
     "notes": "Bambu specifies the same regime for TPU 85A and 90A: 70 °C for 8 h in a forced-air oven, or 75-85 °C for 8 h on a compatible heatbed, stored under 20% RH with desiccant. Hardness does not shift TPU drying — the chemistry is filler-free — so this matches the base entry apart from the tighter, better-documented window. Account for spool swelling when choosing a dry box."
   },
@@ -88,22 +126,87 @@
     "water_tolerance": 6
   },
   "compatibility": {
-    "bonds_with": ["tpu", "tpu-60a", "tpu-90a", "tpu-95a", "tpu-60d", "tpu-68d", "tpe"],
-    "support_materials": ["pla"],
+    "bonds_with": [
+      "tpe",
+      "tpu",
+      "tpu-60a",
+      "tpu-60d",
+      "tpu-68d",
+      "tpu-90a",
+      "tpu-95a",
+      "tpu-gf"
+    ],
+    "support_materials": [
+      "pla"
+    ],
     "usable_as_support_for": [],
     "notes": "Same-family welds to base TPU and every sibling grade make multi-durometer assemblies practical — an 85A grip zone on a 95A or 60D body is the common pattern. Bonding to rigid materials is unchanged from the base entry: PLA and PETG joints are mechanical interlock, not a chemical weld. Rigid and soluble supports remain impractical (PVA/HIPS are not documented as reliable TPU interfaces, and removal tears soft parts), so prefer same-material minimal supports or support-free geometry."
   },
   "plate_recommendations": [
     {
+      "plate_id": "pp-sheet",
+      "rating": "recommended",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Softer grades that would embed themselves in textured PEI release from this coating."
+    },
+    {
+      "plate_id": "g10-garolite",
+      "rating": "recommended",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Softer grades are the ones most likely to fuse into PEI; run the bed cool or unheated on G10 to keep release easy."
+    },
+    {
+      "plate_id": "carbon-fiber-plate",
+      "rating": "recommended",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Soft grades are the ones that fuse into PEI; keep the bed at the low end here and flex to release."
+    },
+    {
       "plate_id": "pei-textured",
       "rating": "usable",
       "notes": "Bambu lists TPU 85A as compatible with its cool, engineering and high-temp PEI plates, explicitly excluding the supertack cool plate, which over-adheres flexibles. Textured PEI behaves the same way as for base TPU: the risk is over-adhesion tearing the part on removal rather than lifting, so a glue stick is used as a release layer. No special surface required."
+    },
+    {
+      "plate_id": "glass-borosilicate",
+      "rating": "usable",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Soft grades on a non-flexing plate are awkward to remove; expect to work IPA under the edge rather than peel."
+    },
+    {
+      "plate_id": "pei-satin",
+      "rating": "usable",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Softer grades work into the fine texture; the separator matters more here."
+    },
+    {
+      "plate_id": "pei-patterned",
+      "rating": "usable",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Softer grades risk working into the micro-grating and dulling it permanently."
+    },
+    {
+      "plate_id": "pei-smooth",
+      "rating": "avoid",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Soft grades weld to the film; the bond routinely exceeds the film-to-steel lamination strength."
+    },
+    {
+      "plate_id": "supertack",
+      "rating": "avoid",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Softer grades fuse into the coating and take it with them."
+    },
+    {
+      "plate_id": "pc-plate",
+      "rating": "avoid",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Soft grades are the worst case for plate damage on this surface."
+    },
+    {
+      "plate_id": "buildtak-polymer",
+      "rating": "avoid",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): NinjaFlex-class material is the specific example the vendor cites as fusing."
     }
   ],
   "emissions": {
     "voc_level": "low",
     "particulate_level": "low",
-    "primary_emissions": ["ultrafine particles", "isocyanate residues (unverified)", "urethane decomposition byproducts (unverified)"],
+    "primary_emissions": [
+      "ultrafine particles",
+      "isocyanate residues (unverified)",
+      "urethane decomposition byproducts (unverified)"
+    ],
     "ventilation": "recommended",
     "notes": "Indistinguishable from base TPU on the available evidence: moderate ultrafine particles and some VOCs, no meaningful styrene, more than PLA and less than ABS. No source differentiates TPU emissions by Shore grade (unverified). The 215-230 °C working range is at the cooler end of the family, so this grade sits slightly better than 60A or 60D on the temperature-emissions relationship, but not enough to change the ventilation recommendation."
   },
@@ -121,5 +224,47 @@
     "last_verified": "2026-07-31",
     "confidence": "low",
     "conflicts": "Nozzle temperature disagrees by 35 °C between brands: NinjaFlex 85A specifies 225-250 °C while Bambu-guide-adjacent figures give 215-230 °C — the recorded range spans both rather than picking one. No density, tensile or elongation datasheet figure was found for any 85A product, so the density and all derived weight/volume figures are unverified estimates. Max service temperature is likewise an estimate. Scoring note: the research notes rated 'compression recovery' 9/10 for this grade, but this catalog's compression_strength score measures resistance to crushing loads, which is the inverse — 85A scores 2 there while being second only to 60A at springing back. Emissions are not grade-differentiated in any source found."
-  }
+  },
+  "trade_names": [
+    {
+      "manufacturer": "colorfabb",
+      "product": "TPU 85A",
+      "notes": "Fixed-hardness grade, exact match"
+    },
+    {
+      "manufacturer": "extrudr",
+      "product": "FLEX SEMISOFT",
+      "notes": "Polycaprolactone-polyester TPU, Shore 85A exactly; density 1.18 g/cm3, elongation to 550%"
+    },
+    {
+      "manufacturer": "forward-am",
+      "product": "Ultrafuse TPU 85A",
+      "notes": "Shore 85A."
+    },
+    {
+      "manufacturer": "ninjatek",
+      "product": "NinjaFlex",
+      "notes": "TPU Shore 85A - the reference product the tpu-85a entry is modelled on."
+    },
+    {
+      "manufacturer": "ninjatek",
+      "product": "NinjaFlex Edge",
+      "notes": "TPU Shore 83A, 2 points softer than the 85A grade; low-tack surface texture for direct-drive feeding."
+    },
+    {
+      "manufacturer": "spectrum-filaments",
+      "product": "S-Flex 85A",
+      "notes": "Shore 85A, elongation at break up to 650%"
+    },
+    {
+      "manufacturer": "spectrum-filaments",
+      "product": "The Filament TPU 82A",
+      "notes": "SPEC DELTA: actual Shore 82A; recycled content"
+    },
+    {
+      "manufacturer": "spectrum-filaments",
+      "product": "The Filament TPU 87A",
+      "notes": "SPEC DELTA: actual Shore 87A; recycled content"
+    }
+  ]
 }

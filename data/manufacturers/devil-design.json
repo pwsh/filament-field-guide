@@ -25,39 +25,63 @@
       "filament_ids": [
         "pla"
       ],
-      "notes": "Flagship line; includes Silk, Silk Dual and glow-in-the-dark variants"
+      "notes": "Standard PLA; density 1.24 g/cm3 (ASTM D1505), softening ~50 C, elongation at break 160%, Spencer impact 2.5 J"
+    },
+    {
+      "name": "PLA MATT",
+      "filament_ids": [
+        "pla-matte"
+      ],
+      "notes": "Matte-finish PLA, a separate line from standard PLA"
+    },
+    {
+      "name": "SILK",
+      "filament_ids": [
+        "pla-silk"
+      ],
+      "notes": "Product card states SILK is a mix of PLA and PET-G, i.e. a genuine two-polymer blend rather than additive-modified pure PLA; density 1.23 g/cm3, very high gloss, very low shrinkage"
     },
     {
       "name": "PET-G",
       "filament_ids": [
         "petg"
-      ]
-    },
-    {
-      "name": "ABS+ / ASA",
-      "filament_ids": [
-        "abs",
-        "asa"
-      ]
-    },
-    {
-      "name": "PA12",
-      "filament_ids": [
-        "pa"
       ],
-      "notes": "Nylon 12 grade"
+      "notes": "Standard PETG"
+    },
+    {
+      "name": "ABS+",
+      "filament_ids": [
+        "abs"
+      ],
+      "notes": "Modified/toughened ABS"
+    },
+    {
+      "name": "ASA",
+      "filament_ids": [
+        "asa"
+      ],
+      "notes": "Density 1.07 g/cm3 (ASTM D792), Vicat 96 C, yield ~500 kg/cm2 at 20% elongation"
     },
     {
       "name": "HIPS",
       "filament_ids": [
         "hips"
-      ]
+      ],
+      "notes": "High-impact polystyrene"
     },
     {
       "name": "TPU",
       "filament_ids": [
         "tpu"
-      ]
+      ],
+      "notes": "Shore 55D (ISO 868) - a hard TPU roughly equivalent to ~98A; no D-scale 55D grade id exists so the generic tpu id is used. Density 1.23 g/cm3, high resistance to oils/greases, not Bowden-friendly"
+    },
+    {
+      "name": "PA12",
+      "filament_ids": [
+        "pa12"
+      ],
+      "notes": "Nylon 12"
     }
   ],
   "makes_plates": false,
@@ -69,7 +93,15 @@
       "https://devildesign.com/en/oferta/",
       "https://devildesign.com/download/PLA_-_product_card.pdf",
       "https://www.tme.com/us/en-us/linecard/p,devil-design_1019/",
-      "https://www.facebook.com/devildesignpl/about/"
+      "https://www.facebook.com/devildesignpl/about/",
+      "https://devildesign.com/download/PLA_MATT_-_product_card.pdf",
+      "https://devildesign.com/download/PET-G_-_product_card.pdf",
+      "https://devildesign.com/download/SILK_-_product_card.pdf",
+      "https://devildesign.com/download/ABS%2B_-_product_card.pdf",
+      "https://devildesign.com/download/HIPS_-_product_card.pdf",
+      "https://devildesign.com/download/ASA_-_product_card.pdf",
+      "https://devildesign.com/download/TPU_-_product_card.pdf",
+      "https://devildesign.com/download/PA12_-_product_card.pdf"
     ],
     "last_verified": "2026-07-31",
     "confidence": "medium",

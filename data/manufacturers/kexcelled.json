@@ -19,40 +19,106 @@
   },
   "product_lines": [
     {
-      "name": "General series",
-      "filament_ids": [
-        "pla",
-        "petg"
-      ],
-      "notes": "Everyday standard filaments"
-    },
-    {
-      "name": "Aesthetic series",
+      "name": "THE K5™ PLA / PLA-P / PLA5",
       "filament_ids": [
         "pla"
       ],
-      "notes": "Decorative/visual-effect PLA grades"
+      "notes": "Base/economy PLA grade; PLA-P and PLA5 are sub-variants of the same base, and no public TDS confirms a toughened (PLA+) formulation."
     },
     {
-      "name": "Functional series",
+      "name": "THE K5™ PLA Silk",
       "filament_ids": [
-        "abs",
-        "asa"
-      ]
-    },
-    {
-      "name": "Flexible series",
-      "filament_ids": [
-        "tpu"
+        "pla-silk"
       ],
-      "notes": "Elastomer grades"
+      "notes": "Silk-luster PLA."
     },
     {
-      "name": "High-performance series",
+      "name": "K5 Matte PLA (incl. Light Wood tones)",
+      "filament_ids": [
+        "pla-matte"
+      ],
+      "notes": "Matte-additive PLA; \"light wood\" SKUs are wood-tone pigment only, not wood-fiber filled."
+    },
+    {
+      "name": "PLA Wood",
+      "filament_ids": [
+        "pla-wood"
+      ],
+      "notes": "Genuine wood-fiber-filled PLA, a separate SKU from the wood-tone matte."
+    },
+    {
+      "name": "THE K5™ WOOD (Textured Series)",
+      "filament_ids": [
+        "pla-wood"
+      ],
+      "notes": "Textured wood-feel line; base polymer not stated on public pages, PLA assumed by analogy with the PLA Wood SKU."
+    },
+    {
+      "name": "THE K5™ PETG-M",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "Standard/modified PETG."
+    },
+    {
+      "name": "K5™ PETG-GF",
+      "filament_ids": [
+        "petg-gf"
+      ],
+      "notes": "Glass-fiber-reinforced PETG."
+    },
+    {
+      "name": "ABS (General series)",
+      "filament_ids": [
+        "abs"
+      ],
+      "notes": "Standard ABS."
+    },
+    {
+      "name": "ASA (General series)",
+      "filament_ids": [
+        "asa"
+      ],
+      "notes": "Standard ASA."
+    },
+    {
+      "name": "PC (Functional series)",
       "filament_ids": [
         "pc"
       ],
-      "notes": "Polycarbonate and other engineering grades, some UL 94 V0 rated"
+      "notes": "Polycarbonate; some grades UL 94 V0 rated."
+    },
+    {
+      "name": "Support (Functional series)",
+      "filament_ids": [],
+      "notes": "Breakaway/support material; solubility not stated, so neither pva nor bvoh can be assigned."
+    },
+    {
+      "name": "High Speed TPU 95A-HF",
+      "filament_ids": [
+        "tpu-95a"
+      ],
+      "notes": "Shore 95A TPU reformulated for high-flow/high-speed printing."
+    },
+    {
+      "name": "High Speed TPU 64D",
+      "filament_ids": [
+        "tpu-68d"
+      ],
+      "notes": "Shore 64D rigid-flex TPU; tpu-68d carries \"TPU 64D\" as an alias."
+    },
+    {
+      "name": "Flexible series — Low Shore (60A-70A) / Mid Shore (75A-85A) / High Shore (90A-77D)",
+      "filament_ids": [
+        "tpu",
+        "tpe"
+      ],
+      "notes": "Range is published by shore band rather than named SKUs and spans both TPU and TPE grades, so individual shore-graded ids (tpu-60a/85a/90a/95a/60d) cannot be assigned to specific products from public listings."
+    },
+    {
+      "name": "High-Performance series (Engineering / Special Engineering)",
+      "filament_ids": [],
+      "notes": "Category exists on the product listing but constituent product names and chemistries are not published; kexcelled3d.com and kexcelled.nl block automated fetches."
     }
   ],
   "price_tier": "mid",
@@ -62,7 +128,20 @@
       "https://kexcelled3d.com/pages/about-us",
       "https://kexcelled3d.en.alibaba.com/",
       "https://www.in3dtec.com/the-top-chinese-3d-printing-filament-providers-an-overview",
-      "https://kexcelled3d.com/"
+      "https://kexcelled3d.com/",
+      "https://kexcelled.nl/product/pla-k-5",
+      "https://kexcelled3d.com/products/the-k5%E2%84%A2-pla",
+      "https://www.addify3d.com/product/kexcelled-k5-silk-pla-filament/",
+      "https://www.amazon.com/dp/B0FJW5LZX3",
+      "https://www.amazon.co.uk/dp/B09C5G3RR3",
+      "https://www.kexcelled3d.com/the-k5-wood",
+      "https://kexcelled3d.com/products/the-k5%e2%84%a2-petg-m",
+      "https://www.a7lab.xyz/en/home/filaments-en/kexcelled-petg-gf-love-bird-color/",
+      "https://kexcelled.nl/products?category=basic",
+      "https://kexcelled.nl/products",
+      "https://kexcelled.nl/products?category=flexible",
+      "https://us.amazon.com/dp/B0FJWVX68M",
+      "https://www.amazon.com/dp/B0DPK8FF8D"
     ],
     "last_verified": "2026-07-31",
     "confidence": "medium",

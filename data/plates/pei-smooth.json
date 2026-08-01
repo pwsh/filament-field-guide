@@ -1,0 +1,516 @@
+{
+  "id": "pei-smooth",
+  "name": "Smooth PEI (laminated sheet on spring steel)",
+  "aliases": [
+    "Smooth PEI sheet",
+    "PEI film plate",
+    "Ultem sheet",
+    "Glossy PEI"
+  ],
+  "status": "researched",
+  "summary": "A flat, unfilled polyetherimide (PEI/Ultem-class) film laminated to a flexible spring-steel carrier — or, on budget builds, bonded to glass or aluminium with 3M 468MP adhesive. Amber, glossy, and high-Tg (~217 degC), it gives the flattest and shiniest print bottoms of any PEI finish. Its bond strength is the highest of the family, which is a feature for PLA and a liability for PETG, TPU and PC, all of which can chemically weld to it and tear the film on release.",
+  "surface_makeup": "Unfilled polyetherimide (PEI/Ultem-class amorphous thermoplastic) film, laminated to spring steel or adhered to glass/aluminium with 3M 468MP transfer tape; the gloss comes from the polished lamination, not a coating",
+  "texture": "smooth",
+  "manufacturers": [
+    "Bambu Lab",
+    "Prusa Research",
+    "Creality",
+    "Wham Bam",
+    "FYSETC",
+    "BIQU",
+    "Energetic",
+    "HartSmart",
+    "MetaFlex3D",
+    "TwoTrees"
+  ],
+  "filament_compatibility": [
+    {
+      "filament_id": "pla",
+      "rating": "recommended",
+      "bed_temp_c": {
+        "min": 55,
+        "max": 65
+      },
+      "adhesion_aid": "none",
+      "notes": "The reference use case: strong direct bond, glossiest and flattest bottom surface of any PEI finish."
+    },
+    {
+      "filament_id": "pla-plus",
+      "rating": "recommended",
+      "bed_temp_c": {
+        "min": 55,
+        "max": 65
+      },
+      "adhesion_aid": "none",
+      "notes": "Behaves as base PLA; no aid needed."
+    },
+    {
+      "filament_id": "pla-silk",
+      "rating": "recommended",
+      "bed_temp_c": {
+        "min": 55,
+        "max": 65
+      },
+      "adhesion_aid": "none",
+      "notes": "Smooth PEI mirrors the silk sheen onto the first layer — the main reason to choose smooth over textured for silk."
+    },
+    {
+      "filament_id": "pla-matte",
+      "rating": "recommended",
+      "bed_temp_c": {
+        "min": 55,
+        "max": 65
+      },
+      "adhesion_aid": "none",
+      "notes": "Matte pigment does not change adhesion; bottom layer comes out glossier than the rest of the part."
+    },
+    {
+      "filament_id": "pla-cf",
+      "rating": "recommended",
+      "bed_temp_c": {
+        "min": 55,
+        "max": 65
+      },
+      "adhesion_aid": "none",
+      "notes": "Filler is abrasive to nozzles, not to the plate; adhesion equals or exceeds plain PLA."
+    },
+    {
+      "filament_id": "pvb",
+      "rating": "recommended",
+      "bed_temp_c": {
+        "min": 70,
+        "max": 80
+      },
+      "adhesion_aid": "none",
+      "notes": "Adheres well, but PVB is IPA-soluble: let the plate dry fully after an alcohol wipe, and never use the alcohol-wicking release trick on a PVB part."
+    },
+    {
+      "filament_id": "petg",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 70,
+        "max": 80
+      },
+      "adhesion_aid": "thin PVA glue-stick release layer",
+      "notes": "PETG chemically bonds to bare smooth PEI and routinely rips chunks of film out on removal. Treat the glue stick as a mandatory separator, not an adhesion aid."
+    },
+    {
+      "filament_id": "pctg",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 70,
+        "max": 80
+      },
+      "adhesion_aid": "thin PVA glue-stick release layer",
+      "notes": "Same over-adhesion and film-tearing risk as PETG."
+    },
+    {
+      "filament_id": "pet",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 70,
+        "max": 80
+      },
+      "adhesion_aid": "thin PVA glue-stick release layer",
+      "notes": "Same copolyester over-adhesion behaviour; separator layer required."
+    },
+    {
+      "filament_id": "petg-cf",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 70,
+        "max": 80
+      },
+      "adhesion_aid": "thin PVA glue-stick release layer",
+      "notes": "Fibre loading reduces but does not eliminate the bonding problem; still use a separator."
+    },
+    {
+      "filament_id": "petg-gf",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 70,
+        "max": 80
+      },
+      "adhesion_aid": "thin PVA glue-stick release layer",
+      "notes": "As PETG-CF."
+    },
+    {
+      "filament_id": "petg-esd",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 70,
+        "max": 80
+      },
+      "adhesion_aid": "thin PVA glue-stick release layer",
+      "notes": "As PETG; separator layer also keeps conductive filler off the film."
+    },
+    {
+      "filament_id": "abs",
+      "rating": "recommended",
+      "bed_temp_c": {
+        "min": 100,
+        "max": 110
+      },
+      "adhesion_aid": "none",
+      "notes": "Good, releasable bond at 100-110 degC. Enclosure and draft control matter far more than the plate for ABS warp."
+    },
+    {
+      "filament_id": "abs-gf",
+      "rating": "recommended",
+      "bed_temp_c": {
+        "min": 100,
+        "max": 110
+      },
+      "adhesion_aid": "none",
+      "notes": "Glass fill reduces warp; plate behaviour unchanged from ABS."
+    },
+    {
+      "filament_id": "abs-fr",
+      "rating": "recommended",
+      "bed_temp_c": {
+        "min": 100,
+        "max": 110
+      },
+      "adhesion_aid": "none",
+      "notes": "Flame-retardant grades behave as ABS on smooth PEI."
+    },
+    {
+      "filament_id": "hips",
+      "rating": "recommended",
+      "bed_temp_c": {
+        "min": 100,
+        "max": 110
+      },
+      "adhesion_aid": "none",
+      "notes": "Prints and releases like ABS; commonly used as a breakaway support next to ABS."
+    },
+    {
+      "filament_id": "asa",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 100,
+        "max": 110
+      },
+      "adhesion_aid": "glue stick optional but advised on large flats",
+      "notes": "ASA can over-adhere to smooth PEI much like PETG; a separator prevents film damage on big footprints."
+    },
+    {
+      "filament_id": "asa-cf",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 100,
+        "max": 110
+      },
+      "adhesion_aid": "glue stick optional",
+      "notes": "As ASA, with slightly lower shrinkage."
+    },
+    {
+      "filament_id": "tpu",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 40,
+        "max": 60
+      },
+      "adhesion_aid": "glue-stick release layer required",
+      "notes": "TPU fuses aggressively to smooth PEI and can tear the surface on removal. Prefer a textured plate; if you must use smooth, lay down a full glue-stick separator."
+    },
+    {
+      "filament_id": "tpu-95a",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 40,
+        "max": 60
+      },
+      "adhesion_aid": "glue-stick release layer required",
+      "notes": "The hardest common grade and the most survivable on smooth PEI, but still needs a separator."
+    },
+    {
+      "filament_id": "tpu-90a",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 40,
+        "max": 60
+      },
+      "adhesion_aid": "glue-stick release layer required",
+      "notes": "Fusing risk rises as Shore hardness falls."
+    },
+    {
+      "filament_id": "tpu-85a",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 40,
+        "max": 60
+      },
+      "adhesion_aid": "release agent required",
+      "notes": "Soft grades weld to the film; the bond routinely exceeds the film-to-steel lamination strength."
+    },
+    {
+      "filament_id": "tpu-60a",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 30,
+        "max": 50
+      },
+      "adhesion_aid": "release agent required",
+      "notes": "Softest common grade — effectively impossible to remove cleanly from bare smooth PEI."
+    },
+    {
+      "filament_id": "tpe",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 30,
+        "max": 50
+      },
+      "adhesion_aid": "release agent required",
+      "notes": "Same fusing behaviour as low-Shore TPU, worse elongation on removal."
+    },
+    {
+      "filament_id": "cope",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 45,
+        "max": 70
+      },
+      "adhesion_aid": "glue-stick release layer",
+      "notes": "Copolyester elastomer combines PETG-style chemical bonding with TPU-style flex; always use a separator."
+    },
+    {
+      "filament_id": "pa",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 70,
+        "max": 100
+      },
+      "adhesion_aid": "glue stick required if attempted",
+      "notes": "Adhesion is erratic on smooth PEI and swings with filament moisture content; Prusa and community consensus both point to G10/garolite for nylon."
+    },
+    {
+      "filament_id": "pa6",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 70,
+        "max": 100
+      },
+      "adhesion_aid": "glue stick required if attempted",
+      "notes": "As base PA; garolite is the recommended surface."
+    },
+    {
+      "filament_id": "pa12",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 70,
+        "max": 100
+      },
+      "adhesion_aid": "glue stick required if attempted",
+      "notes": "Lower moisture uptake than PA6 but still not a smooth-PEI material."
+    },
+    {
+      "filament_id": "pa66",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 80,
+        "max": 110
+      },
+      "adhesion_aid": "glue stick required if attempted",
+      "notes": "High shrinkage plus unreliable PEI bond; use garolite."
+    },
+    {
+      "filament_id": "pa6-cf",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 70,
+        "max": 100
+      },
+      "adhesion_aid": "glue stick required if attempted",
+      "notes": "Fibre fill reduces warp but does not fix the adhesion mismatch."
+    },
+    {
+      "filament_id": "pa12-cf",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 70,
+        "max": 100
+      },
+      "adhesion_aid": "glue stick required if attempted",
+      "notes": "As PA6-CF."
+    },
+    {
+      "filament_id": "ppa",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 90,
+        "max": 120
+      },
+      "adhesion_aid": "dedicated high-temp surface required",
+      "notes": "High-performance polyamide; bed temps push the lamination adhesive and adhesion is unreliable."
+    },
+    {
+      "filament_id": "ppa-cf",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 90,
+        "max": 120
+      },
+      "adhesion_aid": "dedicated high-temp surface required",
+      "notes": "As PPA."
+    },
+    {
+      "filament_id": "pc",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 110,
+        "max": 130
+      },
+      "adhesion_aid": "glue stick, PC-specific adhesive or hairspray, plus a brim",
+      "notes": "Polycarbonate is the classic smooth-PEI killer: it welds to the film and tears chunks out. Never print PC on bare smooth PEI."
+    },
+    {
+      "filament_id": "pc-abs",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 100,
+        "max": 120
+      },
+      "adhesion_aid": "glue stick or hairspray plus brim",
+      "notes": "Less aggressive than straight PC but still capable of pulling the film."
+    },
+    {
+      "filament_id": "pc-pbt",
+      "rating": "usable-with-prep",
+      "bed_temp_c": {
+        "min": 100,
+        "max": 120
+      },
+      "adhesion_aid": "glue stick or hairspray plus brim",
+      "notes": "As PC-ABS; separator strongly advised."
+    },
+    {
+      "filament_id": "pp",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 80,
+        "max": 100
+      },
+      "adhesion_aid": "PP-specific tape or sheet required",
+      "notes": "Polypropylene will not hold on PEI; use a PP-specific surface or packing tape."
+    },
+    {
+      "filament_id": "pp-gf",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 80,
+        "max": 100
+      },
+      "adhesion_aid": "PP-specific tape or sheet required",
+      "notes": "Glass fill improves dimensional stability but not PEI adhesion."
+    },
+    {
+      "filament_id": "pva",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 45,
+        "max": 60
+      },
+      "adhesion_aid": "print on top of an existing PLA/PETG layer",
+      "notes": "Per Prusa, PVA adheres poorly directly to PEI; use it only as a soluble interface above a first layer of another material."
+    },
+    {
+      "filament_id": "bvoh",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 45,
+        "max": 60
+      },
+      "adhesion_aid": "print on top of an existing PLA/PETG layer",
+      "notes": "Same limitation as PVA."
+    },
+    {
+      "filament_id": "peek",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 130,
+        "max": 160
+      },
+      "adhesion_aid": "dedicated high-temp sheet or garolite required",
+      "notes": "Processing bed temps exceed what a laminated PEI sheet and its adhesive are rated for."
+    },
+    {
+      "filament_id": "pekk",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 130,
+        "max": 160
+      },
+      "adhesion_aid": "dedicated high-temp sheet or garolite required",
+      "notes": "As PEEK."
+    },
+    {
+      "filament_id": "pei-ultem",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 130,
+        "max": 160
+      },
+      "adhesion_aid": "dedicated high-temp sheet or garolite required",
+      "notes": "Printing PEI onto PEI at these bed temps risks welding part to plate outright."
+    },
+    {
+      "filament_id": "pps",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 120,
+        "max": 150
+      },
+      "adhesion_aid": "dedicated high-temp sheet required",
+      "notes": "Outside the rated envelope of a laminated sheet."
+    },
+    {
+      "filament_id": "pps-cf",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 120,
+        "max": 150
+      },
+      "adhesion_aid": "dedicated high-temp sheet required",
+      "notes": "As PPS."
+    },
+    {
+      "filament_id": "ppsu",
+      "rating": "avoid",
+      "bed_temp_c": {
+        "min": 130,
+        "max": 160
+      },
+      "adhesion_aid": "dedicated high-temp sheet required",
+      "notes": "Outside the rated envelope of a laminated sheet."
+    }
+  ],
+  "preparation": "On first use, wash the sheet with warm water and unscented dish soap (or a heavy 99% IPA wipe) to strip factory mould-release and handling oils, then dry completely with a clean paper towel. In routine use, wipe with 90%+ IPA on a lint-free cloth before every print, or at least every few prints — smooth PEI shows fingerprints as adhesion dropouts faster than textured surfaces because there is no micro-texture to compensate. When IPA stops restoring first-layer grip, escalate to a soapy-water wash; when soap stops working, a very light scuff with #0000 steel wool (uniform, whole-surface, never localised) restores tooth. Handle the sheet by its edges or tabs, and re-run first-layer/Live-Z calibration after swapping from a textured or satin sheet, since coating thickness differs.",
+  "cleaning": "Routine cleaning is a cold 90-99% IPA wipe with a lint-free cloth or paper towel. Deep cleaning is warm water plus unscented dish soap, scrubbed with a soft sponge or cloth, rinsed and dried completely before the sheet goes back on the magnet — trapped water under a magnetic sheet causes corrosion of the steel carrier. Do not use acetone: Prusa and multiple plate vendors state it deteriorates PEI surfaces, and on laminated film it can also attack the adhesive layer. Skip abrasive scouring pads, wire brushes and metal scrapers, all of which leave scratches that become permanent adhesion dead-zones. Baked-on filament from a crashed Z-offset is best softened by heating the bed to that material's bed temperature and lifting the residue with a plastic scraper rather than cutting at it cold.",
+  "model_removal": "Smooth PEI is a cold-release surface: let the bed drop to room temperature (below roughly 40 degC) so the differential contraction between the steel/PEI stack and the printed polymer breaks the bond, then lift the flexible sheet off the magnet and flex it in both directions until the part cracks free. Unlike textured plates, smooth PEI rarely self-releases on cooling — expect to flex actively, and expect large flat PLA or PETG footprints to need progressive flexing from one corner across the part. Use a plastic or nylon spatula only for stubborn small parts and only at a shallow angle to a corner; a metal blade will gouge the film and every gouge is a future adhesion failure. Never pry a part off a hot plate: the bond is at its strongest at temperature and that is when film tearing happens.",
+  "stuck_print_recovery": "First, be patient — put the sheet aside and let it reach true room temperature, which resolves most cases. If the part still will not budge, put the whole flexible plate (print attached) in a freezer for 10-20 minutes; the further contraction differential pops most prints free. For PETG, PC and ASA parts that have chemically bonded, drip 90%+ IPA at the print/plate interface and let it wick underneath for a minute or two to break the bond, repeating at several edges (skip this on PVB, which IPA dissolves). Mechanically, unwaxed dental floss or a thin steel wire sawed under a corner and drawn across the footprint is far gentler on the film than a scraper. If nothing works, reheat the bed to the material's print bed temperature, then let it cool fully and undisturbed and retry — but do not shock a hot plate with ice or cold water, which can crack the film or delaminate it from the steel.",
+  "temperature_limits_c": {
+    "max": 150
+  },
+  "lifespan_notes": "Expect roughly 12-18 months of regular daily use before adhesion becomes unreliable, per Bambu-ecosystem community reporting; light users get several years. Wear shows up as scratches, locally shiny or hazed patches, and areas of the bed that work while others fail. The usual accelerators are metal scrapers, acetone or other aggressive solvents, baked-on filament from a bad Z-offset, and repeated hard flexing of thin budget steel, which eventually leaves the sheet visibly non-flat. There is no practical home recoating path — the sheet is a consumable and gets replaced; a few third-party PEI relamination services exist but are not mainstream (unverified).",
+  "price": {
+    "usd_low": 20,
+    "usd_high": 40,
+    "notes": "Prusa smooth PEI sheet about USD 35 in the 250x220 mm class; Bambu Smooth PEI Plate roughly USD 25-30 (unverified, store page inaccessible at time of research); FYSETC/BIQU double-sided smooth+textured steel sheets USD 20-30 for 235-310 mm sizes."
+  },
+  "additional_notes": "Almost always sold as one face of a double-sided sheet (smooth on one side, textured or satin on the other) and mounted on a magnetic base, so a single purchase covers two finishes and swaps tool-free across Bambu, Prusa MK3S+/MK4/CORE One and Creality machines. Chosen when a part needs a flat, glossy reference face. Do not confuse smooth PEI with PEO/PEY holographic films (see pei-patterned) — those are different, lower-temperature polymers marketed under similar 'PEI' language. Long-term flatness is the quiet failure mode on cheap thin sheets: repeated heat cycling curls the edges before the PEI itself gives out.",
+  "provenance": {
+    "sources": [
+      "Bambu Lab Wiki - Build Plates: https://wiki.bambulab.com/en/filament-acc/acc/plates",
+      "Prusa Knowledge Base - Flexible Steel Sheets: https://help.prusa3d.com/article/flexible-steel-sheets-guidepost_2195",
+      "All3DP - Prusa PEI Sheet Differences: https://all3dp.com/2/prusa-pei-sheet-textured-powder-coated-steel/",
+      "LayerGrade - Smooth vs Textured PEI: https://layergrade.com/guides/smooth-vs-textured-pei-build-plate/",
+      "MatterHackers - 3D Printing Essentials: Bed Surface: https://www.matterhackers.com/articles/3d-printing-essentials-bed-surface",
+      "Prusa Knowledge Base - Water-Soluble Materials (PVA/BVOH): https://help.prusa3d.com/article/water-soluble-materials-pva-bvoh_162860",
+      "PC Macgicians - Bambu PEI Sheet Replacement: https://pcmacgicians.co.uk/support-centre/it-support-blogs/bambu-build-plate-pei-sheet-replacement/"
+    ],
+    "last_verified": "2026-08-01",
+    "confidence": "medium",
+    "conflicts": "Surface thermal ceiling is unverified: PEI resin datasheets imply continuous service well above 150 degC, but no vendor publishes a rated max bed temperature for a laminated sheet, and the 3M-class adhesive or steel lamination is the real limit rather than the polymer — the 150 degC max recorded here is a conservative estimate, not a published figure. Bambu's Smooth PEI Plate price (USD 25-30) could not be confirmed against the manufacturer store. Sources also disagree on removal aids: general community practice endorses the freezer trick on smooth PEI, while Prusa discourages freezer use for its coated sheets, so the guidance differs by sheet construction rather than being universal. Vendor ratings for TPU and PC range from flat 'avoid' to 'fine with a glue stick'; recorded here as usable-with-prep with a mandatory separator, which is the conservative reading."
+  }
+}

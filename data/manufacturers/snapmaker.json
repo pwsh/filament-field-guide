@@ -2,10 +2,16 @@
   "id": "snapmaker",
   "name": "Shenzhen Snapmaker Technologies Co., Ltd.",
   "status": "researched",
-  "summary": "Shenzhen company founded 2016, distinctive for building multi-function 3-in-1 machines (3D printing, laser, CNC) rather than printers alone (Snapmaker 2.0, Artisan, J1, U1). Filament is an in-house accessory line with RFID-tagged spools tuned to Snapmaker's own machines, and the material range is narrower than pure filament brands — PLA, PETG and TPU only, with no confirmed ABS/ASA/PA/PC lines. No third-party OEM relationship is documented and the brand is absent from the owner-verified ground-truth table.",
+  "summary": "Shenzhen company founded 2016, distinctive for building multi-function 3-in-1 machines (3D printing, laser, CNC) rather than printers alone (Snapmaker 2.0, Artisan, J1, U1). Filament is an in-house accessory line with RFID-tagged spools tuned to Snapmaker's own machines, and the material range is narrower than pure filament brands — PLA variants, PETG, ABS, TPU 95A, unfilled and fibre-filled nylon, PVA and a breakaway support, with no confirmed ASA or PC lines. No third-party OEM relationship is documented and the brand is absent from the owner-verified ground-truth table.",
   "headquarters_country": "China",
-  "manufacturing_countries": ["China"],
-  "brands": ["Snapmaker", "SnapSpeed", "Artisan"],
+  "manufacturing_countries": [
+    "China"
+  ],
+  "brands": [
+    "Snapmaker",
+    "SnapSpeed",
+    "Artisan"
+  ],
   "oem_relationships": [],
   "endpoints": {
     "website": "https://snapmaker.com",
@@ -14,9 +20,105 @@
     "support": "https://support.snapmaker.com"
   },
   "product_lines": [
-    { "name": "PLA", "filament_ids": ["pla"], "notes": "PLA Basic, SnapSpeed PLA, Silk PLA and Matte PLA" },
-    { "name": "PETG HF", "filament_ids": ["petg"], "notes": "High-flow PETG" },
-    { "name": "TPU 95A HF", "filament_ids": ["tpu"], "notes": "High-flow TPU 95A, around $40/kg" }
+    {
+      "name": "PLA (Basic)",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Standard PLA, RFID-tagged spools"
+    },
+    {
+      "name": "Matte PLA",
+      "filament_ids": [
+        "pla-matte"
+      ],
+      "notes": "Matting-filler PLA"
+    },
+    {
+      "name": "Silk PLA",
+      "filament_ids": [
+        "pla-silk"
+      ],
+      "notes": "Gloss-additive silk PLA including metallic gold/silver/copper colourways (pigment effect, not metal-powder fill)"
+    },
+    {
+      "name": "SnapSpeed PLA",
+      "filament_ids": [
+        "pla-hf"
+      ],
+      "notes": "High-speed/high-flow PLA"
+    },
+    {
+      "name": "Glow-in-the-dark (Green) PLA",
+      "filament_ids": [
+        "pla-glow"
+      ],
+      "notes": "Phosphorescent-pigment PLA"
+    },
+    {
+      "name": "Wood PLA",
+      "filament_ids": [
+        "pla-wood"
+      ],
+      "notes": "Wood-fibre-filled PLA"
+    },
+    {
+      "name": "PETG (Basic)",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "Standard PETG"
+    },
+    {
+      "name": "PETG HF",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "High-flow PETG; process delta only, no petg-hf id in catalog"
+    },
+    {
+      "name": "ABS",
+      "filament_ids": [
+        "abs"
+      ],
+      "notes": "Standard ABS"
+    },
+    {
+      "name": "TPU / TPU 95A HF",
+      "filament_ids": [
+        "tpu-95a"
+      ],
+      "notes": "Snapmaker spec states hardness >= 95 Shore A; the HF variant is the same durometer in a high-flow formulation"
+    },
+    {
+      "name": "Black Nylon (PA)",
+      "filament_ids": [
+        "pa"
+      ],
+      "notes": "Unfilled polyamide; specific grade not disclosed, so mapped to the generic pa entry"
+    },
+    {
+      "name": "PA-CF",
+      "filament_ids": [],
+      "notes": "Carbon-fibre-filled nylon with the base polyamide grade undisclosed in the Luban PA-Fiber guide; no generic pa-cf id exists - reported as a gap"
+    },
+    {
+      "name": "PA-GF",
+      "filament_ids": [],
+      "notes": "Glass-fibre-filled nylon with the base polyamide grade undisclosed; pa6-gf exists but the PA6 base is unconfirmed, so not mapped - reported as a gap"
+    },
+    {
+      "name": "PVA",
+      "filament_ids": [
+        "pva"
+      ],
+      "notes": "Water-soluble support filament, 500 g spools"
+    },
+    {
+      "name": "Breakaway Support for PLA",
+      "filament_ids": [],
+      "notes": "Mechanical breakaway support polymer, explicitly non-soluble and distinct from PVA; composition undisclosed and no breakaway-support id exists (hips is the ABS-side analogue) - reported as a gap"
+    }
   ],
   "makes_plates": true,
   "plate_ids": [],
@@ -27,7 +129,10 @@
       "https://shop.snapmaker.com/collections/3d-printer-filament",
       "https://wiki.snapmaker.com/en/general/manual/filament_library",
       "https://baike.baidu.com/en/item/Shenzhen%20Snapmaker%20Technologies%20Co.,%20Ltd./53513",
-      "https://www.3dprintingjournal.com/p/06-01-2016-snapmaker-was-founded"
+      "https://www.3dprintingjournal.com/p/06-01-2016-snapmaker-was-founded",
+      "https://us.snapmaker.com/collections/3d-printer-filament",
+      "https://wiki.snapmaker.com/en/Snapmaker_Luban/Filament_Settings/PA-Fiber",
+      "https://us.snapmaker.com/products/pva-filament-500g"
     ],
     "last_verified": "2026-07-31",
     "confidence": "low",

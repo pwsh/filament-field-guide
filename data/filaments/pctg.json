@@ -1,7 +1,11 @@
 {
   "id": "pctg",
   "name": "PCTG (Glycol-Modified PCT Copolyester)",
-  "aliases": ["PCTG", "Glycol-modified PCT", "Tritan-type copolyester"],
+  "aliases": [
+    "PCTG",
+    "Glycol-modified PCT",
+    "Tritan-type copolyester"
+  ],
   "status": "researched",
   "base_type": null,
   "variation_kind": null,
@@ -9,15 +13,35 @@
   "chemical_makeup": "Poly(cyclohexylenedimethylene terephthalate), glycol-modified — a copolyester of terephthalic acid with a high 1,4-cyclohexanedimethanol (CHDM) content, typically >40-50 % versus roughly 30 % in PETG. The heavier CHDM substitution suppresses crystallinity entirely, giving a fully amorphous, tougher polymer closely related to Eastman Tritan chemistry.",
   "summary": "PETG's tougher, clearer, more expensive sibling: the same easy-going amorphous copolyester behaviour with markedly better impact strength, optical clarity, chemical resistance and near-isotropic layer bonding. The costs are a hotter nozzle (250-270 °C, all-metal hotend), more shrink-driven warp than PETG, and roughly double the price.",
   "printing": {
-    "nozzle_temp_c": { "min": 240, "max": 275, "recommended": 260 },
-    "bed_temp_c": { "min": 60, "max": 100, "recommended": 80 },
-    "ambient_temp_c": { "min": 20, "max": 40, "recommended": 28 },
-    "speed_mm_s": { "min": 40, "max": 110, "recommended": 60 },
+    "nozzle_temp_c": {
+      "min": 240,
+      "max": 275,
+      "recommended": 260
+    },
+    "bed_temp_c": {
+      "min": 60,
+      "max": 100,
+      "recommended": 80
+    },
+    "ambient_temp_c": {
+      "min": 20,
+      "max": 40,
+      "recommended": 28
+    },
+    "speed_mm_s": {
+      "min": 40,
+      "max": 110,
+      "recommended": 60
+    },
     "enclosure_recommended": true,
     "heated_chamber_required": false,
     "enclosure_open_for_cooling": false,
     "requires_hardened_nozzle": false,
-    "part_cooling_fan_pct": { "min": 20, "max": 60, "recommended": 30 },
+    "part_cooling_fan_pct": {
+      "min": 20,
+      "max": 60,
+      "recommended": 30
+    },
     "notes": "An all-metal hotend is effectively mandatory: the useful window sits above 250 °C and CNC Kitchen ran Essentium PCTG at 270 °C. Brass nozzles are fine — unfilled PCTG is not abrasive. Moderate cooling (~30 %) preserves layer bonding; Spectrum's datasheet permits up to 100 % but full cooling costs Z strength. Enclosure is optional for small parts and genuinely helpful on large flats, where shrink-induced stress lifts corners. Legacy Bowden machines should stay at 40-60 mm/s; direct-drive CoreXY machines handle 80-110 mm/s."
   },
   "feeding": {
@@ -28,9 +52,22 @@
   },
   "drying": {
     "required_before_use": "if-exposed",
-    "temp_c": { "min": 55, "max": 65, "recommended": 60 },
-    "time_hours": { "min": 4, "max": 8, "recommended": 6 },
-    "methods": ["filament dryer", "food dehydrator", "convection oven at lowest setting", "drybox with desiccant"],
+    "temp_c": {
+      "min": 55,
+      "max": 65,
+      "recommended": 60
+    },
+    "time_hours": {
+      "min": 4,
+      "max": 8,
+      "recommended": 6
+    },
+    "methods": [
+      "filament dryer",
+      "food dehydrator",
+      "convection oven at lowest setting",
+      "drybox with desiccant"
+    ],
     "dryness_validation": "No popping, hissing or crackling as the filament extrudes; no visible steam or bubbles at the nozzle tip; the extrudate is glossy rather than matte/frosted",
     "notes": "Multiple sources rate PCTG's moisture uptake as lower than PETG's, so a sealed spool straight out of the bag usually prints without drying. Treat drying as mandatory after any prolonged open-air exposure. The 55 °C/8 h PETG-family default (Bambu) is a safe starting point; 60 °C is fine given Tg ~78 °C."
   },
@@ -76,7 +113,11 @@
     "glass_transition_c": 78,
     "heat_deflection_c": 76,
     "max_service_temp_c": 62,
-    "tensile_strength_mpa": { "min": 44, "max": 51, "recommended": 47 },
+    "tensile_strength_mpa": {
+      "min": 44,
+      "max": 51,
+      "recommended": 47
+    },
     "notes": "Density 1.23 g/cm³ (Spectrum TDS). Tg ~78 °C (3DXTech; other sources mid-70s). HDT 76 °C @0.45 MPa (Spectrum); other sources report 74-78 °C. Tensile: Spectrum quotes 44 MPa yield / 46 MPa break, CNC Kitchen measured 48-51 MPa flat. Flat (XY) impact ~24 kJ/m², approaching ABS levels and several times PETG's Izod rating, but standing/Z impact falls to ~1.5 kJ/m² — strongly anisotropic in impact even though Z tensile holds up well at 38-40 MPa. Max service temperature is an estimate from Tg minus margin, not a datasheet figure; one community report describes failure under load at 65 °C. Shrinkage is not published by any source found and is omitted deliberately — described only qualitatively as greater than PETG's."
   },
   "scores": {
@@ -91,8 +132,18 @@
     "water_tolerance": 9
   },
   "compatibility": {
-    "bonds_with": ["pctg", "petg", "pet"],
-    "support_materials": ["pla", "petg"],
+    "bonds_with": [
+      "pctg",
+      "pet",
+      "petg",
+      "petg-cf",
+      "petg-esd",
+      "petg-gf"
+    ],
+    "support_materials": [
+      "petg",
+      "pla"
+    ],
     "usable_as_support_for": [],
     "notes": "Same ester backbone as PETG and PET, so co-printing and welding within the copolyester family is expected and PETG/PCTG are routinely printed together; direct fusion testing against PET was not found (unverified). No reliable structural bond to PLA, ABS, ASA, PA, PC, PP, TPU or TPE — incidental adhesion is possible but should not be designed around. No water-soluble support (PVA, BVOH) is documented to bond chemically to PCTG, so supports are in practice mechanical/breakaway: PLA and PETG separate cleanly from PCTG in the same way they do from each other. PCTG is not used as a support material for other filaments."
   },
@@ -101,12 +152,66 @@
       "plate_id": "pei-textured",
       "rating": "recommended",
       "notes": "Sticks readily at 70-100 °C bed — the problem is over-adhesion, not adhesion. Like PETG, PCTG can bond hard enough to tear PEI off the plate, so use a release-agent separator: glue stick, a wiped film of window cleaner or dish soap, or talcum powder. CNC Kitchen found glue stick unreliable on powder-coated PEI specifically for PCTG, so test on a small part first and lift the part only once the bed is fully cool."
+    },
+    {
+      "plate_id": "pp-sheet",
+      "rating": "recommended",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Behaves as PETG; direct print."
+    },
+    {
+      "plate_id": "g10-garolite",
+      "rating": "recommended",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Treated as PETG-equivalent; not separately documented by vendors (inferred from copolyester behavior)."
+    },
+    {
+      "plate_id": "pei-satin",
+      "rating": "recommended",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): As PETG."
+    },
+    {
+      "plate_id": "carbon-fiber-plate",
+      "rating": "recommended",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Same copolyester family as PETG; same non-over-bonding behavior."
+    },
+    {
+      "plate_id": "pei-smooth",
+      "rating": "usable",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Same over-adhesion and film-tearing risk as PETG."
+    },
+    {
+      "plate_id": "glass-borosilicate",
+      "rating": "usable",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Same over-bonding risk as PETG; not separately documented but the copolyester chemistry is the same."
+    },
+    {
+      "plate_id": "supertack",
+      "rating": "usable",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Treat exactly as PETG, including the rule that no copolyester support may print directly on the coating."
+    },
+    {
+      "plate_id": "buildtak-polymer",
+      "rating": "usable",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Treat as PETG; the fusion risk is the same."
+    },
+    {
+      "plate_id": "pei-patterned",
+      "rating": "usable",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): As PETG."
+    },
+    {
+      "plate_id": "pc-plate",
+      "rating": "avoid",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Same copolyester chemistry and same bed-temperature requirement as PETG; assume the same bubbling/sticking damage."
     }
   ],
   "emissions": {
     "voc_level": "moderate",
     "particulate_level": "low",
-    "primary_emissions": ["acetaldehyde", "phthalic acid esters", "ultrafine particles"],
+    "primary_emissions": [
+      "acetaldehyde",
+      "phthalic acid esters",
+      "ultrafine particles"
+    ],
     "ventilation": "recommended",
     "notes": "No emissions study of PCTG specifically was found; this profile is extrapolated from the PETG-family literature (MDPI Materials), which measures ultrafine particle output roughly 10x lower than ABS with acetaldehyde and phthalate esters as the notable VOCs. Odour is reported as minimal (3DXTech). The extrapolation is conservative on VOCs because PCTG runs 250-270 °C, well above PETG, and emission rates rise sharply with nozzle temperature."
   },
@@ -129,5 +234,61 @@
     "last_verified": "2026-07-31",
     "confidence": "medium",
     "conflicts": "Nozzle temperature: most guidance says 250-270 °C but some vendors list a window starting at 230 °C; 240-275 °C recorded as the union with 260 °C recommended. Bed temperature: Spectrum's TDS says 60-100 °C while most practical guidance says 70-85 °C. Part cooling: CNC Kitchen recommends ~30 % while Spectrum permits up to 100 %; low-moderate cooling recorded. HDT: 76 °C (Spectrum) versus a 74-78 °C spread elsewhere. Shrinkage is not published by any source (omitted rather than guessed). Food contact: industrial PCT food grades exist for bottles and blender jars, but no 3D-printing PCTG filament found carries a food-contact certification — recorded as conditional and unverified for any specific brand. UV/weathering advantage over PETG is asserted qualitatively by several sources but never quantified, and no head-to-head against ASA was found."
-  }
+  },
+  "trade_names": [
+    {
+      "manufacturer": "3djake",
+      "product": "PCTG"
+    },
+    {
+      "manufacturer": "3dxtech",
+      "product": "MAX-G PCTG",
+      "notes": "CHDM-modified copolyester; tougher/clearer than the PETG in the same MAX-G family."
+    },
+    {
+      "manufacturer": "atomic-filament",
+      "product": "PCTG PRO",
+      "notes": "Opaque, translucent/clear, marble, metallic and neon colourways; the CF variant is excluded (see gaps)."
+    },
+    {
+      "manufacturer": "coex-3d",
+      "product": "PCTG Prime",
+      "notes": "Premium-tier glycol-modified copolyester."
+    },
+    {
+      "manufacturer": "extrudr",
+      "product": "PCTG",
+      "notes": "Modified copolyester, UL94 V2; density 1.21 g/cm3, VICAT A 88 C / HDT-B 76 C"
+    },
+    {
+      "manufacturer": "fiberlogy",
+      "product": "PCTG",
+      "notes": "~90 kJ/m2 impact strength, distinctly higher-impact than PETG"
+    },
+    {
+      "manufacturer": "formfutura",
+      "product": "PCTG",
+      "notes": "Glycol-modified PCT copolyester"
+    },
+    {
+      "manufacturer": "fusion-filaments",
+      "product": "PCTG",
+      "notes": "Standard glycol-modified copolyester."
+    },
+    {
+      "manufacturer": "push-plastic",
+      "product": "PCTG",
+      "notes": "Glycol-modified copolyester."
+    },
+    {
+      "manufacturer": "rosa3d",
+      "product": "PCTG",
+      "notes": "transparent variants"
+    },
+    {
+      "manufacturer": "spectrum-filaments",
+      "product": "PCTG Premium",
+      "notes": "higher impact than PETG"
+    }
+  ]
 }

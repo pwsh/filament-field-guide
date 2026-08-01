@@ -1,7 +1,12 @@
 {
   "id": "ppsu",
   "name": "PPSU (Polyphenylsulfone)",
-  "aliases": ["Polyphenylsulfone", "Radel", "Ultrason P", "3DXTech ThermaX PPSU"],
+  "aliases": [
+    "Polyphenylsulfone",
+    "Radel",
+    "Ultrason P",
+    "3DXTech ThermaX PPSU"
+  ],
   "status": "researched",
   "base_type": null,
   "variation_kind": null,
@@ -9,14 +14,30 @@
   "chemical_makeup": "Amorphous aromatic polysulfone — benzene rings bridged by sulfone and ether linkages, sold as Solvay's Radel or BASF's Ultrason P. Amorphous like pei-ultem and unlike the semi-crystalline peek, pekk and pps, so it shrinks by thermal contraction only. The sulfone chemistry is what separates it from PEI's imide backbone: markedly higher impact toughness and outstanding hydrolytic and steam stability, at the cost of lower tensile and compressive strength and stiffness than either pei-ultem or peek.",
   "summary": "The tough, steam-proof member of the high-performance cluster. Tg 220 °C is the highest here — above both ULTEM grades — and it survives 1,000+ steam sterilisation cycles while meeting ISO 10993 biocompatibility, which nothing else in this cluster claims. Deltas vs pei-ultem: same amorphous low-warp behaviour and the same 8/8 stability-and-adhesion profile, a gentler 110 °C drying spec against 1010's 150 °C, far better impact toughness and water tolerance (10 vs 6), but lower stiffness and compressive strength (6 vs 7) and roughly double the price. Deltas vs peek: comparative sources put it behind on compressive strength, tensile strength and elasticity, and its 180 °C continuous rating is well short of PEEK's 240-260 °C — but it is easier to print, warps far less, and takes an impact that would crack a PEEK part.",
   "printing": {
-    "nozzle_temp_c": { "min": 360, "max": 410, "recommended": 385 },
-    "bed_temp_c": { "min": 120, "max": 155, "recommended": 145 },
-    "ambient_temp_c": { "min": 65, "max": 90, "recommended": 85 },
+    "nozzle_temp_c": {
+      "min": 360,
+      "max": 410,
+      "recommended": 385
+    },
+    "bed_temp_c": {
+      "min": 120,
+      "max": 155,
+      "recommended": 145
+    },
+    "ambient_temp_c": {
+      "min": 65,
+      "max": 90,
+      "recommended": 85
+    },
     "enclosure_recommended": true,
     "heated_chamber_required": true,
     "enclosure_open_for_cooling": false,
     "requires_hardened_nozzle": false,
-    "part_cooling_fan_pct": { "min": 0, "max": 25, "recommended": 10 },
+    "part_cooling_fan_pct": {
+      "min": 0,
+      "max": 25,
+      "recommended": 10
+    },
     "notes": "Sources cluster into two overlapping bands: Formfutura 360-400 °C, Prusa and 3DXTech-context 370-410 °C; 385 °C is a reasonable start. Bed 120-155 °C. The chamber is a hard requirement rather than a nicety — Prusa specifies a minimum of 65 °C ACTIVELY heated, Formfutura recommends 90 °C — which is why heated_chamber_required is true, matching peek, pekk and pei-ultem and unlike the base pps entry and pps-cf. The one relaxation vs the rest of the cluster is part cooling: 0-25 % is tolerable here where peek, pekk and pps want essentially zero, a consequence of amorphous behaviour rather than crystallisation. At 360-410 °C this is out of reach of Bambu's stock hotend and of the X1E/H2D high-temp hotend's ~350 °C ceiling. Unfilled, so no hardened nozzle."
   },
   "feeding": {
@@ -27,9 +48,21 @@
   },
   "drying": {
     "required_before_use": "always",
-    "temp_c": { "min": 110, "max": 110, "recommended": 110 },
-    "time_hours": { "min": 4, "max": 8, "recommended": 4 },
-    "methods": ["filament dryer or convection oven at 110 °C", "print from a heated drybox", "sealed drybox with desiccant while printing"],
+    "temp_c": {
+      "min": 110,
+      "max": 110,
+      "recommended": 110
+    },
+    "time_hours": {
+      "min": 4,
+      "max": 8,
+      "recommended": 4
+    },
+    "methods": [
+      "filament dryer or convection oven at 110 °C",
+      "print from a heated drybox",
+      "sealed drybox with desiccant while printing"
+    ],
     "dryness_validation": "No popping, hissing or steam at the nozzle and a continuous, blister-free purge line at 385 °C — trace moisture is obvious at this temperature.",
     "notes": "Prusa and Formfutura agree: minimum 4 hours at 110 °C, then store in a dry box. This is the gentlest schedule in the very-high-temperature group — 10 °C below peek and pekk's 120 °C and 40 °C below pei-ultem 1010's 150 °C — and is one of the reasons PPSU scores a point higher than pei-ultem on ease of print despite an equally demanding hotend."
   },
@@ -87,9 +120,15 @@
     "water_tolerance": 10
   },
   "compatibility": {
-    "bonds_with": ["ppsu"],
-    "support_materials": ["ppsu"],
-    "usable_as_support_for": [],
+    "bonds_with": [
+      "ppsu"
+    ],
+    "support_materials": [
+      "ppsu"
+    ],
+    "usable_as_support_for": [
+      "ppsu"
+    ],
     "notes": "Bonds well to itself — amorphous polymers weld cleanly, hence layer adhesion 8 alongside pei-ultem and above peek's 6. No soluble support survives 360-410 °C; pva and bvoh are far out of range, so same-material breakaway support is the only option and Prusa notes that removing it is difficult, which is a real design constraint rather than a footnote. First-layer adhesion relies on multiple layers of a high-temperature adhesive such as Magigoo HT rather than on a support or plate trick. No bonding to commodity materials."
   },
   "plate_recommendations": [
@@ -97,12 +136,31 @@
       "plate_id": "pei-textured",
       "rating": "usable",
       "notes": "Prusa's knowledge base does not endorse a standard textured PEI sheet on its own for PPSU — the guidance is multiple layers of high-temperature adhesive (Magigoo HT). Treat the plate as an adhesive carrier: usable with the adhesive, insufficient bare. That is the same caution applied to peek and pekk, but rated usable rather than avoid here because the 120-155 °C bed under a 385 °C nozzle is a less punishing environment for the sheet than PEEK's 145 °C bed under a 400 °C nozzle. Garolite/G10 is an alternative with no catalog plate entry yet."
+    },
+    {
+      "plate_id": "pei-smooth",
+      "rating": "avoid",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Outside the rated envelope of a laminated sheet."
+    },
+    {
+      "plate_id": "pei-satin",
+      "rating": "avoid",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Out of range."
+    },
+    {
+      "plate_id": "pei-patterned",
+      "rating": "avoid",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Far outside the rated range."
     }
   ],
   "emissions": {
     "voc_level": "moderate",
     "particulate_level": "high",
-    "primary_emissions": ["ultrafine particles", "unspecified high-temperature process VOCs (no PPSU-specific speciation found in this research pass)", "trace sulfur-bearing species if the melt is overheated (inferred from the sulfone backbone, unverified)"],
+    "primary_emissions": [
+      "ultrafine particles",
+      "unspecified high-temperature process VOCs (no PPSU-specific speciation found in this research pass)",
+      "trace sulfur-bearing species if the melt is overheated (inferred from the sulfone backbone, unverified)"
+    ],
     "ventilation": "required",
     "notes": "No PPSU-specific VOC or particulate data was found. The temperature-scaling rule puts a 360-410 °C process alongside peek and pei-ultem at the top of this catalog, so ventilation is recorded as required — enclosure plus outdoor exhaust or HEPA-plus-carbon filtration. As with pps, the sulfur in the backbone is noted as a plausible source of sulfurous species if the melt is overheated; that is inferred from chemistry, not measured (unverified)."
   },
@@ -119,5 +177,22 @@
     "last_verified": "2026-07-31",
     "confidence": "medium",
     "conflicts": "Nozzle temperature disagrees mildly: Formfutura 360-400 °C against Prusa/3DXTech-context 370-410 °C; the recorded band is the union. Chamber temperature disagrees more meaningfully — Prusa specifies a 65 °C minimum actively heated chamber while Formfutura recommends 90 °C — and the recommended value follows Formfutura on the grounds that hotter is safer for an amorphous polymer at this size. Price is estimated from a single European listing (~€190/500 g) and converted approximately; the upper bound is unverified headroom. No HDT figure was found for PPSU in any source reviewed, so the field is left empty. Comparative claims that PPSU 'underperforms PEEK in compressive strength, tensile strength and elasticity' come from a single vendor-adjacent comparison article without underlying numbers. Emissions are inferred from process temperature with no PPSU-specific measurement, including the sulfur-species note. Food-contact status is unresolved: the resin's medical and food-contact pedigree is strong but no evidence covers printed parts, hence conditional. UV tolerance is a reasoned estimate for an aromatic polymer, not evidence-based."
-  }
+  },
+  "trade_names": [
+    {
+      "manufacturer": "3dxtech",
+      "product": "ThermaX PPSU",
+      "notes": "Polyphenylsulfone."
+    },
+    {
+      "manufacturer": "formfutura",
+      "product": "PPSU",
+      "notes": "High-temperature engineering polymer"
+    },
+    {
+      "manufacturer": "iemai-3d",
+      "product": "PPSU",
+      "notes": "Polyphenylsulfone"
+    }
+  ]
 }

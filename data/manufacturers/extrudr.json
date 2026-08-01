@@ -24,49 +24,172 @@
   },
   "product_lines": [
     {
-      "name": "PLA",
+      "name": "PLA NX2",
       "filament_ids": [
         "pla"
       ],
-      "notes": "Includes the NX2 specialty PLA line"
+      "notes": "'New generation' PLA with improved mechanicals over commodity PLA; density 1.30 g/cm3, VICAT A 60 C"
+    },
+    {
+      "name": "PLA NX2 MATT",
+      "filament_ids": [
+        "pla-matte"
+      ],
+      "notes": "Matte variant of NX2"
+    },
+    {
+      "name": "PLA BASIC",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Bio-based, EN13432-biodegradable PLA; density 1.24 g/cm3, VICAT A 55 C"
+    },
+    {
+      "name": "BioFusion",
+      "notes": "Proprietary bio-based copolymer with metallic gloss and raised impact resistance; density 1.25 g/cm3, VICAT A 75 C - not plain PLA and no generic equivalent exists"
+    },
+    {
+      "name": "GreenTEC",
+      "notes": "100% renewable, biodegradable matte bio-engineering material; density 1.30 g/cm3, VICAT A 115 C - far above PLA and marketed as an oil-free ABS/PETG alternative, so no existing id fits"
+    },
+    {
+      "name": "GreenTEC Pro",
+      "notes": "Higher-performance bio-based grade, semi-matte; density 1.35 g/cm3, VICAT A 160 C / HDT-B 115 C; no existing id fits"
+    },
+    {
+      "name": "GreenTEC Pro CF",
+      "notes": "GreenTEC Pro matrix + 10% carbon fibre; density 1.20 g/cm3, VICAT A 165 C / HDT-B 115 C; no existing id fits"
+    },
+    {
+      "name": "FLAX",
+      "notes": "Bio-based matrix + mineral filler with a sandstone-like matte finish; density 1.45 g/cm3, VICAT A 48 C. No stone/mineral-filled id exists and the matrix is not confirmed to be PLA"
+    },
+    {
+      "name": "PEARL",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Bio-based renewable translucent pearlescent grade; density 1.25 g/cm3, VICAT A 58 C / HDT-B 51 C - PLA-consistent"
+    },
+    {
+      "name": "WOOD",
+      "filament_ids": [
+        "pla-wood"
+      ],
+      "notes": "Lignin/biopolymer matrix + wood-fibre reinforcement; density 1.23 g/cm3, VICAT A 48 C. Matrix is described as lignin/biopolymer rather than explicitly PLA"
     },
     {
       "name": "PETG",
       "filament_ids": [
         "petg"
-      ]
+      ],
+      "notes": "Standard low-shrink PETG; density 1.29 g/cm3, VICAT A 78 C"
+    },
+    {
+      "name": "XPETG MATT",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "Modified matte PETG; density 1.41 g/cm3, VICAT A 85 C / HDT-B 67 C. No petg-matte id exists"
+    },
+    {
+      "name": "XPETG CF",
+      "filament_ids": [
+        "petg-cf"
+      ],
+      "notes": "PETG + carbon fibre, UL94 V2; density 1.29 g/cm3, VICAT A 85 C / HDT-B 69 C"
     },
     {
       "name": "PCTG",
       "filament_ids": [
         "pctg"
-      ]
+      ],
+      "notes": "Modified copolyester, UL94 V2; density 1.21 g/cm3, VICAT A 88 C / HDT-B 76 C"
     },
     {
       "name": "DuraPro ABS",
       "filament_ids": [
         "abs"
-      ]
+      ],
+      "notes": "Low-warp ABS; density 1.06 g/cm3, VICAT A 92 C / HDT-B 85 C"
     },
     {
-      "name": "ASA",
+      "name": "DuraPro ASA",
       "filament_ids": [
         "asa"
-      ]
+      ],
+      "notes": "UV/weather-resistant ASA; density 1.05 g/cm3, VICAT A 96 C / HDT-B 96 C"
     },
     {
-      "name": "TPU",
+      "name": "DuraPro ASA CF",
+      "filament_ids": [
+        "asa-cf"
+      ],
+      "notes": "ASA + carbon fibre; density 1.14 g/cm3, VICAT A 101 C / HDT-B 96 C"
+    },
+    {
+      "name": "DuraPro ASA GF",
+      "filament_ids": [
+        "asa-gf"
+      ],
+      "notes": "ASA + glass fibre; density 1.10 g/cm3, VICAT A 101 C / HDT-B 99 C. asa-gf is a provisional id"
+    },
+    {
+      "name": "DuraPro PA12",
+      "filament_ids": [
+        "pa12"
+      ],
+      "notes": "Polyamide 12, high notched impact and low moisture uptake; density 1.01 g/cm3, VICAT A 142 C"
+    },
+    {
+      "name": "DuraPro PA12 CF",
+      "filament_ids": [
+        "pa12-cf"
+      ],
+      "notes": "PA12 + carbon fibre; density 1.03 g/cm3, VICAT A 145 C"
+    },
+    {
+      "name": "DuraPro PC/PBT",
+      "filament_ids": [
+        "pc-pbt"
+      ],
+      "notes": "Polycarbonate/PBT alloy; density 1.20 g/cm3, VICAT A 126 C / HDT-B 85-110 C"
+    },
+    {
+      "name": "DuraPro PC/PBT CF",
+      "notes": "PC/PBT alloy + carbon fibre; density 1.01 g/cm3. No pc-pbt-cf id exists"
+    },
+    {
+      "name": "FLEX SEMISOFT",
+      "filament_ids": [
+        "tpu-85a"
+      ],
+      "notes": "Polycaprolactone-polyester TPU, Shore 85A; density 1.18 g/cm3, elongation to 550%"
+    },
+    {
+      "name": "FLEX MEDIUM",
       "filament_ids": [
         "tpu"
-      ]
+      ],
+      "notes": "Polycaprolactone-polyester TPU, Shore 98A; density 1.19 g/cm3, elongation to 470%. Above the 85A-95A band of the base tpu entry, no tpu-98a grade exists"
     },
     {
-      "name": "GreenTEC / GreenTEC Pro",
-      "notes": "Bio-based, oil-free engineering material; a proprietary biopolymer blend with no established filament type id"
+      "name": "FLEX MEDIUM ESD",
+      "filament_ids": [
+        "tpu-95a"
+      ],
+      "notes": "Shore 95A TPU with ESD-conductive additive (0.7-0.9 MOhm); density 1.20 g/cm3. petg-esd has no TPU counterpart"
     },
     {
-      "name": "BioFusion",
-      "notes": "Bio-based composite line; base polymer not confirmed"
+      "name": "FLEX HARD",
+      "filament_ids": [
+        "tpu-60d"
+      ],
+      "notes": "Polycaprolactone-polyester TPU, Shore 58D against the 60D grade's nominal; density 1.20 g/cm3, elongation to 480%"
+    },
+    {
+      "name": "FLEX HARD CF",
+      "notes": "TPU + carbon fibre, Shore 70D, density 1.22 g/cm3, damping-oriented; tpu-gf is glass-filled, no tpu-cf id exists"
     }
   ],
   "price_tier": "premium",
@@ -77,7 +200,8 @@
       "https://at.linkedin.com/company/extrudr",
       "https://filamentcheatsheet.com/brands/extrudr/",
       "https://www.extrudr.com/en/inlt/products/greentec/",
-      "https://www.3dnatives.com/en/low-cost-high-performance-filaments-from-extrudr-200420214/"
+      "https://www.3dnatives.com/en/low-cost-high-performance-filaments-from-extrudr-200420214/",
+      "https://s3.extrudr.com/extrudr-media/product-catalogue/extrudr-Produktkatalog_EN.pdf"
     ],
     "last_verified": "2026-07-31",
     "confidence": "medium",

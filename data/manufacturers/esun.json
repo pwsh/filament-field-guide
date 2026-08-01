@@ -48,52 +48,191 @@
   },
   "product_lines": [
     {
-      "name": "PLA family",
+      "name": "PLA+",
       "filament_ids": [
-        "pla",
-        "pla-cf"
+        "pla-plus"
       ],
-      "notes": "PLA+, silk, matte, high-speed, glow-in-the-dark, wood/marble aesthetic blends, carbon-fiber filled"
+      "notes": "Impact-modifier-toughened PLA; density 1.24 g/cm3, no chemistry change vs base PLA (TDS V4.0)."
     },
     {
-      "name": "PETG",
+      "name": "PLA-Basic",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Unmodified economy PLA."
+    },
+    {
+      "name": "PLA-ST",
+      "filament_ids": [
+        "pla-plus"
+      ],
+      "notes": "\"Specialized technical\" PLA positioned above PLA+: impact/heat-modified toughened PLA, same lactide base."
+    },
+    {
+      "name": "PLA-HF",
+      "filament_ids": [
+        "pla-hf"
+      ],
+      "notes": "High-flow PLA for high-speed printers."
+    },
+    {
+      "name": "eSilk-PLA (PLA-Silk Candy / Mystic / Magic)",
+      "filament_ids": [
+        "pla-silk"
+      ],
+      "notes": "PLA + luster additive; density 1.21 g/cm3, tensile 52 MPa, elongation 14.4% (TDS V4.0). Candy/Mystic/Magic are multi-colour silk SKUs."
+    },
+    {
+      "name": "PLA-Matte",
+      "filament_ids": [
+        "pla-matte"
+      ],
+      "notes": "Matte-additive PLA."
+    },
+    {
+      "name": "PLA-Marble",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Mineral/pigment marble-effect PLA; no chemistry change, no dedicated marble id in catalog."
+    },
+    {
+      "name": "PLA-Coffee",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Organic coffee-residue filler in PLA; not wood flour, so pla-wood does not apply."
+    },
+    {
+      "name": "PLA-Luminous Rainbow",
+      "filament_ids": [
+        "pla-glow",
+        "pla-gradient"
+      ],
+      "notes": "Phosphorescent pigment plus along-strand colour gradient on a PLA base."
+    },
+    {
+      "name": "PLA-LW",
+      "filament_ids": [
+        "lw-pla"
+      ],
+      "notes": "Chemically foamed lightweight PLA; density drops in-nozzle with temperature."
+    },
+    {
+      "name": "PLA-Cast",
+      "filament_ids": [],
+      "notes": "Castable burnout PLA — no catalog id covers castable/burnout formulations."
+    },
+    {
+      "name": "PETG / PETG-Basic / PETG+",
       "filament_ids": [
         "petg"
-      ]
+      ],
+      "notes": "Standard and enhanced amorphous PETG copolyester grades."
     },
     {
-      "name": "ABS / ASA",
+      "name": "PETG-UV Color Change",
       "filament_ids": [
-        "abs",
+        "petg"
+      ],
+      "notes": "PETG carrying a UV-photochromic pigment; base chemistry unchanged."
+    },
+    {
+      "name": "ABS+HS",
+      "filament_ids": [
+        "abs"
+      ],
+      "notes": "High-strength ABS grade."
+    },
+    {
+      "name": "ABS-ESD",
+      "filament_ids": [],
+      "notes": "ABS + conductive filler for static dissipation; catalog has petg-esd but no ABS ESD id."
+    },
+    {
+      "name": "ASA",
+      "filament_ids": [
         "asa"
-      ]
-    },
-    {
-      "name": "Nylon",
-      "filament_ids": [
-        "pa",
-        "pa-cf"
       ],
-      "notes": "PA6 and PA12 grades including carbon-fiber filled"
+      "notes": "Standard acrylonitrile styrene acrylate."
     },
     {
-      "name": "Flexibles",
+      "name": "PET-FR",
       "filament_ids": [
-        "tpu"
+        "pet"
       ],
-      "notes": "TPU and TPE grades"
+      "notes": "Flame-retardant unmodified PET; chemistry is pet, but no pet-fr id exists (compare abs-fr)."
     },
     {
-      "name": "Polycarbonate blends",
+      "name": "PA",
       "filament_ids": [
-        "pc"
-      ]
+        "pa"
+      ],
+      "notes": "Unfilled polyamide; PA type not stated in the catalog listing, so no pa6/pa12 grade id."
     },
     {
-      "name": "Soluble support",
+      "name": "ePA-CF (PA-CF)",
+      "filament_ids": [
+        "pa6-cf"
+      ],
+      "notes": "Nylon 6/66 copolymer + 20% carbon fiber; density 1.24 g/cm3, tensile 84.05 MPa XY / 50.34 MPa Z. Copolymer base, not straight PA6."
+    },
+    {
+      "name": "ePA12-CF (PA12-CF)",
+      "filament_ids": [
+        "pa12-cf"
+      ],
+      "notes": "PA12 + carbon fiber, ~120 C heat resistance (TDS V4.01)."
+    },
+    {
+      "name": "TPU-95A",
+      "filament_ids": [
+        "tpu-95a"
+      ],
+      "notes": "Shore 95A flexible TPU."
+    },
+    {
+      "name": "TPU-64D",
+      "filament_ids": [
+        "tpu-68d"
+      ],
+      "notes": "Shore 64D rigid-flexible TPU; tpu-68d carries \"TPU 64D\" as an alias."
+    },
+    {
+      "name": "TPE-83A",
+      "filament_ids": [
+        "tpe"
+      ],
+      "notes": "Shore 83A thermoplastic elastomer, not a urethane; no 83A-specific TPE grade id."
+    },
+    {
+      "name": "PEBA-90A / PEBA-85A",
+      "filament_ids": [],
+      "notes": "Polyether block amide elastomer (Pebax-class), not TPU or SEBS TPE; high-rebound footwear/sports material. No catalog id."
+    },
+    {
+      "name": "PEBA-LW",
+      "filament_ids": [],
+      "notes": "Foamed lightweight PEBA; no catalog id."
+    },
+    {
+      "name": "PVA",
       "filament_ids": [
         "pva"
-      ]
+      ],
+      "notes": "Water-soluble support."
+    },
+    {
+      "name": "HIPS",
+      "filament_ids": [
+        "hips"
+      ],
+      "notes": "High-impact polystyrene, support/sacrificial use."
+    },
+    {
+      "name": "Clean (Cleaning Filament)",
+      "filament_ids": [],
+      "notes": "Purge/cleaning compound, not a print material."
     }
   ],
   "price_tier": "mid",
@@ -104,7 +243,17 @@
       "https://www.esungroup.net/about-esun/",
       "https://filamentcheatsheet.com/database/brand/esun_3d/",
       "https://esun.en.alibaba.com/",
-      "/home/claude/filament-repo/research/verified-oem-relationships.md (project-owner verified)"
+      "/home/claude/filament-repo/research/verified-oem-relationships.md (project-owner verified)",
+      "https://www.esun3d.com/filaments/",
+      "https://www.esun3d.com/uploads/eSUN_PLA+-Filament_TDS_V4.0.pdf",
+      "https://www.esun3d.com/uploads/eSUN_eSilk-PLA-Filament_TDS_V4.0.pdf",
+      "https://www.esun3d.com/esilk-pla-product/",
+      "https://www.esun3d.com/epa-cf-product/",
+      "https://www.esun3d.com/uploads/eSUN_ePA12-CF-Filament_TDS_V4.01.pdf",
+      "https://esun3dstore.com/products/epa12-cf",
+      "https://www.esun3d.com/peba-product/",
+      "https://www.esun3d.com/peba-85a-product/",
+      "https://www.esun3d.com/uploads/PEBA90A-TDS-EN.pdf"
     ],
     "last_verified": "2026-07-31",
     "confidence": "medium",

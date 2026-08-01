@@ -150,6 +150,9 @@ def summary_fil(f: dict) -> dict:
     sh = f.get("properties", {}).get("shore_hardness")
     if sh:
         out["shore_hardness"] = sh
+    tn = f.get("trade_names", [])
+    if tn:
+        out["trade_names"] = [{"manufacturer": t.get("manufacturer"), "product": t.get("product")} for t in tn]
     pr = f.get("printing", {})
     out["enclosure_recommended"] = pr.get("enclosure_recommended")
     out["heated_chamber_required"] = pr.get("heated_chamber_required")

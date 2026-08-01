@@ -22,63 +22,607 @@
   },
   "product_lines": [
     {
-      "name": "PLA",
+      "name": "PLA Premium",
       "filament_ids": [
         "pla"
       ],
-      "notes": "Premium, Matte and other variants"
+      "notes": "Standard PLA"
     },
     {
-      "name": "PET-G / PET-G Premium",
+      "name": "PLA Pro",
+      "filament_ids": [
+        "pla-plus"
+      ],
+      "notes": "Styrene-replacement toughened PLA"
+    },
+    {
+      "name": "PLA Tough",
+      "filament_ids": [
+        "pla-plus"
+      ],
+      "notes": "Impact-modified PLA"
+    },
+    {
+      "name": "PLA SILK",
+      "filament_ids": [
+        "pla-silk"
+      ],
+      "notes": "Silk-gloss PLA; additive-based gloss assumed, blend vs additive unconfirmed"
+    },
+    {
+      "name": "PLA Magic SILK",
+      "filament_ids": [
+        "pla-silk"
+      ],
+      "notes": "Silk PLA with improved heat resistance"
+    },
+    {
+      "name": "PLA Silk Rainbow",
+      "filament_ids": [
+        "pla-silk",
+        "pla-gradient"
+      ],
+      "notes": "Length-wise colour-shifting silk PLA"
+    },
+    {
+      "name": "PLA MATT",
+      "filament_ids": [
+        "pla-matte"
+      ],
+      "notes": "Matte PLA with UV stabiliser"
+    },
+    {
+      "name": "Pastello PLA",
+      "filament_ids": [
+        "pla-matte"
+      ],
+      "notes": "Pastel matte PLA"
+    },
+    {
+      "name": "PLA Carbon",
+      "filament_ids": [
+        "pla-cf"
+      ],
+      "notes": "PLA + 10% carbon fibre"
+    },
+    {
+      "name": "PLA Crystal",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Clear/translucent PLA"
+    },
+    {
+      "name": "PLA Glitter",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Glitter-particle-filled PLA; no glitter-specific id exists"
+    },
+    {
+      "name": "PLA Glow in the Dark",
+      "filament_ids": [
+        "pla-glow"
+      ],
+      "notes": "Phosphorescent PLA"
+    },
+    {
+      "name": "PLA High Speed",
+      "filament_ids": [
+        "pla-hf"
+      ],
+      "notes": "High-flow PLA, up to 600 mm/s"
+    },
+    {
+      "name": "Huracan PLA",
+      "filament_ids": [
+        "pla-hf"
+      ],
+      "notes": "High-flow PLA, up to 350 mm/s"
+    },
+    {
+      "name": "PLA Nature",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "PLA + bio-filler; no bio-filled PLA id exists (cf. pla-wood)"
+    },
+    {
+      "name": "PLA Stone Age",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "PLA + mineral filler, stone look; no mineral-filled PLA id exists"
+    },
+    {
+      "name": "PLA Thermoactive",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Thermochromic PLA, ~30 C transition; no thermochromic id exists"
+    },
+    {
+      "name": "PLA Metal Brass / Bronze / Copper",
+      "filament_ids": [
+        "pla-metal"
+      ],
+      "notes": "PLA + metal powder filler"
+    },
+    {
+      "name": "PLA Electrically Conductive",
+      "filament_ids": [],
+      "notes": "Carbon-doped conductive PLA; no pla-esd id exists (only petg-esd)"
+    },
+    {
+      "name": "PLA ESD",
+      "filament_ids": [],
+      "notes": "Static-dissipative PLA; no pla-esd id exists"
+    },
+    {
+      "name": "FlameGuard PLA",
+      "filament_ids": [],
+      "notes": "UL94 V0 flame-retardant PLA; no pla-fr id exists (cf. abs-fr)"
+    },
+    {
+      "name": "GreenyPro",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Food-safe/FDA PLA"
+    },
+    {
+      "name": "GreenyHT",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Biodegradable/compostable PLA"
+    },
+    {
+      "name": "LW-PLA UltraFoam",
+      "filament_ids": [
+        "lw-pla"
+      ],
+      "notes": "Foaming lightweight PLA, up to 70% weight reduction"
+    },
+    {
+      "name": "Safeguard PLA",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Antibacterial PLA"
+    },
+    {
+      "name": "rPLA",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Recycled-content PLA"
+    },
+    {
+      "name": "The Filament PLA Lite",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Budget PLA sub-line"
+    },
+    {
+      "name": "The Filament PLA Matte",
+      "filament_ids": [
+        "pla-matte"
+      ],
+      "notes": "Budget matte PLA"
+    },
+    {
+      "name": "The Filament PLA HS",
+      "filament_ids": [
+        "pla-hf"
+      ],
+      "notes": "Budget high-speed PLA"
+    },
+    {
+      "name": "The Filament PLA CF",
+      "filament_ids": [
+        "pla-cf"
+      ],
+      "notes": "Budget carbon-filled PLA"
+    },
+    {
+      "name": "The Filament HT-PLA",
+      "filament_ids": [],
+      "notes": "Heat-resistant/crystallising PLA; no pla-ht id exists"
+    },
+    {
+      "name": "Prografen PLA Graphene Light / Strong",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Graphene-additive PLA (PrograFen sub-brand)"
+    },
+    {
+      "name": "ABS GP450",
+      "filament_ids": [
+        "abs"
+      ],
+      "notes": "High-speed ABS"
+    },
+    {
+      "name": "smart ABS",
+      "filament_ids": [
+        "abs"
+      ],
+      "notes": "Easily post-processable ABS"
+    },
+    {
+      "name": "ABS Medical",
+      "filament_ids": [
+        "abs"
+      ],
+      "notes": "Biocompatible (30-day) FDA ABS"
+    },
+    {
+      "name": "ABS Kevlar",
+      "filament_ids": [],
+      "notes": "ABS + aramid (Kevlar) fibre; no aramid-filled id exists"
+    },
+    {
+      "name": "ASA 275",
+      "filament_ids": [
+        "asa"
+      ],
+      "notes": "Standard ASA"
+    },
+    {
+      "name": "ASA Kevlar",
+      "filament_ids": [],
+      "notes": "ASA + aramid fibre; no aramid-filled id exists"
+    },
+    {
+      "name": "ASA-X CF10",
+      "filament_ids": [
+        "asa-cf"
+      ],
+      "notes": "ASA + 10% carbon fibre"
+    },
+    {
+      "name": "ASA-X GF10",
+      "filament_ids": [
+        "asa-gf"
+      ],
+      "notes": "ASA + 10% glass fibre, UV resistant; asa-gf is provisional"
+    },
+    {
+      "name": "ASA Electrically Conductive",
+      "filament_ids": [],
+      "notes": "Conductive ASA, ~40 ohm-m; no asa-esd id exists"
+    },
+    {
+      "name": "FlameGuard ASA 275",
+      "filament_ids": [],
+      "notes": "UL94 V0 flame-retardant ASA; no asa-fr id exists"
+    },
+    {
+      "name": "LW-ASA UltraFoam",
+      "filament_ids": [],
+      "notes": "Foaming lightweight ASA, up to 66% weight reduction; no lw-asa id exists (lw-pla has no ASA analogue)"
+    },
+    {
+      "name": "HIPS-X",
+      "filament_ids": [
+        "hips"
+      ],
+      "notes": "High-impact polystyrene"
+    },
+    {
+      "name": "The Filament ASA",
+      "filament_ids": [
+        "asa"
+      ],
+      "notes": "Budget ASA sub-line"
+    },
+    {
+      "name": "The Filament ASA CF",
+      "filament_ids": [
+        "asa-cf"
+      ],
+      "notes": "Budget carbon-filled ASA"
+    },
+    {
+      "name": "PET-G Premium",
       "filament_ids": [
         "petg"
-      ]
-    },
-    {
-      "name": "PCTG / PET",
-      "filament_ids": [
-        "pctg",
-        "pet"
-      ]
-    },
-    {
-      "name": "ABS / ASA / HIPS",
-      "filament_ids": [
-        "abs",
-        "asa",
-        "hips"
-      ]
-    },
-    {
-      "name": "TPU",
-      "filament_ids": [
-        "tpu"
-      ]
-    },
-    {
-      "name": "Engineering polymers",
-      "filament_ids": [
-        "pa",
-        "pc",
-        "pp",
-        "pps",
-        "peba",
-        "hdpe"
       ],
-      "notes": "Nylon, polycarbonate, polypropylene, PPS, PEBA variants and HDPE"
+      "notes": "Standard PETG"
     },
     {
-      "name": "Wood-filled",
+      "name": "PETG Premium High Speed",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "High-flow PETG up to 800 mm/s; no petg-hf id exists"
+    },
+    {
+      "name": "PET-G MATT",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "Matte PETG; no petg-matte id exists"
+    },
+    {
+      "name": "PET-G Carbon",
+      "filament_ids": [
+        "petg-cf"
+      ],
+      "notes": "PETG + 10% carbon fibre"
+    },
+    {
+      "name": "PET-G HT100",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "High-temperature PETG (100 C)"
+    },
+    {
+      "name": "PET-G FX120",
+      "filament_ids": [],
+      "notes": "Flexible sterilisable PETG-based compound, Shore 95A - neither a rigid PETG nor a conventional TPU"
+    },
+    {
+      "name": "PET-G Glitter",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "Glitter-filled PETG"
+    },
+    {
+      "name": "PET-G Glow in the Dark",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "Phosphorescent PETG; no petg-glow id exists"
+    },
+    {
+      "name": "PET-G FR V0",
+      "filament_ids": [],
+      "notes": "Flame-retardant PETG; no petg-fr id exists"
+    },
+    {
+      "name": "PETG/PTFE",
+      "filament_ids": [],
+      "notes": "PETG + 10% PTFE low-friction compound; no PTFE-filled id exists"
+    },
+    {
+      "name": "PETG ESD",
+      "filament_ids": [
+        "petg-esd"
+      ],
+      "notes": "Static-dissipative PETG"
+    },
+    {
+      "name": "rPETG",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "Recycled PETG"
+    },
+    {
+      "name": "The Filament PETG",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "Budget PETG sub-line"
+    },
+    {
+      "name": "The Filament PETG Lite",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "Budget PETG"
+    },
+    {
+      "name": "The Filament PETG CF",
+      "filament_ids": [
+        "petg-cf"
+      ],
+      "notes": "Budget carbon-filled PETG"
+    },
+    {
+      "name": "Prografen PET-G Graphene Light / Strong",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "Graphene-additive PETG (PrograFen sub-brand)"
+    },
+    {
+      "name": "PCTG Premium",
+      "filament_ids": [
+        "pctg"
+      ],
+      "notes": "Copolyester, higher impact than PETG"
+    },
+    {
+      "name": "PCTG CF10",
+      "filament_ids": [],
+      "notes": "PCTG + 10% carbon fibre; no pctg-cf id exists"
+    },
+    {
+      "name": "PCTG GF10",
+      "filament_ids": [],
+      "notes": "PCTG + 10% glass fibre; no pctg-gf id exists"
+    },
+    {
+      "name": "PET CF15",
+      "filament_ids": [
+        "pet-cf"
+      ],
+      "notes": "PET + 15% carbon fibre"
+    },
+    {
+      "name": "S-Flex 85A",
+      "filament_ids": [
+        "tpu-85a"
+      ],
+      "notes": "TPU Shore 85A, elongation at break up to 650%"
+    },
+    {
+      "name": "S-Flex 90A",
+      "filament_ids": [
+        "tpu-90a"
+      ],
+      "notes": "TPU Shore 90A, elongation up to 500%, oil/chemical resistant"
+    },
+    {
+      "name": "S-Flex 98A",
+      "filament_ids": [
+        "tpu-95a"
+      ],
+      "notes": "TPU Shore 98A - mapped to the 95A hard-TPU grade band, actual hardness is 98A; elongation up to 510%"
+    },
+    {
+      "name": "S-Flex Carbon",
+      "filament_ids": [],
+      "notes": "TPU + 20% carbon fibre, ESD; no tpu-cf id exists (tpu-gf does)"
+    },
+    {
+      "name": "The Filament TPU 82A",
+      "filament_ids": [
+        "tpu-85a"
+      ],
+      "notes": "Recycled-content TPU, actual Shore 82A"
+    },
+    {
+      "name": "The Filament TPU 87A",
+      "filament_ids": [
+        "tpu-85a"
+      ],
+      "notes": "Recycled-content TPU, actual Shore 87A"
+    },
+    {
+      "name": "The Filament TPU 95A",
+      "filament_ids": [
+        "tpu-95a"
+      ],
+      "notes": "Recycled-content TPU, Shore 95A"
+    },
+    {
+      "name": "PA6 Neat BK / NT",
+      "filament_ids": [
+        "pa6"
+      ],
+      "notes": "Unfilled PA6"
+    },
+    {
+      "name": "PA6 Low Warp",
+      "filament_ids": [
+        "pa6"
+      ],
+      "notes": "Low-warp unfilled PA6"
+    },
+    {
+      "name": "PA6 GK10",
+      "filament_ids": [
+        "pa6"
+      ],
+      "notes": "Chemically resistant PA6"
+    },
+    {
+      "name": "PA6 CF15",
+      "filament_ids": [
+        "pa6-cf"
+      ],
+      "notes": "PA6 + 15% carbon fibre, HDT-A 200 C"
+    },
+    {
+      "name": "PA6 Low Warp CF15S",
+      "filament_ids": [
+        "pa6-cf"
+      ],
+      "notes": "Low-warp PA6 + 15% carbon fibre"
+    },
+    {
+      "name": "PA6 Low Warp GF30",
+      "filament_ids": [
+        "pa6-gf"
+      ],
+      "notes": "PA6 + 30% glass fibre; pa6-gf is provisional"
+    },
+    {
+      "name": "PA6 CS20 FR V0",
+      "filament_ids": [],
+      "notes": "Flame-retardant rail-grade PA6; no pa6-fr id exists"
+    },
+    {
+      "name": "PA12 CF15",
+      "filament_ids": [
+        "pa12-cf"
+      ],
+      "notes": "PA12 + 15% carbon fibre, ~10% lighter than PA6 CF15"
+    },
+    {
+      "name": "ThermaTech PA",
+      "filament_ids": [],
+      "notes": "Ceramic-filled thermally conductive polyamide; no thermally-conductive id exists"
+    },
+    {
+      "name": "PP",
+      "filament_ids": [
+        "pp"
+      ],
+      "notes": "Polypropylene, low shrinkage"
+    },
+    {
+      "name": "PC 275",
+      "filament_ids": [
+        "pc"
+      ],
+      "notes": "Polycarbonate"
+    },
+    {
+      "name": "PC CF",
+      "filament_ids": [],
+      "notes": "PC + 10% carbon fibre; no pc-cf id exists (pc-gf does)"
+    },
+    {
+      "name": "PC/ABS FR V0",
+      "filament_ids": [
+        "pc-abs"
+      ],
+      "notes": "Flame-retardant PC/ABS blend"
+    },
+    {
+      "name": "PC/PTFE",
+      "filament_ids": [],
+      "notes": "PTFE-filled polycarbonate; no PTFE-filled id exists"
+    },
+    {
+      "name": "WOOD",
       "filament_ids": [
         "pla-wood"
-      ]
+      ],
+      "notes": "PLA-wood composite"
     },
     {
-      "name": "Soluble supports",
+      "name": "PPS AM230",
+      "filament_ids": [
+        "pps"
+      ],
+      "notes": "Polyphenylene sulfide, Vicat 236 C"
+    },
+    {
+      "name": "AquaPrint",
       "filament_ids": [
         "pva"
       ],
-      "notes": "Soluble and breakaway support materials; specific chemistry not confirmed"
+      "notes": "Cold-water-soluble support material, described as PVA-class; PVA vs BVOH copolymer not confirmed"
+    },
+    {
+      "name": "HDPE",
+      "filament_ids": [],
+      "notes": "High-density polyethylene; no polyethylene id exists"
+    },
+    {
+      "name": "PEBA",
+      "filament_ids": [],
+      "notes": "Polyether block amide elastomer; distinct from tpu, tpe and cope"
     }
   ],
   "makes_plates": false,
@@ -91,7 +635,12 @@
       "https://us.spectrumfilaments.com/",
       "https://3dprintingcenter.net/we-just-focus-on-our-work-an-interview-with-tomasz-augustyniak-of-spectrum-group/",
       "https://www.3dprintingjournal.com/p/06-25-2015-spectrum-filaments-officially",
-      "https://www.3djake.com/spectrum"
+      "https://www.3djake.com/spectrum",
+      "https://spectrumfilaments.com/en/our-offer/",
+      "https://spectrumfilaments.com/en/download/",
+      "https://spectrumfilaments.com/wp-content/uploads/2022/05/en_tds_spectrum_sflex_85a.pdf",
+      "https://spectrumfilaments.com/wp-content/uploads/2022/05/en_tds_spectrum_sflex_90a.pdf",
+      "https://spectrumfilaments.com/wp-content/uploads/2022/05/en_tds_spectrum_sflex_98a.pdf"
     ],
     "last_verified": "2026-07-31",
     "confidence": "medium",

@@ -25,24 +25,21 @@
       "filament_ids": [
         "pla"
       ],
-      "notes": "Marketed as a bioplastic; the core line"
+      "notes": "Standard bioplastic PLA, 1.75 mm and 2.85 mm; sold in many colour/finish SKUs but no distinct engineering grades were found"
     },
     {
       "name": "PETG",
       "filament_ids": [
         "petg"
       ],
-      "notes": "Marketed on temperature resistance"
+      "notes": "Standard PETG marketed on temperature resistance, 1.75/2.85 mm"
     },
     {
       "name": "TPU",
       "filament_ids": [
         "tpu"
-      ]
-    },
-    {
-      "name": "Specialty materials",
-      "notes": "A general specialty category exists in the catalog but the individual materials were not itemized in the sources reviewed"
+      ],
+      "notes": "UV-stable flexible TPU, 1.75/2.85 mm; Shore hardness is not published, so no specific grade id can be assigned"
     }
   ],
   "makes_plates": false,

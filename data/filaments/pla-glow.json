@@ -1,7 +1,12 @@
 {
   "id": "pla-glow",
   "name": "Glow-in-the-Dark PLA",
-  "aliases": ["PLA Glow", "GITD PLA", "Glow PLA", "Phosphorescent PLA"],
+  "aliases": [
+    "PLA Glow",
+    "GITD PLA",
+    "Glow PLA",
+    "Phosphorescent PLA"
+  ],
   "status": "researched",
   "base_type": "pla",
   "variation_kind": "glow",
@@ -9,14 +14,34 @@
   "chemical_makeup": "PLA matrix loaded with phosphorescent mineral pigment, typically strontium-aluminate-based; the phosphor crystals are hard and angular, which is what makes this variant abrasive despite its modest filler fraction",
   "summary": "PLA carrying a strontium-aluminate phosphor that charges under light and glows in the dark. Printing temperatures are base-PLA-like (190-230 °C) and it has the best layer bonding of any filled variant in this cluster (Z 26 vs XY 32 MPa), but the phosphor is aggressively abrasive: a hardened nozzle is required, 0.2 mm nozzles are out, and it chews plastic AMS feeder components in a way base PLA never does.",
   "printing": {
-    "nozzle_temp_c": { "min": 190, "max": 230, "recommended": 220 },
-    "bed_temp_c": { "min": 35, "max": 45, "recommended": 40 },
-    "ambient_temp_c": { "min": 25, "max": 45, "recommended": 30 },
-    "speed_mm_s": { "min": 40, "max": 250, "recommended": 150 },
+    "nozzle_temp_c": {
+      "min": 190,
+      "max": 230,
+      "recommended": 220
+    },
+    "bed_temp_c": {
+      "min": 35,
+      "max": 45,
+      "recommended": 40
+    },
+    "ambient_temp_c": {
+      "min": 25,
+      "max": 45,
+      "recommended": 30
+    },
+    "speed_mm_s": {
+      "min": 40,
+      "max": 250,
+      "recommended": 150
+    },
     "enclosure_recommended": false,
     "heated_chamber_required": false,
     "requires_hardened_nozzle": true,
-    "part_cooling_fan_pct": { "min": 80, "max": 100, "recommended": 100 },
+    "part_cooling_fan_pct": {
+      "min": 80,
+      "max": 100,
+      "recommended": 100
+    },
     "enclosure_open_for_cooling": true,
     "notes": "Thermally this is base PLA — Bambu tests specimens at 220 °C and 200 mm/s and rates the material below 250 mm/s, so unlike pla-wood and heavy pla-metal there is no speed penalty. The delta is entirely abrasion: CNC Kitchen's nozzle-wear testing found glow filaments more damaging to brass than some fibre-reinforced materials (colorFabb GlowFill removed roughly 0.5 mm from a brass nozzle tip over a 100 g sample, while better-behaved brands such as dasFilament caused little wear). Use hardened steel and 0.4 mm or larger — Bambu explicitly advises against 0.2 mm nozzles because of phosphor particle size. Print thick: glow brightness and duration keep improving with wall thickness up to about 2 mm, with diminishing returns beyond."
   },
@@ -28,9 +53,22 @@
   },
   "drying": {
     "required_before_use": "if-exposed",
-    "temp_c": { "min": 45, "max": 55, "recommended": 55 },
-    "time_hours": { "min": 4, "max": 8, "recommended": 8 },
-    "methods": ["filament dryer", "blast oven at 55 °C", "food dehydrator", "drybox with desiccant"],
+    "temp_c": {
+      "min": 45,
+      "max": 55,
+      "recommended": 55
+    },
+    "time_hours": {
+      "min": 4,
+      "max": 8,
+      "recommended": 8
+    },
+    "methods": [
+      "filament dryer",
+      "blast oven at 55 °C",
+      "food dehydrator",
+      "drybox with desiccant"
+    ],
     "dryness_validation": "No popping or steam at the nozzle and minimal stringing on a retraction test; extrudate should be smooth rather than pitted",
     "notes": "Bambu specifies 55 °C for 8 h, matching base PLA. The mineral phosphor is not hygroscopic and no source reports an additive-driven moisture penalty — unlike pla-wood, where the filler absorbs water on its own."
   },
@@ -72,11 +110,19 @@
     "density_g_cm3": 1.26,
     "grams_per_100cm3": 126,
     "cm3_per_100g": 79.4,
-    "shrinkage_pct": { "min": 0.3, "max": 0.5, "recommended": 0.4 },
+    "shrinkage_pct": {
+      "min": 0.3,
+      "max": 0.5,
+      "recommended": 0.4
+    },
     "glass_transition_c": 55,
     "heat_deflection_c": 55,
     "max_service_temp_c": 48,
-    "tensile_strength_mpa": { "min": 29, "max": 35, "recommended": 32 },
+    "tensile_strength_mpa": {
+      "min": 29,
+      "max": 35,
+      "recommended": 32
+    },
     "notes": "Bambu PLA Glow TDS: density 1.26 g/cm³ (only just above base PLA's 1.24, so the phosphor load is modest by mass), tensile XY 32±3 MPa and Z 26±3 MPa, elongation XY 8.6±1.2 % and Z 6.5±0.8 %, Tg 55 °C, HDT 55 °C at 0.45 MPa and 52 °C at 1.8 MPa. The Z/XY tensile ratio of about 0.81 is the second best in this cluster after pla-metal and far better than pla-wood's 0.58 — this variant's problem is hardware wear, not part strength. Thermal numbers sit slightly below base PLA."
   },
   "scores": {
@@ -91,8 +137,19 @@
     "water_tolerance": 5
   },
   "compatibility": {
-    "bonds_with": ["pla", "pla-glow", "pla-matte", "pla-silk", "pla-gradient"],
-    "support_materials": ["pla", "pva", "bvoh", "petg"],
+    "bonds_with": [
+      "pla",
+      "pla-glow",
+      "pla-matte",
+      "pla-silk",
+      "pla-gradient"
+    ],
+    "support_materials": [
+      "pla",
+      "pva",
+      "bvoh",
+      "petg"
+    ],
     "usable_as_support_for": [],
     "notes": "Standard PLA-family bonding: welds to base PLA and other PLA grades, does not weld to PETG/ABS/ASA/PC/PA/PP. Practical workflow note — if you fit a hardened nozzle for glow, that nozzle stays in for the support material too, so plan a nozzle swap only if a finer nozzle is genuinely required for interface quality. Not recommended as a support material itself: it wastes an abrasive, expensive filament."
   },
@@ -101,12 +158,20 @@
       "plate_id": "pei-textured",
       "rating": "recommended",
       "notes": "Adheres normally at 35-45 °C with no release agent. Phosphor granules can read as slightly gritty on the plate-facing surface; smooth PEI gives a cleaner bottom face if that surface is visible."
+    },
+    {
+      "plate_id": "pei-patterned",
+      "rating": "recommended",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Adheres normally; translucent glow bases carry the pattern well."
     }
   ],
   "emissions": {
     "voc_level": "low",
     "particulate_level": "low",
-    "primary_emissions": ["lactide", "ultrafine particles"],
+    "primary_emissions": [
+      "lactide",
+      "ultrafine particles"
+    ],
     "ventilation": "optional",
     "notes": "No emissions delta from base PLA — the strontium-aluminate phosphor is an inert mineral at printing temperature and no unique fume hazard is reported. Standard good-practice ventilation for continuous printing still applies."
   },
@@ -124,5 +189,110 @@
     "last_verified": "2026-07-31",
     "confidence": "medium",
     "conflicts": "AMS compatibility is directly disputed: Bambu's own material table lists glow PLA as AMS-compatible (excluding AMS Lite), while a long forum thread documents the material destroying AMS feeder inlet funnels within ~500 g and causing motor-overload errors. Recorded as 'conditional' with mitigations. Abrasiveness is strongly brand-dependent per CNC Kitchen — colorFabb GlowFill removed ~0.5 mm of a brass nozzle tip over 100 g while dasFilament caused minimal wear, so 'requires hardened nozzle' is set true for the category even though some spools would survive brass. Bambu's own wording is 'recommended for long-term printing' rather than required. UV stability of the phosphor pigment over long outdoor exposure is unverified."
-  }
+  },
+  "trade_names": [
+    {
+      "manufacturer": "amolen",
+      "product": "PLA Glow",
+      "notes": "Phosphorescent pigment."
+    },
+    {
+      "manufacturer": "anycubic",
+      "product": "PLA Glow"
+    },
+    {
+      "manufacturer": "bambu-lab",
+      "product": "PLA Glow"
+    },
+    {
+      "manufacturer": "colorfabb",
+      "product": "glowFill",
+      "notes": "PLA/PHA carrier + phosphor"
+    },
+    {
+      "manufacturer": "duramic-3d",
+      "product": "PLA Filament Glow in the Dark",
+      "notes": "Phosphorescent pigment."
+    },
+    {
+      "manufacturer": "elegoo",
+      "product": "PLA Glow"
+    },
+    {
+      "manufacturer": "eryone",
+      "product": "PLA Glow in Dark",
+      "notes": "Phosphorescent PLA."
+    },
+    {
+      "manufacturer": "esun",
+      "product": "PLA-Luminous Rainbow",
+      "notes": "Phosphorescent pigment; combination inferred from the product name"
+    },
+    {
+      "manufacturer": "filament-pm",
+      "product": "GLOWJET"
+    },
+    {
+      "manufacturer": "formfutura",
+      "product": "EasyFil PLA Glow in the Dark",
+      "notes": "PLA + phosphorescent pigment"
+    },
+    {
+      "manufacturer": "geeetech",
+      "product": "PLA Luminous (Glow)",
+      "notes": "Fluorescent/phosphorescent powder in PLA."
+    },
+    {
+      "manufacturer": "hatchbox",
+      "product": "Glow PLA",
+      "notes": "Phosphorescent pigment in PLA."
+    },
+    {
+      "manufacturer": "jayo",
+      "product": "PLA Glow In The Dark",
+      "notes": "Phosphorescent pigment"
+    },
+    {
+      "manufacturer": "keene-village-plastics",
+      "product": "Glow-in-the-Dark Green PLA",
+      "notes": "Phosphorescent pigment on the standard PLA base."
+    },
+    {
+      "manufacturer": "kingroon",
+      "product": "Glow-in-the-Dark PLA"
+    },
+    {
+      "manufacturer": "overture",
+      "product": "Glow PLA",
+      "notes": "Phosphorescent pigment in PLA."
+    },
+    {
+      "manufacturer": "polymaker",
+      "product": "Panchroma PLA Luminous (Glow)",
+      "notes": "Phosphorescent pigment"
+    },
+    {
+      "manufacturer": "snapmaker",
+      "product": "Glow-in-the-dark (Green) PLA"
+    },
+    {
+      "manufacturer": "spectrum-filaments",
+      "product": "PLA Glow in the Dark"
+    },
+    {
+      "manufacturer": "sunlu",
+      "product": "PLA Glow in Dark",
+      "notes": "Strontium-aluminate phosphor"
+    },
+    {
+      "manufacturer": "tinmorry",
+      "product": "PLA Glow in the Dark",
+      "notes": "Phosphorescent pigment"
+    },
+    {
+      "manufacturer": "ziro",
+      "product": "Glow in Dark PLA",
+      "notes": "Phosphorescent pigment"
+    }
+  ]
 }

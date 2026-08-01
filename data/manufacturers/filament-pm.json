@@ -32,62 +32,166 @@
       "name": "PLA",
       "filament_ids": [
         "pla"
-      ]
+      ],
+      "notes": "Standard PLA"
     },
     {
-      "name": "ABS / ABS-T",
+      "name": "PLA+",
       "filament_ids": [
-        "abs"
-      ]
+        "pla-plus"
+      ],
+      "notes": "Toughened PLA"
     },
     {
-      "name": "PET-G",
+      "name": "SILK",
+      "filament_ids": [
+        "pla-silk"
+      ],
+      "notes": "Silk-finish line (e.g. Golden Glory); base polymer PLA assumed - the TDS could not be fetched (robots.txt), so blend vs additive is unconfirmed"
+    },
+    {
+      "name": "PETG",
       "filament_ids": [
         "petg"
-      ]
+      ],
+      "notes": "Standard PETG"
+    },
+    {
+      "name": "PETG CFJET",
+      "filament_ids": [
+        "petg-cf"
+      ],
+      "notes": "PETG + carbon fibre"
+    },
+    {
+      "name": "FRJET",
+      "filament_ids": [],
+      "notes": "Self-extinguishing flame-retardant PETG-based compound; no petg-fr id exists"
+    },
+    {
+      "name": "ABS \"NOT DEAD\"",
+      "filament_ids": [
+        "abs"
+      ],
+      "notes": "Standard ABS"
+    },
+    {
+      "name": "ABS-T",
+      "filament_ids": [
+        "abs"
+      ],
+      "notes": "Modified/toughened ABS"
     },
     {
       "name": "ASA",
       "filament_ids": [
         "asa"
-      ]
-    },
-    {
-      "name": "TPU",
-      "filament_ids": [
-        "tpu"
-      ]
-    },
-    {
-      "name": "PA (Nylon)",
-      "filament_ids": [
-        "pa",
-        "pa-cf"
       ],
-      "notes": "Includes PA-CFJet, carbon-fibre-reinforced PA12"
+      "notes": "Standard ASA"
     },
     {
-      "name": "CFJet",
+      "name": "HiPS",
       "filament_ids": [
-        "pla-cf",
-        "petg-cf",
-        "pa-cf"
+        "hips"
       ],
-      "notes": "Carbon-fibre-reinforced family; exact base-polymer coverage beyond PA12 not fully confirmed"
+      "notes": "High-impact polystyrene"
     },
     {
-      "name": "WoodJet",
+      "name": "GLOWJET",
+      "filament_ids": [
+        "pla-glow"
+      ],
+      "notes": "Glow-in-the-dark PLA"
+    },
+    {
+      "name": "MARBLEJET",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Marble-effect mineral-filled PLA; no mineral-filled id exists"
+    },
+    {
+      "name": "WOODJET",
       "filament_ids": [
         "pla-wood"
       ],
-      "notes": "Wood-filled line; base polymer assumed PLA"
+      "notes": "Wood-filled PLA composite"
     },
     {
-      "name": "Recycled (RePLA+ / RePETG)",
+      "name": "PAJET NYLON",
       "filament_ids": [
-        "r-pla",
-        "r-petg"
-      ]
+        "pa"
+      ],
+      "notes": "Polyamide; exact PA type not stated in the TDS extract, so the generic pa id is used"
+    },
+    {
+      "name": "PACFJET",
+      "filament_ids": [
+        "pa12-cf"
+      ],
+      "notes": "PA + carbon fibre; PA12 base carried over from earlier research but the polyamide type is unconfirmed and no generic pa-cf id exists"
+    },
+    {
+      "name": "PC/ABS",
+      "filament_ids": [
+        "pc-abs"
+      ],
+      "notes": "Polycarbonate/ABS blend"
+    },
+    {
+      "name": "PEIJET 1010 ULTEM",
+      "filament_ids": [
+        "pei-ultem"
+      ],
+      "notes": "Targets Ultem 1010 chemistry per the SKU name; genuine-resin vs PEI blend not independently confirmed"
+    },
+    {
+      "name": "PPJet",
+      "filament_ids": [
+        "pp"
+      ],
+      "notes": "Polypropylene-based industrial grade"
+    },
+    {
+      "name": "TPE 32 (RUBBERJET FLEX)",
+      "filament_ids": [
+        "tpe"
+      ],
+      "notes": "Soft thermoplastic elastomer grade"
+    },
+    {
+      "name": "TPE 88",
+      "filament_ids": [
+        "tpe"
+      ],
+      "notes": "Firmer thermoplastic elastomer grade"
+    },
+    {
+      "name": "TPU 96",
+      "filament_ids": [
+        "tpu-95a"
+      ],
+      "notes": "TPU, Shore ~96A implied by the product name; TDS confirmation pending"
+    },
+    {
+      "name": "ESD",
+      "filament_ids": [],
+      "notes": "Static-dissipative filament; base polymer varies by SKU (likely carbon-doped PLA or PETG) and is unconfirmed"
+    },
+    {
+      "name": "RePLA / RePLA+",
+      "filament_ids": [
+        "pla",
+        "pla-plus"
+      ],
+      "notes": "Recycled-content PLA and PLA+"
+    },
+    {
+      "name": "RePETG",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "Recycled-content PETG"
     }
   ],
   "makes_plates": false,
@@ -99,7 +203,28 @@
       "https://www.plastymladec.cz/en",
       "https://shop.filament-pm.com/",
       "https://www.filament-pm.co.uk/page/about-us-26",
-      "https://en.industryarena.com/filament-pm"
+      "https://en.industryarena.com/filament-pm",
+      "https://www.filament-pm.com/stranka/product-info-documents-certificates-68",
+      "https://shop.filament-pm.com/pla",
+      "https://shop.filament-pm.com/PLA%2B",
+      "https://shop.filament-pm.com/SILK",
+      "https://shop.filament-pm.com/petg",
+      "https://shop.filament-pm.com/frjet",
+      "https://shop.filament-pm.com/abs-not-dead",
+      "https://shop.filament-pm.com/abs-t",
+      "https://shop.filament-pm.com/asa175",
+      "https://shop.filament-pm.com/glowjet",
+      "https://shop.filament-pm.com/marblejet",
+      "https://shop.filament-pm.com/woodjet",
+      "https://shop.filament-pm.com/nylon",
+      "https://shop.filament-pm.com/pc-abs",
+      "https://shop.filament-pm.com/peijet-1010-ultem-natur-1-75-mm-0-5-kg/p199",
+      "https://shop.filament-pm.com/industrial-ppjet",
+      "https://shop.filament-pm.com/tpe-32",
+      "https://shop.filament-pm.com/tpe-88",
+      "https://shop.filament-pm.com/tpu-96",
+      "https://shop.filament-pm.com/repla",
+      "https://shop.filament-pm.com/repetg"
     ],
     "last_verified": "2026-07-31",
     "confidence": "medium",

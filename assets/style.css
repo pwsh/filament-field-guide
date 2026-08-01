@@ -351,6 +351,38 @@ td.cell-name .sub { display: block; font-weight: 400; font-size: .82rem; color: 
 .rating-usable, .rating-usable-with-prep { color: var(--warn); font-weight: 650; }
 .rating-avoid { color: var(--danger); font-weight: 650; }
 
+/* ---------- collapsible groups (rating groups, long lists) ---------- */
+.group { border: 1px solid var(--border); border-radius: var(--radius-sm); margin-bottom: .5rem; background: var(--bg-elev); }
+.group + .group { margin-top: 0; }
+.group > summary {
+  cursor: pointer; list-style: none; padding: .45rem .7rem;
+  display: flex; align-items: center; gap: .5rem; border-radius: var(--radius-sm);
+  font-size: .9rem; user-select: none;
+}
+.group > summary::-webkit-details-marker { display: none; }
+.group > summary::before {
+  content: '▸'; color: var(--text-faint); font-size: .8rem; transition: transform .12s ease;
+  display: inline-block; width: .8em;
+}
+.group[open] > summary::before { transform: rotate(90deg); }
+.group > summary:hover { background: var(--bg-hover); }
+.group .group-title { font-weight: 650; }
+.group .group-count {
+  font-size: .75rem; color: var(--text-muted); background: var(--bg-sunken);
+  border: 1px solid var(--border); border-radius: 999px; padding: 0 .45rem;
+}
+.group .group-body { padding: 0 .5rem .5rem; }
+.group .group-body .table-wrap { border-radius: var(--radius-sm); }
+
+/* ---------- trade names ("Sold as") ---------- */
+.trade-list { list-style: none; padding: 0; margin: 0; display: grid; gap: .35rem; }
+.trade-row { display: grid; grid-template-columns: minmax(110px, 18%) 1fr; gap: .6rem; align-items: baseline; }
+.trade-maker { font-weight: 600; font-size: .87rem; }
+.trade-list .taglist li { font-size: .82rem; }
+.trade-list .taglist li.has-note { cursor: help; border-style: dashed; }
+.note-dot { color: var(--accent); font-weight: 700; margin-left: .15em; }
+@media (max-width: 560px) { .trade-row { grid-template-columns: 1fr; gap: .15rem; } }
+
 /* ---------- glossary ---------- */
 .glossary-entry { scroll-margin-top: 80px; }
 .glossary-entry h2 { margin-bottom: .1rem; }
@@ -402,12 +434,14 @@ td.cell-name .sub { display: block; font-weight: 400; font-size: .82rem; color: 
   .wrap { width: 100%; }
   a { color: #000 !important; text-decoration: none; }
   .card, .sheet, .table-wrap { border: 1px solid #bbb !important; box-shadow: none !important; break-inside: avoid; }
-  .sheet { padding: 0; border: 0 !important; font-size: 9pt; line-height: 1.28; }
+  .sheet { padding: 0; border: 0 !important; font-size: 8.75pt; line-height: 1.25; }
   .sheet h1 { font-size: 1.15rem; margin-bottom: .05rem; }
   .sheet-sub { margin-bottom: .25rem; font-size: .82rem; }
   .sheet-cols { columns: 2; column-gap: 1.1rem; }
-  .sheet-block { break-inside: avoid; margin-bottom: .5rem; }
+  .sheet-block { break-inside: avoid; margin-bottom: .45rem; }
   .sheet-block h2 { margin-bottom: .2rem; }
+  /* the trailing provenance line must not be what pushes a sheet to page 2 */
+  .sheet-foot { margin: .2rem 0 0 !important; font-size: 7.5pt; }
   .sheet table th, .sheet table td { padding: .06rem .25rem; }
   .sheet-block h2 { font-size: .72rem; letter-spacing: .05em; }
   .sheet .fine { font-size: .78rem; }
@@ -421,4 +455,10 @@ td.cell-name .sub { display: block; font-weight: 400; font-size: .82rem; color: 
   thead th { position: static; }
   .lbl { border-bottom: 0; }
   .lbl .lbl-i { display: none; }
+  /* collapsed groups are expanded before printing (see beforeprint handler) */
+  .group { border: 0 !important; break-inside: auto; }
+  .group > summary { padding: .2rem 0; }
+  .group > summary::before { content: ''; width: 0; }
+  .group > summary:hover { background: none; }
+  .group .group-body { padding: 0; }
 }

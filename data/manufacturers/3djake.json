@@ -33,58 +33,124 @@
     {
       "name": "ecoPLA",
       "filament_ids": [
-        "pla",
-        "pla-cf",
-        "pla-wood"
+        "pla"
       ],
-      "notes": "Core house PLA with Carbon Fiber, Silk, Sparkling and Wood variants"
+      "notes": "Core house PLA line"
     },
     {
-      "name": "easyPETG",
+      "name": "ecoPLA CF",
       "filament_ids": [
-        "petg",
-        "petg-cf"
+        "pla-cf"
       ],
-      "notes": "Includes Carbon Fiber and Matte variants"
+      "notes": "PLA + carbon fibre"
+    },
+    {
+      "name": "ecoPLA Silk",
+      "filament_ids": [
+        "pla-silk"
+      ],
+      "notes": "Silk-finish PLA"
+    },
+    {
+      "name": "ecoPLA Sparkling",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Glitter PLA; no glitter-specific id exists"
+    },
+    {
+      "name": "ecoPLA Wood (lumberjake PLA)",
+      "filament_ids": [
+        "pla-wood"
+      ],
+      "notes": "PLA + wood-fibre composite"
     },
     {
       "name": "mattePLA",
       "filament_ids": [
-        "pla"
-      ]
+        "pla-matte"
+      ],
+      "notes": "Matte-finish PLA"
     },
     {
-      "name": "ABS / ASA",
+      "name": "magicPLA",
       "filament_ids": [
-        "abs",
-        "asa"
-      ]
+        "pla"
+      ],
+      "notes": "Dual-tone colour-shifting PLA; mechanism and base polymer not confirmed by TDS, so no gradient/silk sub-id is assigned"
+    },
+    {
+      "name": "mysteryPLA",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Random-colour assortment pack, not a distinct chemistry"
+    },
+    {
+      "name": "niceBIO",
+      "filament_ids": [],
+      "notes": "Marketed only as biodegradable with high heat resistance; base polymer not disclosed, so no id is assigned pending a TDS"
+    },
+    {
+      "name": "easyPETG",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "Standard PETG"
+    },
+    {
+      "name": "easyPETG CF",
+      "filament_ids": [
+        "petg-cf"
+      ],
+      "notes": "PETG + carbon fibre"
+    },
+    {
+      "name": "easyPETG Matte",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "Matte PETG; no petg-matte id exists"
     },
     {
       "name": "PCTG",
       "filament_ids": [
         "pctg"
-      ]
+      ],
+      "notes": "Copolyester, higher impact and chemical resistance than PETG"
+    },
+    {
+      "name": "ABS",
+      "filament_ids": [
+        "abs"
+      ],
+      "notes": "Standard ABS"
+    },
+    {
+      "name": "ABS CF",
+      "filament_ids": [],
+      "notes": "ABS + carbon fibre; no abs-cf id exists (abs-gf and abs-fr do)"
+    },
+    {
+      "name": "ASA",
+      "filament_ids": [
+        "asa"
+      ],
+      "notes": "Standard weatherproof/UV-resistant ASA"
+    },
+    {
+      "name": "ASA CF",
+      "filament_ids": [
+        "asa-cf"
+      ],
+      "notes": "ASA + carbon fibre"
     },
     {
       "name": "TPU A95",
       "filament_ids": [
-        "tpu"
-      ]
-    },
-    {
-      "name": "niceBIO",
-      "filament_ids": [
-        "pla"
+        "tpu-95a"
       ],
-      "notes": "Bio-based/biodegradable line; base polymer not explicitly stated, PLA assumed"
-    },
-    {
-      "name": "magicPLA / mysteryPLA",
-      "filament_ids": [
-        "pla"
-      ],
-      "notes": "Colour-changing and novelty PLA lines"
+      "notes": "TPU Shore A95 per the SKU name; density/TDS not independently confirmed"
     }
   ],
   "makes_plates": false,
@@ -97,7 +163,10 @@
       "https://www.niceshops.com/en/inhouse-brands",
       "https://www.3djake.com/info/guide/filament-made-in-austria-extrudr",
       "https://www.3djake.com/spectrum",
-      "https://www.3djake.com/3djake/nicebio"
+      "https://www.3djake.com/3djake/nicebio",
+      "https://www.3djake.com/3djake",
+      "https://www.3djake.com/3djake/magicpla",
+      "https://www.3djake.com/3djake/tpu-a95"
     ],
     "last_verified": "2026-07-31",
     "confidence": "medium",

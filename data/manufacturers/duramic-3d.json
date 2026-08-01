@@ -23,27 +23,50 @@
       "filament_ids": [
         "pla"
       ],
-      "notes": "Basic, Neat, Matte, Silk and Glow variants; from $15.99"
+      "notes": "Plain PLA; from $15.99."
     },
     {
       "name": "PLA Plus",
       "filament_ids": [
-        "pla"
+        "pla-plus"
       ],
-      "notes": "From $20.59"
+      "notes": "Toughened PLA marketed as '8 Times Strength' vs base PLA; from $20.59."
     },
     {
-      "name": "Premium PETG",
+      "name": "Matte PLA",
+      "filament_ids": [
+        "pla-matte"
+      ],
+      "notes": "Matte-finish PLA."
+    },
+    {
+      "name": "Shiny Silk PLA",
+      "filament_ids": [
+        "pla-silk"
+      ],
+      "notes": "Silk-luster / 'metallic' sheen PLA; aesthetic additive only, not metal-filled."
+    },
+    {
+      "name": "PLA Filament Glow in the Dark",
+      "filament_ids": [
+        "pla-glow"
+      ],
+      "notes": "Phosphorescent-pigment PLA."
+    },
+    {
+      "name": "PETG",
       "filament_ids": [
         "petg"
-      ]
+      ],
+      "notes": "Plain PETG (sold as Premium PETG)."
     },
     {
-      "name": "TPU",
+      "name": "TPU Flexible Filament 95A",
       "filament_ids": [
-        "tpu"
+        "tpu",
+        "tpu-95a"
       ],
-      "notes": "$23.99-$39.99"
+      "notes": "Shore 95A stated on the product line; $23.99-$39.99."
     }
   ],
   "price_tier": "budget",
@@ -52,7 +75,10 @@
     "sources": [
       "https://duramic3d.com/",
       "https://duramic3d.com/collections/all",
-      "https://www.srvfast.com/duramic-3d-premium-pla-pro-printer-filament-1-75mm-3d-printing-filament-with-build-surface-200-x-200mm-dimensional-accuracy-0-05-mm-white-3-spools-1kg-spool-pla-plus-white-3.html"
+      "https://www.srvfast.com/duramic-3d-premium-pla-pro-printer-filament-1-75mm-3d-printing-filament-with-build-surface-200-x-200mm-dimensional-accuracy-0-05-mm-white-3-spools-1kg-spool-pla-plus-white-3.html",
+      "https://duramic3d.com/pages/download",
+      "https://duramic3d.com/collections/all/filament",
+      "https://duramic3d.com/collections/tpu"
     ],
     "last_verified": "2026-07-31",
     "confidence": "low",

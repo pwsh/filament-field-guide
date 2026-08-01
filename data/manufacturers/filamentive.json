@@ -17,44 +17,147 @@
   },
   "product_lines": [
     {
-      "name": "rPLA",
+      "name": "PLA (rPLA)",
       "filament_ids": [
-        "r-pla"
+        "pla"
       ],
-      "notes": "Recycled PLA, the core line"
+      "notes": "Recycled-content PLA, the core line"
     },
     {
-      "name": "rPETG",
+      "name": "ReFill PLA",
       "filament_ids": [
-        "r-petg",
+        "pla"
+      ],
+      "notes": "~50% recycled PLA in an AMS-compatible refill spool format"
+    },
+    {
+      "name": "Cosmic PLA",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Glitter/metallic-flake PLA; flake effect rather than metal powder, so pla-metal does not apply"
+    },
+    {
+      "name": "Matte PLA",
+      "filament_ids": [
+        "pla-matte"
+      ],
+      "notes": "Matte-finish recycled PLA"
+    },
+    {
+      "name": "Tough PLA",
+      "filament_ids": [
+        "pla-plus"
+      ],
+      "notes": "Impact-modified recycled PLA"
+    },
+    {
+      "name": "Algae PLA",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "PLA + ~5-10% algae bio-filler; the bio-filler composite has no dedicated id"
+    },
+    {
+      "name": "Hemp PLA",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "PLA + ~5-10% hemp bio-filler; no dedicated id"
+    },
+    {
+      "name": "Wood PLA",
+      "filament_ids": [
+        "pla-wood"
+      ],
+      "notes": "PLA + ~40% recycled wood fibre"
+    },
+    {
+      "name": "Bio HT",
+      "filament_ids": [],
+      "notes": "Oil-free bio-based polyester, heat resistant to ~160 C; not PLA, PETG or PCTG and has no equivalent id"
+    },
+    {
+      "name": "PETg (rPETG)",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "100% recycled PETG"
+    },
+    {
+      "name": "ReFill PETg",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "100% recycled PETG in AMS-compatible refill format"
+    },
+    {
+      "name": "Carbon Fibre PETG",
+      "filament_ids": [
         "petg-cf"
       ],
-      "notes": "Recycled PETG including Matte, Cosmic, Tough, Carbon Fibre and wood-infused variants"
+      "notes": "PETG + 15% carbon fibre"
     },
     {
-      "name": "TPU",
+      "name": "TPU 90A",
       "filament_ids": [
-        "tpu"
-      ]
+        "tpu-90a"
+      ],
+      "notes": "TPU Shore 90A, UV and chemical resistant"
+    },
+    {
+      "name": "TPU 98A",
+      "filament_ids": [
+        "tpu-95a"
+      ],
+      "notes": "TPU Shore 98A - mapped to the 95A grade band, actual hardness 98A; elongation to 500%"
     },
     {
       "name": "ASA",
       "filament_ids": [
         "asa"
-      ]
+      ],
+      "notes": "UV/weather-resistant ASA"
     },
     {
-      "name": "PEEK",
+      "name": "Ultem 9085 (PEI)",
+      "filament_ids": [
+        "pei-ultem"
+      ],
+      "notes": "Genuine aerospace-grade PEI (Ultem 9085), UL94 V-0"
+    },
+    {
+      "name": "Ultem 1010 (PEI)",
+      "filament_ids": [
+        "pei-ultem"
+      ],
+      "notes": "Genuine PEI (Ultem 1010), HDT ~216 C, UL94 V-0"
+    },
+    {
+      "name": "3F PEEK 9581",
       "filament_ids": [
         "peek"
-      ]
+      ],
+      "notes": "Unfilled PEEK, heat resistant to 260 C, biocompatible"
     },
     {
-      "name": "Bio-derived",
+      "name": "3F PEEK-CF 9676",
+      "filament_ids": [],
+      "notes": "PEEK + 15% carbon fibre, heat resistance to 280 C; no peek-cf id exists"
+    },
+    {
+      "name": "rPA12 Recycled Nylon",
       "filament_ids": [
-        "pla"
+        "pa12"
       ],
-      "notes": "Algae PLA, Hemp PLA and BioHT; PLA-based, exact chemistry of BioHT not confirmed"
+      "notes": "100% recycled PA12 reclaimed from MJF powder-bed waste"
+    },
+    {
+      "name": "ABS (rABS)",
+      "filament_ids": [
+        "abs"
+      ],
+      "notes": "Recycled ABS, 2.85 mm only"
     }
   ],
   "makes_plates": false,
@@ -66,7 +169,25 @@
       "https://www.filamentive.com/",
       "https://tocco.earth/supplier/filamentive",
       "https://www.filamentive.com/uk-filament-brand-filamentive-launches-strategic-partnership-with-3d-printlife-in-the-us/",
-      "https://www.filamentive.com/downloads/"
+      "https://www.filamentive.com/downloads/",
+      "https://www.filamentive.com/shop/",
+      "https://www.filamentive.com/product-category/rpla-recycled-pla-3d-printer-filament/",
+      "https://www.filamentive.com/product-category/refill-filaments/",
+      "https://www.filamentive.com/product-category/pla-matte/",
+      "https://www.filamentive.com/product-category/pla-tough/",
+      "https://www.filamentive.com/product/alga-algae-pla-3d-printing-material/",
+      "https://www.filamentive.com/product/hemp-based-pla-sustainable-3d-printing-filament-1-75mm-1-kg/",
+      "https://www.filamentive.com/product/wood-pla/",
+      "https://www.filamentive.com/product-category/bio-ht/",
+      "https://www.filamentive.com/product-category/rpetg-recycled-petg-pet-3d-printer-filament",
+      "https://www.filamentive.com/product/carbon/",
+      "https://www.filamentive.com/product/tpu-90a/",
+      "https://www.filamentive.com/product/tpu-98a/",
+      "https://www.filamentive.com/product/pei-ultem-9085-300g-1-75mm/",
+      "https://www.filamentive.com/product/pei-ultem-1010-300g-1-75mm/",
+      "https://www.filamentive.com/product/3f-peek-9581-300g-1-75mm/",
+      "https://www.filamentive.com/product/3f-peek-cf-9676-300g-1-75mm/",
+      "https://www.filamentive.com/product/filamentive-rpa12-recycled-nylon-filament-1-75-mm-1-kg-natural/"
     ],
     "last_verified": "2026-07-31",
     "confidence": "medium",

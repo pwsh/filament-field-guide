@@ -18,29 +18,65 @@
   },
   "product_lines": [
     {
-      "name": "iglidur tribo-filament",
-      "filament_ids": [
-        "pa",
-        "tpu"
-      ],
-      "notes": "Wear-resistant, self-lubricating FDM filament in 1.75mm and 3mm, aimed at gears, bushings and cable carriers. Base chemistries are proprietary tribo-polymer compounds, most commonly nylon-family; the pa and tpu ids here are approximations to catalog material ids, not confirmed chemistries. Industry-cited SKU names such as I150-PF, I180-PF and I190-PF could not be confirmed from an igus source in this research session."
+      "name": "iglidur I150-PF",
+      "notes": "Entry-level general-purpose tribo-filament: density 1.3 g/cm3, flexural strength 54 MPa, 65 C continuous / 75 C short-term, up to 50x the abrasion resistance of standard printing plastics; easiest of the range to process on open-frame printers. Base resin undisclosed, so no id is assigned."
     },
     {
-      "name": "Specialty tribo grades",
-      "filament_ids": [
-        "pa"
-      ],
-      "notes": "FDA-compliant, high-temperature and chemical-resistant formulations within the tribo-filament range (confirmed qualitatively, not itemised by SKU)."
+      "name": "iglidur I151-PF",
+      "notes": "Food-safe variant of I150 (FDA and EU 10/2011 compliant), blue for optical food-safety detection, same ~65 C service temp. Base resin undisclosed."
+    },
+    {
+      "name": "iglidur I170-PF",
+      "notes": "Mid-tier grade positioned between I150 and I180. Base resin undisclosed."
+    },
+    {
+      "name": "iglidur I180-PF",
+      "notes": "Higher continuous-temperature grade rated to 100 C, for highly dynamic moving applications. Base resin undisclosed."
+    },
+    {
+      "name": "iglidur I190-PF",
+      "notes": "Strongest of the I-series: flexural strength 80 MPa, ~50x ABS abrasion resistance, 90 C service temp after tempering; second-strongest tribo-filament after RW370-PF. Base resin undisclosed."
+    },
+    {
+      "name": "iglidur J260-PF",
+      "notes": "Workhorse grade: -100 C to +120 C operating range, highest wear resistance and maximum surface speed of the standard tier. Base resin undisclosed."
+    },
+    {
+      "name": "iglidur A350-PF",
+      "notes": "Heat-resistant high-performance grade: 180 C continuous service, 340-360 C processing, UL94 V-0, FDA/EU food-contact compliant, requires a heated chamber (min 160 C). The processing window implies a PPS- or high-temp-PA-class base, but igus does not name it."
+    },
+    {
+      "name": "iglidur RW370-PF",
+      "notes": "Rail-industry flame-retardant grade: flexural strength 91 MPa, 170 C max application temp, 350-360 C processing, certified to UL94 V-0 and DIN EN 45545. No common-generic equivalent."
+    },
+    {
+      "name": "iglidur C210-PF",
+      "notes": "Chemical-resistant tribo-filament for corrosive environments, 260-270 C nozzle. Base resin undisclosed."
+    },
+    {
+      "name": "igumid P190-PF",
+      "notes": "Carbon-fiber-reinforced structural filament under the separate igumid sub-brand: flexural strength up to 237 MPa, flexural modulus up to 11.5 GPa, density 1.25 g/cm3, 120 C max long-term. The property profile is consistent with a PA-CF composite, but igus does not state the base resin, so it is left unmapped rather than assigned pa6-cf."
     }
   ],
   "makes_plates": false,
   "price_tier": "engineering",
-  "additional_notes": "igus's core business is motion-plastics components — plain bearings, cable carriers, linear guides — for automation and industrial markets; 3D printing filament is a materials-sales extension of its self-lubricating polymer competency, serving prototyping and low-volume production of functional parts across food and beverage, medical and manufacturing sectors. Operates a 41,000 sq ft materials test laboratory in Cologne and a US engineering centre in Detroit. igus has manufacturing plants outside Germany, but filament-specific production sites beyond Cologne were not itemised, so manufacturing_countries lists Germany only. Specific filament catalog sub-pages attempted in this session (/product/24471, /wpck/183/3d_druck_filament_engl) returned 404, so only the general 3D-printing materials page is recorded. Also sells SLS powders and DLP resin, which are outside this catalog's scope. No social profiles confirmed. No build-plate or print-surface products — consistent with a materials and components business rather than a printer-hardware vendor.",
+  "additional_notes": "igus's core business is motion-plastics components — plain bearings, cable carriers, linear guides — for automation and industrial markets; 3D printing filament is a materials-sales extension of its self-lubricating polymer competency, serving prototyping and low-volume production of functional parts across food and beverage, medical and manufacturing sectors. Operates a 41,000 sq ft materials test laboratory in Cologne and a US engineering centre in Detroit. igus has manufacturing plants outside Germany, but filament-specific production sites beyond Cologne were not itemised, so manufacturing_countries lists Germany only. Specific filament catalog sub-pages attempted in this session (/product/24471, /wpck/183/3d_druck_filament_engl) returned 404, so only the general 3D-printing materials page is recorded. Also sells SLS powders and DLP resin, which are outside this catalog's scope. No social profiles confirmed. No build-plate or print-surface products — consistent with a materials and components business rather than a printer-hardware vendor. UPDATE (trade-name pass): SKU names are now confirmed from igus product pages (I150-PF, I151-PF, I170-PF, I180-PF, I190-PF, J260-PF, A350-PF, RW370-PF, C210-PF, igumid P190-PF). The previous pa and tpu filament_ids were approximations and have been removed: igus publishes mechanical and thermal data but deliberately withholds base-resin identity for every tribo-filament, so none of them can be mapped to a catalog id with confidence.",
   "provenance": {
     "sources": [
       "https://www.igus.com/info/3d-printing-materials",
       "https://www.igus.com/",
-      "https://en.wikipedia.org/wiki/Igus"
+      "https://en.wikipedia.org/wiki/Igus",
+      "https://www.igus.com/product/iglidur_I150_PF",
+      "https://www.igus.com/product/iglidur_I151_PF",
+      "https://www.igus.com/product/iglidur_I190_PF",
+      "https://www.igus.com/product/656",
+      "https://www.igus.com/product/700",
+      "https://www.igus.com/product/716",
+      "https://www.igus.com/product/20269",
+      "https://www.igus.com/product/18973",
+      "https://www.igus.com/product/21034",
+      "https://www.cabletiesandmore.com/iglide-c210-filament-3d-printer",
+      "https://colorfabb.com/media/datasheets/tds/igus/iglidur_I150-PF_product_data_sheet.pdf"
     ],
     "last_verified": "2026-07-31",
     "confidence": "low",

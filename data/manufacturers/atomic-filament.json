@@ -26,30 +26,117 @@
       "filament_ids": [
         "pla"
       ],
-      "notes": "Plant-based (corn/sugarcane) PLA marketed alongside the petroleum-based lines; UV-reactive and shade-shifting/color-change specialty colors."
+      "notes": "Standard opaque line plus MeltMiser PLA Economy Series and the effect colourways (Translucent, Gemstone Translucent, Neon UV Reactive, Pearlescent, Metallic, Marble, Shade-Shifting thermochromic, Iridescent, Extreme JET Black) — all standard PLA base with colourant/effect packages. 'Metallic' and 'Marble' are pigment effects, not metal- or stone-filled."
     },
     {
-      "name": "PETG and PCTG",
+      "name": "Hi-Flow Pro PLA",
       "filament_ids": [
-        "petg",
-        "pctg"
+        "pla-hf"
       ],
-      "notes": "PCTG is sold as a distinct copolyester grade from PETG."
+      "notes": "High-flow/high-speed PLA formulation positioned against the Bambu/Polymaker high-speed PLA category; flow figures not published."
     },
     {
-      "name": "ABS / ASA",
+      "name": "Silky PLA",
       "filament_ids": [
-        "abs",
-        "asa"
-      ]
+        "pla-silk"
+      ],
+      "notes": "Standard PLA base with a silk/gloss additive."
     },
     {
-      "name": "Carbon fiber composites",
+      "name": "Extreme Impact PLA / Ultra Impact Modified PLA",
       "filament_ids": [
-        "pla-cf",
+        "pla-plus"
+      ],
+      "notes": "PLA + impact modifier — the toughened/'Tough PLA' category."
+    },
+    {
+      "name": "Carbon Fiber Extreme Black PLA",
+      "filament_ids": [
+        "pla-cf"
+      ],
+      "notes": "PLA + carbon fibre."
+    },
+    {
+      "name": "PETG PRO",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "Standard opaque PETG plus Translucent, Neon UV-Reactive, Metallic, Shade-Shifting and Extreme JET Black effect colourways."
+    },
+    {
+      "name": "Carbon Fiber Extreme PETG PRO",
+      "filament_ids": [
         "petg-cf"
       ],
-      "notes": "Carbon-fiber filled grades; exact base-polymer lineup not itemised in sources, so the filament ids here are inferred from the base catalog."
+      "notes": "PETG + carbon fibre; Extreme Black plus Dark Cherry, Dark Blue, Stone Gray and Smoke Blue colourways."
+    },
+    {
+      "name": "PCTG PRO",
+      "filament_ids": [
+        "pctg"
+      ],
+      "notes": "Glycol-modified copolyester, higher impact than PETG; opaque, translucent/clear, marble, metallic and neon colourways."
+    },
+    {
+      "name": "Carbon Fiber Extreme Black PCTG PRO",
+      "filament_ids": [
+        "pctg"
+      ],
+      "notes": "PCTG + carbon fibre. Listed against pctg for family context only — no pctg-cf id exists."
+    },
+    {
+      "name": "ABS",
+      "filament_ids": [
+        "abs"
+      ],
+      "notes": "Standard multi-colour ABS."
+    },
+    {
+      "name": "Carbon Fiber ABS / CARBON FIBER Ultra Black ABS",
+      "filament_ids": [
+        "abs"
+      ],
+      "notes": "ABS + carbon fibre. Listed against abs for family context only — the catalog has abs-gf but no abs-cf id."
+    },
+    {
+      "name": "FLAME RETARDANT Sabic FR15U Black ABS",
+      "filament_ids": [
+        "abs-fr"
+      ],
+      "notes": "Built on SABIC Cycolac FR15U, a UL94 flame-retardant ABS grade — a named industrial resin rather than a generic FR compound."
+    },
+    {
+      "name": "ASA",
+      "filament_ids": [
+        "asa"
+      ],
+      "notes": "Natural, Black, White and colours."
+    },
+    {
+      "name": "CARBON FIBER Black ASA",
+      "filament_ids": [
+        "asa-cf"
+      ],
+      "notes": "ASA + carbon fibre."
+    },
+    {
+      "name": "Nuclear Nylon v3",
+      "filament_ids": [
+        "pa"
+      ],
+      "notes": "Described as an engineering-grade alloyed PA copolymer with adhesion promoters and impact modifiers; exact PA type (6/12/66) undisclosed, so it maps to the generic pa entry rather than pa6/pa12."
+    },
+    {
+      "name": "Black Carbon Fiber Nuclear Nylon v3",
+      "filament_ids": [
+        "pa"
+      ],
+      "notes": "Alloyed PA copolymer + milled carbon fibre. PA type undisclosed, so neither pa6-cf nor pa12-cf can be asserted and no generic pa-cf id exists; listed against pa for family context only."
+    },
+    {
+      "name": "3.5 kg Jumbo rolls (PLA / PETG / ABS / ASA / CF)",
+      "filament_ids": [],
+      "notes": "Bulk-spool packaging of the resins already listed above — not a distinct chemistry."
     }
   ],
   "makes_plates": false,
@@ -60,7 +147,15 @@
       "https://atomicfilament.com/pages/about-us",
       "https://filamentcheatsheet.com/brands/atomic-filament/",
       "https://www.facebook.com/Atomicfilament2015/",
-      "https://www.instagram.com/therealatomicfilament/"
+      "https://www.instagram.com/therealatomicfilament/",
+      "https://atomicfilament.com/products/black-hi-flow-pro-pla-filament",
+      "https://atomicfilament.com/products/carbon-fiber-nuclear-nylon",
+      "https://atomicfilament.com/collections/exotic-specialty-filament",
+      "https://atomicfilament.com/collections/opaque-pla-filaments-1",
+      "https://atomicfilament.com/collections/petg-3d-printer-filament-us-made-with-free-shipping",
+      "https://atomicfilament.com/collections/abs-3d-filament",
+      "https://atomicfilament.com/collections/pctg-free-us-shipping",
+      "https://atomicfilament.com/collections/asa-free-us-shipping"
     ],
     "last_verified": "2026-07-31",
     "confidence": "medium",

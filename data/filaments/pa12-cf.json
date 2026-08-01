@@ -1,7 +1,13 @@
 {
   "id": "pa12-cf",
   "name": "PA12-CF (Carbon-Fiber-Filled Nylon 12)",
-  "aliases": ["PA12 CF", "Nylon 12 Carbon Fiber", "CarbonX Nylon 12+CF", "PA12-CF10", "Fiberon PA12-CF10"],
+  "aliases": [
+    "PA12 CF",
+    "Nylon 12 Carbon Fiber",
+    "CarbonX Nylon 12+CF",
+    "PA12-CF10",
+    "Fiberon PA12-CF10"
+  ],
   "status": "researched",
   "base_type": "pa",
   "variation_kind": "carbon-fiber-filled",
@@ -9,15 +15,35 @@
   "chemical_makeup": "The same laurolactam-derived PA12 backbone as the pa12 grade — eleven methylene carbons between amide groups — compounded with chopped carbon fiber, disclosed at 10 wt% by Polymaker Fiberon (PA12-CF10) and undisclosed by 3DXTech. The long hydrocarbon run keeps amide density low, so the composite inherits PA12's sub-1 % moisture uptake intact; the fiber supplies stiffness the base grade lacks.",
   "summary": "The CF nylon that keeps its numbers when the room gets humid. Deltas vs the base pa entry and the pa12 grade: tensile roughly doubles to ~120 MPa dry (pa12 is 45 MPa) and warping falls further from an already-low baseline, at the cost of a mandatory hardened nozzle and layer adhesion that drops from pa12's 8 to 5. Vs siblings: it retains ~85 % of dry tensile after moisture conditioning where pa6-cf keeps only 56 %, and its stiffness is essentially unchanged wet where pa6-cf loses two-thirds — but it gives up peak dry stiffness to pa6-cf and roughly 40-75 °C of HDT to both pa6-cf and ppa-cf (150 °C vs 190 °C and 227 °C).",
   "printing": {
-    "nozzle_temp_c": { "min": 265, "max": 285, "recommended": 275 },
-    "bed_temp_c": { "min": 90, "max": 110, "recommended": 100 },
-    "ambient_temp_c": { "min": 30, "max": 55, "recommended": 45 },
-    "speed_mm_s": { "min": 30, "max": 100, "recommended": 50 },
+    "nozzle_temp_c": {
+      "min": 265,
+      "max": 285,
+      "recommended": 275
+    },
+    "bed_temp_c": {
+      "min": 90,
+      "max": 110,
+      "recommended": 100
+    },
+    "ambient_temp_c": {
+      "min": 30,
+      "max": 55,
+      "recommended": 45
+    },
+    "speed_mm_s": {
+      "min": 30,
+      "max": 100,
+      "recommended": 50
+    },
     "enclosure_recommended": true,
     "heated_chamber_required": false,
     "enclosure_open_for_cooling": false,
     "requires_hardened_nozzle": true,
-    "part_cooling_fan_pct": { "min": 0, "max": 10, "recommended": 0 },
+    "part_cooling_fan_pct": {
+      "min": 0,
+      "max": 10,
+      "recommended": 0
+    },
     "notes": "Deltas vs the pa12 grade (240-290 °C, no hardened nozzle): the window narrows to 265-285 °C per 3DXTech and a hardened nozzle of 0.4 mm minimum becomes mandatory, because carbon fiber destroys brass. 3DXTech also specifies a layer height of 0.25 mm or greater — fiber-filled melt does not reliably fill thinner layers. Bed 90-110 °C, part cooling effectively off as for every nylon in this catalog. An enclosure is recommended and a heated chamber helps large parts, but heated_chamber_required stays false: 3DXTech describes 'low shrinkage and warping for high dimensional stability', and both 3DXTech and CNC Kitchen rate PA12-CF as warping less than pa6-cf, which is itself printable on open frames. The recorded 100 mm/s ceiling is community practice rather than a vendor limit."
   },
   "feeding": {
@@ -28,9 +54,22 @@
   },
   "drying": {
     "required_before_use": "if-exposed",
-    "temp_c": { "min": 80, "max": 90, "recommended": 90 },
-    "time_hours": { "min": 4, "max": 6, "recommended": 4 },
-    "methods": ["blast/convection oven at 90 °C", "dedicated filament dryer", "food dehydrator", "drybox with desiccant while printing"],
+    "temp_c": {
+      "min": 80,
+      "max": 90,
+      "recommended": 90
+    },
+    "time_hours": {
+      "min": 4,
+      "max": 6,
+      "recommended": 4
+    },
+    "methods": [
+      "blast/convection oven at 90 °C",
+      "dedicated filament dryer",
+      "food dehydrator",
+      "drybox with desiccant while printing"
+    ],
     "dryness_validation": "No popping or steam at the nozzle and a void-free purge line; stringing at baseline on a retraction test. The practical differentiator is that a sealed, desiccated PA12-CF spool usually passes this check with no drying at all, where pa6-cf almost never does.",
     "notes": "The shortest schedule of the three CF nylons — 3DXTech specifies 90 °C for 4 h minimum against 6-20 h at 80 °C for pa6-cf and 8-12 h at 100-140 °C for ppa-cf — because PA12 absorbs only 0.7-1 wt% water (CNC Kitchen measured 0.7 %) against PA6's 3-9 %. Runs hotter but far shorter than the pa12 grade's 70 °C / 4 h. required_before_use is 'if-exposed' rather than 'always', matching the pa12 grade and setting this entry apart from both CF siblings: PA12-CF is markedly more forgiving of imperfect drying."
   },
@@ -72,11 +111,19 @@
     "density_g_cm3": 1.06,
     "grams_per_100cm3": 106,
     "cm3_per_100g": 94.3,
-    "shrinkage_pct": { "min": 0.2, "max": 0.8, "recommended": 0.4 },
+    "shrinkage_pct": {
+      "min": 0.2,
+      "max": 0.8,
+      "recommended": 0.4
+    },
     "glass_transition_c": 40,
     "heat_deflection_c": 150,
     "max_service_temp_c": 120,
-    "tensile_strength_mpa": { "min": 100, "max": 120, "recommended": 110 },
+    "tensile_strength_mpa": {
+      "min": 100,
+      "max": 120,
+      "recommended": 110
+    },
     "notes": "Density 1.06 g/cm³ is NOT a sourced figure — no datasheet density was found for a PA12-CF filament, so it is estimated by adding a ~10 wt% carbon-fiber loading to the pa12 grade's measured 1.01 g/cm³. It remains the lightest of the three CF nylons (pa6-cf 1.17, ppa-cf 1.25), yielding 94.3 cm³ per 100 g against pa6-cf's 85.5. HDT@0.45 MPa 150 °C (3DXTech CarbonX Nylon 12+CF) with continuous-use temperature 120 °C — both the lowest of the CF-nylon trio, corroborated by CNC Kitchen's failure-temperature test at ~170 °C against pa6-cf's ~205 °C. Tensile ~120 MPa dry (CNC Kitchen), retaining ~85 % after moisture conditioning against pa6-cf's 56 % — the standout number in this entry. Stiffness 1.15 mm deflection dry in the same bending test (pa6-cf 0.7 mm, i.e. stiffer dry) but essentially unchanged wet, where pa6-cf falls to about a third of its dry stiffness. Moisture absorption 0.7-1 wt%. Tg 40 °C is carried from the pa12 grade; shrinkage is a reasoned reduction from pa12's 0.5-1.5 %, not a datasheet figure."
   },
   "scores": {
@@ -91,9 +138,19 @@
     "water_tolerance": 8
   },
   "compatibility": {
-    "bonds_with": ["pa12-cf", "pa12", "pa", "pa6"],
-    "support_materials": ["pa12-cf", "pa12"],
-    "usable_as_support_for": [],
+    "bonds_with": [
+      "pa",
+      "pa12",
+      "pa12-cf",
+      "pa6"
+    ],
+    "support_materials": [
+      "pa12",
+      "pa12-cf"
+    ],
+    "usable_as_support_for": [
+      "pa12-cf"
+    ],
     "notes": "Welds to itself and to the aliphatic polyamide family, though the PA12/PA6 interface is weaker than same-grade bonds because the melting points differ by 40-80 °C. No bond to pla, petg, abs, asa, pc, pp, pctg, pvb or pet, and the 265-285 °C window destroys any PLA or PETG breakaway interface on contact. Same-material breakaway supports are the default. This is the one filled nylon in the catalog with a documented soluble option: 3DXTech lists its AquaTek X1 USM support as compatible with PA12-CF, so a water-soluble interface is worth testing here where it is a non-starter for pa6-cf and ppa-cf. pva still degrades well below the print range."
   },
   "plate_recommendations": [
@@ -101,12 +158,36 @@
       "plate_id": "pei-textured",
       "rating": "recommended",
       "notes": "Carried up from the pa12 grade's 'recommended' rather than the pa6-cf 'usable': PA12-CF has the lowest shrinkage of the three CF nylons, so edge lift is largely a non-issue and textured PEI at 90-110 °C holds well. A glue stick is still applied as an adhesion promoter and doubles as a release layer against over-bonding. Garolite / G10 remains the best-adhesion surface for the nylon family and is the fallback for large footprints, but it is not the near-requirement here that it is for pa6-cf; no garolite plate entry exists in the catalog yet, so it is recorded in notes."
+    },
+    {
+      "plate_id": "g10-garolite",
+      "rating": "recommended",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Same no-glue behavior as other CF nylons."
+    },
+    {
+      "plate_id": "carbon-fiber-plate",
+      "rating": "usable",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Same handling as other CF nylons."
+    },
+    {
+      "plate_id": "pei-smooth",
+      "rating": "avoid",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): As PA6-CF."
+    },
+    {
+      "plate_id": "pei-satin",
+      "rating": "avoid",
+      "notes": "Backfilled from plate entry (Phase E reciprocity): As PA6-CF."
     }
   ],
   "emissions": {
     "voc_level": "moderate",
     "particulate_level": "moderate",
-    "primary_emissions": ["laurolactam and amide-family VOCs", "ultrafine particles", "respirable carbon fiber dust (post-processing)"],
+    "primary_emissions": [
+      "laurolactam and amide-family VOCs",
+      "ultrafine particles",
+      "respirable carbon fiber dust (post-processing)"
+    ],
     "ventilation": "recommended",
     "notes": "Rated a step below pa6-cf on VOCs and matching the pa12 grade: PA12 is laurolactam-based, so it is not a caprolactam source, the characteristic acidic nylon odour is milder, and the drier melt processes more cleanly. General nylon fume and ultrafine-particle concerns still apply across the 265-285 °C range, and the CF adds a post-processing dust hazard the unfilled pa12 grade does not have. Enclosed printer with HEPA plus activated-carbon filtration or external exhaust for long jobs. No PA12-CF-specific emissions measurement was found — this is nylon-family guidance with the monomer difference accounted for (unverified)."
   },
@@ -124,5 +205,71 @@
     "last_verified": "2026-07-31",
     "confidence": "low",
     "conflicts": "Confidence is recorded low because three core fields rest on a single source or none. Density (1.06 g/cm³) is not sourced at all — it is estimated from the pa12 grade's 1.01 plus a ~10 % fiber loading, and should be replaced the moment a filament TDS is found. Price rests on one listing ($88/500 g, 3DXTech) that the pa12 entry already flags as previously out of stock. Fiber loading is disclosed only by Polymaker Fiberon (10 %); 3DXTech states none, so their mechanical figures are not directly comparable — a 10 % loading against pa6-cf's 20 % would itself explain much of the stiffness gap attributed here to the polymer. Tensile (~120 MPa) and stiffness come from CNC Kitchen's independent test rather than a vendor TDS. HDT 150 °C @0.45 MPa is 3DXTech's figure alone. AMS status 'no' is inferred from Bambu's general third-party CF bar, not a product statement for PA12-CF. Nozzle window 265-285 °C is quoted by 3DXTech for both PA6-CF and PA12-CF, which is suspiciously identical and may be an editorial simplification."
-  }
+  },
+  "trade_names": [
+    {
+      "manufacturer": "3dxtech",
+      "product": "CarbonX PA12+CF",
+      "notes": "PA12 + chopped CF; loading % not disclosed."
+    },
+    {
+      "manufacturer": "esun",
+      "product": "ePA12-CF (PA12-CF)",
+      "notes": "PA12 + CF, ~120 C heat resistance (TDS V4.01)"
+    },
+    {
+      "manufacturer": "extrudr",
+      "product": "DuraPro PA12 CF",
+      "notes": "PA12 + carbon fibre; density 1.03 g/cm3, VICAT A 145 C"
+    },
+    {
+      "manufacturer": "fiberlogy",
+      "product": "Nylon PA12+CF15",
+      "notes": "PA12 + 15% carbon fibre, subtype explicitly stated"
+    },
+    {
+      "manufacturer": "iemai-3d",
+      "product": "CF-PA12",
+      "notes": "Carbon-fiber PA12"
+    },
+    {
+      "manufacturer": "jayo",
+      "product": "PA12-CF",
+      "notes": "Carbon-fiber PA12"
+    },
+    {
+      "manufacturer": "matterhackers",
+      "product": "PRO Series NylonX",
+      "notes": "MatterHackers' own listing title is 'NylonX Carbon Fiber PA12 Filament' — PA12 + chopped carbon fibre. Contradicts the pre-existing additional_notes claim that NylonX is a third-party brand."
+    },
+    {
+      "manufacturer": "polymaker",
+      "product": "Fiberon PA12-CF10",
+      "notes": "PA12 + 10% carbon fiber"
+    },
+    {
+      "manufacturer": "qidi-tech",
+      "product": "PA12-CF"
+    },
+    {
+      "manufacturer": "rosa3d",
+      "product": "PA12 + 15CF",
+      "notes": "corrects the previous generic pa-cf id, which does not exist in the catalog"
+    },
+    {
+      "manufacturer": "spectrum-filaments",
+      "product": "PA12 CF15",
+      "notes": "15% carbon fibre, ~10% lighter than PA6 CF15"
+    },
+    {
+      "manufacturer": "sunlu",
+      "product": "PA12-CF",
+      "notes": "Carbon-fiber PA12"
+    },
+    {
+      "manufacturer": "ultimaker",
+      "product": "UltiMaker Nylon 12 CF",
+      "notes": "PA12 + chopped carbon fiber (Method series)."
+    }
+  ]
 }

@@ -37,25 +37,49 @@
       "filament_ids": [
         "pla"
       ],
-      "notes": "Includes the P-PLA grade."
+      "notes": "Standard PLA base across the colour line (Bold Black, Stellar Black, Blue, Deep Blue, Deep Red, Purple, Red, Orange, Yellow, Green, Neon Green); Black Sparkle, Strawberry Pearl, Evergreen Pearl and Pearl Blueberry are glitter/pearl-mica effect colours on the same base."
+    },
+    {
+      "name": "Glow-in-the-Dark PLA",
+      "filament_ids": [
+        "pla-glow"
+      ],
+      "notes": "PLA carrying a phosphorescent pigment (Glow-in-the-Dark Green)."
+    },
+    {
+      "name": "P-PLA (Performance Polylactide)",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "KVP/Village Plastics' high-heat, high-impact PLA grade with faster crystallisation, marketed as an ABS alternative that stays biodegradable — the same annealable high-heat-PLA category as HTPLA/3D870-class products. No dedicated high-heat-PLA id exists."
+    },
+    {
+      "name": "Tru Wood",
+      "filament_ids": [
+        "pla-wood"
+      ],
+      "notes": "PLA + wood-flour filler (e.g. Tru Wood Cherry)."
     },
     {
       "name": "ABS",
       "filament_ids": [
         "abs"
-      ]
+      ],
+      "notes": "Standard ABS across the colour line (Battleship Gray, Black, Crimson, Fluorescent Green, Metallic Silver, Proper Purple, Sea Blue, Stellar Black, Stellar Blue, Voron Red); Glow-in-the-Dark Blue adds a phosphor to the same ABS base and has no dedicated id."
     },
     {
       "name": "PETG",
       "filament_ids": [
         "petg"
-      ]
+      ],
+      "notes": "Standard PETG, including Glass/clear, Yellow Edge Glow and Granite; Granite is a speckled stone-look particulate fill, not structural reinforcement."
     },
     {
       "name": "HIPS",
       "filament_ids": [
         "hips"
-      ]
+      ],
+      "notes": "Standard high-impact polystyrene, sold as a support/sacrificial material."
     },
     {
       "name": "PAPC",
@@ -75,7 +99,7 @@
     {
       "name": "Welding rod",
       "filament_ids": [],
-      "notes": "Thermoplastic welding rod — an industrial product line, not 3D printing filament, reflecting the company's plastics heritage."
+      "notes": "Thermoplastic welding rod - an industrial product line, not 3D printing filament, reflecting the company's plastics heritage."
     }
   ],
   "makes_plates": false,
@@ -88,7 +112,10 @@
       "https://3dprintingindustry.com/news/keene-village-plastics-acquires-3d-printing-filament-manufacturer-makeshaper-expands-reach-to-hobbyist-market-150718/",
       "https://www.instagram.com/keeneplastics/",
       "https://www.thomasnet.com/company/keene-village-plastics-co-20042930/profile",
-      "https://www.makeshaper.com/"
+      "https://www.makeshaper.com/",
+      "https://tonerplastics.com/product/village-plastics-p-pla-filament-reels/",
+      "https://3dfilamentprofiles.com/filaments/keene-village-plastics",
+      "https://www.globenewswire.com/de/news-release/2013/12/13/596819/8852/en/3D-Systems-Acquires-Village-Plastics.html"
     ],
     "last_verified": "2026-07-31",
     "confidence": "medium",

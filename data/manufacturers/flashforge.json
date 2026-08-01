@@ -4,8 +4,16 @@
   "status": "researched",
   "summary": "Zhejiang-based printer maker founded 2011 (Creator, Adventurer, Guider, AD5X lines) that extrudes its own filament in-house. Flashforge is also the owner-verified manufacturer behind Voxelab, its budget consumer sub-brand. Filament catalog leans toward high-speed tuned commodity materials plus engineering-grade carbon-fiber-reinforced variants.",
   "headquarters_country": "China",
-  "manufacturing_countries": ["China"],
-  "brands": ["Flashforge", "Voxelab", "Creator", "Adventurer", "Guider"],
+  "manufacturing_countries": [
+    "China"
+  ],
+  "brands": [
+    "Flashforge",
+    "Voxelab",
+    "Creator",
+    "Adventurer",
+    "Guider"
+  ],
   "oem_relationships": [
     {
       "company": "Voxelab",
@@ -18,10 +26,111 @@
     "docs": "https://wiki.flashforge.com"
   },
   "product_lines": [
-    { "name": "HS (high speed)", "filament_ids": ["pla", "petg"], "notes": "HS PLA and HS PETG tuned for high-speed printing" },
-    { "name": "PLA Pro", "filament_ids": ["pla"] },
-    { "name": "ABS / ASA", "filament_ids": ["abs", "asa"] },
-    { "name": "Engineering composites", "filament_ids": ["pla-cf", "pa-cf"], "notes": "Carbon-fiber-reinforced engineering grades; exact SKU list unverified" }
+    {
+      "name": "PLA Basic",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Standard PLA"
+    },
+    {
+      "name": "PLA Multicolor",
+      "filament_ids": [
+        "pla-gradient"
+      ],
+      "notes": "Gradient/colour-transition PLA, no chemistry change"
+    },
+    {
+      "name": "HS PLA",
+      "filament_ids": [
+        "pla-hf"
+      ],
+      "notes": "\"High Strength\"/high-speed PLA formulation"
+    },
+    {
+      "name": "HS PLA Multicolor / HS PLA Rainbow",
+      "filament_ids": [
+        "pla-hf",
+        "pla-gradient"
+      ],
+      "notes": "High-speed PLA base in gradient colourways"
+    },
+    {
+      "name": "PLA Silk+",
+      "filament_ids": [
+        "pla-silk"
+      ],
+      "notes": "Gloss-additive silk PLA"
+    },
+    {
+      "name": "PLA Silk+ Rainbow",
+      "filament_ids": [
+        "pla-silk",
+        "pla-gradient"
+      ],
+      "notes": "Silk PLA in a gradient colourway"
+    },
+    {
+      "name": "PLA Silk+ Dual Color",
+      "filament_ids": [
+        "pla-silk"
+      ],
+      "notes": "Coextruded two-tone silk PLA"
+    },
+    {
+      "name": "PLA-CF",
+      "filament_ids": [
+        "pla-cf"
+      ],
+      "notes": "PLA + carbon fibre"
+    },
+    {
+      "name": "HS PETG / HS PETG Multicolor",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "High-speed PETG; process delta only, no petg-hf id in catalog. Multicolor is a gradient colourway"
+    },
+    {
+      "name": "PETG-CF",
+      "filament_ids": [
+        "petg-cf"
+      ],
+      "notes": "Carbon-fibre-filled PETG"
+    },
+    {
+      "name": "PET-CF",
+      "filament_ids": [
+        "pet-cf"
+      ],
+      "notes": "Carbon-fibre-filled PET"
+    },
+    {
+      "name": "PET-GF",
+      "filament_ids": [],
+      "notes": "Glass-fibre-filled PET; no pet-gf id exists in catalog - reported as a gap"
+    },
+    {
+      "name": "ABS",
+      "filament_ids": [
+        "abs"
+      ],
+      "notes": "Standard ABS"
+    },
+    {
+      "name": "ASA",
+      "filament_ids": [
+        "asa"
+      ],
+      "notes": "Weatherable ASA"
+    },
+    {
+      "name": "ASA-CF",
+      "filament_ids": [
+        "asa-cf"
+      ],
+      "notes": "Carbon-fibre-filled ASA"
+    }
   ],
   "makes_plates": true,
   "plate_ids": [],
@@ -32,7 +141,11 @@
       "https://www.flashforge.com/pages/about-us",
       "https://www.voxelab3dp.com/aboutUs",
       "https://wiki.flashforge.com/en/filaments_and_accessories/filament",
-      "research/verified-oem-relationships.md"
+      "research/verified-oem-relationships.md",
+      "https://www.flashforge.com/collections/pla",
+      "https://www.flashforge.com/collections/petg",
+      "https://www.flashforge.com/collections/filament",
+      "https://www.flashforge.com/products/abs"
     ],
     "last_verified": "2026-07-31",
     "confidence": "medium"
