@@ -352,7 +352,17 @@ td.cell-name .sub { display: block; font-weight: 400; font-size: .82rem; color: 
 .pros-cons h3 { font-size: .82rem; text-transform: uppercase; letter-spacing: .04em; color: var(--text-muted); }
 .pros li::marker { color: var(--ok); }
 .cons li::marker { color: var(--danger); }
-.sources { font-size: .85rem; word-break: break-word; }
+.sources { font-size: .85rem; }
+/* Long URLs must never blow out a table or card on narrow screens. */
+.sources li, .prose { overflow-wrap: anywhere; word-break: break-word; }
+.prose { max-width: 78ch; }
+td .ext-link, .sources .ext-link, .prose .ext-link { overflow-wrap: anywhere; word-break: break-word; }
+.ext-link::after {
+  content: "\2197";            /* north-east arrow: leaves the site */
+  font-size: .8em; margin-left: .12em; color: var(--text-faint);
+  text-decoration: none; display: inline-block;
+}
+.ext-link:hover::after, .ext-link:focus-visible::after { color: var(--accent); }
 /* damage avoidance: worst-first table, severity carried by a left rule */
 .damage-table td.cell-name { min-width: 12rem; font-weight: 600; }
 .damage-table tbody tr { border-left: 3px solid transparent; }
@@ -476,6 +486,9 @@ td.cell-name .sub { display: block; font-weight: 400; font-size: .82rem; color: 
   .badge { border: 1px solid #999 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   thead th { position: static; }
   .lbl { border-bottom: 0; }
+  .ext-link { color: #000 !important; text-decoration: none; }
+  .ext-link::after { content: none; }
+  .sources, .prose { overflow-wrap: anywhere; }
   .lbl .lbl-i { display: none; }
   /* collapsed groups are expanded before printing (see beforeprint handler) */
   .group { border: 0 !important; break-inside: auto; }

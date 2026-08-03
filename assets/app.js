@@ -609,7 +609,7 @@ function kvTable(rows) {
     body.appendChild(el('tr', {},
       el('th', { scope: 'row' }, label),
       el('td', { 'data-label': (opts && opts.label) || humanizeKey(key) },
-        value instanceof Node ? value : txt(value))));
+        value instanceof Node ? value : linkify(value))));
   }
   if (!count) return null;
   return el('div', { class: 'table-wrap' },
@@ -649,8 +649,68 @@ function bulletList(items, className) {
 
 function externalLink(url, label) {
   if (!has(url)) return null;
-  return el('a', { href: String(url), rel: 'noopener noreferrer', target: '_blank' }, label || String(url));
+  const href = String(url);
+  const isMail = /^mailto:/i.test(href);
+  return el('a', {
+    class: 'ext-link',
+    href,
+    rel: 'noopener noreferrer',
+    target: isMail ? null : '_blank',
+  }, label || (isMail ? href.replace(/^mailto:/i, '') : href));
 }
+
+/* ---------- URL linkification (text-node scanning, never HTML strings) ---------- */
+
+const URL_RE = /\b(?:https?:\/\/|mailto:)[^\s<>"']+/gi;
+
+/**
+ * Trailing sentence punctuation is almost never part of a URL. Closing
+ * brackets only count when the URL actually opened them.
+ */
+function trimUrlTail(url) {
+  let end = url.length;
+  for (;;) {
+    const ch = url[end - 1];
+    if (!ch) break;
+    if ('.,;:!?'.includes(ch)) { end -= 1; continue; }
+    if (ch === ')' || ch === ']' || ch === '}') {
+      const open = { ')': '(', ']': '[', '}': '{' }[ch];
+      const slice = url.slice(0, end);
+      const opens = slice.split(open).length - 1;
+      const closes = slice.split(ch).length - 1;
+      if (closes > opens) { end -= 1; continue; }
+    }
+    if (ch === '"' || ch === "'") { end -= 1; continue; }
+    break;
+  }
+  return url.slice(0, end);
+}
+
+/**
+ * Turn any http(s)/mailto substrings in a plain string into anchors, keeping
+ * the surrounding text as text nodes. Non-URL citations pass through untouched.
+ */
+function linkify(value) {
+  const text = String(value);
+  if (!/(?:https?:\/\/|mailto:)/i.test(text)) return txt(text);
+  const out = document.createDocumentFragment();
+  let last = 0;
+  URL_RE.lastIndex = 0;
+  let m;
+  while ((m = URL_RE.exec(text)) !== null) {
+    const raw = m[0];
+    const url = trimUrlTail(raw);
+    if (!url || /^(?:https?:\/\/|mailto:)$/i.test(url)) continue;
+    if (m.index > last) out.appendChild(txt(text.slice(last, m.index)));
+    out.appendChild(externalLink(url, url.replace(/^mailto:/i, '')));
+    last = m.index + url.length;
+  }
+  if (last < text.length) out.appendChild(txt(text.slice(last)));
+  return out;
+}
+
+/** Free prose that may embed URLs. */
+const prose = (value) => (has(value) ? linkify(value) : null);
 
 function backCrumb(href, label) {
   return el('nav', { class: 'crumbs no-print' }, el('a', { href }, `← ${label}`));
@@ -1551,17 +1611,15 @@ function provenanceSection(entity) {
   if (!has(p)) return null;
   const sources = Array.isArray(p.sources) ? p.sources : [];
   const list = sources.length ? el('ul', { class: 'linklist sources' }) : null;
-  for (const src of sources) {
-    const isUrl = /^https?:\/\//i.test(String(src));
-    list.appendChild(el('li', {}, isUrl ? externalLink(src) : txt(String(src))));
-  }
+  for (const src of sources) list.appendChild(el('li', {}, linkify(src)));
   return section('Provenance', 'provenance.confidence',
     kvTable([
       ['provenance.confidence', p.confidence ? confidenceBadge(p.confidence) : null, { label: 'Confidence' }],
       ['provenance.last_verified', p.last_verified, { label: 'Last verified' }],
       ['status', entity.status ? statusBadge(entity.status) : null, { label: 'Entry status' }],
-      ['provenance.conflicts', p.conflicts, { label: 'Unresolved source conflicts' }],
     ]),
+    has(p.conflicts) ? el('h3', { text: 'Unresolved source conflicts' }) : null,
+    has(p.conflicts) ? el('p', { class: 'prose' }, prose(p.conflicts)) : null,
     list ? el('h3', { text: 'Sources' }) : null,
     list);
 }
@@ -1716,7 +1774,7 @@ function plateRecommendationsSection(f) {
     for (const r of rows) {
       body.appendChild(el('tr', {},
         el('td', { 'data-label': 'Plate' }, refLink('plates', r.plate_id) || txt(String(r.plate_id))),
-        el('td', { 'data-label': 'Notes' }, r.notes || '—')));
+        el('td', { 'data-label': 'Notes' }, has(r.notes) ? linkify(r.notes) : txt('—'))));
     }
     const table = el('div', { class: 'table-wrap' },
       el('table', { class: 'responsive-table' },
@@ -1862,8 +1920,8 @@ async function viewFilamentDetail(id) {
     hasTradeNames ? null : madeBySection(f.id),
     feedingSection(f),
     emissionsSection(f),
-    f.safety_notes ? section('Safety', null, el('p', { text: f.safety_notes })) : null,
-    f.additional_notes ? section('Additional notes', null, el('p', { text: f.additional_notes })) : null,
+    f.safety_notes ? section('Safety', null, el('p', { class: 'prose' }, prose(f.safety_notes))) : null,
+    f.additional_notes ? section('Additional notes', null, el('p', { class: 'prose' }, prose(f.additional_notes))) : null,
     provenanceSection(f));
 }
 
@@ -1887,7 +1945,7 @@ async function viewManufacturerDetail(id) {
         body.appendChild(el('tr', {},
           el('td', { 'data-label': 'Company' }, r.company || '—'),
           el('td', { 'data-label': 'Relationship' }, prettyEnum(r.relationship)),
-          el('td', { 'data-label': 'Notes' }, r.notes || '—')));
+          el('td', { 'data-label': 'Notes' }, has(r.notes) ? linkify(r.notes) : txt('—'))));
       }
       return el('div', { class: 'table-wrap' }, el('table', { class: 'responsive-table' },
         el('thead', {}, el('tr', {},
@@ -1905,7 +1963,7 @@ async function viewManufacturerDetail(id) {
           el('td', { 'data-label': 'Line' }, line.name || '—'),
           // Materials link through to filament pages when the id is in the catalog.
           el('td', { 'data-label': 'Materials' }, refChips('filaments', line.filament_ids) || txt('—')),
-          el('td', { 'data-label': 'Notes' }, line.notes || '—')));
+          el('td', { 'data-label': 'Notes' }, has(line.notes) ? linkify(line.notes) : txt('—'))));
       }
       const table = el('div', { class: 'table-wrap' }, el('table', { class: 'responsive-table' },
         el('thead', {}, el('tr', {},
@@ -1953,7 +2011,7 @@ async function viewManufacturerDetail(id) {
         ['endpoints.social', socialList, { label: 'Social' }],
       ]))
       : null,
-    m.additional_notes ? section('Additional notes', null, el('p', { text: m.additional_notes })) : null,
+    m.additional_notes ? section('Additional notes', null, el('p', { class: 'prose' }, prose(m.additional_notes))) : null,
     provenanceSection(m));
 }
 
@@ -1967,7 +2025,7 @@ function plateCompatGroupTable(rows) {
       el('td', { 'data-label': 'Filament' }, refLink('filaments', c.filament_id) || txt(String(c.filament_id))),
       el('td', { 'data-label': 'Bed temperature' }, fmtRange(c.bed_temp_c, '°C') || '—'),
       el('td', { 'data-label': 'Adhesion aid' }, c.adhesion_aid || '—'),
-      el('td', { 'data-label': 'Notes' }, c.notes || '—')));
+      el('td', { 'data-label': 'Notes' }, has(c.notes) ? linkify(c.notes) : txt('—'))));
   }
   return el('div', { class: 'table-wrap' }, el('table', { class: 'responsive-table' },
     el('thead', {}, el('tr', {},
@@ -2014,7 +2072,7 @@ function damageAvoidanceSection(p) {
     body.appendChild(el('tr', { class: `sev-${row.severity || 'unrated'}` },
       el('td', { 'data-label': 'Do not use', class: 'cell-name' }, row.item || '—'),
       el('td', { 'data-label': 'Severity' }, severityBadge(row.severity) || el('span', { class: 'faint', text: '—' })),
-      el('td', { 'data-label': 'Why' }, row.reason || '—')));
+      el('td', { 'data-label': 'Why' }, has(row.reason) ? linkify(row.reason) : txt('—'))));
   }
 
   const tally = el('span', { class: 'badge-group' });
@@ -2075,8 +2133,8 @@ async function viewPlateDetail(id) {
       ['model_removal', p.model_removal, { label: 'Model removal' }],
       ['stuck_print_recovery', p.stuck_print_recovery, { label: 'Stuck print recovery' }],
     ])) : null,
-    p.lifespan_notes ? section('Lifespan & wear', null, el('p', { text: p.lifespan_notes })) : null,
-    p.additional_notes ? section('Additional notes', null, el('p', { text: p.additional_notes })) : null,
+    p.lifespan_notes ? section('Lifespan & wear', null, el('p', { class: 'prose' }, prose(p.lifespan_notes))) : null,
+    p.additional_notes ? section('Additional notes', null, el('p', { class: 'prose' }, prose(p.additional_notes))) : null,
     provenanceSection(p));
 }
 
