@@ -210,6 +210,28 @@
       "notes": "Inferred from tpu-95a: firmer grades are no exception; use textured PEI, G10 or a carbon plate for flexibles (unverified)."
     }
   ],
+  "alternatives": [
+    {
+      "filament_id": "tpu-60d",
+      "reason": "Essentially the same hardness expressed on the D scale, with more engineering-plastic character: dimensional stability 6 vs 5, temp 6 vs 5, and AMS-conditional rather than barred — at $25-45 against 98A's wider $16-58."
+    },
+    {
+      "filament_id": "tpu-95a",
+      "reason": "Step back down for genuine elasticity: 580 % elongation instead of ~450 % and a real rubbery feel, at ease 5 vs 6 and $40-70."
+    },
+    {
+      "filament_id": "tpu-68d",
+      "reason": "If the point is running flexible-adjacent material out of an AMS: ams yes vs no and ease 7 vs 6, but layer adhesion halves (2 vs 4) and there is no rubber left at all."
+    },
+    {
+      "filament_id": "tpu-gf",
+      "reason": "Glass fiber trades the last of the stretch for stiffness and dimensional stability (stab 7 vs 5, temp 6 vs 5) at similar money ($34-40), with a mandatory hardened nozzle."
+    },
+    {
+      "filament_id": "petg",
+      "reason": "If nothing about the part actually needs a urethane, PETG is easier still (ease 7 vs 6), has layer adhesion 9 vs 4 and is cheaper at scale ($18-42) — with none of TPU's impact absorption or abrasion life."
+    }
+  ],
   "emissions": {
     "voc_level": "low",
     "particulate_level": "low",

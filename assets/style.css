@@ -497,3 +497,30 @@ td .ext-link, .sources .ext-link, .prose .ext-link { overflow-wrap: anywhere; wo
   .group > summary:hover { background: none; }
   .group .group-body { padding: 0; }
 }
+
+/* ---------- glossary-aware badges ---------- */
+a.badge.tip-badge {
+  text-decoration: none;
+  cursor: help;
+  border-style: dashed;
+}
+a.badge.tip-badge:hover, a.badge.tip-badge:focus-visible {
+  border-style: solid;
+  filter: brightness(1.04);
+}
+
+/* ---------- column picker ---------- */
+.columns-picker { display: grid; gap: .6rem; }
+.columns-picker .field-label {
+  font-size: .74rem; font-weight: 600; color: var(--text-muted);
+  text-transform: uppercase; letter-spacing: .04em;
+}
+.chip-note { font-size: .7rem; color: var(--accent); font-weight: 700; }
+
+/* ---------- export ---------- */
+.export-control { gap: .35rem; align-items: center; }
+.export-control .btn-sm { font-variant-numeric: tabular-nums; }
+
+@media print {
+  .export-control, .columns-picker { display: none !important; }
+}

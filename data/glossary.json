@@ -244,6 +244,35 @@
       "why_it_matters": "Nylon parts absorb water and soften/swell; PVA dissolves outright. Matters for marine, plumbing-adjacent, and bathroom uses."
     },
     {
+      "key": "suitability.outdoor",
+      "term": "Outdoor suitability",
+      "definition": "Whether printed parts survive permanent outdoor placement (no / limited / yes), combining UV stability, moisture behavior, and temperature-swing tolerance into one verdict.",
+      "why_it_matters": "The quick answer to 'can this live outside'. 'Limited' means seasonal or sheltered use (PETG fades and softens over years of sun); 'yes' means the material was formulated for weather (ASA). Check uv_tolerance and weather_tolerance for the underlying scores, and remember dark colors absorb more heat — a 'limited' material in black on a hot roof fails faster.",
+      "see_also": ["scores.uv_tolerance", "scores.weather_tolerance", "suitability.high_temperature"]
+    },
+    {
+      "key": "suitability.high_temperature",
+      "term": "High-temperature suitability",
+      "definition": "Whether parts keep their shape and useful strength in hot environments (no / moderate / yes), anchored to glass transition, HDT, and max service temperature.",
+      "why_it_matters": "The filter for hot cars, enclosures near electronics, under-hood parts, and anything close to a heat source. 'No' fails in a parked car (~60-70 °C interior); 'moderate' handles that but not sustained engine-bay or near-hotend duty; 'yes' is the PC/PPA/high-performance tier. The numbers behind the verdict live in glass_transition_c, heat_deflection_c, and max_service_temp_c.",
+      "see_also": ["properties.glass_transition_c", "properties.heat_deflection_c", "properties.max_service_temp_c", "scores.temperature_tolerance"]
+    },
+    {
+      "key": "properties.tensile_strength_mpa",
+      "term": "Tensile strength",
+      "definition": "The stress at which the material yields or breaks when pulled, in megapascals (MPa). Recorded as a range because published values vary by brand, test method (yield vs break), and print orientation — FDM parts measured along the layers (XY) are markedly stronger than across them (Z).",
+      "why_it_matters": "The headline number for load-bearing design — how much pull a bracket, hook, or clip takes before failing. Two cautions: datasheet values usually describe injection-moulded or XY-printed specimens, so real Z-loaded prints deliver a fraction of it (see layer adhesion); and a strong-but-brittle material (PLA) fails differently than a weaker-but-ductile one (PETG), so pair this with the compression and layer-adhesion scores rather than reading it alone.",
+      "units": "MPa",
+      "see_also": ["scores.layer_adhesion", "scores.compression_strength", "suitability.load_bearing"]
+    },
+    {
+      "key": "alternatives",
+      "term": "Alternatives to consider",
+      "definition": "For each filament, a short curated list of other catalog materials worth evaluating instead, each with the specific trade-off reasoning (easier printing, lower cost, better UV, higher temperature ceiling...).",
+      "why_it_matters": "Material selection is comparative: the right question is rarely 'is ABS good' but 'is ABS better than ASA for this part'. These are directional suggestions — ASA appears as an easier-printing alternative to ABS, while ABS appears as a cheaper alternative to ASA — grounded in the catalog's own scores, prices, and suitability data.",
+      "see_also": ["scores.ease_of_print", "compatibility.bonds_with"]
+    },
+    {
       "key": "suitability.food_contact",
       "term": "Food contact suitability",
       "definition": "Whether the material can be used for food-contact items (no / conditional / yes on certified lines).",

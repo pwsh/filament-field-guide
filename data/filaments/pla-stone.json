@@ -159,6 +159,24 @@
       "notes": "Bonds fine, but a glossy bottom face reads as obviously plastic against the matte mineral texture of every other surface on the part. Choose it only when the underside will be sanded, painted or hidden."
     }
   ],
+  "alternatives": [
+    {
+      "filament_id": "pla",
+      "reason": "If the mineral texture is purely cosmetic and paint or primer would do, base PLA prints far easier (ease 10 vs 6), needs no hardened nozzle or 40-70 mm/s cap, keeps full strength (comp 8 vs 6, adh 6 vs 4) and costs $14-35."
+    },
+    {
+      "filament_id": "pla-wood",
+      "reason": "The other real-filler aesthetic at the same ease 6: sandable, wood-look and much lighter (1.21 vs 1.70 g/cm³) — but weaker again (adh 3 vs 4) and clearly worse outdoors, because the fibre wicks water independently of the PLA (water 3 vs 5, weath 1 vs 2)."
+    },
+    {
+      "filament_id": "pla-matte",
+      "reason": "Most of the non-glossy, layer-line-hiding look with none of the filler penalties: ease 9 vs 6, no hardened nozzle, base-PLA speeds and a flat $20-23 against stone's $20-52 spread — but no grit, no weight and no cast-stone patina."
+    },
+    {
+      "filament_id": "pla-metal",
+      "reason": "If the goal is heavy, dense, patinable parts rather than stone specifically: metal fill goes much further (bronzeFill 3.9 g/cm³ vs stone's 1.70) and polishes to real metal, at ease 5 vs 6, faster nozzle wear and up to $65/kg."
+    }
+  ],
   "emissions": {
     "voc_level": "low",
     "particulate_level": "low",

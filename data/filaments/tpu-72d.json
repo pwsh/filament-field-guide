@@ -178,6 +178,24 @@
       "notes": "Inferred from the family: this grade's 60-80 °C bed sits above the plate's comfortable range, and the family-wide guidance is to use textured PEI or a carbon plate for TPU (unverified)."
     }
   ],
+  "alternatives": [
+    {
+      "filament_id": "tpu-68d",
+      "reason": "Half the price ($35-45 vs $70-100) with an actual published TDS, engineered AMS behaviour (ams yes vs conditional) and no warp quirk — at slightly lower compressive strength (6 vs 7) and service temp (5 vs 6)."
+    },
+    {
+      "filament_id": "pa12",
+      "reason": "The nylon this grade is sold to replace, if you can run the moisture discipline: better layer adhesion (8 vs 5) and toughness at $55-90 — but water tolerance 7 with real drying requirements and warp 6 vs 2."
+    },
+    {
+      "filament_id": "tpu-gf",
+      "reason": "Semi-rigid TPU by the other route — glass fiber to 67D — at half the price ($34-40), with published Fibreheart numbers and the same stability 7. It needs a hardened nozzle, and tops out at moderate load-bearing too."
+    },
+    {
+      "filament_id": "petg-cf",
+      "reason": "If the part is really just a stiff bracket: cheaper ($25-67), stiffer in compression (8 vs 7), dimensionally better (stab 8 vs 7) and easier to source — with none of TPU's impact tolerance or abrasion life."
+    }
+  ],
   "emissions": {
     "voc_level": "low",
     "particulate_level": "low",

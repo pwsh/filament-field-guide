@@ -194,6 +194,28 @@
       "notes": "Nylon-class material on a low-temperature PC sheet; vendor guidance routes all nylons to engineering or high-temperature plates even where, as here, the specified bed temperature happens to be low."
     }
   ],
+  "alternatives": [
+    {
+      "filament_id": "pa12",
+      "reason": "The verified unfilled nylon if this entry's caveat matters — every mechanical number here comes from a CF-filled PA612-CF15 grade. PA12 offers a far better layer bond (8 vs 4) and slightly better water tolerance (7 vs 6) with no hardened nozzle, at $55-90/kg, giving up stiffness and heat (compression 6 vs 8, temp 6 vs 7)."
+    },
+    {
+      "filament_id": "pa6",
+      "reason": "Much cheaper ($35-70 vs ~$65-77) and stiffer per dollar with far better layer adhesion (9 vs 4), but three times the warp (9 vs 3), dimensional stability 2 vs 7 and 3-9 % moisture uptake against PA612's low amide density (water 1 vs 6)."
+    },
+    {
+      "filament_id": "copa",
+      "reason": "The other low-warp nylon (warp 3, equal) with much better layer adhesion (9 vs 4) and genuine toughness, and no 250-300 °C nozzle — it gives up heat resistance (temp 5 vs 7, HDT 111 vs 175 °C) and stiffness (compression 7 vs 8)."
+    },
+    {
+      "filament_id": "pa6-cf",
+      "reason": "More stiffness and heat (compression 9 vs 8, temp 8 vs 7, HDT 175-215 °C) at $79-135/kg — but PA6's 3-9 % uptake costs 44 % of tensile and two-thirds of stiffness when wet (water 2 vs 6), which is exactly what PA612 exists to avoid."
+    },
+    {
+      "filament_id": "pa12-cf",
+      "reason": "The moisture-stable composite: dimensional stability 9 vs 7 and warp 2 vs 3 while holding ~85 % of dry tensile when conditioned, with a better layer bond (5 vs 4) — at roughly double the price ($130-180) and lower heat (temp 6 vs 7)."
+    }
+  ],
   "emissions": {
     "voc_level": "moderate",
     "particulate_level": "moderate",

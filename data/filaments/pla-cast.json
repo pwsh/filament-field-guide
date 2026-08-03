@@ -149,6 +149,20 @@
       "notes": "Adheres like base PLA at 45-60 °C with no release agent, but the plate grain transfers into the pattern and therefore into the finished casting. Fine when the bottom face will be cut off a sprue or finished anyway."
     }
   ],
+  "alternatives": [
+    {
+      "filament_id": "pla",
+      "reason": "Every difference is post-print: if the pattern will not be invested and burned out, base PLA prints identically (ease 10 vs 9, warp 1, same temps) for $14-35 vs $16-40, and only gives up the controlled sub-0.003 % ash residue."
+    },
+    {
+      "filament_id": "pvb",
+      "reason": "The other pattern-friendly display material: it prints as easily (ease 9 both) and smooths with IPA, so surface defects can be dissolved rather than sanded before investing — but it is not formulated for low-ash burnout, so treat it as a fit-check pattern, not a casting one."
+    },
+    {
+      "filament_id": "pla-plus",
+      "reason": "If the model is a keeper rather than a sacrifice, the impact-modified grade gives real toughness and Z-strength (adh 8 vs 6) at $22-45, and gives up the burnout chemistry entirely."
+    }
+  ],
   "emissions": {
     "voc_level": "low",
     "particulate_level": "low",

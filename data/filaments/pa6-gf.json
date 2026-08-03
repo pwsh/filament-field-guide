@@ -171,6 +171,28 @@
       "notes": "Backfilled from plate entry (reciprocity) — see plate page"
     }
   ],
+  "alternatives": [
+    {
+      "filament_id": "pa6-cf",
+      "reason": "The stiffness trade the other way: higher modulus and compression (9 vs 8) with slightly better warp control (3 vs 4) and a marginally higher heat score — at $79-135/kg against $55-65, more abrasion, and less impact toughness (adhesion 4 vs 6)."
+    },
+    {
+      "filament_id": "pa6",
+      "reason": "Unfilled PA6 when toughness and ductility matter more than stiffness: layer adhesion 9 vs 6, no hardened nozzle, full AMS feeding and $35-70/kg — but warp jumps from 4 to 9 and dimensional stability falls from 5 to 2."
+    },
+    {
+      "filament_id": "pa12-cf",
+      "reason": "Fixes the one thing glass fiber does not — water. PA12-CF holds its numbers wet (water 8 vs 2, dim 9 vs 5, warp 2 vs 4) where PA6-GF's 2.56 % uptake moves the part with the weather; costs $130-180/kg and gives up heat (temp 6 vs 8)."
+    },
+    {
+      "filament_id": "pa612",
+      "reason": "Similar low-warp territory without PA6's moisture problem: water 6 vs 2, warp 3 vs 4 and dimensional stability 7 vs 5, so the part holds size as humidity changes — at ~$65-77/kg, a 250-300 °C nozzle and a much weaker layer bond (4 vs 6)."
+    },
+    {
+      "filament_id": "petg-gf",
+      "reason": "The open-frame glass-filled option with no drying discipline: dim 9 vs 5, warp 2 vs 4, water 9 vs 2 and ease 6 vs 4 at $25-35/kg — giving up heat (temp 7 vs 8, HDT ~182 °C on the nylon) and nylon's wear resistance."
+    }
+  ],
   "emissions": {
     "voc_level": "high",
     "particulate_level": "moderate",

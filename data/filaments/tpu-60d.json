@@ -153,6 +153,28 @@
       "notes": "Standard textured PEI works given the hotter 50-60 °C bed this grade wants, and no separator is generally needed because the part is rigid enough to release without tearing — the over-adhesion problem that dogs the soft grades largely goes away. No garolite or other special surface is required, though this was not separately verified for this grade."
     }
   ],
+  "alternatives": [
+    {
+      "filament_id": "tpu-68d",
+      "reason": "The grade engineered for the material station: ams yes vs conditional, ease 7 vs 6, a documented Bambu TDS behind its numbers and dimensional stability 7 vs 6 — at $35-45 vs $25-45, and with severe Z anisotropy (adhesion 2 vs 5)."
+    },
+    {
+      "filament_id": "tpu-98a",
+      "reason": "The Shore A grade of equivalent hardness, with a cheaper floor ($16-58) and a little more rubbery recovery — but lower dimensional stability (5 vs 6), lower service temp (5 vs 6) and barred from the AMS."
+    },
+    {
+      "filament_id": "tpu-72d",
+      "reason": "Harder again and sold as a nylon replacement without nylon's moisture problem: compressive strength 7 vs 5 at the same temp 6 — for 2-3x the price ($70-100 vs $25-45), no published datasheet, and warp behaviour no other TPU grade shows."
+    },
+    {
+      "filament_id": "tpu-gf",
+      "reason": "Reaches the same semi-rigid 67D territory via glass fiber, with better dimensional stability (7 vs 6) and retained impact toughness (80 % elongation, Charpy 'did not break') — at $34-40 and a mandatory hardened nozzle."
+    },
+    {
+      "filament_id": "petg",
+      "reason": "If the part does not need urethane impact and abrasion behaviour, PETG is easier (ease 7 vs 6), has far better layer adhesion (9 vs 5) and costs $18-42 — but it is brittle where TPU simply bends."
+    }
+  ],
   "emissions": {
     "voc_level": "low",
     "particulate_level": "moderate",

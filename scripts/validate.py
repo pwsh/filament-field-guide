@@ -98,6 +98,15 @@ def main() -> int:
                 elif ref in entities["filaments"] and fam_root(ref) == fam_root(fid):
                     errors.append(f"data/filaments/{fid}.json: compatibility.{field} lists same-family material '{ref}' (family '{fam_root(fid)}') — same-chemistry pairs weld and cannot serve as a removable interface")
 
+    # Alternatives: must reference existing, non-self filaments
+    for fid, f in entities["filaments"].items():
+        for alt in f.get("alternatives", []):
+            aid = alt.get("filament_id")
+            if aid == fid:
+                errors.append(f"data/filaments/{fid}.json: alternatives lists itself")
+            elif aid not in entities["filaments"]:
+                errors.append(f"data/filaments/{fid}.json: alternatives references unknown filament '{aid}'")
+
     # Cross-references and derived fields
     for fid, f in entities["filaments"].items():
         src = f"data/filaments/{fid}.json"

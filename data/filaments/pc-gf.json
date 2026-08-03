@@ -171,6 +171,24 @@
       "notes": "Backfilled from plate entry (reciprocity) — see plate page"
     }
   ],
+  "alternatives": [
+    {
+      "filament_id": "pc",
+      "reason": "Unfilled PC at roughly a third the price ($30-65 vs $100-115) with a far better layer bond and real ductility (adhesion 8 vs 4 against 2.5 % elongation), no hardened nozzle or hardened drive gears and a cooler 250-310 °C window — giving up the fiber's warp suppression (warp 8 vs 4, dim 6 vs 8) and the 137 °C @1.8 MPa HDT."
+    },
+    {
+      "filament_id": "pa6-cf",
+      "reason": "Comparable stiffness and near-comparable heat (compression 9 both, temp 8 vs 9) at a lower price ($79-135 vs $100-115) and a much cooler nozzle (260-300 vs 280-330 °C) — but PA6's 3-9 % moisture uptake costs 44 % of tensile when wet (water 2 vs 6), where PC-GF is far less humidity-sensitive."
+    },
+    {
+      "filament_id": "pet-cf",
+      "reason": "The budget stiff-and-hot option: identical compression (9) and temperature (9) scores at $35-45/kg with much better water tolerance (9 vs 6) and a better layer bond (5 vs 4) — without PC's impact toughness or PC-GF's documented 137 °C @1.8 MPa HDT."
+    },
+    {
+      "filament_id": "ppa-cf",
+      "reason": "Step up in heat and strength: HDT 227 °C and compression 10 vs 9 — at $172-266/kg, a 50-80 °C chamber specification, the catalog's harshest drying schedule and worse anisotropy still (adhesion 3 vs 4)."
+    }
+  ],
   "emissions": {
     "voc_level": "moderate",
     "particulate_level": "high",

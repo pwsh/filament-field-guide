@@ -196,6 +196,24 @@
       "notes": "Backfilled from plate entry (Phase E reciprocity): As PC."
     }
   ],
+  "alternatives": [
+    {
+      "filament_id": "pc",
+      "reason": "Full polycarbonate when the blend runs out of heat: temp 9 vs 7 (HDT 114 vs ~100 °C), higher stiffness (compression 8 vs 7) and a better layer bond (8 vs 7), starting cheaper ($30-65 vs $44-48) — but a 250-310 °C nozzle, worse warp (8 vs 7) and a mandatory 75 °C/6 h dry."
+    },
+    {
+      "filament_id": "abs",
+      "reason": "A third to half the price ($18-35 vs $44-48) with essentially the same enclosure and a near-identical 250-280 °C process, plus acetone vapour smoothing — you give up the blend's tensile strength (39.9 MPa-class vs ABS's ~30s) and its stiffness and creep resistance under load, while HDT is close to a wash (~99 vs ~100 °C)."
+    },
+    {
+      "filament_id": "pc-pbt",
+      "reason": "The chemical- and cold-resistant member of the family: stronger (50.4 vs 39.9 MPa, compression 8 vs 7), hotter (HDT 107 vs ~100 °C, temp 8 vs 7), better water tolerance (7 vs 6) and actually cheaper ($36-37 vs $44-48) — but it demands a maintained 100-110 °C heated chamber, the only PC blend here that does."
+    },
+    {
+      "filament_id": "asa",
+      "reason": "If UV is the actual requirement rather than heat, ASA is weatherable (uv 9 vs 3, weather 9 vs 3), easier (ease 5 vs 4) and cheaper ($18-45 vs $44-48) — at lower strength, lower heat and no PC content."
+    }
+  ],
   "emissions": {
     "voc_level": "high",
     "particulate_level": "high",

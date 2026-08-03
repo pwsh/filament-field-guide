@@ -216,6 +216,28 @@
       "notes": "Backfilled from plate entry (reciprocity)"
     }
   ],
+  "alternatives": [
+    {
+      "filament_id": "pla",
+      "reason": "If the sheen is not the point, base PLA is stronger and better bonded (adh 6 vs 4, Z 33 vs 25 MPa), runs 10-20 °C cooler and faster, is less moisture-sensitive (water 6 vs 5), stays AMS-friendly (ams yes vs conditional) and starts at $14/kg."
+    },
+    {
+      "filament_id": "pla-glitter",
+      "reason": "A different decorative effect that keeps base-PLA mechanicals (XY 39 / Z 32 MPa against silk's 33 / 25) and full AMS compatibility; the constraint moves from layer adhesion to nozzle size — 0.4 mm floor, no 0.2 mm."
+    },
+    {
+      "filament_id": "pla-gradient",
+      "reason": "Visual interest with no chemistry change at all: base-PLA strength, adhesion and printability (ease 10 vs 8) for $24-26 — but the colour shift only reads on tall or long parts, and it cannot give you silk's mirror gloss."
+    },
+    {
+      "filament_id": "pvb",
+      "reason": "If the goal is a genuinely glossy finished surface rather than an in-filament sheen: PVB prints as easily (ease 9 vs 8) and smooths with IPA to a real gloss, at $33-50 and much worse moisture tolerance (water 3 vs 5)."
+    },
+    {
+      "filament_id": "pla-metal",
+      "reason": "For a metallic rather than satin shine — sandable and polishable to real metal lustre — at ease 5 vs 8, a mandatory hardened nozzle, 20-80 mm/s on heavy fills and up to $65/kg."
+    }
+  ],
   "emissions": {
     "voc_level": "low",
     "particulate_level": "low",

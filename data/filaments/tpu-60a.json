@@ -174,6 +174,24 @@
       "notes": "Backfilled from plate entry (Phase E reciprocity): Worst case of the TPU family on this surface."
     }
   ],
+  "alternatives": [
+    {
+      "filament_id": "tpu-85a",
+      "reason": "The next step up, and the softest grade Bambu machines will actually print: ease 3 vs 2, 15-20 mm/s instead of 10-20 with zero retraction, and no near-mandatory feeding assistant. You trade ~950 % elongation for something nearer 600 %."
+    },
+    {
+      "filament_id": "tpu-95a",
+      "reason": "If the design does not truly need silicone-like softness: ease 5 vs 2, 25-45 mm/s, limited retraction that actually works, dimensional stability 4 vs 1, and cheaper ($40-70 vs $40-116)."
+    },
+    {
+      "filament_id": "lw-tpu",
+      "reason": "Foaming TPU tuned to a measured 65A reaches the same softness territory while feeding better than solid TPU of that hardness — paid for with unavoidable stringing, poor bridging, per-model calibration and $65-85."
+    },
+    {
+      "filament_id": "tpe",
+      "reason": "SEBS grades give a closer-to-real-rubber feel with food- and skin-contact certified lines at roughly a third of the top-end price ($25-45), but tensile strength is far lower and printing is no easier (ease 3 vs 2)."
+    }
+  ],
   "emissions": {
     "voc_level": "low",
     "particulate_level": "low",

@@ -173,6 +173,24 @@
       "notes": "Backfilled from plate entry (reciprocity)"
     }
   ],
+  "alternatives": [
+    {
+      "filament_id": "pp",
+      "reason": "The far better-documented polyolefin with the same chemical inertness and water tolerance (10, equal), more heat (temp 6 vs 5), a better layer bond (7 vs 6) and no hardened-nozzle requirement — but it warps even worse (10 vs 9) and its food-contact status is conditional rather than certified-line."
+    },
+    {
+      "filament_id": "pp-gf",
+      "reason": "Glass fiber gives the polyolefin family a printable geometry envelope: warp 4 vs 9, dimensional stability 7 vs 3, compression 8 vs 6 and HDT 127 °C (temp 7 vs 5) while keeping water tolerance 10 — at $85-215/kg against $25-45 and no food-contact claim."
+    },
+    {
+      "filament_id": "petg",
+      "reason": "The practical everyday alternative: open-frame, sticks to anything (ease 7 vs 2, warp 3 vs 9), far better layer adhesion (9 vs 6) and universally available at $18-42/kg — giving up PE's certified food-contact lines, its full outdoor rating and its perfect chemical/water resistance (water 9 vs 10)."
+    },
+    {
+      "filament_id": "sbs",
+      "reason": "For food-contact-certified flexible or squeeze parts, SBS prints far easier (ease 5 vs 2, warp 3 vs 9) at $25-40/kg with the same certified-line food status — with much less chemical resistance (water 8 vs 10) and no heat capability (temp 4 vs 5)."
+    }
+  ],
   "emissions": {
     "voc_level": "low",
     "particulate_level": "low",

@@ -223,6 +223,20 @@
       "notes": "Backfilled from plate entry (Phase E reciprocity): As PVA."
     }
   ],
+  "alternatives": [
+    {
+      "filament_id": "pva",
+      "reason": "Less than half the cost ($50-120 vs $150-250) and perfectly adequate when the build material is PLA at similar temperatures — slower dissolution, fussier extrusion (ease 3 vs 5) and worse stability over long jobs."
+    },
+    {
+      "filament_id": "support-breakaway",
+      "reason": "Removes the solvent bath and the hygroscopic storage problem entirely (water tolerance 8 vs 2) and prints easier (ease 6 vs 5) at lower cost — only viable where every support face is hand-accessible."
+    },
+    {
+      "filament_id": "hips",
+      "reason": "Limonene-soluble support for styrenic prints at a fraction of the cost ($20-50), with none of BVOH's moisture sensitivity — but it will not pair with PLA, PETG or TPU the way BVOH does, and it needs an enclosure."
+    }
+  ],
   "emissions": {
     "voc_level": "low",
     "particulate_level": "low",

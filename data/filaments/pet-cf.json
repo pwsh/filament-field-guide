@@ -155,6 +155,24 @@
       "notes": "Backfilled from plate entry (Phase E reciprocity): CF fill raises stiffness and corner-lift force; brim recommended. Not vendor-documented for G10."
     }
   ],
+  "alternatives": [
+    {
+      "filament_id": "petg-cf",
+      "reason": "If the part does not actually need the heat ceiling, PETG-CF is far easier (ease 6 vs 3), needs no heated chamber and is AMS-conditional rather than excluded — you drop from HDT 205 °C to ~70 °C (temp 5 vs 9) and lose a step of stiffness (comp 8 vs 9)."
+    },
+    {
+      "filament_id": "pet-gf",
+      "reason": "The glass grade of the same base: easier to print (ease 5 vs 3), no chamber requirement and better retained toughness — bought with much lower heat (temp 6 vs 9; 134 °C annealed against 205 °C as printed) and lower stiffness."
+    },
+    {
+      "filament_id": "pa6-cf",
+      "reason": "The polyamide route to the same stiffness-plus-heat class (comp 9 both, temp 8 vs 9) with better toughness and layer behaviour — but far worse moisture behaviour (water 2 vs 9, aggressive drying and in-print humidity control) at $79-135 vs $35-45."
+    },
+    {
+      "filament_id": "pet",
+      "reason": "Unfilled PET if the real requirement was water and chemical resistance rather than stiffness and heat: $18-35, AMS-compatible, no hardened nozzle and no chamber — at warp 7 vs 4, comp 7 vs 9 and temp 6 vs 9."
+    }
+  ],
   "emissions": {
     "voc_level": "moderate",
     "particulate_level": "moderate",

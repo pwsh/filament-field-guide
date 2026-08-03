@@ -157,6 +157,28 @@
       "notes": "Compatible with cool, engineering and high-temp PEI plates, following the same family guidance Bambu gives for 85A/90A. The unusually low 30-35 °C bed target reduces the over-adhesion and plate-damage risk that makes textured PEI merely 'usable' for the soft grades. No special surface such as garolite is required."
     }
   ],
+  "alternatives": [
+    {
+      "filament_id": "tpu-72d",
+      "reason": "Harder still and the family's easiest feed, with more compressive strength (7 vs 6) and a higher service ceiling (temp 6 vs 5) — but no published datasheet anywhere, real warp risk unique in the family, and $70-100 vs $35-45."
+    },
+    {
+      "filament_id": "tpu-60d",
+      "reason": "One step softer with a little more give and the cheapest D-scale pricing ($25-45 vs $35-45), plus much better layer adhesion (5 vs 2). AMS support drops from a documented yes to conditional."
+    },
+    {
+      "filament_id": "tpu-95a",
+      "reason": "If what you actually wanted was a flexible: real rubbery stretch (580 % elongation) and layer adhesion 4 vs 2, at ease 5 vs 7, no AMS and a direct-drive preference."
+    },
+    {
+      "filament_id": "tpu-gf",
+      "reason": "The same ~67D hardness reached with glass fiber instead of hard-segment chemistry: better service temp (6 vs 5), equal stability (7) and far better toughness retention — but AMS-conditional and a hardened nozzle is mandatory."
+    },
+    {
+      "filament_id": "petg",
+      "reason": "For a rigid AMS material at comparable ease (7) and lower cost ($18-42 vs $35-45), with layer adhesion 9 vs 2 — you lose TPU's impact absorption and abrasion resistance entirely."
+    }
+  ],
   "emissions": {
     "voc_level": "low",
     "particulate_level": "low",

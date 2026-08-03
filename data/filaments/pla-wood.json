@@ -163,6 +163,24 @@
       "notes": "Backfilled from plate entry (Phase E reciprocity): As base PLA; wood-filled blends are specifically listed as compatible."
     }
   ],
+  "alternatives": [
+    {
+      "filament_id": "pla",
+      "reason": "When the wood look is not essential, base PLA is dramatically stronger (tensile XY 45-65 vs 26 MPa, adh 6 vs 3), runs at full speed with no hardened nozzle (ease 10 vs 6) and costs less ($14-35 vs $24-26)."
+    },
+    {
+      "filament_id": "pla-stone",
+      "reason": "The mineral sibling on the same ease 6 filled-PLA terms: denser and grittier, takes paint and patina like cast stone, and behaves better in damp air (water 5 vs 3, weath 2 vs 1) since there is no fibre to wick — but it is heavy (1.70 vs 1.21 g/cm³) and cannot be sanded to grain."
+    },
+    {
+      "filament_id": "pla-matte",
+      "reason": "If what you actually want is a non-plastic, layer-line-hiding surface to paint: ease 9 vs 6, no hardened nozzle, no extra retraction tuning, and much better strength and bonding (adh 5 vs 3)."
+    },
+    {
+      "filament_id": "petg",
+      "reason": "Wood-fill is the worst aesthetic PLA outdoors (weath 1, water 3); for planters, garden markers or anything that gets wet, PETG survives (water 9, weath 5, temp 5 vs 2) — at the total loss of the wood grain and smell, and ease 7 vs 6."
+    }
+  ],
   "emissions": {
     "voc_level": "low",
     "particulate_level": "moderate",

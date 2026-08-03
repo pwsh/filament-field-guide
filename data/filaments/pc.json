@@ -216,6 +216,28 @@
       "notes": "Backfilled from plate entry (reciprocity)"
     }
   ],
+  "alternatives": [
+    {
+      "filament_id": "pc-abs",
+      "reason": "Prints materially easier at the cost of the top end: nozzle 250-280 °C instead of 250-310 °C, less shrinkage stress (warp 7 vs 8) and a lighter dry (80 °C/3 h vs a mandatory 75 °C/6 h), giving up heat and stiffness (temp 7 vs 9, HDT ~100 vs 114 °C, compression 7 vs 8) for $44-48/kg."
+    },
+    {
+      "filament_id": "petg",
+      "reason": "If the part does not actually need PC's heat and impact class, PETG prints far easier open-frame (ease 7 vs 3, warp 3 vs 8) with better water tolerance (9 vs 5) at the bottom of the price band — at a four-point drop in temperature tolerance (5 vs 9)."
+    },
+    {
+      "filament_id": "pc-gf",
+      "reason": "When PC still deflects: glass fiber lifts HDT to 137 °C @1.8 MPa from 114 °C @0.45 MPa and halves the warp (4 vs 8, dim 8 vs 6, compression 9 vs 8) — paid for with a 280-330 °C nozzle, hardened nozzle *and* drive gears, 2.5 % elongation (adhesion 4 vs 8) and $100-115/kg."
+    },
+    {
+      "filament_id": "peek",
+      "reason": "A step up in temperature ceiling (temp 10 vs 9) and chemical/weather resistance (weather 8 vs 4, water 9 vs 5), at 10-20x the price ($400-900 vs $30-65) and heated-chamber industrial hardware only."
+    },
+    {
+      "filament_id": "asa",
+      "reason": "For a PC-class enclosure that has to live outdoors, ASA is far easier (ease 5 vs 3) and genuinely weatherable (uv 9 vs 3, weather 9 vs 4) at $18-45 — with markedly less strength, stiffness and heat (compression 6 vs 8, temp 7 vs 9)."
+    }
+  ],
   "emissions": {
     "voc_level": "moderate",
     "particulate_level": "moderate",

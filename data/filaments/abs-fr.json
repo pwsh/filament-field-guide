@@ -173,6 +173,24 @@
       "notes": "Backfilled from plate entry (Phase E reciprocity): As ABS."
     }
   ],
+  "alternatives": [
+    {
+      "filament_id": "abs",
+      "reason": "Base ABS when the part is not in a regulated fire-safety application: a third to a fifth the price ($18-35 vs $45-107), higher HDT (99 °C vs ~84 °C, temp 7 vs 6), better layer adhesion (5 vs 4) and a well-characterised emissions profile instead of flame-retardant decomposition products of undisclosed chemistry."
+    },
+    {
+      "filament_id": "asa",
+      "reason": "If the real driver is an outdoor electrical enclosure rather than a UL94 rating, ASA is much cheaper ($18-45 vs $45-107), weatherable (uv 9 vs 2, weather 9 vs 2) and dimensionally calmer (dim 7 vs 4) — with no flame rating at all."
+    },
+    {
+      "filament_id": "pc-abs",
+      "reason": "Where the FR grade was a proxy for 'must survive heat near electronics', PC-ABS gives real heat and strength headroom (temp 7 vs 6, HDT ~100 °C vs 84 °C, dim 6 vs 4) for less money ($44-48 vs $45-107) — but carries no V-0 claim."
+    },
+    {
+      "filament_id": "pei-ultem",
+      "reason": "Inherently flame-retardant without additives, with a far higher ceiling (temp 9 vs 6), much better dimensional stability (8 vs 4) and layer adhesion (8 vs 4) — at $195-290/kg and heated-chamber industrial hardware."
+    }
+  ],
   "emissions": {
     "voc_level": "high",
     "particulate_level": "high",

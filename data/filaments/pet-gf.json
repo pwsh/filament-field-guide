@@ -169,6 +169,24 @@
       "notes": "The 80-100 °C bed and 290 °C nozzle sit outside this plate's working range."
     }
   ],
+  "alternatives": [
+    {
+      "filament_id": "petg-gf",
+      "reason": "If 133 °C annealed HDT is enough and process cost matters, PETG-GF runs in a normal 240-260 °C window rather than 280-300 °C and costs $25-35 vs $45-55 — you give up base PET's 0.5 % water absorption and some stiffness."
+    },
+    {
+      "filament_id": "pet-cf",
+      "reason": "The stiffer, hotter grade of the same base: comp 9 vs 8 and temp 9 vs 6, with HDT 205 °C as printed rather than 78 °C unannealed — bought with ease 3 vs 5 and a mandatory 45-60 °C heated chamber."
+    },
+    {
+      "filament_id": "pet",
+      "reason": "Unfilled if you can live with warp 7 vs 3 and roughly half the modulus: $18-35, no hardened nozzle, AMS-compatible, and full retained impact — annealing the glass grade costs roughly half its Charpy strength."
+    },
+    {
+      "filament_id": "petg-cf",
+      "reason": "The cheapest route to a stiff, dimensionally quiet part ($25-67, warp 2, stab 8) when heat is irrelevant: no 280-300 °C nozzle, no annealing workflow — and no path past ~70 °C HDT (temp 5 vs 6)."
+    }
+  ],
   "emissions": {
     "voc_level": "moderate",
     "particulate_level": "moderate",

@@ -255,6 +255,28 @@
       "notes": "Backfilled from plate entry (reciprocity)"
     }
   ],
+  "alternatives": [
+    {
+      "filament_id": "pla-plus",
+      "reason": "Same PLA process window and hardware for markedly better impact toughness and layer adhesion (adh 8 vs 6); you give up some stiffness and tensile strength, print slower (40-50 mm/s), and pay $22-45 vs $14-35. Heat resistance is unchanged (temp 2 both, HDT ~53-58 °C)."
+    },
+    {
+      "filament_id": "petg",
+      "reason": "The standard step up when PLA's ~55-60 °C softening, creep or brittleness is the problem: temp 5 vs 2, water 9 vs 6 and adh 9 vs 6, still with no enclosure — bought with harder printing (ease 7 vs 10), stringing/oozing and supports that fuse to the part."
+    },
+    {
+      "filament_id": "pla-hf",
+      "reason": "Identical lactide chemistry and identical strength/heat scores, rheology-tuned for 100-300 mm/s instead of roughly 40-100 mm/s; the only costs are mandatory near-100 % part cooling, a glossier less forgiving finish and $18-30 vs $14-35."
+    },
+    {
+      "filament_id": "pla-ht",
+      "reason": "For a part that must survive above 60 °C while still printing warp-free (warp 1 both): annealing lifts temp 2 to 6 (HDT 85 °C unfilled, 150 °C+ glass-filled) — paid for with a mandatory 30-min bake, ~1.8 % X/Y shrink compensation and weaker layers (adh 4 vs 6)."
+    },
+    {
+      "filament_id": "asa",
+      "reason": "If the part lives outdoors, PLA is simply the wrong material (uv 3, weath 2); ASA is uv 9 / weath 9 with temp 7 vs 2 at a comparable $18-45 — bought with enclosure printing, ventilation, ease 5 vs 10 and warp 7 vs 1."
+    }
+  ],
   "emissions": {
     "voc_level": "low",
     "particulate_level": "low",

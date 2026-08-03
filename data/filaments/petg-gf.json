@@ -167,6 +167,24 @@
       "notes": "Backfilled from plate entry (Phase E reciprocity): As PETG-CF."
     }
   ],
+  "alternatives": [
+    {
+      "filament_id": "petg",
+      "reason": "Unfilled when stiffness and dimensional stability are not the constraint: ease 7 vs 6, no hardened nozzle, better bonding (adh 9 vs 7), less moisture fuss and a lower floor ($18-42 vs $25-35) — you lose stab 9 vs 7, temp 7 vs 5 and the annealed 133 °C HDT."
+    },
+    {
+      "filament_id": "petg-cf",
+      "reason": "Stiffer and more dimensionally quiet with a matte-black finish, but more brittle with weaker layers (adh 6 vs 7) and no heat gain at all (temp 5 vs 7): choose CF for rigidity and looks, GF for toughness and heat."
+    },
+    {
+      "filament_id": "pet-gf",
+      "reason": "Glass on the semi-crystalline parent: the same anneal-to-134 °C trick but with genuinely low 0.5 % water absorption and modulus 4.2-4.3 GPa — at ease 5 vs 6, a 280-300 °C nozzle and $45-55 vs $25-35."
+    },
+    {
+      "filament_id": "pctg-gf",
+      "reason": "Glass on a more ductile base resin, so it should be the tougher of the two glass copolyesters (adh 8 vs 7) with the same warp-4 class — at $60/kg flat, and with no published mechanical datasheet to check the claim against."
+    }
+  ],
   "emissions": {
     "voc_level": "low",
     "particulate_level": "moderate",

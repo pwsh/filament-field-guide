@@ -172,6 +172,28 @@
       "notes": "Backfilled from plate entry (reciprocity) — see plate page"
     }
   ],
+  "alternatives": [
+    {
+      "filament_id": "tpu",
+      "reason": "The unfilled base, when flex is genuinely the point: real elastomer behaviour at 85A-95A and no hardened nozzle needed — at ease 3 vs 6, dimensional stability 4 vs 7 and temp 3 vs 6."
+    },
+    {
+      "filament_id": "tpu-68d",
+      "reason": "Similar 67-68D hardness with no abrasive filler at all: no hardened nozzle, documented AMS compatibility (yes vs conditional) and ease 7 vs 6 — but lower service temp (5 vs 6) and much worse layer adhesion (2 vs 4)."
+    },
+    {
+      "filament_id": "tpu-72d",
+      "reason": "The unfilled way to reach nylon-substitute stiffness: compressive strength 7 vs 5 and no hardened-nozzle requirement — at $70-100 vs $34-40 and with no published datasheet behind it."
+    },
+    {
+      "filament_id": "petg-gf",
+      "reason": "The rigid glass-filled comparison: better dimensional stability (9 vs 7) and temp 7 vs 6 at $25-35 — but it snaps where TPU-GF keeps 80 % elongation and a Charpy 'did not break'."
+    },
+    {
+      "filament_id": "pa12-cf",
+      "reason": "A genuine step up for load-bearing semi-rigid parts: stability 9 vs 7, load-bearing high vs moderate and outdoor-rated — at $130-180 and with nylon's drying and moisture regime."
+    }
+  ],
   "emissions": {
     "voc_level": "low",
     "particulate_level": "low",

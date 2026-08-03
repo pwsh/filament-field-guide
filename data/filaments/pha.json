@@ -195,6 +195,24 @@
       "notes": "Within this material's 50-60 °C bed band, so the plate's low thermal ceiling is not a problem; rated one step below the PEI surfaces only because nothing is documented for this blend (unverified)."
     }
   ],
+  "alternatives": [
+    {
+      "filament_id": "pla",
+      "reason": "The cheaper baseline in the same process window: ease 10 vs 9 and $14-35 vs $46-61 — you give up the PHA phase's reduced brittleness (adh 8 vs 6) and the home/marine-degradation story, which is itself the least verified thing about PHA blends."
+    },
+    {
+      "filament_id": "pla-plus",
+      "reason": "The mainstream way to buy PLA toughness: matching adh 8 and matching heat (temp 2 both), widely stocked at $22-45 vs $46-61 — but the modifier is petro-based, so the bio-degradation angle disappears entirely."
+    },
+    {
+      "filament_id": "pbat",
+      "reason": "The other compostable polyester here, and the more honest comparison for degradation claims: it is a blend component rather than a spool, weaker in every mechanical axis (comp 3 vs 7, ease 6 vs 9), and worth chasing only when certified compostability is the actual requirement."
+    },
+    {
+      "filament_id": "petg",
+      "reason": "If the part needs heat, water or any outdoor life, no PLA-window bioplastic gets there: temp 5 vs 2 and water 9 vs 5 at $18-42, bought with ease 7 vs 9 and stringing."
+    }
+  ],
   "emissions": {
     "voc_level": "low",
     "particulate_level": "low",

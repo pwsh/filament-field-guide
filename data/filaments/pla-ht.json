@@ -163,6 +163,24 @@
       "notes": "Bonds well and gives a flat glossy bottom face, but the anneal will distort that face on unsupported bakes anyway — the flatness you start with is not the flatness you finish with unless the part is sand-supported."
     }
   ],
+  "alternatives": [
+    {
+      "filament_id": "pla",
+      "reason": "If nothing ever gets hot, base PLA skips the mandatory 80-100 °C anneal and its ~1.8 % X/Y shrink compensation, bonds better (adh 6 vs 4) and costs $14-35 vs $30-45 — at the cost of temp 2 vs 6."
+    },
+    {
+      "filament_id": "petg",
+      "reason": "Heat with no post-process: usable to ~70 °C straight off the plate with far better layer adhesion (adh 9 vs 4) and water resistance (water 9 vs 6) — remember an un-annealed HT-PLA part is just PLA. Costs ease 7 vs 8, stringing and fused supports."
+    },
+    {
+      "filament_id": "asa",
+      "reason": "When the part needs heat and outdoor life together, annealed HT-PLA still loses badly on weathering: uv 9 vs 3 and weath 9 vs 3 at a similar temp (7 vs 6) and $18-45 — bought with an enclosure, ventilation, warp 7 vs 1 and ease 5 vs 8."
+    },
+    {
+      "filament_id": "pla-cf",
+      "reason": "If the failure mode is creep and flex under load rather than temperature, fibre stiffness is the cheaper, no-post-process fix (comp 9 vs 8, stab 9 vs 6) — but HDT stays ~54 °C, so it solves nothing thermally."
+    }
+  ],
   "emissions": {
     "voc_level": "low",
     "particulate_level": "low",

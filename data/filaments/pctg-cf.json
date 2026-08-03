@@ -201,6 +201,24 @@
       "notes": "Inferred from pctg and petg-cf: the same copolyester chemistry and an 80 °C bed requirement above this plate's comfortable range, plus added corner-lift force from the fiber (unverified)."
     }
   ],
+  "alternatives": [
+    {
+      "filament_id": "pctg",
+      "reason": "Unfilled when bonding and clarity matter more than rigidity: the catalog's best layer adhesion (adh 10 vs 7), full transparency, no hardened nozzle, ease 6 vs 5 and $30-55 vs a flat $55 — you give up stab 7 vs 6 and warp 4 vs 5."
+    },
+    {
+      "filament_id": "petg-cf",
+      "reason": "The mainstream equivalent with a far broader brand ecosystem, published mechanicals and a wider price floor ($25-67 vs a flat $55) — bought with PETG's less ductile base and weaker layer bonding (adh 6 vs 7)."
+    },
+    {
+      "filament_id": "pctg-gf",
+      "reason": "Same base, glass instead of carbon: tougher, non-conductive, colourable, better bonded (adh 8 vs 7) and more dimensionally stable (stab 8 vs 7) with gentler nozzle wear — at $60 vs $55 and less peak stiffness (comp 7 vs 8)."
+    },
+    {
+      "filament_id": "pet-cf",
+      "reason": "If a carbon copolyester part must also take heat, this is the only one that does: temp 9 vs 5, HDT 205 °C against PCTG-CF's PETG-class ~70 °C — bought with a 45-60 °C chamber, no AMS and ease 3 vs 5."
+    }
+  ],
   "emissions": {
     "voc_level": "moderate",
     "particulate_level": "moderate",

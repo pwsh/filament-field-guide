@@ -148,6 +148,28 @@
       "notes": "The traditional choice when the underside must be glossy, which is often the point with a clear material. Expect to need a glue stick or comparable promoter, and warm the plate towards the top of the 70-120 °C band on large parts. Inferred from ABS-class practice; no PMMA source addresses build surfaces at all."
     }
   ],
+  "alternatives": [
+    {
+      "filament_id": "mabs",
+      "reason": "The tougher clear: ABS-like impact instead of PMMA's brittleness (layer adhesion 6 vs 3), easier to print (ease 5 vs 3, warp 6 vs 8) and much cheaper ($18-30 vs $40-90) — at up to 92 % transmittance rather than true optical clarity, and effectively no UV life (uv 3 vs 9)."
+    },
+    {
+      "filament_id": "petg",
+      "reason": "The easy transparent for non-optical work: ease 7 vs 3, warp 3 vs 8, layer adhesion 9 vs 3, water tolerance 9 vs 4 and no enclosure, at $18-42/kg — with a much shorter UV life (uv 5 vs 9) and a softer, scratch-prone surface."
+    },
+    {
+      "filament_id": "asa",
+      "reason": "If UV survival rather than clarity is the real requirement, ASA matches on UV (9, equal) and beats it on weathering (9 vs 6) with far better printability (ease 5 vs 3, adhesion 4 vs 3) and heat (temp 7 vs 5) at $18-45/kg — opaque only."
+    },
+    {
+      "filament_id": "pctg",
+      "reason": "Clear, tough and open-frame printable with the catalog's best layer adhesion (10 vs 3), ease 6 vs 3 and water tolerance 9 vs 4 at $30-55/kg — giving up PMMA's hard scratch-resistant surface and a third of its UV performance (uv 6 vs 9)."
+    },
+    {
+      "filament_id": "pc",
+      "reason": "When the clear part also has to carry load and heat: temp 9 vs 5, compression 8 vs 7 and layer adhesion 8 vs 3 at $30-65/kg — but PC yellows in sunlight (uv 3 vs 9) and needs a 250-310 °C nozzle."
+    }
+  ],
   "emissions": {
     "voc_level": "moderate",
     "particulate_level": "moderate",

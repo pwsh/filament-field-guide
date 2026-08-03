@@ -213,6 +213,24 @@
       "notes": "Backfilled from plate entry (reciprocity)"
     }
   ],
+  "alternatives": [
+    {
+      "filament_id": "petg",
+      "reason": "The cheaper, easier default from the same family: ease 7 vs 6, warp 3 vs 5, a 220-250 °C window instead of 250-270 °C all-metal, and $18-42 vs $30-55 — you give up PCTG's impact toughness, optical clarity and near-isotropic bonding (adh 10 vs 9)."
+    },
+    {
+      "filament_id": "cpe",
+      "reason": "If heat is the missing piece rather than toughness: temp 7 vs 5 with better chemical resistance and still no enclosure — at $45-100 vs $30-55 and pronounced XY/Z anisotropy on the main grade, against PCTG's near-isotropic layers."
+    },
+    {
+      "filament_id": "pctg-gf",
+      "reason": "The same resin made stiff and dimensionally quiet (stab 8 vs 6, warp 4 vs 5) while keeping more bonding than the CF grade (adh 8 vs 10) — costs the clarity, a hardened nozzle, $60/kg and unpublished mechanicals."
+    },
+    {
+      "filament_id": "asa",
+      "reason": "For sustained sun, PCTG's uv 6 / weath 6 is mid-tier: ASA is 9 / 9 with temp 7 vs 5 at $18-45 — bought with an enclosure, ventilation, warp 7 vs 5, ease 5 vs 6 and much worse layer adhesion (adh 4 vs 10)."
+    }
+  ],
   "emissions": {
     "voc_level": "moderate",
     "particulate_level": "low",

@@ -187,6 +187,24 @@
       "notes": "As for the PETG family — the plate's thermal ceiling and chemistry do not suit this bed range."
     }
   ],
+  "alternatives": [
+    {
+      "filament_id": "petg",
+      "reason": "The commodity member of the same amorphous copolyester family: ease 7 vs 6, universally stocked, and $18-42 vs $45-100 — you give up 15-25 °C of Tg/HDT (temp 5 vs 7), some chemical resistance and a point of UV (5 vs 6)."
+    },
+    {
+      "filament_id": "pctg",
+      "reason": "The toughness-and-clarity direction instead of the heat direction: near-isotropic layer bonding (adh 10 vs 7) against CPE's pronounced XY/Z anisotropy, plus real impact strength, at $30-55 vs $45-100 — costs temp 5 vs 7."
+    },
+    {
+      "filament_id": "abs",
+      "reason": "Similar heat class (temp 7 both) at $18-35 vs $45-100, plus acetone smoothing — but it needs an enclosure and ventilation, warps far more (warp 8 vs 4) and prints harder (ease 4 vs 6), which is exactly the pain CPE exists to avoid."
+    },
+    {
+      "filament_id": "pc",
+      "reason": "The real step up in heat and impact for load-bearing enclosures: temp 9 vs 7 and adh 8 vs 7 at $30-65 — bought with warp 8 vs 4, ease 3 vs 6, an enclosure and strict drying."
+    }
+  ],
   "emissions": {
     "voc_level": "low",
     "particulate_level": "moderate",

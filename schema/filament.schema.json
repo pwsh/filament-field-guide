@@ -159,6 +159,19 @@
         "notes": { "type": "string" }
       }
     },
+    "alternatives": {
+      "type": "array",
+      "description": "Other catalog filaments worth considering instead, with directional trade-off reasoning (e.g. on abs: asa for easier printing + UV). Never self-referential.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["filament_id", "reason"],
+        "properties": {
+          "filament_id": { "type": "string", "description": "Existing catalog filament id" },
+          "reason": { "type": "string", "description": "The specific trade-off: what you gain and what you give up" }
+        }
+      }
+    },
     "trade_names": {
       "type": "array",
       "description": "Manufacturer-specific product names that are this material chemically (matched by makeup/specs), e.g. NinjaFlex -> tpu-85a",

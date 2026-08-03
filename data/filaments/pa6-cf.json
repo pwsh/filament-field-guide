@@ -213,6 +213,28 @@
       "notes": "Backfilled from plate entry (Phase E reciprocity): As PA."
     }
   ],
+  "alternatives": [
+    {
+      "filament_id": "pa12-cf",
+      "reason": "The humid-service answer: retains ~85 % of dry tensile after conditioning where PA6-CF keeps only 56 % and loses two-thirds of its stiffness, with better dimensional stability (9 vs 6), lower warp (2 vs 3) and higher water tolerance (8 vs 2) — at $130-180/kg and ~40 °C less HDT (150 vs 190 °C, temp 6 vs 8)."
+    },
+    {
+      "filament_id": "pa6-gf",
+      "reason": "The same base reinforced for toughness rather than stiffness: markedly better impact and layer adhesion (6 vs 4), less abrasive to hotends and feed paths, and colourable, at $55-65/kg against $79-135 — giving up stiffness (compression 8 vs 9) and a little warp control (4 vs 3)."
+    },
+    {
+      "filament_id": "pa-cf",
+      "reason": "Half the price ($40-60 vs $79-135) for a CF nylon of unspecified grade — sensible when cost and availability dominate, worse on stiffness, heat and warp (compression 7 vs 9, temp 7 vs 8, warp 4 vs 3) and unpredictable because the base polyamide is not published."
+    },
+    {
+      "filament_id": "ppa-cf",
+      "reason": "Step up in heat: HDT 227 °C against 175-215 °C (temp 9 vs 8) with compression 10 vs 9 — at $172-266/kg, a 280-315 °C nozzle, an explicit 50-80 °C chamber spec and worse anisotropy (adhesion 3 vs 4)."
+    },
+    {
+      "filament_id": "pet-cf",
+      "reason": "If the drying regime is the dealbreaker, CF PET matches on the score sheet (compression 9 equal, temp 9 vs 8) with far better water tolerance (9 vs 2) at $35-45/kg — but without nylon's wear, fatigue and impact behaviour, and with worse printability (ease 3 vs 5)."
+    }
+  ],
   "emissions": {
     "voc_level": "high",
     "particulate_level": "moderate",

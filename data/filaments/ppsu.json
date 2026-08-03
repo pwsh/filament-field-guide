@@ -149,6 +149,28 @@
       "notes": "Backfilled from plate entry (Phase E reciprocity): Far outside the rated range."
     }
   ],
+  "alternatives": [
+    {
+      "filament_id": "pei-ultem",
+      "reason": "Half the price ($195-290 vs $400-600) with the same amorphous 8/8 stability-and-adhesion profile and more stiffness (compressive 7 vs 6) — but water tolerance falls to 6, drying jumps to 150 °C, and it will not take repeated steam autoclaving."
+    },
+    {
+      "filament_id": "peek",
+      "reason": "A higher service ceiling (temp 10 vs 8) and near-total chemical resistance — at $400-900, a 375-410 °C industrial hotend, warp 10 vs 5 and stability 5 vs 8, and it cracks under impacts PPSU absorbs."
+    },
+    {
+      "filament_id": "pps-cf",
+      "reason": "A quarter of the cost ($100-200) with comparable water and chemical class, better stiffness (compressive 9 vs 6) and a consumer high-temp hotend path with no chamber — but Tg 85 °C against PPSU's 220 °C, so it cannot hold load hot."
+    },
+    {
+      "filament_id": "pekk",
+      "reason": "Similar money ($495-700) for a higher continuous rating (260 °C vs 180 °C) — traded for worse warp (8 vs 5), lower toughness and layer adhesion (7 vs 8), and no steam-sterilisation or ISO 10993 story."
+    },
+    {
+      "filament_id": "pc",
+      "reason": "If autoclaving and 180 °C service are not actually required: PC scores temp 9 on ordinary enclosed hardware at $30-65 with similar toughness (adhesion 8) — far weaker in steam, hot water and chemicals (water 5 vs 10)."
+    }
+  ],
   "emissions": {
     "voc_level": "moderate",
     "particulate_level": "high",

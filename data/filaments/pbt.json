@@ -158,6 +158,24 @@
       "notes": "Polypropylene sheet is not rated for a sustained 100-130 °C bed."
     }
   ],
+  "alternatives": [
+    {
+      "filament_id": "pc-pbt",
+      "reason": "The blend, and far better documented: stronger (50.4 MPa, compression 8 vs 7), much hotter (HDT ~140 °C against PBT's 110 °C Vicat, temp 8 vs 5), better dimensional stability (7 vs 5) and actually cheaper ($36-37 vs $40-70) — at the cost of a mandatory maintained 100-110 °C heated chamber and harder printing (ease 3 vs 4)."
+    },
+    {
+      "filament_id": "petg",
+      "reason": "If the draw was simply a tough, water-tolerant polyester, PETG is far easier (ease 7 vs 4, warp 3 vs 7), needs no 100-130 °C bed, bonds far better (adhesion 9 vs 6) and is universally available at $18-42/kg — with lower heat and chemical tolerance and none of PBT's -30 °C impact retention."
+    },
+    {
+      "filament_id": "pet",
+      "reason": "The closest well-supported semi-crystalline polyester: slightly more heat (temp 6 vs 5), better water tolerance (9 vs 8) and a far deeper filament market at $18-35/kg against PBT's single dedicated TDS — but it warps just as much (7, equal) and lacks the cold-impact toughness."
+    },
+    {
+      "filament_id": "pa612",
+      "reason": "When the cold-impact and chemical brief also needs real heat and stiffness: compression 8 vs 7 and temp 7 vs 5 with HDT@0.45 MPa 175 °C, at far lower warp (3 vs 7) — paid for with ~$65-77/kg, a hardened nozzle, a 250-300 °C nozzle window and nylon drying."
+    }
+  ],
   "emissions": {
     "voc_level": "low",
     "particulate_level": "moderate",

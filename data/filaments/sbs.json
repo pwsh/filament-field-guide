@@ -138,6 +138,28 @@
       "notes": "Undocumented for SBS. Worth using where the underside is a viewing face on a part destined for d-limonene smoothing, with hairspray or glue stick as the promoter, mirroring the glass routine. Unverified."
     }
   ],
+  "alternatives": [
+    {
+      "filament_id": "tpu-95a",
+      "reason": "A far better-documented flexible with real elastomer stretch, better UV and weather behaviour (uv 4 vs 2) and published tensile numbers — at the same ease 5 but with a direct-drive preference SBS does not impose."
+    },
+    {
+      "filament_id": "asa",
+      "reason": "If the part goes outdoors at all, SBS is the wrong choice: ASA is uv 9 vs 2 and weather 9 vs 3 at similar money ($18-45) — traded for a rigid part, an enclosure and warp 7 vs 3."
+    },
+    {
+      "filament_id": "hips",
+      "reason": "The other limonene-soluble styrenic: the same solvent-smoothing and dissolving chemistry, and it doubles as a breakaway support, at a documented $20-50 — but rigid, warp 6 vs 3, and it wants an enclosure."
+    },
+    {
+      "filament_id": "pvb",
+      "reason": "If the appeal was solvent smoothing to a glassy finish rather than flexibility: IPA instead of d-limonene, ease 9 vs 5 and real datasheet numbers — but rigid, brittle in Z, and heat-limited (temp 3 vs 4)."
+    },
+    {
+      "filament_id": "tpe",
+      "reason": "More genuinely rubbery at similar cost ($25-45) with the same food/skin-contact certified-line status and better UV (4 vs 2) — traded for much harder printing (ease 3 vs 5) and a direct-drive mandate."
+    }
+  ],
   "emissions": {
     "voc_level": "low",
     "particulate_level": "low",

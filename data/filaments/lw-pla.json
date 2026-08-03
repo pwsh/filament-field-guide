@@ -155,6 +155,24 @@
       "notes": "No LW-PLA-specific build-surface guidance was found in any fetched source; textured PEI is inferred from base-PLA practice and rated 'usable' rather than 'recommended' on that basis (unverified). Reduced extrusion flow makes the first layer thinner than usual, so the first layer is worth printing unfoamed (~205 °C) at normal flow for adhesion."
     }
   ],
+  "alternatives": [
+    {
+      "filament_id": "pla",
+      "reason": "Base PLA when the weight saving is not worth the strength collapse: bending stiffness 3200 vs 900 MPa and Z adhesion 33 vs 4.3 MPa (adh 6 vs 2, comp 8 vs 2), no per-model foaming calibration, ease 10 vs 5 and $14-35 vs $36-41 — at roughly double the printed density."
+    },
+    {
+      "filament_id": "lw-asa",
+      "reason": "The same foaming trick on ASA for RC and aero parts that live in the sun: uv 8 vs 3, weath 8 vs 2 and temp 6 vs 2 — bought with enclosure printing (ease 4 vs 5), warp 7 vs 3, ventilation and $45-60."
+    },
+    {
+      "filament_id": "pla-cf",
+      "reason": "If low mass mattered because you wanted stiffness per gram rather than raw lightness, CF-filled PLA is vastly stiffer (comp 9 vs 2, stab 9 vs 5) at near base-PLA density and $30-35, with a hardened nozzle and no foaming calibration."
+    },
+    {
+      "filament_id": "lw-tpu",
+      "reason": "Foamed elastomer instead of foamed rigid, for lightweight parts that must absorb impact rather than resist it: ease 3 vs 5, no AMS and $65-85."
+    }
+  ],
   "emissions": {
     "voc_level": "moderate",
     "particulate_level": "moderate",

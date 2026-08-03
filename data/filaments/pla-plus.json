@@ -208,6 +208,24 @@
       "notes": "Backfilled from plate entry (reciprocity)"
     }
   ],
+  "alternatives": [
+    {
+      "filament_id": "pla",
+      "reason": "If the part is decorative or lightly loaded, base PLA prints easier and faster (ease 10 vs 8, 190-230 °C vs 210-250 °C) and costs less ($14-35 vs $22-45); you give up the impact modifier's toughness and its Z-strength advantage (adh 6 vs 8)."
+    },
+    {
+      "filament_id": "petg",
+      "reason": "When 'tougher' really means 'must also take heat and water': temp 5 vs 2, water 9 vs 6 and even better bonding (adh 9 vs 8), at ease 7 vs 8 plus stringing and fused supports."
+    },
+    {
+      "filament_id": "pha",
+      "reason": "The other PLA-window toughness route: a PLA/PHA blend keeps ease 9 and warp 1 while cutting brittleness (adh 8, same as PLA+), and adds a bio-degradation story — at $46-61 vs $22-45, and it does nothing for heat either (temp 2 both)."
+    },
+    {
+      "filament_id": "abs-plus",
+      "reason": "If the requirement is real impact plus real heat rather than 'less brittle PLA': temp 6 vs 2, acetone smoothing and $15-25/kg — bought with an enclosure, ventilation, warp 7 vs 1 and ease 5 vs 8."
+    }
+  ],
   "emissions": {
     "voc_level": "low",
     "particulate_level": "low",

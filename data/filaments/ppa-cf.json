@@ -181,6 +181,28 @@
       "notes": "Backfilled from plate entry (Phase E reciprocity): Bed temperature crowds the ceiling and adhesion behaviour is uncharacterised."
     }
   ],
+  "alternatives": [
+    {
+      "filament_id": "pa6-cf",
+      "reason": "Half the price ($79-135 vs $172-266), a cooler 260-300 °C nozzle, no chamber-temperature specification and a better layer bond (adhesion 4 vs 3) — at 40-50 °C less HDT (175-215 vs 227 °C, temp 8 vs 9) and lower strength (compression 9 vs 10)."
+    },
+    {
+      "filament_id": "ppa",
+      "reason": "Unfilled PPA if ductility matters more than stiffness: layer adhesion 6 vs 3 and cheaper ($150-200 vs $172-266) — but warp jumps from 3 to 8, ease drops from 3 to 1, the nozzle window opens to 280-390 °C and a true heated chamber becomes mandatory."
+    },
+    {
+      "filament_id": "pps-cf",
+      "reason": "The same temperature class (temp 9, equal) but genuinely outdoor- and chemical-proof (uv 9 vs 4, weather 9 vs 6, water 9 vs 6) with a better layer bond (5 vs 3), better dimensional stability (8 vs 7) and often cheaper ($100-200 vs $172-266) — giving up peak strength (compression 9 vs 10) and polyamide toughness."
+    },
+    {
+      "filament_id": "pei-ultem",
+      "reason": "An amorphous alternative with far better layer adhesion (8 vs 3) and dimensional stability (8 vs 7) and none of the polyamide drying marathon — at $195-290/kg, a mandatory heated chamber and lower strength (compression 7 vs 10)."
+    },
+    {
+      "filament_id": "pc-gf",
+      "reason": "A large step down in cost ($100-115 vs $172-266) and drying discipline while keeping most of the stiffness and heat (compression 9 vs 10, temp 9 equal) — but it needs hardened drive gears as well as a hardened nozzle, and elongation collapses to 2.5 %."
+    }
+  ],
   "emissions": {
     "voc_level": "high",
     "particulate_level": "high",

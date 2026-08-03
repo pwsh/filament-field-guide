@@ -191,6 +191,24 @@
       "notes": "Polymaker's low 25-50 °C bed would fit thermally, but taulman Bridge's 80-100 °C bed does not, and vendor guidance routes nylons to engineering plates regardless."
     }
   ],
+  "alternatives": [
+    {
+      "filament_id": "pa12",
+      "reason": "The other calm nylon, and the one that is genuinely low-moisture: water tolerance 7 vs 2 and under 1 % uptake, so it does not need CoPA's 100 °C/8 h dry and sub-20 % RH storage, and it needs no hardened nozzle — at double the warp (6 vs 3), a weaker layer bond (8 vs 9) and $55-90/kg."
+    },
+    {
+      "filament_id": "pa6",
+      "reason": "The cheap stiff homopolymer at $35-70/kg if you can absorb the process cost — but warp 9 vs 3, dimensional stability 2 vs 5 and ease 3 vs 5; CoPA exists precisely to avoid that trade."
+    },
+    {
+      "filament_id": "pa612",
+      "reason": "Steps up heat and stiffness at similarly low warp (3, equal): compression 8 vs 7 and temp 7 vs 5, with HDT@0.45 MPa 175 °C against CoPA's 111 °C — at a 250-300 °C nozzle, ~$65-77/kg and a much weaker layer bond (4 vs 9)."
+    },
+    {
+      "filament_id": "pa6-gf",
+      "reason": "When the low-warp nylon also has to be stiff and hot: HDT ~182 °C and compression 8 vs 7 at comparable warp (4 vs 3), paid for with a big loss of layer adhesion (6 vs 9) and PA6's full moisture problem (water 2, equal, but 2.56 % uptake and weather-driven dimensional drift)."
+    }
+  ],
   "emissions": {
     "voc_level": "moderate",
     "particulate_level": "moderate",

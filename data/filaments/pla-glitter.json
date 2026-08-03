@@ -171,6 +171,24 @@
       "notes": "Reflective bases carry the holographic pattern well, as with silk and metallic PLA, but a bottom face already full of flake competes with the diffraction effect rather than amplifying it. Extrapolated from the silk/metallic pairing rather than directly reported."
     }
   ],
+  "alternatives": [
+    {
+      "filament_id": "pla",
+      "reason": "Base PLA when the sparkle is not needed: identical mechanicals, no 0.4 mm nozzle floor, a milder dry (45-55 °C / 6 h vs 55 °C / 8 h) and $14-35 vs $22-30."
+    },
+    {
+      "filament_id": "pla-silk",
+      "reason": "A shinier route to 'not plain PLA' at $20-23, but the gloss package costs real layer adhesion and elongation (adh 4 vs 6, 2.8 % XY) where glitter keeps base-PLA strength."
+    },
+    {
+      "filament_id": "pla-glow",
+      "reason": "A different light effect — phosphorescent rather than reflective — with unusually good bonding for a filled PLA (Z 26 vs XY 32 MPa); the cost is a mandatory hardened nozzle and a phosphor abrasive enough to chew AMS feeder parts, where glitter flake only limits nozzle diameter."
+    },
+    {
+      "filament_id": "pla-metal",
+      "reason": "For a heavier, genuinely metallic sparkle that can be sanded and polished; markedly harder to print (ease 5 vs 9), brittle at 1-3 % elongation on true heavy fills, and up to $65/kg."
+    }
+  ],
   "emissions": {
     "voc_level": "low",
     "particulate_level": "low",

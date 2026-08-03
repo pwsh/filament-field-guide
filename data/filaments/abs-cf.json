@@ -192,6 +192,28 @@
       "notes": "As abs-gf: fiber fill reduces warp but does not make a polyolefin coating hold a styrenic."
     }
   ],
+  "alternatives": [
+    {
+      "filament_id": "abs",
+      "reason": "Drop the fiber when the part does not need the stiffness: base ABS is roughly half the price ($18-35 vs $32-70), needs no hardened nozzle and keeps a brass-nozzle machine intact — at the cost of dimensional stability (4 vs 8) and warp (8 vs 5)."
+    },
+    {
+      "filament_id": "abs-gf",
+      "reason": "The cheaper filled sibling ($25-35 vs $32-70) with the same warp suppression (warp 5, dim 7 vs 8) and available in colour rather than black; less stiff and with a weaker layer bond (adhesion 4 vs 5)."
+    },
+    {
+      "filament_id": "asa-cf",
+      "reason": "The same CF benefits with the indoor-only problem solved (uv 9 vs 2, weather 9 vs 2) and higher stiffness (compression 8 vs 7), at roughly double the price ($70-112 vs $32-70) and worse layer adhesion still (3 vs 5)."
+    },
+    {
+      "filament_id": "petg-cf",
+      "reason": "If the enclosure and the styrene fumes are the obstacle rather than the strength, CF PETG prints open-frame with less warp (2 vs 5) and higher compression (8 vs 7) for less money ($25-67), giving up 2 points of heat tolerance (temp 5 vs 7)."
+    },
+    {
+      "filament_id": "pa6-cf",
+      "reason": "Step up in stiffness and heat: HDT 175-215 °C against ABS-CF's ~97 °C (temp 8 vs 7, compression 9 vs 7), for 2-4x the price ($79-135) and nylon's 3-9 % moisture uptake and drying discipline (water 2 vs 5)."
+    }
+  ],
   "emissions": {
     "voc_level": "high",
     "particulate_level": "high",

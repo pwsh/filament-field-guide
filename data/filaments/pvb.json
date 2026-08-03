@@ -199,6 +199,28 @@
       "notes": "Backfilled from plate entry (Phase E reciprocity): Bed temp is within range and translucent PVB should show the pattern well, but no vendor documents PVB on these coatings (unverified). Keep IPA off the part."
     }
   ],
+  "alternatives": [
+    {
+      "filament_id": "pla",
+      "reason": "Cheaper ($14-35 vs $33-50), easier still (ease 10 vs 9), stronger in compression (8 vs 5) and far less hygroscopic — but no IPA smoothing and no solvent welding, so gloss means sanding and priming."
+    },
+    {
+      "filament_id": "abs",
+      "reason": "The other solvent-smoothable route: acetone vapour gives a comparable finish on a much tougher and more heat-capable part (temp 7 vs 3) at $18-35 — traded for warp 8 vs 2, a required enclosure and styrene ventilation."
+    },
+    {
+      "filament_id": "pla-silk",
+      "reason": "If the goal was simply a glossy look with no post-processing: high sheen straight off the printer at $20-23 and similar ease (8 vs 9), with no alcohol sensitivity — but the shine is surface-level, not melted layer lines."
+    },
+    {
+      "filament_id": "petg",
+      "reason": "If the part will ever meet water, cleaners or alcohol, PVB is disqualified: PETG is water tolerance 9 vs 3, far tougher (layer adhesion 9 vs 4) and $18-42 — at ease 7 vs 9 and no smoothing route."
+    },
+    {
+      "filament_id": "sbs",
+      "reason": "The flexible member of the solvent-smoothing family: d-limonene takes it to genuine transparency and it is rubber-adjacent rather than brittle — but ease 5 vs 9 and the catalog's worst UV rating (2)."
+    }
+  ],
   "emissions": {
     "voc_level": "low",
     "particulate_level": "low",

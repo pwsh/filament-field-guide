@@ -171,6 +171,28 @@
       "notes": "Backfilled from plate entry (Phase E reciprocity): High shrinkage; garolite preferred."
     }
   ],
+  "alternatives": [
+    {
+      "filament_id": "pa6",
+      "reason": "Easier and cheaper for most of the same job (ease 3 vs 2, warp 9 vs 10, $35-70 vs $44-75) with a much better layer bond (adhesion 9 vs 7) — you give up stiffness, creep resistance and the ~135 °C service temperature (compression 7 vs 8, temp 5 vs 7)."
+    },
+    {
+      "filament_id": "copa",
+      "reason": "Many spools labelled 'PA6/66' are really this copolymer, and it prints in another league (warp 3 vs 10, ease 5 vs 2, dim 5 vs 3) while keeping nylon toughness (adhesion 9 vs 7) — at lower heat resistance (temp 5 vs 7, HDT 111 °C) and a hardened-nozzle requirement."
+    },
+    {
+      "filament_id": "pa612",
+      "reason": "Keeps PA66-class stiffness and heat (compression 8 and temp 7, both equal) with a fraction of the warp (3 vs 10), better dimensional stability (7 vs 3) and better moisture behaviour (water 6 vs 2) — at ~$65-77/kg, a hardened nozzle and a weaker layer bond (4 vs 7)."
+    },
+    {
+      "filament_id": "pa6-cf",
+      "reason": "If PA66 was chosen for stiffness and heat, CF PA6 delivers more of both (compression 9 vs 8, temp 8 vs 7, HDT 175-215 °C) with warp 3 vs 10 — at $79-135/kg, a hardened nozzle and brittle Z behaviour (adhesion 4 vs 7)."
+    },
+    {
+      "filament_id": "ppa",
+      "reason": "The genuine high-temperature nylon when ~135 °C service is not enough: temp 9 vs 7 with HDT from 196 °C to 260 °C and Tg 125 °C — at $150-200/kg, a heated chamber, a 280-390 °C nozzle and even worse printability (ease 1 vs 2)."
+    }
+  ],
   "emissions": {
     "voc_level": "high",
     "particulate_level": "moderate",

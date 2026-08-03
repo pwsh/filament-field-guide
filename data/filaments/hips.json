@@ -219,6 +219,28 @@
       "notes": "Backfilled from plate entry (Phase E reciprocity): Bed temp sits at the top of the coating's rated band with no benefit — use a textured PEI plate instead."
     }
   ],
+  "alternatives": [
+    {
+      "filament_id": "support-breakaway",
+      "reason": "The mechanical-release support when you do not want to handle limonene: it peels away with no solvent bath and pairs with more base materials, and it is easier to print (ease 6 vs 5, warp 3 vs 6) — but it leaves witness marks and cannot clear fully enclosed cavities the way dissolved HIPS can."
+    },
+    {
+      "filament_id": "pva",
+      "reason": "Water-soluble rather than limonene-soluble, so it clears internal geometry HIPS cannot reach and pairs with PLA, PETG and nylon instead of ABS/ASA — at 2-6x the price ($50-120 vs $20-50), harder printing (ease 3 vs 5) and extreme moisture sensitivity (water tolerance 1 vs 7)."
+    },
+    {
+      "filament_id": "bvoh",
+      "reason": "Faster and more complete water dissolution than PVA with a wider bonding range and much better printability (ease 5, warp 2 vs 6) — but by far the priciest support here ($150-250/kg against HIPS's $20-50) and just as hygroscopic (water 2 vs 7)."
+    },
+    {
+      "filament_id": "abs",
+      "reason": "As a build material rather than a support: the same styrenic process and enclosure, but with real engineering properties — compression 7 vs 5, temp 7 vs 5 — at similar money, giving up HIPS's low density, lower shrinkage and easy sanding."
+    },
+    {
+      "filament_id": "lw-pla",
+      "reason": "For lightweight props and airframes without an enclosure: easier and far calmer (warp 3 vs 6) at $36-41 — but no heat resistance (temp 2 vs 5) and a much weaker part (adhesion 2 vs 6, compression 2 vs 5)."
+    }
+  ],
   "emissions": {
     "voc_level": "high",
     "particulate_level": "high",

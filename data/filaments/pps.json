@@ -148,6 +148,28 @@
       "notes": "Backfilled from plate entry (Phase E reciprocity): Far outside the rated range."
     }
   ],
+  "alternatives": [
+    {
+      "filament_id": "pps-cf",
+      "reason": "The grade most engineering users actually buy: warp 9 down to 3, dimensional stability 5 up to 8, nozzle 310-350 °C instead of 365-390 °C (inside a consumer high-temp hotend's reach) and no chamber or enclosure needed — for a mandatory hardened nozzle and layer adhesion that drops below the base (5 vs 6)."
+    },
+    {
+      "filament_id": "ppsu",
+      "reason": "If the 85 °C Tg is the real problem: PPSU holds stiffness to a 180 °C service rating with equal water tolerance, far better toughness (adhesion 8 vs 6) and much lower warp (5 vs 9) — at three to four times the price ($400-600 vs $140-200)."
+    },
+    {
+      "filament_id": "pp",
+      "reason": "The cheap chemical-resistance answer: the same 10/10 water tolerance and excellent solvent resistance at $40-70 on hardware anyone owns — but temp 6 vs 8, warp 10 vs 9, and none of PPS's inherent flame retardancy."
+    },
+    {
+      "filament_id": "peek",
+      "reason": "A vastly higher Tg (143 vs 85 °C) and service ceiling (temp 10 vs 8) with better UV-stable weathering — but it loses to PPS on raw solvent resistance and costs $400-900 with a mandatory heated chamber and a 375-410 °C hotend."
+    },
+    {
+      "filament_id": "pet-cf",
+      "reason": "For stiff hot parts without the high-performance price: temp 9 vs 8 and compressive 9 vs 7 at $35-45 on standard hardware — chemical resistance is nowhere near PPS's (water 9 vs 10 understates the gap), and it is no easier to print (ease 3)."
+    }
+  ],
   "emissions": {
     "voc_level": "moderate",
     "particulate_level": "high",

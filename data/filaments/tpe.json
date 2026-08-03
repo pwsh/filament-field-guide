@@ -206,6 +206,28 @@
       "notes": "Backfilled from plate entry (Phase E reciprocity): As soft TPU; the elastomer works into the texture and tears the film on removal."
     }
   ],
+  "alternatives": [
+    {
+      "filament_id": "tpu",
+      "reason": "The mainstream flexible: better tensile strength and abrasion life, vastly more published data and far wider brand choice at overlapping prices ($20-70) — but a less rubbery feel and only conditional food-contact status."
+    },
+    {
+      "filament_id": "tpu-95a",
+      "reason": "The specific grade to reach for if TPE's printing pain is the problem: ease 5 vs 3, 25-45 mm/s, working retraction and a survivable short Bowden path."
+    },
+    {
+      "filament_id": "sbs",
+      "reason": "The other elastomer with food-certified lines, and far easier to print (ease 5 vs 3) with no direct-drive mandate and PLA-adjacent speeds — but firmer, and its uv 2 vs 4 rules out any sunlight exposure."
+    },
+    {
+      "filament_id": "peba",
+      "reason": "High rebound instead of damping, better weather tolerance (5 vs 4) and ~12 % lighter, with excellent oil resistance — at 2-3x the price ($75-110 vs $25-45) and a nylon-style drying regime."
+    },
+    {
+      "filament_id": "pe",
+      "reason": "If the real requirement is inertness and water rather than softness: water tolerance 10 vs 7 with food-safe certified lines — but a rigid part, and among the hardest things in the catalog to print (ease 2, warp 9)."
+    }
+  ],
   "emissions": {
     "voc_level": "low",
     "particulate_level": "low",

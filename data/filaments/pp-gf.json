@@ -195,6 +195,28 @@
       "notes": "Backfilled from plate entry (Phase E reciprocity): As PP; glass fill lowers warp but does nothing for the surface-energy mismatch."
     }
   ],
+  "alternatives": [
+    {
+      "filament_id": "pp-cf",
+      "reason": "Carbon instead of glass at a lower density, keeping more of PP's volume-per-spool advantage, with better dimensional stability (8 vs 7), a slightly better UV score (6 vs 5) and a narrower, lower price band ($85-140 vs $85-215); warp, heat and compression are the same."
+    },
+    {
+      "filament_id": "pp",
+      "reason": "Base PP for half or less ($40-70 vs $85-215) with a better layer bond (adhesion 7 vs 5) and no hardened nozzle — if you can live with the catalog's worst warp (10 vs 4), dimensional stability 4 vs 7 and HDT dropping from 127 °C to ~95 °C."
+    },
+    {
+      "filament_id": "petg-gf",
+      "reason": "The easy glass-filled alternative: open-frame, sticks to any plate, dim 9 vs 7, warp 2 vs 4, ease 6 vs 4 and a much better layer bond (7 vs 5) at $25-35/kg — but water tolerance drops 10 to 9 with far less chemical resistance, and none of PP's fatigue or living-hinge behaviour."
+    },
+    {
+      "filament_id": "pa6-gf",
+      "reason": "Glass-filled nylon when you need real stiffness and heat on a normal build surface: equal compression (8) with HDT ~182 °C against 127 °C (temp 8 vs 7) at $55-65/kg — paid for with extreme hygroscopy (water 2 vs 10) and constant drying."
+    },
+    {
+      "filament_id": "pe",
+      "reason": "If the requirement is food-contact-certified chemical inertness rather than stiffness, PE has certified lines at $25-45/kg with the same water tolerance (10) — at base-PP-grade warp (9 vs 4), lower heat (temp 5 vs 7) and much weaker parts (compression 6 vs 8)."
+    }
+  ],
   "emissions": {
     "voc_level": "low",
     "particulate_level": "low",

@@ -154,6 +154,28 @@
       "notes": "Backfilled from plate entry (Phase E reciprocity): As PEEK."
     }
   ],
+  "alternatives": [
+    {
+      "filament_id": "peek",
+      "reason": "The reference material of the cluster — higher peak service temperature (temp 10 vs 9) and better-established data — but harder in every printing respect (ease 1 vs 2, warp 10 vs 8, 375-410 °C nozzle), and its $400-900 band undercuts PEKK's $495 floor."
+    },
+    {
+      "filament_id": "pei-ultem",
+      "reason": "Half the price or less ($195-290 vs $495-700), amorphous so it holds tolerance (stability 8 vs 7) and warps far less (6 vs 8), and it prints cooler — at a lower ceiling (~180 °C continuous vs 260 °C)."
+    },
+    {
+      "filament_id": "ppsu",
+      "reason": "Comparable money ($400-600) for much better impact toughness, water and steam tolerance (10 vs 9) and lower warp (5 vs 8) — service temperature drops to 180 °C and compressive strength to 6 vs 8."
+    },
+    {
+      "filament_id": "pps-cf",
+      "reason": "A fifth to a quarter of the cost ($100-200) at the same temp 9, with better UV and weather ratings and a printable path on a high-temp consumer hotend without a heated chamber — the catch is a Tg of 85 °C and layer adhesion 5 vs 7."
+    },
+    {
+      "filament_id": "ppa-cf",
+      "reason": "If the requirement is high-temperature structural rather than polyketone chemistry: the catalog's highest compressive strength (10 vs 8) at temp 9 for $172-266, and no mandatory heated chamber — but nylon-grade moisture uptake and far worse chemical resistance."
+    }
+  ],
   "emissions": {
     "voc_level": "moderate",
     "particulate_level": "high",

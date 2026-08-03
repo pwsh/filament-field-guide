@@ -201,6 +201,24 @@
       "notes": "Inferred from pctg and petg-cf: the same copolyester chemistry and an 80 °C bed above this plate's comfortable range (unverified)."
     }
   ],
+  "alternatives": [
+    {
+      "filament_id": "pctg",
+      "reason": "Unfilled when stiffness is not the constraint: the catalog's best layer bonding (adh 10 vs 8), full clarity, no hardened nozzle and $30-55 vs a flat $60 — you give up stab 8 vs 6 and warp 4 vs 5."
+    },
+    {
+      "filament_id": "pctg-cf",
+      "reason": "The stiffer sibling off the same resin (comp 8 vs 7) with a matte-black finish at $55 vs $60 — bought with faster nozzle wear, worse bonding (adh 7 vs 8), electrical conductivity and no colour options."
+    },
+    {
+      "filament_id": "petg-gf",
+      "reason": "The established glass copolyester: cheaper ($25-35 vs $60), documented, and with a genuine annealed HDT up to 133 °C (temp 7 vs 5) — giving up PCTG's more ductile base and its bonding advantage (adh 8 vs 7)."
+    },
+    {
+      "filament_id": "pet-gf",
+      "reason": "Glass on semi-crystalline PET for the heat and moisture case: anneals to 134 °C and absorbs only 0.5 % water (water 9 vs 7) — at a 280-300 °C nozzle window and $45-55 vs $60."
+    }
+  ],
   "emissions": {
     "voc_level": "moderate",
     "particulate_level": "moderate",

@@ -185,6 +185,24 @@
       "notes": "Backfilled from plate entry (reciprocity)"
     }
   ],
+  "alternatives": [
+    {
+      "filament_id": "asa",
+      "reason": "Base ASA at a third to a half the price ($18-45 vs $70-112), with a better layer bond (adhesion 4 vs 3) and no hardened nozzle — you give back the stiffness and the warp suppression (compression 6 vs 8, warp 7 vs 4, dim 7 vs 8)."
+    },
+    {
+      "filament_id": "asa-gf",
+      "reason": "The same outdoor package with near-identical warp control (warp 5 vs 4, dim 8 both) for roughly half the price ($34-45 vs $70-112), pigmentable rather than black-only and less abrasive; slightly less stiff (compression 7 vs 8) and barred from AMS feeding."
+    },
+    {
+      "filament_id": "abs-cf",
+      "reason": "The indoor equivalent at half the cost ($32-70 vs $70-112) with a better layer bond (adhesion 5 vs 3) and easier sourcing — but no UV or weather life at all (uv 2 vs 9, weather 2 vs 9)."
+    },
+    {
+      "filament_id": "pa12-cf",
+      "reason": "Step up for outdoor structural parts: better dimensional stability (9 vs 8), lower warp (2 vs 4) and a much better layer bond (5 vs 3), holding ~85 % of dry tensile when moisture-conditioned — at $130-180/kg and nylon's drying discipline."
+    }
+  ],
   "emissions": {
     "voc_level": "high",
     "particulate_level": "high",

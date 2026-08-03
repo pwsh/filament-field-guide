@@ -164,6 +164,20 @@
       "notes": "Backfilled from plate entry (Phase E reciprocity): As PETG; separator layer also keeps conductive filler off the film."
     }
   ],
+  "alternatives": [
+    {
+      "filament_id": "petg",
+      "reason": "If the part does not truly need 10⁴-10⁹ Ω surface resistivity, base PETG is the same polymer at $18-42 vs $105-140: easier (ease 7 vs 6), far better bonded (adh 9 vs 6 — the ESD grade measures 48.1 MPa XY against 19.3 MPa Z), no hardened nozzle, better UV (5 vs 3) and available in colours rather than black only."
+    },
+    {
+      "filament_id": "abs-esd",
+      "reason": "The styrenic route to the same static control: real heat (temp 7 vs 5) and acetone smoothing for electronics enclosures — bought with ease 4 vs 6, an enclosure plus ventilation, warp 8 vs 3 and an even wider $45-140 band."
+    },
+    {
+      "filament_id": "petg-cf",
+      "reason": "Often mistaken for an ESD material because it is black and carbon-loaded: much stiffer (comp 8 vs 6) and far cheaper ($25-67 vs $105-140), but its resistivity is not specified or controlled — only an option when the requirement is stiffness, not static dissipation."
+    }
+  ],
   "emissions": {
     "voc_level": "low",
     "particulate_level": "moderate",

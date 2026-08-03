@@ -207,6 +207,24 @@
       "notes": "Backfilled from plate entry (reciprocity)"
     }
   ],
+  "alternatives": [
+    {
+      "filament_id": "tpu-90a",
+      "reason": "One step firmer and the point where the hardware gate disappears: 90A is rated for 0.4 mm nozzles where 85A demands 0.6 or 0.8 mm, takes 0-1 mm retraction and runs 20-30 mm/s (ease 4 vs 3). The cost is a little gel-insole softness."
+    },
+    {
+      "filament_id": "tpu-95a",
+      "reason": "The mainstream grade and the best-documented in the family: ease 5 vs 3, no nozzle-diameter restriction, dimensional stability 4 vs 2, and cheaper ($40-70 vs $50-70) — firm shoe-sole feel rather than gel insole."
+    },
+    {
+      "filament_id": "tpu-60a",
+      "reason": "Go softer for gaskets and squeeze parts: silicone-like 60A with ~950 % elongation, at the family's worst printability (ease 2 vs 3, stability 1 vs 2), a near-mandatory feeding assistant, and no support at all on Bambu machines."
+    },
+    {
+      "filament_id": "tpe",
+      "reason": "Comparable softness with a more rubbery feel and food/skin-contact certified lines at roughly half the price ($25-45 vs $50-70) — weaker in tension, and equally slow to print (ease 3)."
+    }
+  ],
   "emissions": {
     "voc_level": "low",
     "particulate_level": "low",

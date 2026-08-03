@@ -218,6 +218,24 @@
       "notes": "Backfilled from plate entry (reciprocity)"
     }
   ],
+  "alternatives": [
+    {
+      "filament_id": "abs",
+      "reason": "Plain ABS when you need the heat back: base ABS's published HDT is ~99 °C against ABS+'s 73 °C (temp 7 vs 6) and it takes higher speeds, at the cost of the toughening package (adhesion 5 vs 7) for similar money ($18-35 vs $15-25)."
+    },
+    {
+      "filament_id": "asa",
+      "reason": "Same difficulty tier and the same enclosure, but it survives sunlight (uv 9 vs 2, weather 9 vs 2) and is dimensionally calmer (dim 7 vs 5, warp 7 same); costs more ($18-45 vs $15-25) and does not match ABS+'s toughened layer bond (adhesion 4 vs 7)."
+    },
+    {
+      "filament_id": "petg",
+      "reason": "Cheaper toughness without an enclosure: easier (ease 7 vs 5), far less warp (3 vs 7) and a better layer bond still (adhesion 9 vs 7) at comparable price, giving up ~20 °C of service temperature (temp 5 vs 6) and acetone smoothing."
+    },
+    {
+      "filament_id": "pc-abs",
+      "reason": "If the '+' still is not strong or hot enough, PC-ABS runs in the same 250-280 °C enclosed envelope with much higher strength and HDT (~100 °C vs 73 °C, temp 7 vs 6), at roughly triple the price ($44-48 vs $15-25)."
+    }
+  ],
   "emissions": {
     "voc_level": "high",
     "particulate_level": "high",

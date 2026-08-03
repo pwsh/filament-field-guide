@@ -202,6 +202,28 @@
       "notes": "Backfilled from plate entry (Phase E reciprocity): Requires bed temperatures above the PC sheet's usable range. Not separately documented."
     }
   ],
+  "alternatives": [
+    {
+      "filament_id": "petg",
+      "reason": "The glycol-modified sibling exists precisely to remove PET's crystallisation shrink: ease 7 vs 4, warp 3 vs 7, adh 9 vs 7 at the same water 9 and a comparable $18-42 — you give up about a point of heat (temp 5 vs 6), stiffness and chemical resistance."
+    },
+    {
+      "filament_id": "pet-gf",
+      "reason": "Glass fibre restrains the crystallisation that makes PET hard to print (warp 3 vs 7, stab 8 vs 5) and roughly doubles modulus to ~4.2 GPa; a 4 h / 95 °C anneal takes HDT from 78 to 134 °C. Costs a hardened nozzle, a 280-300 °C nozzle window and $45-55 vs $18-35."
+    },
+    {
+      "filament_id": "pet-cf",
+      "reason": "The heat answer on the same base: HDT 205 °C at 0.45 MPa against base PET's ~70 °C (temp 9 vs 6) with comp 9 vs 7 — bought with a 45-60 °C heated chamber, no AMS and ease 3 vs 4."
+    },
+    {
+      "filament_id": "cpe",
+      "reason": "Amorphous engineering copolyester with PET-class heat (temp 7 vs 6) and better chemical resistance but none of the crystallisation warp (warp 4 vs 7) — at $45-100 vs $18-35 and a much smaller brand ecosystem."
+    },
+    {
+      "filament_id": "pctg",
+      "reason": "If clarity and toughness were the draw rather than heat, PCTG delivers both with far better printability (ease 6 vs 4, adh 10 vs 7, warp 5 vs 7) — at $30-55 and a point less heat (temp 5 vs 6)."
+    }
+  ],
   "emissions": {
     "voc_level": "moderate",
     "particulate_level": "low",

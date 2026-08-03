@@ -164,6 +164,24 @@
       "notes": "Carried at base ASA's 'recommended' and reinforced by both vendors — Siraya names glass, PEI and PC film as compatible surfaces, Zyltech names a PEI plate directly. Run the bed at 90-110 °C; the high bed temperature is doing adhesion and warp-control work that the plate alone cannot. Corner lift is reduced against unfilled ASA but not eliminated, so a glue stick or Magigoo-type promoter and a brim remain worthwhile on large footprints, exactly as on the base entry. Unlike base ASA there is no reported over-adhesion or release-agent restriction for this grade."
     }
   ],
+  "alternatives": [
+    {
+      "filament_id": "asa",
+      "reason": "Base ASA if the fiber is not earning its keep: cheaper at the low end ($18-45 vs $34-45), a better layer bond (adhesion 4 vs 3), no hardened nozzle, and it feeds through an AMS where ASA-GF is explicitly barred — at the cost of warp (7 vs 5) and dimensional stability (7 vs 8)."
+    },
+    {
+      "filament_id": "asa-cf",
+      "reason": "Stiffer and slightly more warp-suppressed (compression 8 vs 7, warp 4 vs 5) with the same UV package, at roughly double the price ($70-112 vs $34-45), black-only and more abrasive."
+    },
+    {
+      "filament_id": "abs-gf",
+      "reason": "The indoor equivalent for less ($25-35 vs $34-45) with a better layer bond (adhesion 4 vs 3) and conditional AMS feeding restored — giving up all weather resistance (uv 2 vs 9, weather 2 vs 9)."
+    },
+    {
+      "filament_id": "petg-gf",
+      "reason": "If the enclosure and the styrene emissions are the blocker, glass-filled PETG prints open-frame (ease 6 vs 4, warp 2 vs 5) with better dimensional stability (9 vs 8) and a far better layer bond (7 vs 3) at $25-35 — but weather tolerance drops from 9 to 5."
+    }
+  ],
   "emissions": {
     "voc_level": "high",
     "particulate_level": "high",

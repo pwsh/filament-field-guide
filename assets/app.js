@@ -367,19 +367,25 @@ function propLabel(key, opts) {
       'aria-describedby': 'tooltip',
     }, label, el('span', { class: 'lbl-i', 'aria-hidden': 'true' }, '?'));
 
-  TIP_DATA.set(a, { entry, value: o.value });
-  a.addEventListener('mouseenter', () => Tooltip.show(a));
-  a.addEventListener('mouseleave', () => Tooltip.hide());
-  a.addEventListener('focus', () => Tooltip.show(a));
-  a.addEventListener('blur', () => Tooltip.hide());
+  attachTip(a, entry, o.value);
+  return a;
+}
+
+/** Wire hover/focus/tap tooltip behaviour onto any node. */
+function attachTip(node, entry, value) {
+  TIP_DATA.set(node, { entry, value });
+  node.addEventListener('mouseenter', () => Tooltip.show(node));
+  node.addEventListener('mouseleave', () => Tooltip.hide());
+  node.addEventListener('focus', () => Tooltip.show(node));
+  node.addEventListener('blur', () => Tooltip.hide());
   // Touch: first tap reveals the tooltip, second tap follows the link.
-  a.addEventListener('click', (e) => {
-    if (window.matchMedia('(hover: none)').matches && Tooltip.target !== a) {
+  node.addEventListener('click', (e) => {
+    if (window.matchMedia('(hover: none)').matches && Tooltip.target !== node) {
       e.preventDefault();
-      Tooltip.show(a);
+      Tooltip.show(node);
     }
   });
-  return a;
+  return node;
 }
 
 /* ==========================================================================
@@ -430,6 +436,33 @@ function scoreInline(scoreKey, value) {
 
 function badge(text, tone, title) {
   return el('span', { class: `badge badge-${tone || 'neutral'}`, title: title || null, text });
+}
+
+/**
+ * Badge that doubles as a glossary affordance: hover/tap shows the definition,
+ * click opens the glossary entry. Falls back to a plain badge when the key has
+ * no glossary entry, so new data never renders a dead link.
+ */
+function tipBadge(key, text, tone, title, value) {
+  const entry = glossaryFor(key);
+  if (!entry) return badge(text, tone, title);
+  const a = el('a', {
+    class: `badge badge-${tone || 'neutral'} tip-badge`,
+    href: `#/glossary#${anchorId(entry.key)}`,
+    title: title || null,
+    'aria-describedby': 'tooltip',
+    text,
+  });
+  return attachTip(a, entry, value);
+}
+
+/** Upgrade an already-built badge node into a tooltip trigger for `key`. */
+function tipBadgeNode(key, node) {
+  if (!node) return null;
+  const entry = glossaryFor(key);
+  if (!entry) return node;
+  return tipBadge(key, node.textContent, (String(node.className).match(/badge-(\w+)/) || [])[1],
+    node.getAttribute('title'));
 }
 
 function statusBadge(status) {
@@ -561,7 +594,7 @@ function suitabilityBadges(suitability) {
   for (const key of Object.keys(SUIT_ORDER)) {
     const v = suitability[key];
     if (!has(v)) continue;
-    group.appendChild(badge(`${SUIT_SHORT[key]}: ${v}`, suitTone(key, v), humanizeKey(key)));
+    group.appendChild(tipBadge(`suitability.${key}`, `${SUIT_SHORT[key]}: ${v}`, suitTone(key, v), humanizeKey(key)));
   }
   return group.childNodes.length ? group : el('span', { class: 'faint', text: '—' });
 }
@@ -834,7 +867,12 @@ function writeParams(route, state, defaults) {
   for (const key of Object.keys(state)) {
     const v = state[key];
     if (v === '' || v === null || v === undefined || v === false) continue;
-    if (Array.isArray(v)) { if (v.length) params.set(key, v.join(',')); continue; }
+    if (Array.isArray(v)) {
+      const dfltList = dflt[key];
+      if (Array.isArray(dfltList) && dfltList.join(',') === v.join(',')) continue;
+      if (v.length) params.set(key, v.join(','));
+      continue;
+    }
     if (v === true) { params.set(key, '1'); continue; }
     if (Object.prototype.hasOwnProperty.call(dflt, key) && v === dflt[key]) continue;
     params.set(key, String(v));
@@ -995,25 +1033,701 @@ const plateSearchBlob = (summary, entity) =>
 const tradeNameCount = (entity) => (Array.isArray(entity && entity.trade_names) ? entity.trade_names.length : 0);
 
 /* ==========================================================================
- * 9. View: filament list
+ * 9. Configurable columns + export (CSV / JSON / XML)
+ *
+ * Every list view renders from a column catalog. Which columns are visible is
+ * user-chosen and encoded in the URL (`cols=`), so a column layout is as
+ * shareable as a filter. Export writes the CURRENT filtered + sorted rows with
+ * the CURRENTLY VISIBLE columns, client-side, with no dependencies.
  * ========================================================================== */
 
-const FILAMENT_SORTS = {
-  name: (f) => f.name,
-  polymer_class: (f) => f.polymer_class,
-  price: (f) => pick(f, 'price.usd_per_kg_low'),
-  ease_of_print: (f) => pick(f, 'scores.ease_of_print'),
-  warp_tendency: (f) => pick(f, 'scores.warp_tendency'),
-  temperature_tolerance: (f) => pick(f, 'scores.temperature_tolerance'),
-  layer_adhesion: (f) => pick(f, 'scores.layer_adhesion'),
-  dimensional_stability: (f) => pick(f, 'scores.dimensional_stability'),
-  weather_tolerance: (f) => pick(f, 'scores.weather_tolerance'),
+/** Column: { id, label, key?, num?, full?, group, cell(row,ctx), sort(row,ctx), value(row,ctx) } */
+
+const dash = () => el('span', { class: 'faint', text: '—' });
+const enumSort = (order, v) => { const i = order.indexOf(v); return i < 0 ? undefined : i; };
+
+function colScore(k, label) {
+  const path = `scores.${k}`;
+  return {
+    id: k, key: path, label, num: true, group: 'Scores',
+    cell: (r) => scoreInline(k, pick(r, path)),
+    sort: (r) => pick(r, path),
+    value: (r) => pick(r, path),
+  };
+}
+
+function colSuit(k, label) {
+  const path = `suitability.${k}`;
+  return {
+    id: `suit_${k}`, key: path, label, group: 'Suitability',
+    cell: (r) => (has(pick(r, path))
+      ? tipBadge(path, prettyEnum(pick(r, path)), suitTone(k, pick(r, path))) : null),
+    sort: (r) => enumSort(SUIT_ORDER[k], pick(r, path)),
+    value: (r) => pick(r, path),
+  };
+}
+
+function colNum(id, path, label, unit, group, full) {
+  return {
+    id, key: path, label, num: true, group, full,
+    cell: (r) => fmtNum(pick(r, path), unit),
+    sort: (r) => pick(r, path),
+    value: (r) => pick(r, path),
+  };
+}
+
+function colRange(id, path, label, unit, group, full) {
+  return {
+    id, key: path, label, group, full, num: true,
+    cell: (r) => fmtRange(pick(r, path), unit),
+    sort: (r) => {
+      const range = pick(r, path);
+      if (!range) return undefined;
+      return isNum(range.recommended) ? range.recommended : (isNum(range.min) ? range.min : range.max);
+    },
+    value: (r) => fmtRange(pick(r, path), unit),
+  };
+}
+
+function colText(id, path, label, group, full) {
+  return {
+    id, key: path, label, group, full,
+    cell: (r) => pick(r, path),
+    sort: (r) => pick(r, path),
+    value: (r) => pick(r, path),
+  };
+}
+
+function colEnum(id, path, label, group, order, toneFn, full) {
+  return {
+    id, key: path, label, group, full,
+    cell: (r) => (has(pick(r, path))
+      ? tipBadge(path, prettyEnum(pick(r, path)), toneFn ? toneFn(pick(r, path)) : 'neutral') : null),
+    sort: (r) => (order ? enumSort(order, pick(r, path)) : pick(r, path)),
+    value: (r) => pick(r, path),
+  };
+}
+
+function colBool(id, path, label, group, badIsTrue, full) {
+  return {
+    id, key: path, label, group, full,
+    cell: (r) => (pick(r, path) === undefined || pick(r, path) === null ? null
+      : badge(pick(r, path) ? 'yes' : 'no', badIsTrue ? (pick(r, path) ? 'mid' : 'good') : (pick(r, path) ? 'good' : 'neutral'))),
+    sort: (r) => (pick(r, path) === true ? 1 : pick(r, path) === false ? 0 : undefined),
+    value: (r) => (pick(r, path) === undefined || pick(r, path) === null ? '' : (pick(r, path) ? 'yes' : 'no')),
+  };
+}
+
+const joinList = (v) => (Array.isArray(v) ? v.join(', ') : '');
+
+/* --- filament columns -------------------------------------------------- */
+
+const FILAMENT_COLUMNS = [
+  {
+    id: 'name', label: 'Name', group: 'Identity', always: true,
+    cell: (r) => el('span', {},
+      el('a', { href: `#/filament/${encodeURIComponent(r.id)}` }, r.name || r.id),
+      filamentFlags(r)),
+    sort: (r) => r.name,
+    value: (r) => r.name,
+  },
+  { id: 'id', label: 'ID', group: 'Identity', cell: (r) => el('code', { text: r.id }), sort: (r) => r.id, value: (r) => r.id },
+  {
+    id: 'polymer_class', key: 'polymer_class', label: 'Class', group: 'Identity',
+    cell: (r) => (has(r.polymer_class) ? el('span', { class: 'pill-class', text: prettyEnum(r.polymer_class) }) : null),
+    sort: (r) => r.polymer_class, value: (r) => r.polymer_class,
+  },
+  colText('variation_kind', 'variation_kind', 'Variation kind', 'Identity'),
+  {
+    id: 'base_type', key: 'base_type', label: 'Base type', group: 'Identity',
+    cell: (r) => (has(r.base_type) ? refLink('filaments', r.base_type, shortName('filaments', r.base_type)) : null),
+    sort: (r) => r.base_type, value: (r) => r.base_type,
+  },
+  { id: 'aliases', label: 'Aliases', group: 'Identity', cell: (r) => joinList(r.aliases), sort: (r) => joinList(r.aliases), value: (r) => joinList(r.aliases) },
+  { id: 'summary', label: 'Summary', group: 'Identity', cell: (r) => r.summary, sort: (r) => r.summary, value: (r) => r.summary },
+  {
+    id: 'status', label: 'Status', group: 'Identity',
+    cell: (r) => statusBadge(r.status), sort: (r) => r.status, value: (r) => r.status,
+  },
+  {
+    id: 'confidence', key: 'provenance.confidence', label: 'Confidence', group: 'Identity',
+    cell: (r) => confidenceBadge(r.confidence || pick(r, 'provenance.confidence')),
+    sort: (r) => enumSort(['placeholder', 'low', 'medium', 'high'], r.confidence || pick(r, 'provenance.confidence')),
+    value: (r) => r.confidence || pick(r, 'provenance.confidence'),
+  },
+
+  colScore('ease_of_print', 'Ease'),
+  colScore('dimensional_stability', 'Dim.'),
+  colScore('warp_tendency', 'Warp'),
+  colScore('layer_adhesion', 'Layers'),
+  colScore('compression_strength', 'Compr.'),
+  colScore('temperature_tolerance', 'Heat'),
+  colScore('uv_tolerance', 'UV'),
+  colScore('weather_tolerance', 'Weather'),
+  colScore('water_tolerance', 'Water'),
+
+  {
+    id: 'price', key: 'price', label: 'Price', num: true, group: 'Price',
+    cell: (r) => fmtPriceKg(r.price),
+    sort: (r) => pick(r, 'price.usd_per_kg_low'),
+    value: (r) => fmtPriceKg(r.price),
+  },
+  colNum('price_low', 'price.usd_per_kg_low', 'Price low (USD/kg)', null, 'Price'),
+  colNum('price_high', 'price.usd_per_kg_high', 'Price high (USD/kg)', null, 'Price'),
+
+  {
+    id: 'suitability', label: 'Suitability', group: 'Suitability',
+    cell: (r) => (has(r.suitability) ? suitabilityBadges(r.suitability) : null),
+    value: (r) => Object.keys(SUIT_ORDER)
+      .filter((k) => has(pick(r, `suitability.${k}`)))
+      .map((k) => `${k}: ${pick(r, `suitability.${k}`)}`).join('; '),
+  },
+  colSuit('high_temperature', 'High temp'),
+  colSuit('outdoor', 'Outdoor'),
+  colSuit('food_contact', 'Food contact'),
+  colSuit('load_bearing', 'Load bearing'),
+
+  {
+    id: 'ventilation', key: 'emissions.ventilation', label: 'Ventilation', group: 'Emissions',
+    cell: (r) => tipBadgeNode('emissions.ventilation', ventilationBadge(pick(r, 'emissions.ventilation'))),
+    sort: (r) => enumSort(VENT_ORDER, pick(r, 'emissions.ventilation')),
+    value: (r) => pick(r, 'emissions.ventilation'),
+  },
+  colEnum('voc_level', 'emissions.voc_level', 'VOC level', 'Emissions', LEVEL_ORDER, levelTone),
+  colEnum('particulate_level', 'emissions.particulate_level', 'Particulates', 'Emissions', LEVEL_ORDER, levelTone),
+  {
+    id: 'primary_emissions', key: 'emissions.primary_emissions', label: 'Primary emissions', group: 'Emissions',
+    cell: (r) => joinList(pick(r, 'emissions.primary_emissions')),
+    value: (r) => joinList(pick(r, 'emissions.primary_emissions')),
+  },
+
+  colBool('enclosure', 'enclosure_recommended', 'Enclosure', 'Printing', true),
+  colBool('chamber', 'heated_chamber_required', 'Heated chamber', 'Printing', true),
+  colBool('hardened_nozzle', 'printing.requires_hardened_nozzle', 'Hardened nozzle', 'Printing', true, true),
+  colRange('nozzle_temp', 'printing.nozzle_temp_c', 'Nozzle temp', '°C', 'Printing', true),
+  colRange('bed_temp', 'printing.bed_temp_c', 'Bed temp', '°C', 'Printing', true),
+  colRange('ambient_temp', 'printing.ambient_temp_c', 'Chamber temp', '°C', 'Printing', true),
+  colRange('speed', 'printing.speed_mm_s', 'Speed', 'mm/s', 'Printing', true),
+
+  {
+    id: 'ams', key: 'feeding.ams_compatible', label: 'AMS', group: 'Feeding',
+    cell: (r) => tipBadgeNode('feeding.ams_compatible', amsBadge(pick(r, 'feeding.ams_compatible'))),
+    sort: (r) => enumSort(AMS_ORDER, pick(r, 'feeding.ams_compatible')),
+    value: (r) => pick(r, 'feeding.ams_compatible'),
+  },
+  {
+    id: 'drive_system', key: 'feeding.drive_system', label: 'Drive system', group: 'Feeding',
+    cell: (r) => tipBadgeNode('feeding.drive_system', driveBadge(pick(r, 'feeding.drive_system'))),
+    sort: (r) => enumSort(['any', 'direct-drive-recommended', 'direct-drive-required'], pick(r, 'feeding.drive_system')),
+    value: (r) => pick(r, 'feeding.drive_system'),
+  },
+  colBool('feeding_assistant', 'feeding.feeding_assistant_recommended', 'Feeding assistant', 'Feeding', true),
+
+  colNum('density', 'properties.density_g_cm3', 'Density', 'g/cm³', 'Properties', true),
+  colNum('grams_per_100cm3', 'properties.grams_per_100cm3', 'g / 100 cm³', 'g', 'Properties', true),
+  colNum('cm3_per_100g', 'properties.cm3_per_100g', 'cm³ / 100 g', 'cm³', 'Properties', true),
+  colNum('tg', 'properties.glass_transition_c', 'Tg', '°C', 'Properties', true),
+  colNum('hdt', 'properties.heat_deflection_c', 'HDT', '°C', 'Properties', true),
+  colNum('max_service', 'properties.max_service_temp_c', 'Max service', '°C', 'Properties', true),
+  colRange('tensile', 'properties.tensile_strength_mpa', 'Tensile', 'MPa', 'Properties', true),
+  colRange('shrinkage', 'properties.shrinkage_pct', 'Shrinkage', '%', 'Properties', true),
+  {
+    id: 'shore', key: 'properties.shore_hardness', label: 'Shore hardness', group: 'Properties',
+    cell: (r) => (has(r.shore_hardness) ? r.shore_hardness : pick(r, 'properties.shore_hardness')),
+    sort: (r) => (has(r.shore_hardness) ? r.shore_hardness : pick(r, 'properties.shore_hardness')),
+    value: (r) => (has(r.shore_hardness) ? r.shore_hardness : pick(r, 'properties.shore_hardness')),
+  },
+  colEnum('hygroscopy', 'storage.hygroscopy', 'Hygroscopy', 'Drying', ['low', 'moderate', 'high', 'extreme'], null, true),
+  colEnum('drying_required', 'drying.required_before_use', 'Drying required', 'Drying', ['rarely', 'if-exposed', 'always'], null, true),
+
+  {
+    id: 'use_cases', key: 'use_cases.recommended', label: 'Recommended for', group: 'Other',
+    cell: (r) => joinList(pick(r, 'use_cases.recommended')),
+    value: (r) => joinList(pick(r, 'use_cases.recommended')),
+  },
+  {
+    id: 'trade_names', label: 'Products', group: 'Other', num: true,
+    cell: (r) => (tradeNameCount(r) ? String(tradeNameCount(r)) : null),
+    sort: (r) => tradeNameCount(r), value: (r) => tradeNameCount(r) || '',
+  },
+  {
+    id: 'alternatives', key: 'alternatives', label: 'Alternatives', group: 'Other', full: true,
+    cell: (r) => refChips('filaments', (r.alternatives || []).map((a) => a.filament_id)),
+    sort: (r) => (Array.isArray(r.alternatives) ? r.alternatives.length : undefined),
+    value: (r) => (r.alternatives || []).map((a) => a.filament_id).join(', '),
+  },
+];
+
+const FILAMENT_DEFAULT_COLS = ['name', 'polymer_class', 'ease_of_print', 'warp_tendency',
+  'temperature_tolerance', 'layer_adhesion', 'dimensional_stability', 'weather_tolerance',
+  'price', 'ventilation', 'suitability'];
+
+/** The flag badges under a filament name (kept out of the column cell body). */
+function filamentFlags(f) {
+  const flags = el('span', { class: 'badge-group' });
+  if (f.enclosure_recommended) flags.appendChild(badge('enclosure', 'mid', 'Enclosure recommended'));
+  if (f.heated_chamber_required) flags.appendChild(badge('chamber', 'bad', 'Heated chamber required'));
+  if (has(f.base_type)) flags.appendChild(badge(`variation of ${f.base_type}`, 'neutral'));
+  if (pick(f, 'feeding.drive_system') === 'direct-drive-required') {
+    flags.appendChild(badge('direct drive required', 'bad', 'Needs a direct-drive extruder'));
+  }
+  if (pick(f, 'feeding.ams_compatible') === 'no') flags.appendChild(amsBadge('no'));
+  const shore = has(f.shore_hardness) ? f.shore_hardness : pick(f, 'properties.shore_hardness');
+  if (has(shore)) flags.appendChild(badge(`Shore ${shore}`, 'neutral', 'Shore hardness'));
+  if (pick(f, 'emissions.ventilation') === 'required') flags.appendChild(ventilationBadge('required'));
+  const products = tradeNameCount(f);
+  if (products) {
+    flags.appendChild(badge(`sold as ${products} product${products === 1 ? '' : 's'}`, 'neutral',
+      'Manufacturer product names that are this material chemically'));
+  }
+  if (isPlaceholder(f)) flags.appendChild(badge('example', 'example', 'Example data pending research'));
+  return flags.childNodes.length ? el('span', { class: 'sub' }, flags) : null;
+}
+
+/* --- manufacturer columns ---------------------------------------------- */
+
+const MANUFACTURER_COLUMNS = [
+  {
+    id: 'name', label: 'Name', group: 'Identity', always: true,
+    cell: (m) => el('span', {},
+      el('a', { href: `#/manufacturer/${encodeURIComponent(m.id)}` }, m.name || m.id),
+      isPlaceholder(m) ? el('span', { class: 'sub' }, badge('example', 'example', 'Example data pending research')) : null,
+      m.summary ? el('span', { class: 'sub', text: m.summary }) : null),
+    sort: (m) => m.name, value: (m) => m.name,
+  },
+  { id: 'id', label: 'ID', group: 'Identity', cell: (m) => el('code', { text: m.id }), sort: (m) => m.id, value: (m) => m.id },
+  {
+    id: 'brands', label: 'Brands', group: 'Identity',
+    cell: (m) => tagList((m.brands || []).slice(0, 8)),
+    sort: (m) => (m.brands || []).length, value: (m) => joinList(m.brands),
+  },
+  {
+    id: 'brands_count', label: 'Brand count', group: 'Identity', num: true,
+    cell: (m) => String((m.brands || []).length), sort: (m) => (m.brands || []).length,
+    value: (m) => (m.brands || []).length,
+  },
+  {
+    id: 'country', key: 'manufacturing_countries', label: 'Made in', group: 'Identity',
+    cell: (m) => joinList(m.manufacturing_countries),
+    sort: (m) => (m.manufacturing_countries || [])[0], value: (m) => joinList(m.manufacturing_countries),
+  },
+  colText('hq', 'headquarters_country', 'Headquarters', 'Identity', true),
+  {
+    id: 'tier', key: 'price_tier', label: 'Price tier', group: 'Identity',
+    cell: (m) => (has(m.price_tier) ? badge(m.price_tier, 'neutral') : null),
+    sort: (m) => enumSort(['budget', 'mid', 'premium', 'engineering'], m.price_tier),
+    value: (m) => m.price_tier,
+  },
+  {
+    id: 'plates', key: 'makes_plates', label: 'Plates', group: 'Products',
+    cell: (m) => (m.makes_plates === true ? badge('plates', 'good') : null),
+    sort: (m) => (m.makes_plates === true ? 1 : m.makes_plates === false ? 0 : undefined),
+    value: (m) => (m.makes_plates === undefined || m.makes_plates === null ? '' : (m.makes_plates ? 'yes' : 'no')),
+  },
+  {
+    id: 'plate_ids', label: 'Plate products', group: 'Products', full: true,
+    cell: (m) => refChips('plates', m.plate_ids),
+    sort: (m) => (m.plate_ids || []).length, value: (m) => joinList(m.plate_ids),
+  },
+  {
+    id: 'product_lines', label: 'Product lines', group: 'Products', num: true, full: true,
+    cell: (m) => (Array.isArray(m.product_lines) ? String(m.product_lines.length) : null),
+    sort: (m) => (m.product_lines || []).length,
+    value: (m) => (Array.isArray(m.product_lines) ? m.product_lines.length : ''),
+  },
+  {
+    id: 'website', key: 'endpoints.website', label: 'Website', group: 'Products', full: true,
+    cell: (m) => {
+      const url = pick(m, 'endpoints.website');
+      return has(url) ? externalLink(url, trimUrlTail(url)) : null;
+    },
+    sort: (m) => pick(m, 'endpoints.website'), value: (m) => pick(m, 'endpoints.website'),
+  },
+  { id: 'summary', label: 'Summary', group: 'Identity', cell: (m) => m.summary, sort: (m) => m.summary, value: (m) => m.summary },
+  { id: 'status', label: 'Status', group: 'Identity', cell: (m) => statusBadge(m.status), sort: (m) => m.status, value: (m) => m.status },
+  {
+    id: 'confidence', key: 'provenance.confidence', label: 'Confidence', group: 'Identity',
+    cell: (m) => confidenceBadge(m.confidence || pick(m, 'provenance.confidence')),
+    sort: (m) => enumSort(['placeholder', 'low', 'medium', 'high'], m.confidence || pick(m, 'provenance.confidence')),
+    value: (m) => m.confidence || pick(m, 'provenance.confidence'),
+  },
+];
+
+const MANUFACTURER_DEFAULT_COLS = ['name', 'brands', 'country', 'tier', 'plates'];
+
+/* --- plate columns ------------------------------------------------------ */
+
+const PLATE_COLUMNS = [
+  {
+    id: 'name', label: 'Name', group: 'Identity', always: true,
+    cell: (r, ctx) => {
+      const entity = ctx.full.get(r.id) || {};
+      const flags = el('span', { class: 'badge-group' });
+      if (isPlaceholder(r)) flags.appendChild(badge('example', 'example', 'Example data pending research'));
+      const soldAs = tradeNameCount(r) || tradeNameCount(entity);
+      if (soldAs) {
+        flags.appendChild(badge(`sold as ${soldAs}`, 'neutral',
+          `${soldAs} vendor product${soldAs === 1 ? '' : 's'} use this surface — searchable by product name`));
+      }
+      return el('span', {},
+        el('a', { href: `#/plate/${encodeURIComponent(r.id)}` }, r.name || r.id),
+        flags.childNodes.length ? el('span', { class: 'sub' }, flags) : null,
+        r.summary ? el('span', { class: 'sub', text: r.summary }) : null);
+    },
+    sort: (r) => r.name, value: (r) => r.name,
+  },
+  { id: 'id', label: 'ID', group: 'Identity', cell: (r) => el('code', { text: r.id }), sort: (r) => r.id, value: (r) => r.id },
+  {
+    id: 'texture', key: 'texture', label: 'Texture', group: 'Identity',
+    cell: (r) => (has(r.texture) ? el('span', { class: 'pill-class', text: prettyEnum(r.texture) }) : null),
+    sort: (r) => r.texture, value: (r) => r.texture,
+  },
+  { id: 'surface', key: 'surface_makeup', label: 'Surface makeup', group: 'Identity', cell: (r) => r.surface_makeup, sort: (r) => r.surface_makeup, value: (r) => r.surface_makeup },
+  { id: 'summary', label: 'Summary', group: 'Identity', cell: (r) => r.summary, sort: (r) => r.summary, value: (r) => r.summary },
+  {
+    id: 'compat', label: 'Filament compatibility', group: 'Compatibility',
+    cell: (r, ctx) => plateCompatCell(r, ctx),
+    value: (r, ctx) => severityFreeCompat(ctx.full.get(r.id))
+      .map(([rating, group]) => `${rating}: ${group.length}`).join('; '),
+  },
+  {
+    id: 'compat_recommended', label: 'Recommended count', group: 'Compatibility', num: true,
+    cell: (r, ctx) => String(plateRatingCount(ctx.full.get(r.id), 'recommended')),
+    sort: (r, ctx) => plateRatingCount(ctx.full.get(r.id), 'recommended'),
+    value: (r, ctx) => plateRatingCount(ctx.full.get(r.id), 'recommended'),
+  },
+  {
+    id: 'compat_avoid', label: 'Avoid count', group: 'Compatibility', num: true,
+    cell: (r, ctx) => String(plateRatingCount(ctx.full.get(r.id), 'avoid')),
+    sort: (r, ctx) => plateRatingCount(ctx.full.get(r.id), 'avoid'),
+    value: (r, ctx) => plateRatingCount(ctx.full.get(r.id), 'avoid'),
+  },
+  {
+    id: 'damage', key: 'damage_avoidance', label: 'Damage risks', group: 'Care',
+    cell: (r, ctx) => {
+      const counts = severityCounts((ctx.full.get(r.id) || {}).damage_avoidance);
+      if (!counts.length) return null;
+      const group = el('span', { class: 'badge-group' });
+      for (const [sev, n] of counts) group.appendChild(badge(`${sev}: ${n}`, severityTone(sev)));
+      return group;
+    },
+    sort: (r, ctx) => severityCount(ctx.full.get(r.id), 'destroys'),
+    value: (r, ctx) => severityCounts((ctx.full.get(r.id) || {}).damage_avoidance)
+      .map(([sev, n]) => `${sev}: ${n}`).join('; '),
+  },
+  {
+    id: 'destroys', label: 'Destroys count', group: 'Care', num: true,
+    cell: (r, ctx) => String(severityCount(ctx.full.get(r.id), 'destroys')),
+    sort: (r, ctx) => severityCount(ctx.full.get(r.id), 'destroys'),
+    value: (r, ctx) => severityCount(ctx.full.get(r.id), 'destroys'),
+  },
+  {
+    id: 'temp_limit', key: 'temperature_limits_c', label: 'Temp limit', group: 'Care', num: true,
+    cell: (r, ctx) => fmtRange((ctx.full.get(r.id) || {}).temperature_limits_c, '°C'),
+    sort: (r, ctx) => {
+      const range = (ctx.full.get(r.id) || {}).temperature_limits_c;
+      return range ? (isNum(range.max) ? range.max : range.min) : undefined;
+    },
+    value: (r, ctx) => fmtRange((ctx.full.get(r.id) || {}).temperature_limits_c, '°C'),
+  },
+  {
+    id: 'price', key: 'price', label: 'Price', group: 'Care', num: true,
+    cell: (r, ctx) => fmtPricePlate((ctx.full.get(r.id) || {}).price),
+    sort: (r, ctx) => pick(ctx.full.get(r.id) || {}, 'price.usd_low'),
+    value: (r, ctx) => fmtPricePlate((ctx.full.get(r.id) || {}).price),
+  },
+  {
+    id: 'manufacturers', label: 'Offered by', group: 'Care',
+    cell: (r, ctx) => joinList((ctx.full.get(r.id) || {}).manufacturers),
+    value: (r, ctx) => joinList((ctx.full.get(r.id) || {}).manufacturers),
+  },
+  {
+    id: 'trade_names', label: 'Products', group: 'Care', num: true,
+    cell: (r, ctx) => {
+      const n = tradeNameCount(r) || tradeNameCount(ctx.full.get(r.id));
+      return n ? String(n) : null;
+    },
+    sort: (r, ctx) => tradeNameCount(r) || tradeNameCount(ctx.full.get(r.id)),
+    value: (r, ctx) => tradeNameCount(r) || tradeNameCount(ctx.full.get(r.id)) || '',
+  },
+  { id: 'status', label: 'Status', group: 'Identity', cell: (r) => statusBadge(r.status), sort: (r) => r.status, value: (r) => r.status },
+  {
+    id: 'confidence', key: 'provenance.confidence', label: 'Confidence', group: 'Identity',
+    cell: (r) => confidenceBadge(r.confidence || pick(r, 'provenance.confidence')),
+    sort: (r) => enumSort(['placeholder', 'low', 'medium', 'high'], r.confidence || pick(r, 'provenance.confidence')),
+    value: (r) => r.confidence || pick(r, 'provenance.confidence'),
+  },
+];
+
+const PLATE_DEFAULT_COLS = ['name', 'texture', 'surface', 'compat'];
+
+const plateCompatList = (entity) => (Array.isArray(entity && entity.filament_compatibility)
+  ? entity.filament_compatibility : []);
+const severityFreeCompat = (entity) => groupByRating(plateCompatList(entity));
+const plateRatingCount = (entity, rating) => plateCompatList(entity).filter((c) => c.rating === rating).length;
+const severityCount = (entity, sev) => ((entity && Array.isArray(entity.damage_avoidance))
+  ? entity.damage_avoidance.filter((d) => d && d.severity === sev).length : 0);
+
+/** Rating counts plus the specific hit for whatever filament is being filtered on. */
+function plateCompatCell(r, ctx) {
+  const compat = plateCompatList(ctx.full.get(r.id));
+  const cell = el('span', { class: 'badge-group' });
+  for (const [rating, group] of groupByRating(compat)) {
+    const tone = rating === 'recommended' ? 'good' : rating === 'avoid' ? 'bad' : 'mid';
+    cell.appendChild(badge(`${RATING_LABEL[rating] || rating}: ${group.length}`, tone,
+      group.map((c) => shortName('filaments', c.filament_id)).join(', ')));
+  }
+  const target = ctx.state && ctx.state.compat;
+  if (target) {
+    const hit = compat.find((c) => c.filament_id === target);
+    if (hit) {
+      cell.appendChild(badge(`${shortName('filaments', target)}: ${RATING_LABEL[hit.rating] || hit.rating}`,
+        hit.rating === 'recommended' ? 'good' : hit.rating === 'avoid' ? 'bad' : 'mid', hit.notes || null));
+    }
+  }
+  return cell.childNodes.length ? cell : null;
+}
+
+/* --- column plumbing ---------------------------------------------------- */
+
+const COLUMN_CATALOG = {
+  filaments: FILAMENT_COLUMNS,
+  manufacturers: MANUFACTURER_COLUMNS,
+  plates: PLATE_COLUMNS,
+};
+const DEFAULT_COLUMNS = {
+  filaments: FILAMENT_DEFAULT_COLS,
+  manufacturers: MANUFACTURER_DEFAULT_COLS,
+  plates: PLATE_DEFAULT_COLS,
 };
 
+function columnById(kind, id) {
+  return (COLUMN_CATALOG[kind] || []).find((c) => c.id === id) || null;
+}
+
+/** Resolve the state's column ids to column defs; unknown ids are dropped. */
+function activeColumns(kind, ids) {
+  const wanted = Array.isArray(ids) && ids.length ? ids : DEFAULT_COLUMNS[kind];
+  const cols = wanted.map((id) => columnById(kind, id)).filter(Boolean);
+  if (!cols.length) return DEFAULT_COLUMNS[kind].map((id) => columnById(kind, id)).filter(Boolean);
+  // The name column carries the link to the entity, so it is never dropped.
+  if (!cols.some((c) => c.id === 'name')) cols.unshift(columnById(kind, 'name'));
+  return cols;
+}
+
+const columnsNeedFull = (cols) => cols.some((c) => c.full);
+
+/** Sort getter for the current sort key, falling back to the name column. */
+function columnSorter(kind, sortKey, ctx) {
+  const col = columnById(kind, sortKey);
+  const target = (col && col.sort) ? col : columnById(kind, 'name');
+  return (row) => target.sort(row, ctx);
+}
+
+/** Column picker: grouped checkboxes, reflected in the URL like any filter. */
+function columnsControl(kind, state, api, opts) {
+  const o = opts || {};
+  const catalog = COLUMN_CATALOG[kind] || [];
+  const activeIds = activeColumns(kind, state.cols).map((c) => c.id);
+  const groups = [];
+  for (const col of catalog) {
+    if (col.always) continue;
+    let group = groups.find((g) => g.name === (col.group || 'Other'));
+    if (!group) { group = { name: col.group || 'Other', cols: [] }; groups.push(group); }
+    group.cols.push(col);
+  }
+
+  const body = el('div', { class: 'columns-picker' });
+  for (const group of groups) {
+    const chips = el('div', { class: 'chips' });
+    for (const col of group.cols) {
+      const on = activeIds.includes(col.id);
+      const label = el('label', { class: `chip${on ? ' on' : ''}`, title: col.full ? 'Loads full entity data' : null });
+      const input = el('input', {
+        type: 'checkbox',
+        dataset: { focusKey: `col:${col.id}` },
+        onchange: (e) => {
+          label.classList.toggle('on', e.target.checked);
+          const current = activeColumns(kind, state.cols).map((c) => c.id);
+          const next = e.target.checked
+            ? current.concat(current.includes(col.id) ? [] : [col.id])
+            : current.filter((id) => id !== col.id);
+          if (o.onChange) o.onChange(next); else api.set({ cols: next });
+        },
+      });
+      input.checked = on;
+      appendKids(label, [input, txt(col.label), col.full ? el('span', { class: 'chip-note', text: '+' }) : null]);
+      chips.appendChild(label);
+    }
+    body.appendChild(el('div', { class: 'field' },
+      el('span', { class: 'field-label', text: group.name }), chips));
+  }
+  body.appendChild(el('div', { class: 'row-actions' },
+    el('button', {
+      class: 'btn-sm',
+      onclick: () => { if (o.onChange) o.onChange(DEFAULT_COLUMNS[kind].slice()); else api.set({ cols: DEFAULT_COLUMNS[kind].slice() }); },
+    }, 'Reset columns'),
+    el('span', { class: 'small faint', text: 'Columns marked + load the full entity files.' })));
+
+  return collapsible('Columns', `${activeIds.length} shown`, body, { open: false });
+}
+
+/* --- generic table renderer --------------------------------------------- */
+
+/**
+ * Render rows through the active column set.
+ * opts: { compareKind, ctx }
+ */
+function dataTable(kind, rows, state, api, opts) {
+  const o = opts || {};
+  const ctx = o.ctx || {};
+  const cols = activeColumns(kind, state.cols);
+  const onSort = (key) => api.sortBy(key);
+
+  const head = el('tr', {});
+  if (o.compareKind) head.appendChild(el('th', { scope: 'col', class: 'no-print', 'aria-label': 'Compare' }, ''));
+  for (const col of cols) {
+    head.appendChild(col.sort
+      ? sortableHeader(col.label, col.id, state.sort, state.dir, onSort, { num: col.num, tipKey: col.key })
+      : el('th', { scope: 'col', class: col.num ? 'num' : null },
+        col.key ? propLabel(col.key, { label: col.label }) : txt(col.label)));
+  }
+
+  const body = el('tbody');
+  for (const row of rows) {
+    const tr = el('tr', {});
+    if (o.compareKind) {
+      tr.appendChild(el('td', { class: 'no-print', 'data-label': 'Compare' },
+        selectCheckbox(o.compareKind, row.id, api.refresh)));
+    }
+    for (const col of cols) {
+      const content = col.cell ? col.cell(row, ctx) : null;
+      tr.appendChild(el('td', {
+        class: `${col.num ? 'num ' : ''}${col.id === 'name' ? 'cell-name' : ''}`.trim() || null,
+        'data-label': col.label,
+      }, has(content) ? content : dash()));
+    }
+    body.appendChild(tr);
+  }
+  return el('div', { class: 'table-wrap' },
+    el('table', { class: 'responsive-table' }, el('thead', {}, head), body));
+}
+
+/* --- export ------------------------------------------------------------- */
+
+/** Text of a value that may be a DOM node built for display. */
+function nodeText(v) {
+  if (v === null || v === undefined || v === false) return '';
+  if (typeof Node !== 'undefined' && v instanceof Node) {
+    const items = v.querySelectorAll ? v.querySelectorAll('li') : [];
+    if (items.length) return Array.from(items).map((li) => li.textContent.trim()).join('; ');
+    return (v.textContent || '').replace(/\s+/g, ' ').trim();
+  }
+  return String(v);
+}
+
+/** Export scalar: never "undefined"/"null" — missing data exports as empty. */
+function exportValue(col, row, ctx) {
+  let v = col.value ? col.value(row, ctx) : (col.cell ? col.cell(row, ctx) : '');
+  if (v === null || v === undefined || v === false) return '';
+  if (typeof v === 'number') return isFinite(v) ? v : '';
+  if (typeof v === 'object') return nodeText(v);
+  return String(v);
+}
+
+/** [{ id, name, <field path>: value }] for the given rows and columns. */
+function buildExportRecords(kind, rows, cols, ctx) {
+  return rows.map((row) => {
+    const rec = { id: row.id === undefined ? '' : row.id, name: row.name || '' };
+    for (const col of cols) {
+      if (col.id === 'name' || col.id === 'id') continue;
+      rec[col.key || col.id] = exportValue(col, row, ctx);
+    }
+    return rec;
+  });
+}
+
+function csvCell(v) {
+  const s = v === null || v === undefined ? '' : String(v);
+  return /[",\r\n]/.test(s) ? `"${s.replace(/"/g, '""')}"` : s;
+}
+
+function rowsToCSV(fields, rows) {
+  const lines = [fields.map(csvCell).join(',')];
+  for (const row of rows) lines.push(row.map(csvCell).join(','));
+  return lines.join('\r\n') + '\r\n';
+}
+
+function recordsToCSV(records) {
+  const fields = recordFields(records);
+  return rowsToCSV(fields, records.map((rec) => fields.map((f) => rec[f])));
+}
+
+function recordFields(records) {
+  const fields = [];
+  for (const rec of records) for (const key of Object.keys(rec)) if (!fields.includes(key)) fields.push(key);
+  return fields;
+}
+
+const xmlEscape = (v) => String(v === null || v === undefined ? '' : v)
+  .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+  .replace(/"/g, '&quot;').replace(/'/g, '&apos;');
+
+function recordsToXML(rootName, itemName, records) {
+  const out = ['<?xml version="1.0" encoding="UTF-8"?>',
+    `<${rootName} count="${records.length}" generated="${xmlEscape(new Date().toISOString())}">`];
+  for (const rec of records) {
+    out.push(`  <${itemName} id="${xmlEscape(rec.id)}">`);
+    out.push(`    <name>${xmlEscape(rec.name)}</name>`);
+    for (const key of Object.keys(rec)) {
+      if (key === 'id' || key === 'name') continue;
+      out.push(`    <field path="${xmlEscape(key)}">${xmlEscape(rec[key])}</field>`);
+    }
+    out.push(`  </${itemName}>`);
+  }
+  out.push(`</${rootName}>`);
+  return out.join('\n') + '\n';
+}
+
+function downloadText(filename, mime, text) {
+  const blob = new Blob([text], { type: `${mime};charset=utf-8` });
+  const url = URL.createObjectURL(blob);
+  const a = el('a', { href: url, download: filename, style: 'display:none' });
+  document.body.appendChild(a);
+  a.click();
+  setTimeout(() => { URL.revokeObjectURL(url); if (a.parentNode) a.parentNode.removeChild(a); }, 0);
+}
+
+const todayStamp = () => new Date().toISOString().slice(0, 10);
+
+/**
+ * Export buttons for a list view. `getPayload()` returns the rows and columns
+ * that are on screen right now, so the download always matches what is shown.
+ */
+function exportControl(kind, getPayload) {
+  const run = (format) => {
+    const { rows, cols, ctx } = getPayload();
+    const records = buildExportRecords(kind, rows, cols, ctx);
+    const base = `${kind}-${todayStamp()}`;
+    if (format === 'csv') downloadText(`${base}.csv`, 'text/csv', recordsToCSV(records));
+    else if (format === 'json') downloadText(`${base}.json`, 'application/json', JSON.stringify(records, null, 2) + '\n');
+    else downloadText(`${base}.xml`, 'application/xml', recordsToXML(kind, SINGULAR[kind] || 'item', records));
+  };
+  return el('div', { class: 'export-control row-actions' },
+    el('span', { class: 'small faint', text: 'Export view:' }),
+    el('button', { class: 'btn-sm', dataset: { export: 'csv' }, onclick: () => run('csv') }, 'CSV'),
+    el('button', { class: 'btn-sm', dataset: { export: 'json' }, onclick: () => run('json') }, 'JSON'),
+    el('button', { class: 'btn-sm', dataset: { export: 'xml' }, onclick: () => run('xml') }, 'XML'));
+}
+
+/* ==========================================================================
+ * 10. View: filament list
+ * ========================================================================== */
+
 /** Values that are never written into the URL (they are the implicit state). */
-const FILAMENT_DEFAULTS = { ease: 1, temp: 1, sort: 'name', dir: 'asc' };
-const LIST_DEFAULTS = { sort: 'name', dir: 'asc' };
-const PLATE_DEFAULTS = { sort: 'name', dir: 'asc', rating: 'recommended' };
+const FILAMENT_DEFAULTS = { ease: 1, temp: 1, sort: 'name', dir: 'asc', cols: FILAMENT_DEFAULT_COLS };
+const LIST_DEFAULTS = { sort: 'name', dir: 'asc', cols: MANUFACTURER_DEFAULT_COLS };
+const PLATE_DEFAULTS = { sort: 'name', dir: 'asc', rating: 'recommended', cols: PLATE_DEFAULT_COLS };
 
 function readFilamentState(p) {
   return {
@@ -1033,6 +1747,7 @@ function readFilamentState(p) {
     ams: paramStr(p, 'ams'),
     sort: paramStr(p, 'sort', 'name'),
     dir: paramStr(p, 'dir', 'asc'),
+    cols: paramList(p, 'cols'),
   };
 }
 
@@ -1122,6 +1837,7 @@ function listView(config) {
 
   const renderResults = () => {
     const shown = config.compute(state);
+    api.shown = shown;                     // what export must write
     countNode.textContent = `${shown.length} of ${config.total} shown`;
     const focusKey = activeFocusKey();
     clear(resultsHost);
@@ -1135,8 +1851,11 @@ function listView(config) {
   const renderResultsSoon = debounce(renderResults, 200);
 
   const api = {
+    shown: [],
     /** Discrete controls (select, checkbox, chip, sort): apply immediately. */
     set(patch) { Object.assign(state, patch); renderResults(); syncUrl(); },
+    /** A change that alters the control set itself (e.g. column picker). */
+    setRebuild(patch) { Object.assign(state, patch); buildControls(); renderResults(); syncUrl(); },
     /**
      * Live text inputs: state updates on every keystroke, but filtering is
      * debounced and no control DOM is touched, so typing is never interrupted.
@@ -1148,10 +1867,10 @@ function listView(config) {
     },
   };
 
-  const buildControls = () => {
+  function buildControls() {
     clear(controlsHost);
     appendKids(controlsHost, [config.buildControls(state, api)]);
-  };
+  }
 
   /* Reset is an explicit action, so rebuilding the controls here is expected. */
   const reset = () => {
@@ -1170,6 +1889,7 @@ function listView(config) {
     el('div', { class: 'filter-foot' },
       countNode,
       el('span', { class: 'spacer' }),
+      config.foot ? config.foot(state, api) : null,
       el('button', { class: 'btn-sm', onclick: reset }, 'Reset filters'))));
   container.appendChild(resultsHost);
   container.appendChild(barHost);
@@ -1211,13 +1931,36 @@ async function viewFilaments(route) {
     extrasReady = true;
   };
 
+  /* Property/printing columns live in the entity files, not the index summary. */
+  let fullReady = false;
+  const ensureFullRows = async () => {
+    if (fullReady) return;
+    const byId = new Map((await loadAllEntities('filaments')).map((e) => [e.id, e]));
+    for (const row of rows) {
+      const full = byId.get(row.id);
+      if (full) Object.assign(row, full);
+    }
+    fullReady = true;
+    extrasReady = true;
+  };
+
   const state = readFilamentState(route.params);
-  if (state.vent || state.ams) await ensureExtras();
+  if (columnsNeedFull(activeColumns('filaments', state.cols))) await ensureFullRows();
+  else if (state.vent || state.ams) await ensureExtras();
 
   /** Filters that read fields the index may not carry load them on demand. */
   const setExtra = (api, patch) => {
     if (!extrasReady) { ensureExtras().then(() => api.set(patch)); return; }
     api.set(patch);
+  };
+
+  /** Turning on a properties column pulls the entity files in first. */
+  const setColumns = (api, cols) => {
+    if (!fullReady && columnsNeedFull(activeColumns('filaments', cols))) {
+      ensureFullRows().then(() => api.set({ cols }));
+      return;
+    }
+    api.set({ cols });
   };
 
   return listView({
@@ -1232,13 +1975,15 @@ async function viewFilaments(route) {
     total: rows.length,
     emptyText: 'No filaments match these filters.',
     compareKind: 'filaments',
-    compute: (s) => sortRows(filterFilaments(rows, s), FILAMENT_SORTS[s.sort] || FILAMENT_SORTS.name, s.dir),
-    buildControls: (s, api) => filamentControls(rows, s, api, setExtra),
-    renderResults: (shown, s, api) => filamentTable(shown, s, api),
+    compute: (s) => sortRows(filterFilaments(rows, s), columnSorter('filaments', s.sort, {}), s.dir),
+    buildControls: (s, api) => filamentControls(rows, s, api, setExtra, setColumns),
+    renderResults: (shown, s, api) => dataTable('filaments', shown, s, api, { compareKind: 'filaments' }),
+    foot: (s, api) => exportControl('filaments',
+      () => ({ rows: api.shown, cols: activeColumns('filaments', s.cols), ctx: {} })),
   });
 }
 
-function filamentControls(rows, s, api, setExtra) {
+function filamentControls(rows, s, api, setExtra, setColumns) {
   const classes = Array.from(new Set(rows.map((f) => f.polymer_class).filter(has))).sort();
   return frag(
     el('div', { class: 'filter-grid' },
@@ -1274,62 +2019,10 @@ function filamentControls(rows, s, api, setExtra) {
     el('div', { class: 'checkline' },
       checkbox('f-enc', 'Enclosure recommended', s.enc, (v) => api.set({ enc: v }), 'printing.enclosure_recommended'),
       checkbox('f-chamber', 'Heated chamber required', s.chamber, (v) => api.set({ chamber: v }), 'printing.heated_chamber_required'),
-      checkbox('f-base', 'Base types only (no variations)', s.base, (v) => api.set({ base: v }))));
+      checkbox('f-base', 'Base types only (no variations)', s.base, (v) => api.set({ base: v }))),
+    columnsControl('filaments', s, api, { onChange: (cols) => setColumns(api, cols) }));
 }
 
-function filamentTable(shown, s, api) {
-  const onSort = (key) => api.sortBy(key);
-  const head = el('tr', {},
-    el('th', { scope: 'col', class: 'no-print', 'aria-label': 'Compare' }, ''),
-    sortableHeader('Name', 'name', s.sort, s.dir, onSort),
-    sortableHeader('Class', 'polymer_class', s.sort, s.dir, onSort, { tipKey: 'polymer_class' }),
-    sortableHeader('Ease', 'ease_of_print', s.sort, s.dir, onSort, { num: true, tipKey: 'scores.ease_of_print' }),
-    sortableHeader('Warp', 'warp_tendency', s.sort, s.dir, onSort, { num: true, tipKey: 'scores.warp_tendency' }),
-    sortableHeader('Heat', 'temperature_tolerance', s.sort, s.dir, onSort, { num: true, tipKey: 'scores.temperature_tolerance' }),
-    sortableHeader('Layers', 'layer_adhesion', s.sort, s.dir, onSort, { num: true, tipKey: 'scores.layer_adhesion' }),
-    sortableHeader('Dim.', 'dimensional_stability', s.sort, s.dir, onSort, { num: true, tipKey: 'scores.dimensional_stability' }),
-    sortableHeader('Weather', 'weather_tolerance', s.sort, s.dir, onSort, { num: true, tipKey: 'scores.weather_tolerance' }),
-    sortableHeader('Price', 'price', s.sort, s.dir, onSort, { num: true }),
-    el('th', { scope: 'col' }, 'Suitability'));
-
-  const body = el('tbody');
-  for (const f of shown) {
-    const flags = el('span', { class: 'badge-group' });
-    if (f.enclosure_recommended) flags.appendChild(badge('enclosure', 'mid', 'Enclosure recommended'));
-    if (f.heated_chamber_required) flags.appendChild(badge('chamber', 'bad', 'Heated chamber required'));
-    if (has(f.base_type)) flags.appendChild(badge(`variation of ${f.base_type}`, 'neutral'));
-    if (pick(f, 'feeding.drive_system') === 'direct-drive-required') {
-      flags.appendChild(badge('direct drive required', 'bad', 'Needs a direct-drive extruder'));
-    }
-    if (pick(f, 'feeding.ams_compatible') === 'no') flags.appendChild(amsBadge('no'));
-    const shore = has(f.shore_hardness) ? f.shore_hardness : pick(f, 'properties.shore_hardness');
-    if (has(shore)) flags.appendChild(badge(`Shore ${shore}`, 'neutral', 'Shore hardness'));
-    if (pick(f, 'emissions.ventilation') === 'required') flags.appendChild(ventilationBadge('required'));
-    const products = Array.isArray(f.trade_names) ? f.trade_names.length : 0;
-    if (products) {
-      flags.appendChild(badge(`sold as ${products} product${products === 1 ? '' : 's'}`, 'neutral',
-        'Manufacturer product names that are this material chemically'));
-    }
-    if (isPlaceholder(f)) flags.appendChild(badge('example', 'example', 'Example data pending research'));
-
-    body.appendChild(el('tr', {},
-      el('td', { class: 'no-print', 'data-label': 'Compare' }, selectCheckbox('filaments', f.id, api.refresh)),
-      el('td', { class: 'cell-name', 'data-label': 'Name' },
-        el('a', { href: `#/filament/${encodeURIComponent(f.id)}` }, f.name || f.id),
-        flags.childNodes.length ? el('span', { class: 'sub' }, flags) : null),
-      el('td', { 'data-label': 'Class' }, el('span', { class: 'pill-class', text: prettyEnum(f.polymer_class) })),
-      el('td', { class: 'num', 'data-label': 'Ease of print' }, scoreInline('ease_of_print', pick(f, 'scores.ease_of_print'))),
-      el('td', { class: 'num', 'data-label': 'Warp tendency (10 = worst)' }, scoreInline('warp_tendency', pick(f, 'scores.warp_tendency'))),
-      el('td', { class: 'num', 'data-label': 'Temperature tolerance' }, scoreInline('temperature_tolerance', pick(f, 'scores.temperature_tolerance'))),
-      el('td', { class: 'num', 'data-label': 'Layer adhesion' }, scoreInline('layer_adhesion', pick(f, 'scores.layer_adhesion'))),
-      el('td', { class: 'num', 'data-label': 'Dimensional stability' }, scoreInline('dimensional_stability', pick(f, 'scores.dimensional_stability'))),
-      el('td', { class: 'num', 'data-label': 'Weather tolerance' }, scoreInline('weather_tolerance', pick(f, 'scores.weather_tolerance'))),
-      el('td', { class: 'num nowrap', 'data-label': 'Price' }, fmtPriceKg(f.price) || '—'),
-      el('td', { 'data-label': 'Suitability' }, suitabilityBadges(f.suitability))));
-  }
-  return el('div', { class: 'table-wrap' },
-    el('table', { class: 'responsive-table' }, el('thead', {}, head), body));
-}
 
 function checkbox(id, labelText, checked, onChange, tipKey) {
   const input = el('input', {
@@ -1361,7 +2054,7 @@ function debounce(fn, ms) {
 }
 
 /* ==========================================================================
- * 10. View: manufacturer list
+ * 11. View: manufacturer list
  * ========================================================================== */
 
 function readManufacturerState(p) {
@@ -1372,19 +2065,34 @@ function readManufacturerState(p) {
     plates: paramBool(p, 'plates'),
     sort: paramStr(p, 'sort', 'name'),
     dir: paramStr(p, 'dir', 'asc'),
+    cols: paramList(p, 'cols'),
   };
 }
 
-const MANUFACTURER_SORTS = {
-  name: (m) => m.name,
-  country: (m) => (m.manufacturing_countries || [])[0],
-  tier: (m) => ['budget', 'mid', 'premium', 'engineering'].indexOf(m.price_tier),
-  brands: (m) => (m.brands || []).length,
-};
-
-function viewManufacturers(route) {
+async function viewManufacturers(route) {
   const rows = listOf('manufacturers');
   const state = readManufacturerState(route.params);
+
+  /* Headquarters, product lines and endpoints are entity-file fields. */
+  let fullReady = false;
+  const ensureFullRows = async () => {
+    if (fullReady) return;
+    const byId = new Map((await loadAllEntities('manufacturers')).map((e) => [e.id, e]));
+    for (const row of rows) {
+      const full = byId.get(row.id);
+      if (full) Object.assign(row, full);
+    }
+    fullReady = true;
+  };
+  if (columnsNeedFull(activeColumns('manufacturers', state.cols))) await ensureFullRows();
+
+  const setColumns = (api, cols) => {
+    if (!fullReady && columnsNeedFull(activeColumns('manufacturers', cols))) {
+      ensureFullRows().then(() => api.set({ cols }));
+      return;
+    }
+    api.set({ cols });
+  };
 
   const filterRows = (s) => rows.filter((m) => {
     if (!matchesText(s.q, [m.name, m.id, m.summary, (m.brands || []).join(' '),
@@ -1405,13 +2113,15 @@ function viewManufacturers(route) {
       'Countries listed are where filament is made, not where it is sold.'),
     total: rows.length,
     emptyText: 'No manufacturers match these filters.',
-    compute: (s) => sortRows(filterRows(s), MANUFACTURER_SORTS[s.sort] || MANUFACTURER_SORTS.name, s.dir),
-    buildControls: (s, api) => manufacturerControls(rows, s, api),
-    renderResults: (shown, s, api) => manufacturerTable(shown, s, api),
+    compute: (s) => sortRows(filterRows(s), columnSorter('manufacturers', s.sort, {}), s.dir),
+    buildControls: (s, api) => manufacturerControls(rows, s, api, setColumns),
+    renderResults: (shown, s, api) => dataTable('manufacturers', shown, s, api, {}),
+    foot: (s, api) => exportControl('manufacturers',
+      () => ({ rows: api.shown, cols: activeColumns('manufacturers', s.cols), ctx: {} })),
   });
 }
 
-function manufacturerControls(rows, s, api) {
+function manufacturerControls(rows, s, api, setColumns) {
   const countries = Array.from(new Set(rows.flatMap((m) => m.manufacturing_countries || []))).sort();
   const tiers = Array.from(new Set(rows.map((m) => m.price_tier).filter(has))).sort();
   return frag(
@@ -1422,36 +2132,13 @@ function manufacturerControls(rows, s, api) {
       field('Price tier', selectControl('m-tier',
         [['', 'any']].concat(tiers.map((t) => [t, prettyEnum(t)])), s.tier, (v) => api.set({ tier: v })))),
     el('div', { class: 'checkline' },
-      checkbox('m-plates', 'Makes build plates', s.plates, (v) => api.set({ plates: v }))));
+      checkbox('m-plates', 'Makes build plates', s.plates, (v) => api.set({ plates: v }))),
+    columnsControl('manufacturers', s, api, { onChange: (cols) => setColumns(api, cols) }));
 }
 
-function manufacturerTable(shown, s, api) {
-  const onSort = (key) => api.sortBy(key);
-  const body = el('tbody');
-  for (const m of shown) {
-    body.appendChild(el('tr', {},
-      el('td', { class: 'cell-name', 'data-label': 'Name' },
-        el('a', { href: `#/manufacturer/${encodeURIComponent(m.id)}` }, m.name || m.id),
-        isPlaceholder(m) ? el('span', { class: 'sub' }, badge('example', 'example', 'Example data pending research')) : null,
-        m.summary ? el('span', { class: 'sub', text: m.summary }) : null),
-      el('td', { 'data-label': 'Brands' }, tagList((m.brands || []).slice(0, 8)) || txt('—')),
-      el('td', { 'data-label': 'Manufacturing countries' }, (m.manufacturing_countries || []).join(', ') || '—'),
-      el('td', { 'data-label': 'Price tier' }, m.price_tier ? badge(m.price_tier, 'neutral') : txt('—')),
-      el('td', { 'data-label': 'Plates' }, m.makes_plates === true ? badge('plates', 'good') : txt('—'))));
-  }
-  return el('div', { class: 'table-wrap' },
-    el('table', { class: 'responsive-table' },
-      el('thead', {}, el('tr', {},
-        sortableHeader('Name', 'name', s.sort, s.dir, onSort),
-        sortableHeader('Brands', 'brands', s.sort, s.dir, onSort),
-        sortableHeader('Made in', 'country', s.sort, s.dir, onSort),
-        sortableHeader('Price tier', 'tier', s.sort, s.dir, onSort),
-        el('th', { scope: 'col' }, 'Plates'))),
-      body));
-}
 
 /* ==========================================================================
- * 11. View: plate list
+ * 12. View: plate list
  * ========================================================================== */
 
 function readPlateState(p) {
@@ -1462,6 +2149,7 @@ function readPlateState(p) {
     rating: paramStr(p, 'rating', 'recommended'),
     sort: paramStr(p, 'sort', 'name'),
     dir: paramStr(p, 'dir', 'asc'),
+    cols: paramList(p, 'cols'),
   };
 }
 
@@ -1492,8 +2180,6 @@ async function viewPlates(route) {
     return true;
   });
 
-  const getters = { name: (r) => r.name, texture: (r) => r.texture };
-
   return listView({
     route,
     state,
@@ -1504,9 +2190,12 @@ async function viewPlates(route) {
     total: rows.length,
     emptyText: 'No plates match these filters.',
     compareKind: 'plates',
-    compute: (s) => sortRows(filterRows(s), getters[s.sort] || getters.name, s.dir),
+    compute: (s) => sortRows(filterRows(s), columnSorter('plates', s.sort, { full, state: s }), s.dir),
     buildControls: (s, api) => plateControls(rows, s, api),
-    renderResults: (shown, s, api) => plateTable(shown, s, api, full),
+    renderResults: (shown, s, api) => dataTable('plates', shown, s, api,
+      { compareKind: 'plates', ctx: { full, state: s } }),
+    foot: (s, api) => exportControl('plates',
+      () => ({ rows: api.shown, cols: activeColumns('plates', s.cols), ctx: { full, state: s } })),
   });
 }
 
@@ -1523,65 +2212,13 @@ function plateControls(rows, s, api) {
         s.rating, (v) => api.set({ rating: v })))),
     textures.length ? field('Texture', chipGroup(textures, s.texture, (value, on) => {
       api.set({ texture: on ? s.texture.concat([value]) : s.texture.filter((t) => t !== value) });
-    }), { key: 'texture' }) : null);
+    }), { key: 'texture' }) : null,
+    columnsControl('plates', s, api));
 }
 
-function plateTable(shown, s, api, full) {
-  const onSort = (key) => api.sortBy(key);
-  const body = el('tbody');
-  for (const r of shown) {
-    const entity = full.get(r.id) || {};
-    const compat = Array.isArray(entity.filament_compatibility) ? entity.filament_compatibility : [];
-    /*
-     * Plates now rate 30-46 materials each. Show rating counts, plus the
-     * named materials for whichever rating the compatibility filter targets.
-     */
-    const compatCell = el('span', { class: 'badge-group' });
-    for (const [rating, group] of groupByRating(compat)) {
-      const tone = rating === 'recommended' ? 'good' : rating === 'avoid' ? 'bad' : 'mid';
-      compatCell.appendChild(badge(`${RATING_LABEL[rating] || rating}: ${group.length}`, tone,
-        group.map((c) => shortName('filaments', c.filament_id)).join(', ')));
-    }
-    if (s.compat) {
-      const hit = compat.find((c) => c.filament_id === s.compat);
-      if (hit) {
-        compatCell.appendChild(badge(
-          `${shortName('filaments', s.compat)}: ${RATING_LABEL[hit.rating] || hit.rating}`,
-          hit.rating === 'recommended' ? 'good' : hit.rating === 'avoid' ? 'bad' : 'mid',
-          hit.notes || null));
-      }
-    }
-    const nameFlags = el('span', { class: 'badge-group' });
-    if (isPlaceholder(r)) nameFlags.appendChild(badge('example', 'example', 'Example data pending research'));
-    const soldAs = tradeNameCount(r) || tradeNameCount(entity);
-    if (soldAs) {
-      nameFlags.appendChild(badge(`sold as ${soldAs}`, 'neutral',
-        `${soldAs} vendor product${soldAs === 1 ? '' : 's'} use this surface — searchable by product name`));
-    }
-
-    body.appendChild(el('tr', {},
-      el('td', { class: 'no-print', 'data-label': 'Compare' }, selectCheckbox('plates', r.id, api.refresh)),
-      el('td', { class: 'cell-name', 'data-label': 'Name' },
-        el('a', { href: `#/plate/${encodeURIComponent(r.id)}` }, r.name || r.id),
-        nameFlags.childNodes.length ? el('span', { class: 'sub' }, nameFlags) : null,
-        r.summary ? el('span', { class: 'sub', text: r.summary }) : null),
-      el('td', { 'data-label': 'Texture' }, r.texture ? el('span', { class: 'pill-class', text: prettyEnum(r.texture) }) : txt('—')),
-      el('td', { 'data-label': 'Surface' }, r.surface_makeup || '—'),
-      el('td', { 'data-label': 'Filament compatibility' }, compatCell.childNodes.length ? compatCell : txt('—'))));
-  }
-  return el('div', { class: 'table-wrap' },
-    el('table', { class: 'responsive-table' },
-      el('thead', {}, el('tr', {},
-        el('th', { scope: 'col', class: 'no-print' }, ''),
-        sortableHeader('Name', 'name', s.sort, s.dir, onSort),
-        sortableHeader('Texture', 'texture', s.sort, s.dir, onSort, { tipKey: 'texture' }),
-        el('th', { scope: 'col' }, 'Surface makeup'),
-        el('th', { scope: 'col' }, 'Filament compatibility'))),
-      body));
-}
 
 /* ==========================================================================
- * 12. Detail pages
+ * 13. Detail pages
  * ========================================================================== */
 
 function detailHeader(entity, opts) {
@@ -1721,10 +2358,13 @@ function emissionsSection(f) {
   const e = f.emissions;
   if (!has(e)) return null;
   return section('Emissions & ventilation', 'emissions.ventilation',
-    has(e.ventilation) ? el('p', { class: 'vent-headline' }, ventilationBadge(e.ventilation)) : null,
+    has(e.ventilation)
+      ? el('p', { class: 'vent-headline' },
+        tipBadgeNode('emissions.ventilation', ventilationBadge(e.ventilation)))
+      : null,
     kvTable([
-      ['emissions.voc_level', has(e.voc_level) ? badge(prettyEnum(e.voc_level), levelTone(e.voc_level)) : null],
-      ['emissions.particulate_level', has(e.particulate_level) ? badge(prettyEnum(e.particulate_level), levelTone(e.particulate_level)) : null],
+      ['emissions.voc_level', has(e.voc_level) ? tipBadge('emissions.voc_level', prettyEnum(e.voc_level), levelTone(e.voc_level)) : null],
+      ['emissions.particulate_level', has(e.particulate_level) ? tipBadge('emissions.particulate_level', prettyEnum(e.particulate_level), levelTone(e.particulate_level)) : null],
       ['emissions.primary_emissions', tagList(e.primary_emissions), { label: 'Primary emissions' }],
       ['emissions.notes', e.notes, { label: 'Emission notes' }],
     ]));
@@ -1747,6 +2387,46 @@ function useCasesSection(f) {
   return section('Use cases', null, el('div', { class: 'pros-cons' },
     rec ? el('div', {}, el('h3', { text: 'Recommended for' }), rec) : null,
     not ? el('div', {}, el('h3', { text: 'Not recommended for' }), not) : null));
+}
+
+/**
+ * "Alternatives to consider" — sibling materials to reach for instead, with the
+ * reason. Absent field renders nothing; unknown ids render as plain text.
+ */
+function alternativeRows(f) {
+  return (Array.isArray(f.alternatives) ? f.alternatives : [])
+    .filter((a) => a && has(a.filament_id));
+}
+
+function alternativesSection(f) {
+  const list = alternativeRows(f);
+  if (!list.length) return null;
+  const body = el('tbody');
+  for (const alt of list) {
+    body.appendChild(el('tr', {},
+      el('td', { 'data-label': 'Material' },
+        refLink('filaments', alt.filament_id) || txt(String(alt.filament_id))),
+      el('td', { 'data-label': 'Why' }, alt.reason || '—')));
+  }
+  return section('Alternatives to consider', 'alternatives',
+    el('div', { class: 'table-wrap' },
+      el('table', { class: 'responsive-table' },
+        el('thead', {}, el('tr', {},
+          el('th', { scope: 'col' }, 'Material'),
+          el('th', { scope: 'col' }, 'Why'))),
+        body)));
+}
+
+/** One-line alternatives summary for the printable sheet. */
+function alternativesLine(f, max) {
+  const list = alternativeRows(f);
+  if (!list.length) return '';
+  return trimText(list
+    .map((alt) => {
+      const name = shortName('filaments', alt.filament_id);
+      return alt.reason ? `${name} (${alt.reason})` : name;
+    })
+    .join('; '), max || 150);
 }
 
 function compatibilitySection(f) {
@@ -1913,6 +2593,7 @@ async function viewFilamentDetail(id) {
       [propertiesSection(f), suitabilitySection(f)],
       [scoresSection(f.scores), priceSection(f)]),
     useCasesSection(f),
+    alternativesSection(f),
     compatibilitySection(f),
     plateRecommendationsSection(f),
     relatedFilaments(f),
@@ -2139,7 +2820,7 @@ async function viewPlateDetail(id) {
 }
 
 /* ==========================================================================
- * 13. Printable reference sheets
+ * 14. Printable reference sheets
  * ========================================================================== */
 
 /**
@@ -2297,7 +2978,10 @@ async function viewFilamentSheet(id) {
             ['Emits', trimText((pick(f, 'emissions.primary_emissions') || []).join(', '), 110)],
           ]),
           pick(f, 'emissions.notes') ? el('p', { class: 'fine', text: trimText(pick(f, 'emissions.notes'), 120) }) : null,
-          f.safety_notes ? el('p', { class: 'fine', text: trimText(f.safety_notes, 110) }) : null) : null),
+          f.safety_notes ? el('p', { class: 'fine', text: trimText(f.safety_notes, 110) }) : null) : null,
+        /* One compact line only — the sheet's one-page guarantee comes first. */
+        alternativesLine(f, 150) ? sheetBlock('Alternatives',
+          el('p', { class: 'fine', text: alternativesLine(f, 150) })) : null),
       el('p', { class: 'fine faint sheet-foot' },
         txt(`Condensed sheet — see the full entry for complete notes. Confidence: ${pick(f, 'provenance.confidence') || 'unknown'}. Filament Field Guide — ${f.id}`))));
 }
@@ -2367,7 +3051,7 @@ async function viewPlateSheet(id) {
 }
 
 /* ==========================================================================
- * 14. Compare views
+ * 15. Compare views
  * ========================================================================== */
 
 const FILAMENT_COMPARE_ROWS = [
@@ -2429,6 +3113,22 @@ const FILAMENT_COMPARE_ROWS = [
     key: 'emissions.particulate_level',
     get: (f) => (has(pick(f, 'emissions.particulate_level'))
       ? badge(prettyEnum(pick(f, 'emissions.particulate_level')), levelTone(pick(f, 'emissions.particulate_level'))) : null),
+  },
+  {
+    key: 'alternatives',
+    label: 'Alternatives to consider',
+    get: (f) => {
+      const list = alternativeRows(f);
+      if (!list.length) return null;
+      const ul = el('ul', { class: 'linklist' });
+      for (const alt of list) {
+        ul.appendChild(el('li', {},
+          refLink('filaments', alt.filament_id, shortName('filaments', alt.filament_id))
+            || txt(String(alt.filament_id)),
+          alt.reason ? txt(` — ${alt.reason}`) : null));
+      }
+      return ul;
+    },
   },
   { key: 'safety_notes', label: 'Safety', get: (f) => f.safety_notes },
   { key: 'provenance.confidence', label: 'Confidence', get: (f) => confidenceBadge(pick(f, 'provenance.confidence')) },
@@ -2520,7 +3220,12 @@ function boolBadge(v, badIsTrue) {
   return badge(v ? 'yes' : 'no', tone);
 }
 
+/**
+ * Side-by-side table. Returns { node, matrix } so the export writes exactly the
+ * rows that were rendered — including the drop of rows nobody has data for.
+ */
 function compareTable(entities, rows, kindPath) {
+  const matrix = [];
   const head = el('tr', {}, el('th', { class: 'rowhead', scope: 'col' }, 'Property'));
   for (const e of entities) {
     head.appendChild(el('th', { scope: 'col' },
@@ -2533,14 +3238,73 @@ function compareTable(entities, rows, kindPath) {
     if (!cells.some((c) => has(c))) continue;   // drop rows nobody has data for
     const tr = el('tr', {}, el('th', { class: 'rowhead', scope: 'row' },
       propLabel(row.key, { label: row.label })));
+    const label = row.label || (glossaryFor(row.key) || {}).term || humanizeKey(row.key);
+    matrix.push({ property: label, path: row.key, values: cells.map((c) => (has(c) ? nodeText(c) : '')) });
     cells.forEach((c) => {
       tr.appendChild(el('td', { 'data-label': row.label || humanizeKey(row.key) },
         has(c) ? (c instanceof Node ? c : txt(c)) : el('span', { class: 'faint', text: '—' })));
     });
     body.appendChild(tr);
   }
-  return el('div', { class: 'table-wrap' },
-    el('table', { class: 'compare-table' }, el('thead', {}, head), body));
+  return {
+    node: el('div', { class: 'table-wrap' },
+      el('table', { class: 'compare-table' }, el('thead', {}, head), body)),
+    matrix,
+  };
+}
+
+/**
+ * Export the comparison matrix: one row per property, one column per entity.
+ * Values are the text of what is on screen, so the file matches the page.
+ */
+function compareExportControl(kind, entities, matrix) {
+  const ids = entities.map((e) => e.id);
+  const names = entities.map((e) => e.name || e.id);
+
+  const run = (format) => {
+    const base = `compare-${kind}-${ids.join('-')}-${todayStamp()}`;
+    if (format === 'csv') {
+      const rows = matrix.map((row) => [row.property].concat(row.values));
+      downloadText(`${base}.csv`, 'text/csv', rowsToCSV(['property'].concat(names), rows));
+      return;
+    }
+    if (format === 'json') {
+      const payload = {
+        kind,
+        generated: new Date().toISOString(),
+        entities: entities.map((e) => ({ id: e.id, name: e.name || e.id })),
+        properties: matrix.map((row) => {
+          const rec = { property: row.property, path: row.path || '' };
+          ids.forEach((id, i) => { rec[id] = row.values[i]; });
+          return rec;
+        }),
+      };
+      downloadText(`${base}.json`, 'application/json', JSON.stringify(payload, null, 2) + '\n');
+      return;
+    }
+    const out = ['<?xml version="1.0" encoding="UTF-8"?>',
+      `<comparison kind="${xmlEscape(kind)}" generated="${xmlEscape(new Date().toISOString())}">`,
+      '  <entities>'];
+    entities.forEach((e) => {
+      out.push(`    <entity id="${xmlEscape(e.id)}" name="${xmlEscape(e.name || e.id)}"/>`);
+    });
+    out.push('  </entities>');
+    for (const row of matrix) {
+      out.push(`  <property name="${xmlEscape(row.property)}" path="${xmlEscape(row.path || '')}">`);
+      ids.forEach((id, i) => {
+        out.push(`    <value entity="${xmlEscape(id)}">${xmlEscape(row.values[i])}</value>`);
+      });
+      out.push('  </property>');
+    }
+    out.push('</comparison>');
+    downloadText(`${base}.xml`, 'application/xml', out.join('\n') + '\n');
+  };
+
+  return el('div', { class: 'export-control row-actions no-print' },
+    el('span', { class: 'small faint', text: `Export ${matrix.length} propert${matrix.length === 1 ? 'y' : 'ies'}:` }),
+    el('button', { class: 'btn-sm', dataset: { export: 'csv' }, onclick: () => run('csv') }, 'CSV'),
+    el('button', { class: 'btn-sm', dataset: { export: 'json' }, onclick: () => run('json') }, 'JSON'),
+    el('button', { class: 'btn-sm', dataset: { export: 'xml' }, onclick: () => run('xml') }, 'XML'));
 }
 
 async function viewCompare(kind, idsRaw) {
@@ -2559,6 +3323,8 @@ async function viewCompare(kind, idsRaw) {
   // Keep the compare selection in sync so the list view reflects this URL.
   selection[kind] = new Set(present.map((e) => e.id));
 
+  const table = present.length ? compareTable(present, rows, singular) : null;
+
   return frag(
     backCrumb(`#/${kind}`, `All ${kind}`),
     el('div', { class: 'page-head' },
@@ -2566,12 +3332,13 @@ async function viewCompare(kind, idsRaw) {
       el('p', { class: 'sub', text: present.map((e) => e.name || e.id).join('  vs  ') })),
     missing.length ? el('div', { class: 'banner' }, el('div', {},
       el('strong', { text: 'Not found: ' }), txt(missing.join(', ')))) : null,
-    present.length ? compareTable(present, rows, singular) : el('p', { class: 'muted', text: 'Nothing to compare.' }),
+    table ? compareExportControl(kind, present, table.matrix) : null,
+    table ? table.node : el('p', { class: 'muted', text: 'Nothing to compare.' }),
     el('p', { class: 'small faint no-print', text: 'This URL is shareable — it encodes the exact comparison.' }));
 }
 
 /* ==========================================================================
- * 15. Glossary view
+ * 16. Glossary view
  * ========================================================================== */
 
 function viewGlossary() {
@@ -2617,7 +3384,7 @@ function viewGlossary() {
 }
 
 /* ==========================================================================
- * 16. Router
+ * 17. Router
  * ========================================================================== */
 
 function parseHash() {
@@ -2751,7 +3518,7 @@ async function router() {
 }
 
 /* ==========================================================================
- * 17. Boot
+ * 18. Boot
  * ========================================================================== */
 
 /** Printing must show everything, including collapsed rating groups. */

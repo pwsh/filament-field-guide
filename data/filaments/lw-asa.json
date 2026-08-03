@@ -180,6 +180,24 @@
       "notes": "As base ASA — thermal and adhesion envelope both exceeded in practice; use a textured PEI plate instead."
     }
   ],
+  "alternatives": [
+    {
+      "filament_id": "lw-pla",
+      "reason": "The easy lightweight: no enclosure, far less warp (3 vs 7) and much simpler foaming calibration, at $36-41 vs $45-60 — but it is indoor-only (uv 3 vs 8, weather 2 vs 8) and has no heat resistance (temp 2 vs 6)."
+    },
+    {
+      "filament_id": "asa",
+      "reason": "Solid ASA when the weight saving is not worth the calibration: the same weather package with real structure (compression 6 vs 2, adhesion 4 vs 2, dim 7 vs 5) for less money ($18-45 vs $45-60), at roughly 2.5-3x the printed density."
+    },
+    {
+      "filament_id": "lw-tpu",
+      "reason": "Lightweight with impact-absorbing flexibility instead of rigidity, for foam-core and bumper parts — but harder to feed (ease 3 vs 4), pricier ($65-85 vs $45-60) and with no outdoor or heat life (uv 3 vs 8, temp 2 vs 6)."
+    },
+    {
+      "filament_id": "pp-cf",
+      "reason": "If the goal is a light, weatherable structural part rather than a foamed shell, CF polypropylene is low-density and genuinely outdoor-rated with real strength (compression 8 vs 2, warp 4 vs 7, temp 7 vs 6) — at $85-140/kg, a hardened nozzle and PP's refusal to stick to a standard build surface."
+    }
+  ],
   "emissions": {
     "voc_level": "high",
     "particulate_level": "high",

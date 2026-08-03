@@ -183,6 +183,28 @@
       "notes": "As pa6-cf: CF nylons want 80-110 °C beds, above this plate's working range."
     }
   ],
+  "alternatives": [
+    {
+      "filament_id": "pa6-cf",
+      "reason": "The named-grade version of what most of these unlabelled spools probably are: higher stiffness and heat (compression 9 vs 7, temp 8 vs 7, HDT 175-215 vs ~155 °C) with published Z numbers and lower warp (3 vs 4) — at roughly double the price ($79-135 vs $40-60)."
+    },
+    {
+      "filament_id": "pa12-cf",
+      "reason": "When humidity is the real enemy: dimensional stability 9 vs 5, warp 2 vs 4 and water tolerance 8 vs 3, holding ~85 % of dry tensile after conditioning — at $130-180/kg and a lower heat ceiling (temp 6 vs 7)."
+    },
+    {
+      "filament_id": "pa6-gf",
+      "reason": "Glass instead of carbon on a named base: more impact-tough with a better layer bond (adhesion 6 vs 4), less abrasive, colourable and hotter (temp 8 vs 7, HDT ~182 °C) — at $55-65/kg against $40-60."
+    },
+    {
+      "filament_id": "pa",
+      "reason": "Unfilled nylon if toughness beats stiffness: layer adhesion 9 vs 4 and real ductility, no hardened nozzle and soluble-support options — at warp 9 vs 4 and dimensional stability 3 vs 5."
+    },
+    {
+      "filament_id": "petg-cf",
+      "reason": "If the part does not actually need nylon's heat or wear behaviour, CF PETG prints open-frame with no drying regime (warp 2 vs 4, water 8 vs 3, ease 6 vs 4) at $25-67/kg, giving up temperature tolerance (5 vs 7)."
+    }
+  ],
   "emissions": {
     "voc_level": "high",
     "particulate_level": "moderate",

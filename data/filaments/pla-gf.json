@@ -180,6 +180,24 @@
       "notes": "Backfilled from plate entry (reciprocity) — see plate page"
     }
   ],
+  "alternatives": [
+    {
+      "filament_id": "pla",
+      "reason": "Drop the fibre when stiffness is not the constraint: no hardened nozzle, ease 10 vs 8 and $14-35 vs $25-40 — you give up flexural modulus 4,415 MPa, tensile 59.3 MPa and stab 9 vs 8."
+    },
+    {
+      "filament_id": "pla-cf",
+      "reason": "The stiffer, matte-black sibling with the same stab 9, but more brittle, more abrasive and harder to print (ease 7 vs 8) — and like glass it leaves HDT at ~54-56 °C, so neither fixes heat."
+    },
+    {
+      "filament_id": "petg-gf",
+      "reason": "The same glass bargain on a copolyester base: much better heat (temp 7 vs 2, up to 133 °C annealed on the PET-based grades), better bonding (adh 7 vs 5) and real water resistance — at ease 6 vs 8 and much more moisture fuss than PLA-GF, whose TDS lists drying as N/A."
+    },
+    {
+      "filament_id": "pla-ht",
+      "reason": "If parts are failing from heat rather than flex, this is the correct PLA fix (temp 6 vs 2, and the glass-filled HT grades pass 150 °C); the price is a mandatory bake and geometry-sensitive shrink compensation that PLA-GF does not need."
+    }
+  ],
   "emissions": {
     "voc_level": "low",
     "particulate_level": "low",

@@ -99,7 +99,7 @@
   "suitability": {
     "food_contact": "no",
     "load_bearing": "moderate",
-    "high_temperature": "no",
+    "high_temperature": "moderate",
     "outdoor": "limited"
   },
   "properties": {
@@ -212,6 +212,24 @@
       "notes": "Backfilled from plate entry (reciprocity)"
     }
   ],
+  "alternatives": [
+    {
+      "filament_id": "petg",
+      "reason": "Usually the better default: eSUN's own numbers put PETG+ at 5.56 % elongation and 2.21 kJ/m² IZOD against base PETG's 83 % and 4.7 kJ/m², i.e. stiffer and more brittle rather than tougher, and base prints easier (ease 7 vs 5) for the same or less money. You give up 6 °C of HDT (70 vs 64 °C) and a point of UV (5 vs 6)."
+    },
+    {
+      "filament_id": "pctg",
+      "reason": "If a genuinely tougher PETG was the goal, this is the grade that delivers it: real impact strength and the catalog's best layer bonding (adh 10 vs 5) — at $30-55 vs $20-30, a 250-270 °C all-metal hotend and more warp (5 vs 3)."
+    },
+    {
+      "filament_id": "petg-gf",
+      "reason": "If the appeal was heat and rigidity, glass fill goes far further: stab 9 vs 7, temp 7 vs 6 and up to 133 °C HDT annealed for a similar $25-35 — bought with a mandatory hardened nozzle and more moisture sensitivity."
+    },
+    {
+      "filament_id": "asa",
+      "reason": "For the UV-resistance claim specifically: uv 9 / weath 9 against PETG+'s 6 / 6, with temp 7 vs 6 at $18-45 — bought with an enclosure, ventilation and warp 7 vs 3."
+    }
+  ],
   "emissions": {
     "voc_level": "low",
     "particulate_level": "moderate",
@@ -234,7 +252,7 @@
     ],
     "last_verified": "2026-08-01",
     "confidence": "medium",
-    "conflicts": "Primary unresolved discrepancy: eSUN's PETG+ / 'PETG Pro' sheet lists elongation at break 5.56 % and IZOD 2.21 kJ/m², while eSUN's own base PETG TDS V4.0 lists 83 % and 4.7 kJ/m². On the manufacturer's own published numbers the '+' grade is roughly 15x less ductile and half as impact-resistant as the base grade it is sold above, directly contradicting the 'High Toughness' marketing claim. This may reflect print-orientation or test-condition differences not captured in the fetched tables, but it is recorded as published rather than silently corrected. The layer_adhesion score of 5 is anchored to the measured Z/XY ratios (~54 % tensile, ~60 % elongation) per the glossary rubric, not to the marketing claim; base petg scores 9. Independent third-party mechanical testing is recommended before relying on the toughness claim. Secondary gaps: the UV-resistance claim is manufacturer marketing with no independent confirmation (unverified), which is why suitability.outdoor is 'limited' rather than 'yes'; no recommended print speed is published (80 mm/s carried from base petg); no price listing was confirmed; Tg, shrinkage and max service temperature are unpublished. Note also that the research pass suggested enclosure_open_for_cooling: true on the grounds that no chamber is required; that is recorded as false here to match base petg and pctg, because the field means 'prints better with the door open' and this grade's 70 °C HDT gives no heat-creep reason to vent the chamber. Re-verification 2026-08-01 — the 5.56 % elongation figure is CONFIRMED as eSUN's current published value, but its plausibility remains OPEN and no values changed. The live esun3d.com/petg-pro-product/ page was re-fetched directly rather than read from cache: elongation at break 5.56±0.2 % (XY) / 3.31±0.2 % (Z), tensile 48 MPa, flexural modulus 1993.64 MPa, density 1.27 g/cm³, HDT 70 °C — every recorded number matched, so this is not a scraping or transcription artefact. eSUN's own base PETG TDS V4.0 (tensile 52.2 MPa, elongation 83 %, flexural modulus 1073 MPa) uses the same GB/T 1040 / GB/T 9341 methods from the same manufacturer, so the ~15x ductility gap is a real difference between two of eSUN's own datasheets rather than a cross-brand or cross-method artefact. The internal inconsistency is therefore eSUN's: the product is titled 'High Toughness' while the TDS shows an order-of-magnitude ductility loss against the base grade, and the sheet offers no IZOD comparison point that would let 'toughness' be justified through impact resistance instead. Independent verification is UNAVAILABLE: targeted searches for CNC Kitchen, MyTechFun and Reddit/forum mechanical testing of eSUN PETG+ specifically (elongation, snap or bend tests) returned nothing — this SKU has not been benchmarked by the usual independent reviewers, so absence of a hit is a real gap and not corroboration. The published value is retained rather than 'corrected', because there is no independent measurement to correct it to. Confidence stays medium: authenticity of the figure is now settled, which is a genuine gain, but the remaining unknowns are unchanged (no independent mechanical test, unconfirmed UV claim, no published speed, no confirmed price, no Tg/shrinkage/max-service-temp)."
+    "conflicts": "Primary unresolved discrepancy: eSUN's PETG+ / 'PETG Pro' sheet lists elongation at break 5.56 % and IZOD 2.21 kJ/m², while eSUN's own base PETG TDS V4.0 lists 83 % and 4.7 kJ/m². On the manufacturer's own published numbers the '+' grade is roughly 15x less ductile and half as impact-resistant as the base grade it is sold above, directly contradicting the 'High Toughness' marketing claim. This may reflect print-orientation or test-condition differences not captured in the fetched tables, but it is recorded as published rather than silently corrected. The layer_adhesion score of 5 is anchored to the measured Z/XY ratios (~54 % tensile, ~60 % elongation) per the glossary rubric, not to the marketing claim; base petg scores 9. Independent third-party mechanical testing is recommended before relying on the toughness claim. Secondary gaps: the UV-resistance claim is manufacturer marketing with no independent confirmation (unverified), which is why suitability.outdoor is 'limited' rather than 'yes'; no recommended print speed is published (80 mm/s carried from base petg); no price listing was confirmed; Tg, shrinkage and max service temperature are unpublished. Note also that the research pass suggested enclosure_open_for_cooling: true on the grounds that no chamber is required; that is recorded as false here to match base petg and pctg, because the field means 'prints better with the door open' and this grade's 70 °C HDT gives no heat-creep reason to vent the chamber. Re-verification 2026-08-01 — the 5.56 % elongation figure is CONFIRMED as eSUN's current published value, but its plausibility remains OPEN and no values changed. The live esun3d.com/petg-pro-product/ page was re-fetched directly rather than read from cache: elongation at break 5.56±0.2 % (XY) / 3.31±0.2 % (Z), tensile 48 MPa, flexural modulus 1993.64 MPa, density 1.27 g/cm³, HDT 70 °C — every recorded number matched, so this is not a scraping or transcription artefact. eSUN's own base PETG TDS V4.0 (tensile 52.2 MPa, elongation 83 %, flexural modulus 1073 MPa) uses the same GB/T 1040 / GB/T 9341 methods from the same manufacturer, so the ~15x ductility gap is a real difference between two of eSUN's own datasheets rather than a cross-brand or cross-method artefact. The internal inconsistency is therefore eSUN's: the product is titled 'High Toughness' while the TDS shows an order-of-magnitude ductility loss against the base grade, and the sheet offers no IZOD comparison point that would let 'toughness' be justified through impact resistance instead. Independent verification is UNAVAILABLE: targeted searches for CNC Kitchen, MyTechFun and Reddit/forum mechanical testing of eSUN PETG+ specifically (elongation, snap or bend tests) returned nothing — this SKU has not been benchmarked by the usual independent reviewers, so absence of a hit is a real gap and not corroboration. The published value is retained rather than 'corrected', because there is no independent measurement to correct it to. Confidence stays medium: authenticity of the figure is now settled, which is a genuine gain, but the remaining unknowns are unchanged (no independent mechanical test, unconfirmed UV claim, no published speed, no confirmed price, no Tg/shrinkage/max-service-temp). 2026-08-03: high_temperature flag corrected no→moderate for internal consistency (temperature_tolerance 6 and HDT 70C exceed base petg, which is flagged moderate)."
   },
   "trade_names": [
     {

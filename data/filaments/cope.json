@@ -193,6 +193,24 @@
       "notes": "Backfilled from plate entry (Phase E reciprocity): Copolyester elastomer combines the PETG fusion risk with elastomer tear behaviour — the worst of both listed cautions."
     }
   ],
+  "alternatives": [
+    {
+      "filament_id": "pla",
+      "reason": "The material CoPE is sold to replace, and still the better pick for anything finished by hand: PLA sands and post-processes properly where CoPE does not, has better impact than CoPE's 2.9 kJ/m² Charpy, and its budget tier undercuts CoPE's $18-20 — you give up the 400 mm/s / ~32 mm³/s ceiling, the strong bed grip and ~8 °C of softening (temp 3 vs 2)."
+    },
+    {
+      "filament_id": "pla-hf",
+      "reason": "The PLA-native answer to the same problem: 100-300 mm/s (600+ on capable hardware) with base-PLA chemistry, finishing and family bonding at $18-30 — a lower speed ceiling and weaker bed adhesion, though the latter is an advantage on textured PEI, which CoPE's own datasheet warns against."
+    },
+    {
+      "filament_id": "petg",
+      "reason": "If those parts must survive heat or water rather than just print fast: temp 5 vs 3, water 9 vs 6 and adh 9 vs 7 at $18-42 — bought with ease 7 vs 9, stringing and no comparable speed band."
+    },
+    {
+      "filament_id": "pctg",
+      "reason": "Copolyester bought for toughness rather than speed: adh 10 vs 7 and genuine impact strength where CoPE's Charpy is only 2.9 kJ/m² — at $30-55 vs $18-20 and a 250-270 °C all-metal hotend."
+    }
+  ],
   "emissions": {
     "voc_level": "low",
     "particulate_level": "low",

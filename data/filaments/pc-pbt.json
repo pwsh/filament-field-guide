@@ -158,6 +158,24 @@
       "notes": "Backfilled from plate entry (Phase E reciprocity): As PC-ABS."
     }
   ],
+  "alternatives": [
+    {
+      "filament_id": "pc-abs",
+      "reason": "Drops the heated-chamber requirement — PC-PBT is the only PC blend here needing a maintained 100-110 °C chamber — for a much cheaper process on ordinary hardware (ease 4 vs 3, warp 7 vs 8), at the cost of strength (39.9 vs 50.4 MPa, compression 7 vs 8), heat (temp 7 vs 8) and solvent resistance."
+    },
+    {
+      "filament_id": "pc",
+      "reason": "Base PC when chemical and cold-impact resistance are not the driver: a higher heat ceiling (temp 9 vs 8, layer adhesion 8 vs 7) and no heated chamber, starting cheaper per kilo at the low end — giving up the blend's resistance to fuels, oils and solvents and its -30 °C impact retention."
+    },
+    {
+      "filament_id": "pbt",
+      "reason": "The standalone polyester if the chemical resistance was the whole point: no heated chamber, easier (ease 4 vs 3) and with 170 % elongation and cold-impact toughness — but Vicat 110 °C against the blend's ~140 °C HDT (temp 5 vs 8), lower strength (compression 7 vs 8), and a 100-130 °C bed of its own."
+    },
+    {
+      "filament_id": "pps",
+      "reason": "When the chemical resistance has to hold hot and outdoors: essentially solvent-proof with water tolerance 10 vs 7, weather 9 vs 3 and temp 8 (equal) without a heated chamber — at $140-200/kg against $36-37 and the catalog's second-worst warp (9 vs 8)."
+    }
+  ],
   "emissions": {
     "voc_level": "moderate",
     "particulate_level": "high",

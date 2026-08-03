@@ -189,6 +189,28 @@
       "notes": "Backfilled from plate entry (Phase E reciprocity): Far outside the rated range."
     }
   ],
+  "alternatives": [
+    {
+      "filament_id": "pekk",
+      "reason": "The more printable cousin at nearly the same ceiling: nozzle 345-375 °C instead of 375-410, Tg 162 vs 143 °C, warp 8 vs 10, layer adhesion 7 vs 6 and ease 2 vs 1 — for a little peak stiffness, and no saving ($495-700)."
+    },
+    {
+      "filament_id": "pei-ultem",
+      "reason": "Three to four times cheaper ($195-290 vs $400-900), prints 20-40 °C cooler, and being amorphous it holds tolerance far better (stability 8 vs 5, warp 6 vs 10) — but continuous service drops to ~180 °C from 240-260 °C."
+    },
+    {
+      "filament_id": "ppsu",
+      "reason": "Broadly similar money ($400-600) for far lower warp (5 vs 10), better dimensional stability (8 vs 5) and impact toughness that survives knocks which crack a PEEK part, plus steam sterilisation — at temp 8 vs 10."
+    },
+    {
+      "filament_id": "pps-cf",
+      "reason": "The only member of this cluster with a real consumer-printer path: 310-350 °C nozzle inside an X1E/H2D high-temp hotend's reach, no heated chamber, warp 3 vs 10, at $100-200 — but Tg 85 °C means stiffness falls away far earlier under load."
+    },
+    {
+      "filament_id": "pc",
+      "reason": "If the part needs a high but not extreme ceiling: PC carries temp 9 vs 10 on ordinary enclosed hardware at $30-65 — a 10-20x price drop, no industrial hotend and no heated chamber, in exchange for chemical resistance and creep performance that are not comparable."
+    }
+  ],
   "emissions": {
     "voc_level": "moderate",
     "particulate_level": "high",

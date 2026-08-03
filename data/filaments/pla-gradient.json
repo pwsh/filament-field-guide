@@ -167,6 +167,24 @@
       "notes": "No delta from base PLA: textured PEI at 35-60 °C bed with no release agent. Smooth PEI or glass equally fine — plate choice does not interact with the gradient effect."
     }
   ],
+  "alternatives": [
+    {
+      "filament_id": "pla",
+      "reason": "The same polymer with identical printing, drying, mechanical and thermal behaviour — take base PLA and save roughly $5-8/kg ($14-35 vs $24-26) unless the height-graded colour shift is the whole point of the model."
+    },
+    {
+      "filament_id": "pla-silk",
+      "reason": "Buys visual drama through gloss instead of colour transition, so it works on small parts where a gradient has no room to develop; costs layer adhesion (adh 4 vs 6), hotter/slower printing and AMS-conditional feeding."
+    },
+    {
+      "filament_id": "pla-glitter",
+      "reason": "Another decorative variant with no mechanical penalty (adh 6 both, comp 7 vs 8) that reads at any part size rather than needing height — but it bars 0.2 mm nozzles and wants a stricter 55 °C / 8 h dry."
+    },
+    {
+      "filament_id": "pla-matte",
+      "reason": "Puts the effect in the surface rather than the colour: kills gloss and hides layer lines and fingerprints for $20-23, at somewhat lower strength (tensile XY ~30 MPa) and 10-20 % slower printing."
+    }
+  ],
   "emissions": {
     "voc_level": "low",
     "particulate_level": "low",

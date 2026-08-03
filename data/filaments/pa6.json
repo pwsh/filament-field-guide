@@ -212,6 +212,28 @@
       "notes": "Backfilled from plate entry (Phase E reciprocity): As base PA."
     }
   ],
+  "alternatives": [
+    {
+      "filament_id": "pa12",
+      "reason": "Far lower moisture uptake and warp — under 1 % absorption against PA6's 3-9 % (water 7 vs 1, warp 6 vs 9, dim 6 vs 2), with drying down to 70 °C/4 h from 80 °C/8-12 h — at the cost of stiffness (~45 vs 55-58 MPa) and a higher price ($55-90 vs $35-70)."
+    },
+    {
+      "filament_id": "copa",
+      "reason": "A PA6/66-class copolymer that prints in a different league (warp 3 vs 9, dim 5 vs 2, ease 5 vs 3) while keeping nylon toughness (adhesion 9, equal) — but it does not fix the moisture problem (water 2 vs 1) and it adds a hardened-nozzle requirement PA6 does not have."
+    },
+    {
+      "filament_id": "pa6-cf",
+      "reason": "The same base with the warp engineered out (warp 3 vs 9, dim 6 vs 2) and HDT@0.45 MPa lifted from ~85 °C to 175-215 °C — at $79-135/kg, a mandatory hardened nozzle, and brittleness replacing PA6's toughness (adhesion 4 vs 9)."
+    },
+    {
+      "filament_id": "pa6-gf",
+      "reason": "Reinforcement that keeps the toughness rather than trading it away: HDT ~182 °C and warp 4 vs 9 with layer adhesion 6 (against pa6-cf's 4), less abrasive and colourable, at $55-65/kg and a hardened nozzle — water uptake is unchanged."
+    },
+    {
+      "filament_id": "pa66",
+      "reason": "The stiffer, hotter homopolymer with ~135 °C service (compression 8 vs 7, temp 7 vs 5) — but the worst warp among the polyamides here (10 vs 9), harder to print (ease 2 vs 3), a weaker layer bond (7 vs 9) and dearer ($44-75 vs $35-70)."
+    }
+  ],
   "emissions": {
     "voc_level": "high",
     "particulate_level": "moderate",

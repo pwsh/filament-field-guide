@@ -202,6 +202,28 @@
       "notes": "Backfilled from plate entry (Phase E reciprocity): No support identified on any patterned coating."
     }
   ],
+  "alternatives": [
+    {
+      "filament_id": "pp-gf",
+      "reason": "Glass fiber suppresses the crystallisation shrinkage that makes base PP the catalog's worst warper — warp 10 to 4, dimensional stability 4 to 7, HDT@0.45 MPa ~95 to 127 °C, XY tensile roughly doubled — at $85-215/kg, a mandatory hardened nozzle, and no fix whatsoever for PP's refusal to stick to a standard build surface."
+    },
+    {
+      "filament_id": "pp-cf",
+      "reason": "The same warp fix (4 vs 10, dim 8 vs 4, compression 8 vs 5) at a lower density, so more of PP's volume-per-spool advantage survives, and it is outdoor-rated where base PP is only limited — at $85-140/kg, a hardened nozzle, and still a PP sheet or PP tape for adhesion."
+    },
+    {
+      "filament_id": "petg",
+      "reason": "If chemical resistance and living hinges are not the point, PETG prints open-frame and sticks to anything (ease 7 vs 2, warp 3 vs 10) at a third to a half the price ($18-42 vs $40-70) — giving up PP's fatigue life and near-perfect chemical and water tolerance (water 9 vs 10)."
+    },
+    {
+      "filament_id": "pe",
+      "reason": "The other polyolefin: the same chemical inertness and best-in-catalog water tolerance (10, equal), plus food-contact-certified lines and a full outdoor rating — but lower heat (temp 5 vs 6), a weaker layer bond (6 vs 7), a hardened-nozzle requirement PP does not carry, and much thinner filament availability."
+    },
+    {
+      "filament_id": "tpu-60d",
+      "reason": "If the draw was PP's flexibility and fatigue life rather than its chemistry, a rigid-end TPU prints far more reliably (ease 6 vs 2, warp 2 vs 10, dim 6 vs 4) with no build-surface problem at $25-45/kg — with much lower chemical and water resistance (water 6 vs 10)."
+    }
+  ],
   "emissions": {
     "voc_level": "low",
     "particulate_level": "low",

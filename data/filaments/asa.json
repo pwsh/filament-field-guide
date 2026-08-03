@@ -228,6 +228,24 @@
       "notes": "Backfilled from plate entry (reciprocity)"
     }
   ],
+  "alternatives": [
+    {
+      "filament_id": "abs",
+      "reason": "The cheaper indoor equivalent at the same strength and heat class, with better compression (7 vs 6), better layer adhesion (5 vs 4) and acetone vapour smoothing — but it yellows and embrittles in sunlight (uv 2 vs 9, weather 2 vs 9), so indoor only."
+    },
+    {
+      "filament_id": "asa-gf",
+      "reason": "Cures ASA's defining warp with glass fiber (warp 5 vs 7, dim 8 vs 7, HDT 97-99 °C vs 93 °C) while keeping the full UV package, at $34-45 vs $18-45, a mandatory hardened nozzle, a worse layer bond (3 vs 4) and no AMS feeding."
+    },
+    {
+      "filament_id": "asa-cf",
+      "reason": "The stiff outdoor grade: compression 8 vs 6 and warp 4 vs 7 with UV unchanged, but the layer bond degrades further (adhesion 3 vs 4) and price jumps to $70-112 from $18-45."
+    },
+    {
+      "filament_id": "petg",
+      "reason": "If the outdoor part is low-stress and low-heat, PETG prints far easier with no enclosure (ease 7 vs 5, warp 3 vs 7) and bonds far better (adhesion 9 vs 4) at the same money — with a much shorter UV life (uv 5 vs 9) and less heat (temp 5 vs 7)."
+    }
+  ],
   "emissions": {
     "voc_level": "high",
     "particulate_level": "high",

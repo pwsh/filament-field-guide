@@ -59,6 +59,12 @@
     "usable_as_support_for": [],
     "notes": "All three lists are deliberately empty: this material is never co-printed, never welded to anything and never used as a support. Its relationship to other filaments is the opposite of bonding — it is designed to release and carry away residue rather than adhere to it. It is compatible with every material in the catalog in the only sense that matters, namely that it can be run through the same hot end at that material's temperature, provided the hot end is rated for it."
   },
+  "alternatives": [
+    {
+      "filament_id": "pla",
+      "reason": "Not a true substitute, but the common practice it competes with: purging with cheap PLA ($14-35/kg) and cold-pulling with it costs a fraction of a dedicated cleaning stick and is fine for same-family colour changes. It scrubs less effectively and cannot bridge a large temperature gap — which is the specific job cleaning filament exists for."
+    }
+  ],
   "emissions": {
     "voc_level": "moderate",
     "particulate_level": "moderate",

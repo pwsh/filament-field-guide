@@ -154,6 +154,24 @@
       "notes": "Inferred from PLA guidance: bare glass is usually too slick for PLA-class materials, and a thin PVA glue-stick film is the standard fix (unverified)."
     }
   ],
+  "alternatives": [
+    {
+      "filament_id": "pla",
+      "reason": "The practical compostable choice: PBAT is effectively unavailable as a retail spool and is weaker in every mechanical axis (comp 3 vs 8, ease 6 vs 10, stab 5 vs 8); PLA is industrially compostable, $14-35 and prints everywhere — you give up PBAT's softer, home/soil-degradable profile."
+    },
+    {
+      "filament_id": "pha",
+      "reason": "The bio-polyester you can actually buy: PLA/PHA blends print in the PLA window (ease 9 vs 6) with real toughness (adh 8 vs 6) at $46-61 — and their degradation claims are equally uncertified, so verify per product exactly as you would for PBAT."
+    },
+    {
+      "filament_id": "tpu-95a",
+      "reason": "If flexibility rather than compostability was the goal, a real elastomer delivers it — PBAT's softening effect in PLA blends is slight because the two phases bond poorly at the interface — at ease 5 vs 6, no AMS support and $40-70."
+    },
+    {
+      "filament_id": "pla-plus",
+      "reason": "If the requirement was simply 'less brittle PLA', the impact-modified grade is the mainstream fix (adh 8 vs 6, comp 7 vs 3) at $22-45 — petro-based, so any compostability claim disappears."
+    }
+  ],
   "emissions": {
     "voc_level": "low",
     "particulate_level": "low",

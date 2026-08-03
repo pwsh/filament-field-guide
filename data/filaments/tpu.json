@@ -221,6 +221,28 @@
       "notes": "Backfilled from plate entry (reciprocity)"
     }
   ],
+  "alternatives": [
+    {
+      "filament_id": "tpu-95a",
+      "reason": "The specific grade this generic entry mostly describes: the firm end of the same 85A-95A band, so it prints faster and calmer (ease 5 vs 3), tolerates 0.5-2 mm retraction and survives a short well-constrained Bowden path. Pick it whenever 'TPU' is all the part actually needs."
+    },
+    {
+      "filament_id": "tpu-68d",
+      "reason": "The AMS answer: stiff enough to feed through a material station (ams yes vs no) on any drive system, at ease 7 vs 3. What you give up is rubberiness and Z strength — 31 % breaking elongation in Z against 650 %+ in XY."
+    },
+    {
+      "filament_id": "tpe",
+      "reason": "A more genuinely rubbery feel with food- and skin-contact certified lines and better water tolerance (7 vs 6), at a tighter price band ($25-45 vs $20-70). It is much weaker in tension and no easier to print (ease 3 either way)."
+    },
+    {
+      "filament_id": "peba",
+      "reason": "Springy energy return instead of TPU's damping, flexibility down to -60 °C, ~17 % lighter (1.01 vs 1.22 g/cm³) and far better oil and solvent resistance — at roughly triple the entry price ($75-110 vs $20-70) and with nylon-grade moisture appetite."
+    },
+    {
+      "filament_id": "petg",
+      "reason": "If the part only needs toughness and vibration tolerance rather than real elasticity, PETG prints far easier on any machine (ease 7 vs 3), feeds through an AMS, and costs $18-42 — with layer adhesion 9 vs 3."
+    }
+  ],
   "emissions": {
     "voc_level": "low",
     "particulate_level": "low",

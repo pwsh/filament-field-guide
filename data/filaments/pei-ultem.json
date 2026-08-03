@@ -176,6 +176,28 @@
       "notes": "Backfilled from plate entry (Phase E reciprocity): Far outside the rated range."
     }
   ],
+  "alternatives": [
+    {
+      "filament_id": "ppsu",
+      "reason": "The same amorphous low-warp behaviour and the same 8/8 stability-and-adhesion profile, with far better impact toughness, water and steam tolerance (10 vs 6) and a gentler 110 °C drying spec against 1010's 150 °C — at roughly double the price ($400-600) and lower stiffness (compressive 6 vs 7)."
+    },
+    {
+      "filament_id": "peek",
+      "reason": "Higher continuous service (240-260 °C vs 170-200 °C) and near-total chemical resistance — at 2-4x the price ($400-900), a 375-410 °C industrial hotend, and much worse dimensional behaviour (stability 5 vs 8, warp 10 vs 6)."
+    },
+    {
+      "filament_id": "pekk",
+      "reason": "A higher service ceiling (260 °C) with PEEK-beating printability — but it still warps more (8 vs 6), holds tolerance less well (stability 7 vs 8) and costs $495-700 against $195-290."
+    },
+    {
+      "filament_id": "pps-cf",
+      "reason": "The same temp 9 rating at half the price ($100-200), with far lower warp (3 vs 6) and no heated chamber — but Tg 85 °C means it softens under load long before PEI's 217 °C Tg does, and layer adhesion drops to 5 vs 8."
+    },
+    {
+      "filament_id": "pc",
+      "reason": "If ~110-130 °C service is genuinely enough: PC carries the same temp 9 score off a 145 °C Tg rather than PEI's 217 °C, prints on ordinary enclosed hardware at $30-65, and needs no 150 °C drying regime — with much weaker chemical resistance and creep performance."
+    }
+  ],
   "emissions": {
     "voc_level": "moderate",
     "particulate_level": "high",

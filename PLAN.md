@@ -96,8 +96,10 @@ Filter/sort table across all discovered metrics (use case, polymer class, ease o
 temperature stability, high-temp / outdoor / food-contact / load-bearing suitability, price,
 enclosure requirements…); linkable per-entity pages (hash routing) each with a **full
 engineering view** and a **single-page printable reference sheet** (print stylesheet);
-multi-select compare for filaments and separately for plates; glossary page; tooltips on
-every property sourced from the glossary.
+multi-select compare for filaments and separately for plates with CSV/JSON/XML export;
+user-configurable, URL-shareable list columns with export of the filtered view; per-entry
+"alternatives to consider" guidance; glossary page; tooltips on every property sourced
+from the glossary.
 
 ## 6. Update contract for future tasks
 
@@ -149,6 +151,15 @@ every property sourced from the glossary.
   and DarkMoon LUX/BIQU SSS coatings remain unidentifiable from public information —
   documented as such. All planned research phases (A-F initial pass) are now COMPLETE;
   the catalog enters maintenance mode (Phase F refresh cadence).
+- 2026-08-03 — **Selection & export features** (owner request): glossary entries added
+  for outdoor/high-temperature suitability, tensile strength, and alternatives; new
+  `alternatives` field authored across all 90 filaments (392 directional suggestions
+  with catalog-grounded trade-off reasoning; validator enforces existing/non-self ids);
+  site gains configurable list columns (~45 filament fields, URL-encoded, shareable),
+  CSV/JSON/XML export of filtered list views and the compare matrix, and an
+  "Alternatives to consider" section on detail pages + sheets. Consistency fixes from
+  authoring review: petg-plus high_temperature flag no→moderate. Counts verified:
+  90 filaments / 71 manufacturers / 14 plates / 1,300+ trade names.
 ## Changelog
 
 - 2026-08-01 — **Support-interface data-quality review** (owner-caught defect): removed

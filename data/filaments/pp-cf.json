@@ -178,6 +178,28 @@
       "notes": "Backfilled from base pp: no data and no vendor support. Polypropylene needs a chemically matched surface, and a high-tack coating does not change that."
     }
   ],
+  "alternatives": [
+    {
+      "filament_id": "pp",
+      "reason": "Base PP at half the price ($40-70 vs $85-140) with no hardened nozzle and a better layer bond (adhesion 7 vs 5) — but warp 10 vs 4 and dimensional stability 4 vs 8 make anything with a large flat footprint impractical, and heat drops (temp 6 vs 7)."
+    },
+    {
+      "filament_id": "pp-gf",
+      "reason": "The glass version with the same warp and heat behaviour (warp 4, temp 7, both equal) and equal compression — but denser, so it gives back some of PP's volume-per-kilo advantage, and the price band runs wider and higher ($85-215 vs $85-140) with a slightly lower UV score (5 vs 6)."
+    },
+    {
+      "filament_id": "petg-cf",
+      "reason": "Much easier, sticks to a normal plate, and cheaper ($25-67 vs $85-140) with lower warp (2 vs 4) — but water tolerance drops from 10 to 8, heat from 7 to 5, and it is only limited-outdoor where PP-CF is fully outdoor-rated."
+    },
+    {
+      "filament_id": "pa12-cf",
+      "reason": "If build-plate adhesion is the dealbreaker, CF PA12 sticks to ordinary plates and is more dimensionally stable (dim 9 vs 8, warp 2 vs 4) with the same outdoor rating — at $130-180/kg, nylon drying discipline and lower water tolerance (8 vs 10)."
+    },
+    {
+      "filament_id": "pps-cf",
+      "reason": "Step up when the chemical resistance has to hold hot: temp 9 vs 7 and uv 9 vs 6 at comparable water tolerance (9 vs 10) and better compression (9 vs 8) — at $100-200/kg and a much harder print."
+    }
+  ],
   "emissions": {
     "voc_level": "low",
     "particulate_level": "low",

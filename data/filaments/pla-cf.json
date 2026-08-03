@@ -221,6 +221,28 @@
       "notes": "Backfilled from plate entry (reciprocity)"
     }
   ],
+  "alternatives": [
+    {
+      "filament_id": "pla",
+      "reason": "If the part is not stiffness-limited, base PLA is tougher and far less anisotropic (adh 6 vs 4 against PLA-CF's 38 MPa XY / 26 MPa Z), needs no hardened nozzle, prints easier (ease 10 vs 7) and costs $14-35 vs $30-35."
+    },
+    {
+      "filament_id": "pla-gf",
+      "reason": "The ductile filled option in the same stiffness class (comp 9 both, stab 9 both): noticeably tougher at 10.16 kJ/m² impact, less abrasive, colourable and easier to run (ease 8 vs 7) — you give up peak modulus and the matte-black fibre look."
+    },
+    {
+      "filament_id": "petg-cf",
+      "reason": "The same stiffness-and-matte-black bargain on a base resin that actually resists heat and water (temp 5 vs 2, water 8 vs 6) with better layer bonding (adh 6 vs 4); costs ease 6 vs 7, PETG stringing and a wider $25-67 price band."
+    },
+    {
+      "filament_id": "pla-ht",
+      "reason": "If the reason for filling PLA was that parts deform, fibre does not help — HDT stays ~54 °C. HT-PLA attacks heat directly (temp 6 vs 2) at the price of a mandatory anneal and ~1.8 % X/Y shrink compensation."
+    },
+    {
+      "filament_id": "pet-cf",
+      "reason": "The step up when a CF part must also take heat: temp 9 vs 2, HDT 205 °C at 0.45 MPa against PLA-CF's ~54 °C, comp 9 both — bought with a 45-60 °C chamber, no AMS, sub-100 mm/s and ease 3 vs 7."
+    }
+  ],
   "emissions": {
     "voc_level": "low",
     "particulate_level": "low",

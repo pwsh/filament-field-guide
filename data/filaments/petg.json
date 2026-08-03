@@ -260,6 +260,28 @@
       "notes": "Backfilled from plate entry (reciprocity)"
     }
   ],
+  "alternatives": [
+    {
+      "filament_id": "pla",
+      "reason": "If the part is indoor, unstressed and never warm, PLA prints easier and cheaper (ease 10 vs 7, $14-35 vs $18-42) with no stringing and clean support release — you give up heat (temp 2 vs 5), water resistance (6 vs 9) and layer strength (adh 6 vs 9)."
+    },
+    {
+      "filament_id": "pctg",
+      "reason": "The tougher, clearer sibling: real impact strength and near-isotropic bonding (adh 10 vs 9) plus slightly better UV (6 vs 5) — at roughly double the price ($30-55 vs $18-42), a hotter 250-270 °C all-metal hotend and more warp (5 vs 3)."
+    },
+    {
+      "filament_id": "asa",
+      "reason": "For sustained outdoor exposure PETG's uv 5 / weath 5 is only adequate; ASA is 9 / 9 with temp 7 vs 5 at $18-45 — bought with an enclosure, ventilation, warp 7 vs 3 and ease 5 vs 7."
+    },
+    {
+      "filament_id": "cpe",
+      "reason": "The engineering tier of the same amorphous copolyester family: Tg and HDT 15-25 °C higher (temp 7 vs 5) plus better chemical resistance, still with no enclosure — at 2-5x the price ($45-100), a small brand ecosystem and pronounced XY/Z anisotropy on the main grade."
+    },
+    {
+      "filament_id": "petg-cf",
+      "reason": "Same base resin made stiff and dimensionally quiet for jigs and brackets (modulus ~5100 vs ~2000 MPa, warp 2 vs 3) — costs a hardened nozzle, elongation (~2 % vs 20 %+), bonding (adh 6 vs 9) and adds no heat at all (temp 5 both)."
+    }
+  ],
   "emissions": {
     "voc_level": "low",
     "particulate_level": "moderate",

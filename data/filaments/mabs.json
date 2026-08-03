@@ -139,6 +139,24 @@
       "notes": "Glass takes ABS-class bed temperatures without complaint and gives the glossiest possible bottom face, which is the reason to use it here. Expect to need an adhesion aid — glue stick, or the traditional ABS/acetone slurry — and expect warp, not the surface, to be the limiting factor. Inferred from base abs."
     }
   ],
+  "alternatives": [
+    {
+      "filament_id": "pmma",
+      "reason": "The other clear option, and the one that survives outdoors: genuinely optical clarity plus uv 9 vs 3 and a hard scratch-resistant surface — but brittle where MABS keeps ABS-like impact (adhesion 3 vs 6), harder to print (ease 3 vs 5, warp 8 vs 6) and dearer ($40-90 vs $18-30)."
+    },
+    {
+      "filament_id": "petg",
+      "reason": "The easy transparent: ease 7 vs 5, warp 3 vs 6, no enclosure, far better layer adhesion (9 vs 6) and water tolerance (9 vs 6) at similar price — less optically clear than true MABS, and no acetone vapour smoothing."
+    },
+    {
+      "filament_id": "pctg",
+      "reason": "Another tough clear engineering option with the catalog's best layer adhesion (10 vs 6), easier printing (ease 6 vs 5) and no styrene emissions, at a higher price ($30-55 vs $18-30) and with the same modest heat ceiling (temp 5)."
+    },
+    {
+      "filament_id": "abs",
+      "reason": "Base ABS when clarity is not needed: the same process and enclosure but with real engineering properties — compression 7 vs 5 and temp 7 vs 5 — and vastly better availability and documentation; opaque only."
+    }
+  ],
   "emissions": {
     "voc_level": "high",
     "particulate_level": "high",

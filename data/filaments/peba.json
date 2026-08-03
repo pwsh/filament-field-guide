@@ -169,6 +169,28 @@
       "notes": "Inferred from the TPU entry (unverified): the vendor states flexibles typically fuse with the surface on large parts, and the film tears on removal."
     }
   ],
+  "alternatives": [
+    {
+      "filament_id": "tpu-95a",
+      "reason": "Half to two-thirds the price ($40-70 vs $75-110), better documented and slightly easier to print (ease 5 vs 4) — you give up the ~70 % energy return, the -60 °C flexibility and the 17 % weight saving."
+    },
+    {
+      "filament_id": "tpu",
+      "reason": "The generic flexible across the same 85A-95A band at a quarter of the entry price ($20-70 vs $75-110), if damping rather than rebound is what the part needs — at ease 3 vs 4 and worse oil resistance."
+    },
+    {
+      "filament_id": "tpe",
+      "reason": "The cheapest route to a soft, rubbery, food/skin-contact-certified part ($25-45), with better water tolerance (7 vs 5) — but much weaker in tension and harder to print (ease 3 vs 4)."
+    },
+    {
+      "filament_id": "pa12",
+      "reason": "If the polyamide side of the chemistry matters more than the rebound: a rigid nylon with better layer adhesion (8 vs 4), higher temperature tolerance (6 vs 3) and weather 6 vs 5 at $55-90 — same moisture discipline, none of the flex."
+    },
+    {
+      "filament_id": "tpu-gf",
+      "reason": "For springy-but-load-bearing parts: dimensional stability 7 vs 5, temp 6 vs 3 and load-bearing moderate rather than none, at $34-40 — with essentially no elastic rebound left."
+    }
+  ],
   "emissions": {
     "voc_level": "low",
     "particulate_level": "low",

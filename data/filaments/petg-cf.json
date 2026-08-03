@@ -212,6 +212,28 @@
       "notes": "Backfilled from plate entry (reciprocity)"
     }
   ],
+  "alternatives": [
+    {
+      "filament_id": "petg",
+      "reason": "Drop the fibre when the part is not stiffness-limited: base PETG keeps elongation (20 %+ vs ~2 %) and layer strength (adh 9 vs 6), needs no hardened nozzle, runs faster (200+ vs <150-200 mm/s) and starts cheaper ($18-42 vs $25-67)."
+    },
+    {
+      "filament_id": "petg-gf",
+      "reason": "The tougher, non-conductive glass counterpart at a tighter $25-35: better bonding (adh 7 vs 6), higher dimensional stability (stab 9 vs 8) and a genuinely higher annealed HDT (temp 7 vs 5, up to 133 °C) — you give up peak stiffness, the matte-black look, and it is fussier about moisture."
+    },
+    {
+      "filament_id": "pet-cf",
+      "reason": "The heat-capable carbon copolyester: HDT 205 °C at 0.45 MPa against PETG-CF's unchanged ~70 °C (temp 9 vs 5) and comp 9 vs 8 — bought with a 45-60 °C heated chamber, no AMS, sub-100 mm/s and ease 3 vs 6."
+    },
+    {
+      "filament_id": "pla-cf",
+      "reason": "Cheaper and easier for cosmetic parts and jigs that never get warm: ease 7 vs 6, $30-35 and stab 9 vs 8 — but temp 2 vs 5, water 6 vs 8 and worse bonding (adh 4 vs 6)."
+    },
+    {
+      "filament_id": "pctg-cf",
+      "reason": "The same carbon bargain on PCTG's more ductile base resin, so bonding and impact hold up better (adh 7 vs 6) — at a flat $55/kg, a narrower brand ecosystem and mechanical numbers the vendor still lists as 'coming soon'."
+    }
+  ],
   "emissions": {
     "voc_level": "low",
     "particulate_level": "moderate",

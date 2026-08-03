@@ -177,6 +177,28 @@
       "notes": "Backfilled from plate entry (Phase E reciprocity): As PA6-CF."
     }
   ],
+  "alternatives": [
+    {
+      "filament_id": "pa6-cf",
+      "reason": "Higher peak dry stiffness and ~40 °C more HDT (190 vs 150 °C, temp 8 vs 6, compression 9 vs 7) for less money ($79-135 vs $130-180) — but it keeps only 56 % of dry tensile and a third of its stiffness once conditioned, against PA12-CF's ~85 % (water 2 vs 8), and warp rises (3 vs 2)."
+    },
+    {
+      "filament_id": "pa12",
+      "reason": "Unfilled PA12 at half the price ($55-90 vs $130-180) with a much better layer bond (adhesion 8 vs 5), no hardened nozzle and AMS feeding restored — you give up roughly half the tensile (~45 vs ~120 MPa) and the dimensional stability (6 vs 9)."
+    },
+    {
+      "filament_id": "pa-cf",
+      "reason": "A third of the price ($40-60 vs $130-180) for a CF nylon of unknown grade — reasonable when budget dominates, worse on every dimensional and moisture axis (dim 5 vs 9, warp 4 vs 2, water 3 vs 8)."
+    },
+    {
+      "filament_id": "ppa-cf",
+      "reason": "Where heat is the binding constraint: HDT 227 vs 150 °C (temp 9 vs 6) and compression 10 vs 7 — at $172-266/kg, a 280-315 °C nozzle, a 50-80 °C chamber spec and much worse layer adhesion (3 vs 5)."
+    },
+    {
+      "filament_id": "pa612",
+      "reason": "The unfilled route to a low-warp, low-moisture nylon at roughly half the price (~$65-77 vs $130-180), with comparable warp (3 vs 2) and a higher heat and compression score (temp 7 vs 6, compression 8 vs 7) — but a weaker layer bond (4 vs 5), lower dimensional stability (7 vs 9), and its own caveat that the published numbers come from a CF-filled grade."
+    }
+  ],
   "emissions": {
     "voc_level": "moderate",
     "particulate_level": "moderate",

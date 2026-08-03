@@ -214,6 +214,20 @@
       "notes": "Backfilled from plate entry (Phase E reciprocity): Not designed for or documented with soluble supports; use as a soluble interface only."
     }
   ],
+  "alternatives": [
+    {
+      "filament_id": "bvoh",
+      "reason": "Dissolves faster, extrudes more stably over multi-day dual-material jobs (ease 5 vs 3) and pairs cleanly with PETG, ASA, nylon and even TPU where PVA struggles — at two to three times the price ($150-250 vs $50-120)."
+    },
+    {
+      "filament_id": "support-breakaway",
+      "reason": "No water bath, no dissolution wait and none of PVA's extreme storage regime (water tolerance 8 vs 1, ease 6 vs 3) — but a hand has to physically reach every support face, so internal cavities are out."
+    },
+    {
+      "filament_id": "hips",
+      "reason": "The cheap support for ABS-class prints ($20-50 vs $50-120), far less hygroscopic and usable as a build material too — removal is a d-limonene soak rather than water, and it needs an enclosure to print."
+    }
+  ],
   "emissions": {
     "voc_level": "low",
     "particulate_level": "low",

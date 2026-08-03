@@ -202,6 +202,24 @@
       "notes": "Backfilled from plate entry (reciprocity)"
     }
   ],
+  "alternatives": [
+    {
+      "filament_id": "pla",
+      "reason": "Base PLA when the matte finish is optional: stronger (tensile XY 45-65 MPa vs ~30 MPa), better bonded (adh 6 vs 5), and faster/cooler to run since the matting filler forces 5-10 °C hotter and 10-20 % slower — plus a lower floor on price ($14-35 vs $20-23)."
+    },
+    {
+      "filament_id": "pla-silk",
+      "reason": "The opposite aesthetic off the same base at the same $20-23 — mirror gloss instead of dead matte — with worse layer adhesion again (adh 4 vs 5), higher moisture sensitivity and no strength gain."
+    },
+    {
+      "filament_id": "pla-cf",
+      "reason": "Also hides layer lines, via fibre texture rather than filler, and adds genuine stiffness (comp 9 vs 7, stab 9 vs 8) — bought with a mandatory hardened nozzle, more brittleness, ease 7 vs 9 and $30-35 vs $20-23."
+    },
+    {
+      "filament_id": "pla-stone",
+      "reason": "A heavier, grittier matte with a real mineral surface that takes paint and patina like cast stone; costs ease 6 vs 9, a hardened nozzle, 40-70 mm/s and more layer adhesion (adh 4 vs 5)."
+    }
+  ],
   "emissions": {
     "voc_level": "low",
     "particulate_level": "low",

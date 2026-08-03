@@ -180,6 +180,24 @@
       "notes": "As base ABS: a polyolefin coating does not hold a styrenic."
     }
   ],
+  "alternatives": [
+    {
+      "filament_id": "petg-esd",
+      "reason": "The easy-process ESD option: open-frame, far less warp (3 vs 8) and easier overall (ease 6 vs 4) — but three to four orders of magnitude less dissipative (10⁹ Ω vs 10⁵ Ω) and ~28 °C less heat resistance (temp 5 vs 7)."
+    },
+    {
+      "filament_id": "abs",
+      "reason": "Plain ABS at a fraction of the cost ($18-35 vs $45-140) with better compression (7 vs 6) and layer adhesion (5 vs 4), if the part does not actually need a controlled surface resistance."
+    },
+    {
+      "filament_id": "abs-cf",
+      "reason": "Same base with a large stiffness and warp gain instead of an electrical spec (dim 8 vs 4, warp 5 vs 8, adhesion 5 vs 4) at lower cost ($32-70 vs $45-140) — but its conductivity is unspecified and uncontrolled, and it requires a hardened nozzle where ABS-ESD does not."
+    },
+    {
+      "filament_id": "pc-abs",
+      "reason": "If heat and stiffness matter more than the resistance spec, PC-ABS is cheaper ($44-48 vs $45-140), stronger (compression 7 vs 6) and better-bonded (adhesion 7 vs 4) in an ABS-like process — with no ESD control."
+    }
+  ],
   "emissions": {
     "voc_level": "high",
     "particulate_level": "high",

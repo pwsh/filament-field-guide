@@ -210,6 +210,28 @@
       "notes": "Backfilled from plate entry (Phase E reciprocity): As base PA."
     }
   ],
+  "alternatives": [
+    {
+      "filament_id": "pa6",
+      "reason": "Cheaper ($35-70 vs $55-90) and stiffer (55-58 vs ~45 MPa) with better layer adhesion (9 vs 8), if you can live with 3-9 % moisture uptake and the drying and dimensional drift that come with it (water 1 vs 7, warp 9 vs 6, dim 2 vs 6)."
+    },
+    {
+      "filament_id": "pa12-cf",
+      "reason": "Roughly doubles tensile to ~120 MPa and drops warp to 2 while keeping PA12's humidity stability — retaining ~85 % of dry tensile when conditioned — at $130-180/kg, a mandatory hardened nozzle, no AMS feeding and a weaker layer bond (5 vs 8)."
+    },
+    {
+      "filament_id": "pa612",
+      "reason": "The grade deliberately between PA6 and PA12: stiffer and hotter (compression 8 vs 6, temp 7 vs 6, HDT@0.45 MPa 175 °C) with lower warp (3 vs 6) — at a hardened-nozzle requirement, a 25-50 °C bed with the fan fully off, and a much weaker layer bond (4 vs 8)."
+    },
+    {
+      "filament_id": "copa",
+      "reason": "If low warp matters more than low moisture: warp 3 vs 6 and layer adhesion 9 vs 8 — but back to nylon-grade hygroscopy (water 2 vs 7, 100 °C/8 h dry) plus a hardened nozzle, and less heat (temp 5 vs 6)."
+    },
+    {
+      "filament_id": "petg",
+      "reason": "For non-wear parts, PETG skips the drying and the enclosure entirely (ease 7 vs 5, warp 3 vs 6, water 9 vs 7) at roughly a third the price ($18-42 vs $55-90) — giving up the wear, fatigue and low-friction behaviour that motivates PA12 in the first place."
+    }
+  ],
   "emissions": {
     "voc_level": "moderate",
     "particulate_level": "moderate",

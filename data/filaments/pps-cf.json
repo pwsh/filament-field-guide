@@ -171,6 +171,28 @@
       "notes": "Backfilled from plate entry (Phase E reciprocity): At or above the sheet's rated maximum."
     }
   ],
+  "alternatives": [
+    {
+      "filament_id": "pps",
+      "reason": "The unfilled base when chemical resistance matters more than stiffness: better layer adhesion (6 vs 5), 10/10 water tolerance and no hardened nozzle — but warp 9 vs 3, dimensional stability 5 vs 8, a 365-390 °C nozzle and no consumer-hotend path."
+    },
+    {
+      "filament_id": "ppa-cf",
+      "reason": "The other CF-reinforced high-temperature option: the catalog's highest compressive strength (10 vs 9) at the same temp 9 — for $172-266 vs $100-200, nylon-grade moisture uptake, and far worse UV and weathering (uv 4 vs 9)."
+    },
+    {
+      "filament_id": "pei-ultem",
+      "reason": "Amorphous stability with much better layer adhesion (8 vs 5) and a real 217 °C Tg rather than PPS's 85 °C, so it keeps stiffness under sustained heat and load — at $195-290, a mandatory heated chamber and a 150 °C drying regime."
+    },
+    {
+      "filament_id": "pet-cf",
+      "reason": "A third to a half of the cost ($35-45) at the same temp 9 and compressive 9, printable on standard high-temp hardware — but no meaningful chemical resistance, no flame retardancy, and weathering 5 vs 9."
+    },
+    {
+      "filament_id": "pc-gf",
+      "reason": "Similar money ($100-115) for equal compressive strength (9) and temp 9 with no exotic hotend — you give up the chemical and water resistance (6 vs 9), the UV rating (5 vs 9) and the flame retardancy that are the whole point of PPS."
+    }
+  ],
   "emissions": {
     "voc_level": "moderate",
     "particulate_level": "high",

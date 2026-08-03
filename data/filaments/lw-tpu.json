@@ -181,6 +181,24 @@
       "notes": "As base TPU: the vendor states flexibles typically fuse with the surface on large parts, and foamed elastomer works into the texture at least as readily."
     }
   ],
+  "alternatives": [
+    {
+      "filament_id": "tpu-85a",
+      "reason": "Solid TPU at roughly the foamed hardness: cheaper ($50-70 vs $65-85), no per-model foaming calibration and none of the stringing and bridging penalty — but you lose the density reduction and the temperature-as-hardness slider."
+    },
+    {
+      "filament_id": "tpu-95a",
+      "reason": "When light-and-soft is not actually the requirement: ease 5 vs 3, predictable dimensions (stability 4 vs 3), documented mechanicals and flow that does not depend on hitting a foaming window."
+    },
+    {
+      "filament_id": "lw-pla",
+      "reason": "The foaming approach for rigid lightweight work — RC airframes, props, cosplay: far easier (ease 5 vs 3), cheaper ($36-41 vs $65-85) and no feeding fight, but rigid and with no impact absorption."
+    },
+    {
+      "filament_id": "tpu-60a",
+      "reason": "If the goal is simply the softest possible solid part rather than a light one: silicone-like 60A with ~950 % elongation and no foaming calibration — at ease 2 vs 3 and a mandatory feeding assistant."
+    }
+  ],
   "emissions": {
     "voc_level": "low",
     "particulate_level": "moderate",

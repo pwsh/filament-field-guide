@@ -205,6 +205,24 @@
       "notes": "Backfilled from plate entry (Phase E reciprocity): As ABS."
     }
   ],
+  "alternatives": [
+    {
+      "filament_id": "abs",
+      "reason": "Skip the fiber if warp is not the problem: base ABS starts cheaper ($18-35 vs $25-35), needs no hardened nozzle and bonds better between layers (adhesion 5 vs 4) — at the cost of dimensional stability (4 vs 7) and much worse warp (8 vs 5)."
+    },
+    {
+      "filament_id": "abs-cf",
+      "reason": "The carbon sibling: stiffer, slightly more dimensionally stable (dim 8 vs 7) and with a better layer bond (5 vs 4), but effectively black-only and dearer ($32-70 vs $25-35)."
+    },
+    {
+      "filament_id": "asa-gf",
+      "reason": "The same glass-filled recipe on a weatherable base (uv 9 vs 2, weather 9 vs 2, dim 8 vs 7) for modestly more ($34-45 vs $25-35); note it loses AMS feeding entirely where ABS-GF keeps it conditionally, and its layer bond is worse (3 vs 4)."
+    },
+    {
+      "filament_id": "petg-gf",
+      "reason": "Fiber-grade dimensional stability without an enclosure or styrene: dim 9 vs 7, warp 2 vs 5, ease 6 vs 5 and a far better layer bond (7 vs 4) at the same $25-35 and the same temperature_tolerance score (7) — you give up acetone smoothing and ABS's styrenic impact behaviour."
+    }
+  ],
   "emissions": {
     "voc_level": "high",
     "particulate_level": "high",
