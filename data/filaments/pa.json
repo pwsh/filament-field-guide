@@ -11,8 +11,8 @@
   "base_type": null,
   "variation_kind": null,
   "polymer_class": "polyamide",
-  "chemical_makeup": "Aliphatic polyamide — unfilled PA6 or PA12 semi-crystalline engineering thermoplastic. PA6 is stiffer, higher-melting and more hygroscopic; PA12 is lower density, absorbs less moisture and is more dimensionally stable at a lower melting point",
-  "summary": "The toughest common engineering filament: outstanding layer adhesion, wear and impact resistance, and low friction, which is why it dominates gears, bushings and living mechanical parts. It is also the most demanding material here — extremely hygroscopic, high-warping, and dimensionally restless as humidity changes, so it needs constant drying, an enclosure and a forgiving build surface.",
+  "chemical_makeup": "Aliphatic polyamide \u2014 unfilled PA6 or PA12 semi-crystalline engineering thermoplastic. PA6 is stiffer, higher-melting and more hygroscopic; PA12 is lower density, absorbs less moisture and is more dimensionally stable at a lower melting point",
+  "summary": "The toughest common engineering filament: outstanding layer adhesion, wear and impact resistance, and low friction, which is why it dominates gears, bushings and living mechanical parts. It is also the most demanding material here \u2014 extremely hygroscopic, high-warping, and dimensionally restless as humidity changes, so it needs constant drying, an enclosure and a forgiving build surface.",
   "printing": {
     "nozzle_temp_c": {
       "min": 240,
@@ -43,13 +43,13 @@
       "max": 20,
       "recommended": 10
     },
-    "notes": "PA12 grades run roughly 240-290 °C (eSUN ePA12 TDS); PA6 grades usually 260-290 °C, and Prusa cites 285 °C for its PA blend. Keep part cooling near zero — aggressive cooling degrades layer adhesion and amplifies warping. An enclosure is effectively required for anything but small parts, and community practice targets ~45 °C+ ambient; an actively heated chamber is strongly beneficial for large parts but is not the hard prerequisite it is for PEEK-class polymers, so heated_chamber_required is recorded as false. Unfilled PA does not require a hardened nozzle, though stainless/hardened is commonly preferred; CF/GF-filled variants do require one."
+    "notes": "PA12 grades run roughly 240-290 \u00b0C (eSUN ePA12 TDS); PA6 grades usually 260-290 \u00b0C, and Prusa cites 285 \u00b0C for its PA blend. Keep part cooling near zero \u2014 aggressive cooling degrades layer adhesion and amplifies warping. An enclosure is effectively required for anything but small parts, and community practice targets ~45 \u00b0C+ ambient; an actively heated chamber is strongly beneficial for large parts but is not the hard prerequisite it is for PEEK-class polymers, so heated_chamber_required is recorded as false. Unfilled PA does not require a hardened nozzle, though stainless/hardened is commonly preferred; CF/GF-filled variants do require one."
   },
   "feeding": {
     "drive_system": "any",
     "ams_compatible": "yes",
     "feeding_assistant_recommended": false,
-    "notes": "Mechanically unproblematic in a material station — Bambu's material table lists PA/PAHT as AMS-compatible — but nylon is the most hygroscopic material in this catalog, and an unsealed AMS-style unit is functionally an open-air spool holder. Over a long multi-material job an unsealed unit will let PA pick up enough moisture to string and bubble, so restrict it to a sealed, actively desiccated unit (AMS 2 Pro / AMS HT class) with fresh desiccant, or feed from a heated drybox instead. Third-party PA-CF and PA-GF are barred outright by Bambu because the fibres wear the AMS PTFE tubes. Enclosure: PA needs the retained chamber heat, so enclosure_open_for_cooling is false; Bambu specifies the cover installed for PA."
+    "notes": "Mechanically unproblematic in a material station \u2014 Bambu's material table lists PA/PAHT as AMS-compatible \u2014 but nylon is the most hygroscopic material in this catalog, and an unsealed AMS-style unit is functionally an open-air spool holder. Over a long multi-material job an unsealed unit will let PA pick up enough moisture to string and bubble, so restrict it to a sealed, actively desiccated unit (AMS 2 Pro / AMS HT class) with fresh desiccant, or feed from a heated drybox instead. Third-party PA-CF and PA-GF are barred outright by Bambu because the fibres wear the AMS PTFE tubes. Enclosure: PA needs the retained chamber heat, so enclosure_open_for_cooling is false; Bambu specifies the cover installed for PA."
   },
   "drying": {
     "required_before_use": "always",
@@ -71,7 +71,7 @@
       "drybox with desiccant while printing"
     ],
     "dryness_validation": "Clean, crisp extrusion with a glossy (not matte or fuzzy) surface finish; no audible popping or crackling at the nozzle; no steam, bubbles or foaming in the extrudate; stringing collapses back to normal; the snap-test brittleness of a saturated spool disappears",
-    "notes": "Nylon is the most hygroscopic common filament and degrades visibly — bubbling, stringing, brittleness — within hours of ambient exposure. eSUN specifies >12 h at 70 °C; Prusa says keep below 90 °C. Badly saturated spools can need 24-48 h. Printing from a heated dryer or sealed drybox is the practical default rather than an optional extra."
+    "notes": "Nylon is the most hygroscopic common filament and degrades visibly \u2014 bubbling, stringing, brittleness \u2014 within hours of ambient exposure. eSUN specifies >12 h at 70 \u00b0C; Prusa says keep below 90 \u00b0C. Badly saturated spools can need 24-48 h. Printing from a heated dryer or sealed drybox is the practical default rather than an optional extra."
   },
   "storage": {
     "recommendations": "Airtight container with fresh desiccant at all times, including between prints on the same day; keep spools in a drybox on the printer rather than on an open shelf. Left in open air, nylon can absorb roughly 10% of its weight in water (Prusa).",
@@ -126,7 +126,7 @@
       "max": 80,
       "recommended": 52
     },
-    "notes": "Density spans the PA12 (~1.01-1.04) to PA6 (~1.12-1.14) range; 1.08 is recorded as the mid-point for an unfilled generic PA. Tg is 40-60 °C depending on grade and drops further when the part is wet. HDT@0.45 MPa is the widest disagreement in the sources: eSUN ePA12 cites 100 °C while unfilled PA6 is often listed at 55-65 °C unless annealed — 80 °C is the recorded mid-point, not a datasheet value. Tensile: eSUN ePA12 50.8 MPa, partmfg table 52.45 MPa, general range 40-80 MPa. Snapmaker's Nylon spec page (owner-provided link, read 2026-08-06) publishes an unusually complete set for an undisclosed-grade PA: tensile 66.2 ± 0.9 MPa, bending 97.0 ± 1.1 MPa, Young's modulus 2223 ± 199 MPa, Charpy impact 9.6 ± 1.4 kJ/m², Tg 67 °C, Vicat 180 °C, melting point 190 °C, printing 250-270 °C, bed 25-50 °C, 30-60 mm/s. The Tg/melting pair is the informative part — Tg 67 °C is PA6-like while a 190 °C melt is nearer PA12 (~178 °C) than PA6 (~220 °C), which is the signature of a copolyamide rather than either homopolymer, and it is exactly why an unfilled-generic entry like this one has to average grades. No density, water absorption, shrinkage or drying schedule is published."
+    "notes": "Density spans the PA12 (~1.01-1.04) to PA6 (~1.12-1.14) range; 1.08 is recorded as the mid-point for an unfilled generic PA. Tg is 40-60 \u00b0C depending on grade and drops further when the part is wet. HDT@0.45 MPa is the widest disagreement in the sources: eSUN ePA12 cites 100 \u00b0C while unfilled PA6 is often listed at 55-65 \u00b0C unless annealed \u2014 80 \u00b0C is the recorded mid-point, not a datasheet value. Tensile: eSUN ePA12 50.8 MPa, partmfg table 52.45 MPa, general range 40-80 MPa. Snapmaker's Nylon spec page (owner-provided link, read 2026-08-06) publishes an unusually complete set for an undisclosed-grade PA: tensile 66.2 \u00b1 0.9 MPa, bending 97.0 \u00b1 1.1 MPa, Young's modulus 2223 \u00b1 199 MPa, Charpy impact 9.6 \u00b1 1.4 kJ/m\u00b2, Tg 67 \u00b0C, Vicat 180 \u00b0C, melting point 190 \u00b0C, printing 250-270 \u00b0C, bed 25-50 \u00b0C, 30-60 mm/s. The Tg/melting pair is the informative part \u2014 Tg 67 \u00b0C is PA6-like while a 190 \u00b0C melt is nearer PA12 (~178 \u00b0C) than PA6 (~220 \u00b0C), which is the signature of a copolyamide rather than either homopolymer, and it is exactly why an unfilled-generic entry like this one has to average grades. No density, water absorption, shrinkage or drying schedule is published."
   },
   "scores": {
     "ease_of_print": 3,
@@ -141,9 +141,7 @@
   },
   "compatibility": {
     "bonds_with": [
-      "bvoh",
       "copa",
-      "pa",
       "pa-cf",
       "pa12",
       "pa12-cf",
@@ -152,9 +150,7 @@
       "pa6-gf",
       "pa612",
       "pa66",
-      "ppa-cf",
-      "pva",
-      "support-breakaway"
+      "ppa-cf"
     ],
     "support_materials": [
       "bvoh",
@@ -162,7 +158,7 @@
       "support-breakaway"
     ],
     "usable_as_support_for": [],
-    "notes": "Nylon reliably welds only to itself. It does not bond usefully to pla, petg, abs, asa, pc, pp, pva, hips, bvoh, pctg, pvb or pet — the chemistry and the 240-290 °C print window are both mismatched. Some engineering TPUs are marketed as nylon-compatible and can reach marginal interlayer bonding, but that is brand-specific rather than a property of the class. Soluble supports are impractical: PVA degrades above ~200 °C and BVOH, while more heat-tolerant, still sits below nylon's range, so same-material PA breakaway supports are the standard workaround. PA is a poor support material for other polymers because it cross-bonds so weakly."
+    "notes": "Nylon reliably welds only to itself. It does not bond usefully to pla, petg, abs, asa, pc, pp, pva, hips, bvoh, pctg, pvb or pet \u2014 the chemistry and the 240-290 \u00b0C print window are both mismatched. Some engineering TPUs are marketed as nylon-compatible and can reach marginal interlayer bonding, but that is brand-specific rather than a property of the class. Soluble supports are impractical: PVA degrades above ~200 \u00b0C and BVOH, while more heat-tolerant, still sits below nylon's range, so same-material PA breakaway supports are the standard workaround. PA is a poor support material for other polymers because it cross-bonds so weakly."
   },
   "plate_recommendations": [
     {
@@ -173,12 +169,12 @@
     {
       "plate_id": "pei-textured",
       "rating": "usable",
-      "notes": "Textured PEI works at ~80-110 °C bed and is preferred over smooth PEI, which nylon can over-bond to and tear on removal. Adhesion on bare PEI is still inconsistent, so a glue stick is commonly applied as an adhesion PROMOTER here — the opposite of its release-layer role for PC/PETG/TPU. A dedicated PA sheet or garolite (G10) plate outperforms textured PEI for large parts."
+      "notes": "Textured PEI works at ~80-110 \u00b0C bed and is preferred over smooth PEI, which nylon can over-bond to and tear on removal. Adhesion on bare PEI is still inconsistent, so a glue stick is commonly applied as an adhesion PROMOTER here \u2014 the opposite of its release-layer role for PC/PETG/TPU. A dedicated PA sheet or garolite (G10) plate outperforms textured PEI for large parts."
     },
     {
       "plate_id": "glass-borosilicate",
       "rating": "usable",
-      "notes": "Backfilled from plate entry (Phase E reciprocity): Not well documented for bare glass in the sources; nylon adhesion aids are discussed for PEI and garolite instead. Nylon on bare glass is generally reported as unreliable — use the"
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Not well documented for bare glass in the sources; nylon adhesion aids are discussed for PEI and garolite instead. Nylon on bare glass is generally reported as unreliable \u2014 use the"
     },
     {
       "plate_id": "carbon-fiber-plate",
@@ -188,7 +184,7 @@
     {
       "plate_id": "buildtak-polymer",
       "rating": "usable",
-      "notes": "Backfilled from plate entry (Phase E reciprocity): The vendor's position is that nylon adheres when a thin washable glue stick is applied — not recommended bare. Bed temperatures near 100 degC are also close to the sheet's ceiling."
+      "notes": "Backfilled from plate entry (Phase E reciprocity): The vendor's position is that nylon adheres when a thin washable glue stick is applied \u2014 not recommended bare. Bed temperatures near 100 degC are also close to the sheet's ceiling."
     },
     {
       "plate_id": "pei-smooth",
@@ -225,14 +221,14 @@
     "voc_level": "high",
     "particulate_level": "moderate",
     "primary_emissions": [
-      "caprolactam (~2-180 µg/min, from PA6)",
-      "ultrafine particles (~10⁸-10¹¹ particles/min)"
+      "caprolactam (~2-180 \u00b5g/min, from PA6)",
+      "ultrafine particles (~10\u2078-10\u00b9\u00b9 particles/min)"
     ],
     "ventilation": "recommended",
     "notes": "Caprolactam is the named marker compound for PA6 and has been reported at levels exceeding some chronic-exposure limits at close range in poorly ventilated spaces; Prusa's own knowledge base flags a strong odour. UFP emission is material- and temperature-dependent and sits between PLA's low baseline and ABS's high baseline. Use an enclosure plus active ventilation or a HEPA+carbon filter for extended prints, and do not run long nylon jobs in an unventilated occupied room."
   },
-  "safety_notes": "Drying ovens set above 90 °C can deform spools and, at nylon's higher drying temperatures, accelerate off-gassing — keep drying under 90 °C and ventilate the dryer. Carbon- and glass-filled PA variants are abrasive and produce respirable fibre dust when sanded or machined; wear a respirator and use wet sanding.",
-  "additional_notes": "Nylon parts continue to move after printing: they absorb ambient moisture and grow, then shrink again when dried, which is why precision fits should be conditioned (soaked to equilibrium or dried and sealed) before final measurement. Choosing between PA6 and PA12 is the main design decision — PA6 for stiffness and heat, PA12 for dimensional calm and easier printing. CoPA-class copolymer products migrated to the dedicated copa entry 2026-08-01.",
+  "safety_notes": "Drying ovens set above 90 \u00b0C can deform spools and, at nylon's higher drying temperatures, accelerate off-gassing \u2014 keep drying under 90 \u00b0C and ventilate the dryer. Carbon- and glass-filled PA variants are abrasive and produce respirable fibre dust when sanded or machined; wear a respirator and use wet sanding.",
+  "additional_notes": "Nylon parts continue to move after printing: they absorb ambient moisture and grow, then shrink again when dried, which is why precision fits should be conditioned (soaked to equilibrium or dried and sealed) before final measurement. Choosing between PA6 and PA12 is the main design decision \u2014 PA6 for stiffness and heat, PA12 for dimensional calm and easier printing. CoPA-class copolymer products migrated to the dedicated copa entry 2026-08-01.",
   "provenance": {
     "sources": [
       "https://help.prusa3d.com/article/polyamide-nylon_167188",
@@ -249,7 +245,7 @@
     ],
     "last_verified": "2026-08-06",
     "confidence": "medium",
-    "conflicts": "HDT@0.45 MPa is the largest unresolved disagreement: eSUN's ePA12 TDS cites 100 °C while unfilled PA6 is commonly listed at 55-65 °C unless annealed; 80 °C is a recorded mid-point rather than a measured figure. Density (1.01-1.14) and Tg (40-60 °C) both vary with PA6 vs PA12 grade rather than between sources, so single values here are grade-averaged. Nozzle temperature differs by grade: eSUN ePA12 240-290 °C vs Prusa's 285 °C for a PA blend. Price range is extrapolated from spool listings and is unverified against current retail. Max continuous service temperature (80-100 °C) is a community/aggregator figure, not a datasheet value. 2026-08-06 update (Snapmaker Nylon spec page — owner-provided link): NO recorded value changed. Confirmations: nozzle 250-270 °C sits inside the recorded 240-290 °C and straddles the recorded 265 °C recommendation; speed 30-60 mm/s sits inside the recorded 30-80 mm/s. Contradictions: tensile 66.2 ± 0.9 MPa is well above the recorded 52 MPa recommendation though still inside the recorded 40-80 MPa band — it is the highest unfilled-PA tensile figure seen here, above eSUN's ePA12 50.8 MPa and partmfg's 52.45 MPa, and it pulls the plausible centre of that band upward without justifying a move on one undisclosed-grade vendor sheet. Tg 67 °C is 17 °C above the recorded 50 °C and above the 40-60 °C grade range this entry describes, so the recorded Tg understates at least this grade. Bed 25-50 °C is dramatically colder than the recorded 70-110 °C with 90 °C recommended — a 20 °C gap at the ceiling. That is Snapmaker's own machine-tuned guidance on a small enclosed printer and it conflicts with every other nylon source in this entry; the recorded range is retained and the Snapmaker figure treated as an outlier, not a correction. HDT is not published by Snapmaker, so the entry's largest open disagreement (eSUN 100 °C vs unfilled PA6's 55-65 °C, recorded 80 °C) gets no help. No test method is cited."
+    "conflicts": "HDT@0.45 MPa is the largest unresolved disagreement: eSUN's ePA12 TDS cites 100 \u00b0C while unfilled PA6 is commonly listed at 55-65 \u00b0C unless annealed; 80 \u00b0C is a recorded mid-point rather than a measured figure. Density (1.01-1.14) and Tg (40-60 \u00b0C) both vary with PA6 vs PA12 grade rather than between sources, so single values here are grade-averaged. Nozzle temperature differs by grade: eSUN ePA12 240-290 \u00b0C vs Prusa's 285 \u00b0C for a PA blend. Price range is extrapolated from spool listings and is unverified against current retail. Max continuous service temperature (80-100 \u00b0C) is a community/aggregator figure, not a datasheet value. 2026-08-06 update (Snapmaker Nylon spec page \u2014 owner-provided link): NO recorded value changed. Confirmations: nozzle 250-270 \u00b0C sits inside the recorded 240-290 \u00b0C and straddles the recorded 265 \u00b0C recommendation; speed 30-60 mm/s sits inside the recorded 30-80 mm/s. Contradictions: tensile 66.2 \u00b1 0.9 MPa is well above the recorded 52 MPa recommendation though still inside the recorded 40-80 MPa band \u2014 it is the highest unfilled-PA tensile figure seen here, above eSUN's ePA12 50.8 MPa and partmfg's 52.45 MPa, and it pulls the plausible centre of that band upward without justifying a move on one undisclosed-grade vendor sheet. Tg 67 \u00b0C is 17 \u00b0C above the recorded 50 \u00b0C and above the 40-60 \u00b0C grade range this entry describes, so the recorded Tg understates at least this grade. Bed 25-50 \u00b0C is dramatically colder than the recorded 70-110 \u00b0C with 90 \u00b0C recommended \u2014 a 20 \u00b0C gap at the ceiling. That is Snapmaker's own machine-tuned guidance on a small enclosed printer and it conflicts with every other nylon source in this entry; the recorded range is retained and the Snapmaker figure treated as an outlier, not a correction. HDT is not published by Snapmaker, so the entry's largest open disagreement (eSUN 100 \u00b0C vs unfilled PA6's 55-65 \u00b0C, recorded 80 \u00b0C) gets no help. No test method is cited."
   },
   "trade_names": [
     {
@@ -325,7 +321,7 @@
     {
       "manufacturer": "snapmaker",
       "product": "Black Nylon (PA)",
-      "notes": "Unfilled polyamide, specific grade undisclosed. Spec-page melting point of 190 °C is well below PA6's ~220 °C and hints at a copolyamide or PA12-family base, but Snapmaker does not state it — see properties.notes."
+      "notes": "Unfilled polyamide, specific grade undisclosed. Spec-page melting point of 190 \u00b0C is well below PA6's ~220 \u00b0C and hints at a copolyamide or PA12-family base, but Snapmaker does not state it \u2014 see properties.notes."
     },
     {
       "manufacturer": "sunlu",
@@ -346,19 +342,19 @@
   "alternatives": [
     {
       "filament_id": "pa12",
-      "reason": "The forgiving grade when this entry's warping and humidity drift are the problem: moisture uptake under 1 % against PA6's 3-9 % (water 7 vs 1), warp 6 vs 9 and dimensional stability 6 vs 3, with drying down to 70 °C/4 h — at lower stiffness (~45 vs 55-58 MPa) and a higher price ($55-90 vs $35-90)."
+      "reason": "The forgiving grade when this entry's warping and humidity drift are the problem: moisture uptake under 1 % against PA6's 3-9 % (water 7 vs 1), warp 6 vs 9 and dimensional stability 6 vs 3, with drying down to 70 \u00b0C/4 h \u2014 at lower stiffness (~45 vs 55-58 MPa) and a higher price ($55-90 vs $35-90)."
     },
     {
       "filament_id": "pa6",
-      "reason": "The cheap, stiff homopolymer that most spools sold as generic 'PA' actually are ($35-70), if you want a named grade with published numbers — same punishing moisture and warp behaviour (warp 9, water 1) and no gain in printability (ease 3, equal)."
+      "reason": "The cheap, stiff homopolymer that most spools sold as generic 'PA' actually are ($35-70), if you want a named grade with published numbers \u2014 same punishing moisture and warp behaviour (warp 9, water 1) and no gain in printability (ease 3, equal)."
     },
     {
       "filament_id": "copa",
-      "reason": "The low-warp copolyamide: warp 3 vs 9 and dimensional stability 5 vs 3, so it prints far calmer while keeping nylon's best-in-family layer adhesion (9, equal) — but low warp is not low moisture (water 2 vs 1, still a 100 °C/8 h dry and sub-20 % RH storage) and it needs a hardened nozzle."
+      "reason": "The low-warp copolyamide: warp 3 vs 9 and dimensional stability 5 vs 3, so it prints far calmer while keeping nylon's best-in-family layer adhesion (9, equal) \u2014 but low warp is not low moisture (water 2 vs 1, still a 100 \u00b0C/8 h dry and sub-20 % RH storage) and it needs a hardened nozzle."
     },
     {
       "filament_id": "pa-cf",
-      "reason": "Carbon fiber collapses the warp (4 vs 9) and lifts HDT@0.45 MPa from ~80 °C to ~155 °C for $40-60/kg — at the cost of nylon's toughness (adhesion 4 vs 9), a mandatory hardened nozzle and no soluble-support option."
+      "reason": "Carbon fiber collapses the warp (4 vs 9) and lifts HDT@0.45 MPa from ~80 \u00b0C to ~155 \u00b0C for $40-60/kg \u2014 at the cost of nylon's toughness (adhesion 4 vs 9), a mandatory hardened nozzle and no soluble-support option."
     },
     {
       "filament_id": "petg",

@@ -158,7 +158,14 @@ every property sourced from the glossary.
   the workspace against the repo before generating bundles — the repo is the source
   of truth, not the workspace.
 ## Changelog
-
+### 2026-08-06 — Bond/support mutual-exclusion review (owner-caught: PCTG both bonded and supported PETG)
+- Full-catalog sweep found 27 contradictory pairs (exact-id) beyond the reported PCTG↔PETG.
+- Ruling: weld pairs keep bonds, lose support edges (ABS↔ASA; PETG↔PCTG/CPE/PET; PETG↔hard TPU).
+  Dedicated support materials (PVA/BVOH/HIPS/breakaway) keep support, lose bond edges.
+  PLA↔TPU ruled a support pair. Self-entries stripped from bonds_with (85 files touched, ~190 edges removed).
+- Validator: new hard errors — bonds_with self-listing, and family-level bond/support
+  mutual exclusion across both directions and all files. Injection-tested.
+- Codified in RESEARCH_GUIDE §8 extension + glossary definitions for bonds_with / support_materials.
 - 2026-08-06 — **Snapmaker catalog refresh** (owner-provided links): ASA product line added
   (new 2026 product, mapped to asa); PA-CF → pa-cf, PA-GF → pa6-gf (Bambu "PA-GF"
   precedent, provisional — base grade still undisclosed) and Breakaway Support for PLA →

@@ -12,8 +12,8 @@
   "base_type": "pa",
   "variation_kind": "grade",
   "polymer_class": "polyamide",
-  "chemical_makeup": "Aliphatic polyamide homopolymer from laurolactam — eleven methylene carbons between amide groups against PA6's five. The long hydrocarbon run dilutes the amide (hydrogen-bonding) content, which is the single fact behind every difference from PA6: less moisture uptake, lower density, lower melting point, more flexibility.",
-  "summary": "The calm, forgiving nylon. Deltas vs the base pa entry: moisture absorption under 1 % against PA6's 3-9 %, so drying drops to 70 °C / 4 h instead of 12 h and redrying between prints is often unnecessary; density falls to 1.01 g/cm³ (the lightest polyamide here, ~7 % more part volume per kilo than pa6); elongation exceeds 50 % and HDT@0.45 MPa reaches ~135 °C. It pays for that with lower stiffness (tensile ~45 MPa vs PA6's 55-58) and a higher price. Vs siblings: much easier and far more humidity-stable than pa6 or pa66, and a completely different hardware class from ppa.",
+  "chemical_makeup": "Aliphatic polyamide homopolymer from laurolactam \u2014 eleven methylene carbons between amide groups against PA6's five. The long hydrocarbon run dilutes the amide (hydrogen-bonding) content, which is the single fact behind every difference from PA6: less moisture uptake, lower density, lower melting point, more flexibility.",
+  "summary": "The calm, forgiving nylon. Deltas vs the base pa entry: moisture absorption under 1 % against PA6's 3-9 %, so drying drops to 70 \u00b0C / 4 h instead of 12 h and redrying between prints is often unnecessary; density falls to 1.01 g/cm\u00b3 (the lightest polyamide here, ~7 % more part volume per kilo than pa6); elongation exceeds 50 % and HDT@0.45 MPa reaches ~135 \u00b0C. It pays for that with lower stiffness (tensile ~45 MPa vs PA6's 55-58) and a higher price. Vs siblings: much easier and far more humidity-stable than pa6 or pa66, and a completely different hardware class from ppa.",
   "printing": {
     "nozzle_temp_c": {
       "min": 240,
@@ -44,13 +44,13 @@
       "max": 10,
       "recommended": 5
     },
-    "notes": "Nozzle window matches the base pa entry (Fiberlogy specifies 255-270 °C for its unfilled PA12; eSUN's ePA12 spans 240-290 °C), so the delta vs pa6 is not temperature but tolerance: PA12 shrinks and warps less, so the enclosure is about draft exclusion rather than rescue. Bed runs at the top of the base range, ~110 °C per Fiberlogy. Part cooling stays near zero as for all nylons — this material needs a warm, still chamber, never open-door cooling, so enclosure_open_for_cooling is false. Unfilled PA12 is not abrasive; the pa12-cf sibling is (0.4 mm+ hardened nozzle, 265-285 °C, layer height >=0.25 mm)."
+    "notes": "Nozzle window matches the base pa entry (Fiberlogy specifies 255-270 \u00b0C for its unfilled PA12; eSUN's ePA12 spans 240-290 \u00b0C), so the delta vs pa6 is not temperature but tolerance: PA12 shrinks and warps less, so the enclosure is about draft exclusion rather than rescue. Bed runs at the top of the base range, ~110 \u00b0C per Fiberlogy. Part cooling stays near zero as for all nylons \u2014 this material needs a warm, still chamber, never open-door cooling, so enclosure_open_for_cooling is false. Unfilled PA12 is not abrasive; the pa12-cf sibling is (0.4 mm+ hardened nozzle, 265-285 \u00b0C, layer height >=0.25 mm)."
   },
   "feeding": {
     "drive_system": "any",
     "ams_compatible": "conditional",
     "feeding_assistant_recommended": false,
-    "notes": "Rigid but noticeably tougher and less brittle than pa6 or pa66, so it survives a material station's bend radii better than any other nylon here — snap risk in the buffer is the lowest of the family. No shore hardness and no feeding assistant (not an elastomer); any extruder feeds it. Rated 'conditional' rather than 'yes' only because it is still a polyamide: use a sealed, desiccated unit. The moisture argument is weaker than for pa6 though — with <1 % absorption, PA12 tolerates an unsealed feed path for far longer than its siblings. Third-party fiber-filled PA12-CF remains barred from standard AMS units on fibre-wear grounds (unverified brand by brand)."
+    "notes": "Rigid but noticeably tougher and less brittle than pa6 or pa66, so it survives a material station's bend radii better than any other nylon here \u2014 snap risk in the buffer is the lowest of the family. No shore hardness and no feeding assistant (not an elastomer); any extruder feeds it. Rated 'conditional' rather than 'yes' only because it is still a polyamide: use a sealed, desiccated unit. The moisture argument is weaker than for pa6 though \u2014 with <1 % absorption, PA12 tolerates an unsealed feed path for far longer than its siblings. Third-party fiber-filled PA12-CF remains barred from standard AMS units on fibre-wear grounds (unverified brand by brand)."
   },
   "drying": {
     "required_before_use": "if-exposed",
@@ -65,13 +65,13 @@
       "recommended": 4
     },
     "methods": [
-      "dedicated filament dryer at 70 °C",
+      "dedicated filament dryer at 70 \u00b0C",
       "food dehydrator",
       "convection oven at low temperature",
       "drybox with desiccant while printing"
     ],
-    "dryness_validation": "No popping, crackling or steam at the nozzle and a glossy, void-free purge line; stringing back to baseline on a retraction test. Because PA12 absorbs so little, a spool that has been sealed with desiccant usually passes this check with no drying at all — which is the practical test that distinguishes it from pa6.",
-    "notes": "The clearest differentiator in the polyamide family. Fiberlogy specifies 70 °C for 4 h against Bambu's 80 °C for 8-12 h on PA6 grades, and 3DXTech puts PA12's moisture uptake below 1 % against PA6's 3-9 %. required_before_use is therefore 'if-exposed' rather than the base pa entry's 'always' — the only polyamide in this catalog that earns that. The pa12-cf sibling still wants 90 °C / 4-6 h if it has been out in the room."
+    "dryness_validation": "No popping, crackling or steam at the nozzle and a glossy, void-free purge line; stringing back to baseline on a retraction test. Because PA12 absorbs so little, a spool that has been sealed with desiccant usually passes this check with no drying at all \u2014 which is the practical test that distinguishes it from pa6.",
+    "notes": "The clearest differentiator in the polyamide family. Fiberlogy specifies 70 \u00b0C for 4 h against Bambu's 80 \u00b0C for 8-12 h on PA6 grades, and 3DXTech puts PA12's moisture uptake below 1 % against PA6's 3-9 %. required_before_use is therefore 'if-exposed' rather than the base pa entry's 'always' \u2014 the only polyamide in this catalog that earns that. The pa12-cf sibling still wants 90 \u00b0C / 4-6 h if it has been out in the room."
   },
   "storage": {
     "recommendations": "Sealed with desiccant is still the right default, but PA12 forgives a lapse: a spool left out overnight is usually still printable, where PA6 would already be bubbling. Keep humidity under 30 % and re-dry only if a purge line pops or strings.",
@@ -81,7 +81,7 @@
   "price": {
     "usd_per_kg_low": 55,
     "usd_per_kg_high": 90,
-    "notes": "Meaningfully above pa6: Fiberlogy's unfilled PA12 runs ~EUR 48 for 0.75 kg (~$68/kg), and specialist PA12 grades span $55-90/kg. The base PA12 resin simply costs more than caprolactam-derived PA6, which carries through to the filled grades too — 3DXTech's CarbonX PA12-CF was listed at $88/500 g (~$176/kg), though it was out of stock at the time of checking and that figure should be re-verified."
+    "notes": "Meaningfully above pa6: Fiberlogy's unfilled PA12 runs ~EUR 48 for 0.75 kg (~$68/kg), and specialist PA12 grades span $55-90/kg. The base PA12 resin simply costs more than caprolactam-derived PA6, which carries through to the filled grades too \u2014 3DXTech's CarbonX PA12-CF was listed at $88/500 g (~$176/kg), though it was out of stock at the time of checking and that figure should be re-verified."
   },
   "use_cases": {
     "recommended": [
@@ -93,8 +93,8 @@
       "outdoor-adjacent mechanical parts where pa6 would swell"
     ],
     "not_recommended": [
-      "maximum-stiffness tooling in a controlled dry environment — pa6 or pa66 is stiffer and cheaper there",
-      "sustained load near or above ~135 °C",
+      "maximum-stiffness tooling in a controlled dry environment \u2014 pa6 or pa66 is stiffer and cheaper there",
+      "sustained load near or above ~135 \u00b0C",
       "food-contact items",
       "budget projects (the most expensive unfilled nylon in this catalog)",
       "parts needing pa66's wear resistance and low creep"
@@ -123,7 +123,7 @@
       "max": 50,
       "recommended": 45
     },
-    "notes": "Density 1.01 g/cm³ (Fiberlogy) is the lowest polyamide figure in the catalog and sits below the base pa entry's grade-averaged 1.08 — 100 g of PA12 yields 99 cm³ against pa6's 88.5, an ~12 % volume advantage per kilo. Tensile at yield 45 MPa with modulus 1400 MPa and elongation at break >50 % — softer and far more ductile than pa6 (55-58 MPa), which is the core stiffness-for-toughness trade. Charpy impact 12 kJ/m². HDT@0.45 MPa 135 °C is well above pa6's ~85 °C, but Tg ~40 °C is the lowest here, so the material creeps under sustained load long before HDT — read HDT as short-term deflection resistance, not a service ceiling. Shrinkage is a reasoned reduction from the base entry's 1.0-2.5 % consistent with PA12's low-warp reputation, not a datasheet figure."
+    "notes": "Density 1.01 g/cm\u00b3 (Fiberlogy) is the lowest polyamide figure in the catalog and sits below the base pa entry's grade-averaged 1.08 \u2014 100 g of PA12 yields 99 cm\u00b3 against pa6's 88.5, an ~12 % volume advantage per kilo. Tensile at yield 45 MPa with modulus 1400 MPa and elongation at break >50 % \u2014 softer and far more ductile than pa6 (55-58 MPa), which is the core stiffness-for-toughness trade. Charpy impact 12 kJ/m\u00b2. HDT@0.45 MPa 135 \u00b0C is well above pa6's ~85 \u00b0C, but Tg ~40 \u00b0C is the lowest here, so the material creeps under sustained load long before HDT \u2014 read HDT as short-term deflection resistance, not a service ceiling. Shrinkage is a reasoned reduction from the base entry's 1.0-2.5 % consistent with PA12's low-warp reputation, not a datasheet figure."
   },
   "scores": {
     "ease_of_print": 5,
@@ -141,7 +141,6 @@
       "copa",
       "pa",
       "pa-cf",
-      "pa12",
       "pa12-cf",
       "pa6",
       "pa612",
@@ -151,13 +150,13 @@
       "support-breakaway"
     ],
     "usable_as_support_for": [],
-    "notes": "Welds to itself and to the aliphatic polyamide family, though the PA12/PA6 and PA12/PA66 interfaces are weaker than same-grade bonds because the melting points differ by 40-80 °C. No bond to pla, petg, abs, asa, pc, pp, pctg, pvb or pet. Same-material breakaway supports are the default, but PA12 is the one grade in this family with a documented soluble option: 3DXTech lists AquaTek X1 USM as compatible with its PA12-CF, so a water-soluble interface is worth testing here where it is a non-starter for pa6/pa66. pva still degrades below the print range."
+    "notes": "Welds to itself and to the aliphatic polyamide family, though the PA12/PA6 and PA12/PA66 interfaces are weaker than same-grade bonds because the melting points differ by 40-80 \u00b0C. No bond to pla, petg, abs, asa, pc, pp, pctg, pvb or pet. Same-material breakaway supports are the default, but PA12 is the one grade in this family with a documented soluble option: 3DXTech lists AquaTek X1 USM as compatible with its PA12-CF, so a water-soluble interface is worth testing here where it is a non-starter for pa6/pa66. pva still degrades below the print range."
   },
   "plate_recommendations": [
     {
       "plate_id": "pei-textured",
       "rating": "recommended",
-      "notes": "Upgraded from the base pa entry's 'usable': PA12's lower shrinkage means edge lift is far less of a threat, and Fiberlogy lists smooth or textured PEI with adhesive (or glass plus adhesive) as normal practice. A glue stick is still applied as an adhesion promoter, and it doubles as a release layer against over-bonding on smooth PEI. Garolite / G10 is not the near-requirement here that it is for pa6 and pa66 — no such plate entry exists in the catalog yet, so this is recorded in notes."
+      "notes": "Upgraded from the base pa entry's 'usable': PA12's lower shrinkage means edge lift is far less of a threat, and Fiberlogy lists smooth or textured PEI with adhesive (or glass plus adhesive) as normal practice. A glue stick is still applied as an adhesion promoter, and it doubles as a release layer against over-bonding on smooth PEI. Garolite / G10 is not the near-requirement here that it is for pa6 and pa66 \u2014 no such plate entry exists in the catalog yet, so this is recorded in notes."
     },
     {
       "plate_id": "g10-garolite",
@@ -217,19 +216,19 @@
     },
     {
       "filament_id": "pa12-cf",
-      "reason": "Roughly doubles tensile to ~120 MPa and drops warp to 2 while keeping PA12's humidity stability — retaining ~85 % of dry tensile when conditioned — at $130-180/kg, a mandatory hardened nozzle, no AMS feeding and a weaker layer bond (5 vs 8)."
+      "reason": "Roughly doubles tensile to ~120 MPa and drops warp to 2 while keeping PA12's humidity stability \u2014 retaining ~85 % of dry tensile when conditioned \u2014 at $130-180/kg, a mandatory hardened nozzle, no AMS feeding and a weaker layer bond (5 vs 8)."
     },
     {
       "filament_id": "pa612",
-      "reason": "The grade deliberately between PA6 and PA12: stiffer and hotter (compression 8 vs 6, temp 7 vs 6, HDT@0.45 MPa 175 °C) with lower warp (3 vs 6) — at a hardened-nozzle requirement, a 25-50 °C bed with the fan fully off, and a much weaker layer bond (4 vs 8)."
+      "reason": "The grade deliberately between PA6 and PA12: stiffer and hotter (compression 8 vs 6, temp 7 vs 6, HDT@0.45 MPa 175 \u00b0C) with lower warp (3 vs 6) \u2014 at a hardened-nozzle requirement, a 25-50 \u00b0C bed with the fan fully off, and a much weaker layer bond (4 vs 8)."
     },
     {
       "filament_id": "copa",
-      "reason": "If low warp matters more than low moisture: warp 3 vs 6 and layer adhesion 9 vs 8 — but back to nylon-grade hygroscopy (water 2 vs 7, 100 °C/8 h dry) plus a hardened nozzle, and less heat (temp 5 vs 6)."
+      "reason": "If low warp matters more than low moisture: warp 3 vs 6 and layer adhesion 9 vs 8 \u2014 but back to nylon-grade hygroscopy (water 2 vs 7, 100 \u00b0C/8 h dry) plus a hardened nozzle, and less heat (temp 5 vs 6)."
     },
     {
       "filament_id": "petg",
-      "reason": "For non-wear parts, PETG skips the drying and the enclosure entirely (ease 7 vs 5, warp 3 vs 6, water 9 vs 7) at roughly a third the price ($18-42 vs $55-90) — giving up the wear, fatigue and low-friction behaviour that motivates PA12 in the first place."
+      "reason": "For non-wear parts, PETG skips the drying and the enclosure entirely (ease 7 vs 5, warp 3 vs 6, water 9 vs 7) at roughly a third the price ($18-42 vs $55-90) \u2014 giving up the wear, fatigue and low-friction behaviour that motivates PA12 in the first place."
     }
   ],
   "emissions": {
@@ -240,10 +239,10 @@
       "ultrafine particles"
     ],
     "ventilation": "recommended",
-    "notes": "Rated a step below pa6 and pa66 on VOCs: PA12 is laurolactam-based, so it is not a caprolactam source, and the characteristic acidic nylon odour is milder. General nylon fume and ultrafine-particle concerns still apply above ~250 °C nozzle, so source-capture extraction or a HEPA+carbon filter is recommended for long jobs. No PA12-specific emissions study was found — this is the general nylon-family guidance applied with the monomer difference accounted for (unverified)."
+    "notes": "Rated a step below pa6 and pa66 on VOCs: PA12 is laurolactam-based, so it is not a caprolactam source, and the characteristic acidic nylon odour is milder. General nylon fume and ultrafine-particle concerns still apply above ~250 \u00b0C nozzle, so source-capture extraction or a HEPA+carbon filter is recommended for long jobs. No PA12-specific emissions study was found \u2014 this is the general nylon-family guidance applied with the monomer difference accounted for (unverified)."
   },
-  "safety_notes": "Keep drying below 90 °C. Molten PA12 in the hotend behaves like any nylon — do not clear a clog by hand at temperature. The pa12-cf sibling adds respirable carbon-fibre dust during sanding or machining; wet-sand and wear respiratory protection there. Not food-contact suitable: FDM layer crevices harbour bacteria regardless of the polymer's industrial food-grade status.",
-  "additional_notes": "PA12 is the grade to reach for when the part has to hold its size in an uncontrolled environment. 3DXTech's own PA6-CF vs PA12-CF comparison makes the trade explicit: PA6 wins on dry stiffness and HDT (175 °C vs 150 °C on their filled grades) but those numbers degrade as the part takes up water, while PA12's stay put — so PA6 wins the datasheet and PA12 wins the shop floor. PA12 also anneals less dramatically than PA6, since there is less moisture-driven property swing to recover.",
+  "safety_notes": "Keep drying below 90 \u00b0C. Molten PA12 in the hotend behaves like any nylon \u2014 do not clear a clog by hand at temperature. The pa12-cf sibling adds respirable carbon-fibre dust during sanding or machining; wet-sand and wear respiratory protection there. Not food-contact suitable: FDM layer crevices harbour bacteria regardless of the polymer's industrial food-grade status.",
+  "additional_notes": "PA12 is the grade to reach for when the part has to hold its size in an uncontrolled environment. 3DXTech's own PA6-CF vs PA12-CF comparison makes the trade explicit: PA6 wins on dry stiffness and HDT (175 \u00b0C vs 150 \u00b0C on their filled grades) but those numbers degrade as the part takes up water, while PA12's stay put \u2014 so PA6 wins the datasheet and PA12 wins the shop floor. PA12 also anneals less dramatically than PA6, since there is less moisture-driven property swing to recover.",
   "provenance": {
     "sources": [
       "https://fiberlogy.com/en/Nylon-PA12-Filament-1_75mm-0_75kg",
@@ -257,7 +256,7 @@
     ],
     "last_verified": "2026-07-31",
     "confidence": "medium",
-    "conflicts": "HDT is the widest disagreement: Fiberlogy's unfilled PA12 cites 135 °C @0.45 MPa while the base pa entry records 80 °C as a PA6/PA12 midpoint and unfilled PA6 is commonly listed at 55-85 °C — the gap is real (PA12 grades genuinely test higher) but 135 °C sits oddly against a Tg of ~40 °C, so treat it as short-term deflection rather than a service ceiling. Nozzle range differs by vendor (Fiberlogy 255-270 °C vs eSUN ePA12 240-290 °C). Moisture uptake '<1 %' is 3DXTech's figure with no measurement condition stated. Price for PA12-CF ($176/kg equivalent) was taken from an out-of-stock listing and needs re-verification. UV tolerance is scored above pa6 on dimensional-stability grounds rather than intrinsic photostability — no UV-exposure test data was found for unfilled PA12 (unverified)."
+    "conflicts": "HDT is the widest disagreement: Fiberlogy's unfilled PA12 cites 135 \u00b0C @0.45 MPa while the base pa entry records 80 \u00b0C as a PA6/PA12 midpoint and unfilled PA6 is commonly listed at 55-85 \u00b0C \u2014 the gap is real (PA12 grades genuinely test higher) but 135 \u00b0C sits oddly against a Tg of ~40 \u00b0C, so treat it as short-term deflection rather than a service ceiling. Nozzle range differs by vendor (Fiberlogy 255-270 \u00b0C vs eSUN ePA12 240-290 \u00b0C). Moisture uptake '<1 %' is 3DXTech's figure with no measurement condition stated. Price for PA12-CF ($176/kg equivalent) was taken from an out-of-stock listing and needs re-verification. UV tolerance is scored above pa6 on dimensional-stability grounds rather than intrinsic photostability \u2014 no UV-exposure test data was found for unfilled PA12 (unverified)."
   },
   "trade_names": [
     {

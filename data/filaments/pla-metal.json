@@ -12,8 +12,8 @@
   "base_type": "pla",
   "variation_kind": "metal-filled",
   "polymer_class": "composite-other",
-  "chemical_makeup": "PLA (or PLA/PHA blend) matrix loaded with fine metal powder — copper, bronze, or steel/iron — at 20-50 wt% in true heavy-fill grades; lighter 'metallic-effect' products use a much smaller particle load and behave closer to base PLA",
-  "summary": "PLA carrying metal powder so parts can be sanded and polished to a real metallic shine, and in the case of steel-filled grades are faintly magnetic and can be patinated. Versus base PLA it needs a hardened nozzle, is markedly more brittle, and the category splits sharply: light metallic-effect products (density ~1.25 g/cm³) print almost like base PLA, while true heavy-fill grades (bronzeFill 3.9, steelFill 3.13 g/cm³) demand 20-80 mm/s, wear brass nozzles out in ~1.5 kg, and drop elongation to 1-3 %.",
+  "chemical_makeup": "PLA (or PLA/PHA blend) matrix loaded with fine metal powder \u2014 copper, bronze, or steel/iron \u2014 at 20-50 wt% in true heavy-fill grades; lighter 'metallic-effect' products use a much smaller particle load and behave closer to base PLA",
+  "summary": "PLA carrying metal powder so parts can be sanded and polished to a real metallic shine, and in the case of steel-filled grades are faintly magnetic and can be patinated. Versus base PLA it needs a hardened nozzle, is markedly more brittle, and the category splits sharply: light metallic-effect products (density ~1.25 g/cm\u00b3) print almost like base PLA, while true heavy-fill grades (bronzeFill 3.9, steelFill 3.13 g/cm\u00b3) demand 20-80 mm/s, wear brass nozzles out in ~1.5 kg, and drop elongation to 1-3 %.",
   "printing": {
     "nozzle_temp_c": {
       "min": 190,
@@ -44,13 +44,13 @@
       "recommended": 100
     },
     "enclosure_open_for_cooling": true,
-    "notes": "The range spans two very different products. Light metallic-effect grades (Bambu PLA Metal): 190-230 °C, tested at 220 °C, bed 35-45 °C, up to 300 mm/s — effectively base-PLA settings. True heavy metal-fill: colorFabb bronzeFill 195-220 °C with a 50-60 °C bed, steelFill 190-210 °C, run at 40-80 mm/s, and general guidance for heavily loaded composites drops to 20-40 mm/s to keep extrusion consistent and avoid clogs. Hardened nozzle is mandatory for heavy fill (steelFill wears out standard brass in about 1.5 kg; E3D hardened steel, JET RSS50 or similar); flagged true for the whole category as a precaution even though Bambu does not state it for its lighter product. Use 0.4 mm or larger — metal particles bridge smaller orifices. No enclosure needed at PLA temperatures."
+    "notes": "The range spans two very different products. Light metallic-effect grades (Bambu PLA Metal): 190-230 \u00b0C, tested at 220 \u00b0C, bed 35-45 \u00b0C, up to 300 mm/s \u2014 effectively base-PLA settings. True heavy metal-fill: colorFabb bronzeFill 195-220 \u00b0C with a 50-60 \u00b0C bed, steelFill 190-210 \u00b0C, run at 40-80 mm/s, and general guidance for heavily loaded composites drops to 20-40 mm/s to keep extrusion consistent and avoid clogs. Hardened nozzle is mandatory for heavy fill (steelFill wears out standard brass in about 1.5 kg; E3D hardened steel, JET RSS50 or similar); flagged true for the whole category as a precaution even though Bambu does not state it for its lighter product. Use 0.4 mm or larger \u2014 metal particles bridge smaller orifices. No enclosure needed at PLA temperatures."
   },
   "feeding": {
     "drive_system": "direct-drive-recommended",
     "ams_compatible": "conditional",
     "feeding_assistant_recommended": false,
-    "notes": "Light metallic-effect grades feed like base PLA through any extruder; heavy metal-fill is brittle enough that community consensus discourages long Bowden and AMS routing — the strand snaps on tight bend radii and the dense, hard filament wears feed tubes — so direct drive is recommended for the category. Bambu's material table lists metal-filled PLA as hardened-nozzle-required and AMS-compatible only 'when not very brittle, rough, or soft', the same batch-dependent caveat applied to pla-wood. Rigid material, so no feeding assistant is required despite the spool weight."
+    "notes": "Light metallic-effect grades feed like base PLA through any extruder; heavy metal-fill is brittle enough that community consensus discourages long Bowden and AMS routing \u2014 the strand snaps on tight bend radii and the dense, hard filament wears feed tubes \u2014 so direct drive is recommended for the category. Bambu's material table lists metal-filled PLA as hardened-nozzle-required and AMS-compatible only 'when not very brittle, rough, or soft', the same batch-dependent caveat applied to pla-wood. Rigid material, so no feeding assistant is required despite the spool weight."
   },
   "drying": {
     "required_before_use": "if-exposed",
@@ -66,22 +66,22 @@
     },
     "methods": [
       "filament dryer",
-      "blast oven at 55 °C",
+      "blast oven at 55 \u00b0C",
       "food dehydrator",
       "drybox with desiccant"
     ],
     "dryness_validation": "Consistent extrusion with no popping or spitting on a purge line; inconsistent flow on heavy-fill grades can also come from particle settling, so rule out moisture first by drying before chasing extrusion tuning",
-    "notes": "Bambu specifies 55 °C for 8 h, matching base PLA. colorFabb publishes no explicit drying schedule for bronzeFill/steelFill in the sourcing reviewed, so standard PLA-range drying (45-55 °C, 6-8 h) is recorded as a safe default."
+    "notes": "Bambu specifies 55 \u00b0C for 8 h, matching base PLA. colorFabb publishes no explicit drying schedule for bronzeFill/steelFill in the sourcing reviewed, so standard PLA-range drying (45-55 \u00b0C, 6-8 h) is recorded as a safe default."
   },
   "storage": {
-    "recommendations": "Sealed bag or drybox with desiccant. Support heavy-fill spools well — a bronzeFill spool weighs roughly three times a PLA spool of the same volume and can bend light spool holders",
+    "recommendations": "Sealed bag or drybox with desiccant. Support heavy-fill spools well \u2014 a bronzeFill spool weighs roughly three times a PLA spool of the same volume and can bend light spool holders",
     "max_humidity_pct": 40,
     "hygroscopy": "low"
   },
   "price": {
     "usd_per_kg_low": 25,
     "usd_per_kg_high": 65,
-    "notes": "Two price tiers: Bambu PLA Metal around $24.99/kg (in line with pla-gradient, pla-wood and pla-glow), versus colorFabb bronzeFill/steelFill around $60-65/kg for genuine heavy metal-powder loading — 2-3x more. General metal-filled market pricing is quoted at $30-80/kg. Note that heavy-fill spools also yield far less volume per kilogram: 100 g of bronzeFill is only ~26 cm³ against ~80 cm³ for base PLA"
+    "notes": "Two price tiers: Bambu PLA Metal around $24.99/kg (in line with pla-gradient, pla-wood and pla-glow), versus colorFabb bronzeFill/steelFill around $60-65/kg for genuine heavy metal-powder loading \u2014 2-3x more. General metal-filled market pricing is quoted at $30-80/kg. Note that heavy-fill spools also yield far less volume per kilogram: 100 g of bronzeFill is only ~26 cm\u00b3 against ~80 cm\u00b3 for base PLA"
   },
   "use_cases": {
     "recommended": [
@@ -123,7 +123,7 @@
       "max": 55,
       "recommended": 34
     },
-    "notes": "Density recorded is Bambu PLA Metal's 1.25 g/cm³ (barely above base PLA's 1.24), because that light metallic-effect product is the mainstream case — but it is NOT representative of true heavy metal-fill, where colorFabb bronzeFill is 3.9 g/cm³ and steelFill 3.13 g/cm³, i.e. roughly 100 g per 26-32 cm³ rather than per 80 cm³. Use the derived weight/volume figures here only for light-fill products. Bambu PLA Metal mechanicals: tensile XY 34±4 MPa and Z 31±3 MPa (Z/XY ~0.91, the best layer bonding in this cluster), elongation XY 14.7±1.5 % and Z 4.5±1.3 %, Tg 60 °C, HDT 58 °C at 1.8 MPa. Heavy-fill composites instead run 25-55 MPa tensile with elongation collapsing to 1-3 % against base PLA's ~6 %+, which is why the tensile range recorded is deliberately wide."
+    "notes": "Density recorded is Bambu PLA Metal's 1.25 g/cm\u00b3 (barely above base PLA's 1.24), because that light metallic-effect product is the mainstream case \u2014 but it is NOT representative of true heavy metal-fill, where colorFabb bronzeFill is 3.9 g/cm\u00b3 and steelFill 3.13 g/cm\u00b3, i.e. roughly 100 g per 26-32 cm\u00b3 rather than per 80 cm\u00b3. Use the derived weight/volume figures here only for light-fill products. Bambu PLA Metal mechanicals: tensile XY 34\u00b14 MPa and Z 31\u00b13 MPa (Z/XY ~0.91, the best layer bonding in this cluster), elongation XY 14.7\u00b11.5 % and Z 4.5\u00b11.3 %, Tg 60 \u00b0C, HDT 58 \u00b0C at 1.8 MPa. Heavy-fill composites instead run 25-55 MPa tensile with elongation collapsing to 1-3 % against base PLA's ~6 %+, which is why the tensile range recorded is deliberately wide."
   },
   "scores": {
     "ease_of_print": 5,
@@ -139,7 +139,6 @@
   "compatibility": {
     "bonds_with": [
       "pla",
-      "pla-metal",
       "pla-matte",
       "pla-gradient"
     ],
@@ -149,7 +148,7 @@
       "petg"
     ],
     "usable_as_support_for": [],
-    "notes": "Welds to base PLA and other PLA grades through the same matrix chemistry, but heavy-fill grades are brittle enough that a multi-material part tends to fail at the interface under stress — keep metal-filled sections decorative. Standard PLA supports work. Not sensible as a support material: expensive, abrasive and heavy."
+    "notes": "Welds to base PLA and other PLA grades through the same matrix chemistry, but heavy-fill grades are brittle enough that a multi-material part tends to fail at the interface under stress \u2014 keep metal-filled sections decorative. Standard PLA supports work. Not sensible as a support material: expensive, abrasive and heavy."
   },
   "plate_recommendations": [
     {
@@ -160,7 +159,7 @@
     {
       "plate_id": "pei-textured",
       "rating": "usable",
-      "notes": "Adheres fine, but for the usual workflow — sand 120 grit up through 600+ and polish to expose the metal — a smooth PEI or glass plate gives a flatter starting surface and less material to remove. Textured PEI is the better choice only if the part is left unpolished."
+      "notes": "Adheres fine, but for the usual workflow \u2014 sand 120 grit up through 600+ and polish to expose the metal \u2014 a smooth PEI or glass plate gives a flatter starting surface and less material to remove. Textured PEI is the better choice only if the part is left unpolished."
     }
   ],
   "alternatives": [
@@ -170,11 +169,11 @@
     },
     {
       "filament_id": "pla-stone",
-      "reason": "A cheaper heavy-filler aesthetic with the same sand-and-patina workflow and slightly easier printing (ease 6 vs 5) — but it reads as stone or marble, is not magnetic, and cannot be polished to metallic lustre."
+      "reason": "A cheaper heavy-filler aesthetic with the same sand-and-patina workflow and slightly easier printing (ease 6 vs 5) \u2014 but it reads as stone or marble, is not magnetic, and cannot be polished to metallic lustre."
     },
     {
       "filament_id": "pla-silk",
-      "reason": "Metallic-looking sheen straight off the printer with no filler at all: ease 8 vs 5, no hardened nozzle, $20-23 — but it is a plastic shine that cannot be sanded and polished back to metal, and its bonding is worse (adh 4 vs 5)."
+      "reason": "Metallic-looking sheen straight off the printer with no filler at all: ease 8 vs 5, no hardened nozzle, $20-23 \u2014 but it is a plastic shine that cannot be sanded and polished back to metal, and its bonding is worse (adh 4 vs 5)."
     },
     {
       "filament_id": "pla-cf",
@@ -189,10 +188,10 @@
       "ultrafine particles"
     ],
     "ventilation": "optional",
-    "notes": "No printing-time delta from base PLA; the metal powder is inert at PLA extrusion temperatures and no unique fume species is reported. The real exposure risk with this material is post-processing, not printing — see safety notes."
+    "notes": "No printing-time delta from base PLA; the metal powder is inert at PLA extrusion temperatures and no unique fume species is reported. The real exposure risk with this material is post-processing, not printing \u2014 see safety notes."
   },
   "safety_notes": "Wear a respirator or dust mask and work wet or with extraction when sanding and polishing: the dust is metal powder plus plastic fines, and metal dust inhalation is the main hazard of this material. Patina chemicals (liver of sulfur, hydrogen peroxide) need gloves, eye protection and ventilation. Not food-contact certified in any grade.",
-  "additional_notes": "Two products share this name and they are not interchangeable. 'Metallic-effect' PLA (e.g. Bambu PLA Metal, density 1.25 g/cm³) is a lightly loaded sparkle filament that prints like base PLA; 'true' metal-filled PLA (colorFabb bronzeFill/steelFill, 3.13-3.9 g/cm³) is a heavy powder composite with real heft, polishable metal surfaces, mandatory hardened nozzles and brittle failure. Check the datasheet density before applying any figure in this entry. Steel-filled parts are weakly magnetic; bronze and copper darken attractively with patina chemistry.",
+  "additional_notes": "Two products share this name and they are not interchangeable. 'Metallic-effect' PLA (e.g. Bambu PLA Metal, density 1.25 g/cm\u00b3) is a lightly loaded sparkle filament that prints like base PLA; 'true' metal-filled PLA (colorFabb bronzeFill/steelFill, 3.13-3.9 g/cm\u00b3) is a heavy powder composite with real heft, polishable metal surfaces, mandatory hardened nozzles and brittle failure. Check the datasheet density before applying any figure in this entry. Steel-filled parts are weakly magnetic; bronze and copper darken attractively with patina chemistry.",
   "provenance": {
     "sources": [
       "https://store.bblcdn.eu/s8/default/5f4a92a8e8df4512830af91f30a8e330/Bambu_PLA_Metal_Technical_Data_Sheet.pdf",
@@ -205,7 +204,7 @@
     ],
     "last_verified": "2026-07-31",
     "confidence": "low",
-    "conflicts": "This entry covers a genuinely split product category and the split drives the low confidence. Density differs by a factor of three between Bambu PLA Metal (1.25 g/cm³) and colorFabb bronzeFill (3.9) / steelFill (3.13); the single recorded density and its derived weight/volume figures describe the light-fill case only. Metal content is undisclosed by Bambu, and its near-base-PLA density plus a 0.91 Z/XY tensile ratio suggests metallic-effect pigment rather than true powder fill — unverified. Hardened nozzle: mandatory and documented for steelFill (brass gone in ~1.5 kg), unstated by Bambu for its product; set true for the category out of caution. Speeds range from Bambu's 300 mm/s to Xometry's 20-40 mm/s for heavy fill. Ease of print is scored 5 for the category on the heavy-fill case; the light metallic-effect product alone would score about 7, close to pla-glow. Drying for colorFabb grades is not published and is assumed at PLA defaults. Long-term weathering of surface-exposed metal is reasoned from oxidation risk, not measured."
+    "conflicts": "This entry covers a genuinely split product category and the split drives the low confidence. Density differs by a factor of three between Bambu PLA Metal (1.25 g/cm\u00b3) and colorFabb bronzeFill (3.9) / steelFill (3.13); the single recorded density and its derived weight/volume figures describe the light-fill case only. Metal content is undisclosed by Bambu, and its near-base-PLA density plus a 0.91 Z/XY tensile ratio suggests metallic-effect pigment rather than true powder fill \u2014 unverified. Hardened nozzle: mandatory and documented for steelFill (brass gone in ~1.5 kg), unstated by Bambu for its product; set true for the category out of caution. Speeds range from Bambu's 300 mm/s to Xometry's 20-40 mm/s for heavy fill. Ease of print is scored 5 for the category on the heavy-fill case; the light metallic-effect product alone would score about 7, close to pla-glow. Drying for colorFabb grades is not published and is assumed at PLA defaults. Long-term weathering of surface-exposed metal is reasoned from oxidation risk, not measured."
   },
   "trade_names": [
     {
@@ -253,7 +252,7 @@
     {
       "manufacturer": "proto-pasta",
       "product": "Metal Composite PLA / HTPLA (Iron, High-Density Magnetic Iron, Stainless Steel, High-Density Stainless Steel, Copper, Brass, Bronze)",
-      "notes": "Iron 1.8 g/cm3 (rustable, magnetic), stainless steel 2.4 g/cm3. Aesthetic/weight filler, polishable — not stronger than plain PLA; steel grades are not electrically conductive."
+      "notes": "Iron 1.8 g/cm3 (rustable, magnetic), stainless steel 2.4 g/cm3. Aesthetic/weight filler, polishable \u2014 not stronger than plain PLA; steel grades are not electrically conductive."
     },
     {
       "manufacturer": "qidi-tech",

@@ -14,7 +14,7 @@
   "variation_kind": "grade",
   "polymer_class": "polyamide",
   "chemical_makeup": "Long-chain aliphatic polyamide condensed from a C6 diamine (hexamethylenediamine) with C12 dodecanedioic acid. The long diacid dilutes amide content relative to PA6 without going as far as PA12, which is the single fact behind the grade's positioning: more of PA6's stiffness and heat performance, closer to PA12's moisture indifference. The commercially dominant filament form is carbon-fibre-filled (Polymaker Fiberon PA612-CF15, 15 % chopped CF), not neat resin.",
-  "summary": "The nylon deliberately engineered to sit between pa6 and pa12: less moisture-hungry and far calmer dimensionally than PA6, meaningfully stiffer and hotter-running than PA12. Deltas vs the base pa entry: nozzle shifts up to 250-300 °C, bed drops to 25-50 °C, fan goes fully off, and drying hardens to 100 °C / 8 h. Note the catalog caveat — every mechanical number here is from the CF-filled Fiberon PA612-CF15 (HDT@0.45 MPa 175 °C, tensile 86 MPa XY but only 30 MPa Z), because no mainstream unfilled PA612 filament was found; treat this as the PA612-CF grade with the neat-resin case unverified.",
+  "summary": "The nylon deliberately engineered to sit between pa6 and pa12: less moisture-hungry and far calmer dimensionally than PA6, meaningfully stiffer and hotter-running than PA12. Deltas vs the base pa entry: nozzle shifts up to 250-300 \u00b0C, bed drops to 25-50 \u00b0C, fan goes fully off, and drying hardens to 100 \u00b0C / 8 h. Note the catalog caveat \u2014 every mechanical number here is from the CF-filled Fiberon PA612-CF15 (HDT@0.45 MPa 175 \u00b0C, tensile 86 MPa XY but only 30 MPa Z), because no mainstream unfilled PA612 filament was found; treat this as the PA612-CF grade with the neat-resin case unverified.",
   "printing": {
     "nozzle_temp_c": {
       "min": 250,
@@ -45,13 +45,13 @@
       "recommended": 0
     },
     "enclosure_open_for_cooling": false,
-    "notes": "Polymaker's Fiberon PA612-CF15 TDS gives 250-300 °C nozzle, 25-50 °C bed and 30-60 mm/s with the part-cooling fan OFF. The bed figure is the surprise against its siblings — pa6 wants 80-110 °C and pa12 90-110 °C, while this grade is specified cool, which is consistent with the CF loading doing the warp control that a hot plate does elsewhere. Enclosure is recorded as recommended rather than required: the retrieved TDS excerpt does not mandate one, but a 250-300 °C CF nylon on a large footprint is conventionally chamber-printed for draft exclusion (best practice, not a confirmed spec — unverified). Hardened nozzle is recorded true on the strength of the 15 % carbon-fibre loading in the flagship SKU, which will chew a brass nozzle inside a spool; the TDS excerpt does not restate it, and a hypothetical unfilled PA612 would not need one. Ambient range is inferred from general filled-nylon practice, not published for this SKU."
+    "notes": "Polymaker's Fiberon PA612-CF15 TDS gives 250-300 \u00b0C nozzle, 25-50 \u00b0C bed and 30-60 mm/s with the part-cooling fan OFF. The bed figure is the surprise against its siblings \u2014 pa6 wants 80-110 \u00b0C and pa12 90-110 \u00b0C, while this grade is specified cool, which is consistent with the CF loading doing the warp control that a hot plate does elsewhere. Enclosure is recorded as recommended rather than required: the retrieved TDS excerpt does not mandate one, but a 250-300 \u00b0C CF nylon on a large footprint is conventionally chamber-printed for draft exclusion (best practice, not a confirmed spec \u2014 unverified). Hardened nozzle is recorded true on the strength of the 15 % carbon-fibre loading in the flagship SKU, which will chew a brass nozzle inside a spool; the TDS excerpt does not restate it, and a hypothetical unfilled PA612 would not need one. Ambient range is inferred from general filled-nylon practice, not published for this SKU."
   },
   "feeding": {
     "drive_system": "any",
     "ams_compatible": "no",
     "feeding_assistant_recommended": false,
-    "notes": "Rigid, so any extruder pushes it; no shore hardness and no feeding assistant (not an elastomer). Retraction per the Fiberon TDS: 3 mm at 40 mm/s on direct drive, 6 mm at 60 mm/s on Bowden. The abrasion caveat extends past the nozzle — CF content wears the whole feed path, so hardened drive gears and a wear-resistant hotend liner are the sensible pairing, not just a hardened tip. AMS/MMU recorded 'no' on the same grounds as pa6-cf and pa12-cf (fibre wears the PTFE path, the stiff filled strand can snap on tight bend radii, and the material wants a sealed dry feed at 100 °C-dry state); Polymaker publishes no AMS statement for this SKU either way, so the rating is a family-consistent judgement rather than a vendor position (unverified)."
+    "notes": "Rigid, so any extruder pushes it; no shore hardness and no feeding assistant (not an elastomer). Retraction per the Fiberon TDS: 3 mm at 40 mm/s on direct drive, 6 mm at 60 mm/s on Bowden. The abrasion caveat extends past the nozzle \u2014 CF content wears the whole feed path, so hardened drive gears and a wear-resistant hotend liner are the sensible pairing, not just a hardened tip. AMS/MMU recorded 'no' on the same grounds as pa6-cf and pa12-cf (fibre wears the PTFE path, the stiff filled strand can snap on tight bend radii, and the material wants a sealed dry feed at 100 \u00b0C-dry state); Polymaker publishes no AMS statement for this SKU either way, so the rating is a family-consistent judgement rather than a vendor position (unverified)."
   },
   "drying": {
     "required_before_use": "always",
@@ -66,40 +66,40 @@
       "recommended": 8
     },
     "methods": [
-      "blast/convection oven at 100 °C",
+      "blast/convection oven at 100 \u00b0C",
       "high-temperature filament dryer",
       "print directly from a heated drybox",
       "sealed drybox with desiccant while printing"
     ],
     "dryness_validation": "No vendor-published threshold for this SKU. General nylon practice applies: dry until consecutive weigh-ins stop dropping, or until a filament moisture meter reads below ~0.2 %; at the nozzle, no popping or steam, a glossy void-free purge line and stringing back to baseline on a retraction tower (industry norm, unverified for PA612 specifically).",
-    "notes": "Polymaker specifies 100 °C for 8 h if moisture has been absorbed — hotter than the pa6 schedule (80 °C / 8-12 h) and much hotter than pa12's 70 °C / 4 h, which is a hardware constraint as much as a material one: most consumer filament dryers top out below 100 °C. Separately, the TDS gives an anneal at 80 °C for 6 h for peak mechanical and dimensional performance; annealing is a post-print operation, not a substitute for drying."
+    "notes": "Polymaker specifies 100 \u00b0C for 8 h if moisture has been absorbed \u2014 hotter than the pa6 schedule (80 \u00b0C / 8-12 h) and much hotter than pa12's 70 \u00b0C / 4 h, which is a hardware constraint as much as a material one: most consumer filament dryers top out below 100 \u00b0C. Separately, the TDS gives an anneal at 80 \u00b0C for 6 h for peak mechanical and dimensional performance; annealing is a post-print operation, not a substitute for drying."
   },
   "storage": {
-    "recommendations": "Sealed with desiccant between prints and fed from a drybox for long jobs. PA612 is genuinely less moisture-driven than pa6 — vendor comparisons rate its absorption 'Low' where PA6 is 'High' — but 'less' is not 'none', and the CF grade's Z-direction weakness makes moisture-driven layer defects more costly here than on an unfilled nylon.",
+    "recommendations": "Sealed with desiccant between prints and fed from a drybox for long jobs. PA612 is genuinely less moisture-driven than pa6 \u2014 vendor comparisons rate its absorption 'Low' where PA6 is 'High' \u2014 but 'less' is not 'none', and the CF grade's Z-direction weakness makes moisture-driven layer defects more costly here than on an unfilled nylon.",
     "max_humidity_pct": 20,
     "hygroscopy": "moderate"
   },
   "price": {
     "usd_per_kg_low": 64.76,
     "usd_per_kg_high": 76.56,
-    "notes": "Polymaker Fiberon PA612-CF15 at 3DJake: $38.28 for 500 g ($76.56/kg) falling to $194.28 for 3 kg ($64.76/kg). That places it above pa6's $35-70/kg and in line with pa12's $55-90/kg — the CF loading, not the base resin, is doing most of that. No unfilled PA612 filament price was found because no mainstream unfilled product was found."
+    "notes": "Polymaker Fiberon PA612-CF15 at 3DJake: $38.28 for 500 g ($76.56/kg) falling to $194.28 for 3 kg ($64.76/kg). That places it above pa6's $35-70/kg and in line with pa12's $55-90/kg \u2014 the CF loading, not the base resin, is doing most of that. No unfilled PA612 filament price was found because no mainstream unfilled product was found."
   },
   "use_cases": {
     "recommended": [
       "jigs, fixtures and shop tooling that must hold size in an uncontrolled shop humidity",
       "stiff mechanical brackets where PA6 warps and PA12 flexes",
       "low-friction wear parts and bushings",
-      "under-hood-adjacent parts needing HDT well above 100 °C",
+      "under-hood-adjacent parts needing HDT well above 100 \u00b0C",
       "functional prototypes replacing machined nylon stock",
       "parts previously printed in PA6-CF that moved dimensionally between seasons"
     ],
     "not_recommended": [
-      "parts loaded across the layer lines — Z tensile is ~30 MPa against 86 MPa in XY",
+      "parts loaded across the layer lines \u2014 Z tensile is ~30 MPa against 86 MPa in XY",
       "printers with a brass nozzle and no wear-resistant upgrade path",
       "high-elongation or impact-absorbing parts (elongation at break 2.8 %)",
-      "cheap or casual prints — this is the expensive end of the nylon family",
+      "cheap or casual prints \u2014 this is the expensive end of the nylon family",
       "AMS/multi-material workflows",
-      "sustained load above ~115 °C (HDT@1.8 MPa 114 °C)"
+      "sustained load above ~115 \u00b0C (HDT@1.8 MPa 114 \u00b0C)"
     ]
   },
   "suitability": {
@@ -120,7 +120,7 @@
       "max": 86,
       "recommended": 86
     },
-    "notes": "Fiberon PA612-CF15, 3D-printed: tensile 86.0 ± 0.9 MPa XY against 29.9 ± 2.1 MPa Z — a ~35 % Z/XY ratio and the single most important number on this entry; Young's modulus 4735.7 ± 87.8 MPa XY; elongation at break 2.8 ± 0.1 % XY; bending strength 125.1 ± 2.6 MPa XY; HDT 175.1 °C at 0.45 MPa and 114.3 °C at 1.8 MPa. The tensile range is recorded as 30-86 MPa deliberately to keep the anisotropy visible rather than quoting the XY figure alone. Density, shrinkage and Tg are NOT published in the retrieved TDS: 1.06 g/cm³ is the general engineering PA612 resin figure carried in as a placeholder (the CF15 grade will read higher — fibre-filled nylons typically land 1.10-1.20 — so treat the derived 106 g/100 cm³ / 94.3 cm³ per 100 g as provisional, unverified), and Tg 80 °C comes from a third-party PA612 comparison article rather than a primary resin datasheet (melting point ≈ 215 °C from the same source, unverified). Max service temperature is inferred from HDT@1.8 MPa, not a datasheet figure. Shrinkage is omitted rather than guessed."
+    "notes": "Fiberon PA612-CF15, 3D-printed: tensile 86.0 \u00b1 0.9 MPa XY against 29.9 \u00b1 2.1 MPa Z \u2014 a ~35 % Z/XY ratio and the single most important number on this entry; Young's modulus 4735.7 \u00b1 87.8 MPa XY; elongation at break 2.8 \u00b1 0.1 % XY; bending strength 125.1 \u00b1 2.6 MPa XY; HDT 175.1 \u00b0C at 0.45 MPa and 114.3 \u00b0C at 1.8 MPa. The tensile range is recorded as 30-86 MPa deliberately to keep the anisotropy visible rather than quoting the XY figure alone. Density, shrinkage and Tg are NOT published in the retrieved TDS: 1.06 g/cm\u00b3 is the general engineering PA612 resin figure carried in as a placeholder (the CF15 grade will read higher \u2014 fibre-filled nylons typically land 1.10-1.20 \u2014 so treat the derived 106 g/100 cm\u00b3 / 94.3 cm\u00b3 per 100 g as provisional, unverified), and Tg 80 \u00b0C comes from a third-party PA612 comparison article rather than a primary resin datasheet (melting point \u2248 215 \u00b0C from the same source, unverified). Max service temperature is inferred from HDT@1.8 MPa, not a datasheet figure. Shrinkage is omitted rather than guessed."
   },
   "scores": {
     "ease_of_print": 5,
@@ -143,20 +143,19 @@
       "pa6",
       "pa6-cf",
       "pa6-gf",
-      "pa612",
       "pa66"
     ],
     "support_materials": [
       "support-breakaway"
     ],
     "usable_as_support_for": [],
-    "notes": "Polymaker recommends PolySupport (their breakaway support, mapped here to support-breakaway) for Fiberon PA612-CF15 — a rare explicit support recommendation in this family, where same-material breakaway is usually the only option. Welds to itself and to the rest of the aliphatic polyamide family on shared amide chemistry and overlapping melt windows, though every cross-grade nylon interface is weaker than a same-grade one. Adhesion to pla, petg, abs, asa, pc or pp is not documented and is not expected (unverified). Water-soluble supports are impractical: pva and bvoh both degrade well below this grade's 250-300 °C window."
+    "notes": "Polymaker recommends PolySupport (their breakaway support, mapped here to support-breakaway) for Fiberon PA612-CF15 \u2014 a rare explicit support recommendation in this family, where same-material breakaway is usually the only option. Welds to itself and to the rest of the aliphatic polyamide family on shared amide chemistry and overlapping melt windows, though every cross-grade nylon interface is weaker than a same-grade one. Adhesion to pla, petg, abs, asa, pc or pp is not documented and is not expected (unverified). Water-soluble supports are impractical: pva and bvoh both degrade well below this grade's 250-300 \u00b0C window."
   },
   "plate_recommendations": [
     {
       "plate_id": "g10-garolite",
       "rating": "recommended",
-      "notes": "General nylon guidance rather than an SKU-specific instruction: garolite/G10 is the surface most consistently reported to hold nylon without adhesive and release it cleanly. Not confirmed by Polymaker for PA612-CF15 (unverified), and note this grade's bed runs cool (25-50 °C) compared to the 80-110 °C typical of garolite nylon guides."
+      "notes": "General nylon guidance rather than an SKU-specific instruction: garolite/G10 is the surface most consistently reported to hold nylon without adhesive and release it cleanly. Not confirmed by Polymaker for PA612-CF15 (unverified), and note this grade's bed runs cool (25-50 \u00b0C) compared to the 80-110 \u00b0C typical of garolite nylon guides."
     },
     {
       "plate_id": "pei-textured",
@@ -181,7 +180,7 @@
     {
       "plate_id": "pp-sheet",
       "rating": "avoid",
-      "notes": "Release-oriented coating against a shrinking engineering nylon — a detachment failure waiting to happen, as for the rest of the PA family."
+      "notes": "Release-oriented coating against a shrinking engineering nylon \u2014 a detachment failure waiting to happen, as for the rest of the PA family."
     },
     {
       "plate_id": "supertack",
@@ -197,7 +196,7 @@
   "alternatives": [
     {
       "filament_id": "pa12",
-      "reason": "The verified unfilled nylon if this entry's caveat matters — every mechanical number here comes from a CF-filled PA612-CF15 grade. PA12 offers a far better layer bond (8 vs 4) and slightly better water tolerance (7 vs 6) with no hardened nozzle, at $55-90/kg, giving up stiffness and heat (compression 6 vs 8, temp 6 vs 7)."
+      "reason": "The verified unfilled nylon if this entry's caveat matters \u2014 every mechanical number here comes from a CF-filled PA612-CF15 grade. PA12 offers a far better layer bond (8 vs 4) and slightly better water tolerance (7 vs 6) with no hardened nozzle, at $55-90/kg, giving up stiffness and heat (compression 6 vs 8, temp 6 vs 7)."
     },
     {
       "filament_id": "pa6",
@@ -205,15 +204,15 @@
     },
     {
       "filament_id": "copa",
-      "reason": "The other low-warp nylon (warp 3, equal) with much better layer adhesion (9 vs 4) and genuine toughness, and no 250-300 °C nozzle — it gives up heat resistance (temp 5 vs 7, HDT 111 vs 175 °C) and stiffness (compression 7 vs 8)."
+      "reason": "The other low-warp nylon (warp 3, equal) with much better layer adhesion (9 vs 4) and genuine toughness, and no 250-300 \u00b0C nozzle \u2014 it gives up heat resistance (temp 5 vs 7, HDT 111 vs 175 \u00b0C) and stiffness (compression 7 vs 8)."
     },
     {
       "filament_id": "pa6-cf",
-      "reason": "More stiffness and heat (compression 9 vs 8, temp 8 vs 7, HDT 175-215 °C) at $79-135/kg — but PA6's 3-9 % uptake costs 44 % of tensile and two-thirds of stiffness when wet (water 2 vs 6), which is exactly what PA612 exists to avoid."
+      "reason": "More stiffness and heat (compression 9 vs 8, temp 8 vs 7, HDT 175-215 \u00b0C) at $79-135/kg \u2014 but PA6's 3-9 % uptake costs 44 % of tensile and two-thirds of stiffness when wet (water 2 vs 6), which is exactly what PA612 exists to avoid."
     },
     {
       "filament_id": "pa12-cf",
-      "reason": "The moisture-stable composite: dimensional stability 9 vs 7 and warp 2 vs 3 while holding ~85 % of dry tensile when conditioned, with a better layer bond (5 vs 4) — at roughly double the price ($130-180) and lower heat (temp 6 vs 7)."
+      "reason": "The moisture-stable composite: dimensional stability 9 vs 7 and warp 2 vs 3 while holding ~85 % of dry tensile when conditioned, with a better layer bond (5 vs 4) \u2014 at roughly double the price ($130-180) and lower heat (temp 6 vs 7)."
     }
   ],
   "emissions": {
@@ -225,10 +224,10 @@
       "respirable carbon fibre dust (post-processing, not printing)"
     ],
     "ventilation": "recommended",
-    "notes": "No PA612-specific chamber study was located. Rated a step below pa6/pa66 on VOCs because PA612 is a diamine/diacid condensation polymer rather than a lactam polymer, so caprolactam is not the marker compound it is for PA6 — the same reasoning already applied to pa12. Ultrafine-particle output tracks nozzle temperature, and 250-300 °C is the hot end of desktop printing, so source-capture extraction or a HEPA+carbon filter is the practical answer for long jobs. All of this is general nylon-family inference, not SKU test data (unverified)."
+    "notes": "No PA612-specific chamber study was located. Rated a step below pa6/pa66 on VOCs because PA612 is a diamine/diacid condensation polymer rather than a lactam polymer, so caprolactam is not the marker compound it is for PA6 \u2014 the same reasoning already applied to pa12. Ultrafine-particle output tracks nozzle temperature, and 250-300 \u00b0C is the hot end of desktop printing, so source-capture extraction or a HEPA+carbon filter is the practical answer for long jobs. All of this is general nylon-family inference, not SKU test data (unverified)."
   },
-  "safety_notes": "Carbon-fibre content is the real hazard here and it appears after the print, not during: sanding, drilling or machining PA612-CF releases respirable fibre dust — wet-sand and wear respiratory protection. Keep drying at 100 °C in an oven rated for it; cardboard spools and some plastic spools deform at that temperature, and the fumes should be vented. Not food-contact suitable: FDM layer crevices harbour bacteria regardless of the polymer, and the fibre and sizing chemistry is undisclosed.",
-  "additional_notes": "Positioning, stated plainly because that is the entire reason this grade exists: pa6 gives cheap stiffness and the worst humidity behaviour, pa12 gives humidity indifference and the lowest stiffness, PA612 is the deliberate middle — vendor comparisons rate its moisture uptake near PA12's, its stiffness and heat performance near PA6's, and its warp tendency low (Polymaker markets the CF grade with 'Warp-Free' fibre-adhesion technology). Those relative rankings come from qualitative vendor and third-party comparison language, not one controlled benchmark, so the scores on this entry are synthesised rather than measured. One catalogue caution: Siraya Tech's PPA-vs-PA6/PA12/PA612 comparison article is a useful positioning source but Siraya does not sell a PA612 spool — their nylon line is PPA/PPA-CF and PEBA — so it must not be miscatalogued as a PA612 trade name.",
+  "safety_notes": "Carbon-fibre content is the real hazard here and it appears after the print, not during: sanding, drilling or machining PA612-CF releases respirable fibre dust \u2014 wet-sand and wear respiratory protection. Keep drying at 100 \u00b0C in an oven rated for it; cardboard spools and some plastic spools deform at that temperature, and the fumes should be vented. Not food-contact suitable: FDM layer crevices harbour bacteria regardless of the polymer, and the fibre and sizing chemistry is undisclosed.",
+  "additional_notes": "Positioning, stated plainly because that is the entire reason this grade exists: pa6 gives cheap stiffness and the worst humidity behaviour, pa12 gives humidity indifference and the lowest stiffness, PA612 is the deliberate middle \u2014 vendor comparisons rate its moisture uptake near PA12's, its stiffness and heat performance near PA6's, and its warp tendency low (Polymaker markets the CF grade with 'Warp-Free' fibre-adhesion technology). Those relative rankings come from qualitative vendor and third-party comparison language, not one controlled benchmark, so the scores on this entry are synthesised rather than measured. One catalogue caution: Siraya Tech's PPA-vs-PA6/PA12/PA612 comparison article is a useful positioning source but Siraya does not sell a PA612 spool \u2014 their nylon line is PPA/PPA-CF and PEBA \u2014 so it must not be miscatalogued as a PA612 trade name.",
   "provenance": {
     "sources": [
       "https://polymaker.com/product/polymide-pa612-cf/",
@@ -240,13 +239,13 @@
     ],
     "last_verified": "2026-08-01",
     "confidence": "low",
-    "conflicts": "The entry describes a grade using one product's data: every printing parameter and mechanical figure is from Polymaker's Fiberon PA612-CF15, a 15 % carbon-fibre composite, because no mainstream unfilled PA612 filament was found — unfilled PA612 would be less stiff, less abrasive, less heat-resistant and would not need a hardened nozzle, so read the requires_hardened_nozzle flag and the HDT/tensile figures as CF-grade values. Density, shrinkage and Tg are absent from the retrieved TDS: density 1.06 g/cm³ is a generic engineering-resin figure that the CF grade will exceed (the derived weight/volume fields inherit that uncertainty), and Tg 80 °C / melt 215 °C come from a secondary comparison article after MatWeb/Ensinger primary datasheets returned 403 — all unverified. Enclosure is recorded 'recommended' although the TDS excerpt does not state a requirement. AMS 'no', ambient range, plate ratings and the whole emissions block are family-consistent inference with no SKU-specific source. The relative moisture/stiffness/warp rankings against pa6 and pa12 are synthesised from qualitative vendor language, not a quantified side-by-side test. Polymaker also lists a Fiberon PA612-ESD grade that this entry does not cover."
+    "conflicts": "The entry describes a grade using one product's data: every printing parameter and mechanical figure is from Polymaker's Fiberon PA612-CF15, a 15 % carbon-fibre composite, because no mainstream unfilled PA612 filament was found \u2014 unfilled PA612 would be less stiff, less abrasive, less heat-resistant and would not need a hardened nozzle, so read the requires_hardened_nozzle flag and the HDT/tensile figures as CF-grade values. Density, shrinkage and Tg are absent from the retrieved TDS: density 1.06 g/cm\u00b3 is a generic engineering-resin figure that the CF grade will exceed (the derived weight/volume fields inherit that uncertainty), and Tg 80 \u00b0C / melt 215 \u00b0C come from a secondary comparison article after MatWeb/Ensinger primary datasheets returned 403 \u2014 all unverified. Enclosure is recorded 'recommended' although the TDS excerpt does not state a requirement. AMS 'no', ambient range, plate ratings and the whole emissions block are family-consistent inference with no SKU-specific source. The relative moisture/stiffness/warp rankings against pa6 and pa12 are synthesised from qualitative vendor language, not a quantified side-by-side test. Polymaker also lists a Fiberon PA612-ESD grade that this entry does not cover."
   },
   "trade_names": [
     {
       "manufacturer": "polymaker",
       "product": "Fiberon PA612-CF15",
-      "notes": "The reference product for this entry: PA612 + 15 % chopped carbon fibre with 'Warp-Free' fibre-adhesion technology. 250-300 °C nozzle, 25-50 °C bed, fan off, HDT@0.45 MPa 175 °C, tensile 86 MPa XY / 30 MPa Z. Sold in 500 g and 3 kg spools."
+      "notes": "The reference product for this entry: PA612 + 15 % chopped carbon fibre with 'Warp-Free' fibre-adhesion technology. 250-300 \u00b0C nozzle, 25-50 \u00b0C bed, fan off, HDT@0.45 MPa 175 \u00b0C, tensile 86 MPa XY / 30 MPa Z. Sold in 500 g and 3 kg spools."
     }
   ]
 }

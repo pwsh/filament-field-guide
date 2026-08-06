@@ -9,8 +9,8 @@
   "base_type": null,
   "variation_kind": null,
   "polymer_class": "polyolefin",
-  "chemical_makeup": "Polypropylene — a semi-crystalline polyolefin thermoplastic, hydrophobic and broadly chemically resistant; the same polymer family as household PP packaging and tubs",
-  "summary": "The living-hinge and chemical-resistance specialist: light, flexible, fatigue-resistant and essentially waterproof, with the lowest density of the common filaments so a spool yields the most part volume. It is also one of the hardest materials to print — extreme warping and near-universal non-adhesion mean it needs its own build surface, since the same non-stick behaviour that makes PP tape a great release layer for other materials makes PP itself refuse to stick to anything.",
+  "chemical_makeup": "Polypropylene \u2014 a semi-crystalline polyolefin thermoplastic, hydrophobic and broadly chemically resistant; the same polymer family as household PP packaging and tubs",
+  "summary": "The living-hinge and chemical-resistance specialist: light, flexible, fatigue-resistant and essentially waterproof, with the lowest density of the common filaments so a spool yields the most part volume. It is also one of the hardest materials to print \u2014 extreme warping and near-universal non-adhesion mean it needs its own build surface, since the same non-stick behaviour that makes PP tape a great release layer for other materials makes PP itself refuse to stick to anything.",
   "printing": {
     "nozzle_temp_c": {
       "min": 200,
@@ -41,13 +41,13 @@
       "max": 100,
       "recommended": 80
     },
-    "notes": "Pure PP typically extrudes at 210-230 °C (PPprint tested at 210 °C); Prusa quotes a broader 220-270 °C and filled/composite PP grades reach 250-280 °C. Bed temperature depends entirely on the surface: Braskem specifies 60-80 °C with a PP adhesion stick or as low as 20-40 °C with spray adhesive, PPprint 50-80 °C, Prusa 85-100 °C. Unlike the other engineering materials, PP wants strong part cooling — 50-100% after a 0% first layer. Braskem suggests 20-40 mm/s for the first layer, 35-65 mm/s for general layers and under 20 mm/s for high resolution. A 45-60 °C enclosure is optional per Simplify3D but makes a large difference to warp control; an actively heated chamber is beneficial rather than mandatory. No hardened nozzle needed for unfilled PP."
+    "notes": "Pure PP typically extrudes at 210-230 \u00b0C (PPprint tested at 210 \u00b0C); Prusa quotes a broader 220-270 \u00b0C and filled/composite PP grades reach 250-280 \u00b0C. Bed temperature depends entirely on the surface: Braskem specifies 60-80 \u00b0C with a PP adhesion stick or as low as 20-40 \u00b0C with spray adhesive, PPprint 50-80 \u00b0C, Prusa 85-100 \u00b0C. Unlike the other engineering materials, PP wants strong part cooling \u2014 50-100% after a 0% first layer. Braskem suggests 20-40 mm/s for the first layer, 35-65 mm/s for general layers and under 20 mm/s for high resolution. A 45-60 \u00b0C enclosure is optional per Simplify3D but makes a large difference to warp control; an actively heated chamber is beneficial rather than mandatory. No hardened nozzle needed for unfilled PP."
   },
   "feeding": {
     "drive_system": "any",
     "ams_compatible": "conditional",
     "feeding_assistant_recommended": false,
-    "notes": "Recorded conditional rather than yes. PP is not listed in Bambu's filament-guide material table, and a Bambu community report documents an AMS jam after a PP print, with users attributing it to PP being limper and softer than TPU ('a wet noodle') so the AMS feeder rollers struggle for reliable grip; PP's low surface energy — the same property that makes PP tape a release film for other filaments — works against gear bite as well. No vendor statement either way was found, so this is a community-sourced caution, not a documented restriction: PP feeds fine from a direct spool holder on any drive system, but assigning it to an AMS/MMU slot is a risk. Enclosure: PP wants a warm 45-60 °C chamber for warp control, so enclosure_open_for_cooling is false."
+    "notes": "Recorded conditional rather than yes. PP is not listed in Bambu's filament-guide material table, and a Bambu community report documents an AMS jam after a PP print, with users attributing it to PP being limper and softer than TPU ('a wet noodle') so the AMS feeder rollers struggle for reliable grip; PP's low surface energy \u2014 the same property that makes PP tape a release film for other filaments \u2014 works against gear bite as well. No vendor statement either way was found, so this is a community-sourced caution, not a documented restriction: PP feeds fine from a direct spool holder on any drive system, but assigning it to an AMS/MMU slot is a risk. Enclosure: PP wants a warm 45-60 \u00b0C chamber for warp control, so enclosure_open_for_cooling is false."
   },
   "drying": {
     "required_before_use": "rarely",
@@ -66,8 +66,8 @@
       "convection oven at low temperature",
       "sealed bag with desiccant"
     ],
-    "dryness_validation": "Largely a non-issue — watch only for minor surface popping or inconsistent extrusion as the rare indicator that a spool has picked up surface humidity",
-    "notes": "PP is hydrophobic and among the least moisture-sensitive filaments in the catalog, so drying is a corrective measure rather than a routine one. Some guides still recommend a light 70 °C dry to drive off surface moisture after long open-air storage."
+    "dryness_validation": "Largely a non-issue \u2014 watch only for minor surface popping or inconsistent extrusion as the rare indicator that a spool has picked up surface humidity",
+    "notes": "PP is hydrophobic and among the least moisture-sensitive filaments in the catalog, so drying is a corrective measure rather than a routine one. Some guides still recommend a light 70 \u00b0C dry to drive off surface moisture after long open-air storage."
   },
   "storage": {
     "recommendations": "A sealed container with desiccant is good practice but not urgent; PP resists moisture pickup well and tolerates open-shelf storage far better than PA, PC or PVA.",
@@ -77,7 +77,7 @@
   "price": {
     "usd_per_kg_low": 40,
     "usd_per_kg_high": 70,
-    "notes": "2025-2026 standard PP filament: Fiberlogy PP around €51/kg (~$55/kg); 0.75-1 kg spools commonly $30-55 each on the wider market. Precise current USD range unverified."
+    "notes": "2025-2026 standard PP filament: Fiberlogy PP around \u20ac51/kg (~$55/kg); 0.75-1 kg spools commonly $30-55 each on the wider market. Precise current USD range unverified."
   },
   "use_cases": {
     "recommended": [
@@ -122,7 +122,7 @@
       "max": 35,
       "recommended": 27
     },
-    "notes": "Density 0.89-0.91 g/cm³, the lowest of the common filaments — 100 g of PP yields over 110 cm³ of solid part, about 38% more volume than PLA. Tg is around -10 to 0 °C, well below room temperature, so it is not a practical service limit; melting point is ~137 °C per the PPprint TDS (ASTM D3418) and HDT@0.45 MPa is 90-100 °C for unfilled grades. Tensile is markedly orientation-dependent: PPprint reports 18.7 MPa cross-direction and 35.1 MPa in-direction. Shrinkage is described qualitatively as severe by most sources; the 1-2.5% figure is an estimate rather than a published number."
+    "notes": "Density 0.89-0.91 g/cm\u00b3, the lowest of the common filaments \u2014 100 g of PP yields over 110 cm\u00b3 of solid part, about 38% more volume than PLA. Tg is around -10 to 0 \u00b0C, well below room temperature, so it is not a practical service limit; melting point is ~137 \u00b0C per the PPprint TDS (ASTM D3418) and HDT@0.45 MPa is 90-100 \u00b0C for unfilled grades. Tensile is markedly orientation-dependent: PPprint reports 18.7 MPa cross-direction and 35.1 MPa in-direction. Shrinkage is described qualitatively as severe by most sources; the 1-2.5% figure is an estimate rather than a published number."
   },
   "scores": {
     "ease_of_print": 2,
@@ -137,19 +137,18 @@
   },
   "compatibility": {
     "bonds_with": [
-      "pp",
       "pp-cf",
       "pp-gf"
     ],
     "support_materials": [],
     "usable_as_support_for": [],
-    "notes": "PP's defining trait is near-universal non-adhesion: it bonds only to itself and will not weld to pla, petg, abs, asa, pa, pc, pva, hips, bvoh, pctg, pvb, pet, tpu or tpe. That is precisely why plain PP packing tape is a popular release-friendly print surface for other materials. No soluble support pairs with it — PP is inert to water and to most solvents — so supports must be same-material PP breakaway. It is a poor support material for other polymers because it will not bond to them, but the same non-stick property is exploited deliberately as a bed release layer or interface sheet for ABS and PETG."
+    "notes": "PP's defining trait is near-universal non-adhesion: it bonds only to itself and will not weld to pla, petg, abs, asa, pa, pc, pva, hips, bvoh, pctg, pvb, pet, tpu or tpe. That is precisely why plain PP packing tape is a popular release-friendly print surface for other materials. No soluble support pairs with it \u2014 PP is inert to water and to most solvents \u2014 so supports must be same-material PP breakaway. It is a poor support material for other polymers because it will not bond to them, but the same non-stick property is exploited deliberately as a bed release layer or interface sheet for ABS and PETG."
   },
   "plate_recommendations": [
     {
       "plate_id": "pp-sheet",
       "rating": "recommended",
-      "notes": "Backfilled from plate entry (Phase E reciprocity): The reason the sheet exists. No separation layer, no glue stick, no PP packing tape — the surface is formulated to bond PP directly. Prusa validates Prusament PP Carbon Fiber Black"
+      "notes": "Backfilled from plate entry (Phase E reciprocity): The reason the sheet exists. No separation layer, no glue stick, no PP packing tape \u2014 the surface is formulated to bond PP directly. Prusa validates Prusament PP Carbon Fiber Black"
     },
     {
       "plate_id": "glass-borosilicate",
@@ -159,7 +158,7 @@
     {
       "plate_id": "g10-garolite",
       "rating": "usable",
-      "notes": "Backfilled from plate entry (Phase E reciprocity): Not covered by any G10 source. PP sticks reliably only to itself or a dedicated promoter on essentially every surface — assume the same here."
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Not covered by any G10 source. PP sticks reliably only to itself or a dedicated promoter on essentially every surface \u2014 assume the same here."
     },
     {
       "plate_id": "carbon-fiber-plate",
@@ -169,7 +168,7 @@
     {
       "plate_id": "pei-textured",
       "rating": "avoid",
-      "notes": "Adhesion on standard textured PEI is poor (Polymaker wiki) and first layers lift readily. Use a PP-specific print sheet, PP packing tape (PP sticks to itself), or a PP adhesion stick or spray at ~50-100 °C bed — Braskem specifies 60-80 °C with a PP adhesion stick and up to 80 °C for the initial layer on long prints. Standard glue sticks, hairspray and painter's tape explicitly do not work; unlike PC or PETG, the adhesive here is a PROMOTER, not a release layer."
+      "notes": "Adhesion on standard textured PEI is poor (Polymaker wiki) and first layers lift readily. Use a PP-specific print sheet, PP packing tape (PP sticks to itself), or a PP adhesion stick or spray at ~50-100 \u00b0C bed \u2014 Braskem specifies 60-80 \u00b0C with a PP adhesion stick and up to 80 \u00b0C for the initial layer on long prints. Standard glue sticks, hairspray and painter's tape explicitly do not work; unlike PC or PETG, the adhesive here is a PROMOTER, not a release layer."
     },
     {
       "plate_id": "pei-smooth",
@@ -205,23 +204,23 @@
   "alternatives": [
     {
       "filament_id": "pp-gf",
-      "reason": "Glass fiber suppresses the crystallisation shrinkage that makes base PP the catalog's worst warper — warp 10 to 4, dimensional stability 4 to 7, HDT@0.45 MPa ~95 to 127 °C, XY tensile roughly doubled — at $85-215/kg, a mandatory hardened nozzle, and no fix whatsoever for PP's refusal to stick to a standard build surface."
+      "reason": "Glass fiber suppresses the crystallisation shrinkage that makes base PP the catalog's worst warper \u2014 warp 10 to 4, dimensional stability 4 to 7, HDT@0.45 MPa ~95 to 127 \u00b0C, XY tensile roughly doubled \u2014 at $85-215/kg, a mandatory hardened nozzle, and no fix whatsoever for PP's refusal to stick to a standard build surface."
     },
     {
       "filament_id": "pp-cf",
-      "reason": "The same warp fix (4 vs 10, dim 8 vs 4, compression 8 vs 5) at a lower density, so more of PP's volume-per-spool advantage survives, and it is outdoor-rated where base PP is only limited — at $85-140/kg, a hardened nozzle, and still a PP sheet or PP tape for adhesion."
+      "reason": "The same warp fix (4 vs 10, dim 8 vs 4, compression 8 vs 5) at a lower density, so more of PP's volume-per-spool advantage survives, and it is outdoor-rated where base PP is only limited \u2014 at $85-140/kg, a hardened nozzle, and still a PP sheet or PP tape for adhesion."
     },
     {
       "filament_id": "petg",
-      "reason": "If chemical resistance and living hinges are not the point, PETG prints open-frame and sticks to anything (ease 7 vs 2, warp 3 vs 10) at a third to a half the price ($18-42 vs $40-70) — giving up PP's fatigue life and near-perfect chemical and water tolerance (water 9 vs 10)."
+      "reason": "If chemical resistance and living hinges are not the point, PETG prints open-frame and sticks to anything (ease 7 vs 2, warp 3 vs 10) at a third to a half the price ($18-42 vs $40-70) \u2014 giving up PP's fatigue life and near-perfect chemical and water tolerance (water 9 vs 10)."
     },
     {
       "filament_id": "pe",
-      "reason": "The other polyolefin: the same chemical inertness and best-in-catalog water tolerance (10, equal), plus food-contact-certified lines and a full outdoor rating — but lower heat (temp 5 vs 6), a weaker layer bond (6 vs 7), a hardened-nozzle requirement PP does not carry, and much thinner filament availability."
+      "reason": "The other polyolefin: the same chemical inertness and best-in-catalog water tolerance (10, equal), plus food-contact-certified lines and a full outdoor rating \u2014 but lower heat (temp 5 vs 6), a weaker layer bond (6 vs 7), a hardened-nozzle requirement PP does not carry, and much thinner filament availability."
     },
     {
       "filament_id": "tpu-60d",
-      "reason": "If the draw was PP's flexibility and fatigue life rather than its chemistry, a rigid-end TPU prints far more reliably (ease 6 vs 2, warp 2 vs 10, dim 6 vs 4) with no build-surface problem at $25-45/kg — with much lower chemical and water resistance (water 6 vs 10)."
+      "reason": "If the draw was PP's flexibility and fatigue life rather than its chemistry, a rigid-end TPU prints far more reliably (ease 6 vs 2, warp 2 vs 10, dim 6 vs 4) with no build-surface problem at $25-45/kg \u2014 with much lower chemical and water resistance (water 6 vs 10)."
     }
   ],
   "emissions": {
@@ -234,7 +233,7 @@
     "notes": "No dominant marker compound comparable to nylon's caprolactam or ABS's styrene is reported for PP in the sources reviewed, and general literature places its VOC output well below the styrenics. UFP emission was not separately quantified for PP in the sources reviewed; the low rating is inferred from desktop-FDM studies placing most non-ABS materials well below ABS's peak, and from PP's comparatively low print temperature. Both levels are low-confidence for this material. Ventilation is recommended as general good practice rather than in response to a PP-specific hazard."
   },
   "safety_notes": "PP-specific adhesion sticks and spray adhesives are the practical way to make it stick; use them with ventilation and follow the manufacturer's guidance. Because PP resists solvents and glues, post-print assembly relies on mechanical fasteners, heat staking or PP-specific welding rather than adhesives.",
-  "additional_notes": "PP is the best living-hinge material in FDM — hinges printed in it survive thousands of flex cycles where PLA and PETG crack — and its low density plus chemical resistance make it the natural choice for lab, fluid-handling and packaging-prototype work. Budget for a dedicated build surface before buying a spool; that single decision determines whether PP is usable or infuriating.",
+  "additional_notes": "PP is the best living-hinge material in FDM \u2014 hinges printed in it survive thousands of flex cycles where PLA and PETG crack \u2014 and its low density plus chemical resistance make it the natural choice for lab, fluid-handling and packaging-prototype work. Budget for a dedicated build surface before buying a spool; that single decision determines whether PP is usable or infuriating.",
   "provenance": {
     "sources": [
       "https://help.prusa3d.com/article/polypropylene-pp_167126",
@@ -249,7 +248,7 @@
     ],
     "last_verified": "2026-07-31",
     "confidence": "medium",
-    "conflicts": "Nozzle and bed temperatures disagree substantially and are surface- and grade-dependent: pure PP tests at 210 °C (PPprint) while Prusa quotes 220-270 °C and composites reach 280 °C; bed spans 20-40 °C with spray adhesive (Braskem), 50-80 °C (PPprint) and 85-100 °C (Prusa) — the recorded 85 °C recommendation follows Prusa but is not universal. Shrinkage percentage is not consistently published; sources describe warping severity qualitatively, so the 1-2.5% figure is an estimate. Emissions data for PP specifically is thin: no PP-specific VOC profile or UFP measurement was found in the sources reviewed, so both levels are inferred and should be treated as low-confidence. Food-contact compliance is brand-specific (PPprint P-filament carries FDA/EU 10/2011 claims) and not a property of PP filament generally. Price range is unverified against current USD retail."
+    "conflicts": "Nozzle and bed temperatures disagree substantially and are surface- and grade-dependent: pure PP tests at 210 \u00b0C (PPprint) while Prusa quotes 220-270 \u00b0C and composites reach 280 \u00b0C; bed spans 20-40 \u00b0C with spray adhesive (Braskem), 50-80 \u00b0C (PPprint) and 85-100 \u00b0C (Prusa) \u2014 the recorded 85 \u00b0C recommendation follows Prusa but is not universal. Shrinkage percentage is not consistently published; sources describe warping severity qualitatively, so the 1-2.5% figure is an estimate. Emissions data for PP specifically is thin: no PP-specific VOC profile or UFP measurement was found in the sources reviewed, so both levels are inferred and should be treated as low-confidence. Food-contact compliance is brand-specific (PPprint P-filament carries FDA/EU 10/2011 claims) and not a property of PP filament generally. Price range is unverified against current USD retail."
   },
   "trade_names": [
     {

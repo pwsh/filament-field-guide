@@ -15,8 +15,8 @@
   "base_type": "pla",
   "variation_kind": "annealable",
   "polymer_class": "polylactide",
-  "chemical_makeup": "PLA formulated for fast crystallisation — a NatureWorks-type resin (Ingeo 3D870/3D850-class) plus a nucleating/crystallisation-promoter package. The base polymer is unchanged polylactide; what changes is that the as-printed part, which is normally amorphous, can be heat-soaked to develop crystalline structure and raise its softening point far above Tg. Reinforced grades add 12 % fibreglass (Polymaker HT-PLA-GF) or carbon fibre (Proto-pasta HTPLA-CF) mainly to restrain anneal shrinkage",
-  "summary": "PLA that becomes a genuinely heat-resistant material after you bake it. As printed it is ordinary PLA — fast, warp-free, useless above ~60 °C — but a 30-minute anneal at 80-100 °C crystallises it and pushes HDT to 85 °C for unfilled grades and past 150 °C for the glass-filled version. The price is a mandatory, geometry-sensitive post-process: unfilled parts shrink about 1.8 % in X/Y (0.6 % for CF grades) and grow in Z, so tolerance-critical parts need a validated compensation workflow. Layer adhesion is also below base PLA, so thin walls are a bad fit.",
+  "chemical_makeup": "PLA formulated for fast crystallisation \u2014 a NatureWorks-type resin (Ingeo 3D870/3D850-class) plus a nucleating/crystallisation-promoter package. The base polymer is unchanged polylactide; what changes is that the as-printed part, which is normally amorphous, can be heat-soaked to develop crystalline structure and raise its softening point far above Tg. Reinforced grades add 12 % fibreglass (Polymaker HT-PLA-GF) or carbon fibre (Proto-pasta HTPLA-CF) mainly to restrain anneal shrinkage",
+  "summary": "PLA that becomes a genuinely heat-resistant material after you bake it. As printed it is ordinary PLA \u2014 fast, warp-free, useless above ~60 \u00b0C \u2014 but a 30-minute anneal at 80-100 \u00b0C crystallises it and pushes HDT to 85 \u00b0C for unfilled grades and past 150 \u00b0C for the glass-filled version. The price is a mandatory, geometry-sensitive post-process: unfilled parts shrink about 1.8 % in X/Y (0.6 % for CF grades) and grow in Z, so tolerance-critical parts need a validated compensation workflow. Layer adhesion is also below base PLA, so thin walls are a bad fit.",
   "printing": {
     "nozzle_temp_c": {
       "min": 190,
@@ -47,13 +47,13 @@
       "recommended": 100
     },
     "enclosure_open_for_cooling": true,
-    "notes": "Printing is base-PLA-easy and genuinely fast: Polymaker rates HT-PLA to 300 mm/s (350 for the GF grade) at 210-230 °C with a 25-60 °C bed and retraction of 1-3 mm at 20-40 mm/s; Proto-pasta and Bambu HTPLA lines sit in the standard 190-230 °C band. No enclosure, no chamber, and no hardened nozzle for unfilled grades — but the glass-filled (HT-PLA-GF) and carbon-filled (HTPLA-CF) members of this family are abrasive and do require hardened steel. All of the material's difficulty lives in the post-process, not the print: see the anneal procedure in additional notes."
+    "notes": "Printing is base-PLA-easy and genuinely fast: Polymaker rates HT-PLA to 300 mm/s (350 for the GF grade) at 210-230 \u00b0C with a 25-60 \u00b0C bed and retraction of 1-3 mm at 20-40 mm/s; Proto-pasta and Bambu HTPLA lines sit in the standard 190-230 \u00b0C band. No enclosure, no chamber, and no hardened nozzle for unfilled grades \u2014 but the glass-filled (HT-PLA-GF) and carbon-filled (HTPLA-CF) members of this family are abrasive and do require hardened steel. All of the material's difficulty lives in the post-process, not the print: see the anneal procedure in additional notes."
   },
   "feeding": {
     "drive_system": "any",
     "ams_compatible": "yes",
     "feeding_assistant_recommended": false,
-    "notes": "Unfilled HT-PLA feeds exactly like base PLA — rigid, unfilled, no fibre wear on PTFE and no brittleness bar in the buffer — so any extruder handles it and it carries base PLA's plain 'yes' for material stations rather than the 'conditional' rating that the filled aesthetic variants get. The GF and CF reinforced grades in this family are the exception: treat those like any other fibre-reinforced filament (PTFE wear, snap risk on tight bend radii, hardened nozzle) and prefer an external spool. No feeding assistant is needed."
+    "notes": "Unfilled HT-PLA feeds exactly like base PLA \u2014 rigid, unfilled, no fibre wear on PTFE and no brittleness bar in the buffer \u2014 so any extruder handles it and it carries base PLA's plain 'yes' for material stations rather than the 'conditional' rating that the filled aesthetic variants get. The GF and CF reinforced grades in this family are the exception: treat those like any other fibre-reinforced filament (PTFE wear, snap risk on tight bend radii, hardened nozzle) and prefer an external spool. No feeding assistant is needed."
   },
   "drying": {
     "required_before_use": "if-exposed",
@@ -73,23 +73,23 @@
       "convection oven at lowest setting",
       "drybox with desiccant"
     ],
-    "dryness_validation": "No popping or steam at the nozzle and minimal stringing on a retraction test. Note that drying temperatures sit far below the anneal window — a 50 °C dry does not crystallise the filament and does not substitute for the post-print bake.",
-    "notes": "No brand in the sourced set publishes an HT-PLA-specific drying schedule, so base-PLA practice (45-55 °C, 4-8 h) is recorded. Keep the dryer below about 60 °C: this material is specifically designed to change state when heat-soaked, and spooled filament held near the anneal window can stiffen and become awkward to feed."
+    "dryness_validation": "No popping or steam at the nozzle and minimal stringing on a retraction test. Note that drying temperatures sit far below the anneal window \u2014 a 50 \u00b0C dry does not crystallise the filament and does not substitute for the post-print bake.",
+    "notes": "No brand in the sourced set publishes an HT-PLA-specific drying schedule, so base-PLA practice (45-55 \u00b0C, 4-8 h) is recorded. Keep the dryer below about 60 \u00b0C: this material is specifically designed to change state when heat-soaked, and spooled filament held near the anneal window can stiffen and become awkward to feed."
   },
   "storage": {
-    "recommendations": "Sealed bag or drybox with desiccant between prints; tolerance is base-PLA-like. Store away from heat sources — unlike ordinary PLA, warm storage starts the crystallisation this material is designed for",
+    "recommendations": "Sealed bag or drybox with desiccant between prints; tolerance is base-PLA-like. Store away from heat sources \u2014 unlike ordinary PLA, warm storage starts the crystallisation this material is designed for",
     "max_humidity_pct": 40,
     "hygroscopy": "low"
   },
   "price": {
     "usd_per_kg_low": 30,
     "usd_per_kg_high": 45,
-    "notes": "Estimated, not directly sourced — no vendor price was confirmed in this research pass. Positioned as a premium engineering-PLA tier above standard PLA ($18-20/kg) and pla-silk/pla-glow ($23-25/kg), and below CF nylon. Treat the range as indicative and re-verify before quoting"
+    "notes": "Estimated, not directly sourced \u2014 no vendor price was confirmed in this research pass. Positioned as a premium engineering-PLA tier above standard PLA ($18-20/kg) and pla-silk/pla-glow ($23-25/kg), and below CF nylon. Treat the range as indicative and re-verify before quoting"
   },
   "use_cases": {
     "recommended": [
       "functional parts that must survive a hot car or a sunny windowsill (after annealing)",
-      "brackets, jigs and fixtures needing dimensional stability above PLA's ~60 °C limit",
+      "brackets, jigs and fixtures needing dimensional stability above PLA's ~60 \u00b0C limit",
       "hot-water-adjacent and appliance-adjacent housings",
       "musical instrument components and other parts held under sustained tension",
       "outdoor fittings where heat, not UV, is the limiting factor",
@@ -98,7 +98,7 @@
     "not_recommended": [
       "tolerance-critical parts without a validated shrink-compensation workflow (1.8 % X/Y on unfilled grades)",
       "single-wall and thin-wall geometry (Polymaker flags interlayer adhesion as fairly low)",
-      "anything needing heat resistance straight off the plate — as printed this is ordinary PLA",
+      "anything needing heat resistance straight off the plate \u2014 as printed this is ordinary PLA",
       "large flat parts that will warp or slump during an unsupported tray bake",
       "food-contact items",
       "UV-exposed parts (annealing fixes heat resistance, not photodegradation)"
@@ -121,7 +121,7 @@
     },
     "glass_transition_c": 60,
     "heat_deflection_c": 60,
-    "notes": "Two sets of numbers exist for this material and mixing them up is the main way people get burned. AS PRINTED: density 1.27 g/cm³ (FormFutura Volcano PLA, above base PLA's 1.24 because of the higher crystallinity package), Tg ~60 °C, HDT ~60 °C — i.e. identical to base PLA, which is why the recorded fields carry the as-printed values on the same basis as every other entry. AFTER ANNEALING: MatterHackers reports standard HTPLA parts surviving 85 °C without deforming, FormFutura quotes Volcano PLA at ~95 °C HDT annealed against 55-60 °C unannealed, and Polymaker's HT-PLA-GF exceeds 150 °C HDT, described as ABS-like thermal resistance. Post-anneal tensile for HT-PLA-GF is ~42.8 MPa on the X axis; no unfilled post-anneal tensile figure was sourced, so the field is left blank rather than guessed. The printing shrinkage recorded here is ordinary PLA cooling contraction — the anneal contributes a separate and much larger dimensional change (see additional notes). Layer adhesion is explicitly called out by Polymaker as fairly low, which is unusual for a PLA grade and is why thin walls are ruled out."
+    "notes": "Two sets of numbers exist for this material and mixing them up is the main way people get burned. AS PRINTED: density 1.27 g/cm\u00b3 (FormFutura Volcano PLA, above base PLA's 1.24 because of the higher crystallinity package), Tg ~60 \u00b0C, HDT ~60 \u00b0C \u2014 i.e. identical to base PLA, which is why the recorded fields carry the as-printed values on the same basis as every other entry. AFTER ANNEALING: MatterHackers reports standard HTPLA parts surviving 85 \u00b0C without deforming, FormFutura quotes Volcano PLA at ~95 \u00b0C HDT annealed against 55-60 \u00b0C unannealed, and Polymaker's HT-PLA-GF exceeds 150 \u00b0C HDT, described as ABS-like thermal resistance. Post-anneal tensile for HT-PLA-GF is ~42.8 MPa on the X axis; no unfilled post-anneal tensile figure was sourced, so the field is left blank rather than guessed. The printing shrinkage recorded here is ordinary PLA cooling contraction \u2014 the anneal contributes a separate and much larger dimensional change (see additional notes). Layer adhesion is explicitly called out by Polymaker as fairly low, which is unusual for a PLA grade and is why thin walls are ruled out."
   },
   "scores": {
     "ease_of_print": 8,
@@ -139,7 +139,6 @@
       "pla",
       "pla-cf",
       "pla-gf",
-      "pla-ht",
       "pla-matte",
       "pla-plus"
     ],
@@ -149,36 +148,36 @@
       "pva"
     ],
     "usable_as_support_for": [],
-    "notes": "Prints and bonds as base PLA does before annealing — welds to itself and other PLA grades, does not weld to PETG/ABS/ASA/PC/PA/PP. One workflow rule dominates multi-material use: remove every support before the part goes in the oven. Support material that is not itself annealable softens, slumps and fuses into the interface at 80-115 °C, and soluble supports must be dissolved first because a wet part cannot be baked. Breakaway PLA or PETG supports removed pre-bake are the practical pairing. Do not co-print HT-PLA with a material you intend to keep on the part through the anneal unless that material also tolerates the bake temperature."
+    "notes": "Prints and bonds as base PLA does before annealing \u2014 welds to itself and other PLA grades, does not weld to PETG/ABS/ASA/PC/PA/PP. One workflow rule dominates multi-material use: remove every support before the part goes in the oven. Support material that is not itself annealable softens, slumps and fuses into the interface at 80-115 \u00b0C, and soluble supports must be dissolved first because a wet part cannot be baked. Breakaway PLA or PETG supports removed pre-bake are the practical pairing. Do not co-print HT-PLA with a material you intend to keep on the part through the anneal unless that material also tolerates the bake temperature."
   },
   "plate_recommendations": [
     {
       "plate_id": "pei-textured",
       "rating": "recommended",
-      "notes": "Behaves exactly like base PLA at 25-60 °C with no release agent. Annealing happens off the plate after removal, so there is no plate interaction unique to this material."
+      "notes": "Behaves exactly like base PLA at 25-60 \u00b0C with no release agent. Annealing happens off the plate after removal, so there is no plate interaction unique to this material."
     },
     {
       "plate_id": "pei-smooth",
       "rating": "usable",
-      "notes": "Bonds well and gives a flat glossy bottom face, but the anneal will distort that face on unsupported bakes anyway — the flatness you start with is not the flatness you finish with unless the part is sand-supported."
+      "notes": "Bonds well and gives a flat glossy bottom face, but the anneal will distort that face on unsupported bakes anyway \u2014 the flatness you start with is not the flatness you finish with unless the part is sand-supported."
     }
   ],
   "alternatives": [
     {
       "filament_id": "pla",
-      "reason": "If nothing ever gets hot, base PLA skips the mandatory 80-100 °C anneal and its ~1.8 % X/Y shrink compensation, bonds better (adh 6 vs 4) and costs $14-35 vs $30-45 — at the cost of temp 2 vs 6."
+      "reason": "If nothing ever gets hot, base PLA skips the mandatory 80-100 \u00b0C anneal and its ~1.8 % X/Y shrink compensation, bonds better (adh 6 vs 4) and costs $14-35 vs $30-45 \u2014 at the cost of temp 2 vs 6."
     },
     {
       "filament_id": "petg",
-      "reason": "Heat with no post-process: usable to ~70 °C straight off the plate with far better layer adhesion (adh 9 vs 4) and water resistance (water 9 vs 6) — remember an un-annealed HT-PLA part is just PLA. Costs ease 7 vs 8, stringing and fused supports."
+      "reason": "Heat with no post-process: usable to ~70 \u00b0C straight off the plate with far better layer adhesion (adh 9 vs 4) and water resistance (water 9 vs 6) \u2014 remember an un-annealed HT-PLA part is just PLA. Costs ease 7 vs 8, stringing and fused supports."
     },
     {
       "filament_id": "asa",
-      "reason": "When the part needs heat and outdoor life together, annealed HT-PLA still loses badly on weathering: uv 9 vs 3 and weath 9 vs 3 at a similar temp (7 vs 6) and $18-45 — bought with an enclosure, ventilation, warp 7 vs 1 and ease 5 vs 8."
+      "reason": "When the part needs heat and outdoor life together, annealed HT-PLA still loses badly on weathering: uv 9 vs 3 and weath 9 vs 3 at a similar temp (7 vs 6) and $18-45 \u2014 bought with an enclosure, ventilation, warp 7 vs 1 and ease 5 vs 8."
     },
     {
       "filament_id": "pla-cf",
-      "reason": "If the failure mode is creep and flex under load rather than temperature, fibre stiffness is the cheaper, no-post-process fix (comp 9 vs 8, stab 9 vs 6) — but HDT stays ~54 °C, so it solves nothing thermally."
+      "reason": "If the failure mode is creep and flex under load rather than temperature, fibre stiffness is the cheaper, no-post-process fix (comp 9 vs 8, stab 9 vs 6) \u2014 but HDT stays ~54 \u00b0C, so it solves nothing thermally."
     }
   ],
   "emissions": {
@@ -189,10 +188,10 @@
       "ultrafine particles"
     ],
     "ventilation": "recommended",
-    "notes": "Printing emissions are base-PLA-level, with lactide and ultrafine particles and no additional species from the nucleating package. The reason this entry is rated 'recommended' rather than base PLA's 'optional' is the second process step: annealing bakes plastic in a domestic-scale oven at 80-115 °C for up to an hour, which off-gasses into a room that is usually a kitchen. Use a dedicated or well-ventilated oven, not the one you cook in, and ventilate during the bake. Post-anneal machining of GF/CF grades needs standard composite-dust precautions."
+    "notes": "Printing emissions are base-PLA-level, with lactide and ultrafine particles and no additional species from the nucleating package. The reason this entry is rated 'recommended' rather than base PLA's 'optional' is the second process step: annealing bakes plastic in a domestic-scale oven at 80-115 \u00b0C for up to an hour, which off-gasses into a room that is usually a kitchen. Use a dedicated or well-ventilated oven, not the one you cook in, and ventilate during the bake. Post-anneal machining of GF/CF grades needs standard composite-dust precautions."
   },
-  "safety_notes": "Annealing is the hazard, not printing. Use an oven you do not cook food in, or ventilate thoroughly; keep the bake below the 110-115 °C ceiling the vendors specify, since PLA that overshoots slumps rather than crystallises. Sand-bath annealing means a dish of hot sand at 100 °C — handle with oven gloves and let it cool in place. Not food-contact certified in any grade, and the anneal does not change that. Glass- and carbon-filled members of this family require a hardened nozzle and a dust mask when sanded.",
-  "additional_notes": "The anneal is the product. Three documented recipes: (1) Polymaker HT-PLA — 80-100 °C for 30 minutes, 100 °C recommended, parts removable immediately; a boiling-water bath also works, though hard water leaves mineral deposits. (2) Proto-pasta/MatterHackers generic HTPLA — preheat the oven to 95-115 °C for 10 minutes, then either bury the part in sand in an oven-safe dish for an hour (preferred, minimises warp) or tray-bake for 6-10 minutes (faster, more warp risk), cooling in place. (3) Proto-pasta HTPLA-CF — preheat to ~150 °C, turn the oven OFF, put the part on a glass plate atop a heat-buffering dish, soak 10-30 minutes to clear the ~60 °C Tg, then cool in room air, gently reshaping features during cooldown. Shrinkage compensation is the part people skip: unfilled HTPLA shrinks about 1.8 % in X/Y while carbon-filled HTPLA-CF shrinks only about 0.6 %, and both grow slightly in Z. Scale up in the slicer and calibrate on a test coupon — MatterHackers measured a 100 mm block finishing at 99.5 mm with their tray-bake method, so real compensation is method-, printer- and geometry-specific. Note that Proto-pasta's Stardust glitter filament uses this same HTPLA matrix, which is why an annealed Stardust part can reach ~120 °C while ordinary glitter PLA cannot.",
+  "safety_notes": "Annealing is the hazard, not printing. Use an oven you do not cook food in, or ventilate thoroughly; keep the bake below the 110-115 \u00b0C ceiling the vendors specify, since PLA that overshoots slumps rather than crystallises. Sand-bath annealing means a dish of hot sand at 100 \u00b0C \u2014 handle with oven gloves and let it cool in place. Not food-contact certified in any grade, and the anneal does not change that. Glass- and carbon-filled members of this family require a hardened nozzle and a dust mask when sanded.",
+  "additional_notes": "The anneal is the product. Three documented recipes: (1) Polymaker HT-PLA \u2014 80-100 \u00b0C for 30 minutes, 100 \u00b0C recommended, parts removable immediately; a boiling-water bath also works, though hard water leaves mineral deposits. (2) Proto-pasta/MatterHackers generic HTPLA \u2014 preheat the oven to 95-115 \u00b0C for 10 minutes, then either bury the part in sand in an oven-safe dish for an hour (preferred, minimises warp) or tray-bake for 6-10 minutes (faster, more warp risk), cooling in place. (3) Proto-pasta HTPLA-CF \u2014 preheat to ~150 \u00b0C, turn the oven OFF, put the part on a glass plate atop a heat-buffering dish, soak 10-30 minutes to clear the ~60 \u00b0C Tg, then cool in room air, gently reshaping features during cooldown. Shrinkage compensation is the part people skip: unfilled HTPLA shrinks about 1.8 % in X/Y while carbon-filled HTPLA-CF shrinks only about 0.6 %, and both grow slightly in Z. Scale up in the slicer and calibrate on a test coupon \u2014 MatterHackers measured a 100 mm block finishing at 99.5 mm with their tray-bake method, so real compensation is method-, printer- and geometry-specific. Note that Proto-pasta's Stardust glitter filament uses this same HTPLA matrix, which is why an annealed Stardust part can reach ~120 \u00b0C while ordinary glitter PLA cannot.",
   "provenance": {
     "sources": [
       "https://wiki.polymaker.com/polymaker-products/polymaker-filaments/prime-materials/functional-pla/ht-pla",
@@ -201,11 +200,11 @@
       "https://www.matterhackers.com/articles/how-to-anneal-tough-pla-and-htpla",
       "https://proto-pasta.com/blogs/applications/anneal-htpla-cf-for-a-truly-durable-fiddle",
       "https://x.com/Proto_pasta/status/1115813990372786176",
-      "research/coverage-gaps.md (this repo, 2026-08-01 trade-name cross-walk) — FormFutura Volcano PLA: density 1.27 g/cc, HDT ~95 °C annealed vs ~55-60 °C unannealed; Fiberlogy HD-PLA and Spectrum The Filament HT-PLA category mapping"
+      "research/coverage-gaps.md (this repo, 2026-08-01 trade-name cross-walk) \u2014 FormFutura Volcano PLA: density 1.27 g/cc, HDT ~95 \u00b0C annealed vs ~55-60 \u00b0C unannealed; Fiberlogy HD-PLA and Spectrum The Filament HT-PLA category mapping"
     ],
     "last_verified": "2026-08-01",
     "confidence": "medium",
-    "conflicts": "Post-anneal heat resistance is quoted across a very wide band and the figures are not comparable: MatterHackers says 85 °C for standard HTPLA without formal anneal optimisation, FormFutura quotes ~95 °C HDT for Volcano PLA, and Polymaker's >150 °C figure is for the 12 % glass-filled HT-PLA-GF, not for unfilled material. The entry records as-printed values in the numeric fields and confines the annealed range to notes precisely because a single number would misrepresent whichever grade the reader owns. temperature_tolerance is scored 6 on the annealed state; as printed this material would score 2 like base PLA, and that gap is the entry's whole point. Anneal shrinkage differs by a factor of three between unfilled (1.8 % X/Y) and CF (0.6 %) grades. Price is an estimate with no confirmed vendor quote. Drying schedule, UV behaviour, food-contact status and post-anneal unfilled tensile strength are all unpublished and either inherited from base PLA or omitted. Density 1.27 is FormFutura Volcano PLA's figure and is assumed representative of the crystallisable family — unverified for Polymaker and Proto-pasta grades. Trade-name mapping overlap: base pla currently carries proto-pasta HTPLA, fusion-filaments HT-PLA, push-plastic HH+T PLA, keene-village-plastics P-PLA, fiberlogy HD-PLA and formfutura Volcano PLA with notes saying no annealable id exists; that note is now stale and a Phase E reciprocity pass should move them here."
+    "conflicts": "Post-anneal heat resistance is quoted across a very wide band and the figures are not comparable: MatterHackers says 85 \u00b0C for standard HTPLA without formal anneal optimisation, FormFutura quotes ~95 \u00b0C HDT for Volcano PLA, and Polymaker's >150 \u00b0C figure is for the 12 % glass-filled HT-PLA-GF, not for unfilled material. The entry records as-printed values in the numeric fields and confines the annealed range to notes precisely because a single number would misrepresent whichever grade the reader owns. temperature_tolerance is scored 6 on the annealed state; as printed this material would score 2 like base PLA, and that gap is the entry's whole point. Anneal shrinkage differs by a factor of three between unfilled (1.8 % X/Y) and CF (0.6 %) grades. Price is an estimate with no confirmed vendor quote. Drying schedule, UV behaviour, food-contact status and post-anneal unfilled tensile strength are all unpublished and either inherited from base PLA or omitted. Density 1.27 is FormFutura Volcano PLA's figure and is assumed representative of the crystallisable family \u2014 unverified for Polymaker and Proto-pasta grades. Trade-name mapping overlap: base pla currently carries proto-pasta HTPLA, fusion-filaments HT-PLA, push-plastic HH+T PLA, keene-village-plastics P-PLA, fiberlogy HD-PLA and formfutura Volcano PLA with notes saying no annealable id exists; that note is now stale and a Phase E reciprocity pass should move them here."
   },
   "trade_names": [
     {
@@ -221,7 +220,7 @@
     {
       "manufacturer": "formfutura",
       "product": "Volcano PLA (incl. Volcano PLA 150C)",
-      "notes": "High-crystallinity annealable PLA, density 1.27 g/cm³, HDT ~95 °C annealed against ~55-60 °C unannealed; TDS confirms a plain PLA base with no PHA blend"
+      "notes": "High-crystallinity annealable PLA, density 1.27 g/cm\u00b3, HDT ~95 \u00b0C annealed against ~55-60 \u00b0C unannealed; TDS confirms a plain PLA base with no PHA blend"
     },
     {
       "manufacturer": "fusion-filaments",
@@ -231,7 +230,7 @@
     {
       "manufacturer": "keene-village-plastics",
       "product": "P-PLA (Performance Polylactide)",
-      "notes": "High-heat, high-impact fast-crystallising PLA marketed as a biodegradable ABS alternative — the same annealable category under KVP's own name"
+      "notes": "High-heat, high-impact fast-crystallising PLA marketed as a biodegradable ABS alternative \u2014 the same annealable category under KVP's own name"
     },
     {
       "manufacturer": "polymaker",
@@ -241,7 +240,7 @@
     {
       "manufacturer": "polymaker",
       "product": "HT-PLA (and HT-PLA-GF)",
-      "notes": "The most fully documented grade: 210-230 °C, up to 300 mm/s (350 for GF), anneal 80-100 °C for 30 min. The GF variant is 12 % fibreglass, exceeds 150 °C HDT annealed, ~42.8 MPa X-axis tensile, and requires a hardened nozzle"
+      "notes": "The most fully documented grade: 210-230 \u00b0C, up to 300 mm/s (350 for GF), anneal 80-100 \u00b0C for 30 min. The GF variant is 12 % fibreglass, exceeds 150 \u00b0C HDT annealed, ~42.8 MPa X-axis tensile, and requires a hardened nozzle"
     },
     {
       "manufacturer": "proto-pasta",
@@ -250,7 +249,7 @@
     },
     {
       "manufacturer": "push-plastic",
-      "product": "High Heat + Tough PLA (HH+T PLA — 3D870)",
+      "product": "High Heat + Tough PLA (HH+T PLA \u2014 3D870)",
       "notes": "Same Ingeo 3D870 annealable resin. Deliberately not mapped to pla-plus: the toughness claim comes from the resin grade, not a documented impact modifier"
     },
     {

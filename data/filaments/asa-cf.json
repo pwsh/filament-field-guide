@@ -12,8 +12,8 @@
   "base_type": "asa",
   "variation_kind": "carbon-fiber-filled",
   "polymer_class": "composite-other",
-  "chemical_makeup": "The same styrenic terpolymer as base ASA — a saturated acrylate-ester rubber phase grafted into a styrene-acrylonitrile matrix — compounded with chopped carbon fiber at roughly 8-15 wt% (Polymaker Fiberon ASA-CF08 is 8 %, 3DXTech CarbonX ASA CF15 is 15 %). The acrylate rubber is what gives the base its UV stability; the fiber adds stiffness and restrains the styrenic shrinkage that makes base ASA warp.",
-  "summary": "The outdoor member of the filled set: base ASA's best-in-class UV and weather resistance, with carbon fiber cutting its worst trait — corner lift and warp — and roughly doubling stiffness (Young's modulus 3600-5400 MPa). Deltas vs asa: hardened nozzle mandatory, nozzle up to 250-280 °C, bed 90-110 °C, and layer bonding worse still on a base that was already weak in Z. Deltas vs the other CF grades: far better UV life, moderate heat resistance (HDT ~97-103 °C), and the highest price in this cluster.",
+  "chemical_makeup": "The same styrenic terpolymer as base ASA \u2014 a saturated acrylate-ester rubber phase grafted into a styrene-acrylonitrile matrix \u2014 compounded with chopped carbon fiber at roughly 8-15 wt% (Polymaker Fiberon ASA-CF08 is 8 %, 3DXTech CarbonX ASA CF15 is 15 %). The acrylate rubber is what gives the base its UV stability; the fiber adds stiffness and restrains the styrenic shrinkage that makes base ASA warp.",
+  "summary": "The outdoor member of the filled set: base ASA's best-in-class UV and weather resistance, with carbon fiber cutting its worst trait \u2014 corner lift and warp \u2014 and roughly doubling stiffness (Young's modulus 3600-5400 MPa). Deltas vs asa: hardened nozzle mandatory, nozzle up to 250-280 \u00b0C, bed 90-110 \u00b0C, and layer bonding worse still on a base that was already weak in Z. Deltas vs the other CF grades: far better UV life, moderate heat resistance (HDT ~97-103 \u00b0C), and the highest price in this cluster.",
   "printing": {
     "nozzle_temp_c": {
       "min": 250,
@@ -44,13 +44,13 @@
       "max": 25,
       "recommended": 10
     },
-    "notes": "Deltas vs base ASA: nozzle window narrowed and shifted up (Fiberon ASA-CF08 260-280 °C, CarbonX ASA CF15 around 250 °C, against base ASA's 240-280 °C starting near 250-255 °C), bed pushed to the top of the base range (Fiberon 90-100 °C, CarbonX 110 °C), a hardened nozzle now mandatory, and the speed ceiling pulled below base ASA's 200-250 mm/s to avoid fiber packing. Part cooling stays essentially off, as for base ASA — cooling splits styrenic layers and the fiber has already weakened the interlayer weld. The enclosure requirement carries over unchanged and Fiberon states it explicitly; a passive enclosure suffices for typical parts, so heated_chamber_required stays false, matching the base entry."
+    "notes": "Deltas vs base ASA: nozzle window narrowed and shifted up (Fiberon ASA-CF08 260-280 \u00b0C, CarbonX ASA CF15 around 250 \u00b0C, against base ASA's 240-280 \u00b0C starting near 250-255 \u00b0C), bed pushed to the top of the base range (Fiberon 90-100 \u00b0C, CarbonX 110 \u00b0C), a hardened nozzle now mandatory, and the speed ceiling pulled below base ASA's 200-250 mm/s to avoid fiber packing. Part cooling stays essentially off, as for base ASA \u2014 cooling splits styrenic layers and the fiber has already weakened the interlayer weld. The enclosure requirement carries over unchanged and Fiberon states it explicitly; a passive enclosure suffices for typical parts, so heated_chamber_required stays false, matching the base entry."
   },
   "feeding": {
     "drive_system": "any",
     "ams_compatible": "conditional",
     "feeding_assistant_recommended": false,
-    "notes": "Rigid, so any extruder drives it, but the AMS answer changes from base ASA's plain 'yes': fiber-filled ASA from third parties falls into the category vendors bar from material stations because the fiber abrades PTFE tubing, while Bambu's own ASA-CF is designed around its enclosed AMS-HT hardware. Recorded 'conditional' and worth checking per product and per unit. Hardened steel or ruby nozzle required at 0.4 mm or larger — Fiberon names both. Dry before loading: ASA's SAN matrix is moderately hygroscopic and damp filament feeds and welds poorly. Not flexible, so no shore hardness and no feeding assistant."
+    "notes": "Rigid, so any extruder drives it, but the AMS answer changes from base ASA's plain 'yes': fiber-filled ASA from third parties falls into the category vendors bar from material stations because the fiber abrades PTFE tubing, while Bambu's own ASA-CF is designed around its enclosed AMS-HT hardware. Recorded 'conditional' and worth checking per product and per unit. Hardened steel or ruby nozzle required at 0.4 mm or larger \u2014 Fiberon names both. Dry before loading: ASA's SAN matrix is moderately hygroscopic and damp filament feeds and welds poorly. Not flexible, so no shore hardness and no feeding assistant."
   },
   "drying": {
     "required_before_use": "if-exposed",
@@ -66,11 +66,11 @@
     },
     "methods": [
       "dedicated filament dryer",
-      "convection or blast oven at 80 °C",
+      "convection or blast oven at 80 \u00b0C",
       "drybox with desiccant"
     ],
-    "dryness_validation": "No popping or crackling while extruding and no bubbles or voids in a hand-pulled strand. As with every fiber-filled grade, surface gloss is not a usable indicator — the finish is matte by design — so judge by sound and by voids.",
-    "notes": "Both Fiberon and 3DXTech specify 80 °C for 4 h, a shorter schedule than base ASA's 8-12 h at the same temperature. The carbon fiber adds little hygroscopicity of its own, so the delta is mostly vendor practice rather than chemistry; if a spool has sat open for months, base ASA's longer 8 h cycle is the safer choice."
+    "dryness_validation": "No popping or crackling while extruding and no bubbles or voids in a hand-pulled strand. As with every fiber-filled grade, surface gloss is not a usable indicator \u2014 the finish is matte by design \u2014 so judge by sound and by voids.",
+    "notes": "Both Fiberon and 3DXTech specify 80 \u00b0C for 4 h, a shorter schedule than base ASA's 8-12 h at the same temperature. The carbon fiber adds little hygroscopicity of its own, so the delta is mostly vendor practice rather than chemistry; if a spool has sat open for months, base ASA's longer 8 h cycle is the safer choice."
   },
   "storage": {
     "recommendations": "Sealed with desiccant below about 20 % RH, exactly as for base ASA. Absorbs less aggressively than nylon but enough that resealing between prints is worthwhile.",
@@ -97,7 +97,7 @@
       "printing in an unventilated occupied room (styrene VOCs)",
       "open-frame printers",
       "cosmetic parts needing colour range or gloss (matte, effectively black)",
-      "sustained load above ~100 °C (use pet-cf)"
+      "sustained load above ~100 \u00b0C (use pet-cf)"
     ]
   },
   "suitability": {
@@ -123,7 +123,7 @@
       "max": 50,
       "recommended": 44
     },
-    "notes": "Two well-documented grades bracket this entry. Polymaker Fiberon ASA-CF08 (8 % CF): HDT 103 °C at 0.45 MPa, Young's modulus 3612 MPa dry, tensile 43.5 MPa XY and 25.0 MPa Z (Z/XY ≈ 0.57), bending modulus 3265 MPa XY against 1743 MPa Z, Charpy notched impact 5.46 kJ/m² XY. 3DXTech CarbonX ASA CF15 (15 % CF): density 1.11 g/cm³, tensile 48 MPa, tensile modulus 5355 MPa, flexural 78 MPa, softening 97 °C. Density is recorded from the CarbonX figure; an 8 % grade will sit nearer base ASA's 1.07. The mechanical story is stiffness, not strength — tensile is barely above base ASA's 37-47 MPa while modulus roughly doubles against the ~2300 MPa bending modulus CNC Kitchen measured for unfilled ASA. HDT gains only about 10 °C over base ASA's 93 °C. Shrinkage is a reasoned reduction from base ASA's 0.4-0.7 %, reflecting fiber restraint, not a datasheet figure; Tg and max service temp are carried from the base entry."
+    "notes": "Two well-documented grades bracket this entry. Polymaker Fiberon ASA-CF08 (8 % CF): HDT 103 \u00b0C at 0.45 MPa, Young's modulus 3612 MPa dry, tensile 43.5 MPa XY and 25.0 MPa Z (Z/XY \u2248 0.57), bending modulus 3265 MPa XY against 1743 MPa Z, Charpy notched impact 5.46 kJ/m\u00b2 XY. 3DXTech CarbonX ASA CF15 (15 % CF): density 1.11 g/cm\u00b3, tensile 48 MPa, tensile modulus 5355 MPa, flexural 78 MPa, softening 97 \u00b0C. Density is recorded from the CarbonX figure; an 8 % grade will sit nearer base ASA's 1.07. The mechanical story is stiffness, not strength \u2014 tensile is barely above base ASA's 37-47 MPa while modulus roughly doubles against the ~2300 MPa bending modulus CNC Kitchen measured for unfilled ASA. HDT gains only about 10 \u00b0C over base ASA's 93 \u00b0C. Shrinkage is a reasoned reduction from base ASA's 0.4-0.7 %, reflecting fiber restraint, not a datasheet figure; Tg and max service temp are carried from the base entry."
   },
   "scores": {
     "ease_of_print": 4,
@@ -143,7 +143,6 @@
       "abs-gf",
       "abs-plus",
       "asa",
-      "asa-cf",
       "asa-gf",
       "lw-asa"
     ],
@@ -151,13 +150,13 @@
       "hips"
     ],
     "usable_as_support_for": [],
-    "notes": "Welds to itself and, through the shared SAN matrix, to base ASA, base ABS and abs-gf — the styrenic family co-prints cleanly and shares one enclosed, hot-bed process environment. HIPS remains the breakaway and limonene-soluble support option inherited from the ABS/ASA family, and same-material breakaway works. PLA and PVA/BVOH supports are unusable: they deform or degrade well below a 250-280 °C nozzle. Not listed as a support for other materials — it welds to its own family rather than releasing from it, and the fiber-roughened interface finishes poorly."
+    "notes": "Welds to itself and, through the shared SAN matrix, to base ASA, base ABS and abs-gf \u2014 the styrenic family co-prints cleanly and shares one enclosed, hot-bed process environment. HIPS remains the breakaway and limonene-soluble support option inherited from the ABS/ASA family, and same-material breakaway works. PLA and PVA/BVOH supports are unusable: they deform or degrade well below a 250-280 \u00b0C nozzle. Not listed as a support for other materials \u2014 it welds to its own family rather than releasing from it, and the fiber-roughened interface finishes poorly."
   },
   "plate_recommendations": [
     {
       "plate_id": "pei-textured",
       "rating": "recommended",
-      "notes": "Textured PEI at 90-110 °C, as for base ASA, and still worth backing with a glue stick or adhesion promoter plus a brim — the fiber reduces warp but does not remove the styrenic shrinkage that lifts large footprints. Let the plate cool before removal. No special surface is needed; garolite is a polyamide concern."
+      "notes": "Textured PEI at 90-110 \u00b0C, as for base ASA, and still worth backing with a glue stick or adhesion promoter plus a brim \u2014 the fiber reduces warp but does not remove the styrenic shrinkage that lifts large footprints. Let the plate cool before removal. No special surface is needed; garolite is a polyamide concern."
     },
     {
       "plate_id": "pei-satin",
@@ -188,7 +187,7 @@
   "alternatives": [
     {
       "filament_id": "asa",
-      "reason": "Base ASA at a third to a half the price ($18-45 vs $70-112), with a better layer bond (adhesion 4 vs 3) and no hardened nozzle — you give back the stiffness and the warp suppression (compression 6 vs 8, warp 7 vs 4, dim 7 vs 8)."
+      "reason": "Base ASA at a third to a half the price ($18-45 vs $70-112), with a better layer bond (adhesion 4 vs 3) and no hardened nozzle \u2014 you give back the stiffness and the warp suppression (compression 6 vs 8, warp 7 vs 4, dim 7 vs 8)."
     },
     {
       "filament_id": "asa-gf",
@@ -196,11 +195,11 @@
     },
     {
       "filament_id": "abs-cf",
-      "reason": "The indoor equivalent at half the cost ($32-70 vs $70-112) with a better layer bond (adhesion 5 vs 3) and easier sourcing — but no UV or weather life at all (uv 2 vs 9, weather 2 vs 9)."
+      "reason": "The indoor equivalent at half the cost ($32-70 vs $70-112) with a better layer bond (adhesion 5 vs 3) and easier sourcing \u2014 but no UV or weather life at all (uv 2 vs 9, weather 2 vs 9)."
     },
     {
       "filament_id": "pa12-cf",
-      "reason": "Step up for outdoor structural parts: better dimensional stability (9 vs 8), lower warp (2 vs 4) and a much better layer bond (5 vs 3), holding ~85 % of dry tensile when moisture-conditioned — at $130-180/kg and nylon's drying discipline."
+      "reason": "Step up for outdoor structural parts: better dimensional stability (9 vs 8), lower warp (2 vs 4) and a much better layer bond (5 vs 3), holding ~85 % of dry tensile when moisture-conditioned \u2014 at $130-180/kg and nylon's drying discipline."
     }
   ],
   "emissions": {
@@ -216,9 +215,9 @@
       "carbon fiber fines (post-processing)"
     ],
     "ventilation": "required",
-    "notes": "Inherits base ASA's styrene-dominated emission profile in full — the highest-emitting material in this cluster, and far above the PET/PETG-family entries, which release no styrene at all. Printing 10-25 °C hotter than base ASA should if anything raise the rate. Print in an enclosure vented externally or filtered through HEPA plus activated carbon, and do not run it in an occupied unventilated room. Carbon fiber dust adds the usual post-processing caution on top."
+    "notes": "Inherits base ASA's styrene-dominated emission profile in full \u2014 the highest-emitting material in this cluster, and far above the PET/PETG-family entries, which release no styrene at all. Printing 10-25 \u00b0C hotter than base ASA should if anything raise the rate. Print in an enclosure vented externally or filtered through HEPA plus activated carbon, and do not run it in an occupied unventilated room. Carbon fiber dust adds the usual post-processing caution on top."
   },
-  "safety_notes": "Styrene is a respiratory irritant and a suspected carcinogen with chronic exposure; the enclosure here is a containment measure as much as a warp-control one. Abrasive — hardened steel or ruby nozzle mandatory. Do not sand, drill or cut printed CF parts without a mask and dust capture. Not food-contact suitable.",
+  "safety_notes": "Styrene is a respiratory irritant and a suspected carcinogen with chronic exposure; the enclosure here is a containment measure as much as a warp-control one. Abrasive \u2014 hardened steel or ruby nozzle mandatory. Do not sand, drill or cut printed CF parts without a mask and dust capture. Not food-contact suitable.",
   "additional_notes": "This is the only entry in the filled-copolyester/styrenic cluster that belongs outdoors. Against abs-gf the chemistry decides it: both are filled styrenics with similar printing behaviour, but ABS's polybutadiene rubber degrades under UV while ASA's acrylate rubber does not, which is a 9-versus-2 gap in UV tolerance that no amount of fiber changes. Against petg-cf and pet-cf, ASA-CF trades heat ceiling and cost for genuine weather durability.",
   "provenance": {
     "sources": [
@@ -231,7 +230,7 @@
     ],
     "last_verified": "2026-07-31",
     "confidence": "medium",
-    "conflicts": "Fiber loading differs almost twofold between the two documented grades (Fiberon 8 %, CarbonX 15 %) and the mechanical figures follow it — tensile 43.5 vs 48 MPa, modulus 3612 vs 5355 MPa, HDT/softening 103 vs 97 °C — so the recorded values bracket two products rather than describing one. Density 1.11 g/cm³ comes from the 15 % grade only; the 8 % grade is unpublished and will sit lower, nearer base ASA's 1.07. Nozzle temperature disagrees by 30 °C between the same two brands (250 vs 260-280 °C). Bambu's ASA-CF store and wiki pages returned 402/paywall and could not be fetched, so its AMS status and pricing rest on search snippets and are unverified. Shrinkage, Tg and max service temperature are inherited or reasoned from base ASA rather than measured for the filled grade. UV performance is scored from vendor marketing claims (UV-stable, minimal colour shift) plus base ASA's well-documented chemistry, not from independent weathering tests of a filled grade."
+    "conflicts": "Fiber loading differs almost twofold between the two documented grades (Fiberon 8 %, CarbonX 15 %) and the mechanical figures follow it \u2014 tensile 43.5 vs 48 MPa, modulus 3612 vs 5355 MPa, HDT/softening 103 vs 97 \u00b0C \u2014 so the recorded values bracket two products rather than describing one. Density 1.11 g/cm\u00b3 comes from the 15 % grade only; the 8 % grade is unpublished and will sit lower, nearer base ASA's 1.07. Nozzle temperature disagrees by 30 \u00b0C between the same two brands (250 vs 260-280 \u00b0C). Bambu's ASA-CF store and wiki pages returned 402/paywall and could not be fetched, so its AMS status and pricing rest on search snippets and are unverified. Shrinkage, Tg and max service temperature are inherited or reasoned from base ASA rather than measured for the filled grade. UV performance is scored from vendor marketing claims (UV-stable, minimal colour shift) plus base ASA's well-documented chemistry, not from independent weathering tests of a filled grade."
   },
   "trade_names": [
     {

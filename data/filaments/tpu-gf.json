@@ -13,8 +13,8 @@
   "base_type": "tpu",
   "variation_kind": "glass-fiber-filled",
   "polymer_class": "composite-other",
-  "chemical_makeup": "A thermoplastic polyurethane block copolymer — the same hard-segment/soft-segment architecture as base TPU — compounded with short-cut glass fiber at roughly 10-15 wt% (Siraya Tech Fibreheart TPU-GF is 15 %). The fiber restrains the soft-segment domains, so the compound is formulated and sold at the hard end of the TPU range: 67D (Siraya) to 75D (Rosa3D) rather than the 85A-95A of the base entry. Glass fiber is electrically non-conductive and light-coloured, so the product is not restricted to black.",
-  "summary": "Not a flexible filament. Deltas vs the base tpu entry: glass fiber plus a hard-segment-rich formulation push Shore hardness from 85A-95A to 67D, which turns an elastomer into a semi-rigid engineering plastic — stiffness rises from roughly 2/10 to 8/10 on the research scale, dimensional stability from 4 to 7, and ease of print from 3 to 6 because the strand no longer buckles in the feed path. It keeps far more of TPU's toughness than a fiber-filled rigid material would (80 % elongation at break, Charpy 'did not break'), which is the whole selling point against a CF-filled equivalent. The costs are a mandatory hardened nozzle, moderate moisture uptake (~1.69 %), and the loss of the stretch that people buy TPU for in the first place.",
+  "chemical_makeup": "A thermoplastic polyurethane block copolymer \u2014 the same hard-segment/soft-segment architecture as base TPU \u2014 compounded with short-cut glass fiber at roughly 10-15 wt% (Siraya Tech Fibreheart TPU-GF is 15 %). The fiber restrains the soft-segment domains, so the compound is formulated and sold at the hard end of the TPU range: 67D (Siraya) to 75D (Rosa3D) rather than the 85A-95A of the base entry. Glass fiber is electrically non-conductive and light-coloured, so the product is not restricted to black.",
+  "summary": "Not a flexible filament. Deltas vs the base tpu entry: glass fiber plus a hard-segment-rich formulation push Shore hardness from 85A-95A to 67D, which turns an elastomer into a semi-rigid engineering plastic \u2014 stiffness rises from roughly 2/10 to 8/10 on the research scale, dimensional stability from 4 to 7, and ease of print from 3 to 6 because the strand no longer buckles in the feed path. It keeps far more of TPU's toughness than a fiber-filled rigid material would (80 % elongation at break, Charpy 'did not break'), which is the whole selling point against a CF-filled equivalent. The costs are a mandatory hardened nozzle, moderate moisture uptake (~1.69 %), and the loss of the stretch that people buy TPU for in the first place.",
   "printing": {
     "nozzle_temp_c": {
       "min": 240,
@@ -45,13 +45,13 @@
       "max": 50,
       "recommended": 35
     },
-    "notes": "The nozzle window shifts up roughly 25-40 °C from base TPU's 210-250 °C to 240-270 °C, because the harder 67D-75D formulation needs more heat to flow. Bed 40-60 °C is the same bracket as base TPU. The two real deltas are speed and abrasion: base TPU is capped near 30 mm/s on typical hardware by buckling in the feed path, while this material's rigidity lifts the working range to 30-100 mm/s, and a hardened or carbide nozzle becomes mandatory where unfilled TPU needs none. Minimum layer height 0.2 mm is specified by Siraya — the fiber makes finer layers unreliable. No enclosure is required and open-frame printing is explicitly fine, which is unusual for a filled engineering material and follows from the low bed temperature. enclosure_open_for_cooling is carried true from the base entry: this is still a urethane and heat creep in a sealed 40 °C chamber remains the failure mode, though it is less acute at 67D than at 95A."
+    "notes": "The nozzle window shifts up roughly 25-40 \u00b0C from base TPU's 210-250 \u00b0C to 240-270 \u00b0C, because the harder 67D-75D formulation needs more heat to flow. Bed 40-60 \u00b0C is the same bracket as base TPU. The two real deltas are speed and abrasion: base TPU is capped near 30 mm/s on typical hardware by buckling in the feed path, while this material's rigidity lifts the working range to 30-100 mm/s, and a hardened or carbide nozzle becomes mandatory where unfilled TPU needs none. Minimum layer height 0.2 mm is specified by Siraya \u2014 the fiber makes finer layers unreliable. No enclosure is required and open-frame printing is explicitly fine, which is unusual for a filled engineering material and follows from the low bed temperature. enclosure_open_for_cooling is carried true from the base entry: this is still a urethane and heat creep in a sealed 40 \u00b0C chamber remains the failure mode, though it is less acute at 67D than at 95A."
   },
   "feeding": {
     "drive_system": "direct-drive-recommended",
     "ams_compatible": "conditional",
     "feeding_assistant_recommended": false,
-    "notes": "The largest feeding delta in the TPU family. Base TPU is direct-drive-REQUIRED and barred from the AMS outright; at 67D this grade is merely direct-drive-recommended — Bowden works with retraction raised to 2.0-4.0 mm against direct drive's 0.8-1.5 mm — and Siraya markets it as compatible with AMS, AMS Lite and AMS 2 specifically because the hardness clears Bambu's ~55D-68D AMS threshold (see the base tpu entry's feeding notes and the tpu-68d grade). It is recorded 'conditional' rather than 'yes' for the opposite reason to soft TPU: not buckling, but abrasion. Siraya itself acknowledges that fiber content accelerates wear on AMS feed components with extended use, and Bambu's general guidance bars third-party fiber-filled filament from the AMS. A hardened steel or carbide nozzle is required regardless of feed path. No feeding assistant: that is a Shore-A-grade concern and this is a 67D material."
+    "notes": "The largest feeding delta in the TPU family. Base TPU is direct-drive-REQUIRED and barred from the AMS outright; at 67D this grade is merely direct-drive-recommended \u2014 Bowden works with retraction raised to 2.0-4.0 mm against direct drive's 0.8-1.5 mm \u2014 and Siraya markets it as compatible with AMS, AMS Lite and AMS 2 specifically because the hardness clears Bambu's ~55D-68D AMS threshold (see the base tpu entry's feeding notes and the tpu-68d grade). It is recorded 'conditional' rather than 'yes' for the opposite reason to soft TPU: not buckling, but abrasion. Siraya itself acknowledges that fiber content accelerates wear on AMS feed components with extended use, and Bambu's general guidance bars third-party fiber-filled filament from the AMS. A hardened steel or carbide nozzle is required regardless of feed path. No feeding assistant: that is a Shore-A-grade concern and this is a 67D material."
   },
   "drying": {
     "required_before_use": "always",
@@ -67,22 +67,22 @@
     },
     "methods": [
       "dedicated filament dryer",
-      "convection oven at 50-60 °C",
+      "convection oven at 50-60 \u00b0C",
       "food dehydrator",
       "print directly from a drybox with desiccant"
     ],
-    "dryness_validation": "No popping or crackling at the nozzle and no bubbles or foaming in a hand-pulled test strand. Base TPU's glossy-extrudate check does not transfer — a fiber-filled surface is matte by design — so judge by sound and by strand voids, or confirm with a moisture meter.",
-    "notes": "Siraya specifies 50-60 °C for 6 h or more, with published water absorption of 1.69 %. That is a distinctly gentler schedule than base TPU's 65-80 °C / 5-24 h, and the lower ceiling is deliberate: urethanes soften and spools deform when dried hot, and the harder GF grade gains nothing from pushing above 60 °C. 'Always' is carried from the base entry — 1.69 % uptake is moderate rather than trivial, and the failure mode (foaming, surface defects) is the same."
+    "dryness_validation": "No popping or crackling at the nozzle and no bubbles or foaming in a hand-pulled test strand. Base TPU's glossy-extrudate check does not transfer \u2014 a fiber-filled surface is matte by design \u2014 so judge by sound and by strand voids, or confirm with a moisture meter.",
+    "notes": "Siraya specifies 50-60 \u00b0C for 6 h or more, with published water absorption of 1.69 %. That is a distinctly gentler schedule than base TPU's 65-80 \u00b0C / 5-24 h, and the lower ceiling is deliberate: urethanes soften and spools deform when dried hot, and the harder GF grade gains nothing from pushing above 60 \u00b0C. 'Always' is carried from the base entry \u2014 1.69 % uptake is moderate rather than trivial, and the failure mode (foaming, surface defects) is the same."
   },
   "storage": {
-    "recommendations": "Sealed with desiccant between prints, targeting under 25 % RH. Absorbs more slowly than the soft Shore A grades in this family — the harder, fiber-restrained matrix has less free soft-segment volume — but 1.69 % published uptake is enough to spoil a long print, so a drybox on the printer is the practical default.",
+    "recommendations": "Sealed with desiccant between prints, targeting under 25 % RH. Absorbs more slowly than the soft Shore A grades in this family \u2014 the harder, fiber-restrained matrix has less free soft-segment volume \u2014 but 1.69 % published uptake is enough to spoil a long print, so a drybox on the printer is the practical default.",
     "max_humidity_pct": 25,
     "hygroscopy": "moderate"
   },
   "price": {
     "usd_per_kg_low": 34,
     "usd_per_kg_high": 40,
-    "notes": "Siraya Tech Fibreheart TPU-GF at $34.39 on sale against a $39.99 list, per 1 kg. That sits inside base TPU's very wide $20-70/kg band and well below premium soft grades like NinjaTek Cheetah — glass fiber is cheap to compound and this is a mainstream consumer product rather than an industrial one. QIDI, Rosa3D, TINMORRY, FilAlfa and 3DBooster all sell competing grades; their pricing was not verified."
+    "notes": "Siraya Tech Fibreheart TPU-GF at $34.39 on sale against a $39.99 list, per 1 kg. That sits inside base TPU's very wide $20-70/kg band and well below premium soft grades like NinjaTek Cheetah \u2014 glass fiber is cheap to compound and this is a mainstream consumer product rather than an industrial one. QIDI, Rosa3D, TINMORRY, FilAlfa and 3DBooster all sell competing grades; their pricing was not verified."
   },
   "use_cases": {
     "recommended": [
@@ -95,7 +95,7 @@
       "wearables and semi-rigid enclosures"
     ],
     "not_recommended": [
-      "anything needing stretch, elasticity or energy return — use tpu-95a or a softer grade",
+      "anything needing stretch, elasticity or energy return \u2014 use tpu-95a or a softer grade",
       "gaskets, seals and O-rings",
       "RC tyres and other high-elongation parts",
       "brass-nozzle printers",
@@ -120,7 +120,7 @@
     "tensile_strength_mpa": {
       "recommended": 32
     },
-    "notes": "All numbers are Siraya Tech Fibreheart TPU-GF (15 % glass fiber) unless noted; no second brand publishes a comparable datasheet, so treat them as product-specific rather than category figures. Density 1.32 g/cm³ against base TPU's 1.22, the expected rise from ~15 wt% of ~2.55 g/cm³ glass; 100 g yields 75.8 cm³ against base TPU's 82.0, the lowest volume-per-spool in the TPU family. Tensile 32 MPa, elongation at break 80 %, Young's modulus 445 MPa, bending strength 15 MPa, Charpy impact 'did not break'. The modulus is the number that frames this material honestly: 445 MPa is roughly an order of magnitude stiffer than a soft TPU but still well under a tenth of a filled rigid engineering plastic (compare pa6-cf's >8.6 GPa), so 'semi-rigid' is literal rather than marketing. Vicat softening is published at 157.3 °C, which sits above base TPU's ~144 °C melting point and is recorded only here rather than as heat_deflection_c because the two figures cannot both be read at face value; max_service_temp_c 90 °C is an inferred derating from the Vicat number with a wide margin, NOT a datasheet value. Tg -25 °C is carried unchanged from base TPU (soft-segment Tg; the fiber does not move it). Shrinkage is omitted, as on the base entry — no source publishes a figure, though Rosa3D and Siraya both describe markedly improved dimensional stability over unfilled TPU."
+    "notes": "All numbers are Siraya Tech Fibreheart TPU-GF (15 % glass fiber) unless noted; no second brand publishes a comparable datasheet, so treat them as product-specific rather than category figures. Density 1.32 g/cm\u00b3 against base TPU's 1.22, the expected rise from ~15 wt% of ~2.55 g/cm\u00b3 glass; 100 g yields 75.8 cm\u00b3 against base TPU's 82.0, the lowest volume-per-spool in the TPU family. Tensile 32 MPa, elongation at break 80 %, Young's modulus 445 MPa, bending strength 15 MPa, Charpy impact 'did not break'. The modulus is the number that frames this material honestly: 445 MPa is roughly an order of magnitude stiffer than a soft TPU but still well under a tenth of a filled rigid engineering plastic (compare pa6-cf's >8.6 GPa), so 'semi-rigid' is literal rather than marketing. Vicat softening is published at 157.3 \u00b0C, which sits above base TPU's ~144 \u00b0C melting point and is recorded only here rather than as heat_deflection_c because the two figures cannot both be read at face value; max_service_temp_c 90 \u00b0C is an inferred derating from the Vicat number with a wide margin, NOT a datasheet value. Tg -25 \u00b0C is carried unchanged from base TPU (soft-segment Tg; the fiber does not move it). Shrinkage is omitted, as on the base entry \u2014 no source publishes a figure, though Rosa3D and Siraya both describe markedly improved dimensional stability over unfilled TPU."
   },
   "scores": {
     "ease_of_print": 6,
@@ -145,53 +145,51 @@
       "tpu-85a",
       "tpu-90a",
       "tpu-95a",
-      "tpu-98a",
-      "tpu-gf"
+      "tpu-98a"
     ],
     "support_materials": [
-      "petg",
       "pla"
     ],
     "usable_as_support_for": [],
-    "notes": "Welds to itself and across the urethane family — same hard/soft-segment chemistry, overlapping melt windows — so a stiff GF shell over a soft 85A core is a workable multi-material design and the most interesting thing this material enables. PLA and PETG are the practical breakaway supports, matching the tpu-60d and tpu-68d grades: they release cleanly rather than welding, and the 40-60 °C bed does not deform them. It does not bond usefully to abs, asa, pc, pa or the polyolefins. Not usable as a support for anything — the fiber-roughened interface leaves a poor finish and the material is too expensive to sacrifice."
+    "notes": "Welds to itself and across the urethane family \u2014 same hard/soft-segment chemistry, overlapping melt windows \u2014 so a stiff GF shell over a soft 85A core is a workable multi-material design and the most interesting thing this material enables. PLA and PETG are the practical breakaway supports, matching the tpu-60d and tpu-68d grades: they release cleanly rather than welding, and the 40-60 \u00b0C bed does not deform them. It does not bond usefully to abs, asa, pc, pa or the polyolefins. Not usable as a support for anything \u2014 the fiber-roughened interface leaves a poor finish and the material is too expensive to sacrifice."
   },
   "plate_recommendations": [
     {
       "plate_id": "pei-textured",
       "rating": "recommended",
-      "notes": "Upgraded from base TPU's 'usable' to 'recommended'. Base TPU's problem on textured PEI is over-adhesion — soft grades grip hard enough that removal tears the part, so a glue stick is applied as a RELEASE layer. At 67D that failure mode largely disappears: the part is rigid enough to lever off intact, and Siraya lists PEI film among its recommended surfaces alongside glass and PVP glue stick, with no special release-agent restriction. Run the bed at 40-60 °C. Glass and a PVP glue stick are the vendor's other named options; no plate entries exist for those yet."
+      "notes": "Upgraded from base TPU's 'usable' to 'recommended'. Base TPU's problem on textured PEI is over-adhesion \u2014 soft grades grip hard enough that removal tears the part, so a glue stick is applied as a RELEASE layer. At 67D that failure mode largely disappears: the part is rigid enough to lever off intact, and Siraya lists PEI film among its recommended surfaces alongside glass and PVP glue stick, with no special release-agent restriction. Run the bed at 40-60 \u00b0C. Glass and a PVP glue stick are the vendor's other named options; no plate entries exist for those yet."
     },
     {
       "plate_id": "g11-garolite",
       "rating": "usable",
-      "notes": "Backfilled from plate entry (reciprocity) — see plate page"
+      "notes": "Backfilled from plate entry (reciprocity) \u2014 see plate page"
     },
     {
       "plate_id": "geckotek-ez-stick",
       "rating": "usable",
-      "notes": "Backfilled from plate entry (reciprocity) — see plate page"
+      "notes": "Backfilled from plate entry (reciprocity) \u2014 see plate page"
     }
   ],
   "alternatives": [
     {
       "filament_id": "tpu",
-      "reason": "The unfilled base, when flex is genuinely the point: real elastomer behaviour at 85A-95A and no hardened nozzle needed — at ease 3 vs 6, dimensional stability 4 vs 7 and temp 3 vs 6."
+      "reason": "The unfilled base, when flex is genuinely the point: real elastomer behaviour at 85A-95A and no hardened nozzle needed \u2014 at ease 3 vs 6, dimensional stability 4 vs 7 and temp 3 vs 6."
     },
     {
       "filament_id": "tpu-68d",
-      "reason": "Similar 67-68D hardness with no abrasive filler at all: no hardened nozzle, documented AMS compatibility (yes vs conditional) and ease 7 vs 6 — but lower service temp (5 vs 6) and much worse layer adhesion (2 vs 4)."
+      "reason": "Similar 67-68D hardness with no abrasive filler at all: no hardened nozzle, documented AMS compatibility (yes vs conditional) and ease 7 vs 6 \u2014 but lower service temp (5 vs 6) and much worse layer adhesion (2 vs 4)."
     },
     {
       "filament_id": "tpu-72d",
-      "reason": "The unfilled way to reach nylon-substitute stiffness: compressive strength 7 vs 5 and no hardened-nozzle requirement — at $70-100 vs $34-40 and with no published datasheet behind it."
+      "reason": "The unfilled way to reach nylon-substitute stiffness: compressive strength 7 vs 5 and no hardened-nozzle requirement \u2014 at $70-100 vs $34-40 and with no published datasheet behind it."
     },
     {
       "filament_id": "petg-gf",
-      "reason": "The rigid glass-filled comparison: better dimensional stability (9 vs 7) and temp 7 vs 6 at $25-35 — but it snaps where TPU-GF keeps 80 % elongation and a Charpy 'did not break'."
+      "reason": "The rigid glass-filled comparison: better dimensional stability (9 vs 7) and temp 7 vs 6 at $25-35 \u2014 but it snaps where TPU-GF keeps 80 % elongation and a Charpy 'did not break'."
     },
     {
       "filament_id": "pa12-cf",
-      "reason": "A genuine step up for load-bearing semi-rigid parts: stability 9 vs 7, load-bearing high vs moderate and outdoor-rated — at $130-180 and with nylon's drying and moisture regime."
+      "reason": "A genuine step up for load-bearing semi-rigid parts: stability 9 vs 7, load-bearing high vs moderate and outdoor-rated \u2014 at $130-180 and with nylon's drying and moisture regime."
     }
   ],
   "emissions": {
@@ -204,10 +202,10 @@
       "glass fiber fines (post-processing)"
     ],
     "ventilation": "recommended",
-    "notes": "No emissions data is published for any TPU-GF product, so the profile is carried unchanged from the base tpu entry — not a styrenic, no styrene, generally regarded as a low VOC and UFP emitter, but with urethane chemistry's unquantified isocyanate question unresolved. The 240-270 °C window runs 25-40 °C hotter than base TPU, which should be expected to raise emission rate somewhat since it scales with extrusion temperature. The one genuine delta is at the bench rather than the nozzle: sanding, drilling or cutting printed parts liberates respirable glass fiber dust, a skin and airway irritant that base TPU does not produce."
+    "notes": "No emissions data is published for any TPU-GF product, so the profile is carried unchanged from the base tpu entry \u2014 not a styrenic, no styrene, generally regarded as a low VOC and UFP emitter, but with urethane chemistry's unquantified isocyanate question unresolved. The 240-270 \u00b0C window runs 25-40 \u00b0C hotter than base TPU, which should be expected to raise emission rate somewhat since it scales with extrusion temperature. The one genuine delta is at the bench rather than the nozzle: sanding, drilling or cutting printed parts liberates respirable glass fiber dust, a skin and airway irritant that base TPU does not produce."
   },
-  "safety_notes": "Abrasive: a hardened steel or carbide nozzle is mandatory and brass will not survive a spool. Do not dry-sand, drill or machine printed parts without respiratory protection and dust capture — glass fiber fines irritate skin, eyes and airways. Isocyanate residues from urethane chemistry remain a plausible but unquantified hazard, so avoid running above 270 °C where thermal decomposition becomes more likely. Not food-contact suitable: no certified grade was found and the fiber-roughened surface compounds the usual FDM layer-crevice problem.",
-  "additional_notes": "Read this entry as a different material from base TPU rather than an upgrade of it. Every reason to choose TPU — stretch, energy return, gasket sealing, grip — is what the glass fiber removes, and everything it adds (stiffness, dimensional stability, feed-path manners, AMS eligibility) is already available from any rigid filament. The narrow band where it wins is real but specific: parts that must survive repeated impact and damp vibration without being stiff enough to shatter, which is why FPV frames and camera mounts dominate the published use cases. The honest comparison against a CF-filled TPU cannot be made from this catalog — no tpu-cf entry exists and no widely sold consumer product was confirmed during research — so the research note's CF contrast is retained qualitatively only. Fiber loading is disclosed by Siraya (15 %) and by nobody else, and hardness spans 67D to 75D across brands, so treat every mechanical number here as belonging to the Siraya product.",
+  "safety_notes": "Abrasive: a hardened steel or carbide nozzle is mandatory and brass will not survive a spool. Do not dry-sand, drill or machine printed parts without respiratory protection and dust capture \u2014 glass fiber fines irritate skin, eyes and airways. Isocyanate residues from urethane chemistry remain a plausible but unquantified hazard, so avoid running above 270 \u00b0C where thermal decomposition becomes more likely. Not food-contact suitable: no certified grade was found and the fiber-roughened surface compounds the usual FDM layer-crevice problem.",
+  "additional_notes": "Read this entry as a different material from base TPU rather than an upgrade of it. Every reason to choose TPU \u2014 stretch, energy return, gasket sealing, grip \u2014 is what the glass fiber removes, and everything it adds (stiffness, dimensional stability, feed-path manners, AMS eligibility) is already available from any rigid filament. The narrow band where it wins is real but specific: parts that must survive repeated impact and damp vibration without being stiff enough to shatter, which is why FPV frames and camera mounts dominate the published use cases. The honest comparison against a CF-filled TPU cannot be made from this catalog \u2014 no tpu-cf entry exists and no widely sold consumer product was confirmed during research \u2014 so the research note's CF contrast is retained qualitatively only. Fiber loading is disclosed by Siraya (15 %) and by nobody else, and hardness spans 67D to 75D across brands, so treat every mechanical number here as belonging to the Siraya product.",
   "provenance": {
     "sources": [
       "https://siraya.tech/pages/fibreheart-tpu-gf-filament-tds",
@@ -220,7 +218,7 @@
     ],
     "last_verified": "2026-08-01",
     "confidence": "low",
-    "conflicts": "Confidence is low because effectively one datasheet (Siraya Tech Fibreheart TPU-GF, 15 % GF, 67D) carries every mechanical number in this entry, while the category spans at least six brands and a 67D-75D hardness range — Rosa3D's Glass-Fiber TPU is 75D, which is a materially different product. The single sharpest internal conflict is thermal: Siraya publishes Vicat softening at 157.3 °C, which sits ABOVE the ~144 °C melting point recorded for base TPU, so both figures cannot be read literally; heat_deflection_c is therefore omitted and max_service_temp_c 90 °C is an inferred derating rather than a datasheet value. AMS status is also contested by construction: Siraya markets AMS/AMS Lite/AMS 2 compatibility and the 67D hardness genuinely clears Bambu's stiffness threshold, but Bambu bars third-party fiber-filled filament generally and Siraya itself warns of accelerated wear on AMS feed components — recorded 'conditional'. 'Bambu TPU-GF' is NOT a real product: Bambu's catalog carries plain TPU 95A/85A and a 68D 'TPU for AMS' but no glass-filled TPU was found, so any such reference should be treated as unverified. Layer adhesion is scored 4 with no anisotropy data at all — no source publishes a Z/XY ratio for any TPU-GF — reasoned between base TPU's 3 and the tpu-68d grade's measured 2 on the strength of the retained 80 % elongation and unbroken Charpy result. Emissions are carried wholesale from the base entry; no TPU-GF measurement exists. Pricing is single-brand. Shrinkage is unpublished and omitted."
+    "conflicts": "Confidence is low because effectively one datasheet (Siraya Tech Fibreheart TPU-GF, 15 % GF, 67D) carries every mechanical number in this entry, while the category spans at least six brands and a 67D-75D hardness range \u2014 Rosa3D's Glass-Fiber TPU is 75D, which is a materially different product. The single sharpest internal conflict is thermal: Siraya publishes Vicat softening at 157.3 \u00b0C, which sits ABOVE the ~144 \u00b0C melting point recorded for base TPU, so both figures cannot be read literally; heat_deflection_c is therefore omitted and max_service_temp_c 90 \u00b0C is an inferred derating rather than a datasheet value. AMS status is also contested by construction: Siraya markets AMS/AMS Lite/AMS 2 compatibility and the 67D hardness genuinely clears Bambu's stiffness threshold, but Bambu bars third-party fiber-filled filament generally and Siraya itself warns of accelerated wear on AMS feed components \u2014 recorded 'conditional'. 'Bambu TPU-GF' is NOT a real product: Bambu's catalog carries plain TPU 95A/85A and a 68D 'TPU for AMS' but no glass-filled TPU was found, so any such reference should be treated as unverified. Layer adhesion is scored 4 with no anisotropy data at all \u2014 no source publishes a Z/XY ratio for any TPU-GF \u2014 reasoned between base TPU's 3 and the tpu-68d grade's measured 2 on the strength of the retained 80 % elongation and unbroken Charpy result. Emissions are carried wholesale from the base entry; no TPU-GF measurement exists. Pricing is single-brand. Shrinkage is unpublished and omitted."
   },
   "trade_names": [
     {

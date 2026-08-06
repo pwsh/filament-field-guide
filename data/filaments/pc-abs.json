@@ -11,7 +11,7 @@
   "variation_kind": "blend",
   "polymer_class": "polycarbonate",
   "chemical_makeup": "Amorphous alloy of bisphenol-A polycarbonate with acrylonitrile butadiene styrene, typically PC-majority; the exact ratio is proprietary and differs by brand. The PC phase carries heat resistance and stiffness, the ABS phase carries melt flow, processability and lower cost.",
-  "summary": "The pragmatic middle of the PC family: ABS content buys back melt flow and cuts the shrinkage stress that makes pure PC delaminate, at the cost of heat resistance and stiffness. Deltas vs pc: nozzle drops to 250-280 °C from 250-310 °C, density 1.1 vs 1.2 g/cm³, tensile 39.9 vs ~53 MPa, HDT around 100 °C rather than 114 °C, and moisture uptake is lower so drying is 80 °C/3 h instead of PC's mandatory 75 °C/6 h. Deltas vs abs: markedly higher heat resistance and strength, higher temperatures throughout, and roughly double the price. Unfilled, so no hardened nozzle.",
+  "summary": "The pragmatic middle of the PC family: ABS content buys back melt flow and cuts the shrinkage stress that makes pure PC delaminate, at the cost of heat resistance and stiffness. Deltas vs pc: nozzle drops to 250-280 \u00b0C from 250-310 \u00b0C, density 1.1 vs 1.2 g/cm\u00b3, tensile 39.9 vs ~53 MPa, HDT around 100 \u00b0C rather than 114 \u00b0C, and moisture uptake is lower so drying is 80 \u00b0C/3 h instead of PC's mandatory 75 \u00b0C/6 h. Deltas vs abs: markedly higher heat resistance and strength, higher temperatures throughout, and roughly double the price. Unfilled, so no hardened nozzle.",
   "printing": {
     "nozzle_temp_c": {
       "min": 250,
@@ -41,13 +41,13 @@
       "max": 15,
       "recommended": 5
     },
-    "notes": "Nozzle sources split by brand: Polymaker 250-270 °C (recommending 260 °C), Fillamentum 260-280 °C — 260 °C is the safe start. Bed 90-110 °C with a 5-10 mm brim; Magigoo PC or 3DLac help on stubborn footprints. Keep part cooling near zero as with base PC — cooling is what splits PC-family layers. The ambient range recorded is Polymaker's 90-100 °C chamber specification for best results, which is an industrial figure; Fillamentum calls a heated enclosure merely 'recommended', so heated_chamber_required is false and a passive enclosure is what most desktop users actually run (the practical ambient of such a setup is nearer 50-60 °C, unverified). Speed 30-55 mm/s, similar to base PC and well below ABS."
+    "notes": "Nozzle sources split by brand: Polymaker 250-270 \u00b0C (recommending 260 \u00b0C), Fillamentum 260-280 \u00b0C \u2014 260 \u00b0C is the safe start. Bed 90-110 \u00b0C with a 5-10 mm brim; Magigoo PC or 3DLac help on stubborn footprints. Keep part cooling near zero as with base PC \u2014 cooling is what splits PC-family layers. The ambient range recorded is Polymaker's 90-100 \u00b0C chamber specification for best results, which is an industrial figure; Fillamentum calls a heated enclosure merely 'recommended', so heated_chamber_required is false and a passive enclosure is what most desktop users actually run (the practical ambient of such a setup is nearer 50-60 \u00b0C, unverified). Speed 30-55 mm/s, similar to base PC and well below ABS."
   },
   "feeding": {
     "drive_system": "any",
     "ams_compatible": "yes",
     "feeding_assistant_recommended": false,
-    "notes": "Rigid, unfilled and non-abrasive: standard drive gears, any extruder topology, and no PTFE-wear or snap-in-the-buffer risk. Bambu lists PC-family unfilled resin as material-station compatible. The caveat inherited from base PC is milder here — the ABS content lowers moisture uptake, so an unsealed AMS-style unit is less punishing than it is for straight PC, but a sealed desiccated unit or drybox is still the better habit. Enclosure stays closed and warm, so enclosure_open_for_cooling is false."
+    "notes": "Rigid, unfilled and non-abrasive: standard drive gears, any extruder topology, and no PTFE-wear or snap-in-the-buffer risk. Bambu lists PC-family unfilled resin as material-station compatible. The caveat inherited from base PC is milder here \u2014 the ABS content lowers moisture uptake, so an unsealed AMS-style unit is less punishing than it is for straight PC, but a sealed desiccated unit or drybox is still the better habit. Enclosure stays closed and warm, so enclosure_open_for_cooling is false."
   },
   "drying": {
     "required_before_use": "if-exposed",
@@ -67,17 +67,17 @@
       "print directly from a heated drybox"
     ],
     "dryness_validation": "No popping or steam at the nozzle; glossy, bubble-free extrudate; no stringing on a retraction test; a test coupon that bends rather than snapping brittly.",
-    "notes": "Fillamentum specifies 80 °C for 3 h. The delta versus base PC is the requirement level, not the temperature: PC is recorded 'always' because it is extremely hygroscopic, whereas the ABS content of the blend lowers uptake enough that drying is an if-exposed step — consistent with the base PC entry's own note that PC blends absorb less moisture. Wet material still shows the classic PC failure set: brittleness, poor layer adhesion and stringing."
+    "notes": "Fillamentum specifies 80 \u00b0C for 3 h. The delta versus base PC is the requirement level, not the temperature: PC is recorded 'always' because it is extremely hygroscopic, whereas the ABS content of the blend lowers uptake enough that drying is an if-exposed step \u2014 consistent with the base PC entry's own note that PC blends absorb less moisture. Wet material still shows the classic PC failure set: brittleness, poor layer adhesion and stringing."
   },
   "storage": {
-    "recommendations": "Sealed container with desiccant between prints. Less demanding than straight PC — the blend does not need to live in a drybox permanently — but more demanding than ABS alone.",
+    "recommendations": "Sealed container with desiccant between prints. Less demanding than straight PC \u2014 the blend does not need to live in a drybox permanently \u2014 but more demanding than ABS alone.",
     "max_humidity_pct": 30,
     "hygroscopy": "high"
   },
   "price": {
     "usd_per_kg_low": 44,
     "usd_per_kg_high": 48,
-    "notes": "Polymaker PC-ABS at €41.45/kg via filament2print (~$44-48/kg). Roughly double base ABS's $18-35/kg and at the upper end of base PC's $30-65/kg band; the claim that PC-ABS generally undercuts pure PC is not borne out by this single data point (unverified)."
+    "notes": "Polymaker PC-ABS at \u20ac41.45/kg via filament2print (~$44-48/kg). Roughly double base ABS's $18-35/kg and at the upper end of base PC's $30-65/kg band; the claim that PC-ABS generally undercuts pure PC is not borne out by this single data point (unverified)."
   },
   "use_cases": {
     "recommended": [
@@ -109,7 +109,7 @@
     "tensile_strength_mpa": {
       "recommended": 39.9
     },
-    "notes": "Density 1.1 g/cm³ (Polymaker) sits between base ABS's 1.05 and base PC's 1.2, so a spool yields more part volume than PC. Tensile 39.9 MPa and flexural 66.3 MPa (Polymaker) — below base PC's ~53 MPa XY but with better flexural performance than plain ABS. HDT is the weak spot in the data: no fetched datasheet publishes one, and the 100 °C recorded here is the low end of general PC-ABS engineering literature (HDT ~100-110 °C at 0.45 MPa, Tg ~110-130 °C) rather than a measured value for any specific filament (unverified). Glass transition and shrinkage are not recorded for the same reason."
+    "notes": "Density 1.1 g/cm\u00b3 (Polymaker) sits between base ABS's 1.05 and base PC's 1.2, so a spool yields more part volume than PC. Tensile 39.9 MPa and flexural 66.3 MPa (Polymaker) \u2014 below base PC's ~53 MPa XY but with better flexural performance than plain ABS. HDT is the weak spot in the data: no fetched datasheet publishes one, and the 100 \u00b0C recorded here is the low end of general PC-ABS engineering literature (HDT ~100-110 \u00b0C at 0.45 MPa, Tg ~110-130 \u00b0C) rather than a measured value for any specific filament (unverified). Glass transition and shrinkage are not recorded for the same reason."
   },
   "scores": {
     "ease_of_print": 4,
@@ -128,7 +128,6 @@
       "abs-plus",
       "asa",
       "pc",
-      "pc-abs",
       "pc-gf",
       "pc-pbt"
     ],
@@ -137,13 +136,13 @@
       "hips"
     ],
     "usable_as_support_for": [],
-    "notes": "The blend is the commercial proof of PC-ABS affinity, so it welds to both parents: base pc and base abs, with asa a weaker styrenic second. HIPS is the natural breakaway support (it prints in the same bed/chamber window and matches the ABS phase), and BVOH survives where HIPS is too fusible; PVA degrades far below 260 °C and is unusable. Bonding to pc-pbt is plausible within the PC family but stated by no source (unverified). PLA and PETG supports melt at these bed temperatures."
+    "notes": "The blend is the commercial proof of PC-ABS affinity, so it welds to both parents: base pc and base abs, with asa a weaker styrenic second. HIPS is the natural breakaway support (it prints in the same bed/chamber window and matches the ABS phase), and BVOH survives where HIPS is too fusible; PVA degrades far below 260 \u00b0C and is unusable. Bonding to pc-pbt is plausible within the PC family but stated by no source (unverified). PLA and PETG supports melt at these bed temperatures."
   },
   "plate_recommendations": [
     {
       "plate_id": "pei-textured",
       "rating": "recommended",
-      "notes": "Textured PEI at 90-110 °C with a 5-10 mm brim is the standard pairing, matching base PC. Adhesion promoters (Magigoo PC, 3DLac) are worth using on large footprints. Unlike base PC, the vendor guidance here does not warn against smooth PEI, but the same tear risk applies at these bed temperatures — use a separator on smooth sheets."
+      "notes": "Textured PEI at 90-110 \u00b0C with a 5-10 mm brim is the standard pairing, matching base PC. Adhesion promoters (Magigoo PC, 3DLac) are worth using on large footprints. Unlike base PC, the vendor guidance here does not warn against smooth PEI, but the same tear risk applies at these bed temperatures \u2014 use a separator on smooth sheets."
     },
     {
       "plate_id": "pei-smooth",
@@ -199,19 +198,19 @@
   "alternatives": [
     {
       "filament_id": "pc",
-      "reason": "Full polycarbonate when the blend runs out of heat: temp 9 vs 7 (HDT 114 vs ~100 °C), higher stiffness (compression 8 vs 7) and a better layer bond (8 vs 7), starting cheaper ($30-65 vs $44-48) — but a 250-310 °C nozzle, worse warp (8 vs 7) and a mandatory 75 °C/6 h dry."
+      "reason": "Full polycarbonate when the blend runs out of heat: temp 9 vs 7 (HDT 114 vs ~100 \u00b0C), higher stiffness (compression 8 vs 7) and a better layer bond (8 vs 7), starting cheaper ($30-65 vs $44-48) \u2014 but a 250-310 \u00b0C nozzle, worse warp (8 vs 7) and a mandatory 75 \u00b0C/6 h dry."
     },
     {
       "filament_id": "abs",
-      "reason": "A third to half the price ($18-35 vs $44-48) with essentially the same enclosure and a near-identical 250-280 °C process, plus acetone vapour smoothing — you give up the blend's tensile strength (39.9 MPa-class vs ABS's ~30s) and its stiffness and creep resistance under load, while HDT is close to a wash (~99 vs ~100 °C)."
+      "reason": "A third to half the price ($18-35 vs $44-48) with essentially the same enclosure and a near-identical 250-280 \u00b0C process, plus acetone vapour smoothing \u2014 you give up the blend's tensile strength (39.9 MPa-class vs ABS's ~30s) and its stiffness and creep resistance under load, while HDT is close to a wash (~99 vs ~100 \u00b0C)."
     },
     {
       "filament_id": "pc-pbt",
-      "reason": "The chemical- and cold-resistant member of the family: stronger (50.4 vs 39.9 MPa, compression 8 vs 7), hotter (HDT 107 vs ~100 °C, temp 8 vs 7), better water tolerance (7 vs 6) and actually cheaper ($36-37 vs $44-48) — but it demands a maintained 100-110 °C heated chamber, the only PC blend here that does."
+      "reason": "The chemical- and cold-resistant member of the family: stronger (50.4 vs 39.9 MPa, compression 8 vs 7), hotter (HDT 107 vs ~100 \u00b0C, temp 8 vs 7), better water tolerance (7 vs 6) and actually cheaper ($36-37 vs $44-48) \u2014 but it demands a maintained 100-110 \u00b0C heated chamber, the only PC blend here that does."
     },
     {
       "filament_id": "asa",
-      "reason": "If UV is the actual requirement rather than heat, ASA is weatherable (uv 9 vs 3, weather 9 vs 3), easier (ease 5 vs 4) and cheaper ($18-45 vs $44-48) — at lower strength, lower heat and no PC content."
+      "reason": "If UV is the actual requirement rather than heat, ASA is weatherable (uv 9 vs 3, weather 9 vs 3), easier (ease 5 vs 4) and cheaper ($18-45 vs $44-48) \u2014 at lower strength, lower heat and no PC content."
     }
   ],
   "emissions": {
@@ -223,9 +222,9 @@
       "unspecified high-temperature PC decomposition VOCs"
     ],
     "ventilation": "required",
-    "notes": "Worse than either parent on the emissions axis: the ABS phase contributes styrene, which base PC does not emit, and the 250-280 °C nozzle drives ultrafine-particle output above what plain ABS produces at 230-255 °C. Treat it as base ABS's 'required' ventilation rather than base PC's 'recommended'. Vent externally or filter with HEPA plus carbon, and let a hot enclosure clear before opening the door. No emissions study covers this blend specifically (unverified) — the classification is the union of the two parents' profiles."
+    "notes": "Worse than either parent on the emissions axis: the ABS phase contributes styrene, which base PC does not emit, and the 250-280 \u00b0C nozzle drives ultrafine-particle output above what plain ABS produces at 230-255 \u00b0C. Treat it as base ABS's 'required' ventilation rather than base PC's 'recommended'. Vent externally or filter with HEPA plus carbon, and let a hot enclosure clear before opening the door. No emissions study covers this blend specifically (unverified) \u2014 the classification is the union of the two parents' profiles."
   },
-  "safety_notes": "Styrene from the ABS phase is a respiratory irritant and suspected carcinogen on chronic exposure — do not run this in an unventilated occupied room. The PC phase is bisphenol-A based, a further reason to keep parts away from food and drink. 250-280 °C hotend and 90-110 °C bed are burn hazards, and a hot enclosure concentrates off-gassing.",
+  "safety_notes": "Styrene from the ABS phase is a respiratory irritant and suspected carcinogen on chronic exposure \u2014 do not run this in an unventilated occupied room. The PC phase is bisphenol-A based, a further reason to keep parts away from food and drink. 250-280 \u00b0C hotend and 90-110 \u00b0C bed are burn hazards, and a hot enclosure concentrates off-gassing.",
   "additional_notes": "The right pick when base ABS is not heat-resistant or strong enough but base PC's drying and warp regime is more process than the job justifies. Against its sibling pc-pbt: pc-abs is the easier print with better melt flow, while pc-pbt wins on chemical resistance, cold-temperature toughness and measured tensile strength.",
   "provenance": {
     "sources": [
@@ -238,7 +237,7 @@
     ],
     "last_verified": "2026-07-31",
     "confidence": "medium",
-    "conflicts": "Chamber requirement is the sharpest disagreement: Polymaker specifies a 90-100 °C chamber for best results while Fillamentum calls a heated enclosure merely 'recommended' — recorded as enclosure_recommended true / heated_chamber_required false to stay consistent with the base pc entry, with Polymaker's figure preserved in ambient_temp_c. Nozzle splits 250-270 °C (Polymaker) against 260-280 °C (Fillamentum), bed 90-105 °C against 90-110 °C. No fetched datasheet publishes HDT or Tg, so heat_deflection_c 100 comes from general PC-ABS literature and is brand-agnostic (unverified); expect real grades to span 100-110 °C. Tensile is a single Polymaker figure with no cross-brand check. Scores were recalibrated against this catalog's fixed anchors rather than the raw research figures: the research proposed ease 6 and warp 6 on the assumption ABS scores about 5 and 8 respectively, but this catalog anchors abs at ease 4 / warp 8 and pc at ease 3 / warp 8, so pc-abs is recorded at ease 4 and warp 7 — between the parents on the catalog's own scale. Temperature tolerance 7 likewise reflects an HDT near base ABS's 99 °C rather than the marketing position midway to PC. Bambu's wiki page was not fully fetchable and is cited for context only. Price is a single retailer data point."
+    "conflicts": "Chamber requirement is the sharpest disagreement: Polymaker specifies a 90-100 \u00b0C chamber for best results while Fillamentum calls a heated enclosure merely 'recommended' \u2014 recorded as enclosure_recommended true / heated_chamber_required false to stay consistent with the base pc entry, with Polymaker's figure preserved in ambient_temp_c. Nozzle splits 250-270 \u00b0C (Polymaker) against 260-280 \u00b0C (Fillamentum), bed 90-105 \u00b0C against 90-110 \u00b0C. No fetched datasheet publishes HDT or Tg, so heat_deflection_c 100 comes from general PC-ABS literature and is brand-agnostic (unverified); expect real grades to span 100-110 \u00b0C. Tensile is a single Polymaker figure with no cross-brand check. Scores were recalibrated against this catalog's fixed anchors rather than the raw research figures: the research proposed ease 6 and warp 6 on the assumption ABS scores about 5 and 8 respectively, but this catalog anchors abs at ease 4 / warp 8 and pc at ease 3 / warp 8, so pc-abs is recorded at ease 4 and warp 7 \u2014 between the parents on the catalog's own scale. Temperature tolerance 7 likewise reflects an HDT near base ABS's 99 \u00b0C rather than the marketing position midway to PC. Bambu's wiki page was not fully fetchable and is cited for context only. Price is a single retailer data point."
   },
   "trade_names": [
     {

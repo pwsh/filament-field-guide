@@ -12,8 +12,8 @@
   "base_type": "abs",
   "variation_kind": "glass-fiber-filled",
   "polymer_class": "composite-other",
-  "chemical_makeup": "The same amorphous acrylonitrile-butadiene-styrene terpolymer as base ABS, compounded with chopped glass fiber — around 10 wt% in most consumer grades (Siraya Fibreheart ABS-GF), though some third-party lines are branded 'ABS-GF25' implying up to 25 %. Glass fiber is electrically non-conductive and light-coloured, so unlike a carbon-filled grade it does not restrict the product to black.",
-  "summary": "ABS with its worst habit partly cured. Deltas vs abs: glass fiber suppresses the shrinkage-driven warp that dominates unfilled ABS printing, lifting dimensional stability from 4 to 7, at the cost of a mandatory hardened nozzle and a slightly weaker interlayer bond. Heat resistance barely moves (HDT 99-106 °C against base ABS's 99 °C) and UV resistance does not move at all — this stays a poor outdoor material, which is the whole reason asa-cf exists alongside it.",
+  "chemical_makeup": "The same amorphous acrylonitrile-butadiene-styrene terpolymer as base ABS, compounded with chopped glass fiber \u2014 around 10 wt% in most consumer grades (Siraya Fibreheart ABS-GF), though some third-party lines are branded 'ABS-GF25' implying up to 25 %. Glass fiber is electrically non-conductive and light-coloured, so unlike a carbon-filled grade it does not restrict the product to black.",
+  "summary": "ABS with its worst habit partly cured. Deltas vs abs: glass fiber suppresses the shrinkage-driven warp that dominates unfilled ABS printing, lifting dimensional stability from 4 to 7, at the cost of a mandatory hardened nozzle and a slightly weaker interlayer bond. Heat resistance barely moves (HDT 99-106 \u00b0C against base ABS's 99 \u00b0C) and UV resistance does not move at all \u2014 this stays a poor outdoor material, which is the whole reason asa-cf exists alongside it.",
   "printing": {
     "nozzle_temp_c": {
       "min": 240,
@@ -44,13 +44,13 @@
       "max": 20,
       "recommended": 0
     },
-    "notes": "Deltas vs base ABS: hardened nozzle now mandatory, and the nozzle window shifts slightly up (Bambu 240-270 °C, Siraya Fibreheart 250-270 °C, against base ABS's 230-270 °C). Bed guidance splits by vendor — Bambu 80-100 °C with glue, Siraya 100-110 °C — with the higher figures needed because a stiffer filled matrix cracks rather than flexes if a corner does lift. Part cooling stays essentially off, as for base ABS. Bambu states outright that an enclosed printer is required; a passive enclosure is normally sufficient, so heated_chamber_required stays false, matching the base entry. Nozzles of 0.4/0.6/0.8 mm are supported and 0.2 mm is not."
+    "notes": "Deltas vs base ABS: hardened nozzle now mandatory, and the nozzle window shifts slightly up (Bambu 240-270 \u00b0C, Siraya Fibreheart 250-270 \u00b0C, against base ABS's 230-270 \u00b0C). Bed guidance splits by vendor \u2014 Bambu 80-100 \u00b0C with glue, Siraya 100-110 \u00b0C \u2014 with the higher figures needed because a stiffer filled matrix cracks rather than flexes if a corner does lift. Part cooling stays essentially off, as for base ABS. Bambu states outright that an enclosed printer is required; a passive enclosure is normally sufficient, so heated_chamber_required stays false, matching the base entry. Nozzles of 0.4/0.6/0.8 mm are supported and 0.2 mm is not."
   },
   "feeding": {
     "drive_system": "any",
     "ams_compatible": "conditional",
     "feeding_assistant_recommended": false,
-    "notes": "The most permissive AMS answer of the five filled grades here, and the one real feeding surprise: Bambu lists its own ABS-GF as compatible with both AMS and AMS lite, where nearly every other fiber-filled filament is barred — the glass loading apparently keeps the strand ductile enough not to snap in the feed path. Third-party ABS-GF should still be assumed incompatible unless the vendor says otherwise, so this is recorded 'conditional' rather than 'yes'. Rigid, so any drive system feeds it; hardened steel nozzle required regardless of AMS use. Not flexible: no shore hardness, no feeding assistant."
+    "notes": "The most permissive AMS answer of the five filled grades here, and the one real feeding surprise: Bambu lists its own ABS-GF as compatible with both AMS and AMS lite, where nearly every other fiber-filled filament is barred \u2014 the glass loading apparently keeps the strand ductile enough not to snap in the feed path. Third-party ABS-GF should still be assumed incompatible unless the vendor says otherwise, so this is recorded 'conditional' rather than 'yes'. Rigid, so any drive system feeds it; hardened steel nozzle required regardless of AMS use. Not flexible: no shore hardness, no feeding assistant."
   },
   "drying": {
     "required_before_use": "if-exposed",
@@ -66,11 +66,11 @@
     },
     "methods": [
       "filament dryer",
-      "convection oven at 65-80 °C",
+      "convection oven at 65-80 \u00b0C",
       "print from a heated drybox"
     ],
-    "dryness_validation": "No popping, crackling or steam at the nozzle and no micro-bubbles in the extrudate. Base ABS's 'no fine hairs or fuzz on printed walls' check is unreliable here — a fiber-filled wall is slightly fuzzy by nature — so rely on sound and on strand quality instead.",
-    "notes": "Bambu specifies 80 °C for 8 h; Siraya's Fibreheart grade asks for only 65 °C for 4-6 h. Both sit inside base ABS's 70-85 °C / 4-8 h band, so the glass fiber adds essentially no drying burden of its own; as with base ABS, the real practice is desiccant storage between prints rather than a pre-print ritual."
+    "dryness_validation": "No popping, crackling or steam at the nozzle and no micro-bubbles in the extrudate. Base ABS's 'no fine hairs or fuzz on printed walls' check is unreliable here \u2014 a fiber-filled wall is slightly fuzzy by nature \u2014 so rely on sound and on strand quality instead.",
+    "notes": "Bambu specifies 80 \u00b0C for 8 h; Siraya's Fibreheart grade asks for only 65 \u00b0C for 4-6 h. Both sit inside base ABS's 70-85 \u00b0C / 4-8 h band, so the glass fiber adds essentially no drying burden of its own; as with base ABS, the real practice is desiccant storage between prints rather than a pre-print ritual."
   },
   "storage": {
     "recommendations": "Airtight box or drybox with desiccant at all times, as for base ABS. Glass fiber does not raise the absorption rate, but the stiffer filled matrix shows moisture-driven layer defects as cracks rather than as cosmetic roughness.",
@@ -80,7 +80,7 @@
   "price": {
     "usd_per_kg_low": 25,
     "usd_per_kg_high": 35,
-    "notes": "Bambu $29.99/kg. A modest premium over base ABS's $18-35/kg and by far the cheapest filled grade in this cluster — roughly a third of asa-cf's price — because glass fiber is cheaper to compound than carbon fiber and ABS resin is itself inexpensive."
+    "notes": "Bambu $29.99/kg. A modest premium over base ABS's $18-35/kg and by far the cheapest filled grade in this cluster \u2014 roughly a third of asa-cf's price \u2014 because glass fiber is cheaper to compound than carbon fiber and ABS resin is itself inexpensive."
   },
   "use_cases": {
     "recommended": [
@@ -92,7 +92,7 @@
       "parts near electronics, where the non-conductive filler matters"
     ],
     "not_recommended": [
-      "UV-exposed or outdoor parts (inherits ABS's poor UV life — use asa-cf)",
+      "UV-exposed or outdoor parts (inherits ABS's poor UV life \u2014 use asa-cf)",
       "food-contact items",
       "printing in an unventilated occupied room (styrene fumes)",
       "open-frame printers",
@@ -123,7 +123,7 @@
       "max": 47,
       "recommended": 40
     },
-    "notes": "Density 1.08 g/cm³ — Bambu and Siraya Fibreheart agree — barely above base ABS's 1.05, since glass fiber is dense but the loading is low. Bambu: tensile 36±3 MPa, bending modulus 2860±130 MPa, HDT 99 °C, Vicat softening 103 °C. Siraya Fibreheart: tensile 44±3 MPa, softening 106 °C. Read the numbers as a stiffness-and-stability upgrade rather than a strength one: tensile sits inside base ABS's own 30-45 MPa band, HDT is identical to base ABS's 99 °C, and only the bending modulus (2860 MPa against roughly 2000-2300 MPa for unfilled ABS) and the warp behaviour move meaningfully. Shrinkage is a reasoned reduction from base ABS's 0.5-1.5 % on the strength of Bambu's 'minimal warping' claim, not a datasheet figure; Tg and max service temp are carried from the base entry."
+    "notes": "Density 1.08 g/cm\u00b3 \u2014 Bambu and Siraya Fibreheart agree \u2014 barely above base ABS's 1.05, since glass fiber is dense but the loading is low. Bambu: tensile 36\u00b13 MPa, bending modulus 2860\u00b1130 MPa, HDT 99 \u00b0C, Vicat softening 103 \u00b0C. Siraya Fibreheart: tensile 44\u00b13 MPa, softening 106 \u00b0C. Read the numbers as a stiffness-and-stability upgrade rather than a strength one: tensile sits inside base ABS's own 30-45 MPa band, HDT is identical to base ABS's 99 \u00b0C, and only the bending modulus (2860 MPa against roughly 2000-2300 MPa for unfilled ABS) and the warp behaviour move meaningfully. Shrinkage is a reasoned reduction from base ABS's 0.5-1.5 % on the strength of Bambu's 'minimal warping' claim, not a datasheet figure; Tg and max service temp are carried from the base entry."
   },
   "scores": {
     "ease_of_print": 5,
@@ -141,7 +141,6 @@
       "abs",
       "abs-cf",
       "abs-esd",
-      "abs-gf",
       "abs-plus",
       "asa",
       "asa-cf",
@@ -151,13 +150,13 @@
       "hips"
     ],
     "usable_as_support_for": [],
-    "notes": "Welds to itself and across the styrenic family — base ABS, base ASA and asa-cf — sharing one enclosed, hot-bed process environment. HIPS is the classic breakaway and D-limonene-soluble support for the ABS family; it is documented for base ABS and only inferred for this filled grade (unverified). PLA and PETG pair badly in either direction, as for base ABS: a 100 °C bed and 260 °C nozzle deform them and the chemistries do not fuse. Not listed as a support for other materials — it welds to its own family rather than releasing from it."
+    "notes": "Welds to itself and across the styrenic family \u2014 base ABS, base ASA and asa-cf \u2014 sharing one enclosed, hot-bed process environment. HIPS is the classic breakaway and D-limonene-soluble support for the ABS family; it is documented for base ABS and only inferred for this filled grade (unverified). PLA and PETG pair badly in either direction, as for base ABS: a 100 \u00b0C bed and 260 \u00b0C nozzle deform them and the chemistries do not fuse. Not listed as a support for other materials \u2014 it welds to its own family rather than releasing from it."
   },
   "plate_recommendations": [
     {
       "plate_id": "pei-textured",
       "rating": "recommended",
-      "notes": "Upgraded from base ABS's 'usable' to 'recommended' because the fiber cuts the corner-lift that makes unfilled ABS marginal on textured PEI — but still use an adhesion aid. Bambu's 80-100 °C bed guidance explicitly assumes glue, and vendor listings in this category commonly specify glue-assisted adhesion at the 80-110 °C bed range. Brims help on large footprints."
+      "notes": "Upgraded from base ABS's 'usable' to 'recommended' because the fiber cuts the corner-lift that makes unfilled ABS marginal on textured PEI \u2014 but still use an adhesion aid. Bambu's 80-100 \u00b0C bed guidance explicitly assumes glue, and vendor listings in this category commonly specify glue-assisted adhesion at the 80-110 \u00b0C bed range. Brims help on large footprints."
     },
     {
       "plate_id": "pei-smooth",
@@ -208,7 +207,7 @@
   "alternatives": [
     {
       "filament_id": "abs",
-      "reason": "Skip the fiber if warp is not the problem: base ABS starts cheaper ($18-35 vs $25-35), needs no hardened nozzle and bonds better between layers (adhesion 5 vs 4) — at the cost of dimensional stability (4 vs 7) and much worse warp (8 vs 5)."
+      "reason": "Skip the fiber if warp is not the problem: base ABS starts cheaper ($18-35 vs $25-35), needs no hardened nozzle and bonds better between layers (adhesion 5 vs 4) \u2014 at the cost of dimensional stability (4 vs 7) and much worse warp (8 vs 5)."
     },
     {
       "filament_id": "abs-cf",
@@ -220,7 +219,7 @@
     },
     {
       "filament_id": "petg-gf",
-      "reason": "Fiber-grade dimensional stability without an enclosure or styrene: dim 9 vs 7, warp 2 vs 5, ease 6 vs 5 and a far better layer bond (7 vs 4) at the same $25-35 and the same temperature_tolerance score (7) — you give up acetone smoothing and ABS's styrenic impact behaviour."
+      "reason": "Fiber-grade dimensional stability without an enclosure or styrene: dim 9 vs 7, warp 2 vs 5, ease 6 vs 5 and a far better layer bond (7 vs 4) at the same $25-35 and the same temperature_tolerance score (7) \u2014 you give up acetone smoothing and ABS's styrenic impact behaviour."
     }
   ],
   "emissions": {
@@ -233,10 +232,10 @@
       "glass fiber fines (post-processing)"
     ],
     "ventilation": "required",
-    "notes": "Inherits base ABS's emission profile unchanged — styrene plus very high ultrafine-particle rates, the worst class in this cluster alongside asa-cf and far above the PET/PETG-family entries. Print in a vented enclosure or filter through HEPA plus activated carbon, and never in an occupied unventilated room. Siraya claims 'minimized odour' for its Fibreheart grade specifically; that is a brand claim, not an independently verified or general glass-fiber effect, and should not change how the material is ventilated. Glass fiber dust from sanding or drilling is a separate skin and respiratory irritant."
+    "notes": "Inherits base ABS's emission profile unchanged \u2014 styrene plus very high ultrafine-particle rates, the worst class in this cluster alongside asa-cf and far above the PET/PETG-family entries. Print in a vented enclosure or filter through HEPA plus activated carbon, and never in an occupied unventilated room. Siraya claims 'minimized odour' for its Fibreheart grade specifically; that is a brand claim, not an independently verified or general glass-fiber effect, and should not change how the material is ventilated. Glass fiber dust from sanding or drilling is a separate skin and respiratory irritant."
   },
-  "safety_notes": "Styrene is a respiratory irritant and a suspected carcinogen with chronic exposure — ventilation is not optional. Abrasive: hardened steel nozzle mandatory. Glass fiber fines from sanding, drilling or cutting irritate skin, eyes and airways; wear a mask and gloves and capture dust. Not food-contact suitable.",
-  "additional_notes": "Choose between the two filled styrenics on UV exposure alone: abs-gf and asa-cf print almost identically and cost very differently, but ABS's polybutadiene rubber yellows and embrittles in sunlight while ASA's acrylate rubber does not. Indoors, abs-gf gives most of asa-cf's dimensional benefit at roughly a third of the price; outdoors it is the wrong material at any price. Glass-fiber percentage is inconsistently labelled across brands — a product named 'ABS-GF25' may or may not carry 25 % fiber — so verify loading per product before relying on a mechanical number.",
+  "safety_notes": "Styrene is a respiratory irritant and a suspected carcinogen with chronic exposure \u2014 ventilation is not optional. Abrasive: hardened steel nozzle mandatory. Glass fiber fines from sanding, drilling or cutting irritate skin, eyes and airways; wear a mask and gloves and capture dust. Not food-contact suitable.",
+  "additional_notes": "Choose between the two filled styrenics on UV exposure alone: abs-gf and asa-cf print almost identically and cost very differently, but ABS's polybutadiene rubber yellows and embrittles in sunlight while ASA's acrylate rubber does not. Indoors, abs-gf gives most of asa-cf's dimensional benefit at roughly a third of the price; outdoors it is the wrong material at any price. Glass-fiber percentage is inconsistently labelled across brands \u2014 a product named 'ABS-GF25' may or may not carry 25 % fiber \u2014 so verify loading per product before relying on a mechanical number.",
   "provenance": {
     "sources": [
       "https://wiki.bambulab.com/filament-acc/absgf-pa6gf/2450f3fe0251448c91c5a191b7cb6a1e.pdf",
@@ -248,7 +247,7 @@
     ],
     "last_verified": "2026-07-31",
     "confidence": "medium",
-    "conflicts": "Tensile strength disagrees between the two primary vendors — Bambu 36±3 MPa, Siraya Fibreheart 44±3 MPa — a spread wide enough that it most likely reflects different glass loadings or test methods rather than noise; the recorded 33-47 MPa band spans both. Bed temperature likewise splits (Bambu 80-100 °C with glue, Siraya 100-110 °C) and softening/HDT splits 99-103 °C (Bambu) against 106 °C (Siraya). Glass-fiber content is genuinely unclear across the category: ~10 % is documented for Fibreheart while 'ABS-GF25' branding implies 25 % without substantiation. Bambu's ABS-GF technical data sheet returned 402 on fetch, so its figures come from cached search results and the store page rather than the PDF itself. AMS status is unusual and brand-specific — Bambu allows its own grade on AMS and AMS lite while third-party fiber-filled filament is generally barred — recorded 'conditional'. HIPS as a support is documented for base ABS and inferred here. Shrinkage is reasoned from the 'minimal warping' marketing claim, not measured."
+    "conflicts": "Tensile strength disagrees between the two primary vendors \u2014 Bambu 36\u00b13 MPa, Siraya Fibreheart 44\u00b13 MPa \u2014 a spread wide enough that it most likely reflects different glass loadings or test methods rather than noise; the recorded 33-47 MPa band spans both. Bed temperature likewise splits (Bambu 80-100 \u00b0C with glue, Siraya 100-110 \u00b0C) and softening/HDT splits 99-103 \u00b0C (Bambu) against 106 \u00b0C (Siraya). Glass-fiber content is genuinely unclear across the category: ~10 % is documented for Fibreheart while 'ABS-GF25' branding implies 25 % without substantiation. Bambu's ABS-GF technical data sheet returned 402 on fetch, so its figures come from cached search results and the store page rather than the PDF itself. AMS status is unusual and brand-specific \u2014 Bambu allows its own grade on AMS and AMS lite while third-party fiber-filled filament is generally barred \u2014 recorded 'conditional'. HIPS as a support is documented for base ABS and inferred here. Shrinkage is reasoned from the 'minimal warping' marketing claim, not measured."
   },
   "trade_names": [
     {

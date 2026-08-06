@@ -11,8 +11,8 @@
   "base_type": null,
   "variation_kind": null,
   "polymer_class": "polyolefin",
-  "chemical_makeup": "Polyethylene — a semi-crystalline polyolefin with a linear (HDPE) or branched (LDPE) hydrocarbon backbone; the same chemical family as pp but without the methyl branch, giving higher crystallinity, higher shrinkage on cooling and the same hydrophobic, chemically inert, low-surface-energy behaviour",
-  "summary": "PP's blunter cousin: waterproof, chemically inert, food-safe on certified lines and famously hard to stick to anything, but with higher crystallinity so it shrinks and warps at least as badly as polypropylene while topping out lower on useful mechanical performance. Filament availability is thin — a handful of HDPE grades led by Spectrum's low-warp line — and most published numbers come from a single TDS or from bulk-resin literature rather than from print testing.",
+  "chemical_makeup": "Polyethylene \u2014 a semi-crystalline polyolefin with a linear (HDPE) or branched (LDPE) hydrocarbon backbone; the same chemical family as pp but without the methyl branch, giving higher crystallinity, higher shrinkage on cooling and the same hydrophobic, chemically inert, low-surface-energy behaviour",
+  "summary": "PP's blunter cousin: waterproof, chemically inert, food-safe on certified lines and famously hard to stick to anything, but with higher crystallinity so it shrinks and warps at least as badly as polypropylene while topping out lower on useful mechanical performance. Filament availability is thin \u2014 a handful of HDPE grades led by Spectrum's low-warp line \u2014 and most published numbers come from a single TDS or from bulk-resin literature rather than from print testing.",
   "printing": {
     "nozzle_temp_c": {
       "min": 200,
@@ -38,7 +38,7 @@
       "max": 50,
       "recommended": 25
     },
-    "notes": "Nozzle guidance spans 200-290 °C across the three sources: Spectrum's HDPE TDS 240-290 °C, 3DSourced 200-260 °C (citing a University of Akron study that found 260 °C the best single compromise for strength, warp and shrinkage together), filaments.ca 230-260 °C — the recorded 255 °C sits inside all three. The clearest delta from base pp is the bed: 80-130 °C (Spectrum 80-100 °C, 3DSourced 100-130 °C) against PP's 50-105 °C, so PE wants a distinctly hotter plate. Fan 0-50 % per Spectrum. An enclosure is recommended for larger parts (Spectrum) but an actively heated chamber is not stated as necessary by any source; like PP the material wants warm, draft-free air, so enclosure_open_for_cooling is false. Hardened nozzle: Spectrum recommends one 'due to the material's abrasion resistance', which is unusual for an unfilled polymer and is corroborated by no other source — treat the requirement as brand-specific and unverified. Speed is not published by any source; the recorded range follows base pp."
+    "notes": "Nozzle guidance spans 200-290 \u00b0C across the three sources: Spectrum's HDPE TDS 240-290 \u00b0C, 3DSourced 200-260 \u00b0C (citing a University of Akron study that found 260 \u00b0C the best single compromise for strength, warp and shrinkage together), filaments.ca 230-260 \u00b0C \u2014 the recorded 255 \u00b0C sits inside all three. The clearest delta from base pp is the bed: 80-130 \u00b0C (Spectrum 80-100 \u00b0C, 3DSourced 100-130 \u00b0C) against PP's 50-105 \u00b0C, so PE wants a distinctly hotter plate. Fan 0-50 % per Spectrum. An enclosure is recommended for larger parts (Spectrum) but an actively heated chamber is not stated as necessary by any source; like PP the material wants warm, draft-free air, so enclosure_open_for_cooling is false. Hardened nozzle: Spectrum recommends one 'due to the material's abrasion resistance', which is unusual for an unfilled polymer and is corroborated by no other source \u2014 treat the requirement as brand-specific and unverified. Speed is not published by any source; the recorded range follows base pp."
   },
   "feeding": {
     "drive_system": "any",
@@ -62,11 +62,11 @@
       "convection oven at low temperature",
       "sealed bag with desiccant"
     ],
-    "dryness_validation": "Largely a non-issue — watch only for minor surface popping or inconsistent extrusion as the rare sign that a spool has picked up surface humidity, exactly as on base pp",
-    "notes": "Spectrum describes PE as having 'very low moisture absorption' and does not publish a drying protocol; no other brand publishes one for PE either. The recorded 60-80 °C / 4-6 h is carried over from the base pp entry as a plausible corrective procedure and is unverified for PE specifically. Keep the temperature well under the ~130 °C melting point."
+    "dryness_validation": "Largely a non-issue \u2014 watch only for minor surface popping or inconsistent extrusion as the rare sign that a spool has picked up surface humidity, exactly as on base pp",
+    "notes": "Spectrum describes PE as having 'very low moisture absorption' and does not publish a drying protocol; no other brand publishes one for PE either. The recorded 60-80 \u00b0C / 4-6 h is carried over from the base pp entry as a plausible corrective procedure and is unverified for PE specifically. Keep the temperature well under the ~130 \u00b0C melting point."
   },
   "storage": {
-    "recommendations": "Tolerates open-shelf storage well. Spectrum states a 24-month shelf life stored dry at 18-25 °C away from sunlight and heat; a sealed box with desiccant is good practice rather than a requirement.",
+    "recommendations": "Tolerates open-shelf storage well. Spectrum states a 24-month shelf life stored dry at 18-25 \u00b0C away from sunlight and heat; a sealed box with desiccant is good practice rather than a requirement.",
     "max_humidity_pct": 60,
     "hygroscopy": "low"
   },
@@ -88,7 +88,7 @@
     "not_recommended": [
       "high-precision dimensional parts (severe shrinkage and warp)",
       "rigid load-bearing structures",
-      "glued or solvent-bonded assemblies — chemical inertness defeats nearly every adhesive, as with pp",
+      "glued or solvent-bonded assemblies \u2014 chemical inertness defeats nearly every adhesive, as with pp",
       "fine-detail miniatures",
       "parts relying on out-of-the-box bed adhesion",
       "printing on an open-frame machine in a draughty room"
@@ -110,7 +110,7 @@
       "max": 45,
       "recommended": 29
     },
-    "notes": "Density is the entry's main unresolved number. The recorded 0.95 g/cm³ follows bulk-HDPE literature (k-mac 0.948; industrial HDPE typically 0.941-0.965), which conflicts with the only filament TDS found — Spectrum states 1.1 g/cm³, plausibly because its 'Low Warp technology' additive package is denser than neat HDPE. If a Spectrum spool is what is on the shelf, use 1.1 (110 g per 100 cm³, 90.9 cm³ per 100 g) instead. Even at 0.95 PE is one of the lightest filaments in the catalog, second only to base pp at 0.90. Tensile: Spectrum reports 29 MPa at break with 18 % elongation for the printed filament; bulk resin (k-mac) spans 15-45 MPa with 500-1000 % elongation, which reflects unprinted resin ductility rather than achievable FDM performance, so the recommended value follows the filament figure and the range carries the resin bounds as context only. Max service temperature 110 °C (Spectrum). Melting point ~130 °C (k-mac). Glass transition is omitted deliberately: PE's amorphous-phase Tg sits around -100 to -120 °C, far below room temperature and useless as a service limit, and no filament-specific figure exists. HDT@0.45 MPa is not published for any PE filament; general industrial HDPE runs roughly 60-90 °C by grade, which is not specific enough to record. Shrinkage is described only qualitatively as high (3DSourced, filaments.ca) and is omitted rather than guessed."
+    "notes": "Density is the entry's main unresolved number. The recorded 0.95 g/cm\u00b3 follows bulk-HDPE literature (k-mac 0.948; industrial HDPE typically 0.941-0.965), which conflicts with the only filament TDS found \u2014 Spectrum states 1.1 g/cm\u00b3, plausibly because its 'Low Warp technology' additive package is denser than neat HDPE. If a Spectrum spool is what is on the shelf, use 1.1 (110 g per 100 cm\u00b3, 90.9 cm\u00b3 per 100 g) instead. Even at 0.95 PE is one of the lightest filaments in the catalog, second only to base pp at 0.90. Tensile: Spectrum reports 29 MPa at break with 18 % elongation for the printed filament; bulk resin (k-mac) spans 15-45 MPa with 500-1000 % elongation, which reflects unprinted resin ductility rather than achievable FDM performance, so the recommended value follows the filament figure and the range carries the resin bounds as context only. Max service temperature 110 \u00b0C (Spectrum). Melting point ~130 \u00b0C (k-mac). Glass transition is omitted deliberately: PE's amorphous-phase Tg sits around -100 to -120 \u00b0C, far below room temperature and useless as a service limit, and no filament-specific figure exists. HDT@0.45 MPa is not published for any PE filament; general industrial HDPE runs roughly 60-90 \u00b0C by grade, which is not specific enough to record. Shrinkage is described only qualitatively as high (3DSourced, filaments.ca) and is omitted rather than guessed."
   },
   "scores": {
     "ease_of_print": 2,
@@ -124,18 +124,15 @@
     "water_tolerance": 10
   },
   "compatibility": {
-    "bonds_with": [
-      "pe"
-    ],
     "support_materials": [],
     "usable_as_support_for": [],
-    "notes": "Bonds only to itself. It is tempting to assume PE welds to pp because both are polyolefins, but no source confirms cross-bonding and the two have different crystalline structures and melting points (~130 °C vs ~137 °C), so pp is deliberately left out of bonds_with. Nothing else in the catalog fuses to it: not pla, petg, abs, asa, pa, pc, pva, hips, bvoh, pctg, pvb, pet, tpu or tpe. No soluble support exists — PE is inert to water and to most solvents — so supports must be same-material PE breakaway. Like PP it is a poor support for other polymers precisely because it will not bond to them, though that same non-stick behaviour is what makes polyolefin tapes useful release layers."
+    "notes": "Bonds only to itself. It is tempting to assume PE welds to pp because both are polyolefins, but no source confirms cross-bonding and the two have different crystalline structures and melting points (~130 \u00b0C vs ~137 \u00b0C), so pp is deliberately left out of bonds_with. Nothing else in the catalog fuses to it: not pla, petg, abs, asa, pa, pc, pva, hips, bvoh, pctg, pvb, pet, tpu or tpe. No soluble support exists \u2014 PE is inert to water and to most solvents \u2014 so supports must be same-material PE breakaway. Like PP it is a poor support for other polymers precisely because it will not bond to them, though that same non-stick behaviour is what makes polyolefin tapes useful release layers."
   },
   "plate_recommendations": [
     {
       "plate_id": "glass-borosilicate",
       "rating": "usable",
-      "notes": "The workaround both consumer sources actually describe: 3DSourced recommends taping the build plate, filaments.ca recommends a raft or brim on a heated bed. Tape the plate with a polyolefin tape so PE prints onto its own polymer family, and expect to run the bed at the hot end of the 80-130 °C band. Unverified for PE specifically — extrapolated from the identical PP practice."
+      "notes": "The workaround both consumer sources actually describe: 3DSourced recommends taping the build plate, filaments.ca recommends a raft or brim on a heated bed. Tape the plate with a polyolefin tape so PE prints onto its own polymer family, and expect to run the bed at the hot end of the 80-130 \u00b0C band. Unverified for PE specifically \u2014 extrapolated from the identical PP practice."
     },
     {
       "plate_id": "pp-sheet",
@@ -155,7 +152,7 @@
     {
       "plate_id": "pei-textured",
       "rating": "avoid",
-      "notes": "Same low-surface-energy adhesion failure as base pp: PEI gives essentially no grip on a polyolefin and first layers lift. Both consumer sources skip PEI entirely and recommend taping the plate or printing on a raft/brim. Ordinary glue sticks, hairspray and painter's tape do not work — what is needed is a promoter, not a release layer."
+      "notes": "Same low-surface-energy adhesion failure as base pp: PEI gives essentially no grip on a polyolefin and first layers lift. Both consumer sources skip PEI entirely and recommend taping the plate or printing on a raft/brim. Ordinary glue sticks, hairspray and painter's tape do not work \u2014 what is needed is a promoter, not a release layer."
     },
     {
       "plate_id": "pei-smooth",
@@ -176,19 +173,19 @@
   "alternatives": [
     {
       "filament_id": "pp",
-      "reason": "The far better-documented polyolefin with the same chemical inertness and water tolerance (10, equal), more heat (temp 6 vs 5), a better layer bond (7 vs 6) and no hardened-nozzle requirement — but it warps even worse (10 vs 9) and its food-contact status is conditional rather than certified-line."
+      "reason": "The far better-documented polyolefin with the same chemical inertness and water tolerance (10, equal), more heat (temp 6 vs 5), a better layer bond (7 vs 6) and no hardened-nozzle requirement \u2014 but it warps even worse (10 vs 9) and its food-contact status is conditional rather than certified-line."
     },
     {
       "filament_id": "pp-gf",
-      "reason": "Glass fiber gives the polyolefin family a printable geometry envelope: warp 4 vs 9, dimensional stability 7 vs 3, compression 8 vs 6 and HDT 127 °C (temp 7 vs 5) while keeping water tolerance 10 — at $85-215/kg against $25-45 and no food-contact claim."
+      "reason": "Glass fiber gives the polyolefin family a printable geometry envelope: warp 4 vs 9, dimensional stability 7 vs 3, compression 8 vs 6 and HDT 127 \u00b0C (temp 7 vs 5) while keeping water tolerance 10 \u2014 at $85-215/kg against $25-45 and no food-contact claim."
     },
     {
       "filament_id": "petg",
-      "reason": "The practical everyday alternative: open-frame, sticks to anything (ease 7 vs 2, warp 3 vs 9), far better layer adhesion (9 vs 6) and universally available at $18-42/kg — giving up PE's certified food-contact lines, its full outdoor rating and its perfect chemical/water resistance (water 9 vs 10)."
+      "reason": "The practical everyday alternative: open-frame, sticks to anything (ease 7 vs 2, warp 3 vs 9), far better layer adhesion (9 vs 6) and universally available at $18-42/kg \u2014 giving up PE's certified food-contact lines, its full outdoor rating and its perfect chemical/water resistance (water 9 vs 10)."
     },
     {
       "filament_id": "sbs",
-      "reason": "For food-contact-certified flexible or squeeze parts, SBS prints far easier (ease 5 vs 2, warp 3 vs 9) at $25-40/kg with the same certified-line food status — with much less chemical resistance (water 8 vs 10) and no heat capability (temp 4 vs 5)."
+      "reason": "For food-contact-certified flexible or squeeze parts, SBS prints far easier (ease 5 vs 2, warp 3 vs 9) at $25-40/kg with the same certified-line food status \u2014 with much less chemical resistance (water 8 vs 10) and no heat capability (temp 4 vs 5)."
     }
   ],
   "emissions": {
@@ -198,10 +195,10 @@
       "ultrafine particles"
     ],
     "ventilation": "recommended",
-    "notes": "No PE-specific VOC or ultrafine-particle measurement was found in any source, so both levels are inferred from base pp — a polyolefin with no dominant marker compound comparable to ABS's styrene or nylon's caprolactam. The inference is weaker than for PP because PE prints hotter (up to 290 °C), and thermal degradation of polyethylene is known in the general literature to release aldehydes and short-chain hydrocarbons; nothing quantifies this for FDM. Ventilate as general good practice rather than in response to a documented PE-specific hazard, and treat both levels as low-confidence."
+    "notes": "No PE-specific VOC or ultrafine-particle measurement was found in any source, so both levels are inferred from base pp \u2014 a polyolefin with no dominant marker compound comparable to ABS's styrene or nylon's caprolactam. The inference is weaker than for PP because PE prints hotter (up to 290 \u00b0C), and thermal degradation of polyethylene is known in the general literature to release aldehydes and short-chain hydrocarbons; nothing quantifies this for FDM. Ventilate as general good practice rather than in response to a documented PE-specific hazard, and treat both levels as low-confidence."
   },
   "safety_notes": "Because PE resists solvents and adhesives, post-print assembly relies on mechanical fasteners, heat staking or polyolefin welding rather than glue. Food-contact claims are brand-specific (Spectrum cites FDA-approved raw material) and do not transfer between spools; as with any FDM part, layer crevices harbour bacteria, so certified material alone does not make a printed part food-safe. Spectrum's hardened-nozzle recommendation is worth honouring on that brand even though no other source corroborates it.",
-  "additional_notes": "PE is the rarest of the commodity polyolefins in filament form and is chosen for chemistry rather than for printing: the reason to reach for it is that the finished part must be polyethylene — for chemical compatibility, food contact or matching an existing HDPE product — not because it prints better than anything else. Practically everything that makes base pp difficult applies here and several things are worse: higher crystallinity means more shrinkage-driven internal stress, and the bed runs 20-30 °C hotter. Budget a dedicated adhesion strategy before buying a spool, and expect single-source numbers throughout this entry.",
+  "additional_notes": "PE is the rarest of the commodity polyolefins in filament form and is chosen for chemistry rather than for printing: the reason to reach for it is that the finished part must be polyethylene \u2014 for chemical compatibility, food contact or matching an existing HDPE product \u2014 not because it prints better than anything else. Practically everything that makes base pp difficult applies here and several things are worse: higher crystallinity means more shrinkage-driven internal stress, and the bed runs 20-30 \u00b0C hotter. Budget a dedicated adhesion strategy before buying a spool, and expect single-source numbers throughout this entry.",
   "provenance": {
     "sources": [
       "https://www.3dsourced.com/3d-printer-materials/hdpe-3d-printing/",
@@ -213,13 +210,13 @@
     ],
     "last_verified": "2026-08-01",
     "confidence": "low",
-    "conflicts": "Density is the headline conflict and is unresolved: Spectrum's HDPE TDS states 1.1 g/cm³ while bulk-HDPE literature (k-mac) gives 0.948 g/cm³ and industrial HDPE runs 0.941-0.965. The recorded 0.95 follows the resin literature on the reasoning that Spectrum's figure reflects its 'Low Warp technology' additive package, but a second filament-specific TDS is needed before either number is trusted — this matters because density drives the volume-per-spool figures. Hardened nozzle is a single-source claim (Spectrum, 'abrasion resistance') that no other source corroborates and that is unusual for an unfilled polymer; recorded true to follow the only TDS available, but treat as brand-specific. Nozzle temperature spans 90 °C across sources (200-290 °C) and bed 50 °C (80-130 °C) with no consensus. Shrinkage percentage, Tg, HDT and any print-tested tensile figure beyond Spectrum's single 29 MPa are unpublished. Tensile is split between a filament figure (29 MPa, 18 % elongation) and bulk-resin figures (15-45 MPa, 500-1000 % elongation) that are not achievable in an FDM part. AMS compatibility is omitted rather than guessed — no statement exists in any direction. Drying protocol, emissions levels and every plate rating are extrapolated from the base pp entry rather than sourced for PE. Price rests on one qualitative 'under $30/kg' remark. Food-contact suitability is a brand claim (Spectrum, FDA-approved raw material), not a property of PE filament generally. Re-verification 2026-08-01 — density conflict STILL OPEN, values unchanged: Spectrum's 1.1 g/cm³ was re-confirmed from the live TDS and from an identical third-party CDN mirror (3d.nice-cdn.com), so it is what Spectrum publishes and not a scrape error. The same TDS lists Young's modulus 3.5 GPa and flexural modulus 3.2 GPa, roughly 2-3x typical unfilled HDPE resin (~0.8-1.5 GPa); elevated density and elevated modulus together are the signature of a filled or compounded HDPE (mineral/talc, for instance) rather than neat resin, even though the datasheet discloses no filler and describes only proprietary 'Low Warp technology'. No competing brand publishes an HDPE filament datasheet — Spectrum appears to be the only mainstream producer of an HDPE-branded FFF filament — so there is no same-material independent cross-check available, and a Prusa forum thread on Spectrum HDPE discusses shrinkage only, not composition. The recorded 0.95 therefore stays as the bulk-HDPE figure for generic PE, with 1.1 retained as the correct number for a Spectrum spool specifically; treat the two as describing different compounds rather than as a disagreement about one. Confidence stays low."
+    "conflicts": "Density is the headline conflict and is unresolved: Spectrum's HDPE TDS states 1.1 g/cm\u00b3 while bulk-HDPE literature (k-mac) gives 0.948 g/cm\u00b3 and industrial HDPE runs 0.941-0.965. The recorded 0.95 follows the resin literature on the reasoning that Spectrum's figure reflects its 'Low Warp technology' additive package, but a second filament-specific TDS is needed before either number is trusted \u2014 this matters because density drives the volume-per-spool figures. Hardened nozzle is a single-source claim (Spectrum, 'abrasion resistance') that no other source corroborates and that is unusual for an unfilled polymer; recorded true to follow the only TDS available, but treat as brand-specific. Nozzle temperature spans 90 \u00b0C across sources (200-290 \u00b0C) and bed 50 \u00b0C (80-130 \u00b0C) with no consensus. Shrinkage percentage, Tg, HDT and any print-tested tensile figure beyond Spectrum's single 29 MPa are unpublished. Tensile is split between a filament figure (29 MPa, 18 % elongation) and bulk-resin figures (15-45 MPa, 500-1000 % elongation) that are not achievable in an FDM part. AMS compatibility is omitted rather than guessed \u2014 no statement exists in any direction. Drying protocol, emissions levels and every plate rating are extrapolated from the base pp entry rather than sourced for PE. Price rests on one qualitative 'under $30/kg' remark. Food-contact suitability is a brand claim (Spectrum, FDA-approved raw material), not a property of PE filament generally. Re-verification 2026-08-01 \u2014 density conflict STILL OPEN, values unchanged: Spectrum's 1.1 g/cm\u00b3 was re-confirmed from the live TDS and from an identical third-party CDN mirror (3d.nice-cdn.com), so it is what Spectrum publishes and not a scrape error. The same TDS lists Young's modulus 3.5 GPa and flexural modulus 3.2 GPa, roughly 2-3x typical unfilled HDPE resin (~0.8-1.5 GPa); elevated density and elevated modulus together are the signature of a filled or compounded HDPE (mineral/talc, for instance) rather than neat resin, even though the datasheet discloses no filler and describes only proprietary 'Low Warp technology'. No competing brand publishes an HDPE filament datasheet \u2014 Spectrum appears to be the only mainstream producer of an HDPE-branded FFF filament \u2014 so there is no same-material independent cross-check available, and a Prusa forum thread on Spectrum HDPE discusses shrinkage only, not composition. The recorded 0.95 therefore stays as the bulk-HDPE figure for generic PE, with 1.1 retained as the correct number for a Spectrum spool specifically; treat the two as describing different compounds rather than as a disagreement about one. Confidence stays low."
   },
   "trade_names": [
     {
       "manufacturer": "spectrum-filaments",
       "product": "HDPE",
-      "notes": "The only filament-specific PE datasheet located: 240-290 °C nozzle, 80-100 °C bed, 0-50 % fan, density 1.1 g/cm³, 29 MPa at break, 18 % elongation, max service 110 °C, 24-month shelf life. Marketed with 'Low Warp technology', which is the likely reason its stated density sits above neat HDPE."
+      "notes": "The only filament-specific PE datasheet located: 240-290 \u00b0C nozzle, 80-100 \u00b0C bed, 0-50 % fan, density 1.1 g/cm\u00b3, 29 MPa at break, 18 % elongation, max service 110 \u00b0C, 24-month shelf life. Marketed with 'Low Warp technology', which is the likely reason its stated density sits above neat HDPE."
     }
   ]
 }

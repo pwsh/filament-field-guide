@@ -11,8 +11,8 @@
   "base_type": null,
   "variation_kind": null,
   "polymer_class": "polyester-copolyester",
-  "chemical_makeup": "Polyethylene terephthalate glycol-modified — a copolyester of PET in which cyclohexanedimethanol (CHDM) replaces part of the ethylene glycol, suppressing crystallisation to give an amorphous, tough, easily printed polymer",
-  "summary": "The workhorse step up from PLA: tougher, far better layer adhesion, genuinely water-resistant and usable to ~70 °C, with only mild warp and no enclosure requirement. Pays for it with stringing, oozing, softer detail and supports that fuse hard to the part.",
+  "chemical_makeup": "Polyethylene terephthalate glycol-modified \u2014 a copolyester of PET in which cyclohexanedimethanol (CHDM) replaces part of the ethylene glycol, suppressing crystallisation to give an amorphous, tough, easily printed polymer",
+  "summary": "The workhorse step up from PLA: tougher, far better layer adhesion, genuinely water-resistant and usable to ~70 \u00b0C, with only mild warp and no enclosure requirement. Pays for it with stringing, oozing, softer detail and supports that fuse hard to the part.",
   "printing": {
     "nozzle_temp_c": {
       "min": 220,
@@ -43,13 +43,13 @@
       "max": 50,
       "recommended": 40
     },
-    "notes": "Prusa profiles run 230 °C first layer / 240 °C for the rest; the Prusament TDS quotes 250±10 °C. Keep part cooling low — fan off for the first layers, then roughly half power; heavy cooling is the main cause of brittle, poorly bonded PETG. No chamber needed, but a draft-free room (or an enclosure on large parts) helps. Hardened nozzle only for CF/GF-filled PETG."
+    "notes": "Prusa profiles run 230 \u00b0C first layer / 240 \u00b0C for the rest; the Prusament TDS quotes 250\u00b110 \u00b0C. Keep part cooling low \u2014 fan off for the first layers, then roughly half power; heavy cooling is the main cause of brittle, poorly bonded PETG. No chamber needed, but a draft-free room (or an enclosure on large parts) helps. Hardened nozzle only for CF/GF-filled PETG."
   },
   "feeding": {
     "drive_system": "any",
     "ams_compatible": "yes",
     "feeding_assistant_recommended": false,
-    "notes": "Listed AMS-compatible by Bambu and unproblematic in Prusa's MMU: rigid, non-abrasive and only moderately hygroscopic. The exception is CF/GF-filled PETG from third parties, which is barred because the fibres abrade the AMS PTFE tubes. Enclosure: Bambu's heat-creep table and QIDI's door-open table both keep the cover installed for PETG, so enclosure_open_for_cooling is false — PETG's Tg is high enough that chamber heat helps rather than hurts, though Bambu does note PETG can suffer heat creep if the enclosure runs unusually hot."
+    "notes": "Listed AMS-compatible by Bambu and unproblematic in Prusa's MMU: rigid, non-abrasive and only moderately hygroscopic. The exception is CF/GF-filled PETG from third parties, which is barred because the fibres abrade the AMS PTFE tubes. Enclosure: Bambu's heat-creep table and QIDI's door-open table both keep the cover installed for PETG, so enclosure_open_for_cooling is false \u2014 PETG's Tg is high enough that chamber heat helps rather than hurts, though Bambu does note PETG can suffer heat creep if the enclosure runs unusually hot."
   },
   "drying": {
     "required_before_use": "if-exposed",
@@ -69,7 +69,7 @@
       "drybox with desiccant"
     ],
     "dryness_validation": "No popping/hissing or steam at the nozzle tip; glossy rather than foggy or matte extrudate; markedly reduced stringing; no surface bubbles or voids in the extruded strand",
-    "notes": "Prusa recommends 55 °C for 6 h, Bambu 65 °C for 8 h; heavily soaked spools may need 6-10 h. Do not exceed ~65-70 °C — spools deform. Wet PETG bubbles and hydrolyses visibly, so drying is effectively routine rather than occasional."
+    "notes": "Prusa recommends 55 \u00b0C for 6 h, Bambu 65 \u00b0C for 8 h; heavily soaked spools may need 6-10 h. Do not exceed ~65-70 \u00b0C \u2014 spools deform. Wet PETG bubbles and hydrolyses visibly, so drying is effectively routine rather than occasional."
   },
   "storage": {
     "recommendations": "Sealed container or drybox with desiccant; re-absorbs moisture noticeably faster than PLA, so store it sealed between prints rather than only before them",
@@ -79,7 +79,7 @@
   "price": {
     "usd_per_kg_low": 18,
     "usd_per_kg_high": 42,
-    "notes": "2025-2026 pricing for standard unfilled grades: budget $18-22, mid $22-26, premium $30-42 per kg. The historical price gap with ABS has closed — budget PETG now often matches or undercuts ABS."
+    "notes": "2025-2026 pricing for standard unfilled grades: budget $18-22, mid $22-26, premium $30-42 per kg. The historical price gap with ABS has closed \u2014 budget PETG now often matches or undercuts ABS."
   },
   "use_cases": {
     "recommended": [
@@ -96,7 +96,7 @@
       "high-precision dimensional parts (more ooze and stringing than PLA)",
       "parts with crisp overhangs or long bridges (sags and droops)",
       "geometry needing easy support removal (supports fuse strongly)",
-      "under-hood or high-temperature applications (HDT ~68-80 °C)",
+      "under-hood or high-temperature applications (HDT ~68-80 \u00b0C)",
       "fine-detail miniatures (glossy, stringy finish blurs detail)"
     ]
   },
@@ -123,7 +123,7 @@
       "max": 55,
       "recommended": 50
     },
-    "notes": "Prusament PETG measures HDT 68 °C and yield ~46-50 MPa; Polymaker PolyLite PETG reports 50.8 MPa and partmfg.com 52.2 MPa. Tg is not on the Prusament TDS; secondary sources put it at 80-85 °C. Max service temp is an estimate, not a datasheet value. 3D-Fuel's Pro PETG TDS (technical library, read 2026-08-01) is a third manufacturer sheet but is plainly the base resin supplier's injection-moulding datasheet — 3.2 mm moulded specimens, ASTM D955 mould shrinkage, Rockwell hardness — not printed-part data, and it must be read that way. It confirms the recorded shrinkage low end exactly (0.002 mm/mm = 0.2 % parallel to flow, ASTM D955) and puts specific gravity at 1.28 against the 1.27 recorded. It adds flexural 75 MPa at 2,200 MPa modulus, notched Izod 69 J/m at 23 °C falling to 28 J/m at -40 °C with unnotched 2,600 J/m, Rockwell R106, and water absorption 0.13 % in 24 h. Two figures do not fit the recorded values: HDT 67/62 °C at 0.455/1.82 MPa, below the 72 °C recorded, and tensile 25 MPa which is a BREAK stress after 30 % drawing, not the yield strength the 40-55 MPa range is built from — the sheet gives no yield figure, so the two are not comparable. No Tg is given."
+    "notes": "Prusament PETG measures HDT 68 \u00b0C and yield ~46-50 MPa; Polymaker PolyLite PETG reports 50.8 MPa and partmfg.com 52.2 MPa. Tg is not on the Prusament TDS; secondary sources put it at 80-85 \u00b0C. Max service temp is an estimate, not a datasheet value. 3D-Fuel's Pro PETG TDS (technical library, read 2026-08-01) is a third manufacturer sheet but is plainly the base resin supplier's injection-moulding datasheet \u2014 3.2 mm moulded specimens, ASTM D955 mould shrinkage, Rockwell hardness \u2014 not printed-part data, and it must be read that way. It confirms the recorded shrinkage low end exactly (0.002 mm/mm = 0.2 % parallel to flow, ASTM D955) and puts specific gravity at 1.28 against the 1.27 recorded. It adds flexural 75 MPa at 2,200 MPa modulus, notched Izod 69 J/m at 23 \u00b0C falling to 28 J/m at -40 \u00b0C with unnotched 2,600 J/m, Rockwell R106, and water absorption 0.13 % in 24 h. Two figures do not fit the recorded values: HDT 67/62 \u00b0C at 0.455/1.82 MPa, below the 72 \u00b0C recorded, and tensile 25 MPa which is a BREAK stress after 30 % drawing, not the yield strength the 40-55 MPa range is built from \u2014 the sheet gives no yield figure, so the two are not comparable. No Tg is given."
   },
   "scores": {
     "ease_of_print": 7,
@@ -139,19 +139,15 @@
   "compatibility": {
     "bonds_with": [
       "asa",
-      "bvoh",
       "cpe",
       "pctg",
       "pctg-cf",
       "pctg-gf",
       "pet",
-      "petg",
       "petg-cf",
       "petg-esd",
       "petg-gf",
       "petg-plus",
-      "pva",
-      "support-breakaway",
       "tpu"
     ],
     "support_materials": [
@@ -170,12 +166,7 @@
       "support-breakaway"
     ],
     "usable_as_support_for": [
-      "cpe",
       "lw-pla",
-      "pctg",
-      "pctg-cf",
-      "pctg-gf",
-      "pet",
       "pha",
       "pla",
       "pla-cf",
@@ -190,19 +181,15 @@
       "pla-plus",
       "pla-silk",
       "pla-stone",
-      "pla-wood",
-      "tpu-60d",
-      "tpu-68d",
-      "tpu-72d",
-      "tpu-gf"
+      "pla-wood"
     ],
-    "notes": "Welds cleanly to itself and to PCTG (same copolyester family); some TPU formulations bond to PETG but the weld is weaker than a same-family joint, so treat flex/rigid PETG-TPU as semi-compatible only. Does not weld to PLA — deliberately, so PLA makes a clean breakaway support for PETG and vice versa. BVOH is the soluble support of choice (PVA pairs better with PLA). PETG plus ABS/ASA is not a standard combination: the chemistry, nozzle windows and warp behaviour clash even though bed temperatures overlap."
+    "notes": "Welds cleanly to itself and to PCTG (same copolyester family); some TPU formulations bond to PETG but the weld is weaker than a same-family joint, so treat flex/rigid PETG-TPU as semi-compatible only. Does not weld to PLA \u2014 deliberately, so PLA makes a clean breakaway support for PETG and vice versa. BVOH is the soluble support of choice (PVA pairs better with PLA). PETG plus ABS/ASA is not a standard combination: the chemistry, nozzle windows and warp behaviour clash even though bed temperatures overlap."
   },
   "plate_recommendations": [
     {
       "plate_id": "pei-textured",
       "rating": "recommended",
-      "notes": "Textured/satin or powder-coated PEI is the right surface for PETG at 70-90 °C bed. On SMOOTH PEI, always apply a glue stick as a separator — bare PETG bonds so hard it can tear the coating off the sheet on removal."
+      "notes": "Textured/satin or powder-coated PEI is the right surface for PETG at 70-90 \u00b0C bed. On SMOOTH PEI, always apply a glue stick as a separator \u2014 bare PETG bonds so hard it can tear the coating off the sheet on removal."
     },
     {
       "plate_id": "pp-sheet",
@@ -212,17 +199,17 @@
     {
       "plate_id": "g10-garolite",
       "rating": "recommended",
-      "notes": "Backfilled from plate entry (Phase E reciprocity): Generally no glue needed — G10 does not develop the aggressive chemical bond PETG forms with smooth PEI or bare glass."
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Generally no glue needed \u2014 G10 does not develop the aggressive chemical bond PETG forms with smooth PEI or bare glass."
     },
     {
       "plate_id": "pei-satin",
       "rating": "recommended",
-      "notes": "Backfilled from plate entry (Phase E reciprocity): Prusa markets satin as an excellent PETG surface with no glue stick required — parts pop off cleanly once cold."
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Prusa markets satin as an excellent PETG surface with no glue stick required \u2014 parts pop off cleanly once cold."
     },
     {
       "plate_id": "carbon-fiber-plate",
       "rating": "recommended",
-      "notes": "Backfilled from plate entry (Phase E reciprocity): A standout use case — vendors specifically call out that PETG does not bond excessively here, unlike smooth PEI or PEX where it can weld on and tear the surface."
+      "notes": "Backfilled from plate entry (Phase E reciprocity): A standout use case \u2014 vendors specifically call out that PETG does not bond excessively here, unlike smooth PEI or PEX where it can weld on and tear the surface."
     },
     {
       "plate_id": "pei-smooth",
@@ -242,7 +229,7 @@
     {
       "plate_id": "buildtak-polymer",
       "rating": "usable",
-      "notes": "Backfilled from plate entry (Phase E reciprocity): Works, but the vendor's own wording is that it requires special print settings to avoid fusion — copolyester chemically welds to this film if the first layer is squished hard or th"
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Works, but the vendor's own wording is that it requires special print settings to avoid fusion \u2014 copolyester chemically welds to this film if the first layer is squished hard or th"
     },
     {
       "plate_id": "pei-patterned",
@@ -252,7 +239,7 @@
     {
       "plate_id": "pc-plate",
       "rating": "avoid",
-      "notes": "Backfilled from plate entry (Phase E reciprocity): Bambu explicitly warns of bubbling and sticking on the plain Cool Plate — the PC sheet is damaged, not merely over-adhered. Note that PETG IS listed as acceptable on the Cool Plate"
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Bambu explicitly warns of bubbling and sticking on the plain Cool Plate \u2014 the PC sheet is damaged, not merely over-adhered. Note that PETG IS listed as acceptable on the Cool Plate"
     },
     {
       "plate_id": "pex-sheet",
@@ -263,23 +250,23 @@
   "alternatives": [
     {
       "filament_id": "pla",
-      "reason": "If the part is indoor, unstressed and never warm, PLA prints easier and cheaper (ease 10 vs 7, $14-35 vs $18-42) with no stringing and clean support release — you give up heat (temp 2 vs 5), water resistance (6 vs 9) and layer strength (adh 6 vs 9)."
+      "reason": "If the part is indoor, unstressed and never warm, PLA prints easier and cheaper (ease 10 vs 7, $14-35 vs $18-42) with no stringing and clean support release \u2014 you give up heat (temp 2 vs 5), water resistance (6 vs 9) and layer strength (adh 6 vs 9)."
     },
     {
       "filament_id": "pctg",
-      "reason": "The tougher, clearer sibling: real impact strength and near-isotropic bonding (adh 10 vs 9) plus slightly better UV (6 vs 5) — at roughly double the price ($30-55 vs $18-42), a hotter 250-270 °C all-metal hotend and more warp (5 vs 3)."
+      "reason": "The tougher, clearer sibling: real impact strength and near-isotropic bonding (adh 10 vs 9) plus slightly better UV (6 vs 5) \u2014 at roughly double the price ($30-55 vs $18-42), a hotter 250-270 \u00b0C all-metal hotend and more warp (5 vs 3)."
     },
     {
       "filament_id": "asa",
-      "reason": "For sustained outdoor exposure PETG's uv 5 / weath 5 is only adequate; ASA is 9 / 9 with temp 7 vs 5 at $18-45 — bought with an enclosure, ventilation, warp 7 vs 3 and ease 5 vs 7."
+      "reason": "For sustained outdoor exposure PETG's uv 5 / weath 5 is only adequate; ASA is 9 / 9 with temp 7 vs 5 at $18-45 \u2014 bought with an enclosure, ventilation, warp 7 vs 3 and ease 5 vs 7."
     },
     {
       "filament_id": "cpe",
-      "reason": "The engineering tier of the same amorphous copolyester family: Tg and HDT 15-25 °C higher (temp 7 vs 5) plus better chemical resistance, still with no enclosure — at 2-5x the price ($45-100), a small brand ecosystem and pronounced XY/Z anisotropy on the main grade."
+      "reason": "The engineering tier of the same amorphous copolyester family: Tg and HDT 15-25 \u00b0C higher (temp 7 vs 5) plus better chemical resistance, still with no enclosure \u2014 at 2-5x the price ($45-100), a small brand ecosystem and pronounced XY/Z anisotropy on the main grade."
     },
     {
       "filament_id": "petg-cf",
-      "reason": "Same base resin made stiff and dimensionally quiet for jigs and brackets (modulus ~5100 vs ~2000 MPa, warp 2 vs 3) — costs a hardened nozzle, elongation (~2 % vs 20 %+), bonding (adh 6 vs 9) and adds no heat at all (temp 5 both)."
+      "reason": "Same base resin made stiff and dimensionally quiet for jigs and brackets (modulus ~5100 vs ~2000 MPa, warp 2 vs 3) \u2014 costs a hardened nozzle, elongation (~2 % vs 20 %+), bonding (adh 6 vs 9) and adds no heat at all (temp 5 both)."
     }
   ],
   "emissions": {
@@ -290,10 +277,10 @@
       "trace acetaldehyde / terephthalate-related compounds (unverified)"
     ],
     "ventilation": "recommended",
-    "notes": "No styrene, and odour is mild. Azimi et al. (2016) placed PET-based filament (T-Glase) around 5×10⁹ particles/min — above PLA but well below ABS, PC and HIPS; a precise figure for generic PETG is unverified. Ventilation is optional for occasional open-air printing and recommended for long or enclosed jobs."
+    "notes": "No styrene, and odour is mild. Azimi et al. (2016) placed PET-based filament (T-Glase) around 5\u00d710\u2079 particles/min \u2014 above PLA but well below ABS, PC and HIPS; a precise figure for generic PETG is unverified. Ventilation is optional for occasional open-air printing and recommended for long or enclosed jobs."
   },
   "safety_notes": "Carbon- and glass-filled PETG grades are abrasive and require a hardened nozzle; fibre dust from sanding filled grades should not be inhaled.",
-  "additional_notes": "Base PETG resin is used for injection-moulded food packaging and some filament lines are sold as food-contact certified, but a printed part's layer crevices and unverified nozzle/additive contamination mean an FDM PETG part is not food-safe without sealing or single-use handling. PIPG ('Post-Industrial PET-G', MCPP) is ~70% recycled PETG resin sold mainly as pellets for large-format printing — chemically PETG-class, aliased here rather than a separate entry.",
+  "additional_notes": "Base PETG resin is used for injection-moulded food packaging and some filament lines are sold as food-contact certified, but a printed part's layer crevices and unverified nozzle/additive contamination mean an FDM PETG part is not food-safe without sealing or single-use handling. PIPG ('Post-Industrial PET-G', MCPP) is ~70% recycled PETG resin sold mainly as pellets for large-format printing \u2014 chemically PETG-class, aliased here rather than a separate entry.",
   "provenance": {
     "sources": [
       "https://help.prusa3d.com/article/petg_2059",
@@ -313,7 +300,7 @@
     ],
     "last_verified": "2026-08-01",
     "confidence": "medium",
-    "conflicts": "HDT: Prusament measures 68 °C while other property tables cite 78-80 °C — recorded as 72 °C with the 68-80 °C spread noted. Hygroscopy: the Prusament TDS reports only 0.07-0.10 % moisture uptake at 7 days for that formulation, while field consensus classes bulk PETG as a moderate-to-high absorber needing routine drying — 'moderate' recorded. Shrinkage: some sources place PETG slightly below PLA, others slightly above. The particulate figure is extrapolated from a PET-based filament (T-Glase), not measured for generic PETG. 2026-08-01 update (3D-Fuel technical library published — owner-provided link): the Pro PETG TDS was mined and NO recorded value was changed. HDT: it measures 67 °C at 0.455 MPa, which drops below the previously noted 68-80 °C spread and lands next to Prusament's 68 °C — two datasheets now cluster near 67-68 °C against the 78-80 °C property tables, so the recorded 72 °C is looking high, but it is retained pending a fourth source. Tensile: its 25 MPa is tensile at BREAK (30 % elongation), not at yield, so it does not contradict the 40-55 MPa yield range despite appearing to; flagged because a naive merge would corrupt the range. Density 1.28 vs the recorded 1.27 is inside normal brand spread. Nozzle temperature: 3D-Fuel specifies 245-265 °C (melt 249-271 °C), above the recorded 220-250 °C window and above even Prusament's 250±10 °C — the hottest PETG guidance found. Drying: 71 °C for 4-6 h exceeds the recorded 50-65 °C ceiling, but that is pellet drying on a resin datasheet, not spool drying, and should not be applied to a wound spool. Water absorption 0.13 % in 24 h (ASTM D570) sits above Prusament's 0.07-0.10 % at 7 days, mildly supporting the 'moderate' hygroscopy class rather than Prusament's low figure. Shrinkage 0.2 % confirms the recorded band's low end."
+    "conflicts": "HDT: Prusament measures 68 \u00b0C while other property tables cite 78-80 \u00b0C \u2014 recorded as 72 \u00b0C with the 68-80 \u00b0C spread noted. Hygroscopy: the Prusament TDS reports only 0.07-0.10 % moisture uptake at 7 days for that formulation, while field consensus classes bulk PETG as a moderate-to-high absorber needing routine drying \u2014 'moderate' recorded. Shrinkage: some sources place PETG slightly below PLA, others slightly above. The particulate figure is extrapolated from a PET-based filament (T-Glase), not measured for generic PETG. 2026-08-01 update (3D-Fuel technical library published \u2014 owner-provided link): the Pro PETG TDS was mined and NO recorded value was changed. HDT: it measures 67 \u00b0C at 0.455 MPa, which drops below the previously noted 68-80 \u00b0C spread and lands next to Prusament's 68 \u00b0C \u2014 two datasheets now cluster near 67-68 \u00b0C against the 78-80 \u00b0C property tables, so the recorded 72 \u00b0C is looking high, but it is retained pending a fourth source. Tensile: its 25 MPa is tensile at BREAK (30 % elongation), not at yield, so it does not contradict the 40-55 MPa yield range despite appearing to; flagged because a naive merge would corrupt the range. Density 1.28 vs the recorded 1.27 is inside normal brand spread. Nozzle temperature: 3D-Fuel specifies 245-265 \u00b0C (melt 249-271 \u00b0C), above the recorded 220-250 \u00b0C window and above even Prusament's 250\u00b110 \u00b0C \u2014 the hottest PETG guidance found. Drying: 71 \u00b0C for 4-6 h exceeds the recorded 50-65 \u00b0C ceiling, but that is pellet drying on a resin datasheet, not spool drying, and should not be applied to a wound spool. Water absorption 0.13 % in 24 h (ASTM D570) sits above Prusament's 0.07-0.10 % at 7 days, mildly supporting the 'moderate' hygroscopy class rather than Prusament's low figure. Shrinkage 0.2 % confirms the recorded band's low end."
   },
   "trade_names": [
     {

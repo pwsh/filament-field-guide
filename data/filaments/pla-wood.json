@@ -12,7 +12,7 @@
   "variation_kind": "wood-filled",
   "polymer_class": "composite-other",
   "chemical_makeup": "PLA matrix loaded with real wood particulate/fibre, commonly cited at 20-40 wt% (about 30 % typical); the fibre is lower-density than the resin, so the composite ends up slightly lighter than base PLA",
-  "summary": "PLA compounded with real wood fibre for a sandable, wood-look, wood-smelling part. Versus base PLA it needs a hardened nozzle, slower speeds (40-60 mm/s) and more retraction, is lighter (1.21 vs 1.24 g/cm³), and is much weaker and more anisotropic (tensile XY 26 MPa, Z 15 MPa vs 45-65 MPa base). It is also the worst of the six aesthetic variants outdoors, because the fibre absorbs water independently of the PLA.",
+  "summary": "PLA compounded with real wood fibre for a sandable, wood-look, wood-smelling part. Versus base PLA it needs a hardened nozzle, slower speeds (40-60 mm/s) and more retraction, is lighter (1.21 vs 1.24 g/cm\u00b3), and is much weaker and more anisotropic (tensile XY 26 MPa, Z 15 MPa vs 45-65 MPa base). It is also the worst of the six aesthetic variants outdoors, because the fibre absorbs water independently of the PLA.",
   "printing": {
     "nozzle_temp_c": {
       "min": 190,
@@ -43,13 +43,13 @@
       "recommended": 100
     },
     "enclosure_open_for_cooling": true,
-    "notes": "Deltas vs base PLA: hardened nozzle, slower speeds, and nozzle diameter matters. Bambu's TDS gives 190-240 °C and rates the material below 250 mm/s, but community practice is 40-60 mm/s, dropping further as fibre load rises, to avoid fibre packing and clogs. Darker/higher-fibre shades generally run hotter within the range; nozzle temperature also controls how much the fibre 'toasts', which is how colour variegation is dialled in. Use 0.4 mm or larger (0.6/0.8 mm preferred for heavily filled shades) — fibre bridges small orifices. Bambu's own TDS does not state a hardened-nozzle requirement, but wood fibre visibly abrades brass within roughly 12-48 h of continuous printing per community reports, so this entry flags it as required."
+    "notes": "Deltas vs base PLA: hardened nozzle, slower speeds, and nozzle diameter matters. Bambu's TDS gives 190-240 \u00b0C and rates the material below 250 mm/s, but community practice is 40-60 mm/s, dropping further as fibre load rises, to avoid fibre packing and clogs. Darker/higher-fibre shades generally run hotter within the range; nozzle temperature also controls how much the fibre 'toasts', which is how colour variegation is dialled in. Use 0.4 mm or larger (0.6/0.8 mm preferred for heavily filled shades) \u2014 fibre bridges small orifices. Bambu's own TDS does not state a hardened-nozzle requirement, but wood fibre visibly abrades brass within roughly 12-48 h of continuous printing per community reports, so this entry flags it as required."
   },
   "feeding": {
     "drive_system": "any",
     "ams_compatible": "conditional",
     "feeding_assistant_recommended": false,
-    "notes": "Feeds through Bowden or direct drive, but increase retraction over your base-PLA profile (~5 mm Bowden, 0.5-1 mm direct drive) because fibre content makes flow start and stop less cleanly. Bambu's material table lists wood/rock-filled PLA as AMS-compatible only 'when not very brittle, rough, or soft' — darker high-fibre shades can be brittle enough to snap in the feed path and rough enough to wear PTFE, so this is 'conditional' and batch-dependent. No feeding assistant needed (rigid)."
+    "notes": "Feeds through Bowden or direct drive, but increase retraction over your base-PLA profile (~5 mm Bowden, 0.5-1 mm direct drive) because fibre content makes flow start and stop less cleanly. Bambu's material table lists wood/rock-filled PLA as AMS-compatible only 'when not very brittle, rough, or soft' \u2014 darker high-fibre shades can be brittle enough to snap in the feed path and rough enough to wear PTFE, so this is 'conditional' and batch-dependent. No feeding assistant needed (rigid)."
   },
   "drying": {
     "required_before_use": "if-exposed",
@@ -65,22 +65,22 @@
     },
     "methods": [
       "filament dryer",
-      "blast oven at 55 °C",
+      "blast oven at 55 \u00b0C",
       "food dehydrator",
       "drybox with desiccant"
     ],
-    "dryness_validation": "Listen for steam pops and watch for rough, spitting extrusion on a purge line — wood-PLA announces moisture far more loudly than base PLA. Surface finish is a poor indicator here because the material is intentionally rough.",
-    "notes": "Bambu specifies 55 °C for 8 h, essentially base-PLA drying; community guidance runs 45-60 °C for 4-6 h. The important delta is not the schedule but the consequence — the wood fibre takes up moisture independently of the PLA matrix, so an under-dried spool causes steam pops and flow disruption much sooner than base PLA would."
+    "dryness_validation": "Listen for steam pops and watch for rough, spitting extrusion on a purge line \u2014 wood-PLA announces moisture far more loudly than base PLA. Surface finish is a poor indicator here because the material is intentionally rough.",
+    "notes": "Bambu specifies 55 \u00b0C for 8 h, essentially base-PLA drying; community guidance runs 45-60 \u00b0C for 4-6 h. The important delta is not the schedule but the consequence \u2014 the wood fibre takes up moisture independently of the PLA matrix, so an under-dried spool causes steam pops and flow disruption much sooner than base PLA would."
   },
   "storage": {
-    "recommendations": "Drybox with desiccant is worth the effort here even though base PLA tolerates open air — the fibre fraction keeps absorbing moisture after the PLA has stabilised",
+    "recommendations": "Drybox with desiccant is worth the effort here even though base PLA tolerates open air \u2014 the fibre fraction keeps absorbing moisture after the PLA has stabilised",
     "max_humidity_pct": 35,
     "hygroscopy": "moderate"
   },
   "price": {
     "usd_per_kg_low": 24,
     "usd_per_kg_high": 26,
-    "notes": "Bambu PLA Wood around $24.99/kg — a moderate premium over base PLA at $18-20/kg, in line with pla-gradient and pla-glow"
+    "notes": "Bambu PLA Wood around $24.99/kg \u2014 a moderate premium over base PLA at $18-20/kg, in line with pla-gradient and pla-glow"
   },
   "use_cases": {
     "recommended": [
@@ -124,7 +124,7 @@
       "max": 31,
       "recommended": 26
     },
-    "notes": "Bambu PLA Wood TDS: density 1.21 g/cm³ — lower than base PLA's 1.24 despite added filler, because wood fibre is less dense than the resin, making this the lightest of the six aesthetic variants. Tensile XY 26±5 MPa and Z 15±4 MPa (a Z/XY ratio near 0.58, the worst in this cluster), elongation XY 15.3±3.1 % and Z 4.5±1.7 %, Tg 54 °C, HDT 57 °C at 1.8 MPa. Important product-category caution: this entry describes particle-filled wood PLA. Chemically foamed 'wood-look' PLA is a different product with density near 0.8 g/cm³ — these numbers do not apply to it."
+    "notes": "Bambu PLA Wood TDS: density 1.21 g/cm\u00b3 \u2014 lower than base PLA's 1.24 despite added filler, because wood fibre is less dense than the resin, making this the lightest of the six aesthetic variants. Tensile XY 26\u00b15 MPa and Z 15\u00b14 MPa (a Z/XY ratio near 0.58, the worst in this cluster), elongation XY 15.3\u00b13.1 % and Z 4.5\u00b11.7 %, Tg 54 \u00b0C, HDT 57 \u00b0C at 1.8 MPa. Important product-category caution: this entry describes particle-filled wood PLA. Chemically foamed 'wood-look' PLA is a different product with density near 0.8 g/cm\u00b3 \u2014 these numbers do not apply to it."
   },
   "scores": {
     "ease_of_print": 6,
@@ -140,8 +140,7 @@
   "compatibility": {
     "bonds_with": [
       "pha",
-      "pla",
-      "pla-wood"
+      "pla"
     ],
     "support_materials": [
       "bvoh",
@@ -149,13 +148,13 @@
       "pva"
     ],
     "usable_as_support_for": [],
-    "notes": "Welds to itself and to base PLA, though the fibre-roughened melt surface makes PLA-to-wood interfaces slightly less reliable than PLA-to-PLA — keep multi-material seams out of load paths. Not listed as usable support for anything: the rough, fibre-loaded surface leaves a poor interface finish on the supported part, unlike base PLA which is a good breakaway support for PETG."
+    "notes": "Welds to itself and to base PLA, though the fibre-roughened melt surface makes PLA-to-wood interfaces slightly less reliable than PLA-to-PLA \u2014 keep multi-material seams out of load paths. Not listed as usable support for anything: the rough, fibre-loaded surface leaves a poor interface finish on the supported part, unlike base PLA which is a good breakaway support for PETG."
   },
   "plate_recommendations": [
     {
       "plate_id": "pei-textured",
       "rating": "recommended",
-      "notes": "Adheres well at 35-45 °C and the plate texture is cosmetically irrelevant against an intentionally rough wood-look surface. Choose smooth PEI instead when the bottom face will be sanded flat and finished."
+      "notes": "Adheres well at 35-45 \u00b0C and the plate texture is cosmetically irrelevant against an intentionally rough wood-look surface. Choose smooth PEI instead when the bottom face will be sanded flat and finished."
     },
     {
       "plate_id": "buildtak-polymer",
@@ -170,7 +169,7 @@
     },
     {
       "filament_id": "pla-stone",
-      "reason": "The mineral sibling on the same ease 6 filled-PLA terms: denser and grittier, takes paint and patina like cast stone, and behaves better in damp air (water 5 vs 3, weath 2 vs 1) since there is no fibre to wick — but it is heavy (1.70 vs 1.21 g/cm³) and cannot be sanded to grain."
+      "reason": "The mineral sibling on the same ease 6 filled-PLA terms: denser and grittier, takes paint and patina like cast stone, and behaves better in damp air (water 5 vs 3, weath 2 vs 1) since there is no fibre to wick \u2014 but it is heavy (1.70 vs 1.21 g/cm\u00b3) and cannot be sanded to grain."
     },
     {
       "filament_id": "pla-matte",
@@ -178,7 +177,7 @@
     },
     {
       "filament_id": "petg",
-      "reason": "Wood-fill is the worst aesthetic PLA outdoors (weath 1, water 3); for planters, garden markers or anything that gets wet, PETG survives (water 9, weath 5, temp 5 vs 2) — at the total loss of the wood grain and smell, and ease 7 vs 6."
+      "reason": "Wood-fill is the worst aesthetic PLA outdoors (weath 1, water 3); for planters, garden markers or anything that gets wet, PETG survives (water 9, weath 5, temp 5 vs 2) \u2014 at the total loss of the wood grain and smell, and ease 7 vs 6."
     }
   ],
   "emissions": {
@@ -192,7 +191,7 @@
     "ventilation": "recommended",
     "notes": "The one emissions delta in this cluster: fibre charring at the nozzle produces a distinct burnt-wood smell that is normal but can be strong in a small closed room, and adds particulate beyond base PLA's baseline. Not classified as hazardous, but move air rather than printing it on a desk in an unventilated space."
   },
-  "safety_notes": "Wear a mask when sanding — wood-PLA dust is a mix of wood and plastic fines. The composite is not food-contact certified and no supplier guarantees the fibre feedstock is free of contaminants.",
+  "safety_notes": "Wear a mask when sanding \u2014 wood-PLA dust is a mix of wood and plastic fines. The composite is not food-contact certified and no supplier guarantees the fibre feedstock is free of contaminants.",
   "additional_notes": "Nozzle temperature doubles as a colour control: hotter extrusion toasts the fibre darker, so deliberately varying temperature by height produces grain-like variegation. Parts sand, stain and wax like soft wood, which is the main reason to accept the mechanical penalty.",
   "provenance": {
     "sources": [
@@ -205,7 +204,7 @@
     ],
     "last_verified": "2026-07-31",
     "confidence": "medium",
-    "conflicts": "Magnitude of embrittlement is genuinely disputed: Bambu's TDS reports elongation XY 15.3 %, while a secondary community composite dataset reports elongation at break of only ~3.8 % (vs ~9.4 % for base PLA), tensile modulus ~3650 MPa vs ~2700 MPa, and flexural strength collapsing to ~14 MPa. These are almost certainly different fibre loadings; treat exact numbers as brand- and fill-percentage-dependent and the datasheet values as applying to Bambu's product only. Fibre content itself is unpublished by Bambu (20-40 wt% is a secondary-source figure). Hardened nozzle: flagged required here on community evidence (brass wear in ~12-48 h of continuous printing, hours unverified) even though Bambu's TDS does not state it. Warp is reported by some sources as slightly better than base PLA because fibre restrains shrinkage — unverified, so warp is recorded equal to base PLA at 1."
+    "conflicts": "Magnitude of embrittlement is genuinely disputed: Bambu's TDS reports elongation XY 15.3 %, while a secondary community composite dataset reports elongation at break of only ~3.8 % (vs ~9.4 % for base PLA), tensile modulus ~3650 MPa vs ~2700 MPa, and flexural strength collapsing to ~14 MPa. These are almost certainly different fibre loadings; treat exact numbers as brand- and fill-percentage-dependent and the datasheet values as applying to Bambu's product only. Fibre content itself is unpublished by Bambu (20-40 wt% is a secondary-source figure). Hardened nozzle: flagged required here on community evidence (brass wear in ~12-48 h of continuous printing, hours unverified) even though Bambu's TDS does not state it. Warp is reported by some sources as slightly better than base PLA because fibre restrains shrinkage \u2014 unverified, so warp is recorded equal to base PLA at 1."
   },
   "trade_names": [
     {

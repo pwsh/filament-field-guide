@@ -12,8 +12,8 @@
   "base_type": null,
   "variation_kind": "blend",
   "polymer_class": "polyester-copolyester",
-  "chemical_makeup": "Proprietary copolyester blend (Polymaker Panchroma CoPE, formerly Panchroma Regular) — an unfilled co-polyester engineered to print in the PLA temperature window rather than the PETG one. Vendors do not disclose the comonomer system, so it is not established whether it is a CHDM-modified PET relative like PETG/PCTG or a different copolyester family.",
-  "summary": "A copolyester marketed as a drop-in high-speed replacement for PLA: same 190-230 °C nozzle window, same full part cooling, no enclosure — but rated to 400 mm/s and ~32 mm³/s where PLA profiles top out far lower, with markedly stronger bed adhesion. Deltas vs pla: density 1.30 vs 1.24 g/cm³, softening ~66 °C vs PLA's ~58 °C Tg, Charpy impact only 2.9 kJ/m² (low even by PLA standards), poor sandability, and adhesion strong enough that the datasheet warns against textured PEI. Filed with base_type null per catalog assignment even though it is sold and used as a PLA-slot material.",
+  "chemical_makeup": "Proprietary copolyester blend (Polymaker Panchroma CoPE, formerly Panchroma Regular) \u2014 an unfilled co-polyester engineered to print in the PLA temperature window rather than the PETG one. Vendors do not disclose the comonomer system, so it is not established whether it is a CHDM-modified PET relative like PETG/PCTG or a different copolyester family.",
+  "summary": "A copolyester marketed as a drop-in high-speed replacement for PLA: same 190-230 \u00b0C nozzle window, same full part cooling, no enclosure \u2014 but rated to 400 mm/s and ~32 mm\u00b3/s where PLA profiles top out far lower, with markedly stronger bed adhesion. Deltas vs pla: density 1.30 vs 1.24 g/cm\u00b3, softening ~66 \u00b0C vs PLA's ~58 \u00b0C Tg, Charpy impact only 2.9 kJ/m\u00b2 (low even by PLA standards), poor sandability, and adhesion strong enough that the datasheet warns against textured PEI. Filed with base_type null per catalog assignment even though it is sold and used as a PLA-slot material.",
   "printing": {
     "nozzle_temp_c": {
       "min": 190,
@@ -44,13 +44,13 @@
       "max": 100,
       "recommended": 100
     },
-    "notes": "The headline delta versus PLA is the speed ceiling: Polymaker rates the material to 400 mm/s and ~32 mm³/s maximum volumetric flow, roughly double a typical PLA profile, at the same 190-230 °C nozzle temperatures and the same 100 % part cooling. Bed runs cool (25-60 °C) and adhesion is the second delta — it is strong enough that the datasheet warns the material can damage a textured PEI sheet on removal, so a smooth plate with Magigoo Original, or glass with a release agent, is the recommended pairing. Retraction 1-3 mm at 20-40 mm/s. Unfilled, so a stock brass nozzle is fine. Like PLA it is a low-softening-point material, so run an enclosed printer with the door or lid open."
+    "notes": "The headline delta versus PLA is the speed ceiling: Polymaker rates the material to 400 mm/s and ~32 mm\u00b3/s maximum volumetric flow, roughly double a typical PLA profile, at the same 190-230 \u00b0C nozzle temperatures and the same 100 % part cooling. Bed runs cool (25-60 \u00b0C) and adhesion is the second delta \u2014 it is strong enough that the datasheet warns the material can damage a textured PEI sheet on removal, so a smooth plate with Magigoo Original, or glass with a release agent, is the recommended pairing. Retraction 1-3 mm at 20-40 mm/s. Unfilled, so a stock brass nozzle is fine. Like PLA it is a low-softening-point material, so run an enclosed printer with the door or lid open."
   },
   "feeding": {
     "drive_system": "any",
     "ams_compatible": "yes",
     "feeding_assistant_recommended": false,
-    "notes": "Rigid, unfilled and non-abrasive, so it feeds through Bowden or direct drive on standard drive gears with no hardened extruder parts. Polymaker lists it as AMS-compatible and ships it on hardened spool edges for material-station use. It is not brittle the way filled or damp filaments are, so the snap-in-the-feed-path risk that downgrades PLA-CF and glow PLA does not apply. Enclosure: like PLA, prefer the cover off — enclosure_open_for_cooling is true."
+    "notes": "Rigid, unfilled and non-abrasive, so it feeds through Bowden or direct drive on standard drive gears with no hardened extruder parts. Polymaker lists it as AMS-compatible and ships it on hardened spool edges for material-station use. It is not brittle the way filled or damp filaments are, so the snap-in-the-feed-path risk that downgrades PLA-CF and glow PLA does not apply. Enclosure: like PLA, prefer the cover off \u2014 enclosure_open_for_cooling is true."
   },
   "drying": {
     "required_before_use": "if-exposed",
@@ -69,18 +69,18 @@
       "convection oven at low temperature",
       "drybox with desiccant"
     ],
-    "dryness_validation": "Polymaker publishes no dryness check for this grade (unverified) — apply the PLA-class checks: no popping or steam at the nozzle, glossy rather than matte extrudate, and minimal stringing on a retraction test.",
-    "notes": "55 °C for 6 h if the spool has been left exposed — milder and shorter than PETG's 60-65 °C schedule and far milder than PA or PC. Drying is a recovery step here, not routine practice."
+    "dryness_validation": "Polymaker publishes no dryness check for this grade (unverified) \u2014 apply the PLA-class checks: no popping or steam at the nozzle, glossy rather than matte extrudate, and minimal stringing on a retraction test.",
+    "notes": "55 \u00b0C for 6 h if the spool has been left exposed \u2014 milder and shorter than PETG's 60-65 \u00b0C schedule and far milder than PA or PC. Drying is a recovery step here, not routine practice."
   },
   "storage": {
-    "recommendations": "Sealed bag or drybox with desiccant between uses. Behaves like PLA rather than PETG in storage — weeks of open air in a dry room are tolerable, and the mild 55 °C drying cycle recovers a neglected spool.",
+    "recommendations": "Sealed bag or drybox with desiccant between uses. Behaves like PLA rather than PETG in storage \u2014 weeks of open air in a dry room are tolerable, and the mild 55 \u00b0C drying cycle recovers a neglected spool.",
     "max_humidity_pct": 40,
     "hygroscopy": "low"
   },
   "price": {
     "usd_per_kg_low": 18,
     "usd_per_kg_high": 20,
-    "notes": "€16.52/kg at filament2print (~$18-20/kg). On par with or slightly above mid-range PLA and well below any engineering filament. USD conversion is approximate and the range is drawn from a single retailer (unverified breadth)."
+    "notes": "\u20ac16.52/kg at filament2print (~$18-20/kg). On par with or slightly above mid-range PLA and well below any engineering filament. USD conversion is approximate and the range is drawn from a single retailer (unverified breadth)."
   },
   "use_cases": {
     "recommended": [
@@ -91,11 +91,11 @@
       "indoor functional and display parts with PLA-class requirements"
     ],
     "not_recommended": [
-      "parts needing heat resistance (softens around 66 °C)",
+      "parts needing heat resistance (softens around 66 \u00b0C)",
       "food-contact items (no certification)",
       "parts to be sanded or finished (poor sandability per vendor)",
       "multi-material parts bonded directly to PLA (the interface does not weld)",
-      "impact-loaded parts (Charpy 2.9 kJ/m² is low)",
+      "impact-loaded parts (Charpy 2.9 kJ/m\u00b2 is low)",
       "textured PEI build plates (adhesion can damage the sheet)"
     ]
   },
@@ -115,7 +115,7 @@
       "max": 51.9,
       "recommended": 51.6
     },
-    "notes": "Density 1.30 g/cm³, above base PLA's 1.24 — a spool yields ~5 % less part volume than PLA. Tensile (XY) 51.6 ± 0.3 MPa, squarely in the PLA/PETG band. Charpy impact 2.9 ± 0.1 kJ/m² is the weak number: low even against PLA and far below PETG, so treat it as a stiff-but-brittle material. Softening temperature is published as 66 °C; Tg and HDT are not published (unverified), so max_service_temp_c 60 is an estimate taken as softening minus margin rather than a datasheet figure. Shrinkage is not documented."
+    "notes": "Density 1.30 g/cm\u00b3, above base PLA's 1.24 \u2014 a spool yields ~5 % less part volume than PLA. Tensile (XY) 51.6 \u00b1 0.3 MPa, squarely in the PLA/PETG band. Charpy impact 2.9 \u00b1 0.1 kJ/m\u00b2 is the weak number: low even against PLA and far below PETG, so treat it as a stiff-but-brittle material. Softening temperature is published as 66 \u00b0C; Tg and HDT are not published (unverified), so max_service_temp_c 60 is an estimate taken as softening minus margin rather than a datasheet figure. Shrinkage is not documented."
   },
   "scores": {
     "ease_of_print": 9,
@@ -129,9 +129,6 @@
     "water_tolerance": 6
   },
   "compatibility": {
-    "bonds_with": [
-      "cope"
-    ],
     "support_materials": [
       "pla",
       "bvoh"
@@ -139,7 +136,7 @@
     "usable_as_support_for": [
       "pla"
     ],
-    "notes": "The vendor explicitly does not recommend multi-material prints where CoPE must bond to PLA — the interface releases rather than welds despite the overlapping print window. That non-bond is the useful property: CoPE makes a clean breakaway support for PLA and PLA does the same for CoPE, exactly the relationship PLA and PETG have. Bonding to the copolyester family (petg, pctg, petg-cf) is plausible on chemistry grounds but is not stated by any source (unverified), so only self-bonding is listed."
+    "notes": "The vendor explicitly does not recommend multi-material prints where CoPE must bond to PLA \u2014 the interface releases rather than welds despite the overlapping print window. That non-bond is the useful property: CoPE makes a clean breakaway support for PLA and PLA does the same for CoPE, exactly the relationship PLA and PETG have. Bonding to the copolyester family (petg, pctg, petg-cf) is plausible on chemistry grounds but is not stated by any source (unverified), so only self-bonding is listed."
   },
   "plate_recommendations": [
     {
@@ -150,7 +147,7 @@
     {
       "plate_id": "glass-borosilicate",
       "rating": "usable",
-      "notes": "Backfilled from plate entry (Phase E reciprocity): Copolyester elastomer — assume PETG-style over-bonding risk on bare glass and keep the glue barrier."
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Copolyester elastomer \u2014 assume PETG-style over-bonding risk on bare glass and keep the glue barrier."
     },
     {
       "plate_id": "pp-sheet",
@@ -175,7 +172,7 @@
     {
       "plate_id": "pei-textured",
       "rating": "avoid",
-      "notes": "The datasheet warns against textured PEI specifically: bed adhesion is strong enough that removal risks tearing the plate surface. Use a smooth plate with Magigoo Original, or glass with a release agent, at 25-60 °C. Those surfaces are not yet catalog plate entries, so the recommendation lives here in notes."
+      "notes": "The datasheet warns against textured PEI specifically: bed adhesion is strong enough that removal risks tearing the plate surface. Use a smooth plate with Magigoo Original, or glass with a release agent, at 25-60 \u00b0C. Those surfaces are not yet catalog plate entries, so the recommendation lives here in notes."
     },
     {
       "plate_id": "supertack",
@@ -190,25 +187,25 @@
     {
       "plate_id": "buildtak-polymer",
       "rating": "avoid",
-      "notes": "Backfilled from plate entry (Phase E reciprocity): Copolyester elastomer combines the PETG fusion risk with elastomer tear behaviour — the worst of both listed cautions."
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Copolyester elastomer combines the PETG fusion risk with elastomer tear behaviour \u2014 the worst of both listed cautions."
     }
   ],
   "alternatives": [
     {
       "filament_id": "pla",
-      "reason": "The material CoPE is sold to replace, and still the better pick for anything finished by hand: PLA sands and post-processes properly where CoPE does not, has better impact than CoPE's 2.9 kJ/m² Charpy, and its budget tier undercuts CoPE's $18-20 — you give up the 400 mm/s / ~32 mm³/s ceiling, the strong bed grip and ~8 °C of softening (temp 3 vs 2)."
+      "reason": "The material CoPE is sold to replace, and still the better pick for anything finished by hand: PLA sands and post-processes properly where CoPE does not, has better impact than CoPE's 2.9 kJ/m\u00b2 Charpy, and its budget tier undercuts CoPE's $18-20 \u2014 you give up the 400 mm/s / ~32 mm\u00b3/s ceiling, the strong bed grip and ~8 \u00b0C of softening (temp 3 vs 2)."
     },
     {
       "filament_id": "pla-hf",
-      "reason": "The PLA-native answer to the same problem: 100-300 mm/s (600+ on capable hardware) with base-PLA chemistry, finishing and family bonding at $18-30 — a lower speed ceiling and weaker bed adhesion, though the latter is an advantage on textured PEI, which CoPE's own datasheet warns against."
+      "reason": "The PLA-native answer to the same problem: 100-300 mm/s (600+ on capable hardware) with base-PLA chemistry, finishing and family bonding at $18-30 \u2014 a lower speed ceiling and weaker bed adhesion, though the latter is an advantage on textured PEI, which CoPE's own datasheet warns against."
     },
     {
       "filament_id": "petg",
-      "reason": "If those parts must survive heat or water rather than just print fast: temp 5 vs 3, water 9 vs 6 and adh 9 vs 7 at $18-42 — bought with ease 7 vs 9, stringing and no comparable speed band."
+      "reason": "If those parts must survive heat or water rather than just print fast: temp 5 vs 3, water 9 vs 6 and adh 9 vs 7 at $18-42 \u2014 bought with ease 7 vs 9, stringing and no comparable speed band."
     },
     {
       "filament_id": "pctg",
-      "reason": "Copolyester bought for toughness rather than speed: adh 10 vs 7 and genuine impact strength where CoPE's Charpy is only 2.9 kJ/m² — at $30-55 vs $18-20 and a 250-270 °C all-metal hotend."
+      "reason": "Copolyester bought for toughness rather than speed: adh 10 vs 7 and genuine impact strength where CoPE's Charpy is only 2.9 kJ/m\u00b2 \u2014 at $30-55 vs $18-20 and a 250-270 \u00b0C all-metal hotend."
     }
   ],
   "emissions": {
@@ -219,10 +216,10 @@
       "unspecified low-level VOCs (no marker compound identified in the sources reviewed)"
     ],
     "ventilation": "optional",
-    "notes": "No styrene, no foaming agent and no filler. Odour is mild and the 190-230 °C print window sits at the low end for FDM, so emissions should track PLA rather than PETG or ABS. No emissions measurement exists for this specific blend (unverified) — the classification is inferred from its chemistry and processing temperature."
+    "notes": "No styrene, no foaming agent and no filler. Odour is mild and the 190-230 \u00b0C print window sits at the low end for FDM, so emissions should track PLA rather than PETG or ABS. No emissions measurement exists for this specific blend (unverified) \u2014 the classification is inferred from its chemistry and processing temperature."
   },
   "safety_notes": "Unfilled and non-abrasive, so no nozzle or dust hazard. The practical hazard is the build plate: adhesion is strong enough to damage textured sheets, so use a release agent rather than force on removal.",
-  "additional_notes": "Positioned as a PLA replacement rather than a PETG one despite the copolyester chemistry — it shares PLA's temperatures, cooling and hardware requirements, and its heat resistance is only marginally better. Choose it over PLA when the machine can exploit the higher flow ceiling; choose PETG instead when the part needs toughness, water resistance or heat.",
+  "additional_notes": "Positioned as a PLA replacement rather than a PETG one despite the copolyester chemistry \u2014 it shares PLA's temperatures, cooling and hardware requirements, and its heat resistance is only marginally better. Choose it over PLA when the machine can exploit the higher flow ceiling; choose PETG instead when the part needs toughness, water resistance or heat.",
   "provenance": {
     "sources": [
       "https://wiki.polymaker.com/polymaker-products/polymaker-filaments/panchroma-tm/panchroma-tm-cope",
@@ -234,7 +231,7 @@
     ],
     "last_verified": "2026-07-31",
     "confidence": "low",
-    "conflicts": "Classification is the main open question. The research notes describe CoPE as a PLA-class material (PLA print settings, sold as a PLA replacement, catalogued by retailers under PLA) while the product name and vendor copy call it a co-polyester; the catalog assignment for this phase fixes base_type null and polymer_class polyester-copolyester, so the entry is filed as a standalone blend even though its behaviour and slot in a print farm are PLA's. Data is single-vendor: every number here traces to Polymaker or a Polymaker reseller, with no independent testing, which is why confidence is low. Tg, HDT, shrinkage, UV/weather behaviour and dryness validation are all undocumented; the 66 °C figure is a softening temperature of unstated method. Layer adhesion (7), water tolerance (6) and the UV/weather scores are reasoned from PLA-plus-copolyester chemistry, not measured. Bonding to PETG/PCTG is plausible but unverified and therefore not recorded."
+    "conflicts": "Classification is the main open question. The research notes describe CoPE as a PLA-class material (PLA print settings, sold as a PLA replacement, catalogued by retailers under PLA) while the product name and vendor copy call it a co-polyester; the catalog assignment for this phase fixes base_type null and polymer_class polyester-copolyester, so the entry is filed as a standalone blend even though its behaviour and slot in a print farm are PLA's. Data is single-vendor: every number here traces to Polymaker or a Polymaker reseller, with no independent testing, which is why confidence is low. Tg, HDT, shrinkage, UV/weather behaviour and dryness validation are all undocumented; the 66 \u00b0C figure is a softening temperature of unstated method. Layer adhesion (7), water tolerance (6) and the UV/weather scores are reasoned from PLA-plus-copolyester chemistry, not measured. Bonding to PETG/PCTG is plausible but unverified and therefore not recorded."
   },
   "trade_names": [
     {

@@ -12,8 +12,8 @@
   "base_type": "abs",
   "variation_kind": "esd-safe",
   "polymer_class": "composite-other",
-  "chemical_makeup": "The same amorphous acrylonitrile-butadiene-styrene terpolymer as base ABS, compounded with a permanent, non-migratory conductive carbon additive. The additive chemistry differs by brand and is the main reason the electrical numbers do: 3DXTech's 3DXSTAT ESD-ABS uses multi-wall carbon nanotubes in a premium ABS base, while eSUN describes an 'antistatic modified ABS' reaching surface resistance as low as 10⁵ Ω without naming the filler (carbon black is the usual choice for that band, but eSUN does not say so — unverified). Loading is low compared with a structural composite: enough to build a conductive network, not enough to reinforce. Always black, because the filler is.",
-  "summary": "Base ABS made static-dissipative for electronics work, and the tougher, hotter-running counterpart to petg-esd. Deltas vs abs: surface resistance controlled down to about 10⁵ Ω, tensile down slightly to 38 MPa XY, a pronounced Z penalty (22 MPa Z tensile and only 2.1 kJ/m² Z impact against 19.29 kJ/m² XY), density oddly low at 0.97 g/cm³, and a specialist price. Almost nothing else moves — HDT 96 °C against base ABS's 99 °C, same enclosure need, same styrene emissions, and notably no hardened-nozzle requirement, which is the clearest delta against abs-cf. Deltas vs petg-esd: three to four orders of magnitude more dissipative (10⁵ Ω against 10⁹ Ω) and 28 °C more heat resistance, but a warp-prone styrenic process instead of an easy copolyester one.",
+  "chemical_makeup": "The same amorphous acrylonitrile-butadiene-styrene terpolymer as base ABS, compounded with a permanent, non-migratory conductive carbon additive. The additive chemistry differs by brand and is the main reason the electrical numbers do: 3DXTech's 3DXSTAT ESD-ABS uses multi-wall carbon nanotubes in a premium ABS base, while eSUN describes an 'antistatic modified ABS' reaching surface resistance as low as 10\u2075 \u03a9 without naming the filler (carbon black is the usual choice for that band, but eSUN does not say so \u2014 unverified). Loading is low compared with a structural composite: enough to build a conductive network, not enough to reinforce. Always black, because the filler is.",
+  "summary": "Base ABS made static-dissipative for electronics work, and the tougher, hotter-running counterpart to petg-esd. Deltas vs abs: surface resistance controlled down to about 10\u2075 \u03a9, tensile down slightly to 38 MPa XY, a pronounced Z penalty (22 MPa Z tensile and only 2.1 kJ/m\u00b2 Z impact against 19.29 kJ/m\u00b2 XY), density oddly low at 0.97 g/cm\u00b3, and a specialist price. Almost nothing else moves \u2014 HDT 96 \u00b0C against base ABS's 99 \u00b0C, same enclosure need, same styrene emissions, and notably no hardened-nozzle requirement, which is the clearest delta against abs-cf. Deltas vs petg-esd: three to four orders of magnitude more dissipative (10\u2075 \u03a9 against 10\u2079 \u03a9) and 28 \u00b0C more heat resistance, but a warp-prone styrenic process instead of an easy copolyester one.",
   "printing": {
     "nozzle_temp_c": {
       "min": 220,
@@ -44,13 +44,13 @@
       "recommended": 10
     },
     "enclosure_open_for_cooling": false,
-    "notes": "Brand spread is wide in the same pattern as abs-cf: eSUN 250-280 °C nozzle / 70-90 °C bed, 3DXTech 3DXSTAT ESD-ABS 220-240 °C / 100-110 °C — the recorded window is a union of two non-overlapping recommendations, so read the spool's datasheet. Bed follows the higher figures because base ABS behaviour dominates once the part is on the plate. The one genuinely permissive delta against every filled grade in this cluster is the nozzle: neither vendor flags this material as abrasive, because a low-loading conductive carbon or nanotube additive is nothing like chopped fiber, so a standard brass nozzle should serve (no explicit vendor statement either way — unverified, and a hardened nozzle costs nothing to fit if in doubt). eSUN allows 10-40 % part cooling, unusual for an ABS-family material and more generous than base ABS's 0-20 %, and rates the material to 300 mm/s. 3DXTech recommends a heated chamber; eSUN does not state one, and standard ABS practice — sealed, draft-free, passive enclosure — is sufficient for typical parts, so heated_chamber_required stays false as on abs and abs-cf."
+    "notes": "Brand spread is wide in the same pattern as abs-cf: eSUN 250-280 \u00b0C nozzle / 70-90 \u00b0C bed, 3DXTech 3DXSTAT ESD-ABS 220-240 \u00b0C / 100-110 \u00b0C \u2014 the recorded window is a union of two non-overlapping recommendations, so read the spool's datasheet. Bed follows the higher figures because base ABS behaviour dominates once the part is on the plate. The one genuinely permissive delta against every filled grade in this cluster is the nozzle: neither vendor flags this material as abrasive, because a low-loading conductive carbon or nanotube additive is nothing like chopped fiber, so a standard brass nozzle should serve (no explicit vendor statement either way \u2014 unverified, and a hardened nozzle costs nothing to fit if in doubt). eSUN allows 10-40 % part cooling, unusual for an ABS-family material and more generous than base ABS's 0-20 %, and rates the material to 300 mm/s. 3DXTech recommends a heated chamber; eSUN does not state one, and standard ABS practice \u2014 sealed, draft-free, passive enclosure \u2014 is sufficient for typical parts, so heated_chamber_required stays false as on abs and abs-cf."
   },
   "feeding": {
     "drive_system": "any",
     "ams_compatible": "conditional",
     "feeding_assistant_recommended": false,
-    "notes": "Rigid, so any extruder feeds it; not an elastomer, so no shore hardness and no feeding assistant. Feeding behaviour is essentially base ABS's — this is not a fiber composite, so the brittleness and PTFE-abrasion arguments that bar pa6-cf and pet-cf from a material station do not apply with anything like the same force. Recorded 'conditional' rather than base ABS's plain 'yes' for the same reason petg-esd is: the conductive carbon filler is mildly abrasive over a long PTFE feed path, no vendor documents this grade in a material station (unverified), and conductive dust in a feed path is an unquantified nuisance around electronics. Standard brass or steel drive gears are sufficient."
+    "notes": "Rigid, so any extruder feeds it; not an elastomer, so no shore hardness and no feeding assistant. Feeding behaviour is essentially base ABS's \u2014 this is not a fiber composite, so the brittleness and PTFE-abrasion arguments that bar pa6-cf and pet-cf from a material station do not apply with anything like the same force. Recorded 'conditional' rather than base ABS's plain 'yes' for the same reason petg-esd is: the conductive carbon filler is mildly abrasive over a long PTFE feed path, no vendor documents this grade in a material station (unverified), and conductive dust in a feed path is an unquantified nuisance around electronics. Standard brass or steel drive gears are sufficient."
   },
   "drying": {
     "required_before_use": "if-exposed",
@@ -66,11 +66,11 @@
     },
     "methods": [
       "dedicated filament dryer",
-      "convection oven at 70-80 °C",
+      "convection oven at 70-80 \u00b0C",
       "drybox with desiccant"
     ],
-    "dryness_validation": "No popping, crackling or steam at the nozzle and no bubbles in a purge strand. Gloss is a weak indicator here because the carbon-loaded surface is dark and flat, the same caveat recorded on petg-esd — judge by sound and strand quality.",
-    "notes": "eSUN specifies 70 °C for over 8 h and 3DXTech 80 °C for 4 h — identical to the same two brands' ABS-CF schedules and inside base ABS's 70-85 °C / 4-8 h band. The ESD additive changes hygroscopy not at all, so this stays a store-it-sealed material rather than a dry-before-every-print one, unlike pa-cf."
+    "dryness_validation": "No popping, crackling or steam at the nozzle and no bubbles in a purge strand. Gloss is a weak indicator here because the carbon-loaded surface is dark and flat, the same caveat recorded on petg-esd \u2014 judge by sound and strand quality.",
+    "notes": "eSUN specifies 70 \u00b0C for over 8 h and 3DXTech 80 \u00b0C for 4 h \u2014 identical to the same two brands' ABS-CF schedules and inside base ABS's 70-85 \u00b0C / 4-8 h band. The ESD additive changes hygroscopy not at all, so this stays a store-it-sealed material rather than a dry-before-every-print one, unlike pa-cf."
   },
   "storage": {
     "recommendations": "Sealed box or drybox with desiccant between prints, as for base ABS. Moisture behaviour is the base material's; the only reason to be stricter is the price of the filament, not its chemistry.",
@@ -88,14 +88,14 @@
       "enclosures and casings for electrostatic-sensitive devices",
       "robot and automation components carrying sensitive electronics",
       "static-dissipative guards and covers on production lines",
-      "ESD-safe tooling that also needs to hold shape near 90 °C, where petg-esd (HDT 68-76 °C) gives up",
+      "ESD-safe tooling that also needs to hold shape near 90 \u00b0C, where petg-esd (HDT 68-76 \u00b0C) gives up",
       "replacing machined ESD plastics for low-volume fixtures"
     ],
     "not_recommended": [
       "any part needing a colour other than black",
-      "outdoor or UV-exposed service — the ESD additive does nothing for ABS's polybutadiene UV weakness",
-      "parts loaded in Z: Z impact strength is 2.1 kJ/m² against 19.29 kJ/m² XY, the widest anisotropy gap in this cluster",
-      "stiff structural parts — use abs-cf, which reinforces where this additive only conducts",
+      "outdoor or UV-exposed service \u2014 the ESD additive does nothing for ABS's polybutadiene UV weakness",
+      "parts loaded in Z: Z impact strength is 2.1 kJ/m\u00b2 against 19.29 kJ/m\u00b2 XY, the widest anisotropy gap in this cluster",
+      "stiff structural parts \u2014 use abs-cf, which reinforces where this additive only conducts",
       "food-contact items",
       "printing in an unventilated occupied room (styrene fumes)",
       "cost-sensitive work where plain ABS would do"
@@ -119,7 +119,7 @@
       "max": 42,
       "recommended": 38
     },
-    "notes": "eSUN ABS-ESD: density 0.97 g/cm³, surface resistance as low as 10⁵ Ω (permanent, non-migratory), tensile 38 MPa XY / 22 MPa Z, flexural 63 MPa XY / 35.9 MPa Z, elongation at break 4.8 % XY / 3.1 % Z, Charpy impact 19.29 kJ/m² XY / 2.1 kJ/m² Z, HDT@0.45 MPa 96 °C. Two figures deserve attention. The density is the odd one: 0.97 g/cm³ is BELOW base ABS's 1.05 and below every filled grade here, which is the opposite of what adding carbon should do — it is recorded as published but should be re-verified, and if correct it makes this the highest part-volume-per-spool material in the styrenic family at 103.1 cm³ per 100 g. The Z impact figure is the other: a 9:1 XY-to-Z ratio is far worse than abs-cf's 0.69 tensile ratio or petg-esd's 0.40, suggesting the conductive network concentrates at layer interfaces (mechanism inferred from the data pattern, unverified). Mechanically the additive is functional, not structural: 38 MPa tensile sits inside base ABS's own 30-45 MPa band and below abs-cf's 43.3 MPa, and HDT 96 °C is fractionally under base ABS's 99 °C. Tg and max service temperature are carried from the base abs entry; shrinkage is unpublished and omitted. For calibration, the sibling petg-esd runs 10⁹ Ω surface resistivity and 68-76 °C HDT — this grade is three to four orders of magnitude more dissipative and 20-28 °C more heat-resistant."
+    "notes": "eSUN ABS-ESD: density 0.97 g/cm\u00b3, surface resistance as low as 10\u2075 \u03a9 (permanent, non-migratory), tensile 38 MPa XY / 22 MPa Z, flexural 63 MPa XY / 35.9 MPa Z, elongation at break 4.8 % XY / 3.1 % Z, Charpy impact 19.29 kJ/m\u00b2 XY / 2.1 kJ/m\u00b2 Z, HDT@0.45 MPa 96 \u00b0C. Two figures deserve attention. The density is the odd one: 0.97 g/cm\u00b3 is BELOW base ABS's 1.05 and below every filled grade here, which is the opposite of what adding carbon should do \u2014 it is recorded as published but should be re-verified, and if correct it makes this the highest part-volume-per-spool material in the styrenic family at 103.1 cm\u00b3 per 100 g. The Z impact figure is the other: a 9:1 XY-to-Z ratio is far worse than abs-cf's 0.69 tensile ratio or petg-esd's 0.40, suggesting the conductive network concentrates at layer interfaces (mechanism inferred from the data pattern, unverified). Mechanically the additive is functional, not structural: 38 MPa tensile sits inside base ABS's own 30-45 MPa band and below abs-cf's 43.3 MPa, and HDT 96 \u00b0C is fractionally under base ABS's 99 \u00b0C. Tg and max service temperature are carried from the base abs entry; shrinkage is unpublished and omitted. For calibration, the sibling petg-esd runs 10\u2079 \u03a9 surface resistivity and 68-76 \u00b0C HDT \u2014 this grade is three to four orders of magnitude more dissipative and 20-28 \u00b0C more heat-resistant."
   },
   "scores": {
     "ease_of_print": 4,
@@ -136,7 +136,6 @@
     "bonds_with": [
       "abs",
       "abs-cf",
-      "abs-esd",
       "abs-fr",
       "abs-gf",
       "abs-plus",
@@ -146,13 +145,13 @@
       "hips"
     ],
     "usable_as_support_for": [],
-    "notes": "Welds to itself and across the styrenic family on the shared SAN matrix — the useful case being an ESD-safe contact surface printed onto an otherwise plain ABS fixture, spending the expensive filament only where charge control matters, exactly as recorded for petg-esd on plain PETG (mechanical soundness inferred from shared chemistry, unverified — and note that a multi-material ESD part is only dissipative where the ESD material actually is). HIPS is the family's breakaway and D-limonene-soluble support, documented for base ABS and inferred here; a conductive additive could in principle affect the solvent-support interaction, which no source tests (unverified). PLA, PETG, PVA and BVOH are all out on temperature. Not listed as a support for other materials — far too expensive for the role."
+    "notes": "Welds to itself and across the styrenic family on the shared SAN matrix \u2014 the useful case being an ESD-safe contact surface printed onto an otherwise plain ABS fixture, spending the expensive filament only where charge control matters, exactly as recorded for petg-esd on plain PETG (mechanical soundness inferred from shared chemistry, unverified \u2014 and note that a multi-material ESD part is only dissipative where the ESD material actually is). HIPS is the family's breakaway and D-limonene-soluble support, documented for base ABS and inferred here; a conductive additive could in principle affect the solvent-support interaction, which no source tests (unverified). PLA, PETG, PVA and BVOH are all out on temperature. Not listed as a support for other materials \u2014 far too expensive for the role."
   },
   "plate_recommendations": [
     {
       "plate_id": "pei-textured",
       "rating": "recommended",
-      "notes": "Textured PEI at 90-110 °C with an adhesion aid, following base ABS practice — the ESD additive does nothing for warp, so the glue stick or ABS promoter plus a brim matters more here than on abs-cf, where the fiber helps. Not vendor-documented for ESD grades (unverified)."
+      "notes": "Textured PEI at 90-110 \u00b0C with an adhesion aid, following base ABS practice \u2014 the ESD additive does nothing for warp, so the glue stick or ABS promoter plus a brim matters more here than on abs-cf, where the fiber helps. Not vendor-documented for ESD grades (unverified)."
     },
     {
       "plate_id": "pei-smooth",
@@ -183,7 +182,7 @@
   "alternatives": [
     {
       "filament_id": "petg-esd",
-      "reason": "The easy-process ESD option: open-frame, far less warp (3 vs 8) and easier overall (ease 6 vs 4) — but three to four orders of magnitude less dissipative (10⁹ Ω vs 10⁵ Ω) and ~28 °C less heat resistance (temp 5 vs 7)."
+      "reason": "The easy-process ESD option: open-frame, far less warp (3 vs 8) and easier overall (ease 6 vs 4) \u2014 but three to four orders of magnitude less dissipative (10\u2079 \u03a9 vs 10\u2075 \u03a9) and ~28 \u00b0C less heat resistance (temp 5 vs 7)."
     },
     {
       "filament_id": "abs",
@@ -191,11 +190,11 @@
     },
     {
       "filament_id": "abs-cf",
-      "reason": "Same base with a large stiffness and warp gain instead of an electrical spec (dim 8 vs 4, warp 5 vs 8, adhesion 5 vs 4) at lower cost ($32-70 vs $45-140) — but its conductivity is unspecified and uncontrolled, and it requires a hardened nozzle where ABS-ESD does not."
+      "reason": "Same base with a large stiffness and warp gain instead of an electrical spec (dim 8 vs 4, warp 5 vs 8, adhesion 5 vs 4) at lower cost ($32-70 vs $45-140) \u2014 but its conductivity is unspecified and uncontrolled, and it requires a hardened nozzle where ABS-ESD does not."
     },
     {
       "filament_id": "pc-abs",
-      "reason": "If heat and stiffness matter more than the resistance spec, PC-ABS is cheaper ($44-48 vs $45-140), stronger (compression 7 vs 6) and better-bonded (adhesion 7 vs 4) in an ABS-like process — with no ESD control."
+      "reason": "If heat and stiffness matter more than the resistance spec, PC-ABS is cheaper ($44-48 vs $45-140), stronger (compression 7 vs 6) and better-bonded (adhesion 7 vs 4) in an ABS-like process \u2014 with no ESD control."
     }
   ],
   "emissions": {
@@ -208,10 +207,10 @@
       "conductive carbon filler fines (post-processing)"
     ],
     "ventilation": "required",
-    "notes": "Base ABS's emission profile unchanged — styrene plus ultrafine-particle rates roughly 100-1000x PLA's (Azimi et al., ES&T) — which puts this in the worst tier alongside abs-cf, abs-gf and asa-cf, and far above sibling petg-esd's low-VOC copolyester profile. Whether carbon nanotube or carbon black additives contribute their own emissions during printing is unstudied (unverified). Print in a vented enclosure or filter through HEPA plus activated carbon. The bench hazard is distinct: sanding or drilling liberates fine conductive dust, which is both a respiratory irritant and a short-circuit risk around energised electronics — precisely the environment this material is bought for."
+    "notes": "Base ABS's emission profile unchanged \u2014 styrene plus ultrafine-particle rates roughly 100-1000x PLA's (Azimi et al., ES&T) \u2014 which puts this in the worst tier alongside abs-cf, abs-gf and asa-cf, and far above sibling petg-esd's low-VOC copolyester profile. Whether carbon nanotube or carbon black additives contribute their own emissions during printing is unstudied (unverified). Print in a vented enclosure or filter through HEPA plus activated carbon. The bench hazard is distinct: sanding or drilling liberates fine conductive dust, which is both a respiratory irritant and a short-circuit risk around energised electronics \u2014 precisely the environment this material is bought for."
   },
-  "safety_notes": "Styrene is a respiratory irritant and a suspected carcinogen with chronic exposure; ventilation is not optional. Do not sand or machine parts without respiratory protection and dust capture — the filler fines are conductive, so keep them away from live electronics and clean the bench afterwards. Not food-contact suitable: the conductive additive rules it out regardless of anything else. Do not treat a printed part as a verified ESD control item without measuring it — as documented on petg-esd, printed surface resistivity moves with print temperature, and the two brands here target bands three to four orders of magnitude apart. No hardened nozzle is required, unlike every fiber-filled grade in this cluster.",
-  "additional_notes": "Choose between the two ESD entries on temperature and on how dissipative the part must be, not on price. ABS-ESD reaches about 10⁵ Ω against petg-esd's 10⁹ Ω — the difference between conductive-tier and the upper edge of the dissipative band, which for some workplace ESD standards decides the material outright — and holds 96 °C HDT against 68-76 °C. What it gives up is the easy print: this is full base-ABS warp behaviour with a styrene emission profile, where petg-esd prints on an open frame. Verify resistivity on your own coupons rather than trusting the spool label, and design against Z loading deliberately: a 9:1 XY-to-Z impact ratio means an ESD tray that survives being dropped flat may shatter dropped on edge. Against abs-cf, the split is clean: the fiber grade reinforces and needs a hardened nozzle, this one conducts and does not.",
+  "safety_notes": "Styrene is a respiratory irritant and a suspected carcinogen with chronic exposure; ventilation is not optional. Do not sand or machine parts without respiratory protection and dust capture \u2014 the filler fines are conductive, so keep them away from live electronics and clean the bench afterwards. Not food-contact suitable: the conductive additive rules it out regardless of anything else. Do not treat a printed part as a verified ESD control item without measuring it \u2014 as documented on petg-esd, printed surface resistivity moves with print temperature, and the two brands here target bands three to four orders of magnitude apart. No hardened nozzle is required, unlike every fiber-filled grade in this cluster.",
+  "additional_notes": "Choose between the two ESD entries on temperature and on how dissipative the part must be, not on price. ABS-ESD reaches about 10\u2075 \u03a9 against petg-esd's 10\u2079 \u03a9 \u2014 the difference between conductive-tier and the upper edge of the dissipative band, which for some workplace ESD standards decides the material outright \u2014 and holds 96 \u00b0C HDT against 68-76 \u00b0C. What it gives up is the easy print: this is full base-ABS warp behaviour with a styrene emission profile, where petg-esd prints on an open frame. Verify resistivity on your own coupons rather than trusting the spool label, and design against Z loading deliberately: a 9:1 XY-to-Z impact ratio means an ESD tray that survives being dropped flat may shatter dropped on edge. Against abs-cf, the split is clean: the fiber grade reinforces and needs a hardened nozzle, this one conducts and does not.",
   "provenance": {
     "sources": [
       "https://www.esun3d.com/abs-esd-product/",
@@ -222,18 +221,18 @@
     ],
     "last_verified": "2026-08-01",
     "confidence": "low",
-    "conflicts": "Additive chemistry differs by brand and is disclosed by only one: 3DXTech names multi-wall carbon nanotubes, eSUN says only 'antistatic modified ABS' — so the entry describes a functional class, not one compound. Nozzle and bed temperatures do not overlap between the two brands (eSUN 250-280 °C / 70-90 °C, 3DXTech 220-240 °C / 100-110 °C), the same unexplained pattern seen on abs-cf. Density 0.97 g/cm³ is a single eSUN figure and is anomalous — below unfilled ABS, which adding carbon should not produce — and needs re-verification. Pricing could not be established for either brand and the recorded band is bracketed by analogy to the wider ESD filament market and to 3DXTech's ESD-PETG pricing; treat it as an estimate. Surface resistance is quoted as 'as low as 10⁵ Ω' by eSUN with no band and no method, and 3DXTech publishes no figure on the fetched page, so the material has no single electrical specification — and petg-esd's sourced data shows printed resistivity moving two orders of magnitude with a 20 °C nozzle change, which almost certainly applies here too (unverified for this grade). Hardened-nozzle status is recorded false because neither vendor flags abrasion, not because either states it is unnecessary. Tg, max service temperature and plate ratings are carried from base ABS; shrinkage is unpublished and omitted. HIPS support pairing is inherited from ABS chemistry and untested against a conductive additive. The layer-interface explanation for the 9:1 Z impact ratio is inferred from the data pattern alone."
+    "conflicts": "Additive chemistry differs by brand and is disclosed by only one: 3DXTech names multi-wall carbon nanotubes, eSUN says only 'antistatic modified ABS' \u2014 so the entry describes a functional class, not one compound. Nozzle and bed temperatures do not overlap between the two brands (eSUN 250-280 \u00b0C / 70-90 \u00b0C, 3DXTech 220-240 \u00b0C / 100-110 \u00b0C), the same unexplained pattern seen on abs-cf. Density 0.97 g/cm\u00b3 is a single eSUN figure and is anomalous \u2014 below unfilled ABS, which adding carbon should not produce \u2014 and needs re-verification. Pricing could not be established for either brand and the recorded band is bracketed by analogy to the wider ESD filament market and to 3DXTech's ESD-PETG pricing; treat it as an estimate. Surface resistance is quoted as 'as low as 10\u2075 \u03a9' by eSUN with no band and no method, and 3DXTech publishes no figure on the fetched page, so the material has no single electrical specification \u2014 and petg-esd's sourced data shows printed resistivity moving two orders of magnitude with a 20 \u00b0C nozzle change, which almost certainly applies here too (unverified for this grade). Hardened-nozzle status is recorded false because neither vendor flags abrasion, not because either states it is unnecessary. Tg, max service temperature and plate ratings are carried from base ABS; shrinkage is unpublished and omitted. HIPS support pairing is inherited from ABS chemistry and untested against a conductive additive. The layer-interface explanation for the 9:1 Z impact ratio is inferred from the data pattern alone."
   },
   "trade_names": [
     {
       "manufacturer": "3dxtech",
       "product": "3DXSTAT ESD-ABS",
-      "notes": "Multi-wall carbon nanotube additive in a premium ABS base; prints 220-240 °C, well below eSUN's window."
+      "notes": "Multi-wall carbon nanotube additive in a premium ABS base; prints 220-240 \u00b0C, well below eSUN's window."
     },
     {
       "manufacturer": "esun",
       "product": "ABS-ESD",
-      "notes": "Permanent antistatic modified ABS, surface resistance as low as 10⁵ Ω; the primary datasheet behind this entry."
+      "notes": "Permanent antistatic modified ABS, surface resistance as low as 10\u2075 \u03a9; the primary datasheet behind this entry."
     },
     {
       "manufacturer": "iemai-3d",

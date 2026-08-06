@@ -11,8 +11,8 @@
   "base_type": null,
   "variation_kind": null,
   "polymer_class": "composite-other",
-  "chemical_makeup": "Polymethyl methacrylate — a fully amorphous, unmodified acrylic thermoplastic. Unlike mabs (which toughens the same optical goal with butadiene rubber), standard PMMA has no rubber phase at all, which is what buys its glass-like clarity and costs it every bit of impact resistance",
-  "summary": "The glass substitute: genuinely optical clarity, excellent UV and weathering behaviour, and a hard, scratch-resistant surface. The price is a material that is brittle, absorbs moisture aggressively and is slow to dry out again, expands a lot with temperature, and has been described in print by one guide as having 'terrible bed and layer adhesion' — so first layers and Z strength are the two things to plan around before anything else.",
+  "chemical_makeup": "Polymethyl methacrylate \u2014 a fully amorphous, unmodified acrylic thermoplastic. Unlike mabs (which toughens the same optical goal with butadiene rubber), standard PMMA has no rubber phase at all, which is what buys its glass-like clarity and costs it every bit of impact resistance",
+  "summary": "The glass substitute: genuinely optical clarity, excellent UV and weathering behaviour, and a hard, scratch-resistant surface. The price is a material that is brittle, absorbs moisture aggressively and is slow to dry out again, expands a lot with temperature, and has been described in print by one guide as having 'terrible bed and layer adhesion' \u2014 so first layers and Z strength are the two things to plan around before anything else.",
   "printing": {
     "nozzle_temp_c": {
       "min": 220,
@@ -38,12 +38,12 @@
       "max": 30,
       "recommended": 15
     },
-    "notes": "Standard grades run 220-260 °C — 3DSourced 245-255 °C with ~250 °C optimal, Filament Cheat Sheet 230-260 °C, filaments.directory 238-250 °C — and the recorded 248 °C sits in the overlap. Impact-modified grades run cooler: Treed's HIRMA specifies 220-230 °C because the toughening package lowers melt viscosity, so check the spool rather than assuming the standard window. Bed 70-120 °C (3DSourced ~100 °C optimal, Filament Cheat Sheet 70-100 °C, Treed HIRMA 90-110 °C). Speed matters for clarity: 3DSourced recommends 30 mm/s or slower, Treed 30-50 mm/s — pushing speed frosts the part. Fan low to moderate; Treed specifies 0-20 %. An enclosure is strongly recommended by every source, both for warp control against PMMA's high thermal expansion and for containing fumes; an actively heated chamber is not called for. No hardened nozzle — this is an unfilled resin."
+    "notes": "Standard grades run 220-260 \u00b0C \u2014 3DSourced 245-255 \u00b0C with ~250 \u00b0C optimal, Filament Cheat Sheet 230-260 \u00b0C, filaments.directory 238-250 \u00b0C \u2014 and the recorded 248 \u00b0C sits in the overlap. Impact-modified grades run cooler: Treed's HIRMA specifies 220-230 \u00b0C because the toughening package lowers melt viscosity, so check the spool rather than assuming the standard window. Bed 70-120 \u00b0C (3DSourced ~100 \u00b0C optimal, Filament Cheat Sheet 70-100 \u00b0C, Treed HIRMA 90-110 \u00b0C). Speed matters for clarity: 3DSourced recommends 30 mm/s or slower, Treed 30-50 mm/s \u2014 pushing speed frosts the part. Fan low to moderate; Treed specifies 0-20 %. An enclosure is strongly recommended by every source, both for warp control against PMMA's high thermal expansion and for containing fumes; an actively heated chamber is not called for. No hardened nozzle \u2014 this is an unfilled resin."
   },
   "feeding": {
     "drive_system": "any",
     "feeding_assistant_recommended": false,
-    "notes": "ams_compatible is omitted rather than guessed: no vendor or community statement about PMMA in an AMS, MMU or CFS was found. The relevant risk is not softness but brittleness — the schema's own caution about brittle filament snapping inside a material-station feed path applies directly here, and PMMA is the most brittle rigid material in the catalog after damp PVA. A tight-radius Bowden path carries the same breakage risk for the same reason. Rigid enough to feed on any drive system in principle; handle spool ends carefully, since a snapped filament inside a PTFE tube is the characteristic PMMA failure."
+    "notes": "ams_compatible is omitted rather than guessed: no vendor or community statement about PMMA in an AMS, MMU or CFS was found. The relevant risk is not softness but brittleness \u2014 the schema's own caution about brittle filament snapping inside a material-station feed path applies directly here, and PMMA is the most brittle rigid material in the catalog after damp PVA. A tight-radius Bowden path carries the same breakage risk for the same reason. Rigid enough to feed on any drive system in principle; handle spool ends carefully, since a snapped filament inside a PTFE tube is the characteristic PMMA failure."
   },
   "drying": {
     "required_before_use": "always",
@@ -63,8 +63,8 @@
       "print from a heated drybox",
       "vacuum-sealed bag with desiccant between prints"
     ],
-    "dryness_validation": "No popping or crackling at the nozzle and no foam or micro-bubbles in an extruded strand; for this material specifically, watch the extrudate's transparency — a hazy or milky test strand where the grade should be water-clear is the practical tell that moisture is still present, though no source publishes this as a formal check",
-    "notes": "Treed specifies 70 °C for at least 3 hours in a filament dryer for HIRMA, then storage in vacuum-sealed bags with desiccant — the only published protocol found, and the basis for the recorded band. Filament Cheat Sheet describes PMMA as absorbing water 'aggressively' and being 'slow to dehydrate', which is why required_before_use is 'always' rather than 'if-exposed': a spool left open loses clarity before it loses strength, and a long dry is needed to recover it."
+    "dryness_validation": "No popping or crackling at the nozzle and no foam or micro-bubbles in an extruded strand; for this material specifically, watch the extrudate's transparency \u2014 a hazy or milky test strand where the grade should be water-clear is the practical tell that moisture is still present, though no source publishes this as a formal check",
+    "notes": "Treed specifies 70 \u00b0C for at least 3 hours in a filament dryer for HIRMA, then storage in vacuum-sealed bags with desiccant \u2014 the only published protocol found, and the basis for the recorded band. Filament Cheat Sheet describes PMMA as absorbing water 'aggressively' and being 'slow to dehydrate', which is why required_before_use is 'always' rather than 'if-exposed': a spool left open loses clarity before it loses strength, and a long dry is needed to recover it."
   },
   "storage": {
     "recommendations": "Vacuum-sealed bags with desiccant between prints (Treed's own instruction), or a drybox held low; printing from a heated drybox is worthwhile on long jobs because uptake continues during the print.",
@@ -74,7 +74,7 @@
   "price": {
     "usd_per_kg_low": 40,
     "usd_per_kg_high": 90,
-    "notes": "filaments.directory surveyed 8 PMMA filaments at an average €46.26/kg with a €37-80/kg spread, which converts to roughly $40-87/kg — the recorded band. Impact-modified grades cost about double: Treed HIRMA at €53.33/500 g is roughly $115/kg equivalent, above the recorded high because it is a different product class rather than an outlier price for standard PMMA."
+    "notes": "filaments.directory surveyed 8 PMMA filaments at an average \u20ac46.26/kg with a \u20ac37-80/kg spread, which converts to roughly $40-87/kg \u2014 the recorded band. Impact-modified grades cost about double: Treed HIRMA at \u20ac53.33/500 g is roughly $115/kg equivalent, above the recorded high because it is a different product class rather than an outlier price for standard PMMA."
   },
   "use_cases": {
     "recommended": [
@@ -89,7 +89,7 @@
       "food-contact items (3DSourced states PMMA is not food-safe)",
       "snap fits, living hinges and any flexing feature",
       "impact-prone parts on standard non-toughened grades",
-      "parts loaded in Z — layer adhesion is the material's worst property",
+      "parts loaded in Z \u2014 layer adhesion is the material's worst property",
       "first prints on a machine with no enclosure or adhesion aid",
       "anyone who cannot keep the filament dry between jobs"
     ]
@@ -110,7 +110,7 @@
       "max": 83,
       "recommended": 55
     },
-    "notes": "Density 1.20 g/cm³ for standard PMMA (3DSourced); Treed's toughened HIRMA is slightly lighter at 1.17. Tg is recorded as 105 °C, the standard cast/extruded-PMMA figure from general polymer literature, but filaments.directory reports an 85-165 °C spread across grades, copolymers and additive packages — the widest Tg range of any entry in this catalog — so treat 105 as a centre of mass rather than a spec for a particular spool. HDT is deliberately omitted: no filament source publishes one. Treed reports a 77 °C 'softening temperature' for HIRMA, which reads as a Vicat softening point rather than an HDT@0.45 MPa and must not be conflated with one; it is nonetheless the most concrete heat number available and is the reason temperature_tolerance is only 5. Tensile is split by grade: 3DSourced cites 83.4 MPa, which reads as a bulk-resin figure and sits awkwardly beside the same source's 'terrible layer adhesion' remark, while Treed's printable toughened grade reports 51 MPa (ASTM D638) — lower strength traded for impact resistance and much closer to what a printed part achieves, so the recommended value follows it. Also published: compressive strength 117.2 MPa and hardness Rockwell R105 (3DSourced, bulk resin), flexural modulus 2300 MPa and impact strength 3.2 kJ/m² (Treed, ASTM D790). Shrinkage is described only as 'some shrinkage during cooling' (3DSourced) with no percentage published, and is omitted rather than guessed — though high thermal expansion is cited by every source as the reason for the warp behaviour."
+    "notes": "Density 1.20 g/cm\u00b3 for standard PMMA (3DSourced); Treed's toughened HIRMA is slightly lighter at 1.17. Tg is recorded as 105 \u00b0C, the standard cast/extruded-PMMA figure from general polymer literature, but filaments.directory reports an 85-165 \u00b0C spread across grades, copolymers and additive packages \u2014 the widest Tg range of any entry in this catalog \u2014 so treat 105 as a centre of mass rather than a spec for a particular spool. HDT is deliberately omitted: no filament source publishes one. Treed reports a 77 \u00b0C 'softening temperature' for HIRMA, which reads as a Vicat softening point rather than an HDT@0.45 MPa and must not be conflated with one; it is nonetheless the most concrete heat number available and is the reason temperature_tolerance is only 5. Tensile is split by grade: 3DSourced cites 83.4 MPa, which reads as a bulk-resin figure and sits awkwardly beside the same source's 'terrible layer adhesion' remark, while Treed's printable toughened grade reports 51 MPa (ASTM D638) \u2014 lower strength traded for impact resistance and much closer to what a printed part achieves, so the recommended value follows it. Also published: compressive strength 117.2 MPa and hardness Rockwell R105 (3DSourced, bulk resin), flexural modulus 2300 MPa and impact strength 3.2 kJ/m\u00b2 (Treed, ASTM D790). Shrinkage is described only as 'some shrinkage during cooling' (3DSourced) with no percentage published, and is omitted rather than guessed \u2014 though high thermal expansion is cited by every source as the reason for the warp behaviour."
   },
   "scores": {
     "ease_of_print": 3,
@@ -124,64 +124,61 @@
     "water_tolerance": 4
   },
   "compatibility": {
-    "bonds_with": [
-      "pmma"
-    ],
     "support_materials": [],
     "usable_as_support_for": [],
-    "notes": "Treat as bonding to itself only. PMMA is acetone-soluble (3DSourced), which opens the same solvent-smoothing and solvent-welding route ABS enjoys and makes an acrylic-to-abs bond chemically plausible — but no source demonstrates co-printed interlayer welding between PMMA and abs, asa or anything else in the catalog, so nothing beyond pmma is asserted. No support pairing is documented in either direction: no soluble interface is established, and PMMA's poor layer adhesion makes it a bad candidate for supporting other materials. Support removal on PMMA itself needs care because the part is brittle enough to chip where a support foot is levered off."
+    "notes": "Treat as bonding to itself only. PMMA is acetone-soluble (3DSourced), which opens the same solvent-smoothing and solvent-welding route ABS enjoys and makes an acrylic-to-abs bond chemically plausible \u2014 but no source demonstrates co-printed interlayer welding between PMMA and abs, asa or anything else in the catalog, so nothing beyond pmma is asserted. No support pairing is documented in either direction: no soluble interface is established, and PMMA's poor layer adhesion makes it a bad candidate for supporting other materials. Support removal on PMMA itself needs care because the part is brittle enough to chip where a support foot is levered off."
   },
   "plate_recommendations": [
     {
       "plate_id": "pei-textured",
       "rating": "usable",
-      "notes": "Usable only with an adhesion aid — do not expect bare PEI to hold. Filament Cheat Sheet characterises PMMA's bed adhesion as 'terrible', and no source names a validated surface for it. The ABS-class approach is the sensible starting point: a glue-stick layer on textured PEI at a 90-110 °C bed inside an enclosure, plus a brim on anything with a large flat footprint. Entirely inferred from ABS practice; unverified for PMMA."
+      "notes": "Usable only with an adhesion aid \u2014 do not expect bare PEI to hold. Filament Cheat Sheet characterises PMMA's bed adhesion as 'terrible', and no source names a validated surface for it. The ABS-class approach is the sensible starting point: a glue-stick layer on textured PEI at a 90-110 \u00b0C bed inside an enclosure, plus a brim on anything with a large flat footprint. Entirely inferred from ABS practice; unverified for PMMA."
     },
     {
       "plate_id": "pei-smooth",
       "rating": "usable",
-      "notes": "Same picture as textured PEI, with the compensating advantage that a smooth surface preserves the optical finish on the first layer — worth using where the bottom face is a viewing face. Adhesion aid still required. Inferred, not sourced."
+      "notes": "Same picture as textured PEI, with the compensating advantage that a smooth surface preserves the optical finish on the first layer \u2014 worth using where the bottom face is a viewing face. Adhesion aid still required. Inferred, not sourced."
     },
     {
       "plate_id": "glass-borosilicate",
       "rating": "usable",
-      "notes": "The traditional choice when the underside must be glossy, which is often the point with a clear material. Expect to need a glue stick or comparable promoter, and warm the plate towards the top of the 70-120 °C band on large parts. Inferred from ABS-class practice; no PMMA source addresses build surfaces at all."
+      "notes": "The traditional choice when the underside must be glossy, which is often the point with a clear material. Expect to need a glue stick or comparable promoter, and warm the plate towards the top of the 70-120 \u00b0C band on large parts. Inferred from ABS-class practice; no PMMA source addresses build surfaces at all."
     }
   ],
   "alternatives": [
     {
       "filament_id": "mabs",
-      "reason": "The tougher clear: ABS-like impact instead of PMMA's brittleness (layer adhesion 6 vs 3), easier to print (ease 5 vs 3, warp 6 vs 8) and much cheaper ($18-30 vs $40-90) — at up to 92 % transmittance rather than true optical clarity, and effectively no UV life (uv 3 vs 9)."
+      "reason": "The tougher clear: ABS-like impact instead of PMMA's brittleness (layer adhesion 6 vs 3), easier to print (ease 5 vs 3, warp 6 vs 8) and much cheaper ($18-30 vs $40-90) \u2014 at up to 92 % transmittance rather than true optical clarity, and effectively no UV life (uv 3 vs 9)."
     },
     {
       "filament_id": "petg",
-      "reason": "The easy transparent for non-optical work: ease 7 vs 3, warp 3 vs 8, layer adhesion 9 vs 3, water tolerance 9 vs 4 and no enclosure, at $18-42/kg — with a much shorter UV life (uv 5 vs 9) and a softer, scratch-prone surface."
+      "reason": "The easy transparent for non-optical work: ease 7 vs 3, warp 3 vs 8, layer adhesion 9 vs 3, water tolerance 9 vs 4 and no enclosure, at $18-42/kg \u2014 with a much shorter UV life (uv 5 vs 9) and a softer, scratch-prone surface."
     },
     {
       "filament_id": "asa",
-      "reason": "If UV survival rather than clarity is the real requirement, ASA matches on UV (9, equal) and beats it on weathering (9 vs 6) with far better printability (ease 5 vs 3, adhesion 4 vs 3) and heat (temp 7 vs 5) at $18-45/kg — opaque only."
+      "reason": "If UV survival rather than clarity is the real requirement, ASA matches on UV (9, equal) and beats it on weathering (9 vs 6) with far better printability (ease 5 vs 3, adhesion 4 vs 3) and heat (temp 7 vs 5) at $18-45/kg \u2014 opaque only."
     },
     {
       "filament_id": "pctg",
-      "reason": "Clear, tough and open-frame printable with the catalog's best layer adhesion (10 vs 3), ease 6 vs 3 and water tolerance 9 vs 4 at $30-55/kg — giving up PMMA's hard scratch-resistant surface and a third of its UV performance (uv 6 vs 9)."
+      "reason": "Clear, tough and open-frame printable with the catalog's best layer adhesion (10 vs 3), ease 6 vs 3 and water tolerance 9 vs 4 at $30-55/kg \u2014 giving up PMMA's hard scratch-resistant surface and a third of its UV performance (uv 6 vs 9)."
     },
     {
       "filament_id": "pc",
-      "reason": "When the clear part also has to carry load and heat: temp 9 vs 5, compression 8 vs 7 and layer adhesion 8 vs 3 at $30-65/kg — but PC yellows in sunlight (uv 3 vs 9) and needs a 250-310 °C nozzle."
+      "reason": "When the clear part also has to carry load and heat: temp 9 vs 5, compression 8 vs 7 and layer adhesion 8 vs 3 at $30-65/kg \u2014 but PC yellows in sunlight (uv 3 vs 9) and needs a 250-310 \u00b0C nozzle."
     }
   ],
   "emissions": {
     "voc_level": "moderate",
     "particulate_level": "moderate",
     "primary_emissions": [
-      "methyl methacrylate (MMA) monomer — inferred from hot-processing literature, not measured for FDM",
+      "methyl methacrylate (MMA) monomer \u2014 inferred from hot-processing literature, not measured for FDM",
       "ultrafine particles"
     ],
     "ventilation": "recommended",
-    "notes": "PMMA is well documented in the general materials literature (laser cutting, thermoforming, other hot-processing contexts) to release residual methyl methacrylate monomer with a characteristic sweet ester odour when heated, and MMA is a recognised respiratory and eye irritant. Extending that to FDM extrusion at 250 °C is chemically reasonable but was not measured in any source reviewed, so the levels here are inferred rather than quantified — treat them as low-confidence. Filament Cheat Sheet frames its enclosure recommendation partly around fume containment, which is the closest a filament source comes to acknowledging the issue. Ventilate, and prefer an enclosure that vents or filters through carbon."
+    "notes": "PMMA is well documented in the general materials literature (laser cutting, thermoforming, other hot-processing contexts) to release residual methyl methacrylate monomer with a characteristic sweet ester odour when heated, and MMA is a recognised respiratory and eye irritant. Extending that to FDM extrusion at 250 \u00b0C is chemically reasonable but was not measured in any source reviewed, so the levels here are inferred rather than quantified \u2014 treat them as low-confidence. Filament Cheat Sheet frames its enclosure recommendation partly around fume containment, which is the closest a filament source comes to acknowledging the issue. Ventilate, and prefer an enclosure that vents or filters through carbon."
   },
-  "safety_notes": "Two hazards beyond the emissions profile. First, brittleness: printed PMMA chips and shatters rather than deforming, so wear eye protection when snapping off supports, drilling or machining parts, and expect sharp fragments. Second, acetone — PMMA dissolves in it, which makes solvent smoothing possible but also means acetone-based cleaning ruins parts; acetone itself is highly flammable and needs ventilation away from ignition sources. Not food-safe on any grade found.",
-  "additional_notes": "PMMA and mabs are two answers to the same question and choosing between them is the main decision here: PMMA wins on outright clarity, surface hardness and UV life, MABS wins on toughness and forgiving printing. If the part will ever be dropped, handled or snap-fitted, the acrylic is the wrong one. Impact-modified acrylic grades such as Treed's HIRMA sit between the two — cooler printing window, roughly 51 MPa instead of 83 MPa tensile, and about double the price. Whichever grade is used, dry the filament properly: haze in a part that should be water-clear is usually moisture, not a temperature problem.",
+  "safety_notes": "Two hazards beyond the emissions profile. First, brittleness: printed PMMA chips and shatters rather than deforming, so wear eye protection when snapping off supports, drilling or machining parts, and expect sharp fragments. Second, acetone \u2014 PMMA dissolves in it, which makes solvent smoothing possible but also means acetone-based cleaning ruins parts; acetone itself is highly flammable and needs ventilation away from ignition sources. Not food-safe on any grade found.",
+  "additional_notes": "PMMA and mabs are two answers to the same question and choosing between them is the main decision here: PMMA wins on outright clarity, surface hardness and UV life, MABS wins on toughness and forgiving printing. If the part will ever be dropped, handled or snap-fitted, the acrylic is the wrong one. Impact-modified acrylic grades such as Treed's HIRMA sit between the two \u2014 cooler printing window, roughly 51 MPa instead of 83 MPa tensile, and about double the price. Whichever grade is used, dry the filament properly: haze in a part that should be water-clear is usually moisture, not a temperature problem.",
   "provenance": {
     "sources": [
       "https://www.3dsourced.com/rigid-ink/pmma-filament-acrylic/",
@@ -191,13 +188,13 @@
     ],
     "last_verified": "2026-08-01",
     "confidence": "low",
-    "conflicts": "Grade split is the recurring problem: standard PMMA and impact-modified PMMA disagree on nozzle temperature (245-255 °C vs Treed's 220-230 °C), density (1.20 vs 1.17) and tensile (83.4 MPa vs 51 MPa), and the entry records the standard grade with the toughened figures noted. Tg is recorded as 105 °C from general polymer literature, but the only filament source to address it gives an 85-165 °C spread across formulations, so no single value is defensible for an arbitrary spool. HDT@0.45 MPa is not published anywhere for a PMMA filament; Treed's 77 °C 'softening temperature' is very likely a Vicat point and is deliberately not recorded as HDT. Max service temperature is unpublished and omitted. Shrinkage percentage is unpublished and omitted despite every source citing high thermal expansion. The 83.4 MPa tensile and 117.2 MPa compressive figures read as bulk-resin data and sit in tension with the same source's 'terrible layer adhesion' characterisation. Hygroscopy is recorded 'high' on the strength of one qualitative description ('absorbs water aggressively, slow to dehydrate') with no measured uptake figure; 'moderate' would also be defensible. Every plate rating is inferred from ABS-class practice — no PMMA source discusses build surfaces. AMS compatibility is omitted rather than guessed. Emissions are inferred from general hot-processing literature about MMA release, with no FDM-specific measurement. Bonding to abs via shared acetone solubility is plausible and deliberately not asserted."
+    "conflicts": "Grade split is the recurring problem: standard PMMA and impact-modified PMMA disagree on nozzle temperature (245-255 \u00b0C vs Treed's 220-230 \u00b0C), density (1.20 vs 1.17) and tensile (83.4 MPa vs 51 MPa), and the entry records the standard grade with the toughened figures noted. Tg is recorded as 105 \u00b0C from general polymer literature, but the only filament source to address it gives an 85-165 \u00b0C spread across formulations, so no single value is defensible for an arbitrary spool. HDT@0.45 MPa is not published anywhere for a PMMA filament; Treed's 77 \u00b0C 'softening temperature' is very likely a Vicat point and is deliberately not recorded as HDT. Max service temperature is unpublished and omitted. Shrinkage percentage is unpublished and omitted despite every source citing high thermal expansion. The 83.4 MPa tensile and 117.2 MPa compressive figures read as bulk-resin data and sit in tension with the same source's 'terrible layer adhesion' characterisation. Hygroscopy is recorded 'high' on the strength of one qualitative description ('absorbs water aggressively, slow to dehydrate') with no measured uptake figure; 'moderate' would also be defensible. Every plate rating is inferred from ABS-class practice \u2014 no PMMA source discusses build surfaces. AMS compatibility is omitted rather than guessed. Emissions are inferred from general hot-processing literature about MMA release, with no FDM-specific measurement. Bonding to abs via shared acetone solubility is plausible and deliberately not asserted."
   },
   "trade_names": [
     {
       "manufacturer": "Treed Filaments",
       "product": "HIRMA",
-      "notes": "High-impact-modified PMMA rather than standard acrylic: 220-230 °C nozzle, 90-110 °C bed, 0-20 % fan, 30-50 mm/s, density 1.17 g/cm³, tensile 51 MPa (ASTM D638), flexural modulus 2300 MPa, impact 3.2 kJ/m², 77 °C softening point, dry 70 °C for 3 h+. Roughly double the price of standard PMMA."
+      "notes": "High-impact-modified PMMA rather than standard acrylic: 220-230 \u00b0C nozzle, 90-110 \u00b0C bed, 0-20 % fan, 30-50 mm/s, density 1.17 g/cm\u00b3, tensile 51 MPa (ASTM D638), flexural modulus 2300 MPa, impact 3.2 kJ/m\u00b2, 77 \u00b0C softening point, dry 70 \u00b0C for 3 h+. Roughly double the price of standard PMMA."
     }
   ]
 }

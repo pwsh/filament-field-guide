@@ -14,7 +14,7 @@
   "variation_kind": "castable",
   "polymer_class": "polylactide",
   "chemical_makeup": "Unfilled PLA reformulated for ultra-low-ash combustion rather than for mechanical performance. eSUN markets PLA-Cast as an 'ash-free' PLA leaving as little as 0.003 % residue after burnout; no filler, fibre or abrasive additive is reported, so print-time chemistry is base PLA with a modified additive/colourant package chosen not to leave inorganic residue in the mould cavity",
-  "summary": "A single-purpose PLA that exists to be destroyed: printed as an investment-casting pattern, invested in plaster or ceramic slurry, then burned out in a kiln leaving as little as 0.003 % ash so molten metal fills a clean cavity. It prints like ordinary PLA with no special hardware — every difference from base PLA is in what happens after the print, which is why its rubric scores track base PLA almost exactly.",
+  "summary": "A single-purpose PLA that exists to be destroyed: printed as an investment-casting pattern, invested in plaster or ceramic slurry, then burned out in a kiln leaving as little as 0.003 % ash so molten metal fills a clean cavity. It prints like ordinary PLA with no special hardware \u2014 every difference from base PLA is in what happens after the print, which is why its rubric scores track base PLA almost exactly.",
   "printing": {
     "nozzle_temp_c": {
       "min": 210,
@@ -45,13 +45,13 @@
       "recommended": 100
     },
     "enclosure_open_for_cooling": true,
-    "notes": "eSUN specifies 210-240 °C with a 45-60 °C bed — the band starts about 20 °C above base PLA's, which is the only print-time delta of note. No enclosure, no chamber, no hardened nozzle: the formulation carries no filler or abrasive. Speed is unpublished and base-PLA-capable, but the recommended 60 mm/s reflects the use case rather than the material — a casting pattern's surface finish becomes the casting's surface finish, so slow outer walls, fine layer heights and generous cooling pay for themselves in reduced post-cast cleanup."
+    "notes": "eSUN specifies 210-240 \u00b0C with a 45-60 \u00b0C bed \u2014 the band starts about 20 \u00b0C above base PLA's, which is the only print-time delta of note. No enclosure, no chamber, no hardened nozzle: the formulation carries no filler or abrasive. Speed is unpublished and base-PLA-capable, but the recommended 60 mm/s reflects the use case rather than the material \u2014 a casting pattern's surface finish becomes the casting's surface finish, so slow outer walls, fine layer heights and generous cooling pay for themselves in reduced post-cast cleanup."
   },
   "feeding": {
     "drive_system": "any",
     "ams_compatible": "yes",
     "feeding_assistant_recommended": false,
-    "notes": "Rigid unfilled PLA, so any extruder feeds it and no spool-side assistant is needed. eSUN markets PLA-Cast as Bambu AMS-compatible and no fibre-wear or brittleness bar is published — there is no filler to wear PTFE and no reported strand embrittlement, so this carries base PLA's plain 'yes' rather than the 'conditional' rating the filled aesthetic variants get. Note that multi-material printing is rarely wanted here: a support or second material that does not burn out as cleanly contaminates the ash profile that this filament exists to control."
+    "notes": "Rigid unfilled PLA, so any extruder feeds it and no spool-side assistant is needed. eSUN markets PLA-Cast as Bambu AMS-compatible and no fibre-wear or brittleness bar is published \u2014 there is no filler to wear PTFE and no reported strand embrittlement, so this carries base PLA's plain 'yes' rather than the 'conditional' rating the filled aesthetic variants get. Note that multi-material printing is rarely wanted here: a support or second material that does not burn out as cleanly contaminates the ash profile that this filament exists to control."
   },
   "drying": {
     "required_before_use": "if-exposed",
@@ -71,8 +71,8 @@
       "convection oven at lowest setting",
       "drybox with desiccant"
     ],
-    "dryness_validation": "No popping or steam at the nozzle and a smooth, consistent extrudate. Surface quality is the operative test for this material — a pattern with moisture-induced pitting or stringing transfers every defect into the finished casting, so inspect a test surface under raking light before committing to a pattern.",
-    "notes": "eSUN publishes no PLA-Cast-specific drying schedule in the sourced material, so base-PLA practice (45-55 °C, 4-8 h) is recorded. Polymaker's PolyCast specifies 50 °C for 12 h, but that is a PVB material and only a rough use-case analog, not a figure for this entry."
+    "dryness_validation": "No popping or steam at the nozzle and a smooth, consistent extrudate. Surface quality is the operative test for this material \u2014 a pattern with moisture-induced pitting or stringing transfers every defect into the finished casting, so inspect a test surface under raking light before committing to a pattern.",
+    "notes": "eSUN publishes no PLA-Cast-specific drying schedule in the sourced material, so base-PLA practice (45-55 \u00b0C, 4-8 h) is recorded. Polymaker's PolyCast specifies 50 \u00b0C for 12 h, but that is a PVB material and only a rough use-case analog, not a figure for this entry."
   },
   "storage": {
     "recommendations": "Sealed bag or drybox with desiccant between prints; base-PLA-level tolerance. Pattern surface quality is the payload here, so a spool that has sat open long enough to string is worth re-drying even though it would still print acceptable functional parts",
@@ -82,7 +82,7 @@
   "price": {
     "usd_per_kg_low": 16,
     "usd_per_kg_high": 40,
-    "notes": "3DJake lists eSUN PLA-Cast White around $16.26/kg; regional resellers run higher (Bits4Bots NZ around NZ$39.99/kg after import and currency effects). Effectively base-PLA pricing in its home market — unusual for a specialty filament, and a strong argument for using it rather than standard PLA whenever a print is destined for burnout"
+    "notes": "3DJake lists eSUN PLA-Cast White around $16.26/kg; regional resellers run higher (Bits4Bots NZ around NZ$39.99/kg after import and currency effects). Effectively base-PLA pricing in its home market \u2014 unusual for a specialty filament, and a strong argument for using it rather than standard PLA whenever a print is destined for burnout"
   },
   "use_cases": {
     "recommended": [
@@ -130,23 +130,22 @@
   },
   "compatibility": {
     "bonds_with": [
-      "pla",
-      "pla-cast"
+      "pla"
     ],
     "support_materials": [],
     "usable_as_support_for": [],
-    "notes": "Chemically this welds to base PLA and other PLA grades like any PLA, but the casting workflow overrides ordinary compatibility logic: standard practice is to design patterns to avoid supports entirely, because any support material left on the pattern must also burn out cleanly and no supplier publishes a burnout-compatible support spec. Where supports are unavoidable, same-material PLA-Cast is the only pairing that certainly shares the low-ash profile — a dissimilar support, including ordinary PLA, risks depositing residue in the very cavity this filament exists to keep clean. PVA and BVOH are ruled out for a different reason: dissolving them soaks the pattern, and a wet pattern cannot be invested or burned out. Not usable as a support material for anything."
+    "notes": "Chemically this welds to base PLA and other PLA grades like any PLA, but the casting workflow overrides ordinary compatibility logic: standard practice is to design patterns to avoid supports entirely, because any support material left on the pattern must also burn out cleanly and no supplier publishes a burnout-compatible support spec. Where supports are unavoidable, same-material PLA-Cast is the only pairing that certainly shares the low-ash profile \u2014 a dissimilar support, including ordinary PLA, risks depositing residue in the very cavity this filament exists to keep clean. PVA and BVOH are ruled out for a different reason: dissolving them soaks the pattern, and a wet pattern cannot be invested or burned out. Not usable as a support material for anything."
   },
   "plate_recommendations": [
     {
       "plate_id": "pei-smooth",
       "rating": "recommended",
-      "notes": "Preferred over textured for this material because the bottom face of the pattern becomes a face of the casting — a mirror-flat first layer means less filing and polishing on the metal part. Extrapolated from base-PLA behaviour; no brand-specific plate reports exist."
+      "notes": "Preferred over textured for this material because the bottom face of the pattern becomes a face of the casting \u2014 a mirror-flat first layer means less filing and polishing on the metal part. Extrapolated from base-PLA behaviour; no brand-specific plate reports exist."
     },
     {
       "plate_id": "pei-textured",
       "rating": "usable",
-      "notes": "Adheres like base PLA at 45-60 °C with no release agent, but the plate grain transfers into the pattern and therefore into the finished casting. Fine when the bottom face will be cut off a sprue or finished anyway."
+      "notes": "Adheres like base PLA at 45-60 \u00b0C with no release agent, but the plate grain transfers into the pattern and therefore into the finished casting. Fine when the bottom face will be cut off a sprue or finished anyway."
     }
   ],
   "alternatives": [
@@ -156,7 +155,7 @@
     },
     {
       "filament_id": "pvb",
-      "reason": "The other pattern-friendly display material: it prints as easily (ease 9 both) and smooths with IPA, so surface defects can be dissolved rather than sanded before investing — but it is not formulated for low-ash burnout, so treat it as a fit-check pattern, not a casting one."
+      "reason": "The other pattern-friendly display material: it prints as easily (ease 9 both) and smooths with IPA, so surface defects can be dissolved rather than sanded before investing \u2014 but it is not formulated for low-ash burnout, so treat it as a fit-check pattern, not a casting one."
     },
     {
       "filament_id": "pla-plus",
@@ -171,10 +170,10 @@
       "ultrafine particles"
     ],
     "ventilation": "optional",
-    "notes": "Printing emissions are base-PLA-level with no reported delta — lactide and ultrafine particles, ventilation optional for occasional work. The serious exposure in this material's life cycle is not the printer at all: burnout means combusting a plastic pattern inside a kiln at casting temperatures (hundreds of °C up to 1000 °C+), which is a separate ventilated-kiln process with its own hazard profile and is out of scope for FDM emissions ratings."
+    "notes": "Printing emissions are base-PLA-level with no reported delta \u2014 lactide and ultrafine particles, ventilation optional for occasional work. The serious exposure in this material's life cycle is not the printer at all: burnout means combusting a plastic pattern inside a kiln at casting temperatures (hundreds of \u00b0C up to 1000 \u00b0C+), which is a separate ventilated-kiln process with its own hazard profile and is out of scope for FDM emissions ratings."
   },
-  "safety_notes": "The dangerous half of this workflow happens after printing. Kiln burnout requires a kiln rated and vented for pattern burnout — never an oven or a domestic appliance — and produces hot combustion products for the duration of the cycle. Molten metal pouring needs full foundry PPE (face shield, leathers, closed footwear), a dry flask (trapped moisture causes steam explosions), and a clear, non-combustible pour area. Not food-contact certified, and the ash-content figure is a manufacturer marketing claim rather than a verified certification.",
-  "additional_notes": "Chemistry-versus-marketing caution: Polymaker's PolyCast, the best-known castable filament, is a PVB material and is mapped in this catalog to the pvb entry, not here — its casting workflow (IPA vapour smoothing on a Polysher, then burnout) is real, but the polymer is not PLA and none of the figures on this page apply to it. This entry covers genuinely PLA-based burnout filament only, of which eSUN PLA-Cast is presently the flagship and, at the time of writing, the only mapped product in the catalog. Workflow in brief: print the pattern → attach sprues → invest in plaster/ceramic slurry → kiln burnout to consume the pattern → pour molten metal into the resulting void. Because the pattern is consumed, its dimensional accuracy and surface finish are the only material properties that matter, which is a different optimisation target from every other entry in this catalog.",
+  "safety_notes": "The dangerous half of this workflow happens after printing. Kiln burnout requires a kiln rated and vented for pattern burnout \u2014 never an oven or a domestic appliance \u2014 and produces hot combustion products for the duration of the cycle. Molten metal pouring needs full foundry PPE (face shield, leathers, closed footwear), a dry flask (trapped moisture causes steam explosions), and a clear, non-combustible pour area. Not food-contact certified, and the ash-content figure is a manufacturer marketing claim rather than a verified certification.",
+  "additional_notes": "Chemistry-versus-marketing caution: Polymaker's PolyCast, the best-known castable filament, is a PVB material and is mapped in this catalog to the pvb entry, not here \u2014 its casting workflow (IPA vapour smoothing on a Polysher, then burnout) is real, but the polymer is not PLA and none of the figures on this page apply to it. This entry covers genuinely PLA-based burnout filament only, of which eSUN PLA-Cast is presently the flagship and, at the time of writing, the only mapped product in the catalog. Workflow in brief: print the pattern \u2192 attach sprues \u2192 invest in plaster/ceramic slurry \u2192 kiln burnout to consume the pattern \u2192 pour molten metal into the resulting void. Because the pattern is consumed, its dimensional accuracy and surface finish are the only material properties that matter, which is a different optimisation target from every other entry in this catalog.",
   "provenance": {
     "sources": [
       "https://www.esun3d.com/news/11503/",
@@ -185,13 +184,13 @@
     ],
     "last_verified": "2026-08-01",
     "confidence": "low",
-    "conflicts": "Confidence is low because the entire entry rests on one manufacturer with one marketing-grade source. The 0.003 % ash figure is eSUN's claim with no third-party verification, no test standard named and no lot-level certification. Density, Tg, HDT, max service temperature, tensile strength, shrinkage, drying schedule and print speed are all unpublished — density and shrinkage are inherited from base PLA on the reasoning that the formulation is unfilled PLA, and the rest are omitted. Enclosure and hardened-nozzle flags are unverified negatives: no source requires them and no filler is reported, but no source explicitly rules them out either. The scores deliberately track base PLA on every mechanical axis, because the material's one genuine differentiator — clean combustion — has no rubric axis in this schema; only ease_of_print is dropped a point, for the higher nozzle band and the pattern-quality tuning the use case demands. Support-material guidance is reasoned from casting practice, not from any published eSUN specification. A significant category caution is recorded in additional notes: Polymaker PolyCast, the most prominent 'castable filament', is PVB and is deliberately NOT merged into this entry."
+    "conflicts": "Confidence is low because the entire entry rests on one manufacturer with one marketing-grade source. The 0.003 % ash figure is eSUN's claim with no third-party verification, no test standard named and no lot-level certification. Density, Tg, HDT, max service temperature, tensile strength, shrinkage, drying schedule and print speed are all unpublished \u2014 density and shrinkage are inherited from base PLA on the reasoning that the formulation is unfilled PLA, and the rest are omitted. Enclosure and hardened-nozzle flags are unverified negatives: no source requires them and no filler is reported, but no source explicitly rules them out either. The scores deliberately track base PLA on every mechanical axis, because the material's one genuine differentiator \u2014 clean combustion \u2014 has no rubric axis in this schema; only ease_of_print is dropped a point, for the higher nozzle band and the pattern-quality tuning the use case demands. Support-material guidance is reasoned from casting practice, not from any published eSUN specification. A significant category caution is recorded in additional notes: Polymaker PolyCast, the most prominent 'castable filament', is PVB and is deliberately NOT merged into this entry."
   },
   "trade_names": [
     {
       "manufacturer": "esun",
       "product": "PLA-Cast",
-      "notes": "The reference and, so far, only product for this entry: 'ash-free' PLA for lost-wax burnout, ash as low as 0.003 %, 210-240 °C nozzle, 45-60 °C bed, marketed as AMS-compatible"
+      "notes": "The reference and, so far, only product for this entry: 'ash-free' PLA for lost-wax burnout, ash as low as 0.003 %, 210-240 \u00b0C nozzle, 45-60 \u00b0C bed, marketed as AMS-compatible"
     }
   ]
 }

@@ -8,8 +8,8 @@
   "base_type": null,
   "variation_kind": null,
   "polymer_class": "styrenic",
-  "chemical_makeup": "Acrylonitrile butadiene styrene — an amorphous terpolymer of acrylonitrile (chemical resistance, rigidity), polybutadiene rubber (impact toughness) and styrene (processability and gloss)",
-  "summary": "The classic engineering thermoplastic: tough, impact-resistant, usable near 95-100 °C and uniquely acetone-smoothable. In exchange it is the hardest of the commodity three to print — high shrinkage, real warping and delamination without a heated enclosure, poor UV life, and styrene fumes that demand ventilation.",
+  "chemical_makeup": "Acrylonitrile butadiene styrene \u2014 an amorphous terpolymer of acrylonitrile (chemical resistance, rigidity), polybutadiene rubber (impact toughness) and styrene (processability and gloss)",
+  "summary": "The classic engineering thermoplastic: tough, impact-resistant, usable near 95-100 \u00b0C and uniquely acetone-smoothable. In exchange it is the hardest of the commodity three to print \u2014 high shrinkage, real warping and delamination without a heated enclosure, poor UV life, and styrene fumes that demand ventilation.",
   "printing": {
     "nozzle_temp_c": {
       "min": 230,
@@ -40,13 +40,13 @@
       "max": 20,
       "recommended": 0
     },
-    "notes": "Print with part cooling essentially off (the BCN3D TDS specifies fan off); active cooling causes warping and interlayer cracking, so use light fan only for bridges and steep overhangs. A heated, draft-free enclosure is effectively mandatory for anything beyond small parts — a passive enclosure suffices for most hobby work, which is why heated_chamber_required is false rather than true. Legacy profiles run 20-60 mm/s; enclosed modern machines push 80-150 mm/s, still slower than PLA/PETG to manage shrinkage. Bed temperature scales with part footprint. Hardened nozzle only for filled ABS grades."
+    "notes": "Print with part cooling essentially off (the BCN3D TDS specifies fan off); active cooling causes warping and interlayer cracking, so use light fan only for bridges and steep overhangs. A heated, draft-free enclosure is effectively mandatory for anything beyond small parts \u2014 a passive enclosure suffices for most hobby work, which is why heated_chamber_required is false rather than true. Legacy profiles run 20-60 mm/s; enclosed modern machines push 80-150 mm/s, still slower than PLA/PETG to manage shrinkage. Bed temperature scales with part footprint. Hardened nozzle only for filled ABS grades."
   },
   "feeding": {
     "drive_system": "any",
     "ams_compatible": "yes",
     "feeding_assistant_recommended": false,
-    "notes": "Rigid and dimensionally stable in the feed path; Bambu's material table lists ABS as AMS-compatible and no vendor restricts it. Filled ABS grades are the usual caveat, as abrasive fibres wear the AMS PTFE tubes. Enclosure: ABS wants the chamber sealed and warm, so enclosure_open_for_cooling is false — Bambu and QIDI both specify the cover installed for ABS."
+    "notes": "Rigid and dimensionally stable in the feed path; Bambu's material table lists ABS as AMS-compatible and no vendor restricts it. Filled ABS grades are the usual caveat, as abrasive fibres wear the AMS PTFE tubes. Enclosure: ABS wants the chamber sealed and warm, so enclosure_open_for_cooling is false \u2014 Bambu and QIDI both specify the cover installed for ABS."
   },
   "drying": {
     "required_before_use": "if-exposed",
@@ -66,7 +66,7 @@
       "print directly from a heated drybox"
     ],
     "dryness_validation": "No popping/crackling or steam at the nozzle; smooth glossy extrusion free of micro-bubbles; no fine hairs or fuzz on printed walls",
-    "notes": "Bambu recommends 80 °C for 8 h. Because ABS keeps absorbing moisture on the shelf, desiccant storage is an ongoing practice rather than a pre-print step; wet ABS bubbles and bonds poorly between layers."
+    "notes": "Bambu recommends 80 \u00b0C for 8 h. Because ABS keeps absorbing moisture on the shelf, desiccant storage is an ongoing practice rather than a pre-print step; wet ABS bubbles and bonds poorly between layers."
   },
   "storage": {
     "recommendations": "Airtight box or drybox with desiccant at all times, not just before printing; more sensitive to ambient humidity swings than PLA",
@@ -76,7 +76,7 @@
   "price": {
     "usd_per_kg_low": 18,
     "usd_per_kg_high": 35,
-    "notes": "2025-2026 pricing for standard unfilled grades: budget $18-22, mid $20-24, premium $28-35 per kg. ABS no longer undercuts PETG — budget PETG now often matches or beats it."
+    "notes": "2025-2026 pricing for standard unfilled grades: budget $18-22, mid $20-24, premium $28-35 per kg. ABS no longer undercuts PETG \u2014 budget PETG now often matches or beats it."
   },
   "use_cases": {
     "recommended": [
@@ -90,7 +90,7 @@
       "prototypes intended for sanding and painting"
     ],
     "not_recommended": [
-      "UV-exposed outdoor parts (yellows and embrittles — use ASA instead)",
+      "UV-exposed outdoor parts (yellows and embrittles \u2014 use ASA instead)",
       "food-contact items",
       "printing in an unventilated occupied room (styrene fumes)",
       "open-frame printers or beginners (warping and delamination)",
@@ -121,7 +121,7 @@
       "max": 45,
       "recommended": 42
     },
-    "notes": "Density 1.04-1.06 g/cm³ — the lightest of the commodity three, so a 1 kg spool yields noticeably more part volume. BCN3D TDS: HDT 99 °C, Vicat softening 105 °C, yield 45 MPa, operating limit 85 °C. Highest shrinkage of the three, and larger/thicker parts trend to the top of the band. 3D-Fuel's Pro ABS TDS (technical library, read 2026-08-01; still filed under the legacy 'Workday ABS' filename) is, like their PETG sheet, a resin-supplier injection-moulding datasheet in kg/cm² on 3.2/6.4 mm moulded bars rather than printed-part data. Converted: tensile 51 MPa at yield, tensile modulus 2,216 MPa, flexural 78.5 MPa at 2,746 MPa modulus, notched Izod 226 J/m at 23 °C (3.2 mm) falling to 78 J/m at -30 °C, Rockwell R110, MFR 23 g/10 min at 220 °C/10 kg, specific gravity 1.04. Its thermal figures run cooler than the recorded ones: HDT 90 °C at 0.451 MPa and 86 °C at 1.824 MPa against the 99 °C recorded, and Vicat 94 °C against BCN3D's 105 °C. Its D955 mould shrinkage of 0.4-0.7 % is an injection figure and is not the same quantity as the recorded 0.5-1.5 % print-shrinkage band. Print settings 240-260 °C nozzle, 100-110 °C bed, 10 % fan. Snapmaker publishes ABS data twice and the two disagree (both read 2026-08-06, owner-provided links). The us.snapmaker.com product page: density 1.04 g/cm³ at 23 °C, Tg 101 °C, HDT 100 °C at 0.45 MPa, Vicat 104 °C, water absorption 0.35 %, melt index 9-14 g/10 min, tensile 33.4 ± 0.6 MPa XY / 29.7 ± 0.3 MPa Z, bending 56.2 ± 0.3 MPa at 2127.2 ± 29.9 MPa modulus, notched impact 18.0 ± 0.9 kJ/m² XY, elongation at break 17.9 ± 1.3 % XY, 240-280 °C nozzle, 90-100 °C bed, 50-200 mm/s, fan off, dry 70 °C for 6 h. The older www.snapmaker.com/filaments/abs/normal spec page: same Tg 101 °C and Vicat 104 °C, tensile 33.3 ± 0.8 MPa, bending 59.0 ± 1.3 MPa, Young's modulus 2174 ± 285 MPa, Charpy 12.6 ± 1.1 kJ/m², 245-265 °C nozzle, 80-100 °C bed, 30-50 mm/s. Both tensile figures sit at the bottom of the recorded 30-45 MPa band and well under 3D-Fuel's moulded 51 MPa, which is the printed-versus-moulded gap made visible within one brand's own catalogue."
+    "notes": "Density 1.04-1.06 g/cm\u00b3 \u2014 the lightest of the commodity three, so a 1 kg spool yields noticeably more part volume. BCN3D TDS: HDT 99 \u00b0C, Vicat softening 105 \u00b0C, yield 45 MPa, operating limit 85 \u00b0C. Highest shrinkage of the three, and larger/thicker parts trend to the top of the band. 3D-Fuel's Pro ABS TDS (technical library, read 2026-08-01; still filed under the legacy 'Workday ABS' filename) is, like their PETG sheet, a resin-supplier injection-moulding datasheet in kg/cm\u00b2 on 3.2/6.4 mm moulded bars rather than printed-part data. Converted: tensile 51 MPa at yield, tensile modulus 2,216 MPa, flexural 78.5 MPa at 2,746 MPa modulus, notched Izod 226 J/m at 23 \u00b0C (3.2 mm) falling to 78 J/m at -30 \u00b0C, Rockwell R110, MFR 23 g/10 min at 220 \u00b0C/10 kg, specific gravity 1.04. Its thermal figures run cooler than the recorded ones: HDT 90 \u00b0C at 0.451 MPa and 86 \u00b0C at 1.824 MPa against the 99 \u00b0C recorded, and Vicat 94 \u00b0C against BCN3D's 105 \u00b0C. Its D955 mould shrinkage of 0.4-0.7 % is an injection figure and is not the same quantity as the recorded 0.5-1.5 % print-shrinkage band. Print settings 240-260 \u00b0C nozzle, 100-110 \u00b0C bed, 10 % fan. Snapmaker publishes ABS data twice and the two disagree (both read 2026-08-06, owner-provided links). The us.snapmaker.com product page: density 1.04 g/cm\u00b3 at 23 \u00b0C, Tg 101 \u00b0C, HDT 100 \u00b0C at 0.45 MPa, Vicat 104 \u00b0C, water absorption 0.35 %, melt index 9-14 g/10 min, tensile 33.4 \u00b1 0.6 MPa XY / 29.7 \u00b1 0.3 MPa Z, bending 56.2 \u00b1 0.3 MPa at 2127.2 \u00b1 29.9 MPa modulus, notched impact 18.0 \u00b1 0.9 kJ/m\u00b2 XY, elongation at break 17.9 \u00b1 1.3 % XY, 240-280 \u00b0C nozzle, 90-100 \u00b0C bed, 50-200 mm/s, fan off, dry 70 \u00b0C for 6 h. The older www.snapmaker.com/filaments/abs/normal spec page: same Tg 101 \u00b0C and Vicat 104 \u00b0C, tensile 33.3 \u00b1 0.8 MPa, bending 59.0 \u00b1 1.3 MPa, Young's modulus 2174 \u00b1 285 MPa, Charpy 12.6 \u00b1 1.1 kJ/m\u00b2, 245-265 \u00b0C nozzle, 80-100 \u00b0C bed, 30-50 mm/s. Both tensile figures sit at the bottom of the recorded 30-45 MPa band and well under 3D-Fuel's moulded 51 MPa, which is the printed-versus-moulded gap made visible within one brand's own catalogue."
   },
   "scores": {
     "ease_of_print": 4,
@@ -136,7 +136,6 @@
   },
   "compatibility": {
     "bonds_with": [
-      "abs",
       "abs-cf",
       "abs-esd",
       "abs-fr",
@@ -145,22 +144,16 @@
       "asa",
       "asa-cf",
       "asa-gf",
-      "hips",
       "lw-asa",
       "pc",
       "pc-abs",
-      "pc-gf",
-      "support-breakaway"
+      "pc-gf"
     ],
     "support_materials": [
-      "asa",
       "hips",
       "support-breakaway"
     ],
-    "usable_as_support_for": [
-      "asa"
-    ],
-    "notes": "Welds permanently to ASA (same styrenic family, near-identical bonding) and bonds moderately to PC — the basis of commercial PC/ABS blends and a common multi-material engineering pairing. HIPS is the classic breakaway/soluble support for ABS: matching print temperatures and dissolvable in D-limonene. Because ABS welds to ASA rather than releasing from it, ASA-supported-by-ABS is a structural pairing, not a clean-release one. ABS pairs badly with PLA and PETG in either direction — its 100 °C bed and 250 °C nozzle deform them, and the chemistries do not fuse."
+    "notes": "Welds permanently to ASA (same styrenic family, near-identical bonding) and bonds moderately to PC \u2014 the basis of commercial PC/ABS blends and a common multi-material engineering pairing. HIPS is the classic breakaway/soluble support for ABS: matching print temperatures and dissolvable in D-limonene. Because ABS welds to ASA rather than releasing from it, ASA-supported-by-ABS is a structural pairing, not a clean-release one. ABS pairs badly with PLA and PETG in either direction \u2014 its 100 \u00b0C bed and 250 \u00b0C nozzle deform them, and the chemistries do not fuse."
   },
   "plate_recommendations": [
     {
@@ -186,7 +179,7 @@
     {
       "plate_id": "pei-textured",
       "rating": "usable",
-      "notes": "Works at 90-110 °C bed but wants an adhesion aid — Prusa's standard advice is a glue-stick layer on the PEI sheet. Community practice also uses an ABS/acetone slurry as a first-layer promoter (unverified against primary sources). Textured PEI plus a brim and an enclosure is the reliable combination for large flat parts."
+      "notes": "Works at 90-110 \u00b0C bed but wants an adhesion aid \u2014 Prusa's standard advice is a glue-stick layer on the PEI sheet. Community practice also uses an ABS/acetone slurry as a first-layer promoter (unverified against primary sources). Textured PEI plus a brim and an enclosure is the reliable combination for large flat parts."
     },
     {
       "plate_id": "glass-borosilicate",
@@ -228,13 +221,13 @@
     "voc_level": "high",
     "particulate_level": "high",
     "primary_emissions": [
-      "styrene (~12-113 µg/min)",
-      "ultrafine particles (~2×10¹⁰ to 9×10¹⁰ particles/min)"
+      "styrene (~12-113 \u00b5g/min)",
+      "ultrafine particles (~2\u00d710\u00b9\u2070 to 9\u00d710\u00b9\u2070 particles/min)"
     ],
     "ventilation": "required",
     "notes": "The highest-emitting of the three by a wide margin: Azimi et al. (2016) measured UFP rates roughly 100-1000x those of PLA, with styrene as the named VOC of concern. Print in a well-ventilated space; the ideal setup is an enclosure that contains fumes plus external venting or HEPA+carbon filtration. Ventilate the room without blowing a draft across the print itself."
   },
-  "safety_notes": "Styrene is a respiratory irritant and a suspected carcinogen with chronic exposure — do not run ABS in an unventilated occupied room. Acetone vapour smoothing adds its own hazards: acetone is highly flammable and needs ventilation away from ignition sources.",
+  "safety_notes": "Styrene is a respiratory irritant and a suspected carcinogen with chronic exposure \u2014 do not run ABS in an unventilated occupied room. Acetone vapour smoothing adds its own hazards: acetone is highly flammable and needs ventilation away from ignition sources.",
   "additional_notes": "For outdoor work choose ASA instead: near-identical printing and mechanical behaviour with vastly better UV resistance.",
   "provenance": {
     "sources": [
@@ -256,7 +249,7 @@
     ],
     "last_verified": "2026-08-06",
     "confidence": "medium",
-    "conflicts": "Shrinkage: Prusa-cited ABS figures quote 1-2 % for large parts while property tables cite ~0.5 % — recorded as a 0.5-1.5 % consensus band with 0.8 % typical. HDT: BCN3D measures 99 °C, Polymaker's table spans 100-118 °C across grades — 99 °C recorded for plain ABS. Bed temperature: Prusa defaults ~100 °C, the BCN3D TDS says 90 °C. Heated chamber: sources describe an enclosure as 'effectively required' for large parts, but since a passive enclosure is normally sufficient, heated_chamber_required is set false and enclosure_recommended true. ABS/acetone slurry as an adhesion aid is community practice, unverified against the cited sources. 2026-08-01 update (3D-Fuel technical library published — owner-provided link): the Pro ABS TDS was mined and NO recorded value was changed, but it contradicts three of them and it is the low-thermal, high-mechanical outlier. Tensile: 51 MPa at yield sits ABOVE the recorded 30-45 MPa range, measured on an injection-moulded 3.2 mm bar — printed ABS does not reach it, and this is exactly the moulded-versus-printed gap that keeps the recorded ceiling at 45 MPa, so the range is retained. HDT: 90 °C at 0.451 MPa against BCN3D's 99 °C and Polymaker's 100-118 °C, widening the band downward to 90-118 °C; 99 °C retained as the middle datasheet value. Vicat: 94 °C against BCN3D's 105 °C, an 11 °C spread. Shrinkage: 0.4-0.7 % by ASTM D955 dips below the recorded 0.5 % minimum, but D955 mould shrinkage and FDM print shrinkage are different measurements and merging them would be a category error. Bed temperature is the one place it settles an open question — 3D-Fuel says 100-110 °C, siding with Prusa's ~100 °C against the BCN3D TDS's 90 °C and supporting the recorded 100 °C. Its drying spec (80 °C for 2-4 h) matches the recorded temperature but halves the recorded 4-8 h time. 2026-08-06 update (Snapmaker ABS, two documents — owner-provided links): NO recorded value changed. Confirmations: density 1.04 g/cm³ matches the low end of the recorded 1.04-1.06 and 3D-Fuel's specific gravity exactly. HDT 100 °C at 0.45 MPa sits within 1 °C of BCN3D's 99 °C on the same load basis and at the bottom of Polymaker's 100-118 °C, which strengthens the retained 99 °C and further isolates 3D-Fuel's 90 °C as the low outlier. Vicat 104 °C likewise sits within 1 °C of BCN3D's 105 °C and against 3D-Fuel's 94 °C, so the 11 °C Vicat spread now looks like a 3D-Fuel-specific result rather than a genuine class range. Bed 90-100 °C brackets the recorded 100 °C recommendation. Fan-off confirms the recorded 0 % part cooling and the BCN3D TDS. Tensile 33.4 MPa is inside the recorded 30-45 MPa range. Contradictions and open items: Tg 101 °C is 2 °C below the recorded 103 °C, within noise. Nozzle 240-280 °C pushes 10 °C above the recorded 270 °C ceiling and speed 50-200 mm/s pushes 50 mm/s above the recorded 150 mm/s ceiling — both are single-vendor U1-era claims tuned to Snapmaker's own enclosed machines, so the recorded ranges are kept. Drying 70 °C for 6 h is 10 °C below the recorded 80 °C recommendation and its time sits inside the recorded 4-8 h; combined with 3D-Fuel's 80 °C for 2-4 h, the drying time recorded at 4-8 h now spans three vendors' claims and only Bambu's 8 h supports the top of it. Snapmaker-internal conflict: the two Snapmaker documents give impact as 18.0 ± 0.9 kJ/m² (notched, product page) versus 12.6 ± 1.1 kJ/m² (Charpy, spec page), a ~43 % gap, and non-overlapping speed windows (50-200 vs 30-50 mm/s) and nozzle windows that only partly overlap (240-280 vs 245-265 °C). The spec page reads as legacy Snapmaker 2.0 guidance and the product page as U1-era; neither cites a test standard, so neither can be preferred on method. No impact figure is recorded in this entry, so nothing depends on the resolution."
+    "conflicts": "Shrinkage: Prusa-cited ABS figures quote 1-2 % for large parts while property tables cite ~0.5 % \u2014 recorded as a 0.5-1.5 % consensus band with 0.8 % typical. HDT: BCN3D measures 99 \u00b0C, Polymaker's table spans 100-118 \u00b0C across grades \u2014 99 \u00b0C recorded for plain ABS. Bed temperature: Prusa defaults ~100 \u00b0C, the BCN3D TDS says 90 \u00b0C. Heated chamber: sources describe an enclosure as 'effectively required' for large parts, but since a passive enclosure is normally sufficient, heated_chamber_required is set false and enclosure_recommended true. ABS/acetone slurry as an adhesion aid is community practice, unverified against the cited sources. 2026-08-01 update (3D-Fuel technical library published \u2014 owner-provided link): the Pro ABS TDS was mined and NO recorded value was changed, but it contradicts three of them and it is the low-thermal, high-mechanical outlier. Tensile: 51 MPa at yield sits ABOVE the recorded 30-45 MPa range, measured on an injection-moulded 3.2 mm bar \u2014 printed ABS does not reach it, and this is exactly the moulded-versus-printed gap that keeps the recorded ceiling at 45 MPa, so the range is retained. HDT: 90 \u00b0C at 0.451 MPa against BCN3D's 99 \u00b0C and Polymaker's 100-118 \u00b0C, widening the band downward to 90-118 \u00b0C; 99 \u00b0C retained as the middle datasheet value. Vicat: 94 \u00b0C against BCN3D's 105 \u00b0C, an 11 \u00b0C spread. Shrinkage: 0.4-0.7 % by ASTM D955 dips below the recorded 0.5 % minimum, but D955 mould shrinkage and FDM print shrinkage are different measurements and merging them would be a category error. Bed temperature is the one place it settles an open question \u2014 3D-Fuel says 100-110 \u00b0C, siding with Prusa's ~100 \u00b0C against the BCN3D TDS's 90 \u00b0C and supporting the recorded 100 \u00b0C. Its drying spec (80 \u00b0C for 2-4 h) matches the recorded temperature but halves the recorded 4-8 h time. 2026-08-06 update (Snapmaker ABS, two documents \u2014 owner-provided links): NO recorded value changed. Confirmations: density 1.04 g/cm\u00b3 matches the low end of the recorded 1.04-1.06 and 3D-Fuel's specific gravity exactly. HDT 100 \u00b0C at 0.45 MPa sits within 1 \u00b0C of BCN3D's 99 \u00b0C on the same load basis and at the bottom of Polymaker's 100-118 \u00b0C, which strengthens the retained 99 \u00b0C and further isolates 3D-Fuel's 90 \u00b0C as the low outlier. Vicat 104 \u00b0C likewise sits within 1 \u00b0C of BCN3D's 105 \u00b0C and against 3D-Fuel's 94 \u00b0C, so the 11 \u00b0C Vicat spread now looks like a 3D-Fuel-specific result rather than a genuine class range. Bed 90-100 \u00b0C brackets the recorded 100 \u00b0C recommendation. Fan-off confirms the recorded 0 % part cooling and the BCN3D TDS. Tensile 33.4 MPa is inside the recorded 30-45 MPa range. Contradictions and open items: Tg 101 \u00b0C is 2 \u00b0C below the recorded 103 \u00b0C, within noise. Nozzle 240-280 \u00b0C pushes 10 \u00b0C above the recorded 270 \u00b0C ceiling and speed 50-200 mm/s pushes 50 mm/s above the recorded 150 mm/s ceiling \u2014 both are single-vendor U1-era claims tuned to Snapmaker's own enclosed machines, so the recorded ranges are kept. Drying 70 \u00b0C for 6 h is 10 \u00b0C below the recorded 80 \u00b0C recommendation and its time sits inside the recorded 4-8 h; combined with 3D-Fuel's 80 \u00b0C for 2-4 h, the drying time recorded at 4-8 h now spans three vendors' claims and only Bambu's 8 h supports the top of it. Snapmaker-internal conflict: the two Snapmaker documents give impact as 18.0 \u00b1 0.9 kJ/m\u00b2 (notched, product page) versus 12.6 \u00b1 1.1 kJ/m\u00b2 (Charpy, spec page), a ~43 % gap, and non-overlapping speed windows (50-200 vs 30-50 mm/s) and nozzle windows that only partly overlap (240-280 vs 245-265 \u00b0C). The spec page reads as legacy Snapmaker 2.0 guidance and the product page as U1-era; neither cites a test standard, so neither can be preferred on method. No impact figure is recorded in this entry, so nothing depends on the resolution."
   },
   "trade_names": [
     {
@@ -573,7 +566,7 @@
     {
       "manufacturer": "snapmaker",
       "product": "ABS Filament (RFID) - 1kg",
-      "notes": "Standard ABS, $22.99/kg, RFID spool, fan off. Two Snapmaker documents publish different numbers for it — see provenance.conflicts."
+      "notes": "Standard ABS, $22.99/kg, RFID spool, fan off. Two Snapmaker documents publish different numbers for it \u2014 see provenance.conflicts."
     },
     {
       "manufacturer": "spectrum-filaments",
@@ -618,19 +611,19 @@
     },
     {
       "filament_id": "abs-plus",
-      "reason": "Same terpolymer with a toughening package: markedly better layer adhesion and impact (adhesion 7 vs 5) for the same or less money ($15-25 vs $18-35), but published HDT drops to ~73 °C from ABS's ~99 °C (temp 6 vs 7), so it is the wrong swap if you chose ABS for near-100 °C service."
+      "reason": "Same terpolymer with a toughening package: markedly better layer adhesion and impact (adhesion 7 vs 5) for the same or less money ($15-25 vs $18-35), but published HDT drops to ~73 \u00b0C from ABS's ~99 \u00b0C (temp 6 vs 7), so it is the wrong swap if you chose ABS for near-100 \u00b0C service."
     },
     {
       "filament_id": "abs-gf",
-      "reason": "ABS with its worst habit partly cured — glass fiber cuts warp 8 to 5 and lifts dimensional stability 4 to 7 at similar cost ($25-35) — paid for with a mandatory hardened nozzle and a weaker interlayer bond (adhesion 4 vs 5). Heat and UV are unchanged."
+      "reason": "ABS with its worst habit partly cured \u2014 glass fiber cuts warp 8 to 5 and lifts dimensional stability 4 to 7 at similar cost ($25-35) \u2014 paid for with a mandatory hardened nozzle and a weaker interlayer bond (adhesion 4 vs 5). Heat and UV are unchanged."
     },
     {
       "filament_id": "petg",
-      "reason": "If the part never sees 80 °C+, PETG prints far easier with no enclosure (ease 7 vs 4, warp 3 vs 8), bonds much better (adhesion 9 vs 5) and emits far less at the same price; you give up heat resistance (temp 5 vs 7) and acetone smoothing."
+      "reason": "If the part never sees 80 \u00b0C+, PETG prints far easier with no enclosure (ease 7 vs 4, warp 3 vs 8), bonds much better (adhesion 9 vs 5) and emits far less at the same price; you give up heat resistance (temp 5 vs 7) and acetone smoothing."
     },
     {
       "filament_id": "pc-abs",
-      "reason": "When ABS parts soften or creep under load, the PC/ABS blend keeps an ABS-like process (250-280 °C nozzle, same enclosure, no hardened nozzle) with markedly higher strength and heat resistance, at roughly double the price ($44-48 vs $18-35)."
+      "reason": "When ABS parts soften or creep under load, the PC/ABS blend keeps an ABS-like process (250-280 \u00b0C nozzle, same enclosure, no hardened nozzle) with markedly higher strength and heat resistance, at roughly double the price ($44-48 vs $18-35)."
     }
   ]
 }

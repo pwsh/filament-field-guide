@@ -12,8 +12,8 @@
   "base_type": "pp",
   "variation_kind": "carbon-fiber-filled",
   "polymer_class": "composite-other",
-  "chemical_makeup": "The same semi-crystalline polyolefin matrix as base pp — homopolymer or copolymer depending on brand — compounded with chopped carbon fiber. 3DXtech describes its CarbonX PP+CF as a 'specialty formulated polypropylene copolymer reinforced with high-modulus chopped carbon fiber'. The polyolefin chemistry, its hydrophobicity and its low surface energy are untouched; the fiber is mechanical restraint on the matrix as it crystallises",
-  "summary": "Carbon fiber does for polypropylene what glass fiber does in pp-gf — restrains the crystallisation shrinkage that makes base PP the worst-warping material in the catalog — but at a lower density, so it keeps more of PP's volume-per-spool advantage than the glass version does. What it does not fix is the other half of PP's difficulty: it still refuses to stick to standard build surfaces, and Prusament's own guidance is a dedicated PP sheet or a smooth PEI sheet with PP tape. The hardened-nozzle requirement is stated more emphatically and more consistently here than for any other PP grade.",
+  "chemical_makeup": "The same semi-crystalline polyolefin matrix as base pp \u2014 homopolymer or copolymer depending on brand \u2014 compounded with chopped carbon fiber. 3DXtech describes its CarbonX PP+CF as a 'specialty formulated polypropylene copolymer reinforced with high-modulus chopped carbon fiber'. The polyolefin chemistry, its hydrophobicity and its low surface energy are untouched; the fiber is mechanical restraint on the matrix as it crystallises",
+  "summary": "Carbon fiber does for polypropylene what glass fiber does in pp-gf \u2014 restrains the crystallisation shrinkage that makes base PP the worst-warping material in the catalog \u2014 but at a lower density, so it keeps more of PP's volume-per-spool advantage than the glass version does. What it does not fix is the other half of PP's difficulty: it still refuses to stick to standard build surfaces, and Prusament's own guidance is a dedicated PP sheet or a smooth PEI sheet with PP tape. The hardened-nozzle requirement is stated more emphatically and more consistently here than for any other PP grade.",
   "printing": {
     "nozzle_temp_c": {
       "min": 235,
@@ -29,13 +29,13 @@
     "heated_chamber_required": false,
     "enclosure_open_for_cooling": false,
     "requires_hardened_nozzle": true,
-    "notes": "Runs hotter on average than the glass-filled sibling: filament2print specifies 235-255 °C and Prusament PP Carbon Fiber 270 ± 10 °C, giving a 235-280 °C envelope against pp-gf's 230-260 °C, consistent with carbon fiber's larger effect on melt viscosity at a comparable loading. Bed 70-100 °C (filament2print 70-90 °C, Prusament 85 ± 10 °C) — a narrower published range than pp-gf's, whose 20-80 °C span is really a property of which adhesion product is used. The hardened nozzle is the least negotiable requirement in the entry and every brand says so: Prusament states it outright, filament2print specifies hardened steel, ruby, vanadium or tungsten carbide at 0.25 mm minimum diameter, 3DXtech calls for hardened steel at 0.4 mm minimum. Enclosure is recorded recommended, matching the base and sibling entries, although Prusament states one is 'not required' for its grade; no source calls for a heated chamber, and filament2print specifies a 20 °C ambient. Two fields are omitted for want of data: no PP-CF source publishes a part-cooling figure (pp-gf's 30-70 %, recommend 50 %, is the plausible analog) and none publishes a speed range."
+    "notes": "Runs hotter on average than the glass-filled sibling: filament2print specifies 235-255 \u00b0C and Prusament PP Carbon Fiber 270 \u00b1 10 \u00b0C, giving a 235-280 \u00b0C envelope against pp-gf's 230-260 \u00b0C, consistent with carbon fiber's larger effect on melt viscosity at a comparable loading. Bed 70-100 \u00b0C (filament2print 70-90 \u00b0C, Prusament 85 \u00b1 10 \u00b0C) \u2014 a narrower published range than pp-gf's, whose 20-80 \u00b0C span is really a property of which adhesion product is used. The hardened nozzle is the least negotiable requirement in the entry and every brand says so: Prusament states it outright, filament2print specifies hardened steel, ruby, vanadium or tungsten carbide at 0.25 mm minimum diameter, 3DXtech calls for hardened steel at 0.4 mm minimum. Enclosure is recorded recommended, matching the base and sibling entries, although Prusament states one is 'not required' for its grade; no source calls for a heated chamber, and filament2print specifies a 20 \u00b0C ambient. Two fields are omitted for want of data: no PP-CF source publishes a part-cooling figure (pp-gf's 30-70 %, recommend 50 %, is the plausible analog) and none publishes a speed range."
   },
   "feeding": {
     "drive_system": "any",
     "ams_compatible": "no",
     "feeding_assistant_recommended": false,
-    "notes": "Rigid and noticeably stiffer than base pp, so any extruder can push it — the reason for the 'no' is abrasion, not buckling. Carbon fiber wears the PTFE feed path and the roller surfaces of a material station, the same mechanism that bars third-party CF and GF filaments generally, and this is recorded identically to pp-gf rather than assumed safe by analogy to anything else. No vendor publishes a PP-CF verdict for any material station and no PP-CF product exists in Bambu's catalog, so this is inferred from the general filled-filament bar plus base pp's own documented AMS jam report. PP's low surface energy also works against feeder-gear bite. Feed from a direct spool holder. Not an elastomer: no shore hardness, no feeding assistant."
+    "notes": "Rigid and noticeably stiffer than base pp, so any extruder can push it \u2014 the reason for the 'no' is abrasion, not buckling. Carbon fiber wears the PTFE feed path and the roller surfaces of a material station, the same mechanism that bars third-party CF and GF filaments generally, and this is recorded identically to pp-gf rather than assumed safe by analogy to anything else. No vendor publishes a PP-CF verdict for any material station and no PP-CF product exists in Bambu's catalog, so this is inferred from the general filled-filament bar plus base pp's own documented AMS jam report. PP's low surface energy also works against feeder-gear bite. Feed from a direct spool holder. Not an elastomer: no shore hardness, no feeding assistant."
   },
   "drying": {
     "required_before_use": "rarely",
@@ -54,18 +54,18 @@
       "convection oven at low temperature",
       "sealed bag with desiccant"
     ],
-    "dryness_validation": "Largely a non-issue, as on base pp and pp-gf — watch only for minor surface popping or inconsistent extrusion as the rare sign a spool has picked up surface humidity. Do not judge by gloss: the fiber-filled surface is matte by design.",
-    "notes": "Sources disagree in framing but not in substance. CHCKX and 3DXtech-style listings state PP-CF 'typically does not absorb moisture, no drying required', matching PP's inherent hydrophobicity. filament2print gives the one concrete protocol found — 60 °C for 4 hours or longer if the spool has been humidity-exposed — alongside a water-absorption spec printed as '-1 % after 24 h submersion', where the negative sign is almost certainly a data-entry artefact for a near-zero or sub-1 % value and should not be read literally. Net: drying is corrective rather than routine, exactly as on the sibling entry, with filament2print's figures as the recorded band."
+    "dryness_validation": "Largely a non-issue, as on base pp and pp-gf \u2014 watch only for minor surface popping or inconsistent extrusion as the rare sign a spool has picked up surface humidity. Do not judge by gloss: the fiber-filled surface is matte by design.",
+    "notes": "Sources disagree in framing but not in substance. CHCKX and 3DXtech-style listings state PP-CF 'typically does not absorb moisture, no drying required', matching PP's inherent hydrophobicity. filament2print gives the one concrete protocol found \u2014 60 \u00b0C for 4 hours or longer if the spool has been humidity-exposed \u2014 alongside a water-absorption spec printed as '-1 % after 24 h submersion', where the negative sign is almost certainly a data-entry artefact for a near-zero or sub-1 % value and should not be read literally. Net: drying is corrective rather than routine, exactly as on the sibling entry, with filament2print's figures as the recorded band."
   },
   "storage": {
-    "recommendations": "Dry, dark storage with desiccant is filament2print's recommendation despite the low measured uptake — good practice rather than urgency, unchanged from base pp and pp-gf, and far less demanding than the polyamide composites.",
+    "recommendations": "Dry, dark storage with desiccant is filament2print's recommendation despite the low measured uptake \u2014 good practice rather than urgency, unchanged from base pp and pp-gf, and far less demanding than the polyamide composites.",
     "max_humidity_pct": 60,
     "hygroscopy": "low"
   },
   "price": {
     "usd_per_kg_low": 85,
     "usd_per_kg_high": 140,
-    "notes": "Three data points, all needing conversion or inference. Filamentive 3F PP-CF 9928 at £67.99/500 g ex VAT is roughly $86/kg; filament2print PP-CF at €41.80/500 g is roughly $90/kg; Prusament PP Carbon Fiber is $69.99 per spool but the spool weight was not confirmed on the page fetched, so a per-kg figure cannot be derived reliably — at Prusament's typical 500-750 g PP spool sizing it would imply roughly $93-140/kg. The band overlaps the lower-to-middle part of pp-gf's wider $85-215/kg, so carbon fiber carries no obvious premium over glass in this material family, unlike the steeper CF-vs-GF gap in the nylon composites."
+    "notes": "Three data points, all needing conversion or inference. Filamentive 3F PP-CF 9928 at \u00a367.99/500 g ex VAT is roughly $86/kg; filament2print PP-CF at \u20ac41.80/500 g is roughly $90/kg; Prusament PP Carbon Fiber is $69.99 per spool but the spool weight was not confirmed on the page fetched, so a per-kg figure cannot be derived reliably \u2014 at Prusament's typical 500-750 g PP spool sizing it would imply roughly $93-140/kg. The band overlaps the lower-to-middle part of pp-gf's wider $85-215/kg, so carbon fiber carries no obvious premium over glass in this material family, unlike the steeper CF-vs-GF gap in the nylon composites."
   },
   "use_cases": {
     "recommended": [
@@ -77,13 +77,13 @@
       "jigs and fixtures that must resist moisture indefinitely"
     ],
     "not_recommended": [
-      "living hinges and repeated-flex parts — the fiber destroys the fatigue behaviour base pp is chosen for",
+      "living hinges and repeated-flex parts \u2014 the fiber destroys the fatigue behaviour base pp is chosen for",
       "food-contact items: no certification was found for any PP-CF product",
       "parts needing isotropic strength (fiber orientation effects are expected, and unquantified here)",
       "brass-nozzle printers and setups that cannot run a hardened nozzle",
       "printing on stock PEI, glass or standard surfaces without a PP sheet, PP tape or primer",
       "glued or solvent-welded assemblies (inherited unchanged from base pp)",
-      "continuous service above about 100 °C, pending resolution of the brand temperature conflict"
+      "continuous service above about 100 \u00b0C, pending resolution of the brand temperature conflict"
     ]
   },
   "suitability": {
@@ -103,7 +103,7 @@
     },
     "glass_transition_c": -5,
     "max_service_temp_c": 100,
-    "notes": "Density 1.10 g/cm³ is filament2print's published figure and is the clearest sourced difference from pp-gf, whose 1.12 is itself an unverified generic-compound number: carbon fiber is less dense than glass at comparable loading, so PP-CF keeps slightly more of base PP's volume-per-spool advantage — 90.9 cm³ per 100 g against pp-gf's 89.3 and base pp's 111.1. Flexural modulus 3800 MPa (filament2print, ISO 178) shows strong stiffening over unfilled PP; no comparable flexural figure was captured for pp-gf, so the two cannot be ranked numerically on stiffness. Tensile strength is not published by any PP-CF source and is deliberately omitted rather than borrowed from the sibling. HDT@0.45 MPa is likewise unpublished — pp-gf's measured 127 °C should not be assumed here. Max service temperature is recorded at filament2print's 100 °C, the conservative side of a direct brand conflict: Prusament claims up to 120 °C for its own PP Carbon Fiber, which happens to match pp-gf's recorded ceiling exactly. Tg is carried from the PP matrix at about -5 °C and remains irrelevant as a service limit, sitting far below room temperature. Shrinkage is unpublished for PP-CF; the recorded 0.5-1.5 % mirrors pp-gf's own reasoned band on the expectation that carbon fiber restrains crystallisation at least as well as glass, and is an estimate, not a measurement."
+    "notes": "Density 1.10 g/cm\u00b3 is filament2print's published figure and is the clearest sourced difference from pp-gf, whose 1.12 is itself an unverified generic-compound number: carbon fiber is less dense than glass at comparable loading, so PP-CF keeps slightly more of base PP's volume-per-spool advantage \u2014 90.9 cm\u00b3 per 100 g against pp-gf's 89.3 and base pp's 111.1. Flexural modulus 3800 MPa (filament2print, ISO 178) shows strong stiffening over unfilled PP; no comparable flexural figure was captured for pp-gf, so the two cannot be ranked numerically on stiffness. Tensile strength is not published by any PP-CF source and is deliberately omitted rather than borrowed from the sibling. HDT@0.45 MPa is likewise unpublished \u2014 pp-gf's measured 127 \u00b0C should not be assumed here. Max service temperature is recorded at filament2print's 100 \u00b0C, the conservative side of a direct brand conflict: Prusament claims up to 120 \u00b0C for its own PP Carbon Fiber, which happens to match pp-gf's recorded ceiling exactly. Tg is carried from the PP matrix at about -5 \u00b0C and remains irrelevant as a service limit, sitting far below room temperature. Shrinkage is unpublished for PP-CF; the recorded 0.5-1.5 % mirrors pp-gf's own reasoned band on the expectation that carbon fiber restrains crystallisation at least as well as glass, and is an estimate, not a measurement."
   },
   "scores": {
     "ease_of_print": 4,
@@ -119,12 +119,11 @@
   "compatibility": {
     "bonds_with": [
       "pp",
-      "pp-gf",
-      "pp-cf"
+      "pp-gf"
     ],
     "support_materials": [],
     "usable_as_support_for": [],
-    "notes": "Inherits base PP's near-universal non-adhesion completely unchanged — carbon fiber does nothing to raise the matrix's surface energy. It welds only to the polyolefin family already in the catalog (pp, pp-gf and itself) and will not bond to pla, petg, abs, asa, pa, pc, pva, hips, bvoh, pctg, pvb, pet, tpu or tpe. No soluble support pairs with it, since PP is inert to water and to most solvents, so supports must be same-family PP or PP-CF breakaway. Unlike base pp it is not useful as a deliberate release layer or interface sheet for other materials: the fiber-roughened surface leaves a poor finish where plain PP tape gives a clean one."
+    "notes": "Inherits base PP's near-universal non-adhesion completely unchanged \u2014 carbon fiber does nothing to raise the matrix's surface energy. It welds only to the polyolefin family already in the catalog (pp, pp-gf and itself) and will not bond to pla, petg, abs, asa, pa, pc, pva, hips, bvoh, pctg, pvb, pet, tpu or tpe. No soluble support pairs with it, since PP is inert to water and to most solvents, so supports must be same-family PP or PP-CF breakaway. Unlike base pp it is not useful as a deliberate release layer or interface sheet for other materials: the fiber-roughened surface leaves a poor finish where plain PP tape gives a clean one."
   },
   "plate_recommendations": [
     {
@@ -135,7 +134,7 @@
     {
       "plate_id": "pei-smooth",
       "rating": "usable",
-      "notes": "The clearest sourced alternative in this entry: Prusament validates a smooth PEI sheet with PP tape applied for its PP Carbon Fiber. The PEI itself does nothing — the point is that PP prints onto its own polymer. Bare smooth PEI will not hold."
+      "notes": "The clearest sourced alternative in this entry: Prusament validates a smooth PEI sheet with PP tape applied for its PP Carbon Fiber. The PEI itself does nothing \u2014 the point is that PP prints onto its own polymer. Bare smooth PEI will not hold."
     },
     {
       "plate_id": "glass-borosilicate",
@@ -155,7 +154,7 @@
     {
       "plate_id": "pei-textured",
       "rating": "avoid",
-      "notes": "Unchanged from base pp and pp-gf, and still the most important practical fact about the material: carbon fiber fixes warping, not adhesion. Textured PEI gives essentially no grip because PP's low surface energy is a chemistry problem the filler does not touch. Use a PP sheet, PP tape on a smooth sheet (both Prusament-validated for this exact filament), or a PP adhesion primer such as Magigoo PP. Ordinary glue sticks, hairspray and painter's tape do not work — the aid here is a promoter, not a release layer."
+      "notes": "Unchanged from base pp and pp-gf, and still the most important practical fact about the material: carbon fiber fixes warping, not adhesion. Textured PEI gives essentially no grip because PP's low surface energy is a chemistry problem the filler does not touch. Use a PP sheet, PP tape on a smooth sheet (both Prusament-validated for this exact filament), or a PP adhesion primer such as Magigoo PP. Ordinary glue sticks, hairspray and painter's tape do not work \u2014 the aid here is a promoter, not a release layer."
     },
     {
       "plate_id": "pei-satin",
@@ -181,23 +180,23 @@
   "alternatives": [
     {
       "filament_id": "pp",
-      "reason": "Base PP at half the price ($40-70 vs $85-140) with no hardened nozzle and a better layer bond (adhesion 7 vs 5) — but warp 10 vs 4 and dimensional stability 4 vs 8 make anything with a large flat footprint impractical, and heat drops (temp 6 vs 7)."
+      "reason": "Base PP at half the price ($40-70 vs $85-140) with no hardened nozzle and a better layer bond (adhesion 7 vs 5) \u2014 but warp 10 vs 4 and dimensional stability 4 vs 8 make anything with a large flat footprint impractical, and heat drops (temp 6 vs 7)."
     },
     {
       "filament_id": "pp-gf",
-      "reason": "The glass version with the same warp and heat behaviour (warp 4, temp 7, both equal) and equal compression — but denser, so it gives back some of PP's volume-per-kilo advantage, and the price band runs wider and higher ($85-215 vs $85-140) with a slightly lower UV score (5 vs 6)."
+      "reason": "The glass version with the same warp and heat behaviour (warp 4, temp 7, both equal) and equal compression \u2014 but denser, so it gives back some of PP's volume-per-kilo advantage, and the price band runs wider and higher ($85-215 vs $85-140) with a slightly lower UV score (5 vs 6)."
     },
     {
       "filament_id": "petg-cf",
-      "reason": "Much easier, sticks to a normal plate, and cheaper ($25-67 vs $85-140) with lower warp (2 vs 4) — but water tolerance drops from 10 to 8, heat from 7 to 5, and it is only limited-outdoor where PP-CF is fully outdoor-rated."
+      "reason": "Much easier, sticks to a normal plate, and cheaper ($25-67 vs $85-140) with lower warp (2 vs 4) \u2014 but water tolerance drops from 10 to 8, heat from 7 to 5, and it is only limited-outdoor where PP-CF is fully outdoor-rated."
     },
     {
       "filament_id": "pa12-cf",
-      "reason": "If build-plate adhesion is the dealbreaker, CF PA12 sticks to ordinary plates and is more dimensionally stable (dim 9 vs 8, warp 2 vs 4) with the same outdoor rating — at $130-180/kg, nylon drying discipline and lower water tolerance (8 vs 10)."
+      "reason": "If build-plate adhesion is the dealbreaker, CF PA12 sticks to ordinary plates and is more dimensionally stable (dim 9 vs 8, warp 2 vs 4) with the same outdoor rating \u2014 at $130-180/kg, nylon drying discipline and lower water tolerance (8 vs 10)."
     },
     {
       "filament_id": "pps-cf",
-      "reason": "Step up when the chemical resistance has to hold hot: temp 9 vs 7 and uv 9 vs 6 at comparable water tolerance (9 vs 10) and better compression (9 vs 8) — at $100-200/kg and a much harder print."
+      "reason": "Step up when the chemical resistance has to hold hot: temp 9 vs 7 and uv 9 vs 6 at comparable water tolerance (9 vs 10) and better compression (9 vs 8) \u2014 at $100-200/kg and a much harder print."
     }
   ],
   "emissions": {
@@ -210,8 +209,8 @@
     "ventilation": "recommended",
     "notes": "Printing emissions are inferred from base pp and pp-gf rather than measured: no styrene as with the styrenics, no caprolactam as with the polyamide composites, and no dominant marker compound reported for PP anywhere in the sources reviewed. Treat both levels as low-confidence, exactly as flagged on the base entry. The genuine delta is at the bench rather than the nozzle, and it is stated more strongly here than for any other filled entry in this family: filament2print explicitly recommends air extraction or breathing equipment for its PP-CF line and names a specific air purifier product (Zimpure 2). Carbon fiber fines from sanding, drilling or machining printed parts are a respiratory irritant and are also electrically conductive, which is a hazard to nearby electronics as well as to lungs."
   },
-  "safety_notes": "Abrasive: a hardened steel, ruby, vanadium or tungsten-carbide nozzle is required — filament2print specifies 0.25 mm minimum diameter, 3DXtech 0.4 mm minimum, and brass will be destroyed. Do not dry-sand, drill or machine printed parts without respiratory protection and dust capture; carbon fiber fines irritate lungs and skin and, being conductive, can short exposed electronics if they settle in a workshop. filament2print goes as far as recommending air extraction or breathing equipment plus a named air purifier for this material. PP-specific adhesion primers and sprays are the practical way to make first layers stick — use them with ventilation per their own instructions. Because PP resists solvents and glues, post-print assembly relies on mechanical fasteners, heat staking or PP welding rather than adhesives. Not food-contact suitable: no certification was found for any PP-CF filament, and the fiber-roughened surface compounds the usual FDM layer-crevice problem.",
-  "additional_notes": "PP-CF and pp-gf are close enough that the choice usually comes down to two things. Density: carbon's 1.10 g/cm³ against glass's ~1.12 keeps a little more of base PP's volume-per-spool advantage, and gives lighter parts at equal geometry. Availability and price: PP-CF has the more crowded brand field — 3DXtech, Prusament, Filoalfa, filament2print, Filamentive, CHCKX — and lands in the lower-to-middle part of pp-gf's price band rather than above it. Everything else is a wash, or unmeasured. What both share is that they fix only one of base PP's two problems: budget for a PP-specific build surface before buying a spool, and accept that the fiber destroys the living-hinge and fatigue behaviour that is the main reason people reach for polypropylene in the first place.",
+  "safety_notes": "Abrasive: a hardened steel, ruby, vanadium or tungsten-carbide nozzle is required \u2014 filament2print specifies 0.25 mm minimum diameter, 3DXtech 0.4 mm minimum, and brass will be destroyed. Do not dry-sand, drill or machine printed parts without respiratory protection and dust capture; carbon fiber fines irritate lungs and skin and, being conductive, can short exposed electronics if they settle in a workshop. filament2print goes as far as recommending air extraction or breathing equipment plus a named air purifier for this material. PP-specific adhesion primers and sprays are the practical way to make first layers stick \u2014 use them with ventilation per their own instructions. Because PP resists solvents and glues, post-print assembly relies on mechanical fasteners, heat staking or PP welding rather than adhesives. Not food-contact suitable: no certification was found for any PP-CF filament, and the fiber-roughened surface compounds the usual FDM layer-crevice problem.",
+  "additional_notes": "PP-CF and pp-gf are close enough that the choice usually comes down to two things. Density: carbon's 1.10 g/cm\u00b3 against glass's ~1.12 keeps a little more of base PP's volume-per-spool advantage, and gives lighter parts at equal geometry. Availability and price: PP-CF has the more crowded brand field \u2014 3DXtech, Prusament, Filoalfa, filament2print, Filamentive, CHCKX \u2014 and lands in the lower-to-middle part of pp-gf's price band rather than above it. Everything else is a wash, or unmeasured. What both share is that they fix only one of base PP's two problems: budget for a PP-specific build surface before buying a spool, and accept that the fiber destroys the living-hinge and fatigue behaviour that is the main reason people reach for polypropylene in the first place.",
   "provenance": {
     "sources": [
       "https://www.3dxtech.com/products/carbonx-pp-cf-1",
@@ -222,7 +221,7 @@
     ],
     "last_verified": "2026-08-01",
     "confidence": "low",
-    "conflicts": "Max service temperature is a direct brand-to-brand disagreement rather than a single-source ambiguity: filament2print states up to 100 °C for its PP-CF while Prusament claims up to 120 °C for its own PP Carbon Fiber, and both are recorded here with the conservative 100 °C in the field. Enclosure is a milder disagreement — Prusament states an enclosure is 'not required' for its grade, while the base and sibling entries record one as recommended for warp control; recommended is retained for family consistency. Several core fields are unpublished for PP-CF and deliberately omitted rather than borrowed from pp-gf: tensile strength, HDT@0.45 MPa, part-cooling fan percentage and print speed. Shrinkage is an estimate mirroring pp-gf's own reasoned band, itself unmeasured. filament2print's water-absorption spec is printed as '-1 % after 24 h submersion'; the negative sign is treated as a data-entry artefact for a near-zero value rather than recorded literally. Drying framing conflicts between 'no drying required' (CHCKX, 3DXtech-style listings) and a concrete 60 °C / 4 h corrective protocol (filament2print) — reconciled as 'rarely', matching the sibling. Pricing rests on three listings in three currencies, one of which (Prusament, $69.99/spool) has an unconfirmed spool weight, so its per-kg figure is an inference. AMS incompatibility is inferred from the general filled-filament bar and base pp's community jam report, not a vendor statement. Emissions levels are inherited from base pp, which itself flags them as low-confidence; only the post-processing dust hazard is directly sourced. Fiber loading is not disclosed by any brand, so mechanical figures are brand-specific and not comparable across products. The Amazon CHCKX listing was blocked by robots.txt and is recorded for follow-up rather than read."
+    "conflicts": "Max service temperature is a direct brand-to-brand disagreement rather than a single-source ambiguity: filament2print states up to 100 \u00b0C for its PP-CF while Prusament claims up to 120 \u00b0C for its own PP Carbon Fiber, and both are recorded here with the conservative 100 \u00b0C in the field. Enclosure is a milder disagreement \u2014 Prusament states an enclosure is 'not required' for its grade, while the base and sibling entries record one as recommended for warp control; recommended is retained for family consistency. Several core fields are unpublished for PP-CF and deliberately omitted rather than borrowed from pp-gf: tensile strength, HDT@0.45 MPa, part-cooling fan percentage and print speed. Shrinkage is an estimate mirroring pp-gf's own reasoned band, itself unmeasured. filament2print's water-absorption spec is printed as '-1 % after 24 h submersion'; the negative sign is treated as a data-entry artefact for a near-zero value rather than recorded literally. Drying framing conflicts between 'no drying required' (CHCKX, 3DXtech-style listings) and a concrete 60 \u00b0C / 4 h corrective protocol (filament2print) \u2014 reconciled as 'rarely', matching the sibling. Pricing rests on three listings in three currencies, one of which (Prusament, $69.99/spool) has an unconfirmed spool weight, so its per-kg figure is an inference. AMS incompatibility is inferred from the general filled-filament bar and base pp's community jam report, not a vendor statement. Emissions levels are inherited from base pp, which itself flags them as low-confidence; only the post-processing dust hazard is directly sourced. Fiber loading is not disclosed by any brand, so mechanical figures are brand-specific and not comparable across products. The Amazon CHCKX listing was blocked by robots.txt and is recorded for follow-up rather than read."
   },
   "trade_names": [
     {
@@ -233,12 +232,12 @@
     {
       "manufacturer": "prusa-research",
       "product": "Prusament PP Carbon Fiber",
-      "notes": "270 ± 10 °C nozzle, 85 ± 10 °C bed, enclosure stated not required, hardened nozzle required, claimed service to 120 °C. Validated on a dedicated PP sheet or a smooth PEI sheet with PP tape. $69.99 per spool, spool weight unconfirmed."
+      "notes": "270 \u00b1 10 \u00b0C nozzle, 85 \u00b1 10 \u00b0C bed, enclosure stated not required, hardened nozzle required, claimed service to 120 \u00b0C. Validated on a dedicated PP sheet or a smooth PEI sheet with PP tape. $69.99 per spool, spool weight unconfirmed."
     },
     {
       "manufacturer": "filamentive",
       "product": "3F PP-CF 9928",
-      "notes": "£67.99/500 g ex VAT (~$86/kg); 300 g 1.75 mm spools also listed."
+      "notes": "\u00a367.99/500 g ex VAT (~$86/kg); 300 g 1.75 mm spools also listed."
     },
     {
       "manufacturer": "chckx3d",
@@ -248,7 +247,7 @@
     {
       "manufacturer": "filament2print",
       "product": "PP CF",
-      "notes": "House-brand line and the most complete PP-CF datasheet found: 235-255 °C nozzle, 70-90 °C bed, 20 °C ambient, density 1.1 g/cm³, flexural modulus 3800 MPa (ISO 178), service to 100 °C, dry 60 °C for 4 h+ if exposed, hardened steel/ruby/vanadium/tungsten-carbide nozzle at 0.25 mm minimum."
+      "notes": "House-brand line and the most complete PP-CF datasheet found: 235-255 \u00b0C nozzle, 70-90 \u00b0C bed, 20 \u00b0C ambient, density 1.1 g/cm\u00b3, flexural modulus 3800 MPa (ISO 178), service to 100 \u00b0C, dry 60 \u00b0C for 4 h+ if exposed, hardened steel/ruby/vanadium/tungsten-carbide nozzle at 0.25 mm minimum."
     },
     {
       "manufacturer": "Filoalfa",

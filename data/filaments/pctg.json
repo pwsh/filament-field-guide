@@ -10,8 +10,8 @@
   "base_type": null,
   "variation_kind": null,
   "polymer_class": "polyester-copolyester",
-  "chemical_makeup": "Poly(cyclohexylenedimethylene terephthalate), glycol-modified — a copolyester of terephthalic acid with a high 1,4-cyclohexanedimethanol (CHDM) content, typically >40-50 % versus roughly 30 % in PETG. The heavier CHDM substitution suppresses crystallinity entirely, giving a fully amorphous, tougher polymer closely related to Eastman Tritan chemistry.",
-  "summary": "PETG's tougher, clearer, more expensive sibling: the same easy-going amorphous copolyester behaviour with markedly better impact strength, optical clarity, chemical resistance and near-isotropic layer bonding. The costs are a hotter nozzle (250-270 °C, all-metal hotend), more shrink-driven warp than PETG, and roughly double the price.",
+  "chemical_makeup": "Poly(cyclohexylenedimethylene terephthalate), glycol-modified \u2014 a copolyester of terephthalic acid with a high 1,4-cyclohexanedimethanol (CHDM) content, typically >40-50 % versus roughly 30 % in PETG. The heavier CHDM substitution suppresses crystallinity entirely, giving a fully amorphous, tougher polymer closely related to Eastman Tritan chemistry.",
+  "summary": "PETG's tougher, clearer, more expensive sibling: the same easy-going amorphous copolyester behaviour with markedly better impact strength, optical clarity, chemical resistance and near-isotropic layer bonding. The costs are a hotter nozzle (250-270 \u00b0C, all-metal hotend), more shrink-driven warp than PETG, and roughly double the price.",
   "printing": {
     "nozzle_temp_c": {
       "min": 240,
@@ -42,13 +42,13 @@
       "max": 60,
       "recommended": 30
     },
-    "notes": "An all-metal hotend is effectively mandatory: the useful window sits above 250 °C and CNC Kitchen ran Essentium PCTG at 270 °C. Brass nozzles are fine — unfilled PCTG is not abrasive. Moderate cooling (~30 %) preserves layer bonding; Spectrum's datasheet permits up to 100 % but full cooling costs Z strength. Enclosure is optional for small parts and genuinely helpful on large flats, where shrink-induced stress lifts corners. Legacy Bowden machines should stay at 40-60 mm/s; direct-drive CoreXY machines handle 80-110 mm/s."
+    "notes": "An all-metal hotend is effectively mandatory: the useful window sits above 250 \u00b0C and CNC Kitchen ran Essentium PCTG at 270 \u00b0C. Brass nozzles are fine \u2014 unfilled PCTG is not abrasive. Moderate cooling (~30 %) preserves layer bonding; Spectrum's datasheet permits up to 100 % but full cooling costs Z strength. Enclosure is optional for small parts and genuinely helpful on large flats, where shrink-induced stress lifts corners. Legacy Bowden machines should stay at 40-60 mm/s; direct-drive CoreXY machines handle 80-110 mm/s."
   },
   "feeding": {
     "drive_system": "any",
     "ams_compatible": "yes",
     "feeding_assistant_recommended": false,
-    "notes": "PCTG is not named in Bambu's filament-guide material table, but it is a rigid, non-abrasive amorphous copolyester that feeds exactly like PETG, which Bambu does list as AMS-compatible, and it appears nowhere on the AMS notes' excluded list. Moisture uptake is lower than PETG's, so an unsealed unit is not the concern it is for PA or PC. Enclosure: this entry already treats an enclosure as genuinely helpful on large flats where shrink lifts corners, so the chamber heat is wanted and enclosure_open_for_cooling is false — the opposite of the PLA case."
+    "notes": "PCTG is not named in Bambu's filament-guide material table, but it is a rigid, non-abrasive amorphous copolyester that feeds exactly like PETG, which Bambu does list as AMS-compatible, and it appears nowhere on the AMS notes' excluded list. Moisture uptake is lower than PETG's, so an unsealed unit is not the concern it is for PA or PC. Enclosure: this entry already treats an enclosure as genuinely helpful on large flats where shrink lifts corners, so the chamber heat is wanted and enclosure_open_for_cooling is false \u2014 the opposite of the PLA case."
   },
   "drying": {
     "required_before_use": "if-exposed",
@@ -69,10 +69,10 @@
       "drybox with desiccant"
     ],
     "dryness_validation": "No popping, hissing or crackling as the filament extrudes; no visible steam or bubbles at the nozzle tip; the extrudate is glossy rather than matte/frosted",
-    "notes": "Multiple sources rate PCTG's moisture uptake as lower than PETG's, so a sealed spool straight out of the bag usually prints without drying. Treat drying as mandatory after any prolonged open-air exposure. The 55 °C/8 h PETG-family default (Bambu) is a safe starting point; 60 °C is fine given Tg ~78 °C."
+    "notes": "Multiple sources rate PCTG's moisture uptake as lower than PETG's, so a sealed spool straight out of the bag usually prints without drying. Treat drying as mandatory after any prolonged open-air exposure. The 55 \u00b0C/8 h PETG-family default (Bambu) is a safe starting point; 60 \u00b0C is fine given Tg ~78 \u00b0C."
   },
   "storage": {
-    "recommendations": "Reseal in a bag or drybox with fresh desiccant between prints; store at 18-25 °C. Spectrum quotes roughly 24 months of shelf life in dry storage.",
+    "recommendations": "Reseal in a bag or drybox with fresh desiccant between prints; store at 18-25 \u00b0C. Spectrum quotes roughly 24 months of shelf life in dry storage.",
     "max_humidity_pct": 40,
     "hygroscopy": "moderate"
   },
@@ -93,9 +93,9 @@
       "snap-fit and living-hinge-adjacent parts leveraging ductility"
     ],
     "not_recommended": [
-      "high-temperature or near-boiling applications (HDT ~64-76 °C, softens near 80 °C)",
+      "high-temperature or near-boiling applications (HDT ~64-76 \u00b0C, softens near 80 \u00b0C)",
       "parts needing maximum rigidity or stiffness (flexural modulus below PET and ABS)",
-      "structural loads applied along Z (standing impact collapses to ~1.5 kJ/m²)",
+      "structural loads applied along Z (standing impact collapses to ~1.5 kJ/m\u00b2)",
       "budget or high-volume printing (cost and limited availability)",
       "printers without a heated bed and an all-metal hotend"
     ]
@@ -118,7 +118,7 @@
       "max": 51,
       "recommended": 47
     },
-    "notes": "Density 1.23 g/cm³ (Spectrum TDS). Tg ~78 °C (3DXTech; other sources mid-70s). HDT 76 °C @0.45 MPa (Spectrum); other sources report 74-78 °C. Tensile: Spectrum quotes 44 MPa yield / 46 MPa break, CNC Kitchen measured 48-51 MPa flat. Flat (XY) impact ~24 kJ/m², approaching ABS levels and several times PETG's Izod rating, but standing/Z impact falls to ~1.5 kJ/m² — strongly anisotropic in impact even though Z tensile holds up well at 38-40 MPa. Max service temperature is an estimate from Tg minus margin, not a datasheet figure; one community report describes failure under load at 65 °C. 3D-Fuel's Pro PCTG TDS (rev 9-2-25, published to their technical library and read 2026-08-01) is a second manufacturer datasheet and agrees closely with Spectrum: specific gravity 1.23 (ASTM D792), HDT 76/64 °C at 0.455/1.82 MPa (ISO 75) — both exactly the recorded values — tensile 44 MPa at yield / 46 MPa at break (ISO 527), elongation 4.4 % at yield / 220 % at break, flexural 60 MPa at 1,600 MPa modulus (ISO 178), notched Izod 93 kJ/m² (ISO 180), Shore 76D, Rockwell R105 and 90 % transmittance. Its one disagreement is Tg 84 °C against the ~78 °C recorded here; 78 is retained as the multi-source figure. Shrinkage is not published by any source found, including this TDS, and is omitted deliberately — described only qualitatively as greater than PETG's."
+    "notes": "Density 1.23 g/cm\u00b3 (Spectrum TDS). Tg ~78 \u00b0C (3DXTech; other sources mid-70s). HDT 76 \u00b0C @0.45 MPa (Spectrum); other sources report 74-78 \u00b0C. Tensile: Spectrum quotes 44 MPa yield / 46 MPa break, CNC Kitchen measured 48-51 MPa flat. Flat (XY) impact ~24 kJ/m\u00b2, approaching ABS levels and several times PETG's Izod rating, but standing/Z impact falls to ~1.5 kJ/m\u00b2 \u2014 strongly anisotropic in impact even though Z tensile holds up well at 38-40 MPa. Max service temperature is an estimate from Tg minus margin, not a datasheet figure; one community report describes failure under load at 65 \u00b0C. 3D-Fuel's Pro PCTG TDS (rev 9-2-25, published to their technical library and read 2026-08-01) is a second manufacturer datasheet and agrees closely with Spectrum: specific gravity 1.23 (ASTM D792), HDT 76/64 \u00b0C at 0.455/1.82 MPa (ISO 75) \u2014 both exactly the recorded values \u2014 tensile 44 MPa at yield / 46 MPa at break (ISO 527), elongation 4.4 % at yield / 220 % at break, flexural 60 MPa at 1,600 MPa modulus (ISO 178), notched Izod 93 kJ/m\u00b2 (ISO 180), Shore 76D, Rockwell R105 and 90 % transmittance. Its one disagreement is Tg 84 \u00b0C against the ~78 \u00b0C recorded here; 78 is retained as the multi-source figure. Shrinkage is not published by any source found, including this TDS, and is omitted deliberately \u2014 described only qualitatively as greater than PETG's."
   },
   "scores": {
     "ease_of_print": 6,
@@ -134,7 +134,6 @@
   "compatibility": {
     "bonds_with": [
       "cpe",
-      "pctg",
       "pctg-cf",
       "pctg-gf",
       "pet",
@@ -145,17 +144,16 @@
       "petg-plus"
     ],
     "support_materials": [
-      "petg",
       "pla"
     ],
     "usable_as_support_for": [],
-    "notes": "Same ester backbone as PETG and PET, so co-printing and welding within the copolyester family is expected and PETG/PCTG are routinely printed together; direct fusion testing against PET was not found (unverified). No reliable structural bond to PLA, ABS, ASA, PA, PC, PP, TPU or TPE — incidental adhesion is possible but should not be designed around. No water-soluble support (PVA, BVOH) is documented to bond chemically to PCTG, so supports are in practice mechanical/breakaway: PLA and PETG separate cleanly from PCTG in the same way they do from each other. PCTG is not used as a support material for other filaments."
+    "notes": "Same ester backbone as PETG and PET, so co-printing and welding within the copolyester family is expected and PETG/PCTG are routinely printed together; direct fusion testing against PET was not found (unverified). No reliable structural bond to PLA, ABS, ASA, PA, PC, PP, TPU or TPE \u2014 incidental adhesion is possible but should not be designed around. No water-soluble support (PVA, BVOH) is documented to bond chemically to PCTG, so supports are in practice mechanical/breakaway: PLA and PETG separate cleanly from PCTG in the same way they do from each other. PCTG is not used as a support material for other filaments."
   },
   "plate_recommendations": [
     {
       "plate_id": "pei-textured",
       "rating": "recommended",
-      "notes": "Sticks readily at 70-100 °C bed — the problem is over-adhesion, not adhesion. Like PETG, PCTG can bond hard enough to tear PEI off the plate, so use a release-agent separator: glue stick, a wiped film of window cleaner or dish soap, or talcum powder. CNC Kitchen found glue stick unreliable on powder-coated PEI specifically for PCTG, so test on a small part first and lift the part only once the bed is fully cool."
+      "notes": "Sticks readily at 70-100 \u00b0C bed \u2014 the problem is over-adhesion, not adhesion. Like PETG, PCTG can bond hard enough to tear PEI off the plate, so use a release-agent separator: glue stick, a wiped film of window cleaner or dish soap, or talcum powder. CNC Kitchen found glue stick unreliable on powder-coated PEI specifically for PCTG, so test on a small part first and lift the part only once the bed is fully cool."
     },
     {
       "plate_id": "pp-sheet",
@@ -216,19 +214,19 @@
   "alternatives": [
     {
       "filament_id": "petg",
-      "reason": "The cheaper, easier default from the same family: ease 7 vs 6, warp 3 vs 5, a 220-250 °C window instead of 250-270 °C all-metal, and $18-42 vs $30-55 — you give up PCTG's impact toughness, optical clarity and near-isotropic bonding (adh 10 vs 9)."
+      "reason": "The cheaper, easier default from the same family: ease 7 vs 6, warp 3 vs 5, a 220-250 \u00b0C window instead of 250-270 \u00b0C all-metal, and $18-42 vs $30-55 \u2014 you give up PCTG's impact toughness, optical clarity and near-isotropic bonding (adh 10 vs 9)."
     },
     {
       "filament_id": "cpe",
-      "reason": "If heat is the missing piece rather than toughness: temp 7 vs 5 with better chemical resistance and still no enclosure — at $45-100 vs $30-55 and pronounced XY/Z anisotropy on the main grade, against PCTG's near-isotropic layers."
+      "reason": "If heat is the missing piece rather than toughness: temp 7 vs 5 with better chemical resistance and still no enclosure \u2014 at $45-100 vs $30-55 and pronounced XY/Z anisotropy on the main grade, against PCTG's near-isotropic layers."
     },
     {
       "filament_id": "pctg-gf",
-      "reason": "The same resin made stiff and dimensionally quiet (stab 8 vs 6, warp 4 vs 5) while keeping more bonding than the CF grade (adh 8 vs 10) — costs the clarity, a hardened nozzle, $60/kg and unpublished mechanicals."
+      "reason": "The same resin made stiff and dimensionally quiet (stab 8 vs 6, warp 4 vs 5) while keeping more bonding than the CF grade (adh 8 vs 10) \u2014 costs the clarity, a hardened nozzle, $60/kg and unpublished mechanicals."
     },
     {
       "filament_id": "asa",
-      "reason": "For sustained sun, PCTG's uv 6 / weath 6 is mid-tier: ASA is 9 / 9 with temp 7 vs 5 at $18-45 — bought with an enclosure, ventilation, warp 7 vs 5, ease 5 vs 6 and much worse layer adhesion (adh 4 vs 10)."
+      "reason": "For sustained sun, PCTG's uv 6 / weath 6 is mid-tier: ASA is 9 / 9 with temp 7 vs 5 at $18-45 \u2014 bought with an enclosure, ventilation, warp 7 vs 5, ease 5 vs 6 and much worse layer adhesion (adh 4 vs 10)."
     }
   ],
   "emissions": {
@@ -240,10 +238,10 @@
       "ultrafine particles"
     ],
     "ventilation": "recommended",
-    "notes": "No emissions study of PCTG specifically was found; this profile is extrapolated from the PETG-family literature (MDPI Materials), which measures ultrafine particle output roughly 10x lower than ABS with acetaldehyde and phthalate esters as the notable VOCs. Odour is reported as minimal (3DXTech). The extrapolation is conservative on VOCs because PCTG runs 250-270 °C, well above PETG, and emission rates rise sharply with nozzle temperature."
+    "notes": "No emissions study of PCTG specifically was found; this profile is extrapolated from the PETG-family literature (MDPI Materials), which measures ultrafine particle output roughly 10x lower than ABS with acetaldehyde and phthalate esters as the notable VOCs. Odour is reported as minimal (3DXTech). The extrapolation is conservative on VOCs because PCTG runs 250-270 \u00b0C, well above PETG, and emission rates rise sharply with nozzle temperature."
   },
-  "safety_notes": "Requires an all-metal hotend; PTFE-lined hotends degrade and release fluoropolymer decomposition products above ~250 °C, which is inside PCTG's normal printing window.",
-  "additional_notes": "Layer adhesion is scored 10 to match the glossary rubric, which names PCTG as its near-isotropic exemplar and is supported by CNC Kitchen's 38-40 MPa standing tensile against 48-51 MPa flat. Note that this near-isotropy holds for tensile loading only — impact energy in Z is roughly 6 % of the flat value, so 'near-isotropic' should not be read as 'safe to shock-load in Z'.",
+  "safety_notes": "Requires an all-metal hotend; PTFE-lined hotends degrade and release fluoropolymer decomposition products above ~250 \u00b0C, which is inside PCTG's normal printing window.",
+  "additional_notes": "Layer adhesion is scored 10 to match the glossary rubric, which names PCTG as its near-isotropic exemplar and is supported by CNC Kitchen's 38-40 MPa standing tensile against 48-51 MPa flat. Note that this near-isotropy holds for tensile loading only \u2014 impact energy in Z is roughly 6 % of the flat value, so 'near-isotropic' should not be read as 'safe to shock-load in Z'.",
   "provenance": {
     "sources": [
       "https://spectrumfilaments.com/wp-content/uploads/2022/05/en_tds_spectrum_pctg.pdf",
@@ -262,7 +260,7 @@
     ],
     "last_verified": "2026-08-01",
     "confidence": "medium",
-    "conflicts": "Nozzle temperature: most guidance says 250-270 °C but some vendors list a window starting at 230 °C; 240-275 °C recorded as the union with 260 °C recommended. Bed temperature: Spectrum's TDS says 60-100 °C while most practical guidance says 70-85 °C. Part cooling: CNC Kitchen recommends ~30 % while Spectrum permits up to 100 %; low-moderate cooling recorded. HDT: 76 °C (Spectrum) versus a 74-78 °C spread elsewhere. Shrinkage is not published by any source (omitted rather than guessed). Food contact: industrial PCT food grades exist for bottles and blender jars, but no 3D-printing PCTG filament found carries a food-contact certification — recorded as conditional and unverified for any specific brand. UV/weathering advantage over PETG is asserted qualitatively by several sources but never quantified, and no head-to-head against ASA was found. 2026-08-01 update (3D-Fuel technical library published — owner-provided link): 3D-Fuel's Pro PCTG TDS independently confirms density 1.23 g/cm³ and HDT 76 °C at 0.455 MPa and puts tensile at 44-46 MPa, inside the recorded 44-51 MPa range, but reports Tg 84 °C where this entry records 78 °C (3DXTech, with other sources mid-70s) — a ~6 °C spread left unresolved with 78 retained. The TDS's ISO 180 notched Izod of 93 kJ/m² is an order of magnitude above the ~24 kJ/m² flat-impact figure cited from CNC Kitchen and is not comparable (injection-moulded ISO bar versus printed specimen). Its ASTM and ISO columns are also internally inconsistent on impact (860 J/m vs 93 kJ/m²) and flexural modulus (18,300 kgf/cm² ≈ 1,795 MPa vs 1,600 MPa), so the TDS is treated as confirmation of density/HDT/tensile rather than as a source of impact or flexural numbers. Shrinkage remains unpublished."
+    "conflicts": "Nozzle temperature: most guidance says 250-270 \u00b0C but some vendors list a window starting at 230 \u00b0C; 240-275 \u00b0C recorded as the union with 260 \u00b0C recommended. Bed temperature: Spectrum's TDS says 60-100 \u00b0C while most practical guidance says 70-85 \u00b0C. Part cooling: CNC Kitchen recommends ~30 % while Spectrum permits up to 100 %; low-moderate cooling recorded. HDT: 76 \u00b0C (Spectrum) versus a 74-78 \u00b0C spread elsewhere. Shrinkage is not published by any source (omitted rather than guessed). Food contact: industrial PCT food grades exist for bottles and blender jars, but no 3D-printing PCTG filament found carries a food-contact certification \u2014 recorded as conditional and unverified for any specific brand. UV/weathering advantage over PETG is asserted qualitatively by several sources but never quantified, and no head-to-head against ASA was found. 2026-08-01 update (3D-Fuel technical library published \u2014 owner-provided link): 3D-Fuel's Pro PCTG TDS independently confirms density 1.23 g/cm\u00b3 and HDT 76 \u00b0C at 0.455 MPa and puts tensile at 44-46 MPa, inside the recorded 44-51 MPa range, but reports Tg 84 \u00b0C where this entry records 78 \u00b0C (3DXTech, with other sources mid-70s) \u2014 a ~6 \u00b0C spread left unresolved with 78 retained. The TDS's ISO 180 notched Izod of 93 kJ/m\u00b2 is an order of magnitude above the ~24 kJ/m\u00b2 flat-impact figure cited from CNC Kitchen and is not comparable (injection-moulded ISO bar versus printed specimen). Its ASTM and ISO columns are also internally inconsistent on impact (860 J/m vs 93 kJ/m\u00b2) and flexural modulus (18,300 kgf/cm\u00b2 \u2248 1,795 MPa vs 1,600 MPa), so the TDS is treated as confirmation of density/HDT/tensile rather than as a source of impact or flexural numbers. Shrinkage remains unpublished."
   },
   "trade_names": [
     {

@@ -12,8 +12,8 @@
   "base_type": "tpu",
   "variation_kind": "shore-grade",
   "polymer_class": "elastomer",
-  "chemical_makeup": "Thermoplastic polyurethane at Shore 72D — the hardest grade in this catalog, above Bambu's 68D 'TPU for AMS' and well past the point where the material stops behaving like an elastomer at all. The reference product is CC3D's 72D TPU, marketed as 'Nylon-Like TPU'; Yoline Lab, Polar Filament and trading3d sell the same durometer.",
-  "summary": "TPU pushed so far up the hardness scale that it reads as a polyamide substitute rather than a flexible: bendable but not stretchy, wear-resistant, with layer adhesion and print behaviour that independent testing likened to nylon. Delta vs tpu-68d: harder still, AMS-workable in practice on Bambu hardware, and the family's easiest feed — but it gives up 68D's engineered-for-the-AMS predictability, warps in a way no other TPU grade does if cooling and temperature are not managed, and has no published datasheet behind any of its claims. Buy it to replace nylon without nylon's moisture problem, not to get flex.",
+  "chemical_makeup": "Thermoplastic polyurethane at Shore 72D \u2014 the hardest grade in this catalog, above Bambu's 68D 'TPU for AMS' and well past the point where the material stops behaving like an elastomer at all. The reference product is CC3D's 72D TPU, marketed as 'Nylon-Like TPU'; Yoline Lab, Polar Filament and trading3d sell the same durometer.",
+  "summary": "TPU pushed so far up the hardness scale that it reads as a polyamide substitute rather than a flexible: bendable but not stretchy, wear-resistant, with layer adhesion and print behaviour that independent testing likened to nylon. Delta vs tpu-68d: harder still, AMS-workable in practice on Bambu hardware, and the family's easiest feed \u2014 but it gives up 68D's engineered-for-the-AMS predictability, warps in a way no other TPU grade does if cooling and temperature are not managed, and has no published datasheet behind any of its claims. Buy it to replace nylon without nylon's moisture problem, not to get flex.",
   "printing": {
     "nozzle_temp_c": {
       "min": 200,
@@ -44,13 +44,13 @@
       "max": 60,
       "recommended": 30
     },
-    "notes": "Vendor and practice disagree by roughly 40 °C at the top: CC3D and trading3d list 200-230 °C, while Hackaday's hands-on testing on a Bambu X1-Carbon landed on about 240 °C for the best results — the recorded 200-245 °C spans both and 235 °C reflects the tested figure rather than the listing. The bed runs at 60-80 °C, the hottest in the TPU family and roughly double what tpu-68d wants, which is the first sign this grade behaves less like a flexible than like a semi-rigid engineering polymer. The second sign is warp: Hackaday's initial attempts turned into 'spaghetti' and needed careful cooling and temperature management, a failure mode no other TPU grade in this catalog exhibits, so enclosure_open_for_cooling is recorded false here against the family's true — this grade wants a draft-free, warm environment, not extra cooling. An enclosure is not required but helps for the same reason. Not abrasive; standard brass nozzle."
+    "notes": "Vendor and practice disagree by roughly 40 \u00b0C at the top: CC3D and trading3d list 200-230 \u00b0C, while Hackaday's hands-on testing on a Bambu X1-Carbon landed on about 240 \u00b0C for the best results \u2014 the recorded 200-245 \u00b0C spans both and 235 \u00b0C reflects the tested figure rather than the listing. The bed runs at 60-80 \u00b0C, the hottest in the TPU family and roughly double what tpu-68d wants, which is the first sign this grade behaves less like a flexible than like a semi-rigid engineering polymer. The second sign is warp: Hackaday's initial attempts turned into 'spaghetti' and needed careful cooling and temperature management, a failure mode no other TPU grade in this catalog exhibits, so enclosure_open_for_cooling is recorded false here against the family's true \u2014 this grade wants a draft-free, warm environment, not extra cooling. An enclosure is not required but helps for the same reason. Not abrasive; standard brass nozzle."
   },
   "feeding": {
     "drive_system": "any",
     "ams_compatible": "conditional",
     "feeding_assistant_recommended": false,
-    "notes": "The easiest-feeding grade in the family: at 72D the filament no longer buckles under drive-gear force at all, so Bowden paths are fine and the compressive-load problem that defines every softer grade simply does not arise. AMS is recorded 'conditional' rather than tpu-68d's 'yes' on a deliberate distinction — 68D is a purpose-engineered AMS product with a vendor guarantee, while 72D is a third-party material that works in an AMS in practice: it has been tested successfully through a Bambu X1-Carbon, and Bambu's own guide places D-scale grades on the compatible side of the hardness line, but there are user reports of the filament slipping out of the H2D print head, i.e. feed-tension quirks rather than the outright jamming that bars the Shore A grades. Test on a short print before trusting it to an unattended multi-material job. No feeding assistant needed."
+    "notes": "The easiest-feeding grade in the family: at 72D the filament no longer buckles under drive-gear force at all, so Bowden paths are fine and the compressive-load problem that defines every softer grade simply does not arise. AMS is recorded 'conditional' rather than tpu-68d's 'yes' on a deliberate distinction \u2014 68D is a purpose-engineered AMS product with a vendor guarantee, while 72D is a third-party material that works in an AMS in practice: it has been tested successfully through a Bambu X1-Carbon, and Bambu's own guide places D-scale grades on the compatible side of the hardness line, but there are user reports of the filament slipping out of the H2D print head, i.e. feed-tension quirks rather than the outright jamming that bars the Shore A grades. Test on a short print before trusting it to an unattended multi-material job. No feeding assistant needed."
   },
   "drying": {
     "required_before_use": "always",
@@ -65,12 +65,12 @@
       "recommended": 8
     },
     "methods": [
-      "dedicated filament dryer at 70 °C",
-      "hot-air or vacuum oven at 70 °C",
-      "heated-bed method at 80-90 °C for 12 h",
+      "dedicated filament dryer at 70 \u00b0C",
+      "hot-air or vacuum oven at 70 \u00b0C",
+      "heated-bed method at 80-90 \u00b0C for 12 h",
       "print directly from a drybox with desiccant"
     ],
-    "dryness_validation": "No popping or crackling at the nozzle, no foamy extrudate, and no rise in stringing on a retraction test — fully reliable at this stiffness, as with tpu-68d.",
+    "dryness_validation": "No popping or crackling at the nozzle, no foamy extrudate, and no rise in stringing on a retraction test \u2014 fully reliable at this stiffness, as with tpu-68d.",
     "notes": "trading3d claims low moisture absorption and stable printing even in open environments, which is consistent with tpu-68d's documented 1.20 % uptake and with hardness reducing moisture sensitivity across the family. 'Always' is nevertheless carried from the base entry: the vendor claim is unquantified, no drying spec is published for this grade, and Hackaday's own test printed straight from a filament dryer. The schedule is the family regime (unverified for 72D specifically)."
   },
   "storage": {
@@ -81,7 +81,7 @@
   "price": {
     "usd_per_kg_low": 70,
     "usd_per_kg_high": 100,
-    "notes": "The most expensive grade in the TPU family by a wide margin: trading3d lists $69.90 on sale against a $99.80 regular price for 1 kg, roughly double tpu-68d's ~$38/kg and triple the cheap end of tpu-60d. That premium is niche pricing rather than raw-material cost — rigid TPU is a specialty product with few buyers — so expect it to fall if the grade catches on. CC3D and Polar Filament sell the same durometer; no confirmed per-kg figures were found for either (unverified)."
+    "notes": "The most expensive grade in the TPU family by a wide margin: trading3d lists $69.90 on sale against a $99.80 regular price for 1 kg, roughly double tpu-68d's ~$38/kg and triple the cheap end of tpu-60d. That premium is niche pricing rather than raw-material cost \u2014 rigid TPU is a specialty product with few buyers \u2014 so expect it to fall if the grade catches on. CC3D and Polar Filament sell the same durometer; no confirmed per-kg figures were found for either (unverified)."
   },
   "use_cases": {
     "recommended": [
@@ -93,12 +93,12 @@
       "multi-material AMS jobs needing a semi-rigid component alongside rigid filaments"
     ],
     "not_recommended": [
-      "anything needing genuine flex, stretch or rubbery feel — this is not a flexible material",
+      "anything needing genuine flex, stretch or rubbery feel \u2014 this is not a flexible material",
       "seals, gaskets and vibration damping (use 85A or 60A)",
-      "tight-tolerance parts under sustained load — it still takes permanent deformation more readily than a true rigid plastic",
+      "tight-tolerance parts under sustained load \u2014 it still takes permanent deformation more readily than a true rigid plastic",
       "large flat parts without cooling and draft management, given the reported warping",
       "unattended AMS printing before testing feed reliability on the specific printer",
-      "budget projects — the most expensive TPU grade in the catalog"
+      "budget projects \u2014 the most expensive TPU grade in the catalog"
     ]
   },
   "suitability": {
@@ -111,7 +111,7 @@
     "shore_hardness": "72D",
     "glass_transition_c": -25,
     "max_service_temp_c": 80,
-    "notes": "The least-documented grade in the family on paper and the best-documented in practice — there is an independent hands-on review but no datasheet. DENSITY IS DELIBERATELY OMITTED: no vendor publishes one, and while extrapolating from tpu-68d's measured 1.26 g/cm³ would suggest something a little above that on the family's hardness-versus-density trend, the derived weight- and volume-per-spool figures would then be an estimate built on an estimate, so nothing is recorded rather than guessed. Tensile strength and elongation are likewise unpublished and omitted; the qualitative record is that the material is much more wear-resistant than PLA, maintains strong layer adhesion, is bendable but not stretchy, and takes permanent deformation more readily than a genuinely rigid plastic — it is still a TPU. Tg is the family value carried from the base entry (unverified for this grade). Max service temperature of 80 °C is an unverified estimate placed at the top of TPU's general 60-80 °C band, matching tpu-60d, on the reasoning that hard-segment content sets this figure across the family."
+    "notes": "The least-documented grade in the family on paper and the best-documented in practice \u2014 there is an independent hands-on review but no datasheet. DENSITY IS DELIBERATELY OMITTED: no vendor publishes one, and while extrapolating from tpu-68d's measured 1.26 g/cm\u00b3 would suggest something a little above that on the family's hardness-versus-density trend, the derived weight- and volume-per-spool figures would then be an estimate built on an estimate, so nothing is recorded rather than guessed. Tensile strength and elongation are likewise unpublished and omitted; the qualitative record is that the material is much more wear-resistant than PLA, maintains strong layer adhesion, is bendable but not stretchy, and takes permanent deformation more readily than a genuinely rigid plastic \u2014 it is still a TPU. Tg is the family value carried from the base entry (unverified for this grade). Max service temperature of 80 \u00b0C is an unverified estimate placed at the top of TPU's general 60-80 \u00b0C band, matching tpu-60d, on the reasoning that hard-segment content sets this figure across the family."
   },
   "scores": {
     "ease_of_print": 7,
@@ -132,7 +132,6 @@
       "tpu-60a",
       "tpu-60d",
       "tpu-68d",
-      "tpu-72d",
       "tpu-85a",
       "tpu-90a",
       "tpu-95a",
@@ -140,17 +139,16 @@
       "tpu-gf"
     ],
     "support_materials": [
-      "petg",
       "pla"
     ],
     "usable_as_support_for": [],
-    "notes": "Chemically welds to base TPU and every sibling grade, but the mechanical mismatch at a rigid-to-soft interface is at its most extreme here — a 72D-to-60A joint is effectively a hard-plastic-to-rubber butt joint and concentrates strain at the boundary, so design multi-durometer transitions with a hardness gradient or interlocking geometry rather than a flat seam. Rigid-material bonding is unchanged from the base entry: mechanical interlock with PLA and PETG only, no useful weld to ABS, ASA, PC or PA. Standard breakaway supports are practical because the part is rigid enough to survive removal, and both PLA and PETG survive the nozzle window — the pairing is inferred from the grade's rigidity rather than documented (unverified). The sibling entries predate this id and do not yet name tpu-72d in their bonds_with lists; the relationship is symmetric and should be backfilled."
+    "notes": "Chemically welds to base TPU and every sibling grade, but the mechanical mismatch at a rigid-to-soft interface is at its most extreme here \u2014 a 72D-to-60A joint is effectively a hard-plastic-to-rubber butt joint and concentrates strain at the boundary, so design multi-durometer transitions with a hardness gradient or interlocking geometry rather than a flat seam. Rigid-material bonding is unchanged from the base entry: mechanical interlock with PLA and PETG only, no useful weld to ABS, ASA, PC or PA. Standard breakaway supports are practical because the part is rigid enough to survive removal, and both PLA and PETG survive the nozzle window \u2014 the pairing is inferred from the grade's rigidity rather than documented (unverified). The sibling entries predate this id and do not yet name tpu-72d in their bonds_with lists; the relationship is symmetric and should be backfilled."
   },
   "plate_recommendations": [
     {
       "plate_id": "pei-textured",
       "rating": "recommended",
-      "notes": "The safe default given the 60-80 °C bed this grade wants — hotter than any other TPU. The soft grades' over-adhesion and sheet-tearing problem does not apply at 72D because the part is rigid enough to release cleanly. Given the reported warping, use a brim on large flats rather than relying on bed temperature alone (plate behaviour inferred from tpu-68d and tpu-60d; not separately documented, unverified)."
+      "notes": "The safe default given the 60-80 \u00b0C bed this grade wants \u2014 hotter than any other TPU. The soft grades' over-adhesion and sheet-tearing problem does not apply at 72D because the part is rigid enough to release cleanly. Given the reported warping, use a brim on large flats rather than relying on bed temperature alone (plate behaviour inferred from tpu-68d and tpu-60d; not separately documented, unverified)."
     },
     {
       "plate_id": "carbon-fiber-plate",
@@ -165,7 +163,7 @@
     {
       "plate_id": "pei-smooth",
       "rating": "usable",
-      "notes": "Inferred: the hardest grade in the family and the most survivable on smooth PEI, though a rigid part on a strongly bonded smooth surface is a plate-damage risk on removal — cool fully first (unverified)."
+      "notes": "Inferred: the hardest grade in the family and the most survivable on smooth PEI, though a rigid part on a strongly bonded smooth surface is a plate-damage risk on removal \u2014 cool fully first (unverified)."
     },
     {
       "plate_id": "glass-borosilicate",
@@ -175,25 +173,25 @@
     {
       "plate_id": "pc-plate",
       "rating": "avoid",
-      "notes": "Inferred from the family: this grade's 60-80 °C bed sits above the plate's comfortable range, and the family-wide guidance is to use textured PEI or a carbon plate for TPU (unverified)."
+      "notes": "Inferred from the family: this grade's 60-80 \u00b0C bed sits above the plate's comfortable range, and the family-wide guidance is to use textured PEI or a carbon plate for TPU (unverified)."
     }
   ],
   "alternatives": [
     {
       "filament_id": "tpu-68d",
-      "reason": "Half the price ($35-45 vs $70-100) with an actual published TDS, engineered AMS behaviour (ams yes vs conditional) and no warp quirk — at slightly lower compressive strength (6 vs 7) and service temp (5 vs 6)."
+      "reason": "Half the price ($35-45 vs $70-100) with an actual published TDS, engineered AMS behaviour (ams yes vs conditional) and no warp quirk \u2014 at slightly lower compressive strength (6 vs 7) and service temp (5 vs 6)."
     },
     {
       "filament_id": "pa12",
-      "reason": "The nylon this grade is sold to replace, if you can run the moisture discipline: better layer adhesion (8 vs 5) and toughness at $55-90 — but water tolerance 7 with real drying requirements and warp 6 vs 2."
+      "reason": "The nylon this grade is sold to replace, if you can run the moisture discipline: better layer adhesion (8 vs 5) and toughness at $55-90 \u2014 but water tolerance 7 with real drying requirements and warp 6 vs 2."
     },
     {
       "filament_id": "tpu-gf",
-      "reason": "Semi-rigid TPU by the other route — glass fiber to 67D — at half the price ($34-40), with published Fibreheart numbers and the same stability 7. It needs a hardened nozzle, and tops out at moderate load-bearing too."
+      "reason": "Semi-rigid TPU by the other route \u2014 glass fiber to 67D \u2014 at half the price ($34-40), with published Fibreheart numbers and the same stability 7. It needs a hardened nozzle, and tops out at moderate load-bearing too."
     },
     {
       "filament_id": "petg-cf",
-      "reason": "If the part is really just a stiff bracket: cheaper ($25-67), stiffer in compression (8 vs 7), dimensionally better (stab 8 vs 7) and easier to source — with none of TPU's impact tolerance or abrasion life."
+      "reason": "If the part is really just a stiff bracket: cheaper ($25-67), stiffer in compression (8 vs 7), dimensionally better (stab 8 vs 7) and easier to source \u2014 with none of TPU's impact tolerance or abrasion life."
     }
   ],
   "emissions": {
@@ -205,7 +203,7 @@
       "urethane decomposition byproducts (unverified)"
     ],
     "ventilation": "recommended",
-    "notes": "No 72D-specific emissions data exists and no source differentiates TPU emissions by Shore grade (unverified); this is the base entry's family profile carried across. The grade-relevant point is that the practical nozzle temperature runs to about 240 °C, below the ~250 °C region where urethane decomposition becomes more likely, so it sits with tpu-68d and tpu-98a among the cooler-running grades rather than with tpu-60d's 260 °C ceiling."
+    "notes": "No 72D-specific emissions data exists and no source differentiates TPU emissions by Shore grade (unverified); this is the base entry's family profile carried across. The grade-relevant point is that the practical nozzle temperature runs to about 240 \u00b0C, below the ~250 \u00b0C region where urethane decomposition becomes more likely, so it sits with tpu-68d and tpu-98a among the cooler-running grades rather than with tpu-60d's 260 \u00b0C ceiling."
   },
   "trade_names": [
     {
@@ -216,26 +214,26 @@
     {
       "manufacturer": "Yoline Lab",
       "product": "TPU 72D",
-      "notes": "No tpu-72d id and 68D is the nearest lower grade; generic tpu used rather than misfiling (see gaps). [Relocated from tpu — 98A grade entry now exists; 2026-08-01]"
+      "notes": "No tpu-72d id and 68D is the nearest lower grade; generic tpu used rather than misfiling (see gaps). [Relocated from tpu \u2014 98A grade entry now exists; 2026-08-01]"
     },
     {
       "manufacturer": "cc3d",
       "product": "72D TPU (Nylon-Like TPU)",
-      "notes": "The reference product for this entry: 1 kg, 1.75 mm, ±0.03 mm, multiple colours including transparent, marketed as comparable to nylon filament. Independently tested by Hackaday on a Bambu X1-Carbon (best results near 240 °C, AMS-workable, initial warping). The CC3D manufacturer entry currently records only a generic 'TPU' line mapped to the base tpu id because no durometer was disclosed there — this 72D product line should be added and mapped here."
+      "notes": "The reference product for this entry: 1 kg, 1.75 mm, \u00b10.03 mm, multiple colours including transparent, marketed as comparable to nylon filament. Independently tested by Hackaday on a Bambu X1-Carbon (best results near 240 \u00b0C, AMS-workable, initial warping). The CC3D manufacturer entry currently records only a generic 'TPU' line mapped to the base tpu id because no durometer was disclosed there \u2014 this 72D product line should be added and mapped here."
     },
     {
       "manufacturer": "trading3d",
       "product": "TPU 72D",
-      "notes": "1 kg 1.75 mm, listed 200-230 °C nozzle, ±0.03 mm, claimed low moisture absorption and stable printing in open environments; $69.90 sale against $99.80 regular. Manufacturer not currently in the catalog, so a display name is used."
+      "notes": "1 kg 1.75 mm, listed 200-230 \u00b0C nozzle, \u00b10.03 mm, claimed low moisture absorption and stable printing in open environments; $69.90 sale against $99.80 regular. Manufacturer not currently in the catalog, so a display name is used."
     },
     {
       "manufacturer": "yoline-lab",
       "product": "TPU 72D",
-      "notes": "Shore 72D rigid TPU, one of Yoline's five TPU hardness grades. Previously mapped to the generic tpu id with a note that it 'falls between the tpu-68d id and nothing above it — see gaps'; retarget here."
+      "notes": "Shore 72D rigid TPU, one of Yoline's five TPU hardness grades. Previously mapped to the generic tpu id with a note that it 'falls between the tpu-68d id and nothing above it \u2014 see gaps'; retarget here."
     }
   ],
-  "safety_notes": "Urethane chemistry can in principle release isocyanate residues at print temperature; the practical window here tops out near 240 °C, below the ~250 °C decomposition concern. Not food-contact certified as printed. No hardened nozzle, no all-metal-hotend requirement and no fibre dust. The one handling note specific to this grade is mechanical rather than chemical: parts are rigid enough that failed prints break into hard shards rather than peeling like soft TPU.",
-  "additional_notes": "Read this grade as 'a nylon alternative that does not drink water', not as a flexible. Independent testing describes bendable-but-not-stretchy behaviour, layer adhesion and print character closer to polyamide than to TPU, and successful use for bike grips — while also reporting that the first attempts warped into spaghetti before cooling and temperature were sorted, which is why this is the only entry in the TPU family that does NOT carry the lid-open guidance. Against tpu-68d the trade is real in both directions: 68D is engineered for the AMS with a vendor datasheet and a guarantee, 72D is harder and feeds even better but is a third-party material with no published numbers, a warp quirk, feed-tension reports on at least one printer, and roughly double the price. Against nylon proper, the pitch is moisture: PA6 and PA66 need drybox discipline that this grade does not, at the cost of much lower stiffness and no real heat resistance.",
+  "safety_notes": "Urethane chemistry can in principle release isocyanate residues at print temperature; the practical window here tops out near 240 \u00b0C, below the ~250 \u00b0C decomposition concern. Not food-contact certified as printed. No hardened nozzle, no all-metal-hotend requirement and no fibre dust. The one handling note specific to this grade is mechanical rather than chemical: parts are rigid enough that failed prints break into hard shards rather than peeling like soft TPU.",
+  "additional_notes": "Read this grade as 'a nylon alternative that does not drink water', not as a flexible. Independent testing describes bendable-but-not-stretchy behaviour, layer adhesion and print character closer to polyamide than to TPU, and successful use for bike grips \u2014 while also reporting that the first attempts warped into spaghetti before cooling and temperature were sorted, which is why this is the only entry in the TPU family that does NOT carry the lid-open guidance. Against tpu-68d the trade is real in both directions: 68D is engineered for the AMS with a vendor datasheet and a guarantee, 72D is harder and feeds even better but is a third-party material with no published numbers, a warp quirk, feed-tension reports on at least one printer, and roughly double the price. Against nylon proper, the pitch is moisture: PA6 and PA66 need drybox discipline that this grade does not, at the cost of much lower stiffness and no real heat resistance.",
   "provenance": {
     "sources": [
       "https://hackaday.com/2025/07/22/nylon-like-tpu-filament-testing-cc3ds-72d-tpu/",
@@ -247,6 +245,6 @@
     ],
     "last_verified": "2026-08-01",
     "confidence": "low",
-    "conflicts": "No datasheet exists for any 72D product, so density, tensile strength, elongation and HDT are all unpublished — density is omitted outright rather than extrapolated from tpu-68d, which means this entry has no weight- or volume-per-spool figures and that is deliberate. Nozzle temperature disagrees by about 40 °C at the top between vendor listings (200-230 °C) and independent testing (~240 °C best results); the recorded range spans both and the recommended value follows the test rather than the listing. AMS status is the entry's judgement call: Hackaday ran it through a Bambu X1-Carbon successfully and Bambu's guide puts D-scale grades on the compatible side, but a forum thread reports the filament slipping out of an H2D print head, so 'conditional' is recorded rather than tpu-68d's 'yes'. The warping reported in testing is hard to reconcile with the low-warp behaviour of every other TPU grade and is the reason enclosure_open_for_cooling is false here, breaking the family pattern — a deliberate divergence from a single hands-on source. The vendor's low-moisture-absorption claim is unquantified, so drying stays 'always'. Tg and max service temperature are family values and estimates. Price rests on one retailer's listing with a 30 % gap between sale and regular. Scores are relative placements: ease_of_print 7 ties tpu-68d rather than exceeding it — the feeding advantage is real but is offset by the warp quirk, the absent vendor profiles and the feed-tension reports — and layer_adhesion is placed at 5 on qualitative 'strong layer adhesion' reports, deliberately above 68D's measured 2 but flagged as unmeasured, since 68D's low score comes from a real 31 % Z elongation figure that has no counterpart here."
+    "conflicts": "No datasheet exists for any 72D product, so density, tensile strength, elongation and HDT are all unpublished \u2014 density is omitted outright rather than extrapolated from tpu-68d, which means this entry has no weight- or volume-per-spool figures and that is deliberate. Nozzle temperature disagrees by about 40 \u00b0C at the top between vendor listings (200-230 \u00b0C) and independent testing (~240 \u00b0C best results); the recorded range spans both and the recommended value follows the test rather than the listing. AMS status is the entry's judgement call: Hackaday ran it through a Bambu X1-Carbon successfully and Bambu's guide puts D-scale grades on the compatible side, but a forum thread reports the filament slipping out of an H2D print head, so 'conditional' is recorded rather than tpu-68d's 'yes'. The warping reported in testing is hard to reconcile with the low-warp behaviour of every other TPU grade and is the reason enclosure_open_for_cooling is false here, breaking the family pattern \u2014 a deliberate divergence from a single hands-on source. The vendor's low-moisture-absorption claim is unquantified, so drying stays 'always'. Tg and max service temperature are family values and estimates. Price rests on one retailer's listing with a 30 % gap between sale and regular. Scores are relative placements: ease_of_print 7 ties tpu-68d rather than exceeding it \u2014 the feeding advantage is real but is offset by the warp quirk, the absent vendor profiles and the feed-tension reports \u2014 and layer_adhesion is placed at 5 on qualitative 'strong layer adhesion' reports, deliberately above 68D's measured 2 but flagged as unmeasured, since 68D's low score comes from a real 31 % Z elongation figure that has no counterpart here."
   }
 }

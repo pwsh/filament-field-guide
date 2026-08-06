@@ -9,8 +9,8 @@
   "base_type": null,
   "variation_kind": null,
   "polymer_class": "support-soluble",
-  "chemical_makeup": "Butenediol vinyl alcohol copolymer — an engineered water-soluble copolymer related to PVA but reformulated for faster dissolution, more stable extrusion and broader material compatibility",
-  "summary": "The premium water-soluble support material: it dissolves faster and prints more stably than PVA, holds up over multi-day dual-material jobs, and pairs cleanly with PETG, ASA, nylon and even TPU where PVA struggles. The trade-offs are cost — often two to three times PVA — and the same extreme hygroscopy in storage.",
+  "chemical_makeup": "Butenediol vinyl alcohol copolymer \u2014 an engineered water-soluble copolymer related to PVA but reformulated for faster dissolution, more stable extrusion and broader material compatibility",
+  "summary": "The premium water-soluble support material: it dissolves faster and prints more stably than PVA, holds up over multi-day dual-material jobs, and pairs cleanly with PETG, ASA, nylon and even TPU where PVA struggles. The trade-offs are cost \u2014 often two to three times PVA \u2014 and the same extreme hygroscopy in storage.",
   "printing": {
     "nozzle_temp_c": {
       "min": 190,
@@ -41,13 +41,13 @@
       "max": 100,
       "recommended": 60
     },
-    "notes": "Nozzle temperature is consistent across BCN3D and Fiberlogy at 190-210 °C. Bed temperature is set by the model material rather than the BVOH: BCN3D quotes a wide 45-90 °C depending on what it is supporting, Fiberlogy a narrower 50-70 °C. No enclosure or heated chamber is called for; standard open-frame machines are fine. Speed is deliberately low — BCN3D recommends ~20 mm/s, and Prusa notes BVOH shares PVA's ~4 mm³/s maximum volumetric flow (versus ~15 mm³/s for PLA), so throughput is capped regardless of printer class. Part cooling guidance is broad (Fiberlogy 0-100 %, BCN3D 50-100 %); tune to bridging needs. Feed from a dry box."
+    "notes": "Nozzle temperature is consistent across BCN3D and Fiberlogy at 190-210 \u00b0C. Bed temperature is set by the model material rather than the BVOH: BCN3D quotes a wide 45-90 \u00b0C depending on what it is supporting, Fiberlogy a narrower 50-70 \u00b0C. No enclosure or heated chamber is called for; standard open-frame machines are fine. Speed is deliberately low \u2014 BCN3D recommends ~20 mm/s, and Prusa notes BVOH shares PVA's ~4 mm\u00b3/s maximum volumetric flow (versus ~15 mm\u00b3/s for PLA), so throughput is capped regardless of printer class. Part cooling guidance is broad (Fiberlogy 0-100 %, BCN3D 50-100 %); tune to bridging needs. Feed from a dry box."
   },
   "feeding": {
     "drive_system": "any",
     "ams_compatible": "conditional",
     "feeding_assistant_recommended": false,
-    "notes": "Conditional for the same reason as PVA. Prusa's MMU soluble-material guidance treats PVA and BVOH together and warns that poorly stored spools deteriorate, go soft at a much lower temperature and cause trouble at the loading stage, that stringy tips need trimming mid-print, and that the filament's diameter deforms under idler pressure so the sensor needs precise calibration; Bambu's AMS notes bar absorbent PVA from the feed tube on the same grounds. BVOH tolerates a damp multi-day job better than PVA does but absorbs moisture just as fast, so the condition is a sealed, actively desiccated unit and a spool kept out of open air. The pronounced Z anisotropy that makes tall support towers snap during printing is a separate reason to keep the feed path short and low-tension. Enclosure: no BVOH-specific door guidance exists — Bambu's heat-creep table flags PVA for cover-removed printing and BVOH may well behave the same way, but that is unverified, so false is recorded rather than inferred."
+    "notes": "Conditional for the same reason as PVA. Prusa's MMU soluble-material guidance treats PVA and BVOH together and warns that poorly stored spools deteriorate, go soft at a much lower temperature and cause trouble at the loading stage, that stringy tips need trimming mid-print, and that the filament's diameter deforms under idler pressure so the sensor needs precise calibration; Bambu's AMS notes bar absorbent PVA from the feed tube on the same grounds. BVOH tolerates a damp multi-day job better than PVA does but absorbs moisture just as fast, so the condition is a sealed, actively desiccated unit and a spool kept out of open air. The pronounced Z anisotropy that makes tall support towers snap during printing is a separate reason to keep the feed path short and low-tension. Enclosure: no BVOH-specific door guidance exists \u2014 Bambu's heat-creep table flags PVA for cover-removed printing and BVOH may well behave the same way, but that is unverified, so false is recorded rather than inferred."
   },
   "drying": {
     "required_before_use": "always",
@@ -68,17 +68,17 @@
       "drybox with desiccant (print directly from it)"
     ],
     "dryness_validation": "No crackling or popping at the nozzle; consistent glassy extrusion; no bubbling or rough surface finish on the extruded strand",
-    "notes": "Sources give two different schedules: BCN3D 70 °C for 4 hours, Fiberlogy 60 °C for 8-12 hours. Both are plausible and probably describe a quick refresh versus a thorough dry of a saturated spool — pick the longer, cooler cycle if the spool has been open. Transfer straight into a sealed dry box afterwards."
+    "notes": "Sources give two different schedules: BCN3D 70 \u00b0C for 4 hours, Fiberlogy 60 \u00b0C for 8-12 hours. Both are plausible and probably describe a quick refresh versus a thorough dry of a saturated spool \u2014 pick the longer, cooler cycle if the spool has been open. Transfer straight into a sealed dry box afterwards."
   },
   "storage": {
-    "recommendations": "Airtight container or dry cabinet with fresh desiccant. Fiberlogy states the filament stays usable for up to 12 months if properly sealed. BCN3D notes BVOH absorbs moisture as fast as PVA but tolerates it better in practice — it will survive a multi-day (roughly two-day) print job where PVA would degrade mid-print.",
+    "recommendations": "Airtight container or dry cabinet with fresh desiccant. Fiberlogy states the filament stays usable for up to 12 months if properly sealed. BCN3D notes BVOH absorbs moisture as fast as PVA but tolerates it better in practice \u2014 it will survive a multi-day (roughly two-day) print job where PVA would degrade mid-print.",
     "max_humidity_pct": 20,
     "hygroscopy": "extreme"
   },
   "price": {
     "usd_per_kg_low": 150,
     "usd_per_kg_high": 250,
-    "notes": "Premium-priced and consistently more expensive than PVA across sources, reflecting more complex chemistry. Direct retail data point: Fiberlogy BVOH 0.5 kg at EUR 86.47 incl. VAT (roughly $95 for the spool at recent rates), implying about $150-250/kg. The per-kg USD figure is converted and estimated (unverified) — no direct USD retail listing was found."
+    "notes": "Premium-priced and consistently more expensive than PVA across sources, reflecting more complex chemistry. Direct retail data point: Fiberlogy BVOH 0.5 kg at EUR 86.47 incl. VAT (roughly $95 for the spool at recent rates), implying about $150-250/kg. The per-kg USD figure is converted and estimated (unverified) \u2014 no direct USD retail listing was found."
   },
   "use_cases": {
     "recommended": [
@@ -113,7 +113,7 @@
       "max": 34,
       "recommended": 33.7
     },
-    "notes": "Density 1.14 g/cm³ agrees well across Fiberlogy/filament2print (ISO 1183) and the BCN3D/Ultrafuse TDS. Tg 68-69 °C also agrees closely (BCN3D 69, Fiberlogy 68); 68.5 recorded. Melting temperature ~175 °C. Tensile strength is strongly orientation-dependent: 33.7 MPa printed flat versus 8.7 MPa upright in the Z direction per BCN3D/Ultrafuse — a ~75 % drop. Fiberlogy separately reports 34 MPa with orientation unspecified, consistent with the flat figure. Max service temperature ~50-60 °C is inferred from Tg, not published (unverified). Shrinkage and HDT at 0.45 MPa are not documented for this material (unverified)."
+    "notes": "Density 1.14 g/cm\u00b3 agrees well across Fiberlogy/filament2print (ISO 1183) and the BCN3D/Ultrafuse TDS. Tg 68-69 \u00b0C also agrees closely (BCN3D 69, Fiberlogy 68); 68.5 recorded. Melting temperature ~175 \u00b0C. Tensile strength is strongly orientation-dependent: 33.7 MPa printed flat versus 8.7 MPa upright in the Z direction per BCN3D/Ultrafuse \u2014 a ~75 % drop. Fiberlogy separately reports 34 MPa with orientation unspecified, consistent with the flat figure. Max service temperature ~50-60 \u00b0C is inferred from Tg, not published (unverified). Shrinkage and HDT at 0.45 MPa are not documented for this material (unverified)."
   },
   "scores": {
     "ease_of_print": 5,
@@ -127,13 +127,6 @@
     "water_tolerance": 2
   },
   "compatibility": {
-    "bonds_with": [
-      "asa",
-      "pa",
-      "petg",
-      "pla",
-      "tpu"
-    ],
     "support_materials": [],
     "usable_as_support_for": [
       "asa",
@@ -170,7 +163,7 @@
     {
       "plate_id": "pei-textured",
       "rating": "usable",
-      "notes": "The 45-90 °C bed range overlaps standard PEI operating conditions comfortably and no special release agent is typically required. In practice the model material, not the BVOH, dictates the first-layer and bed-temperature strategy."
+      "notes": "The 45-90 \u00b0C bed range overlaps standard PEI operating conditions comfortably and no special release agent is typically required. In practice the model material, not the BVOH, dictates the first-layer and bed-temperature strategy."
     },
     {
       "plate_id": "glass-borosilicate",
@@ -226,15 +219,15 @@
   "alternatives": [
     {
       "filament_id": "pva",
-      "reason": "Less than half the cost ($50-120 vs $150-250) and perfectly adequate when the build material is PLA at similar temperatures — slower dissolution, fussier extrusion (ease 3 vs 5) and worse stability over long jobs."
+      "reason": "Less than half the cost ($50-120 vs $150-250) and perfectly adequate when the build material is PLA at similar temperatures \u2014 slower dissolution, fussier extrusion (ease 3 vs 5) and worse stability over long jobs."
     },
     {
       "filament_id": "support-breakaway",
-      "reason": "Removes the solvent bath and the hygroscopic storage problem entirely (water tolerance 8 vs 2) and prints easier (ease 6 vs 5) at lower cost — only viable where every support face is hand-accessible."
+      "reason": "Removes the solvent bath and the hygroscopic storage problem entirely (water tolerance 8 vs 2) and prints easier (ease 6 vs 5) at lower cost \u2014 only viable where every support face is hand-accessible."
     },
     {
       "filament_id": "hips",
-      "reason": "Limonene-soluble support for styrenic prints at a fraction of the cost ($20-50), with none of BVOH's moisture sensitivity — but it will not pair with PLA, PETG or TPU the way BVOH does, and it needs an enclosure."
+      "reason": "Limonene-soluble support for styrenic prints at a fraction of the cost ($20-50), with none of BVOH's moisture sensitivity \u2014 but it will not pair with PLA, PETG or TPU the way BVOH does, and it needs an enclosure."
     }
   ],
   "emissions": {
@@ -244,7 +237,7 @@
       "ultrafine particles"
     ],
     "ventilation": "optional",
-    "notes": "No dedicated emissions chamber study specific to BVOH was found, so this whole assessment is by analogy to PVA — a similar water-soluble alcohol-based chemistry printed at low temperature — and should be treated as unverified. On that basis it is generally regarded as lower-VOC and lower-UFP than the styrenic (HIPS/ABS) or nylon families, with no major named toxic monomer commonly cited. General FDM ventilation best practice still applies."
+    "notes": "No dedicated emissions chamber study specific to BVOH was found, so this whole assessment is by analogy to PVA \u2014 a similar water-soluble alcohol-based chemistry printed at low temperature \u2014 and should be treated as unverified. On that basis it is generally regarded as lower-VOC and lower-UFP than the styrenic (HIPS/ABS) or nylon families, with no major named toxic monomer commonly cited. General FDM ventilation best practice still applies."
   },
   "safety_notes": "Dissolved BVOH leaves a viscous waste solution; dissolve supports in a bucket and dispose of the liquid per local guidance rather than pouring thick slurry down a drain. Warm water and agitation speed dissolution but keep the model material's own heat limits in mind when choosing bath temperature.",
   "additional_notes": "Choose BVOH over PVA when the model material is PETG, ASA, nylon or TPU, when the print runs more than a day, or when support-interface surface quality matters; choose PVA when the model is PLA, the print is short, and cost dominates. The pronounced Z-direction anisotropy (tensile falling roughly 75 % from flat to upright) matters mainly for tall thin support towers, which can snap during printing.",
@@ -263,7 +256,7 @@
     ],
     "last_verified": "2026-07-31",
     "confidence": "medium",
-    "conflicts": "Drying schedule: BCN3D specifies 70 °C for 4 h, Fiberlogy 60 °C for 8-12 h — the recorded range spans both; the difference likely reflects a light refresh versus a thorough dry rather than a factual disagreement. Bed temperature: BCN3D 45-90 °C versus Fiberlogy 50-70 °C, union recorded. Part cooling: Fiberlogy 0-100 % versus BCN3D 50-100 %. Tensile strength varies ~4x with print orientation (BCN3D 33.7 MPa flat, 8.7 MPa upright) and Fiberlogy's 34 MPa does not state orientation. Price per kg is converted from a single EUR retail listing and is an estimate. Emissions data is entirely inferred by analogy to PVA — no BVOH-specific study found. Shrinkage, HDT and max service temperature are undocumented."
+    "conflicts": "Drying schedule: BCN3D specifies 70 \u00b0C for 4 h, Fiberlogy 60 \u00b0C for 8-12 h \u2014 the recorded range spans both; the difference likely reflects a light refresh versus a thorough dry rather than a factual disagreement. Bed temperature: BCN3D 45-90 \u00b0C versus Fiberlogy 50-70 \u00b0C, union recorded. Part cooling: Fiberlogy 0-100 % versus BCN3D 50-100 %. Tensile strength varies ~4x with print orientation (BCN3D 33.7 MPa flat, 8.7 MPa upright) and Fiberlogy's 34 MPa does not state orientation. Price per kg is converted from a single EUR retail listing and is an estimate. Emissions data is entirely inferred by analogy to PVA \u2014 no BVOH-specific study found. Shrinkage, HDT and max service temperature are undocumented."
   },
   "trade_names": [
     {

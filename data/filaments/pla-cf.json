@@ -12,8 +12,8 @@
   "base_type": "pla",
   "variation_kind": "carbon-fiber-filled",
   "polymer_class": "composite-other",
-  "chemical_makeup": "Polylactide matrix filled with chopped carbon fibre — Polymaker PolyLite PLA-CF discloses 8 wt% chopped fibre; Bambu does not publish a loading figure",
-  "summary": "Base PLA filled with chopped carbon fibre — the stiffness-and-stability variant, and the only entry in this PLA set that is not a polylactide-class material. Versus base PLA it is denser (1.29 vs 1.24 g/cm³), stiffer (Young's modulus ~3280 MPa), warps less and holds dimensions better, and prints with a matte fibre texture that hides layer lines. The costs are a mandatory hardened nozzle, strongly reduced toughness, and the sharpest anisotropy in the PLA family (Bambu 38 MPa X-Y vs 26 MPa Z). Critically, it does NOT raise heat resistance: HDT is still ~54 °C.",
+  "chemical_makeup": "Polylactide matrix filled with chopped carbon fibre \u2014 Polymaker PolyLite PLA-CF discloses 8 wt% chopped fibre; Bambu does not publish a loading figure",
+  "summary": "Base PLA filled with chopped carbon fibre \u2014 the stiffness-and-stability variant, and the only entry in this PLA set that is not a polylactide-class material. Versus base PLA it is denser (1.29 vs 1.24 g/cm\u00b3), stiffer (Young's modulus ~3280 MPa), warps less and holds dimensions better, and prints with a matte fibre texture that hides layer lines. The costs are a mandatory hardened nozzle, strongly reduced toughness, and the sharpest anisotropy in the PLA family (Bambu 38 MPa X-Y vs 26 MPa Z). Critically, it does NOT raise heat resistance: HDT is still ~54 \u00b0C.",
   "printing": {
     "nozzle_temp_c": {
       "min": 190,
@@ -44,13 +44,13 @@
       "recommended": 100
     },
     "enclosure_open_for_cooling": true,
-    "notes": "Delta vs base PLA: temperatures are essentially PLA's — Polymaker says 'standard PLA settings', Bambu specifies 210-240 °C with spec samples at 230 °C — but the hardware requirement is not. A hardened steel, ruby or tungsten-carbide nozzle is required, not merely advised: Polymaker calls it 'strongly recommended due to the abrasive nature of the carbon fiber' and community practice treats brass as disposable on any CF grade. 0.4/0.6/0.8 mm nozzles are all supported per Bambu's TDS; larger diameters reduce clog risk with filled melt. Bed guidance is source-split (Bambu's TDS lists 35-45 °C for spec samples while its AMS/print guide table cites 45-65 °C depending on plate). Bambu suggests an enclosure for larger models to limit warping, since the higher stiffness and lower elongation make big parts more crack-prone under thermal stress — but it is not a requirement the way it is for ABS/ASA, and this remains a low-Tg PLA grade, so an enclosed machine should still be run open-door to avoid heat creep. Bambu also lists an optional 25-45 °C chamber."
+    "notes": "Delta vs base PLA: temperatures are essentially PLA's \u2014 Polymaker says 'standard PLA settings', Bambu specifies 210-240 \u00b0C with spec samples at 230 \u00b0C \u2014 but the hardware requirement is not. A hardened steel, ruby or tungsten-carbide nozzle is required, not merely advised: Polymaker calls it 'strongly recommended due to the abrasive nature of the carbon fiber' and community practice treats brass as disposable on any CF grade. 0.4/0.6/0.8 mm nozzles are all supported per Bambu's TDS; larger diameters reduce clog risk with filled melt. Bed guidance is source-split (Bambu's TDS lists 35-45 \u00b0C for spec samples while its AMS/print guide table cites 45-65 \u00b0C depending on plate). Bambu suggests an enclosure for larger models to limit warping, since the higher stiffness and lower elongation make big parts more crack-prone under thermal stress \u2014 but it is not a requirement the way it is for ABS/ASA, and this remains a low-Tg PLA grade, so an enclosed machine should still be run open-door to avoid heat creep. Bambu also lists an optional 25-45 \u00b0C chamber."
   },
   "feeding": {
     "drive_system": "any",
     "ams_compatible": "conditional",
     "feeding_assistant_recommended": false,
-    "notes": "Rigid and easily pushed, so any extruder works and no spool-side assistant is needed — but the abrasive filler wears the whole path, not just the nozzle: brass gears and PTFE liners on long bowden runs degrade over time (general filled-filament consensus; Bambu-specific liner wear is not separately quantified — unverified). AMS is 'conditional', a step down from base PLA's 'yes': Bambu explicitly markets its own PLA-CF as AMS-compatible with low clogging risk and ships it RFID-tagged, and its material table confirms 'YES for Bambu PLA-CF', while community guidance (filamentspecs.com) warns that a third-party spool being labelled 'CF' does not make it AMS-safe — the concern is cumulative abrasion of the AMS feed path rather than snapping. Unlike pa-cf/petg-cf grades, PLA-CF is not flagged as brittle at the spool bend radius (unverified generalisation). No shore hardness applies (rigid grade)."
+    "notes": "Rigid and easily pushed, so any extruder works and no spool-side assistant is needed \u2014 but the abrasive filler wears the whole path, not just the nozzle: brass gears and PTFE liners on long bowden runs degrade over time (general filled-filament consensus; Bambu-specific liner wear is not separately quantified \u2014 unverified). AMS is 'conditional', a step down from base PLA's 'yes': Bambu explicitly markets its own PLA-CF as AMS-compatible with low clogging risk and ships it RFID-tagged, and its material table confirms 'YES for Bambu PLA-CF', while community guidance (filamentspecs.com) warns that a third-party spool being labelled 'CF' does not make it AMS-safe \u2014 the concern is cumulative abrasion of the AMS feed path rather than snapping. Unlike pa-cf/petg-cf grades, PLA-CF is not flagged as brittle at the spool bend radius (unverified generalisation). No shore hardness applies (rigid grade)."
   },
   "drying": {
     "required_before_use": "if-exposed",
@@ -66,12 +66,12 @@
     },
     "methods": [
       "filament dryer",
-      "blast oven at 55 °C",
+      "blast oven at 55 \u00b0C",
       "food dehydrator",
       "drybox with desiccant"
     ],
     "dryness_validation": "No popping/crackling or steam at the nozzle. The matte fibre surface hides the gloss cues used on unfilled PLA, so judge on extrusion sound and on wall consistency rather than sheen; stringing on a retraction test still reads normally.",
-    "notes": "Bambu specifies 55 °C for 8 h in a blast/dry-box oven with storage below 20 % RH and desiccant; Polymaker specifies 55 °C for 6 h. Slightly hotter and longer than base PLA (45-55 °C / 4-8 h) but nowhere near the regimes needed for PA-CF/PPA-CF — carbon fibre does not meaningfully change PLA's hygroscopicity, and the drying figures reflect that."
+    "notes": "Bambu specifies 55 \u00b0C for 8 h in a blast/dry-box oven with storage below 20 % RH and desiccant; Polymaker specifies 55 \u00b0C for 6 h. Slightly hotter and longer than base PLA (45-55 \u00b0C / 4-8 h) but nowhere near the regimes needed for PA-CF/PPA-CF \u2014 carbon fibre does not meaningfully change PLA's hygroscopicity, and the drying figures reflect that."
   },
   "storage": {
     "recommendations": "Sealed bag or drybox with desiccant; Bambu specifies storage below 20 % RH, tighter than base PLA's 40 %",
@@ -81,7 +81,7 @@
   "price": {
     "usd_per_kg_low": 30,
     "usd_per_kg_high": 35,
-    "notes": "Bambu PLA-CF about $34.99/kg (US store listing, 1 kg spool assumed); Polymaker PolyLite PLA-CF about $29.99/kg (1 kg spool); eSUN PLA-CF in the same band (unverified). Roughly a $10-20/kg premium over base PLA, at or slightly above the pla-plus/lw-pla tier — and the hardened nozzle is an additional one-off cost."
+    "notes": "Bambu PLA-CF about $34.99/kg (US store listing, 1 kg spool assumed); Polymaker PolyLite PLA-CF about $29.99/kg (1 kg spool); eSUN PLA-CF in the same band (unverified). Roughly a $10-20/kg premium over base PLA, at or slightly above the pla-plus/lw-pla tier \u2014 and the hardened nozzle is an additional one-off cost."
   },
   "use_cases": {
     "recommended": [
@@ -96,7 +96,7 @@
     "not_recommended": [
       "impact- or snap-loaded parts (worse than base PLA and much worse than pla-plus)",
       "parts loaded in Z (26 MPa Z vs 38 MPa X-Y)",
-      "high-temperature parts — CF does NOT raise HDT here, still ~54 °C",
+      "high-temperature parts \u2014 CF does NOT raise HDT here, still ~54 \u00b0C",
       "exposure to strong acids or alkalis",
       "smooth, injection-moulded-look surfaces (visible fibre texture)",
       "printers without a hardened nozzle",
@@ -122,7 +122,7 @@
       "max": 38,
       "recommended": 38
     },
-    "notes": "Bambu PLA-CF: density 1.29 g/cm³ — higher than base PLA (1.24) and higher than pla-plus (1.21-1.24), as expected from the fibre filler, so a spool yields less part volume (77.5 vs 80.6 cm³/100 g). Tensile 38±4 MPa X-Y against 26±2 MPa Z, a ~32 % anisotropy gap and the clearest orientation-dependence in the PLA family; the recommended value is the X-Y figure. Polymaker's PLA-CF data gives Young's modulus 3280.7±79.6 MPa X-Y, a genuine stiffness gain over unfilled PLA's ~2300-3000 MPa — this is the property the filler actually buys. The property it does NOT buy is heat resistance: Bambu HDT 54 °C at 1.8 MPa and Tg 63 °C, essentially unchanged from unfilled PLA and pla-plus (58 °C), which contradicts the common assumption that carbon fibre implies a higher service temperature. HDT here is at 1.8 MPa, not the schema-default 0.45 MPa. Shrinkage is not disclosed by Bambu or Polymaker (unverified), though the practical warp behaviour is better than unfilled PLA. Fibre loading is 8 wt% for Polymaker; Bambu does not publish a figure."
+    "notes": "Bambu PLA-CF: density 1.29 g/cm\u00b3 \u2014 higher than base PLA (1.24) and higher than pla-plus (1.21-1.24), as expected from the fibre filler, so a spool yields less part volume (77.5 vs 80.6 cm\u00b3/100 g). Tensile 38\u00b14 MPa X-Y against 26\u00b12 MPa Z, a ~32 % anisotropy gap and the clearest orientation-dependence in the PLA family; the recommended value is the X-Y figure. Polymaker's PLA-CF data gives Young's modulus 3280.7\u00b179.6 MPa X-Y, a genuine stiffness gain over unfilled PLA's ~2300-3000 MPa \u2014 this is the property the filler actually buys. The property it does NOT buy is heat resistance: Bambu HDT 54 \u00b0C at 1.8 MPa and Tg 63 \u00b0C, essentially unchanged from unfilled PLA and pla-plus (58 \u00b0C), which contradicts the common assumption that carbon fibre implies a higher service temperature. HDT here is at 1.8 MPa, not the schema-default 0.45 MPa. Shrinkage is not disclosed by Bambu or Polymaker (unverified), though the practical warp behaviour is better than unfilled PLA. Fibre loading is 8 wt% for Polymaker; Bambu does not publish a figure."
   },
   "scores": {
     "ease_of_print": 7,
@@ -140,7 +140,6 @@
       "lw-pla",
       "pha",
       "pla",
-      "pla-cf",
       "pla-gf",
       "pla-gradient",
       "pla-hf",
@@ -157,13 +156,13 @@
     "usable_as_support_for": [
       "petg"
     ],
-    "notes": "Same PLA-matrix bonding chemistry as the base entry despite the composite-other class: welds to itself and to other PLA grades, does not weld to PETG/ABS/ASA/PC/PA/PP. In multi-material work the CF side is always the weaker half of an interface, so keep boundaries out of load paths — pairing with pla-plus gives a tough-to-stiff transition but the joint inherits PLA-CF's poorer interlayer strength. Polymaker recommends PolySupport and PolyDissolve S1 for its PLA-CF line; PVA/BVOH work generally. A practical bonus of the filler: supports break away from PLA-CF unusually cleanly."
+    "notes": "Same PLA-matrix bonding chemistry as the base entry despite the composite-other class: welds to itself and to other PLA grades, does not weld to PETG/ABS/ASA/PC/PA/PP. In multi-material work the CF side is always the weaker half of an interface, so keep boundaries out of load paths \u2014 pairing with pla-plus gives a tough-to-stiff transition but the joint inherits PLA-CF's poorer interlayer strength. Polymaker recommends PolySupport and PolyDissolve S1 for its PLA-CF line; PVA/BVOH work generally. A practical bonus of the filler: supports break away from PLA-CF unusually cleanly."
   },
   "plate_recommendations": [
     {
       "plate_id": "pei-textured",
       "rating": "recommended",
-      "notes": "Standard for PLA-CF per Bambu and general practice. Filled filaments are less tacky on the first layer than unfilled PLA, and the textured grain both grips and releases well while complementing the matte fibre finish. No special surface (garolite/G10 and similar) is needed here — that belongs to high-temp PA/PPA-CF grades, not PLA-CF."
+      "notes": "Standard for PLA-CF per Bambu and general practice. Filled filaments are less tacky on the first layer than unfilled PLA, and the textured grain both grips and releases well while complementing the matte fibre finish. No special surface (garolite/G10 and similar) is needed here \u2014 that belongs to high-temp PA/PPA-CF grades, not PLA-CF."
     },
     {
       "plate_id": "pei-smooth",
@@ -173,7 +172,7 @@
     {
       "plate_id": "glass-borosilicate",
       "rating": "recommended",
-      "notes": "Backfilled from plate entry (Phase E reciprocity): Abrasive fills are a non-issue for glass — there is no coating for filler particles to score."
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Abrasive fills are a non-issue for glass \u2014 there is no coating for filler particles to score."
     },
     {
       "plate_id": "g10-garolite",
@@ -198,12 +197,12 @@
     {
       "plate_id": "pp-sheet",
       "rating": "usable",
-      "notes": "Backfilled from plate entry (Phase E reciprocity): Not separately characterised (unverified). Stiff CF parts do not flex with the sheet and, on a lower-tack surface, are also more prone to lifting mid-print — brim generously."
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Not separately characterised (unverified). Stiff CF parts do not flex with the sheet and, on a lower-tack surface, are also more prone to lifting mid-print \u2014 brim generously."
     },
     {
       "plate_id": "supertack",
       "rating": "usable",
-      "notes": "Backfilled from plate entry (Phase E reciprocity): Not called out in Bambu's compatibility list. Adhesion follows base PLA, but stiff CF-filled parts do not flex with the sheet, so they lever against a soft coating during removal —"
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Not called out in Bambu's compatibility list. Adhesion follows base PLA, but stiff CF-filled parts do not flex with the sheet, so they lever against a soft coating during removal \u2014"
     },
     {
       "plate_id": "pc-plate",
@@ -228,7 +227,7 @@
     },
     {
       "filament_id": "pla-gf",
-      "reason": "The ductile filled option in the same stiffness class (comp 9 both, stab 9 both): noticeably tougher at 10.16 kJ/m² impact, less abrasive, colourable and easier to run (ease 8 vs 7) — you give up peak modulus and the matte-black fibre look."
+      "reason": "The ductile filled option in the same stiffness class (comp 9 both, stab 9 both): noticeably tougher at 10.16 kJ/m\u00b2 impact, less abrasive, colourable and easier to run (ease 8 vs 7) \u2014 you give up peak modulus and the matte-black fibre look."
     },
     {
       "filament_id": "petg-cf",
@@ -236,11 +235,11 @@
     },
     {
       "filament_id": "pla-ht",
-      "reason": "If the reason for filling PLA was that parts deform, fibre does not help — HDT stays ~54 °C. HT-PLA attacks heat directly (temp 6 vs 2) at the price of a mandatory anneal and ~1.8 % X/Y shrink compensation."
+      "reason": "If the reason for filling PLA was that parts deform, fibre does not help \u2014 HDT stays ~54 \u00b0C. HT-PLA attacks heat directly (temp 6 vs 2) at the price of a mandatory anneal and ~1.8 % X/Y shrink compensation."
     },
     {
       "filament_id": "pet-cf",
-      "reason": "The step up when a CF part must also take heat: temp 9 vs 2, HDT 205 °C at 0.45 MPa against PLA-CF's ~54 °C, comp 9 both — bought with a 45-60 °C chamber, no AMS, sub-100 mm/s and ease 3 vs 7."
+      "reason": "The step up when a CF part must also take heat: temp 9 vs 2, HDT 205 \u00b0C at 0.45 MPa against PLA-CF's ~54 \u00b0C, comp 9 both \u2014 bought with a 45-60 \u00b0C chamber, no AMS, sub-100 mm/s and ease 3 vs 7."
     }
   ],
   "emissions": {
@@ -251,10 +250,10 @@
       "ultrafine particles"
     ],
     "ventilation": "optional",
-    "notes": "During printing the gas-phase profile is close to base PLA — no styrene, no caprolactam, no foaming agent — so ventilation guidance is unchanged from base PLA. The real hazard with this grade is particulate and it happens AFTER the print: see safety_notes. Bambu forum consensus is that carbon fibres stay bound in the polymer matrix during normal printing and handling."
+    "notes": "During printing the gas-phase profile is close to base PLA \u2014 no styrene, no caprolactam, no foaming agent \u2014 so ventilation guidance is unchanged from base PLA. The real hazard with this grade is particulate and it happens AFTER the print: see safety_notes. Bambu forum consensus is that carbon fibres stay bound in the polymer matrix during normal printing and handling."
   },
-  "safety_notes": "Post-processing is the distinct hazard, not printing: sanding, drilling or cutting PLA-CF releases fine carbon-fibre dust, so use dust extraction or wet sanding plus a mask and gloves — a materially different profile from unfilled PLA grades, where post-processing dust is not a comparable concern. Also note the hardware hazard: a brass nozzle can be worn out by a single spool, and the abraded brass ends up in the part. No food-contact certification exists for CF-filled grades (unverified but standard for filled composites).",
-  "additional_notes": "The headline catalog note for this entry is what carbon fibre does and does not do in a PLA matrix: it raises stiffness and dimensional stability and lowers warp, but leaves HDT at ~54 °C, so 'carbon fibre' here is not a route to heat resistance the way it is in PA- or PET-based composites. Bambu markets 20-115 % mechanical improvement over 'regular PLA Matte' across bending and impact metrics — read that as brand marketing rather than an independently verified figure, since the published tensile numbers alone do not show a gain of that size. Polymaker reports good resistance to weak acids, oils and greases but poor resistance to strong acids and alkalis. Part orientation matters far more here than for any unfilled PLA grade.",
+  "safety_notes": "Post-processing is the distinct hazard, not printing: sanding, drilling or cutting PLA-CF releases fine carbon-fibre dust, so use dust extraction or wet sanding plus a mask and gloves \u2014 a materially different profile from unfilled PLA grades, where post-processing dust is not a comparable concern. Also note the hardware hazard: a brass nozzle can be worn out by a single spool, and the abraded brass ends up in the part. No food-contact certification exists for CF-filled grades (unverified but standard for filled composites).",
+  "additional_notes": "The headline catalog note for this entry is what carbon fibre does and does not do in a PLA matrix: it raises stiffness and dimensional stability and lowers warp, but leaves HDT at ~54 \u00b0C, so 'carbon fibre' here is not a route to heat resistance the way it is in PA- or PET-based composites. Bambu markets 20-115 % mechanical improvement over 'regular PLA Matte' across bending and impact metrics \u2014 read that as brand marketing rather than an independently verified figure, since the published tensile numbers alone do not show a gain of that size. Polymaker reports good resistance to weak acids, oils and greases but poor resistance to strong acids and alkalis. Part orientation matters far more here than for any unfilled PLA grade.",
   "provenance": {
     "sources": [
       "https://store.bblcdn.eu/s8/default/aefa8303ad8d40248b0d86dfdad46518/Bambu_PLA-CF_Technical_Data_Sheet_V3.pdf",
@@ -267,7 +266,7 @@
     ],
     "last_verified": "2026-07-31",
     "confidence": "medium",
-    "conflicts": "Bed temperature is source-split within one manufacturer: Bambu's PLA-CF TDS lists 35-45 °C for its spec samples while Bambu's AMS/filament guide table cites 45-65 °C depending on plate type — the recorded 25-65 °C range spans both plus Polymaker's 'standard PLA settings'. Bambu's marketing claim of 20-115 % mechanical improvement over PLA Matte is not supported in magnitude by its own published tensile figures (unverified). Fibre loading is disclosed only by Polymaker (8 wt%); Bambu publishes none, so the two products are not assumed equivalent. AMS compatibility disagrees by scope: Bambu certifies its own PLA-CF while community guidance warns against assuming third-party CF spools are AMS-safe — recorded as 'conditional'. Shrinkage, UV/weather and water-absorption data were not found in any fetched source; UV/weather/water scores are inherited from base PLA on the reasoning that the filler does not address those mechanisms (unverified)."
+    "conflicts": "Bed temperature is source-split within one manufacturer: Bambu's PLA-CF TDS lists 35-45 \u00b0C for its spec samples while Bambu's AMS/filament guide table cites 45-65 \u00b0C depending on plate type \u2014 the recorded 25-65 \u00b0C range spans both plus Polymaker's 'standard PLA settings'. Bambu's marketing claim of 20-115 % mechanical improvement over PLA Matte is not supported in magnitude by its own published tensile figures (unverified). Fibre loading is disclosed only by Polymaker (8 wt%); Bambu publishes none, so the two products are not assumed equivalent. AMS compatibility disagrees by scope: Bambu certifies its own PLA-CF while community guidance warns against assuming third-party CF spools are AMS-safe \u2014 recorded as 'conditional'. Shrinkage, UV/weather and water-absorption data were not found in any fetched source; UV/weather/water scores are inherited from base PLA on the reasoning that the filler does not address those mechanisms (unverified)."
   },
   "trade_names": [
     {

@@ -98,6 +98,26 @@ def main() -> int:
                 elif ref in entities["filaments"] and fam_root(ref) == fam_root(fid):
                     errors.append(f"data/filaments/{fid}.json: compatibility.{field} lists same-family material '{ref}' (family '{fam_root(fid)}') — same-chemistry pairs weld and cannot serve as a removable interface")
 
+    # Bond/support mutual exclusion: a pair cannot both weld (bonds_with) and serve
+    # as a removable support interface for each other, in either direction, at
+    # family level (variants inherit base chemistry). See RESEARCH_GUIDE §8.
+    bond_fam_pairs: dict[frozenset, str] = {}
+    for fid, f in entities["filaments"].items():
+        comp = f.get("compatibility", {})
+        for ref in comp.get("bonds_with", []):
+            if ref == fid:
+                errors.append(f"data/filaments/{fid}.json: compatibility.bonds_with lists itself — self-bonding is implicit; do not list")
+            elif ref in entities["filaments"] and fam_root(ref) != fam_root(fid):
+                bond_fam_pairs.setdefault(frozenset((fam_root(fid), fam_root(ref))), f"{fid} bonds_with {ref}")
+    for fid, f in entities["filaments"].items():
+        comp = f.get("compatibility", {})
+        for field in ("support_materials", "usable_as_support_for"):
+            for ref in comp.get(field, []):
+                if ref in entities["filaments"]:
+                    pair = frozenset((fam_root(fid), fam_root(ref)))
+                    if pair in bond_fam_pairs:
+                        errors.append(f"data/filaments/{fid}.json: compatibility.{field} lists '{ref}' but the pair is declared a weld ({bond_fam_pairs[pair]}) — a welding pair can never be a support interface; remove one side")
+
     # Alternatives: must reference existing, non-self filaments
     for fid, f in entities["filaments"].items():
         for alt in f.get("alternatives", []):

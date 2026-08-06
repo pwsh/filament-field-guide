@@ -12,8 +12,8 @@
   "base_type": "pps",
   "variation_kind": "carbon-fiber-filled",
   "polymer_class": "high-performance",
-  "chemical_makeup": "The same aryl sulfide backbone as the base pps entry, compounded with chopped carbon fiber — Polymaker's Fiberon grade states 10 wt% (PPS-CF10), while Bambu's PPS-CF is described as a roughly 90 % PPS matrix with the fiber loading undisclosed. The fiber is a physical reinforcement: it does not change the chemistry, the solvent resistance or the 85 °C Tg of the matrix, but it does suppress the crystallisation-driven shrinkage that makes unfilled PPS warp. A glass-filled sibling (PPS-GF20) exists for cases where the carbon's electrical conductivity is unacceptable.",
-  "summary": "The grade of PPS that engineering users actually buy. Deltas vs the base pps entry: nozzle drops from 365-390 °C to 310-350 °C — low enough to land inside the X1E/H2D high-temp hotend's reach and make this the only member of the high-performance cluster with a real consumer-printer path — warp tendency falls from 9 to 3 with Fiberon stating no heated chamber or enclosure is needed at all, dimensional stability climbs from 5 to 8, and HDT reaches 252-264 °C after annealing where unfilled PPS has no published figure at all. It is paid for with a mandatory hardened nozzle, spool brittleness that rules out AMS use, and layer adhesion that drops BELOW the unfilled base (5 vs 6) — Z-axis tensile is 32 MPa against 87 MPa in XY, the most pronounced anisotropy in this cluster.",
+  "chemical_makeup": "The same aryl sulfide backbone as the base pps entry, compounded with chopped carbon fiber \u2014 Polymaker's Fiberon grade states 10 wt% (PPS-CF10), while Bambu's PPS-CF is described as a roughly 90 % PPS matrix with the fiber loading undisclosed. The fiber is a physical reinforcement: it does not change the chemistry, the solvent resistance or the 85 \u00b0C Tg of the matrix, but it does suppress the crystallisation-driven shrinkage that makes unfilled PPS warp. A glass-filled sibling (PPS-GF20) exists for cases where the carbon's electrical conductivity is unacceptable.",
+  "summary": "The grade of PPS that engineering users actually buy. Deltas vs the base pps entry: nozzle drops from 365-390 \u00b0C to 310-350 \u00b0C \u2014 low enough to land inside the X1E/H2D high-temp hotend's reach and make this the only member of the high-performance cluster with a real consumer-printer path \u2014 warp tendency falls from 9 to 3 with Fiberon stating no heated chamber or enclosure is needed at all, dimensional stability climbs from 5 to 8, and HDT reaches 252-264 \u00b0C after annealing where unfilled PPS has no published figure at all. It is paid for with a mandatory hardened nozzle, spool brittleness that rules out AMS use, and layer adhesion that drops BELOW the unfilled base (5 vs 6) \u2014 Z-axis tensile is 32 MPa against 87 MPa in XY, the most pronounced anisotropy in this cluster.",
   "printing": {
     "nozzle_temp_c": {
       "min": 310,
@@ -44,13 +44,13 @@
       "max": 0,
       "recommended": 0
     },
-    "notes": "The processing delta vs the base pps entry is large and runs the friendly direction: 310-350 °C (Fiberon 310-350, Bambu 310-340) against unfilled PPS's 365-390 °C, bed 80-120 °C against 100-130 °C, and — the headline — Fiberon states explicitly that no heated chamber or enclosure is needed, because the carbon fiber suppresses warp enough for open-frame machines to produce flat, accurate parts. enclosure_recommended is nonetheless left true: it improves layer bonding on a material whose Z strength is already the weak axis, and it contains fiber dust. A hardened nozzle becomes mandatory here where the unfilled base needs none — chopped carbon fiber destroys brass. Cooling stays at 0 %. Fiberon quotes 250-300 mm/s; the recorded 150 mm/s recommendation is a conservative starting point given the Z-strength penalty of running fast."
+    "notes": "The processing delta vs the base pps entry is large and runs the friendly direction: 310-350 \u00b0C (Fiberon 310-350, Bambu 310-340) against unfilled PPS's 365-390 \u00b0C, bed 80-120 \u00b0C against 100-130 \u00b0C, and \u2014 the headline \u2014 Fiberon states explicitly that no heated chamber or enclosure is needed, because the carbon fiber suppresses warp enough for open-frame machines to produce flat, accurate parts. enclosure_recommended is nonetheless left true: it improves layer bonding on a material whose Z strength is already the weak axis, and it contains fiber dust. A hardened nozzle becomes mandatory here where the unfilled base needs none \u2014 chopped carbon fiber destroys brass. Cooling stays at 0 %. Fiberon quotes 250-300 mm/s; the recorded 150 mm/s recommendation is a conservative starting point given the Z-strength penalty of running fast."
   },
   "feeding": {
     "drive_system": "direct-drive-recommended",
     "ams_compatible": "no",
     "feeding_assistant_recommended": false,
-    "notes": "The AMS verdict here is a different objection from the base pps entry's. Unfilled PPS is barred by process temperature alone; PPS-CF is barred mechanically — Fiberon warns that although the filament fits an AMS, it is brittle on the spool and the tight bends of an AMS path risk snapping it, recommending a direct feed path instead. This matches the general Bambu-ecosystem caution against assuming third-party CF filament behaves like Bambu-tested material. Steel or hardened drive gears are recommended because carbon fiber abrades brass gears and PTFE. Note the spool-format tell: Fiberon sells 500 g and 2 kg but not 1 kg, specifically because a thinner-wound 1 kg spool increases snap risk. No feeding assistant applies (not an elastomer)."
+    "notes": "The AMS verdict here is a different objection from the base pps entry's. Unfilled PPS is barred by process temperature alone; PPS-CF is barred mechanically \u2014 Fiberon warns that although the filament fits an AMS, it is brittle on the spool and the tight bends of an AMS path risk snapping it, recommending a direct feed path instead. This matches the general Bambu-ecosystem caution against assuming third-party CF filament behaves like Bambu-tested material. Steel or hardened drive gears are recommended because carbon fiber abrades brass gears and PTFE. Note the spool-format tell: Fiberon sells 500 g and 2 kg but not 1 kg, specifically because a thinner-wound 1 kg spool increases snap risk. No feeding assistant applies (not an elastomer)."
   },
   "drying": {
     "required_before_use": "always",
@@ -65,15 +65,15 @@
       "recommended": 12
     },
     "methods": [
-      "blast/convection oven at 100-140 °C for 8-12 h",
-      "heatbed at 110-120 °C for 12 h",
+      "blast/convection oven at 100-140 \u00b0C for 8-12 h",
+      "heatbed at 110-120 \u00b0C for 12 h",
       "print from a heated drybox"
     ],
-    "dryness_validation": "No popping or steam at the nozzle and a void-free purge. Gloss is a poor tell on a fiber-filled matte surface — listen for popping and inspect the purge for blisters, or use a moisture meter.",
-    "notes": "This is the sharpest disagreement in the entry and the biggest drying delta vs the base pps entry's 110 °C / 4 h: Fiberon claims moisture insensitivity 'eliminates extensive pre-drying', while Bambu specifies 100-140 °C for 8-12 h in a blast oven or 110-120 °C for 12 h on the heatbed. The recorded schedule follows Bambu on the grounds that intensive drying costs time while under-drying costs the print; read Fiberon's claim as relative (PPS absorbs less than nylon) rather than absolute."
+    "dryness_validation": "No popping or steam at the nozzle and a void-free purge. Gloss is a poor tell on a fiber-filled matte surface \u2014 listen for popping and inspect the purge for blisters, or use a moisture meter.",
+    "notes": "This is the sharpest disagreement in the entry and the biggest drying delta vs the base pps entry's 110 \u00b0C / 4 h: Fiberon claims moisture insensitivity 'eliminates extensive pre-drying', while Bambu specifies 100-140 \u00b0C for 8-12 h in a blast oven or 110-120 \u00b0C for 12 h on the heatbed. The recorded schedule follows Bambu on the grounds that intensive drying costs time while under-drying costs the print; read Fiberon's claim as relative (PPS absorbs less than nylon) rather than absolute."
   },
   "storage": {
-    "recommendations": "Sealed with desiccant. Moisture uptake is modest — this is a PPS matrix, and the base entry's water tolerance carries over — but two things argue for care anyway: vendors disagree sharply on the drying requirement, and the fiber-matrix interface gives moisture a wicking path that unfilled PPS does not have. Keep the spool boxed for the mechanical reason too: it is brittle and dislikes tight bends.",
+    "recommendations": "Sealed with desiccant. Moisture uptake is modest \u2014 this is a PPS matrix, and the base entry's water tolerance carries over \u2014 but two things argue for care anyway: vendors disagree sharply on the drying requirement, and the fiber-matrix interface gives moisture a wicking path that unfilled PPS does not have. Keep the spool boxed for the mechanical reason too: it is brittle and dislikes tight bends.",
     "max_humidity_pct": 25,
     "hygroscopy": "moderate"
   },
@@ -89,12 +89,12 @@
       "jigs, fixtures and shop tooling requiring metal-like stiffness",
       "functional prototypes and end-use parts on machines without a heated chamber",
       "chemically aggressive environments where stiffness also matters",
-      "high-HDT parts after annealing (252-264 °C at 0.45 MPa)"
+      "high-HDT parts after annealing (252-264 \u00b0C at 0.45 MPa)"
     ],
     "not_recommended": [
       "parts loaded in Z or needing isotropic strength (Z tensile 32 MPa vs 87 MPa XY)",
-      "impact-loaded or tough applications — the fiber trades toughness for stiffness",
-      "electrically insulating applications (carbon fiber is conductive — use a PPS-GF grade)",
+      "impact-loaded or tough applications \u2014 the fiber trades toughness for stiffness",
+      "electrically insulating applications (carbon fiber is conductive \u2014 use a PPS-GF grade)",
       "AMS or multi-material stations (brittle strand, tight bends snap it)",
       "brass-nozzle printers",
       "parts used at high temperature without the post-print annealing step that the HDT figures depend on"
@@ -117,7 +117,7 @@
       "max": 92,
       "recommended": 87
     },
-    "notes": "Density 1.26 g/cm³ (Bambu) is LOWER than the base pps entry's 1.35 g/cm³ literature figure, which inverts the usual filler effect — carbon fiber is denser than most matrices — and most likely reflects a different base compound rather than a fiber-loading calculation; flagged as a conflict. 100 g therefore yields 79.4 cm³ against unfilled PPS's 74.1. HDT is recorded at 252.5 °C at 0.45 MPa (Fiberon); Bambu gives 264 °C at 0.45 MPa and 235 °C at 1.8 MPa. Both figures require post-print annealing to reach — 125 °C for 16 h per Fiberon — so an un-annealed part does not have them. Tensile is strongly anisotropic and this is the most important number in the entry: 87±5 MPa in XY (Bambu) against 32.0 MPa in Z (Fiberon), with Young's modulus ~5,314 MPa dry. Tg is carried unchanged from the base pps entry at 85 °C, because fiber does not move the matrix Tg — the HDT gain comes from the fiber carrying load above Tg, not from a stiffer polymer. UL94 V-0 flame rating is retained (internal testing, not always UL-certified)."
+    "notes": "Density 1.26 g/cm\u00b3 (Bambu) is LOWER than the base pps entry's 1.35 g/cm\u00b3 literature figure, which inverts the usual filler effect \u2014 carbon fiber is denser than most matrices \u2014 and most likely reflects a different base compound rather than a fiber-loading calculation; flagged as a conflict. 100 g therefore yields 79.4 cm\u00b3 against unfilled PPS's 74.1. HDT is recorded at 252.5 \u00b0C at 0.45 MPa (Fiberon); Bambu gives 264 \u00b0C at 0.45 MPa and 235 \u00b0C at 1.8 MPa. Both figures require post-print annealing to reach \u2014 125 \u00b0C for 16 h per Fiberon \u2014 so an un-annealed part does not have them. Tensile is strongly anisotropic and this is the most important number in the entry: 87\u00b15 MPa in XY (Bambu) against 32.0 MPa in Z (Fiberon), with Young's modulus ~5,314 MPa dry. Tg is carried unchanged from the base pps entry at 85 \u00b0C, because fiber does not move the matrix Tg \u2014 the HDT gain comes from the fiber carrying load above Tg, not from a stiffer polymer. UL94 V-0 flame rating is retained (internal testing, not always UL-certified)."
   },
   "scores": {
     "ease_of_print": 4,
@@ -132,18 +132,17 @@
   },
   "compatibility": {
     "bonds_with": [
-      "pps",
-      "pps-cf"
+      "pps"
     ],
     "support_materials": [],
     "usable_as_support_for": [],
-    "notes": "Welds to itself and to the unfilled pps base — same matrix — though the published nozzle windows do not overlap cleanly (310-350 °C here vs 365-390 °C unfilled), so co-printing needs a compromise temperature. A PPS-GF20 glass-filled grade is the electrically insulating sibling with comparable thermal and mechanical performance, but has no catalog entry yet. No soluble support survives these temperatures: pva and bvoh are far out of range. No bonding to any commodity material."
+    "notes": "Welds to itself and to the unfilled pps base \u2014 same matrix \u2014 though the published nozzle windows do not overlap cleanly (310-350 \u00b0C here vs 365-390 \u00b0C unfilled), so co-printing needs a compromise temperature. A PPS-GF20 glass-filled grade is the electrically insulating sibling with comparable thermal and mechanical performance, but has no catalog entry yet. No soluble support survives these temperatures: pva and bvoh are far out of range. No bonding to any commodity material."
   },
   "plate_recommendations": [
     {
       "plate_id": "pei-textured",
       "rating": "usable",
-      "notes": "Not explicitly documented for this grade in the sources reviewed (unverified). Rated usable on the strength of the moderate 80-120 °C bed range and the 'no chamber needed' claim — this is ordinary high-temperature-plate territory rather than the extreme conditions that make textured PEI a bad idea under peek and pekk. Garolite/G10 is the other plausible surface. Confirm adhesion on a test part before committing a long print."
+      "notes": "Not explicitly documented for this grade in the sources reviewed (unverified). Rated usable on the strength of the moderate 80-120 \u00b0C bed range and the 'no chamber needed' claim \u2014 this is ordinary high-temperature-plate territory rather than the extreme conditions that make textured PEI a bad idea under peek and pekk. Garolite/G10 is the other plausible surface. Confirm adhesion on a test part before committing a long print."
     },
     {
       "plate_id": "pei-smooth",
@@ -174,23 +173,23 @@
   "alternatives": [
     {
       "filament_id": "pps",
-      "reason": "The unfilled base when chemical resistance matters more than stiffness: better layer adhesion (6 vs 5), 10/10 water tolerance and no hardened nozzle — but warp 9 vs 3, dimensional stability 5 vs 8, a 365-390 °C nozzle and no consumer-hotend path."
+      "reason": "The unfilled base when chemical resistance matters more than stiffness: better layer adhesion (6 vs 5), 10/10 water tolerance and no hardened nozzle \u2014 but warp 9 vs 3, dimensional stability 5 vs 8, a 365-390 \u00b0C nozzle and no consumer-hotend path."
     },
     {
       "filament_id": "ppa-cf",
-      "reason": "The other CF-reinforced high-temperature option: the catalog's highest compressive strength (10 vs 9) at the same temp 9 — for $172-266 vs $100-200, nylon-grade moisture uptake, and far worse UV and weathering (uv 4 vs 9)."
+      "reason": "The other CF-reinforced high-temperature option: the catalog's highest compressive strength (10 vs 9) at the same temp 9 \u2014 for $172-266 vs $100-200, nylon-grade moisture uptake, and far worse UV and weathering (uv 4 vs 9)."
     },
     {
       "filament_id": "pei-ultem",
-      "reason": "Amorphous stability with much better layer adhesion (8 vs 5) and a real 217 °C Tg rather than PPS's 85 °C, so it keeps stiffness under sustained heat and load — at $195-290, a mandatory heated chamber and a 150 °C drying regime."
+      "reason": "Amorphous stability with much better layer adhesion (8 vs 5) and a real 217 \u00b0C Tg rather than PPS's 85 \u00b0C, so it keeps stiffness under sustained heat and load \u2014 at $195-290, a mandatory heated chamber and a 150 \u00b0C drying regime."
     },
     {
       "filament_id": "pet-cf",
-      "reason": "A third to a half of the cost ($35-45) at the same temp 9 and compressive 9, printable on standard high-temp hardware — but no meaningful chemical resistance, no flame retardancy, and weathering 5 vs 9."
+      "reason": "A third to a half of the cost ($35-45) at the same temp 9 and compressive 9, printable on standard high-temp hardware \u2014 but no meaningful chemical resistance, no flame retardancy, and weathering 5 vs 9."
     },
     {
       "filament_id": "pc-gf",
-      "reason": "Similar money ($100-115) for equal compressive strength (9) and temp 9 with no exotic hotend — you give up the chemical and water resistance (6 vs 9), the UV rating (5 vs 9) and the flame retardancy that are the whole point of PPS."
+      "reason": "Similar money ($100-115) for equal compressive strength (9) and temp 9 with no exotic hotend \u2014 you give up the chemical and water resistance (6 vs 9), the UV rating (5 vs 9) and the flame retardancy that are the whole point of PPS."
     }
   ],
   "emissions": {
@@ -203,10 +202,10 @@
       "trace sulfur-bearing species if the melt is overheated (inferred from the aryl sulfide backbone, unverified)"
     ],
     "ventilation": "required",
-    "notes": "No PPS-CF-specific emissions measurement was found. The base pps hazard profile carries over — high-temperature UFP output plus the inferred sulfur caution — with one addition at the bench rather than the nozzle: sanding, drilling or machining printed CF parts liberates respirable carbon fiber fines. The nozzle temperature is 40-55 °C lower than unfilled PPS, which should reduce process emissions somewhat, but the fiber-dust route is new, so ventilation stays required and fiber-dust filtration is added to it (unverified specifics)."
+    "notes": "No PPS-CF-specific emissions measurement was found. The base pps hazard profile carries over \u2014 high-temperature UFP output plus the inferred sulfur caution \u2014 with one addition at the bench rather than the nozzle: sanding, drilling or machining printed CF parts liberates respirable carbon fiber fines. The nozzle temperature is 40-55 \u00b0C lower than unfilled PPS, which should reduce process emissions somewhat, but the fiber-dust route is new, so ventilation stays required and fiber-dust filtration is added to it (unverified specifics)."
   },
-  "safety_notes": "Abrasive: chopped carbon fiber wears brass nozzles quickly, so hardened steel, ruby or carbide is mandatory — this is the hard safety and hardware delta vs the unfilled pps base. Do not dry-sand, drill or machine printed parts without a respirator and dust capture. Carbon fiber is electrically conductive, so PPS-CF parts must not be used where the base PPS's insulating behaviour was the reason for choosing it. The filament itself is brittle on the spool and can snap into sharp fragments if forced around a tight bend. Food contact is not verified for printed parts.",
-  "additional_notes": "Annealing is not optional for the headline numbers: the 252-264 °C HDT figures both depend on a post-print cycle (125 °C for 16 h per Fiberon), and an un-annealed part carries the matrix's 85 °C Tg much more visibly. The strategic framing against the rest of the cluster is accessibility: every other high-performance entry here needs a 375-420 °C industrial hotend and an actively heated chamber, while PPS-CF at 310-350 °C with no chamber requirement is within reach of a high-temp-hotend consumer machine — which makes it, in practice, the entry point to this whole polymer class. The price of admission is anisotropy: design the load path in-plane, or use pekk or pei-ultem where Z strength matters.",
+  "safety_notes": "Abrasive: chopped carbon fiber wears brass nozzles quickly, so hardened steel, ruby or carbide is mandatory \u2014 this is the hard safety and hardware delta vs the unfilled pps base. Do not dry-sand, drill or machine printed parts without a respirator and dust capture. Carbon fiber is electrically conductive, so PPS-CF parts must not be used where the base PPS's insulating behaviour was the reason for choosing it. The filament itself is brittle on the spool and can snap into sharp fragments if forced around a tight bend. Food contact is not verified for printed parts.",
+  "additional_notes": "Annealing is not optional for the headline numbers: the 252-264 \u00b0C HDT figures both depend on a post-print cycle (125 \u00b0C for 16 h per Fiberon), and an un-annealed part carries the matrix's 85 \u00b0C Tg much more visibly. The strategic framing against the rest of the cluster is accessibility: every other high-performance entry here needs a 375-420 \u00b0C industrial hotend and an actively heated chamber, while PPS-CF at 310-350 \u00b0C with no chamber requirement is within reach of a high-temp-hotend consumer machine \u2014 which makes it, in practice, the entry point to this whole polymer class. The price of admission is anisotropy: design the load path in-plane, or use pekk or pei-ultem where Z strength matters.",
   "provenance": {
     "sources": [
       "https://wiki.polymaker.com/polymaker-products/polymaker-filaments/fiberon-tm/fiberon-tm-pps-cf10",
@@ -217,7 +216,7 @@
     ],
     "last_verified": "2026-07-31",
     "confidence": "medium",
-    "conflicts": "Drying is the headline disagreement: Fiberon claims moisture insensitivity eliminates extensive pre-drying, Bambu specifies 100-140 °C for 8-12 h (or 110-120 °C for 12 h on the bed); the Bambu schedule is recorded. Nozzle temperature disagrees against the base entry by 55-80 °C (310-350 °C filled vs 365-390 °C unfilled), which is too large for a pure filler effect and suggests different base resins — worth resolving directly with manufacturers. HDT differs between vendors: Fiberon 252.5 °C and Bambu 264 °C at 0.45 MPa (Bambu also 235 °C at 1.8 MPa); the Fiberon figure is recorded as the explicit datasheet value. Density 1.26 g/cm³ (Bambu) sits below the unfilled literature value of 1.35, inverting the expected filler effect and implying a different compound. Fiber loading is disclosed only by Fiberon (10 wt%); Bambu does not publish theirs, so cross-brand mechanical comparison is unsound. Pricing is entirely unverified. Build-surface guidance is unverified for this grade. Emissions are inferred with no PPS-CF-specific measurement. Ease of print is scored 4 against the base pps entry's 3, which diverges from the research note's 'comparable to slightly harder' framing: the glossary rubric weights hardware gating heavily, and losing the chamber requirement plus a 55 °C drop in nozzle temperature outweighs the added abrasion, brittleness and drying burden."
+    "conflicts": "Drying is the headline disagreement: Fiberon claims moisture insensitivity eliminates extensive pre-drying, Bambu specifies 100-140 \u00b0C for 8-12 h (or 110-120 \u00b0C for 12 h on the bed); the Bambu schedule is recorded. Nozzle temperature disagrees against the base entry by 55-80 \u00b0C (310-350 \u00b0C filled vs 365-390 \u00b0C unfilled), which is too large for a pure filler effect and suggests different base resins \u2014 worth resolving directly with manufacturers. HDT differs between vendors: Fiberon 252.5 \u00b0C and Bambu 264 \u00b0C at 0.45 MPa (Bambu also 235 \u00b0C at 1.8 MPa); the Fiberon figure is recorded as the explicit datasheet value. Density 1.26 g/cm\u00b3 (Bambu) sits below the unfilled literature value of 1.35, inverting the expected filler effect and implying a different compound. Fiber loading is disclosed only by Fiberon (10 wt%); Bambu does not publish theirs, so cross-brand mechanical comparison is unsound. Pricing is entirely unverified. Build-surface guidance is unverified for this grade. Emissions are inferred with no PPS-CF-specific measurement. Ease of print is scored 4 against the base pps entry's 3, which diverges from the research note's 'comparable to slightly harder' framing: the glossary rubric weights hardware gating heavily, and losing the chamber requirement plus a 55 \u00b0C drop in nozzle temperature outweighs the added abrasion, brittleness and drying burden."
   },
   "trade_names": [
     {

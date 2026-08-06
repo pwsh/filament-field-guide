@@ -12,7 +12,7 @@
   "variation_kind": "silk",
   "polymer_class": "polylactide",
   "chemical_makeup": "PLA-majority blend with a small fraction of thermoplastic-elastomer / polyester-type gloss additive that raises surface sheen and adds slight melt elasticity; sometimes co-extruded as a dual-colour strand for a shifting sheen",
-  "summary": "Base PLA with a gloss additive package — same lactide chemistry, aesthetic delta only. Versus base PLA it runs 10-20 °C hotter and slower for maximum sheen (210-240 °C vs 190-230 °C), is denser (1.27 vs 1.24 g/cm³), noticeably more moisture-sensitive, and has markedly worse layer adhesion (Z tensile 25 MPa vs XY 33 MPa) and low elongation (2.8 % XY), so it is a display material, not a structural one.",
+  "summary": "Base PLA with a gloss additive package \u2014 same lactide chemistry, aesthetic delta only. Versus base PLA it runs 10-20 \u00b0C hotter and slower for maximum sheen (210-240 \u00b0C vs 190-230 \u00b0C), is denser (1.27 vs 1.24 g/cm\u00b3), noticeably more moisture-sensitive, and has markedly worse layer adhesion (Z tensile 25 MPa vs XY 33 MPa) and low elongation (2.8 % XY), so it is a display material, not a structural one.",
   "printing": {
     "nozzle_temp_c": {
       "min": 210,
@@ -43,7 +43,7 @@
       "recommended": 100
     },
     "enclosure_open_for_cooling": true,
-    "notes": "Delta vs base PLA: run 10-20 °C hotter. Bambu's Silk/Silk+ TDS gives 210-240 °C (specimens tested near 230 °C) against 190-230 °C for base PLA, and rates the material to 250 mm/s — but gloss is directly controlled by temperature (higher) and speed (lower), so community practice is 30-60 mm/s on outer walls for the best sheen. Unfilled, so no hardened nozzle. As with base PLA, open the door/lid on an enclosed machine."
+    "notes": "Delta vs base PLA: run 10-20 \u00b0C hotter. Bambu's Silk/Silk+ TDS gives 210-240 \u00b0C (specimens tested near 230 \u00b0C) against 190-230 \u00b0C for base PLA, and rates the material to 250 mm/s \u2014 but gloss is directly controlled by temperature (higher) and speed (lower), so community practice is 30-60 mm/s on outer walls for the best sheen. Unfilled, so no hardened nozzle. As with base PLA, open the door/lid on an enclosed machine."
   },
   "feeding": {
     "drive_system": "any",
@@ -65,12 +65,12 @@
     },
     "methods": [
       "filament dryer",
-      "blast oven at 55 °C",
-      "heated bed at 65-75 °C for 12 h",
+      "blast oven at 55 \u00b0C",
+      "heated bed at 65-75 \u00b0C for 12 h",
       "drybox with desiccant"
     ],
     "dryness_validation": "Test-print a large smooth curved surface and inspect under raking light: micro-bubbles, a dulled or milky sheen, or stringing mean it is still wet. No popping or steam at the nozzle.",
-    "notes": "Delta vs base PLA (45-55 °C / 4-8 h): Bambu specifies 55 °C for 8 h in a blast oven, or 65-75 °C for 12 h using a heated bed. Moisture damage shows up cosmetically here long before it shows up mechanically — surface bubbling and a dull finish defeat the entire point of the material."
+    "notes": "Delta vs base PLA (45-55 \u00b0C / 4-8 h): Bambu specifies 55 \u00b0C for 8 h in a blast oven, or 65-75 \u00b0C for 12 h using a heated bed. Moisture damage shows up cosmetically here long before it shows up mechanically \u2014 surface bubbling and a dull finish defeat the entire point of the material."
   },
   "storage": {
     "recommendations": "Sealed bag or drybox with desiccant between prints; treat more strictly than base PLA because moisture ruins the gloss before it ruins the part",
@@ -121,7 +121,7 @@
       "max": 37,
       "recommended": 33
     },
-    "notes": "Bambu PLA Silk TDS: density 1.27 g/cm³ (vs 1.24 for base PLA), tensile XY 33±4 MPa and Z 25±4 MPa, elongation XY 2.8±0.6 % and Z 1.5±0.2 %, Tg 57 °C, HDT 60 °C at 0.45 MPa and 56 °C at 1.8 MPa. Thermally it matches base PLA; mechanically it is both weaker and far more brittle than base PLA's 45-65 MPa, and the XY/Z gap is the practical story — the gloss additive costs layer bonding. Bambu's 'PLA Silk+' is marketed as a strengthened revision of the original Silk; figures here are for the Silk family generally."
+    "notes": "Bambu PLA Silk TDS: density 1.27 g/cm\u00b3 (vs 1.24 for base PLA), tensile XY 33\u00b14 MPa and Z 25\u00b14 MPa, elongation XY 2.8\u00b10.6 % and Z 1.5\u00b10.2 %, Tg 57 \u00b0C, HDT 60 \u00b0C at 0.45 MPa and 56 \u00b0C at 1.8 MPa. Thermally it matches base PLA; mechanically it is both weaker and far more brittle than base PLA's 45-65 MPa, and the XY/Z gap is the practical story \u2014 the gloss additive costs layer bonding. Bambu's 'PLA Silk+' is marketed as a strengthened revision of the original Silk; figures here are for the Silk family generally."
   },
   "scores": {
     "ease_of_print": 8,
@@ -146,8 +146,7 @@
       "pla-gradient",
       "pla-hf",
       "pla-matte",
-      "pla-plus",
-      "pla-silk"
+      "pla-plus"
     ],
     "support_materials": [
       "bvoh",
@@ -163,7 +162,7 @@
     {
       "plate_id": "pei-smooth",
       "rating": "recommended",
-      "notes": "Backfilled from plate entry (Phase E reciprocity): Smooth PEI mirrors the silk sheen onto the first layer — the main reason to choose smooth over textured for silk."
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Smooth PEI mirrors the silk sheen onto the first layer \u2014 the main reason to choose smooth over textured for silk."
     },
     {
       "plate_id": "glass-borosilicate",
@@ -183,7 +182,7 @@
     {
       "plate_id": "carbon-fiber-plate",
       "rating": "recommended",
-      "notes": "Backfilled from plate entry (Phase E reciprocity): Silk grades that over-bond on tacky low-temp plates behave normally here — thermal release does the work, not surface tack."
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Silk grades that over-bond on tacky low-temp plates behave normally here \u2014 thermal release does the work, not surface tack."
     },
     {
       "plate_id": "buildtak-polymer",
@@ -193,17 +192,17 @@
     {
       "plate_id": "pei-patterned",
       "rating": "recommended",
-      "notes": "Backfilled from plate entry (Phase E reciprocity): Silk and metallic PLA are the standout pairing — the reflective surface amplifies the diffraction pattern."
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Silk and metallic PLA are the standout pairing \u2014 the reflective surface amplifies the diffraction pattern."
     },
     {
       "plate_id": "pei-textured",
       "rating": "usable",
-      "notes": "Adheres fine at 35-45 °C, but the textured surface transfers its grain to the bottom layer and kills the silk sheen there. For parts whose underside is visible, a smooth PEI or glass surface is preferred — this is the one plate-choice delta versus base PLA, where textured PEI is simply recommended."
+      "notes": "Adheres fine at 35-45 \u00b0C, but the textured surface transfers its grain to the bottom layer and kills the silk sheen there. For parts whose underside is visible, a smooth PEI or glass surface is preferred \u2014 this is the one plate-choice delta versus base PLA, where textured PEI is simply recommended."
     },
     {
       "plate_id": "pc-plate",
       "rating": "usable",
-      "notes": "Backfilled from plate entry (Phase E reciprocity): Bambu explicitly flags PLA Silk as a strong-adhesion risk on the Cool Plate SuperTack — it can damage or tear the model on removal. Use a full glue-stick barrier and let the plate "
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Bambu explicitly flags PLA Silk as a strong-adhesion risk on the Cool Plate SuperTack \u2014 it can damage or tear the model on removal. Use a full glue-stick barrier and let the plate "
     },
     {
       "plate_id": "supertack",
@@ -224,10 +223,10 @@
       "ultrafine particles"
     ],
     "ventilation": "optional",
-    "notes": "No measured difference from base PLA; the elastomer/gloss fraction is small and no unusual fumes are reported. Printing 10-20 °C hotter than base PLA nudges particulate emission up slightly, so ventilate for continuous printing in an occupied room."
+    "notes": "No measured difference from base PLA; the elastomer/gloss fraction is small and no unusual fumes are reported. Printing 10-20 \u00b0C hotter than base PLA nudges particulate emission up slightly, so ventilate for continuous printing in an occupied room."
   },
-  "safety_notes": "Colourant and gloss-additive package is not food-contact certified — treat silk parts as decorative only, including for dry food.",
-  "additional_notes": "Gloss is a process outcome, not just a material property: temperature up and speed down both increase sheen. Dual-colour co-extruded silk spools shift hue with viewing angle and are a separate marketing category from gradient (colour-along-length) filament — see pla-gradient.",
+  "safety_notes": "Colourant and gloss-additive package is not food-contact certified \u2014 treat silk parts as decorative only, including for dry food.",
+  "additional_notes": "Gloss is a process outcome, not just a material property: temperature up and speed down both increase sheen. Dual-colour co-extruded silk spools shift hue with viewing angle and are a separate marketing category from gradient (colour-along-length) filament \u2014 see pla-gradient.",
   "provenance": {
     "sources": [
       "https://store.bblcdn.eu/s8/default/d0de0f57694b406dbf3e9b2345b7dbb9/Bambu_PLA_Silk__Technical_Data_Sheet.pdf",
@@ -239,7 +238,7 @@
     ],
     "last_verified": "2026-07-31",
     "confidence": "medium",
-    "conflicts": "AMS compatibility: Bambu's general material table lists Silk/Silk+ as AMS-compatible, while Bambu forum users report layer-adhesion and feed problems specific to AMS routing — recorded as 'conditional'. Drying: Bambu gives 55 °C/8 h (blast oven) or 65-75 °C/12 h (heated bed), noticeably hotter than the 45-55 °C used for base PLA; both are listed rather than reconciled. Mechanical figures are Bambu's Silk TDS; 'Silk+' is claimed to be stronger but no separate numbers were located, so the improvement is unverified."
+    "conflicts": "AMS compatibility: Bambu's general material table lists Silk/Silk+ as AMS-compatible, while Bambu forum users report layer-adhesion and feed problems specific to AMS routing \u2014 recorded as 'conditional'. Drying: Bambu gives 55 \u00b0C/8 h (blast oven) or 65-75 \u00b0C/12 h (heated bed), noticeably hotter than the 45-55 \u00b0C used for base PLA; both are listed rather than reconciled. Mechanical figures are Bambu's Silk TDS; 'Silk+' is claimed to be stronger but no separate numbers were located, so the improvement is unverified."
   },
   "trade_names": [
     {
@@ -552,15 +551,15 @@
   "alternatives": [
     {
       "filament_id": "pla",
-      "reason": "If the sheen is not the point, base PLA is stronger and better bonded (adh 6 vs 4, Z 33 vs 25 MPa), runs 10-20 °C cooler and faster, is less moisture-sensitive (water 6 vs 5), stays AMS-friendly (ams yes vs conditional) and starts at $14/kg."
+      "reason": "If the sheen is not the point, base PLA is stronger and better bonded (adh 6 vs 4, Z 33 vs 25 MPa), runs 10-20 \u00b0C cooler and faster, is less moisture-sensitive (water 6 vs 5), stays AMS-friendly (ams yes vs conditional) and starts at $14/kg."
     },
     {
       "filament_id": "pla-glitter",
-      "reason": "A different decorative effect that keeps base-PLA mechanicals (XY 39 / Z 32 MPa against silk's 33 / 25) and full AMS compatibility; the constraint moves from layer adhesion to nozzle size — 0.4 mm floor, no 0.2 mm."
+      "reason": "A different decorative effect that keeps base-PLA mechanicals (XY 39 / Z 32 MPa against silk's 33 / 25) and full AMS compatibility; the constraint moves from layer adhesion to nozzle size \u2014 0.4 mm floor, no 0.2 mm."
     },
     {
       "filament_id": "pla-gradient",
-      "reason": "Visual interest with no chemistry change at all: base-PLA strength, adhesion and printability (ease 10 vs 8) for $24-26 — but the colour shift only reads on tall or long parts, and it cannot give you silk's mirror gloss."
+      "reason": "Visual interest with no chemistry change at all: base-PLA strength, adhesion and printability (ease 10 vs 8) for $24-26 \u2014 but the colour shift only reads on tall or long parts, and it cannot give you silk's mirror gloss."
     },
     {
       "filament_id": "pvb",
@@ -568,7 +567,7 @@
     },
     {
       "filament_id": "pla-metal",
-      "reason": "For a metallic rather than satin shine — sandable and polishable to real metal lustre — at ease 5 vs 8, a mandatory hardened nozzle, 20-80 mm/s on heavy fills and up to $65/kg."
+      "reason": "For a metallic rather than satin shine \u2014 sandable and polishable to real metal lustre \u2014 at ease 5 vs 8, a mandatory hardened nozzle, 20-80 mm/s on heavy fills and up to $65/kg."
     }
   ]
 }

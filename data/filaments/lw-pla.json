@@ -13,7 +13,7 @@
   "variation_kind": "foaming",
   "polymer_class": "polylactide",
   "chemical_makeup": "Base polylactide compounded with an undisclosed chemical foaming/blowing agent that decomposes thermally in the hot end, expanding the melt into a closed-cell structure as it leaves the nozzle",
-  "summary": "Base PLA with a thermally activated foaming agent — the only PLA variant whose density is set by the operator rather than the spool. Foaming starts around 215 °C and increases with nozzle temperature to 250-280 °C, with extrusion flow cut by up to 65 % to match; effective printed density falls from base PLA's ~1.24 g/cm³ to about 0.54 g/cm³ (roughly 44 % of solid, over 2x volume). The cost is steep and non-linear: bending stiffness drops 3200 → 900 MPa and Z layer adhesion 33 → 4.3 MPa, so strength falls faster than weight. It also needs per-model temperature/flow calibration, prints hotter than any other PLA grade, and must not be annealed.",
+  "summary": "Base PLA with a thermally activated foaming agent \u2014 the only PLA variant whose density is set by the operator rather than the spool. Foaming starts around 215 \u00b0C and increases with nozzle temperature to 250-280 \u00b0C, with extrusion flow cut by up to 65 % to match; effective printed density falls from base PLA's ~1.24 g/cm\u00b3 to about 0.54 g/cm\u00b3 (roughly 44 % of solid, over 2x volume). The cost is steep and non-linear: bending stiffness drops 3200 \u2192 900 MPa and Z layer adhesion 33 \u2192 4.3 MPa, so strength falls faster than weight. It also needs per-model temperature/flow calibration, prints hotter than any other PLA grade, and must not be annealed.",
   "printing": {
     "nozzle_temp_c": {
       "min": 205,
@@ -44,13 +44,13 @@
       "recommended": 100
     },
     "enclosure_open_for_cooling": true,
-    "notes": "Delta vs base PLA: nozzle temperature is a control input, not a setting. CNC Kitchen measured foaming onset at ~215 °C on colorFabb LW-PLA, rising through 240-280 °C for maximum expansion; eSUN PLA-LW is rated 210-270 °C. Flow must be cut in step — colorFabb's own guide recommends reducing extrusion flow by up to 65 % to hit target lightness, and eSUN cites up to 220 % volume increase. Print unfoamed at ~205 °C if you want solid PLA behaviour. Bed temperature is not separately specified by either brand (unverified — base-PLA values assumed). Speed is moderate in practice because layer heights are usually raised to compensate for reduced flow, and the fan setting interacts with when the foam sets; neither is quantified in any fetched source (unverified). Unfilled, so no hardened nozzle — but mismatched temperature and flow will clog a nozzle with expanded melt, a different failure mode from abrasion. As with all PLA grades, run an enclosed machine with the door/lid open."
+    "notes": "Delta vs base PLA: nozzle temperature is a control input, not a setting. CNC Kitchen measured foaming onset at ~215 \u00b0C on colorFabb LW-PLA, rising through 240-280 \u00b0C for maximum expansion; eSUN PLA-LW is rated 210-270 \u00b0C. Flow must be cut in step \u2014 colorFabb's own guide recommends reducing extrusion flow by up to 65 % to hit target lightness, and eSUN cites up to 220 % volume increase. Print unfoamed at ~205 \u00b0C if you want solid PLA behaviour. Bed temperature is not separately specified by either brand (unverified \u2014 base-PLA values assumed). Speed is moderate in practice because layer heights are usually raised to compensate for reduced flow, and the fan setting interacts with when the foam sets; neither is quantified in any fetched source (unverified). Unfilled, so no hardened nozzle \u2014 but mismatched temperature and flow will clog a nozzle with expanded melt, a different failure mode from abrasion. As with all PLA grades, run an enclosed machine with the door/lid open."
   },
   "feeding": {
     "drive_system": "any",
     "ams_compatible": "conditional",
     "feeding_assistant_recommended": false,
-    "notes": "The unmelted filament is ordinary rigid PLA and feeds through any extruder with standard gears and PTFE — no abrasion, no spool-side assistant. AMS is the caveat: Bambu wiki content notes LW-PLA 'may not be compatible with AMS lite' (single source, unverified for full AMS units), and the grade's dependence on a specific nozzle temperature sits badly with automated multi-material swapping, where a shared temperature across tools would change the foam ratio. Rated 'conditional' rather than base PLA's 'yes' on that basis. No shore hardness applies — foamed but rigid, not a flexible."
+    "notes": "The unmelted filament is ordinary rigid PLA and feeds through any extruder with standard gears and PTFE \u2014 no abrasion, no spool-side assistant. AMS is the caveat: Bambu wiki content notes LW-PLA 'may not be compatible with AMS lite' (single source, unverified for full AMS units), and the grade's dependence on a specific nozzle temperature sits badly with automated multi-material swapping, where a shared temperature across tools would change the foam ratio. Rated 'conditional' rather than base PLA's 'yes' on that basis. No shore hardness applies \u2014 foamed but rigid, not a flexible."
   },
   "drying": {
     "required_before_use": "if-exposed",
@@ -71,7 +71,7 @@
       "drybox with desiccant"
     ],
     "dryness_validation": "Harder to judge than base PLA: the material foams by design, so a foamy extrudate is not itself a moisture signal. Use a fixed-temperature test extrusion and watch for popping/steam and for an unstable, inconsistent expansion ratio rather than for foaming as such; re-run the temperature/flow calibration tower after drying and compare measured part density.",
-    "notes": "No drying parameters are published by colorFabb or eSUN (unverified). Base-PLA practice (45-55 °C, 4-8 h) is the working default here. Conservative drybox handling is worth the effort anyway, since trapped moisture flashing to steam could plausibly disturb the foaming reaction and make density unrepeatable — a mechanism no fetched source confirms or measures. Note the opposite of pla-plus on annealing: CNC Kitchen found 100 °C annealing caused significant Z-direction growth and warp in standing LW-PLA parts with negligible mechanical benefit, so do not anneal."
+    "notes": "No drying parameters are published by colorFabb or eSUN (unverified). Base-PLA practice (45-55 \u00b0C, 4-8 h) is the working default here. Conservative drybox handling is worth the effort anyway, since trapped moisture flashing to steam could plausibly disturb the foaming reaction and make density unrepeatable \u2014 a mechanism no fetched source confirms or measures. Note the opposite of pla-plus on annealing: CNC Kitchen found 100 \u00b0C annealing caused significant Z-direction growth and warp in standing LW-PLA parts with negligible mechanical benefit, so do not anneal."
   },
   "storage": {
     "recommendations": "Sealed bag or drybox with desiccant between uses; treat more strictly than base PLA because density repeatability, not just surface quality, is at stake",
@@ -81,7 +81,7 @@
   "price": {
     "usd_per_kg_low": 36,
     "usd_per_kg_high": 41,
-    "notes": "colorFabb LW-PLA about $40.79/kg ($30.60 per 750 g spool, 3DJake); eSUN PLA-LW about $36.99/kg (1 kg spool, eSUN store). Clearly above base PLA and pla-plus, reflecting the specialty foaming agent — though per printed volume it is cheaper than the sticker suggests, since a spool yields roughly 2x the part volume at high foam ratios."
+    "notes": "colorFabb LW-PLA about $40.79/kg ($30.60 per 750 g spool, 3DJake); eSUN PLA-LW about $36.99/kg (1 kg spool, eSUN store). Clearly above base PLA and pla-plus, reflecting the specialty foaming agent \u2014 though per printed volume it is cheaper than the sticker suggests, since a spool yields roughly 2x the part volume at high foam ratios."
   },
   "use_cases": {
     "recommended": [
@@ -114,7 +114,7 @@
     "grams_per_100cm3": 124,
     "cm3_per_100g": 80.6,
     "glass_transition_c": 58,
-    "notes": "IMPORTANT — the density recorded here (1.24 g/cm³, inherited from base PLA) is the SOLID FILAMENT density, i.e. what a spool weighs per unit of extruded solid, and the derived 124 g/100 cm³ and 80.6 cm³/100 g figures follow from it. It is NOT the density of a printed part. Effective printed density is a user-selected variable: printing unfoamed at ~205 °C gives roughly the solid figure; at ~225 °C parts land near 67 % of solid; at ~250 °C CNC Kitchen measured ~44 % of regular PLA density, and eSUN rates PLA-LW as low as 0.54 g/cm³ at its '220 % foaming ratio' — so a printed part can be anywhere from ~0.54 to ~1.24 g/cm³ on the same spool. Mechanical properties track the same axis and degrade faster than density: tensile 49 MPa unfoamed → 24 MPa at 225 °C → 12 MPa at max foam; bending stiffness 3200 MPa → 900 MPa; vertical (Z) layer adhesion 33 MPa → 13 MPa → 4.3 MPa, the steepest degradation of any grade in this catalog and classic Gibson-Ashby cellular scaling (strength loss outpaces weight loss). The one exception is impact: vertical specimens retained energy absorption across all foam levels per CNC Kitchen. Thermal behaviour is inherited from base PLA (Tg ~58 °C) — no LW-specific Tg/HDT data was found (unverified), and annealing does not improve it."
+    "notes": "IMPORTANT \u2014 the density recorded here (1.24 g/cm\u00b3, inherited from base PLA) is the SOLID FILAMENT density, i.e. what a spool weighs per unit of extruded solid, and the derived 124 g/100 cm\u00b3 and 80.6 cm\u00b3/100 g figures follow from it. It is NOT the density of a printed part. Effective printed density is a user-selected variable: printing unfoamed at ~205 \u00b0C gives roughly the solid figure; at ~225 \u00b0C parts land near 67 % of solid; at ~250 \u00b0C CNC Kitchen measured ~44 % of regular PLA density, and eSUN rates PLA-LW as low as 0.54 g/cm\u00b3 at its '220 % foaming ratio' \u2014 so a printed part can be anywhere from ~0.54 to ~1.24 g/cm\u00b3 on the same spool. Mechanical properties track the same axis and degrade faster than density: tensile 49 MPa unfoamed \u2192 24 MPa at 225 \u00b0C \u2192 12 MPa at max foam; bending stiffness 3200 MPa \u2192 900 MPa; vertical (Z) layer adhesion 33 MPa \u2192 13 MPa \u2192 4.3 MPa, the steepest degradation of any grade in this catalog and classic Gibson-Ashby cellular scaling (strength loss outpaces weight loss). The one exception is impact: vertical specimens retained energy absorption across all foam levels per CNC Kitchen. Thermal behaviour is inherited from base PLA (Tg ~58 \u00b0C) \u2014 no LW-specific Tg/HDT data was found (unverified), and annealing does not improve it."
   },
   "scores": {
     "ease_of_print": 5,
@@ -129,7 +129,6 @@
   },
   "compatibility": {
     "bonds_with": [
-      "lw-pla",
       "pha",
       "pla",
       "pla-cf",
@@ -146,23 +145,23 @@
       "pva"
     ],
     "usable_as_support_for": [],
-    "notes": "Same PLA-family bonding chemistry as the base entry, and the pairing that matters is structural: CNC Kitchen recommends sandwich construction with solid PLA or pla-plus ribs and spars inside LW-PLA skins, since the foamed material carries almost no Z load. The foamed side is always the weak side of any interface. Standard PLA-compatible supports work, and the material's own oozing and stringing rub off easily, which makes support removal easier than with base PLA. Not listed as usable as support for other materials — it is too soft and too temperature-sensitive to make a reliable interface layer."
+    "notes": "Same PLA-family bonding chemistry as the base entry, and the pairing that matters is structural: CNC Kitchen recommends sandwich construction with solid PLA or pla-plus ribs and spars inside LW-PLA skins, since the foamed material carries almost no Z load. The foamed side is always the weak side of any interface. Standard PLA-compatible supports work, and the material's own oozing and stringing rub off easily, which makes support removal easier than with base PLA. Not listed as usable as support for other materials \u2014 it is too soft and too temperature-sensitive to make a reliable interface layer."
   },
   "plate_recommendations": [
     {
       "plate_id": "pei-textured",
       "rating": "usable",
-      "notes": "No LW-PLA-specific build-surface guidance was found in any fetched source; textured PEI is inferred from base-PLA practice and rated 'usable' rather than 'recommended' on that basis (unverified). Reduced extrusion flow makes the first layer thinner than usual, so the first layer is worth printing unfoamed (~205 °C) at normal flow for adhesion."
+      "notes": "No LW-PLA-specific build-surface guidance was found in any fetched source; textured PEI is inferred from base-PLA practice and rated 'usable' rather than 'recommended' on that basis (unverified). Reduced extrusion flow makes the first layer thinner than usual, so the first layer is worth printing unfoamed (~205 \u00b0C) at normal flow for adhesion."
     }
   ],
   "alternatives": [
     {
       "filament_id": "pla",
-      "reason": "Base PLA when the weight saving is not worth the strength collapse: bending stiffness 3200 vs 900 MPa and Z adhesion 33 vs 4.3 MPa (adh 6 vs 2, comp 8 vs 2), no per-model foaming calibration, ease 10 vs 5 and $14-35 vs $36-41 — at roughly double the printed density."
+      "reason": "Base PLA when the weight saving is not worth the strength collapse: bending stiffness 3200 vs 900 MPa and Z adhesion 33 vs 4.3 MPa (adh 6 vs 2, comp 8 vs 2), no per-model foaming calibration, ease 10 vs 5 and $14-35 vs $36-41 \u2014 at roughly double the printed density."
     },
     {
       "filament_id": "lw-asa",
-      "reason": "The same foaming trick on ASA for RC and aero parts that live in the sun: uv 8 vs 3, weath 8 vs 2 and temp 6 vs 2 — bought with enclosure printing (ease 4 vs 5), warp 7 vs 3, ventilation and $45-60."
+      "reason": "The same foaming trick on ASA for RC and aero parts that live in the sun: uv 8 vs 3, weath 8 vs 2 and temp 6 vs 2 \u2014 bought with enclosure printing (ease 4 vs 5), warp 7 vs 3, ventilation and $45-60."
     },
     {
       "filament_id": "pla-cf",
@@ -182,9 +181,9 @@
       "ultrafine particles"
     ],
     "ventilation": "recommended",
-    "notes": "The one PLA variant in this set with a genuine emissions delta. The grade works by thermally decomposing an undisclosed blowing agent, which by mechanism releases gaseous decomposition products, and it does so at up to 270-280 °C rather than base PLA's ~210 °C — and ultrafine-particle emission from FDM rises steeply with nozzle temperature. No source quantifies VOC or UFP output for LW-PLA specifically, so both levels are rated 'moderate' by mechanism rather than measurement (unverified quantitatively) and ventilation is raised to 'recommended' against base PLA's 'optional'. This is still nowhere near styrenic territory."
+    "notes": "The one PLA variant in this set with a genuine emissions delta. The grade works by thermally decomposing an undisclosed blowing agent, which by mechanism releases gaseous decomposition products, and it does so at up to 270-280 \u00b0C rather than base PLA's ~210 \u00b0C \u2014 and ultrafine-particle emission from FDM rises steeply with nozzle temperature. No source quantifies VOC or UFP output for LW-PLA specifically, so both levels are rated 'moderate' by mechanism rather than measurement (unverified quantitatively) and ventilation is raised to 'recommended' against base PLA's 'optional'. This is still nowhere near styrenic territory."
   },
-  "safety_notes": "No food-contact certification found, and the undisclosed foaming agent makes food contact a firmer 'no' than for base PLA. Do not anneal: 100 °C annealing produced significant Z-direction growth and warping with no useful strength gain. Because the foaming agent's composition is undisclosed, avoid running the material far above 280 °C where decomposition chemistry is unpredictable.",
+  "safety_notes": "No food-contact certification found, and the undisclosed foaming agent makes food contact a firmer 'no' than for base PLA. Do not anneal: 100 \u00b0C annealing produced significant Z-direction growth and warping with no useful strength gain. Because the foaming agent's composition is undisclosed, avoid running the material far above 280 \u00b0C where decomposition chemistry is unpredictable.",
   "additional_notes": "Treat this as a tunable material rather than a fixed one: colorFabb's own guide is a four-step calibration process (temperature tower, flow reduction, layer-height adjustment, density check) that has to be repeated per model and per printer. Design consequence: pick the target density first, then engineer the part around the strength that density gives, rather than substituting LW-PLA into a geometry designed for solid PLA.",
   "provenance": {
     "sources": [
@@ -197,7 +196,7 @@
     ],
     "last_verified": "2026-07-31",
     "confidence": "low",
-    "conflicts": "Maximum expansion disagrees: CNC Kitchen independently measured just over 2x volume increase (density ~44 % of regular PLA) on colorFabb LW-PLA, while colorFabb markets 'nearly 3x'; eSUN separately claims a 220 % foaming ratio and 0.54 g/cm³, which agrees with CNC Kitchen rather than with colorFabb's marketing — the measured figure is used. Foaming onset and ceiling also vary by source (215 °C onset per CNC Kitchen; 210-270 °C per eSUN; testing to 280 °C in Polymaker-style guidance). Bed temperature, print speed, fan settings and drying parameters are not published by either brand and are assumed from base PLA (unverified). No LW-specific Tg/HDT, UV/weather or water-absorption data exists; the elevated water-tolerance concern from surface porosity is a flagged mechanism, not a measurement. AMS compatibility rests on a single Bambu wiki note about AMS lite. Confidence is 'low' overall because so many process fields are inherited assumptions."
+    "conflicts": "Maximum expansion disagrees: CNC Kitchen independently measured just over 2x volume increase (density ~44 % of regular PLA) on colorFabb LW-PLA, while colorFabb markets 'nearly 3x'; eSUN separately claims a 220 % foaming ratio and 0.54 g/cm\u00b3, which agrees with CNC Kitchen rather than with colorFabb's marketing \u2014 the measured figure is used. Foaming onset and ceiling also vary by source (215 \u00b0C onset per CNC Kitchen; 210-270 \u00b0C per eSUN; testing to 280 \u00b0C in Polymaker-style guidance). Bed temperature, print speed, fan settings and drying parameters are not published by either brand and are assumed from base PLA (unverified). No LW-specific Tg/HDT, UV/weather or water-absorption data exists; the elevated water-tolerance concern from surface porosity is a flagged mechanism, not a measurement. AMS compatibility rests on a single Bambu wiki note about AMS lite. Confidence is 'low' overall because so many process fields are inherited assumptions."
   },
   "trade_names": [
     {

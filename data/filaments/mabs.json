@@ -11,8 +11,8 @@
   "base_type": "abs",
   "variation_kind": "blend",
   "polymer_class": "styrenic",
-  "chemical_makeup": "Methyl methacrylate-acrylonitrile-butadiene-styrene — ABS with methyl methacrylate copolymerised into the SAN matrix phase, raising the matrix refractive index until it matches the dispersed butadiene rubber particles. Removing that refractive-index mismatch removes the light scattering that makes ordinary ABS opaque, without removing the rubber toughening",
-  "summary": "Clear ABS, and clear for a chemical reason rather than a pigment one: MMA in the matrix matches the refractive index of the rubber phase, giving up to 92 % light transmittance while keeping impact behaviour much closer to ABS than to brittle pmma. It prints like ABS — same temperatures, same enclosure, same styrenic caveats — and it is the tougher of the two clear options in this catalog. The catch is that genuine MABS filament is rare, its datasheets are thin, and one vendor's outdoor claim directly contradicts the chemistry literature on UV yellowing.",
+  "chemical_makeup": "Methyl methacrylate-acrylonitrile-butadiene-styrene \u2014 ABS with methyl methacrylate copolymerised into the SAN matrix phase, raising the matrix refractive index until it matches the dispersed butadiene rubber particles. Removing that refractive-index mismatch removes the light scattering that makes ordinary ABS opaque, without removing the rubber toughening",
+  "summary": "Clear ABS, and clear for a chemical reason rather than a pigment one: MMA in the matrix matches the refractive index of the rubber phase, giving up to 92 % light transmittance while keeping impact behaviour much closer to ABS than to brittle pmma. It prints like ABS \u2014 same temperatures, same enclosure, same styrenic caveats \u2014 and it is the tougher of the two clear options in this catalog. The catch is that genuine MABS filament is rare, its datasheets are thin, and one vendor's outdoor claim directly contradicts the chemistry literature on UV yellowing.",
   "printing": {
     "nozzle_temp_c": {
       "min": 210,
@@ -28,12 +28,12 @@
     "heated_chamber_required": false,
     "enclosure_open_for_cooling": false,
     "requires_hardened_nozzle": false,
-    "notes": "Squarely in base-ABS territory: 3DFoxShop's NEBULA MABS specifies 235-245 °C at 80-100 °C bed, purefil quotes a wider 210-260 °C at 80-110 °C, and the recorded values sit in the overlap. 3DFoxShop recommends 'closed print boxes ... for consistent environmental temperature', so enclosure_recommended is true; no source calls for an actively heated chamber, and no filler means no hardened nozzle. Two fields are deliberately omitted for want of data: neither MABS source publishes a part-cooling figure — base abs runs the fan essentially off (0-20 %) and that is the sensible starting point, but it is an inference rather than a specification — and neither publishes a speed range, so the base entry's 20-150 mm/s should be used as the guide. enclosure_open_for_cooling is false by ABS-class analogy: like ABS this wants the chamber sealed and warm."
+    "notes": "Squarely in base-ABS territory: 3DFoxShop's NEBULA MABS specifies 235-245 \u00b0C at 80-100 \u00b0C bed, purefil quotes a wider 210-260 \u00b0C at 80-110 \u00b0C, and the recorded values sit in the overlap. 3DFoxShop recommends 'closed print boxes ... for consistent environmental temperature', so enclosure_recommended is true; no source calls for an actively heated chamber, and no filler means no hardened nozzle. Two fields are deliberately omitted for want of data: neither MABS source publishes a part-cooling figure \u2014 base abs runs the fan essentially off (0-20 %) and that is the sensible starting point, but it is an inference rather than a specification \u2014 and neither publishes a speed range, so the base entry's 20-150 mm/s should be used as the guide. enclosure_open_for_cooling is false by ABS-class analogy: like ABS this wants the chamber sealed and warm."
   },
   "feeding": {
     "drive_system": "any",
     "feeding_assistant_recommended": false,
-    "notes": "Rigid, unfilled and dimensionally stable in the feed path, so it feeds on any drive system. ams_compatible is omitted rather than inherited: base abs is recorded 'yes' on the strength of Bambu's own material table, but that table does not list MABS and no vendor has published a verdict for it. Nothing about the chemistry suggests a problem — it is neither flexible, nor abrasive, nor as brittle as a damp hygroscopic filament — so a 'yes' would probably be right; it is left blank because it is not sourced, not because there is a known restriction."
+    "notes": "Rigid, unfilled and dimensionally stable in the feed path, so it feeds on any drive system. ams_compatible is omitted rather than inherited: base abs is recorded 'yes' on the strength of Bambu's own material table, but that table does not list MABS and no vendor has published a verdict for it. Nothing about the chemistry suggests a problem \u2014 it is neither flexible, nor abrasive, nor as brittle as a damp hygroscopic filament \u2014 so a 'yes' would probably be right; it is left blank because it is not sourced, not because there is a known restriction."
   },
   "drying": {
     "required_before_use": "if-exposed",
@@ -53,18 +53,18 @@
       "print from a heated drybox",
       "sealed box with desiccant"
     ],
-    "dryness_validation": "No popping or steam at the nozzle and no micro-bubbles in the extrudate — and for this material specifically, watch clarity: haze or a milky cast in a part that should be transparent is the most visible symptom of a wet spool, since moisture defeats the whole reason for choosing MABS",
-    "notes": "No MABS filament source publishes a drying protocol. The recorded 70-90 °C / 2-4 h comes from general MABS resin processing guidance (80-90 °C for 2-4 h before moulding) and is an inferred starting point rather than a filament instruction; base abs's own 70-85 °C / 4-8 h is the alternative reference and would also be defensible. One concrete indirect signal: 3DFoxShop ships silica gel inside the retail packaging, so the manufacturer clearly treats moisture as a live concern for the finished spool."
+    "dryness_validation": "No popping or steam at the nozzle and no micro-bubbles in the extrudate \u2014 and for this material specifically, watch clarity: haze or a milky cast in a part that should be transparent is the most visible symptom of a wet spool, since moisture defeats the whole reason for choosing MABS",
+    "notes": "No MABS filament source publishes a drying protocol. The recorded 70-90 \u00b0C / 2-4 h comes from general MABS resin processing guidance (80-90 \u00b0C for 2-4 h before moulding) and is an inferred starting point rather than a filament instruction; base abs's own 70-85 \u00b0C / 4-8 h is the alternative reference and would also be defensible. One concrete indirect signal: 3DFoxShop ships silica gel inside the retail packaging, so the manufacturer clearly treats moisture as a live concern for the finished spool."
   },
   "storage": {
-    "recommendations": "Airtight box or drybox with desiccant as an ongoing practice, as with base ABS — 3DFoxShop packs silica gel with the spool. Keep it out of sunlight in storage as well as in service, given the yellowing question.",
+    "recommendations": "Airtight box or drybox with desiccant as an ongoing practice, as with base ABS \u2014 3DFoxShop packs silica gel with the spool. Keep it out of sunlight in storage as well as in service, given the yellowing question.",
     "max_humidity_pct": 30,
     "hygroscopy": "moderate"
   },
   "price": {
     "usd_per_kg_low": 18,
     "usd_per_kg_high": 30,
-    "notes": "Two European retail data points only: 3DFoxShop NEBULA MABS at €16.81/kg (~$18/kg), which is remarkable — budget-ABS money for a specialty clear material — and purefil MABS at CHF 24.05/kg (~$27/kg). n=2, both European, unverified against US retail, and the sample is small enough that a third listing could move the band substantially."
+    "notes": "Two European retail data points only: 3DFoxShop NEBULA MABS at \u20ac16.81/kg (~$18/kg), which is remarkable \u2014 budget-ABS money for a specialty clear material \u2014 and purefil MABS at CHF 24.05/kg (~$27/kg). n=2, both European, unverified against US retail, and the sample is small enough that a third listing could move the band substantially."
   },
   "use_cases": {
     "recommended": [
@@ -76,10 +76,10 @@
       "clear covers over indicators, dials and PCBs"
     ],
     "not_recommended": [
-      "food-contact items — 3DFoxShop explicitly excludes food contact and toy manufacture",
+      "food-contact items \u2014 3DFoxShop explicitly excludes food contact and toy manufacture",
       "sustained outdoor or UV-exposed use (see the yellowing conflict)",
       "maximum-clarity optical parts, where pmma's better transmittance wins if toughness is not needed",
-      "sustained service above roughly 95 °C — HDT sits slightly below plain ABS",
+      "sustained service above roughly 95 \u00b0C \u2014 HDT sits slightly below plain ABS",
       "open-frame printers in draughty rooms, as with any ABS-class material",
       "unventilated occupied rooms"
     ]
@@ -96,7 +96,7 @@
     "cm3_per_100g": 92.6,
     "heat_deflection_c": 85,
     "max_service_temp_c": 100,
-    "notes": "Sparse, and the sparseness is the honest picture: no MABS filament datasheet found publishes density, shrinkage, Tg or tensile strength. Density 1.08 g/cm³ is the general MABS resin figure (typically 1.07-1.09) and is unverified for any specific filament; it sits just above base abs's 1.05, consistent with MMA being denser than styrene. HDT 85 °C is the midpoint of the 75-95 °C range that general MABS resin literature gives while noting it is 'slightly lower than standard ABS' — the source does not state the load basis, so it may not be a true HDT@0.45 MPa figure comparable to base abs's 99 °C. Max service temperature 100 °C is purefil's stated 'heat resistance up to 100 °C'. Melt flow index runs 3-12 g/10 min at 230 °C/3.8 kg depending on resin grade, which is processing context rather than a part property. Tg and tensile are deliberately omitted: base ABS's ~103 °C Tg and ~40-45 MPa tensile are the obvious neighbourhoods, but nothing in the sources confirms them for MABS and adding MMA to the matrix moves both. Optical transmittance is the one headline number that is well sourced: up to 92 %."
+    "notes": "Sparse, and the sparseness is the honest picture: no MABS filament datasheet found publishes density, shrinkage, Tg or tensile strength. Density 1.08 g/cm\u00b3 is the general MABS resin figure (typically 1.07-1.09) and is unverified for any specific filament; it sits just above base abs's 1.05, consistent with MMA being denser than styrene. HDT 85 \u00b0C is the midpoint of the 75-95 \u00b0C range that general MABS resin literature gives while noting it is 'slightly lower than standard ABS' \u2014 the source does not state the load basis, so it may not be a true HDT@0.45 MPa figure comparable to base abs's 99 \u00b0C. Max service temperature 100 \u00b0C is purefil's stated 'heat resistance up to 100 \u00b0C'. Melt flow index runs 3-12 g/10 min at 230 \u00b0C/3.8 kg depending on resin grade, which is processing context rather than a part property. Tg and tensile are deliberately omitted: base ABS's ~103 \u00b0C Tg and ~40-45 MPa tensile are the obvious neighbourhoods, but nothing in the sources confirms them for MABS and adding MMA to the matrix moves both. Optical transmittance is the one headline number that is well sourced: up to 92 %."
   },
   "scores": {
     "ease_of_print": 5,
@@ -110,23 +110,20 @@
     "water_tolerance": 6
   },
   "compatibility": {
-    "bonds_with": [
-      "mabs"
-    ],
     "support_materials": [],
     "usable_as_support_for": [],
-    "notes": "Only self-bonding is asserted, which is deliberately conservative for a material whose base_type is abs. The shared SAN/styrenic matrix makes bonding to abs, asa and the other styrenics chemically very plausible — as does acetone-vapour smoothing, by the same analogy — and hips would be the obvious breakaway support candidate. None of this is confirmed by any source for MABS specifically, and the MMA content is exactly the sort of matrix change that can alter solvent response, so nothing beyond mabs is listed. Worth testing before relying on it in a multi-material job; if it behaves like ABS, expect abs, asa, hips, pc and support-breakaway to all work."
+    "notes": "Only self-bonding is asserted, which is deliberately conservative for a material whose base_type is abs. The shared SAN/styrenic matrix makes bonding to abs, asa and the other styrenics chemically very plausible \u2014 as does acetone-vapour smoothing, by the same analogy \u2014 and hips would be the obvious breakaway support candidate. None of this is confirmed by any source for MABS specifically, and the MMA content is exactly the sort of matrix change that can alter solvent response, so nothing beyond mabs is listed. Worth testing before relying on it in a multi-material job; if it behaves like ABS, expect abs, asa, hips, pc and support-breakaway to all work."
   },
   "plate_recommendations": [
     {
       "plate_id": "pei-textured",
       "rating": "usable",
-      "notes": "No MABS source discusses build surfaces at all; this follows base abs, where textured PEI works at 90-110 °C with a glue-stick adhesion aid, a brim on large flats, and an enclosure doing most of the real work against warp. One MABS-specific caveat: the textured surface prints an opaque, diffused bottom face, which defeats the point on a part chosen for clarity — use a smooth surface where the underside is a viewing face."
+      "notes": "No MABS source discusses build surfaces at all; this follows base abs, where textured PEI works at 90-110 \u00b0C with a glue-stick adhesion aid, a brim on large flats, and an enclosure doing most of the real work against warp. One MABS-specific caveat: the textured surface prints an opaque, diffused bottom face, which defeats the point on a part chosen for clarity \u2014 use a smooth surface where the underside is a viewing face."
     },
     {
       "plate_id": "pei-smooth",
       "rating": "usable",
-      "notes": "The better choice for this material specifically: base abs rates smooth PEI 'recommended' at 100-110 °C, and the glossy first layer preserves optical clarity on the bottom face. Inferred from the base entry; unverified for MABS."
+      "notes": "The better choice for this material specifically: base abs rates smooth PEI 'recommended' at 100-110 \u00b0C, and the glossy first layer preserves optical clarity on the bottom face. Inferred from the base entry; unverified for MABS."
     },
     {
       "plate_id": "pei-satin",
@@ -136,17 +133,17 @@
     {
       "plate_id": "glass-borosilicate",
       "rating": "usable",
-      "notes": "Glass takes ABS-class bed temperatures without complaint and gives the glossiest possible bottom face, which is the reason to use it here. Expect to need an adhesion aid — glue stick, or the traditional ABS/acetone slurry — and expect warp, not the surface, to be the limiting factor. Inferred from base abs."
+      "notes": "Glass takes ABS-class bed temperatures without complaint and gives the glossiest possible bottom face, which is the reason to use it here. Expect to need an adhesion aid \u2014 glue stick, or the traditional ABS/acetone slurry \u2014 and expect warp, not the surface, to be the limiting factor. Inferred from base abs."
     }
   ],
   "alternatives": [
     {
       "filament_id": "pmma",
-      "reason": "The other clear option, and the one that survives outdoors: genuinely optical clarity plus uv 9 vs 3 and a hard scratch-resistant surface — but brittle where MABS keeps ABS-like impact (adhesion 3 vs 6), harder to print (ease 3 vs 5, warp 8 vs 6) and dearer ($40-90 vs $18-30)."
+      "reason": "The other clear option, and the one that survives outdoors: genuinely optical clarity plus uv 9 vs 3 and a hard scratch-resistant surface \u2014 but brittle where MABS keeps ABS-like impact (adhesion 3 vs 6), harder to print (ease 3 vs 5, warp 8 vs 6) and dearer ($40-90 vs $18-30)."
     },
     {
       "filament_id": "petg",
-      "reason": "The easy transparent: ease 7 vs 5, warp 3 vs 6, no enclosure, far better layer adhesion (9 vs 6) and water tolerance (9 vs 6) at similar price — less optically clear than true MABS, and no acetone vapour smoothing."
+      "reason": "The easy transparent: ease 7 vs 5, warp 3 vs 6, no enclosure, far better layer adhesion (9 vs 6) and water tolerance (9 vs 6) at similar price \u2014 less optically clear than true MABS, and no acetone vapour smoothing."
     },
     {
       "filament_id": "pctg",
@@ -154,7 +151,7 @@
     },
     {
       "filament_id": "abs",
-      "reason": "Base ABS when clarity is not needed: the same process and enclosure but with real engineering properties — compression 7 vs 5 and temp 7 vs 5 — and vastly better availability and documentation; opaque only."
+      "reason": "Base ABS when clarity is not needed: the same process and enclosure but with real engineering properties \u2014 compression 7 vs 5 and temp 7 vs 5 \u2014 and vastly better availability and documentation; opaque only."
     }
   ],
   "emissions": {
@@ -167,8 +164,8 @@
     "ventilation": "required",
     "notes": "No MABS-specific VOC or particulate measurement exists. These levels are inherited wholesale from base abs, which is measured: Azimi et al. put ABS ultrafine-particle rates roughly 100-1000x PLA's, with styrene as the named VOC of concern. MABS shares the acrylonitrile-butadiene-styrene backbone and prints at the same temperatures, so assuming a similar profile is the safety-conservative reading, and where a safety field has no data the conservative inheritance is the right default rather than a lower guess. The MMA content raises the additional possibility of methyl methacrylate release, as flagged on the pmma entry, but nothing measures that either. Print with ventilation, ideally an enclosure that vents outside or filters through HEPA plus carbon."
   },
-  "safety_notes": "Treat exactly as ABS until measurements say otherwise: styrene is a respiratory irritant and a suspected carcinogen on chronic exposure, so do not run this in an unventilated occupied room. 3DFoxShop explicitly excludes its NEBULA MABS from food contact and from toy manufacture, and no MABS filament with a food-contact certification was found. If acetone smoothing is attempted by analogy to ABS, note that acetone is highly flammable, needs ventilation away from ignition sources, and will destroy the optical surface that is the reason for buying this material in the first place — test on a scrap part.",
-  "additional_notes": "The useful framing is MABS versus pmma, the catalog's two clear materials. MABS keeps ABS's rubber toughening and gives up a little clarity; PMMA gives glass-like clarity, better UV life and a harder surface, and is brittle enough to chip when a support is snapped off. For a housing, a lens cover or anything that will be handled, MABS is the safer choice; for a display piece or a light pipe where nothing gets dropped, PMMA wins. Note also that a spool labelled 'transparent ABS' is not automatically MABS — several vendors sell tinted-clear standard ABS with no MMA content, and only a vendor statement about the resin chemistry distinguishes them. Confirmed MABS filament products are genuinely scarce: two European retail SKUs plus one industrial listing were all that could be located.",
+  "safety_notes": "Treat exactly as ABS until measurements say otherwise: styrene is a respiratory irritant and a suspected carcinogen on chronic exposure, so do not run this in an unventilated occupied room. 3DFoxShop explicitly excludes its NEBULA MABS from food contact and from toy manufacture, and no MABS filament with a food-contact certification was found. If acetone smoothing is attempted by analogy to ABS, note that acetone is highly flammable, needs ventilation away from ignition sources, and will destroy the optical surface that is the reason for buying this material in the first place \u2014 test on a scrap part.",
+  "additional_notes": "The useful framing is MABS versus pmma, the catalog's two clear materials. MABS keeps ABS's rubber toughening and gives up a little clarity; PMMA gives glass-like clarity, better UV life and a harder surface, and is brittle enough to chip when a support is snapped off. For a housing, a lens cover or anything that will be handled, MABS is the safer choice; for a display piece or a light pipe where nothing gets dropped, PMMA wins. Note also that a spool labelled 'transparent ABS' is not automatically MABS \u2014 several vendors sell tinted-clear standard ABS with no MMA content, and only a vendor statement about the resin chemistry distinguishes them. Confirmed MABS filament products are genuinely scarce: two European retail SKUs plus one industrial listing were all that could be located.",
   "provenance": {
     "sources": [
       "https://salesplastics.com/mabs/",
@@ -179,18 +176,18 @@
     ],
     "last_verified": "2026-08-01",
     "confidence": "low",
-    "conflicts": "The headline conflict is outdoor suitability: 3DFoxShop markets NEBULA MABS as 'outdoor use approved', while salesplastics' general MABS chemistry summary states 'poor UV resistance; materials yellow over time with sunlight exposure'. That is a vendor marketing claim against chemistry literature, unresolved — suitability.outdoor is recorded 'limited' and uv_tolerance 3 following the chemistry, which is also consistent with base abs's own UV score of 2. Beyond that, almost every number is either absent or borrowed. Density (1.08) is a general resin figure, not from any filament datasheet. HDT (85 °C) is the midpoint of a 75-95 °C literature range whose load basis is unstated, so it is not strictly comparable with base abs's measured 99 °C. Tg, tensile strength and shrinkage are unpublished for MABS and omitted rather than inherited from ABS. Fan speed and print speed are unpublished and omitted. The drying protocol is extrapolated from injection-moulding resin guidance, not filament practice. ams_compatible is omitted rather than inherited from base abs's sourced 'yes'. All plate ratings are inferred from base abs. All scores are inferred from the ABS anchor and none is print-tested; uv_tolerance is the only axis with even a general citation behind it. Emissions are inherited wholesale from base abs as the safety-conservative default, with no MABS measurement of any kind. Only two retail MABS SKUs and one industrial listing could be located, so pricing (n=2, EUR/CHF) and the vendor claims behind it rest on a very thin market sample. Finally, generic 'transparent ABS' products are not assumed to be MABS: without a vendor statement about MMA content they are a different material and were excluded."
+    "conflicts": "The headline conflict is outdoor suitability: 3DFoxShop markets NEBULA MABS as 'outdoor use approved', while salesplastics' general MABS chemistry summary states 'poor UV resistance; materials yellow over time with sunlight exposure'. That is a vendor marketing claim against chemistry literature, unresolved \u2014 suitability.outdoor is recorded 'limited' and uv_tolerance 3 following the chemistry, which is also consistent with base abs's own UV score of 2. Beyond that, almost every number is either absent or borrowed. Density (1.08) is a general resin figure, not from any filament datasheet. HDT (85 \u00b0C) is the midpoint of a 75-95 \u00b0C literature range whose load basis is unstated, so it is not strictly comparable with base abs's measured 99 \u00b0C. Tg, tensile strength and shrinkage are unpublished for MABS and omitted rather than inherited from ABS. Fan speed and print speed are unpublished and omitted. The drying protocol is extrapolated from injection-moulding resin guidance, not filament practice. ams_compatible is omitted rather than inherited from base abs's sourced 'yes'. All plate ratings are inferred from base abs. All scores are inferred from the ABS anchor and none is print-tested; uv_tolerance is the only axis with even a general citation behind it. Emissions are inherited wholesale from base abs as the safety-conservative default, with no MABS measurement of any kind. Only two retail MABS SKUs and one industrial listing could be located, so pricing (n=2, EUR/CHF) and the vendor claims behind it rest on a very thin market sample. Finally, generic 'transparent ABS' products are not assumed to be MABS: without a vendor statement about MMA content they are a different material and were excluded."
   },
   "trade_names": [
     {
       "manufacturer": "3DFoxShop",
       "product": "NEBULA MABS transparent natural",
-      "notes": "German retail SKU, €16.81/kg: 235-245 °C nozzle, 80-100 °C bed, closed print box recommended, silica gel included in packaging, excluded from food contact and toy use, marketed as 'outdoor use approved' — a claim that conflicts with general MABS UV literature."
+      "notes": "German retail SKU, \u20ac16.81/kg: 235-245 \u00b0C nozzle, 80-100 \u00b0C bed, closed print box recommended, silica gel included in packaging, excluded from food contact and toy use, marketed as 'outdoor use approved' \u2014 a claim that conflicts with general MABS UV literature."
     },
     {
       "manufacturer": "purefil",
       "product": "MABS",
-      "notes": "Swiss retail SKU, CHF 24.05/kg: 210-260 °C nozzle, 80-110 °C bed, stated heat resistance up to 100 °C."
+      "notes": "Swiss retail SKU, CHF 24.05/kg: 210-260 \u00b0C nozzle, 80-110 \u00b0C bed, stated heat resistance up to 100 \u00b0C."
     },
     {
       "manufacturer": "RS Components",

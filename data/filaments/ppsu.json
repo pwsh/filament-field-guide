@@ -11,8 +11,8 @@
   "base_type": null,
   "variation_kind": null,
   "polymer_class": "high-performance",
-  "chemical_makeup": "Amorphous aromatic polysulfone — benzene rings bridged by sulfone and ether linkages, sold as Solvay's Radel or BASF's Ultrason P. Amorphous like pei-ultem and unlike the semi-crystalline peek, pekk and pps, so it shrinks by thermal contraction only. The sulfone chemistry is what separates it from PEI's imide backbone: markedly higher impact toughness and outstanding hydrolytic and steam stability, at the cost of lower tensile and compressive strength and stiffness than either pei-ultem or peek.",
-  "summary": "The tough, steam-proof member of the high-performance cluster. Tg 220 °C is the highest here — above both ULTEM grades — and it survives 1,000+ steam sterilisation cycles while meeting ISO 10993 biocompatibility, which nothing else in this cluster claims. Deltas vs pei-ultem: same amorphous low-warp behaviour and the same 8/8 stability-and-adhesion profile, a gentler 110 °C drying spec against 1010's 150 °C, far better impact toughness and water tolerance (10 vs 6), but lower stiffness and compressive strength (6 vs 7) and roughly double the price. Deltas vs peek: comparative sources put it behind on compressive strength, tensile strength and elasticity, and its 180 °C continuous rating is well short of PEEK's 240-260 °C — but it is easier to print, warps far less, and takes an impact that would crack a PEEK part.",
+  "chemical_makeup": "Amorphous aromatic polysulfone \u2014 benzene rings bridged by sulfone and ether linkages, sold as Solvay's Radel or BASF's Ultrason P. Amorphous like pei-ultem and unlike the semi-crystalline peek, pekk and pps, so it shrinks by thermal contraction only. The sulfone chemistry is what separates it from PEI's imide backbone: markedly higher impact toughness and outstanding hydrolytic and steam stability, at the cost of lower tensile and compressive strength and stiffness than either pei-ultem or peek.",
+  "summary": "The tough, steam-proof member of the high-performance cluster. Tg 220 \u00b0C is the highest here \u2014 above both ULTEM grades \u2014 and it survives 1,000+ steam sterilisation cycles while meeting ISO 10993 biocompatibility, which nothing else in this cluster claims. Deltas vs pei-ultem: same amorphous low-warp behaviour and the same 8/8 stability-and-adhesion profile, a gentler 110 \u00b0C drying spec against 1010's 150 \u00b0C, far better impact toughness and water tolerance (10 vs 6), but lower stiffness and compressive strength (6 vs 7) and roughly double the price. Deltas vs peek: comparative sources put it behind on compressive strength, tensile strength and elasticity, and its 180 \u00b0C continuous rating is well short of PEEK's 240-260 \u00b0C \u2014 but it is easier to print, warps far less, and takes an impact that would crack a PEEK part.",
   "printing": {
     "nozzle_temp_c": {
       "min": 360,
@@ -38,13 +38,13 @@
       "max": 25,
       "recommended": 10
     },
-    "notes": "Sources cluster into two overlapping bands: Formfutura 360-400 °C, Prusa and 3DXTech-context 370-410 °C; 385 °C is a reasonable start. Bed 120-155 °C. The chamber is a hard requirement rather than a nicety — Prusa specifies a minimum of 65 °C ACTIVELY heated, Formfutura recommends 90 °C — which is why heated_chamber_required is true, matching peek, pekk and pei-ultem and unlike the base pps entry and pps-cf. The one relaxation vs the rest of the cluster is part cooling: 0-25 % is tolerable here where peek, pekk and pps want essentially zero, a consequence of amorphous behaviour rather than crystallisation. At 360-410 °C this is out of reach of Bambu's stock hotend and of the X1E/H2D high-temp hotend's ~350 °C ceiling. Unfilled, so no hardened nozzle."
+    "notes": "Sources cluster into two overlapping bands: Formfutura 360-400 \u00b0C, Prusa and 3DXTech-context 370-410 \u00b0C; 385 \u00b0C is a reasonable start. Bed 120-155 \u00b0C. The chamber is a hard requirement rather than a nicety \u2014 Prusa specifies a minimum of 65 \u00b0C ACTIVELY heated, Formfutura recommends 90 \u00b0C \u2014 which is why heated_chamber_required is true, matching peek, pekk and pei-ultem and unlike the base pps entry and pps-cf. The one relaxation vs the rest of the cluster is part cooling: 0-25 % is tolerable here where peek, pekk and pps want essentially zero, a consequence of amorphous behaviour rather than crystallisation. At 360-410 \u00b0C this is out of reach of Bambu's stock hotend and of the X1E/H2D high-temp hotend's ~350 \u00b0C ceiling. Unfilled, so no hardened nozzle."
   },
   "feeding": {
     "drive_system": "direct-drive-recommended",
     "ams_compatible": "no",
     "feeding_assistant_recommended": false,
-    "notes": "Rigid; direct drive recommended for extrusion pressure at 385 °C rather than for buckling. No AMS or material-station compatibility on any current desktop system — the process temperature is far outside AMS-fed hotend range and the 110 °C drying spec exceeds what an AMS-HT dryer holds. Feed from a heated drybox. Unlike pps-cf there is no brittleness objection and unlike pei-ultem the moisture objection is milder; the barrier is temperature. No feeding assistant applies."
+    "notes": "Rigid; direct drive recommended for extrusion pressure at 385 \u00b0C rather than for buckling. No AMS or material-station compatibility on any current desktop system \u2014 the process temperature is far outside AMS-fed hotend range and the 110 \u00b0C drying spec exceeds what an AMS-HT dryer holds. Feed from a heated drybox. Unlike pps-cf there is no brittleness objection and unlike pei-ultem the moisture objection is milder; the barrier is temperature. No feeding assistant applies."
   },
   "drying": {
     "required_before_use": "always",
@@ -59,22 +59,22 @@
       "recommended": 4
     },
     "methods": [
-      "filament dryer or convection oven at 110 °C",
+      "filament dryer or convection oven at 110 \u00b0C",
       "print from a heated drybox",
       "sealed drybox with desiccant while printing"
     ],
-    "dryness_validation": "No popping, hissing or steam at the nozzle and a continuous, blister-free purge line at 385 °C — trace moisture is obvious at this temperature.",
-    "notes": "Prusa and Formfutura agree: minimum 4 hours at 110 °C, then store in a dry box. This is the gentlest schedule in the very-high-temperature group — 10 °C below peek and pekk's 120 °C and 40 °C below pei-ultem 1010's 150 °C — and is one of the reasons PPSU scores a point higher than pei-ultem on ease of print despite an equally demanding hotend."
+    "dryness_validation": "No popping, hissing or steam at the nozzle and a continuous, blister-free purge line at 385 \u00b0C \u2014 trace moisture is obvious at this temperature.",
+    "notes": "Prusa and Formfutura agree: minimum 4 hours at 110 \u00b0C, then store in a dry box. This is the gentlest schedule in the very-high-temperature group \u2014 10 \u00b0C below peek and pekk's 120 \u00b0C and 40 \u00b0C below pei-ultem 1010's 150 \u00b0C \u2014 and is one of the reasons PPSU scores a point higher than pei-ultem on ease of print despite an equally demanding hotend."
   },
   "storage": {
-    "recommendations": "Sealed with desiccant between prints and fed from a dry box during the job. Uptake is real but far less punishing than pei-ultem's — this is a material whose finished parts shrug off 1,000+ steam sterilisation cycles, so the concern is the filament in the melt rather than the part in service.",
+    "recommendations": "Sealed with desiccant between prints and fed from a dry box during the job. Uptake is real but far less punishing than pei-ultem's \u2014 this is a material whose finished parts shrug off 1,000+ steam sterilisation cycles, so the concern is the filament in the melt rather than the part in service.",
     "max_humidity_pct": 20,
     "hygroscopy": "high"
   },
   "price": {
     "usd_per_kg_low": 400,
     "usd_per_kg_high": 600,
-    "notes": "Estimated from Formfutura's ~€190/500 g listing, which works out above $400/kg. That puts PPSU among the most expensive materials in this cluster — broadly comparable to peek and above ULTEM 9085, and roughly 2-3x pei-ultem 1010 at $195/kg. The upper end is headroom for other brands rather than a verified listing."
+    "notes": "Estimated from Formfutura's ~\u20ac190/500 g listing, which works out above $400/kg. That puts PPSU among the most expensive materials in this cluster \u2014 broadly comparable to peek and above ULTEM 9085, and roughly 2-3x pei-ultem 1010 at $195/kg. The upper end is headroom for other brands rather than a verified listing."
   },
   "use_cases": {
     "recommended": [
@@ -86,10 +86,10 @@
       "high-temperature parts where toughness matters more than stiffness"
     ],
     "not_recommended": [
-      "printers without a 400 °C-class hotend and an actively heated 65 °C+ chamber — Bambu machines included",
+      "printers without a 400 \u00b0C-class hotend and an actively heated 65 \u00b0C+ chamber \u2014 Bambu machines included",
       "maximum stiffness or compressive strength at temperature, where peek and pekk lead",
-      "sustained service above ~180 °C",
-      "budget-sensitive work — pei-ultem 1010 delivers similar printing behaviour for a third of the price",
+      "sustained service above ~180 \u00b0C",
+      "budget-sensitive work \u2014 pei-ultem 1010 delivers similar printing behaviour for a third of the price",
       "parts with heavy support requirements (support removal is noted as difficult)",
       "food-contact items without a certified line and post-print sealing"
     ]
@@ -106,7 +106,7 @@
     "cm3_per_100g": 77.5,
     "glass_transition_c": 220,
     "max_service_temp_c": 180,
-    "notes": "Density 1.29 g/cc and Tg 220 °C — the highest Tg in this cluster, above ULTEM 1010's 217 °C and well above 9085's 186 °C — with a rated continuous operating temperature of 180 °C. The gap between a 220 °C Tg and a 180 °C service rating is the honest story of this material: being amorphous, it loses stiffness through Tg with nothing crystalline left to carry load, which is why peek at Tg 143 °C still outruns it in service (250 °C) and why temperature_tolerance is scored 8 rather than 10. HDT is not recorded — no figure appeared in the sources reviewed. Comparative sourcing puts PPSU behind PEEK in compressive strength, tensile strength and elasticity, and ahead of it in impact toughness and hydrolysis resistance; the standout credentials are 1,000+ steam sterilisation cycles and ISO 10993 medical biocompatibility, neither of which any other entry in this cluster claims."
+    "notes": "Density 1.29 g/cc and Tg 220 \u00b0C \u2014 the highest Tg in this cluster, above ULTEM 1010's 217 \u00b0C and well above 9085's 186 \u00b0C \u2014 with a rated continuous operating temperature of 180 \u00b0C. The gap between a 220 \u00b0C Tg and a 180 \u00b0C service rating is the honest story of this material: being amorphous, it loses stiffness through Tg with nothing crystalline left to carry load, which is why peek at Tg 143 \u00b0C still outruns it in service (250 \u00b0C) and why temperature_tolerance is scored 8 rather than 10. HDT is not recorded \u2014 no figure appeared in the sources reviewed. Comparative sourcing puts PPSU behind PEEK in compressive strength, tensile strength and elasticity, and ahead of it in impact toughness and hydrolysis resistance; the standout credentials are 1,000+ steam sterilisation cycles and ISO 10993 medical biocompatibility, neither of which any other entry in this cluster claims."
   },
   "scores": {
     "ease_of_print": 4,
@@ -120,18 +120,15 @@
     "water_tolerance": 10
   },
   "compatibility": {
-    "bonds_with": [
-      "ppsu"
-    ],
     "support_materials": [],
     "usable_as_support_for": [],
-    "notes": "Bonds well to itself — amorphous polymers weld cleanly, hence layer adhesion 8 alongside pei-ultem and above peek's 6. No soluble support survives 360-410 °C; pva and bvoh are far out of range, so same-material breakaway support is the only option and Prusa notes that removing it is difficult, which is a real design constraint rather than a footnote. First-layer adhesion relies on multiple layers of a high-temperature adhesive such as Magigoo HT rather than on a support or plate trick. No bonding to commodity materials."
+    "notes": "Bonds well to itself \u2014 amorphous polymers weld cleanly, hence layer adhesion 8 alongside pei-ultem and above peek's 6. No soluble support survives 360-410 \u00b0C; pva and bvoh are far out of range, so same-material breakaway support is the only option and Prusa notes that removing it is difficult, which is a real design constraint rather than a footnote. First-layer adhesion relies on multiple layers of a high-temperature adhesive such as Magigoo HT rather than on a support or plate trick. No bonding to commodity materials."
   },
   "plate_recommendations": [
     {
       "plate_id": "pei-textured",
       "rating": "usable",
-      "notes": "Prusa's knowledge base does not endorse a standard textured PEI sheet on its own for PPSU — the guidance is multiple layers of high-temperature adhesive (Magigoo HT). Treat the plate as an adhesive carrier: usable with the adhesive, insufficient bare. That is the same caution applied to peek and pekk, but rated usable rather than avoid here because the 120-155 °C bed under a 385 °C nozzle is a less punishing environment for the sheet than PEEK's 145 °C bed under a 400 °C nozzle. Garolite/G10 is an alternative with no catalog plate entry yet."
+      "notes": "Prusa's knowledge base does not endorse a standard textured PEI sheet on its own for PPSU \u2014 the guidance is multiple layers of high-temperature adhesive (Magigoo HT). Treat the plate as an adhesive carrier: usable with the adhesive, insufficient bare. That is the same caution applied to peek and pekk, but rated usable rather than avoid here because the 120-155 \u00b0C bed under a 385 \u00b0C nozzle is a less punishing environment for the sheet than PEEK's 145 \u00b0C bed under a 400 \u00b0C nozzle. Garolite/G10 is an alternative with no catalog plate entry yet."
     },
     {
       "plate_id": "pei-smooth",
@@ -152,23 +149,23 @@
   "alternatives": [
     {
       "filament_id": "pei-ultem",
-      "reason": "Half the price ($195-290 vs $400-600) with the same amorphous 8/8 stability-and-adhesion profile and more stiffness (compressive 7 vs 6) — but water tolerance falls to 6, drying jumps to 150 °C, and it will not take repeated steam autoclaving."
+      "reason": "Half the price ($195-290 vs $400-600) with the same amorphous 8/8 stability-and-adhesion profile and more stiffness (compressive 7 vs 6) \u2014 but water tolerance falls to 6, drying jumps to 150 \u00b0C, and it will not take repeated steam autoclaving."
     },
     {
       "filament_id": "peek",
-      "reason": "A higher service ceiling (temp 10 vs 8) and near-total chemical resistance — at $400-900, a 375-410 °C industrial hotend, warp 10 vs 5 and stability 5 vs 8, and it cracks under impacts PPSU absorbs."
+      "reason": "A higher service ceiling (temp 10 vs 8) and near-total chemical resistance \u2014 at $400-900, a 375-410 \u00b0C industrial hotend, warp 10 vs 5 and stability 5 vs 8, and it cracks under impacts PPSU absorbs."
     },
     {
       "filament_id": "pps-cf",
-      "reason": "A quarter of the cost ($100-200) with comparable water and chemical class, better stiffness (compressive 9 vs 6) and a consumer high-temp hotend path with no chamber — but Tg 85 °C against PPSU's 220 °C, so it cannot hold load hot."
+      "reason": "A quarter of the cost ($100-200) with comparable water and chemical class, better stiffness (compressive 9 vs 6) and a consumer high-temp hotend path with no chamber \u2014 but Tg 85 \u00b0C against PPSU's 220 \u00b0C, so it cannot hold load hot."
     },
     {
       "filament_id": "pekk",
-      "reason": "Similar money ($495-700) for a higher continuous rating (260 °C vs 180 °C) — traded for worse warp (8 vs 5), lower toughness and layer adhesion (7 vs 8), and no steam-sterilisation or ISO 10993 story."
+      "reason": "Similar money ($495-700) for a higher continuous rating (260 \u00b0C vs 180 \u00b0C) \u2014 traded for worse warp (8 vs 5), lower toughness and layer adhesion (7 vs 8), and no steam-sterilisation or ISO 10993 story."
     },
     {
       "filament_id": "pc",
-      "reason": "If autoclaving and 180 °C service are not actually required: PC scores temp 9 on ordinary enclosed hardware at $30-65 with similar toughness (adhesion 8) — far weaker in steam, hot water and chemicals (water 5 vs 10)."
+      "reason": "If autoclaving and 180 \u00b0C service are not actually required: PC scores temp 9 on ordinary enclosed hardware at $30-65 with similar toughness (adhesion 8) \u2014 far weaker in steam, hot water and chemicals (water 5 vs 10)."
     }
   ],
   "emissions": {
@@ -180,10 +177,10 @@
       "trace sulfur-bearing species if the melt is overheated (inferred from the sulfone backbone, unverified)"
     ],
     "ventilation": "required",
-    "notes": "No PPSU-specific VOC or particulate data was found. The temperature-scaling rule puts a 360-410 °C process alongside peek and pei-ultem at the top of this catalog, so ventilation is recorded as required — enclosure plus outdoor exhaust or HEPA-plus-carbon filtration. As with pps, the sulfur in the backbone is noted as a plausible source of sulfurous species if the melt is overheated; that is inferred from chemistry, not measured (unverified)."
+    "notes": "No PPSU-specific VOC or particulate data was found. The temperature-scaling rule puts a 360-410 \u00b0C process alongside peek and pei-ultem at the top of this catalog, so ventilation is recorded as required \u2014 enclosure plus outdoor exhaust or HEPA-plus-carbon filtration. As with pps, the sulfur in the backbone is noted as a plausible source of sulfurous species if the melt is overheated; that is inferred from chemistry, not measured (unverified)."
   },
-  "safety_notes": "385 °C hotend, 155 °C bed and a 65-90 °C actively heated chamber are burn hazards; vent and cool the chamber before opening. Support removal is difficult and often mechanical — expect sharp fragments and use eye protection. Food contact is recorded as conditional rather than yes: Radel-class PPSU resin is widely used in food-contact and medical injection moulding, including reusable bottles, and the polymer meets ISO 10993, but an FDM part's layer-line porosity harbours bacteria, so a printed part needs a certified filament line plus sealing or single-use handling (unverified for printed parts specifically).",
-  "additional_notes": "PPSU is chosen for a combination nothing else in this cluster offers: repeated steam sterilisation, hydrolytic stability and impact toughness, in a material that still runs to 180 °C. If the requirement is stiffness or peak service temperature, peek or pekk win outright; if it is dimensional accuracy at a sane price, pei-ultem 1010 does the same job for a third of the money; if it is chemical resistance in cold service, pps is a tenth of the price. The case for PPSU is autoclaves, hot water and impact — and it is a strong one.",
+  "safety_notes": "385 \u00b0C hotend, 155 \u00b0C bed and a 65-90 \u00b0C actively heated chamber are burn hazards; vent and cool the chamber before opening. Support removal is difficult and often mechanical \u2014 expect sharp fragments and use eye protection. Food contact is recorded as conditional rather than yes: Radel-class PPSU resin is widely used in food-contact and medical injection moulding, including reusable bottles, and the polymer meets ISO 10993, but an FDM part's layer-line porosity harbours bacteria, so a printed part needs a certified filament line plus sealing or single-use handling (unverified for printed parts specifically).",
+  "additional_notes": "PPSU is chosen for a combination nothing else in this cluster offers: repeated steam sterilisation, hydrolytic stability and impact toughness, in a material that still runs to 180 \u00b0C. If the requirement is stiffness or peak service temperature, peek or pekk win outright; if it is dimensional accuracy at a sane price, pei-ultem 1010 does the same job for a third of the money; if it is chemical resistance in cold service, pps is a tenth of the price. The case for PPSU is autoclaves, hot water and impact \u2014 and it is a strong one.",
   "provenance": {
     "sources": [
       "https://www.formfutura.com/ppsu",
@@ -194,7 +191,7 @@
     ],
     "last_verified": "2026-07-31",
     "confidence": "medium",
-    "conflicts": "Nozzle temperature disagrees mildly: Formfutura 360-400 °C against Prusa/3DXTech-context 370-410 °C; the recorded band is the union. Chamber temperature disagrees more meaningfully — Prusa specifies a 65 °C minimum actively heated chamber while Formfutura recommends 90 °C — and the recommended value follows Formfutura on the grounds that hotter is safer for an amorphous polymer at this size. Price is estimated from a single European listing (~€190/500 g) and converted approximately; the upper bound is unverified headroom. No HDT figure was found for PPSU in any source reviewed, so the field is left empty. Comparative claims that PPSU 'underperforms PEEK in compressive strength, tensile strength and elasticity' come from a single vendor-adjacent comparison article without underlying numbers. Emissions are inferred from process temperature with no PPSU-specific measurement, including the sulfur-species note. Food-contact status is unresolved: the resin's medical and food-contact pedigree is strong but no evidence covers printed parts, hence conditional. UV tolerance is a reasoned estimate for an aromatic polymer, not evidence-based."
+    "conflicts": "Nozzle temperature disagrees mildly: Formfutura 360-400 \u00b0C against Prusa/3DXTech-context 370-410 \u00b0C; the recorded band is the union. Chamber temperature disagrees more meaningfully \u2014 Prusa specifies a 65 \u00b0C minimum actively heated chamber while Formfutura recommends 90 \u00b0C \u2014 and the recommended value follows Formfutura on the grounds that hotter is safer for an amorphous polymer at this size. Price is estimated from a single European listing (~\u20ac190/500 g) and converted approximately; the upper bound is unverified headroom. No HDT figure was found for PPSU in any source reviewed, so the field is left empty. Comparative claims that PPSU 'underperforms PEEK in compressive strength, tensile strength and elasticity' come from a single vendor-adjacent comparison article without underlying numbers. Emissions are inferred from process temperature with no PPSU-specific measurement, including the sulfur-species note. Food-contact status is unresolved: the resin's medical and food-contact pedigree is strong but no evidence covers printed parts, hence conditional. UV tolerance is a reasoned estimate for an aromatic polymer, not evidence-based."
   },
   "trade_names": [
     {

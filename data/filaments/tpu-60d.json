@@ -12,8 +12,8 @@
   "base_type": "tpu",
   "variation_kind": "shore-grade",
   "polymer_class": "elastomer",
-  "chemical_makeup": "Thermoplastic polyurethane formulated with a high hard-segment ratio, placing it on the Shore D scale at roughly 58D-60D — beyond the top of the Shore A range rather than inside it. Represented by Extrudr TPU hard (58D) and generic TPU-60D SKUs",
-  "summary": "Semi-rigid TPU that behaves more like a tough engineering plastic than a flexible: hockey-puck stiffness with TPU's impact resistance and a little flex left over. Delta vs base TPU: this sits above the base entry's entire 85A-95A band on a different hardness scale, so the feeding problems largely disappear — Bowden becomes viable, no feeding assistant, near-PETG speeds — while the bed runs hotter at 50-60 °C and rubbery compression recovery is traded away. It is the stiffest, most dimensionally stable grade in the family apart from 68D, and the cheapest.",
+  "chemical_makeup": "Thermoplastic polyurethane formulated with a high hard-segment ratio, placing it on the Shore D scale at roughly 58D-60D \u2014 beyond the top of the Shore A range rather than inside it. Represented by Extrudr TPU hard (58D) and generic TPU-60D SKUs",
+  "summary": "Semi-rigid TPU that behaves more like a tough engineering plastic than a flexible: hockey-puck stiffness with TPU's impact resistance and a little flex left over. Delta vs base TPU: this sits above the base entry's entire 85A-95A band on a different hardness scale, so the feeding problems largely disappear \u2014 Bowden becomes viable, no feeding assistant, near-PETG speeds \u2014 while the bed runs hotter at 50-60 \u00b0C and rubbery compression recovery is traded away. It is the stiffest, most dimensionally stable grade in the family apart from 68D, and the cheapest.",
   "printing": {
     "nozzle_temp_c": {
       "min": 220,
@@ -44,13 +44,13 @@
       "max": 60,
       "recommended": 40
     },
-    "notes": "Brand variance here is unusually wide: Extrudr TPU hard specifies 230-260 °C while Polar Filament's TPU-60D gives 220-230 °C, a 30 °C disagreement at the top end, so treat the recorded range as an envelope and start from the specific spool's datasheet. The bed runs at 50-60 °C, hotter than any Shore A grade and closer to PLA/PETG practice. Speed can be pushed well past every A-grade because the filament resists buckling under drive-gear force — the recorded 30-60 mm/s is a community-consensus estimate at ABS/PETG-like rates rather than a published figure, and is unverified. No enclosure; warp is minimal. Not abrasive — standard brass nozzle."
+    "notes": "Brand variance here is unusually wide: Extrudr TPU hard specifies 230-260 \u00b0C while Polar Filament's TPU-60D gives 220-230 \u00b0C, a 30 \u00b0C disagreement at the top end, so treat the recorded range as an envelope and start from the specific spool's datasheet. The bed runs at 50-60 \u00b0C, hotter than any Shore A grade and closer to PLA/PETG practice. Speed can be pushed well past every A-grade because the filament resists buckling under drive-gear force \u2014 the recorded 30-60 mm/s is a community-consensus estimate at ABS/PETG-like rates rather than a published figure, and is unverified. No enclosure; warp is minimal. Not abrasive \u2014 standard brass nozzle."
   },
   "feeding": {
     "drive_system": "direct-drive-recommended",
     "ams_compatible": "conditional",
     "feeding_assistant_recommended": false,
-    "notes": "The stiffness changes the feeding story entirely relative to the base entry. Direct drive is still preferred, but a Bowden path is genuinely viable here in a way it is not for any Shore A grade, because the filament no longer buckles like rope under compressive load. AMS is recorded as 'conditional', not 'yes': Bambu's wiki says harder TPUs at 77D and 55D can be printed successfully through the AMS, which brackets this 58D-60D range on both sides, but Bambu has not confirmed this specific range and its own AMS-rated product is the 68D grade — so treat AMS use as plausible and worth testing on a short print rather than proven. No feeding assistant needed."
+    "notes": "The stiffness changes the feeding story entirely relative to the base entry. Direct drive is still preferred, but a Bowden path is genuinely viable here in a way it is not for any Shore A grade, because the filament no longer buckles like rope under compressive load. AMS is recorded as 'conditional', not 'yes': Bambu's wiki says harder TPUs at 77D and 55D can be printed successfully through the AMS, which brackets this 58D-60D range on both sides, but Bambu has not confirmed this specific range and its own AMS-rated product is the 68D grade \u2014 so treat AMS use as plausible and worth testing on a short print rather than proven. No feeding assistant needed."
   },
   "drying": {
     "required_before_use": "always",
@@ -65,12 +65,12 @@
       "recommended": 8
     },
     "methods": [
-      "dedicated filament dryer at 70 °C",
-      "hot-air or vacuum oven at 70 °C",
-      "heated-bed method at 80-90 °C for 12 h",
+      "dedicated filament dryer at 70 \u00b0C",
+      "hot-air or vacuum oven at 70 \u00b0C",
+      "heated-bed method at 80-90 \u00b0C for 12 h",
       "print directly from a drybox with desiccant"
     ],
-    "dryness_validation": "No popping or crackling at the nozzle, no foamy extrudate, and no rise in stringing on a retraction test — stringing is a reliable indicator at this stiffness, unlike the Shore A grades",
+    "dryness_validation": "No popping or crackling at the nozzle, no foamy extrudate, and no rise in stringing on a retraction test \u2014 stringing is a reliable indicator at this stiffness, unlike the Shore A grades",
     "notes": "No brand-specific drying spec was found for the 58D-60D range, so the general TPU regime from the base entry is carried over unchanged (unverified for this grade specifically). This is defensible because TPU drying is set by the urethane chemistry rather than by hardness or fillers, and no source suggests hardness shifts it."
   },
   "storage": {
@@ -81,7 +81,7 @@
   "price": {
     "usd_per_kg_low": 25,
     "usd_per_kg_high": 45,
-    "notes": "Extrudr TPU hard runs about $44.62/kg ($33.46 per 750 g), while generic TPU-60D from Polar Filament is roughly $25-29/kg — a near-2x spread between name brand and generic at the same nominal durometer. This is the cheapest grade in the family and the only one whose floor reaches the base entry's $20-25 budget band."
+    "notes": "Extrudr TPU hard runs about $44.62/kg ($33.46 per 750 g), while generic TPU-60D from Polar Filament is roughly $25-29/kg \u2014 a near-2x spread between name brand and generic at the same nominal durometer. This is the cheapest grade in the family and the only one whose floor reaches the base entry's $20-25 budget band."
   },
   "use_cases": {
     "recommended": [
@@ -112,7 +112,7 @@
     "cm3_per_100g": 80.6,
     "glass_transition_c": -25,
     "max_service_temp_c": 80,
-    "notes": "No consolidated tensile, elongation or density figures were found published for the 58D-60D range. Density of 1.24 g/cm³ is an unverified interpolation between the documented 1.22 of the 95A grades and the documented 1.26 of Bambu's 68D, on the reasoning that density rises with hard-segment content across the family; the derived weight/volume figures inherit that uncertainty. Qualitatively Polar Filament describes the grade as considerably more rigid while retaining impact resistance. Expect elongation at break far below the 550-950% seen across the Shore A grades and flexural modulus markedly higher, approaching semi-rigid engineering-plastic behaviour. Extrudr claims high temperature resistance for its TPU hard without publishing an HDT, so the 80 °C max service figure is an unverified estimate placed at the top of TPU's general 60-80 °C band rather than a measurement. Tg is the family value carried from the base entry."
+    "notes": "No consolidated tensile, elongation or density figures were found published for the 58D-60D range. Density of 1.24 g/cm\u00b3 is an unverified interpolation between the documented 1.22 of the 95A grades and the documented 1.26 of Bambu's 68D, on the reasoning that density rises with hard-segment content across the family; the derived weight/volume figures inherit that uncertainty. Qualitatively Polar Filament describes the grade as considerably more rigid while retaining impact resistance. Expect elongation at break far below the 550-950% seen across the Shore A grades and flexural modulus markedly higher, approaching semi-rigid engineering-plastic behaviour. Extrudr claims high temperature resistance for its TPU hard without publishing an HDT, so the 80 \u00b0C max service figure is an unverified estimate placed at the top of TPU's general 60-80 \u00b0C band rather than a measurement. Tg is the family value carried from the base entry."
   },
   "scores": {
     "ease_of_print": 6,
@@ -140,39 +140,38 @@
       "tpu-gf"
     ],
     "support_materials": [
-      "petg",
       "pla"
     ],
     "usable_as_support_for": [],
-    "notes": "Chemically welds to base TPU and every sibling grade, but the mechanical mismatch at a rigid-to-soft interface is far more pronounced here than among the A-grades — a 60D-to-60A joint concentrates strain at the boundary in a way a 90A-to-95A joint does not, so design multi-durometer transitions with a gradient or an interlocking geometry rather than a flat butt joint. Rigid-material bonding is unchanged from the base entry (mechanical interlock with PLA/PETG only). Unlike the soft grades, standard breakaway supports are feasible because the part is rigid enough to survive removal; PETG is added as a support option on that basis, though the pairing is inferred from the grade's rigidity rather than documented (unverified)."
+    "notes": "Chemically welds to base TPU and every sibling grade, but the mechanical mismatch at a rigid-to-soft interface is far more pronounced here than among the A-grades \u2014 a 60D-to-60A joint concentrates strain at the boundary in a way a 90A-to-95A joint does not, so design multi-durometer transitions with a gradient or an interlocking geometry rather than a flat butt joint. Rigid-material bonding is unchanged from the base entry (mechanical interlock with PLA/PETG only). Unlike the soft grades, standard breakaway supports are feasible because the part is rigid enough to survive removal; PETG is added as a support option on that basis, though the pairing is inferred from the grade's rigidity rather than documented (unverified)."
   },
   "plate_recommendations": [
     {
       "plate_id": "pei-textured",
       "rating": "recommended",
-      "notes": "Standard textured PEI works given the hotter 50-60 °C bed this grade wants, and no separator is generally needed because the part is rigid enough to release without tearing — the over-adhesion problem that dogs the soft grades largely goes away. No garolite or other special surface is required, though this was not separately verified for this grade."
+      "notes": "Standard textured PEI works given the hotter 50-60 \u00b0C bed this grade wants, and no separator is generally needed because the part is rigid enough to release without tearing \u2014 the over-adhesion problem that dogs the soft grades largely goes away. No garolite or other special surface is required, though this was not separately verified for this grade."
     }
   ],
   "alternatives": [
     {
       "filament_id": "tpu-68d",
-      "reason": "The grade engineered for the material station: ams yes vs conditional, ease 7 vs 6, a documented Bambu TDS behind its numbers and dimensional stability 7 vs 6 — at $35-45 vs $25-45, and with severe Z anisotropy (adhesion 2 vs 5)."
+      "reason": "The grade engineered for the material station: ams yes vs conditional, ease 7 vs 6, a documented Bambu TDS behind its numbers and dimensional stability 7 vs 6 \u2014 at $35-45 vs $25-45, and with severe Z anisotropy (adhesion 2 vs 5)."
     },
     {
       "filament_id": "tpu-98a",
-      "reason": "The Shore A grade of equivalent hardness, with a cheaper floor ($16-58) and a little more rubbery recovery — but lower dimensional stability (5 vs 6), lower service temp (5 vs 6) and barred from the AMS."
+      "reason": "The Shore A grade of equivalent hardness, with a cheaper floor ($16-58) and a little more rubbery recovery \u2014 but lower dimensional stability (5 vs 6), lower service temp (5 vs 6) and barred from the AMS."
     },
     {
       "filament_id": "tpu-72d",
-      "reason": "Harder again and sold as a nylon replacement without nylon's moisture problem: compressive strength 7 vs 5 at the same temp 6 — for 2-3x the price ($70-100 vs $25-45), no published datasheet, and warp behaviour no other TPU grade shows."
+      "reason": "Harder again and sold as a nylon replacement without nylon's moisture problem: compressive strength 7 vs 5 at the same temp 6 \u2014 for 2-3x the price ($70-100 vs $25-45), no published datasheet, and warp behaviour no other TPU grade shows."
     },
     {
       "filament_id": "tpu-gf",
-      "reason": "Reaches the same semi-rigid 67D territory via glass fiber, with better dimensional stability (7 vs 6) and retained impact toughness (80 % elongation, Charpy 'did not break') — at $34-40 and a mandatory hardened nozzle."
+      "reason": "Reaches the same semi-rigid 67D territory via glass fiber, with better dimensional stability (7 vs 6) and retained impact toughness (80 % elongation, Charpy 'did not break') \u2014 at $34-40 and a mandatory hardened nozzle."
     },
     {
       "filament_id": "petg",
-      "reason": "If the part does not need urethane impact and abrasion behaviour, PETG is easier (ease 7 vs 6), has far better layer adhesion (9 vs 5) and costs $18-42 — but it is brittle where TPU simply bends."
+      "reason": "If the part does not need urethane impact and abrasion behaviour, PETG is easier (ease 7 vs 6), has far better layer adhesion (9 vs 5) and costs $18-42 \u2014 but it is brittle where TPU simply bends."
     }
   ],
   "emissions": {
@@ -184,10 +183,10 @@
       "urethane decomposition byproducts (unverified)"
     ],
     "ventilation": "recommended",
-    "notes": "Standard TPU-family chemistry, but this is the hottest-running grade in the family — Extrudr's window reaches 260 °C, above the ~250 °C point at which urethane decomposition becomes more likely. Emissions correlate with nozzle temperature, so particulate level is recorded a step above the base entry's 'low' on that basis. This is an inference from the general temperature-emissions relationship, not a measurement for this grade (unverified); no source differentiates TPU emissions by Shore grade."
+    "notes": "Standard TPU-family chemistry, but this is the hottest-running grade in the family \u2014 Extrudr's window reaches 260 \u00b0C, above the ~250 \u00b0C point at which urethane decomposition becomes more likely. Emissions correlate with nozzle temperature, so particulate level is recorded a step above the base entry's 'low' on that basis. This is an inference from the general temperature-emissions relationship, not a measurement for this grade (unverified); no source differentiates TPU emissions by Shore grade."
   },
-  "safety_notes": "The 260 °C top of Extrudr's window is the one place in the TPU family where the print temperature reaches the range where isocyanate release and urethane decomposition become a real rather than theoretical concern — ventilate, and do not chase flow rate above that. Not food-contact certified as printed.",
-  "additional_notes": "Durometer consistency is the practical risk at this grade. At least one user review of a 58D-labelled product reported material that felt closer to 95A than to the stated spec, and the 30 °C nozzle-window disagreement between Extrudr and Polar Filament points the same way — 'TPU 60D' is a looser label than 'TPU 95A' is. Buy a small quantity and check the feel before committing a design to a specific brand's 60D.",
+  "safety_notes": "The 260 \u00b0C top of Extrudr's window is the one place in the TPU family where the print temperature reaches the range where isocyanate release and urethane decomposition become a real rather than theoretical concern \u2014 ventilate, and do not chase flow rate above that. Not food-contact certified as printed.",
+  "additional_notes": "Durometer consistency is the practical risk at this grade. At least one user review of a 58D-labelled product reported material that felt closer to 95A than to the stated spec, and the 30 \u00b0C nozzle-window disagreement between Extrudr and Polar Filament points the same way \u2014 'TPU 60D' is a looser label than 'TPU 95A' is. Buy a small quantity and check the feel before committing a design to a specific brand's 60D.",
   "provenance": {
     "sources": [
       "https://www.3djake.com/extrudr/tpu-hard-transparent",
@@ -198,7 +197,7 @@
     ],
     "last_verified": "2026-07-31",
     "confidence": "low",
-    "conflicts": "Nozzle temperature disagrees by 30 °C at the top end between Extrudr TPU hard (230-260 °C) and Polar Filament TPU-60D (220-230 °C) — an unusually wide gap for the same nominal durometer, and the recorded range spans both. Price spreads nearly 2x between the same two products. No density, tensile, elongation or HDT figures are published for this range at all, so every property number here is an interpolation or estimate and is flagged as such. Print speed is community consensus only, with no published mm/s figure. AMS compatibility is recorded 'conditional' because Bambu's stated AMS-safe examples (77D and 55D) bracket this range without confirming it. A community review flagged a 58D product feeling closer to 95A, i.e. real durometer QC variance at this grade. Scoring note: the research notes rated 'compression/elastic recovery' 3/10 here, but this catalog's compression_strength score measures resistance to crushing loads, which is the inverse — 60D scores 5, the second highest in the family, precisely because it is the least rubbery."
+    "conflicts": "Nozzle temperature disagrees by 30 \u00b0C at the top end between Extrudr TPU hard (230-260 \u00b0C) and Polar Filament TPU-60D (220-230 \u00b0C) \u2014 an unusually wide gap for the same nominal durometer, and the recorded range spans both. Price spreads nearly 2x between the same two products. No density, tensile, elongation or HDT figures are published for this range at all, so every property number here is an interpolation or estimate and is flagged as such. Print speed is community consensus only, with no published mm/s figure. AMS compatibility is recorded 'conditional' because Bambu's stated AMS-safe examples (77D and 55D) bracket this range without confirming it. A community review flagged a 58D product feeling closer to 95A, i.e. real durometer QC variance at this grade. Scoring note: the research notes rated 'compression/elastic recovery' 3/10 here, but this catalog's compression_strength score measures resistance to crushing loads, which is the inverse \u2014 60D scores 5, the second highest in the family, precisely because it is the least rubbery."
   },
   "trade_names": [
     {

@@ -11,7 +11,7 @@
   "variation_kind": "blend",
   "polymer_class": "polycarbonate",
   "chemical_makeup": "Alloy of bisphenol-A polycarbonate with polybutylene terephthalate, a semicrystalline polyester. The PBT phase supplies solvent, oil and fuel resistance plus sub-ambient toughness; the PC phase supplies stiffness and heat resistance. The semicrystalline second phase is what separates this blend from the fully amorphous pc and pc-abs.",
-  "summary": "The chemical- and cold-resistant member of the PC family. Deltas vs pc: markedly better resistance to solvents, oils and fuels, retained impact down to -30 °C (15.7 kJ/m² notched Charpy against 33.0 at room temperature), tensile 50.4 MPa, but a 100-110 °C maintained chamber and 100-115 °C bed make it the hardest of the three to print. Deltas vs pc-abs: denser (1.2 vs 1.1 g/cm³), stronger (50.4 vs 39.9 MPa), higher measured HDT (107 vs ~100 °C at 0.45 MPa), no styrene in the emissions profile — paid for with a stricter chamber and a longer 75 °C/6 h drying cycle. A 90 °C/2 h anneal is recommended to relieve print stress.",
+  "summary": "The chemical- and cold-resistant member of the PC family. Deltas vs pc: markedly better resistance to solvents, oils and fuels, retained impact down to -30 \u00b0C (15.7 kJ/m\u00b2 notched Charpy against 33.0 at room temperature), tensile 50.4 MPa, but a 100-110 \u00b0C maintained chamber and 100-115 \u00b0C bed make it the hardest of the three to print. Deltas vs pc-abs: denser (1.2 vs 1.1 g/cm\u00b3), stronger (50.4 vs 39.9 MPa), higher measured HDT (107 vs ~100 \u00b0C at 0.45 MPa), no styrene in the emissions profile \u2014 paid for with a stricter chamber and a longer 75 \u00b0C/6 h drying cycle. A 90 \u00b0C/2 h anneal is recommended to relieve print stress.",
   "printing": {
     "nozzle_temp_c": {
       "min": 250,
@@ -42,13 +42,13 @@
       "max": 15,
       "recommended": 0
     },
-    "notes": "Polymaker's grade specifies a chamber held at 100-110 °C, which is stricter than the 90-100 °C its own PC-ABS asks for and is the reason heated_chamber_required is true here while it is false for base pc and pc-abs — this is the one entry in the PC family that genuinely needs active chamber heating rather than a passive box. Filamentcheatsheet's cross-brand figures are looser (250-270 °C nozzle, 80-100 °C bed, enclosure 'recommended'), so the recorded ranges bracket both and the recommended values follow Polymaker. Part cooling essentially off. Post-print annealing at 90 °C for 2 h is recommended to relieve internal stress. Unfilled, so a stock nozzle is fine. Speed is carried from base PC (20-60 mm/s); no PC-PBT-specific figure is published (unverified)."
+    "notes": "Polymaker's grade specifies a chamber held at 100-110 \u00b0C, which is stricter than the 90-100 \u00b0C its own PC-ABS asks for and is the reason heated_chamber_required is true here while it is false for base pc and pc-abs \u2014 this is the one entry in the PC family that genuinely needs active chamber heating rather than a passive box. Filamentcheatsheet's cross-brand figures are looser (250-270 \u00b0C nozzle, 80-100 \u00b0C bed, enclosure 'recommended'), so the recorded ranges bracket both and the recommended values follow Polymaker. Part cooling essentially off. Post-print annealing at 90 \u00b0C for 2 h is recommended to relieve internal stress. Unfilled, so a stock nozzle is fine. Speed is carried from base PC (20-60 mm/s); no PC-PBT-specific figure is published (unverified)."
   },
   "feeding": {
     "drive_system": "any",
     "ams_compatible": "conditional",
     "feeding_assistant_recommended": false,
-    "notes": "Rigid, unfilled and non-abrasive, so any drive system feeds it and there is no PTFE wear or snap risk in the feed path. AMS status is recorded conditional rather than yes because no vendor documents this specific grade in a material station (unverified) and the practical obstacle is thermal, not mechanical: a 100-110 °C chamber is outside what consumer AMS units are rated to sit next to, and the PC phase remains hygroscopic enough to want a sealed desiccated path. Enclosure stays closed and hot, so enclosure_open_for_cooling is false."
+    "notes": "Rigid, unfilled and non-abrasive, so any drive system feeds it and there is no PTFE wear or snap risk in the feed path. AMS status is recorded conditional rather than yes because no vendor documents this specific grade in a material station (unverified) and the practical obstacle is thermal, not mechanical: a 100-110 \u00b0C chamber is outside what consumer AMS units are rated to sit next to, and the PC phase remains hygroscopic enough to want a sealed desiccated path. Enclosure stays closed and hot, so enclosure_open_for_cooling is false."
   },
   "drying": {
     "required_before_use": "always",
@@ -68,8 +68,8 @@
       "print directly from a heated dryer",
       "drybox with desiccant while printing"
     ],
-    "dryness_validation": "Clear, glossy extrudate rather than hazy or bubbly; no popping at the nozzle; a test coupon that does not snap brittly. Polymaker publishes no explicit check for this grade (unverified) — these are the base PC criteria.",
-    "notes": "Polymaker specifies 75 °C for 6 h, matching the base PC schedule exactly and running hotter and twice as long as pc-abs's 80 °C/3 h. Recorded 'always' for the same reason base PC is: the PC phase dominates moisture behaviour and the ABS-derived relief that softens pc-abs's requirement is absent here."
+    "dryness_validation": "Clear, glossy extrudate rather than hazy or bubbly; no popping at the nozzle; a test coupon that does not snap brittly. Polymaker publishes no explicit check for this grade (unverified) \u2014 these are the base PC criteria.",
+    "notes": "Polymaker specifies 75 \u00b0C for 6 h, matching the base PC schedule exactly and running hotter and twice as long as pc-abs's 80 \u00b0C/3 h. Recorded 'always' for the same reason base PC is: the PC phase dominates moisture behaviour and the ABS-derived relief that softens pc-abs's requirement is absent here."
   },
   "storage": {
     "recommendations": "Airtight container with desiccant at all times; print from a drybox or heated dryer on long jobs. Follows base PC practice rather than pc-abs's lighter regime.",
@@ -79,7 +79,7 @@
   "price": {
     "usd_per_kg_low": 36,
     "usd_per_kg_high": 37,
-    "notes": "$49.99 CAD/kg for the natural grade at Voxel Factory (~$36-37 USD/kg). Comparable to or slightly below pc-abs at retail and toward the lower half of base PC's $30-65/kg band. Single-retailer, single-currency data point — the broader market range is unverified."
+    "notes": "$49.99 CAD/kg for the natural grade at Voxel Factory (~$36-37 USD/kg). Comparable to or slightly below pc-abs at retail and toward the lower half of base PC's $30-65/kg band. Single-retailer, single-currency data point \u2014 the broader market range is unverified."
   },
   "use_cases": {
     "recommended": [
@@ -114,7 +114,7 @@
       "max": 51,
       "recommended": 50.4
     },
-    "notes": "Density 1.2 g/cm³, matching base PC and above pc-abs's 1.1. Polymaker measures Tg 140 °C, HDT 107 °C at 0.45 MPa (91 °C at 1.8 MPa), a melting point of 223 °C from the semicrystalline PBT phase, tensile XY 50.4 ± 0.6 MPa and Young's modulus 1940.2 ± 76.5 MPa. Notched Charpy is the standout: 33.0 ± 0.3 kJ/m² at room temperature and 15.7 ± 2.9 kJ/m² at -30 °C, i.e. roughly half the toughness retained at automotive cold-soak temperatures. HDT at 1.8 MPa (91 °C) sits just below base PC's 99 °C, which is the honest measure of the heat-resistance trade. Shrinkage is not published; the semicrystalline PBT phase means it should not be assumed equal to base PC's 0.5-0.8 % (unverified)."
+    "notes": "Density 1.2 g/cm\u00b3, matching base PC and above pc-abs's 1.1. Polymaker measures Tg 140 \u00b0C, HDT 107 \u00b0C at 0.45 MPa (91 \u00b0C at 1.8 MPa), a melting point of 223 \u00b0C from the semicrystalline PBT phase, tensile XY 50.4 \u00b1 0.6 MPa and Young's modulus 1940.2 \u00b1 76.5 MPa. Notched Charpy is the standout: 33.0 \u00b1 0.3 kJ/m\u00b2 at room temperature and 15.7 \u00b1 2.9 kJ/m\u00b2 at -30 \u00b0C, i.e. roughly half the toughness retained at automotive cold-soak temperatures. HDT at 1.8 MPa (91 \u00b0C) sits just below base PC's 99 \u00b0C, which is the honest measure of the heat-resistance trade. Shrinkage is not published; the semicrystalline PBT phase means it should not be assumed equal to base PC's 0.5-0.8 % (unverified)."
   },
   "scores": {
     "ease_of_print": 3,
@@ -132,20 +132,19 @@
       "pbt",
       "pc",
       "pc-abs",
-      "pc-gf",
-      "pc-pbt"
+      "pc-gf"
     ],
     "support_materials": [
       "hips"
     ],
     "usable_as_support_for": [],
-    "notes": "Welds to itself and, on shared PC chemistry, to base pc and pc-abs — the pc-abs pairing is chemically plausible and marketed as a family but is not documented by a source (unverified). HIPS is the practical breakaway support at these bed temperatures; BVOH is listed for base PC but its stability in a 100-110 °C chamber for a long job is unverified here, so it is omitted. PVA degrades far below the print temperature. Not usable as a support for other materials — the melt window is too hot and adhesion too aggressive."
+    "notes": "Welds to itself and, on shared PC chemistry, to base pc and pc-abs \u2014 the pc-abs pairing is chemically plausible and marketed as a family but is not documented by a source (unverified). HIPS is the practical breakaway support at these bed temperatures; BVOH is listed for base PC but its stability in a 100-110 \u00b0C chamber for a long job is unverified here, so it is omitted. PVA degrades far below the print temperature. Not usable as a support for other materials \u2014 the melt window is too hot and adhesion too aggressive."
   },
   "plate_recommendations": [
     {
       "plate_id": "pei-textured",
       "rating": "recommended",
-      "notes": "Textured PEI at 100-115 °C, following base PC practice, which explicitly prefers textured over smooth PEI because PC-family adhesion can tear a smooth sheet. No vendor names a specific adhesion promoter for this grade (unverified), but the very high bed temperature and large-part warp risk make a brim and a glue-stick separator the sensible default."
+      "notes": "Textured PEI at 100-115 \u00b0C, following base PC practice, which explicitly prefers textured over smooth PEI because PC-family adhesion can tear a smooth sheet. No vendor names a specific adhesion promoter for this grade (unverified), but the very high bed temperature and large-part warp risk make a brim and a glue-stick separator the sensible default."
     },
     {
       "plate_id": "pei-smooth",
@@ -161,19 +160,19 @@
   "alternatives": [
     {
       "filament_id": "pc-abs",
-      "reason": "Drops the heated-chamber requirement — PC-PBT is the only PC blend here needing a maintained 100-110 °C chamber — for a much cheaper process on ordinary hardware (ease 4 vs 3, warp 7 vs 8), at the cost of strength (39.9 vs 50.4 MPa, compression 7 vs 8), heat (temp 7 vs 8) and solvent resistance."
+      "reason": "Drops the heated-chamber requirement \u2014 PC-PBT is the only PC blend here needing a maintained 100-110 \u00b0C chamber \u2014 for a much cheaper process on ordinary hardware (ease 4 vs 3, warp 7 vs 8), at the cost of strength (39.9 vs 50.4 MPa, compression 7 vs 8), heat (temp 7 vs 8) and solvent resistance."
     },
     {
       "filament_id": "pc",
-      "reason": "Base PC when chemical and cold-impact resistance are not the driver: a higher heat ceiling (temp 9 vs 8, layer adhesion 8 vs 7) and no heated chamber, starting cheaper per kilo at the low end — giving up the blend's resistance to fuels, oils and solvents and its -30 °C impact retention."
+      "reason": "Base PC when chemical and cold-impact resistance are not the driver: a higher heat ceiling (temp 9 vs 8, layer adhesion 8 vs 7) and no heated chamber, starting cheaper per kilo at the low end \u2014 giving up the blend's resistance to fuels, oils and solvents and its -30 \u00b0C impact retention."
     },
     {
       "filament_id": "pbt",
-      "reason": "The standalone polyester if the chemical resistance was the whole point: no heated chamber, easier (ease 4 vs 3) and with 170 % elongation and cold-impact toughness — but Vicat 110 °C against the blend's ~140 °C HDT (temp 5 vs 8), lower strength (compression 7 vs 8), and a 100-130 °C bed of its own."
+      "reason": "The standalone polyester if the chemical resistance was the whole point: no heated chamber, easier (ease 4 vs 3) and with 170 % elongation and cold-impact toughness \u2014 but Vicat 110 \u00b0C against the blend's ~140 \u00b0C HDT (temp 5 vs 8), lower strength (compression 7 vs 8), and a 100-130 \u00b0C bed of its own."
     },
     {
       "filament_id": "pps",
-      "reason": "When the chemical resistance has to hold hot and outdoors: essentially solvent-proof with water tolerance 10 vs 7, weather 9 vs 3 and temp 8 (equal) without a heated chamber — at $140-200/kg against $36-37 and the catalog's second-worst warp (9 vs 8)."
+      "reason": "When the chemical resistance has to hold hot and outdoors: essentially solvent-proof with water tolerance 10 vs 7, weather 9 vs 3 and temp 8 (equal) without a heated chamber \u2014 at $140-200/kg against $36-37 and the catalog's second-worst warp (9 vs 8)."
     }
   ],
   "emissions": {
@@ -184,10 +183,10 @@
       "unspecified high-temperature PC/PBT decomposition VOCs"
     ],
     "ventilation": "recommended",
-    "notes": "No styrene: the ABS phase that pushes pc-abs into 'required' ventilation is absent here, so the VOC profile follows base PC's moderate rating. Particulates are rated high rather than PC's moderate because the 250-280 °C nozzle runs inside a 100-110 °C chamber, and hot enclosed printing concentrates ultrafine particles that all escape when the door opens. No measurement covers this blend (unverified) — vent or filter, and let the enclosure clear before opening."
+    "notes": "No styrene: the ABS phase that pushes pc-abs into 'required' ventilation is absent here, so the VOC profile follows base PC's moderate rating. Particulates are rated high rather than PC's moderate because the 250-280 \u00b0C nozzle runs inside a 100-110 \u00b0C chamber, and hot enclosed printing concentrates ultrafine particles that all escape when the door opens. No measurement covers this blend (unverified) \u2014 vent or filter, and let the enclosure clear before opening."
   },
-  "safety_notes": "Bisphenol-A based like all PC grades, so keep parts away from food and drink regardless of surface finish. The 250-280 °C hotend, 100-115 °C bed and a chamber held above 100 °C are all burn hazards and the chamber concentrates off-gassing. The 90 °C annealing step needs an oven that will hold temperature accurately — overshooting distorts parts.",
-  "additional_notes": "Choose within the PC family by failure mode: base pc for maximum heat and stiffness, pc-abs for the easiest print and the lowest process overhead, pc-pbt when the part will meet solvents, fuels or sub-zero impact. The cold-toughness claim is the one to verify for your own use — see conflicts.",
+  "safety_notes": "Bisphenol-A based like all PC grades, so keep parts away from food and drink regardless of surface finish. The 250-280 \u00b0C hotend, 100-115 \u00b0C bed and a chamber held above 100 \u00b0C are all burn hazards and the chamber concentrates off-gassing. The 90 \u00b0C annealing step needs an oven that will hold temperature accurately \u2014 overshooting distorts parts.",
+  "additional_notes": "Choose within the PC family by failure mode: base pc for maximum heat and stiffness, pc-abs for the easiest print and the lowest process overhead, pc-pbt when the part will meet solvents, fuels or sub-zero impact. The cold-toughness claim is the one to verify for your own use \u2014 see conflicts.",
   "provenance": {
     "sources": [
       "https://wiki.polymaker.com/polymaker-products/more-about-our-products/documents/technical-data-sheets/polycarbonate/polymaker-pc-pbt",
@@ -199,7 +198,7 @@
     ],
     "last_verified": "2026-07-31",
     "confidence": "medium",
-    "conflicts": "Cold-impact performance is the substantive disagreement: Polymaker's own FDM data shows 15.7 kJ/m² notched Charpy retained at -30 °C and markets the grade specifically for cold toughness, while the Madison Group / Plastics Technology injection-moulding comparisons rate PC-ABS the better performer at sub-ambient temperatures because of its butadiene phase. Both are recorded; the entry follows Polymaker for the FDM grade and flags the literature position. Process figures also split by source: Polymaker 260-280 °C nozzle, 100-115 °C bed and a required 100-110 °C chamber, against filamentcheatsheet's 250-270 °C, 80-100 °C and 'enclosure recommended'. heated_chamber_required is set true on Polymaker's explicit chamber specification, making this the only PC-family entry with that flag — a deliberate deviation from base pc's false that reviewers should check against a second vendor's grade. AMS compatibility, shrinkage, adhesion promoters, BVOH support viability and print speed are all undocumented for this material; speed is carried from base PC. Price is one Canadian retailer converted to USD."
+    "conflicts": "Cold-impact performance is the substantive disagreement: Polymaker's own FDM data shows 15.7 kJ/m\u00b2 notched Charpy retained at -30 \u00b0C and markets the grade specifically for cold toughness, while the Madison Group / Plastics Technology injection-moulding comparisons rate PC-ABS the better performer at sub-ambient temperatures because of its butadiene phase. Both are recorded; the entry follows Polymaker for the FDM grade and flags the literature position. Process figures also split by source: Polymaker 260-280 \u00b0C nozzle, 100-115 \u00b0C bed and a required 100-110 \u00b0C chamber, against filamentcheatsheet's 250-270 \u00b0C, 80-100 \u00b0C and 'enclosure recommended'. heated_chamber_required is set true on Polymaker's explicit chamber specification, making this the only PC-family entry with that flag \u2014 a deliberate deviation from base pc's false that reviewers should check against a second vendor's grade. AMS compatibility, shrinkage, adhesion promoters, BVOH support viability and print speed are all undocumented for this material; speed is carried from base PC. Price is one Canadian retailer converted to USD."
   },
   "trade_names": [
     {

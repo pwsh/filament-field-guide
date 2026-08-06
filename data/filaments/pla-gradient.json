@@ -11,7 +11,7 @@
   "base_type": "pla",
   "variation_kind": "gradient",
   "polymer_class": "polylactide",
-  "chemical_makeup": "Chemically identical to base PLA — the variation is a manufacturing technique in which pigment streams are blended along the filament length so colour shifts gradually down the spool",
+  "chemical_makeup": "Chemically identical to base PLA \u2014 the variation is a manufacturing technique in which pigment streams are blended along the filament length so colour shifts gradually down the spool",
   "summary": "Base PLA with a colour-blending manufacturing process and no chemistry change: pigment is graded along the strand so a tall print shifts colour with height. Printing, drying, feeding, mechanical and thermal behaviour are all base-PLA-equivalent; the only real deltas are price (~$25/kg vs ~$18-20/kg) and the design constraint that the part must be tall or long enough for the transition to develop.",
   "printing": {
     "nozzle_temp_c": {
@@ -43,13 +43,13 @@
       "recommended": 100
     },
     "enclosure_open_for_cooling": true,
-    "notes": "No printing delta versus base PLA — Bambu's material table groups plain (non-silk) gradient PLA with PLA Basic at 190-240 °C nozzle and 35-65 °C bed. Unfilled and non-abrasive, so a brass nozzle is fine. Caveat: gradient spools are also sold in silk form; a silk-gradient behaves like pla-silk (hotter nozzle, slower outer walls for gloss, weaker layers), not like this entry."
+    "notes": "No printing delta versus base PLA \u2014 Bambu's material table groups plain (non-silk) gradient PLA with PLA Basic at 190-240 \u00b0C nozzle and 35-65 \u00b0C bed. Unfilled and non-abrasive, so a brass nozzle is fine. Caveat: gradient spools are also sold in silk form; a silk-gradient behaves like pla-silk (hotter nozzle, slower outer walls for gloss, weaker layers), not like this entry."
   },
   "feeding": {
     "drive_system": "any",
     "ams_compatible": "yes",
     "feeding_assistant_recommended": false,
-    "notes": "Because the chemistry is unmodified base PLA, there is no added brittleness, abrasion or snap risk in the feed path — this and pla-matte are the only two of the six aesthetic variants that earn an unqualified 'yes' for AMS/MMU/CFS use. One practical caution that is scheduling rather than mechanical: swapping a gradient spool mid-print restarts the colour position, so keep one spool per part."
+    "notes": "Because the chemistry is unmodified base PLA, there is no added brittleness, abrasion or snap risk in the feed path \u2014 this and pla-matte are the only two of the six aesthetic variants that earn an unqualified 'yes' for AMS/MMU/CFS use. One practical caution that is scheduling rather than mechanical: swapping a gradient spool mid-print restarts the colour position, so keep one spool per part."
   },
   "drying": {
     "required_before_use": "if-exposed",
@@ -65,22 +65,22 @@
     },
     "methods": [
       "filament dryer",
-      "blast oven at 55 °C",
+      "blast oven at 55 \u00b0C",
       "food dehydrator",
       "drybox with desiccant"
     ],
-    "dryness_validation": "No popping/crackling or steam at the nozzle; glossy consistent extrudate; minimal stringing on a retraction test — same checks as base PLA",
-    "notes": "Unchanged from base PLA (Bambu 55 °C/8 h, Prusa-style 45 °C/6 h also fine). The pigment blending adds nothing hygroscopic."
+    "dryness_validation": "No popping/crackling or steam at the nozzle; glossy consistent extrudate; minimal stringing on a retraction test \u2014 same checks as base PLA",
+    "notes": "Unchanged from base PLA (Bambu 55 \u00b0C/8 h, Prusa-style 45 \u00b0C/6 h also fine). The pigment blending adds nothing hygroscopic."
   },
   "storage": {
-    "recommendations": "Sealed bag or drybox with desiccant; same tolerance for open-air storage as base PLA. Keep the spool wound in order — the colour sequence is positional, so re-spooling scrambles the intended gradient",
+    "recommendations": "Sealed bag or drybox with desiccant; same tolerance for open-air storage as base PLA. Keep the spool wound in order \u2014 the colour sequence is positional, so re-spooling scrambles the intended gradient",
     "max_humidity_pct": 40,
     "hygroscopy": "low"
   },
   "price": {
     "usd_per_kg_low": 24,
     "usd_per_kg_high": 26,
-    "notes": "Bambu PLA Basic Gradient around $24.99/kg — roughly a 25-40 % premium over base PLA Basic ($18-20/kg) that buys the colour-blending process, not any material improvement"
+    "notes": "Bambu PLA Basic Gradient around $24.99/kg \u2014 roughly a 25-40 % premium over base PLA Basic ($18-20/kg) that buys the colour-blending process, not any material improvement"
   },
   "use_cases": {
     "recommended": [
@@ -120,7 +120,7 @@
       "max": 65,
       "recommended": 55
     },
-    "notes": "All figures are inherited from the base PLA entry: no manufacturer publishes a separate mechanical datasheet for gradient PLA, and with no filler or additive present the plain gradient formulation is expected to be mechanically and thermally identical to PLA Basic (density ~1.24 g/cm³, Tg ~58 °C, tensile 45-65 MPa). Unverified in isolation — treat as equivalence by chemistry, not by measurement. This is the only one of the six aesthetic variants whose density is unchanged from base PLA; silk 1.27, matte 1.31, glow 1.26, metal 1.25 and wood 1.21 all shift."
+    "notes": "All figures are inherited from the base PLA entry: no manufacturer publishes a separate mechanical datasheet for gradient PLA, and with no filler or additive present the plain gradient formulation is expected to be mechanically and thermally identical to PLA Basic (density ~1.24 g/cm\u00b3, Tg ~58 \u00b0C, tensile 45-65 MPa). Unverified in isolation \u2014 treat as equivalence by chemistry, not by measurement. This is the only one of the six aesthetic variants whose density is unchanged from base PLA; silk 1.27, matte 1.31, glow 1.26, metal 1.25 and wood 1.21 all shift."
   },
   "scores": {
     "ease_of_print": 10,
@@ -141,7 +141,6 @@
       "pla-gf",
       "pla-glitter",
       "pla-glow",
-      "pla-gradient",
       "pla-hf",
       "pla-matte",
       "pla-metal",
@@ -158,19 +157,19 @@
       "petg",
       "tpu"
     ],
-    "notes": "Identical to base PLA in every bonding respect — welds to PLA grades, does not weld to PETG/ABS/ASA/PC/PA/PP, and is usable as breakaway support for PETG and TPU. Using gradient filament as support is wasteful of an expensive spool but mechanically fine."
+    "notes": "Identical to base PLA in every bonding respect \u2014 welds to PLA grades, does not weld to PETG/ABS/ASA/PC/PA/PP, and is usable as breakaway support for PETG and TPU. Using gradient filament as support is wasteful of an expensive spool but mechanically fine."
   },
   "plate_recommendations": [
     {
       "plate_id": "pei-textured",
       "rating": "recommended",
-      "notes": "No delta from base PLA: textured PEI at 35-60 °C bed with no release agent. Smooth PEI or glass equally fine — plate choice does not interact with the gradient effect."
+      "notes": "No delta from base PLA: textured PEI at 35-60 \u00b0C bed with no release agent. Smooth PEI or glass equally fine \u2014 plate choice does not interact with the gradient effect."
     }
   ],
   "alternatives": [
     {
       "filament_id": "pla",
-      "reason": "The same polymer with identical printing, drying, mechanical and thermal behaviour — take base PLA and save roughly $5-8/kg ($14-35 vs $24-26) unless the height-graded colour shift is the whole point of the model."
+      "reason": "The same polymer with identical printing, drying, mechanical and thermal behaviour \u2014 take base PLA and save roughly $5-8/kg ($14-35 vs $24-26) unless the height-graded colour shift is the whole point of the model."
     },
     {
       "filament_id": "pla-silk",
@@ -178,7 +177,7 @@
     },
     {
       "filament_id": "pla-glitter",
-      "reason": "Another decorative variant with no mechanical penalty (adh 6 both, comp 7 vs 8) that reads at any part size rather than needing height — but it bars 0.2 mm nozzles and wants a stricter 55 °C / 8 h dry."
+      "reason": "Another decorative variant with no mechanical penalty (adh 6 both, comp 7 vs 8) that reads at any part size rather than needing height \u2014 but it bars 0.2 mm nozzles and wants a stricter 55 \u00b0C / 8 h dry."
     },
     {
       "filament_id": "pla-matte",
@@ -189,14 +188,14 @@
     "voc_level": "low",
     "particulate_level": "low",
     "primary_emissions": [
-      "lactide (~4-5 µg/min)",
+      "lactide (~4-5 \u00b5g/min)",
       "ultrafine particles"
     ],
     "ventilation": "optional",
     "notes": "Identical to base PLA, the lowest-emission common filament; pigment loading is trivial and adds no measured species."
   },
   "safety_notes": "Pigment package is not food-contact certified, as with most coloured PLA.",
-  "additional_notes": "Distinguish three marketing categories that are often conflated: gradient (colour blended along the strand length, this entry), 'Quantum'/dual-colour (two colours fused side by side for an angle-dependent shimmer), and silk-gradient (a gradient colour scheme layered on top of the silk gloss additive — score and print that as pla-silk). Design tip: gradient period is fixed by the manufacturer, so a part's height determines how much of the transition it shows; vase mode maximises the effect per gram.",
+  "additional_notes": "Distinguish three marketing categories that are often conflated: gradient (colour blended along the strand length, this entry), 'Quantum'/dual-colour (two colours fused side by side for an angle-dependent shimmer), and silk-gradient (a gradient colour scheme layered on top of the silk gloss additive \u2014 score and print that as pla-silk). Design tip: gradient period is fixed by the manufacturer, so a part's height determines how much of the transition it shows; vase mode maximises the effect per gram.",
   "provenance": {
     "sources": [
       "https://us.store.bambulab.com/products/pla-basic-gradient",
@@ -207,7 +206,7 @@
     ],
     "last_verified": "2026-07-31",
     "confidence": "low",
-    "conflicts": "No dedicated mechanical TDS exists for gradient PLA — every property and score in this entry is inferred from base-PLA equivalence rather than measured, which is why confidence is 'low' despite the deltas being small. Secondary risk: some vendors sell silk-gradient under the same 'gradient' label; if the spool is silk, the pla-silk entry applies instead (layer adhesion drops to roughly 4/10 and the nozzle temperature window shifts up)."
+    "conflicts": "No dedicated mechanical TDS exists for gradient PLA \u2014 every property and score in this entry is inferred from base-PLA equivalence rather than measured, which is why confidence is 'low' despite the deltas being small. Secondary risk: some vendors sell silk-gradient under the same 'gradient' label; if the spool is silk, the pla-silk entry applies instead (layer adhesion drops to roughly 4/10 and the nozzle temperature window shifts up)."
   },
   "trade_names": [
     {

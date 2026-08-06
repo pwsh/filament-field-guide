@@ -13,8 +13,8 @@
   "base_type": "pa",
   "variation_kind": "glass-fiber-filled",
   "polymer_class": "composite-other",
-  "chemical_makeup": "The same caprolactam-derived PA6 amide backbone as the pa6 grade, compounded with chopped glass fiber — 30 wt% in the industrial grades that publish a loading (3DXTech FIBREX PA6+GF30, Owens Corning XSTRAND GF30-PA6), undisclosed by Bambu Lab. The fiber is a mechanical reinforcement only: it does not touch the amide chemistry, the hydrogen bonding, or PA6's appetite for water, which is why the 2.56 % moisture uptake survives reinforcement intact. Glass fiber is non-conductive and light-coloured, so unlike pa6-cf this grade can be pigmented rather than being locked to carbon black.",
-  "summary": "The toughness-retaining reinforced nylon. Deltas vs the pa6 grade: glass fiber lifts dimensional stability from 2 to 5 and drops warp_tendency from 9 to 4, HDT rises to ~182 °C against pa6's 85 °C, and bending strength reaches 120 MPa — bought with a mandatory hardened nozzle, an enclosure that Bambu states outright is required, and a partial AMS ban. Vs pa6-cf it is the deliberate trade the other way: less stiff and slightly less warp-suppressed, but noticeably more impact-tough (27.2 kJ/m² Charpy XY dry), less abrasive to hotends and feed paths, and colourable. What neither filler fixes is water — 2.56 % uptake, extreme hygroscopy, and PA6's habit of moving dimensionally with the weather are unchanged from the base entry.",
+  "chemical_makeup": "The same caprolactam-derived PA6 amide backbone as the pa6 grade, compounded with chopped glass fiber \u2014 30 wt% in the industrial grades that publish a loading (3DXTech FIBREX PA6+GF30, Owens Corning XSTRAND GF30-PA6), undisclosed by Bambu Lab. The fiber is a mechanical reinforcement only: it does not touch the amide chemistry, the hydrogen bonding, or PA6's appetite for water, which is why the 2.56 % moisture uptake survives reinforcement intact. Glass fiber is non-conductive and light-coloured, so unlike pa6-cf this grade can be pigmented rather than being locked to carbon black.",
+  "summary": "The toughness-retaining reinforced nylon. Deltas vs the pa6 grade: glass fiber lifts dimensional stability from 2 to 5 and drops warp_tendency from 9 to 4, HDT rises to ~182 \u00b0C against pa6's 85 \u00b0C, and bending strength reaches 120 MPa \u2014 bought with a mandatory hardened nozzle, an enclosure that Bambu states outright is required, and a partial AMS ban. Vs pa6-cf it is the deliberate trade the other way: less stiff and slightly less warp-suppressed, but noticeably more impact-tough (27.2 kJ/m\u00b2 Charpy XY dry), less abrasive to hotends and feed paths, and colourable. What neither filler fixes is water \u2014 2.56 % uptake, extreme hygroscopy, and PA6's habit of moving dimensionally with the weather are unchanged from the base entry.",
   "printing": {
     "nozzle_temp_c": {
       "min": 260,
@@ -45,13 +45,13 @@
       "max": 10,
       "recommended": 0
     },
-    "notes": "Bambu caps print speed below 130 mm/s, which is the one hard published number for this grade and the reason the recorded ceiling sits below pa6-cf's 150. Nozzle sizes of 0.4, 0.6 (Bambu's recommendation) and 0.8 mm are supported and 0.2 mm is explicitly NOT compatible — the same gating as abs-gf. Hardened steel is mandatory and Bambu states that even stainless steel is not recommended, which is a stricter wording than most filled grades get. The enclosure requirement is the sharpest process delta against pa6-cf: CNC Kitchen reports carbon fiber suppresses nylon warping well enough to print PA6-CF on open-frame machines, while Bambu states an enclosed printer is required for PA6-GF, so the recorded enclosure_recommended true carries real weight here rather than being a nicety. heated_chamber_required stays false, matching the base pa entry — a passive enclosure plus a hot bed is sufficient. Part cooling stays off, as for every nylon in this catalog: fan air splits an already fiber-weakened layer bond. The nozzle and bed windows are not published as ranges by Bambu on the accessible pages and are carried from the pa6-cf sibling and the base pa entry, adjusted for the published 0.6 mm nozzle recommendation."
+    "notes": "Bambu caps print speed below 130 mm/s, which is the one hard published number for this grade and the reason the recorded ceiling sits below pa6-cf's 150. Nozzle sizes of 0.4, 0.6 (Bambu's recommendation) and 0.8 mm are supported and 0.2 mm is explicitly NOT compatible \u2014 the same gating as abs-gf. Hardened steel is mandatory and Bambu states that even stainless steel is not recommended, which is a stricter wording than most filled grades get. The enclosure requirement is the sharpest process delta against pa6-cf: CNC Kitchen reports carbon fiber suppresses nylon warping well enough to print PA6-CF on open-frame machines, while Bambu states an enclosed printer is required for PA6-GF, so the recorded enclosure_recommended true carries real weight here rather than being a nicety. heated_chamber_required stays false, matching the base pa entry \u2014 a passive enclosure plus a hot bed is sufficient. Part cooling stays off, as for every nylon in this catalog: fan air splits an already fiber-weakened layer bond. The nozzle and bed windows are not published as ranges by Bambu on the accessible pages and are carried from the pa6-cf sibling and the base pa entry, adjusted for the published 0.6 mm nozzle recommendation."
   },
   "feeding": {
     "drive_system": "any",
     "ams_compatible": "conditional",
     "feeding_assistant_recommended": false,
-    "notes": "Rigid, so any extruder feeds it; not an elastomer, so no shore hardness and no feeding assistant. The AMS verdict is the most precisely documented in this cluster and sits between the base pa entry's 'yes' and pa6-cf's flat 'no': Bambu lists PA6-GF as compatible with the standard AMS, AMS 2 Pro and AMS HT, but explicitly NOT with the AMS Lite, whose lighter-duty feed path does not tolerate the fiber abrasion. That makes 'conditional' the literal answer rather than a hedge — the condition is which unit you own. The base entry's separate warning still applies on top: PA6 is among the most hygroscopic materials in the catalog and an unsealed material station is functionally an open spool holder, so use a sealed desiccated unit (AMS 2 Pro / AMS HT class) or feed from a heated drybox for anything longer than a short job. Hardened steel nozzle mandatory regardless of feed path; stainless is not sufficient."
+    "notes": "Rigid, so any extruder feeds it; not an elastomer, so no shore hardness and no feeding assistant. The AMS verdict is the most precisely documented in this cluster and sits between the base pa entry's 'yes' and pa6-cf's flat 'no': Bambu lists PA6-GF as compatible with the standard AMS, AMS 2 Pro and AMS HT, but explicitly NOT with the AMS Lite, whose lighter-duty feed path does not tolerate the fiber abrasion. That makes 'conditional' the literal answer rather than a hedge \u2014 the condition is which unit you own. The base entry's separate warning still applies on top: PA6 is among the most hygroscopic materials in the catalog and an unsealed material station is functionally an open spool holder, so use a sealed desiccated unit (AMS 2 Pro / AMS HT class) or feed from a heated drybox for anything longer than a short job. Hardened steel nozzle mandatory regardless of feed path; stainless is not sufficient."
   },
   "drying": {
     "required_before_use": "always",
@@ -66,24 +66,24 @@
       "recommended": 10
     },
     "methods": [
-      "blast/convection oven at 80 °C",
-      "blast oven at 90-100 °C for the shorter schedule",
+      "blast/convection oven at 80 \u00b0C",
+      "blast oven at 90-100 \u00b0C for the shorter schedule",
       "dedicated filament dryer",
       "print directly from a heated dryer",
       "sealed drybox with desiccant while printing"
     ],
-    "dryness_validation": "No audible popping, hissing or crackling at the nozzle and no steam, bubbles or voids in the purge line; stringing collapses back to baseline. The base pa entry's glossy-extrudate check does not transfer — a fiber-filled surface is matte by design — so listen and inspect the strand, or confirm with a filament moisture meter.",
-    "notes": "Bambu publishes two alternative schedules: 80 °C for 8-12 h, or 90-100 °C for 10-12 h, both in a blast oven. That upper option runs hotter than the base pa entry's 60-90 °C band and hotter than Prusa's general 'keep nylon below 90 °C' guidance, so it needs a spool that tolerates it — check the spool material before using the 90-100 °C schedule. Water absorption is published at 2.56 %, meaningfully lower than unfilled PA6's 3-9 % simply because 30 % of the compound is non-absorbing glass, but the matrix behaves exactly as before and the practical regime is unchanged: dry immediately before printing and run from a drybox on long jobs."
+    "dryness_validation": "No audible popping, hissing or crackling at the nozzle and no steam, bubbles or voids in the purge line; stringing collapses back to baseline. The base pa entry's glossy-extrudate check does not transfer \u2014 a fiber-filled surface is matte by design \u2014 so listen and inspect the strand, or confirm with a filament moisture meter.",
+    "notes": "Bambu publishes two alternative schedules: 80 \u00b0C for 8-12 h, or 90-100 \u00b0C for 10-12 h, both in a blast oven. That upper option runs hotter than the base pa entry's 60-90 \u00b0C band and hotter than Prusa's general 'keep nylon below 90 \u00b0C' guidance, so it needs a spool that tolerates it \u2014 check the spool material before using the 90-100 \u00b0C schedule. Water absorption is published at 2.56 %, meaningfully lower than unfilled PA6's 3-9 % simply because 30 % of the compound is non-absorbing glass, but the matrix behaves exactly as before and the practical regime is unchanged: dry immediately before printing and run from a drybox on long jobs."
   },
   "storage": {
-    "recommendations": "Airtight with fresh desiccant at all times, including between prints on the same day, and a heated drybox on the printer for anything long. The glass displaces about a third of the absorbing matrix but does not change its behaviour — this is the pa6 storage regime unchanged, and the consequence of neglect is the usual nylon one of foaming, stringing and lost strength.",
+    "recommendations": "Airtight with fresh desiccant at all times, including between prints on the same day, and a heated drybox on the printer for anything long. The glass displaces about a third of the absorbing matrix but does not change its behaviour \u2014 this is the pa6 storage regime unchanged, and the consequence of neglect is the usual nylon one of foaming, stringing and lost strength.",
     "max_humidity_pct": 20,
     "hygroscopy": "extreme"
   },
   "price": {
     "usd_per_kg_low": 55,
     "usd_per_kg_high": 65,
-    "notes": "Bambu Lab PA6-GF at $59.99/kg on the US store per the GigaParts listing; the recorded band brackets that single verified figure rather than spanning the category. Industrial lines (3DXTech FIBREX PA6+GF30, Owens Corning XSTRAND GF30-PA6) publish no accessible retail pricing and should be expected higher. Against the pa6 grade's $35-70/kg this is a modest premium, and notably cheaper than pa6-cf's $79-135/kg — the clearest cost argument for choosing glass over carbon."
+    "notes": "Bambu Lab PA6-GF at $59.99/kg on the US store per the GigaParts listing; the recorded band brackets that single verified figure rather than spanning the category. Industrial lines (3DXTech FIBREX PA6+GF30, Owens Corning XSTRAND GF30-PA6) publish no accessible retail pricing and should be expected higher. Against the pa6 grade's $35-70/kg this is a modest premium, and notably cheaper than pa6-cf's $79-135/kg \u2014 the clearest cost argument for choosing glass over carbon."
   },
   "use_cases": {
     "recommended": [
@@ -103,7 +103,7 @@
       "outdoor, humid or wet-service parts under sustained load",
       "dimensionally critical fits without post-print moisture conditioning",
       "food-contact items",
-      "quick one-off prints — the 8-12 h drying overhead outweighs the job"
+      "quick one-off prints \u2014 the 8-12 h drying overhead outweighs the job"
     ]
   },
   "suitability": {
@@ -124,7 +124,7 @@
     "glass_transition_c": 60,
     "heat_deflection_c": 182,
     "max_service_temp_c": 130,
-    "notes": "Density 1.36 g/cm³ is NOT a datasheet figure — Bambu's official PDF returned an access error during research and no accessible page publishes one. It is calculated by rule of mixtures for 30 wt% E-glass (2.55 g/cm³) in a 1.13 g/cm³ PA6 matrix and must be re-verified before it is trusted. If correct it is the densest entry in the nylon family, yielding 73.5 cm³ per 100 g against pa6's 88.5 and pa6-cf's 85.5 — a ~17 % loss of part volume per spool versus unfilled PA6, because glass is denser than carbon fiber as well as denser than the matrix. Published Bambu figures: HDT ~182 °C, impact strength 27.2 kJ/m² (XY, dry), bending strength 120 MPa, water absorption 2.56 %. The load basis for the HDT is not stated by Bambu, so it is recorded on the schema's default 0.45 MPa assumption and should be read as approximately comparable to pa6-cf's 190 °C rather than precisely below it. The impact figure is the number that justifies this material's existence: it is the toughness pa6-cf gives away. Tensile strength is omitted entirely — no accessible source publishes one for any PA6-GF filament, and inventing a band from the bending figure would misrepresent the confidence. Max service temperature 130 °C is inferred by scaling pa6-cf's own inferred 140 °C figure down in proportion to HDT, so it is an estimate of an estimate. Tg 60 °C is carried from pa6 (dry state; a wet part's Tg falls sharply). Shrinkage is a reasoned reduction from pa6's 1.0-2.5 % consistent with the observed warp suppression and set slightly above pa6-cf's 0.3-1.0/0.5 because glass suppresses nylon warping somewhat less than carbon does; no source publishes a figure."
+    "notes": "Density 1.36 g/cm\u00b3 is NOT a datasheet figure \u2014 Bambu's official PDF returned an access error during research and no accessible page publishes one. It is calculated by rule of mixtures for 30 wt% E-glass (2.55 g/cm\u00b3) in a 1.13 g/cm\u00b3 PA6 matrix and must be re-verified before it is trusted. If correct it is the densest entry in the nylon family, yielding 73.5 cm\u00b3 per 100 g against pa6's 88.5 and pa6-cf's 85.5 \u2014 a ~17 % loss of part volume per spool versus unfilled PA6, because glass is denser than carbon fiber as well as denser than the matrix. Published Bambu figures: HDT ~182 \u00b0C, impact strength 27.2 kJ/m\u00b2 (XY, dry), bending strength 120 MPa, water absorption 2.56 %. The load basis for the HDT is not stated by Bambu, so it is recorded on the schema's default 0.45 MPa assumption and should be read as approximately comparable to pa6-cf's 190 \u00b0C rather than precisely below it. The impact figure is the number that justifies this material's existence: it is the toughness pa6-cf gives away. Tensile strength is omitted entirely \u2014 no accessible source publishes one for any PA6-GF filament, and inventing a band from the bending figure would misrepresent the confidence. Max service temperature 130 \u00b0C is inferred by scaling pa6-cf's own inferred 140 \u00b0C figure down in proportion to HDT, so it is an estimate of an estimate. Tg 60 \u00b0C is carried from pa6 (dry state; a wet part's Tg falls sharply). Shrinkage is a reasoned reduction from pa6's 1.0-2.5 % consistent with the observed warp suppression and set slightly above pa6-cf's 0.3-1.0/0.5 because glass suppresses nylon warping somewhat less than carbon does; no source publishes a figure."
   },
   "scores": {
     "ease_of_print": 4,
@@ -144,7 +144,6 @@
       "pa-cf",
       "pa6",
       "pa6-cf",
-      "pa6-gf",
       "pa612",
       "pa66"
     ],
@@ -152,7 +151,7 @@
       "support-breakaway"
     ],
     "usable_as_support_for": [],
-    "notes": "Welds to itself and to the rest of the PA6 family (pa6, base pa, pa66, pa6-cf) — same amide chemistry, overlapping melt windows. It does not bond to pla, petg, abs, asa, pc, pp, pctg, pvb or pet, and at 260-300 °C no breakaway PLA or PETG interface survives contact. Soluble supports are a non-starter for the same reason as pa6-cf: pva degrades roughly 60-100 °C below this nozzle range and bvoh sits below it too, so same-material breakaway is the standard workaround and this material is in practice printed single-material. The one place it is a better co-print partner than pa6-cf is against pigmented nylon: glass fiber does not bleed carbon black into an adjacent colour."
+    "notes": "Welds to itself and to the rest of the PA6 family (pa6, base pa, pa66, pa6-cf) \u2014 same amide chemistry, overlapping melt windows. It does not bond to pla, petg, abs, asa, pc, pp, pctg, pvb or pet, and at 260-300 \u00b0C no breakaway PLA or PETG interface survives contact. Soluble supports are a non-starter for the same reason as pa6-cf: pva degrades roughly 60-100 \u00b0C below this nozzle range and bvoh sits below it too, so same-material breakaway is the standard workaround and this material is in practice printed single-material. The one place it is a better co-print partner than pa6-cf is against pigmented nylon: glass fiber does not bleed carbon black into an adjacent colour."
   },
   "plate_recommendations": [
     {
@@ -163,12 +162,12 @@
     {
       "plate_id": "g11-garolite",
       "rating": "usable",
-      "notes": "Backfilled from plate entry (reciprocity) — see plate page"
+      "notes": "Backfilled from plate entry (reciprocity) \u2014 see plate page"
     },
     {
       "plate_id": "geckotek-ez-stick",
       "rating": "usable",
-      "notes": "Backfilled from plate entry (reciprocity) — see plate page"
+      "notes": "Backfilled from plate entry (reciprocity) \u2014 see plate page"
     }
   ],
   "emissions": {
@@ -181,9 +180,9 @@
       "glass fiber fines (post-processing)"
     ],
     "ventilation": "recommended",
-    "notes": "Nylon-first hazard profile carried unchanged from the pa6 grade and pa6-cf: caprolactam is the marker compound and its emission rises steeply above ~250 °C nozzle, which is the entire working range here. No PA6-GF-specific emission measurement exists. The delta against unfilled PA6 is at the bench rather than the nozzle — sanding, drilling or machining printed parts liberates respirable glass fiber dust. Because an enclosure is required for this grade anyway, the practical answer is to vent that enclosure externally or filter through HEPA plus activated carbon, and to vent before opening the door."
+    "notes": "Nylon-first hazard profile carried unchanged from the pa6 grade and pa6-cf: caprolactam is the marker compound and its emission rises steeply above ~250 \u00b0C nozzle, which is the entire working range here. No PA6-GF-specific emission measurement exists. The delta against unfilled PA6 is at the bench rather than the nozzle \u2014 sanding, drilling or machining printed parts liberates respirable glass fiber dust. Because an enclosure is required for this grade anyway, the practical answer is to vent that enclosure externally or filter through HEPA plus activated carbon, and to vent before opening the door."
   },
-  "safety_notes": "Abrasive: hardened steel is mandatory and Bambu states stainless steel is not sufficient. Do not dry-sand, drill or machine printed parts without a respirator and dust capture — glass fiber fines are a skin, eye and respiratory irritant. Caprolactam is a respiratory irritant; ventilate the enclosure rather than relying on it to contain fumes. Bambu's optional 90-100 °C drying schedule exceeds the usual 'keep nylon under 90 °C' guidance and can deform plastic spools — verify the spool before using it. Not food-contact suitable: no certified grade was found, the fiber-roughened surface traps bacteria, and fiber fragments can shed.",
+  "safety_notes": "Abrasive: hardened steel is mandatory and Bambu states stainless steel is not sufficient. Do not dry-sand, drill or machine printed parts without a respirator and dust capture \u2014 glass fiber fines are a skin, eye and respiratory irritant. Caprolactam is a respiratory irritant; ventilate the enclosure rather than relying on it to contain fumes. Bambu's optional 90-100 \u00b0C drying schedule exceeds the usual 'keep nylon under 90 \u00b0C' guidance and can deform plastic spools \u2014 verify the spool before using it. Not food-contact suitable: no certified grade was found, the fiber-roughened surface traps bacteria, and fiber fragments can shed.",
   "additional_notes": "The choice against pa6-cf is a genuine fork rather than a budget compromise. PA6-CF wins on dry stiffness (>8.6 GPa modulus), on warp suppression complete enough for open-frame printing, and on peak dry tensile; PA6-GF wins on impact toughness, on hotend and feed-path wear, on colour, on AMS eligibility for three of Bambu's four units, and on price. Both lose the same argument to water: 2.56 % uptake here and 3-9 % for unfilled PA6 mean neither belongs in a humid or wet-service structural application, and pa12-cf remains the answer when humidity stability matters more than peak stiffness. Fiber loading is disclosed only by the industrial brands (30 %) and not by Bambu, whose product supplies every number in this entry, so the mechanical figures and the 30 %-based density calculation may not describe the same compound.",
   "provenance": {
     "sources": [
@@ -199,7 +198,7 @@
     ],
     "last_verified": "2026-08-06",
     "confidence": "medium",
-    "conflicts": "Bambu's official PA6-GF technical data sheet returned an access error during research, so the published figures here (HDT ~182 °C, impact 27.2 kJ/m² XY dry, bending 120 MPa, water absorption 2.56 %) come from the store page and wiki rather than the PDF, and several fields the PDF would have supplied are simply absent. Density, tensile strength and shrinkage are NOT confirmed from any accessible source: density 1.36 g/cm³ is a rule-of-mixtures calculation for 30 wt% glass and is the single number in this entry most in need of re-verification, tensile strength is omitted rather than guessed, and shrinkage is reasoned. Fiber loading is undisclosed by Bambu while the industrial grades that do disclose it (3DXTech FIBREX, XSTRAND) are 30 %, so applying a 30 % density calculation to Bambu's mechanical data mixes two products. The HDT load basis is unstated by Bambu and is recorded on the schema's 0.45 MPa default. Max service temperature 130 °C is inferred from pa6-cf's own inferred 140 °C, an estimate derived from an estimate. Nozzle and bed temperature ranges are not published as ranges on the accessible Bambu pages and are carried from pa6-cf and the base pa entry. uv_tolerance is recorded 2, one below pa6-cf's 3, on the reasoning that carbon fiber is an effective UV absorber while glass is not — that is a physical argument, not a sourced measurement, and it is the one score here that deliberately diverges from the CF sibling. 2026-08-06 addition: Snapmaker's PA-GF was mapped into this entry, following the precedent already set by the Bambu 'PA6-GF (PA-GF)' row — pa6-gf is the catalog's only glass-filled nylon id and PA6 is the dominant GF base. The mapping is weaker than Bambu's: Snapmaker discloses no base grade, no fiber loading and no specifications at all (no spec page, no shop product page, and the Luban PA-Fiber guide names neither), so it contributes no data and is a naming-level assignment only. Snapmaker's unfilled Nylon spec page reports a 190 °C melting point, which is NOT PA6-like, so if the filled grades share that base the PA-GF assignment here would be wrong — flagged rather than acted on, since Snapmaker does not state that the unfilled and filled lines share a base resin."
+    "conflicts": "Bambu's official PA6-GF technical data sheet returned an access error during research, so the published figures here (HDT ~182 \u00b0C, impact 27.2 kJ/m\u00b2 XY dry, bending 120 MPa, water absorption 2.56 %) come from the store page and wiki rather than the PDF, and several fields the PDF would have supplied are simply absent. Density, tensile strength and shrinkage are NOT confirmed from any accessible source: density 1.36 g/cm\u00b3 is a rule-of-mixtures calculation for 30 wt% glass and is the single number in this entry most in need of re-verification, tensile strength is omitted rather than guessed, and shrinkage is reasoned. Fiber loading is undisclosed by Bambu while the industrial grades that do disclose it (3DXTech FIBREX, XSTRAND) are 30 %, so applying a 30 % density calculation to Bambu's mechanical data mixes two products. The HDT load basis is unstated by Bambu and is recorded on the schema's 0.45 MPa default. Max service temperature 130 \u00b0C is inferred from pa6-cf's own inferred 140 \u00b0C, an estimate derived from an estimate. Nozzle and bed temperature ranges are not published as ranges on the accessible Bambu pages and are carried from pa6-cf and the base pa entry. uv_tolerance is recorded 2, one below pa6-cf's 3, on the reasoning that carbon fiber is an effective UV absorber while glass is not \u2014 that is a physical argument, not a sourced measurement, and it is the one score here that deliberately diverges from the CF sibling. 2026-08-06 addition: Snapmaker's PA-GF was mapped into this entry, following the precedent already set by the Bambu 'PA6-GF (PA-GF)' row \u2014 pa6-gf is the catalog's only glass-filled nylon id and PA6 is the dominant GF base. The mapping is weaker than Bambu's: Snapmaker discloses no base grade, no fiber loading and no specifications at all (no spec page, no shop product page, and the Luban PA-Fiber guide names neither), so it contributes no data and is a naming-level assignment only. Snapmaker's unfilled Nylon spec page reports a 190 \u00b0C melting point, which is NOT PA6-like, so if the filled grades share that base the PA-GF assignment here would be wrong \u2014 flagged rather than acted on, since Snapmaker does not state that the unfilled and filled lines share a base resin."
   },
   "trade_names": [
     {
@@ -240,7 +239,7 @@
     {
       "manufacturer": "snapmaker",
       "product": "PA-GF",
-      "notes": "Base polyamide grade undisclosed by Snapmaker; mapped here on the same provisional basis as the Bambu 'PA-GF' entry above. Snapmaker publishes no spec page, product page or datasheet for it — no figures in this entry come from it."
+      "notes": "Base polyamide grade undisclosed by Snapmaker; mapped here on the same provisional basis as the Bambu 'PA-GF' entry above. Snapmaker publishes no spec page, product page or datasheet for it \u2014 no figures in this entry come from it."
     },
     {
       "manufacturer": "spectrum-filaments",
@@ -256,23 +255,23 @@
   "alternatives": [
     {
       "filament_id": "pa6-cf",
-      "reason": "The stiffness trade the other way: higher modulus and compression (9 vs 8) with slightly better warp control (3 vs 4) and a marginally higher heat score — at $79-135/kg against $55-65, more abrasion, and less impact toughness (adhesion 4 vs 6)."
+      "reason": "The stiffness trade the other way: higher modulus and compression (9 vs 8) with slightly better warp control (3 vs 4) and a marginally higher heat score \u2014 at $79-135/kg against $55-65, more abrasion, and less impact toughness (adhesion 4 vs 6)."
     },
     {
       "filament_id": "pa6",
-      "reason": "Unfilled PA6 when toughness and ductility matter more than stiffness: layer adhesion 9 vs 6, no hardened nozzle, full AMS feeding and $35-70/kg — but warp jumps from 4 to 9 and dimensional stability falls from 5 to 2."
+      "reason": "Unfilled PA6 when toughness and ductility matter more than stiffness: layer adhesion 9 vs 6, no hardened nozzle, full AMS feeding and $35-70/kg \u2014 but warp jumps from 4 to 9 and dimensional stability falls from 5 to 2."
     },
     {
       "filament_id": "pa12-cf",
-      "reason": "Fixes the one thing glass fiber does not — water. PA12-CF holds its numbers wet (water 8 vs 2, dim 9 vs 5, warp 2 vs 4) where PA6-GF's 2.56 % uptake moves the part with the weather; costs $130-180/kg and gives up heat (temp 6 vs 8)."
+      "reason": "Fixes the one thing glass fiber does not \u2014 water. PA12-CF holds its numbers wet (water 8 vs 2, dim 9 vs 5, warp 2 vs 4) where PA6-GF's 2.56 % uptake moves the part with the weather; costs $130-180/kg and gives up heat (temp 6 vs 8)."
     },
     {
       "filament_id": "pa612",
-      "reason": "Similar low-warp territory without PA6's moisture problem: water 6 vs 2, warp 3 vs 4 and dimensional stability 7 vs 5, so the part holds size as humidity changes — at ~$65-77/kg, a 250-300 °C nozzle and a much weaker layer bond (4 vs 6)."
+      "reason": "Similar low-warp territory without PA6's moisture problem: water 6 vs 2, warp 3 vs 4 and dimensional stability 7 vs 5, so the part holds size as humidity changes \u2014 at ~$65-77/kg, a 250-300 \u00b0C nozzle and a much weaker layer bond (4 vs 6)."
     },
     {
       "filament_id": "petg-gf",
-      "reason": "The open-frame glass-filled option with no drying discipline: dim 9 vs 5, warp 2 vs 4, water 9 vs 2 and ease 6 vs 4 at $25-35/kg — giving up heat (temp 7 vs 8, HDT ~182 °C on the nylon) and nylon's wear resistance."
+      "reason": "The open-frame glass-filled option with no drying discipline: dim 9 vs 5, warp 2 vs 4, water 9 vs 2 and ease 6 vs 4 at $25-35/kg \u2014 giving up heat (temp 7 vs 8, HDT ~182 \u00b0C on the nylon) and nylon's wear resistance."
     }
   ]
 }

@@ -13,8 +13,8 @@
   "base_type": "pa",
   "variation_kind": "grade",
   "polymer_class": "polyamide",
-  "chemical_makeup": "Aliphatic polyamide condensation copolymer of hexamethylenediamine and adipic acid — two alternating six-carbon units rather than PA6's single ring-opened caprolactam repeat. The symmetric repeat packs into a tighter, higher-melting crystal (~255-265 °C vs PA6's ~220 °C), which is the origin of its extra stiffness, wear resistance and heat resistance, and of its extra shrinkage.",
-  "summary": "The stiff, hot, hard-to-tame nylon. Deltas vs the base pa entry and vs pa6: melting point and processing temperatures climb (255-275 °C for low-warp grades, 285-315 °C and a 130 °C bed for high-performance grades), density rises to ~1.14, stiffness, wear resistance and creep resistance all improve, and service temperature reaches ~135 °C — while hygroscopicity stays as bad as PA6's and shrinkage gets worse. Rarer than PA6 on the hobby market and more expensive; many spools labelled 'PA6/66' are deliberately easier-printing copolymer blends rather than this homopolymer.",
+  "chemical_makeup": "Aliphatic polyamide condensation copolymer of hexamethylenediamine and adipic acid \u2014 two alternating six-carbon units rather than PA6's single ring-opened caprolactam repeat. The symmetric repeat packs into a tighter, higher-melting crystal (~255-265 \u00b0C vs PA6's ~220 \u00b0C), which is the origin of its extra stiffness, wear resistance and heat resistance, and of its extra shrinkage.",
+  "summary": "The stiff, hot, hard-to-tame nylon. Deltas vs the base pa entry and vs pa6: melting point and processing temperatures climb (255-275 \u00b0C for low-warp grades, 285-315 \u00b0C and a 130 \u00b0C bed for high-performance grades), density rises to ~1.14, stiffness, wear resistance and creep resistance all improve, and service temperature reaches ~135 \u00b0C \u2014 while hygroscopicity stays as bad as PA6's and shrinkage gets worse. Rarer than PA6 on the hobby market and more expensive; many spools labelled 'PA6/66' are deliberately easier-printing copolymer blends rather than this homopolymer.",
   "printing": {
     "nozzle_temp_c": {
       "min": 255,
@@ -45,13 +45,13 @@
       "max": 30,
       "recommended": 0
     },
-    "notes": "The widest nozzle window in this family and the largest unresolved disagreement: ABC3D's low-warp PA66 runs 255-275 °C on a 60-70 °C bed, while its high-performance PA66 wants 285-315 °C on a 130 °C bed — a spread that almost certainly reflects different formulations (possibly filled) rather than one material, so check the specific datasheet before trusting the recommended 275 °C. Deltas vs pa6: hotter at both ends, a hotter bed for the high-performance grades, and a slightly wider fan allowance (ABC3D permits 0-30 %, unusual for a nylon) — but 0 % remains the safe starting point since fan air amplifies this grade's already-high shrinkage. Enclosure effectively mandatory; ambient targeted a little higher than pa6 because of the higher melt point. Unfilled PA66 is not abrasive, so no hardened nozzle — a PA66-CF product does exist (ABC3D) and would require one."
+    "notes": "The widest nozzle window in this family and the largest unresolved disagreement: ABC3D's low-warp PA66 runs 255-275 \u00b0C on a 60-70 \u00b0C bed, while its high-performance PA66 wants 285-315 \u00b0C on a 130 \u00b0C bed \u2014 a spread that almost certainly reflects different formulations (possibly filled) rather than one material, so check the specific datasheet before trusting the recommended 275 \u00b0C. Deltas vs pa6: hotter at both ends, a hotter bed for the high-performance grades, and a slightly wider fan allowance (ABC3D permits 0-30 %, unusual for a nylon) \u2014 but 0 % remains the safe starting point since fan air amplifies this grade's already-high shrinkage. Enclosure effectively mandatory; ambient targeted a little higher than pa6 because of the higher melt point. Unfilled PA66 is not abrasive, so no hardened nozzle \u2014 a PA66-CF product does exist (ABC3D) and would require one."
   },
   "feeding": {
     "drive_system": "any",
     "ams_compatible": "conditional",
     "feeding_assistant_recommended": false,
-    "notes": "Rigid, unfilled and mechanically easy to push, so any extruder feeds it; no shore hardness and no feeding assistant (not an elastomer). Standard hobbed drive gears are sufficient — there is no filler to wear them, unlike the CF/GF grades. AMS status is 'conditional' on the same moisture grounds as pa6: ABC3D describes PA66 as absorbing ambient moisture 'in just a few hours', so only a sealed, actively desiccated unit is acceptable and a heated drybox is better. No Bambu-branded pure PA66 exists, so there is no vendor AMS listing to cite for this grade (unverified)."
+    "notes": "Rigid, unfilled and mechanically easy to push, so any extruder feeds it; no shore hardness and no feeding assistant (not an elastomer). Standard hobbed drive gears are sufficient \u2014 there is no filler to wear them, unlike the CF/GF grades. AMS status is 'conditional' on the same moisture grounds as pa6: ABC3D describes PA66 as absorbing ambient moisture 'in just a few hours', so only a sealed, actively desiccated unit is acceptable and a heated drybox is better. No Bambu-branded pure PA66 exists, so there is no vendor AMS listing to cite for this grade (unverified)."
   },
   "drying": {
     "required_before_use": "always",
@@ -66,13 +66,13 @@
       "recommended": 4
     },
     "methods": [
-      "blast/convection oven at 90 °C",
+      "blast/convection oven at 90 \u00b0C",
       "dedicated high-temperature filament dryer",
       "print directly from a heated dryer",
       "sealed drybox with desiccant while printing"
     ],
-    "dryness_validation": "No popping, crackling or steam at the nozzle; a glossy, blister-free purge line; stringing back to baseline. Because PA66 re-absorbs within hours of opening, validate immediately before the print rather than after drying — a spool that passed yesterday will not necessarily pass today.",
-    "notes": "Hotter but shorter than pa6's schedule: ABC3D specifies 90 °C for 4 h for both its low-warp and high-performance PA66 lines (alternatively 85 °C for 4-6 h). This is the second-highest drying temperature in the family, behind ppa's 100-140 °C and well above pa12's 70 °C / 4 h — the single clearest ranking of the four grades. Do not assume PA66's higher melting point implies better moisture stability: it does not, and this is the most common misconception about the grade."
+    "dryness_validation": "No popping, crackling or steam at the nozzle; a glossy, blister-free purge line; stringing back to baseline. Because PA66 re-absorbs within hours of opening, validate immediately before the print rather than after drying \u2014 a spool that passed yesterday will not necessarily pass today.",
+    "notes": "Hotter but shorter than pa6's schedule: ABC3D specifies 90 \u00b0C for 4 h for both its low-warp and high-performance PA66 lines (alternatively 85 \u00b0C for 4-6 h). This is the second-highest drying temperature in the family, behind ppa's 100-140 \u00b0C and well above pa12's 70 \u00b0C / 4 h \u2014 the single clearest ranking of the four grades. Do not assume PA66's higher melting point implies better moisture stability: it does not, and this is the most common misconception about the grade."
   },
   "storage": {
     "recommendations": "Airtight with fresh desiccant, opened only at the moment of use. ABC3D warns that PA66 picks up ambient moisture in a few hours, so treat a heated drybox on the printer as the operating state and re-dry any spool that has spent a session in open air.",
@@ -82,7 +82,7 @@
   "price": {
     "usd_per_kg_low": 44,
     "usd_per_kg_high": 75,
-    "notes": "Split by grade: ABC3D's low-warp PA66 is CAD $59.95/kg (~$44 USD/kg) while its high-performance PA66 is $99.95/kg (~$73 USD/kg) — the latter above Bambu's filled PA6-GF pricing, reflecting a rarer resin supply chain and less competition. PA6/66 copolymer blends undercut both at ~$46/kg (Inslogic). USD conversions are approximate and unverified against current rates."
+    "notes": "Split by grade: ABC3D's low-warp PA66 is CAD $59.95/kg (~$44 USD/kg) while its high-performance PA66 is $99.95/kg (~$73 USD/kg) \u2014 the latter above Bambu's filled PA6-GF pricing, reflecting a rarer resin supply chain and less competition. PA6/66 copolymer blends undercut both at ~$46/kg (Inslogic). USD conversions are approximate and unverified against current rates."
   },
   "use_cases": {
     "recommended": [
@@ -94,12 +94,12 @@
       "oil-and-gas and industrial components"
     ],
     "not_recommended": [
-      "printing without an enclosure — warps at least as badly as pa6",
+      "printing without an enclosure \u2014 warps at least as badly as pa6",
       "humid or outdoor service without sealing",
       "budget projects (costs more than pa6 for a harder print)",
-      "beginners' first nylon — pa12 or a PA6/66 blend is the gentler entry point",
+      "beginners' first nylon \u2014 pa12 or a PA6/66 blend is the gentler entry point",
       "parts needing maximum impact toughness or elongation (pa12 is more ductile)",
-      "hotends limited to 250-260 °C, which cannot reach the high-performance grades"
+      "hotends limited to 250-260 \u00b0C, which cannot reach the high-performance grades"
     ]
   },
   "suitability": {
@@ -125,7 +125,7 @@
       "max": 85,
       "recommended": 75
     },
-    "notes": "Density is recorded at the literature homopolymer value of 1.14 g/cm³ — the heaviest unfilled grade in this family, consistent with PA66's tighter crystal packing — but the two product datasheets found read higher still (ABC3D low-warp 1.24, high-performance 1.19), which strongly suggests mineral or glass content in those formulations; see conflicts. Max service temp 135 °C with a service floor of -45 °C (ABC3D high-performance), the widest usable band of the four grades. Tg ~70 °C and HDT@0.45 MPa ~90 °C are literature figures for dry unfilled PA66, both modestly above pa6's 60 °C / 85 °C; as with all nylons they fall as the part takes up water. Tensile 55-85 MPa spans the grades; an Inslogic PA6/66 copolymer blend measures 79 MPa tensile and 103 MPa flexural but with a melt point of only 198 °C, confirming it is not this homopolymer. Shrinkage is reasoned upward from the base pa entry on crystallinity grounds, not a datasheet value."
+    "notes": "Density is recorded at the literature homopolymer value of 1.14 g/cm\u00b3 \u2014 the heaviest unfilled grade in this family, consistent with PA66's tighter crystal packing \u2014 but the two product datasheets found read higher still (ABC3D low-warp 1.24, high-performance 1.19), which strongly suggests mineral or glass content in those formulations; see conflicts. Max service temp 135 \u00b0C with a service floor of -45 \u00b0C (ABC3D high-performance), the widest usable band of the four grades. Tg ~70 \u00b0C and HDT@0.45 MPa ~90 \u00b0C are literature figures for dry unfilled PA66, both modestly above pa6's 60 \u00b0C / 85 \u00b0C; as with all nylons they fall as the part takes up water. Tensile 55-85 MPa spans the grades; an Inslogic PA6/66 copolymer blend measures 79 MPa tensile and 103 MPa flexural but with a melt point of only 198 \u00b0C, confirming it is not this homopolymer. Shrinkage is reasoned upward from the base pa entry on crystallinity grounds, not a datasheet value."
   },
   "scores": {
     "ease_of_print": 2,
@@ -147,18 +147,17 @@
       "pa6",
       "pa6-cf",
       "pa6-gf",
-      "pa612",
-      "pa66"
+      "pa612"
     ],
     "support_materials": [],
     "usable_as_support_for": [],
-    "notes": "Welds to itself and to the aliphatic polyamide family; the PA66/PA6 pair is the strongest cross-grade bond here because their nozzle windows overlap most, while PA66/PA12 is the weakest of the family pairings given the ~80 °C melt-point gap. No bond to pla, petg, abs, asa, pc, pp, pctg, pvb or pet. Soluble supports are out — pva and bvoh both degrade well below 275 °C — so same-material breakaway supports are standard. Build-plate chemistry is the practical adhesion story: a PA-specific adhesive or glue stick as a promoter, and a garolite sheet for anything large."
+    "notes": "Welds to itself and to the aliphatic polyamide family; the PA66/PA6 pair is the strongest cross-grade bond here because their nozzle windows overlap most, while PA66/PA12 is the weakest of the family pairings given the ~80 \u00b0C melt-point gap. No bond to pla, petg, abs, asa, pc, pp, pctg, pvb or pet. Soluble supports are out \u2014 pva and bvoh both degrade well below 275 \u00b0C \u2014 so same-material breakaway supports are standard. Build-plate chemistry is the practical adhesion story: a PA-specific adhesive or glue stick as a promoter, and a garolite sheet for anything large."
   },
   "plate_recommendations": [
     {
       "plate_id": "pei-textured",
       "rating": "usable",
-      "notes": "Usable with a PA adhesive, but the weakest recommendation of the four grades: PA66's higher shrinkage plus bed temperatures up to 130 °C on the high-performance line make edge lift likelier than with pa6, and standard textured PEI sheets are not comfortable at the top of that bed range. Garolite / G10 is the safer surface for pure PA66 and for any large footprint; the low-warp and PA6/66-blend products are more forgiving and may hold on textured PEI with adhesive alone (unverified — two ABC3D datasheets were still marked 'coming soon'). No garolite plate entry exists in the catalog yet, so it is recorded here in notes."
+      "notes": "Usable with a PA adhesive, but the weakest recommendation of the four grades: PA66's higher shrinkage plus bed temperatures up to 130 \u00b0C on the high-performance line make edge lift likelier than with pa6, and standard textured PEI sheets are not comfortable at the top of that bed range. Garolite / G10 is the safer surface for pure PA66 and for any large footprint; the low-warp and PA6/66-blend products are more forgiving and may hold on textured PEI with adhesive alone (unverified \u2014 two ABC3D datasheets were still marked 'coming soon'). No garolite plate entry exists in the catalog yet, so it is recorded here in notes."
     },
     {
       "plate_id": "pei-smooth",
@@ -174,23 +173,23 @@
   "alternatives": [
     {
       "filament_id": "pa6",
-      "reason": "Easier and cheaper for most of the same job (ease 3 vs 2, warp 9 vs 10, $35-70 vs $44-75) with a much better layer bond (adhesion 9 vs 7) — you give up stiffness, creep resistance and the ~135 °C service temperature (compression 7 vs 8, temp 5 vs 7)."
+      "reason": "Easier and cheaper for most of the same job (ease 3 vs 2, warp 9 vs 10, $35-70 vs $44-75) with a much better layer bond (adhesion 9 vs 7) \u2014 you give up stiffness, creep resistance and the ~135 \u00b0C service temperature (compression 7 vs 8, temp 5 vs 7)."
     },
     {
       "filament_id": "copa",
-      "reason": "Many spools labelled 'PA6/66' are really this copolymer, and it prints in another league (warp 3 vs 10, ease 5 vs 2, dim 5 vs 3) while keeping nylon toughness (adhesion 9 vs 7) — at lower heat resistance (temp 5 vs 7, HDT 111 °C) and a hardened-nozzle requirement."
+      "reason": "Many spools labelled 'PA6/66' are really this copolymer, and it prints in another league (warp 3 vs 10, ease 5 vs 2, dim 5 vs 3) while keeping nylon toughness (adhesion 9 vs 7) \u2014 at lower heat resistance (temp 5 vs 7, HDT 111 \u00b0C) and a hardened-nozzle requirement."
     },
     {
       "filament_id": "pa612",
-      "reason": "Keeps PA66-class stiffness and heat (compression 8 and temp 7, both equal) with a fraction of the warp (3 vs 10), better dimensional stability (7 vs 3) and better moisture behaviour (water 6 vs 2) — at ~$65-77/kg, a hardened nozzle and a weaker layer bond (4 vs 7)."
+      "reason": "Keeps PA66-class stiffness and heat (compression 8 and temp 7, both equal) with a fraction of the warp (3 vs 10), better dimensional stability (7 vs 3) and better moisture behaviour (water 6 vs 2) \u2014 at ~$65-77/kg, a hardened nozzle and a weaker layer bond (4 vs 7)."
     },
     {
       "filament_id": "pa6-cf",
-      "reason": "If PA66 was chosen for stiffness and heat, CF PA6 delivers more of both (compression 9 vs 8, temp 8 vs 7, HDT 175-215 °C) with warp 3 vs 10 — at $79-135/kg, a hardened nozzle and brittle Z behaviour (adhesion 4 vs 7)."
+      "reason": "If PA66 was chosen for stiffness and heat, CF PA6 delivers more of both (compression 9 vs 8, temp 8 vs 7, HDT 175-215 \u00b0C) with warp 3 vs 10 \u2014 at $79-135/kg, a hardened nozzle and brittle Z behaviour (adhesion 4 vs 7)."
     },
     {
       "filament_id": "ppa",
-      "reason": "The genuine high-temperature nylon when ~135 °C service is not enough: temp 9 vs 7 with HDT from 196 °C to 260 °C and Tg 125 °C — at $150-200/kg, a heated chamber, a 280-390 °C nozzle and even worse printability (ease 1 vs 2)."
+      "reason": "The genuine high-temperature nylon when ~135 \u00b0C service is not enough: temp 9 vs 7 with HDT from 196 \u00b0C to 260 \u00b0C and Tg 125 \u00b0C \u2014 at $150-200/kg, a heated chamber, a 280-390 \u00b0C nozzle and even worse printability (ease 1 vs 2)."
     }
   ],
   "emissions": {
@@ -202,10 +201,10 @@
       "caprolactam (from PA6/66 blends only)"
     ],
     "ventilation": "recommended",
-    "notes": "Same amide-family VOC and ultrafine-particle profile as pa6, but likely worse in practice because the high-performance grades run at 285-315 °C — well above pa6's 220-270 °C — and nylon emissions scale steeply with nozzle temperature. Note the one chemistry delta: PA66 is not a caprolactam source (that is PA6's monomer), so a spool that smells strongly of caprolactam is probably a PA6/66 blend. Source-capture extraction is recommended and becomes near-essential at the top of the temperature range. No PA66-specific emissions measurement was found; this is general nylon-family guidance scaled for temperature (unverified)."
+    "notes": "Same amide-family VOC and ultrafine-particle profile as pa6, but likely worse in practice because the high-performance grades run at 285-315 \u00b0C \u2014 well above pa6's 220-270 \u00b0C \u2014 and nylon emissions scale steeply with nozzle temperature. Note the one chemistry delta: PA66 is not a caprolactam source (that is PA6's monomer), so a spool that smells strongly of caprolactam is probably a PA6/66 blend. Source-capture extraction is recommended and becomes near-essential at the top of the temperature range. No PA66-specific emissions measurement was found; this is general nylon-family guidance scaled for temperature (unverified)."
   },
-  "safety_notes": "The high-performance grades need an all-metal hotend rated well past 300 °C — pushing a PTFE-lined hotend to 315 °C degrades the liner and releases fluoropolymer decomposition products. Keep drying at or below 90 °C to avoid deforming spools. Annealed PA66 parts harden noticeably and become ductile again as they re-absorb humidity; account for that before machining or tapping. Not food-contact suitable.",
-  "additional_notes": "Read the label carefully with this grade: a large share of filament sold as 'PA66' or 'PA6/66' is a copolymer blend engineered to reduce warping and improve layer adhesion, and it prints far more easily than homopolymer PA66 — the giveaway is a melt point near 198 °C and a bed temperature around 50 °C rather than 100-130 °C. This entry describes the homopolymer. Against its siblings PA66 is the stiffness-and-heat choice among the aliphatic grades: better wear resistance and creep resistance than pa6, far more heat capability than pa12, and none of ppa's hardware requirements — at the cost of being the hardest of the three to keep flat and dry.",
+  "safety_notes": "The high-performance grades need an all-metal hotend rated well past 300 \u00b0C \u2014 pushing a PTFE-lined hotend to 315 \u00b0C degrades the liner and releases fluoropolymer decomposition products. Keep drying at or below 90 \u00b0C to avoid deforming spools. Annealed PA66 parts harden noticeably and become ductile again as they re-absorb humidity; account for that before machining or tapping. Not food-contact suitable.",
+  "additional_notes": "Read the label carefully with this grade: a large share of filament sold as 'PA66' or 'PA6/66' is a copolymer blend engineered to reduce warping and improve layer adhesion, and it prints far more easily than homopolymer PA66 \u2014 the giveaway is a melt point near 198 \u00b0C and a bed temperature around 50 \u00b0C rather than 100-130 \u00b0C. This entry describes the homopolymer. Against its siblings PA66 is the stiffness-and-heat choice among the aliphatic grades: better wear resistance and creep resistance than pa6, far more heat capability than pa12, and none of ppa's hardware requirements \u2014 at the cost of being the hardest of the three to keep flat and dry.",
   "provenance": {
     "sources": [
       "https://abc3d.ca/product/nylon-66-low-warp-filament/",
@@ -219,6 +218,6 @@
     ],
     "last_verified": "2026-07-31",
     "confidence": "low",
-    "conflicts": "Confidence is 'low' because pure single-resin PA66 filament is rare and the available sources conflict badly. Nozzle temperature spans 255-275 °C (ABC3D low-warp) against 285-315 °C (ABC3D high-performance) with bed 60-70 °C against 130 °C — it is unverified which represents 'pure' PA66 and whether the high-performance grade is filled. Density likewise: literature unfilled PA66 is 1.14 g/cm³ but both ABC3D products read 1.19-1.24, implying additives; 1.14 is recorded as the homopolymer value and the product figures are flagged rather than averaged in. Tg (70 °C), HDT (90 °C) and shrinkage are literature/reasoned values, not figures from a filament datasheet. Products sold as 'PA6/66' are copolymer blends with a 198 °C melt point and materially easier printing — their numbers are cited here for contrast only, not merged into this entry. No filled PA66-CF/GF datasheet was obtained (ABC3D lists such a product); flag for follow-up. Emissions and AMS behaviour for PA66 specifically are inferred from PA6, not measured."
+    "conflicts": "Confidence is 'low' because pure single-resin PA66 filament is rare and the available sources conflict badly. Nozzle temperature spans 255-275 \u00b0C (ABC3D low-warp) against 285-315 \u00b0C (ABC3D high-performance) with bed 60-70 \u00b0C against 130 \u00b0C \u2014 it is unverified which represents 'pure' PA66 and whether the high-performance grade is filled. Density likewise: literature unfilled PA66 is 1.14 g/cm\u00b3 but both ABC3D products read 1.19-1.24, implying additives; 1.14 is recorded as the homopolymer value and the product figures are flagged rather than averaged in. Tg (70 \u00b0C), HDT (90 \u00b0C) and shrinkage are literature/reasoned values, not figures from a filament datasheet. Products sold as 'PA6/66' are copolymer blends with a 198 \u00b0C melt point and materially easier printing \u2014 their numbers are cited here for contrast only, not merged into this entry. No filled PA66-CF/GF datasheet was obtained (ABC3D lists such a product); flag for follow-up. Emissions and AMS behaviour for PA66 specifically are inferred from PA6, not measured."
   }
 }

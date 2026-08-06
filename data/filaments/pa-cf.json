@@ -13,8 +13,8 @@
   "base_type": "pa",
   "variation_kind": "carbon-fiber-filled",
   "polymer_class": "composite-other",
-  "chemical_makeup": "Chopped carbon fiber in a polyamide matrix whose grade the vendor does not disclose — most commonly a PA6/66 copolymer rather than a homopolymer. eSUN, the one brand in this class that publishes its chemistry, states outright that ePA-CF is 'developed based on nylon 6/66 copolymer, adding 20% carbon fiber'; addnorth's Adura X is described as a CF-reinforced copolyamide, and kingroon calls its base a 'specialty nylon copolymer'. A copolymer amide backbone sits between PA6 and PA12 in crystallinity: less regular than PA6, so it melts lower and shrinks less, but with the same abundant amide hydrogen bonds that make nylon hygroscopic. The fiber is physical reinforcement only and changes none of that.",
-  "summary": "The catch-all entry for carbon-fiber nylon whose polyamide grade is not published — 11 brands sell one, and none of pa6-cf, pa12-cf or ppa-cf can be asserted for them. Deltas vs the base pa entry: tensile and stiffness climb sharply (flexural modulus ~4.4 GPa, tensile 84-140 MPa depending on which eSUN figure you trust), HDT@0.45 MPa rises from ~80 °C to ~155 °C, and warp collapses from 9 to 4 as the fiber restrains shrinkage — paid for with a mandatory hardened nozzle and no soluble-support option. Deltas vs the named-grade siblings: cheaper than all three ($40-60/kg against pa6-cf's $79-135 and pa12-cf's $130-180), but its mechanical numbers are lower than pa6-cf's and its unknown blend makes it the least predictable — the reason to reach for it is price and availability, not performance.",
+  "chemical_makeup": "Chopped carbon fiber in a polyamide matrix whose grade the vendor does not disclose \u2014 most commonly a PA6/66 copolymer rather than a homopolymer. eSUN, the one brand in this class that publishes its chemistry, states outright that ePA-CF is 'developed based on nylon 6/66 copolymer, adding 20% carbon fiber'; addnorth's Adura X is described as a CF-reinforced copolyamide, and kingroon calls its base a 'specialty nylon copolymer'. A copolymer amide backbone sits between PA6 and PA12 in crystallinity: less regular than PA6, so it melts lower and shrinks less, but with the same abundant amide hydrogen bonds that make nylon hygroscopic. The fiber is physical reinforcement only and changes none of that.",
+  "summary": "The catch-all entry for carbon-fiber nylon whose polyamide grade is not published \u2014 11 brands sell one, and none of pa6-cf, pa12-cf or ppa-cf can be asserted for them. Deltas vs the base pa entry: tensile and stiffness climb sharply (flexural modulus ~4.4 GPa, tensile 84-140 MPa depending on which eSUN figure you trust), HDT@0.45 MPa rises from ~80 \u00b0C to ~155 \u00b0C, and warp collapses from 9 to 4 as the fiber restrains shrinkage \u2014 paid for with a mandatory hardened nozzle and no soluble-support option. Deltas vs the named-grade siblings: cheaper than all three ($40-60/kg against pa6-cf's $79-135 and pa12-cf's $130-180), but its mechanical numbers are lower than pa6-cf's and its unknown blend makes it the least predictable \u2014 the reason to reach for it is price and availability, not performance.",
   "printing": {
     "nozzle_temp_c": {
       "min": 240,
@@ -45,13 +45,13 @@
       "recommended": 0
     },
     "enclosure_open_for_cooling": false,
-    "notes": "The window is wider than any named-grade CF nylon in this catalog because the entry pools brands rather than describing one resin: eSUN tests 260-300 °C, most budget PA-CF lines cluster 250-280 °C, and the recorded 240 °C floor covers the lower-melting copolymer blends. Bed guidance is the same kind of spread — eSUN recommends 80 °C with a 45-60 °C tested minimum, while the CF-nylon norm carried from pa6-cf and 3DXTech's PA6-CF/PA12-CF guidance is 90-110 °C; 80 °C follows eSUN because it is the only primary datasheet here. Part cooling stays at 0 % (eSUN), as on every nylon in this catalog — fan air splits the already-weak fiber-filled layer bond. Speed is the one place this is slower than pa6-cf: community guidance for CF nylon on consumer machines is 30-50 % of a normal PLA speed to keep extrusion even, so the ceiling is recorded at 100 mm/s against pa6-cf's 150. An enclosure is recommended, and unlike pa6-cf there is no CNC Kitchen-style evidence that open-frame printing works for this class, so treat the enclosure as closer to mandatory. Hardened steel or ruby nozzle is specified by eSUN and is unanimous in community guidance."
+    "notes": "The window is wider than any named-grade CF nylon in this catalog because the entry pools brands rather than describing one resin: eSUN tests 260-300 \u00b0C, most budget PA-CF lines cluster 250-280 \u00b0C, and the recorded 240 \u00b0C floor covers the lower-melting copolymer blends. Bed guidance is the same kind of spread \u2014 eSUN recommends 80 \u00b0C with a 45-60 \u00b0C tested minimum, while the CF-nylon norm carried from pa6-cf and 3DXTech's PA6-CF/PA12-CF guidance is 90-110 \u00b0C; 80 \u00b0C follows eSUN because it is the only primary datasheet here. Part cooling stays at 0 % (eSUN), as on every nylon in this catalog \u2014 fan air splits the already-weak fiber-filled layer bond. Speed is the one place this is slower than pa6-cf: community guidance for CF nylon on consumer machines is 30-50 % of a normal PLA speed to keep extrusion even, so the ceiling is recorded at 100 mm/s against pa6-cf's 150. An enclosure is recommended, and unlike pa6-cf there is no CNC Kitchen-style evidence that open-frame printing works for this class, so treat the enclosure as closer to mandatory. Hardened steel or ruby nozzle is specified by eSUN and is unanimous in community guidance."
   },
   "feeding": {
     "drive_system": "any",
     "ams_compatible": "conditional",
     "feeding_assistant_recommended": false,
-    "notes": "Rigid, so any extruder feeds it, and no feeding assistant applies (not an elastomer, no shore hardness). Hardened extruder gears matter as much as the nozzle — chopped fiber wears standard drive gears over a spool. The AMS answer is a deliberate step up from pa6-cf's flat 'no' and down from the base pa entry's 'yes': the limiting factor here is moisture rather than brittleness, because a copolymer PA-CF strand is less brittle than a 20 % PA6-CF one but absorbs just as eagerly. A passive unit (AMS Lite class) cannot keep nylon dry through a long print and is functionally an open-air spool holder; only an actively heated, humidity-controlled unit (AMS 2 Pro class) is suitable, and even then the fiber abrades the PTFE path. The default recommendation is an external heated drybox feeding the extruder directly. No vendor publishes an AMS verdict for a generic PA-CF (unverified)."
+    "notes": "Rigid, so any extruder feeds it, and no feeding assistant applies (not an elastomer, no shore hardness). Hardened extruder gears matter as much as the nozzle \u2014 chopped fiber wears standard drive gears over a spool. The AMS answer is a deliberate step up from pa6-cf's flat 'no' and down from the base pa entry's 'yes': the limiting factor here is moisture rather than brittleness, because a copolymer PA-CF strand is less brittle than a 20 % PA6-CF one but absorbs just as eagerly. A passive unit (AMS Lite class) cannot keep nylon dry through a long print and is functionally an open-air spool holder; only an actively heated, humidity-controlled unit (AMS 2 Pro class) is suitable, and even then the fiber abrades the PTFE path. The default recommendation is an external heated drybox feeding the extruder directly. No vendor publishes an AMS verdict for a generic PA-CF (unverified)."
   },
   "drying": {
     "required_before_use": "always",
@@ -66,24 +66,24 @@
       "recommended": 12
     },
     "methods": [
-      "dedicated filament dryer at 70-80 °C",
-      "blast/convection oven at 70 °C for 12 h or more",
+      "dedicated filament dryer at 70-80 \u00b0C",
+      "blast/convection oven at 70 \u00b0C for 12 h or more",
       "food dehydrator",
       "print directly from a heated dryer",
       "sealed drybox with desiccant while printing"
     ],
-    "dryness_validation": "No audible popping or crackling and no visible steam at the nozzle — the standard nylon check, and the only one the sources here document ('if it pops or crackles while printing, it is wet'). Back it with a void-free purge line and stringing that collapses to baseline. Surface gloss is useless as an indicator because the fiber-filled finish is matte by design.",
-    "notes": "eSUN specifies 70 °C for over 12 h; community practice for the category is 80 °C for 8-12 h in an actively dried box with the print fed straight from the dryer. Both are longer than abs-cf's or pet-gf's schedules and in the same tier as pa6-cf's, because the copolymer PA6/66 base is as hygroscopic as PA6 in kind if not quite in degree. No brand publishes a moisture-uptake figure for a generic PA-CF; PA6's documented 3-9 wt% (3DXTech) is the directional reference, against PA12's under 1 %."
+    "dryness_validation": "No audible popping or crackling and no visible steam at the nozzle \u2014 the standard nylon check, and the only one the sources here document ('if it pops or crackles while printing, it is wet'). Back it with a void-free purge line and stringing that collapses to baseline. Surface gloss is useless as an indicator because the fiber-filled finish is matte by design.",
+    "notes": "eSUN specifies 70 \u00b0C for over 12 h; community practice for the category is 80 \u00b0C for 8-12 h in an actively dried box with the print fed straight from the dryer. Both are longer than abs-cf's or pet-gf's schedules and in the same tier as pa6-cf's, because the copolymer PA6/66 base is as hygroscopic as PA6 in kind if not quite in degree. No brand publishes a moisture-uptake figure for a generic PA-CF; PA6's documented 3-9 wt% (3DXTech) is the directional reference, against PA12's under 1 %."
   },
   "storage": {
-    "recommendations": "Vacuum bag or sealed box with fresh desiccant between every print, not just between projects — this class reabsorbs enough moisture within hours of open-air exposure to print badly. Treat a heated drybox on the printer as the normal operating state. Same regime as pa6-cf; the exact reabsorption curve for a copolymer base is unpublished.",
+    "recommendations": "Vacuum bag or sealed box with fresh desiccant between every print, not just between projects \u2014 this class reabsorbs enough moisture within hours of open-air exposure to print badly. Treat a heated drybox on the printer as the normal operating state. Same regime as pa6-cf; the exact reabsorption curve for a copolymer base is unpublished.",
     "max_humidity_pct": 15,
     "hygroscopy": "extreme"
   },
   "price": {
     "usd_per_kg_low": 40,
     "usd_per_kg_high": 60,
-    "notes": "eSUN ePA-CF at $51.67/kg (3DJake) is the one verified figure; budget and OEM-branded PA-CF generally lands $40-60/kg. This is the cheapest carbon-fiber nylon in the catalog by a wide margin — roughly half pa6-cf's $79-135/kg and a third of pa12-cf's $130-180/kg — and that price gap, not any performance advantage, is why 11 manufacturers ship an unspecified-grade PA-CF alongside the named ones."
+    "notes": "eSUN ePA-CF at $51.67/kg (3DJake) is the one verified figure; budget and OEM-branded PA-CF generally lands $40-60/kg. This is the cheapest carbon-fiber nylon in the catalog by a wide margin \u2014 roughly half pa6-cf's $79-135/kg and a third of pa12-cf's $130-180/kg \u2014 and that price gap, not any performance advantage, is why 11 manufacturers ship an unspecified-grade PA-CF alongside the named ones."
   },
   "use_cases": {
     "recommended": [
@@ -92,14 +92,14 @@
       "brackets and mounts for indoor equipment",
       "budget substitutes for pa6-cf where the exact polyamide grade is not design-critical",
       "parts that can be oriented so load runs in-plane",
-      "hot-environment tooling that would soften in abs-cf (155 °C HDT against 97 °C)"
+      "hot-environment tooling that would soften in abs-cf (155 \u00b0C HDT against 97 \u00b0C)"
     ],
     "not_recommended": [
-      "parts held to tight tolerances across humidity swings — the undisclosed copolymer base reacts more to moisture than pa12-cf",
+      "parts held to tight tolerances across humidity swings \u2014 the undisclosed copolymer base reacts more to moisture than pa12-cf",
       "engineering work needing a traceable datasheet: the polyamide grade is unpublished, so numbers are not transferable between brands",
       "bushings, bearings and low-friction surfaces (the fiber removes the low-friction behaviour nylon is usually bought for)",
       "outdoor or UV-exposed parts without added stabilisation",
-      "impact-critical parts — the fiber trades away nylon's toughness",
+      "impact-critical parts \u2014 the fiber trades away nylon's toughness",
       "brass-nozzle printers and passive material stations"
     ]
   },
@@ -120,7 +120,7 @@
       "max": 140,
       "recommended": 105
     },
-    "notes": "All figures are eSUN ePA-CF, the only primary datasheet available for an undisclosed-grade PA-CF: density 1.24 g/cm³, elongation at break 10.6 %, flexural strength 140 MPa, flexural modulus 4363 MPa, HDT@0.45 MPa 155 °C, melt flow 11.46 g/10 min (275 °C/5 kg), continuous service ~120 °C. Density 1.24 is the highest of the CF nylons here (pa6-cf 1.17, pa12-cf 1.06), so 100 g yields only 80.6 cm³ against pa6-cf's 85.5 — a real cost-per-part difference. Tensile is the entry's weakest number: eSUN's own TDS quotes 140 MPa while the eSUN figures already recorded on the pa6-cf entry give 84.05 MPa XY / 50.34 MPa Z, a Z/XY ratio of 0.60; the recorded 84-140 MPa band spans both and 105 MPa follows the pa6-cf-style XY convention. Stiffness is the honest differentiator against pa6-cf: 4363 MPa flexural modulus is roughly half pa6-cf's published >8.6 GPa, so this is a mid-tier composite, not a peak one. Glass transition and shrinkage are not published by any brand in this class and are deliberately omitted rather than inherited — the copolymer base makes the pa6 grade's Tg 60 °C a poor guess."
+    "notes": "All figures are eSUN ePA-CF, the only primary datasheet available for an undisclosed-grade PA-CF: density 1.24 g/cm\u00b3, elongation at break 10.6 %, flexural strength 140 MPa, flexural modulus 4363 MPa, HDT@0.45 MPa 155 \u00b0C, melt flow 11.46 g/10 min (275 \u00b0C/5 kg), continuous service ~120 \u00b0C. Density 1.24 is the highest of the CF nylons here (pa6-cf 1.17, pa12-cf 1.06), so 100 g yields only 80.6 cm\u00b3 against pa6-cf's 85.5 \u2014 a real cost-per-part difference. Tensile is the entry's weakest number: eSUN's own TDS quotes 140 MPa while the eSUN figures already recorded on the pa6-cf entry give 84.05 MPa XY / 50.34 MPa Z, a Z/XY ratio of 0.60; the recorded 84-140 MPa band spans both and 105 MPa follows the pa6-cf-style XY convention. Stiffness is the honest differentiator against pa6-cf: 4363 MPa flexural modulus is roughly half pa6-cf's published >8.6 GPa, so this is a mid-tier composite, not a peak one. Glass transition and shrinkage are not published by any brand in this class and are deliberately omitted rather than inherited \u2014 the copolymer base makes the pa6 grade's Tg 60 \u00b0C a poor guess."
   },
   "scores": {
     "ease_of_print": 4,
@@ -137,7 +137,6 @@
     "bonds_with": [
       "copa",
       "pa",
-      "pa-cf",
       "pa12",
       "pa6",
       "pa6-cf",
@@ -149,7 +148,7 @@
       "support-breakaway"
     ],
     "usable_as_support_for": [],
-    "notes": "Welds to itself and across the polyamide family — shared amide chemistry and overlapping melt windows — with the usual caveat that a copolymer base melts a little lower than PA6, so a PA6/PA-CF interface runs at the copolymer's ceiling. It does not bond to pla, petg, abs, asa, pc, pp or pet, and at 240-300 °C no PLA or PETG breakaway interface survives contact. Soluble supports are out: pva and bvoh both degrade well below this nozzle range. Same-material breakaway is the practical route and this class is normally printed single-material. Poor as a support for other polymers — weak cross-bonding and a fiber-roughened interface. Support pairings here are inherited from pa6-cf rather than tested for this class (unverified)."
+    "notes": "Welds to itself and across the polyamide family \u2014 shared amide chemistry and overlapping melt windows \u2014 with the usual caveat that a copolymer base melts a little lower than PA6, so a PA6/PA-CF interface runs at the copolymer's ceiling. It does not bond to pla, petg, abs, asa, pc, pp or pet, and at 240-300 \u00b0C no PLA or PETG breakaway interface survives contact. Soluble supports are out: pva and bvoh both degrade well below this nozzle range. Same-material breakaway is the practical route and this class is normally printed single-material. Poor as a support for other polymers \u2014 weak cross-bonding and a fiber-roughened interface. Support pairings here are inherited from pa6-cf rather than tested for this class (unverified)."
   },
   "plate_recommendations": [
     {
@@ -160,7 +159,7 @@
     {
       "plate_id": "pei-textured",
       "rating": "usable",
-      "notes": "Works, but plan the interface deliberately. Nylon bonds hard to bare and smooth PEI and can be difficult to release without damaging the sheet; textured PEI reduces that over-adhesion, while a PA glue stick or PVA-based adhesive is still commonly applied — here as a release layer as much as a promoter, the opposite of the reasoning used on pa6-cf. General nylon-on-PEI community consensus, not vendor-tested for this class (unverified)."
+      "notes": "Works, but plan the interface deliberately. Nylon bonds hard to bare and smooth PEI and can be difficult to release without damaging the sheet; textured PEI reduces that over-adhesion, while a PA glue stick or PVA-based adhesive is still commonly applied \u2014 here as a release layer as much as a promoter, the opposite of the reasoning used on pa6-cf. General nylon-on-PEI community consensus, not vendor-tested for this class (unverified)."
     },
     {
       "plate_id": "carbon-fiber-plate",
@@ -180,25 +179,25 @@
     {
       "plate_id": "pc-plate",
       "rating": "avoid",
-      "notes": "As pa6-cf: CF nylons want 80-110 °C beds, above this plate's working range."
+      "notes": "As pa6-cf: CF nylons want 80-110 \u00b0C beds, above this plate's working range."
     }
   ],
   "alternatives": [
     {
       "filament_id": "pa6-cf",
-      "reason": "The named-grade version of what most of these unlabelled spools probably are: higher stiffness and heat (compression 9 vs 7, temp 8 vs 7, HDT 175-215 vs ~155 °C) with published Z numbers and lower warp (3 vs 4) — at roughly double the price ($79-135 vs $40-60)."
+      "reason": "The named-grade version of what most of these unlabelled spools probably are: higher stiffness and heat (compression 9 vs 7, temp 8 vs 7, HDT 175-215 vs ~155 \u00b0C) with published Z numbers and lower warp (3 vs 4) \u2014 at roughly double the price ($79-135 vs $40-60)."
     },
     {
       "filament_id": "pa12-cf",
-      "reason": "When humidity is the real enemy: dimensional stability 9 vs 5, warp 2 vs 4 and water tolerance 8 vs 3, holding ~85 % of dry tensile after conditioning — at $130-180/kg and a lower heat ceiling (temp 6 vs 7)."
+      "reason": "When humidity is the real enemy: dimensional stability 9 vs 5, warp 2 vs 4 and water tolerance 8 vs 3, holding ~85 % of dry tensile after conditioning \u2014 at $130-180/kg and a lower heat ceiling (temp 6 vs 7)."
     },
     {
       "filament_id": "pa6-gf",
-      "reason": "Glass instead of carbon on a named base: more impact-tough with a better layer bond (adhesion 6 vs 4), less abrasive, colourable and hotter (temp 8 vs 7, HDT ~182 °C) — at $55-65/kg against $40-60."
+      "reason": "Glass instead of carbon on a named base: more impact-tough with a better layer bond (adhesion 6 vs 4), less abrasive, colourable and hotter (temp 8 vs 7, HDT ~182 \u00b0C) \u2014 at $55-65/kg against $40-60."
     },
     {
       "filament_id": "pa",
-      "reason": "Unfilled nylon if toughness beats stiffness: layer adhesion 9 vs 4 and real ductility, no hardened nozzle and soluble-support options — at warp 9 vs 4 and dimensional stability 3 vs 5."
+      "reason": "Unfilled nylon if toughness beats stiffness: layer adhesion 9 vs 4 and real ductility, no hardened nozzle and soluble-support options \u2014 at warp 9 vs 4 and dimensional stability 3 vs 5."
     },
     {
       "filament_id": "petg-cf",
@@ -215,10 +214,10 @@
       "respirable carbon fiber dust (post-processing)"
     ],
     "ventilation": "recommended",
-    "notes": "Nylon-first profile carried from the base pa entry and pa6-cf: caprolactam-type VOCs and a strong characteristic odour, emitted more heavily above ~250 °C, which is most of this working range. A PA6/66 copolymer is still a caprolactam source, so the rating does not drop to pa12-cf's 'moderate'. Less acutely irritating than the styrene from abs-cf, but venting is still warranted in an enclosed room. No quantitative emissions measurement exists for any PA-CF grade (unverified). The bench hazard is separate and real: sanding, drilling or cutting printed parts liberates respirable carbon fiber fines."
+    "notes": "Nylon-first profile carried from the base pa entry and pa6-cf: caprolactam-type VOCs and a strong characteristic odour, emitted more heavily above ~250 \u00b0C, which is most of this working range. A PA6/66 copolymer is still a caprolactam source, so the rating does not drop to pa12-cf's 'moderate'. Less acutely irritating than the styrene from abs-cf, but venting is still warranted in an enclosed room. No quantitative emissions measurement exists for any PA-CF grade (unverified). The bench hazard is separate and real: sanding, drilling or cutting printed parts liberates respirable carbon fiber fines."
   },
-  "safety_notes": "Abrasive: chopped carbon fiber wears a brass nozzle visibly within a spool, so hardened steel or ruby is mandatory, and hardened extruder gears are strongly advised. Do not dry-sand, drill or machine printed parts without a respirator and dust capture. Keep drying below 90 °C to avoid deforming spools. Not food-contact suitable — no PA-CF grade carries a food-contact claim, the fiber-roughened surface traps bacteria, and fibers can shed.",
-  "additional_notes": "Use this entry when the vendor does not say which polyamide is in the spool, and treat every number in it as brand-specific rather than categorical: an undisclosed 'nylon copolymer + high-modulus carbon fiber' from one brand and eSUN's stated PA6/66 + 20 % CF are not guaranteed to be the same material. If the datasheet names PA6, PA12 or PPA, use pa6-cf, pa12-cf or ppa-cf instead — those entries carry real grade-specific data. The practical decision against pa6-cf is price versus predictability: this class costs roughly half as much and prints similarly, but its stiffness is about half pa6-cf's published figure and its moisture behaviour is inferred rather than measured. Against pa12-cf the gap is humidity: PA12-CF's properties barely move when the part equilibrates with damp air, and nothing in this class can claim that.",
+  "safety_notes": "Abrasive: chopped carbon fiber wears a brass nozzle visibly within a spool, so hardened steel or ruby is mandatory, and hardened extruder gears are strongly advised. Do not dry-sand, drill or machine printed parts without a respirator and dust capture. Keep drying below 90 \u00b0C to avoid deforming spools. Not food-contact suitable \u2014 no PA-CF grade carries a food-contact claim, the fiber-roughened surface traps bacteria, and fibers can shed.",
+  "additional_notes": "Use this entry when the vendor does not say which polyamide is in the spool, and treat every number in it as brand-specific rather than categorical: an undisclosed 'nylon copolymer + high-modulus carbon fiber' from one brand and eSUN's stated PA6/66 + 20 % CF are not guaranteed to be the same material. If the datasheet names PA6, PA12 or PPA, use pa6-cf, pa12-cf or ppa-cf instead \u2014 those entries carry real grade-specific data. The practical decision against pa6-cf is price versus predictability: this class costs roughly half as much and prints similarly, but its stiffness is about half pa6-cf's published figure and its moisture behaviour is inferred rather than measured. Against pa12-cf the gap is humidity: PA12-CF's properties barely move when the part equilibrates with damp air, and nothing in this class can claim that.",
   "provenance": {
     "sources": [
       "https://www.esun3d.com/uploads/eSUN_ePA-CF-Filament_TDS_V4.0.pdf",
@@ -231,7 +230,7 @@
     ],
     "last_verified": "2026-08-01",
     "confidence": "low",
-    "conflicts": "The category itself is the largest conflict: 'PA-CF' is not a controlled designation the way PA6-CF and PA12-CF are, so the 11 products mapped here need not share a resin. Only eSUN publishes its chemistry (PA6/66 copolymer + 20 % CF); the rest disclose neither the polyamide grade nor the fiber loading, which makes cross-brand comparison of any mechanical number unsound. Tensile disagrees inside a single brand: eSUN's own TDS states 140 MPa while the eSUN figures recorded on the pa6-cf entry are 84.05 MPa XY / 50.34 MPa Z — plausibly different test specimens or revisions, recorded as an 84-140 MPa band. Bed temperature splits between eSUN's 80 °C recommendation (45-60 °C tested minimum) and the 90-110 °C CF-nylon norm; the entry follows eSUN and contradicts the norm. Tg, shrinkage and moisture-uptake percentage are unpublished for every product in this class and are omitted rather than inherited from pa6. Moisture-driven strength loss is scored from PA6-CF's documented 44 % tensile loss when wet, applied directionally — no measurement exists for a copolymer base. AMS status is community consensus about passive versus actively heated units, not a vendor certification. UV data does not exist for any product here; uv_tolerance 3 is carried from the polyamide family. eSUN ePA-CF is currently listed as a trade name on pa6-cf with a note that its base is a copolymer, not straight PA6 — by that note it belongs on this entry instead, and the mapping should be reviewed."
+    "conflicts": "The category itself is the largest conflict: 'PA-CF' is not a controlled designation the way PA6-CF and PA12-CF are, so the 11 products mapped here need not share a resin. Only eSUN publishes its chemistry (PA6/66 copolymer + 20 % CF); the rest disclose neither the polyamide grade nor the fiber loading, which makes cross-brand comparison of any mechanical number unsound. Tensile disagrees inside a single brand: eSUN's own TDS states 140 MPa while the eSUN figures recorded on the pa6-cf entry are 84.05 MPa XY / 50.34 MPa Z \u2014 plausibly different test specimens or revisions, recorded as an 84-140 MPa band. Bed temperature splits between eSUN's 80 \u00b0C recommendation (45-60 \u00b0C tested minimum) and the 90-110 \u00b0C CF-nylon norm; the entry follows eSUN and contradicts the norm. Tg, shrinkage and moisture-uptake percentage are unpublished for every product in this class and are omitted rather than inherited from pa6. Moisture-driven strength loss is scored from PA6-CF's documented 44 % tensile loss when wet, applied directionally \u2014 no measurement exists for a copolymer base. AMS status is community consensus about passive versus actively heated units, not a vendor certification. UV data does not exist for any product here; uv_tolerance 3 is carried from the polyamide family. eSUN ePA-CF is currently listed as a trade name on pa6-cf with a note that its base is a copolymer, not straight PA6 \u2014 by that note it belongs on this entry instead, and the mapping should be reviewed."
   },
   "trade_names": [
     {
@@ -252,12 +251,12 @@
     {
       "manufacturer": "azurefilm",
       "product": "Carbon Fiber PAHT",
-      "notes": "Heat-stabilised polyamide + carbon fibre rated to 160 °C continuous; PA6 vs PA6/66 undisclosed, and 160 °C is below PPA territory, so ppa-cf would overstate it."
+      "notes": "Heat-stabilised polyamide + carbon fibre rated to 160 \u00b0C continuous; PA6 vs PA6/66 undisclosed, and 160 \u00b0C is below PPA territory, so ppa-cf would overstate it."
     },
     {
       "manufacturer": "bambu-lab",
       "product": "PAHT-CF",
-      "notes": "Relocated from ppa-cf: Bambu's own TDS states PA12 + long-chain aliphatic PA base (Tm 225C, Tg 70C), not polyphthalamide. Other vendors' 'PAHT-CF' may be true PPA — check per product. Fable review 2026-08-01."
+      "notes": "Relocated from ppa-cf: Bambu's own TDS states PA12 + long-chain aliphatic PA base (Tm 225C, Tg 70C), not polyphthalamide. Other vendors' 'PAHT-CF' may be true PPA \u2014 check per product. Fable review 2026-08-01."
     },
     {
       "manufacturer": "colorfabb",
@@ -272,7 +271,7 @@
     {
       "manufacturer": "esun",
       "product": "ePA-CF (PA-CF)",
-      "notes": "Nylon 6/66 copolymer + 20% CF; tensile 84.05 MPa XY / 50.34 MPa Z, density 1.24 g/cm3. Copolymer base, not straight PA6 [Relocated from pa6-cf — chemistry match, Fable review 2026-08-01]"
+      "notes": "Nylon 6/66 copolymer + 20% CF; tensile 84.05 MPa XY / 50.34 MPa Z, density 1.24 g/cm3. Copolymer base, not straight PA6 [Relocated from pa6-cf \u2014 chemistry match, Fable review 2026-08-01]"
     },
     {
       "manufacturer": "filament-pm",

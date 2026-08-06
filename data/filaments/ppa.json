@@ -15,8 +15,8 @@
   "base_type": "pa",
   "variation_kind": "grade",
   "polymer_class": "polyamide",
-  "chemical_makeup": "Semi-aromatic polyamide in which part of the aliphatic diacid is replaced by a phthalic-acid-derived aromatic unit. The rigid aromatic ring in the backbone raises Tg from PA6's ~60 °C to ~125 °C and the melting point to ~305 °C, and simultaneously cuts moisture uptake — the whole property set follows from that one substitution. Commercial FDM PPA is almost always compounded with chopped carbon fiber (PPA-CF) or glass fiber (PPA-GF15/GF30).",
-  "summary": "The high-temperature tier of the polyamide family and the hardest material in this catalog outside the PEEK class. Deltas vs the base pa entry: melting point ~305 °C against PA6's ~220 °C, Tg 125 °C against ~50 °C, HDT from 196 °C @1.8 MPa (Bambu PPA-CF) to 260 °C (3DXTech PPA-GF15), tensile up to 168 MPa X-Y, and saturated water absorption of only ~1.3 %. It pays for all of it with the family's most extreme process window: 280-390 °C nozzle, 100-160 °C bed, a heated chamber, a hardened nozzle and 100-140 °C drying — plus roughly triple the price of pa6.",
+  "chemical_makeup": "Semi-aromatic polyamide in which part of the aliphatic diacid is replaced by a phthalic-acid-derived aromatic unit. The rigid aromatic ring in the backbone raises Tg from PA6's ~60 \u00b0C to ~125 \u00b0C and the melting point to ~305 \u00b0C, and simultaneously cuts moisture uptake \u2014 the whole property set follows from that one substitution. Commercial FDM PPA is almost always compounded with chopped carbon fiber (PPA-CF) or glass fiber (PPA-GF15/GF30).",
+  "summary": "The high-temperature tier of the polyamide family and the hardest material in this catalog outside the PEEK class. Deltas vs the base pa entry: melting point ~305 \u00b0C against PA6's ~220 \u00b0C, Tg 125 \u00b0C against ~50 \u00b0C, HDT from 196 \u00b0C @1.8 MPa (Bambu PPA-CF) to 260 \u00b0C (3DXTech PPA-GF15), tensile up to 168 MPa X-Y, and saturated water absorption of only ~1.3 %. It pays for all of it with the family's most extreme process window: 280-390 \u00b0C nozzle, 100-160 \u00b0C bed, a heated chamber, a hardened nozzle and 100-140 \u00b0C drying \u2014 plus roughly triple the price of pa6.",
   "printing": {
     "nozzle_temp_c": {
       "min": 280,
@@ -47,13 +47,13 @@
       "max": 10,
       "recommended": 0
     },
-    "notes": "Two very different hardware tiers hide inside this window and the recommended values follow the prosumer one. Bambu's PPA-CF runs 280-310 °C nozzle (0.6 mm recommended), 100-120 °C bed and a 50-80 °C chamber; 3DXTech's FibreX PPA-GF15 runs 365-390 °C nozzle, 140-160 °C bed and a chamber up to 140 °C on what it explicitly calls industrial-grade hardware. heated_chamber_required is recorded true — it is the only grade in this family to earn that, and the flag is what separates PPA from pa6/pa12/pa66, whose enclosures are passive. Chamber heat retention is critical against delamination, so never open the door: enclosure_open_for_cooling is false and part cooling stays at 0 %. requires_hardened_nozzle is true because essentially every commercial PPA filament is CF- or GF-filled, and fibre abrasion at these temperatures wears a nozzle faster than in any PA6/PA12 composite; neat unfilled PPA would not need one but is not realistically available."
+    "notes": "Two very different hardware tiers hide inside this window and the recommended values follow the prosumer one. Bambu's PPA-CF runs 280-310 \u00b0C nozzle (0.6 mm recommended), 100-120 \u00b0C bed and a 50-80 \u00b0C chamber; 3DXTech's FibreX PPA-GF15 runs 365-390 \u00b0C nozzle, 140-160 \u00b0C bed and a chamber up to 140 \u00b0C on what it explicitly calls industrial-grade hardware. heated_chamber_required is recorded true \u2014 it is the only grade in this family to earn that, and the flag is what separates PPA from pa6/pa12/pa66, whose enclosures are passive. Chamber heat retention is critical against delamination, so never open the door: enclosure_open_for_cooling is false and part cooling stays at 0 %. requires_hardened_nozzle is true because essentially every commercial PPA filament is CF- or GF-filled, and fibre abrasion at these temperatures wears a nozzle faster than in any PA6/PA12 composite; neat unfilled PPA would not need one but is not realistically available."
   },
   "feeding": {
     "drive_system": "direct-drive-recommended",
     "ams_compatible": "conditional",
     "feeding_assistant_recommended": false,
-    "notes": "Stiff, brittle, fiber-filled filament needing an all-metal high-temperature hotend and a well-tuned extruder with good grip — direct drive is the sensible default, and long Bowden paths risk snapping the low-elongation strand. No shore hardness and no feeding assistant (not an elastomer). AMS status is 'conditional' in the narrowest sense: Bambu positions PPA-CF alongside the high-temperature AMS HT unit rather than the standard AMS, since standard units are neither rated for the drying/handling regime nor tolerant of fibre wear on their PTFE paths (unverified exact wording). Third-party PPA-CF/GF should be treated as barred from a standard AMS outright. Feed from a heated drybox at <20 % RH regardless of unit."
+    "notes": "Stiff, brittle, fiber-filled filament needing an all-metal high-temperature hotend and a well-tuned extruder with good grip \u2014 direct drive is the sensible default, and long Bowden paths risk snapping the low-elongation strand. No shore hardness and no feeding assistant (not an elastomer). AMS status is 'conditional' in the narrowest sense: Bambu positions PPA-CF alongside the high-temperature AMS HT unit rather than the standard AMS, since standard units are neither rated for the drying/handling regime nor tolerant of fibre wear on their PTFE paths (unverified exact wording). Third-party PPA-CF/GF should be treated as barred from a standard AMS outright. Feed from a heated drybox at <20 % RH regardless of unit."
   },
   "drying": {
     "required_before_use": "always",
@@ -68,23 +68,23 @@
       "recommended": 8
     },
     "methods": [
-      "blast oven at 100-140 °C",
+      "blast oven at 100-140 \u00b0C",
       "high-temperature industrial filament dryer",
-      "heated-bed method at 110-120 °C for 12 h (less effective)",
+      "heated-bed method at 110-120 \u00b0C for 12 h (less effective)",
       "sealed drybox with desiccant at <20 % RH while printing"
     ],
-    "dryness_validation": "No popping or steam at the nozzle and no voids or fuzz in a purge line — gloss is a poor indicator because the fiber-filled extrudate is matte by design. At these nozzle temperatures residual moisture shows up as visible foaming almost immediately, so the purge line is a reliable test.",
-    "notes": "The highest drying requirement in the catalog outside the PEEK class and the clearest quantitative separator in the PA family: Bambu specifies 100-140 °C for 8-12 h for PPA-CF and 3DXTech 120 °C for 4 h minimum for PPA-GF15, against pa66's 90 °C, pa6's 80 °C and pa12's 70 °C. PPA's high Tg (125 °C) is what both permits and requires drying this hot — the filament does not soften at temperatures that would slump a PA6 spool, and moisture will not fully desorb below them. Ordinary consumer filament dryers top out around 70-90 °C and are therefore not sufficient for this grade."
+    "dryness_validation": "No popping or steam at the nozzle and no voids or fuzz in a purge line \u2014 gloss is a poor indicator because the fiber-filled extrudate is matte by design. At these nozzle temperatures residual moisture shows up as visible foaming almost immediately, so the purge line is a reliable test.",
+    "notes": "The highest drying requirement in the catalog outside the PEEK class and the clearest quantitative separator in the PA family: Bambu specifies 100-140 \u00b0C for 8-12 h for PPA-CF and 3DXTech 120 \u00b0C for 4 h minimum for PPA-GF15, against pa66's 90 \u00b0C, pa6's 80 \u00b0C and pa12's 70 \u00b0C. PPA's high Tg (125 \u00b0C) is what both permits and requires drying this hot \u2014 the filament does not soften at temperatures that would slump a PA6 spool, and moisture will not fully desorb below them. Ordinary consumer filament dryers top out around 70-90 \u00b0C and are therefore not sufficient for this grade."
   },
   "storage": {
-    "recommendations": "Sealed with fresh desiccant below 20 % RH at all times, per Bambu's own guidance for PPA-CF, and fed from a heated drybox. PPA absorbs far less water than pa6 or pa66 in absolute terms (~1.3 % saturated), but the consequence of a wet spool is worse: at 300+ °C the trapped water flashes instantly and foams a fiber-filled melt that has little strength to spare.",
+    "recommendations": "Sealed with fresh desiccant below 20 % RH at all times, per Bambu's own guidance for PPA-CF, and fed from a heated drybox. PPA absorbs far less water than pa6 or pa66 in absolute terms (~1.3 % saturated), but the consequence of a wet spool is worse: at 300+ \u00b0C the trapped water flashes instantly and foams a fiber-filled melt that has little strength to spare.",
     "max_humidity_pct": 20,
     "hygroscopy": "moderate"
   },
   "price": {
     "usd_per_kg_low": 150,
     "usd_per_kg_high": 200,
-    "notes": "The most expensive grade in the polyamide family by a wide margin — roughly 2-3x filled PA6 and 3-5x unfilled pa6. Bambu PPA-CF is $149.99/750 g (~$200/kg); 3DXTech FibreX PPA-GF15 is ~EUR 140/750 g (~$200/kg), falling to ~EUR 126-168/kg at 10+ units. Both figures are for fiber-filled grades because neat PPA filament is essentially not sold at retail."
+    "notes": "The most expensive grade in the polyamide family by a wide margin \u2014 roughly 2-3x filled PA6 and 3-5x unfilled pa6. Bambu PPA-CF is $149.99/750 g (~$200/kg); 3DXTech FibreX PPA-GF15 is ~EUR 140/750 g (~$200/kg), falling to ~EUR 126-168/kg at 10+ units. Both figures are for fiber-filled grades because neat PPA filament is essentially not sold at retail."
   },
   "use_cases": {
     "recommended": [
@@ -96,9 +96,9 @@
       "metal-replacement parts where pa66 lacks the heat capability"
     ],
     "not_recommended": [
-      "any printer without a heated chamber and a 300 °C+ all-metal hotend",
-      "consumer filament dryers that cannot reach 100 °C",
-      "budget or hobby projects — 3-5x the cost of pa6",
+      "any printer without a heated chamber and a 300 \u00b0C+ all-metal hotend",
+      "consumer filament dryers that cannot reach 100 \u00b0C",
+      "budget or hobby projects \u2014 3-5x the cost of pa6",
       "parts needing high elongation or impact toughness (Z tensile is ~1/3 of X-Y)",
       "large flat parts printed in a passive enclosure",
       "food-contact items"
@@ -127,7 +127,7 @@
       "max": 168,
       "recommended": 150
     },
-    "notes": "Density 1.18 g/cm³ is the neat semi-aromatic resin figure; the fiber-filled grades actually sold run heavier — Bambu's PPA-CF measures 1.25 g/cm³, the densest polyamide in this catalog — so budget part weight from 1.25 if buying a CF grade. Tg 125 °C (3DXTech FibreX PPA-GF15) against pa6's 60 °C and pa12's 40 °C is the headline number, and melting point ~305 °C against PA6's ~220 °C explains the process window. HDT is recorded at 260 °C @0.45 MPa from the GF15 datasheet; Bambu's PPA-CF reports 196 °C at the harsher 1.8 MPa load, against 164 °C for PA6-CF and 137 °C for PA12-CF at the same load — every comparison points the same way. Tensile X-Y 168 ± 4 MPa (Bambu PPA-CF) is roughly 1.6x PA6-CF's 102 MPa, but Z tensile is only 57 ± 5 MPa, about a third of X-Y — orient loads in plane. Saturated water absorption 1.30 % (Bambu). Max service temp and shrinkage are reasoned from Tg, HDT and the fiber loading rather than taken from a datasheet."
+    "notes": "Density 1.18 g/cm\u00b3 is the neat semi-aromatic resin figure; the fiber-filled grades actually sold run heavier \u2014 Bambu's PPA-CF measures 1.25 g/cm\u00b3, the densest polyamide in this catalog \u2014 so budget part weight from 1.25 if buying a CF grade. Tg 125 \u00b0C (3DXTech FibreX PPA-GF15) against pa6's 60 \u00b0C and pa12's 40 \u00b0C is the headline number, and melting point ~305 \u00b0C against PA6's ~220 \u00b0C explains the process window. HDT is recorded at 260 \u00b0C @0.45 MPa from the GF15 datasheet; Bambu's PPA-CF reports 196 \u00b0C at the harsher 1.8 MPa load, against 164 \u00b0C for PA6-CF and 137 \u00b0C for PA12-CF at the same load \u2014 every comparison points the same way. Tensile X-Y 168 \u00b1 4 MPa (Bambu PPA-CF) is roughly 1.6x PA6-CF's 102 MPa, but Z tensile is only 57 \u00b1 5 MPa, about a third of X-Y \u2014 orient loads in plane. Saturated water absorption 1.30 % (Bambu). Max service temp and shrinkage are reasoned from Tg, HDT and the fiber loading rather than taken from a datasheet."
   },
   "scores": {
     "ease_of_print": 1,
@@ -142,18 +142,17 @@
   },
   "compatibility": {
     "bonds_with": [
-      "ppa",
       "ppa-cf"
     ],
     "support_materials": [],
     "usable_as_support_for": [],
-    "notes": "Unlike the aliphatic grades, PPA does not usefully cross-bond within the family: pa6, pa12 and pa66 all melt 40-100 °C below PPA's ~305 °C, so an aliphatic nylon placed against PPA either degrades or fails to fuse — this is the compatibility delta that most distinguishes ppa from its siblings, which bond to each other freely. Same-material or ppa-cf breakaway supports are the only practical option. Soluble supports are out entirely: pva degrades above ~200 °C and bvoh not far above, both far below PPA's process temperatures. Build-plate chemistry needs a high-temperature adhesive; ordinary PA glue sticks are not characterised at a 160 °C bed (unverified)."
+    "notes": "Unlike the aliphatic grades, PPA does not usefully cross-bond within the family: pa6, pa12 and pa66 all melt 40-100 \u00b0C below PPA's ~305 \u00b0C, so an aliphatic nylon placed against PPA either degrades or fails to fuse \u2014 this is the compatibility delta that most distinguishes ppa from its siblings, which bond to each other freely. Same-material or ppa-cf breakaway supports are the only practical option. Soluble supports are out entirely: pva degrades above ~200 \u00b0C and bvoh not far above, both far below PPA's process temperatures. Build-plate chemistry needs a high-temperature adhesive; ordinary PA glue sticks are not characterised at a 160 \u00b0C bed (unverified)."
   },
   "plate_recommendations": [
     {
       "plate_id": "pei-textured",
       "rating": "usable",
-      "notes": "Usable at the Bambu PPA-CF end of the range (100-120 °C bed), which is within the normal comfort zone of a textured PEI sheet. It is the wrong surface for the 3DXTech GF15 end: bed 140-160 °C with a chamber to 140 °C exceeds what many PEI sheets and their adhesive backings are rated for sustained use at (unverified exact ratings, flagged as a likely failure point). Garolite / G10 or another high-temperature composite build surface is the recommendation for those grades — no such plate entry exists in the catalog yet, so it is recorded here in notes."
+      "notes": "Usable at the Bambu PPA-CF end of the range (100-120 \u00b0C bed), which is within the normal comfort zone of a textured PEI sheet. It is the wrong surface for the 3DXTech GF15 end: bed 140-160 \u00b0C with a chamber to 140 \u00b0C exceeds what many PEI sheets and their adhesive backings are rated for sustained use at (unverified exact ratings, flagged as a likely failure point). Garolite / G10 or another high-temperature composite build surface is the recommendation for those grades \u2014 no such plate entry exists in the catalog yet, so it is recorded here in notes."
     },
     {
       "plate_id": "pei-smooth",
@@ -174,23 +173,23 @@
   "alternatives": [
     {
       "filament_id": "ppa-cf",
-      "reason": "The filled grade is the one most people can actually print: warp 3 vs 8, ease 3 vs 1 and a cooler 280-315 °C nozzle against PPA's 280-390 °C, with higher strength (compression 10 vs 9) — at $172-266/kg, worse anisotropy (adhesion 3 vs 6) and the catalog's harshest drying schedule."
+      "reason": "The filled grade is the one most people can actually print: warp 3 vs 8, ease 3 vs 1 and a cooler 280-315 \u00b0C nozzle against PPA's 280-390 \u00b0C, with higher strength (compression 10 vs 9) \u2014 at $172-266/kg, worse anisotropy (adhesion 3 vs 6) and the catalog's harshest drying schedule."
     },
     {
       "filament_id": "pa6-cf",
-      "reason": "Roughly half the price ($79-135 vs $150-200) and printable without a true heated chamber, with warp 3 vs 8 — at 40-60 °C less HDT (175-215 vs 196-260 °C, temp 8 vs 9) and PA6's much worse moisture behaviour (water 2 vs 6)."
+      "reason": "Roughly half the price ($79-135 vs $150-200) and printable without a true heated chamber, with warp 3 vs 8 \u2014 at 40-60 \u00b0C less HDT (175-215 vs 196-260 \u00b0C, temp 8 vs 9) and PA6's much worse moisture behaviour (water 2 vs 6)."
     },
     {
       "filament_id": "pei-ultem",
-      "reason": "A different route to the same temperature class (temp 9, equal) with far better layer adhesion (8 vs 6), better dimensional stability (8 vs 7) and none of the polyamide hygroscopy — at $195-290/kg and a heated chamber that is equally mandatory."
+      "reason": "A different route to the same temperature class (temp 9, equal) with far better layer adhesion (8 vs 6), better dimensional stability (8 vs 7) and none of the polyamide hygroscopy \u2014 at $195-290/kg and a heated chamber that is equally mandatory."
     },
     {
       "filament_id": "pps-cf",
-      "reason": "Same temperature class (temp 9, equal) with far lower warp (3 vs 8), genuine outdoor and chemical resistance (uv 9 vs 3, weather 9 vs 6, water 9 vs 6) and no heated-chamber requirement — often cheaper too ($100-200 vs $150-200), giving up ductility (adhesion 5 vs 6)."
+      "reason": "Same temperature class (temp 9, equal) with far lower warp (3 vs 8), genuine outdoor and chemical resistance (uv 9 vs 3, weather 9 vs 6, water 9 vs 6) and no heated-chamber requirement \u2014 often cheaper too ($100-200 vs $150-200), giving up ductility (adhesion 5 vs 6)."
     },
     {
       "filament_id": "peek",
-      "reason": "The ceiling above PPA (temp 10 vs 9, weather 8 vs 6, water 9 vs 6) when 260 °C HDT is still not enough — at $400-900/kg, equally unprintable without industrial hardware (ease 1, equal) and the catalog's worst warp (10 vs 8)."
+      "reason": "The ceiling above PPA (temp 10 vs 9, weather 8 vs 6, water 9 vs 6) when 260 \u00b0C HDT is still not enough \u2014 at $400-900/kg, equally unprintable without industrial hardware (ease 1, equal) and the catalog's worst warp (10 vs 8)."
     }
   ],
   "emissions": {
@@ -202,10 +201,10 @@
       "carbon/glass fiber fines (post-processing)"
     ],
     "ventilation": "required",
-    "notes": "Scored the worst in the polyamide family on both axes, and the only one at 'required'. Two compounding reasons: PPA processes at 280-390 °C — 60-120 °C above pa6 — and nylon VOC and ultrafine-particle emission rises steeply with nozzle temperature; and the mandatory heated chamber concentrates whatever is produced inside a sealed volume that is then vented into the room. Active extraction or HEPA+carbon filtration on the enclosure is not optional here. Post-processing filled PPA liberates respirable carbon or glass fibre dust — wet-sand with respiratory protection. No PPA-specific emissions study was found; this is inference from the general nylon temperature relationship plus the chamber requirement (unverified)."
+    "notes": "Scored the worst in the polyamide family on both axes, and the only one at 'required'. Two compounding reasons: PPA processes at 280-390 \u00b0C \u2014 60-120 \u00b0C above pa6 \u2014 and nylon VOC and ultrafine-particle emission rises steeply with nozzle temperature; and the mandatory heated chamber concentrates whatever is produced inside a sealed volume that is then vented into the room. Active extraction or HEPA+carbon filtration on the enclosure is not optional here. Post-processing filled PPA liberates respirable carbon or glass fibre dust \u2014 wet-sand with respiratory protection. No PPA-specific emissions study was found; this is inference from the general nylon temperature relationship plus the chamber requirement (unverified)."
   },
-  "safety_notes": "Requires an all-metal hotend rated for 300 °C+ (390 °C for the GF15 grades) — a PTFE-lined hotend will decompose its liner and release fluoropolymer breakdown products well below these temperatures. Bed and chamber surfaces reach 140-160 °C and will burn on contact; let the machine cool before reaching in. Drying ovens run at 100-140 °C, hot enough to soften or deform standard plastic spools — check the spool material before oven-drying. Filled grades produce respirable fibre dust when sanded, drilled or machined. Not food-contact suitable.",
-  "additional_notes": "PPA is where the polyamide family stops being a hobby material. The decision rule against its siblings is simply the service temperature: below ~90 °C use pa6 or pa12, up to ~135 °C use pa66, and only above that does PPA's cost and hardware burden pay for itself. Note also that this entry describes a grade that is sold almost exclusively fiber-filled — the separate ppa-cf entry covers the carbon-filled specifics, and most of the numbers cited here necessarily come from filled datasheets because neat PPA filament is not a retail product. Siraya Tech's four-way comparison rates PPA 'excellent' on mechanical strength and 'high' on thermal stability while rating its printability 'challenging' — the worst of PPA, PA6, PA12 and PA612.",
+  "safety_notes": "Requires an all-metal hotend rated for 300 \u00b0C+ (390 \u00b0C for the GF15 grades) \u2014 a PTFE-lined hotend will decompose its liner and release fluoropolymer breakdown products well below these temperatures. Bed and chamber surfaces reach 140-160 \u00b0C and will burn on contact; let the machine cool before reaching in. Drying ovens run at 100-140 \u00b0C, hot enough to soften or deform standard plastic spools \u2014 check the spool material before oven-drying. Filled grades produce respirable fibre dust when sanded, drilled or machined. Not food-contact suitable.",
+  "additional_notes": "PPA is where the polyamide family stops being a hobby material. The decision rule against its siblings is simply the service temperature: below ~90 \u00b0C use pa6 or pa12, up to ~135 \u00b0C use pa66, and only above that does PPA's cost and hardware burden pay for itself. Note also that this entry describes a grade that is sold almost exclusively fiber-filled \u2014 the separate ppa-cf entry covers the carbon-filled specifics, and most of the numbers cited here necessarily come from filled datasheets because neat PPA filament is not a retail product. Siraya Tech's four-way comparison rates PPA 'excellent' on mechanical strength and 'high' on thermal stability while rating its printability 'challenging' \u2014 the worst of PPA, PA6, PA12 and PA612.",
   "provenance": {
     "sources": [
       "https://www.additive-x.com/shop/mpattachments/file/viewonline/id/916/product_id/2729/",
@@ -219,6 +218,6 @@
     ],
     "last_verified": "2026-07-31",
     "confidence": "medium",
-    "conflicts": "The nozzle window is the largest unresolved disagreement in this catalog: Bambu PPA-CF 280-310 °C vs 3DXTech FibreX PPA-GF15 365-390 °C, with beds at 100-120 °C vs 140-160 °C and chambers at 50-80 °C vs up to 140 °C. These are almost certainly different matrix chemistries and fiber loadings rather than a measurement dispute, but it is unverified which is 'typical' — the recommended values follow Bambu's prosumer grade and the maxima follow 3DXTech's. heated_chamber_required is recorded true on the strength of 3DXTech's industrial-hardware statement, even though Bambu's PPA-CF is printable in a prosumer passively-heated enclosure; treat the flag as 'true for the grade as a class'. Density 1.18 is the neat-resin figure while the only measured filament value found is 1.25 (Bambu PPA-CF, fiber-filled) — the derived weight/volume figures therefore describe neat PPA, not the spool you will buy. HDT is quoted at two different loads by the two vendors (260 °C @0.45 MPa vs 196 °C @1.8 MPa) and is not directly comparable. Max service temp, shrinkage and Tg-to-service-ceiling reasoning are inferred, not sourced. No UV-exposure data was found for PPA — uv_tolerance 3 is a reasoned aromatic-polyamide estimate (unverified). The Bambu wiki page returned HTTP 402 and was cross-checked via the additive-x TDS PDF and a retail listing instead. Emissions are inferred from the nylon temperature relationship, not measured for PPA."
+    "conflicts": "The nozzle window is the largest unresolved disagreement in this catalog: Bambu PPA-CF 280-310 \u00b0C vs 3DXTech FibreX PPA-GF15 365-390 \u00b0C, with beds at 100-120 \u00b0C vs 140-160 \u00b0C and chambers at 50-80 \u00b0C vs up to 140 \u00b0C. These are almost certainly different matrix chemistries and fiber loadings rather than a measurement dispute, but it is unverified which is 'typical' \u2014 the recommended values follow Bambu's prosumer grade and the maxima follow 3DXTech's. heated_chamber_required is recorded true on the strength of 3DXTech's industrial-hardware statement, even though Bambu's PPA-CF is printable in a prosumer passively-heated enclosure; treat the flag as 'true for the grade as a class'. Density 1.18 is the neat-resin figure while the only measured filament value found is 1.25 (Bambu PPA-CF, fiber-filled) \u2014 the derived weight/volume figures therefore describe neat PPA, not the spool you will buy. HDT is quoted at two different loads by the two vendors (260 \u00b0C @0.45 MPa vs 196 \u00b0C @1.8 MPa) and is not directly comparable. Max service temp, shrinkage and Tg-to-service-ceiling reasoning are inferred, not sourced. No UV-exposure data was found for PPA \u2014 uv_tolerance 3 is a reasoned aromatic-polyamide estimate (unverified). The Bambu wiki page returned HTTP 402 and was cross-checked via the additive-x TDS PDF and a retail listing instead. Emissions are inferred from the nylon temperature relationship, not measured for PPA."
   }
 }

@@ -13,7 +13,7 @@
   "variation_kind": "grade",
   "polymer_class": "polyamide",
   "chemical_makeup": "Aliphatic polyamide homopolymer produced by ring-opening polymerisation of caprolactam; a single repeat unit with one amide group per six carbons, giving the highest amide density (and therefore the highest hydrogen-bonding and moisture uptake) of the aliphatic nylon grades in this catalog.",
-  "summary": "The archetypal nylon behind most of the generic 'PA' entry — cheap, tough and the stiffest of the common aliphatic grades, but also the most moisture-hungry and the worst-warping. Deltas vs the base pa entry (which averages PA6 and PA12): higher density (~1.13 vs 1.08), higher amide content so moisture absorption reaches 3-9 % of part weight against PA12's <1 %, and a correspondingly harsher drying schedule (80 °C / 8-12 h rather than 70 °C / 12 h). Vs its siblings: cheaper and easier than pa66, markedly harder to print and far less dimensionally calm than pa12, and a completely different hardware class from ppa.",
+  "summary": "The archetypal nylon behind most of the generic 'PA' entry \u2014 cheap, tough and the stiffest of the common aliphatic grades, but also the most moisture-hungry and the worst-warping. Deltas vs the base pa entry (which averages PA6 and PA12): higher density (~1.13 vs 1.08), higher amide content so moisture absorption reaches 3-9 % of part weight against PA12's <1 %, and a correspondingly harsher drying schedule (80 \u00b0C / 8-12 h rather than 70 \u00b0C / 12 h). Vs its siblings: cheaper and easier than pa66, markedly harder to print and far less dimensionally calm than pa12, and a completely different hardware class from ppa.",
   "printing": {
     "nozzle_temp_c": {
       "min": 220,
@@ -44,13 +44,13 @@
       "max": 10,
       "recommended": 0
     },
-    "notes": "Deltas vs the base pa window (240-290 °C): unfilled PA6 runs cooler at the bottom end, 220-270 °C, and 260 °C is the practical starting point; bed 80-110 °C is the base range shifted up, because PA6's shrinkage needs the hot plate to hold the first layer. Part cooling is effectively off (0-10 %) — the same rule as base PA, and stricter than most materials, since fan air both splits layers and amplifies corner lift. Enclosure is effectively mandatory for anything with a footprint; an actively heated chamber helps large parts but is not a hard prerequisite, so heated_chamber_required stays false as on the base entry. Unfilled PA6 is not abrasive and does not need a hardened nozzle — the filled pa6-cf / PA6-GF grades do (nozzle windows there shift to 260-300 °C, chamber 45-60 °C, layer height >=0.25 mm), and those are separate entries."
+    "notes": "Deltas vs the base pa window (240-290 \u00b0C): unfilled PA6 runs cooler at the bottom end, 220-270 \u00b0C, and 260 \u00b0C is the practical starting point; bed 80-110 \u00b0C is the base range shifted up, because PA6's shrinkage needs the hot plate to hold the first layer. Part cooling is effectively off (0-10 %) \u2014 the same rule as base PA, and stricter than most materials, since fan air both splits layers and amplifies corner lift. Enclosure is effectively mandatory for anything with a footprint; an actively heated chamber helps large parts but is not a hard prerequisite, so heated_chamber_required stays false as on the base entry. Unfilled PA6 is not abrasive and does not need a hardened nozzle \u2014 the filled pa6-cf / PA6-GF grades do (nozzle windows there shift to 260-300 \u00b0C, chamber 45-60 \u00b0C, layer height >=0.25 mm), and those are separate entries."
   },
   "feeding": {
     "drive_system": "any",
     "ams_compatible": "conditional",
     "feeding_assistant_recommended": false,
-    "notes": "Rigid and mechanically unproblematic to push, so any extruder feeds it and no feeding assistant is needed (no shore hardness — this is not an elastomer). The AMS delta vs the base pa entry's plain 'yes' is moisture, not mechanics: PA6 is the most hygroscopic grade in this family and will pick up printable-to-unprintable amounts of water inside an unsealed material station over a long job. Restrict to a sealed, actively desiccated unit (AMS 2 Pro / AMS HT class) with fresh desiccant or feed from a heated drybox — hence 'conditional'. Fiber-filled PA6-CF/GF is a separate matter: Bambu's own filled grades are AMS-listed but third-party CF/GF is barred outright because the fibres wear the PTFE path and the brittle strand can snap in the buffer."
+    "notes": "Rigid and mechanically unproblematic to push, so any extruder feeds it and no feeding assistant is needed (no shore hardness \u2014 this is not an elastomer). The AMS delta vs the base pa entry's plain 'yes' is moisture, not mechanics: PA6 is the most hygroscopic grade in this family and will pick up printable-to-unprintable amounts of water inside an unsealed material station over a long job. Restrict to a sealed, actively desiccated unit (AMS 2 Pro / AMS HT class) with fresh desiccant or feed from a heated drybox \u2014 hence 'conditional'. Fiber-filled PA6-CF/GF is a separate matter: Bambu's own filled grades are AMS-listed but third-party CF/GF is barred outright because the fibres wear the PTFE path and the brittle strand can snap in the buffer."
   },
   "drying": {
     "required_before_use": "always",
@@ -65,24 +65,24 @@
       "recommended": 8
     },
     "methods": [
-      "blast/convection oven at 80 °C",
+      "blast/convection oven at 80 \u00b0C",
       "dedicated filament dryer",
       "food dehydrator",
       "print directly from a heated dryer",
       "sealed drybox with desiccant while printing"
     ],
     "dryness_validation": "No audible popping or crackling at the nozzle and no visible steam or foaming in the extrudate; purge line comes out glossy and dimensionally even rather than matte and blistered; stringing drops back to normal on a retraction tower; the brittle snap of a saturated spool disappears.",
-    "notes": "Hotter and more urgent than the base pa schedule (60-90 °C / 12 h): Bambu specifies 80 °C for 8-12 h in a blast oven for its PA6 grades, and 3DXTech notes PA6 can absorb 3-9 % of its weight in water — the highest figure in this family and roughly an order of magnitude above pa12's <1 %. Do not confuse drying with annealing: post-print annealing at 80-140 °C for 6-16 h is a separate operation that raises crystallinity and heat resistance."
+    "notes": "Hotter and more urgent than the base pa schedule (60-90 \u00b0C / 12 h): Bambu specifies 80 \u00b0C for 8-12 h in a blast oven for its PA6 grades, and 3DXTech notes PA6 can absorb 3-9 % of its weight in water \u2014 the highest figure in this family and roughly an order of magnitude above pa12's <1 %. Do not confuse drying with annealing: post-print annealing at 80-140 \u00b0C for 6-16 h is a separate operation that raises crystallinity and heat resistance."
   },
   "storage": {
-    "recommendations": "Airtight with fresh desiccant at all times, including between prints on the same day. PA6 is the worst offender in this catalog for ambient pickup — hours of open-air exposure produce visible bubbling and stringing — so treat a heated drybox on the printer as the normal storage state, not an upgrade.",
+    "recommendations": "Airtight with fresh desiccant at all times, including between prints on the same day. PA6 is the worst offender in this catalog for ambient pickup \u2014 hours of open-air exposure produce visible bubbling and stringing \u2014 so treat a heated drybox on the printer as the normal storage state, not an upgrade.",
     "max_humidity_pct": 15,
     "hygroscopy": "extreme"
   },
   "price": {
     "usd_per_kg_low": 35,
     "usd_per_kg_high": 70,
-    "notes": "Unfilled PA6 and PA6/66 copolymer blends are the cheap end of the nylon family — an Inslogic PA6/66 blend sits at ~$46/kg. Filled siblings cost far more (Bambu PA6-GF ~$60/kg, PA6-CF ~$80/kg, 3DXTech CarbonX PA6-CF ~$83/kg rising to ~$133/kg for the 'Obsidian' line), which is why the filled grades are separate entries. Range is extrapolated from 2026 spool listings and unverified against current retail."
+    "notes": "Unfilled PA6 and PA6/66 copolymer blends are the cheap end of the nylon family \u2014 an Inslogic PA6/66 blend sits at ~$46/kg. Filled siblings cost far more (Bambu PA6-GF ~$60/kg, PA6-CF ~$80/kg, 3DXTech CarbonX PA6-CF ~$83/kg rising to ~$133/kg for the 'Obsidian' line), which is why the filled grades are separate entries. Range is extrapolated from 2026 spool listings and unverified against current retail."
   },
   "use_cases": {
     "recommended": [
@@ -97,9 +97,9 @@
       "outdoor or humid-environment parts without sealing (absorbs 3-9 % of its weight in water)",
       "dimensionally critical fits measured straight off the plate",
       "large flat parts on an open-frame printer",
-      "quick one-off prints — the drying overhead dwarfs the print",
+      "quick one-off prints \u2014 the drying overhead dwarfs the print",
       "parts needing the stiffness or heat resistance of pa66 or the humidity stability of pa12",
-      "sustained load above ~85 °C"
+      "sustained load above ~85 \u00b0C"
     ]
   },
   "suitability": {
@@ -125,7 +125,7 @@
       "max": 79,
       "recommended": 58
     },
-    "notes": "Density is recorded at the PA6 end of the base entry's 1.01-1.14 span rather than the base's grade-averaged 1.08; sources disagree because many 'PA6' filaments are PA6/66 copolymer blends that run lighter. Tensile 55-58 MPa on a generic PA datasheet, up to 79 MPa for an Inslogic PA6/66 copolymer blend. HDT@0.45 MPa ~85 °C and Tg ~60 °C are both dry-state figures — a wet PA6 part's Tg drops sharply and the part goes noticeably softer and tougher, which is the single most surprising behaviour of this grade. For scale, the filled siblings move HDT@0.45 MPa to 182 °C (Bambu PA6-GF25) and 186 °C (Bambu PA6-CF) with Z tensile roughly half of X-Y, so the filled grades trade this entry's toughness for stiffness and heat."
+    "notes": "Density is recorded at the PA6 end of the base entry's 1.01-1.14 span rather than the base's grade-averaged 1.08; sources disagree because many 'PA6' filaments are PA6/66 copolymer blends that run lighter. Tensile 55-58 MPa on a generic PA datasheet, up to 79 MPa for an Inslogic PA6/66 copolymer blend. HDT@0.45 MPa ~85 \u00b0C and Tg ~60 \u00b0C are both dry-state figures \u2014 a wet PA6 part's Tg drops sharply and the part goes noticeably softer and tougher, which is the single most surprising behaviour of this grade. For scale, the filled siblings move HDT@0.45 MPa to 182 \u00b0C (Bambu PA6-GF25) and 186 \u00b0C (Bambu PA6-CF) with Z tensile roughly half of X-Y, so the filled grades trade this entry's toughness for stiffness and heat."
   },
   "scores": {
     "ease_of_print": 3,
@@ -145,7 +145,6 @@
       "pa-cf",
       "pa12",
       "pa12-cf",
-      "pa6",
       "pa6-cf",
       "pa6-gf",
       "pa612",
@@ -153,23 +152,23 @@
     ],
     "support_materials": [],
     "usable_as_support_for": [],
-    "notes": "Welds to itself and to the rest of the aliphatic polyamide family (pa, pa66, pa12 and the PA6 filled grades) — same amide chemistry and overlapping 240-280 °C windows, with the PA6/PA66 pairing the strongest because their melt ranges are closest. It does not bond usefully to pla, petg, abs, asa, pc, pp, pctg, pvb or pet. Soluble supports are impractical: pva degrades well below PA6's nozzle range and bvoh sits below it too, so same-material breakaway supports are the standard workaround. Build-plate chemistry matters more than support choice here — a PA-specific adhesive (Magigoo PA) or plain glue stick as an adhesion PROMOTER is normal practice."
+    "notes": "Welds to itself and to the rest of the aliphatic polyamide family (pa, pa66, pa12 and the PA6 filled grades) \u2014 same amide chemistry and overlapping 240-280 \u00b0C windows, with the PA6/PA66 pairing the strongest because their melt ranges are closest. It does not bond usefully to pla, petg, abs, asa, pc, pp, pctg, pvb or pet. Soluble supports are impractical: pva degrades well below PA6's nozzle range and bvoh sits below it too, so same-material breakaway supports are the standard workaround. Build-plate chemistry matters more than support choice here \u2014 a PA-specific adhesive (Magigoo PA) or plain glue stick as an adhesion PROMOTER is normal practice."
   },
   "plate_recommendations": [
     {
       "plate_id": "g10-garolite",
       "rating": "recommended",
-      "notes": "Backfilled from plate entry (Phase E reciprocity): PA6 grades adhere directly; dry the filament thoroughly — moisture, not the plate, is the usual first-layer failure with nylon."
+      "notes": "Backfilled from plate entry (Phase E reciprocity): PA6 grades adhere directly; dry the filament thoroughly \u2014 moisture, not the plate, is the usual first-layer failure with nylon."
     },
     {
       "plate_id": "pei-textured",
       "rating": "usable",
-      "notes": "Same rating and reasoning as the base pa entry: textured PEI at 80-110 °C works and is preferred over smooth PEI (which PA6 can over-bond to and tear), but bare adhesion is inconsistent and edge lift on large parts is common, so a PA glue stick is applied as an adhesion promoter. A garolite / G10 (phenolic laminate) sheet clearly outperforms textured PEI for unfilled PA6 and is the recommendation for anything with a large footprint — that surface has no catalog entry yet, so it is recorded here in notes."
+      "notes": "Same rating and reasoning as the base pa entry: textured PEI at 80-110 \u00b0C works and is preferred over smooth PEI (which PA6 can over-bond to and tear), but bare adhesion is inconsistent and edge lift on large parts is common, so a PA glue stick is applied as an adhesion promoter. A garolite / G10 (phenolic laminate) sheet clearly outperforms textured PEI for unfilled PA6 and is the recommendation for anything with a large footprint \u2014 that surface has no catalog entry yet, so it is recorded here in notes."
     },
     {
       "plate_id": "glass-borosilicate",
       "rating": "usable",
-      "notes": "Backfilled from plate entry (Phase E reciprocity): Unverified for glass; dry the filament first — moisture failures look like adhesion failures."
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Unverified for glass; dry the filament first \u2014 moisture failures look like adhesion failures."
     },
     {
       "plate_id": "carbon-fiber-plate",
@@ -215,23 +214,23 @@
   "alternatives": [
     {
       "filament_id": "pa12",
-      "reason": "Far lower moisture uptake and warp — under 1 % absorption against PA6's 3-9 % (water 7 vs 1, warp 6 vs 9, dim 6 vs 2), with drying down to 70 °C/4 h from 80 °C/8-12 h — at the cost of stiffness (~45 vs 55-58 MPa) and a higher price ($55-90 vs $35-70)."
+      "reason": "Far lower moisture uptake and warp \u2014 under 1 % absorption against PA6's 3-9 % (water 7 vs 1, warp 6 vs 9, dim 6 vs 2), with drying down to 70 \u00b0C/4 h from 80 \u00b0C/8-12 h \u2014 at the cost of stiffness (~45 vs 55-58 MPa) and a higher price ($55-90 vs $35-70)."
     },
     {
       "filament_id": "copa",
-      "reason": "A PA6/66-class copolymer that prints in a different league (warp 3 vs 9, dim 5 vs 2, ease 5 vs 3) while keeping nylon toughness (adhesion 9, equal) — but it does not fix the moisture problem (water 2 vs 1) and it adds a hardened-nozzle requirement PA6 does not have."
+      "reason": "A PA6/66-class copolymer that prints in a different league (warp 3 vs 9, dim 5 vs 2, ease 5 vs 3) while keeping nylon toughness (adhesion 9, equal) \u2014 but it does not fix the moisture problem (water 2 vs 1) and it adds a hardened-nozzle requirement PA6 does not have."
     },
     {
       "filament_id": "pa6-cf",
-      "reason": "The same base with the warp engineered out (warp 3 vs 9, dim 6 vs 2) and HDT@0.45 MPa lifted from ~85 °C to 175-215 °C — at $79-135/kg, a mandatory hardened nozzle, and brittleness replacing PA6's toughness (adhesion 4 vs 9)."
+      "reason": "The same base with the warp engineered out (warp 3 vs 9, dim 6 vs 2) and HDT@0.45 MPa lifted from ~85 \u00b0C to 175-215 \u00b0C \u2014 at $79-135/kg, a mandatory hardened nozzle, and brittleness replacing PA6's toughness (adhesion 4 vs 9)."
     },
     {
       "filament_id": "pa6-gf",
-      "reason": "Reinforcement that keeps the toughness rather than trading it away: HDT ~182 °C and warp 4 vs 9 with layer adhesion 6 (against pa6-cf's 4), less abrasive and colourable, at $55-65/kg and a hardened nozzle — water uptake is unchanged."
+      "reason": "Reinforcement that keeps the toughness rather than trading it away: HDT ~182 \u00b0C and warp 4 vs 9 with layer adhesion 6 (against pa6-cf's 4), less abrasive and colourable, at $55-65/kg and a hardened nozzle \u2014 water uptake is unchanged."
     },
     {
       "filament_id": "pa66",
-      "reason": "The stiffer, hotter homopolymer with ~135 °C service (compression 8 vs 7, temp 7 vs 5) — but the worst warp among the polyamides here (10 vs 9), harder to print (ease 2 vs 3), a weaker layer bond (7 vs 9) and dearer ($44-75 vs $35-70)."
+      "reason": "The stiffer, hotter homopolymer with ~135 \u00b0C service (compression 8 vs 7, temp 7 vs 5) \u2014 but the worst warp among the polyamides here (10 vs 9), harder to print (ease 2 vs 3), a weaker layer bond (7 vs 9) and dearer ($44-75 vs $35-70)."
     }
   ],
   "emissions": {
@@ -243,10 +242,10 @@
       "general amide-family VOCs"
     ],
     "ventilation": "recommended",
-    "notes": "Caprolactam is the named marker compound and PA6 is its primary source in this family — it is what produces the characteristic burnt/acidic nylon odour, and emissions rise steeply above ~250 °C nozzle, i.e. across most of this grade's working range. Sits between PLA and ABS/PC on particulates. Source-capture extraction or a HEPA+carbon filter is the practical answer; do not run long PA6 jobs in an unventilated occupied room. Unlike the filled siblings there is no fibre-dust hazard during post-processing."
+    "notes": "Caprolactam is the named marker compound and PA6 is its primary source in this family \u2014 it is what produces the characteristic burnt/acidic nylon odour, and emissions rise steeply above ~250 \u00b0C nozzle, i.e. across most of this grade's working range. Sits between PLA and ABS/PC on particulates. Source-capture extraction or a HEPA+carbon filter is the practical answer; do not run long PA6 jobs in an unventilated occupied room. Unlike the filled siblings there is no fibre-dust hazard during post-processing."
   },
-  "safety_notes": "Keep drying below 90 °C — hotter ovens deform spools and accelerate caprolactam off-gassing. Annealing (80-140 °C) should be done in a ventilated oven, not a sealed one. Not food-contact suitable despite nylon's industrial food-grade use: FDM layer crevices harbour bacteria and residual caprolactam monomer is present in the print.",
-  "additional_notes": "PA6 vs its siblings is a four-way trade the catalog now makes explicit: PA6 for cheap toughness and stiffness, pa12 for humidity stability and an easier print, pa66 for stiffness, wear and heat at higher processing temperatures, ppa for genuine high-temperature service on industrial hardware. PA6 parts keep moving after printing — they grow as they absorb ambient moisture and shrink again when dried — so condition precision fits (soak to equilibrium, or dry and seal) before final measurement. PA6/66 copolymer blends sold as 'PA6' are deliberately easier to print than this entry describes; check the datasheet melt point (a blend reads ~198 °C, homopolymer PA6 ~220 °C).",
+  "safety_notes": "Keep drying below 90 \u00b0C \u2014 hotter ovens deform spools and accelerate caprolactam off-gassing. Annealing (80-140 \u00b0C) should be done in a ventilated oven, not a sealed one. Not food-contact suitable despite nylon's industrial food-grade use: FDM layer crevices harbour bacteria and residual caprolactam monomer is present in the print.",
+  "additional_notes": "PA6 vs its siblings is a four-way trade the catalog now makes explicit: PA6 for cheap toughness and stiffness, pa12 for humidity stability and an easier print, pa66 for stiffness, wear and heat at higher processing temperatures, ppa for genuine high-temperature service on industrial hardware. PA6 parts keep moving after printing \u2014 they grow as they absorb ambient moisture and shrink again when dried \u2014 so condition precision fits (soak to equilibrium, or dry and seal) before final measurement. PA6/66 copolymer blends sold as 'PA6' are deliberately easier to print than this entry describes; check the datasheet melt point (a blend reads ~198 \u00b0C, homopolymer PA6 ~220 \u00b0C).",
   "provenance": {
     "sources": [
       "https://bambulab.com/en-us/filament/pa6-gf",
@@ -263,7 +262,7 @@
     ],
     "last_verified": "2026-07-31",
     "confidence": "medium",
-    "conflicts": "Density for 'PA6' filament spans 1.01-1.14 across sources because many products are PA6/66 copolymer blends rather than homopolymer; 1.13 is recorded as the homopolymer figure, not a cross-brand average, and conflicts with the base pa entry's grade-averaged 1.08 by design. Tensile spans 55-58 MPa (generic PA datasheet) to 79 MPa (Inslogic PA6/66 blend) — the blend is not the same material. Moisture uptake is quoted as 3-9 % by 3DXTech with no measurement condition given. Drying guidance ranges 70-90 °C for 4-12 h between vendors. Most published PA6 mechanical data is for the CF/GF-filled grades, so unfilled figures here rest on fewer datasheets than the filled siblings. AMS status is recorded 'conditional' on moisture grounds, which is stricter than the base pa entry's 'yes' — a deliberate judgement, not a sourced vendor statement."
+    "conflicts": "Density for 'PA6' filament spans 1.01-1.14 across sources because many products are PA6/66 copolymer blends rather than homopolymer; 1.13 is recorded as the homopolymer figure, not a cross-brand average, and conflicts with the base pa entry's grade-averaged 1.08 by design. Tensile spans 55-58 MPa (generic PA datasheet) to 79 MPa (Inslogic PA6/66 blend) \u2014 the blend is not the same material. Moisture uptake is quoted as 3-9 % by 3DXTech with no measurement condition given. Drying guidance ranges 70-90 \u00b0C for 4-12 h between vendors. Most published PA6 mechanical data is for the CF/GF-filled grades, so unfilled figures here rest on fewer datasheets than the filled siblings. AMS status is recorded 'conditional' on moisture grounds, which is stricter than the base pa entry's 'yes' \u2014 a deliberate judgement, not a sourced vendor statement."
   },
   "trade_names": [
     {

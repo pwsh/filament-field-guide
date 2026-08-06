@@ -12,8 +12,8 @@
   "base_type": "pctg",
   "variation_kind": "carbon-fiber-filled",
   "polymer_class": "composite-other",
-  "chemical_makeup": "The same glycol-modified PCT copolyester matrix as base PCTG — terephthalic acid with a high (>40-50 %) 1,4-cyclohexanedimethanol content — compounded with roughly 10 wt% chopped carbon fiber (3D-Fuel and Spectrum both state 10 %, an unusually clear disclosure for this category). The filler changes stiffness, surface finish and abrasiveness; it does not alter the copolyester chemistry, its amorphous nature or its hydrolysis behaviour.",
-  "summary": "Base PCTG stiffened with ~10 % chopped carbon fiber — marketed by 3D-Fuel as 'PETG-CF on steroids', which is the right comparison: the same stiffness-and-matte-black bargain as petg-cf, but riding on PCTG's tougher, better-bonding base resin instead of PETG's. Deltas vs pctg: a hardened nozzle becomes mandatory, the nozzle window shifts up to 250-280 °C, warp drops and dimensional stability rises, and the base entry's headline near-isotropic layer bonding is partly given back. The unusual caveat is that 3D-Fuel's own datasheet still lists the mechanical numbers as 'coming soon', so nothing about this grade's strength is independently verified.",
+  "chemical_makeup": "The same glycol-modified PCT copolyester matrix as base PCTG \u2014 terephthalic acid with a high (>40-50 %) 1,4-cyclohexanedimethanol content \u2014 compounded with roughly 10 wt% chopped carbon fiber (3D-Fuel and Spectrum both state 10 %, an unusually clear disclosure for this category). The filler changes stiffness, surface finish and abrasiveness; it does not alter the copolyester chemistry, its amorphous nature or its hydrolysis behaviour.",
+  "summary": "Base PCTG stiffened with ~10 % chopped carbon fiber \u2014 marketed by 3D-Fuel as 'PETG-CF on steroids', which is the right comparison: the same stiffness-and-matte-black bargain as petg-cf, but riding on PCTG's tougher, better-bonding base resin instead of PETG's. Deltas vs pctg: a hardened nozzle becomes mandatory, the nozzle window shifts up to 250-280 \u00b0C, warp drops and dimensional stability rises, and the base entry's headline near-isotropic layer bonding is partly given back. The unusual caveat is that 3D-Fuel's own datasheet still lists the mechanical numbers as 'coming soon', so nothing about this grade's strength is independently verified.",
   "printing": {
     "nozzle_temp_c": {
       "min": 250,
@@ -44,7 +44,7 @@
       "max": 30,
       "recommended": 10
     },
-    "notes": "Deltas vs base PCTG: 3D-Fuel raises the nozzle window from base Pro PCTG's 250-270 °C to 250-280 °C for the fiber-filled grade, keeps the bed at 80 °C on textured PEI, and calls for cooling to be minimised or switched off — a tighter fan window than base PCTG's 20-60 %, because fiber-filled melt needs its heat to weld and the layer bond is the property the fiber costs you. An enclosure is explicitly not required (3D-Fuel notes it as optional at ~45 °C), a relaxation from the base entry's 'recommended', on the same logic as petg-cf: fiber loading cuts shrink-driven corner lift. An all-metal hotend is mandatory at these temperatures and so is a hardened steel or ruby nozzle at 0.4 mm or larger — 10 % chopped carbon fiber destroys brass exactly as in petg-cf and pla-cf. 3D-Fuel specifically calls for pressure-advance tuning and wipe/retraction tuning. The recorded speed band is a reasoned narrowing of base PCTG's 40-110 mm/s to allow for fiber packing; no vendor publishes a figure for this grade (unverified)."
+    "notes": "Deltas vs base PCTG: 3D-Fuel raises the nozzle window from base Pro PCTG's 250-270 \u00b0C to 250-280 \u00b0C for the fiber-filled grade, keeps the bed at 80 \u00b0C on textured PEI, and calls for cooling to be minimised or switched off \u2014 a tighter fan window than base PCTG's 20-60 %, because fiber-filled melt needs its heat to weld and the layer bond is the property the fiber costs you. An enclosure is explicitly not required (3D-Fuel notes it as optional at ~45 \u00b0C), a relaxation from the base entry's 'recommended', on the same logic as petg-cf: fiber loading cuts shrink-driven corner lift. An all-metal hotend is mandatory at these temperatures and so is a hardened steel or ruby nozzle at 0.4 mm or larger \u2014 10 % chopped carbon fiber destroys brass exactly as in petg-cf and pla-cf. 3D-Fuel specifically calls for pressure-advance tuning and wipe/retraction tuning. The recorded speed band is a reasoned narrowing of base PCTG's 40-110 mm/s to allow for fiber packing; no vendor publishes a figure for this grade (unverified)."
   },
   "feeding": {
     "drive_system": "any",
@@ -65,16 +65,16 @@
       "recommended": 6
     },
     "methods": [
-      "dedicated filament dryer at 65 °C",
-      "blast/convection oven at 65 °C",
+      "dedicated filament dryer at 65 \u00b0C",
+      "blast/convection oven at 65 \u00b0C",
       "food dehydrator",
       "drybox with desiccant"
     ],
-    "dryness_validation": "No popping, hissing or steam at the nozzle and no voids or fuzz on a purge line. Unlike base PCTG, gloss is useless as an indicator here — the fiber-filled extrudate is matte by design — so judge by sound and by strand quality, as for petg-cf.",
-    "notes": "3D-Fuel specifies 65 °C for 6-8 h and ships the material vacuum-sealed with desiccant. That is base PCTG's schedule (55-65 °C / 4-8 h) run at the top of the range. The carbon fiber adds little hygroscopicity of its own, but moisture defects show up more visibly and cost more strength in a low-elongation filled matrix than in unfilled PCTG."
+    "dryness_validation": "No popping, hissing or steam at the nozzle and no voids or fuzz on a purge line. Unlike base PCTG, gloss is useless as an indicator here \u2014 the fiber-filled extrudate is matte by design \u2014 so judge by sound and by strand quality, as for petg-cf.",
+    "notes": "3D-Fuel specifies 65 \u00b0C for 6-8 h and ships the material vacuum-sealed with desiccant. That is base PCTG's schedule (55-65 \u00b0C / 4-8 h) run at the top of the range. The carbon fiber adds little hygroscopicity of its own, but moisture defects show up more visibly and cost more strength in a low-elongation filled matrix than in unfilled PCTG."
   },
   "storage": {
-    "recommendations": "Airtight container or drybox with fresh desiccant between prints; 3D-Fuel ships vacuum-sealed with desiccant and advises the same on reseal. PCTG's moisture uptake is lower than PETG's, so this is a routine rather than an urgent regime — but see the drying note on why neglect costs more in a filled grade.",
+    "recommendations": "Airtight container or drybox with fresh desiccant between prints; 3D-Fuel ships vacuum-sealed with desiccant and advises the same on reseal. PCTG's moisture uptake is lower than PETG's, so this is a routine rather than an urgent regime \u2014 but see the drying note on why neglect costs more in a filled grade.",
     "max_humidity_pct": 30,
     "hygroscopy": "moderate"
   },
@@ -93,9 +93,9 @@
       "matte cosmetic-functional parts where PCTG's gloss is unwanted"
     ],
     "not_recommended": [
-      "parts needing PCTG's clarity or translucency — the fiber makes it opaque matte black",
+      "parts needing PCTG's clarity or translucency \u2014 the fiber makes it opaque matte black",
       "snap-fits, living hinges and anything relying on the base resin's ductility",
-      "sustained load above roughly 65-70 °C — carbon fiber does not raise an amorphous copolyester's HDT (see petg-cf)",
+      "sustained load above roughly 65-70 \u00b0C \u2014 carbon fiber does not raise an amorphous copolyester's HDT (see petg-cf)",
       "food-contact items",
       "printers without a hardened nozzle and an all-metal hotend",
       "0.2 mm nozzle detail work"
@@ -112,7 +112,7 @@
     "grams_per_100cm3": 127,
     "cm3_per_100g": 78.7,
     "glass_transition_c": 78,
-    "notes": "ESTIMATED DENSITY: 1.27 g/cm³ is calculated by rule of mixtures for 10 wt% carbon fiber (~1.80 g/cm³) in base PCTG's measured 1.23 g/cm³ matrix; no vendor publishes a density for this grade, and the derived 127 g/100 cm³ and 78.7 cm³/100 g inherit that uncertainty. Tg is carried unchanged from the base pctg entry (78 °C) because fiber loading does not shift an amorphous polymer's glass transition (unverified for the filled grade). Tensile strength, flexural modulus, impact and HDT are deliberately NOT recorded: 3D-Fuel's product datasheet lists them as 'coming soon' and no independent measurement was found, so any number here would be invented. 3D-Fuel's technical library was checked on 2026-08-01: it publishes SDS/TDS pairs for Pro PCTG, Tough Pro PLA+, Standard PLA+, Pro ABS, Pro ASA, Pro PETG and 3D-Clean, but no datasheet of any kind for the fiber-filled PCTG grades, so the 'coming soon' gap is still open. For calibration when a datasheet does appear, 3D-Fuel's own Pro PCTG TDS (rev 9-2-25, published to their technical library) measures the unfilled base at specific gravity 1.23 (ASTM D792), tensile 44 MPa at yield / 46 MPa at break (ISO 527) with elongation 4.4 % / 220 %, flexural 60 MPa at 1,600 MPa modulus (ISO 178), notched Izod 93 kJ/m² (ISO 180), HDT 76/64 °C at 0.455/1.82 MPa (ISO 75) and Tg 84 °C — note that the base entry keeps Tg 78 °C on multi-source consensus, so this grade's carried-over 78 °C may be 5-6 °C low if 3D-Fuel's own figure is right. The petg-cf precedent says to expect a large modulus gain, a collapse in elongation, and essentially no HDT gain. Shrinkage is unpublished for base PCTG and remains unpublished here."
+    "notes": "ESTIMATED DENSITY: 1.27 g/cm\u00b3 is calculated by rule of mixtures for 10 wt% carbon fiber (~1.80 g/cm\u00b3) in base PCTG's measured 1.23 g/cm\u00b3 matrix; no vendor publishes a density for this grade, and the derived 127 g/100 cm\u00b3 and 78.7 cm\u00b3/100 g inherit that uncertainty. Tg is carried unchanged from the base pctg entry (78 \u00b0C) because fiber loading does not shift an amorphous polymer's glass transition (unverified for the filled grade). Tensile strength, flexural modulus, impact and HDT are deliberately NOT recorded: 3D-Fuel's product datasheet lists them as 'coming soon' and no independent measurement was found, so any number here would be invented. 3D-Fuel's technical library was checked on 2026-08-01: it publishes SDS/TDS pairs for Pro PCTG, Tough Pro PLA+, Standard PLA+, Pro ABS, Pro ASA, Pro PETG and 3D-Clean, but no datasheet of any kind for the fiber-filled PCTG grades, so the 'coming soon' gap is still open. For calibration when a datasheet does appear, 3D-Fuel's own Pro PCTG TDS (rev 9-2-25, published to their technical library) measures the unfilled base at specific gravity 1.23 (ASTM D792), tensile 44 MPa at yield / 46 MPa at break (ISO 527) with elongation 4.4 % / 220 %, flexural 60 MPa at 1,600 MPa modulus (ISO 178), notched Izod 93 kJ/m\u00b2 (ISO 180), HDT 76/64 \u00b0C at 0.455/1.82 MPa (ISO 75) and Tg 84 \u00b0C \u2014 note that the base entry keeps Tg 78 \u00b0C on multi-source consensus, so this grade's carried-over 78 \u00b0C may be 5-6 \u00b0C low if 3D-Fuel's own figure is right. The petg-cf precedent says to expect a large modulus gain, a collapse in elongation, and essentially no HDT gain. Shrinkage is unpublished for base PCTG and remains unpublished here."
   },
   "scores": {
     "ease_of_print": 5,
@@ -129,7 +129,6 @@
     "bonds_with": [
       "cpe",
       "pctg",
-      "pctg-cf",
       "pctg-gf",
       "petg",
       "petg-cf",
@@ -138,17 +137,16 @@
       "petg-plus"
     ],
     "support_materials": [
-      "petg",
       "support-breakaway"
     ],
     "usable_as_support_for": [],
-    "notes": "Welds to itself, to base pctg and across the copolyester family on the same ester-backbone logic the base entry uses — the nozzle windows overlap with petg-cf and petg-gf, so mixed filled/unfilled copolyester prints are practical. PLA is deliberately omitted from support_materials even though base pctg lists it: at a 250-280 °C nozzle, PLA supports soften and deform, the same reasoning petg-gf applies. PETG supports survive the window and separate cleanly from the copolyester family; Bambu's 280-300 °C Support for PA/PET grade is the breakaway option rated for this temperature range, though neither pairing is vendor-documented for PCTG-CF (unverified). Same-material supports fuse hard — use breakaway settings. Like petg-cf and unlike the glass-fiber grades, the carbon loading makes the surface mildly conductive, so pctg-gf is the safer filled copolyester against exposed electronics."
+    "notes": "Welds to itself, to base pctg and across the copolyester family on the same ester-backbone logic the base entry uses \u2014 the nozzle windows overlap with petg-cf and petg-gf, so mixed filled/unfilled copolyester prints are practical. PLA is deliberately omitted from support_materials even though base pctg lists it: at a 250-280 \u00b0C nozzle, PLA supports soften and deform, the same reasoning petg-gf applies. PETG supports survive the window and separate cleanly from the copolyester family; Bambu's 280-300 \u00b0C Support for PA/PET grade is the breakaway option rated for this temperature range, though neither pairing is vendor-documented for PCTG-CF (unverified). Same-material supports fuse hard \u2014 use breakaway settings. Like petg-cf and unlike the glass-fiber grades, the carbon loading makes the surface mildly conductive, so pctg-gf is the safer filled copolyester against exposed electronics."
   },
   "plate_recommendations": [
     {
       "plate_id": "pei-textured",
       "rating": "recommended",
-      "notes": "3D-Fuel explicitly recommends textured PEI at 80 °C for this grade. Fiber loading also helps with base PCTG's real problem on PEI, which is over-adhesion rather than adhesion: the filled surface releases more readily than neat PCTG, which can bond hard enough to tear the sheet. Let the plate cool fully before removal."
+      "notes": "3D-Fuel explicitly recommends textured PEI at 80 \u00b0C for this grade. Fiber loading also helps with base PCTG's real problem on PEI, which is over-adhesion rather than adhesion: the filled surface releases more readily than neat PCTG, which can bond hard enough to tear the sheet. Let the plate cool fully before removal."
     },
     {
       "plate_id": "pei-satin",
@@ -198,25 +196,25 @@
     {
       "plate_id": "pc-plate",
       "rating": "avoid",
-      "notes": "Inferred from pctg and petg-cf: the same copolyester chemistry and an 80 °C bed requirement above this plate's comfortable range, plus added corner-lift force from the fiber (unverified)."
+      "notes": "Inferred from pctg and petg-cf: the same copolyester chemistry and an 80 \u00b0C bed requirement above this plate's comfortable range, plus added corner-lift force from the fiber (unverified)."
     }
   ],
   "alternatives": [
     {
       "filament_id": "pctg",
-      "reason": "Unfilled when bonding and clarity matter more than rigidity: the catalog's best layer adhesion (adh 10 vs 7), full transparency, no hardened nozzle, ease 6 vs 5 and $30-55 vs a flat $55 — you give up stab 7 vs 6 and warp 4 vs 5."
+      "reason": "Unfilled when bonding and clarity matter more than rigidity: the catalog's best layer adhesion (adh 10 vs 7), full transparency, no hardened nozzle, ease 6 vs 5 and $30-55 vs a flat $55 \u2014 you give up stab 7 vs 6 and warp 4 vs 5."
     },
     {
       "filament_id": "petg-cf",
-      "reason": "The mainstream equivalent with a far broader brand ecosystem, published mechanicals and a wider price floor ($25-67 vs a flat $55) — bought with PETG's less ductile base and weaker layer bonding (adh 6 vs 7)."
+      "reason": "The mainstream equivalent with a far broader brand ecosystem, published mechanicals and a wider price floor ($25-67 vs a flat $55) \u2014 bought with PETG's less ductile base and weaker layer bonding (adh 6 vs 7)."
     },
     {
       "filament_id": "pctg-gf",
-      "reason": "Same base, glass instead of carbon: tougher, non-conductive, colourable, better bonded (adh 8 vs 7) and more dimensionally stable (stab 8 vs 7) with gentler nozzle wear — at $60 vs $55 and less peak stiffness (comp 7 vs 8)."
+      "reason": "Same base, glass instead of carbon: tougher, non-conductive, colourable, better bonded (adh 8 vs 7) and more dimensionally stable (stab 8 vs 7) with gentler nozzle wear \u2014 at $60 vs $55 and less peak stiffness (comp 7 vs 8)."
     },
     {
       "filament_id": "pet-cf",
-      "reason": "If a carbon copolyester part must also take heat, this is the only one that does: temp 9 vs 5, HDT 205 °C against PCTG-CF's PETG-class ~70 °C — bought with a 45-60 °C chamber, no AMS and ease 3 vs 5."
+      "reason": "If a carbon copolyester part must also take heat, this is the only one that does: temp 9 vs 5, HDT 205 \u00b0C against PCTG-CF's PETG-class ~70 \u00b0C \u2014 bought with a 45-60 \u00b0C chamber, no AMS and ease 3 vs 5."
     }
   ],
   "emissions": {
@@ -229,13 +227,13 @@
       "carbon fiber fines (post-processing)"
     ],
     "ventilation": "recommended",
-    "notes": "No emissions study covers PCTG-CF, or PCTG at all. This is the base pctg profile carried across: PETG-family literature measures ultrafine particle output roughly an order of magnitude below ABS, with acetaldehyde and phthalate esters as the notable VOCs, and emission rates rise sharply with nozzle temperature — which matters here because this grade runs to 280 °C, hotter than base PCTG. Carbon fiber does not meaningfully change the fume profile at the nozzle. The real delta is at the bench rather than the printer: sanding, drilling or machining finished CF parts liberates respirable carbon fiber dust, so use a respirator and dust capture for post-processing (unverified as a measurement, consistent across the filled-filament entries)."
+    "notes": "No emissions study covers PCTG-CF, or PCTG at all. This is the base pctg profile carried across: PETG-family literature measures ultrafine particle output roughly an order of magnitude below ABS, with acetaldehyde and phthalate esters as the notable VOCs, and emission rates rise sharply with nozzle temperature \u2014 which matters here because this grade runs to 280 \u00b0C, hotter than base PCTG. Carbon fiber does not meaningfully change the fume profile at the nozzle. The real delta is at the bench rather than the printer: sanding, drilling or machining finished CF parts liberates respirable carbon fiber dust, so use a respirator and dust capture for post-processing (unverified as a measurement, consistent across the filled-filament entries)."
   },
   "trade_names": [
     {
       "manufacturer": "3d-fuel",
       "product": "Pro PCTG + 10 % Carbon Fiber (Pro PCTG-CF10)",
-      "notes": "The reference product for this entry: 10 % chopped carbon fiber, 1.75 mm, Midnight Black, ±0.02 mm tolerance, $54.95/kg, 250-280 °C nozzle, 80 °C bed, dry 65 °C for 6-8 h. Mechanical datasheet listed as 'coming soon' at time of research. Previously mapped to base pctg in the 3D-Fuel manufacturer entry with a 'no pctg-cf id exists' note — that mapping should now be retargeted here."
+      "notes": "The reference product for this entry: 10 % chopped carbon fiber, 1.75 mm, Midnight Black, \u00b10.02 mm tolerance, $54.95/kg, 250-280 \u00b0C nozzle, 80 \u00b0C bed, dry 65 \u00b0C for 6-8 h. Mechanical datasheet listed as 'coming soon' at time of research. Previously mapped to base pctg in the 3D-Fuel manufacturer entry with a 'no pctg-cf id exists' note \u2014 that mapping should now be retargeted here."
     },
     {
       "manufacturer": "spectrum-filaments",
@@ -248,8 +246,8 @@
       "notes": "PCTG + carbon fibre, previously listed against base pctg 'for family context only' because no pctg-cf id existed. Fiber loading and mechanical specs undisclosed (unverified)."
     }
   ],
-  "safety_notes": "Abrasive: 10 % chopped carbon fiber wears a brass nozzle visibly within a spool, so hardened steel or ruby is mandatory. An all-metal hotend is also mandatory — the whole printing window sits above the ~250 °C point at which PTFE liners degrade and release fluoropolymer decomposition products. Do not sand, drill or machine printed parts without respiratory protection and dust capture; carbon fiber fines are a respiratory irritant. Not food-contact suitable: the fiber-roughened surface traps bacteria on top of the usual FDM layer-crevice problem.",
-  "additional_notes": "MECHANICAL DATA — VERIFY BEFORE PUBLISHING CLAIMS: this is the least-substantiated composite entry in the catalog. 3D-Fuel's own product page lists tensile, flexural and impact figures as 'coming soon', and no independent test of any PCTG-CF product was located, so every strength statement here is directional reasoning from base PCTG plus the petg-cf precedent, not measurement. Two things are worth trusting anyway. First, the fiber loading is disclosed (10 %), which is rarer than it should be in this category and makes cross-brand comparison at least possible. Second, the choice against petg-cf is about base resin, not filler: PCTG's tougher, better-bonding matrix should give a filled grade with better impact behaviour and interlayer strength at similar stiffness, which is exactly what a fiber-filled PETG is worst at. Choose pctg-gf instead when nozzle wear, colour choice or electrical non-conductivity matters more than peak stiffness.",
+  "safety_notes": "Abrasive: 10 % chopped carbon fiber wears a brass nozzle visibly within a spool, so hardened steel or ruby is mandatory. An all-metal hotend is also mandatory \u2014 the whole printing window sits above the ~250 \u00b0C point at which PTFE liners degrade and release fluoropolymer decomposition products. Do not sand, drill or machine printed parts without respiratory protection and dust capture; carbon fiber fines are a respiratory irritant. Not food-contact suitable: the fiber-roughened surface traps bacteria on top of the usual FDM layer-crevice problem.",
+  "additional_notes": "MECHANICAL DATA \u2014 VERIFY BEFORE PUBLISHING CLAIMS: this is the least-substantiated composite entry in the catalog. 3D-Fuel's own product page lists tensile, flexural and impact figures as 'coming soon', and no independent test of any PCTG-CF product was located, so every strength statement here is directional reasoning from base PCTG plus the petg-cf precedent, not measurement. Two things are worth trusting anyway. First, the fiber loading is disclosed (10 %), which is rarer than it should be in this category and makes cross-brand comparison at least possible. Second, the choice against petg-cf is about base resin, not filler: PCTG's tougher, better-bonding matrix should give a filled grade with better impact behaviour and interlayer strength at similar stiffness, which is exactly what a fiber-filled PETG is worst at. Choose pctg-gf instead when nozzle wear, colour choice or electrical non-conductivity matters more than peak stiffness.",
   "provenance": {
     "sources": [
       "https://www.3dfuel.com/products/pro-pctg-cf10-carbon-fiber-1-75mm",
@@ -263,6 +261,6 @@
     ],
     "last_verified": "2026-08-01",
     "confidence": "low",
-    "conflicts": "No mechanical data exists for this grade from any source — 3D-Fuel's datasheet says 'coming soon' — so tensile, flexural, impact and HDT are omitted rather than guessed, and confidence is 'low' on that basis alone. Density is calculated by rule of mixtures, not measured. Speed range is reasoned from base PCTG, not published. Enclosure is recorded false against base pctg's true, following 3D-Fuel's 'optional, ~45 °C' guidance and the petg-cf warp precedent; this is a judgement call rather than a documented delta. AMS status is inferred from petg-cf's abrasion-and-brittleness reasoning with no vendor statement. Emissions are extrapolated twice over (PETG literature to PCTG to PCTG-CF). Price rests on one product. Scores are placed relative to pctg and petg-cf rather than measured: dimensional_stability +1 and warp -1 from base pctg mirror the PETG-to-PETG-CF deltas, layer_adhesion is dropped from base PCTG's exemplar 10 to 7 (a smaller drop than PETG's 9 to 6, on the reasoning that PCTG's tougher matrix keeps more of its interlayer strength), and temperature_tolerance is held at the base value because the petg-cf datasheet showed fiber loading gives an amorphous copolyester essentially no HDT gain. 2026-08-01 update (3D-Fuel technical library published — owner-provided link): the library carries SDS/TDS pairs for Pro PCTG, Tough Pro PLA+, Standard PLA+, Pro ABS, Pro ASA, Pro PETG and 3D-Clean but publishes NOTHING for Pro PCTG-CF, so no tensile, flexural, impact, HDT, density or shrinkage value could be filled and confidence deliberately stays 'low'. The only change made is that the base-PCTG calibration figures in properties.notes now come from 3D-Fuel's own Pro PCTG TDS rather than third-party aggregation, and that TDS reports Tg 84 °C against the 78 °C this entry carries from the base pctg consensus — an unresolved conflict affecting the carried-over glass_transition_c. A future session should re-check the library for a PCTG-CF TDS."
+    "conflicts": "No mechanical data exists for this grade from any source \u2014 3D-Fuel's datasheet says 'coming soon' \u2014 so tensile, flexural, impact and HDT are omitted rather than guessed, and confidence is 'low' on that basis alone. Density is calculated by rule of mixtures, not measured. Speed range is reasoned from base PCTG, not published. Enclosure is recorded false against base pctg's true, following 3D-Fuel's 'optional, ~45 \u00b0C' guidance and the petg-cf warp precedent; this is a judgement call rather than a documented delta. AMS status is inferred from petg-cf's abrasion-and-brittleness reasoning with no vendor statement. Emissions are extrapolated twice over (PETG literature to PCTG to PCTG-CF). Price rests on one product. Scores are placed relative to pctg and petg-cf rather than measured: dimensional_stability +1 and warp -1 from base pctg mirror the PETG-to-PETG-CF deltas, layer_adhesion is dropped from base PCTG's exemplar 10 to 7 (a smaller drop than PETG's 9 to 6, on the reasoning that PCTG's tougher matrix keeps more of its interlayer strength), and temperature_tolerance is held at the base value because the petg-cf datasheet showed fiber loading gives an amorphous copolyester essentially no HDT gain. 2026-08-01 update (3D-Fuel technical library published \u2014 owner-provided link): the library carries SDS/TDS pairs for Pro PCTG, Tough Pro PLA+, Standard PLA+, Pro ABS, Pro ASA, Pro PETG and 3D-Clean but publishes NOTHING for Pro PCTG-CF, so no tensile, flexural, impact, HDT, density or shrinkage value could be filled and confidence deliberately stays 'low'. The only change made is that the base-PCTG calibration figures in properties.notes now come from 3D-Fuel's own Pro PCTG TDS rather than third-party aggregation, and that TDS reports Tg 84 \u00b0C against the 78 \u00b0C this entry carries from the base pctg consensus \u2014 an unresolved conflict affecting the carried-over glass_transition_c. A future session should re-check the library for a PCTG-CF TDS."
   }
 }

@@ -11,7 +11,7 @@
   "variation_kind": "glass-fiber-filled",
   "polymer_class": "composite-other",
   "chemical_makeup": "Copolyester matrix compounded with chopped glass fiber, commonly 10-15 wt% (Polymaker's Fiberon PET-GF15 is 15 %). Vendor naming is loose in this category: several products sold as 'PETG-GF' are built on unmodified PET rather than glycol-modified PETG, which is why the published heat-resistance figures run far above base PETG's. Glass fiber is electrically non-conductive and light-coloured, so unlike carbon fiber it does not force an opaque black part.",
-  "summary": "The tougher, non-conductive counterpart to petg-cf. Deltas vs base petg: much higher stiffness and dimensional stability (<0.5 % change after annealing), a mandatory hardened nozzle, and — in the PET-based grades that dominate this category — a dramatically higher HDT of up to 133 °C annealed against base PETG's ~72 °C. Versus petg-cf it trades some stiffness for better layer bonding and impact toughness, keeps the surface electrically insulating, and is fussier about moisture.",
+  "summary": "The tougher, non-conductive counterpart to petg-cf. Deltas vs base petg: much higher stiffness and dimensional stability (<0.5 % change after annealing), a mandatory hardened nozzle, and \u2014 in the PET-based grades that dominate this category \u2014 a dramatically higher HDT of up to 133 \u00b0C annealed against base PETG's ~72 \u00b0C. Versus petg-cf it trades some stiffness for better layer bonding and impact toughness, keeps the surface electrically insulating, and is fussier about moisture.",
   "printing": {
     "nozzle_temp_c": {
       "min": 240,
@@ -42,13 +42,13 @@
       "max": 40,
       "recommended": 20
     },
-    "notes": "The nozzle window is unusually wide because the category is unusually mixed: true PETG-based grades (TINMORRY and similar) print in base PETG's 230-260 °C band, while Polymaker's PET-GF15 needs around 300 °C per user reports because its base is unmodified PET, not PETG. Check the product datasheet before assuming a profile. Bed 60-90 °C, the same bracket as petg-cf. Speed ceiling is higher than petg-cf's — up to 250 mm/s is reported for Fiberon PET-GF15 — because glass fiber packs and clogs less readily than carbon fiber. An all-metal hotend is required for grades running near 300 °C. Post-print annealing is what unlocks the quoted 133 °C HDT; unannealed parts do not reach it."
+    "notes": "The nozzle window is unusually wide because the category is unusually mixed: true PETG-based grades (TINMORRY and similar) print in base PETG's 230-260 \u00b0C band, while Polymaker's PET-GF15 needs around 300 \u00b0C per user reports because its base is unmodified PET, not PETG. Check the product datasheet before assuming a profile. Bed 60-90 \u00b0C, the same bracket as petg-cf. Speed ceiling is higher than petg-cf's \u2014 up to 250 mm/s is reported for Fiberon PET-GF15 \u2014 because glass fiber packs and clogs less readily than carbon fiber. An all-metal hotend is required for grades running near 300 \u00b0C. Post-print annealing is what unlocks the quoted 133 \u00b0C HDT; unannealed parts do not reach it."
   },
   "feeding": {
     "drive_system": "any",
     "ams_compatible": "conditional",
     "feeding_assistant_recommended": false,
-    "notes": "Rigid; any drive system feeds it. AMS is brand-split, as with petg-cf: Fiberon PET-GF15 is marketed as AMS-compatible and GF grades are generally treated more favourably than CF because they stay less brittle and snap less readily in a tight feed path, but third-party GF is still commonly barred alongside CF on vendor compatibility lists because the fiber abrades PTFE tubing. Recorded 'conditional'. Hardened steel or ruby nozzle mandatory — glass fiber is slightly gentler than carbon fiber over a long run but still destroys brass. Not flexible, so no shore hardness and no feeding assistant."
+    "notes": "Rigid; any drive system feeds it. AMS is brand-split, as with petg-cf: Fiberon PET-GF15 is marketed as AMS-compatible and GF grades are generally treated more favourably than CF because they stay less brittle and snap less readily in a tight feed path, but third-party GF is still commonly barred alongside CF on vendor compatibility lists because the fiber abrades PTFE tubing. Recorded 'conditional'. Hardened steel or ruby nozzle mandatory \u2014 glass fiber is slightly gentler than carbon fiber over a long run but still destroys brass. Not flexible, so no shore hardness and no feeding assistant."
   },
   "drying": {
     "required_before_use": "always",
@@ -69,10 +69,10 @@
       "vacuum-sealed storage between prints"
     ],
     "dryness_validation": "No popping or steam on a purge line and no voids in the extruded strand; as with petg-cf, gloss is useless as an indicator because the surface is matte by design. Users report that once this material has taken on moisture it dries back slowly, so validate before a long print rather than after a failure.",
-    "notes": "This is the clearest drying delta in the filled-copolyester set: users of Fiberon PET-GF15 report high moisture sensitivity and difficulty drying the material back out once soaked, and the vendor advises vacuum-sealed storage. The schedule recorded is the copolyester-family default run hotter and longer than base PETG's 50-65 °C / 4-8 h; the exact specification is unverified because the sourced datasheet does not publish one. Grades on an unmodified-PET base inherit PET's melt-hydrolysis risk, which is why 'always' is recorded rather than base PETG's 'if-exposed'."
+    "notes": "This is the clearest drying delta in the filled-copolyester set: users of Fiberon PET-GF15 report high moisture sensitivity and difficulty drying the material back out once soaked, and the vendor advises vacuum-sealed storage. The schedule recorded is the copolyester-family default run hotter and longer than base PETG's 50-65 \u00b0C / 4-8 h; the exact specification is unverified because the sourced datasheet does not publish one. Grades on an unmodified-PET base inherit PET's melt-hydrolysis risk, which is why 'always' is recorded rather than base PETG's 'if-exposed'."
   },
   "storage": {
-    "recommendations": "Vacuum-sealed or in a desiccant drybox at all times, not merely between prints — recovery from a soaked spool is slow, so prevention matters more here than for base PETG or petg-cf.",
+    "recommendations": "Vacuum-sealed or in a desiccant drybox at all times, not merely between prints \u2014 recovery from a soaked spool is slow, so prevention matters more here than for base PETG or petg-cf.",
     "max_humidity_pct": 25,
     "hygroscopy": "moderate"
   },
@@ -87,14 +87,14 @@
       "jigs, fixtures and tooling",
       "brackets and housings near electronics, where a non-conductive filler matters",
       "parts needing stiffness with more impact tolerance than petg-cf offers",
-      "annealed parts serving above base PETG's ~70 °C ceiling",
+      "annealed parts serving above base PETG's ~70 \u00b0C ceiling",
       "large flat functional prints where base PETG bows"
     ],
     "not_recommended": [
       "cosmetic or aesthetic parts (matte, fiber-flecked surface)",
       "flexible or energy-absorbing applications",
       "food-contact items",
-      "parts printed on a PTFE-lined hotend if the grade runs near 300 °C",
+      "parts printed on a PTFE-lined hotend if the grade runs near 300 \u00b0C",
       "printers without a hardened nozzle",
       "workflows without reliable dry storage"
     ]
@@ -120,7 +120,7 @@
       "max": 60,
       "recommended": 52
     },
-    "notes": "Bending strength 104 MPa and HDT 133 °C at 0.45 MPa after annealing, with dimensional change under 0.5 % after annealing (Polymaker Fiberon PET-GF15). The HDT figure belongs to a PET-based grade and should not be assumed for a true PETG-based product, which will sit far closer to base PETG's ~72 °C. Density is not published by the sourced datasheets — 1.35 g/cm³ is calculated by rule of mixtures for ~15 wt% E-glass (2.55 g/cm³) in a 1.27 g/cm³ copolyester matrix and is an estimate, not a measurement. Tensile strength is likewise a reasoned band from the bending-strength figure and the CF sibling's measured 51-56 MPa, not a datasheet value. Glass transition is omitted: the base polymer varies by product between PETG (~80 °C) and PET, so no single figure applies."
+    "notes": "Bending strength 104 MPa and HDT 133 \u00b0C at 0.45 MPa after annealing, with dimensional change under 0.5 % after annealing (Polymaker Fiberon PET-GF15). The HDT figure belongs to a PET-based grade and should not be assumed for a true PETG-based product, which will sit far closer to base PETG's ~72 \u00b0C. Density is not published by the sourced datasheets \u2014 1.35 g/cm\u00b3 is calculated by rule of mixtures for ~15 wt% E-glass (2.55 g/cm\u00b3) in a 1.27 g/cm\u00b3 copolyester matrix and is an estimate, not a measurement. Tensile strength is likewise a reasoned band from the bending-strength figure and the CF sibling's measured 51-56 MPa, not a datasheet value. Glass transition is omitted: the base polymer varies by product between PETG (~80 \u00b0C) and PET, so no single figure applies."
   },
   "scores": {
     "ease_of_print": 6,
@@ -141,20 +141,19 @@
       "pctg-gf",
       "petg",
       "petg-cf",
-      "petg-gf",
       "petg-plus"
     ],
     "support_materials": [
       "bvoh"
     ],
     "usable_as_support_for": [],
-    "notes": "Welds to itself and to the copolyester family (base petg, petg-cf, pctg). PLA is deliberately omitted from the support list even though it works for base PETG and petg-cf: the grades that need a ~300 °C nozzle will deform PLA supports, so same-family breakaway or BVOH is the safer default. The practical selection point against petg-cf is electrical: glass fiber is non-conductive, so this is the filled copolyester to put against circuit boards and inside electronics enclosures."
+    "notes": "Welds to itself and to the copolyester family (base petg, petg-cf, pctg). PLA is deliberately omitted from the support list even though it works for base PETG and petg-cf: the grades that need a ~300 \u00b0C nozzle will deform PLA supports, so same-family breakaway or BVOH is the safer default. The practical selection point against petg-cf is electrical: glass fiber is non-conductive, so this is the filled copolyester to put against circuit boards and inside electronics enclosures."
   },
   "plate_recommendations": [
     {
       "plate_id": "pei-textured",
       "rating": "recommended",
-      "notes": "Explicitly recommended by the Fiberon datasheet, with a warning that adhesion is strong — let the plate cool completely before removal or you risk warping the part and damaging the sheet. Same guidance as base PETG, one notch more emphatic."
+      "notes": "Explicitly recommended by the Fiberon datasheet, with a warning that adhesion is strong \u2014 let the plate cool completely before removal or you risk warping the part and damaging the sheet. Same guidance as base PETG, one notch more emphatic."
     },
     {
       "plate_id": "pei-satin",
@@ -170,7 +169,7 @@
   "alternatives": [
     {
       "filament_id": "petg",
-      "reason": "Unfilled when stiffness and dimensional stability are not the constraint: ease 7 vs 6, no hardened nozzle, better bonding (adh 9 vs 7), less moisture fuss and a lower floor ($18-42 vs $25-35) — you lose stab 9 vs 7, temp 7 vs 5 and the annealed 133 °C HDT."
+      "reason": "Unfilled when stiffness and dimensional stability are not the constraint: ease 7 vs 6, no hardened nozzle, better bonding (adh 9 vs 7), less moisture fuss and a lower floor ($18-42 vs $25-35) \u2014 you lose stab 9 vs 7, temp 7 vs 5 and the annealed 133 \u00b0C HDT."
     },
     {
       "filament_id": "petg-cf",
@@ -178,11 +177,11 @@
     },
     {
       "filament_id": "pet-gf",
-      "reason": "Glass on the semi-crystalline parent: the same anneal-to-134 °C trick but with genuinely low 0.5 % water absorption and modulus 4.2-4.3 GPa — at ease 5 vs 6, a 280-300 °C nozzle and $45-55 vs $25-35."
+      "reason": "Glass on the semi-crystalline parent: the same anneal-to-134 \u00b0C trick but with genuinely low 0.5 % water absorption and modulus 4.2-4.3 GPa \u2014 at ease 5 vs 6, a 280-300 \u00b0C nozzle and $45-55 vs $25-35."
     },
     {
       "filament_id": "pctg-gf",
-      "reason": "Glass on a more ductile base resin, so it should be the tougher of the two glass copolyesters (adh 8 vs 7) with the same warp-4 class — at $60/kg flat, and with no published mechanical datasheet to check the claim against."
+      "reason": "Glass on a more ductile base resin, so it should be the tougher of the two glass copolyesters (adh 8 vs 7) with the same warp-4 class \u2014 at $60/kg flat, and with no published mechanical datasheet to check the claim against."
     }
   ],
   "emissions": {
@@ -194,10 +193,10 @@
       "glass fiber fines (post-processing)"
     ],
     "ventilation": "recommended",
-    "notes": "Printing emissions track base PETG and petg-cf — no styrene, low odour. Grades running near 300 °C should be expected to emit more than a 240 °C profile, since emission rate scales with extrusion temperature. Glass fiber dust from sanding or drilling is a respiratory and skin irritant; use the same PPE and dust capture as for a carbon-filled grade."
+    "notes": "Printing emissions track base PETG and petg-cf \u2014 no styrene, low odour. Grades running near 300 \u00b0C should be expected to emit more than a 240 \u00b0C profile, since emission rate scales with extrusion temperature. Glass fiber dust from sanding or drilling is a respiratory and skin irritant; use the same PPE and dust capture as for a carbon-filled grade."
   },
-  "safety_notes": "Abrasive — hardened steel or ruby nozzle required. Glass fiber fines from sanding, drilling or cutting irritate skin, eyes and airways; wear a mask and gloves and capture dust. Grades printing near 300 °C require an all-metal hotend: a PTFE-lined hotend degrades and releases fluoropolymer decomposition products at that temperature. Not food-contact suitable.",
-  "additional_notes": "Read the datasheet before buying: this category mixes true PETG-based products with unmodified-PET-based ones sold under a 'PETG-GF' label, and the two need profiles nearly 60 °C apart. Nozzle temperature is the tell — a 230-260 °C window means a PETG base, while a ~300 °C requirement means the product belongs chemically closer to pet-cf's family than to base PETG. The 133 °C HDT quoted in this entry is only reachable on a PET-based grade after annealing.",
+  "safety_notes": "Abrasive \u2014 hardened steel or ruby nozzle required. Glass fiber fines from sanding, drilling or cutting irritate skin, eyes and airways; wear a mask and gloves and capture dust. Grades printing near 300 \u00b0C require an all-metal hotend: a PTFE-lined hotend degrades and releases fluoropolymer decomposition products at that temperature. Not food-contact suitable.",
+  "additional_notes": "Read the datasheet before buying: this category mixes true PETG-based products with unmodified-PET-based ones sold under a 'PETG-GF' label, and the two need profiles nearly 60 \u00b0C apart. Nozzle temperature is the tell \u2014 a 230-260 \u00b0C window means a PETG base, while a ~300 \u00b0C requirement means the product belongs chemically closer to pet-cf's family than to base PETG. The 133 \u00b0C HDT quoted in this entry is only reachable on a PET-based grade after annealing.",
   "provenance": {
     "sources": [
       "https://shop.polymaker.com/products/fiberon-pet-gf15",
@@ -209,7 +208,7 @@
     ],
     "last_verified": "2026-07-31",
     "confidence": "low",
-    "conflicts": "The category itself is the largest unresolved conflict: products branded 'PETG-GF' are variously built on PETG or on unmodified PET (Polymaker's Fiberon PET-GF15 is the latter), which splits the nozzle window between roughly 230-260 °C and roughly 300 °C and splits HDT between base PETG's ~72 °C and the annealed 133 °C recorded here. The recorded ranges deliberately span both; a single-product entry would be narrower. Density is not published by any sourced datasheet and is calculated, not measured. Tensile strength is inferred rather than sourced (only bending strength, 104 MPa, is published). Drying temperature and time are unpublished for this grade and are family defaults reasoned upward from base PETG on user reports of high moisture sensitivity. AMS status is contradictory: Fiberon markets PET-GF15 as AMS-compatible while Bambu's general guidance bars third-party fiber-filled filament — recorded 'conditional'. Confidence is 'low' rather than 'medium' because so much of the numeric data is estimated or product-specific. 2026-08-01: 'PET-GF15'/'Fiberon PET-GF15' aliases relocated to the new pet-gf entry (true PET-based grade); HDT/price figures drawn from that product should be re-verified against actual PETG-GF datasheets in a future pass."
+    "conflicts": "The category itself is the largest unresolved conflict: products branded 'PETG-GF' are variously built on PETG or on unmodified PET (Polymaker's Fiberon PET-GF15 is the latter), which splits the nozzle window between roughly 230-260 \u00b0C and roughly 300 \u00b0C and splits HDT between base PETG's ~72 \u00b0C and the annealed 133 \u00b0C recorded here. The recorded ranges deliberately span both; a single-product entry would be narrower. Density is not published by any sourced datasheet and is calculated, not measured. Tensile strength is inferred rather than sourced (only bending strength, 104 MPa, is published). Drying temperature and time are unpublished for this grade and are family defaults reasoned upward from base PETG on user reports of high moisture sensitivity. AMS status is contradictory: Fiberon markets PET-GF15 as AMS-compatible while Bambu's general guidance bars third-party fiber-filled filament \u2014 recorded 'conditional'. Confidence is 'low' rather than 'medium' because so much of the numeric data is estimated or product-specific. 2026-08-01: 'PET-GF15'/'Fiberon PET-GF15' aliases relocated to the new pet-gf entry (true PET-based grade); HDT/price figures drawn from that product should be re-verified against actual PETG-GF datasheets in a future pass."
   },
   "trade_names": [
     {

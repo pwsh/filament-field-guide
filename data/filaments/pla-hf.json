@@ -14,7 +14,7 @@
   "variation_kind": "high-flow",
   "polymer_class": "polylactide",
   "chemical_makeup": "Base polylactide reformulated for a high melt-flow index (lower melt viscosity) and dosed with nucleating agents that accelerate crystallisation immediately after extrusion; no filler, no co-polymer blend",
-  "summary": "Base PLA rheology-tuned for speed — same lactide chemistry, process delta only. Versus base PLA the melt is thinner and re-solidifies faster, lifting the usable speed band from roughly 40-100 mm/s to 100-300 mm/s (600+ mm/s on capable hardware) and volumetric flow from ~24 to ~28 mm³/s on Prusa's own comparison. Nozzle and bed temperatures are near-identical to base PLA and near-100 % part cooling becomes mandatory rather than merely advisable. Strength, heat resistance and weather behaviour are unchanged; the finish is glossier and less forgiving of defects than matte PLA.",
+  "summary": "Base PLA rheology-tuned for speed \u2014 same lactide chemistry, process delta only. Versus base PLA the melt is thinner and re-solidifies faster, lifting the usable speed band from roughly 40-100 mm/s to 100-300 mm/s (600+ mm/s on capable hardware) and volumetric flow from ~24 to ~28 mm\u00b3/s on Prusa's own comparison. Nozzle and bed temperatures are near-identical to base PLA and near-100 % part cooling becomes mandatory rather than merely advisable. Strength, heat resistance and weather behaviour are unchanged; the finish is glossier and less forgiving of defects than matte PLA.",
   "printing": {
     "nozzle_temp_c": {
       "min": 210,
@@ -45,13 +45,13 @@
       "recommended": 100
     },
     "enclosure_open_for_cooling": true,
-    "notes": "Delta vs base PLA: temperatures barely move (Polymaker PolySonic PLA Pro 210-230 °C, Prusament PLA High Speed tuned around 220 °C at high flow, eSUN ePLA-HS ~220 °C; eSUN's tested bed range is 30-45 °C), but speed does — PolySonic PLA Pro is rated 100-300 mm/s and the class is commonly run at 250-600 mm/s on high-flow hotends, against 40-100 mm/s for typical PLA profiles. Prusa measures 28 mm³/s at 220 °C for PLA High Speed against 24 mm³/s for standard Prusament PLA. Full-power part cooling is not optional here: the nucleated melt has to be frozen quickly to hold shape at speed, so the fan effectively lives at 100 %. That makes an open frame preferable and an enclosed machine should be run with the door/lid open, as with base PLA. Unfilled, so no hardened nozzle."
+    "notes": "Delta vs base PLA: temperatures barely move (Polymaker PolySonic PLA Pro 210-230 \u00b0C, Prusament PLA High Speed tuned around 220 \u00b0C at high flow, eSUN ePLA-HS ~220 \u00b0C; eSUN's tested bed range is 30-45 \u00b0C), but speed does \u2014 PolySonic PLA Pro is rated 100-300 mm/s and the class is commonly run at 250-600 mm/s on high-flow hotends, against 40-100 mm/s for typical PLA profiles. Prusa measures 28 mm\u00b3/s at 220 \u00b0C for PLA High Speed against 24 mm\u00b3/s for standard Prusament PLA. Full-power part cooling is not optional here: the nucleated melt has to be frozen quickly to hold shape at speed, so the fan effectively lives at 100 %. That makes an open frame preferable and an enclosed machine should be run with the door/lid open, as with base PLA. Unfilled, so no hardened nozzle."
   },
   "feeding": {
     "drive_system": "any",
     "ams_compatible": "yes",
     "feeding_assistant_recommended": false,
-    "notes": "Feeds exactly like base PLA — rigid, unfilled, non-abrasive, no PTFE wear concern, no spool-side assistant needed, and Bambu's material guidance flags no high-speed PLA as barred from the AMS. Rated 'yes' like base PLA rather than the 'conditional' carried by pla-cf and lw-pla. No shore hardness applies (rigid grade)."
+    "notes": "Feeds exactly like base PLA \u2014 rigid, unfilled, non-abrasive, no PTFE wear concern, no spool-side assistant needed, and Bambu's material guidance flags no high-speed PLA as barred from the AMS. Rated 'yes' like base PLA rather than the 'conditional' carried by pla-cf and lw-pla. No shore hardness applies (rigid grade)."
   },
   "drying": {
     "required_before_use": "if-exposed",
@@ -71,8 +71,8 @@
       "convection oven at lowest setting",
       "drybox with desiccant"
     ],
-    "dryness_validation": "No popping/crackling or steam at the nozzle and no foamy extrudate — worth checking at the intended print speed, since moisture artefacts that a slow profile hides show up as rough walls at 250+ mm/s. Minimal stringing on a retraction test.",
-    "notes": "Essentially the same as base PLA. Polymaker specifies 55 °C for 6 h for PolySonic PLA Pro and explicitly only 'if moisture absorbed'. Nothing in the nucleator/flow-modifier package is reported to change PLA's hygroscopicity, so the shorter, cooler drying regime of the base entry carries over — unlike pla-plus, where Bambu calls for a hotter 55-75 °C cycle."
+    "dryness_validation": "No popping/crackling or steam at the nozzle and no foamy extrudate \u2014 worth checking at the intended print speed, since moisture artefacts that a slow profile hides show up as rough walls at 250+ mm/s. Minimal stringing on a retraction test.",
+    "notes": "Essentially the same as base PLA. Polymaker specifies 55 \u00b0C for 6 h for PolySonic PLA Pro and explicitly only 'if moisture absorbed'. Nothing in the nucleator/flow-modifier package is reported to change PLA's hygroscopicity, so the shorter, cooler drying regime of the base entry carries over \u2014 unlike pla-plus, where Bambu calls for a hotter 55-75 \u00b0C cycle."
   },
   "storage": {
     "recommendations": "Sealed bag or drybox with desiccant between uses; same tolerance for open-air storage in a dry room as base PLA",
@@ -116,7 +116,7 @@
       "max": 50,
       "recommended": 41
     },
-    "notes": "Density is NOT published by Polymaker or Prusa for their high-speed grades; 1.24 g/cm³ is inherited from the base PLA entry on the basis that the chemistry is base polylactide plus nucleator/flow modifier (unverified for this grade specifically). Polymaker PolySonic PLA Pro: tensile X-Y 41.2±0.6 MPa at 'classic speed', bending strength X-Y 67.5±0.7 MPa, Charpy impact 22.7±2.5 kJ/m² — comparable to base PLA and sitting between base PLA and pla-plus on toughness, consistent with Polymaker's claim of 'impact strength similar to ABS'. The engineering delta of this grade is flow rate, not final part strength: Prusa's own figure is 28 mm³/s at 220 °C vs 24 mm³/s for standard Prusament PLA. Tg, HDT and shrinkage are not disclosed by any fetched source (unverified); expect base-PLA-like values around 55-60 °C since no chemistry change targets heat resistance, so no thermal numbers are recorded here rather than inventing them."
+    "notes": "Density is NOT published by Polymaker or Prusa for their high-speed grades; 1.24 g/cm\u00b3 is inherited from the base PLA entry on the basis that the chemistry is base polylactide plus nucleator/flow modifier (unverified for this grade specifically). Polymaker PolySonic PLA Pro: tensile X-Y 41.2\u00b10.6 MPa at 'classic speed', bending strength X-Y 67.5\u00b10.7 MPa, Charpy impact 22.7\u00b12.5 kJ/m\u00b2 \u2014 comparable to base PLA and sitting between base PLA and pla-plus on toughness, consistent with Polymaker's claim of 'impact strength similar to ABS'. The engineering delta of this grade is flow rate, not final part strength: Prusa's own figure is 28 mm\u00b3/s at 220 \u00b0C vs 24 mm\u00b3/s for standard Prusament PLA. Tg, HDT and shrinkage are not disclosed by any fetched source (unverified); expect base-PLA-like values around 55-60 \u00b0C since no chemistry change targets heat resistance, so no thermal numbers are recorded here rather than inventing them."
   },
   "scores": {
     "ease_of_print": 9,
@@ -137,7 +137,6 @@
       "pla-cf",
       "pla-gf",
       "pla-gradient",
-      "pla-hf",
       "pla-matte",
       "pla-plus",
       "pla-silk"
@@ -157,7 +156,7 @@
     {
       "plate_id": "pei-textured",
       "rating": "recommended",
-      "notes": "Same as base PLA — no release agent needed at 30-60 °C. Worth noting that first-layer adhesion is the limiting factor when the rest of the print runs at 250+ mm/s, so keep the first layer at normal PLA speeds."
+      "notes": "Same as base PLA \u2014 no release agent needed at 30-60 \u00b0C. Worth noting that first-layer adhesion is the limiting factor when the rest of the print runs at 250+ mm/s, so keep the first layer at normal PLA speeds."
     },
     {
       "plate_id": "supertack",
@@ -168,11 +167,11 @@
   "alternatives": [
     {
       "filament_id": "pla",
-      "reason": "Base PLA if you are not actually flow-limited: same strength, heat and warp scores, cheaper ($14-35 vs $18-30) and far less dependent on near-100 % part cooling; you lose the 100-300 mm/s (600+ mm/s capable) band and ~28 vs ~24 mm³/s of flow."
+      "reason": "Base PLA if you are not actually flow-limited: same strength, heat and warp scores, cheaper ($14-35 vs $18-30) and far less dependent on near-100 % part cooling; you lose the 100-300 mm/s (600+ mm/s capable) band and ~28 vs ~24 mm\u00b3/s of flow."
     },
     {
       "filament_id": "cope",
-      "reason": "The copolyester high-speed rival: rated to 400 mm/s and ~32 mm³/s with markedly stronger bed adhesion and a slightly higher softening point (temp 3 vs 2) at $18-20 — but Charpy impact is only 2.9 kJ/m², it sands badly, and its bed grip is strong enough that the datasheet warns off textured PEI."
+      "reason": "The copolyester high-speed rival: rated to 400 mm/s and ~32 mm\u00b3/s with markedly stronger bed adhesion and a slightly higher softening point (temp 3 vs 2) at $18-20 \u2014 but Charpy impact is only 2.9 kJ/m\u00b2, it sands badly, and its bed grip is strong enough that the datasheet warns off textured PEI."
     },
     {
       "filament_id": "pla-plus",
@@ -180,7 +179,7 @@
     },
     {
       "filament_id": "petg",
-      "reason": "If those fast parts also have to survive heat or moisture: temp 5 vs 2 and water 9 vs 6 with adh 9 vs 7 — at ease 7 vs 9, more stringing and no comparable speed ceiling."
+      "reason": "If those fast parts also have to survive heat or moisture: temp 5 vs 2 and water 9 vs 6 with adh 9 vs 7 \u2014 at ease 7 vs 9, more stringing and no comparable speed ceiling."
     }
   ],
   "emissions": {
@@ -191,10 +190,10 @@
       "ultrafine particles"
     ],
     "ventilation": "optional",
-    "notes": "No unique emission concern beyond base PLA — no styrene, caprolactam or foaming agent. One practical caveat: ultrafine-particle emission scales with extruded mass per unit time, so a machine running this grade at 250-600 mm/s for hours puts out proportionally more than the same machine on a slow base-PLA profile, even though the per-gram emission profile is identical (inference, not a measured figure). Ventilate for continuous printing in an occupied room."
+    "notes": "No unique emission concern beyond base PLA \u2014 no styrene, caprolactam or foaming agent. One practical caveat: ultrafine-particle emission scales with extruded mass per unit time, so a machine running this grade at 250-600 mm/s for hours puts out proportionally more than the same machine on a slow base-PLA profile, even though the per-gram emission profile is identical (inference, not a measured figure). Ventilate for continuous printing in an occupied room."
   },
   "safety_notes": "No food-contact certification found for any high-speed PLA line; brand-dependent and unverified, so treat as not food-safe.",
-  "additional_notes": "Naming caveat for catalog mapping: Bambu Lab does not sell a filament literally called 'PLA-HF' — Bambu's 'HF' branding (as in PETG-HF) refers to the high-flow hotend/nozzle hardware, not to a PLA product. 'PLA-HF' in community usage maps to third-party high-speed PLA formulations (eSUN ePLA-HS, Polymaker PolySonic, Prusament PLA High Speed, colorFabb PLA High Speed Pro) run on fast printers. Realising the rated speed also needs the hardware: a high-flow hotend and strong part cooling, otherwise the grade behaves like ordinary PLA.",
+  "additional_notes": "Naming caveat for catalog mapping: Bambu Lab does not sell a filament literally called 'PLA-HF' \u2014 Bambu's 'HF' branding (as in PETG-HF) refers to the high-flow hotend/nozzle hardware, not to a PLA product. 'PLA-HF' in community usage maps to third-party high-speed PLA formulations (eSUN ePLA-HS, Polymaker PolySonic, Prusament PLA High Speed, colorFabb PLA High Speed Pro) run on fast printers. Realising the rated speed also needs the hardware: a high-flow hotend and strong part cooling, otherwise the grade behaves like ordinary PLA.",
   "provenance": {
     "sources": [
       "https://blog.prusa3d.com/prusament-pla-high-speed-a-perfect-choice-for-rapid-prototyping_137192/",
@@ -206,7 +205,7 @@
     ],
     "last_verified": "2026-07-31",
     "confidence": "low",
-    "conflicts": "Confidence is 'low' rather than 'medium' because the core physical data is missing: no fetched source publishes density, Tg, HDT or shrinkage for any high-speed PLA grade, so density is inherited from base PLA and thermal properties are omitted entirely. The speed ceiling also disagrees by source: Polymaker rates PolySonic PLA Pro at 100-300 mm/s while community and vendor marketing for the class cites 250-600+ mm/s — the range recorded spans both, but the upper end is hardware-dependent, not a material property. Naming is unresolved: 'PLA-HF' is a community label, not a manufacturer SKU, and Bambu's 'HF' means high-flow hardware rather than a filament grade."
+    "conflicts": "Confidence is 'low' rather than 'medium' because the core physical data is missing: no fetched source publishes density, Tg, HDT or shrinkage for any high-speed PLA grade, so density is inherited from base PLA and thermal properties are omitted entirely. The speed ceiling also disagrees by source: Polymaker rates PolySonic PLA Pro at 100-300 mm/s while community and vendor marketing for the class cites 250-600+ mm/s \u2014 the range recorded spans both, but the upper end is hardware-dependent, not a material property. Naming is unresolved: 'PLA-HF' is a community label, not a manufacturer SKU, and Bambu's 'HF' means high-flow hardware rather than a filament grade."
   },
   "trade_names": [
     {

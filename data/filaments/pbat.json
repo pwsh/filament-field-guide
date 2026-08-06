@@ -13,7 +13,7 @@
   "variation_kind": null,
   "polymer_class": "polyester-copolyester",
   "chemical_makeup": "An aliphatic-aromatic copolyester of 1,4-butanediol with both adipic acid (aliphatic, flexible) and terephthalic acid (aromatic, rigid). The aliphatic ester links are what make it genuinely biodegradable under composting conditions, while the aromatic ones give it enough thermal and mechanical integrity to be melt-processed. In the FDM world it almost never appears alone: it is compounded as a minority ductile phase into PLA to cut PLA's brittleness and to carry a compostability claim, so a spool labelled PBAT is in practice a PLA-majority PLA/PBAT blend.",
-  "summary": "A genuinely compostable soft copolyester that is far better known as an additive than as a filament. PBAT's role in 3D printing is as the ductile minority phase in 'compostable' or 'soft' PLA blends, not as a material you buy on its own — no verified retail pure-PBAT spool was found in this research pass. Judge it accordingly: at practical blend ratios it is weaker than pla and pla-plus in every mechanical axis, the flexibility gain is slight because PLA and PBAT bond poorly at the interface, and compostability is the only real differentiator — one that needs certificate-level verification per product, not a marketing line.",
+  "summary": "A genuinely compostable soft copolyester that is far better known as an additive than as a filament. PBAT's role in 3D printing is as the ductile minority phase in 'compostable' or 'soft' PLA blends, not as a material you buy on its own \u2014 no verified retail pure-PBAT spool was found in this research pass. Judge it accordingly: at practical blend ratios it is weaker than pla and pla-plus in every mechanical axis, the flexibility gain is slight because PLA and PBAT bond poorly at the interface, and compostability is the only real differentiator \u2014 one that needs certificate-level verification per product, not a marketing line.",
   "printing": {
     "nozzle_temp_c": {
       "min": 190,
@@ -44,7 +44,7 @@
       "max": 100,
       "recommended": 50
     },
-    "notes": "These are PLA/PBAT blend settings from peer-reviewed FDM work (roughly 220 °C nozzle and 50 °C bed reported as workable up to 40 % PBAT content), not a vendor profile — no retail product datasheet was found to record. Open-frame printers are fine and no enclosure is needed; as with every PLA-class material, run an enclosed printer with the door or lid open to avoid heat creep. The recommended speed is conservative relative to base PLA because higher PBAT fractions get tacky and ductile, which widens the stringing window and complicates retraction. Neat PBAT alone melts far lower than PLA (roughly 110-120 °C melting) and would need a correspondingly cooler profile than the one recorded here, which describes the blend."
+    "notes": "These are PLA/PBAT blend settings from peer-reviewed FDM work (roughly 220 \u00b0C nozzle and 50 \u00b0C bed reported as workable up to 40 % PBAT content), not a vendor profile \u2014 no retail product datasheet was found to record. Open-frame printers are fine and no enclosure is needed; as with every PLA-class material, run an enclosed printer with the door or lid open to avoid heat creep. The recommended speed is conservative relative to base PLA because higher PBAT fractions get tacky and ductile, which widens the stringing window and complicates retraction. Neat PBAT alone melts far lower than PLA (roughly 110-120 \u00b0C melting) and would need a correspondingly cooler profile than the one recorded here, which describes the blend."
   },
   "feeding": {
     "drive_system": "any",
@@ -71,10 +71,10 @@
       "drybox with desiccant"
     ],
     "dryness_validation": "PLA-tier checks applied by analogy, not by vendor instruction: no popping or visible steam at the nozzle, glossy rather than blistered extrudate, minimal stringing on a retraction tower. Note that a high-PBAT blend strings somewhat even when dry, so stringing alone is a weaker indicator here than for base PLA.",
-    "notes": "No drying schedule is published for any PBAT or PLA/PBAT filament (unverified). The recorded window is the flexible-PLA regime, chosen because the commercially relevant form is a PLA-majority blend and because PBAT's own melting point (~110-120 °C) leaves less headroom than PLA's for aggressive drying — do not carry a nylon-style 70-80 °C schedule across to this material."
+    "notes": "No drying schedule is published for any PBAT or PLA/PBAT filament (unverified). The recorded window is the flexible-PLA regime, chosen because the commercially relevant form is a PLA-majority blend and because PBAT's own melting point (~110-120 \u00b0C) leaves less headroom than PLA's for aggressive drying \u2014 do not carry a nylon-style 70-80 \u00b0C schedule across to this material."
   },
   "storage": {
-    "recommendations": "Sealed bag or drybox with desiccant between prints, as for base PLA. This is standard practice for polyester filaments rather than a vendor instruction — no storage guidance exists for any PBAT product (unverified). Compostable materials are designed to break down under heat and humidity, so long open-air storage in a damp workshop is a worse idea here than for ordinary PLA.",
+    "recommendations": "Sealed bag or drybox with desiccant between prints, as for base PLA. This is standard practice for polyester filaments rather than a vendor instruction \u2014 no storage guidance exists for any PBAT product (unverified). Compostable materials are designed to break down under heat and humidity, so long open-air storage in a damp workshop is a worse idea here than for ordinary PLA.",
     "max_humidity_pct": 40,
     "hygroscopy": "moderate"
   },
@@ -90,12 +90,12 @@
       "toughening PLA where a modest gain in elongation is enough"
     ],
     "not_recommended": [
-      "anything structural or load-bearing — tensile strength falls with PBAT content, to roughly 17 MPa at 40 % PBAT against pure PLA's 39 MPa",
-      "flexible parts — this is NOT a TPU or TPE substitute; PLA/PBAT blends still fail brittle",
-      "heat exposure of any kind — PBAT's own melting point is roughly 110-120 °C and its Tg is far below room temperature",
+      "anything structural or load-bearing \u2014 tensile strength falls with PBAT content, to roughly 17 MPa at 40 % PBAT against pure PLA's 39 MPa",
+      "flexible parts \u2014 this is NOT a TPU or TPE substitute; PLA/PBAT blends still fail brittle",
+      "heat exposure of any kind \u2014 PBAT's own melting point is roughly 110-120 \u00b0C and its Tg is far below room temperature",
       "outdoor or long-service parts, where designed-in degradability works against you",
       "any part bought on a compostability claim that has no BPI or EN 13432 certificate behind it",
-      "projects needing a repeatable commercial supply — no verified retail product was located"
+      "projects needing a repeatable commercial supply \u2014 no verified retail product was located"
     ]
   },
   "suitability": {
@@ -109,7 +109,7 @@
     "grams_per_100cm3": 126,
     "cm3_per_100g": 79.4,
     "glass_transition_c": -30,
-    "notes": "Density 1.26 g/cm³ is the standard resin figure for commercial PBAT grades (Ecoflex-class), not a filament measurement (unverified); the derived 126 g/100 cm³ and 79.4 cm³/100 g follow from it. Tg is far below room temperature at roughly -30 °C, which is precisely why PBAT is soft and rubbery at ambient and why it toughens PLA — this is a general polymer-literature figure with no filament datasheet behind it (unverified). Tensile strength is deliberately NOT recorded as a range, because every published number describes a blend rather than the neat polymer and the value moves with blend ratio: from the peer-reviewed FDM study (Polymers 2024, 16(8):1140), pure PLA measures 39.01 MPa tensile, 7.07 % elongation at break, 48.90 MPa flexural strength and 1.97 GPa flexural modulus, while at 40 % PBAT tensile collapses to 17.16 MPa (a 56 % reduction), flexural strength to 31.13 MPa and flexural modulus to 1.09 GPa. At the 30 % blend that study identifies as optimal, elongation at break improves only to 10.15 % from 7.07 % — the key finding, and the reason this material should never be sold as a flexible: PLA and PBAT have poor interfacial compatibility, so the ductility of the PBAT phase does not transfer to the part. HDT, shrinkage and max service temperature are unpublished and omitted."
+    "notes": "Density 1.26 g/cm\u00b3 is the standard resin figure for commercial PBAT grades (Ecoflex-class), not a filament measurement (unverified); the derived 126 g/100 cm\u00b3 and 79.4 cm\u00b3/100 g follow from it. Tg is far below room temperature at roughly -30 \u00b0C, which is precisely why PBAT is soft and rubbery at ambient and why it toughens PLA \u2014 this is a general polymer-literature figure with no filament datasheet behind it (unverified). Tensile strength is deliberately NOT recorded as a range, because every published number describes a blend rather than the neat polymer and the value moves with blend ratio: from the peer-reviewed FDM study (Polymers 2024, 16(8):1140), pure PLA measures 39.01 MPa tensile, 7.07 % elongation at break, 48.90 MPa flexural strength and 1.97 GPa flexural modulus, while at 40 % PBAT tensile collapses to 17.16 MPa (a 56 % reduction), flexural strength to 31.13 MPa and flexural modulus to 1.09 GPa. At the 30 % blend that study identifies as optimal, elongation at break improves only to 10.15 % from 7.07 % \u2014 the key finding, and the reason this material should never be sold as a flexible: PLA and PBAT have poor interfacial compatibility, so the ductility of the PBAT phase does not transfer to the part. HDT, shrinkage and max service temperature are unpublished and omitted."
   },
   "scores": {
     "ease_of_print": 6,
@@ -123,20 +123,17 @@
     "water_tolerance": 3
   },
   "compatibility": {
-    "bonds_with": [
-      "pbat"
-    ],
     "support_materials": [
       "pla"
     ],
     "usable_as_support_for": [],
-    "notes": "bonds_with is deliberately near-empty and that is the informative part. The single best-documented fact about PBAT in an FDM context is that it bonds POORLY to PLA — the peer-reviewed blend study attributes the disappointing ductility of PLA/PBAT blends directly to poor interfacial compatibility between the two phases, which is a statement about the PLA/PBAT interface itself. A co-printed PLA-to-PBAT boundary should therefore be expected to be weak, not strong, despite both being PLA-window materials, unless a compatibiliser is present. No bond to the copolyester family (petg, pctg) has been tested despite the shared ester backbone (unverified) and none is asserted. PLA is listed as a support material on the standard non-bonding logic — the same weak interface that makes co-printing unwise makes PLA a clean breakaway support — but this is inference, not documentation (unverified)."
+    "notes": "bonds_with is deliberately near-empty and that is the informative part. The single best-documented fact about PBAT in an FDM context is that it bonds POORLY to PLA \u2014 the peer-reviewed blend study attributes the disappointing ductility of PLA/PBAT blends directly to poor interfacial compatibility between the two phases, which is a statement about the PLA/PBAT interface itself. A co-printed PLA-to-PBAT boundary should therefore be expected to be weak, not strong, despite both being PLA-window materials, unless a compatibiliser is present. No bond to the copolyester family (petg, pctg) has been tested despite the shared ester backbone (unverified) and none is asserted. PLA is listed as a support material on the standard non-bonding logic \u2014 the same weak interface that makes co-printing unwise makes PLA a clean breakaway support \u2014 but this is inference, not documentation (unverified)."
   },
   "plate_recommendations": [
     {
       "plate_id": "pei-textured",
       "rating": "recommended",
-      "notes": "Inferred from PLA-class behaviour at a 40-60 °C bed with no adhesive; low PLA-family shrinkage keeps corners down. No plate guidance exists for any PBAT product (unverified)."
+      "notes": "Inferred from PLA-class behaviour at a 40-60 \u00b0C bed with no adhesive; low PLA-family shrinkage keeps corners down. No plate guidance exists for any PBAT product (unverified)."
     },
     {
       "plate_id": "pei-smooth",
@@ -157,19 +154,19 @@
   "alternatives": [
     {
       "filament_id": "pla",
-      "reason": "The practical compostable choice: PBAT is effectively unavailable as a retail spool and is weaker in every mechanical axis (comp 3 vs 8, ease 6 vs 10, stab 5 vs 8); PLA is industrially compostable, $14-35 and prints everywhere — you give up PBAT's softer, home/soil-degradable profile."
+      "reason": "The practical compostable choice: PBAT is effectively unavailable as a retail spool and is weaker in every mechanical axis (comp 3 vs 8, ease 6 vs 10, stab 5 vs 8); PLA is industrially compostable, $14-35 and prints everywhere \u2014 you give up PBAT's softer, home/soil-degradable profile."
     },
     {
       "filament_id": "pha",
-      "reason": "The bio-polyester you can actually buy: PLA/PHA blends print in the PLA window (ease 9 vs 6) with real toughness (adh 8 vs 6) at $46-61 — and their degradation claims are equally uncertified, so verify per product exactly as you would for PBAT."
+      "reason": "The bio-polyester you can actually buy: PLA/PHA blends print in the PLA window (ease 9 vs 6) with real toughness (adh 8 vs 6) at $46-61 \u2014 and their degradation claims are equally uncertified, so verify per product exactly as you would for PBAT."
     },
     {
       "filament_id": "tpu-95a",
-      "reason": "If flexibility rather than compostability was the goal, a real elastomer delivers it — PBAT's softening effect in PLA blends is slight because the two phases bond poorly at the interface — at ease 5 vs 6, no AMS support and $40-70."
+      "reason": "If flexibility rather than compostability was the goal, a real elastomer delivers it \u2014 PBAT's softening effect in PLA blends is slight because the two phases bond poorly at the interface \u2014 at ease 5 vs 6, no AMS support and $40-70."
     },
     {
       "filament_id": "pla-plus",
-      "reason": "If the requirement was simply 'less brittle PLA', the impact-modified grade is the mainstream fix (adh 8 vs 6, comp 7 vs 3) at $22-45 — petro-based, so any compostability claim disappears."
+      "reason": "If the requirement was simply 'less brittle PLA', the impact-modified grade is the mainstream fix (adh 8 vs 6, comp 7 vs 3) at $22-45 \u2014 petro-based, so any compostability claim disappears."
     }
   ],
   "emissions": {
@@ -181,10 +178,10 @@
       "aliphatic ester decomposition products (unverified)"
     ],
     "ventilation": "recommended",
-    "notes": "No emissions or ultrafine-particle study of PBAT or PLA/PBAT filament was located (unverified). The levels recorded are by analogy with the PLA-class materials the blend is mostly made of, at an identical ~220 °C nozzle. Ventilation is recorded 'recommended' rather than base PLA's 'optional' purely because nothing here is measured — this is a precautionary placement, not evidence of a worse profile."
+    "notes": "No emissions or ultrafine-particle study of PBAT or PLA/PBAT filament was located (unverified). The levels recorded are by analogy with the PLA-class materials the blend is mostly made of, at an identical ~220 \u00b0C nozzle. Ventilation is recorded 'recommended' rather than base PLA's 'optional' purely because nothing here is measured \u2014 this is a precautionary placement, not evidence of a worse profile."
   },
-  "safety_notes": "Nothing beyond ordinary PLA-class handling is documented: no styrene, no caprolactam, no fibre dust, no hardened nozzle, no all-metal hotend requirement. The non-obvious caution is behavioural and identical to the one on the pha entry — 'biodegradable' marketing invites disposal in the environment. PBAT is compostable under composting conditions, which is not the same as safe to litter, and a PLA-majority blend degrades on PLA's terms rather than PBAT's. Dispose of prints as plastic waste unless a specific certified end-of-life route exists.",
-  "additional_notes": "PRODUCT EXISTENCE — VERIFY BEFORE PUBLISHING: extensive searching found no confirmed retail pure-PBAT filament spool. Two specific traps are worth recording. First, CC3D names PBAT in its About-page material range but the purchasable CC3D product with a similar name is PBT (polybutylene terephthalate) — a different, non-biodegradable engineering polymer that this catalog already covers as pbt. One letter, entirely different material. Second, retail filaments marketed as compostable or as flexible-and-biodegradable (Compostify and similar) are generally PLA-PBS or PLA-PBAT blends, not neat PBAT, and their blend ratios are undisclosed. If no commercial pure-PBAT spool can be confirmed, the editorially honest move is to retitle this entry as a PLA/PBAT blend rather than a standalone material and keep sourcing it from the academic literature as done here. Finally, treat every compostability claim as unverified until a BPI or EN 13432 certificate number is produced: neat PBAT is fully degradable under composting conditions per the literature, but a PLA-majority blend's fate depends on the blend ratio and is not automatically industrially compostable.",
+  "safety_notes": "Nothing beyond ordinary PLA-class handling is documented: no styrene, no caprolactam, no fibre dust, no hardened nozzle, no all-metal hotend requirement. The non-obvious caution is behavioural and identical to the one on the pha entry \u2014 'biodegradable' marketing invites disposal in the environment. PBAT is compostable under composting conditions, which is not the same as safe to litter, and a PLA-majority blend degrades on PLA's terms rather than PBAT's. Dispose of prints as plastic waste unless a specific certified end-of-life route exists.",
+  "additional_notes": "PRODUCT EXISTENCE \u2014 VERIFY BEFORE PUBLISHING: extensive searching found no confirmed retail pure-PBAT filament spool. Two specific traps are worth recording. First, CC3D names PBAT in its About-page material range but the purchasable CC3D product with a similar name is PBT (polybutylene terephthalate) \u2014 a different, non-biodegradable engineering polymer that this catalog already covers as pbt. One letter, entirely different material. Second, retail filaments marketed as compostable or as flexible-and-biodegradable (Compostify and similar) are generally PLA-PBS or PLA-PBAT blends, not neat PBAT, and their blend ratios are undisclosed. If no commercial pure-PBAT spool can be confirmed, the editorially honest move is to retitle this entry as a PLA/PBAT blend rather than a standalone material and keep sourcing it from the academic literature as done here. Finally, treat every compostability claim as unverified until a BPI or EN 13432 certificate number is produced: neat PBAT is fully degradable under composting conditions per the literature, but a PLA-majority blend's fate depends on the blend ratio and is not automatically industrially compostable.",
   "provenance": {
     "sources": [
       "https://ncbi.nlm.nih.gov/pmc/articles/PMC11054694",
@@ -196,6 +193,6 @@
     ],
     "last_verified": "2026-08-01",
     "confidence": "low",
-    "conflicts": "The largest unresolved item is whether this entry describes a purchasable product at all: no verified retail pure-PBAT spool was found, and the CC3D listing that prompted the gap turns out to be PBT rather than PBAT. Every mechanical figure recorded in prose comes from academic PLA/PBAT blend studies at stated blend ratios, not from a filament datasheet, so nothing is comparable to the vendor-datasheet numbers used elsewhere in this catalog — which is why tensile_strength_mpa is omitted entirely rather than recorded as a misleading range. Density (1.26 g/cm³) and Tg (-30 °C) are general resin-literature values for PBAT, not filament measurements. Process temperatures come from a study of blends up to 40 % PBAT and would not apply to neat PBAT, whose ~110-120 °C melting point implies a much cooler profile. Drying, storage, plate behaviour, AMS status and the whole emissions profile are inferred from PLA-family analogy with no product-specific source. Price is unverified outright, so the price object carries notes with no numeric bounds. Scores are relative placements against pla and pha: the material is scored below both on strength, stiffness and temperature, and its water_tolerance is deliberately low (3) because hydrolytic degradability is the point of the material rather than a defect. Confidence is 'low' throughout and this entry should not be published without an editorial decision on the product-existence question."
+    "conflicts": "The largest unresolved item is whether this entry describes a purchasable product at all: no verified retail pure-PBAT spool was found, and the CC3D listing that prompted the gap turns out to be PBT rather than PBAT. Every mechanical figure recorded in prose comes from academic PLA/PBAT blend studies at stated blend ratios, not from a filament datasheet, so nothing is comparable to the vendor-datasheet numbers used elsewhere in this catalog \u2014 which is why tensile_strength_mpa is omitted entirely rather than recorded as a misleading range. Density (1.26 g/cm\u00b3) and Tg (-30 \u00b0C) are general resin-literature values for PBAT, not filament measurements. Process temperatures come from a study of blends up to 40 % PBAT and would not apply to neat PBAT, whose ~110-120 \u00b0C melting point implies a much cooler profile. Drying, storage, plate behaviour, AMS status and the whole emissions profile are inferred from PLA-family analogy with no product-specific source. Price is unverified outright, so the price object carries notes with no numeric bounds. Scores are relative placements against pla and pha: the material is scored below both on strength, stiffness and temperature, and its water_tolerance is deliberately low (3) because hydrolytic degradability is the point of the material rather than a defect. Confidence is 'low' throughout and this entry should not be published without an editorial decision on the product-existence question."
   }
 }

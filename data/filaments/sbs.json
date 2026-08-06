@@ -11,8 +11,8 @@
   "base_type": null,
   "variation_kind": null,
   "polymer_class": "elastomer",
-  "chemical_makeup": "Styrene-butadiene-styrene block copolymer — rigid polystyrene end blocks acting as physical crosslinks in a flexible, chemically unsaturated polybutadiene mid block. The same block-copolymer architecture as the SEBS behind most of the tpe entry, but un-hydrogenated: those remaining double bonds are exactly why SBS is far more UV- and ozone-sensitive than SEBS while sharing its solvent-smoothing behaviour",
-  "summary": "A firm, rubber-adjacent elastomer that prints far more like a rigid material than TPE or TPU do — PLA-adjacent speeds, a glass-and-hairspray bed routine, and no direct-drive mandate — and that smooths to genuine transparency in d-limonene. Its defining weakness is sunlight: the unsaturated butadiene block gives it the worst UV rating of any flexible in the catalog. The category is essentially one manufacturer, Filamentarno!, resold under regional labels, and almost no numeric datasheet data exists for it.",
+  "chemical_makeup": "Styrene-butadiene-styrene block copolymer \u2014 rigid polystyrene end blocks acting as physical crosslinks in a flexible, chemically unsaturated polybutadiene mid block. The same block-copolymer architecture as the SEBS behind most of the tpe entry, but un-hydrogenated: those remaining double bonds are exactly why SBS is far more UV- and ozone-sensitive than SEBS while sharing its solvent-smoothing behaviour",
+  "summary": "A firm, rubber-adjacent elastomer that prints far more like a rigid material than TPE or TPU do \u2014 PLA-adjacent speeds, a glass-and-hairspray bed routine, and no direct-drive mandate \u2014 and that smooths to genuine transparency in d-limonene. Its defining weakness is sunlight: the unsaturated butadiene block gives it the worst UV rating of any flexible in the catalog. The category is essentially one manufacturer, Filamentarno!, resold under regional labels, and almost no numeric datasheet data exists for it.",
   "printing": {
     "nozzle_temp_c": {
       "min": 195,
@@ -37,12 +37,12 @@
       "max": 100,
       "recommended": 35
     },
-    "notes": "Nozzle spans 195-245 °C across resellers — FIL-X/DaVinciLab 195-215 °C, SA Filament 210-240 °C, filx.co.za 215-235 °C with 235 °C cited for a Bambu Lab standard-speed profile — and the recorded 220 °C sits in the common ground. Bed 60-80 °C, notably with glass plus hairspray named as the practical adhesion method by two independent sources, which is a rigid-material routine rather than the bare-textured-PEI routine soft flexibles use. Fan is the clearest departure from the tpe entry: SA Filament quotes a 0-100 % range and filx.co.za's Bambu profile runs 40 %, where SEBS-based TPE wants the fan off entirely. Speed is the other big one: DaVinciLab describes settings 'equivalent to PLA', roughly 40-60 mm/s, against TPE's 5-30 mm/s ceiling — this is the single most useful practical difference. SA Filament's listed '50-500 mm/s' upper figure is implausible for FDM extrusion and is treated as a listing artefact rather than data. No source calls for an enclosure or a hardened nozzle on standard grades. enclosure_open_for_cooling is omitted rather than recorded false: no source addresses door-open printing either way, and SBS's mid-range fan use makes the tpe entry's answer a poor guide."
+    "notes": "Nozzle spans 195-245 \u00b0C across resellers \u2014 FIL-X/DaVinciLab 195-215 \u00b0C, SA Filament 210-240 \u00b0C, filx.co.za 215-235 \u00b0C with 235 \u00b0C cited for a Bambu Lab standard-speed profile \u2014 and the recorded 220 \u00b0C sits in the common ground. Bed 60-80 \u00b0C, notably with glass plus hairspray named as the practical adhesion method by two independent sources, which is a rigid-material routine rather than the bare-textured-PEI routine soft flexibles use. Fan is the clearest departure from the tpe entry: SA Filament quotes a 0-100 % range and filx.co.za's Bambu profile runs 40 %, where SEBS-based TPE wants the fan off entirely. Speed is the other big one: DaVinciLab describes settings 'equivalent to PLA', roughly 40-60 mm/s, against TPE's 5-30 mm/s ceiling \u2014 this is the single most useful practical difference. SA Filament's listed '50-500 mm/s' upper figure is implausible for FDM extrusion and is treated as a listing artefact rather than data. No source calls for an enclosure or a hardened nozzle on standard grades. enclosure_open_for_cooling is omitted rather than recorded false: no source addresses door-open printing either way, and SBS's mid-range fan use makes the tpe entry's answer a poor guide."
   },
   "feeding": {
     "drive_system": "direct-drive-recommended",
     "feeding_assistant_recommended": false,
-    "notes": "Recommended rather than required, which is a genuine step up from the tpe entry's direct-drive-required. DaVinciLab's only feeding caution is 'don't overtighten the extruder tension spring due to material softness' — the material still deforms under excessive gear pressure, but it prints at PLA-adjacent speeds and sticks to glass with hairspray, both of which point to a filament firm enough to survive a short Bowden path. ams_compatible is omitted rather than guessed: no vendor statement about SBS in any material station was found, and parity with the tpe entry's documented 'no' should not be assumed given how much firmer this material appears to be. A feeding assistant is not indicated; those matter for ~60A-85A grades, and SBS is described qualitatively as firmer than that."
+    "notes": "Recommended rather than required, which is a genuine step up from the tpe entry's direct-drive-required. DaVinciLab's only feeding caution is 'don't overtighten the extruder tension spring due to material softness' \u2014 the material still deforms under excessive gear pressure, but it prints at PLA-adjacent speeds and sticks to glass with hairspray, both of which point to a filament firm enough to survive a short Bowden path. ams_compatible is omitted rather than guessed: no vendor statement about SBS in any material station was found, and parity with the tpe entry's documented 'no' should not be assumed given how much firmer this material appears to be. A feeding assistant is not indicated; those matter for ~60A-85A grades, and SBS is described qualitatively as firmer than that."
   },
   "drying": {
     "required_before_use": "rarely",
@@ -63,17 +63,17 @@
       "drybox with desiccant"
     ],
     "dryness_validation": "No popping or crackling at the nozzle and no foamy extrudate; because the material is normally printed for a silky or solvent-clarified surface, a dull or bubbled test strand is the practical tell",
-    "notes": "Both FIL-X-family sources state outright that SBS 'does not absorb moisture' / has 'no moisture absorption capability', which would put it below even SEBS TPE for hygroscopy. No brand publishes a drying temperature or time anywhere, so the recorded 40-55 °C / 4-8 h band is carried from the tpe entry as a plausible corrective procedure and is unverified for SBS. Keep the temperature low regardless: an elastomer spool deforms in a hot dryer."
+    "notes": "Both FIL-X-family sources state outright that SBS 'does not absorb moisture' / has 'no moisture absorption capability', which would put it below even SEBS TPE for hygroscopy. No brand publishes a drying temperature or time anywhere, so the recorded 40-55 \u00b0C / 4-8 h band is carried from the tpe entry as a plausible corrective procedure and is unverified for SBS. Keep the temperature low regardless: an elastomer spool deforms in a hot dryer."
   },
   "storage": {
-    "recommendations": "Sealed with desiccant as generic good practice, but not urgent — the sourced 'no moisture absorption' claims mean open-shelf storage is tolerated far better than by TPU or PVA. Keep it out of direct sunlight, which matters more for this material than humidity does.",
+    "recommendations": "Sealed with desiccant as generic good practice, but not urgent \u2014 the sourced 'no moisture absorption' claims mean open-shelf storage is tolerated far better than by TPU or PVA. Keep it out of direct sunlight, which matters more for this material than humidity does.",
     "max_humidity_pct": 60,
     "hygroscopy": "low"
   },
   "price": {
     "usd_per_kg_low": 25,
     "usd_per_kg_high": 40,
-    "notes": "Poorly documented. The only concrete figure found is €20-28/kg including VAT and shipping for Filamentarno! product, cited in a 2017 Hubs community thread — nearly a decade stale and best read as a historical floor. The recorded $25-40/kg extrapolates from it to present-day pricing and is unverified; regional resale (SA Filament, FIL-X) will diverge from European pricing."
+    "notes": "Poorly documented. The only concrete figure found is \u20ac20-28/kg including VAT and shipping for Filamentarno! product, cited in a 2017 Hubs community thread \u2014 nearly a decade stale and best read as a historical floor. The recorded $25-40/kg extrapolates from it to present-day pricing and is unverified; regional resale (SA Filament, FIL-X) will diverge from European pricing."
   },
   "use_cases": {
     "recommended": [
@@ -86,10 +86,10 @@
       "parts that need some give without TPU's full elasticity"
     ],
     "not_recommended": [
-      "anything with sustained sun exposure — the worst UV rating of any flexible here",
+      "anything with sustained sun exposure \u2014 the worst UV rating of any flexible here",
       "high-precision rigid structural parts",
       "applications assuming TPU-level stretch (SBS is firmer and less elastic)",
-      "sustained high-temperature service — the heat data is thin and contradictory",
+      "sustained high-temperature service \u2014 the heat data is thin and contradictory",
       "outdoor fixtures generally, unless the part is a consumable"
     ]
   },
@@ -100,7 +100,7 @@
     "outdoor": "no"
   },
   "properties": {
-    "notes": "This is the thinnest property set in the catalog and the omissions are deliberate. Shore hardness — the single number that normally drives everything about a flexible — is published by no source found in this research; every description is qualitative ('resembles hard rubber', 'silky finish', an SBS-Pro grade marketed as an ABS replacement), all pointing at the firm end of the flexible spectrum, plausibly the 85A-98A neighbourhood, but no datasheet value exists to record and guessing one would be worse than leaving the field empty. A dedicated re-check on 2026-08-01 across Filamentarno's own Russian-language site, a 3dtoday.ru editorial on SBS-PRO, the ink-market.ru and biotorg.com resellers and the unrelated SA Filament brand found no durometer figure anywhere, so the omission is now confirmed as genuinely unpublished data rather than a research gap — see provenance.conflicts. Density, shrinkage, Tg, HDT and tensile strength are likewise unpublished for SBS filament and are all omitted. Two partial thermal signals exist and disagree: Filamentarno's CERAMO variant is reported to soften at 102 °C, and DaVinciLab claims the material is 'dishwasher safe' with 'high temperature resistance', while SA Filament rates heat resistance a middling 3/5 stars — this is probably grade-to-grade variation across Filamentarno's own line (S-Soft, T-Soft, M-Soft, SBS-Pro, CERAMO, CERAMO-TEX) rather than one number in dispute. General block-copolymer science predicts two glass transitions, a polystyrene-domain Tg near 90-100 °C and a polybutadiene-domain Tg near -90 °C, which is why a single Tg field would be misleading here even if one were published."
+    "notes": "This is the thinnest property set in the catalog and the omissions are deliberate. Shore hardness \u2014 the single number that normally drives everything about a flexible \u2014 is published by no source found in this research; every description is qualitative ('resembles hard rubber', 'silky finish', an SBS-Pro grade marketed as an ABS replacement), all pointing at the firm end of the flexible spectrum, plausibly the 85A-98A neighbourhood, but no datasheet value exists to record and guessing one would be worse than leaving the field empty. A dedicated re-check on 2026-08-01 across Filamentarno's own Russian-language site, a 3dtoday.ru editorial on SBS-PRO, the ink-market.ru and biotorg.com resellers and the unrelated SA Filament brand found no durometer figure anywhere, so the omission is now confirmed as genuinely unpublished data rather than a research gap \u2014 see provenance.conflicts. Density, shrinkage, Tg, HDT and tensile strength are likewise unpublished for SBS filament and are all omitted. Two partial thermal signals exist and disagree: Filamentarno's CERAMO variant is reported to soften at 102 \u00b0C, and DaVinciLab claims the material is 'dishwasher safe' with 'high temperature resistance', while SA Filament rates heat resistance a middling 3/5 stars \u2014 this is probably grade-to-grade variation across Filamentarno's own line (S-Soft, T-Soft, M-Soft, SBS-Pro, CERAMO, CERAMO-TEX) rather than one number in dispute. General block-copolymer science predicts two glass transitions, a polystyrene-domain Tg near 90-100 \u00b0C and a polybutadiene-domain Tg near -90 \u00b0C, which is why a single Tg field would be misleading here even if one were published."
   },
   "scores": {
     "ease_of_print": 5,
@@ -114,9 +114,6 @@
     "water_tolerance": 8
   },
   "compatibility": {
-    "bonds_with": [
-      "sbs"
-    ],
     "support_materials": [],
     "usable_as_support_for": [],
     "notes": "No cross-material bonding data exists for SBS against anything in this catalog. Two candidates are chemically plausible and both are deliberately left out of bonds_with pending confirmation: abs and the other styrenics, on the strength of the shared polystyrene hard block and a shared response to aggressive solvents, and tpe, on the strength of the shared styrenic-block-copolymer architecture. No soluble support is documented; the material's own flexibility means overhangs are often printed unsupported where geometry allows, and same-material breakaway is the fallback. Note for post-processing rather than co-printing: SBS smooths and clarifies in d-limonene, with NEFRAS-A130/150 and xylene reported by Russian-market users as cheaper regional alternatives."
@@ -125,12 +122,12 @@
     {
       "plate_id": "glass-borosilicate",
       "rating": "recommended",
-      "notes": "The only build surface any source actually names, and two independent ones name the same thing: a glass bed with hairspray at roughly 60-80 °C. This is a rigid-material adhesion routine rather than the bare-plate grip soft flexibles rely on, and it is the clearest single sign that SBS behaves more like a firm styrenic than like TPE on the plate."
+      "notes": "The only build surface any source actually names, and two independent ones name the same thing: a glass bed with hairspray at roughly 60-80 \u00b0C. This is a rigid-material adhesion routine rather than the bare-plate grip soft flexibles rely on, and it is the clearest single sign that SBS behaves more like a firm styrenic than like TPE on the plate."
     },
     {
       "plate_id": "pei-textured",
       "rating": "usable",
-      "notes": "No source evaluates PEI for SBS. Textured PEI is likely to work — the material is styrenic and firm — but treat it as needing an adhesion aid (glue stick or hairspray) rather than assuming the bare-PEI grip that soft TPU and TPE get from mechanical keying. Unverified."
+      "notes": "No source evaluates PEI for SBS. Textured PEI is likely to work \u2014 the material is styrenic and firm \u2014 but treat it as needing an adhesion aid (glue stick or hairspray) rather than assuming the bare-PEI grip that soft TPU and TPE get from mechanical keying. Unverified."
     },
     {
       "plate_id": "pei-smooth",
@@ -141,23 +138,23 @@
   "alternatives": [
     {
       "filament_id": "tpu-95a",
-      "reason": "A far better-documented flexible with real elastomer stretch, better UV and weather behaviour (uv 4 vs 2) and published tensile numbers — at the same ease 5 but with a direct-drive preference SBS does not impose."
+      "reason": "A far better-documented flexible with real elastomer stretch, better UV and weather behaviour (uv 4 vs 2) and published tensile numbers \u2014 at the same ease 5 but with a direct-drive preference SBS does not impose."
     },
     {
       "filament_id": "asa",
-      "reason": "If the part goes outdoors at all, SBS is the wrong choice: ASA is uv 9 vs 2 and weather 9 vs 3 at similar money ($18-45) — traded for a rigid part, an enclosure and warp 7 vs 3."
+      "reason": "If the part goes outdoors at all, SBS is the wrong choice: ASA is uv 9 vs 2 and weather 9 vs 3 at similar money ($18-45) \u2014 traded for a rigid part, an enclosure and warp 7 vs 3."
     },
     {
       "filament_id": "hips",
-      "reason": "The other limonene-soluble styrenic: the same solvent-smoothing and dissolving chemistry, and it doubles as a breakaway support, at a documented $20-50 — but rigid, warp 6 vs 3, and it wants an enclosure."
+      "reason": "The other limonene-soluble styrenic: the same solvent-smoothing and dissolving chemistry, and it doubles as a breakaway support, at a documented $20-50 \u2014 but rigid, warp 6 vs 3, and it wants an enclosure."
     },
     {
       "filament_id": "pvb",
-      "reason": "If the appeal was solvent smoothing to a glassy finish rather than flexibility: IPA instead of d-limonene, ease 9 vs 5 and real datasheet numbers — but rigid, brittle in Z, and heat-limited (temp 3 vs 4)."
+      "reason": "If the appeal was solvent smoothing to a glassy finish rather than flexibility: IPA instead of d-limonene, ease 9 vs 5 and real datasheet numbers \u2014 but rigid, brittle in Z, and heat-limited (temp 3 vs 4)."
     },
     {
       "filament_id": "tpe",
-      "reason": "More genuinely rubbery at similar cost ($25-45) with the same food/skin-contact certified-line status and better UV (4 vs 2) — traded for much harder printing (ease 3 vs 5) and a direct-drive mandate."
+      "reason": "More genuinely rubbery at similar cost ($25-45) with the same food/skin-contact certified-line status and better UV (4 vs 2) \u2014 traded for much harder printing (ease 3 vs 5) and a direct-drive mandate."
     }
   ],
   "emissions": {
@@ -168,10 +165,10 @@
       "trace styrene from the polystyrene hard block (inferred from chemistry, unquantified)"
     ],
     "ventilation": "recommended",
-    "notes": "No SBS-specific VOC or ultrafine-particle measurement exists in any source reviewed, so both levels are estimates. Two independent sources do describe printing as low-odour or odourless (filx.co.za 'no odor during printing'; SA Filament 'low odor emission'), which is qualitative but is at least direct observation rather than inference — and it is a real contrast with ABS, whose styrene smell is unmistakable. The polystyrene hard block still makes some styrene release plausible in principle, unquantified, and print temperatures are 30-50 °C below ABS's. Ventilate as a general precaution. Solvent smoothing is the bigger exposure: d-limonene, NEFRAS and xylene all need their own ventilation and are more hazardous than the printing step."
+    "notes": "No SBS-specific VOC or ultrafine-particle measurement exists in any source reviewed, so both levels are estimates. Two independent sources do describe printing as low-odour or odourless (filx.co.za 'no odor during printing'; SA Filament 'low odor emission'), which is qualitative but is at least direct observation rather than inference \u2014 and it is a real contrast with ABS, whose styrene smell is unmistakable. The polystyrene hard block still makes some styrene release plausible in principle, unquantified, and print temperatures are 30-50 \u00b0C below ABS's. Ventilate as a general precaution. Solvent smoothing is the bigger exposure: d-limonene, NEFRAS and xylene all need their own ventilation and are more hazardous than the printing step."
   },
-  "safety_notes": "Solvent smoothing is where the real hazards are. d-Limonene is the mainstream choice and the mildest; the NEFRAS-A130/150 and xylene alternatives reported by regional users are aromatic/aliphatic solvents that are flammable and neurotoxic on inhalation, and need outdoor or fume-hood-grade ventilation plus skin protection. Food-contact claims (FDA/EU, per FIL-X) are per-SKU brand claims and do not transfer between grades or resellers — verify the specific spool, and remember that FDM layer crevices harbour bacteria regardless of the certificate. Because the entry has no published shore hardness, do not size grip or seal parts from this catalog data alone.",
-  "additional_notes": "The most useful way to read this entry is as the un-hydrogenated twin of the tpe entry. Same block architecture, same solvent-smoothing behaviour, similar water tolerance — but the double bonds left in the butadiene mid block make it markedly more UV- and ozone-sensitive (SA Filament rates UV 1/5) while, in exchange, it prints much more easily: PLA-adjacent speeds, real part cooling, glass-and-hairspray adhesion, no direct-drive mandate. 'SBS' is also effectively one manufacturer's product line, Filamentarno!, resold regionally as SA Filament and FIL-X, and that line spans grades from S-Soft to the ABS-replacement SBS-Pro, so a spool's behaviour depends more on which grade it is than on the SBS label. Filamentarno's own site was unreachable in this research (robots.txt), which is the main reason the property table is nearly empty.",
+  "safety_notes": "Solvent smoothing is where the real hazards are. d-Limonene is the mainstream choice and the mildest; the NEFRAS-A130/150 and xylene alternatives reported by regional users are aromatic/aliphatic solvents that are flammable and neurotoxic on inhalation, and need outdoor or fume-hood-grade ventilation plus skin protection. Food-contact claims (FDA/EU, per FIL-X) are per-SKU brand claims and do not transfer between grades or resellers \u2014 verify the specific spool, and remember that FDM layer crevices harbour bacteria regardless of the certificate. Because the entry has no published shore hardness, do not size grip or seal parts from this catalog data alone.",
+  "additional_notes": "The most useful way to read this entry is as the un-hydrogenated twin of the tpe entry. Same block architecture, same solvent-smoothing behaviour, similar water tolerance \u2014 but the double bonds left in the butadiene mid block make it markedly more UV- and ozone-sensitive (SA Filament rates UV 1/5) while, in exchange, it prints much more easily: PLA-adjacent speeds, real part cooling, glass-and-hairspray adhesion, no direct-drive mandate. 'SBS' is also effectively one manufacturer's product line, Filamentarno!, resold regionally as SA Filament and FIL-X, and that line spans grades from S-Soft to the ABS-replacement SBS-Pro, so a spool's behaviour depends more on which grade it is than on the SBS label. Filamentarno's own site was unreachable in this research (robots.txt), which is the main reason the property table is nearly empty.",
   "provenance": {
     "sources": [
       "https://www.safilament.co.za/sbs.html",
@@ -186,23 +183,23 @@
     ],
     "last_verified": "2026-08-01",
     "confidence": "low",
-    "conflicts": "The biggest gap is shore hardness: no source found publishes one, which for a flexible material is the number that drives printability, drive-system needs, speed ceiling and part behaviour — the field is left empty rather than estimated, and the entry should be revisited if a Filamentarno datasheet surfaces. Density, shrinkage, Tg, HDT and tensile strength are likewise unpublished and omitted. Heat resistance is actively contradictory: DaVinciLab claims 'dishwasher safe' and 'high temperature resistance' while SA Filament rates heat 3/5, with a single 102 °C softening figure attached to the CERAMO variant only — probably grade variation rather than a resolvable disagreement, and temperature_tolerance is scored conservatively as a result. Nozzle temperature spans 50 °C across resellers of what may be the same underlying product. SA Filament's '50-500 mm/s' speed listing is implausible and was rejected as a listing artefact rather than recorded. Price rests on a 2017 forum post. enclosure_open_for_cooling and ams_compatible are both omitted for want of any statement in either direction. Every plate rating except glass is inferred. Emissions levels are estimates supported only by qualitative low-odour claims. Filamentarno.eu, the manufacturer behind essentially the whole category, blocked fetching (robots.txt), so all data here is second-hand through resellers. Re-verification 2026-08-01 — shore hardness RESOLVED as genuinely unavailable, not as a missing lookup: a targeted re-check of Filamentarno's own site (filamentarno.ru), a 3dtoday.ru editorial on SBS-PRO, the ink-market.ru and biotorg.com resellers, and the unrelated SA Filament / FIL-X SBS line found no durometer value published by anyone. The 3dtoday piece describes SBS-PRO only qualitatively ('повышена упругость', 'более высокая твердость') with no number. Shore hardness is in practice reported only for elastomers and soft flexibles; SBS in filament form is a rigid, HIPS-adjacent block copolymer, so it appears not to be a spec manufacturers routinely test or publish for this material class. The field stays empty by design and should not be imputed — the earlier '85A-98A neighbourhood' remark in properties.notes is a qualitative placement, not a candidate value. Confidence stays low, but for the remaining gaps (density, Tg, HDT, tensile, the heat-resistance contradiction) rather than for this one, which is now closed as far as it can be."
+    "conflicts": "The biggest gap is shore hardness: no source found publishes one, which for a flexible material is the number that drives printability, drive-system needs, speed ceiling and part behaviour \u2014 the field is left empty rather than estimated, and the entry should be revisited if a Filamentarno datasheet surfaces. Density, shrinkage, Tg, HDT and tensile strength are likewise unpublished and omitted. Heat resistance is actively contradictory: DaVinciLab claims 'dishwasher safe' and 'high temperature resistance' while SA Filament rates heat 3/5, with a single 102 \u00b0C softening figure attached to the CERAMO variant only \u2014 probably grade variation rather than a resolvable disagreement, and temperature_tolerance is scored conservatively as a result. Nozzle temperature spans 50 \u00b0C across resellers of what may be the same underlying product. SA Filament's '50-500 mm/s' speed listing is implausible and was rejected as a listing artefact rather than recorded. Price rests on a 2017 forum post. enclosure_open_for_cooling and ams_compatible are both omitted for want of any statement in either direction. Every plate rating except glass is inferred. Emissions levels are estimates supported only by qualitative low-odour claims. Filamentarno.eu, the manufacturer behind essentially the whole category, blocked fetching (robots.txt), so all data here is second-hand through resellers. Re-verification 2026-08-01 \u2014 shore hardness RESOLVED as genuinely unavailable, not as a missing lookup: a targeted re-check of Filamentarno's own site (filamentarno.ru), a 3dtoday.ru editorial on SBS-PRO, the ink-market.ru and biotorg.com resellers, and the unrelated SA Filament / FIL-X SBS line found no durometer value published by anyone. The 3dtoday piece describes SBS-PRO only qualitatively ('\u043f\u043e\u0432\u044b\u0448\u0435\u043d\u0430 \u0443\u043f\u0440\u0443\u0433\u043e\u0441\u0442\u044c', '\u0431\u043e\u043b\u0435\u0435 \u0432\u044b\u0441\u043e\u043a\u0430\u044f \u0442\u0432\u0435\u0440\u0434\u043e\u0441\u0442\u044c') with no number. Shore hardness is in practice reported only for elastomers and soft flexibles; SBS in filament form is a rigid, HIPS-adjacent block copolymer, so it appears not to be a spec manufacturers routinely test or publish for this material class. The field stays empty by design and should not be imputed \u2014 the earlier '85A-98A neighbourhood' remark in properties.notes is a qualitative placement, not a candidate value. Confidence stays low, but for the remaining gaps (density, Tg, HDT, tensile, the heat-resistance contradiction) rather than for this one, which is now closed as far as it can be."
   },
   "trade_names": [
     {
       "manufacturer": "Filamentarno!",
       "product": "SBS (S-Soft, T-Soft, M-Soft, SBS-Pro, CERAMO, CERAMO-TEX)",
-      "notes": "The originating manufacturer behind essentially the whole SBS filament category; the grades differ materially in softness and heat behaviour (CERAMO reported to soften at 102 °C, SBS-Pro marketed as an ABS replacement), so datasheet behaviour is grade-specific. Manufacturer site not fetchable in this research."
+      "notes": "The originating manufacturer behind essentially the whole SBS filament category; the grades differ materially in softness and heat behaviour (CERAMO reported to soften at 102 \u00b0C, SBS-Pro marketed as an ABS replacement), so datasheet behaviour is grade-specific. Manufacturer site not fetchable in this research."
     },
     {
       "manufacturer": "SA Filament",
       "product": "SBS",
-      "notes": "South African reseller/rebrand: 210-240 °C nozzle, 60-80 °C bed, 0-100 % fan, heat resistance rated 3/5, UV resistance 1/5, low odour."
+      "notes": "South African reseller/rebrand: 210-240 \u00b0C nozzle, 60-80 \u00b0C bed, 0-100 % fan, heat resistance rated 3/5, UV resistance 1/5, low odour."
     },
     {
       "manufacturer": "FIL-X",
       "product": "SBS",
-      "notes": "Reseller/rebrand distributed via filx.co.za and davincilab.co.za: 195-235 °C nozzle, 60-70 °C bed, glass plus hairspray for adhesion, 'no moisture absorption', FDA/EU food-contact claims, no odour while printing."
+      "notes": "Reseller/rebrand distributed via filx.co.za and davincilab.co.za: 195-235 \u00b0C nozzle, 60-70 \u00b0C bed, glass plus hairspray for adhesion, 'no moisture absorption', FDA/EU food-contact claims, no odour while printing."
     }
   ]
 }

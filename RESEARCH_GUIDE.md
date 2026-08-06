@@ -32,6 +32,15 @@ updating data. Follow it exactly and the site updates itself.
    supports are breakaway-with-scarring, not an interface pairing, and do not belong in
    these fields. Chemically-blended families count too (e.g. PLA/PHA blends are PLA-family
    for this rule). The validator enforces self/same-family exclusion.
+   **Extension (2026-08-06, second review):** `bonds_with` and the support fields are
+   mutually exclusive at family level, across both directions and all files — a pair that
+   welds can never also be a support interface, and vice versa. Decide the pair's role
+   before recording it: dedicated support materials (PVA, BVOH, HIPS, breakaway) adhere as
+   *removable interfaces* — never list their build-material partners in `bonds_with`.
+   Weld groups (ABS↔ASA; the copolyesters PETG/PCTG/CPE/PET among themselves; PETG↔TPU)
+   carry only bond edges. PLA↔TPU is ruled a support pair (weakest TPU pairing, releases
+   cleanly). Do not list a material in its own `bonds_with` — self-bonding is implicit.
+   The validator enforces all of this.
 
 ## Model delegation (per user policy)
 

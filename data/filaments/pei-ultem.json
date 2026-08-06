@@ -13,8 +13,8 @@
   "base_type": null,
   "variation_kind": null,
   "polymer_class": "high-performance",
-  "chemical_makeup": "Polyetherimide — an amorphous aromatic polymer built from imide and ether linkages, sold under SABIC/Stratasys's ULTEM name. The amorphous structure is the defining difference from the semi-crystalline members of this cluster (peek, pekk, pps): there is no crystallisation shrinkage on cooling, only thermal contraction. Two grades dominate filament: ULTEM 1010 (Tg 217 °C, higher strength and chemical resistance, ESD-safe variants available) and ULTEM 9085 (Tg 186 °C, aerospace FST-rated, UL94 V-0/5VA with low smoke and toxicity, lower strength).",
-  "summary": "The dimensionally sane member of the high-performance cluster. Being amorphous rather than semi-crystalline, it has no crystallisation shrinkage to fight, so it holds tolerances and welds layers better than peek or pekk — dimensional stability 8 and layer adhesion 8, the joint best here. Deltas vs peek: cheaper by 3-4x (ULTEM 1010 ~$195/kg against $400-900/kg), prints 20-40 °C cooler, warps far less, but tops out around 170-200 °C continuous instead of 240-260 °C. Deltas vs ppsu: essentially the same printing story and the same amorphous stability, but PEI is stiffer and stronger while PPSU is far tougher and better in steam and water. Its own weakness is moisture: it is the most hygroscopic material in this cluster, needing 110-150 °C drying and a dry box during the print, not just before it.",
+  "chemical_makeup": "Polyetherimide \u2014 an amorphous aromatic polymer built from imide and ether linkages, sold under SABIC/Stratasys's ULTEM name. The amorphous structure is the defining difference from the semi-crystalline members of this cluster (peek, pekk, pps): there is no crystallisation shrinkage on cooling, only thermal contraction. Two grades dominate filament: ULTEM 1010 (Tg 217 \u00b0C, higher strength and chemical resistance, ESD-safe variants available) and ULTEM 9085 (Tg 186 \u00b0C, aerospace FST-rated, UL94 V-0/5VA with low smoke and toxicity, lower strength).",
+  "summary": "The dimensionally sane member of the high-performance cluster. Being amorphous rather than semi-crystalline, it has no crystallisation shrinkage to fight, so it holds tolerances and welds layers better than peek or pekk \u2014 dimensional stability 8 and layer adhesion 8, the joint best here. Deltas vs peek: cheaper by 3-4x (ULTEM 1010 ~$195/kg against $400-900/kg), prints 20-40 \u00b0C cooler, warps far less, but tops out around 170-200 \u00b0C continuous instead of 240-260 \u00b0C. Deltas vs ppsu: essentially the same printing story and the same amorphous stability, but PEI is stiffer and stronger while PPSU is far tougher and better in steam and water. Its own weakness is moisture: it is the most hygroscopic material in this cluster, needing 110-150 \u00b0C drying and a dry box during the print, not just before it.",
   "printing": {
     "nozzle_temp_c": {
       "min": 350,
@@ -40,13 +40,13 @@
       "max": 10,
       "recommended": 0
     },
-    "notes": "The recorded band is a union across grades and sources: ULTEM 1010 at 365-390 °C nozzle with a 120-160 °C bed, ULTEM 9085 at ~350-390 °C with bed 120 °C and chamber 90 °C, and Prusa's consolidated figures at 370-420 °C nozzle with a 150-155 °C bed and 85-90 °C chamber. Start at 380 °C. This exceeds Bambu's stock hotend and the X1E/H2D high-temp hotend's ~350 °C ceiling, so there is no consumer Bambu path — the same gate as peek, pekk and ppsu, and unlike pps-cf. Chamber heating is required. The characteristic failure is not the wild corner lift of peek but warp on square, flat geometry, which persists even with chamber heating and is best managed with a brim plus 2-3 layers of high-temperature adhesive. Unfilled, so no hardened nozzle."
+    "notes": "The recorded band is a union across grades and sources: ULTEM 1010 at 365-390 \u00b0C nozzle with a 120-160 \u00b0C bed, ULTEM 9085 at ~350-390 \u00b0C with bed 120 \u00b0C and chamber 90 \u00b0C, and Prusa's consolidated figures at 370-420 \u00b0C nozzle with a 150-155 \u00b0C bed and 85-90 \u00b0C chamber. Start at 380 \u00b0C. This exceeds Bambu's stock hotend and the X1E/H2D high-temp hotend's ~350 \u00b0C ceiling, so there is no consumer Bambu path \u2014 the same gate as peek, pekk and ppsu, and unlike pps-cf. Chamber heating is required. The characteristic failure is not the wild corner lift of peek but warp on square, flat geometry, which persists even with chamber heating and is best managed with a brim plus 2-3 layers of high-temperature adhesive. Unfilled, so no hardened nozzle."
   },
   "feeding": {
     "drive_system": "direct-drive-recommended",
     "ams_compatible": "no",
     "feeding_assistant_recommended": false,
-    "notes": "Rigid; direct drive recommended for extrusion pressure at 380 °C rather than for buckling. AMS/material-station compatibility is no on two independent grounds here rather than one: the process temperature is far outside any AMS-fed hotend, and PEI is hygroscopic enough that an unsealed feed path exposed to room air for the length of a long high-temperature job would itself cause bubbling — this is the strongest moisture-driven AMS objection in the cluster. Feed from a heated drybox. No feeding assistant applies."
+    "notes": "Rigid; direct drive recommended for extrusion pressure at 380 \u00b0C rather than for buckling. AMS/material-station compatibility is no on two independent grounds here rather than one: the process temperature is far outside any AMS-fed hotend, and PEI is hygroscopic enough that an unsealed feed path exposed to room air for the length of a long high-temperature job would itself cause bubbling \u2014 this is the strongest moisture-driven AMS objection in the cluster. Feed from a heated drybox. No feeding assistant applies."
   },
   "drying": {
     "required_before_use": "always",
@@ -61,22 +61,22 @@
       "recommended": 4
     },
     "methods": [
-      "high-temperature filament dryer or blast oven at 110-150 °C",
+      "high-temperature filament dryer or blast oven at 110-150 \u00b0C",
       "print directly from a heated drybox",
       "sealed drybox with desiccant while printing"
     ],
     "dryness_validation": "No popping, hissing or steam at the nozzle; purge line continuous and free of blisters or foam. Because PEI reabsorbs moisture quickly, re-validate at the start of each session rather than trusting a dry spool from yesterday.",
-    "notes": "Grade-dependent and the most aggressive regimen in this cluster: ULTEM 1010 wants 150 °C for 4 h, ULTEM 9085 110 °C for 4 h minimum — against 120 °C/4 h for peek and pekk and 110 °C for ppsu and pps. The delta that matters is not the temperature but the persistence: PEI must stay in a dry box during printing, because drying it once and leaving it on an open spool holder is enough to undo the work."
+    "notes": "Grade-dependent and the most aggressive regimen in this cluster: ULTEM 1010 wants 150 \u00b0C for 4 h, ULTEM 9085 110 \u00b0C for 4 h minimum \u2014 against 120 \u00b0C/4 h for peek and pekk and 110 \u00b0C for ppsu and pps. The delta that matters is not the temperature but the persistence: PEI must stay in a dry box during printing, because drying it once and leaving it on an open spool holder is enough to undo the work."
   },
   "storage": {
-    "recommendations": "Sealed with fresh desiccant at all times and printed from a heated drybox — treat this as mandatory rather than best practice. PEI is the most hygroscopic material in the high-performance cluster and its moisture defects (bubbling, voids, poor layer weld) appear at 380 °C rather than merely degrading surface finish.",
+    "recommendations": "Sealed with fresh desiccant at all times and printed from a heated drybox \u2014 treat this as mandatory rather than best practice. PEI is the most hygroscopic material in the high-performance cluster and its moisture defects (bubbling, voids, poor layer weld) appear at 380 \u00b0C rather than merely degrading surface finish.",
     "max_humidity_pct": 15,
     "hygroscopy": "extreme"
   },
   "price": {
     "usd_per_kg_low": 195,
     "usd_per_kg_high": 290,
-    "notes": "ULTEM 1010 from 3DXTech: $98/500 g, $195/1 kg, $390/2 kg — comfortably the cheapest of the very-high-temperature group and roughly a third to a fifth of peek or ppsu. ULTEM 9085 is dearer at ~€256/kg (~$270-290/kg, Formfutura), and was listed as not available for sale at the time of checking, so that end of the band is soft."
+    "notes": "ULTEM 1010 from 3DXTech: $98/500 g, $195/1 kg, $390/2 kg \u2014 comfortably the cheapest of the very-high-temperature group and roughly a third to a fifth of peek or ppsu. ULTEM 9085 is dearer at ~\u20ac256/kg (~$270-290/kg, Formfutura), and was listed as not available for sale at the time of checking, so that end of the band is soft."
   },
   "use_cases": {
     "recommended": [
@@ -88,7 +88,7 @@
       "extreme-durability prototypes at moderate-to-high temperature"
     ],
     "not_recommended": [
-      "printers without a 400 °C-class hotend and heated chamber — Bambu machines included",
+      "printers without a 400 \u00b0C-class hotend and heated chamber \u2014 Bambu machines included",
       "the highest continuous-service-temperature applications, where peek, pekk and annealed pps-cf all lead",
       "large square flat plates, which warp even with chamber heating",
       "any workflow without drybox discipline through the whole print",
@@ -108,7 +108,7 @@
     "cm3_per_100g": 76.9,
     "glass_transition_c": 217,
     "max_service_temp_c": 180,
-    "notes": "Recorded Tg 217 °C is ULTEM 1010, the more common filament grade; ULTEM 9085 is 186 °C. Density is recorded at 1.30 g/cm³ as a midpoint between the two grades — 9085 is 1.34 g/cc per Stratasys, unfilled 1010 is nearer 1.27 — so part-weight estimates for a specific grade should use that grade's figure rather than this one. Max service temperature 180 °C is the midpoint of the ~170-200 °C operational range cited in the comparative source; note the gap to peek (240-260 °C) is the single most important trade in choosing between them, and it exists despite PEI's higher Tg because PEI is amorphous and loses stiffness through Tg rather than retaining a crystalline structure above it. HDT is not recorded: no figure appeared in the sources reviewed for either grade. The amorphous structure is the property that drives the scores — low shrinkage, high dimensional stability, strong layer welding — while 9085's UL94 V-0/5VA FST rating is the differentiator against 1010 for aerospace interiors."
+    "notes": "Recorded Tg 217 \u00b0C is ULTEM 1010, the more common filament grade; ULTEM 9085 is 186 \u00b0C. Density is recorded at 1.30 g/cm\u00b3 as a midpoint between the two grades \u2014 9085 is 1.34 g/cc per Stratasys, unfilled 1010 is nearer 1.27 \u2014 so part-weight estimates for a specific grade should use that grade's figure rather than this one. Max service temperature 180 \u00b0C is the midpoint of the ~170-200 \u00b0C operational range cited in the comparative source; note the gap to peek (240-260 \u00b0C) is the single most important trade in choosing between them, and it exists despite PEI's higher Tg because PEI is amorphous and loses stiffness through Tg rather than retaining a crystalline structure above it. HDT is not recorded: no figure appeared in the sources reviewed for either grade. The amorphous structure is the property that drives the scores \u2014 low shrinkage, high dimensional stability, strong layer welding \u2014 while 9085's UL94 V-0/5VA FST rating is the differentiator against 1010 for aerospace interiors."
   },
   "scores": {
     "ease_of_print": 3,
@@ -122,18 +122,15 @@
     "water_tolerance": 6
   },
   "compatibility": {
-    "bonds_with": [
-      "pei-ultem"
-    ],
     "support_materials": [],
     "usable_as_support_for": [],
-    "notes": "Bonds well to itself — amorphous polymers weld cleanly, which is why layer adhesion scores 8 here against peek's 6. No soluble support chemistry exists at 350-420 °C; pva and bvoh are 150-200 °C out of range. Prusa's first-layer recipe is 2-3 layers of Magigoo HT plus a brim rather than a support-material trick. No bonding to any commodity material in the catalog."
+    "notes": "Bonds well to itself \u2014 amorphous polymers weld cleanly, which is why layer adhesion scores 8 here against peek's 6. No soluble support chemistry exists at 350-420 \u00b0C; pva and bvoh are 150-200 \u00b0C out of range. Prusa's first-layer recipe is 2-3 layers of Magigoo HT plus a brim rather than a support-material trick. No bonding to any commodity material in the catalog."
   },
   "plate_recommendations": [
     {
       "plate_id": "pei-textured",
       "rating": "usable",
-      "notes": "The one material in this cluster where a standard textured PEI spring steel plate is workable — but only with a high-temperature adhesive on top. Prusa's guidance centres on 2-3 layers of Magigoo HT plus a brim rather than on bare-sheet adhesion, so the plate is a carrier for the adhesive, not the adhesion mechanism. Garolite is also used. Contrast peek and pekk, where PEI sheets are rated avoid outright. No garolite plate entry exists in the catalog yet."
+      "notes": "The one material in this cluster where a standard textured PEI spring steel plate is workable \u2014 but only with a high-temperature adhesive on top. Prusa's guidance centres on 2-3 layers of Magigoo HT plus a brim rather than on bare-sheet adhesion, so the plate is a carrier for the adhesive, not the adhesion mechanism. Garolite is also used. Contrast peek and pekk, where PEI sheets are rated avoid outright. No garolite plate entry exists in the catalog yet."
     },
     {
       "plate_id": "pei-smooth",
@@ -148,7 +145,7 @@
     {
       "plate_id": "g10-garolite",
       "rating": "avoid",
-      "notes": "Backfilled from plate entry (Phase E reciprocity): Same as PEEK — marketing mentions exist, verified data does not."
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Same as PEEK \u2014 marketing mentions exist, verified data does not."
     },
     {
       "plate_id": "pei-satin",
@@ -163,7 +160,7 @@
     {
       "plate_id": "carbon-fiber-plate",
       "rating": "avoid",
-      "notes": "Backfilled from plate entry (Phase E reciprocity): Same as PEEK — marketing mentions without supporting specs, and bed requirements sit at or above the plate's stated limit."
+      "notes": "Backfilled from plate entry (Phase E reciprocity): Same as PEEK \u2014 marketing mentions without supporting specs, and bed requirements sit at or above the plate's stated limit."
     },
     {
       "plate_id": "buildtak-polymer",
@@ -179,23 +176,23 @@
   "alternatives": [
     {
       "filament_id": "ppsu",
-      "reason": "The same amorphous low-warp behaviour and the same 8/8 stability-and-adhesion profile, with far better impact toughness, water and steam tolerance (10 vs 6) and a gentler 110 °C drying spec against 1010's 150 °C — at roughly double the price ($400-600) and lower stiffness (compressive 6 vs 7)."
+      "reason": "The same amorphous low-warp behaviour and the same 8/8 stability-and-adhesion profile, with far better impact toughness, water and steam tolerance (10 vs 6) and a gentler 110 \u00b0C drying spec against 1010's 150 \u00b0C \u2014 at roughly double the price ($400-600) and lower stiffness (compressive 6 vs 7)."
     },
     {
       "filament_id": "peek",
-      "reason": "Higher continuous service (240-260 °C vs 170-200 °C) and near-total chemical resistance — at 2-4x the price ($400-900), a 375-410 °C industrial hotend, and much worse dimensional behaviour (stability 5 vs 8, warp 10 vs 6)."
+      "reason": "Higher continuous service (240-260 \u00b0C vs 170-200 \u00b0C) and near-total chemical resistance \u2014 at 2-4x the price ($400-900), a 375-410 \u00b0C industrial hotend, and much worse dimensional behaviour (stability 5 vs 8, warp 10 vs 6)."
     },
     {
       "filament_id": "pekk",
-      "reason": "A higher service ceiling (260 °C) with PEEK-beating printability — but it still warps more (8 vs 6), holds tolerance less well (stability 7 vs 8) and costs $495-700 against $195-290."
+      "reason": "A higher service ceiling (260 \u00b0C) with PEEK-beating printability \u2014 but it still warps more (8 vs 6), holds tolerance less well (stability 7 vs 8) and costs $495-700 against $195-290."
     },
     {
       "filament_id": "pps-cf",
-      "reason": "The same temp 9 rating at half the price ($100-200), with far lower warp (3 vs 6) and no heated chamber — but Tg 85 °C means it softens under load long before PEI's 217 °C Tg does, and layer adhesion drops to 5 vs 8."
+      "reason": "The same temp 9 rating at half the price ($100-200), with far lower warp (3 vs 6) and no heated chamber \u2014 but Tg 85 \u00b0C means it softens under load long before PEI's 217 \u00b0C Tg does, and layer adhesion drops to 5 vs 8."
     },
     {
       "filament_id": "pc",
-      "reason": "If ~110-130 °C service is genuinely enough: PC carries the same temp 9 score off a 145 °C Tg rather than PEI's 217 °C, prints on ordinary enclosed hardware at $30-65, and needs no 150 °C drying regime — with much weaker chemical resistance and creep performance."
+      "reason": "If ~110-130 \u00b0C service is genuinely enough: PC carries the same temp 9 score off a 145 \u00b0C Tg rather than PEI's 217 \u00b0C, prints on ordinary enclosed hardware at $30-65, and needs no 150 \u00b0C drying regime \u2014 with much weaker chemical resistance and creep performance."
     }
   ],
   "emissions": {
@@ -206,10 +203,10 @@
       "unspecified high-temperature process VOCs (no PEI-specific speciation found in this research pass)"
     ],
     "ventilation": "required",
-    "notes": "No PEI-specific VOC or particulate measurement was found. By the temperature-scaling rule a 350-420 °C process sits alongside peek at the top of this catalog, so ventilation is recorded as required: enclosure plus outdoor exhaust or HEPA-plus-carbon filtration, at or above pc's tier. VOC is recorded moderate because the polymer is stable inside its own processing window; the particulate figure carries the requirement. Both inferred, not measured (unverified)."
+    "notes": "No PEI-specific VOC or particulate measurement was found. By the temperature-scaling rule a 350-420 \u00b0C process sits alongside peek at the top of this catalog, so ventilation is recorded as required: enclosure plus outdoor exhaust or HEPA-plus-carbon filtration, at or above pc's tier. VOC is recorded moderate because the polymer is stable inside its own processing window; the particulate figure carries the requirement. Both inferred, not measured (unverified)."
   },
-  "safety_notes": "380 °C hotend, 150-160 °C bed and a 90 °C chamber are burn hazards; vent and cool before opening. ULTEM 9085's flame retardancy is inherent rather than additive-based, so no separate additive hazard applies. Food contact is not verified for printed parts and is recorded as no. Handle high-temperature bed adhesives (Magigoo HT and similar) per their own datasheets — they are applied to a plate that will exceed 150 °C.",
-  "additional_notes": "Grade choice is the real decision here, and this entry deliberately covers both: ULTEM 1010 for strength, chemical resistance, the higher 217 °C Tg and ESD-safe variants; ULTEM 9085 for aerospace interiors, where the UL94 V-0/5VA flame, smoke and toxicity rating outweighs its lower 186 °C Tg and lower strength. Against the cluster, PEI is the pragmatic pick: a third of PEEK's price, meaningfully easier, dimensionally the best behaved along with ppsu, and only outclassed when the part must genuinely run above ~200 °C. Its Achilles heel is moisture discipline rather than temperature.",
+  "safety_notes": "380 \u00b0C hotend, 150-160 \u00b0C bed and a 90 \u00b0C chamber are burn hazards; vent and cool before opening. ULTEM 9085's flame retardancy is inherent rather than additive-based, so no separate additive hazard applies. Food contact is not verified for printed parts and is recorded as no. Handle high-temperature bed adhesives (Magigoo HT and similar) per their own datasheets \u2014 they are applied to a plate that will exceed 150 \u00b0C.",
+  "additional_notes": "Grade choice is the real decision here, and this entry deliberately covers both: ULTEM 1010 for strength, chemical resistance, the higher 217 \u00b0C Tg and ESD-safe variants; ULTEM 9085 for aerospace interiors, where the UL94 V-0/5VA flame, smoke and toxicity rating outweighs its lower 186 \u00b0C Tg and lower strength. Against the cluster, PEI is the pragmatic pick: a third of PEEK's price, meaningfully easier, dimensionally the best behaved along with ppsu, and only outclassed when the part must genuinely run above ~200 \u00b0C. Its Achilles heel is moisture discipline rather than temperature.",
   "provenance": {
     "sources": [
       "https://www.3dxtech.com/products/thermax-pei-1010",
@@ -220,7 +217,7 @@
     ],
     "last_verified": "2026-07-31",
     "confidence": "medium",
-    "conflicts": "The entry covers two genuinely different grades under one id, which is the largest source of spread: Tg 217 °C (1010) vs 186 °C (9085), density 1.27 vs 1.34 g/cc, drying 150 °C vs 110 °C, and flame rating present only on 9085. Recorded values follow 1010 for Tg and midpoint the density; a Fable-level decision on splitting this into two entries would remove the ambiguity. Printing parameters also disagree across sources: 3DXTech 365-390 °C nozzle for 1010, Formfutura ~350-390 °C for 9085, Prusa 370-420 °C consolidated, with beds spanning 120-160 °C. Max service temperature 180 °C is a midpoint of a cited 170-200 °C range, not a datasheet figure. No HDT figure was found for either grade. ULTEM 9085 pricing was taken from a listing marked not available for sale. Emissions are inferred from process temperature with no PEI-specific measurement (unverified). Outdoor/UV behaviour is undocumented in the sources reviewed and the uv_tolerance score of 4 is a reasoned estimate for an aromatic polymer, not evidence-based."
+    "conflicts": "The entry covers two genuinely different grades under one id, which is the largest source of spread: Tg 217 \u00b0C (1010) vs 186 \u00b0C (9085), density 1.27 vs 1.34 g/cc, drying 150 \u00b0C vs 110 \u00b0C, and flame rating present only on 9085. Recorded values follow 1010 for Tg and midpoint the density; a Fable-level decision on splitting this into two entries would remove the ambiguity. Printing parameters also disagree across sources: 3DXTech 365-390 \u00b0C nozzle for 1010, Formfutura ~350-390 \u00b0C for 9085, Prusa 370-420 \u00b0C consolidated, with beds spanning 120-160 \u00b0C. Max service temperature 180 \u00b0C is a midpoint of a cited 170-200 \u00b0C range, not a datasheet figure. No HDT figure was found for either grade. ULTEM 9085 pricing was taken from a listing marked not available for sale. Emissions are inferred from process temperature with no PEI-specific measurement (unverified). Outdoor/UV behaviour is undocumented in the sources reviewed and the uv_tolerance score of 4 is a reasoned estimate for an aromatic polymer, not evidence-based."
   },
   "trade_names": [
     {
@@ -271,7 +268,7 @@
     {
       "manufacturer": "push-plastic",
       "product": "PEI 1010",
-      "notes": "ULTEM 1010 chemistry, unfilled polyetherimide — the same grade 3DXTech and others sell. Replaces the invalid 'pei' id previously in this file."
+      "notes": "ULTEM 1010 chemistry, unfilled polyetherimide \u2014 the same grade 3DXTech and others sell. Replaces the invalid 'pei' id previously in this file."
     }
   ]
 }

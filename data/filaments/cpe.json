@@ -12,8 +12,8 @@
   "base_type": null,
   "variation_kind": null,
   "polymer_class": "polyester-copolyester",
-  "chemical_makeup": "Amorphous engineering-grade copolyester — a glycol- and/or acid-modified PET-family copolymer. Fillamentum describes CPE HG100 as a 'modified PETG'; UltiMaker does not disclose the comonomer system for CPE/CPE+. Whatever the exact modification, both grades measure materially hotter and stiffer than commodity PETG or PCTG.",
-  "summary": "The engineering tier above PETG/PCTG: same amorphous copolyester family, run 20-30 °C hotter, with Tg and HDT 15-25 °C above PETG and better chemical resistance, without ABS's enclosure demands. Note the naming collision — CPE is NOT the same material as cope (Panchroma CoPE), which prints in the PLA window at 190-230 °C and is a fast decorative material; the two share only an acronym. Costs are price (roughly 2-5x commodity PETG), a small brand ecosystem, and pronounced XY/Z anisotropy on the UltiMaker grade.",
+  "chemical_makeup": "Amorphous engineering-grade copolyester \u2014 a glycol- and/or acid-modified PET-family copolymer. Fillamentum describes CPE HG100 as a 'modified PETG'; UltiMaker does not disclose the comonomer system for CPE/CPE+. Whatever the exact modification, both grades measure materially hotter and stiffer than commodity PETG or PCTG.",
+  "summary": "The engineering tier above PETG/PCTG: same amorphous copolyester family, run 20-30 \u00b0C hotter, with Tg and HDT 15-25 \u00b0C above PETG and better chemical resistance, without ABS's enclosure demands. Note the naming collision \u2014 CPE is NOT the same material as cope (Panchroma CoPE), which prints in the PLA window at 190-230 \u00b0C and is a fast decorative material; the two share only an acronym. Costs are price (roughly 2-5x commodity PETG), a small brand ecosystem, and pronounced XY/Z anisotropy on the UltiMaker grade.",
   "printing": {
     "nozzle_temp_c": {
       "min": 255,
@@ -44,13 +44,13 @@
       "recommended": 10
     },
     "enclosure_open_for_cooling": false,
-    "notes": "Figures are Fillamentum's CPE HG100 TDS and printing guide (nozzle 255-275 °C, bed 70-85 °C, 40-60 mm/s, fan 0-15 % standard and up to 50 % for bridges and overhangs). The fetched UltiMaker CPE+ TDS v5.00 does not publish nozzle or bed ranges (unverified); community and comparable UltiMaker practice puts CPE+ around 255-270 °C nozzle and 70-90 °C bed, which is where the recorded bed maximum comes from. Fillamentum explicitly states no enclosure is required, so this is open-frame printable — but it also warns that excessive cooling 'could lead into improper layer bonding', so fan discipline matters even without a chamber, and the low fan ceiling is the main handling difference from PETG. An all-metal hotend is effectively mandatory at these temperatures. Unfilled grades are not abrasive and run fine on brass; Fillamentum's CF25 carbon-filled CPE variant would need a hardened nozzle (not researched here, unverified). Fillamentum recommends a 5 mm skirt or brim rather than a raft."
+    "notes": "Figures are Fillamentum's CPE HG100 TDS and printing guide (nozzle 255-275 \u00b0C, bed 70-85 \u00b0C, 40-60 mm/s, fan 0-15 % standard and up to 50 % for bridges and overhangs). The fetched UltiMaker CPE+ TDS v5.00 does not publish nozzle or bed ranges (unverified); community and comparable UltiMaker practice puts CPE+ around 255-270 \u00b0C nozzle and 70-90 \u00b0C bed, which is where the recorded bed maximum comes from. Fillamentum explicitly states no enclosure is required, so this is open-frame printable \u2014 but it also warns that excessive cooling 'could lead into improper layer bonding', so fan discipline matters even without a chamber, and the low fan ceiling is the main handling difference from PETG. An all-metal hotend is effectively mandatory at these temperatures. Unfilled grades are not abrasive and run fine on brass; Fillamentum's CF25 carbon-filled CPE variant would need a hardened nozzle (not researched here, unverified). Fillamentum recommends a 5 mm skirt or brim rather than a raft."
   },
   "feeding": {
     "drive_system": "any",
     "ams_compatible": "conditional",
     "feeding_assistant_recommended": false,
-    "notes": "Rigid, unfilled and non-abrasive, so any extruder feeds it and there is no PTFE wear or snap risk. AMS status is recorded conditional rather than yes because no vendor documents this material in a consumer material station (unverified) and because UltiMaker ships CPE/CPE+ on its own NFC-tagged spools for S-series machines — a closed-ecosystem constraint distinct from open AMS units. Mechanically it should behave like petg, which is rated 'yes'. The chamber is not opened for cooling, so enclosure_open_for_cooling is false. No Shore rating applies; this is a rigid grade."
+    "notes": "Rigid, unfilled and non-abrasive, so any extruder feeds it and there is no PTFE wear or snap risk. AMS status is recorded conditional rather than yes because no vendor documents this material in a consumer material station (unverified) and because UltiMaker ships CPE/CPE+ on its own NFC-tagged spools for S-series machines \u2014 a closed-ecosystem constraint distinct from open AMS units. Mechanically it should behave like petg, which is rated 'yes'. The chamber is not opened for cooling, so enclosure_open_for_cooling is false. No Shore rating applies; this is a rigid grade."
   },
   "drying": {
     "required_before_use": "if-exposed",
@@ -71,7 +71,7 @@
       "print directly from a heated drybox"
     ],
     "dryness_validation": "No popping, hissing or crackling while extruding; no steam or bubbles at the nozzle tip; glossy rather than frosted extrudate; no fine surface fuzz or stringing on a retraction test",
-    "notes": "Fillamentum specifies re-drying at 75 °C for 4 h when moisture is evident — hotter than the PETG-family 55-65 °C schedule, which the higher Tg permits. Fillamentum's warning language is stronger than typical PETG guidance: moist filament causes 'brittleness, poor layer adhesion, stringing, oozing' plus polymer-chain degradation, so treat drying as routine rather than occasional after any open-air exposure."
+    "notes": "Fillamentum specifies re-drying at 75 \u00b0C for 4 h when moisture is evident \u2014 hotter than the PETG-family 55-65 \u00b0C schedule, which the higher Tg permits. Fillamentum's warning language is stronger than typical PETG guidance: moist filament causes 'brittleness, poor layer adhesion, stringing, oozing' plus polymer-chain degradation, so treat drying as routine rather than occasional after any open-air exposure."
   },
   "storage": {
     "recommendations": "Airtight bag or drybox with fresh desiccant between prints, per Fillamentum's explicit instruction. In practice more moisture-sensitive than commodity PETG given the degradation warning, so this sits at the upper end of 'moderate'.",
@@ -81,7 +81,7 @@
   "price": {
     "usd_per_kg_low": 45,
     "usd_per_kg_high": 100,
-    "notes": "Wide band because the two grades are priced very differently. UltiMaker CPE+ was observed at ~302 PLN for a 750 g spool at one Polish reseller, roughly $90-100/kg equivalent — closed-ecosystem pricing inflated by the proprietary NFC spool (single-region snapshot, unverified). Fillamentum CPE HG100 had no live price page at research time (listed sold out or discontinued in some markets); Fillamentum's copolyester tier historically retails around EUR 35-45/750 g, roughly $45-60/kg equivalent (unverified estimate). Either way this is well above pctg's $30-55/kg and several times commodity petg."
+    "notes": "Wide band because the two grades are priced very differently. UltiMaker CPE+ was observed at ~302 PLN for a 750 g spool at one Polish reseller, roughly $90-100/kg equivalent \u2014 closed-ecosystem pricing inflated by the proprietary NFC spool (single-region snapshot, unverified). Fillamentum CPE HG100 had no live price page at research time (listed sold out or discontinued in some markets); Fillamentum's copolyester tier historically retails around EUR 35-45/750 g, roughly $45-60/kg equivalent (unverified estimate). Either way this is well above pctg's $30-55/kg and several times commodity petg."
   },
   "use_cases": {
     "recommended": [
@@ -94,7 +94,7 @@
     "not_recommended": [
       "parts loaded in Z on the UltiMaker grade (Z elongation 1.4 % against >130 % in XY)",
       "food-contact items",
-      "budget or high-volume work — commodity PETG is a fraction of the price",
+      "budget or high-volume work \u2014 commodity PETG is a fraction of the price",
       "applications needing wide colour or brand choice",
       "PTFE-lined hotends (the print window sits above their safe ceiling)"
     ]
@@ -116,7 +116,7 @@
       "max": 48,
       "recommended": 45
     },
-    "notes": "The two reference grades disagree, and the recorded figures take the conservative Fillamentum values with UltiMaker's noted alongside. Density: UltiMaker CPE+ 1.18, Fillamentum HG100 1.25 g/cm³ — 1.22 recorded as the midpoint. Tg: Fillamentum 90 °C, UltiMaker 105.9 °C — 90 recorded. HDT: Fillamentum 80 °C, UltiMaker 100.0±0.3 °C @0.455 MPa — 80 recorded. UltiMaker CPE+ also measures Vicat 108.7±0.3 °C, MFI 8.5 g/10 min (260 °C/1.2 kg), tensile stress at break 33.3±1.7 MPa XY / 33.2±2.2 MPa YZ / 14.1±3.5 MPa Z, elongation >130 % XY, >150 % YZ but only 1.4±0.6 % Z, Charpy notched 36.7±11.9 kJ/m², Young's modulus 1442-1542 MPa, Shore 77D. Fillamentum HG100 measures tensile 47 MPa yield / 48 MPa break, elongation 150 %, flexural strength 71 MPa, flexural modulus 1860 MPa, notched Izod 'no break' at 23 °C, Rockwell 115 R. Either way both run meaningfully hotter than petg (Tg ~82 °C, HDT 72 °C) and pctg (Tg 78 °C, HDT 76 °C), which is the reason this material exists. Max service temperature is not published by either vendor (unverified) and is deliberately omitted; general engineering-thermoplastic practice would put it 5-15 °C below HDT. Shrinkage is unpublished."
+    "notes": "The two reference grades disagree, and the recorded figures take the conservative Fillamentum values with UltiMaker's noted alongside. Density: UltiMaker CPE+ 1.18, Fillamentum HG100 1.25 g/cm\u00b3 \u2014 1.22 recorded as the midpoint. Tg: Fillamentum 90 \u00b0C, UltiMaker 105.9 \u00b0C \u2014 90 recorded. HDT: Fillamentum 80 \u00b0C, UltiMaker 100.0\u00b10.3 \u00b0C @0.455 MPa \u2014 80 recorded. UltiMaker CPE+ also measures Vicat 108.7\u00b10.3 \u00b0C, MFI 8.5 g/10 min (260 \u00b0C/1.2 kg), tensile stress at break 33.3\u00b11.7 MPa XY / 33.2\u00b12.2 MPa YZ / 14.1\u00b13.5 MPa Z, elongation >130 % XY, >150 % YZ but only 1.4\u00b10.6 % Z, Charpy notched 36.7\u00b111.9 kJ/m\u00b2, Young's modulus 1442-1542 MPa, Shore 77D. Fillamentum HG100 measures tensile 47 MPa yield / 48 MPa break, elongation 150 %, flexural strength 71 MPa, flexural modulus 1860 MPa, notched Izod 'no break' at 23 \u00b0C, Rockwell 115 R. Either way both run meaningfully hotter than petg (Tg ~82 \u00b0C, HDT 72 \u00b0C) and pctg (Tg 78 \u00b0C, HDT 76 \u00b0C), which is the reason this material exists. Max service temperature is not published by either vendor (unverified) and is deliberately omitted; general engineering-thermoplastic practice would put it 5-15 \u00b0C below HDT. Shrinkage is unpublished."
   },
   "scores": {
     "ease_of_print": 6,
@@ -131,7 +131,6 @@
   },
   "compatibility": {
     "bonds_with": [
-      "cpe",
       "pctg",
       "pctg-cf",
       "pctg-gf",
@@ -143,18 +142,17 @@
       "petg-plus"
     ],
     "support_materials": [
-      "petg",
       "pla",
       "support-breakaway"
     ],
     "usable_as_support_for": [],
-    "notes": "Shares the copolyester backbone with petg, pctg and pet, so welding within that family is expected on chemistry grounds; no vendor documents a tested CPE-to-PETG co-print (unverified). Does not bond to PLA, which makes PLA the usual low-adhesion breakaway support on dual-extrusion setups, as it is for the rest of the PETG family — again standard family practice rather than a CPE-specific confirmation (unverified). Same-material CPE supports are the safe default. No water-soluble support is documented as bonding to CPE. No useful bond to ABS, ASA, PC, PA, PP or the elastomers. Deliberately not listed as bonding to cope: despite the acronym overlap the two are unrelated materials with non-overlapping print windows."
+    "notes": "Shares the copolyester backbone with petg, pctg and pet, so welding within that family is expected on chemistry grounds; no vendor documents a tested CPE-to-PETG co-print (unverified). Does not bond to PLA, which makes PLA the usual low-adhesion breakaway support on dual-extrusion setups, as it is for the rest of the PETG family \u2014 again standard family practice rather than a CPE-specific confirmation (unverified). Same-material CPE supports are the safe default. No water-soluble support is documented as bonding to CPE. No useful bond to ABS, ASA, PC, PA, PP or the elastomers. Deliberately not listed as bonding to cope: despite the acronym overlap the two are unrelated materials with non-overlapping print windows."
   },
   "plate_recommendations": [
     {
       "plate_id": "pei-smooth",
       "rating": "recommended",
-      "notes": "Fillamentum explicitly recommends PEI, mirror or glass. Smooth PEI gives the most consistent first layer at 70-85 °C."
+      "notes": "Fillamentum explicitly recommends PEI, mirror or glass. Smooth PEI gives the most consistent first layer at 70-85 \u00b0C."
     },
     {
       "plate_id": "glass-borosilicate",
@@ -164,7 +162,7 @@
     {
       "plate_id": "pei-textured",
       "rating": "usable",
-      "notes": "Works, but unlike PETG — which over-adheres to bare textured PEI — Fillamentum's guidance implies adhesion can be borderline without an aid. Use a promoter (Magigoo, 3DLac, PVA glue) and a 5 mm skirt or brim rather than a raft."
+      "notes": "Works, but unlike PETG \u2014 which over-adheres to bare textured PEI \u2014 Fillamentum's guidance implies adhesion can be borderline without an aid. Use a promoter (Magigoo, 3DLac, PVA glue) and a 5 mm skirt or brim rather than a raft."
     },
     {
       "plate_id": "pei-satin",
@@ -179,30 +177,30 @@
     {
       "plate_id": "carbon-fiber-plate",
       "rating": "usable",
-      "notes": "Tolerates the 70-90 °C bed; adhesion behaviour inferred from the PETG family (unverified)."
+      "notes": "Tolerates the 70-90 \u00b0C bed; adhesion behaviour inferred from the PETG family (unverified)."
     },
     {
       "plate_id": "pc-plate",
       "rating": "avoid",
-      "notes": "As for the PETG family — the plate's thermal ceiling and chemistry do not suit this bed range."
+      "notes": "As for the PETG family \u2014 the plate's thermal ceiling and chemistry do not suit this bed range."
     }
   ],
   "alternatives": [
     {
       "filament_id": "petg",
-      "reason": "The commodity member of the same amorphous copolyester family: ease 7 vs 6, universally stocked, and $18-42 vs $45-100 — you give up 15-25 °C of Tg/HDT (temp 5 vs 7), some chemical resistance and a point of UV (5 vs 6)."
+      "reason": "The commodity member of the same amorphous copolyester family: ease 7 vs 6, universally stocked, and $18-42 vs $45-100 \u2014 you give up 15-25 \u00b0C of Tg/HDT (temp 5 vs 7), some chemical resistance and a point of UV (5 vs 6)."
     },
     {
       "filament_id": "pctg",
-      "reason": "The toughness-and-clarity direction instead of the heat direction: near-isotropic layer bonding (adh 10 vs 7) against CPE's pronounced XY/Z anisotropy, plus real impact strength, at $30-55 vs $45-100 — costs temp 5 vs 7."
+      "reason": "The toughness-and-clarity direction instead of the heat direction: near-isotropic layer bonding (adh 10 vs 7) against CPE's pronounced XY/Z anisotropy, plus real impact strength, at $30-55 vs $45-100 \u2014 costs temp 5 vs 7."
     },
     {
       "filament_id": "abs",
-      "reason": "Similar heat class (temp 7 both) at $18-35 vs $45-100, plus acetone smoothing — but it needs an enclosure and ventilation, warps far more (warp 8 vs 4) and prints harder (ease 4 vs 6), which is exactly the pain CPE exists to avoid."
+      "reason": "Similar heat class (temp 7 both) at $18-35 vs $45-100, plus acetone smoothing \u2014 but it needs an enclosure and ventilation, warps far more (warp 8 vs 4) and prints harder (ease 4 vs 6), which is exactly the pain CPE exists to avoid."
     },
     {
       "filament_id": "pc",
-      "reason": "The real step up in heat and impact for load-bearing enclosures: temp 9 vs 7 and adh 8 vs 7 at $30-65 — bought with warp 8 vs 4, ease 3 vs 6, an enclosure and strict drying."
+      "reason": "The real step up in heat and impact for load-bearing enclosures: temp 9 vs 7 and adh 8 vs 7 at $30-65 \u2014 bought with warp 8 vs 4, ease 3 vs 6, an enclosure and strict drying."
     }
   ],
   "emissions": {
@@ -213,10 +211,10 @@
       "acetaldehyde and terephthalate-related compounds (extrapolated from the PETG family, unverified)"
     ],
     "ventilation": "recommended",
-    "notes": "No emissions study of CPE was found in the sourced TDS or printing guides (unverified). As an amorphous copolyester processed at 255-275 °C — 20-30 °C above PETG's window, and emission rates rise sharply with nozzle temperature — expect a PETG-like species profile at somewhat elevated rates. Standard room ventilation is likely adequate and no chamber is required per Fillamentum, but the classification is inferred from chemistry and processing temperature rather than measured."
+    "notes": "No emissions study of CPE was found in the sourced TDS or printing guides (unverified). As an amorphous copolyester processed at 255-275 \u00b0C \u2014 20-30 \u00b0C above PETG's window, and emission rates rise sharply with nozzle temperature \u2014 expect a PETG-like species profile at somewhat elevated rates. Standard room ventilation is likely adequate and no chamber is required per Fillamentum, but the classification is inferred from chemistry and processing temperature rather than measured."
   },
-  "safety_notes": "Requires an all-metal hotend: the normal 255-275 °C window sits above the point at which PTFE liners degrade and release fluoropolymer decomposition products. Fillamentum's CF-filled CPE variants are abrasive and additionally need a hardened nozzle; do not inhale fibre dust when sanding them.",
-  "additional_notes": "Naming: CPE is not CoPE. This entry is the UltiMaker/Fillamentum engineering-copolyester class — 255-275 °C nozzle, Tg 90-106 °C, chemical-resistance positioning. The catalog's cope entry is Polymaker Panchroma CoPE, a deliberately PLA-window material (190-230 °C nozzle, 25-60 °C bed, full part cooling, no enclosure, rated to 400 mm/s) sold as a fast decorative PLA alternative. Anything describing a 'CoPE' that prints like PLA belongs on the cope entry; anything describing a copolyester that needs an all-metal hotend and beats PETG on heat belongs here. UltiMaker also uses 'CPE' and 'CPE+' as two tiers, CPE+ being the hotter of the two.",
+  "safety_notes": "Requires an all-metal hotend: the normal 255-275 \u00b0C window sits above the point at which PTFE liners degrade and release fluoropolymer decomposition products. Fillamentum's CF-filled CPE variants are abrasive and additionally need a hardened nozzle; do not inhale fibre dust when sanding them.",
+  "additional_notes": "Naming: CPE is not CoPE. This entry is the UltiMaker/Fillamentum engineering-copolyester class \u2014 255-275 \u00b0C nozzle, Tg 90-106 \u00b0C, chemical-resistance positioning. The catalog's cope entry is Polymaker Panchroma CoPE, a deliberately PLA-window material (190-230 \u00b0C nozzle, 25-60 \u00b0C bed, full part cooling, no enclosure, rated to 400 mm/s) sold as a fast decorative PLA alternative. Anything describing a 'CoPE' that prints like PLA belongs on the cope entry; anything describing a copolyester that needs an all-metal hotend and beats PETG on heat belongs here. UltiMaker also uses 'CPE' and 'CPE+' as two tiers, CPE+ being the hotter of the two.",
   "provenance": {
     "sources": [
       "https://um-support-files.ultimaker.com/materials/2.85mm/tds/CPE-PLUS/Ultimaker-CPE-PLUS-TDS-v5.00.pdf",
@@ -231,18 +229,18 @@
     ],
     "last_verified": "2026-08-01",
     "confidence": "medium",
-    "conflicts": "The two reference grades are not the same material in any tight sense and disagree across the board: density 1.18 (UltiMaker CPE+) vs 1.25 g/cm³ (Fillamentum HG100); Tg 105.9 vs 90 °C; HDT 100.0 @0.455 MPa vs 80 °C; tensile at break 33.3 MPa XY vs 47-48 MPa. Recorded values take the conservative Fillamentum figures with UltiMaker's noted in properties.notes rather than averaging incompatible measurements. The fetched UltiMaker CPE+ TDS v5.00 does not publish nozzle or bed temperature ranges at all (unverified); the recorded printing window is Fillamentum's, widened slightly at the bed maximum by community practice. Toughness is also split: Fillamentum reports notched Izod 'no break' while UltiMaker's Z elongation collapses to 1.4 % — so layer_adhesion is scored 7, above petg's XY/Z spread would suggest for the UltiMaker grade and below Fillamentum's no-break result, reflecting genuine grade-to-grade variance. Fillamentum HG100 had no confirmed live price at research time and the UltiMaker price is a single-region conversion. Outdoor suitability is 'limited' on copolyester-family plausibility, not on published UV data (unverified). Naming collision with the catalog's cope entry is resolved in additional_notes. Note also that the research pass suggested enclosure_open_for_cooling: true on the grounds that no enclosure is required; that is recorded false here, matching petg and pctg, because the field means 'open the door to shed heat' and a Tg of 90-106 °C gives no heat-creep reason to do so — Fillamentum in fact warns against over-cooling."
+    "conflicts": "The two reference grades are not the same material in any tight sense and disagree across the board: density 1.18 (UltiMaker CPE+) vs 1.25 g/cm\u00b3 (Fillamentum HG100); Tg 105.9 vs 90 \u00b0C; HDT 100.0 @0.455 MPa vs 80 \u00b0C; tensile at break 33.3 MPa XY vs 47-48 MPa. Recorded values take the conservative Fillamentum figures with UltiMaker's noted in properties.notes rather than averaging incompatible measurements. The fetched UltiMaker CPE+ TDS v5.00 does not publish nozzle or bed temperature ranges at all (unverified); the recorded printing window is Fillamentum's, widened slightly at the bed maximum by community practice. Toughness is also split: Fillamentum reports notched Izod 'no break' while UltiMaker's Z elongation collapses to 1.4 % \u2014 so layer_adhesion is scored 7, above petg's XY/Z spread would suggest for the UltiMaker grade and below Fillamentum's no-break result, reflecting genuine grade-to-grade variance. Fillamentum HG100 had no confirmed live price at research time and the UltiMaker price is a single-region conversion. Outdoor suitability is 'limited' on copolyester-family plausibility, not on published UV data (unverified). Naming collision with the catalog's cope entry is resolved in additional_notes. Note also that the research pass suggested enclosure_open_for_cooling: true on the grounds that no enclosure is required; that is recorded false here, matching petg and pctg, because the field means 'open the door to shed heat' and a Tg of 90-106 \u00b0C gives no heat-creep reason to do so \u2014 Fillamentum in fact warns against over-cooling."
   },
   "trade_names": [
     {
       "manufacturer": "fillamentum",
       "product": "CPE HG100",
-      "notes": "Marketed as 'modified PETG'/Advanced PETG: Tg 90 °C, HDT 80 °C, notched Izod no-break, clear grades at 90 % transmittance. A CF25 carbon-filled variant exists and is not covered by this entry."
+      "notes": "Marketed as 'modified PETG'/Advanced PETG: Tg 90 \u00b0C, HDT 80 \u00b0C, notched Izod no-break, clear grades at 90 % transmittance. A CF25 carbon-filled variant exists and is not covered by this entry."
     },
     {
       "manufacturer": "ultimaker",
       "product": "CPE / CPE+",
-      "notes": "Two tiers; CPE+ is the hotter and tougher, TDS v5.00 measuring Tg 105.9 °C and HDT 100 °C @0.455 MPa. Ships on NFC-tagged UltiMaker spools."
+      "notes": "Two tiers; CPE+ is the hotter and tougher, TDS v5.00 measuring Tg 105.9 \u00b0C and HDT 100 \u00b0C @0.455 MPa. Ships on NFC-tagged UltiMaker spools."
     }
   ]
 }
