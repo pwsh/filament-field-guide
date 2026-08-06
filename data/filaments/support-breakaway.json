@@ -163,20 +163,6 @@
       "notes": "Build-plate behaviour is largely inherited rather than intrinsic: support material is normally printed on top of, or alongside, the model material's own first layer and raft, so the plate interaction that matters is the base material's. No plate-specific guidance for any breakaway grade was found (unverified). Where the support does touch the plate directly — perimeter towers, purge blocks, prime lines — textured PEI at the base material's usual bed temperature is the safe default, and the low-temperature PLA-blend grades behave like PLA on it."
     }
   ],
-  "alternatives": [
-    {
-      "filament_id": "pva",
-      "reason": "For internal cavities and lattice interiors no hand can reach: water-soluble removal that never touches the part — at ease 3 vs 6, $50-120, and a storage regime severe enough that unprotected filament can clog within hours."
-    },
-    {
-      "filament_id": "bvoh",
-      "reason": "Soluble support that dissolves faster than PVA and pairs with PETG, ASA, nylon and TPU rather than PLA alone — at $150-250 and the same extreme hygroscopy this material does not have (water tolerance 2 vs 8)."
-    },
-    {
-      "filament_id": "hips",
-      "reason": "Also hand-removable, with a d-limonene soak available as a fallback for trapped geometry, and usable as a build material at a documented $20-50 — but effectively limited to ABS/styrenic prints and it needs an enclosure (warp 6 vs 3)."
-    }
-  ],
   "emissions": {
     "voc_level": "low",
     "particulate_level": "low",
@@ -197,11 +183,12 @@
       "https://eu.store.bambulab.com/en-cy/products/support-for-pa-pet",
       "https://store.bblcdn.eu/s8/default/3971a666363d43b8a2fe852b04832f93/Bambus_Support_for_ABS_Technical_Data_Sheet.pdf",
       "https://forum.bambulab.com/t/can-the-bambu-lab-support-g-filament-be-used-with-the-pc-filament/3042",
-      "https://www.esun3d.com/filaments/"
+      "https://www.esun3d.com/filaments/",
+      "https://www.snapmaker.com/filaments/breakaway-pla/normal"
     ],
-    "last_verified": "2026-08-01",
+    "last_verified": "2026-08-06",
     "confidence": "medium",
-    "conflicts": "The category boundary is the main unresolved item. Bambu's 'Support for ABS' (Support G) is HIPS by its own TDS, meaning a product sold as dedicated breakaway is chemically the hips entry — recorded here as a class note rather than by splitting the entry, but it makes any class-wide chemistry statement approximate. eSUN 'eBreak' could not be confirmed to exist: eSUN's own catalogue page shows PVA and HIPS as its only support lines, so the product is treated as unverified or miscategorised and is deliberately absent from trade_names. A Bambu forum thread (single-user anecdote, unverified) reports that Support G was once recommended for PLA in an older product table and leaves residue on PC, contradicting its current ABS-only positioning. Price is unverified outright — the Bambu store returned HTTP 402 and no UltiMaker retail listing was confirmed — so the price object carries notes with no numeric bounds. UltiMaker Breakaway publishes no nozzle, bed or drying figures at all, so the class-wide process ranges rest on Bambu's three datasheets. Tensile, HDT, shrinkage and max service temperature are published for no grade. Speed, ambient range, plate behaviour and the whole emissions profile are inferred rather than sourced. Confidence is 'medium' rather than 'low' because the numbers that do exist — density, drying schedules, melt temperatures, per-grade temperature windows, AMS Lite incompatibility, the 2-hour removal window — come from manufacturer datasheets and agree with each other."
+    "conflicts": "The category boundary is the main unresolved item. Bambu's 'Support for ABS' (Support G) is HIPS by its own TDS, meaning a product sold as dedicated breakaway is chemically the hips entry — recorded here as a class note rather than by splitting the entry, but it makes any class-wide chemistry statement approximate. eSUN 'eBreak' could not be confirmed to exist: eSUN's own catalogue page shows PVA and HIPS as its only support lines, so the product is treated as unverified or miscategorised and is deliberately absent from trade_names. A Bambu forum thread (single-user anecdote, unverified) reports that Support G was once recommended for PLA in an older product table and leaves residue on PC, contradicting its current ABS-only positioning. Price is unverified outright — the Bambu store returned HTTP 402 and no UltiMaker retail listing was confirmed — so the price object carries notes with no numeric bounds. UltiMaker Breakaway publishes no nozzle, bed or drying figures at all, so the class-wide process ranges rest on Bambu's three datasheets. Tensile, HDT, shrinkage and max service temperature are published for no grade. Speed, ambient range, plate behaviour and the whole emissions profile are inferred rather than sourced. Confidence is 'medium' rather than 'low' because the numbers that do exist — density, drying schedules, melt temperatures, per-grade temperature windows, AMS Lite incompatibility, the 2-hour removal window — come from manufacturer datasheets and agree with each other. 2026-08-06 update (Snapmaker Breakaway Support for PLA spec page — owner-provided link): the previous 'composition undisclosed' caveat on the Snapmaker row is partly resolved — the vendor states it is PLA-based and compatible with PLA-, PVB- and TPU-based materials, which confirms the class assignment made by inference and independently supports the compatibility note's grouping of Snapmaker's breakaway with the PLA-blend grades rather than with hips. Its 220-230 °C nozzle and 25-60 °C bed are consistent with the low-temperature grades. It adds a fourth vendor confirming TPU compatibility alongside UltiMaker's PLA/PETG/nylon/ABS list. Still no tensile, HDT, density or shrinkage from this source, so the entry's core gap is unchanged. One inconsistency: the spec-page table lists 1 kg while the US shop sells the same SKU as a 500 g spool at $19.99 — a spool-size discrepancy only, with no bearing on recorded properties."
   },
   "trade_names": [
     {
@@ -237,7 +224,7 @@
     {
       "manufacturer": "snapmaker",
       "product": "Breakaway Support for PLA",
-      "notes": "Mechanical breakaway support for PLA, explicitly distinguished from PVA by the vendor; exact composition undisclosed (unverified)."
+      "notes": "Mechanical breakaway support for PLA, explicitly distinguished from PVA by the vendor. Composition is now partly disclosed: Snapmaker's spec page calls it a PLA-based filament that breaks easily and lists compatibility with PLA-, PVB- and TPU-based materials, placing it in the low-temperature PLA-blend class rather than in hips. Nozzle 220-230 °C, bed 25-60 °C, 20-40 mm/s; sold as 500 g at $19.99 although the spec-page table says 1 kg."
     },
     {
       "manufacturer": "ultimaker",

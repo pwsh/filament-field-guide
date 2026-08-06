@@ -171,28 +171,6 @@
       "notes": "Backfilled from plate entry (reciprocity) — see plate page"
     }
   ],
-  "alternatives": [
-    {
-      "filament_id": "pa6-cf",
-      "reason": "The stiffness trade the other way: higher modulus and compression (9 vs 8) with slightly better warp control (3 vs 4) and a marginally higher heat score — at $79-135/kg against $55-65, more abrasion, and less impact toughness (adhesion 4 vs 6)."
-    },
-    {
-      "filament_id": "pa6",
-      "reason": "Unfilled PA6 when toughness and ductility matter more than stiffness: layer adhesion 9 vs 6, no hardened nozzle, full AMS feeding and $35-70/kg — but warp jumps from 4 to 9 and dimensional stability falls from 5 to 2."
-    },
-    {
-      "filament_id": "pa12-cf",
-      "reason": "Fixes the one thing glass fiber does not — water. PA12-CF holds its numbers wet (water 8 vs 2, dim 9 vs 5, warp 2 vs 4) where PA6-GF's 2.56 % uptake moves the part with the weather; costs $130-180/kg and gives up heat (temp 6 vs 8)."
-    },
-    {
-      "filament_id": "pa612",
-      "reason": "Similar low-warp territory without PA6's moisture problem: water 6 vs 2, warp 3 vs 4 and dimensional stability 7 vs 5, so the part holds size as humidity changes — at ~$65-77/kg, a 250-300 °C nozzle and a much weaker layer bond (4 vs 6)."
-    },
-    {
-      "filament_id": "petg-gf",
-      "reason": "The open-frame glass-filled option with no drying discipline: dim 9 vs 5, warp 2 vs 4, water 9 vs 2 and ease 6 vs 4 at $25-35/kg — giving up heat (temp 7 vs 8, HDT ~182 °C on the nylon) and nylon's wear resistance."
-    }
-  ],
   "emissions": {
     "voc_level": "high",
     "particulate_level": "moderate",
@@ -215,11 +193,13 @@
       "https://www.gigaparts.com/bambu-lab-pa6-gf-3d-printer-filament.html",
       "https://www.friendlyhobbies.com/products/bambu-filament-pa6-gf",
       "https://www.3dxtech.com/products/glass-fiber-filaments/",
-      "https://wiki.bambulab.com/en/knowledge-sharing/notes-ams"
+      "https://wiki.bambulab.com/en/knowledge-sharing/notes-ams",
+      "https://us.snapmaker.com/collections/3d-printer-filament",
+      "https://wiki.snapmaker.com/en/Snapmaker_Luban/Filament_Settings/PA-Fiber"
     ],
-    "last_verified": "2026-08-01",
+    "last_verified": "2026-08-06",
     "confidence": "medium",
-    "conflicts": "Bambu's official PA6-GF technical data sheet returned an access error during research, so the published figures here (HDT ~182 °C, impact 27.2 kJ/m² XY dry, bending 120 MPa, water absorption 2.56 %) come from the store page and wiki rather than the PDF, and several fields the PDF would have supplied are simply absent. Density, tensile strength and shrinkage are NOT confirmed from any accessible source: density 1.36 g/cm³ is a rule-of-mixtures calculation for 30 wt% glass and is the single number in this entry most in need of re-verification, tensile strength is omitted rather than guessed, and shrinkage is reasoned. Fiber loading is undisclosed by Bambu while the industrial grades that do disclose it (3DXTech FIBREX, XSTRAND) are 30 %, so applying a 30 % density calculation to Bambu's mechanical data mixes two products. The HDT load basis is unstated by Bambu and is recorded on the schema's 0.45 MPa default. Max service temperature 130 °C is inferred from pa6-cf's own inferred 140 °C, an estimate derived from an estimate. Nozzle and bed temperature ranges are not published as ranges on the accessible Bambu pages and are carried from pa6-cf and the base pa entry. uv_tolerance is recorded 2, one below pa6-cf's 3, on the reasoning that carbon fiber is an effective UV absorber while glass is not — that is a physical argument, not a sourced measurement, and it is the one score here that deliberately diverges from the CF sibling."
+    "conflicts": "Bambu's official PA6-GF technical data sheet returned an access error during research, so the published figures here (HDT ~182 °C, impact 27.2 kJ/m² XY dry, bending 120 MPa, water absorption 2.56 %) come from the store page and wiki rather than the PDF, and several fields the PDF would have supplied are simply absent. Density, tensile strength and shrinkage are NOT confirmed from any accessible source: density 1.36 g/cm³ is a rule-of-mixtures calculation for 30 wt% glass and is the single number in this entry most in need of re-verification, tensile strength is omitted rather than guessed, and shrinkage is reasoned. Fiber loading is undisclosed by Bambu while the industrial grades that do disclose it (3DXTech FIBREX, XSTRAND) are 30 %, so applying a 30 % density calculation to Bambu's mechanical data mixes two products. The HDT load basis is unstated by Bambu and is recorded on the schema's 0.45 MPa default. Max service temperature 130 °C is inferred from pa6-cf's own inferred 140 °C, an estimate derived from an estimate. Nozzle and bed temperature ranges are not published as ranges on the accessible Bambu pages and are carried from pa6-cf and the base pa entry. uv_tolerance is recorded 2, one below pa6-cf's 3, on the reasoning that carbon fiber is an effective UV absorber while glass is not — that is a physical argument, not a sourced measurement, and it is the one score here that deliberately diverges from the CF sibling. 2026-08-06 addition: Snapmaker's PA-GF was mapped into this entry, following the precedent already set by the Bambu 'PA6-GF (PA-GF)' row — pa6-gf is the catalog's only glass-filled nylon id and PA6 is the dominant GF base. The mapping is weaker than Bambu's: Snapmaker discloses no base grade, no fiber loading and no specifications at all (no spec page, no shop product page, and the Luban PA-Fiber guide names neither), so it contributes no data and is a naming-level assignment only. Snapmaker's unfilled Nylon spec page reports a 190 °C melting point, which is NOT PA6-like, so if the filled grades share that base the PA-GF assignment here would be wrong — flagged rather than acted on, since Snapmaker does not state that the unfilled and filled lines share a base resin."
   },
   "trade_names": [
     {
@@ -256,6 +236,11 @@
       "manufacturer": "polymaker",
       "product": "Fiberon PA6-GF25",
       "notes": "PA6 + 25% glass fiber; pa6-gf id is provisional"
+    },
+    {
+      "manufacturer": "snapmaker",
+      "product": "PA-GF",
+      "notes": "Base polyamide grade undisclosed by Snapmaker; mapped here on the same provisional basis as the Bambu 'PA-GF' entry above. Snapmaker publishes no spec page, product page or datasheet for it — no figures in this entry come from it."
     },
     {
       "manufacturer": "spectrum-filaments",

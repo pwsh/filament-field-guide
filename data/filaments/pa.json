@@ -126,7 +126,7 @@
       "max": 80,
       "recommended": 52
     },
-    "notes": "Density spans the PA12 (~1.01-1.04) to PA6 (~1.12-1.14) range; 1.08 is recorded as the mid-point for an unfilled generic PA. Tg is 40-60 °C depending on grade and drops further when the part is wet. HDT@0.45 MPa is the widest disagreement in the sources: eSUN ePA12 cites 100 °C while unfilled PA6 is often listed at 55-65 °C unless annealed — 80 °C is the recorded mid-point, not a datasheet value. Tensile: eSUN ePA12 50.8 MPa, partmfg table 52.45 MPa, general range 40-80 MPa."
+    "notes": "Density spans the PA12 (~1.01-1.04) to PA6 (~1.12-1.14) range; 1.08 is recorded as the mid-point for an unfilled generic PA. Tg is 40-60 °C depending on grade and drops further when the part is wet. HDT@0.45 MPa is the widest disagreement in the sources: eSUN ePA12 cites 100 °C while unfilled PA6 is often listed at 55-65 °C unless annealed — 80 °C is the recorded mid-point, not a datasheet value. Tensile: eSUN ePA12 50.8 MPa, partmfg table 52.45 MPa, general range 40-80 MPa. Snapmaker's Nylon spec page (owner-provided link, read 2026-08-06) publishes an unusually complete set for an undisclosed-grade PA: tensile 66.2 ± 0.9 MPa, bending 97.0 ± 1.1 MPa, Young's modulus 2223 ± 199 MPa, Charpy impact 9.6 ± 1.4 kJ/m², Tg 67 °C, Vicat 180 °C, melting point 190 °C, printing 250-270 °C, bed 25-50 °C, 30-60 mm/s. The Tg/melting pair is the informative part — Tg 67 °C is PA6-like while a 190 °C melt is nearer PA12 (~178 °C) than PA6 (~220 °C), which is the signature of a copolyamide rather than either homopolymer, and it is exactly why an unfilled-generic entry like this one has to average grades. No density, water absorption, shrinkage or drying schedule is published."
   },
   "scores": {
     "ease_of_print": 3,
@@ -221,28 +221,6 @@
       "notes": "Backfilled from plate entry (Phase E reciprocity): Outside the coating's adhesion and temperature envelope; use garolite or textured PEI."
     }
   ],
-  "alternatives": [
-    {
-      "filament_id": "pa12",
-      "reason": "The forgiving grade when this entry's warping and humidity drift are the problem: moisture uptake under 1 % against PA6's 3-9 % (water 7 vs 1), warp 6 vs 9 and dimensional stability 6 vs 3, with drying down to 70 °C/4 h — at lower stiffness (~45 vs 55-58 MPa) and a higher price ($55-90 vs $35-90)."
-    },
-    {
-      "filament_id": "pa6",
-      "reason": "The cheap, stiff homopolymer that most spools sold as generic 'PA' actually are ($35-70), if you want a named grade with published numbers — same punishing moisture and warp behaviour (warp 9, water 1) and no gain in printability (ease 3, equal)."
-    },
-    {
-      "filament_id": "copa",
-      "reason": "The low-warp copolyamide: warp 3 vs 9 and dimensional stability 5 vs 3, so it prints far calmer while keeping nylon's best-in-family layer adhesion (9, equal) — but low warp is not low moisture (water 2 vs 1, still a 100 °C/8 h dry and sub-20 % RH storage) and it needs a hardened nozzle."
-    },
-    {
-      "filament_id": "pa-cf",
-      "reason": "Carbon fiber collapses the warp (4 vs 9) and lifts HDT@0.45 MPa from ~80 °C to ~155 °C for $40-60/kg — at the cost of nylon's toughness (adhesion 4 vs 9), a mandatory hardened nozzle and no soluble-support option."
-    },
-    {
-      "filament_id": "petg",
-      "reason": "If the part just needs a tough, dimensionally stable plastic rather than nylon's wear, fatigue and low-friction behaviour, PETG skips the drying and the enclosure entirely (ease 7 vs 3, warp 3 vs 9, water 9 vs 1) at $18-42/kg."
-    }
-  ],
   "emissions": {
     "voc_level": "high",
     "particulate_level": "moderate",
@@ -266,11 +244,12 @@
       "http://built-envi.com/portfolio/ultrafine-particle-emissions-from-3d-printers/",
       "https://www.cnckitchen.com/blog/carbon-fiber-nylon-in-3d-printing-pa6-vs-pa12-tested",
       "https://wiki.bambulab.com/en/general/filament-guide-material-table",
-      "https://wiki.bambulab.com/en/knowledge-sharing/notes-ams"
+      "https://wiki.bambulab.com/en/knowledge-sharing/notes-ams",
+      "https://www.snapmaker.com/filaments/nylon/normal"
     ],
-    "last_verified": "2026-07-31",
+    "last_verified": "2026-08-06",
     "confidence": "medium",
-    "conflicts": "HDT@0.45 MPa is the largest unresolved disagreement: eSUN's ePA12 TDS cites 100 °C while unfilled PA6 is commonly listed at 55-65 °C unless annealed; 80 °C is a recorded mid-point rather than a measured figure. Density (1.01-1.14) and Tg (40-60 °C) both vary with PA6 vs PA12 grade rather than between sources, so single values here are grade-averaged. Nozzle temperature differs by grade: eSUN ePA12 240-290 °C vs Prusa's 285 °C for a PA blend. Price range is extrapolated from spool listings and is unverified against current retail. Max continuous service temperature (80-100 °C) is a community/aggregator figure, not a datasheet value."
+    "conflicts": "HDT@0.45 MPa is the largest unresolved disagreement: eSUN's ePA12 TDS cites 100 °C while unfilled PA6 is commonly listed at 55-65 °C unless annealed; 80 °C is a recorded mid-point rather than a measured figure. Density (1.01-1.14) and Tg (40-60 °C) both vary with PA6 vs PA12 grade rather than between sources, so single values here are grade-averaged. Nozzle temperature differs by grade: eSUN ePA12 240-290 °C vs Prusa's 285 °C for a PA blend. Price range is extrapolated from spool listings and is unverified against current retail. Max continuous service temperature (80-100 °C) is a community/aggregator figure, not a datasheet value. 2026-08-06 update (Snapmaker Nylon spec page — owner-provided link): NO recorded value changed. Confirmations: nozzle 250-270 °C sits inside the recorded 240-290 °C and straddles the recorded 265 °C recommendation; speed 30-60 mm/s sits inside the recorded 30-80 mm/s. Contradictions: tensile 66.2 ± 0.9 MPa is well above the recorded 52 MPa recommendation though still inside the recorded 40-80 MPa band — it is the highest unfilled-PA tensile figure seen here, above eSUN's ePA12 50.8 MPa and partmfg's 52.45 MPa, and it pulls the plausible centre of that band upward without justifying a move on one undisclosed-grade vendor sheet. Tg 67 °C is 17 °C above the recorded 50 °C and above the 40-60 °C grade range this entry describes, so the recorded Tg understates at least this grade. Bed 25-50 °C is dramatically colder than the recorded 70-110 °C with 90 °C recommended — a 20 °C gap at the ceiling. That is Snapmaker's own machine-tuned guidance on a small enclosed printer and it conflicts with every other nylon source in this entry; the recorded range is retained and the Snapmaker figure treated as an outlier, not a correction. HDT is not published by Snapmaker, so the entry's largest open disagreement (eSUN 100 °C vs unfilled PA6's 55-65 °C, recorded 80 °C) gets no help. No test method is cited."
   },
   "trade_names": [
     {
@@ -346,7 +325,7 @@
     {
       "manufacturer": "snapmaker",
       "product": "Black Nylon (PA)",
-      "notes": "Unfilled polyamide, specific grade undisclosed"
+      "notes": "Unfilled polyamide, specific grade undisclosed. Spec-page melting point of 190 °C is well below PA6's ~220 °C and hints at a copolyamide or PA12-family base, but Snapmaker does not state it — see properties.notes."
     },
     {
       "manufacturer": "sunlu",

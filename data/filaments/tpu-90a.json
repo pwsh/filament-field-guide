@@ -160,24 +160,6 @@
       "notes": "Backfilled from plate entry (Phase E reciprocity): As TPU."
     }
   ],
-  "alternatives": [
-    {
-      "filament_id": "tpu-95a",
-      "reason": "The default of the family: ease 5 vs 4, 25-45 mm/s, retraction up to 2 mm, a survivable short Bowden path and real published mechanicals (39 MPa tensile, 580 % elongation) — for only a small step up in firmness."
-    },
-    {
-      "filament_id": "tpu-85a",
-      "reason": "Softer, gel-insole feel where seal or grip compliance matters more than speed — at ease 3 vs 4 and a hardware gate 90A does not have (0.6/0.8 mm nozzle only on Bambu)."
-    },
-    {
-      "filament_id": "tpu-98a",
-      "reason": "If the part really wants abrasion and impact resistance rather than stretch: much easier and faster (ease 6 vs 4), higher service temperature (temp 5 vs 3) and far cheaper at the low end ($16-58 vs $50-70) — but it feels like a hockey puck."
-    },
-    {
-      "filament_id": "tpu-68d",
-      "reason": "The only route to a TPU-family material in an AMS slot (ams yes vs no), at ease 7 vs 4 and a cooler 30-35 °C bed. Treat it as a tough semi-rigid plastic, not a flexible — layer adhesion drops to 2 vs 4."
-    }
-  ],
   "emissions": {
     "voc_level": "low",
     "particulate_level": "low",
@@ -228,6 +210,11 @@
       "manufacturer": "polymaker",
       "product": "PolyFlex TPU90",
       "notes": "Shore 90A"
+    },
+    {
+      "manufacturer": "snapmaker",
+      "product": "TPU 90A",
+      "notes": "US-shop listing, 1 kg $39.99; no spec page yet — mapped by unambiguous title (2026-08-06)"
     },
     {
       "manufacturer": "spectrum-filaments",

@@ -2,7 +2,7 @@
   "id": "snapmaker",
   "name": "Shenzhen Snapmaker Technologies Co., Ltd.",
   "status": "researched",
-  "summary": "Shenzhen company founded 2016, distinctive for building multi-function 3-in-1 machines (3D printing, laser, CNC) rather than printers alone (Snapmaker 2.0, Artisan, J1, U1). Filament is an in-house accessory line with RFID-tagged spools tuned to Snapmaker's own machines, and the material range is narrower than pure filament brands — PLA variants, PETG, ABS, TPU 95A, unfilled and fibre-filled nylon, PVA and a breakaway support, with no confirmed ASA or PC lines. No third-party OEM relationship is documented and the brand is absent from the owner-verified ground-truth table.",
+  "summary": "Shenzhen company founded 2016, distinctive for building multi-function 3-in-1 machines (3D printing, laser, CNC) rather than printers alone (Snapmaker 2.0, Artisan, J1, U1). Filament is an in-house accessory line with RFID-tagged spools tuned to Snapmaker's own machines, and the material range is narrower than pure filament brands — PLA variants, PETG, ABS, ASA (added 2026), TPU 95A, unfilled and fibre-filled nylon, PVA and a breakaway support, with no confirmed PC line. No third-party OEM relationship is documented and the brand is absent from the owner-verified ground-truth table.",
   "headquarters_country": "China",
   "manufacturing_countries": [
     "China"
@@ -81,49 +81,76 @@
       "filament_ids": [
         "abs"
       ],
-      "notes": "Standard ABS"
+      "notes": "Standard ABS, RFID spool, $22.99/kg. Shop product page: nozzle 240-280 °C, bed 90-100 °C, 50-200 mm/s, cooling fan OFF, pre-dry 70 °C for 6 h. Density 1.04 g/cm³ at 23 °C, Tg 101 °C, HDT 100 °C at 0.45 MPa, Vicat 104 °C, water absorption 0.35 %, melt index 9-14 g/10 min. Tensile 33.4 ± 0.6 MPa XY / 29.7 ± 0.3 MPa Z, bending 56.2 ± 0.3 MPa at 2127.2 ± 29.9 MPa modulus XY, notched impact 18.0 ± 0.9 kJ/m² XY, elongation at break 17.9 ± 1.3 % XY. The older www.snapmaker.com/filaments/abs/normal spec page gives different numbers — see provenance.conflicts."
+    },
+    {
+      "name": "ASA",
+      "filament_ids": [
+        "asa"
+      ],
+      "notes": "Weather-resistant styrenic, new in 2026; RFID spool, $27.99/kg. Shop product page: nozzle 240-280 °C, bed 75-100 °C, 50-200 mm/s, cooling fan OFF, enclosed printing required (U1 top cover recommended for a stable chamber, no chamber temperature target given), pre-dry 70 °C for 7 h. Density 1.13 g/cm³ at 23 °C, Tg 98 °C at 10 °C/min, HDT 103 °C at 0.45 MPa, Vicat 105 °C, water absorption 0.4 %. Tensile 43.8 ± 0.8 MPa XY / 32 ± 1.8 MPa Z, bending 73.4 ± 2.1 MPa at 3206 ± 108 MPa modulus XY, notched impact 10.3 ± 0.4 kJ/m² XY / 6.7 ± 1.4 kJ/m² Z. Marketed on enhanced UV resistance against yellowing."
     },
     {
       "name": "TPU / TPU 95A HF",
       "filament_ids": [
         "tpu-95a"
       ],
-      "notes": "Snapmaker spec states hardness >= 95 Shore A; the HF variant is the same durometer in a high-flow formulation"
+      "notes": "Snapmaker spec states hardness >= 95 Shore A; the HF variant is the same durometer in a high-flow formulation. High Flow TPU95 spec page: nozzle 200-220 °C, bed 25-50 °C, 40-100 mm/s, tensile 23.11 ± 0.63 MPa, elongation at break 462.3 ± 21.1 %, 100 % modulus 13.24 ± 0.29 MPa, 1.75 mm, 1 kg. The US shop added a separate TPU 90A (1 kg, $39.99) that has no product line here yet."
     },
     {
       "name": "Black Nylon (PA)",
       "filament_ids": [
         "pa"
       ],
-      "notes": "Unfilled polyamide; specific grade not disclosed, so mapped to the generic pa entry"
+      "notes": "Unfilled polyamide; specific grade not disclosed, so mapped to the generic pa entry. Spec page: nozzle 250-270 °C, bed 25-50 °C, 30-60 mm/s, Young's modulus 2223 ± 199 MPa, tensile 66.2 ± 0.9 MPa, bending 97.0 ± 1.1 MPa, Charpy impact 9.6 ± 1.4 kJ/m², Tg 67 °C, Vicat 180 °C, melting point 190 °C, 1.75 mm, 1 kg. The 190 °C melting point is well below PA6's ~220 °C and points at a copolyamide or PA12-family base, but the grade is still not stated and the 25-50 °C bed is unusually cold for nylon."
     },
     {
       "name": "PA-CF",
-      "filament_ids": [],
-      "notes": "Carbon-fibre-filled nylon with the base polyamide grade undisclosed in the Luban PA-Fiber guide; no generic pa-cf id exists - reported as a gap"
+      "filament_ids": [
+        "pa-cf"
+      ],
+      "notes": "Carbon-fibre-filled nylon. The base polyamide grade is still undisclosed — there is no Snapmaker spec page or shop product page for it and the Luban PA-Fiber guide does not name the grade — so it maps to the generic copolymer pa-cf entry, which is the correct home for an undisclosed-base nylon-CF. Re-map to pa6-cf or pa12-cf if Snapmaker ever discloses the grade."
     },
     {
       "name": "PA-GF",
-      "filament_ids": [],
-      "notes": "Glass-fibre-filled nylon with the base polyamide grade undisclosed; pa6-gf exists but the PA6 base is unconfirmed, so not mapped - reported as a gap"
+      "filament_ids": [
+        "pa6-gf"
+      ],
+      "notes": "Glass-fibre-filled nylon, base polyamide grade undisclosed (no spec page or shop product page; the Luban PA-Fiber guide does not name it). Mapped to pa6-gf following the Bambu precedent already recorded in that entry, which carries Bambu's 'PA6-GF (PA-GF)' with a 'provisional id' note: pa6-gf is the catalog's only glass-filled nylon id and PA6 is the dominant GF base. Provisional — re-map if Snapmaker discloses a non-PA6 base."
     },
     {
       "name": "PVA",
       "filament_ids": [
         "pva"
       ],
-      "notes": "Water-soluble support filament, 500 g spools"
+      "notes": "Water-soluble support filament, 500 g spools, $34.99. Spec page: nozzle 215-225 °C, bed 25-60 °C, 30-40 mm/s, 1.75 mm."
     },
     {
       "name": "Breakaway Support for PLA",
-      "filament_ids": [],
-      "notes": "Mechanical breakaway support polymer, explicitly non-soluble and distinct from PVA; composition undisclosed and no breakaway-support id exists (hips is the ABS-side analogue) - reported as a gap"
+      "filament_ids": [
+        "support-breakaway"
+      ],
+      "notes": "Mechanical breakaway support, explicitly non-soluble and distinct from PVA; now mapped to the support-breakaway entry created after the original pass. Composition is no longer fully undisclosed — the spec page calls it a PLA-based filament that breaks easily and states compatibility with PLA-, PVB- and TPU-based materials, which puts it in the same low-temperature PLA-blend class as Bambu Support for PLA and UltiMaker Breakaway rather than in hips. Nozzle 220-230 °C, bed 25-60 °C, 20-40 mm/s. Sold as a 500 g spool at $19.99 although the spec page's table says 1 kg."
+    },
+    {
+      "name": "TPU 90A",
+      "filament_ids": [
+        "tpu-90a"
+      ],
+      "notes": "US-shop listing (1 kg, $39.99); mapped from the unambiguous shore-grade title — no spec page yet (Fable decision 2026-08-06)."
+    },
+    {
+      "name": "Silk Dual-Color PLA (RFID)",
+      "filament_ids": [
+        "pla-silk"
+      ],
+      "notes": "US-shop listing; dual-color coextruded silk PLA, mapped per the Bambu Silk Dual Color precedent — no spec page yet (Fable decision 2026-08-06)."
     }
   ],
   "makes_plates": true,
   "plate_ids": [],
   "price_tier": "mid",
-  "additional_notes": "Standard PLA around $23/kg. Build plates and other consumables are sold under the Materials/accessories collection for the 3-in-1 machines. Roughly ten years in market as of 2026. Whether the filament is extruded in-house or contract-manufactured is unverified; no specific manufacturing facility was identified. Social profiles on YouTube, Facebook, Instagram and X are presumed to exist but were not verified, so none are recorded.",
+  "additional_notes": "Standard PLA around $23/kg. Build plates and other consumables are sold under the Materials/accessories collection for the 3-in-1 machines. Roughly ten years in market as of 2026. Whether the filament is extruded in-house or contract-manufactured is unverified; no specific manufacturing facility was identified. Social profiles on YouTube, Facebook, Instagram and X are presumed to exist but were not verified, so none are recorded. Snapmaker publishes a per-material technical comparison at www.snapmaker.com/filaments — a gallery linking to one spec page per material, each giving printing and bed temperature, recommended speed, Young's modulus, tensile and bending strength, Charpy impact, Tg, Vicat, melting point, diameter and spool weight. As read on 2026-08-06 it covers eleven products (SnapSpeed/Matte/Basic/Wood/Glow-in-the-dark PLA, TPU, High Flow TPU95, ABS, PVA, Nylon, Breakaway Support for PLA) and is stale relative to the shop: ASA, PETG, PETG HF, Silk PLA, PA-CF, PA-GF and a newly listed TPU 90A are all absent from it, and its ABS figures disagree with the newer us.snapmaker.com ABS product page. The richest Snapmaker datasheets are now those shop product pages for ABS and ASA, which add density, HDT, Vicat, water absorption, melt index, a drying schedule and Z-axis mechanical figures that the comparison pages omit. Neither source states a diameter tolerance and no ASTM/ISO test method is cited anywhere. Two shop SKUs seen on 2026-08-06 have no product line recorded yet — TPU 90A (1 kg, $39.99) and Silk Dual-Color PLA (RFID, 1 kg) — left out pending their own research pass rather than mapped from a listing title.",
   "provenance": {
     "sources": [
       "https://shop.snapmaker.com/collections/3d-printer-filament",
@@ -132,10 +159,18 @@
       "https://www.3dprintingjournal.com/p/06-01-2016-snapmaker-was-founded",
       "https://us.snapmaker.com/collections/3d-printer-filament",
       "https://wiki.snapmaker.com/en/Snapmaker_Luban/Filament_Settings/PA-Fiber",
-      "https://us.snapmaker.com/products/pva-filament-500g"
+      "https://us.snapmaker.com/products/pva-filament-500g",
+      "https://us.snapmaker.com/products/abs-filament-1kg",
+      "https://us.snapmaker.com/products/asa-filament-1kg",
+      "https://www.snapmaker.com/filaments",
+      "https://www.snapmaker.com/filaments/abs/normal",
+      "https://www.snapmaker.com/filaments/nylon/normal",
+      "https://www.snapmaker.com/filaments/tpu/high-flow-tpu95",
+      "https://www.snapmaker.com/filaments/pva/normal",
+      "https://www.snapmaker.com/filaments/breakaway-pla/normal"
     ],
-    "last_verified": "2026-07-31",
+    "last_verified": "2026-08-06",
     "confidence": "low",
-    "conflicts": "Corporate sourcing is thinner than the other brands in this cluster; founding year rests largely on 3dprintingjournal.com and a Baidu Baike entry. Actual production origin (in-house vs contracted) is unverified, as is the absence of ABS/ASA/PA/PC lines (likely absent rather than confirmed absent)."
+    "conflicts": "Corporate sourcing is thinner than the other brands in this cluster; founding year rests largely on 3dprintingjournal.com and a Baidu Baike entry. Actual production origin (in-house vs contracted) is unverified, as is the absence of ABS/ASA/PA/PC lines (likely absent rather than confirmed absent). 2026-08-06: ASA added (new product); PA-CF/PA-GF/breakaway remapped to ids created after the original Phase C pass. PA-CF now points at the generic pa-cf entry and PA-GF at pa6-gf on the Bambu 'PA-GF' precedent — both remain provisional because Snapmaker still discloses no base polyamide grade for either, and neither has a spec page or a shop product page. Breakaway Support for PLA now points at support-breakaway, and the vendor spec page has since disclosed enough (PLA-based, compatible with PLA/PVB/TPU) to place it in the PLA-blend breakaway class rather than leaving composition unknown. New conflict found on the same pass: Snapmaker's two ABS documents disagree. The comparison spec page at www.snapmaker.com/filaments/abs/normal gives 245-265 °C nozzle, 80-100 °C bed, 30-50 mm/s, tensile 33.3 ± 0.8 MPa, bending 59.0 ± 1.3 MPa and Charpy 12.6 ± 1.1 kJ/m²; the newer us.snapmaker.com ABS product page gives 240-280 °C, 90-100 °C, 50-200 mm/s, tensile 33.4 ± 0.6 MPa, bending 56.2 ± 0.3 MPa and notched impact 18.0 ± 0.9 kJ/m². Tensile agrees to within noise and bending is close, but impact differs by ~43 % and the speed windows do not overlap at all — the older page reads as legacy Snapmaker 2.0 guidance and the newer one as U1-era, and neither cites a test standard. The breakaway spool weight is also inconsistent: the spec page table says 1 kg, the US shop sells 500 g at $19.99. The absence of a PC line is still unconfirmed-absent rather than confirmed-absent, but the ASA gap recorded in the previous pass is now closed."
   }
 }

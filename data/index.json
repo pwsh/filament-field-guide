@@ -327,7 +327,7 @@
         },
         {
           "manufacturer": "snapmaker",
-          "product": "ABS"
+          "product": "ABS Filament (RFID) - 1kg"
         },
         {
           "manufacturer": "spectrum-filaments",
@@ -1027,6 +1027,10 @@
         {
           "manufacturer": "rosa3d",
           "product": "ASA"
+        },
+        {
+          "manufacturer": "snapmaker",
+          "product": "ASA Filament (RFID) - 1kg"
         },
         {
           "manufacturer": "spectrum-filaments",
@@ -2936,6 +2940,10 @@
         {
           "manufacturer": "polymaker",
           "product": "Fiberon PA6-GF25"
+        },
+        {
+          "manufacturer": "snapmaker",
+          "product": "PA-GF"
         },
         {
           "manufacturer": "spectrum-filaments",
@@ -5599,7 +5607,7 @@
       "suitability": {
         "food_contact": "no",
         "load_bearing": "moderate",
-        "high_temperature": "moderate",
+        "high_temperature": "no",
         "outdoor": "limited"
       },
       "scores": {
@@ -8568,6 +8576,10 @@
         },
         {
           "manufacturer": "snapmaker",
+          "product": "Silk Dual-Color PLA (RFID)"
+        },
+        {
+          "manufacturer": "snapmaker",
           "product": "Silk PLA"
         },
         {
@@ -10941,6 +10953,10 @@
           "product": "PolyFlex TPU90"
         },
         {
+          "manufacturer": "snapmaker",
+          "product": "TPU 90A"
+        },
+        {
           "manufacturer": "spectrum-filaments",
           "product": "S-Flex 90A"
         },
@@ -11123,7 +11139,7 @@
         },
         {
           "manufacturer": "snapmaker",
-          "product": "TPU / TPU 95A HF"
+          "product": "TPU / High Flow TPU95"
         },
         {
           "manufacturer": "spectrum-filaments",
@@ -12358,7 +12374,7 @@
       "id": "snapmaker",
       "name": "Shenzhen Snapmaker Technologies Co., Ltd.",
       "status": "researched",
-      "summary": "Shenzhen company founded 2016, distinctive for building multi-function 3-in-1 machines (3D printing, laser, CNC) rather than printers alone (Snapmaker 2.0, Artisan, J1, U1). Filament is an in-house accessory line with RFID-tagged spools tuned to Snapmaker's own machines, and the material range is narrower than pure filament brands \u2014 PLA variants, PETG, ABS, TPU 95A, unfilled and fibre-filled nylon, PVA and a breakaway support, with no confirmed ASA or PC lines. No third-party OEM relationship is documented and the brand is absent from the owner-verified ground-truth table.",
+      "summary": "Shenzhen company founded 2016, distinctive for building multi-function 3-in-1 machines (3D printing, laser, CNC) rather than printers alone (Snapmaker 2.0, Artisan, J1, U1). Filament is an in-house accessory line with RFID-tagged spools tuned to Snapmaker's own machines, and the material range is narrower than pure filament brands \u2014 PLA variants, PETG, ABS, ASA (added 2026), TPU 95A, unfilled and fibre-filled nylon, PVA and a breakaway support, with no confirmed PC line. No third-party OEM relationship is documented and the brand is absent from the owner-verified ground-truth table.",
       "brands": [
         "Snapmaker",
         "SnapSpeed",

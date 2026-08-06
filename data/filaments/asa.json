@@ -122,7 +122,7 @@
       "max": 47,
       "recommended": 43
     },
-    "notes": "Density spans 1.05 (Bambu) to 1.08-1.09 (Polymaker/partmfg.com) with Prusament at 1.07 — 1.07 recorded. HDT from the Prusament TDS is 93 °C at 0.45 MPa and 86 °C at 1.8 MPa; Bambu cites 100 °C without stating a load. Tensile strength shows a notable brand spread: Bambu 37±3 MPa, Prusament 42-45 MPa, Polymaker/partmfg.com 47.1 MPa. Shrinkage and max service temperature are typical-for-styrenics estimates rather than datasheet values. CNC Kitchen measured a bending modulus of ~2300 MPa for ASA against ~3300 MPa for PLA, and ~30% impact energy absorbed versus 8% for PLA and 14% for PETG. 3D-Fuel's Pro ASA sheet (technical library, read 2026-08-01, branded 'Workday ASA') adds NOTHING to this block: it is a one-page marketing-and-print-settings sheet with no density, tensile, flexural, impact, HDT, Tg, shrinkage or melt-flow figure and no ASTM/ISO method cited anywhere — the only ASA document in 3D-Fuel's library and the weakest of the seven. Its sole quantitative content is 230-260 °C nozzle and 110 °C bed."
+    "notes": "Density spans 1.05 (Bambu) to 1.08-1.09 (Polymaker/partmfg.com) with Prusament at 1.07 — 1.07 recorded. HDT from the Prusament TDS is 93 °C at 0.45 MPa and 86 °C at 1.8 MPa; Bambu cites 100 °C without stating a load. Tensile strength shows a notable brand spread: Bambu 37±3 MPa, Prusament 42-45 MPa, Polymaker/partmfg.com 47.1 MPa. Shrinkage and max service temperature are typical-for-styrenics estimates rather than datasheet values. CNC Kitchen measured a bending modulus of ~2300 MPa for ASA against ~3300 MPa for PLA, and ~30% impact energy absorbed versus 8% for PLA and 14% for PETG. 3D-Fuel's Pro ASA sheet (technical library, read 2026-08-01, branded 'Workday ASA') adds NOTHING to this block: it is a one-page marketing-and-print-settings sheet with no density, tensile, flexural, impact, HDT, Tg, shrinkage or melt-flow figure and no ASTM/ISO method cited anywhere — the only ASA document in 3D-Fuel's library and the weakest of the seven. Its sole quantitative content is 230-260 °C nozzle and 110 °C bed. Snapmaker's ASA product page (owner-provided link, read 2026-08-06) is the fourth branded ASA sheet here and the most complete of them, and the only one publishing Z-axis figures: tensile 43.8 ± 0.8 MPa XY against 32 ± 1.8 MPa Z, bending 73.4 ± 2.1 MPa at a 3206 ± 108 MPa modulus XY, notched impact 10.3 ± 0.4 kJ/m² XY against 6.7 ± 1.4 kJ/m² Z, Tg 98 °C at 10 °C/min, HDT 103 °C at 0.45 MPa, Vicat 105 °C, water absorption 0.4 %, density 1.13 g/cm³ at 23 °C. Its tensile figure lands inside the recorded 37-47 MPa band and effectively on Prusament's 42-45 MPa, which is the strongest independent support the mid-range value has had. Its density does not fit: 1.13 is above every other source. Its bending modulus of 3206 MPa is roughly 40 % above the ~2300 MPa CNC Kitchen measured on Prusament ASA, so the stiffness gap to PLA that entry describes is formulation-dependent rather than a property of ASA as a class. Print settings 240-280 °C nozzle (exactly the recorded range), 75-100 °C bed, 50-200 mm/s, fan off, pre-dry 70 °C for 7 h. No ASTM/ISO method and no diameter tolerance are stated."
   },
   "scores": {
     "ease_of_print": 5,
@@ -228,24 +228,6 @@
       "notes": "Backfilled from plate entry (reciprocity)"
     }
   ],
-  "alternatives": [
-    {
-      "filament_id": "abs",
-      "reason": "The cheaper indoor equivalent at the same strength and heat class, with better compression (7 vs 6), better layer adhesion (5 vs 4) and acetone vapour smoothing — but it yellows and embrittles in sunlight (uv 2 vs 9, weather 2 vs 9), so indoor only."
-    },
-    {
-      "filament_id": "asa-gf",
-      "reason": "Cures ASA's defining warp with glass fiber (warp 5 vs 7, dim 8 vs 7, HDT 97-99 °C vs 93 °C) while keeping the full UV package, at $34-45 vs $18-45, a mandatory hardened nozzle, a worse layer bond (3 vs 4) and no AMS feeding."
-    },
-    {
-      "filament_id": "asa-cf",
-      "reason": "The stiff outdoor grade: compression 8 vs 6 and warp 4 vs 7 with UV unchanged, but the layer bond degrades further (adhesion 3 vs 4) and price jumps to $70-112 from $18-45."
-    },
-    {
-      "filament_id": "petg",
-      "reason": "If the outdoor part is low-stress and low-heat, PETG prints far easier with no enclosure (ease 7 vs 5, warp 3 vs 7) and bonds far better (adhesion 9 vs 4) at the same money — with a much shorter UV life (uv 5 vs 9) and less heat (temp 5 vs 7)."
-    }
-  ],
   "emissions": {
     "voc_level": "high",
     "particulate_level": "high",
@@ -278,11 +260,12 @@
       "https://wiki.bambulab.com/en/general/filament-guide-material-table",
       "https://wiki.bambulab.com/en/filament-acc/filament/heat-creep",
       "https://support.3dfuel.com/hc/en-us/articles/360055661154-Technical-Library-SDS-TDS",
-      "https://cdn.shopify.com/s/files/1/0027/5339/6848/files/TDS-3DFuel-ASA.pdf"
+      "https://cdn.shopify.com/s/files/1/0027/5339/6848/files/TDS-3DFuel-ASA.pdf",
+      "https://us.snapmaker.com/products/asa-filament-1kg"
     ],
-    "last_verified": "2026-08-01",
+    "last_verified": "2026-08-06",
     "confidence": "medium",
-    "conflicts": "HDT: Prusament measures 93 °C at 0.45 MPa and 86 °C at 1.8 MPa while Bambu cites 100 °C without specifying the load basis — 93 °C recorded on the schema's 0.45 MPa basis. Density: Bambu 1.05, Prusament 1.07, Polymaker/partmfg.com 1.08-1.09. Tensile strength spans 37±3 MPa (Bambu) to 47.1 MPa (Polymaker/partmfg.com), a spread too wide to be measurement noise alone. Drying: Bambu's wiki says 75-85 °C while Bambu's own ASA product page says 80 °C. Shrinkage (~0.4-0.7%), max continuous service temperature (~80-90 °C) and the 'moderate' hygroscopy class are typical-for-class or community estimates, not datasheet figures. HIPS as an ASA support is documented for ABS and inferred for ASA. 2026-08-01 update (3D-Fuel technical library published — owner-provided link): 3D-Fuel's Pro ASA document was checked and contains NO mechanical or thermal data at all — no density, tensile, HDT, Tg or shrinkage, and no test methods — so it neither confirms nor contradicts anything here and no value changed. It is the only sheet in the library with no SDS counterpart and the only one carrying no test data, which is itself worth recording: the wide brand spreads in this entry (density 1.05-1.09, tensile 37-47 MPa, HDT 93-100 °C) get no help from a third manufacturer. Its 230 °C nozzle minimum is 10 °C below the recorded 240 °C floor and its 110 °C bed sits at the top of the recorded range, both consistent with Prusament's guidance."
+    "conflicts": "HDT: Prusament measures 93 °C at 0.45 MPa and 86 °C at 1.8 MPa while Bambu cites 100 °C without specifying the load basis — 93 °C recorded on the schema's 0.45 MPa basis. Density: Bambu 1.05, Prusament 1.07, Polymaker/partmfg.com 1.08-1.09. Tensile strength spans 37±3 MPa (Bambu) to 47.1 MPa (Polymaker/partmfg.com), a spread too wide to be measurement noise alone. Drying: Bambu's wiki says 75-85 °C while Bambu's own ASA product page says 80 °C. Shrinkage (~0.4-0.7%), max continuous service temperature (~80-90 °C) and the 'moderate' hygroscopy class are typical-for-class or community estimates, not datasheet figures. HIPS as an ASA support is documented for ABS and inferred for ASA. 2026-08-01 update (3D-Fuel technical library published — owner-provided link): 3D-Fuel's Pro ASA document was checked and contains NO mechanical or thermal data at all — no density, tensile, HDT, Tg or shrinkage, and no test methods — so it neither confirms nor contradicts anything here and no value changed. It is the only sheet in the library with no SDS counterpart and the only one carrying no test data, which is itself worth recording: the wide brand spreads in this entry (density 1.05-1.09, tensile 37-47 MPa, HDT 93-100 °C) get no help from a third manufacturer. Its 230 °C nozzle minimum is 10 °C below the recorded 240 °C floor and its 110 °C bed sits at the top of the recorded range, both consistent with Prusament's guidance. 2026-08-06 update (Snapmaker ASA launch — owner-provided link): NO recorded value changed. Confirmations: the 240-280 °C nozzle range matches the recorded range exactly, the first source to do so; tensile 43.8 ± 0.8 MPa XY sits essentially on the recorded 43 MPa recommendation; the 75-100 °C bed overlaps Bambu's 80-100 °C; enclosure-required matches enclosure_recommended true with no heated chamber demanded. Contradictions: density 1.13 g/cm³ is above every other source — Bambu 1.05, Prusament 1.07, Polymaker/partmfg 1.08-1.09 — widening the spread from 1.05-1.09 to 1.05-1.13. It is a single-vendor outlier on an already-disputed field with no test method cited, so the recorded 1.07 is retained rather than re-centred, and this remains the entry's least settled number. HDT 103 °C at 0.45 MPa is 10 °C above Prusament's 93 °C on the SAME stated load basis and 3 °C above Bambu's load-unspecified 100 °C, so the HDT disagreement is now three-way with Prusament the low outlier; 93 °C is retained only because Prusament is still the sole figure backed by a published TDS with both load points. Tg 98 °C against the recorded 100 °C is within noise. Cooling fan: Snapmaker specifies OFF against the recorded 10-25 % band — but Snapmaker specifies fan-off for its ABS too, so this reads as a house rule for styrenics rather than an ASA-specific measurement, and the low-but-nonzero recorded band is kept. Drying 70 °C for 7 h is 5 °C below the recorded 75 °C floor and its time falls inside the recorded 8-12 h window's lower edge; the recorded window spans two vendors and is retained. Bed floor 75 °C is 5 °C below the recorded 80 °C minimum. Shrinkage, max service temperature and part-cooling remain unsupported by this source, which publishes none of them."
   },
   "trade_names": [
     {
@@ -471,6 +454,11 @@
       "manufacturer": "rosa3d",
       "product": "ASA",
       "notes": "UV resistant"
+    },
+    {
+      "manufacturer": "snapmaker",
+      "product": "ASA Filament (RFID) - 1kg",
+      "notes": "Launched 2026, $27.99/kg, RFID spool, enclosure required, cooling fan off. Its datasheet density of 1.13 g/cm³ is the highest ASA figure in this entry and sits above the recorded 1.07 — see properties.notes and provenance.conflicts."
     },
     {
       "manufacturer": "spectrum-filaments",

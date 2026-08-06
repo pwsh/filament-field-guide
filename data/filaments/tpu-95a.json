@@ -117,7 +117,7 @@
       "max": 49,
       "recommended": 39
     },
-    "notes": "The best-documented grade in the family. NinjaTek Cheetah 95A: density 1.22 g/cm³, tensile yield 9 MPa and ultimate 39 MPa, elongation 55% at yield and 580% at break. Polymaker PolyFlex TPU95: density 1.20-1.24 g/cm³, 25.8±0.4 MPa at 400% strain, elongation at break 551.2±23.5%. Fillamentum Flexfill 92A (near sibling): density 1.20 g/cm³, tensile 49 MPa on a differing test basis, likely ultimate. Density of 1.22 is the NinjaTek figure and coincides with the base entry's recorded value. Elongation of roughly 550-580% is dramatically below tpu-60a's ~950%, and tensile correspondingly higher — the clearest quantitative statement of the stiffness-for-stretch trade across the Shore A grades. Max service temperature of 72 °C is an unverified estimate, marginally above the base entry's 70 °C because this is the firmest A-grade."
+    "notes": "The best-documented grade in the family. NinjaTek Cheetah 95A: density 1.22 g/cm³, tensile yield 9 MPa and ultimate 39 MPa, elongation 55% at yield and 580% at break. Polymaker PolyFlex TPU95: density 1.20-1.24 g/cm³, 25.8±0.4 MPa at 400% strain, elongation at break 551.2±23.5%. Fillamentum Flexfill 92A (near sibling): density 1.20 g/cm³, tensile 49 MPa on a differing test basis, likely ultimate. Density of 1.22 is the NinjaTek figure and coincides with the base entry's recorded value. Elongation of roughly 550-580% is dramatically below tpu-60a's ~950%, and tensile correspondingly higher — the clearest quantitative statement of the stiffness-for-stretch trade across the Shore A grades. Max service temperature of 72 °C is an unverified estimate, marginally above the base entry's 70 °C because this is the firmest A-grade. Snapmaker's High Flow TPU95 spec page (owner-provided link, read 2026-08-06) is a fourth 95A datasheet: hardness 95A, tensile 23.11 ± 0.63 MPa, elongation at break 462.3 ± 21.1 %, 100 % modulus 13.24 ± 0.29 MPa, printing 200-220 °C, bed 25-50 °C, 40-100 mm/s, 1.75 mm, 1 kg. Its 100 % modulus is the only stress-at-100 %-strain figure in the entry and is not comparable to Polymaker's stress at 400 % strain; its elongation of ~462 % is the lowest of the four brands, below Polymaker's 551 % and NinjaTek's 580 %, consistent with a high-flow reformulation trading stretch for processability. No density, drying schedule or max service temperature is published."
   },
   "scores": {
     "ease_of_print": 5,
@@ -212,28 +212,6 @@
       "notes": "Backfilled from plate entry (reciprocity)"
     }
   ],
-  "alternatives": [
-    {
-      "filament_id": "tpu-98a",
-      "reason": "Firmer and easier again (ease 6 vs 5) with a higher service ceiling (temp 5 vs 4, 75 vs 72 °C) and the family's cheapest floor ($16-58 vs $40-70) — abrasion and impact rather than elasticity, and elongation falls from 580 % to ~450 %."
-    },
-    {
-      "filament_id": "tpu-90a",
-      "reason": "One step softer where grip or gasket compliance beats print speed: still 0.4 mm-nozzle friendly, but ease 4 vs 5 and retraction drops to 0-1 mm."
-    },
-    {
-      "filament_id": "tpu-68d",
-      "reason": "AMS-compatible (yes vs no) and printable on any drive system at ease 7 vs 5 — the price is rubberiness and the family's most extreme anisotropy (31 % elongation in Z, layer adhesion 2 vs 4)."
-    },
-    {
-      "filament_id": "peba",
-      "reason": "The same 85A-95A hardness band, but high-rebound rather than damping, ~17 % lighter (1.01 vs 1.22 g/cm³), flexible to -60 °C and far better against oils — at roughly double the price ($75-110) and with nylon-grade drying discipline."
-    },
-    {
-      "filament_id": "tpu-gf",
-      "reason": "The same base chemistry taken to 67D with 15 % glass fiber: dimensional stability 7 vs 4, temp 6 vs 4 and load-bearing moderate rather than light, at $34-40 — you lose the stretch and gain a mandatory hardened nozzle."
-    }
-  ],
   "emissions": {
     "voc_level": "low",
     "particulate_level": "low",
@@ -254,11 +232,12 @@
       "https://fillamentum.com/collections/flexfill-tpu-flexible-filament/flexfill-tpu-92a/",
       "https://wiki.bambulab.com/en/knowledge-sharing/tpu-printing-guide",
       "https://spoolhound.com/tpu-hardness-guide",
-      "https://shop.polymaker.com/products/polyflex-tpu95"
+      "https://shop.polymaker.com/products/polyflex-tpu95",
+      "https://www.snapmaker.com/filaments/tpu/high-flow-tpu95"
     ],
-    "last_verified": "2026-07-31",
+    "last_verified": "2026-08-06",
     "confidence": "medium",
-    "conflicts": "Tensile figures are not directly comparable across sources because the test bases differ: NinjaTek reports 39 MPa ultimate, Polymaker 25.8 MPa at 400% strain (a stress-at-strain figure, not ultimate), Fillamentum 49 MPa on an unstated basis — the recorded 25-49 MPa range spans all three rather than pretending they measure the same thing. Nozzle temperature disagrees by 40 °C between Polymaker (210-230) and NinjaTek (225-250). Density spans 1.20-1.24 across the same three brands. Drive system is recorded as 'recommended' where the base entry records 'required' for the range; this is a deliberate grade-level relaxation based on community reports of short-Bowden success, not a datasheet claim. Max service temperature is unverified. Scoring note: the research notes rated 'compression recovery' 6/10 here, but this catalog's compression_strength score measures resistance to crushing loads, which is the inverse — 95A scores 3, above the softer siblings for exactly the reason it recovers less."
+    "conflicts": "Tensile figures are not directly comparable across sources because the test bases differ: NinjaTek reports 39 MPa ultimate, Polymaker 25.8 MPa at 400% strain (a stress-at-strain figure, not ultimate), Fillamentum 49 MPa on an unstated basis — the recorded 25-49 MPa range spans all three rather than pretending they measure the same thing. Nozzle temperature disagrees by 40 °C between Polymaker (210-230) and NinjaTek (225-250). Density spans 1.20-1.24 across the same three brands. Drive system is recorded as 'recommended' where the base entry records 'required' for the range; this is a deliberate grade-level relaxation based on community reports of short-Bowden success, not a datasheet claim. Max service temperature is unverified. Scoring note: the research notes rated 'compression recovery' 6/10 here, but this catalog's compression_strength score measures resistance to crushing loads, which is the inverse — 95A scores 3, above the softer siblings for exactly the reason it recovers less. 2026-08-06 update (Snapmaker High Flow TPU95 spec page — owner-provided link): NO recorded value changed. Confirmations: 95 Shore A hardness confirms the grade assignment; bed 25-50 °C sits inside the recorded 25-60 °C. Contradictions: tensile 23.11 ± 0.63 MPa falls BELOW the recorded 25-49 MPa floor, the first 95A figure to do so — but Snapmaker does not state whether it is ultimate or a stress-at-strain value, and the entry already records that the three existing tensile figures are not measured on a common basis, so a fourth uncomparable number does not move the range. Nozzle 200-220 °C is 10 °C below the recorded 210 °C floor and 30 °C below the recorded 230 °C recommendation, widening the already 40 °C brand disagreement (Polymaker 210-230, NinjaTek 225-250) to a 50 °C span — expected for a high-flow grade, which is formulated to extrude cooler, so the recorded range is kept. Speed 40-100 mm/s is well above the recorded 25-45 mm/s ceiling; that is the whole point of a high-flow TPU and is a variant claim rather than a contradiction of the base grade. No density figure is given, so the 1.20-1.24 spread is unresolved."
   },
   "trade_names": [
     {
@@ -391,8 +370,8 @@
     },
     {
       "manufacturer": "snapmaker",
-      "product": "TPU / TPU 95A HF",
-      "notes": "Snapmaker spec explicitly states 'Hardness >= 95 Shore A'; HF variant is the same durometer"
+      "product": "TPU / High Flow TPU95",
+      "notes": "Snapmaker spec explicitly states 'Hardness >= 95 Shore A'; the HF variant is the same durometer. HF spec page adds tensile 23.11 ± 0.63 MPa and elongation at break 462.3 ± 21.1 % — see properties.notes."
     },
     {
       "manufacturer": "spectrum-filaments",
