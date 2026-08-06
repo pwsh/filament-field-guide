@@ -342,5 +342,27 @@
       "product": "UltiMaker Nylon",
       "notes": "PA6-vs-PA12 split not disclosed (community references point at the 12-family), so base pa."
     }
+  ],
+  "alternatives": [
+    {
+      "filament_id": "pa12",
+      "reason": "The forgiving grade when this entry's warping and humidity drift are the problem: moisture uptake under 1 % against PA6's 3-9 % (water 7 vs 1), warp 6 vs 9 and dimensional stability 6 vs 3, with drying down to 70 °C/4 h — at lower stiffness (~45 vs 55-58 MPa) and a higher price ($55-90 vs $35-90)."
+    },
+    {
+      "filament_id": "pa6",
+      "reason": "The cheap, stiff homopolymer that most spools sold as generic 'PA' actually are ($35-70), if you want a named grade with published numbers — same punishing moisture and warp behaviour (warp 9, water 1) and no gain in printability (ease 3, equal)."
+    },
+    {
+      "filament_id": "copa",
+      "reason": "The low-warp copolyamide: warp 3 vs 9 and dimensional stability 5 vs 3, so it prints far calmer while keeping nylon's best-in-family layer adhesion (9, equal) — but low warp is not low moisture (water 2 vs 1, still a 100 °C/8 h dry and sub-20 % RH storage) and it needs a hardened nozzle."
+    },
+    {
+      "filament_id": "pa-cf",
+      "reason": "Carbon fiber collapses the warp (4 vs 9) and lifts HDT@0.45 MPa from ~80 °C to ~155 °C for $40-60/kg — at the cost of nylon's toughness (adhesion 4 vs 9), a mandatory hardened nozzle and no soluble-support option."
+    },
+    {
+      "filament_id": "petg",
+      "reason": "If the part just needs a tough, dimensionally stable plastic rather than nylon's wear, fatigue and low-friction behaviour, PETG skips the drying and the enclosure entirely (ease 7 vs 3, warp 3 vs 9, water 9 vs 1) at $18-42/kg."
+    }
   ]
 }

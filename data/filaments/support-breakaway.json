@@ -231,5 +231,19 @@
       "product": "UltiMaker Breakaway (Method)",
       "notes": "Declared a 'PLA / TPU mixture' in its own TDS — the clearest published chemistry in the class. Density 1.22 g/cm³, Tg 59.7 °C, melting 151.8 °C, MFR 3-6 g/10 min at 220 °C. TDS reports good adhesion to PLA, PETG, nylon and ABS-based filaments, and a longer shelf life with less moisture sensitivity than water-soluble supports. No process temperatures published."
     }
+  ],
+  "alternatives": [
+    {
+      "filament_id": "pva",
+      "reason": "For internal cavities and lattice interiors no hand can reach: water-soluble removal that never touches the part — at ease 3 vs 6, $50-120, and a storage regime severe enough that unprotected filament can clog within hours."
+    },
+    {
+      "filament_id": "bvoh",
+      "reason": "Soluble support that dissolves faster than PVA and pairs with PETG, ASA, nylon and TPU rather than PLA alone — at $150-250 and the same extreme hygroscopy this material does not have (water tolerance 2 vs 8)."
+    },
+    {
+      "filament_id": "hips",
+      "reason": "Also hand-removable, with a d-limonene soak available as a fallback for trapped geometry, and usable as a build material at a documented $20-50 — but effectively limited to ABS/styrenic prints and it needs an enclosure (warp 6 vs 3)."
+    }
   ]
 }

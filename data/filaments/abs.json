@@ -610,5 +610,27 @@
       "product": "UltiMaker ABS-R",
       "notes": "Recycled/reground ABS, standard ABS chemistry (Method series)."
     }
+  ],
+  "alternatives": [
+    {
+      "filament_id": "asa",
+      "reason": "Easier to print at the same styrenic strength and heat class, and vastly better sunlight tolerance (uv 9 vs 2, weather 9 vs 2, dimensional stability 7 vs 4) for the same enclosure-and-ventilation process; costs a little more at the top of the band ($18-45 vs $18-35) and gives up ABS's acetone vapour smoothing."
+    },
+    {
+      "filament_id": "abs-plus",
+      "reason": "Same terpolymer with a toughening package: markedly better layer adhesion and impact (adhesion 7 vs 5) for the same or less money ($15-25 vs $18-35), but published HDT drops to ~73 °C from ABS's ~99 °C (temp 6 vs 7), so it is the wrong swap if you chose ABS for near-100 °C service."
+    },
+    {
+      "filament_id": "abs-gf",
+      "reason": "ABS with its worst habit partly cured — glass fiber cuts warp 8 to 5 and lifts dimensional stability 4 to 7 at similar cost ($25-35) — paid for with a mandatory hardened nozzle and a weaker interlayer bond (adhesion 4 vs 5). Heat and UV are unchanged."
+    },
+    {
+      "filament_id": "petg",
+      "reason": "If the part never sees 80 °C+, PETG prints far easier with no enclosure (ease 7 vs 4, warp 3 vs 8), bonds much better (adhesion 9 vs 5) and emits far less at the same price; you give up heat resistance (temp 5 vs 7) and acetone smoothing."
+    },
+    {
+      "filament_id": "pc-abs",
+      "reason": "When ABS parts soften or creep under load, the PC/ABS blend keeps an ABS-like process (250-280 °C nozzle, same enclosure, no hardened nozzle) with markedly higher strength and heat resistance, at roughly double the price ($44-48 vs $18-35)."
+    }
   ]
 }

@@ -149,6 +149,14 @@ every property sourced from the glossary.
   and DarkMoon LUX/BIQU SSS coatings remain unidentifiable from public information —
   documented as such. All planned research phases (A-F initial pass) are now COMPLETE;
   the catalog enters maintenance mode (Phase F refresh cadence).
+- 2026-08-06 — **CI failure root-caused and fixed**: the cloud research workspace was
+  rolled back by a container reclaim (Aug 3→6), so the Snapmaker batch was generated
+  against pre-alternatives data — committing a stale index.json (petg-plus flag) and
+  stripping the alternatives arrays from the 8 bundled filament files. Recovered from
+  repo git history (b984df1): 36 alternatives restored, index regenerated, validate
+  passes. Process note for future sessions: after any gap in session activity, diff
+  the workspace against the repo before generating bundles — the repo is the source
+  of truth, not the workspace.
 ## Changelog
 
 - 2026-08-06 — **Snapmaker catalog refresh** (owner-provided links): ASA product line added

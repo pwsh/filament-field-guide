@@ -398,5 +398,27 @@
       "product": "TPU (incl. gradient-color TPU)",
       "notes": "Shore 95A; gradient SKUs are the same polymer with graded pigment"
     }
+  ],
+  "alternatives": [
+    {
+      "filament_id": "tpu-98a",
+      "reason": "Firmer and easier again (ease 6 vs 5) with a higher service ceiling (temp 5 vs 4, 75 vs 72 °C) and the family's cheapest floor ($16-58 vs $40-70) — abrasion and impact rather than elasticity, and elongation falls from 580 % to ~450 %."
+    },
+    {
+      "filament_id": "tpu-90a",
+      "reason": "One step softer where grip or gasket compliance beats print speed: still 0.4 mm-nozzle friendly, but ease 4 vs 5 and retraction drops to 0-1 mm."
+    },
+    {
+      "filament_id": "tpu-68d",
+      "reason": "AMS-compatible (yes vs no) and printable on any drive system at ease 7 vs 5 — the price is rubberiness and the family's most extreme anisotropy (31 % elongation in Z, layer adhesion 2 vs 4)."
+    },
+    {
+      "filament_id": "peba",
+      "reason": "The same 85A-95A hardness band, but high-rebound rather than damping, ~17 % lighter (1.01 vs 1.22 g/cm³), flexible to -60 °C and far better against oils — at roughly double the price ($75-110) and with nylon-grade drying discipline."
+    },
+    {
+      "filament_id": "tpu-gf",
+      "reason": "The same base chemistry taken to 67D with 15 % glass fiber: dimensional stability 7 vs 4, temp 6 vs 4 and load-bearing moderate rather than light, at $34-40 — you lose the stretch and gain a mandatory hardened nozzle."
+    }
   ]
 }

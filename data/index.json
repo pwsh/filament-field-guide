@@ -5607,7 +5607,7 @@
       "suitability": {
         "food_contact": "no",
         "load_bearing": "moderate",
-        "high_temperature": "no",
+        "high_temperature": "moderate",
         "outdoor": "limited"
       },
       "scores": {
