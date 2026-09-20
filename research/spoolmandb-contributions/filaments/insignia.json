@@ -1,0 +1,182 @@
+{
+    "manufacturer": "Insignia",
+    "filaments": [
+        {
+            "name": "{color_name}",
+            "material": "PLA",
+            "density": 1.24,
+            "weights": [
+                {
+                    "weight": 1000
+                }
+            ],
+            "diameters": [
+                1.75
+            ],
+            "extruder_temp_range": [
+                190,
+                230
+            ],
+            "bed_temp_range": [
+                25,
+                60
+            ],
+            "colors": [
+                {
+                    "name": "Black",
+                    "hex": "000000"
+                },
+                {
+                    "name": "Blue",
+                    "hex": "1976D2"
+                },
+                {
+                    "name": "Brown",
+                    "hex": "795548"
+                },
+                {
+                    "name": "Gray",
+                    "hex": "9E9E9E"
+                },
+                {
+                    "name": "Green",
+                    "hex": "388E3C"
+                },
+                {
+                    "name": "Orange",
+                    "hex": "F57C00"
+                },
+                {
+                    "name": "Pink",
+                    "hex": "F48FB1"
+                },
+                {
+                    "name": "Purple",
+                    "hex": "7B1FA2"
+                },
+                {
+                    "name": "Red",
+                    "hex": "D32F2F"
+                },
+                {
+                    "name": "White",
+                    "hex": "FFFFFF"
+                },
+                {
+                    "name": "Yellow",
+                    "hex": "FBC02D"
+                }
+            ]
+        },
+        {
+            "name": "Matte {color_name}",
+            "material": "PLA",
+            "density": 1.24,
+            "finish": "matte",
+            "weights": [
+                {
+                    "weight": 1000
+                }
+            ],
+            "diameters": [
+                1.75
+            ],
+            "extruder_temp_range": [
+                190,
+                230
+            ],
+            "bed_temp_range": [
+                25,
+                60
+            ],
+            "colors": [
+                {
+                    "name": "Matte Black",
+                    "hex": "000000"
+                },
+                {
+                    "name": "Matte Blue",
+                    "hex": "1976D2"
+                },
+                {
+                    "name": "Matte Green",
+                    "hex": "388E3C"
+                },
+                {
+                    "name": "White",
+                    "hex": "FFFFFF"
+                }
+            ]
+        },
+        {
+            "name": "{color_name}",
+            "material": "PETG",
+            "density": 1.27,
+            "weights": [
+                {
+                    "weight": 1000
+                }
+            ],
+            "diameters": [
+                1.75
+            ],
+            "extruder_temp_range": [
+                240,
+                260
+            ],
+            "bed_temp_range": [
+                60,
+                70
+            ],
+            "colors": [
+                {
+                    "name": "Black",
+                    "hex": "000000"
+                },
+                {
+                    "name": "Blue",
+                    "hex": "1976D2"
+                },
+                {
+                    "name": "Clear",
+                    "hex": "E8E8E8"
+                },
+                {
+                    "name": "Gray",
+                    "hex": "9E9E9E"
+                },
+                {
+                    "name": "White",
+                    "hex": "FFFFFF"
+                }
+            ]
+        },
+        {
+            "name": "{color_name}",
+            "material": "TPU-95A",
+            "density": 1.21,
+            "weights": [
+                {
+                    "weight": 1000
+                }
+            ],
+            "diameters": [
+                1.75
+            ],
+            "extruder_temp_range": [
+                210,
+                230
+            ],
+            "bed_temp_range": [
+                25,
+                50
+            ],
+            "colors": [
+                {
+                    "name": "Black",
+                    "hex": "000000"
+                }
+            ]
+        }
+    ]
+}

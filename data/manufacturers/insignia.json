@@ -1,0 +1,71 @@
+{
+  "id": "insignia",
+  "name": "Insignia (Best Buy house brand)",
+  "status": "researched",
+  "summary": "Best Buy's long-running house electronics brand, extended into 3D-printing filament in 2026: PLA, Matte PLA, PETG and TPU 95A on ~155 g cardboard spools at aggressive retail pricing ($11-20/kg), sold only through bestbuy.com and Best Buy stores. Published specs are unusually complete for a house brand (temps, speeds, tolerance), but the contract extruder is undisclosed.",
+  "headquarters_country": "United States",
+  "brands": [
+    "Insignia",
+    "Best Buy"
+  ],
+  "oem_relationships": [
+    {
+      "company": "Best Buy Co., Inc.",
+      "relationship": "parent-company",
+      "notes": "Insignia is Best Buy's house brand (Richfield, MN)."
+    },
+    {
+      "company": "Unidentified contract manufacturer",
+      "relationship": "suspected-manufactured-by",
+      "notes": "No OEM disclosure on product pages or secondary coverage. A Bambu Lab forum thread documents the cardboard spool (~155 g) but shows Sunlu only as a user's separate respool reel \u2014 not evidence of a Sunlu supply relationship."
+    }
+  ],
+  "endpoints": {
+    "store": "https://www.bestbuy.com/site/searchpage.jsp?browsedCategory=pcmcat335400050008&id=pcat17071&qp=brand_facet%3DBrand%7EBest+Buy+Brands&st=categoryid%24pcmcat335400050008"
+  },
+  "product_lines": [
+    {
+      "name": "Insignia PLA",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "NS-3FSPLA2* SKUs; 1.75 mm +/-0.02, 1 kg, 190-230 C / 25-60 C bed, up to 350 mm/s; 11 colors; $12.99."
+    },
+    {
+      "name": "Insignia Matte PLA",
+      "filament_ids": [
+        "pla-matte"
+      ],
+      "notes": "NS-3FMPLA2* SKUs; 190-230 C / 25-60 C, up to 300 mm/s; 5 colors incl. Matte Pastel Rainbow; $10.99."
+    },
+    {
+      "name": "Insignia PETG",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "NS-3FPETG2* SKUs; 240-260 C / 60-70 C bed, up to 300 mm/s; 5 colors; $11.99."
+    },
+    {
+      "name": "Insignia TPU",
+      "filament_ids": [
+        "tpu-95a"
+      ],
+      "notes": "NS-3FTPU2BK; 95A, 1.75 mm +/-0.05, 210-230 C / 25-50 C bed, <=100 mm/s, dry 45-55 C; black only; $19.99."
+    }
+  ],
+  "price_tier": "budget",
+  "makes_plates": false,
+  "additional_notes": "Retail-only house brand; no brand site or TDS beyond Best Buy product-page specs. Entered the catalog 2026-09-20 on owner report.",
+  "provenance": {
+    "sources": [
+      "https://www.bestbuy.com/product/insignia-pla-1-75mm-filament-black/J2FPJK9FK2",
+      "https://www.bestbuy.com/product/insignia-matte-pla-1-75mm-filament-matte-black/J2FPJK9VJK",
+      "https://www.bestbuy.com/product/insignia-petg-1-75mm-filament-black/J2FPJK9VX3",
+      "https://www.bestbuy.com/product/insignia-tpu-1-75mm-filament-black/J2FPJK9V8V/sku/6674488",
+      "https://forum.bambulab.com/t/best-buy-insignia-filament-on-sunlu-v3-spool/257431"
+    ],
+    "last_verified": "2026-09-20",
+    "confidence": "medium",
+    "conflicts": "Spool weight ~155 g appears in listing/forum coverage but is approximate; contract extruder unknown."
+  }
+}

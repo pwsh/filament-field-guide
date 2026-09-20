@@ -1,0 +1,81 @@
+{
+  "id": "michaels",
+  "name": "Michaels (Make Market)",
+  "status": "researched",
+  "summary": "Make Market is Michaels' general craft house brand, extended in 2026 into a PLA-only filament line (Basic, Matte, Silk, Glitter, White Marble, plus a 4-count multicolor pack) on 2.2 lb / 1 kg spools sold in ~1,300 US/Canada stores, michaels.com and delivery-partner mirrors. No TDS, temps or manufacturer disclosure of any kind; the contract extruder is unknown.",
+  "headquarters_country": "United States",
+  "brands": [
+    "Make Market",
+    "Michaels"
+  ],
+  "oem_relationships": [
+    {
+      "company": "Unidentified contract manufacturer",
+      "relationship": "suspected-manufactured-by",
+      "notes": "Michaels is a craft retailer, not an extruder; no packaging, country-of-origin or OEM disclosure recoverable (michaels.com blocks automated reading; data reconstructed from search-indexed SKU slugs and Shipt/Instacart/Uber Eats catalog mirrors)."
+    }
+  ],
+  "endpoints": {
+    "store": "https://www.michaels.com/search?q=3d%20printer%20filament%20make%20market"
+  },
+  "product_lines": [
+    {
+      "name": "Basic PLA",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "1.75 mm, 2.2 lb; observed colors Black/Purple/Orange/Red; ~$15-18.50."
+    },
+    {
+      "name": "Matte PLA",
+      "filament_ids": [
+        "pla-matte"
+      ],
+      "notes": "White/Black/Pink observed; ~$17.39."
+    },
+    {
+      "name": "Silk PLA",
+      "filament_ids": [
+        "pla-silk"
+      ],
+      "notes": "~$19.79; per-SKU colors unconfirmed."
+    },
+    {
+      "name": "Glitter PLA",
+      "filament_ids": [
+        "pla-glitter"
+      ],
+      "notes": "White/Pink observed (SKUs 10821030/10821036)."
+    },
+    {
+      "name": "White Marble PLA",
+      "filament_ids": [
+        "pla-stone"
+      ],
+      "notes": "Marble-effect PLA (SKU 10821035); mapped to the stone/marble aesthetic entry."
+    },
+    {
+      "name": "Multicolor Basic PLA 4ct",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "4-pack, individual colors unconfirmed."
+    }
+  ],
+  "price_tier": "budget",
+  "makes_plates": false,
+  "additional_notes": "No printing temps published anywhere accessible \u2014 only marketing copy ('eco-friendly bioplastic, little odor'). Owner-reported line, added 2026-09-20 alongside the Hobby Lobby and Best Buy Insignia retail house brands.",
+  "provenance": {
+    "sources": [
+      "https://www.michaels.com/product/175mm-glitter-pla-3d-printer-filament-22lb-by-make-market-10821030",
+      "https://www.michaels.com/product/175mm-silk-pla-3d-printer-filament-22lb-by-make-market-10821032",
+      "https://www.michaels.com/product/175mm-basic-pla-3d-printer-filament-22lb-by-make-market-10821039",
+      "https://www.michaels.com/product/175mm-matte-pla-3d-printer-filament-22lb-by-make-market-10821041",
+      "https://www.michaels.com/product/175mm-white-marble-pla-3d-printer-filament-22lb-by-make-market-10821035",
+      "https://forums.redflagdeals.com/michaels-make-market-3d-printer-filament-pla-15-49-18-49-40-coupon-michaels-2818378/"
+    ],
+    "last_verified": "2026-09-20",
+    "confidence": "medium",
+    "conflicts": "michaels.com blocks automated fetching; colors/prices reconstructed from SKU slugs and delivery-partner mirrors \u2014 per-line color lists are partial and temps are unpublished."
+  }
+}

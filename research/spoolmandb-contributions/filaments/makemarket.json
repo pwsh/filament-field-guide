@@ -1,0 +1,88 @@
+{
+    "manufacturer": "Make Market",
+    "filaments": [
+        {
+            "name": "Basic {color_name}",
+            "material": "PLA",
+            "density": 1.24,
+            "weights": [
+                {
+                    "weight": 1000
+                }
+            ],
+            "diameters": [
+                1.75
+            ],
+            "colors": [
+                {
+                    "name": "Black",
+                    "hex": "000000"
+                },
+                {
+                    "name": "Purple",
+                    "hex": "7B1FA2"
+                },
+                {
+                    "name": "Orange",
+                    "hex": "F57C00"
+                },
+                {
+                    "name": "Red",
+                    "hex": "D32F2F"
+                }
+            ]
+        },
+        {
+            "name": "Matte {color_name}",
+            "material": "PLA",
+            "density": 1.24,
+            "finish": "matte",
+            "weights": [
+                {
+                    "weight": 1000
+                }
+            ],
+            "diameters": [
+                1.75
+            ],
+            "colors": [
+                {
+                    "name": "White",
+                    "hex": "FFFFFF"
+                },
+                {
+                    "name": "Black",
+                    "hex": "000000"
+                },
+                {
+                    "name": "Pink",
+                    "hex": "F48FB1"
+                }
+            ]
+        },
+        {
+            "name": "Glitter {color_name}",
+            "material": "PLA",
+            "density": 1.24,
+            "pattern": "sparkle",
+            "weights": [
+                {
+                    "weight": 1000
+                }
+            ],
+            "diameters": [
+                1.75
+            ],
+            "colors": [
+                {
+                    "name": "White",
+                    "hex": "FFFFFF"
+                },
+                {
+                    "name": "Pink",
+                    "hex": "F48FB1"
+                }
+            ]
+        }
+    ]
+}

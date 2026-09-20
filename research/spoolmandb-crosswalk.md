@@ -43,8 +43,7 @@ generics (every substitution itemised).
 
 Not authored, with reasons: snapmaker (already pending upstream as PR #478),
 igus (no material mapping), voxelab (site TLS-expired, no source),
-hobby-lobby (sells no filament — its Field Guide entry is itself questionable;
-owner review suggested), chckx3d (defunct site), colorFabb/Duramic/NinjaTek/
+chckx3d (defunct site), colorFabb/Duramic/NinjaTek/
 OVV3D/UltiMaker/Comgrow (no publishable color data — swatch reading needed).
 
 ## Open-PR correlation (checked 2026-09-20)
@@ -54,6 +53,17 @@ correlates with our new pa11-cf entry) · #479 VANYO (new; now also in our catal
 · #478 Snapmaker (new; we deliberately did not author it) · #477 schema: manufacturer-
 wide colors + RAL→hex (if merged, would ease the hex-approximation problem for
 Direction B). No collisions with our 23 candidates.
+
+## Retail house brands (owner-corrected 2026-09-20)
+
+An automated pass wrongly reported Hobby Lobby sells no filament — it does (own-brand
+PLA + Silk PLA under kids-crafts; the Field Guide entry was already correct). Added on
+owner report: insignia (Best Buy house brand — PLA/Matte PLA/PETG/TPU-95A, full published
+specs, OEM undisclosed) and michaels (Make Market — PLA-only line: Basic/Matte/Silk/
+Glitter/White Marble, no published temps, OEM undisclosed). SpoolmanDB candidates
+authored for all three (hobbylobby.json, insignia.json, makemarket.json) — basic-color
+hex approximations flagged; Make Market Silk/Marble lines and multi-color silks skipped
+pending color data.
 
 ## Status changes discovered during research
 

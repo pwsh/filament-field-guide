@@ -983,3 +983,25 @@ are common and the PR queue moves.
 Also checked: none of the 23 manufacturers already has a file in `filaments/` on
 the tracked branch of this clone (67 existing files), so all 23 are new
 manufacturer additions rather than edits.
+
+
+---
+
+## Addendum (2026-09-20, owner-corrected): retail house brands
+
+**Correction:** §4's "Hobby Lobby — excluded, sells no filament" was wrong. Hobby Lobby sells
+own-brand PLA ($14.99) and Silk PLA ($19.99), 1 kg, 200–220 °C, under the kids-crafts category
+([solid](https://www.hobbylobby.com/crafts-hobbies/kids-crafts-activities/arts-crafts-supplies/3d-printing-filament/p/p81250144),
+[silk](https://www.hobbylobby.com/crafts-hobbies/kids-crafts-activities/arts-crafts-supplies/silk-3d-printing-filament/p/p81250157)).
+
+Three additional candidate files (same rules as the main set — generic densities from
+materials.json, basic-name hex approximations, no spool_weight, all schema-valid):
+
+| File | Lines | Colors | Temps source | Gaps |
+|---|---|---|---|---|
+| hobbylobby.json | PLA, Silk PLA | 13 | product pages (200–220 °C) | Wood/Marble + 6 multi-color silks skipped (no hex); OEM unknown |
+| insignia.json | PLA, Matte PLA, PETG, TPU-95A | 21 | Best Buy product pages (full nozzle+bed) | Matte Pastel Rainbow skipped; ~155 g spool weight seen in listings but approximate — measure before submitting; OEM unknown |
+| makemarket.json | Basic, Matte, Glitter PLA | 9 | none published — entries carry no temps | Silk + White Marble lines and 4-ct pack skipped (colors unconfirmed); michaels.com blocks fetching (data via SKU slugs + Shipt/Instacart mirrors); OEM unknown |
+
+All approximated hexes use the same conventional values as §2. These three, like the rest,
+require value-by-value human verification and measured spool weights before any PR.

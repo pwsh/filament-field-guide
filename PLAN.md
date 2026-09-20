@@ -158,6 +158,11 @@ every property sourced from the glossary.
   the workspace against the repo before generating bundles — the repo is the source
   of truth, not the workspace.
 ## Changelog
+### 2026-09-20 (later) — Retail house brands (owner-reported)
+- Correction: Hobby Lobby DOES sell filament (agent error; FFG entry was already right) — provenance refreshed.
+- New manufacturers: insignia (Best Buy house brand, 4 lines w/ full specs), michaels (Make Market, PLA-only, no published temps). Catalog: 99 filaments / 99 manufacturers / 14 plates.
+- SpoolmanDB candidates added: hobbylobby.json, insignia.json, makemarket.json (+REVIEW.md addendum).
+
 ### 2026-09-20 — SpoolmanDB crosswalk (owner request): both-direction sync
 - Crosswalk vs Donkie/SpoolmanDB (67 brands, 5 open PRs): research/spoolmandb-crosswalk.md.
 - Direction A ingested: 26 new manufacturers (24 SpoolmanDB-only + vanyo from PR #479 +

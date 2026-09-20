@@ -1,0 +1,95 @@
+{
+    "manufacturer": "Hobby Lobby",
+    "filaments": [
+        {
+            "name": "{color_name}",
+            "material": "PLA",
+            "density": 1.24,
+            "weights": [
+                {
+                    "weight": 1000
+                }
+            ],
+            "diameters": [
+                1.75
+            ],
+            "extruder_temp_range": [
+                200,
+                220
+            ],
+            "colors": [
+                {
+                    "name": "Black",
+                    "hex": "000000"
+                },
+                {
+                    "name": "Red",
+                    "hex": "D32F2F"
+                },
+                {
+                    "name": "Yellow",
+                    "hex": "FBC02D"
+                },
+                {
+                    "name": "Purple",
+                    "hex": "7B1FA2"
+                },
+                {
+                    "name": "White",
+                    "hex": "FFFFFF"
+                },
+                {
+                    "name": "Blue",
+                    "hex": "1976D2"
+                },
+                {
+                    "name": "Gray",
+                    "hex": "9E9E9E"
+                },
+                {
+                    "name": "Pink",
+                    "hex": "F48FB1"
+                },
+                {
+                    "name": "Orange",
+                    "hex": "F57C00"
+                },
+                {
+                    "name": "Green",
+                    "hex": "388E3C"
+                },
+                {
+                    "name": "Golden",
+                    "hex": "D4AF37"
+                }
+            ]
+        },
+        {
+            "name": "Silk {color_name}",
+            "material": "PLA",
+            "density": 1.24,
+            "weights": [
+                {
+                    "weight": 1000
+                }
+            ],
+            "diameters": [
+                1.75
+            ],
+            "extruder_temp_range": [
+                200,
+                220
+            ],
+            "colors": [
+                {
+                    "name": "Black",
+                    "hex": "000000"
+                },
+                {
+                    "name": "Silver",
+                    "hex": "C0C0C0"
+                }
+            ]
+        }
+    ]
+}
