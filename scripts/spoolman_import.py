@@ -340,8 +340,20 @@ def main():
     print("Connected to Spoolman %s [%s]" % (info.get("version", "?"), mode))
 
     only = {b.strip().lower() for b in args.brands.split(",")} if args.brands else None
-    files = sorted(f for f in os.listdir(args.dir) if f.endswith(".json"))
-    files = [f for f in files if only is None or f[:-5].lower() in only]
+    if os.path.isdir(args.dir):
+        files = sorted(f for f in os.listdir(args.dir) if f.endswith(".json"))
+        files = [f for f in files if only is None or f[:-5].lower() in only]
+    elif args.pr:
+        # PR-only mode: local candidate files are optional.
+        print("Note: candidate directory not found (%s); importing --pr brands only."
+              % args.dir)
+        files = []
+    else:
+        print("Candidate directory not found: %s" % args.dir)
+        print("Run from a Filament Field Guide repo checkout, or point --dir at "
+              "research/spoolmandb-contributions/filaments, or use --pr to import "
+              "straight from open SpoolmanDB pull requests.")
+        return 1
 
     # (label, doc, comment_base) -- local candidate files, then any --pr brands.
     # --brands filters the local files only.
