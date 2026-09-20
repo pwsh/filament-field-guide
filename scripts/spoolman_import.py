@@ -5,6 +5,12 @@ Populates a Spoolman server with the vendors/filaments that Spoolman's native
 external database (SpoolmanDB) does not carry, reading the candidate files in
 ``research/spoolmandb-contributions/filaments/*.json``.
 
+The script is self-sufficient: a checkout is preferred, but when the data files
+are not next to it (e.g. the script was saved on its own to ~/Downloads) it
+downloads them from github.com/pwsh/filament-field-guide into a cache under the
+system temp directory and carries on. Later runs reuse that cache; --refresh
+re-downloads it and --no-download forbids the network fetch entirely.
+
 One Spoolman filament is created per (product line x color). Runs are
 idempotent: an existing filament with the same name + material under the same
 vendor is skipped, so re-running is safe. With --update, such an existing
@@ -23,9 +29,19 @@ update brands upstream already carries, and importing those creates local
 duplicates of Spoolman's native external-database entries (a warning is
 printed).
 
+``--generics`` additionally imports the guide's own material catalog
+(``data/filaments/*.json``) as one generic reference filament per material
+type, under a single "Filament Field Guide" vendor -- deliberately not
+Spoolman's native "Generic" vendor, so nothing collides with the native
+external-database generics -- so every material the guide knows about exists in
+the instance even where no branded spool does.
+
 Usage:
     # dry run (default) -- prints exactly what would be created
     python3 scripts/spoolman_import.py --url http://spoolman.local:7912
+
+    # standalone: no checkout needed, the data is downloaded on demand
+    python3 spoolman_import.py --url http://spoolman.local:7912 --generics
 
     # only certain brands (matched against the candidate file stem)
     python3 scripts/spoolman_import.py --url http://spoolman.local:7912 \\
@@ -42,6 +58,10 @@ Usage:
     python3 scripts/spoolman_import.py --url http://spoolman.local:7912 \\
         --pr 478,479 --apply
 
+    # full sync: candidates + generic material types + two open PRs
+    python3 scripts/spoolman_import.py --url http://spoolman.example.local \\
+        --apply --update --generics --pr 478,479
+
     # https with a self-signed internal certificate
     python3 scripts/spoolman_import.py --url https://spoolman.example.internal \\
         --insecure --apply
@@ -54,6 +74,7 @@ import json
 import os
 import ssl
 import sys
+import tempfile
 import urllib.error
 import urllib.parse
 import urllib.request
@@ -62,6 +83,24 @@ CANDIDATE_DIR = os.path.join(
     os.path.dirname(os.path.abspath(__file__)),
     "..", "research", "spoolmandb-contributions", "filaments",
 )
+GENERIC_DIR = os.path.join(
+    os.path.dirname(os.path.abspath(__file__)), "..", "data", "filaments",
+)
+GENERIC_VENDOR = "Filament Field Guide"
+GENERIC_VENDOR_COMMENT = (
+    "Generic material-type reference entries imported from the Filament Field "
+    "Guide catalog."
+)
+GENERIC_NOTE = " [FFG generic; not a branded spool]"
+# Public repo the script downloads its data from when there is no checkout.
+REPO_OWNER = "pwsh"
+REPO_NAME = "filament-field-guide"
+REPO_BRANCH = "main"
+FFG_REPO = "%s/%s" % (REPO_OWNER, REPO_NAME)
+CANDIDATE_REPO_PATH = "research/spoolmandb-contributions/filaments"
+CACHE_DIR = os.path.join(tempfile.gettempdir(), "ffg-spoolman-cache")
+CACHE_CANDIDATES = os.path.join(CACHE_DIR, "candidates")
+CACHE_FILAMENTS = os.path.join(CACHE_DIR, "filaments")
 COMMENT_BASE = (
     "Imported from Filament Field Guide SpoolmanDB candidates "
     "(research/spoolmandb-contributions). Hex may be approximate; verify. "
@@ -232,9 +271,139 @@ def fmt_diff(changes):
                      for f, (o, n) in sorted(changes.items()))
 
 
+def generic_temp(block):
+    """Recommended temperature, else the midpoint of min/max, else None."""
+    if not isinstance(block, dict):
+        return None
+    rec = block.get("recommended")
+    if isinstance(rec, (int, float)):
+        return int(round(rec))
+    lo, hi = block.get("min"), block.get("max")
+    if isinstance(lo, (int, float)) and isinstance(hi, (int, float)):
+        return int(round((lo + hi) / 2.0))
+    return None
+
+
+def first_sentence(text, limit=200):
+    text = " ".join((text or "").split())
+    cut = text.find(". ")
+    if cut != -1:
+        text = text[:cut + 1]
+    if len(text) > limit:
+        text = text[:limit - 3].rstrip() + "..."
+    return text
+
+
+def generic_payloads(directory):
+    """Build one generic reference filament per Filament Field Guide entry.
+
+    Returns (payloads, skipped_ids); entries without a density are skipped,
+    because Spoolman requires it.
+    """
+    payloads, skipped = [], []
+    for fname in sorted(f for f in os.listdir(directory) if f.endswith(".json")):
+        with open(os.path.join(directory, fname)) as fh:
+            entry = json.load(fh)
+        ident = (entry.get("id") or fname[:-5]).strip()
+        density = (entry.get("properties") or {}).get("density_g_cm3")
+        if not isinstance(density, (int, float)):
+            skipped.append(ident)
+            continue
+        printing = entry.get("printing") or {}
+        payload = {
+            "name": (entry.get("name") or ident).strip(),
+            "material": ident.upper(),
+            "density": float(density),
+            "diameter": 1.75,
+            "comment": (first_sentence(entry.get("summary")) + GENERIC_NOTE).strip(),
+        }
+        ext = generic_temp(printing.get("nozzle_temp_c"))
+        bed = generic_temp(printing.get("bed_temp_c"))
+        if ext is not None:
+            payload["settings_extruder_temp"] = ext
+        if bed is not None:
+            payload["settings_bed_temp"] = bed
+        payloads.append(payload)
+    return payloads, skipped
+
+
 def gh(path, timeout):
     """GET a GitHub API path (a User-Agent header is mandatory there)."""
     return api(GITHUB_API, path, timeout=timeout, headers={"User-Agent": USER_AGENT})
+
+
+def raw_json(path, timeout):
+    """GET a file from the Filament Field Guide repo via raw.githubusercontent."""
+    return api(GITHUB_RAW, "/%s/%s/%s" % (FFG_REPO, REPO_BRANCH, path),
+               timeout=timeout, headers={"User-Agent": USER_AGENT})
+
+
+def write_json(directory, name, doc):
+    with open(os.path.join(directory, name), "w") as fh:
+        json.dump(doc, fh)
+
+
+def download_candidates(dest, timeout):
+    """Mirror the repo's SpoolmanDB candidate brand files into dest."""
+    listing = gh("/repos/%s/contents/%s" % (FFG_REPO, CANDIDATE_REPO_PATH), timeout)
+    if not isinstance(listing, list):
+        raise ApiError("unexpected contents listing for %s" % CANDIDATE_REPO_PATH)
+    count = 0
+    for entry in listing:
+        name = entry.get("name") or ""
+        if entry.get("type") != "file" or not name.endswith(".json"):
+            continue
+        url = entry.get("download_url") or ("%s/%s/%s/%s/%s" % (
+            GITHUB_RAW.rstrip("/"), FFG_REPO, REPO_BRANCH, CANDIDATE_REPO_PATH, name))
+        write_json(dest, name, api(url, "", timeout=timeout,
+                                   headers={"User-Agent": USER_AGENT}))
+        count += 1
+    if not count:
+        raise ApiError("no candidate files listed at %s" % CANDIDATE_REPO_PATH)
+    return count
+
+
+def download_generics(dest, timeout):
+    """Mirror the repo's data/filaments entries into dest, via data/index.json."""
+    index = raw_json("data/index.json", timeout)
+    ids = [f.get("id") for f in (index or {}).get("filaments", []) if f.get("id")]
+    if not ids:
+        raise ApiError("data/index.json lists no filaments")
+    for ident in ids:
+        write_json(dest, "%s.json" % ident,
+                   raw_json("data/filaments/%s.json" % ident, timeout))
+    return len(ids)
+
+
+def cached_json(directory):
+    if not os.path.isdir(directory):
+        return []
+    return [f for f in os.listdir(directory) if f.endswith(".json")]
+
+
+def source_dir(local, cache, label, downloader, args, announced):
+    """Local directory if present, else the download cache. None if neither."""
+    if os.path.isdir(local):
+        return local
+    if args.no_download:
+        return None
+    if not args.refresh and cached_json(cache):
+        print("Using cached %s from %s" % (label, cache))
+        return cache
+    if not announced:
+        print("Local files not found; downloading from github.com/%s ..." % FFG_REPO)
+        announced.append(True)
+    try:
+        os.makedirs(cache, exist_ok=True)
+        if args.refresh:
+            for stale in cached_json(cache):
+                os.remove(os.path.join(cache, stale))
+        count = downloader(cache, args.timeout)
+    except (ApiError, OSError) as exc:
+        print("  download of %s failed: %s" % (label, exc))
+        return None
+    print("  %d %s cached in %s" % (count, label, cache))
+    return cache
 
 
 def upstream_brands(directory):
@@ -297,7 +466,8 @@ def pr_jobs(number, timeout, known):
                   "brand -- importing creates LOCAL copies of its whole catalog "
                   "alongside Spoolman's native external-database entries "
                   "(duplicates in the filament picker)." % (number, path))
-        yield ("PR #%s %s" % (number, path), doc, comment_base)
+        yield ("PR #%s %s" % (number, path), (doc.get("manufacturer") or "").strip(),
+               VENDOR_COMMENT, expand(doc, comment_base))
 
 
 def main():
@@ -313,6 +483,15 @@ def main():
     ap.add_argument("--dir", default=CANDIDATE_DIR, help="candidate filaments directory")
     ap.add_argument("--pr", help="comma-separated open SpoolmanDB PR numbers to import "
                                  "as well (e.g. 478,479)")
+    ap.add_argument("--generics", action="store_true",
+                    help="also import the guide's own material catalog as generic "
+                         "reference filaments under a '%s' vendor" % GENERIC_VENDOR)
+    ap.add_argument("--generic-dir", default=GENERIC_DIR,
+                    help="Filament Field Guide data/filaments directory")
+    ap.add_argument("--no-download", action="store_true",
+                    help="never download missing data files; use local files only")
+    ap.add_argument("--refresh", action="store_true",
+                    help="re-download the data files even if they are cached")
     ap.add_argument("--spoolmandb-dir", default=None,
                     help="local SpoolmanDB filaments/ clone dir; overrides the "
                          "built-in upstream-brand snapshot used to warn when a "
@@ -340,27 +519,47 @@ def main():
     print("Connected to Spoolman %s [%s]" % (info.get("version", "?"), mode))
 
     only = {b.strip().lower() for b in args.brands.split(",")} if args.brands else None
-    if os.path.isdir(args.dir):
-        files = sorted(f for f in os.listdir(args.dir) if f.endswith(".json"))
+    announced = []
+    cand_dir = source_dir(args.dir, CACHE_CANDIDATES, "candidate brand files",
+                          download_candidates, args, announced)
+    if cand_dir:
+        files = sorted(f for f in os.listdir(cand_dir) if f.endswith(".json"))
         files = [f for f in files if only is None or f[:-5].lower() in only]
-    elif args.pr:
-        # PR-only mode: local candidate files are optional.
-        print("Note: candidate directory not found (%s); importing --pr brands only."
-              % args.dir)
+    elif args.pr or args.generics:
+        # The candidate files are optional when another source was asked for.
+        print("Note: candidate files unavailable; importing the other "
+              "requested sources only.")
         files = []
     else:
-        print("Candidate directory not found: %s" % args.dir)
+        print("Candidate files unavailable (no local %s, and no download)." % args.dir)
         print("Run from a Filament Field Guide repo checkout, or point --dir at "
-              "research/spoolmandb-contributions/filaments, or use --pr to import "
-              "straight from open SpoolmanDB pull requests.")
+              "research/spoolmandb-contributions/filaments, or download the repo, "
+              "or use --pr / --generics to import from the other sources.")
         return 1
 
-    # (label, doc, comment_base) -- local candidate files, then any --pr brands.
-    # --brands filters the local files only.
+    # (label, vendor, vendor_comment, payloads) -- local candidate files, then
+    # the generics, then any --pr brands. --brands filters local files only.
     jobs = []
     for fname in files:
-        with open(os.path.join(args.dir, fname)) as fh:
-            jobs.append((fname, json.load(fh), COMMENT_BASE))
+        with open(os.path.join(cand_dir, fname)) as fh:
+            doc = json.load(fh)
+        jobs.append((fname, (doc.get("manufacturer") or "").strip(),
+                     VENDOR_COMMENT, expand(doc, COMMENT_BASE)))
+    if args.generics:
+        gen_dir = source_dir(args.generic_dir, CACHE_FILAMENTS,
+                             "generic material files", download_generics,
+                             args, announced)
+        if not gen_dir:
+            print("Generic material catalog unavailable (no local %s, and no "
+                  "download)." % args.generic_dir)
+            return 1
+        payloads, no_density = generic_payloads(gen_dir)
+        print("Generics: %d material-type entries from %s"
+              % (len(payloads), gen_dir))
+        if no_density:
+            print("  %d skipped (no density): %s"
+                  % (len(no_density), ", ".join(no_density)))
+        jobs.append(("generics", GENERIC_VENDOR, GENERIC_VENDOR_COMMENT, payloads))
     if args.pr:
         known = UPSTREAM_BRANDS_SNAPSHOT
         if args.spoolmandb_dir:
@@ -386,8 +585,7 @@ def main():
 
     vc = vs = fc = fs = fu = ff = 0
     sample_shown = False
-    for label, doc, comment_base in jobs:
-        vendor = doc.get("manufacturer", "").strip()
+    for label, vendor, vendor_comment, payloads in jobs:
         if not vendor:
             print("SKIP source  %s (no manufacturer)" % label)
             continue
@@ -399,7 +597,7 @@ def main():
         elif args.apply:
             try:
                 created = api(args.url, "/api/v1/vendor", "POST",
-                              {"name": vendor, "comment": VENDOR_COMMENT},
+                              {"name": vendor, "comment": vendor_comment},
                               args.timeout, ctx)
                 vid = created["id"]
                 vendor_ids[key] = vid
@@ -414,7 +612,7 @@ def main():
             vendor_ids[key] = None
             vc += 1
 
-        for payload in expand(doc, comment_base):
+        for payload in payloads:
             sig = (str(vid), payload["name"].strip().lower(),
                    (payload["material"] or "").strip().lower())
             if sig in have:
@@ -444,9 +642,10 @@ def main():
                 print("  sample payload: %s" % json.dumps(dict(payload, vendor_id=vid)))
                 sample_shown = True
             if not args.apply:
-                print("  CREATE %s / %s (%s, %.2fmm, %.0fg, #%s)" % (
+                print("  CREATE %s / %s (%s, %.2fmm, %s, #%s)" % (
                     vendor, payload["name"], payload["material"], payload["diameter"],
-                    payload["weight"], payload.get("color_hex", "------")))
+                    "%.0fg" % payload["weight"] if payload.get("weight") else "no weight",
+                    payload.get("color_hex", "------")))
                 fc += 1
                 continue
             try:

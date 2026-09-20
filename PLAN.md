@@ -163,7 +163,13 @@ every property sourced from the glossary.
   brands (547 line x color filaments) into a live Spoolman via its REST API; dry-run
   default, --apply to write, idempotent on (vendor, name, material), --insecure for
   internal certs (https only), --update to PATCH changed fields onto existing filaments,
-  --pr N[,N] to import brands from open SpoolmanDB pull requests before they merge
+  self-sufficient when run without a checkout (downloads the candidate files via the
+  GitHub contents API and the generics via data/index.json into a temp cache; --refresh
+  re-downloads, --no-download forbids it), --generics to import the guide's own 99-entry
+  material catalog as generic reference
+  filaments under a "Filament Field Guide" vendor (96 import; cleaning/sbs/tpu-72d have
+  no density, which Spoolman requires), --pr N[,N] to import brands from open
+  SpoolmanDB pull requests before they merge
   (warns when the PR updates a brand upstream already carries, since that duplicates
   Spoolman's native external-DB entries). The owner's
   internal Spoolman instance is unreachable from Claude's egress proxies (403 CONNECT) —

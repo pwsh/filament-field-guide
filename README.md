@@ -32,7 +32,25 @@ python scripts/spoolman_import.py --url http://spoolman.local:7912 \
 
 # also pull brands from open SpoolmanDB pull requests, before they merge
 python scripts/spoolman_import.py --url http://spoolman.local:7912 --pr 478,479
+
+# full sync: candidates + generic material types + two open PRs
+python scripts/spoolman_import.py --url http://spoolman.example.local \
+    --apply --update --generics --pr 478,479
+
+# the script also runs standalone, with no checkout: it downloads the data
+# files it needs from this repo and caches them under the system temp dir
+python spoolman_import.py --url http://spoolman.local:7912 --generics
 ```
+
+The script is self-sufficient — copy it anywhere and it fetches what it needs
+from GitHub on first run, reusing the cache afterwards (`--refresh`
+re-downloads, `--no-download` forbids the fetch). A checkout beside it is always
+preferred when present.
+
+`--generics` adds one generic reference filament per material type in
+`data/filaments/`, under a single "Filament Field Guide" vendor, so every
+material the guide knows about exists in the instance even where no branded
+spool does.
 
 Re-running is safe: unchanged filaments are skipped. The `--url` takes a plain
 `http://` base (what most installs use) or `https://`, with `--insecure` for a
