@@ -1,0 +1,93 @@
+{
+    "manufacturer": "MarsWork",
+    "filaments": [
+        {
+            "name": "Matte {color_name}",
+            "material": "PLA",
+            "density": 1.24,
+            "weights": [
+                {
+                    "weight": 1000
+                }
+            ],
+            "diameters": [
+                1.75
+            ],
+            "extruder_temp_range": [
+                190,
+                230
+            ],
+            "bed_temp_range": [
+                35,
+                65
+            ],
+            "finish": "matte",
+            "colors": [
+                {
+                    "name": "Black",
+                    "hex": "000000"
+                },
+                {
+                    "name": "Orange",
+                    "hex": "ef7622"
+                },
+                {
+                    "name": "Red",
+                    "hex": "c8102e"
+                },
+                {
+                    "name": "White",
+                    "hex": "ffffff"
+                }
+            ]
+        },
+        {
+            "name": "Silk {color_name}",
+            "material": "PLA+",
+            "density": 1.24,
+            "weights": [
+                {
+                    "weight": 1000
+                }
+            ],
+            "diameters": [
+                1.75
+            ],
+            "extruder_temp_range": [
+                190,
+                230
+            ],
+            "bed_temp_range": [
+                35,
+                65
+            ],
+            "finish": "glossy",
+            "colors": [
+                {
+                    "name": "Gold",
+                    "hex": "c9a227"
+                },
+                {
+                    "name": "Silver",
+                    "hex": "c0c0c4"
+                },
+                {
+                    "name": "Blue",
+                    "hex": "1c50a0"
+                },
+                {
+                    "name": "Pink",
+                    "hex": "e8739f"
+                },
+                {
+                    "name": "Purple",
+                    "hex": "7b3fa0"
+                },
+                {
+                    "name": "White",
+                    "hex": "ffffff"
+                }
+            ]
+        }
+    ]
+}

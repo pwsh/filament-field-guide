@@ -222,6 +222,10 @@
       "manufacturer": "kimya",
       "product": "PEKK-A",
       "notes": "Amorphous PEKK grade (amber)."
+    },
+    {
+      "manufacturer": "Tectonic 3D",
+      "product": "VULCAN PEKK-A / SC"
     }
   ]
 }

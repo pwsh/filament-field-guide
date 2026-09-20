@@ -75,7 +75,7 @@
   "makes_plates": true,
   "plate_ids": [],
   "price_tier": "budget",
-  "additional_notes": "Confirmed filament SKUs now cover PLA, PLA Pro, PETG, PETG Pro, PETG CF, ASA and TPU; ABS remains unconfirmed. Voxelab publishes little spec detail and its own store pages are frequently robots-blocked, so several lines rest on retailer listings rather than a TDS. Aquila printers ship with and sell removable spring-steel build surfaces, consistent with the Flashforge accessory lineup. No separate registered corporate address was found — Voxelab operates under the Flashforge corporate umbrella.",
+  "additional_notes": "Confirmed filament SKUs now cover PLA, PLA Pro, PETG, PETG Pro, PETG CF, ASA and TPU; ABS remains unconfirmed. Voxelab publishes little spec detail and its own store pages are frequently robots-blocked, so several lines rest on retailer listings rather than a TDS. Aquila printers ship with and sell removable spring-steel build surfaces, consistent with the Flashforge accessory lineup. No separate registered corporate address was found \u2014 Voxelab operates under the Flashforge corporate umbrella. Domain observation 2026-09-20: voxelab3dp.com was unreachable \u2014 the site presents an EXPIRED TLS CERTIFICATE and could not be loaded. No conclusion is drawn about the brand's status from that alone: an expired certificate is a maintenance lapse, not evidence of closure, and Voxelab is a Flashforge sub-brand whose products remain listed at retail. The practical consequence for this entry is narrower \u2014 the voxelab3dp.com URLs in the source list (the about page, the filaments category and the PETG-CF product page) could not be re-verified in this pass, so the endpoints and the product lines resting on them are carried forward from the 2026-07-31 pass unchanged and unre-checked.",
   "provenance": {
     "sources": [
       "https://www.voxelab3dp.com/aboutUs",
@@ -86,8 +86,8 @@
       "https://www.amazon.com/dp/B08JTVQ116",
       "https://www.amazon.com/dp/B09YTF5YT6"
     ],
-    "last_verified": "2026-07-31",
+    "last_verified": "2026-09-20",
     "confidence": "medium",
-    "conflicts": "Full material catalog beyond PLA and ASA is unconfirmed. Voxelab's separate legal/registered entity details (if any) distinct from Flashforge could not be established."
+    "conflicts": "Full material catalog beyond PLA and ASA is unconfirmed. Voxelab's separate legal/registered entity details (if any) distinct from Flashforge could not be established. Observed 2026-09-20: voxelab3dp.com was unreachable due to an expired TLS certificate, so none of the three voxelab3dp.com sources in this entry could be re-read. The endpoints.website value is retained because it is still the brand's correct address, but it does not currently load. This is recorded as a dated observation only \u2014 it is not evidence that the brand is defunct, and the Flashforge relationship and the filament catalog are unaffected by it. Everything sourced from voxelab3dp.com should be treated as last verified 2026-07-31, not 2026-09-20."
   }
 }

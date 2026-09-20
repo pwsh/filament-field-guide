@@ -1,0 +1,160 @@
+{
+  "id": "tpi",
+  "name": "TPI (Thermoplastic Polyimide)",
+  "aliases": [
+    "Thermoplastic polyimide",
+    "TPI",
+    "EXTEM",
+    "ThermaX TPI",
+    "VULCAN Pi"
+  ],
+  "status": "researched",
+  "base_type": null,
+  "variation_kind": null,
+  "polymer_class": "high-performance",
+  "chemical_makeup": "Thermoplastic polyimide (amorphous, EXTEM-type). An aromatic imide backbone closely related to the polyetherimide of pei-ultem but with a higher imide content and fewer flexible ether linkages, which pushes the glass transition from PEI's ~217 \u00b0C up to 247 \u00b0C and the processing window past 440 \u00b0C. Fully amorphous, so it has no melting point and no crystallisation shrinkage \u2014 the reason it holds tolerance despite the extreme process temperatures.",
+  "summary": "The highest-processing-temperature material in this catalog and the most hardware-gated: a 445 \u00b0C nozzle inside a chamber near 225 \u00b0C, on industrial equipment only. What it buys is a Tg of 247 \u00b0C with amorphous dimensional stability, UL94 V-0 at 0.75 mm, and a service ceiling above what pei-ultem can hold. What it costs is roughly $973/kg and the complete absence of any consumer path. Deltas vs pei-ultem: about 30 \u00b0C more Tg and 60-70 \u00b0C more process temperature for three to five times the price. Deltas vs peek: comparable difficulty, less chemical resistance, but amorphous stability and no crystallisation warp.",
+  "printing": {
+    "nozzle_temp_c": {
+      "recommended": 445
+    },
+    "ambient_temp_c": {
+      "recommended": 225
+    },
+    "enclosure_recommended": true,
+    "heated_chamber_required": true,
+    "enclosure_open_for_cooling": false,
+    "requires_hardened_nozzle": false,
+    "part_cooling_fan_pct": {
+      "min": 0,
+      "max": 0,
+      "recommended": 0
+    },
+    "notes": "445 \u00b0C at the nozzle is the highest figure in this catalog, above peek's 375-410 \u00b0C and far beyond any hotend sold for a consumer machine \u2014 this material runs on purpose-built industrial printers and nothing else. heated_chamber_required is true and the figure is approximately 225 \u00b0C, which is itself above the bed temperature of every other entry here. The datasheet does not cleanly separate bed from chamber for that 225 \u00b0C number, so no separate bed_temp_c is recorded (see conflicts) rather than guessing one. Part cooling is zero. Unfilled, so nozzle abrasion is not the issue; nozzle material rated to 450 \u00b0C is."
+  },
+  "feeding": {
+    "drive_system": "direct-drive-required",
+    "ams_compatible": "no",
+    "feeding_assistant_recommended": false,
+    "notes": "Industrial machines only, all of which are direct drive; a Bowden path is not a meaningful option at this extrusion pressure and these temperatures. AMS is categorically 'no' \u2014 no material station exists that operates anywhere near this window, and the drying regimen alone is outside what an AMS-HT dryer can do."
+  },
+  "drying": {
+    "required_before_use": "always",
+    "methods": [
+      "high-temperature industrial oven",
+      "heated drybox integrated with the printer"
+    ],
+    "dryness_validation": "No popping, hissing or foaming in the purge. At 445 \u00b0C trace moisture flashes violently, so the audible check is unusually decisive.",
+    "notes": "Drying is recorded 'always' on the general principle that every amorphous high-performance polymer in this tier requires it, but no specific temperature or time schedule was published in the sources reviewed, so none is recorded (unverified). Expect a regimen at or above pei-ultem 1010's 150 \u00b0C specification."
+  },
+  "storage": {
+    "recommendations": "Sealed with desiccant at all times and fed from a heated drybox integrated with the machine. Treat the drybox as part of the printer rather than an accessory.",
+    "max_humidity_pct": 20,
+    "hygroscopy": "moderate"
+  },
+  "price": {
+    "usd_per_kg_low": 973,
+    "usd_per_kg_high": 973,
+    "notes": "Approximately $973/kg from a single VisionMiner listing for Tectonic TenneT TPI \u2014 one retailer, one product, one currency. This is the most expensive material in this catalog and the datapoint should be treated as indicative rather than a market rate; the broader band is unverified."
+  },
+  "use_cases": {
+    "recommended": [
+      "aerospace and defence components in sustained service above 200 \u00b0C",
+      "EN45545 flame-retardant rail and industrial parts",
+      "high-temperature jigs, fixtures and tooling",
+      "electrical insulation at extreme temperature",
+      "parts where a V-0 rating is required at 0.75 mm wall"
+    ],
+    "not_recommended": [
+      "any consumer printer \u2014 no hotend, bed or chamber comes close",
+      "cost-sensitive work of any description",
+      "anything pei-ultem or peek can do, which is almost everything at a fraction of the price",
+      "prototyping and iteration \u2014 failed prints are ruinously expensive",
+      "food-contact items"
+    ]
+  },
+  "suitability": {
+    "food_contact": "no",
+    "load_bearing": "high",
+    "high_temperature": "yes",
+    "outdoor": "limited"
+  },
+  "properties": {
+    "density_g_cm3": 1.3,
+    "grams_per_100cm3": 130,
+    "cm3_per_100g": 76.9,
+    "glass_transition_c": 247,
+    "heat_deflection_c": 237,
+    "tensile_strength_mpa": {
+      "min": 74,
+      "max": 74,
+      "recommended": 74
+    },
+    "notes": "Tg 247 \u00b0C is the highest in this catalog, roughly 30 \u00b0C above pei-ultem and, because TPI is amorphous, it is the real service ceiling rather than a waypoint. HDT 237 \u00b0C at 0.45 MPa sits just below it, which is the expected relationship for an amorphous polymer and a useful cross-check. Tensile 74 MPa \u2014 respectable but not exceptional, and notably below the filled engineering materials in this catalog; TPI is bought for its temperature and flame behaviour, not its strength. UL94 V-0 at 0.75 mm, a thin-wall rating that matters for enclosures and electrical parts. Density 1.30 g/cm\u00b3. Being amorphous, there is no melting point and no crystallisation shrinkage; specific shrinkage figures are not published and are left blank."
+  },
+  "scores": {
+    "ease_of_print": 1,
+    "dimensional_stability": 9,
+    "warp_tendency": 6,
+    "layer_adhesion": 7,
+    "compression_strength": 7,
+    "temperature_tolerance": 10,
+    "uv_tolerance": 6,
+    "weather_tolerance": 7,
+    "water_tolerance": 8
+  },
+  "compatibility": {
+    "bonds_with": [],
+    "support_materials": [],
+    "usable_as_support_for": [],
+    "notes": "Nothing in this catalog survives contact with a 445 \u00b0C melt in a 225 \u00b0C chamber \u2014 including peek, pekk and pei-ultem, all of which process 60-150 \u00b0C lower. No bonding or support pairing is documented or plausible, and none is asserted. Self-supporting geometry or same-material breakaway support are the only options; the latter is slicer behaviour rather than an interface pairing and is not recorded here (RESEARCH_GUIDE \u00a78)."
+  },
+  "alternatives": [
+    {
+      "filament_id": "pei-ultem",
+      "reason": "The obvious substitute and the right answer almost every time: the same amorphous imide family with comparable dimensional stability and a V-0 rating, printing 60-70 \u00b0C cooler, at roughly a fifth of the price \u2014 giving up about 30 \u00b0C of Tg (217 vs 247 \u00b0C)."
+    },
+    {
+      "filament_id": "peek",
+      "reason": "The established high-performance choice with a broader ecosystem and far better chemical resistance, printing at 375-410 \u00b0C against 445 \u00b0C and costing $400-900/kg \u2014 but its Tg is 143 \u00b0C and, being semi-crystalline, it warps badly (10 vs 6) where TPI holds tolerance."
+    },
+    {
+      "filament_id": "pekk",
+      "reason": "Cheaper again ($495-700) and the most printable member of the PAEK group, at 345-375 \u00b0C \u2014 with Tg 162 \u00b0C against 247 \u00b0C, so it is only a substitute when the real service temperature sits well below what TPI is being bought for."
+    }
+  ],
+  "emissions": {
+    "voc_level": "moderate",
+    "particulate_level": "high",
+    "primary_emissions": [
+      "ultrafine particles",
+      "unspecified high-temperature imide process VOCs"
+    ],
+    "ventilation": "required",
+    "notes": "No TPI-specific emissions measurement was found (unverified). Ultrafine-particle emission scales steeply with nozzle temperature, and at 445 \u00b0C this is the hottest process in the catalog, so particulate level is recorded 'high' and ventilation 'required' on that basis alone. VOC is recorded 'moderate' rather than 'high' by the same reasoning applied to peek: the polymer is thermally stable within its own processing window, which is why it can be processed there. Industrial installations running this material should have engineered extraction rather than a filter box."
+  },
+  "safety_notes": "A 445 \u00b0C hotend and a chamber held near 225 \u00b0C are severe burn hazards well beyond anything else in this catalog, and the chamber must be allowed to cool and vent before it is opened. Follow the machine manufacturer's procedures rather than general FDM practice. Do not attempt to run this material on a hotend not rated for 450 \u00b0C \u2014 both the hardware failure and the decomposition products are serious. Not food-contact suitable.",
+  "additional_notes": "Confidence on this entry is low and the reason is thin sourcing: essentially one manufacturer TDS plus one retail listing, with no independent testing found. TPI is a genuinely niche material \u2014 the honest framing is that it exists for the handful of aerospace, defence and rail applications where a certified V-0 part must hold properties above 200 \u00b0C and where pei-ultem's 217 \u00b0C Tg is not quite enough. For every other purpose, pei-ultem does the job for a fifth of the money.",
+  "provenance": {
+    "sources": [
+      "https://www.3dxtech.com/products/thermax-tpi-1",
+      "https://cdn.shopify.com/s/files/1/0625/4185/6821/files/Thermax_TPI_TDS_TDS_v1.pdf",
+      "https://visionminer.com/products/tectonic3d-tennet-tpi-filament"
+    ],
+    "last_verified": "2026-09-20",
+    "confidence": "low",
+    "conflicts": "The TDS does not clearly separate bed temperature from chamber temperature for the ~225 \u00b0C figure quoted, so it is recorded as ambient_temp_c only and no bed_temp_c is given rather than inventing a split. Price rests on a single VisionMiner listing for the Tectonic TenneT TPI product (~$973/kg) \u2014 one retailer, one SKU, no second source. No drying temperature or time schedule is published anywhere in the sources reviewed, so drying is recorded as required with no regimen. Print speed, shrinkage and bed-adhesion practice are all undocumented. Emissions are inferred entirely from the temperature-scaling relationship with no TPI-specific measurement. No independent mechanical testing was found; every property figure traces to manufacturer literature. Confidence is low for all of these reasons and the entry should be re-verified against a second vendor before anything is designed around it."
+  },
+  "trade_names": [
+    {
+      "manufacturer": "3dxtech",
+      "product": "ThermaX TPI (EXTEM)",
+      "notes": "The source of this entry's recorded property figures; EXTEM-type thermoplastic polyimide."
+    },
+    {
+      "manufacturer": "Tectonic 3D",
+      "product": "VULCAN Pi / TenneT TPI",
+      "notes": "The single retail price datapoint (~$973/kg via VisionMiner) comes from the TenneT TPI listing."
+    }
+  ]
+}

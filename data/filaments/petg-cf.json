@@ -396,6 +396,11 @@
     {
       "manufacturer": "voxelab",
       "product": "PETG CF"
+    },
+    {
+      "manufacturer": "RatRig",
+      "product": "PunkFil PETG-CF10",
+      "notes": "10% carbon fibre on 100% recycled feedstock."
     }
   ]
 }

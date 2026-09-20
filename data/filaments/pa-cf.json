@@ -302,6 +302,11 @@
       "manufacturer": "snapmaker",
       "product": "PA-CF",
       "notes": "Carbon-fibre-filled nylon; base grade undisclosed in the Luban PA-Fiber guide."
+    },
+    {
+      "manufacturer": "azurefilm",
+      "product": "PAHT-CF",
+      "notes": "Unspecified nylon + carbon fibre; 270-290 C / 90-120 C, 160 C continuous limit."
     }
   ]
 }

@@ -193,6 +193,11 @@
       "manufacturer": "RS Components",
       "product": "RS PRO Transparent M-ABS",
       "notes": "Industrial distribution SKU; listing located but the linked datasheet was not fetched, so its specifications are unconfirmed."
+    },
+    {
+      "manufacturer": "filament-pm",
+      "product": "ABS-T",
+      "notes": "'ABS MMA' per TDS; density 1.08, 230-250 C / 110 C bed, HDT 97 C \u2014 an MMA-modified ABS, MABS-leaning. SpoolmanDB materials list carries ABS-T. NOT a Verbatim product despite occasional association \u2014 verified absent from the Verbatim catalog."
     }
   ]
 }

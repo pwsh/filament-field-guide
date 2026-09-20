@@ -5,7 +5,8 @@
   "summary": "Czech joint-stock company behind the Original Prusa printer ecosystem. Its filament brand, Prusament, is extruded in-house by wholly-owned subsidiary Prusa Polymers a.s. on roughly 12 production lines near Prague. Vertically integrated: Prusa makes its own filament, printers and build surfaces, and no evidence was found of it white-labelling for other brands.",
   "headquarters_country": "Czech Republic",
   "manufacturing_countries": [
-    "Czech Republic"
+    "Czech Republic",
+    "United States"
   ],
   "brands": [
     "Prusament",
@@ -22,6 +23,11 @@
       "company": "Filament PM (Plasty Mladec)",
       "relationship": "manufactured-by",
       "notes": "Historical: Plasty Mladec was Prusa's official filament partner from 2014 until in-house Prusament production (2018). Reciprocal of filament-pm.json edge; added in Phase E reciprocity pass."
+    },
+    {
+      "company": "printed-solid",
+      "relationship": "parent-company",
+      "notes": "Prusa Research acquired Printed Solid (Wilmington, Delaware) in 2022 and formally rebranded it Prusa USA, Inc. in July 2026. Reciprocal of the printed-solid.json parent-company edge. The Delaware facility extrudes the Jessie filament line and also produces Prusament and PEI print surfaces for North America."
     }
   ],
   "endpoints": {
@@ -174,7 +180,7 @@
     "pei-textured"
   ],
   "price_tier": "premium",
-  "additional_notes": "Markets on tolerance: claimed +/-0.02 mm diameter versus an industry norm of +/-0.05 mm, with per-spool QR codes linking to batch measurement data. Pricing roughly $29.99/kg for standard PLA, $49.99 for 2 kg spools, up to ~$44/kg for limited editions. Sells genuine double-sided PEI powder-coated spring steel sheets (smooth and textured) as build surfaces for Original Prusa printers. Reported 2024 addition of a US production line in Delaware is not included in manufacturing_countries because it rests on a single trade-press citation. No HIPS or PVA found in the current catalog; whether those were ever offered and discontinued was not established.",
+  "additional_notes": "Markets on tolerance: claimed +/-0.02 mm diameter versus an industry norm of +/-0.05 mm, with per-spool QR codes linking to batch measurement data. Pricing roughly $29.99/kg for standard PLA, $49.99 for 2 kg spools, up to ~$44/kg for limited editions. Sells genuine double-sided PEI powder-coated spring steel sheets (smooth and textured) as build surfaces for Original Prusa printers. US PRODUCTION (updated 2026-09-20): the previously single-sourced report of a Delaware production line is now corroborated - Prusa Research acquired Printed Solid of Wilmington, Delaware in 2022 and rebranded it Prusa USA, Inc. in July 2026. That facility runs the filament extrusion line Printed Solid built in 2019 for its Jessie brand and also produces Prusament and PEI print surfaces for the North American market, so United States has been added to manufacturing_countries. See data/manufacturers/printed-solid.json. No HIPS or PVA found in the current catalog; whether those were ever offered and discontinued was not established.",
   "provenance": {
     "sources": [
       "https://prusament.com/story-behind-prusament/",
@@ -185,10 +191,12 @@
       "https://prusament.com/materials/",
       "https://prusament.com/materials/petg/",
       "https://prusament.com/wp-content/uploads/2022/10/PCBlend_Prusament_TDS_2022_16_EN.pdf",
-      "https://prusament.com/wp-content/uploads/2022/08/TDS_PA11CFB.pdf"
+      "https://prusament.com/wp-content/uploads/2022/08/TDS_PA11CFB.pdf",
+      "https://www.tomshardware.com/3d-printing/delawares-printed-solid-rebrands-to-prusa-usa",
+      "https://www.printedsolid.com/blogs/news/jessie-filament-is-now-made-in-house-at-printed-solid"
     ],
-    "last_verified": "2026-07-31",
+    "last_verified": "2026-09-20",
     "confidence": "medium",
-    "conflicts": "A 2024 Tom's Hardware report of a Delaware (US) production line is uncorroborated, so manufacturing_countries lists only Czech Republic; if confirmed, the United States should be added."
+    "conflicts": "RESOLVED 2026-09-20: the formerly uncorroborated Delaware (US) production line is confirmed by the Printed Solid acquisition (2022) and its July 2026 rebrand to Prusa USA, Inc.; United States has been added to manufacturing_countries. Remaining open point: how the Prusament volume is split between the Czech lines and the Delaware facility is not published."
   }
 }

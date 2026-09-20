@@ -264,6 +264,15 @@
       "manufacturer": "esun",
       "product": "ABS+HS",
       "notes": "High-strength toughened ABS [Remapped from earlier gap 2026-08-01]"
+    },
+    {
+      "manufacturer": "fusion-filaments",
+      "product": "ABS+ Gloss / ABS+ Matte",
+      "notes": "Separate gloss and matte TDS; density 1.04, 230-250 C."
+    },
+    {
+      "manufacturer": "nobufil",
+      "product": "ABSx"
     }
   ]
 }

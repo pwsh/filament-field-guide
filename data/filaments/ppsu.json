@@ -208,6 +208,10 @@
       "manufacturer": "iemai-3d",
       "product": "PPSU",
       "notes": "Polyphenylsulfone"
+    },
+    {
+      "manufacturer": "Tectonic 3D",
+      "product": "VULCAN PPSU"
     }
   ]
 }

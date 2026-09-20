@@ -602,6 +602,11 @@
       "manufacturer": "ultimaker",
       "product": "UltiMaker ABS-R",
       "notes": "Recycled/reground ABS, standard ABS chemistry (Method series)."
+    },
+    {
+      "manufacturer": "Printy Please",
+      "product": "Cat Yarn ABS Sparkle",
+      "notes": "Glitter-filled ABS with cat-themed colorways."
     }
   ],
   "alternatives": [

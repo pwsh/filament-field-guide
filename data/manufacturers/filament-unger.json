@@ -1,0 +1,69 @@
+{
+  "id": "filament-unger",
+  "name": "Filament Unger (Unger GmbH & Co. KG)",
+  "status": "researched",
+  "summary": "Filament line of Unger GmbH & Co. KG, a fourth-generation family plastics processor founded in 1952 in Schopfheim, Baden-Wuerttemberg (HRA 670372 Freiburg). Production is in-house in Germany under ISO 9001, with a short catalogue of mainstream grades on AMS-compatible spools.",
+  "headquarters_country": "Germany",
+  "manufacturing_countries": [
+    "Germany"
+  ],
+  "brands": [
+    "Filament Unger",
+    "Unger"
+  ],
+  "endpoints": {
+    "website": "https://filament-unger.de/",
+    "social": {
+      "instagram": "https://www.instagram.com/filament_unger/",
+      "tiktok": "https://www.tiktok.com/@filament_unger"
+    }
+  },
+  "product_lines": [
+    {
+      "name": "ABS+",
+      "filament_ids": [
+        "abs-plus"
+      ],
+      "notes": "Toughened/enhanced ABS grade."
+    },
+    {
+      "name": "PLA+",
+      "filament_ids": [
+        "pla-plus"
+      ],
+      "notes": "Impact-modified PLA."
+    },
+    {
+      "name": "PETG",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "Standard PETG."
+    },
+    {
+      "name": "SILK",
+      "filament_ids": [
+        "pla-silk"
+      ],
+      "notes": "Luster-additive PLA."
+    },
+    {
+      "name": "PA12 CF15%",
+      "filament_ids": [
+        "pa12-cf"
+      ],
+      "notes": "PA12 + 15% carbon fibre."
+    }
+  ],
+  "makes_plates": false,
+  "price_tier": "mid",
+  "additional_notes": "Pricing roughly EUR 23-26/kg. The filament brand is young but the parent has processed plastics since 1952, which is the basis for the in-house German production claim; ISO 9001 certification is stated by the company. Spools are marketed as AMS-compatible.",
+  "provenance": {
+    "sources": [
+      "https://filament-unger.de/",
+      "https://filament-unger.de/pages/ueber-uns"
+    ],
+    "last_verified": "2026-09-20",
+    "confidence": "high"
+  }
+}

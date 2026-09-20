@@ -1,0 +1,102 @@
+{
+  "id": "redline-filament",
+  "name": "REDLINE FILAMENT GmbH",
+  "status": "researched",
+  "summary": "German filament brand based in Neuss, North Rhine-Westphalia, selling through its own shop and Amazon.de. The range is unusually broad for a brand of its size - decorative PLA variants through PA6-CF, PC and PVA - and is anchored by ASA-X, a heavily modified industrial ASA marketed on 'zero-warp' behaviour as a premium ABS alternative.",
+  "headquarters_country": "Germany",
+  "manufacturing_countries": [],
+  "brands": [
+    "REDLINE FILAMENT",
+    "ASA-X"
+  ],
+  "endpoints": {
+    "website": "https://redline-filament.com/",
+    "social": {
+      "instagram": "https://www.instagram.com/redlinefilament/"
+    }
+  },
+  "product_lines": [
+    {
+      "name": "PLA (Pastel / Wizard / Mystic / Stone / Glitter / Matte / Neon / Wood / Recycled)",
+      "filament_ids": [
+        "pla",
+        "pla-glitter",
+        "pla-matte",
+        "pla-stone",
+        "pla-wood"
+      ],
+      "notes": "A wide decorative PLA family; Pastel, Wizard, Mystic and Neon are pigment colourways on the base chemistry."
+    },
+    {
+      "name": "PET-G / PCTG",
+      "filament_ids": [
+        "petg",
+        "pctg"
+      ],
+      "notes": "Standard PETG plus the tougher PCTG copolyester."
+    },
+    {
+      "name": "ASA-X",
+      "filament_ids": [
+        "asa"
+      ],
+      "notes": "Highly modified industrial ASA marketed as 'Zero-Warp'; the modification package is undisclosed, so the base asa id applies."
+    },
+    {
+      "name": "REDLINE ABS",
+      "filament_ids": [
+        "abs"
+      ],
+      "notes": "Standard ABS."
+    },
+    {
+      "name": "REDLINE PC",
+      "filament_ids": [
+        "pc"
+      ],
+      "notes": "Polycarbonate."
+    },
+    {
+      "name": "REDLINE TPU",
+      "filament_ids": [
+        "tpu"
+      ],
+      "notes": "Flexible TPU; no shore hardness published."
+    },
+    {
+      "name": "PA6 (incl. CF and Kevlar)",
+      "filament_ids": [
+        "pa6",
+        "pa6-cf"
+      ],
+      "notes": "Unfilled and carbon-filled PA6; the aramid ('Kevlar') grade has no catalog id and is covered by the base pa6 mapping."
+    },
+    {
+      "name": "REDLINE PVA",
+      "filament_ids": [
+        "pva"
+      ],
+      "notes": "Water-soluble support."
+    },
+    {
+      "name": "Glow",
+      "filament_ids": [
+        "pla-glow"
+      ],
+      "notes": "Phosphorescent-pigment PLA."
+    }
+  ],
+  "makes_plates": false,
+  "price_tier": "mid",
+  "additional_notes": "Pricing roughly EUR 17-40/kg. manufacturing_countries is left empty on purpose: REDLINE FILAMENT GmbH is a registered German company (Neuss) and markets as a German brand, but no evidence was found that it extrudes rather than contract-manufactures, and an unusually broad range for a company of this size points toward sourcing from multiple suppliers. Germany is confirmed as the corporate seat only. Amazon storefront (the manufacturer schema's endpoints object has no amazon field, so it is recorded here): https://www.amazon.de/stores/REDLINEFILAMENT/page/EB75CA55-3AB0-42C3-8E52-7F4F99CC635D",
+  "provenance": {
+    "sources": [
+      "https://redline-filament.com/",
+      "https://redline-filament.com/pages/impressum",
+      "https://www.companyhouse.de/REDLINE-FILAMENT-GmbH-Neuss"
+    ],
+    "last_verified": "2026-09-20",
+    "confidence": "medium",
+    "conflicts": "Own extrusion versus contract manufacture is unresolved: the company neither claims a plant nor names a supplier. If in-house German extrusion is later confirmed, add Germany to manufacturing_countries."
+  }
+}

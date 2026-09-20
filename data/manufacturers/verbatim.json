@@ -1,0 +1,92 @@
+{
+  "id": "verbatim",
+  "name": "Verbatim",
+  "status": "researched",
+  "summary": "Legacy optical-media brand that entered filament around 2014. The filament is manufactured in Japan by Mitsubishi Chemical Media Co. under licence, and includes genuinely distinctive grades - BVOH support, Mitsubishi's Durabio bio-engineering resin and Tefabloc TPE - rather than generic rebadged material. The Verbatim brand itself has been owned by Taiwan's CMC Magnetics since 2020.",
+  "manufacturing_countries": [
+    "Japan"
+  ],
+  "brands": [
+    "Verbatim",
+    "Durabio",
+    "Tefabloc"
+  ],
+  "oem_relationships": [
+    {
+      "company": "Mitsubishi Chemical Media Co., Ltd.",
+      "relationship": "manufactured-by",
+      "notes": "Manufactures Verbatim-branded filament in Japan under licence. Several lines are explicitly marked 'Made in Japan', and the Durabio and Tefabloc grades are Mitsubishi Chemical materials."
+    },
+    {
+      "company": "CMC Magnetics Corporation",
+      "relationship": "parent-company",
+      "notes": "Taiwanese optical-media maker that acquired the Verbatim brand from Mitsubishi Chemical in 2019-2020 (reported at about USD 32 million). Brand ownership sits with CMC while Japanese manufacture continues under licence."
+    }
+  ],
+  "endpoints": {
+    "website": "https://www.verbatim.com/en",
+    "store": "https://www.verbatim-europe.com/en/3d-printing-filaments"
+  },
+  "product_lines": [
+    {
+      "name": "Verbatim PLA",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Standard PLA."
+    },
+    {
+      "name": "Verbatim ABS (Made in Japan)",
+      "filament_ids": [
+        "abs"
+      ],
+      "notes": "Standard ABS, explicitly marked as Japanese manufacture."
+    },
+    {
+      "name": "Verbatim PET-G",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "Standard PETG."
+    },
+    {
+      "name": "Verbatim BVOH",
+      "filament_ids": [
+        "bvoh"
+      ],
+      "notes": "Butenediol vinyl alcohol copolymer water-soluble support - dissolves faster and more reliably than commodity PVA."
+    },
+    {
+      "name": "Verbatim Durabio",
+      "filament_ids": [],
+      "notes": "Mitsubishi Chemical's isosorbide-based bio-engineering resin, a polycarbonate-class material from plant-derived feedstock. No Durabio or isosorbide-polycarbonate id exists in the catalog and mapping it to pc would misdescribe it, so no filament_ids are set."
+    },
+    {
+      "name": "Verbatim PP",
+      "filament_ids": [
+        "pp"
+      ],
+      "notes": "Polypropylene."
+    },
+    {
+      "name": "Verbatim Tefabloc TPE",
+      "filament_ids": [
+        "tpe"
+      ],
+      "notes": "Mitsubishi Chemical Tefabloc thermoplastic elastomer - a TPE, not a urethane, so no TPU shore-grade id applies."
+    }
+  ],
+  "makes_plates": false,
+  "price_tier": "premium",
+  "additional_notes": "Pricing roughly USD 22-35/kg. Verbatim is an unusual case: a consumer-media brand whose filament is genuinely differentiated, because the licensed manufacturer is a major Japanese chemical company supplying its own proprietary resins. headquarters_country is deliberately omitted - the brand's corporate home has moved between Mitsubishi Chemical (Japan) and CMC Magnetics (Taiwan) with regional Verbatim entities in the US and Europe, and no single seat could be verified. Amazon storefront (the manufacturer schema's endpoints object has no amazon field, so it is recorded here): https://www.amazon.com/stores/Verbatim/page/2CA82963-D0E2-498A-8415-F3671686E111",
+  "provenance": {
+    "sources": [
+      "https://www.amazon.com/dp/B0BSMRT7LY",
+      "https://www.storagenewsletter.com/2019/06/18/cmc-magnetics-acquires-verbatim-from-mitsubishi-chemical-for-32-million/",
+      "https://en.wikipedia.org/wiki/Verbatim_(brand)"
+    ],
+    "last_verified": "2026-09-20",
+    "confidence": "medium",
+    "conflicts": "Sources differ on whether the CMC Magnetics acquisition closed in 2019 or 2020, and on how much of the current filament range is still Japanese-made versus sourced elsewhere after the brand changed hands. 'Made in Japan' is confirmed for the ABS line specifically; extending it to every line would be an assumption."
+  }
+}

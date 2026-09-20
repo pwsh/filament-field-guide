@@ -1,0 +1,225 @@
+{
+  "id": "tpu-64d",
+  "name": "TPU 64D (semi-rigid)",
+  "aliases": [
+    "TPU 64D",
+    "Shore 64D TPU",
+    "Ultrafuse TPU 64D",
+    "Flex TPU 64D"
+  ],
+  "status": "draft",
+  "base_type": "tpu",
+  "variation_kind": "shore-grade",
+  "polymer_class": "elastomer",
+  "chemical_makeup": "Thermoplastic polyurethane with a high hard-segment ratio placing it at Shore 64D \u2014 above the entire Shore A range and one step below the 68D AMS grade. Three vendors sell a product labelled exactly 64D (Forward AM Ultrafuse TPU 64D, Siraya Tech Flex TPU 64D, Yoline Lab TPU 64D), which is what separates this entry from the 60D and 68D grades either side of it",
+  "summary": "The middle of the three Shore D TPU grades: stiff enough that the feeding problems which define flexible printing largely disappear, soft enough to still absorb impact rather than crack. Delta vs base TPU: it sits above the base entry's 85A-95A band on a different hardness scale, so drive-system and material-station restrictions lift, the bed runs cool, and rubbery compression recovery is traded for dimensional stability. It exists as a distinct entry because three vendors label a product exactly 64D \u2014 previously these SKUs were filed against the 68D entry's alias list.",
+  "printing": {
+    "nozzle_temp_c": {
+      "min": 220,
+      "max": 240,
+      "recommended": 230
+    },
+    "bed_temp_c": {
+      "min": 40,
+      "max": 60,
+      "recommended": 50
+    },
+    "ambient_temp_c": {
+      "min": 18,
+      "max": 30,
+      "recommended": 22
+    },
+    "speed_mm_s": {
+      "min": 30,
+      "max": 80,
+      "recommended": 50
+    },
+    "enclosure_recommended": false,
+    "heated_chamber_required": false,
+    "enclosure_open_for_cooling": true,
+    "requires_hardened_nozzle": false,
+    "part_cooling_fan_pct": {
+      "min": 0,
+      "max": 60,
+      "recommended": 40
+    },
+    "notes": "IMPORTANT \u2014 these temperatures are NOT 64D-specific. Yoline Lab publishes no temperatures for its TPU 64D product at all, and the Forward AM Ultrafuse TPU 64D product page and TDS were unreachable in this pass (forward-am.com did not resolve on repeated attempts, 2026-09-20). The recorded 220-240 \u00b0C nozzle / 40-60 \u00b0C bed and the 1.24 g/cm\u00b3 density are Yoline Lab's TPU FAMILY values, published across their 85A through 72D grades, applied here because no 64D-specific figure could be sourced. They are plausible \u2014 they bracket the 68D grade's documented 220-240 \u00b0C \u2014 but they are family values, not a datasheet for this durometer. Speed 30-80 mm/s is inherited from the 68D entry and is likewise inferred from the grade's resistance to buckling rather than published. Bed is recorded wider and warmer than the 68D grade's documented 30-35 \u00b0C because nothing here is measured. No enclosure; warp is minimal at this hardness. Unfilled, so a standard brass nozzle is fine."
+  },
+  "feeding": {
+    "drive_system": "any",
+    "ams_compatible": "yes",
+    "feeding_assistant_recommended": false,
+    "notes": "Treated the same way as the 60D and 68D grades: at Shore D hardness the filament no longer buckles like rope under drive-gear compression, which is the mechanism behind every flexible-filament feeding restriction. 'yes' rather than the 60D entry's 'conditional' follows the 68D treatment \u2014 64D sits inside the band Bambu's own wiki brackets with its 55D and 77D AMS-compatible examples, and eSUN and Kexcelled both market 64D products explicitly on material-station compatibility. Drive system 'any' mirrors tpu-68d: Bowden paths are viable at this stiffness. No feeding assistant needed. No vendor publishes an AMS pass/fail verdict for a product labelled 64D specifically (unverified)."
+  },
+  "drying": {
+    "required_before_use": "always",
+    "temp_c": {
+      "min": 70,
+      "max": 90,
+      "recommended": 70
+    },
+    "time_hours": {
+      "min": 8,
+      "max": 12,
+      "recommended": 8
+    },
+    "methods": [
+      "blast/forced-air oven at 70 \u00b0C for 8 h",
+      "heated bed at 80-90 \u00b0C for 12 h",
+      "dedicated filament dryer",
+      "print directly from a drybox with desiccant"
+    ],
+    "dryness_validation": "No popping or crackling at the nozzle, no foamy extrudate, and no rise in stringing on a retraction test \u2014 stringing is a reliable dryness indicator at this stiffness, unlike the soft Shore A grades.",
+    "notes": "No brand publishes a drying schedule for a 64D product (unverified). The regime is carried unchanged from the tpu-68d entry, which is defensible because TPU drying is governed by urethane chemistry rather than by hard-segment ratio, and no source suggests hardness shifts it."
+  },
+  "storage": {
+    "recommendations": "Sealed with fresh desiccant under 20 % RH. Like the other Shore D grades it absorbs more slowly than the soft A grades, but it is still a urethane and should not be left in open air between prints.",
+    "max_humidity_pct": 20,
+    "hygroscopy": "moderate"
+  },
+  "use_cases": {
+    "recommended": [
+      "multi-material prints needing a semi-rigid component alongside rigid filaments",
+      "semi-rigid brackets, mounts and housings",
+      "snap-fit and clip parts needing more rigidity than 95A",
+      "protective cases and bumpers",
+      "wear parts where TPU's abrasion resistance beats PETG",
+      "oil- and grease-exposed mechanical parts"
+    ],
+    "not_recommended": [
+      "parts needing true rubber-like compression or squish (use 60A or 85A)",
+      "fully rigid structural parts (use a rigid engineering plastic)",
+      "parts loaded in tension across layers \u2014 the Shore D grades show severe Z anisotropy",
+      "high-temperature service (no HDT published for this grade)",
+      "food-contact use"
+    ]
+  },
+  "suitability": {
+    "food_contact": "no",
+    "load_bearing": "moderate",
+    "high_temperature": "no",
+    "outdoor": "limited"
+  },
+  "properties": {
+    "shore_hardness": "64D",
+    "density_g_cm3": 1.24,
+    "grams_per_100cm3": 124,
+    "cm3_per_100g": 80.6,
+    "glass_transition_c": -25,
+    "max_service_temp_c": 75,
+    "notes": "No tensile, elongation, HDT or melting figure is published by any of the three 64D vendors, and none is recorded here rather than borrowed from a neighbouring grade. Density 1.24 g/cm\u00b3 is Yoline Lab's published TPU family value and is NOT 64D-specific (unverified); it is consistent with the family trend, sitting between the documented 1.22 of the 95A grades and the documented 1.26 of Bambu's 68D, and the derived 124 g/100 cm\u00b3 and 80.6 cm\u00b3/100 g inherit that uncertainty. Tg is the family value carried from the base entry. The 75 \u00b0C max service temperature is an unverified estimate carried from the 68D entry. Expect elongation at break far below the 550-950 % of the Shore A grades and markedly higher flexural modulus, approaching semi-rigid engineering-plastic behaviour \u2014 qualitative, not measured."
+  },
+  "scores": {
+    "ease_of_print": 7,
+    "dimensional_stability": 7,
+    "warp_tendency": 1,
+    "layer_adhesion": 2,
+    "compression_strength": 6,
+    "temperature_tolerance": 5,
+    "uv_tolerance": 4,
+    "weather_tolerance": 5,
+    "water_tolerance": 7
+  },
+  "compatibility": {
+    "bonds_with": [
+      "lw-tpu",
+      "tpe",
+      "tpu",
+      "tpu-60a",
+      "tpu-60d",
+      "tpu-68d",
+      "tpu-72d",
+      "tpu-85a",
+      "tpu-90a",
+      "tpu-95a",
+      "tpu-98a",
+      "tpu-gf"
+    ],
+    "support_materials": [
+      "pla"
+    ],
+    "usable_as_support_for": [],
+    "notes": "Mirrors the tpu-68d treatment exactly. Chemically welds to base TPU and every sibling grade, so multi-durometer assemblies in one chemistry are the obvious design pattern \u2014 but the Shore D grades show severe Z anisotropy, so do not load a multi-durometer bond line in the vertical print direction. Rigid-material bonding is unchanged from the base entry: mechanical interlock with PLA and PETG, no useful weld to ABS, ASA, PC or PA. PLA is the practical breakaway support interface because it releases cleanly from TPU; PETG is deliberately excluded because PETG\u2194TPU is recorded catalog-wide as a weld pair and a welding pair can never be a removable interface. Soluble supports (PVA, BVOH) are not documented as working TPU interfaces (unverified). Not usable as a support for anything."
+  },
+  "plate_recommendations": [
+    {
+      "plate_id": "pei-textured",
+      "rating": "recommended",
+      "notes": "Inferred from the 60D and 68D entries (unverified for a 64D product specifically). Textured PEI works at this grade's bed temperature and no separator is generally needed, because the part is rigid enough to release without tearing \u2014 the over-adhesion problem that dogs the soft grades largely goes away."
+    }
+  ],
+  "alternatives": [
+    {
+      "filament_id": "tpu-68d",
+      "reason": "One step harder and by far the better-documented grade: a full Bambu TDS behind its density, tensile and anisotropy figures where this entry has none, plus a documented rather than inferred AMS verdict \u2014 at the cost of even worse layer adhesion (31 % Z elongation) and a narrower vendor choice."
+    },
+    {
+      "filament_id": "tpu-60d",
+      "reason": "One step softer with a little more give and the cheapest D-scale pricing ($25-45); layer adhesion is much better (5 vs 2) and it prints hotter (up to 260 \u00b0C). AMS drops from 'yes' to 'conditional' and durometer QC variance at 60D is a documented problem."
+    },
+    {
+      "filament_id": "tpu-72d",
+      "reason": "Harder again and sold as a nylon replacement without nylon's moisture problem: compressive strength 7 vs 6 at a higher service ceiling \u2014 for 2-3x the price ($70-100), no published datasheet anywhere, and warp behaviour no other TPU grade shows."
+    },
+    {
+      "filament_id": "tpu-gf",
+      "reason": "Reaches roughly the same ~67D territory with glass fiber instead of hard-segment chemistry: better service temperature and far better toughness retention \u2014 but AMS-conditional and a hardened nozzle is mandatory."
+    },
+    {
+      "filament_id": "petg",
+      "reason": "For a rigid material at comparable ease of print and lower cost ($18-42), with layer adhesion 9 vs 2 \u2014 you lose TPU's impact absorption and abrasion resistance entirely."
+    }
+  ],
+  "emissions": {
+    "voc_level": "low",
+    "particulate_level": "low",
+    "primary_emissions": [
+      "ultrafine particles",
+      "isocyanate residues (unverified)",
+      "urethane decomposition byproducts (unverified)"
+    ],
+    "ventilation": "recommended",
+    "notes": "No emissions measurement exists for any TPU grade, let alone this one (unverified). Levels are carried from the tpu-68d entry on the reasoning that both grades run the same 220-240 \u00b0C window, which stays clear of the ~250 \u00b0C point where urethane decomposition becomes a real rather than theoretical concern. Standard TPU ventilation practice applies."
+  },
+  "safety_notes": "Urethane chemistry can in principle release isocyanate residues at print temperature; the 220-240 \u00b0C window stays below the ~250 \u00b0C decomposition concern, as with the 68D grade. Not food-contact certified as printed. Unfilled, so not abrasive.",
+  "additional_notes": "This entry was split out because three separate vendors sell a product labelled exactly Shore 64D \u2014 Forward AM's Ultrafuse TPU 64D, Siraya Tech's Flex TPU 64D and Yoline Lab's TPU 64D \u2014 while the catalog previously routed all of them through tpu-68d's alias list. The practical consequence of the split is honesty about sourcing: the 68D entry rests on a real manufacturer datasheet, and this one does not. eSUN's TPU-64D and Kexcelled's High Speed TPU 64D remain recorded as trade names on tpu-68d, where they were filed before this entry existed; they are candidates to move here in a future pass but were not re-verified in this one. Treat this grade as 'a rigid material with some give' rather than as a flexible, and orient functional parts so the layer lines are not the load path.",
+  "provenance": {
+    "sources": [
+      "https://yolinelab.com/",
+      "https://siraya.tech/collections/tpu-filament",
+      "https://siraya.tech/collections/prusa-filaments",
+      "https://cdn.shopify.com/s/files/1/1339/4265/files/Bambu_TPU_for_AMS_Technical_Data_Sheet.pdf",
+      "https://wiki.bambulab.com/en/knowledge-sharing/tpu-printing-guide",
+      "https://3dbite.com/tpu-filament-grades-shore-hardness-guide-3d-printing/"
+    ],
+    "last_verified": "2026-09-20",
+    "confidence": "low"
+  },
+  "trade_names": [
+    {
+      "manufacturer": "forward-am",
+      "product": "Ultrafuse TPU 64D",
+      "notes": "The best-known product at this exact durometer and the intended primary source for this entry's numbers. The forward-am.com product page and TDS were unreachable on 2026-09-20, so no published nozzle/bed/density figure was obtained from it (unverified)."
+    },
+    {
+      "manufacturer": "siraya-tech",
+      "product": "Flex TPU 64D",
+      "notes": "Marketed as mid-flexibility with improved dimensional stability versus their 85A and 95A grades, and listed in Siraya's Prusa-compatible collection. No product-specific nozzle temperature, bed temperature or density published; the TPU collection FAQ gives only a general 40-60 \u00b0C bed."
+    },
+    {
+      "manufacturer": "yoline-lab",
+      "product": "TPU 64D",
+      "notes": "Listed in Yoline's flexible series alongside 72D and 75D. No temperatures or density published for the 64D grade specifically \u2014 the family values used in this entry come from their 85A-72D grades."
+    },
+    {
+      "manufacturer": "esun",
+      "product": "TPU-64D",
+      "notes": "Shore 64D; tpu-68d already carries 'TPU 64D' as an alias Moved from tpu-68d when the dedicated 64D entry was created (2026-09-20); product not re-verified in this pass."
+    },
+    {
+      "manufacturer": "kexcelled",
+      "product": "High Speed TPU 64D",
+      "notes": "Shore 64D; tpu-68d carries 'TPU 64D' as an alias Moved from tpu-68d when the dedicated 64D entry was created (2026-09-20); product not re-verified in this pass."
+    }
+  ]
+}

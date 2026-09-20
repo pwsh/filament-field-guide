@@ -48,14 +48,14 @@ parameters against current manufacturer datasheets.
 Phases A–E complete, plus two variant tranches, a build-plate vendor cross-walk,
 and a trade-name cross-walk of every manufacturer catalog. The catalog holds:
 
-- **90 filaments** — 15 base chemistries plus researched variant entries for
+- **99 filaments** — 18 base chemistries plus researched variant entries for
   aesthetic/functional PLA grades, fiber-filled composites (CF/GF across nine base
-  polymers), polyamide grades (PA6/PA12/PA66/PPA + composites), eight TPU shore grades
+  polymers), polyamide grades (PA6/PA12/PA66/PPA + composites), ten TPU shore grades
   with per-grade AMS/drive-system data, blends (CoPE, PC-ABS, PC-PBT), specialty
-  (ESD, FR, castable, annealable HT-PLA, stone/glitter, foaming LW grades, PEBA),
-  the high-performance tier (PEEK/PEKK/PEI-ULTEM/PPS/PPSU), and support materials.
+  (ESD, FR, castable, annealable HT-PLA, stone/glitter, foaming LW-PLA/LW-TPU/LW-PEBA, PEBA),
+  the high-performance tier (PEEK/PEEK-CF/PEKK/PEI-ULTEM/PPS/PPSU/PVDF/TPI/PPE), and support materials.
   Every filament carries a curated "alternatives to consider" list with trade-off reasoning.
-- **71 manufacturers** — brands, OEM/white-label relationships (including owner-verified
+- **97 manufacturers** — brands, OEM/white-label relationships (including owner-verified
   mappings), countries of manufacture, endpoints, product lines, and 1,300+ trade-name
   mappings so marketing names (NinjaFlex, PolyTerra, PAHT-CF…) resolve to entries.
 - **14 build plates** — full compatibility matrices, prep/cleaning/removal/stuck-print

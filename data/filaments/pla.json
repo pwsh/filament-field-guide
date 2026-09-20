@@ -1007,6 +1007,16 @@
       "manufacturer": "ziro",
       "product": "Translucent PLA",
       "notes": "Clear/semi-clear PLA, no chemistry change"
+    },
+    {
+      "manufacturer": "extrudr",
+      "product": "BioFusion",
+      "notes": "PLA-based metallic-finish biopolymer; TDS 210-220 C, density 1.25 g/cm3."
+    },
+    {
+      "manufacturer": "extrudr",
+      "product": "GreenTEC",
+      "notes": "Biodegradable PLA/copolyester blend per MSDS."
     }
   ]
 }

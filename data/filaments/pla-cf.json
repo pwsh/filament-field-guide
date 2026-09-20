@@ -421,6 +421,16 @@
       "manufacturer": "ziro",
       "product": "CF-PLA",
       "notes": "Carbon-fiber PLA"
+    },
+    {
+      "manufacturer": "extrudr",
+      "product": "GreenTEC Pro CF",
+      "notes": "10% carbon fibre on the GreenTEC Pro bio-polyester base; hardened 0.6 mm nozzle."
+    },
+    {
+      "manufacturer": "nobufil",
+      "product": "PLAx CF",
+      "notes": "10% carbon fibre on an impact-modified recycled PLA base."
     }
   ]
 }

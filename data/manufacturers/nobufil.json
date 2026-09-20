@@ -1,0 +1,100 @@
+{
+  "id": "nobufil",
+  "name": "nobufil GmbH",
+  "status": "researched",
+  "summary": "Austrian filament manufacturer in Krems an der Donau, founded in 2022 by Alexander Datzinger, extruding in-house from recycled EU industrial plastic waste. Its proprietary 'x' line (PLAx, ABSx, PCx) is positioned as enhanced-polymer grades rather than commodity material, and the range extends into fibre-filled PLA, PCTG and PC.",
+  "headquarters_country": "Austria",
+  "manufacturing_countries": [
+    "Austria"
+  ],
+  "brands": [
+    "nobufil",
+    "PLAx",
+    "ABSx",
+    "PCx"
+  ],
+  "endpoints": {
+    "website": "https://www.nobufil.com/en",
+    "store": "https://www.nobufil.com/en/shop",
+    "social": {
+      "instagram": "https://www.instagram.com/nobufil3d",
+      "linkedin": "https://www.linkedin.com/company/nobufil-gmbh"
+    }
+  },
+  "product_lines": [
+    {
+      "name": "PLAx",
+      "filament_ids": [
+        "pla-plus"
+      ],
+      "notes": "Impact-modified enhanced PLA; 'x' is nobufil's trade designation for its toughened grades, mapped to pla-plus on chemistry."
+    },
+    {
+      "name": "PLAx CF",
+      "filament_ids": [
+        "pla-cf"
+      ],
+      "notes": "Carbon-fibre-filled PLAx."
+    },
+    {
+      "name": "PLAx GF",
+      "filament_ids": [
+        "pla-gf"
+      ],
+      "notes": "Glass-fibre-filled PLAx."
+    },
+    {
+      "name": "PETG (incl. matte)",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "Standard PETG plus a matte-additive variant; pla-matte is PLA-based so only the base id applies."
+    },
+    {
+      "name": "nobufil ASA",
+      "filament_ids": [
+        "asa"
+      ],
+      "notes": "Standard ASA."
+    },
+    {
+      "name": "ABSx",
+      "filament_ids": [
+        "abs-plus"
+      ],
+      "notes": "Toughened/enhanced ABS grade."
+    },
+    {
+      "name": "PCTG",
+      "filament_ids": [
+        "pctg"
+      ],
+      "notes": "Glycol-modified copolyester, tougher and clearer than PETG."
+    },
+    {
+      "name": "PCx",
+      "filament_ids": [
+        "pc"
+      ],
+      "notes": "Enhanced polycarbonate grade; no blend composition published, so the base pc id applies."
+    },
+    {
+      "name": "Glow",
+      "filament_ids": [
+        "pla-glow"
+      ],
+      "notes": "Phosphorescent-pigment PLA."
+    }
+  ],
+  "makes_plates": false,
+  "price_tier": "premium",
+  "additional_notes": "Pricing roughly USD 28-60/kg. The recycled-feedstock positioning is central to the brand: material is sourced from European industrial plastic waste streams rather than virgin resin, and extrusion is done in-house in Krems.",
+  "provenance": {
+    "sources": [
+      "https://www.nobufil.com/en",
+      "https://kalkinemedia.com/news/world-news/nobufil-nachhaltiges-und-leistungsstarkes-filament-fur-den-3d-druck-made-in-austria"
+    ],
+    "last_verified": "2026-09-20",
+    "confidence": "high"
+  }
+}

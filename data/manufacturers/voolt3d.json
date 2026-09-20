@@ -1,0 +1,70 @@
+{
+  "id": "voolt3d",
+  "name": "Voolt3D (Voolt Industria e Comercio de Insumos para Manufatura Aditiva LTDA)",
+  "status": "researched",
+  "summary": "Brazilian filament manufacturer in Sao Bernardo do Campo, Sao Paulo (CNPJ 13.210.431/0001-24), claiming the largest domestic resin-to-spool production in Brazil. Range runs from decorative PLA finishes through PETG, ABS and a small engineering group (PA6, TPU, PCTG). A US reseller storefront operates as voolt3dusa.com.",
+  "headquarters_country": "Brazil",
+  "manufacturing_countries": [
+    "Brazil"
+  ],
+  "brands": [
+    "Voolt3D",
+    "V-Silk"
+  ],
+  "endpoints": {
+    "website": "https://voolt3d.com.br/",
+    "social": {
+      "facebook": "https://www.facebook.com/voolt3d/",
+      "linkedin": "https://www.linkedin.com/company/voolt-3d"
+    }
+  },
+  "product_lines": [
+    {
+      "name": "Voolt PLA (Solid / Velvet / V-Silk / TriColor / Neon / Stone / Wood)",
+      "filament_ids": [
+        "pla",
+        "pla-matte",
+        "pla-silk",
+        "pla-gradient",
+        "pla-stone",
+        "pla-wood"
+      ],
+      "notes": "The decorative core: Velvet is the matte grade, V-Silk the luster grade, TriColor a multi-colour strand, Stone and Wood mineral- and wood-filled."
+    },
+    {
+      "name": "Voolt PETG",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "Standard PETG."
+    },
+    {
+      "name": "Voolt ABS (incl. Metallic and Stone)",
+      "filament_ids": [
+        "abs"
+      ],
+      "notes": "Standard ABS with pigment/filler colourways; the catalog has no stone-filled ABS id, so only the matrix id applies."
+    },
+    {
+      "name": "Engineering (PA6, PA6-CF/graphene, TPU, PCTG)",
+      "filament_ids": [
+        "pa6",
+        "tpu",
+        "pctg"
+      ],
+      "notes": "Small technical group. The carbon/graphene-loaded nylon is listed without a stated fibre content and the graphene grade has no catalog id, so only pa6 is mapped."
+    }
+  ],
+  "makes_plates": false,
+  "price_tier": "budget",
+  "additional_notes": "Pricing roughly USD 18-24/kg equivalent. The 'largest domestic production' claim is the company's own. Resin-to-spool integration in Brazil is unusual - most Latin American brands import - which is the main reason Voolt3D is recorded with a confirmed manufacturing country.",
+  "provenance": {
+    "sources": [
+      "https://voolt3d.com.br/",
+      "https://www.econodata.com.br/consulta-empresa/13210431000124-voolt-industria-e-comercio-de-insumos-para-manufatura-aditiva-ltda"
+    ],
+    "last_verified": "2026-09-20",
+    "confidence": "medium",
+    "conflicts": "Scale claims ('largest in Brazil', full resin-to-spool integration) are self-reported. Whether the engineering grades are extruded domestically or imported was not established."
+  }
+}

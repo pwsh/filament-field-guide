@@ -1,0 +1,81 @@
+{
+  "id": "r3d",
+  "name": "R3D (Wuhu R3D Technology Co., Ltd.)",
+  "status": "researched",
+  "summary": "Chinese filament manufacturer in Wuhu, Anhui, founded 2014 and running at roughly 1,800 kg/day. Sells direct-to-consumer through r3dprint.com and through European resellers, with a branded range - RevoPLA, RadiantPLA, RevoPETG, RevoFlex, RuggedMaster - covering commodity through flexible and styrenic grades at budget pricing.",
+  "headquarters_country": "China",
+  "manufacturing_countries": [
+    "China"
+  ],
+  "brands": [
+    "R3D",
+    "RevoPLA",
+    "RadiantPLA",
+    "RevoPETG",
+    "RevoFlex",
+    "RuggedMaster"
+  ],
+  "endpoints": {
+    "website": "https://r3dprint.com/",
+    "social": {
+      "facebook": "https://www.facebook.com/p/Wuhu-R3D-Technology-Co-Ltd-100064129749047/"
+    }
+  },
+  "product_lines": [
+    {
+      "name": "RevoPLA",
+      "filament_ids": [
+        "pla",
+        "pla-plus"
+      ],
+      "notes": "Base and toughened PLA, the volume line."
+    },
+    {
+      "name": "RadiantPLA (silk / matte / wood / colour-change)",
+      "filament_ids": [
+        "pla-silk",
+        "pla-matte",
+        "pla-wood",
+        "pla-gradient"
+      ],
+      "notes": "Decorative PLA family spanning luster, matte, wood-filled and colour-changing finishes on a PLA base."
+    },
+    {
+      "name": "RevoPETG (incl. GF and marble)",
+      "filament_ids": [
+        "petg",
+        "petg-gf"
+      ],
+      "notes": "Standard PETG plus a glass-fibre grade; marble is a pigment effect on the base chemistry."
+    },
+    {
+      "name": "RevoFlex TPU 90A / 95A and PEBA 90A",
+      "filament_ids": [
+        "tpu-90a",
+        "tpu-95a",
+        "peba"
+      ],
+      "notes": "Two TPU shore grades plus a polyether block amide elastomer, which is a different chemistry from TPU."
+    },
+    {
+      "name": "RuggedMaster ABS / ASA",
+      "filament_ids": [
+        "abs",
+        "asa"
+      ],
+      "notes": "Styrenic engineering pair."
+    }
+  ],
+  "makes_plates": false,
+  "price_tier": "budget",
+  "additional_notes": "Pricing around USD 18/kg. Output figure (~1,800 kg/day) is the company's own. Despite the D2C storefront, much of the volume reaches Europe through resellers such as Filament2Print.",
+  "provenance": {
+    "sources": [
+      "https://filament2print.com/en/brand/127-r3d",
+      "https://r3dprint.com/pages/about-r3d"
+    ],
+    "last_verified": "2026-09-20",
+    "confidence": "medium",
+    "conflicts": "FALSE LEAD, recorded explicitly: Raise3D publishes a product URL containing the slug 'r3d-premium-petg'. That is Raise3D's own PETG and has nothing to do with Wuhu R3D Technology - the two companies are unrelated, and the slug must not be treated as evidence of a link or an OEM relationship. Separately, the ~1,800 kg/day capacity claim is self-reported."
+  }
+}

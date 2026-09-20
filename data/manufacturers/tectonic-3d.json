@@ -1,0 +1,110 @@
+{
+  "id": "tectonic-3d",
+  "name": "Tectonic 3D",
+  "status": "researched",
+  "summary": "Eindhoven-based engineering-filament company founded by former DSM materials veteran Patrick Duis, selling high-temperature and fibre-reinforced grades under named product families (AURA, ZEPHYR, KRATIR, VULCAN, PYRA, ATAR, ANASA, PROTEOS). In 2024 it took over the Syensqo (formerly Solvay) 3D printing filament portfolio, including production and supply, with medical grades excluded. UltiMaker is its exclusive distributor for North and South America.",
+  "headquarters_country": "Netherlands",
+  "manufacturing_countries": [
+    "Netherlands"
+  ],
+  "brands": [
+    "Tectonic 3D",
+    "AURA",
+    "ZEPHYR",
+    "KRATIR",
+    "VULCAN",
+    "PYRA",
+    "ATAR",
+    "ANASA",
+    "PROTEOS"
+  ],
+  "oem_relationships": [
+    {
+      "company": "UltiMaker",
+      "relationship": "distributes",
+      "notes": "UltiMaker is the exclusive distributor of Tectonic 3D materials in North and South America (announced 2024). Direction: UltiMaker distributes Tectonic's product, Tectonic manufactures it."
+    }
+  ],
+  "endpoints": {
+    "website": "https://tectonic-3d.com/",
+    "social": {
+      "linkedin": "https://www.linkedin.com/company/tectonic-3d/"
+    }
+  },
+  "product_lines": [
+    {
+      "name": "AURA",
+      "filament_ids": [
+        "abs",
+        "asa",
+        "cpe",
+        "petg",
+        "pla"
+      ],
+      "notes": "The commodity/general-purpose family spanning styrenics and copolyesters."
+    },
+    {
+      "name": "ZEPHYR / KRATIR (fibre-reinforced)",
+      "filament_ids": [
+        "pa11-cf",
+        "pa6-cf",
+        "peek-cf",
+        "pet-cf",
+        "pp-cf"
+      ],
+      "notes": "Carbon-fibre-reinforced grades from bio-based PA11 through PEEK."
+    },
+    {
+      "name": "VULCAN (high temperature)",
+      "filament_ids": [
+        "pekk",
+        "pei-ultem",
+        "ppsu",
+        "tpi",
+        "pc"
+      ],
+      "notes": "High-performance amorphous and semi-crystalline grades, largely inherited from the Syensqo/Solvay portfolio."
+    },
+    {
+      "name": "PYRA",
+      "filament_ids": [
+        "pc-abs"
+      ],
+      "notes": "Flame-retardant PC/ABS alloy."
+    },
+    {
+      "name": "ATAR",
+      "filament_ids": [
+        "ppe"
+      ],
+      "notes": "Polyphenylene ether with FST (fire, smoke, toxicity) rating for rail and aerospace interiors."
+    },
+    {
+      "name": "ANASA",
+      "filament_ids": [
+        "cope"
+      ],
+      "notes": "Thermoplastic copolyester elastomer (TPC), approximately 43% bio-based content."
+    },
+    {
+      "name": "PROTEOS",
+      "filament_ids": [
+        "pva"
+      ],
+      "notes": "High-temperature water-soluble support grade, usable to about 215 C - well above commodity PVA."
+    }
+  ],
+  "makes_plates": false,
+  "price_tier": "premium",
+  "additional_notes": "Pricing spans roughly USD 44 to 973/kg across commodity AURA grades and PEEK/PEKK-class VULCAN materials. PORTFOLIO TAKEOVER: in 2024 Tectonic 3D took over Syensqo's (formerly Solvay's) 3D printing filament portfolio, acquiring both production and supply responsibility, with medical grades excluded from the transfer. This is not captured as an oem_relationships edge because none of the enum values describes an asset/portfolio acquisition - it is neither a white-label arrangement, a corporate parent relationship, nor distribution - so it is recorded here instead and flagged for a Fable-level decision on whether the vocabulary needs an 'acquired-portfolio-from' value. The VULCAN and ZEPHYR/KRATIR high-performance grades are largely the ex-Solvay materials. The exact Dutch legal entity was not confirmed.",
+  "provenance": {
+    "sources": [
+      "https://tectonic-3d.com/",
+      "https://3dprint.com/325903/tectonic-3d-takes-over-solvay-3d-printing-materials-portfolio/",
+      "https://3dprint.com/325313/ultimaker-exclusive-north-and-south-american-distributor-for-tectonic-3d/amp/"
+    ],
+    "last_verified": "2026-09-20",
+    "confidence": "medium",
+    "conflicts": "The legal entity behind the Tectonic 3D brand was not confirmed. Netherlands is recorded as the manufacturing country on the basis of the company's Eindhoven production and the takeover of Syensqo's production responsibility, but no plant address was published; whether every ex-Solvay grade is now physically extruded in the Netherlands is unverified."
+  }
+}

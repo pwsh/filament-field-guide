@@ -367,6 +367,11 @@
       "manufacturer": "sunlu",
       "product": "PLA Wood",
       "notes": "Wood-flour-filled PLA"
+    },
+    {
+      "manufacturer": "extrudr",
+      "product": "Flax",
+      "notes": "Flax-fibre-filled PLA, not wood; density 1.45 g/cm3."
     }
   ]
 }

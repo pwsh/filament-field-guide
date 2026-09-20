@@ -1,0 +1,181 @@
+{
+    "manufacturer": "Kingroon",
+    "filaments": [
+        {
+            "name": "Basic {color_name}",
+            "material": "PETG",
+            "density": 1.26,
+            "weights": [
+                {
+                    "weight": 1000
+                }
+            ],
+            "diameters": [
+                1.75
+            ],
+            "extruder_temp_range": [
+                230,
+                250
+            ],
+            "bed_temp_range": [
+                70,
+                90
+            ],
+            "colors": [
+                {
+                    "name": "Black",
+                    "hex": "000000"
+                },
+                {
+                    "name": "White",
+                    "hex": "ffffff"
+                },
+                {
+                    "name": "Gray",
+                    "hex": "808285"
+                },
+                {
+                    "name": "Red",
+                    "hex": "c8102e"
+                },
+                {
+                    "name": "Blue",
+                    "hex": "1c50a0"
+                },
+                {
+                    "name": "Yellow",
+                    "hex": "f2c300"
+                },
+                {
+                    "name": "Green",
+                    "hex": "1e8449"
+                },
+                {
+                    "name": "Orange",
+                    "hex": "ef7622"
+                },
+                {
+                    "name": "Silver",
+                    "hex": "c0c0c4"
+                },
+                {
+                    "name": "Pink",
+                    "hex": "e8739f"
+                },
+                {
+                    "name": "Transparent",
+                    "hex": "f5f5f5cc",
+                    "translucent": true
+                },
+                {
+                    "name": "Purple",
+                    "hex": "7b3fa0"
+                },
+                {
+                    "name": "Brown",
+                    "hex": "6b4226"
+                }
+            ]
+        },
+        {
+            "name": "PLUS {color_name}",
+            "material": "PLA+",
+            "density": 1.24,
+            "weights": [
+                {
+                    "weight": 1000
+                },
+                {
+                    "weight": 10000
+                }
+            ],
+            "diameters": [
+                1.75
+            ],
+            "colors": [
+                {
+                    "name": "Blue",
+                    "hex": "1c50a0"
+                },
+                {
+                    "name": "White",
+                    "hex": "ffffff"
+                },
+                {
+                    "name": "Black",
+                    "hex": "000000"
+                },
+                {
+                    "name": "Grey",
+                    "hex": "808285"
+                },
+                {
+                    "name": "Red",
+                    "hex": "c8102e"
+                }
+            ]
+        },
+        {
+            "name": "{color_name}",
+            "material": "TPU-95A",
+            "density": 1.21,
+            "weights": [
+                {
+                    "weight": 1000
+                }
+            ],
+            "diameters": [
+                1.75
+            ],
+            "colors": [
+                {
+                    "name": "Black",
+                    "hex": "000000"
+                },
+                {
+                    "name": "White",
+                    "hex": "ffffff"
+                },
+                {
+                    "name": "Blue",
+                    "hex": "1c50a0"
+                },
+                {
+                    "name": "Red",
+                    "hex": "c8102e"
+                },
+                {
+                    "name": "Green",
+                    "hex": "1e8449"
+                }
+            ]
+        },
+        {
+            "name": "{color_name}",
+            "material": "ABS",
+            "density": 1.04,
+            "weights": [
+                {
+                    "weight": 2000
+                }
+            ],
+            "diameters": [
+                1.75
+            ],
+            "colors": [
+                {
+                    "name": "White",
+                    "hex": "ffffff"
+                },
+                {
+                    "name": "Black",
+                    "hex": "000000"
+                },
+                {
+                    "name": "Gray",
+                    "hex": "808285"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,42 @@
+{
+  "id": "printy-please",
+  "name": "Printy Please (Crucial IT Solutions Ltd)",
+  "status": "researched",
+  "summary": "Small UK retailer in Ipswich (registered as Crucial IT Solutions Ltd, company no. 13682545) specialising in Voron build parts, with a boutique cat-themed sparkle ABS line sold under the Cat Yarn name and its own CatBed PEI build surfaces. Also resells Bondtech and LDO hardware. Filament is a side line rather than the core business.",
+  "headquarters_country": "United Kingdom",
+  "manufacturing_countries": [],
+  "brands": [
+    "Printy Please",
+    "Cat Yarn",
+    "CatBed"
+  ],
+  "endpoints": {
+    "website": "https://www.printyplease.uk/",
+    "store": "https://www.printyplease.uk/CatYarn",
+    "social": {
+      "x": "https://x.com/printyplease"
+    }
+  },
+  "product_lines": [
+    {
+      "name": "Cat Yarn ABS Sparkle",
+      "filament_ids": [
+        "abs"
+      ],
+      "notes": "Glitter/sparkle-particle ABS in a small colour range; the catalog has no glitter ABS id (pla-glitter is PLA-based), so only the matrix id applies."
+    }
+  ],
+  "makes_plates": true,
+  "price_tier": "premium",
+  "additional_notes": "Cat Yarn sells at roughly GBP 18-26 per spool, premium for ABS. CatBed PEI spring-steel build surfaces are sold alongside; no specific plate id is claimed here because the surface finish (smooth vs textured) was not established, so plate_ids is left unset. Printy Please also resells Bondtech and LDO parts - a straightforward retail relationship in hardware, not filament, so it is not recorded as an OEM edge. manufacturing_countries is empty: no extruder is named for Cat Yarn and there is no evidence of UK extrusion.",
+  "provenance": {
+    "sources": [
+      "https://www.printyplease.uk/",
+      "https://www.printyplease.uk/CatYarn",
+      "https://uk.trustpilot.com/review/printyplease.uk"
+    ],
+    "last_verified": "2026-09-20",
+    "confidence": "medium",
+    "conflicts": "Cat Yarn's extruder is undisclosed; a UK micro-retailer commissioning sparkle ABS almost certainly buys it in, but no supplier was identified."
+  }
+}

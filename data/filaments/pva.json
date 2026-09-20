@@ -297,6 +297,11 @@
       "manufacturer": "ultimaker",
       "product": "UltiMaker PVA",
       "notes": "Water-soluble polyvinyl alcohol support."
+    },
+    {
+      "manufacturer": "Tectonic 3D",
+      "product": "PROTEOS / PROTEOS HT",
+      "notes": "HT grade rated to 215 C for PEI/PEEK support."
     }
   ]
 }

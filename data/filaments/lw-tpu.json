@@ -219,27 +219,28 @@
       "https://colorfabb.com/varioshore-tpu-black",
       "https://www.3djake.com/colorfabb/varioshore-tpu-black",
       "https://siraya.tech/products/flex-tpu-air-65a-82a-foaming-flexible-filament",
-      "https://www.esun3d.com/peba-lw-product/"
+      "https://www.esun3d.com/peba-lw-product/",
+      "https://siraya.tech/collections/tpu-filament"
     ],
-    "last_verified": "2026-08-01",
+    "last_verified": "2026-09-20",
     "confidence": "low",
-    "conflicts": "Expansion ratio disagrees between the datasheet and independent measurement: colorFabb states up to 1.6x volume, CNC Kitchen measured roughly 2x (~100 %) at 220 \u00b0C on their setup \u2014 the gap is real and printer-dependent, so both are recorded rather than averaged. Foamed density is derived from those expansion figures (~0.6-0.75 g/cm\u00b3) and is published by nobody. Category chemistry is the other unresolved item: eSUN PEBA-LW is named like a foaming TPU and was originally grouped with this category, but eSUN's own page identifies PEBA as the base polymer, so it is excluded here and cross-referenced to peba \u2014 a decision that rests on one manufacturer page. A fourth genuine foaming-TPU manufacturer beyond colorFabb and Siraya Tech was not independently confirmed in this pass; the Fiberlogy, QIDI and Rosa3D products listed as trade names come from the catalog's own coverage-gap cross-walk rather than from datasheets read in this research (unverified). Drying schedule, storage, enclosure/chamber behaviour, shrinkage, HDT, max service temperature, Tg, AMS behaviour, build-plate behaviour, UV/weather/water tolerance and the whole emissions profile are unverified \u2014 inherited from base TPU or inferred by mechanism. Confidence is 'low' on that basis, despite the unusually good independent mechanical data from CNC Kitchen."
+    "conflicts": "Expansion ratio disagrees between the datasheet and independent measurement: colorFabb states up to 1.6x volume, CNC Kitchen measured roughly 2x (~100 %) at 220 \u00b0C on their setup \u2014 the gap is real and printer-dependent, so both are recorded rather than averaged. Foamed density is derived from those expansion figures (~0.6-0.75 g/cm\u00b3) and is published by nobody. Category chemistry is the other unresolved item: eSUN PEBA-LW is named like a foaming TPU and was originally grouped with this category, but eSUN's own page identifies PEBA as the base polymer, so it is excluded here and cross-referenced to peba \u2014 a decision that rests on one manufacturer page. A fourth genuine foaming-TPU manufacturer beyond colorFabb and Siraya Tech was not independently confirmed in this pass; the Fiberlogy, QIDI and Rosa3D products listed as trade names come from the catalog's own coverage-gap cross-walk rather than from datasheets read in this research (unverified). Drying schedule, storage, enclosure/chamber behaviour, shrinkage, HDT, max service temperature, Tg, AMS behaviour, build-plate behaviour, UV/weather/water tolerance and the whole emissions profile are unverified \u2014 inherited from base TPU or inferred by mechanism. Confidence is 'low' on that basis, despite the unusually good independent mechanical data from CNC Kitchen. Housekeeping 2026-09-20: the two Siraya Tech trade names now carry the catalog manufacturer id 'siraya-tech' rather than a display name, because a siraya-tech manufacturer entry was created in this pass; the 'not a catalog manufacturer id' caveat that accompanied them has been dropped as obsolete. The colorFabb varioShore duplicate listing on the base tpu entry has been confirmed removed."
   },
   "trade_names": [
     {
-      "manufacturer": "Siraya Tech",
+      "manufacturer": "siraya-tech",
       "product": "Flex TPU Air (65A-82A)",
-      "notes": "Not a catalog manufacturer id \u2014 display name. Genuine foamed TPU with an operator-set 65A-82A range, directly comparable to varioShore."
+      "notes": "Genuine foamed TPU with an operator-set 65A-82A range, directly comparable to varioShore."
     },
     {
-      "manufacturer": "Siraya Tech",
+      "manufacturer": "siraya-tech",
       "product": "Roamr TPU Air HR (85A)",
-      "notes": "Not a catalog manufacturer id \u2014 display name. Higher-rebound foamed TPU at 85A; sits at the firm end of the foaming-flexible category."
+      "notes": "Higher-rebound foamed TPU at 85A; sits at the firm end of the foaming-flexible category."
     },
     {
       "manufacturer": "colorfabb",
       "product": "varioShore TPU",
-      "notes": "The reference product for this entry: nominal 92A unfoamed, 1.2 g/cm\u00b3 solid, 195-260 \u00b0C with foaming from ~230 \u00b0C, up to 1.6x expansion per TDS (~2x measured independently), tensile 24 MPa solid / 12 MPa foamed at 465 % / 450 % elongation, measured 65A when foamed. Currently also listed as a trade name on the base tpu entry with a note that no fixed-durometer id fitted \u2014 that listing is superseded by this entry and should be moved here."
+      "notes": "The reference product for this entry: nominal 92A unfoamed, 1.2 g/cm\u00b3 solid, 195-260 \u00b0C with foaming from ~230 \u00b0C, up to 1.6x expansion per TDS (~2x measured independently), tensile 24 MPa solid / 12 MPa foamed at 465 % / 450 % elongation, measured 65A when foamed. Formerly also listed as a trade name on the base tpu entry with a note that no fixed-durometer id fitted; that listing has been removed and this entry now owns the product (verified 2026-09-20)."
     },
     {
       "manufacturer": "fiberlogy",

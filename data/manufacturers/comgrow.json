@@ -25,7 +25,7 @@
     {
       "company": "Creality",
       "relationship": "manufactured-by",
-      "notes": "Reciprocal of creality.json edge; user-verified (research/verified-oem-relationships.md) — Comgrow resells Creality filament. Added in Phase E reciprocity pass."
+      "notes": "Reciprocal of creality.json edge; user-verified (research/verified-oem-relationships.md) \u2014 Comgrow resells Creality filament. Added in Phase E reciprocity pass."
     }
   ],
   "endpoints": {
@@ -45,7 +45,7 @@
       "filament_ids": [
         "pla"
       ],
-      "notes": "Plain Comgrow-branded PLA, sold as a 6-pack of primary colours. Silk/chameleon/glow variants seen in the store are largely resold Creality/Sovol stock rather than Comgrow-branded."
+      "notes": "Own-branded Comgrow PLA, confirmed 2026-09-20 on comgrow.com/collections/filament, sold as a 6-pack of primary colours. This is genuinely Comgrow-branded stock rather than resold Creality/Sovol product."
     },
     {
       "name": "Hyper Filament PLA",
@@ -60,7 +60,7 @@
       "filament_ids": [
         "pla-silk"
       ],
-      "notes": "Silk-additive PLA on a tri-colour spool; multi-colour is a spool feature, not a chemistry change."
+      "notes": "Silk-additive PLA on a tri-colour spool (Gold, Green, Black), confirmed 2026-09-20 as own-branded Comgrow stock on comgrow.com, sold singly and as a 4-pack of 1 kg spools. Multi-colour is a spool feature, not a chemistry change. Listed under a PLA+ material label in aggregator data, but no toughened-PLA claim is made on the Comgrow listing itself, so the pla-silk mapping is kept."
     },
     {
       "name": "PETG",
@@ -80,7 +80,7 @@
   ],
   "makes_plates": true,
   "price_tier": "budget",
-  "additional_notes": "Registered address RM 023, 9/F BLK G Kwai Shing Industrial Building Stage 2, 42-46 Tai Lin Pai Road, Kwai Chung, NT, Hong Kong; legal entity Shenzhen ZCSW Technology Co., Ltd. Sells PEI plates, double-sided build plates and flexible steel plates, though these appear to be largely Creality-branded rather than Comgrow-branded, so makes_plates=true reflects that it sells plates rather than that it produces them; no plate_ids are asserted. Also retails Creality (Ender, K-series) and Sovol printers and SH01-SH03 filament dryers (from $59). Manufacturing origin is China for both own-brand and resold Creality filament.",
+  "additional_notes": "Registered address RM 023, 9/F BLK G Kwai Shing Industrial Building Stage 2, 42-46 Tai Lin Pai Road, Kwai Chung, NT, Hong Kong; legal entity Shenzhen ZCSW Technology Co., Ltd. Sells PEI plates, double-sided build plates and flexible steel plates, though these appear to be largely Creality-branded rather than Comgrow-branded, so makes_plates=true reflects that it sells plates rather than that it produces them; no plate_ids are asserted. Also retails Creality (Ender, K-series) and Sovol printers and SH01-SH03 filament dryers (from $59). Manufacturing origin is China for both own-brand and resold Creality filament. Own-brand confirmation 2026-09-20: comgrow.com/collections/filament was reviewed and Comgrow does carry a small genuinely own-branded filament line alongside the Creality stock it resells \u2014 specifically a 6-pack of primary-colour PLA and a Tri-Color Silk PLA sold singly and in 4-packs. This refines rather than overturns the reseller-first characterisation: the own-brand range is thin, publishes no TDS, and sits beside a much larger catalog of resold Creality and Sovol product, but it is not nothing, and 'Comgrow only rebrands Creality' would be too strong a reading. Who extrudes the own-branded spools is still not established \u2014 Creality remains the obvious candidate given the verified reselling relationship and the shared 'Hyper' naming, but no source states it.",
   "provenance": {
     "sources": [
       "https://www.comgrow.com/pages/about-us",
@@ -92,8 +92,8 @@
       "https://www.amazon.com/Comgrow-Filament-Precision-Dimensional-Accuracy/dp/B0DBDFGB5W",
       "https://www.amazon.com/Comgrow-Filament-Printing-Flexible-Dimensional/dp/B0DF4TY2GD"
     ],
-    "last_verified": "2026-07-31",
+    "last_verified": "2026-09-20",
     "confidence": "medium",
-    "conflicts": "Brand identity is unstable: a 2024 company TikTok announcement describes a Comgrow/Sovol merger with Comgrow redirecting to Sovol, which is independently unverified and may make this entry a historical rather than a live brand. Whether Comgrow-branded filament is also Creality-produced (as opposed to only the explicitly resold Creality filament) is not established, and the build plates it sells are Creality-branded."
+    "conflicts": "Brand identity is unstable: a 2024 company TikTok announcement describes a Comgrow/Sovol merger with Comgrow redirecting to Sovol, which is independently unverified and may make this entry a historical rather than a live brand. Whether Comgrow-branded filament is also Creality-produced (as opposed to only the explicitly resold Creality filament) is not established, and the build plates it sells are Creality-branded. Own-brand scope, clarified 2026-09-20: a review of comgrow.com/collections/filament confirmed a small own-branded Comgrow line (6-pack primary-colour PLA, Tri-Color Silk PLA singly and in 4-packs) in addition to the resold Creality filament, so the entry's reseller-first framing is retained but qualified. What remains open is unchanged and is the more consequential question: whether those own-branded spools are themselves Creality-produced. No TDS exists for any own-branded line, so nothing in the specifications distinguishes them."
   }
 }

@@ -1,0 +1,184 @@
+{
+  "id": "peek-cf",
+  "name": "PEEK-CF (Carbon-Fiber-Filled PEEK)",
+  "aliases": [
+    "PEEK CF",
+    "CF-PEEK",
+    "PEEK+CF10",
+    "CarbonX PEEK+CF10",
+    "Carbon fiber PEEK"
+  ],
+  "status": "researched",
+  "base_type": "peek",
+  "variation_kind": "carbon-fiber-filled",
+  "polymer_class": "high-performance",
+  "chemical_makeup": "The same semi-crystalline polyaryletherketone backbone as the peek grade \u2014 aromatic rings joined by alternating ether and ketone linkages \u2014 compounded with chopped carbon fiber, disclosed at 10 wt% by 3DXTech (CarbonX PEEK+CF10). The fiber raises stiffness and, more usefully for printing, nucleates crystallisation more evenly, which is why the filled grade warps somewhat less than unfilled peek despite identical polymer chemistry.",
+  "summary": "PEEK with the stiffness problem solved and the printability problem unchanged. Deltas vs the peek grade: tensile rises to 105-119 MPa, HDT climbs to 265 \u00b0C @0.45 MPa against ~145 \u00b0C unfilled, and warp eases slightly because the fiber nucleates crystallisation more evenly \u2014 paid for with a mandatory hardened nozzle, worse layer adhesion in Z, and a price around $715/kg. Everything else is unchanged and unforgiving: a 400 \u00b0C industrial hotend no consumer machine can reach, an actively heated 70-150 \u00b0C chamber that is genuinely mandatory, and a 120 \u00b0C drying cycle.",
+  "printing": {
+    "nozzle_temp_c": {
+      "min": 380,
+      "max": 410,
+      "recommended": 400
+    },
+    "bed_temp_c": {
+      "min": 120,
+      "max": 160,
+      "recommended": 140
+    },
+    "ambient_temp_c": {
+      "min": 70,
+      "max": 150,
+      "recommended": 120
+    },
+    "enclosure_recommended": true,
+    "heated_chamber_required": true,
+    "enclosure_open_for_cooling": false,
+    "requires_hardened_nozzle": true,
+    "part_cooling_fan_pct": {
+      "min": 0,
+      "max": 5,
+      "recommended": 0
+    },
+    "notes": "3DXTech's 380-410 \u00b0C window is recorded and is consistent with the unfilled peek grade's 375-410 \u00b0C. Tectonic's KRATIR rPEEK CF listing gives 250-270 \u00b0C, which is roughly 140 \u00b0C below any plausible PEEK melt and is treated as a datasheet anomaly or a different process entirely rather than a competing specification (see conflicts). heated_chamber_required is true and means it: PEEK crystallises almost immediately on cooling and 70-150 \u00b0C ambient is what stands between a part and severe warp with delamination. Part cooling at or near zero for the same reason. A hardened nozzle is mandatory here where it is optional for unfilled peek \u2014 carbon fiber destroys brass \u2014 with 0.4 mm the practical minimum (Tectonic specifies 0.6 mm for its grade). This is industrial hardware only: the 400 \u00b0C requirement is above the X1E/H2D high-temp hotend's ~350 \u00b0C ceiling."
+  },
+  "feeding": {
+    "drive_system": "direct-drive-recommended",
+    "ams_compatible": "no",
+    "feeding_assistant_recommended": false,
+    "notes": "Rigid and easy to push mechanically, but direct drive is strongly preferred \u2014 a long Bowden path fights the extrusion pressure needed at 400 \u00b0C with a fiber-loaded melt. AMS is a flat 'no' on two independent grounds: the process temperature is far outside any material station's range, and the 120 \u00b0C drying specification exceeds what an AMS-HT dryer delivers. Feed from a heated drybox on the industrial machine."
+  },
+  "drying": {
+    "required_before_use": "always",
+    "temp_c": {
+      "min": 120,
+      "max": 120,
+      "recommended": 120
+    },
+    "time_hours": {
+      "min": 4,
+      "max": 8,
+      "recommended": 4
+    },
+    "methods": [
+      "high-temperature filament dryer rated to 120 \u00b0C",
+      "convection/blast oven at 120 \u00b0C",
+      "print directly from a heated drybox"
+    ],
+    "dryness_validation": "No popping, hissing or visible steam at the nozzle and no foaming in the purge \u2014 at 400 \u00b0C trace moisture flashes to steam violently, making the audible test unusually reliable. Extrudate should be a continuous strand, not a blistered one.",
+    "notes": "3DXTech specifies 120 \u00b0C for 4 h, matching the unfilled peek grade exactly. Tectonic specifies 80 \u00b0C for 6-8 h for its recycled grade \u2014 40 \u00b0C cooler and twice as long (see conflicts). Recorded 'always' and, as with unfilled PEEK, the practical rule is that the material is stored and printed from a dry box rather than dried once and left out: moisture that would merely string in PETG bubbles catastrophically at 400 \u00b0C."
+  },
+  "storage": {
+    "recommendations": "Sealed with desiccant at all times and fed from a heated drybox during the print. Equilibrium moisture uptake is modest, but the consequence at 400 \u00b0C is severe, so the drybox is part of the machine rather than an accessory.",
+    "max_humidity_pct": 20,
+    "hygroscopy": "high"
+  },
+  "price": {
+    "usd_per_kg_low": 715,
+    "usd_per_kg_high": 715,
+    "notes": "Approximately $715/kg for the 3DXTech CarbonX PEEK+CF10 1 kg spool \u2014 a single-vendor datapoint. That sits within the unfilled peek grade's $400-900/kg band rather than above it, so the fiber loading does not carry a clear premium at this tier. The broader market band is unverified."
+  },
+  "use_cases": {
+    "recommended": [
+      "metal replacement where stiffness-to-weight is the driver",
+      "aerospace structural brackets and fittings",
+      "semiconductor and wafer-handling fixtures",
+      "oil and gas downhole and sealing components",
+      "parts facing combined chemical attack and sustained high temperature",
+      "high-temperature jigs and tooling above what pei-ultem can hold"
+    ],
+    "not_recommended": [
+      "any consumer printer \u2014 400 \u00b0C is above every stock and high-temp consumer hotend",
+      "cost-sensitive work of any kind",
+      "parts loaded in Z \u2014 fiber reinforcement makes the anisotropy worse, not better",
+      "large flat geometry (immediate crystallisation drives warp even with a chamber)",
+      "brass-nozzle machines",
+      "prototyping and iteration \u2014 failed prints cost hundreds of dollars"
+    ]
+  },
+  "suitability": {
+    "food_contact": "no",
+    "load_bearing": "high",
+    "high_temperature": "yes",
+    "outdoor": "yes"
+  },
+  "properties": {
+    "density_g_cm3": 1.39,
+    "grams_per_100cm3": 139,
+    "cm3_per_100g": 71.9,
+    "glass_transition_c": 143,
+    "heat_deflection_c": 265,
+    "tensile_strength_mpa": {
+      "min": 105,
+      "max": 119
+    },
+    "notes": "HDT 265 \u00b0C at 0.45 MPa (3DXTech) against roughly 145 \u00b0C for the unfilled peek grade \u2014 the largest HDT gain from fiber loading anywhere in this catalog, and the main reason to choose the filled grade. Tectonic's recycled grade quotes 270 \u00b0C at the harsher 1.8 MPa load, which would be a stronger result still (see conflicts). Tensile 105-119 MPa. Tg 143 \u00b0C is unchanged from unfilled PEEK, as expected \u2014 fiber does not move the glass transition, only the load-bearing behaviour above it. Density 1.39 g/cm\u00b3 (Tectonic gives 1.36 for its grade), against 1.30 for unfilled peek, the expected increase from a ~10 wt% fiber loading. Melting point 343 \u00b0C carries over from the base grade. Shrinkage is not published and is left blank, but as with unfilled PEEK it is driven by near-immediate crystallisation rather than simple thermal contraction, which is what makes chamber control mandatory."
+  },
+  "scores": {
+    "ease_of_print": 1,
+    "dimensional_stability": 7,
+    "warp_tendency": 8,
+    "layer_adhesion": 4,
+    "compression_strength": 10,
+    "temperature_tolerance": 10,
+    "uv_tolerance": 6,
+    "weather_tolerance": 8,
+    "water_tolerance": 9
+  },
+  "compatibility": {
+    "bonds_with": [],
+    "support_materials": [
+      "pekk"
+    ],
+    "usable_as_support_for": [],
+    "notes": "Inherits the base peek grade's position exactly. No soluble support chemistry survives anywhere near 380-410 \u00b0C \u2014 pva and bvoh degrade more than 200 \u00b0C below this window \u2014 so the options are self-supporting geometry or a breakaway PAEK interface. pekk is listed as a plausible breakaway support partner on shared PAEK chemistry and overlapping melt behaviour, carried over from the peek entry, but no source in this pass tested that interface for the filled grade specifically (unverified). It bonds to nothing in the commodity half of this catalog; pla, petg, abs, asa, pc, pa and pp are all destroyed on contact."
+  },
+  "alternatives": [
+    {
+      "filament_id": "peek",
+      "reason": "Unfilled PEEK at a similar or lower price with a better layer bond (adhesion 6 vs 4) and no hardened nozzle \u2014 giving up roughly 120 \u00b0C of HDT (145 vs 265 \u00b0C) and the stiffness that is the whole point of the filled grade."
+    },
+    {
+      "filament_id": "pekk",
+      "reason": "The more printable member of the PAEK family at $495-700: 345-375 \u00b0C rather than 400 \u00b0C, better layer adhesion and less warp, with Tg 162 \u00b0C against 143 \u00b0C \u2014 but nothing like the filled grade's stiffness or its 265 \u00b0C HDT."
+    },
+    {
+      "filament_id": "ppa-cf",
+      "reason": "A fraction of the price ($172-266 vs ~$715) and printable on a good enclosed machine at 280-315 \u00b0C with no industrial hotend \u2014 HDT 227 \u00b0C gets surprisingly close, but continuous service and chemical resistance are not comparable, and PPA is far more moisture-sensitive."
+    }
+  ],
+  "emissions": {
+    "voc_level": "moderate",
+    "particulate_level": "high",
+    "primary_emissions": [
+      "ultrafine particles",
+      "respirable carbon fiber dust (post-processing)",
+      "unspecified high-temperature process VOCs"
+    ],
+    "ventilation": "required",
+    "notes": "No PEEK-CF-specific VOC or particulate measurement was found. Carried from the unfilled peek entry, where the reasoning is that emission scales steeply with process temperature and 380-410 \u00b0C is near the top of this catalog's range, so ventilation is 'required' \u2014 enclosure plus external exhaust, or serious HEPA-plus-carbon filtration. VOC is 'moderate' rather than 'high' because PEEK is thermally stable within its own processing window. The one addition over the unfilled grade is post-processing carbon fiber dust, which is a respiratory hazard the unfilled material does not have. Both printing levels are inferred, not measured (unverified)."
+  },
+  "safety_notes": "Abrasive: a hardened steel or ruby nozzle is mandatory and brass will not survive a spool. Wear respiratory protection with dust capture when sanding or machining printed parts \u2014 carbon fiber fines are a respiratory irritant. A 400 \u00b0C hotend, a 160 \u00b0C bed and a chamber holding 150 \u00b0C are all severe burn hazards, and the chamber must be allowed to cool and vent before the door is opened. Do not attempt to push a hotend beyond its rated temperature to reach these numbers. Not food-contact suitable: no certified grade was found and the fiber-roughened surface compounds the usual FDM layer-crevice problem.",
+  "additional_notes": "Choose the filled grade over unfilled peek when stiffness or heat-under-load is the binding constraint, and accept that layer adhesion gets worse rather than better \u2014 design the part so the load never runs through Z. Tectonic's KRATIR rPEEK CF is notable as a 100 % recycled PEEK-CF feedstock, which is unusual at this tier, but its published process figures do not reconcile with any other PEEK source and should be checked directly with the vendor before use.",
+  "provenance": {
+    "sources": [
+      "https://www.3dxtech.com/products/carbonx-peek-cf10-1",
+      "https://cdn.shopify.com/s/files/1/0625/4185/6821/files/CarbonX_CF_PEEK_TDS_v3.pdf",
+      "https://3dgbire.com/products/tectonic-kratir-rpeek-cf"
+    ],
+    "last_verified": "2026-09-20",
+    "confidence": "medium",
+    "conflicts": "The Tectonic KRATIR rPEEK CF listing disagrees with 3DXTech on four figures and one of them is not reconcilable. Nozzle: Tectonic lists 250-270 \u00b0C against 3DXTech's 380-410 \u00b0C \u2014 roughly 140 \u00b0C apart and far below the 343 \u00b0C melting point of PEEK, so it is treated as a datasheet anomaly or a listing for a materially different process rather than a competing specification; 3DXTech is treated as authoritative throughout. Density: 1.39 (3DXTech) against 1.36 (Tectonic); 1.39 is recorded and the derived weight/volume figures follow it. HDT: 265 \u00b0C @0.45 MPa (3DXTech) against 270 \u00b0C @1.8 MPa (Tectonic) \u2014 different load conditions, not directly comparable, and the 3DXTech figure is recorded because it matches the load condition used elsewhere in this catalog. Drying: 120 \u00b0C / 4 h (3DXTech) against 80 \u00b0C / 6-8 h (Tectonic). Minimum nozzle diameter: 0.4 mm (3DXTech) against 0.6 mm (Tectonic). Price rests on one 3DXTech 1 kg listing. Fiber loading is disclosed only by 3DXTech (10 wt%). Emissions are inferred from the unfilled peek entry with no measurement for either grade. The pekk breakaway-support pairing is reasoned from shared PAEK chemistry and was not tested for the filled grade."
+  },
+  "trade_names": [
+    {
+      "manufacturer": "3dxtech",
+      "product": "CarbonX PEEK+CF10",
+      "notes": "10 wt% chopped carbon fiber; the source of this entry's recorded figures (380-410 \u00b0C, HDT 265 \u00b0C @0.45 MPa, density 1.39)."
+    },
+    {
+      "manufacturer": "Tectonic 3D",
+      "product": "KRATIR rPEEK CF",
+      "notes": "100 % recycled PEEK-CF feedstock. Published figures diverge sharply from 3DXTech's, including a 250-270 \u00b0C nozzle range below PEEK's melting point (see conflicts)."
+    }
+  ]
+}

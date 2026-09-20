@@ -1,0 +1,184 @@
+{
+  "id": "ppe",
+  "name": "PPE/PS (Modified Polyphenylene Ether)",
+  "aliases": [
+    "PPE",
+    "PPO",
+    "Modified PPO",
+    "Noryl",
+    "PPE/PS blend",
+    "ThermaX PPE/PS"
+  ],
+  "status": "researched",
+  "base_type": null,
+  "variation_kind": null,
+  "polymer_class": "high-performance",
+  "chemical_makeup": "Polyphenylene ether / polystyrene blend (modified PPO, Noryl-type). Neat PPE is effectively unprocessable by melt extrusion, so every commercial grade is alloyed with polystyrene, which drops the melt viscosity into a printable range while diluting the heat resistance. The resulting blend is fully amorphous \u2014 the reason it warps far less than the semi-crystalline members of the high-performance group \u2014 and, unusually among engineering plastics, it has essentially no ester or amide linkages to hydrolyse, which is the basis of its standout resistance to hot water and steam.",
+  "summary": "The hydrolysis-proof, low-warp member of the high-performance group. It will sit in boiling water long-term without losing properties, holds tolerance better than anything else printing above 300 \u00b0C, and carries UL94 V-0 with a UV F1 rating \u2014 at roughly $104/kg, a fraction of the PAEK tier. What it does not offer is strength: 67 MPa tensile puts it in PETG territory, so it is chosen for stability and environment, not for load. Deltas vs pc: better hydrolytic and dimensional behaviour and a V-0 rating, but a 310 \u00b0C nozzle and a 120 \u00b0C bed that most machines cannot reach, and a much thinner ecosystem.",
+  "printing": {
+    "nozzle_temp_c": {
+      "min": 290,
+      "max": 320,
+      "recommended": 310
+    },
+    "bed_temp_c": {
+      "min": 90,
+      "max": 120,
+      "recommended": 120
+    },
+    "ambient_temp_c": {
+      "min": 50,
+      "max": 80,
+      "recommended": 65
+    },
+    "enclosure_recommended": true,
+    "heated_chamber_required": false,
+    "enclosure_open_for_cooling": false,
+    "requires_hardened_nozzle": false,
+    "part_cooling_fan_pct": {
+      "min": 0,
+      "max": 20,
+      "recommended": 0
+    },
+    "notes": "290-320 \u00b0C nozzle and a 90-120 \u00b0C bed put this above every commodity machine and outside a stock Bambu hotend, though within reach of an X1E/H2D-class high-temperature hotend and most well-built enclosed printers with a high-temp bed. A 50-80 \u00b0C chamber is recommended and helps first layers on large footprints, but heated_chamber_required is false \u2014 being amorphous, PPE/PS does not carry the crystallisation-driven shrinkage that makes chamber heat mandatory for peek or pc-pbt. Part cooling off or very low. Unfilled, so a stock nozzle is fine. Filamentcheatsheet lists 195-220 \u00b0C for what appears to be the same product; that figure is roughly 100 \u00b0C below the manufacturer TDS and is treated as an aggregation error (see conflicts)."
+  },
+  "feeding": {
+    "drive_system": "direct-drive-recommended",
+    "ams_compatible": "no",
+    "feeding_assistant_recommended": false,
+    "notes": "Rigid, unfilled and non-abrasive, so nothing in the feed path objects mechanically, but direct drive is preferred at these extrusion pressures. AMS is 'no' on process temperature alone: 290-320 \u00b0C is outside what any consumer material station feeds, and no vendor documents PPE/PS in one (unverified)."
+  },
+  "drying": {
+    "required_before_use": "if-exposed",
+    "temp_c": {
+      "min": 80,
+      "max": 80,
+      "recommended": 80
+    },
+    "time_hours": {
+      "min": 4,
+      "max": 4,
+      "recommended": 4
+    },
+    "methods": [
+      "filament dryer at 80 \u00b0C",
+      "convection oven at 80 \u00b0C",
+      "drybox with desiccant while printing"
+    ],
+    "dryness_validation": "Clear glossy extrudate with no popping at the nozzle. PPE/PS rarely fails this check \u2014 unlike the nylons, a sealed spool is normally print-ready without a cycle.",
+    "notes": "3DXTech specifies 80 \u00b0C for 4 h, and 'if-exposed' rather than 'always' is the honest setting: the blend has no hydrolysable linkages, so it neither absorbs much water nor degrades from the water it does absorb. This is the same property that lets finished parts live in boiling water, and it makes PPE/PS one of the least moisture-fussy materials printing above 300 \u00b0C."
+  },
+  "storage": {
+    "recommendations": "Ordinary sealed storage with desiccant. No drybox discipline is needed and a lapse is recoverable with a short 80 \u00b0C cycle.",
+    "max_humidity_pct": 50,
+    "hygroscopy": "low"
+  },
+  "price": {
+    "usd_per_kg_low": 104,
+    "usd_per_kg_high": 104,
+    "notes": "Approximately $104/kg from the 3DXTech ThermaX PPE/PS listing \u2014 a single-vendor datapoint, so the broader market band is unverified. That is roughly double pc and a quarter to a tenth of the PAEK tier, which is the value proposition: high-performance behaviour on several axes at an engineering-plastic price."
+  },
+  "use_cases": {
+    "recommended": [
+      "dimensionally stable precision parts and tooling",
+      "parts exposed to hot water, steam or repeated wet-heat cycling",
+      "UL94 V-0 rated enclosures and electrical housings",
+      "low-warp jigs and fixtures at large footprints",
+      "outdoor housings needing a UV F1 rating",
+      "plumbing and fluid-handling fixtures where hydrolysis kills polyesters"
+    ],
+    "not_recommended": [
+      "high-strength structural parts \u2014 67 MPa is PETG-class",
+      "budget printers and stock hotends (290-320 \u00b0C and a 120 \u00b0C bed)",
+      "chemically aggressive service \u2014 the polystyrene phase is attacked by many solvents",
+      "cost-sensitive work where pc would do",
+      "sustained service above ~110 \u00b0C",
+      "food-contact items"
+    ]
+  },
+  "suitability": {
+    "food_contact": "no",
+    "load_bearing": "moderate",
+    "high_temperature": "yes",
+    "outdoor": "yes"
+  },
+  "properties": {
+    "density_g_cm3": 1.1,
+    "grams_per_100cm3": 110,
+    "cm3_per_100g": 90.9,
+    "glass_transition_c": 128,
+    "heat_deflection_c": 112,
+    "tensile_strength_mpa": {
+      "min": 67,
+      "max": 67,
+      "recommended": 67
+    },
+    "notes": "HDT 112 \u00b0C is quoted at 1.8 MPa \u2014 the harsher of the two standard loads, so it is not directly comparable with the 0.45 MPa figures given elsewhere in this catalog and understates the material relative to them. Marketing copy for the same product cites 120 \u00b0C without stating a load (see conflicts). Tg 128 \u00b0C. Tensile 67 MPa, which is the honest weak point: strong for a commodity plastic, unremarkable for something printing at 310 \u00b0C. Density 1.10 g/cm\u00b3, among the lightest materials in the high-performance group. UL94 V-0 flame rating and a UL746C F1 outdoor-weathering rating \u2014 the combination of V-0 and F1 is rare in this catalog. Hydrolytic stability is the headline: the blend withstands long-term immersion in boiling water without property loss, which no polyester or polyamide here will do. Shrinkage is not published and is left blank, but being amorphous it is low."
+  },
+  "scores": {
+    "ease_of_print": 3,
+    "dimensional_stability": 9,
+    "warp_tendency": 4,
+    "layer_adhesion": 7,
+    "compression_strength": 6,
+    "temperature_tolerance": 8,
+    "uv_tolerance": 7,
+    "weather_tolerance": 7,
+    "water_tolerance": 10
+  },
+  "compatibility": {
+    "bonds_with": [],
+    "support_materials": [],
+    "usable_as_support_for": [],
+    "notes": "No bonding or support pairings are documented for PPE/PS in the sources reviewed and none are asserted. The polystyrene phase suggests a styrenic affinity in principle, but nothing in the ABS/ASA/HIPS group survives contact with a 290-320 \u00b0C melt, so a hips breakaway interface \u2014 the obvious guess \u2014 is not viable and is deliberately omitted. pva and bvoh degrade roughly 100 \u00b0C below the print window. Same-material breakaway support is the practical route; that is slicer behaviour rather than an interface pairing and is not recorded here (RESEARCH_GUIDE \u00a78)."
+  },
+  "alternatives": [
+    {
+      "filament_id": "pc",
+      "reason": "Cheaper, far more widely stocked and printable on ordinary enclosed hardware at 250-280 \u00b0C rather than 310 \u00b0C \u2014 with a higher heat score (9 vs 8) and much better strength \u2014 but PC hydrolyses in hot water and steam where PPE/PS does not (water 7 vs 10), and it carries no V-0 rating."
+    },
+    {
+      "filament_id": "pei-ultem",
+      "reason": "A much higher ceiling (continuous service ~180 \u00b0C against ~110 \u00b0C) with comparable amorphous dimensional stability and its own V-0 rating \u2014 at roughly twice to three times the price, a 150 \u00b0C drying specification and a nozzle beyond any consumer hotend."
+    },
+    {
+      "filament_id": "pa11-cf",
+      "reason": "When the part is actually loaded: 105 MPa in-plane against 67 MPa and an HDT of 180 \u00b0C @1.8 MPa against 112 \u00b0C \u2014 giving up the V-0 rating, the hydrolytic stability, the low warp (5 vs 4) and adding a 120 \u00b0C drying cycle and a hardened nozzle."
+    }
+  ],
+  "emissions": {
+    "voc_level": "moderate",
+    "particulate_level": "high",
+    "primary_emissions": [
+      "styrene (from the polystyrene phase)",
+      "ultrafine particles",
+      "unspecified high-temperature process VOCs"
+    ],
+    "ventilation": "required",
+    "notes": "The polystyrene phase means styrene is a plausible emission, as it is for the styrenics, and the 290-320 \u00b0C process temperature is far above the range where that becomes significant \u2014 particulate emission scales steeply with nozzle temperature and this is near the top of what a non-industrial machine reaches. Ventilation is recorded 'required' on that combination. No PPE/PS-specific emissions measurement was found (unverified); the styrene attribution is inferred from the blend chemistry rather than measured. Vent externally or filter through HEPA plus activated carbon, and let the enclosure clear before opening."
+  },
+  "safety_notes": "A 310 \u00b0C hotend and a 120 \u00b0C bed inside a warm enclosure are serious burn hazards, and the enclosure concentrates styrene-bearing off-gas \u2014 let it clear before opening. The V-0 rating describes the finished part's flame behaviour and says nothing about the safety of the printing process. Not food-contact suitable as printed, despite the hot-water tolerance: hydrolytic stability is not the same as food certification, and no certified line was found.",
+  "additional_notes": "PPE/PS is a specification material rather than a general-purpose one. Pick it when the failure mode you are designing against is hot water, steam, warp on a large flat part, or a flame test \u2014 it beats everything cheaper on those four axes simultaneously. Do not pick it for strength, and do not pick it for chemical resistance in general: the polystyrene phase is attacked by solvents that PPE alone would shrug off, which is the standing trade-off of every Noryl-type blend. Tectonic's ATAR FST1 grade is marketed on fire/smoke/toxicity performance for transport applications; its specific FST ratings were not verified in this pass.",
+  "provenance": {
+    "sources": [
+      "https://www.3dxtech.com/products/thermax-ppe-ps-1",
+      "https://cdn.shopify.com/s/files/1/0625/4185/6821/files/THERMAX_PPE_PS_TDS_v1.pdf",
+      "https://filamentcheatsheet.com/database/material/ppe/"
+    ],
+    "last_verified": "2026-09-20",
+    "confidence": "medium",
+    "conflicts": "Two disagreements, one of them severe. Nozzle temperature: filamentcheatsheet lists 195-220 \u00b0C for what appears to be the same product, against the 3DXTech TDS's 290-320 \u00b0C \u2014 roughly 100 \u00b0C apart. The TDS is treated as authoritative and the aggregator figure is recorded here as an apparent error rather than a competing formulation; 195-220 \u00b0C is not a plausible melt range for any PPE blend. HDT: the TDS gives 112 \u00b0C at 1.8 MPa while the product's marketing copy cites 120 \u00b0C with no load stated; 112 \u00b0C at the specified load is recorded and the marketing figure is flagged. Price rests on a single vendor listing. Emissions are inferred from blend chemistry and process temperature with no PPE/PS-specific measurement found. Shrinkage, print speed and any bonding or support pairings are undocumented in the sources reviewed. The Tectonic ATAR FST1 grade's fire/smoke/toxicity ratings were not verified."
+  },
+  "trade_names": [
+    {
+      "manufacturer": "3dxtech",
+      "product": "ThermaX PPE/PS",
+      "notes": "The source of this entry's recorded figures: 290-320 \u00b0C nozzle, 90-120 \u00b0C bed, HDT 112 \u00b0C @1.8 MPa, UL94 V-0."
+    },
+    {
+      "manufacturer": "Tectonic 3D",
+      "product": "ATAR FST1 PPE",
+      "notes": "Marketed on fire/smoke/toxicity performance for transport applications; specific FST ratings not verified in this pass."
+    }
+  ]
+}

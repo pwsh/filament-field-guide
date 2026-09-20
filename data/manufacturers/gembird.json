@@ -1,0 +1,84 @@
+{
+  "id": "gembird",
+  "name": "Gembird (Gembird Europe B.V.)",
+  "status": "researched",
+  "summary": "Dutch consumer-electronics accessories conglomerate founded in 1997, also trading as EnerGenie and CablExpert, which sells 3D printing filament as one private-label category among hundreds. Group manufacturing is in China but no filament plant or supplier is published, so the filament is effectively an unattributed private label.",
+  "headquarters_country": "Netherlands",
+  "manufacturing_countries": [],
+  "brands": [
+    "Gembird",
+    "EnerGenie",
+    "CablExpert"
+  ],
+  "endpoints": {
+    "website": "https://gembird.com/",
+    "store": "https://gembird3.nl/"
+  },
+  "product_lines": [
+    {
+      "name": "Gembird PLA (incl. matte, wood, carbon)",
+      "filament_ids": [
+        "pla",
+        "pla-matte",
+        "pla-wood",
+        "pla-cf"
+      ],
+      "notes": "Base PLA with matte, wood-filled and carbon-filled variants."
+    },
+    {
+      "name": "Gembird PLA+",
+      "filament_ids": [
+        "pla-plus"
+      ],
+      "notes": "Toughened PLA grade."
+    },
+    {
+      "name": "Silk PLA",
+      "filament_ids": [
+        "pla-silk"
+      ],
+      "notes": "Luster-additive PLA."
+    },
+    {
+      "name": "Flexible",
+      "filament_ids": [
+        "tpu"
+      ],
+      "notes": "Flexible TPU; no shore hardness published, so the generic id is used."
+    },
+    {
+      "name": "Gembird ABS",
+      "filament_ids": [
+        "abs"
+      ],
+      "notes": "Standard ABS."
+    },
+    {
+      "name": "Gembird HIPS",
+      "filament_ids": [
+        "hips"
+      ],
+      "notes": "High-impact polystyrene."
+    },
+    {
+      "name": "Gembird PVA",
+      "filament_ids": [
+        "pva"
+      ],
+      "notes": "Water-soluble support."
+    }
+  ],
+  "makes_plates": false,
+  "price_tier": "budget",
+  "additional_notes": "Pricing roughly USD 15-27/kg. manufacturing_countries is left empty deliberately: Gembird is a Dutch brand owner whose group factories are in China, but no filament production site or contract extruder is published, so neither country can be recorded as confirmed filament origin. gembird3.nl is the dedicated 3D-printing storefront.",
+  "provenance": {
+    "sources": [
+      "https://gembird.com/products.aspx?sg=285",
+      "https://gembird3.nl/",
+      "https://www.hotend.eu/filaments/m-gembird"
+    ],
+    "last_verified": "2026-09-20",
+    "confidence": "medium",
+    "conflicts": "Filament origin is unpublished. Chinese group manufacturing is documented for the electronics catalogue generally, but extending that to filament would be an inference, so no manufacturing country is claimed."
+  }
+}

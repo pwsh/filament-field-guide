@@ -238,6 +238,11 @@
       "manufacturer": "polymaker",
       "product": "Panchroma CoPE",
       "notes": "'Panchroma CoPE' is already a cope alias"
+    },
+    {
+      "manufacturer": "Tectonic 3D",
+      "product": "ANASA TPC",
+      "notes": "Thermoplastic copolyester elastomer (TPC-ET); 43% bio-based castor-oil content, density 1.14, Tg -35 C. SpoolmanDB material string 'TPC'."
     }
   ]
 }

@@ -1,0 +1,113 @@
+{
+  "id": "ambrosia",
+  "name": "Ambrosia Filament",
+  "status": "draft",
+  "summary": "Premium US retail line marketed as 'Filament of the Gods', relaunched in December 2024 as the house brand of West3D Printing. Sold on AMS-friendly cardboard spools through a curated distributor network rather than direct mass-market channels. Who actually extrudes the material is not disclosed anywhere in the brand's own materials.",
+  "headquarters_country": "United States",
+  "manufacturing_countries": [],
+  "brands": [
+    "Ambrosia",
+    "Galactic",
+    "Dolos",
+    "Uber ABS+"
+  ],
+  "oem_relationships": [
+    {
+      "company": "West3D Printing",
+      "relationship": "parent-company",
+      "notes": "Ambrosia is West3D's house brand; West3D runs the brand and its primary storefront. West3D is not itself known to extrude, so the actual manufacturer remains unidentified."
+    }
+  ],
+  "endpoints": {
+    "website": "https://ambrosiafilament.com/",
+    "store": "https://west3d.com/collections/ambrosia-filament"
+  },
+  "product_lines": [
+    {
+      "name": "Ambrosia PLA",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Standard PLA."
+    },
+    {
+      "name": "Silk PLA",
+      "filament_ids": [
+        "pla-silk"
+      ],
+      "notes": "Luster-additive PLA."
+    },
+    {
+      "name": "Galactic PLA",
+      "filament_ids": [
+        "pla-glitter"
+      ],
+      "notes": "Glitter/sparkle-particle PLA."
+    },
+    {
+      "name": "Dolos PLA",
+      "filament_ids": [
+        "pla-gradient"
+      ],
+      "notes": "Colour-shift/chameleon PLA; mapped to pla-gradient as the nearest colour-varying id, though the shift here is angle/temperature-driven rather than along-strand."
+    },
+    {
+      "name": "Ambrosia PETG",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "Standard PETG."
+    },
+    {
+      "name": "ABS Matte / Uber ABS+",
+      "filament_ids": [
+        "abs",
+        "abs-plus"
+      ],
+      "notes": "Matte-finish standard ABS plus a toughened 'Uber ABS+' grade."
+    },
+    {
+      "name": "ASA (incl. Galactic, GF and CF)",
+      "filament_ids": [
+        "asa",
+        "asa-gf",
+        "asa-cf"
+      ],
+      "notes": "Standard ASA plus glitter, glass-fibre and carbon-fibre variants."
+    },
+    {
+      "name": "PC-CF",
+      "filament_ids": [
+        "pc"
+      ],
+      "notes": "Carbon-fibre-filled polycarbonate; no pc-cf id exists in the catalog, so only the matrix id applies."
+    },
+    {
+      "name": "PC-ABS",
+      "filament_ids": [
+        "pc-abs"
+      ],
+      "notes": "Polycarbonate/ABS alloy."
+    },
+    {
+      "name": "PHA",
+      "filament_ids": [
+        "pha"
+      ],
+      "notes": "Polyhydroxyalkanoate or PLA/PHA blend; the listing does not state blend ratio."
+    }
+  ],
+  "makes_plates": false,
+  "price_tier": "premium",
+  "additional_notes": "Pricing roughly USD 19-40/kg. Cardboard spools are marketed as AMS-compatible. manufacturing_countries is left empty on purpose: no extrusion site, contract manufacturer or country of origin is disclosed for any line, and West3D is a retailer rather than a known extruder. Status is draft rather than researched because confidence is low.",
+  "provenance": {
+    "sources": [
+      "https://ambrosiafilament.com/",
+      "https://filamentcheatsheet.com/brands/ambrosia/",
+      "https://west3d.com/collections/ambrosia-filament"
+    ],
+    "last_verified": "2026-09-20",
+    "confidence": "low",
+    "conflicts": "No legal entity, extrusion partner or country of manufacture was found. The West3D house-brand relationship is inferred from storefront ownership and the December 2024 relaunch announcement rather than from a corporate statement."
+  }
+}

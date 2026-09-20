@@ -1,0 +1,105 @@
+{
+  "id": "smart-materials-3d",
+  "name": "Smart Materials 3D Printing, S.L. (SMARTFIL)",
+  "status": "researched",
+  "summary": "Spanish filament manufacturer in Alcala la Real, Jaen, consistently ranked among the larger European producers and exporting to roughly 45 countries. Sells commodity and decorative PLA under Smartfil, a bio-composite Eco line filled with cork, wood, algae, coffee, olive, oyster shell and pine residues, and technical grades under the Innovatefil sub-brand.",
+  "headquarters_country": "Spain",
+  "manufacturing_countries": [
+    "Spain"
+  ],
+  "brands": [
+    "Smartfil",
+    "Smartfil Eco",
+    "Innovatefil",
+    "Smart Materials 3D"
+  ],
+  "endpoints": {
+    "website": "https://www.smartmaterials3d.com/en/",
+    "social": {
+      "x": "https://x.com/smartmaterials3"
+    }
+  },
+  "product_lines": [
+    {
+      "name": "Smartfil PLA (Basic / Crystal / Glitter / Glow / Silk / Matte / Neon / Pastel)",
+      "filament_ids": [
+        "pla",
+        "pla-glitter",
+        "pla-glow",
+        "pla-silk",
+        "pla-matte"
+      ],
+      "notes": "The core decorative PLA family; Crystal, Neon and Pastel are pigment colourways on the base chemistry."
+    },
+    {
+      "name": "Smartfil PETG / R-PETG",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "Virgin and recycled-feedstock PETG; one chemistry."
+    },
+    {
+      "name": "Smartfil ABS",
+      "filament_ids": [
+        "abs"
+      ],
+      "notes": "Standard ABS."
+    },
+    {
+      "name": "Smartfil ASA",
+      "filament_ids": [
+        "asa"
+      ],
+      "notes": "Standard ASA."
+    },
+    {
+      "name": "Smartfil FLEX (TPU 77A-98A)",
+      "filament_ids": [
+        "tpu",
+        "tpu-85a",
+        "tpu-98a"
+      ],
+      "notes": "A span of TPU shore grades from 77A to 98A; the generic tpu id covers the grades with no dedicated entry."
+    },
+    {
+      "name": "Smartfil Eco bio-composites (Cork / Wood / Algae / Coffee / Olive / Oyster / Pine)",
+      "filament_ids": [
+        "pla-wood"
+      ],
+      "notes": "PLA matrix filled with natural residues. Only the wood-filled variant has a matching id; cork, algae, coffee, olive and oyster-shell fillers have no catalog entry and sit under the same PLA base."
+    },
+    {
+      "name": "Smartfil PVA / HIPS",
+      "filament_ids": [
+        "pva",
+        "hips"
+      ],
+      "notes": "Support materials: water-soluble PVA and breakaway/limonene-soluble HIPS."
+    },
+    {
+      "name": "Technical PC / PA",
+      "filament_ids": [
+        "pc",
+        "pa"
+      ],
+      "notes": "Polycarbonate and unfilled polyamide; PA grade not specified in the listing."
+    },
+    {
+      "name": "Innovatefil",
+      "filament_ids": [],
+      "notes": "High-performance technical sub-brand spanning several chemistries; the listing does not enumerate them at a level that maps to specific ids."
+    }
+  ],
+  "makes_plates": false,
+  "price_tier": "mid",
+  "additional_notes": "Pricing around EUR 20/kg. Regional press has placed the company in the global top ten by filament production volume, a claim worth treating as promotional but consistent with its export footprint. The Eco bio-composite line is the most distinctive part of the catalog and exposes a catalog gap: only wood-filled PLA has an id. Amazon storefront (the manufacturer schema's endpoints object has no amazon field, so it is recorded here): https://www.amazon.es/stores/SMARTMATERIALS3D/page/9D94F895-9CF2-4E2A-B640-EFD244AA1065",
+  "provenance": {
+    "sources": [
+      "https://www.smartmaterials3d.com/en/smartfil",
+      "https://www.andaluciainformacion.es/articulo/alcala-la-real/smart-materials-en-el-top-ten-mundial-de-fabricacion-de-filamento-3d/202002071726552252871.html"
+    ],
+    "last_verified": "2026-09-20",
+    "confidence": "high",
+    "conflicts": "The 'global top ten producer' ranking comes from regional press quoting the company and has no independent basis."
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "id": "unitak3d",
+  "name": "UniTak3D",
+  "status": "draft",
+  "summary": "Amazon-centric 3D printing accessories brand - spool holders, build plates and similar - that extended into PLA filament aimed largely at Bambu Lab users. Company registration, ownership and manufacturing are all unverifiable from public sources; the brand exists almost entirely as an Amazon storefront.",
+  "manufacturing_countries": [],
+  "brands": [
+    "UniTak3D"
+  ],
+  "endpoints": {
+    "website": "https://unitak3d.net/",
+    "store": "https://www.amazon.com/stores/UniTak3D/page/D48CE113-27F6-482C-A484-F857980DD5B3"
+  },
+  "product_lines": [
+    {
+      "name": "UniTak3D PLA",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Standard PLA; no variant grades or datasheets published."
+    }
+  ],
+  "makes_plates": true,
+  "price_tier": "budget",
+  "additional_notes": "Status is draft, not researched: no legal entity, address, country of origin or extruder could be established, and the brand's own site adds nothing beyond the Amazon listings. Build plates are part of the accessories catalog, so makes_plates is true, but no specific plate id is claimed. headquarters_country is omitted rather than guessed. The Amazon storefront is recorded as the store endpoint because it is effectively the brand's only sales channel.",
+  "provenance": {
+    "sources": [
+      "https://www.amazon.com/stores/UniTak3D/page/D48CE113-27F6-482C-A484-F857980DD5B3",
+      "https://3dfilamentprofiles.com/filaments/unitak3d"
+    ],
+    "last_verified": "2026-09-20",
+    "confidence": "low",
+    "conflicts": "Everything about the company behind the brand is unverified: registration, country, and whether the filament is bought in from a Chinese extruder (the likeliest case for an Amazon accessories brand) or sourced elsewhere."
+  }
+}

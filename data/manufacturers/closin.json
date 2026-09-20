@@ -1,0 +1,69 @@
+{
+  "id": "closin",
+  "name": "Closin (Closin Distribuidora LTDA)",
+  "status": "researched",
+  "summary": "Brazilian filament distributor based in Chapeco, Santa Catarina, founded 2019 (CNPJ 58.506.101/0001-19). Imports filament from audited overseas suppliers through its own sourcing office in China and sells under the Closin label, with PETG as the headline material. It is a distributor, not an extruder.",
+  "headquarters_country": "Brazil",
+  "manufacturing_countries": [],
+  "brands": [
+    "Closin",
+    "DUO"
+  ],
+  "endpoints": {
+    "website": "https://www.closin.com.br/",
+    "social": {
+      "instagram": "https://www.instagram.com/closintecnologia/",
+      "linkedin": "https://br.linkedin.com/company/closin"
+    }
+  },
+  "product_lines": [
+    {
+      "name": "Closin PLA (incl. Silk)",
+      "filament_ids": [
+        "pla",
+        "pla-silk"
+      ],
+      "notes": "Standard and luster-additive PLA."
+    },
+    {
+      "name": "Closin PETG",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "The brand's headline material."
+    },
+    {
+      "name": "Closin ABS",
+      "filament_ids": [
+        "abs"
+      ],
+      "notes": "Standard ABS."
+    },
+    {
+      "name": "Closin TPU",
+      "filament_ids": [
+        "tpu"
+      ],
+      "notes": "Flexible TPU; no shore hardness published, so the generic id is used."
+    },
+    {
+      "name": "Closin DUO",
+      "filament_ids": [
+        "pla-gradient"
+      ],
+      "notes": "Dual-colour filament; mapped to pla-gradient as the nearest colour-varying id."
+    }
+  ],
+  "makes_plates": false,
+  "price_tier": "budget",
+  "additional_notes": "Pricing roughly USD 12-17/kg equivalent. Closin describes its sourcing as coming from audited overseas suppliers via a Chinese sourcing office but does not name any of them, so no OEM relationship can be recorded and manufacturing_countries is empty - the filament is imported, and Brazil is the country of sale, not of manufacture.",
+  "provenance": {
+    "sources": [
+      "https://www.closin.com.br/",
+      "https://www.closin.com.br/quem-somos"
+    ],
+    "last_verified": "2026-09-20",
+    "confidence": "medium",
+    "conflicts": "Suppliers are described as 'audited' but none is named; country of origin for each line is therefore unconfirmed, though China is the likely source given the stated sourcing office."
+  }
+}

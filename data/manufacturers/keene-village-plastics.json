@@ -1,8 +1,8 @@
 {
   "id": "keene-village-plastics",
-  "name": "Keene Village Plastics (Village Plastics)",
+  "name": "Village Plastics (formerly Keene Village Plastics)",
   "status": "researched",
-  "summary": "Long-established US industrial plastics manufacturer that extruded its way into 3D printing filament at wholesale scale, self-describing as \"the largest manufacturer of high-quality 3D printer filaments in the United States\". Operates consumer-facing as Village Plastics and reached the hobbyist market by acquiring the MakeShaper filament brand in 2018/2019.",
+  "summary": "Long-established US industrial plastics extruder that scaled into 3D printing filament, and since August 2024 a brand of Toner Plastics rather than an independent company. Keene Village Plastics was acquired by Toner Plastics in August 2024 and relocated to Toner's East Longmeadow, Massachusetts site; the line now sells as the \"Village Plastics\" brand of Toner Plastics, and villageplastics.com has given way to tonerplastics.com as the product home. The catalog is wholesale-scale commodity extrusion \u2014 PLA (including the annealable P-PLA grade), ABS, PETG and HIPS \u2014 and it reached the hobbyist market by acquiring the MakeShaper filament brand in 2018/2019.",
   "headquarters_country": "United States",
   "manufacturing_countries": [
     "United States"
@@ -14,18 +14,24 @@
     "MakeShaper",
     "3D Solve",
     "PAPC",
-    "Koil"
+    "Koil",
+    "Toner Plastics"
   ],
   "oem_relationships": [
     {
       "company": "MakeShaper",
       "relationship": "manufactures-for",
       "notes": "MakeShaper is a wholly-owned sub-brand since the 2018/2019 acquisition, not an arm's-length customer; KVP manufactures MakeShaper filament itself rather than sourcing it externally. Recorded here for traceability of the label; MakeShaper has no independent manufacturing presence and so gets no separate entry."
+    },
+    {
+      "company": "Toner Plastics",
+      "relationship": "parent-company",
+      "notes": "Toner Plastics acquired Keene Village Plastics in August 2024. The filament line now operates as Toner Plastics' 'Village Plastics' brand and its products are listed on tonerplastics.com; production moved to Toner's East Longmeadow, Massachusetts facility. Observed 2026-09-20 via the tonerplastics.com product pages. Not present in research/verified-oem-relationships.md."
     }
   ],
   "endpoints": {
-    "website": "https://www.villageplastics.com/",
-    "store": "https://www.villageplastics.com/",
+    "website": "https://tonerplastics.com/",
+    "store": "https://tonerplastics.com/product-category/3d-printing/",
     "social": {
       "instagram": "https://www.instagram.com/keeneplastics/",
       "linkedin": "https://www.linkedin.com/company/keene-village-plastics"
@@ -37,7 +43,7 @@
       "filament_ids": [
         "pla"
       ],
-      "notes": "Standard PLA base across the colour line (Bold Black, Stellar Black, Blue, Deep Blue, Deep Red, Purple, Red, Orange, Yellow, Green, Neon Green); Black Sparkle, Strawberry Pearl, Evergreen Pearl and Pearl Blueberry are glitter/pearl-mica effect colours on the same base."
+      "notes": "Standard PLA base across the colour line (Bold Black, Stellar Black, Blue, Deep Blue, Deep Red, Purple, Red, Orange, Yellow, Green, Neon Green); Black Sparkle, Strawberry Pearl, Evergreen Pearl and Pearl Blueberry are glitter/pearl-mica effect colours on the same base. Now sold as Village Plastics PLA Filament Reels on tonerplastics.com: NatureWorks Ingeo resin, 205-215 \u00b0C nozzle, 50-60 \u00b0C bed, 1.75 mm, 1000 g and 2250 g reels."
     },
     {
       "name": "Glow-in-the-Dark PLA",
@@ -51,7 +57,7 @@
       "filament_ids": [
         "pla"
       ],
-      "notes": "KVP/Village Plastics' high-heat, high-impact PLA grade with faster crystallisation, marketed as an ABS alternative that stays biodegradable — the same annealable high-heat-PLA category as HTPLA/3D870-class products. No dedicated high-heat-PLA id exists."
+      "notes": "KVP/Village Plastics' high-heat, high-impact PLA grade with faster crystallisation, marketed as an ABS alternative that stays biodegradable \u2014 the same annealable high-heat-PLA category as HTPLA/3D870-class products. No dedicated high-heat-PLA id exists. Now sold as Village Plastics P-PLA Filament Reels on tonerplastics.com: 190-230 \u00b0C nozzle, unheated to 70 \u00b0C bed, annealable at 110-120 \u00b0C \u2014 which is the mechanism behind the ABS-alternative claim."
     },
     {
       "name": "Tru Wood",
@@ -65,7 +71,7 @@
       "filament_ids": [
         "abs"
       ],
-      "notes": "Standard ABS across the colour line (Battleship Gray, Black, Crimson, Fluorescent Green, Metallic Silver, Proper Purple, Sea Blue, Stellar Black, Stellar Blue, Voron Red); Glow-in-the-Dark Blue adds a phosphor to the same ABS base and has no dedicated id."
+      "notes": "Standard ABS across the colour line (Battleship Gray, Black, Crimson, Fluorescent Green, Metallic Silver, Proper Purple, Sea Blue, Stellar Black, Stellar Blue, Voron Red); Glow-in-the-Dark Blue adds a phosphor to the same ABS base and has no dedicated id. Now sold as Village Plastics ABS Filament Reels on tonerplastics.com: 220-240 \u00b0C nozzle, 100-130 \u00b0C bed, 1.75 mm, 1000 g and 2250 g reels, in an unusually broad colour range."
     },
     {
       "name": "PETG",
@@ -104,7 +110,7 @@
   ],
   "makes_plates": false,
   "price_tier": "mid",
-  "additional_notes": "Corporate geography is unresolved: the consumer site gives East Longmeadow, Massachusetts, company imagery references a \"Keene Village Plastics Factory\" tied to Keene, New Hampshire-area operations, and ThomasNet separately lists a Euclid, Ohio facility — KVP appears to run multiple US sites and the HQ-vs-factory-of-record distinction was not settled. All identified sites are domestic, so manufacturing_countries is unambiguous even though the specific address is not. Also sells \"Koil\", a spool-less packaging format. Price tier is inferred from industrial/wholesale QC positioning rather than observed USD/kg.",
+  "additional_notes": "CORPORATE STATUS CHANGED \u2014 Keene Village Plastics was acquired by Toner Plastics in August 2024, relocated to Toner Plastics' East Longmeadow, Massachusetts facility, and now operates as the 'Village Plastics' brand of Toner Plastics rather than as an independent company. villageplastics.com is superseded by tonerplastics.com as the product home, and endpoints have been repointed accordingly (observed 2026-09-20). This also resolves the multi-site geography question this entry previously left open: the Euclid, Ohio operation is the pre-acquisition history and Massachusetts is the present manufacturing location, so manufacturing is now Massachusetts where it was formerly Ohio. The id and the Keene name are retained for continuity of cross-references; the display name now leads with Village Plastics. What has NOT been established is the fate of the sub-brands \u2014 whether MakeShaper, 3D Solve, PAPC and Koil survived the acquisition was not confirmed in this pass, and they are left in place as historical. Toner Plastics publishes print parameters per reel line but no full TDS. Also sells 'Koil', a spool-less packaging format, and thermoplastic welding rod, an industrial line reflecting the company's plastics heritage. Price tier is inferred from industrial/wholesale QC positioning rather than observed USD/kg.",
   "provenance": {
     "sources": [
       "https://www.villageplastics.com/",
@@ -115,10 +121,12 @@
       "https://www.makeshaper.com/",
       "https://tonerplastics.com/product/village-plastics-p-pla-filament-reels/",
       "https://3dfilamentprofiles.com/filaments/keene-village-plastics",
-      "https://www.globenewswire.com/de/news-release/2013/12/13/596819/8852/en/3D-Systems-Acquires-Village-Plastics.html"
+      "https://www.globenewswire.com/de/news-release/2013/12/13/596819/8852/en/3D-Systems-Acquires-Village-Plastics.html",
+      "https://tonerplastics.com/product/village-plastics-pla-filament-reels/",
+      "https://tonerplastics.com/product/village-plastics-abs-filament-reels/"
     ],
-    "last_verified": "2026-07-31",
+    "last_verified": "2026-09-20",
     "confidence": "medium",
-    "conflicts": "Sources disagree on the company's principal location: East Longmeadow MA (own site), Keene NH (factory imagery/name), and Euclid OH (ThomasNet). Treated as a multi-site US manufacturer with HQ unresolved. The PAPC and 3D Solve filament_ids mappings are provisional pending datasheets."
+    "conflicts": "Corporate status, updated 2026-09-20: Keene Village Plastics was acquired by Toner Plastics in August 2024 and relocated to East Longmeadow, Massachusetts, operating since as Toner Plastics' 'Village Plastics' brand with products listed on tonerplastics.com. This supersedes the previous unresolved-geography note: the East Longmeadow MA address on the old consumer site and the Euclid OH ThomasNet listing are not two concurrent sites but before-and-after the move, so manufacturing is recorded as Massachusetts now and Ohio formerly. The Keene, New Hampshire association in factory imagery remains unexplained and is likely a naming artefact rather than a site. Not established in this pass: whether villageplastics.com now redirects to tonerplastics.com or simply lapsed (the product pages were reached via tonerplastics.com), and whether the MakeShaper, 3D Solve, PAPC and Koil sub-brands survived the acquisition \u2014 all four are retained here as historical rather than confirmed live. The PAPC and 3D Solve filament_ids mappings remain provisional pending datasheets, which Toner Plastics does not publish."
   }
 }

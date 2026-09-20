@@ -1,0 +1,179 @@
+{
+  "id": "pvdf",
+  "name": "PVDF (Polyvinylidene Fluoride)",
+  "aliases": [
+    "Polyvinylidene fluoride",
+    "PVDF",
+    "Kynar-type fluoropolymer",
+    "FluorX PVDF",
+    "Fluorinar"
+  ],
+  "status": "researched",
+  "base_type": null,
+  "variation_kind": null,
+  "polymer_class": "high-performance",
+  "chemical_makeup": "Polyvinylidene fluoride (fluoropolymer) \u2014 a semi-crystalline chain of alternating CH2 and CF2 units. The partially fluorinated backbone is what gives it near-total chemical inertness and outstanding UV stability while still melting low enough (unlike PTFE) to be extruded on a conventional hotend. That same C-F chemistry is the source of its one serious hazard: decomposition products are hydrogen fluoride rather than the hydrocarbon VOCs the rest of this catalog emits.",
+  "summary": "The chemical-resistance specialist that prints at ordinary engineering-plastic temperatures. A 220-275 \u00b0C nozzle and a 50-110 \u00b0C bed put it within reach of a good enclosed printer with no heated chamber, and it delivers fluoropolymer inertness, UL94 V-0, excellent UV stability and near-zero water uptake. The costs are speed (10-40 mm/s), price ($188-333/kg) and a hard safety ceiling: above roughly 315 \u00b0C PVDF decomposes to hydrofluoric acid, which is a different class of hazard from ABS styrene. Deltas vs pp: far better UV, flame and dimensional behaviour and much easier bed adhesion, at roughly ten times the price. Deltas vs the PAEK tier: a fraction of the cost and no industrial hotend, but service temperature stops around 130 \u00b0C.",
+  "printing": {
+    "nozzle_temp_c": {
+      "min": 220,
+      "max": 275,
+      "recommended": 250
+    },
+    "bed_temp_c": {
+      "min": 50,
+      "max": 110,
+      "recommended": 90
+    },
+    "speed_mm_s": {
+      "min": 10,
+      "max": 40,
+      "recommended": 20
+    },
+    "enclosure_recommended": true,
+    "heated_chamber_required": false,
+    "enclosure_open_for_cooling": false,
+    "requires_hardened_nozzle": false,
+    "part_cooling_fan_pct": {
+      "min": 0,
+      "max": 20,
+      "recommended": 0
+    },
+    "notes": "The nozzle window is the widest disagreement in this entry: add:north specifies 240-260 \u00b0C, 3DXTech 255-275 \u00b0C and Nile Polymers' Fluorinar roughly 260 \u00b0C. The recorded 220-275 \u00b0C envelope brackets all three and 250 \u00b0C is the midpoint rather than any one vendor's figure \u2014 start from the specific spool's datasheet, not from this range. Speed is genuinely low: 10-40 mm/s, with 20 mm/s the working default, because PVDF crystallises sharply and rushed layers delaminate. Part cooling stays off or very low for the same reason. The enclosure is recommended for fume containment as much as for thermal stability \u2014 heated_chamber_required is false, and no source in this pass demands active chamber heating. Unfilled, so a standard brass nozzle is fine; the abrasion concern that drives hardened nozzles elsewhere does not apply."
+  },
+  "feeding": {
+    "drive_system": "direct-drive-recommended",
+    "ams_compatible": "no",
+    "feeding_assistant_recommended": false,
+    "notes": "Rigid and dimensionally consistent, so mechanically it feeds like any engineering filament, but direct drive is preferred because the slow, high-pressure extrusion at 250 \u00b0C is poorly served by a long Bowden path. AMS is recorded 'no': no vendor documents a material station for PVDF, and the decomposition hazard makes an unattended multi-material path with unknown purge temperatures a bad trade (unverified \u2014 an inference, not a product statement)."
+  },
+  "drying": {
+    "required_before_use": "rarely",
+    "methods": [
+      "filament dryer at 60-70 \u00b0C",
+      "sealed bag with desiccant between prints"
+    ],
+    "dryness_validation": "Clear, continuous extrudate with no popping or hissing at the nozzle. PVDF's moisture uptake is low enough that a spool stored sealed will normally pass with no drying cycle at all.",
+    "notes": "One of the few high-performance materials in this catalog that does not need a drying regimen. Water absorption is very low (fluoropolymer chemistry), so drying is recorded 'rarely' \u2014 the opposite end of the scale from the nylons and the PAEK tier. No vendor in this pass publishes a specific temperature/time schedule (unverified), so none is recorded."
+  },
+  "storage": {
+    "recommendations": "Ordinary sealed storage with desiccant is sufficient; no drybox discipline is required. Keep away from open flame and from any heat source that could take it near its decomposition range.",
+    "max_humidity_pct": 50,
+    "hygroscopy": "low"
+  },
+  "price": {
+    "usd_per_kg_low": 188,
+    "usd_per_kg_high": 333,
+    "notes": "Spans $188-333/kg across the three brands checked (3DXTech FluorX, add:north Adamant S1, Nile Polymers Fluorinar). Roughly ten times the price of pp for the same chemical-resistance brief, and roughly a third to a half of the PAEK tier."
+  },
+  "use_cases": {
+    "recommended": [
+      "chemical-processing and semiconductor fittings",
+      "valve bodies, valve seats and gaskets",
+      "corrosion-resistant laboratory parts and fixtures",
+      "outdoor parts needing long-term UV stability",
+      "UL94 V-0 flame-rated components",
+      "parts in contact with acids, bases and aggressive solvents"
+    ],
+    "not_recommended": [
+      "cosmetic or display prints \u2014 the surface finish does not justify the price",
+      "cost-sensitive work of any kind",
+      "printers that cannot be vented or enclosed",
+      "anything where the hotend might be driven above its rated temperature",
+      "sustained service above ~130 \u00b0C",
+      "beginners \u2014 the hazard profile does not forgive a mis-set temperature"
+    ]
+  },
+  "suitability": {
+    "food_contact": "no",
+    "load_bearing": "moderate",
+    "high_temperature": "moderate",
+    "outdoor": "yes"
+  },
+  "properties": {
+    "density_g_cm3": 1.78,
+    "grams_per_100cm3": 178,
+    "cm3_per_100g": 56.2,
+    "max_service_temp_c": 130,
+    "tensile_strength_mpa": {
+      "min": 51,
+      "max": 58
+    },
+    "notes": "Density is recorded at 1.78 g/cm\u00b3, the mid-point of a 1.71-1.80 spread across the brands checked \u2014 the densest material in this catalog by a wide margin, which is why a kilogram of PVDF buys only 56 cm\u00b3 per 100 g against PLA's ~80. Tensile strength 51-58 MPa. Maximum continuous service temperature 130 \u00b0C. Heat-deflection temperature is deliberately omitted: the two published figures are irreconcilable (see conflicts), and recording either would imply a confidence the sources do not support. UL94 V-0 flame rating. Water absorption is very low, and chemical resistance is the headline property \u2014 resistant to most acids, bases, halogens and solvents at service temperature."
+  },
+  "scores": {
+    "ease_of_print": 3,
+    "dimensional_stability": 7,
+    "warp_tendency": 6,
+    "layer_adhesion": 5,
+    "compression_strength": 6,
+    "temperature_tolerance": 7,
+    "uv_tolerance": 9,
+    "weather_tolerance": 9,
+    "water_tolerance": 10
+  },
+  "compatibility": {
+    "bonds_with": [],
+    "support_materials": [],
+    "usable_as_support_for": [],
+    "notes": "No bonding or support pairings are documented for PVDF in the sources reviewed, and none are asserted here. Fluoropolymer surface energy is famously low \u2014 the same property that makes PVDF chemically inert makes it reluctant to adhere to anything, including other filaments \u2014 so cross-material welding should be assumed absent until tested. Same-material breakaway support is the practical route; that is a slicer behaviour rather than an interface pairing and is not recorded in these fields (see RESEARCH_GUIDE \u00a78). Soluble supports were not evaluated by any source in this pass."
+  },
+  "alternatives": [
+    {
+      "filament_id": "pp",
+      "reason": "The budget route to chemical resistance: comparable inertness to many solvents at roughly a tenth of the price \u2014 but harder to print (ease 2 vs 3), the catalog's worst warp (10 vs 6), no flame rating and far worse UV stability (uv 9 here)."
+    },
+    {
+      "filament_id": "petg",
+      "reason": "Far cheaper and dramatically easier (ease 7 vs 3, warp 3 vs 6) whenever fluoropolymer inertness is not actually the requirement \u2014 giving up acid/solvent resistance, the V-0 rating, UV stability and about 50 \u00b0C of service temperature."
+    },
+    {
+      "filament_id": "pa11-cf",
+      "reason": "When the part needs structural strength rather than chemical inertness: roughly double the tensile and a 180 \u00b0C HDT at a lower price \u2014 but it absorbs moisture aggressively, needs a hardened nozzle and a 285 \u00b0C nozzle, and has no meaningful chemical-resistance story."
+    }
+  ],
+  "emissions": {
+    "voc_level": "low",
+    "particulate_level": "moderate",
+    "primary_emissions": [
+      "hydrogen fluoride / hydrofluoric acid (thermal decomposition above ~315 \u00b0C only)",
+      "hydrogen cyanide (thermal decomposition)",
+      "carbon monoxide (thermal decomposition)",
+      "ultrafine particles"
+    ],
+    "ventilation": "required",
+    "notes": "Two very different regimes, and conflating them is the mistake to avoid. Printed within its rated window PVDF is a low-VOC material \u2014 quieter than ABS, with no styrene and little odour. Driven above roughly 315 \u00b0C it decomposes, and the decomposition products named in the safety data sheet are hydrogen fluoride (which forms hydrofluoric acid on contact with moisture, including the moisture in lung tissue), hydrogen cyanide and carbon monoxide. Ventilation is therefore recorded 'required' not because of routine printing emissions but because the failure mode is acutely dangerous rather than merely unpleasant. Vent externally or filter through activated carbon, and never leave a PVDF print running unattended with a hotend that can overshoot."
+  },
+  "safety_notes": "CRITICAL: thermal decomposition of PVDF above approximately 315 \u00b0C releases hydrogen fluoride (hydrofluoric acid), hydrogen cyanide and carbon monoxide. Hydrofluoric acid exposure is a medical emergency, not an irritation. Never set a hotend above the rated temperature, never attempt to 'push flow' with extra heat, and check that thermal-runaway protection and PID tuning are sound before the first print \u2014 an overshooting hotend is the realistic route to a decomposition event. Purge and cold-pull residual PVDF before running a much hotter material through the same hotend. Do not smoke near PVDF dust or swarf (the classic polymer-fume-fever route for fluoropolymers). Ventilate the enclosure externally and let it clear before opening. Not food-contact suitable as printed.",
+  "additional_notes": "PVDF occupies an unusual slot: fluoropolymer chemistry at engineering-plastic process temperatures. If the brief is 'this part must survive a chemical it would otherwise be destroyed by, outdoors, without burning', nothing else in this catalog does the job at this hardware level. If the brief is merely 'resists water and mild chemicals', PETG or PP does it for a fraction of the money. add:north also lists a PVDF+Graphene conductive variant of Adamant S1, which is not covered by this entry \u2014 its electrical properties and any added abrasion from the graphene loading are unresearched.",
+  "provenance": {
+    "sources": [
+      "https://www.3dxtech.com/products/fluorx-pvdf-1",
+      "https://cdn.shopify.com/s/files/1/0625/4185/6821/files/FLUORX_PVDF_TDS_v3.pdf",
+      "https://cdn.shopify.com/s/files/1/0625/4185/6821/files/FLUORX_PVDF_SDS_v1.1.pdf",
+      "https://filament2print.com/en/advanced/1178-adamant-s1-pvdf.html",
+      "https://www.nilepolymers.com/products/fluorinar-c-pvdf-filament",
+      "https://www.3ditaly.it/datasheet/Filamenti/Fluorinar-C-TDS.pdf"
+    ],
+    "last_verified": "2026-09-20",
+    "confidence": "medium",
+    "conflicts": "Heat-deflection temperature is the unresolved disagreement and the reason no numeric heat_deflection_c is recorded: Nile Polymers' Fluorinar datasheet gives 35-52 \u00b0C at 0.45 MPa while 3DXTech's FluorX TDS gives 158 \u00b0C at the same 0.45 MPa \u2014 a factor of three to four apart, far outside grade-to-grade variation, and at least one of the two must be an error or a mis-labelled test condition. Both figures are recorded here and neither is adopted. Nozzle temperature splits three ways across brands: add:north 240-260 \u00b0C, 3DXTech 255-275 \u00b0C, Nile Polymers ~260 \u00b0C; the recorded 220-275 \u00b0C range is an envelope and the 250 \u00b0C recommendation is a midpoint, not a sourced value. Density spans 1.71-1.80 g/cm\u00b3 across brands; 1.78 is recorded as the mid-point and the derived weight/volume figures inherit that spread. Bed temperature 50-110 \u00b0C is an unusually wide band drawn across brands rather than a single vendor's specification. Emissions levels under normal printing are inferred from the temperature range and the absence of styrenic or amide chemistry; no PVDF-specific FDM emissions measurement was found (unverified). No bonding or support pairings were tested by any source."
+  },
+  "trade_names": [
+    {
+      "manufacturer": "addnorth",
+      "product": "Adamant S1 PVDF",
+      "notes": "add:north's PVDF line; a PVDF+Graphene conductive variant is also sold under the Adamant S1 name and is NOT covered by this entry."
+    },
+    {
+      "manufacturer": "3dxtech",
+      "product": "FluorX PVDF",
+      "notes": "TDS gives 255-275 \u00b0C nozzle and HDT 158 \u00b0C @0.45 MPa \u2014 the high side of both disputed figures."
+    },
+    {
+      "manufacturer": "Nile Polymers",
+      "product": "Fluorinar-C / Fluorinar-H",
+      "notes": "Two grades; the TDS gives HDT 35-52 \u00b0C @0.45 MPa, irreconcilable with 3DXTech's figure (see conflicts)."
+    }
+  ]
+}

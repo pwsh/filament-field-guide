@@ -158,6 +158,43 @@ every property sourced from the glossary.
   the workspace against the repo before generating bundles — the repo is the source
   of truth, not the workspace.
 ## Changelog
+### 2026-09-20 — SpoolmanDB crosswalk (owner request): both-direction sync
+- Crosswalk vs Donkie/SpoolmanDB (67 brands, 5 open PRs): research/spoolmandb-crosswalk.md.
+- Direction A ingested: 26 new manufacturers (24 SpoolmanDB-only + vanyo from PR #479 +
+  siraya-tech), 9 new filaments (pvdf, pa11-cf, ppe, tpi, peek-cf, pc-pbt-cf, tpu-55d,
+  tpu-64d, lw-peba), 25+ trade-name mappings, prusa-research/taulman3d/kvp/voxelab/
+  chckx3d/comgrow entry updates. Catalog now 99 filaments / 97 manufacturers / 14 plates.
+- Direction B authored: research/spoolmandb-contributions/ — 23 SpoolmanDB-format brand
+  files (111 entries, 504 colors), schema-valid, lint clean except by-design spool_weight
+  gaps; REVIEW.md itemises every approximated hex + generic-density substitution.
+  MANUAL VERIFICATION REQUIRED before any PR (their no-AI-data policy + measured spool
+  weights; one manufacturer per PR, sources in PR description).
+- 64D consolidation: "TPU 64D" alias + eSUN/Kexcelled trade names moved tpu-68d→tpu-64d.
+- Open items: POM entry (NTH product evidence exists), ppa-gf id, TPU-75D (Yoline),
+  hobby-lobby entry legitimacy, swatch-hex capture for colorFabb/Duramic/NinjaTek/
+  OVV3D/UltiMaker/Comgrow, GitHub repo About text still says 60+/58/11.
+
+### 2026-09-20 — Manufacturer expansion: 24 new entries
+- Added `data/manufacturers/`: nth-grillon, abaflex, aurapol, ambrosia, printy-please, closin,
+  cr3d, filament-unger, gembird, gst3d, ldo, nobufil, polar-filament, printed-solid, r3d,
+  ratrig, redline-filament, smart-materials-3d, tectonic-3d, unitak3d, verbatim, voolt3d,
+  winkle, zyltech. ambrosia and unitak3d set `draft` (low confidence); the rest `researched`.
+- `manufacturing_countries` recorded only where filament manufacture (not sale) is evidenced;
+  left empty with an explanatory note for ambrosia, printy-please, closin, gembird, gst3d, ldo,
+  ratrig, redline-filament.
+- `prusa-research` updated: reciprocal `parent-company` edge to printed-solid; the formerly
+  uncorroborated Delaware production line is confirmed via the Printed Solid acquisition (2022)
+  and July 2026 Prusa USA rebrand, so United States added to `manufacturing_countries`.
+- **Open item for Fable:** `oem_relationships.relationship` has no value for a portfolio/asset
+  acquisition. Tectonic 3D took over the Syensqo (ex-Solvay) filament portfolio in 2024
+  (production + supply, medical excluded); none of manufactures-for / manufactured-by /
+  rebrands / parent-company / distributes describes it, so it is recorded in
+  `additional_notes` only. Consider an `acquired-portfolio-from` value.
+- **Open item:** no POM (acetal) filament entry exists — NTH Grillon sells one (`Grilon POM`),
+  currently mapped to no ids. Same gap for Mitsubishi Durabio (isosorbide polycarbonate,
+  Verbatim) and for non-wood PLA bio-composites (cork/algae/coffee/olive/oyster, Smartfil Eco).
+- tectonic-3d references pa11-cf, peek-cf, ppe and tpi, added in the parallel filament pass.
+
 ### 2026-08-06 — Bond/support mutual-exclusion review (owner-caught: PCTG both bonded and supported PETG)
 - Full-catalog sweep found 27 contradictory pairs (exact-id) beyond the reported PCTG↔PETG.
 - Ruling: weld pairs keep bonds, lose support edges (ABS↔ASA; PETG↔PCTG/CPE/PET; PETG↔hard TPU).
@@ -285,3 +322,32 @@ every property sourced from the glossary.
 - 2026-08-01 — **Named**: the project is now the **Filament Field Guide** (owner choice;
   suggested GitHub repo name `filament-field-guide`). "Filament Atlas" was rejected due
   to the existing Filamatlas project. Site title, header brand, README, and PLAN updated.
+- 2026-09-20 — **Siraya Tech + VANYO manufacturers; tpu-64d + lw-peba filaments; five
+  entry refreshes.** New manufacturers: `siraya-tech` (resin house expanded into
+  elastomers and Fibreheart composites; Peopoly `manufactures-for` self-disclosed on
+  Siraya's own PETG-CF listing; manufacturing country deliberately left empty) and
+  `vanyo` (China-based extruder with an undisclosed private-label programme; parameters
+  sourced from SpoolmanDB PR #479, no reachable vendor site — status draft). New
+  filaments: `tpu-64d` (three vendors sell exactly 64D — Forward AM, Siraya Tech, Yoline
+  Lab; forward-am.com unreachable, so temps/density are Yoline TPU *family* values, not
+  64D-specific — status draft, confidence low) and `lw-peba` (foaming PEBA; Siraya
+  Rebound PEBA Air publishes the mechanism — temperature sets 70A-95A hardness, up to
+  50 % weight reduction — and none of the numbers, so all figures are carried from
+  `peba`/`lw-tpu` — status draft). Closes the `peba-lw` coverage gap. Trade-name
+  normalisation: `"Siraya Tech"` → `siraya-tech` on lw-tpu ×2 and peba ×1, with the
+  "not a catalog manufacturer id" caveats dropped; Forward AM's Ultrafuse TPU 64D moved
+  off base `tpu` to `tpu-64d` (forward-am product_lines remapped to match); the
+  superseded colorFabb varioShore listing on `tpu` was confirmed already removed and
+  lw-tpu's stale "should be moved here" note cleared. Entry refreshes (all last_verified
+  2026-09-20): taulman3d — taulman3d.com squatted, brand continues as "Xtellar Taulman"
+  via MatterHackers; keene-village-plastics — acquired by Toner Plastics Aug 2024,
+  relocated East Longmeadow MA (manufacturing now Massachusetts, formerly Ohio), now the
+  "Village Plastics" brand of Toner Plastics, endpoints repointed to tonerplastics.com;
+  voxelab — voxelab3dp.com unreachable on an expired TLS cert (noted only, not read as
+  closure); chckx3d — chckx3d.com unreachable across attempts and no active storefront,
+  likely defunct, caveats strengthened and the mislabeling suspicions marked
+  unconfirmable; comgrow — small own-branded PLA / Tri-Color Silk PLA line confirmed
+  alongside the Creality reselling. Open for Fable: `ppa-gf` still has no id (Siraya
+  Fibreheart PPA-GF mapped to `ppa` with a caveat), and `tpu-68d` still carries the
+  "TPU 64D" alias plus eSUN/Kexcelled 64D trade names that now arguably belong on
+  `tpu-64d`. Validator: 0 errors, 0 warnings (99 filaments, 97 manufacturers, 14 plates).

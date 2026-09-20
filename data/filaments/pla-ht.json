@@ -256,6 +256,16 @@
       "manufacturer": "spectrum-filaments",
       "product": "The Filament HT-PLA",
       "notes": "Heat-resistant crystallising PLA. Distinct from pla-hf, which is about flow rate rather than heat resistance"
+    },
+    {
+      "manufacturer": "extrudr",
+      "product": "GreenTEC Pro",
+      "notes": "Bio-polyester family; HDT-B 115 C, Vicat 160 C."
+    },
+    {
+      "manufacturer": "fusion-filaments",
+      "product": "HTPLA+",
+      "notes": "NatureWorks Ingeo 3D870 high-heat crystallizing PLA per SKU/TDS index."
     }
   ]
 }

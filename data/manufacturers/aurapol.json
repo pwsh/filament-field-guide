@@ -1,0 +1,84 @@
+{
+  "id": "aurapol",
+  "name": "AURAPOL s.r.o.",
+  "status": "researched",
+  "summary": "Czech filament manufacturer headquartered in Sumna, South Moravia, extruding since 2017-18 and marketing heavily on Czech-made provenance. A second production facility in Andrychow, Poland was added in 2025. The range is mainstream and price-aggressive: PLA in many variants (including a high-temperature HT110 grade, wood-filled and recycled), PET-G, ASA and ABS.",
+  "headquarters_country": "Czech Republic",
+  "manufacturing_countries": [
+    "Czech Republic",
+    "Poland"
+  ],
+  "brands": [
+    "AURAPOL"
+  ],
+  "endpoints": {
+    "website": "https://www.aurapol.com/",
+    "social": {
+      "facebook": "https://www.facebook.com/aurapol3d/",
+      "youtube": "https://www.youtube.com/@aurapol3d"
+    }
+  },
+  "product_lines": [
+    {
+      "name": "AURAPOL PLA",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Standard PLA, the volume line."
+    },
+    {
+      "name": "AURAPOL PLA HT110",
+      "filament_ids": [
+        "pla-ht"
+      ],
+      "notes": "Annealable high-temperature PLA; the '110' refers to the claimed post-annealing service temperature."
+    },
+    {
+      "name": "AURAPOL PLA Wood",
+      "filament_ids": [
+        "pla-wood"
+      ],
+      "notes": "PLA matrix + wood-fibre filler."
+    },
+    {
+      "name": "AURAPOL PLA Recycled",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Recycled-feedstock PLA; same chemistry as base PLA, no recycled-content id exists."
+    },
+    {
+      "name": "AURAPOL PET-G (incl. Army and Recycled)",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "Standard PETG plus matte 'Army' colourway and a recycled-feedstock variant; one chemistry."
+    },
+    {
+      "name": "AURAPOL ASA",
+      "filament_ids": [
+        "asa"
+      ],
+      "notes": "Standard ASA."
+    },
+    {
+      "name": "AURAPOL ABS",
+      "filament_ids": [
+        "abs"
+      ],
+      "notes": "Standard ABS."
+    }
+  ],
+  "makes_plates": false,
+  "price_tier": "budget",
+  "additional_notes": "Pricing roughly USD 13-17/kg, positioning it at the budget end of EU-made filament. The Polish facility (Andrychow, 2025) is the second site; both are counted in manufacturing_countries because extrusion, not just warehousing, is claimed for each.",
+  "provenance": {
+    "sources": [
+      "https://start.aurapol.com/",
+      "https://www.aurapol.com/"
+    ],
+    "last_verified": "2026-09-20",
+    "confidence": "medium",
+    "conflicts": "The Polish site's role (full extrusion vs finishing/logistics) is asserted by the company and not independently confirmed."
+  }
+}

@@ -478,6 +478,16 @@
       "manufacturer": "voxelab",
       "product": "ASA",
       "notes": "Marketed UV/rain/heat resistant; retained from prior pass (Amazon listing B0C8S4CD4L)"
+    },
+    {
+      "manufacturer": "REDLINE FILAMENT",
+      "product": "ASA-X",
+      "notes": "Marketed as a 'highly modified industrial-grade ASA' with a Zero-Warp claim; formulation undisclosed. SpoolmanDB lists it as a distinct material 'ASA-X'; density 1.11."
+    },
+    {
+      "manufacturer": "fusion-filaments",
+      "product": "EasyASA",
+      "notes": "Density 1.05, 235-255 C."
     }
   ],
   "alternatives": [

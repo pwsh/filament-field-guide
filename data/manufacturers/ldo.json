@@ -1,0 +1,65 @@
+{
+  "id": "ldo",
+  "name": "LDO (LDO SYSTEMS CO. LIMITED)",
+  "status": "researched",
+  "summary": "Shenzhen stepper-motor and motion-hardware maker central to the Voron and RatRig DIY printer ecosystems, which extended its catalogue into ABS, ASA and PLA filament plus PEI flex plates. The filament is sold through the same reseller network as its motors (Fabreeko, Printed Solid and others); who extrudes it is not disclosed.",
+  "headquarters_country": "China",
+  "manufacturing_countries": [],
+  "brands": [
+    "LDO",
+    "LDO Motion",
+    "LDO Motors",
+    "Stardust"
+  ],
+  "endpoints": {
+    "website": "https://ldomotion.com/",
+    "store": "https://store.ldomotion.com/",
+    "social": {
+      "instagram": "https://www.instagram.com/ldomotors",
+      "youtube": "https://www.youtube.com/@ldomotors"
+    }
+  },
+  "product_lines": [
+    {
+      "name": "LDO ABS (incl. Stardust glitter)",
+      "filament_ids": [
+        "abs"
+      ],
+      "notes": "Standard ABS plus a glitter 'Stardust' colourway; the catalog has no glitter ABS id, so only the matrix id applies."
+    },
+    {
+      "name": "LDO ASA",
+      "filament_ids": [
+        "asa"
+      ],
+      "notes": "Standard ASA, aimed at Voron enclosure and part printing."
+    },
+    {
+      "name": "LDO ASA-CF",
+      "filament_ids": [
+        "asa-cf"
+      ],
+      "notes": "Carbon-fibre-filled ASA."
+    },
+    {
+      "name": "LDO PLA",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Standard PLA."
+    }
+  ],
+  "makes_plates": true,
+  "price_tier": "mid",
+  "additional_notes": "Pricing roughly USD 20-35/kg. No OEM relationship is recorded because none could be found: LDO manufactures motors and motion hardware in Shenzhen, but the filament's extruder is entirely undisclosed and there is no evidence LDO extrudes it itself. manufacturing_countries is therefore left empty - China is confirmed for LDO's hardware manufacturing but not for the filament. LDO also sells PEI flex plates; no specific plate id is claimed, so plate_ids is left unset.",
+  "provenance": {
+    "sources": [
+      "https://store.ldomotion.com/products/abs-filaments",
+      "https://filamentcheatsheet.com/brands/ldo/",
+      "https://forum.vorondesign.com/threads/ldo-filament-release-in-us.1999/"
+    ],
+    "last_verified": "2026-09-20",
+    "confidence": "medium",
+    "conflicts": "The filament extruder is unknown. LDO's own manufacturing is in motors, not polymers, so the filament is very likely contract-extruded, but no supplier was identified and no OEM edge is recorded."
+  }
+}

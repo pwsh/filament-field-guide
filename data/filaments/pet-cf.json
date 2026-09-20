@@ -230,6 +230,10 @@
       "manufacturer": "spectrum-filaments",
       "product": "PET CF15",
       "notes": "PET + 15% carbon fibre"
+    },
+    {
+      "manufacturer": "azurefilm",
+      "product": "PET-CF"
     }
   ]
 }

@@ -1,0 +1,200 @@
+{
+  "id": "tpu-55d",
+  "name": "TPU 55D (semi-rigid)",
+  "aliases": [
+    "TPU 55D",
+    "Shore 55D TPU",
+    "Semi-rigid TPU 55D"
+  ],
+  "status": "researched",
+  "base_type": "tpu",
+  "variation_kind": "shore-grade",
+  "polymer_class": "elastomer",
+  "chemical_makeup": "Thermoplastic polyurethane with a hard-segment ratio placing it at 55D on the Shore D scale \u2014 just above the top of the Shore A range and the softest of the D-scale grades in this catalog. Represented by Devil Design's TPU 55D.",
+  "summary": "The entry point to semi-rigid TPU: still unmistakably a urethane, but stiff enough to behave like a tough plastic rather than a flexible. Delta vs tpu-60d: a little softer and correspondingly a little closer to the flexible-feeding problems, with a lower nozzle window (210-230 \u00b0C against 220-260 \u00b0C) and a cooler bed. Delta vs the Shore A grades: 400 % elongation and 180 N/mm tear strength are retained while the rope-like buckling that plagues 85A-95A largely disappears. Low shrinkage and 44 MPa tensile make it usable for parts that need structure as well as give.",
+  "printing": {
+    "nozzle_temp_c": {
+      "min": 210,
+      "max": 230,
+      "recommended": 220
+    },
+    "bed_temp_c": {
+      "min": 20,
+      "max": 80,
+      "recommended": 50
+    },
+    "ambient_temp_c": {
+      "min": 18,
+      "max": 30,
+      "recommended": 22
+    },
+    "speed_mm_s": {
+      "min": 15,
+      "max": 40,
+      "recommended": 25
+    },
+    "enclosure_recommended": false,
+    "heated_chamber_required": false,
+    "enclosure_open_for_cooling": true,
+    "requires_hardened_nozzle": false,
+    "part_cooling_fan_pct": {
+      "min": 0,
+      "max": 60,
+      "recommended": 40
+    },
+    "notes": "Devil Design's TDS gives 210-230 \u00b0C at the nozzle and an unusually wide 20-80 \u00b0C bed range \u2014 wide enough that it is effectively 'anything from unheated to warm', with 50 \u00b0C a sensible default. The window runs cooler than tpu-60d's 220-260 \u00b0C, which is the expected direction for a softer grade. Speed is described as low; the recorded 15-40 mm/s is a conservative reading of that guidance rather than a published mm/s figure (unverified) \u2014 55D is stiff enough to tolerate more than a Shore A grade but not enough to print at PETG rates. No enclosure needed; warp is minimal and shrinkage is low. Not abrasive \u2014 standard brass nozzle."
+  },
+  "feeding": {
+    "drive_system": "direct-drive-recommended",
+    "ams_compatible": "conditional",
+    "feeding_assistant_recommended": false,
+    "notes": "Mirrors tpu-60d's treatment, one notch more cautious. Direct drive is preferred and a Bowden path is plausible but less comfortable than at 60D, because at 55D the filament is nearer the durometer where compressive buckling starts. AMS is 'conditional', not 'yes': Bambu's wiki notes that harder TPUs at 55D and 77D can be printed through the AMS, which is a direct mention of this durometer rather than an inference \u2014 but it is not a product statement for any specific 55D filament, and 55D sits close enough to the flexible limit that a short test print should come before a long unattended job. No feeding assistant needed."
+  },
+  "drying": {
+    "required_before_use": "always",
+    "temp_c": {
+      "min": 65,
+      "max": 80,
+      "recommended": 70
+    },
+    "time_hours": {
+      "min": 6,
+      "max": 12,
+      "recommended": 8
+    },
+    "methods": [
+      "dedicated filament dryer at 70 \u00b0C",
+      "hot-air or vacuum oven at 70 \u00b0C",
+      "print directly from a drybox with desiccant"
+    ],
+    "dryness_validation": "No popping or crackling at the nozzle, no foamy extrudate, and no rise in stringing on a retraction test \u2014 at this stiffness stringing is a reliable indicator, unlike the soft Shore A grades.",
+    "notes": "No grade-specific drying schedule is published by Devil Design, so the family regimen carried through the rest of the TPU entries is applied here (unverified for this grade specifically). TPU drying is set by the urethane chemistry rather than by durometer, so the carry-over is defensible."
+  },
+  "storage": {
+    "recommendations": "Sealed with desiccant under 20 % RH. Absorbs more slowly than the soft Shore A grades but is still a urethane and should not be left in open air between prints.",
+    "max_humidity_pct": 20,
+    "hygroscopy": "high"
+  },
+  "price": {
+    "usd_per_kg_low": 30,
+    "usd_per_kg_high": 45,
+    "notes": "No firm retail figure was captured for Devil Design's TPU 55D in this pass; the recorded band is carried from the adjacent tpu-60d grade ($25-45/kg) narrowed to the brand tier and should be treated as indicative rather than sourced (unverified)."
+  },
+  "use_cases": {
+    "recommended": [
+      "flexible parts needing more rigidity than a 95A grade",
+      "seals, bushings and gaskets exposed to oil or grease",
+      "semi-rigid housings and protective covers",
+      "snap-fit and clip parts with some give",
+      "wear parts where urethane abrasion resistance beats a rigid plastic"
+    ],
+    "not_recommended": [
+      "parts needing true rubber-like compression or squish (use 60A or 85A)",
+      "fully rigid structural parts",
+      "high-temperature service",
+      "long unattended material-station jobs without a test print first",
+      "food-contact items"
+    ]
+  },
+  "suitability": {
+    "food_contact": "no",
+    "load_bearing": "moderate",
+    "high_temperature": "no",
+    "outdoor": "limited"
+  },
+  "properties": {
+    "shore_hardness": "55D",
+    "density_g_cm3": 1.23,
+    "grams_per_100cm3": 123,
+    "cm3_per_100g": 81.3,
+    "glass_transition_c": -25,
+    "max_service_temp_c": 80,
+    "tensile_strength_mpa": {
+      "min": 44,
+      "max": 44,
+      "recommended": 44
+    },
+    "notes": "Devil Design publishes a usefully complete datasheet for this grade, which is unusual in the D-scale TPUs: density 1.23 g/cm\u00b3 (between the 95A grades' 1.22 and tpu-60d's estimated 1.24, which is the expected ordering), tensile 44 MPa, elongation at break 400 %, tear strength 180 N/mm, and low shrinkage. The 400 % elongation is the number that distinguishes this grade from a rigid plastic of similar tensile strength \u2014 it is stiff, but it does not snap. Tg -25 \u00b0C and the 80 \u00b0C maximum service temperature are family values carried from the base tpu entry rather than grade-specific measurements (unverified). No HDT figure is published."
+  },
+  "scores": {
+    "ease_of_print": 6,
+    "dimensional_stability": 5,
+    "warp_tendency": 2,
+    "layer_adhesion": 5,
+    "compression_strength": 4,
+    "temperature_tolerance": 5,
+    "uv_tolerance": 4,
+    "weather_tolerance": 5,
+    "water_tolerance": 6
+  },
+  "compatibility": {
+    "bonds_with": [
+      "lw-tpu",
+      "tpe",
+      "tpu",
+      "tpu-60a",
+      "tpu-60d",
+      "tpu-68d",
+      "tpu-72d",
+      "tpu-85a",
+      "tpu-90a",
+      "tpu-95a",
+      "tpu-98a",
+      "tpu-gf"
+    ],
+    "support_materials": [
+      "pla"
+    ],
+    "usable_as_support_for": [],
+    "notes": "Chemically welds to base TPU and every sibling grade, but as with tpu-60d the mechanical mismatch at a rigid-to-soft interface matters: a 55D-to-60A joint concentrates strain at the boundary in a way a 90A-to-95A joint does not, so design multi-durometer transitions with a gradient or interlocking geometry rather than a flat butt joint. PLA is the support pairing, following this catalog's ruling that PLA-to-TPU is the weakest TPU interface and releases cleanly. PETG is deliberately NOT listed as a support: PETG and TPU are a documented weld pair in this catalog, and a welding pair can never serve as a removable support interface (RESEARCH_GUIDE \u00a78)."
+  },
+  "plate_recommendations": [
+    {
+      "plate_id": "pei-textured",
+      "rating": "recommended",
+      "notes": "Textured PEI works at the 50 \u00b0C bed this grade wants, and the over-adhesion problem that dogs the soft grades is much reduced because the part is rigid enough to release without tearing. A separator is optional rather than advisable. Not separately verified for this grade."
+    }
+  ],
+  "alternatives": [
+    {
+      "filament_id": "tpu-60d",
+      "reason": "The next grade up: slightly harder and more dimensionally stable, with a better-documented AMS story and a hotter 220-260 \u00b0C window \u2014 giving up a little of the give that makes 55D useful, and its property figures are interpolations where Devil Design publishes real ones for 55D."
+    },
+    {
+      "filament_id": "tpu-95a",
+      "reason": "Much softer, far more widely stocked and cheaper, with genuine rubber-like compression \u2014 but it buckles in a Bowden path, is barred from the AMS, and cannot carry the structural load a 55D part can."
+    },
+    {
+      "filament_id": "tpu-98a",
+      "reason": "The closest Shore A grade: nearly the same practical hardness with a little more rubbery recovery and a cheaper floor \u2014 with lower dimensional stability and a durometer label that makes cross-brand comparison harder than the D-scale does."
+    }
+  ],
+  "emissions": {
+    "voc_level": "low",
+    "particulate_level": "low",
+    "primary_emissions": [
+      "ultrafine particles",
+      "isocyanate residues (unverified)",
+      "urethane decomposition byproducts (unverified)"
+    ],
+    "ventilation": "recommended",
+    "notes": "Standard TPU-family chemistry, and this is one of the cooler-running grades in the family at 210-230 \u00b0C \u2014 comfortably below the ~250 \u00b0C point at which urethane decomposition becomes a real rather than theoretical concern, which is why particulate level is recorded 'low' where tpu-60d's hotter window earns 'moderate'. Inferred from the general temperature-emissions relationship rather than measured for this grade (unverified); no source differentiates TPU emissions by Shore grade."
+  },
+  "safety_notes": "Prints cool enough to stay clear of the urethane decomposition range, which is the main safety advantage of this grade over the hotter D-scale TPUs \u2014 keep the nozzle inside the 210-230 \u00b0C window and it stays there. Ventilate as for any TPU. Not food-contact certified as printed.",
+  "additional_notes": "This is the grade to pick when a 95A part is too floppy and a 60D part is too stiff, and the one point in the family where a manufacturer publishes a complete property set \u2014 tensile, elongation, tear strength and density all come from Devil Design's own TDS rather than from interpolation, which is not true of tpu-60d. Durometer consistency across brands remains the standing risk in the D-scale TPUs; buy a small quantity and check the feel before committing a design.",
+  "provenance": {
+    "sources": [
+      "https://devildesign.com/download/TPU_-_product_card.pdf"
+    ],
+    "last_verified": "2026-09-20",
+    "confidence": "medium",
+    "conflicts": "Single-source entry \u2014 Devil Design's product card is the only datasheet behind it, so no figure here is corroborated. That card is unusually complete for the D-scale TPUs (tensile 44 MPa, elongation 400 %, tear strength 180 N/mm, density 1.23 g/cm\u00b3, low shrinkage), but it publishes no HDT, no glass transition, no drying schedule and no mm/s print speed. Tg (-25 \u00b0C), maximum service temperature (80 \u00b0C) and the drying regimen are carried from the base tpu entry and its siblings rather than measured for this grade. Print speed is a conservative reading of 'low speed' guidance, not a published number. Price is carried from tpu-60d's band narrowed to this brand tier and is not a captured retail figure. AMS status is 'conditional' on the strength of Bambu's wiki naming 55D as printable through the AMS \u2014 a direct mention of the durometer but not of any specific product. Bed temperature is published as 20-80 \u00b0C, a range wide enough to be nearly uninformative; 50 \u00b0C is recorded as a working default rather than a vendor recommendation."
+  },
+  "trade_names": [
+    {
+      "manufacturer": "devil-design",
+      "product": "TPU 55D",
+      "notes": "The source of this entry's recorded figures: 210-230 \u00b0C nozzle, 20-80 \u00b0C bed, density 1.23 g/cm3, tensile 44 MPa, elongation 400 %, tear strength 180 N/mm."
+    }
+  ]
+}

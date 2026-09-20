@@ -1,0 +1,184 @@
+{
+  "id": "siraya-tech",
+  "name": "Siraya Tech",
+  "status": "researched",
+  "summary": "Resin house that expanded into filament. Siraya Tech built its reputation on high-performance UV/SLA resins and platinum silicones, then moved into FDM with a catalog that deliberately skips the commodity middle: no own-brand plain PLA, PLA+, unfilled PETG, unfilled ABS or unfilled ASA at all. What it does sell is elastomers (the Flex TPU, Roamr and Rebound PEBA lines, including foaming grades whose hardness the operator sets at the nozzle) and fiber-reinforced engineering materials under the Fibreheart brand (PET-CF, PET-GF, the PPA family, ABS/ASA-GF and -CF, including coaxial CF-core constructions). It also manufactures at least one filament under another company's brand.",
+  "manufacturing_countries": [],
+  "brands": [
+    "Siraya Tech",
+    "Flex",
+    "Roamr",
+    "Rebound",
+    "Fibreheart",
+    "Defiant",
+    "Aegis",
+    "Grip"
+  ],
+  "oem_relationships": [
+    {
+      "company": "Peopoly",
+      "relationship": "manufactures-for",
+      "notes": "Siraya Tech's own PETG-CF collection lists a 'Peopoly Lancer PETG-CF HF' product annotated 'Manufactured by Siraya Tech' \u2014 an unusually explicit self-disclosure of a white-label arrangement, since the product is sold under the Peopoly brand on Siraya's own storefront. Observed directly on siraya.tech/collections/petg-cf-filament, 2026-09-20. Whether the arrangement extends beyond this one SKU is not stated (unverified). Not present in research/verified-oem-relationships.md."
+    }
+  ],
+  "endpoints": {
+    "website": "https://siraya.tech/",
+    "store": "https://siraya.tech/collections/plastic-filament",
+    "support": "https://siraya.tech/pages/support",
+    "social": {
+      "youtube": "https://www.youtube.com/@sirayatechofficial",
+      "instagram": "https://www.instagram.com/sirayatech/",
+      "x": "https://x.com/SirayaTech",
+      "tiktok": "https://www.tiktok.com/@sirayatech"
+    }
+  },
+  "product_lines": [
+    {
+      "name": "Flex TPU 85A",
+      "filament_ids": [
+        "tpu-85a"
+      ],
+      "notes": "Shore 85A flexible TPU. No product-specific nozzle temperature or density published; the TPU collection FAQ gives a general bed of about 40-60 \u00b0C."
+    },
+    {
+      "name": "Flex TPU 95A",
+      "filament_ids": [
+        "tpu-95a"
+      ],
+      "notes": "Shore 95A flexible TPU, the firm end of Siraya's Shore A range."
+    },
+    {
+      "name": "Flex TPU 64D",
+      "filament_ids": [
+        "tpu-64d"
+      ],
+      "notes": "Shore 64D semi-rigid TPU, marketed on mid-flexibility with improved dimensional stability against the 85A and 95A grades, and listed in Siraya's Prusa-compatible collection. One of only three products found anywhere at exactly 64D, which is why the tpu-64d entry exists."
+    },
+    {
+      "name": "Fibreheart TPU-GF",
+      "filament_ids": [
+        "tpu-gf"
+      ],
+      "notes": "15 % glass-fiber reinforced TPU at roughly Shore 67D; the stiffness is pitched explicitly at making a flexible feed reliably through Prusa MMU2S/MMU3 material changers."
+    },
+    {
+      "name": "Flex TPU Air 65A-82A",
+      "filament_ids": [
+        "lw-tpu"
+      ],
+      "notes": "Actively foaming TPU whose printed Shore hardness varies across 65A-82A with the foam ratio, which is set by nozzle temperature. Directly comparable to colorFabb varioShore, the lw-tpu reference product."
+    },
+    {
+      "name": "Roamr TPU Air HR 80A / 85A",
+      "filament_ids": [
+        "lw-tpu"
+      ],
+      "notes": "High-rebound foaming TPU aimed at footwear and midsoles; Siraya claims roughly 57 % lighter than standard TPU under active foaming. Sits at the firm end of the foaming-flexible category."
+    },
+    {
+      "name": "Rebound PEBA 85A / 95A",
+      "filament_ids": [
+        "peba"
+      ],
+      "notes": "Solid polyether block amide elastomers at Shore 85A and 95A, sold under the Fibreheart branding in the Elegoo Centauri collection. Siraya's own blog positions PEBA as the 'super TPU' and cites 15-20 % lower density than standard TPU, which matches the catalog's measured 1.01 vs 1.22 g/cm\u00b3 gap."
+    },
+    {
+      "name": "Rebound PEBA Air 70A-95A",
+      "filament_ids": [
+        "lw-peba"
+      ],
+      "notes": "Foamed elastic PEBA and the reference product for the lw-peba entry: operator-set hardness across 70A-95A via nozzle temperature (higher temperature softer, lower temperature firmer rebound), up to 50 % weight reduction with active foaming, matte fabric-like surface. No temperatures, density or mechanicals published."
+    },
+    {
+      "name": "Fibreheart PET-CF",
+      "filament_ids": [
+        "pet-cf"
+      ],
+      "notes": "Carbon-fiber reinforced PET."
+    },
+    {
+      "name": "Fibreheart PET-GF",
+      "filament_ids": [
+        "pet-gf"
+      ],
+      "notes": "Glass-fiber reinforced PET."
+    },
+    {
+      "name": "Fibreheart PETG-CF Pro / PETG-CF HF",
+      "filament_ids": [
+        "petg-cf"
+      ],
+      "notes": "Matte carbon-fiber PETG, 240-265 \u00b0C nozzle and 75-85 \u00b0C bed per Siraya's PETG-CF collection; requires a hardened steel or ruby nozzle. The same formulation is sold under the Peopoly brand as Lancer PETG-CF HF \u2014 see oem_relationships."
+    },
+    {
+      "name": "Fibreheart PPA",
+      "filament_ids": [
+        "ppa"
+      ],
+      "notes": "Unfilled polyphthalamide, 280-320 \u00b0C nozzle and 80-120 \u00b0C bed."
+    },
+    {
+      "name": "Fibreheart PPA-CF / PPA-CF Core",
+      "filament_ids": [
+        "ppa-cf"
+      ],
+      "notes": "Carbon-fiber PPA, 280-320 \u00b0C nozzle and 80-120 \u00b0C bed. The 'Core' variant is a coaxial construction \u2014 a 25 % carbon-fiber core inside a plain PPA shell \u2014 which the flat ppa-cf id does not capture."
+    },
+    {
+      "name": "Fibreheart PPA-GF",
+      "filament_ids": [
+        "ppa"
+      ],
+      "notes": "Glass-fiber reinforced PPA, 280-320 \u00b0C nozzle and 80-120 \u00b0C bed, rated to about 200 \u00b0C max service on the Prusa listing. MAPPING CAVEAT: no ppa-gf id exists in this catalog (only ppa and ppa-cf), so this line is mapped to the unfilled ppa id. The glass-fiber reinforcement \u2014 which changes stiffness, abrasion and nozzle requirements \u2014 is not captured by that id; flagged for the coverage-gap list."
+    },
+    {
+      "name": "Fibreheart ABS-GF",
+      "filament_ids": [
+        "abs-gf"
+      ],
+      "notes": "Glass-fiber reinforced ABS; bed up to about 100 \u00b0C."
+    },
+    {
+      "name": "Fibreheart ABS-CF / ABS-CF Core",
+      "filament_ids": [
+        "abs-cf"
+      ],
+      "notes": "Carbon-fiber reinforced ABS; bed up to about 100 \u00b0C. As with PPA-CF, the 'Core' variant is a carbon-fiber core inside an ABS shell rather than a homogeneous compound, which the flat abs-cf id does not capture."
+    },
+    {
+      "name": "Fibreheart ABS HT HF",
+      "filament_ids": [
+        "abs"
+      ],
+      "notes": "High-temperature, high-flow ABS; bed up to about 100 \u00b0C. MAPPING CAVEAT: mapped to plain abs because the catalog has no high-flow or high-temperature ABS id \u2014 both modifications are real and neither is captured."
+    },
+    {
+      "name": "Fibreheart ASA-GF",
+      "filament_ids": [
+        "asa-gf"
+      ],
+      "notes": "Glass-fiber reinforced ASA, marketed as UV stable; bed up to about 110 \u00b0C."
+    }
+  ],
+  "makes_plates": false,
+  "additional_notes": "The catalog shape is the most distinctive thing about this manufacturer and is worth stating plainly, because it is easy to assume otherwise from the brand's visibility: Siraya Tech does not sell own-brand plain PLA, PLA+, unfilled PETG, unfilled ABS or unfilled ASA filament. Where its marketing copy names those materials it is describing what the target printers can run, not what Siraya sells. The filament range is elastomers plus fiber-reinforced engineering materials, which is a resin company's instinct applied to FDM \u2014 go where the margin and the differentiation are. Two structural features recur and neither has a catalog id: several Fibreheart composites ship in a 'Core' coaxial construction (fiber-rich core, plain shell) rather than as a homogeneous compound, and three of the elastomer lines are actively foaming grades whose printed hardness and density the operator sets at the nozzle. Siraya also sells non-filament products \u2014 Defiant platinum silicones, Aegis print coatings, Grip bed adhesive, and the UV/SLA resin range the company was built on \u2014 none of which are in scope for this catalog. No build plates or print surfaces were found, so makes_plates is false.",
+  "provenance": {
+    "sources": [
+      "https://siraya.tech/",
+      "https://siraya.tech/collections/plastic-filament",
+      "https://siraya.tech/collections/tpu-filament",
+      "https://siraya.tech/collections/petg-cf-filament",
+      "https://siraya.tech/collections/ppa-filament",
+      "https://siraya.tech/collections/paht-cf-filament",
+      "https://siraya.tech/collections/prusa-filaments",
+      "https://siraya.tech/collections/elegoo-centauri-filament",
+      "https://siraya.tech/products/siraya-tech-rebound-peba-air-70a-95a-foamed-elastic-filament",
+      "https://siraya.tech/products/flex-tpu-air-65a-82a-foaming-flexible-filament",
+      "https://siraya.tech/blogs/news/what-is-peba-meet-the-super-tpu-revolutionizing-3d-printing",
+      "https://siraya.tech/pages/support"
+    ],
+    "last_verified": "2026-09-20",
+    "confidence": "medium",
+    "conflicts": "manufacturing_countries is recorded as an empty array rather than guessed: no page on siraya.tech states where the filament is extruded, and no legal entity, factory address or country of origin was found in this pass. The US phone number and support address on the site establish a US commercial presence, not a manufacturing location, and the company's resin heritage says nothing about who extrudes its filament. Headquarters country is omitted for the same reason. The Peopoly relationship rests on a single annotation on Siraya's own storefront ('Manufactured by Siraya Tech' against the Peopoly Lancer PETG-CF HF listing) \u2014 strong evidence for that SKU, no evidence either way for any other Peopoly product, and not corroborated on Peopoly's own site in this pass. Printing parameters were published only for the PETG-CF and PPA families; the TPU, PEBA and ABS/ASA lines carry no product-specific nozzle temperatures or densities anywhere on the site, only collection-level FAQ guidance, so those product_lines notes record behaviour rather than numbers. Two mappings are lossy and are flagged in their own notes: PPA-GF maps to the unfilled ppa id because no ppa-gf id exists, and ABS HT HF maps to plain abs because no high-flow/high-temp ABS id exists."
+  }
+}

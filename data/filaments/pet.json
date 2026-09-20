@@ -266,6 +266,11 @@
       "manufacturer": "tinmorry",
       "product": "PET Reinforced Filament",
       "notes": "Filler type unspecified, so pet-cf is not asserted"
+    },
+    {
+      "manufacturer": "fusion-filaments",
+      "product": "HTPET+",
+      "notes": "High-temperature PET; distinct TDS from the same vendor's PETG."
     }
   ]
 }

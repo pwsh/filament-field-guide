@@ -269,6 +269,10 @@
       "manufacturer": "push-plastic",
       "product": "PEI 1010",
       "notes": "ULTEM 1010 chemistry, unfilled polyetherimide \u2014 the same grade 3DXTech and others sell. Replaces the invalid 'pei' id previously in this file."
+    },
+    {
+      "manufacturer": "Tectonic 3D",
+      "product": "VULCAN 1010 / 9085"
     }
   ]
 }

@@ -1,0 +1,72 @@
+{
+  "id": "winkle",
+  "name": "Winkle",
+  "status": "researched",
+  "summary": "Spanish filament manufacturer founded in 2019 in Salamanca by Jorge Garcia, marketing on domestic production ('fabricado en Espana'). The PLA range is segmented by application - HD, Seda (silk), PRO, HS, Texture and recycled grades - alongside PETG including flame-retardant and carbon-filled variants, ASA, ABS and polypropylene.",
+  "headquarters_country": "Spain",
+  "manufacturing_countries": [
+    "Spain"
+  ],
+  "brands": [
+    "Winkle"
+  ],
+  "endpoints": {
+    "website": "https://winkle.shop/en/",
+    "social": {
+      "instagram": "https://www.instagram.com/winkle3d/"
+    }
+  },
+  "product_lines": [
+    {
+      "name": "PLA HD / Seda / PRO / HS / Texture / Recycled",
+      "filament_ids": [
+        "pla",
+        "pla-silk",
+        "pla-hf",
+        "pla-stone"
+      ],
+      "notes": "The PLA family: HD and PRO are base-chemistry quality tiers, Seda is the silk/luster grade, HS the high-speed grade, Texture the mineral/stone-effect grade, and Recycled uses recovered feedstock on the same chemistry."
+    },
+    {
+      "name": "PETG (incl. FR and CF)",
+      "filament_ids": [
+        "petg",
+        "petg-cf"
+      ],
+      "notes": "Standard and carbon-filled PETG; the flame-retardant grade has no catalog id (abs-fr has no PETG equivalent) and is covered by the base petg mapping."
+    },
+    {
+      "name": "Winkle ASA",
+      "filament_ids": [
+        "asa"
+      ],
+      "notes": "Standard ASA."
+    },
+    {
+      "name": "Winkle ABS",
+      "filament_ids": [
+        "abs"
+      ],
+      "notes": "Standard ABS."
+    },
+    {
+      "name": "Winkle PP",
+      "filament_ids": [
+        "pp"
+      ],
+      "notes": "Polypropylene."
+    }
+  ],
+  "makes_plates": false,
+  "price_tier": "mid",
+  "additional_notes": "Pricing roughly USD 19-22/kg. Winkle publishes a factory page describing its own Salamanca extrusion, which is the basis for recording Spain as a manufacturing country. Amazon storefront (the manufacturer schema's endpoints object has no amazon field, so it is recorded here): https://www.amazon.es/stores/WINKLE/page/0B3016B9-4CD8-4CDC-877F-2ABCE1FD7911",
+  "provenance": {
+    "sources": [
+      "https://winkle.shop/fabrica-filamento-winkle/",
+      "https://winkle.shop/en/"
+    ],
+    "last_verified": "2026-09-20",
+    "confidence": "medium",
+    "conflicts": "Domestic manufacture rests on the company's own factory page; no third-party confirmation or plant audit was found. Whether every line (notably PP and the CF grades) is extruded in Spain or partly bought in is unclear."
+  }
+}

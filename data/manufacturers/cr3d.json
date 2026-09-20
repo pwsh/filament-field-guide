@@ -1,0 +1,118 @@
+{
+  "id": "cr3d",
+  "name": "CR-3D (Ingenieurbuero Christian Reil)",
+  "status": "researched",
+  "summary": "Vertically integrated German 3D-printing company in Cham, Bavaria, founded 2016 by Christian Reil. Builds its own printers and slicer and has extruded filament in-house since opening its production line in 2023, spanning commodity PLA/PETG through ESD, flame-retardant and fibre-filled engineering grades. Also offers white-label and OEM extrusion for other brands.",
+  "headquarters_country": "Germany",
+  "manufacturing_countries": [
+    "Germany"
+  ],
+  "brands": [
+    "CR-3D",
+    "CR3D",
+    "FibCR",
+    "FlameX"
+  ],
+  "oem_relationships": [
+    {
+      "company": "Undisclosed white-label clients",
+      "relationship": "manufactures-for",
+      "notes": "CR-3D advertises white-label/OEM filament extrusion as a service. No client brand is named, so this edge records the capability rather than a specific counterparty."
+    }
+  ],
+  "endpoints": {
+    "website": "https://www.cr3d.de/",
+    "store": "https://www.cr3d.de/kategorie/filamente/",
+    "social": {
+      "facebook": "https://www.facebook.com/cr3d.official/"
+    }
+  },
+  "product_lines": [
+    {
+      "name": "CR-3D ABS (incl. Matt)",
+      "filament_ids": [
+        "abs"
+      ],
+      "notes": "Standard and matte-finish ABS."
+    },
+    {
+      "name": "ABS FibCR20",
+      "filament_ids": [
+        "abs-gf"
+      ],
+      "notes": "ABS + 20% glass fibre."
+    },
+    {
+      "name": "ABS-ESD",
+      "filament_ids": [
+        "abs-esd"
+      ],
+      "notes": "ABS + conductive filler for static dissipation."
+    },
+    {
+      "name": "PETG / PETG Carbon",
+      "filament_ids": [
+        "petg",
+        "petg-cf"
+      ],
+      "notes": "Standard PETG and a carbon-fibre-filled grade."
+    },
+    {
+      "name": "FlameX PETG UL94-V0",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "PETG + flame-retardant package rated UL94 V0; no flame-retardant PETG id exists (abs-fr has no PETG equivalent)."
+    },
+    {
+      "name": "PLA / Crystal / Soft / CF10",
+      "filament_ids": [
+        "pla",
+        "pla-cf"
+      ],
+      "notes": "Base PLA in several finishes plus a 10% carbon-fibre grade. 'Soft' is a modified PLA, not an elastomer."
+    },
+    {
+      "name": "CR-3D ASA",
+      "filament_ids": [
+        "asa"
+      ],
+      "notes": "Standard ASA."
+    },
+    {
+      "name": "PA6 / PA12",
+      "filament_ids": [
+        "pa6",
+        "pa12"
+      ],
+      "notes": "Unfilled polyamide grades."
+    },
+    {
+      "name": "PC / PC-ABS",
+      "filament_ids": [
+        "pc",
+        "pc-abs"
+      ],
+      "notes": "Polycarbonate and PC/ABS alloy."
+    },
+    {
+      "name": "TPU 85A",
+      "filament_ids": [
+        "tpu-85a"
+      ],
+      "notes": "Shore 85A flexible TPU."
+    }
+  ],
+  "makes_plates": true,
+  "price_tier": "premium",
+  "additional_notes": "Pricing spans EUR 39.80 to roughly EUR 178/kg, among the steepest in the German market, reflecting the engineering-grade and certified-flame-retardant end of the range. The company sells printers, a slicer and build surfaces alongside filament; no specific plate id is claimed, so plate_ids is left unset.",
+  "provenance": {
+    "sources": [
+      "https://www.cr3d.de/",
+      "https://www.cr3d.de/ueber/",
+      "https://www.cr3d.de/kategorie/filamente/"
+    ],
+    "last_verified": "2026-09-20",
+    "confidence": "high"
+  }
+}

@@ -1,0 +1,218 @@
+{
+  "id": "lw-peba",
+  "name": "LW-PEBA (Lightweight Foaming PEBA)",
+  "aliases": [
+    "LW-PEBA",
+    "PEBA Air",
+    "Foaming PEBA",
+    "Rebound PEBA Air",
+    "PEBA-LW",
+    "Lightweight PEBA"
+  ],
+  "status": "draft",
+  "base_type": "peba",
+  "variation_kind": "foaming",
+  "polymer_class": "elastomer",
+  "chemical_makeup": "Polyether block amide compounded with a chemical foaming/blowing agent that decomposes in the hot end and expands the melt into a closed-cell elastomeric foam. The base resin is the same polyamide-hard-block / polyether-soft-block copolymer as the solid peba entry \u2014 the foam cells, not a different resin, produce the softer effective durometer. Distinct from lw-tpu, whose matrix is polyurethane: the polyamide hard phase is what carries the rebound and the oil resistance through the foaming process",
+  "summary": "PEBA's high-rebound chemistry with foaming TPU's density slider bolted on: a single spool prints anywhere from roughly 70A to 95A, set by nozzle temperature rather than by which spool you bought, and foaming takes up to 50 % of the weight out of the part. Where lw-tpu damps, this rebounds \u2014 which is why the entire commercial pitch for it is footwear midsoles and cushioning. It is the thinnest-documented elastomer entry in the catalog: the vendors publish the behaviour and none of the numbers.",
+  "printing": {
+    "nozzle_temp_c": {
+      "min": 225,
+      "max": 260,
+      "recommended": 240
+    },
+    "bed_temp_c": {
+      "min": 60,
+      "max": 90,
+      "recommended": 80
+    },
+    "ambient_temp_c": {
+      "min": 18,
+      "max": 35,
+      "recommended": 25
+    },
+    "speed_mm_s": {
+      "min": 25,
+      "max": 60,
+      "recommended": 40
+    },
+    "enclosure_recommended": false,
+    "heated_chamber_required": false,
+    "enclosure_open_for_cooling": false,
+    "requires_hardened_nozzle": false,
+    "part_cooling_fan_pct": {
+      "min": 10,
+      "max": 50,
+      "recommended": 20
+    },
+    "notes": "IMPORTANT \u2014 no vendor publishes a nozzle temperature, bed temperature or density for a foaming PEBA product. The recorded window is the solid peba entry's, carried over unchanged (unverified for the foamed grades). What IS published is the mechanism: Siraya Tech states for Rebound PEBA Air that 'higher temp = softer feel, lower temp = firmer rebound', so nozzle temperature is a control input rather than a setting, exactly as on the lw-tpu entry \u2014 print cool for firm 95A-like behaviour and hot for maximum expansion and a ~70A feel, cutting flow to match as the melt expands. Siraya claims up to 50 % weight reduction with active foaming. Speed is capped below the solid entry's 25-110 mm/s because foam expansion needs time and consistency; the 25-60 mm/s figure is inferred, not published (unverified). Siraya notes the PEBA base is rigid enough to minimise feeding issues even at higher speeds, which is a genuine advantage over foaming TPU. No enclosure or chamber is specified (unverified). Unfilled, so a standard brass nozzle is fine \u2014 but as with every foaming grade, mismatched temperature and flow packs the nozzle with expanded melt."
+  },
+  "feeding": {
+    "drive_system": "direct-drive-recommended",
+    "ams_compatible": "conditional",
+    "feeding_assistant_recommended": true,
+    "notes": "Carried from the solid peba entry, which is itself one notch more permissive than base tpu on the reasoning that the polyamide hard phase makes the strand less prone to buckling than urethane at a given durometer. The unmelted filament feeds as firm PEBA regardless of how soft the printed part ends up, which is what makes 'conditional' rather than 'no' defensible here. Siraya Tech's own marketing for Rebound PEBA Air claims the PEBA base is stiff enough to minimise the feeding problems that dog foaming elastomers \u2014 a vendor claim, untested independently (unverified). A spool-side feeding assistant remains worthwhile because spool drag stretches elastomer filament into under-extrusion, and under-extrusion here does not merely thin a wall, it changes the foam ratio and therefore the part's hardness."
+  },
+  "drying": {
+    "required_before_use": "always",
+    "temp_c": {
+      "min": 70,
+      "max": 75,
+      "recommended": 70
+    },
+    "time_hours": {
+      "min": 6,
+      "max": 8,
+      "recommended": 8
+    },
+    "methods": [
+      "dedicated filament dryer at 70-75 \u00b0C",
+      "convection or hot-air oven at 70 \u00b0C",
+      "print directly from a drybox with desiccant",
+      "in-print drying for long jobs"
+    ],
+    "dryness_validation": "The foam makes surface texture useless as a moisture signal \u2014 a bubbled, matte extrudate is the intended product, not a warning. Judge instead by popping, crackling and visible steam at the nozzle, and above all by repeatability: extrude a fixed length at a fixed temperature twice and check that the expansion ratio and the resulting weight match. A spool that will not repeat its own foam ratio is wet.",
+    "notes": "No drying schedule is published for any foaming PEBA product (unverified). The figures are the solid peba entry's, which come from eSUN's PEBA-90A TDS. 'Always' matters more here than on the solid grade for a mechanism no source measures: moisture flashing to steam competes with the blowing agent, so a damp spool plausibly makes part density and hardness unrepeatable \u2014 the same reasoning the lw-tpu entry records. Polyamide hard blocks are hygroscopic in the nylon sense, so treat drying as routine rather than occasional."
+  },
+  "storage": {
+    "recommendations": "Sealed with fresh desiccant at all times, targeting under 20 % RH, and ideally printed straight from a drybox. No brand publishes storage specifics for a foaming PEBA (unverified); the polyamide content means nylon-grade discipline is the safe default, and the foaming mechanism means moisture costs you dimensional and hardness repeatability, not just surface quality.",
+    "max_humidity_pct": 20,
+    "hygroscopy": "high"
+  },
+  "use_cases": {
+    "recommended": [
+      "footwear midsoles and insoles at tunable firmness",
+      "sports and helmet padding where energy return beats damping",
+      "lightweight cushioning and soft-goods prototypes",
+      "wearables needing a soft, fabric-like matte surface",
+      "drone and robotics parts where weight and high-cycle fatigue both matter",
+      "parts with a deliberate hardness gradient printed in one job by varying nozzle temperature",
+      "prototyping a target durometer before committing to a fixed-grade elastomer"
+    ],
+    "not_recommended": [
+      "any load-bearing or structural part",
+      "parts loaded in Z \u2014 foaming cuts strength as it cuts density",
+      "damping and shock-absorbing duty where energy should be dissipated rather than returned (use lw-tpu or solid TPU)",
+      "tight-tolerance or dimensionally critical parts",
+      "sealing gaskets (closed-cell foam compresses and leaks differently from solid elastomer)",
+      "budget-sensitive work \u2014 this is the most expensive way to make a soft part in this catalog",
+      "high-temperature, and unqualified food-contact use"
+    ]
+  },
+  "suitability": {
+    "food_contact": "no",
+    "load_bearing": "no",
+    "high_temperature": "no",
+    "outdoor": "limited"
+  },
+  "properties": {
+    "shore_hardness": "70A-95A",
+    "density_g_cm3": 1.01,
+    "grams_per_100cm3": 101,
+    "cm3_per_100g": 99.0,
+    "notes": "IMPORTANT \u2014 the recorded 1.01 g/cm\u00b3 is the SOLID/unfoamed reference density carried from the peba entry (Fillamentum 1.00, eSUN 1.01, Kimya 1.013), and the derived 101 g/100 cm\u00b3 and 99.0 cm\u00b3/100 g follow from it. It is NOT the density of a printed part. Siraya Tech claims up to 50 % weight reduction with active foaming, which would put a fully foamed part near 0.5 g/cm\u00b3 \u2014 derived from a marketing claim, published by nobody (unverified). If that figure holds, foamed PEBA is the lightest printable elastomer in this catalog by a wide margin: solid PEBA is already ~17 % lighter than TPU, and foaming roughly halves it again. Shore hardness is a print setting, not a spec: Siraya publishes a 70A-95A operator-set range for Rebound PEBA Air and eSUN 66A-92A for PEBA-LW, in both cases set by nozzle temperature and flow. No tensile, elongation, energy-return, melt-point or Tg figure is published for any foamed PEBA grade, and none is recorded here rather than borrowed from the solid entry \u2014 the solid entry's ~70 % energy return and 149-185 \u00b0C melt figures describe unfoamed material and should not be read across. Expect strength to fall roughly with density, as it does for foaming TPU, and expect hardness to fall faster than density does, which is standard cellular-solid scaling."
+  },
+  "scores": {
+    "ease_of_print": 3,
+    "dimensional_stability": 3,
+    "warp_tendency": 1,
+    "layer_adhesion": 3,
+    "compression_strength": 1,
+    "temperature_tolerance": 3,
+    "uv_tolerance": 4,
+    "weather_tolerance": 5,
+    "water_tolerance": 5
+  },
+  "compatibility": {
+    "bonds_with": [
+      "peba"
+    ],
+    "support_materials": [],
+    "usable_as_support_for": [],
+    "notes": "Deliberately sparse, following the solid peba entry: no sourced page documents co-printing PEBA with anything, foamed or not. Same-chemistry welding to the solid peba entry is the only claim made, and it is the obvious design pattern \u2014 a solid PEBA mounting boss or outsole with a foamed cushioning layer over it, all in one chemistry and one spool if temperature is used to set the transition. Bonding to TPU and TPE is undocumented despite all three being elastomers (unverified): urethane, styrenic and polyamide hard phases are not interchangeable, and this entry does not assert a weld the solid entry declines to assert. A weld to the pa family is plausible in principle from the polyamide blocks but is ruled out on temperature grounds as on the solid entry (unverified). Supports: no soluble or breakaway interface is documented for PEBA in any form, so support_materials is left empty rather than populated by analogy with the TPU family. Not usable as a support for anything."
+  },
+  "plate_recommendations": [
+    {
+      "plate_id": "pei-textured",
+      "rating": "usable",
+      "notes": "No build-surface guidance exists for foaming PEBA (unverified); inferred from the solid peba entry, which is itself inferred from TPU practice. Textured PEI grips elastomers well at a 60-90 \u00b0C bed and the usual failure mode is over-adhesion rather than lifting. As on lw-tpu, print the first layer unfoamed \u2014 cool and at full flow \u2014 for adhesion, then ramp into the foaming window: a foamed first layer has less material to grip with."
+    },
+    {
+      "plate_id": "g10-garolite",
+      "rating": "usable",
+      "notes": "Inferred from the solid peba and base tpu entries, where G10 grips elastomers without fusing and needs no release agent (unverified for a foamed PEBA). Start at a low bed temperature and raise only if the first layer lifts."
+    },
+    {
+      "plate_id": "pei-smooth",
+      "rating": "usable",
+      "notes": "Inferred from the solid peba entry (unverified). Smooth PEI at a 70-90 \u00b0C bed can fuse hard enough to damage the sheet on removal; lay down a full glue-stick separator if using it. It does give a clean, untextured underside, which matters for a material sold partly on its fabric-like surface."
+    },
+    {
+      "plate_id": "supertack",
+      "rating": "avoid",
+      "notes": "Inferred from the explicit TPU prohibition and carried through the solid peba entry (unverified): the tacky coating bonds to soft elastomers and tears when the part is pulled. A foamed surface tears more readily than a solid one, not less."
+    },
+    {
+      "plate_id": "buildtak-polymer",
+      "rating": "avoid",
+      "notes": "Inferred from the base tpu entry via solid peba (unverified): the vendor states flexibles typically fuse with the surface on large parts, and foamed elastomer works into the texture at least as readily."
+    }
+  ],
+  "alternatives": [
+    {
+      "filament_id": "lw-tpu",
+      "reason": "The same temperature-as-hardness trick on a urethane matrix: cheaper ($65-85 against PEBA pricing that starts around $75-110 solid and runs higher foamed), far better documented \u2014 CNC Kitchen measured its expansion, hardness and tensile independently \u2014 and more widely stocked. What you give up is the whole reason to pick PEBA: urethane damps energy where PEBA returns it, so midsoles and rebound parts lose their point."
+    },
+    {
+      "filament_id": "peba",
+      "reason": "The solid grade at a fixed 85A-95A: published density, tensile, ~70 % energy return and a -60 \u00b0C low-temperature rating, none of which exist for the foamed version, plus predictable dimensions and no per-model foaming calibration. You lose the up-to-50 % weight reduction and the ability to set hardness at the nozzle."
+    },
+    {
+      "filament_id": "tpu-85a",
+      "reason": "Solid TPU at roughly the middle of this entry's hardness range and a fraction of the price ($50-70), with slicer profiles everywhere and no foaming window to hit \u2014 but no rebound, no weight saving, and none of PEBA's oil and solvent resistance."
+    },
+    {
+      "filament_id": "tpu-95a",
+      "reason": "The default flexible when light-and-springy is not actually the requirement: documented mechanicals, ease 5 against 3 here, and flow that does not depend on temperature control."
+    }
+  ],
+  "emissions": {
+    "voc_level": "low",
+    "particulate_level": "moderate",
+    "primary_emissions": [
+      "ultrafine particles",
+      "chemical foaming/blowing-agent decomposition products (composition undisclosed)",
+      "polyamide/polyether thermal decomposition products (unverified)"
+    ],
+    "ventilation": "recommended",
+    "notes": "No emissions measurement exists for PEBA in any form, foamed or solid (unverified). VOC level stays 'low' as on the solid entry: PEBA is neither a styrenic nor a urethane, so there is no styrene pathway as with ABS/ASA and no isocyanate pathway as with TPU, and the PA11/PA12 hard blocks mean caprolactam is not expected either. Particulate is raised one step to 'moderate' against the solid entry's 'low', following the same reasoning the lw-tpu entry uses: the grade is deliberately run toward the top of its window to maximise foaming, and ultrafine-particle emission from FDM rises steeply with nozzle temperature. The blowing agent's composition is undisclosed by every vendor."
+  },
+  "safety_notes": "The blowing agent's exact composition is undisclosed by every brand selling a foaming PEBA, so nothing can be said about its decomposition products beyond that they exist. Do not exceed the vendor's stated nozzle ceiling chasing more expansion \u2014 above roughly 260 \u00b0C polyamide decomposition chemistry becomes unpredictable. No food-contact certification was found for any foaming elastomer, and the open cell structure at fracture surfaces makes food contact a firmer 'no' here than for solid PEBA, where Fillamentum's declarations make the solid entry 'conditional'. Unfilled, so not abrasive.",
+  "additional_notes": "Three things define this entry. First, hardness is a print setting: Siraya Tech states plainly that higher temperature gives a softer feel and lower temperature a firmer rebound across a 70A-95A span, so one spool can carry a stiffness gradient through a single part \u2014 the same varioShore-class trick as lw-tpu, on a different polymer. Second, foaming takes up to 50 % of the weight out, on top of PEBA already being ~17 % lighter than TPU; that compounding is what makes the material interesting for footwear, where every gram is carried thousands of times a day. Third, and the actual reason to pay for it rather than buy lw-tpu: the polyamide/polyether backbone returns energy instead of dissipating it, so a foamed PEBA midsole springs back where a foamed TPU one sinks. Everything else is a trade \u2014 the highest price in the elastomer section, nylon-grade drying, no slicer profiles, and a complete absence of published numbers. Note the naming trap: eSUN's PEBA-LW sits in an LW line beside PLA-LW and ASA-LW and reads like a foaming TPU product, but eSUN's own page names PEBA as the base polymer, which is why it belongs here and is explicitly excluded from lw-tpu.",
+  "provenance": {
+    "sources": [
+      "https://siraya.tech/products/siraya-tech-rebound-peba-air-70a-95a-foamed-elastic-filament",
+      "https://siraya.tech/collections/tpu-filament",
+      "https://siraya.tech/blogs/news/what-is-peba-meet-the-super-tpu-revolutionizing-3d-printing",
+      "https://www.esun3d.com/peba-lw-product/",
+      "https://www.esun3d.com/uploads/PEBA90A-TDS-EN.pdf",
+      "https://colorfabb.com/media/datasheets/tds/colorfabb/TDS_E_ColorFabb_varioShore_TPU.pdf",
+      "https://www.cnckitchen.com/blog/testing-colorfabb-varioshore-tpu-foaming-3d-printing-filament"
+    ],
+    "last_verified": "2026-09-20",
+    "confidence": "low",
+    "conflicts": "This entry has no numbers of its own, and that is its governing caveat. The Siraya Tech Rebound PEBA Air product page was read directly on 2026-09-20 and publishes the mechanism (temperature sets hardness across 70A-95A, up to 50 % weight reduction with active foaming, nylon-elastomer backbone, matte fabric-like surface, PEBA base stiff enough to reduce feeding problems) but not a single nozzle temperature, bed temperature, density or mechanical figure. eSUN's PEBA-LW page gives a 66A-92A operator-set range and nothing else. Every printing temperature, drying figure, storage figure, plate rating and emissions level here is therefore carried from the solid peba entry or inferred from lw-tpu by mechanism, never sourced for a foamed PEBA. The density recorded is explicitly the solid reference value; the ~0.5 g/cm\u00b3 foamed figure implied by Siraya's 50 % claim is a vendor marketing number with no independent measurement behind it, unlike lw-tpu where CNC Kitchen measured the expansion ratio directly. Shore range disagrees between vendors (Siraya 70A-95A, eSUN 66A-92A); the schema takes one value and Siraya's is recorded as the reference product, with eSUN's noted rather than averaged. No price is recorded at all because no per-kg listing was confirmed for any foaming PEBA product. Status 'draft' and confidence 'low' on all of the above."
+  },
+  "trade_names": [
+    {
+      "manufacturer": "siraya-tech",
+      "product": "Rebound PEBA Air (70A-95A)",
+      "notes": "The reference product for this entry. Operator-set hardness across 70A-95A via nozzle temperature \u2014 higher temperature softer, lower temperature firmer rebound \u2014 with up to 50 % weight reduction claimed under active foaming, a matte fabric-like surface, and a PEBA base the vendor says is stiff enough to minimise the feeding problems typical of foaming elastomers. Targeted at sports equipment, drone parts, wearables and impact-resistant components. No temperatures, density or mechanicals published."
+    },
+    {
+      "manufacturer": "esun",
+      "product": "PEBA-LW",
+      "notes": "Chemically foamed lightweight PEBA \u2014 eSUN's own product page names PEBA, not TPU, as the base polymer, despite the product sitting in an LW line beside PLA-LW and ASA-LW. Adjustable roughly 66A-92A by foaming ratio, a slightly wider and softer-topped span than Siraya's 70A-95A. Previously tracked as candidate id peba-lw in the coverage-gap list and cross-referenced from both the peba and lw-tpu entries; this entry is that id."
+    }
+  ]
+}

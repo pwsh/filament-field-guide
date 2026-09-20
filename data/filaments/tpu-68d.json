@@ -5,7 +5,6 @@
     "TPU 68D",
     "TPU for AMS",
     "Shore 68D TPU",
-    "TPU 64D",
     "AMS-compatible TPU"
   ],
   "status": "researched",
@@ -218,16 +217,6 @@
       "manufacturer": "bambu-lab",
       "product": "TPU for AMS",
       "notes": "tpu-68d already carries aliases 'TPU for AMS' and 'AMS-compatible TPU'"
-    },
-    {
-      "manufacturer": "esun",
-      "product": "TPU-64D",
-      "notes": "Shore 64D; tpu-68d already carries 'TPU 64D' as an alias"
-    },
-    {
-      "manufacturer": "kexcelled",
-      "product": "High Speed TPU 64D",
-      "notes": "Shore 64D; tpu-68d carries 'TPU 64D' as an alias"
     }
   ]
 }

@@ -1,0 +1,201 @@
+{
+  "id": "pa11-cf",
+  "name": "PA11-CF (Carbon-Fiber-Filled Nylon 11)",
+  "aliases": [
+    "PA11 CF",
+    "Nylon 11 Carbon Fiber",
+    "PA11CF",
+    "Bio-nylon CF",
+    "KRATIR PA11-CF"
+  ],
+  "status": "researched",
+  "base_type": "pa",
+  "variation_kind": "carbon-fiber-filled",
+  "polymer_class": "polyamide",
+  "chemical_makeup": "Bio-based polyamide 11 (castor oil derived) + chopped carbon fiber. The PA11 backbone runs ten methylene carbons between amide groups \u2014 one short of PA12 and four longer than PA6 \u2014 which places its moisture behaviour and melting point (189 \u00b0C) between the two, while making it the only nylon in this catalog derived from a renewable feedstock rather than petrochemical monomer. The fiber supplies the stiffness PA11 conspicuously lacks unfilled.",
+  "summary": "The bio-based CF nylon, and the impact-tough member of the filled-nylon group. Deltas vs pa12-cf: markedly better toughness and a much higher HDT (180 \u00b0C @1.8 MPa against 150 \u00b0C @0.45 MPa), plus a castor-oil feedstock \u2014 paid for with far worse moisture sensitivity (drying is 'always', at an unusually hot 120 \u00b0C) and a 285 \u00b0C nozzle with a 90 \u00b0C chamber. Deltas vs pa6-cf: less stiff and less strong on the datasheet, but it holds its numbers better and is easier to keep dry in practice. Anisotropy is the number to design around: 105 MPa tensile in XZ collapses to 34 MPa in ZX.",
+  "printing": {
+    "nozzle_temp_c": {
+      "min": 260,
+      "max": 290,
+      "recommended": 285
+    },
+    "bed_temp_c": {
+      "min": 90,
+      "max": 110,
+      "recommended": 110
+    },
+    "ambient_temp_c": {
+      "min": 60,
+      "max": 100,
+      "recommended": 90
+    },
+    "speed_mm_s": {
+      "min": 30,
+      "max": 100,
+      "recommended": 30
+    },
+    "enclosure_recommended": true,
+    "heated_chamber_required": false,
+    "enclosure_open_for_cooling": false,
+    "requires_hardened_nozzle": true,
+    "part_cooling_fan_pct": {
+      "min": 0,
+      "max": 10,
+      "recommended": 0
+    },
+    "notes": "Recorded from Tectonic 3D's KRATIR PA11-CF (260-290 \u00b0C nozzle, 90-110 \u00b0C bed, 90 \u00b0C chamber). Prusament's PA11CF specifies a completely different process \u2014 215-230 \u00b0C nozzle and 40-60 \u00b0C bed \u2014 which is 60-70 \u00b0C lower and cannot be reconciled as a tolerance; the two are different formulations sharing a name (see conflicts). Use the datasheet for the spool in hand rather than this range. A 90 \u00b0C chamber is recommended and materially improves large parts, but heated_chamber_required stays false: an enclosed printer holding passive heat will produce sound parts. Hardened nozzle is mandatory \u2014 carbon fiber eats brass. Part cooling off, as for every nylon here. The 30 mm/s recommendation is deliberately conservative; 100 mm/s is achievable on small parts but layer adhesion suffers and this material is already Z-weak."
+  },
+  "feeding": {
+    "drive_system": "direct-drive-recommended",
+    "ams_compatible": "conditional",
+    "feeding_assistant_recommended": false,
+    "notes": "Rigid, so it pushes well, but direct drive is preferred for the extrusion pressure a fiber-filled melt needs at 285 \u00b0C. AMS is recorded 'conditional' rather than 'no': mechanically the filament is stiff enough to feed, but the material must stay dry through the whole path, and an unsealed material station will undo a 6-8 h drying cycle in an afternoon. If it goes in an AMS at all, it goes in a sealed, desiccated one with the spool fed hot \u2014 and the fiber will still abrade the PTFE path. No vendor publishes an AMS verdict for PA11-CF (unverified)."
+  },
+  "drying": {
+    "required_before_use": "always",
+    "temp_c": {
+      "min": 110,
+      "max": 120,
+      "recommended": 120
+    },
+    "time_hours": {
+      "min": 6,
+      "max": 8,
+      "recommended": 6
+    },
+    "methods": [
+      "high-temperature filament dryer rated to 120 \u00b0C",
+      "convection/blast oven at 120 \u00b0C",
+      "print directly from a heated drybox"
+    ],
+    "dryness_validation": "No popping, hissing or steam at the nozzle, a void-free purge line, and baseline stringing on a retraction test. Because the drying temperature is high enough to soften some spool materials, check the spool itself has not deformed before loading.",
+    "notes": "Tectonic specifies 120 \u00b0C for 6-8 h, which is 30-40 \u00b0C hotter than the 80-90 \u00b0C schedule typical of the rest of the nylon family in this catalog and closer to the PAEK tier's regimen \u2014 a genuine outlier worth noting, and one that rules out most cardboard-cored spools and many consumer dryers. Recorded 'always': PA11 is hygroscopic and the fiber loading does nothing to help."
+  },
+  "storage": {
+    "recommendations": "Sealed with desiccant at all times and fed from a drybox during the print. Treat an opened spool left in room air overnight as needing a full re-dry, not a top-up.",
+    "max_humidity_pct": 20,
+    "hygroscopy": "high"
+  },
+  "price": {
+    "usd_per_kg_low": 110,
+    "usd_per_kg_high": 165,
+    "notes": "$110-165/kg across the Tectonic 3D and Prusament listings checked. Comparable to pa6-cf and below pa12-cf's $130-180, which is unusual for a bio-based grade \u2014 the castor-oil feedstock does not carry the price premium one might expect."
+  },
+  "use_cases": {
+    "recommended": [
+      "impact-tough stiff functional parts",
+      "jigs, fixtures and brackets",
+      "bio-based engineering parts where feedstock origin matters",
+      "components exposed to fuels, oils and hydraulic fluid",
+      "load-bearing parts that must survive knocks rather than just loads"
+    ],
+    "not_recommended": [
+      "cosmetic prints \u2014 the fiber-matte surface and Z lines are not a finish",
+      "beginners \u2014 a 285 \u00b0C nozzle, a 120 \u00b0C drying cycle and a hardened nozzle all at once",
+      "open-bay print farms without humidity control",
+      "parts loaded in Z (34 MPa against 105 MPa in-plane)",
+      "brass-nozzle printers",
+      "food-contact items"
+    ]
+  },
+  "suitability": {
+    "food_contact": "no",
+    "load_bearing": "high",
+    "high_temperature": "yes",
+    "outdoor": "limited"
+  },
+  "properties": {
+    "density_g_cm3": 1.13,
+    "grams_per_100cm3": 113,
+    "cm3_per_100g": 88.5,
+    "glass_transition_c": 46,
+    "heat_deflection_c": 180,
+    "max_service_temp_c": 150,
+    "tensile_strength_mpa": {
+      "min": 34,
+      "max": 105
+    },
+    "notes": "The tensile range is anisotropy, not uncertainty: 105 MPa measured in XZ against 34 MPa in ZX, a roughly 3:1 ratio that is among the most pronounced in this catalog and the single most important design constraint on the material. Orient loads in-plane or accept a third of the strength. HDT 180 \u00b0C at 1.8 MPa \u2014 measured at the harsher load, so not directly comparable with the 0.45 MPa figures quoted for pa12-cf (150 \u00b0C) and it is the stronger result of the two. Melting point 189 \u00b0C. Density 1.13 g/cm\u00b3 sits between pa12-cf's 1.06 and pa6-cf's 1.17. Tg 46 \u00b0C is a literature PA11 value rather than a filament datasheet figure (unverified). Shrinkage is not published by either vendor and is left blank."
+  },
+  "scores": {
+    "ease_of_print": 3,
+    "dimensional_stability": 7,
+    "warp_tendency": 5,
+    "layer_adhesion": 4,
+    "compression_strength": 8,
+    "temperature_tolerance": 8,
+    "uv_tolerance": 5,
+    "weather_tolerance": 6,
+    "water_tolerance": 4
+  },
+  "compatibility": {
+    "bonds_with": [
+      "copa",
+      "pa",
+      "pa12",
+      "pa6",
+      "pa612"
+    ],
+    "support_materials": [
+      "support-breakaway"
+    ],
+    "usable_as_support_for": [],
+    "notes": "Welds to itself and across the aliphatic polyamide family, though a PA11-to-PA6 interface is weaker than a same-grade bond because the melting points differ by roughly 30 \u00b0C. Soluble supports are not viable: pva and bvoh both degrade well below the 260-290 \u00b0C window, so they are omitted here even though the base pa entry lists them \u2014 the same deviation pa6-cf and pa12-cf make. A dedicated breakaway support is the practical removable interface. No cross-family bond to pla, petg, abs, asa, pc or pp; all of them are destroyed on contact at this temperature."
+  },
+  "alternatives": [
+    {
+      "filament_id": "pa12-cf",
+      "reason": "Stiffer on the datasheet and markedly easier to live with: drying is 'if-exposed' at 90 \u00b0C rather than 'always' at 120 \u00b0C, and it holds ~85 % of dry tensile when conditioned (water 8 vs 4, ease 6 vs 3) \u2014 giving up PA11's impact toughness, its 180 \u00b0C HDT and the bio-based feedstock, at a higher price ($130-180 vs $110-165)."
+    },
+    {
+      "filament_id": "pa6-cf",
+      "reason": "Higher stiffness and strength for similar money, and the most widely supported CF nylon \u2014 but it is the most moisture-sensitive nylon in the catalog (water 2 vs 4), losing roughly half its tensile and two-thirds of its stiffness once conditioned, where PA11-CF's impact behaviour is the thing you were buying."
+    },
+    {
+      "filament_id": "ppa-cf",
+      "reason": "When the ceiling is the constraint: HDT 227 \u00b0C against 180 \u00b0C (temp 9 vs 8) and higher compressive strength \u2014 at $172-266/kg, a 280-315 \u00b0C nozzle, a 50-80 \u00b0C chamber spec and even worse layer adhesion (3 vs 4)."
+    }
+  ],
+  "emissions": {
+    "voc_level": "moderate",
+    "particulate_level": "moderate",
+    "primary_emissions": [
+      "amide-family VOCs",
+      "ultrafine particles",
+      "respirable carbon fiber dust (post-processing)"
+    ],
+    "ventilation": "recommended",
+    "notes": "Standard nylon-family profile at the top of the nylon temperature range. PA11 is aminoundecanoic-acid based rather than caprolactam based, so it is not a caprolactam source and the characteristic acidic nylon odour is milder than PA6's, but 285 \u00b0C is hot enough that ultrafine-particle emission is significant. The carbon fiber adds a post-processing dust hazard the unfilled nylons do not have. Enclosed printer with HEPA plus activated-carbon filtration, or external exhaust, for long jobs. No PA11-CF-specific measurement was found (unverified) \u2014 this is nylon-family guidance with the monomer difference accounted for."
+  },
+  "safety_notes": "Abrasive: a hardened steel or ruby nozzle is mandatory and a brass nozzle will not survive a spool. Wear respiratory protection with dust capture when sanding or machining printed parts \u2014 carbon fiber fines are a respiratory irritant. The 120 \u00b0C drying specification is hot enough to deform cardboard cores and some plastic spools; check the spool is rated for it before running an oven cycle. A 285 \u00b0C hotend and a 110 \u00b0C bed inside a heated enclosure are all burn hazards. Not food-contact suitable as printed.",
+  "additional_notes": "The design decision that matters here is orientation. A part printed with its load path in XZ carries 105 MPa; the same part rotated to load the Z axis carries 34 MPa, and no amount of process tuning closes that gap. Choose PA11-CF over pa12-cf when impact toughness or the bio-based feedstock is the reason for the choice, and over pa6-cf when the part will live somewhere humid. Choose neither if the shop cannot dry filament at 120 \u00b0C.",
+  "provenance": {
+    "sources": [
+      "https://3dgbire.com/products/tectonic-kratir-pa11-cf",
+      "https://www.tectonic-3d.com/products/tennet-kratir-pa11-cf-1",
+      "https://prusament.com/wp-content/uploads/2022/08/TDS_PA11CFB.pdf",
+      "https://filamentcheatsheet.com/database/material/pa11/"
+    ],
+    "last_verified": "2026-09-20",
+    "confidence": "medium",
+    "conflicts": "The process window is the major unresolved disagreement, and it is too large to be tolerance. Tectonic 3D's KRATIR PA11-CF specifies 260-290 \u00b0C nozzle and 90-110 \u00b0C bed; Prusament's PA11CF TDS specifies 215-230 \u00b0C nozzle and 40-60 \u00b0C bed \u2014 60-70 \u00b0C lower at the nozzle and roughly 50 \u00b0C lower at the bed. These are almost certainly different formulations (fiber loading, PA11 grade or impact modifier) marketed under the same material name rather than an error by either vendor. The Tectonic figures are recorded because they carry the mechanical and thermal data used elsewhere in this entry; the Prusament grade is flagged as a genuinely different material that happens to share a name, and anyone buying it should use its own datasheet. The 120 \u00b0C / 6-8 h drying specification is Tectonic's and is an outlier against the 80-90 \u00b0C typical of this catalog's nylons \u2014 recorded as published, unverified against a second vendor. Tg 46 \u00b0C is a literature PA11 value, not a filament datasheet figure. Shrinkage is unpublished. AMS status is inferred, not documented. Price rests on two retail listings."
+  },
+  "trade_names": [
+    {
+      "manufacturer": "Tectonic 3D",
+      "product": "KRATIR PA11-CF",
+      "notes": "260-290 \u00b0C nozzle, 90-110 \u00b0C bed, 90 \u00b0C chamber; 120 \u00b0C / 6-8 h drying. The source of this entry's recorded figures."
+    },
+    {
+      "manufacturer": "Tectonic 3D",
+      "product": "ZEPHYR PA11 CF",
+      "notes": "Second PA11-CF line from the same vendor; process figures not separately verified."
+    },
+    {
+      "manufacturer": "prusa-research",
+      "product": "PA11CF",
+      "notes": "TDS specifies 215-230 \u00b0C nozzle and 40-60 \u00b0C bed \u2014 a materially different formulation from the Tectonic grade despite the shared name (see conflicts)."
+    }
+  ]
+}

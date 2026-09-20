@@ -20,7 +20,7 @@
     {
       "company": "iAM Marketplace",
       "relationship": "joint-venture",
-      "notes": "essentium.com now redirects to i-am-marketplace.com, which describes iAM Marketplace as combining iSQUARED, Forward AM and AM Marketplace GmbH into one ecosystem — so Forward AM materials are now sold through a consolidated multi-brand storefront. The redirect and page content are directly observed; the underlying corporate structure is unverified. Not present in research/verified-oem-relationships.md."
+      "notes": "essentium.com now redirects to i-am-marketplace.com, which describes iAM Marketplace as combining iSQUARED, Forward AM and AM Marketplace GmbH into one ecosystem \u2014 so Forward AM materials are now sold through a consolidated multi-brand storefront. The redirect and page content are directly observed; the underlying corporate structure is unverified. Not present in research/verified-oem-relationships.md."
     }
   ],
   "endpoints": {
@@ -109,9 +109,9 @@
     {
       "name": "Ultrafuse TPU 64D",
       "filament_ids": [
-        "tpu"
+        "tpu-64d"
       ],
-      "notes": "Shore 64D rigid-flex grade; sits between the tpu-60d and tpu-68d grade entries, so mapped to base tpu."
+      "notes": "Shore 64D rigid-flex grade. Remapped ['tpu'] -> ['tpu-64d'] 2026-09-20: a dedicated tpu-64d entry now exists, created because this product, Siraya Tech's Flex TPU 64D and Yoline Lab's TPU 64D all sit at exactly 64D between the tpu-60d and tpu-68d grades. NOTE: forward-am.com did not resolve on repeated attempts on 2026-09-20, so this product's page and TDS could not be re-read and supply none of the tpu-64d entry's numbers."
     },
     {
       "name": "Ultrafuse PP GF30",
@@ -159,7 +159,7 @@
   ],
   "makes_plates": false,
   "price_tier": "engineering",
-  "additional_notes": "IMPORTANT for anyone reading older sources: BASF is no longer the parent company. Most pre-carve-out coverage still describes 'BASF Forward AM' as a BASF subsidiary. headquarters_country is recorded as Germany on the basis of the historic Heidelberg/Ludwigshafen BASF Forward AM base plus leadership continuity through the buyout; the independent entity's registered HQ was not directly stated in any source found. manufacturing_countries likewise carries forward the historic German/European BASF polymer-plant footprint — post-buyout production sites are unconfirmed. Reported 30% annual growth since 2022 under Forward AM leadership. No social profiles confirmed. No build-plate products found — this is an industrial materials supplier, not a hardware or accessory vendor.",
+  "additional_notes": "IMPORTANT for anyone reading older sources: BASF is no longer the parent company. Most pre-carve-out coverage still describes 'BASF Forward AM' as a BASF subsidiary. headquarters_country is recorded as Germany on the basis of the historic Heidelberg/Ludwigshafen BASF Forward AM base plus leadership continuity through the buyout; the independent entity's registered HQ was not directly stated in any source found. manufacturing_countries likewise carries forward the historic German/European BASF polymer-plant footprint \u2014 post-buyout production sites are unconfirmed. Reported 30% annual growth since 2022 under Forward AM leadership. No social profiles confirmed. No build-plate products found \u2014 this is an industrial materials supplier, not a hardware or accessory vendor.",
   "provenance": {
     "sources": [
       "https://3dprintingindustry.com/news/basf-exits-the-3d-printing-industry-forward-am-carved-out-into-a-new-company-231451/",
@@ -174,8 +174,8 @@
       "https://forward-am.com/material-portfolio/ultrafuse-filaments-for-fused-filaments-fabrication-fff/support-filaments/",
       "https://forward-am.com/material-portfolio/ultrafuse-filaments-for-fused-filaments-fabrication-fff/metal-filaments/"
     ],
-    "last_verified": "2026-07-31",
+    "last_verified": "2026-09-20",
     "confidence": "medium",
-    "conflicts": "Corporate structure is in flux and only partly resolved. The BASF carve-out is confirmed but the independent entity's HQ and manufacturing sites are not stated in any source found — Germany is carried forward from the BASF era for both fields. The iAM Marketplace consolidation (iSQUARED + Forward AM + AM Marketplace GmbH, sharing a storefront with the former Essentium business) is observed via redirect but the legal relationships behind it are unverified. Metal-filament premium pricing is industry knowledge, not confirmed with $/kg figures. Endpoint corrected 2026-08-01: docs https://3dgbire.com/pages/forward-am -> https://forward-am.com/material-portfolio/ultrafuse-filaments-for-fused-filaments-fabrication-fff/ (old URL was a third-party UK reseller page, not Forward AM's own material documentation)."
+    "conflicts": "Corporate structure is in flux and only partly resolved. The BASF carve-out is confirmed but the independent entity's HQ and manufacturing sites are not stated in any source found \u2014 Germany is carried forward from the BASF era for both fields. The iAM Marketplace consolidation (iSQUARED + Forward AM + AM Marketplace GmbH, sharing a storefront with the former Essentium business) is observed via redirect but the legal relationships behind it are unverified. Metal-filament premium pricing is industry knowledge, not confirmed with $/kg figures. Endpoint corrected 2026-08-01: docs https://3dgbire.com/pages/forward-am -> https://forward-am.com/material-portfolio/ultrafuse-filaments-for-fused-filaments-fabrication-fff/ (old URL was a third-party UK reseller page, not Forward AM's own material documentation). Observed 2026-09-20: forward-am.com did not resolve across repeated attempts from this environment, so no Ultrafuse product page or TDS could be re-verified in this pass; the endpoints and product-line details recorded here are from earlier passes and were not re-checked."
   }
 }

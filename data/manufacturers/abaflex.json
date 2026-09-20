@@ -1,0 +1,74 @@
+{
+  "id": "abaflex",
+  "name": "Abaflex (Colendis s.r.o.)",
+  "status": "researched",
+  "summary": "Small family-run Czech filament maker in Jihlava, founded around 2020-21 by Pavel Suchanek and trading through Colendis s.r.o. Runs its own extrusion line and has operated a direct e-shop since August 2023; the catalogue is deliberately narrow, centred on PETG+ and ASA with carbon-filled and UV-reactive variants.",
+  "headquarters_country": "Czech Republic",
+  "manufacturing_countries": [
+    "Czech Republic"
+  ],
+  "brands": [
+    "Abaflex"
+  ],
+  "endpoints": {
+    "website": "https://www.abaflex.cz/"
+  },
+  "product_lines": [
+    {
+      "name": "PLA",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Standard PLA."
+    },
+    {
+      "name": "PETG+",
+      "filament_ids": [
+        "petg",
+        "petg-plus"
+      ],
+      "notes": "House enhanced PETG grade; the '+' is the brand's own designation with no disclosed chemistry departure from base PETG."
+    },
+    {
+      "name": "PETG+ CF",
+      "filament_ids": [
+        "petg-cf"
+      ],
+      "notes": "Carbon-fibre-filled PETG."
+    },
+    {
+      "name": "PETG+ UV",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "PETG carrying a UV-reactive (photochromic) pigment; base chemistry unchanged and no UV-reactive id exists."
+    },
+    {
+      "name": "ASA",
+      "filament_ids": [
+        "asa"
+      ],
+      "notes": "Standard acrylonitrile styrene acrylate."
+    },
+    {
+      "name": "ASA+ CF",
+      "filament_ids": [
+        "asa-cf"
+      ],
+      "notes": "Carbon-fibre-filled ASA."
+    }
+  ],
+  "makes_plates": false,
+  "price_tier": "mid",
+  "additional_notes": "Pricing roughly USD 13-25/kg equivalent. Very small operation - a single family workshop with one extrusion line - so batch availability is limited and colour ranges are short.",
+  "provenance": {
+    "sources": [
+      "https://www.abaflex.cz/",
+      "https://www.abaflex.cz/o-nas",
+      "https://www.abaflex.cz/a/vyroba-filamentu-v-abaflexu"
+    ],
+    "last_verified": "2026-09-20",
+    "confidence": "medium",
+    "conflicts": "Founding year (~2020-21) and the link between the Abaflex brand and the Colendis s.r.o. legal entity come from the company's own pages; no independent registry confirmation was retrieved."
+  }
+}

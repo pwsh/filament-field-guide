@@ -1,0 +1,77 @@
+{
+  "id": "ratrig",
+  "name": "Rat Rig, Lda",
+  "status": "researched",
+  "summary": "Faro, Portugal company best known for the open-source V-Core CoreXY printer kits, which extended into filament with the PunkFil line built on recycled feedstock, plus Ultembase PEI build plates. PunkFil's extruder is not disclosed; Rat Rig also resells third-party filament including eSUN and Sakata.",
+  "headquarters_country": "Portugal",
+  "manufacturing_countries": [],
+  "brands": [
+    "RatRig",
+    "Rat Rig",
+    "PunkFil",
+    "Ultembase"
+  ],
+  "oem_relationships": [
+    {
+      "company": "Unknown third-party extruder",
+      "relationship": "suspected-manufactured-by",
+      "notes": "PunkFil is Rat Rig's own brand but Rat Rig has no known extrusion capability and names no manufacturer. Contract extrusion is the strong inference; the counterparty is unidentified."
+    },
+    {
+      "company": "esun",
+      "relationship": "distributes",
+      "notes": "Rat Rig resells eSUN PLA through its own store alongside PunkFil. A retail relationship, not white-labelling."
+    }
+  ],
+  "endpoints": {
+    "website": "https://ratrig.com/",
+    "store": "https://ratrig.com/collections/filament",
+    "social": {
+      "instagram": "https://www.instagram.com/rat.rig/",
+      "youtube": "https://www.youtube.com/@ratrighardware"
+    }
+  },
+  "product_lines": [
+    {
+      "name": "PunkFil ABS",
+      "filament_ids": [
+        "abs"
+      ],
+      "notes": "Standard ABS on recycled feedstock."
+    },
+    {
+      "name": "PunkFil PETG",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "Standard PETG."
+    },
+    {
+      "name": "PunkFil PETG-CF10 (recycled)",
+      "filament_ids": [
+        "petg-cf"
+      ],
+      "notes": "PETG + 10% carbon fibre, recycled feedstock - e.g. the 'Brute Black' SKU."
+    },
+    {
+      "name": "PunkFil ASA-CF",
+      "filament_ids": [
+        "asa-cf"
+      ],
+      "notes": "Carbon-fibre-filled ASA."
+    }
+  ],
+  "makes_plates": true,
+  "price_tier": "premium",
+  "additional_notes": "Pricing roughly EUR 27-51/kg. Rat Rig also resells Sakata 3D filament, which has no entry in this catalog, so that relationship is recorded here in notes rather than as an OEM edge. manufacturing_countries is empty: Portugal is where Rat Rig designs and assembles printers, not where PunkFil is extruded, and no extrusion country is disclosed. Ultembase PEI plates are sold alongside; no specific plate id is claimed, so plate_ids is left unset.",
+  "provenance": {
+    "sources": [
+      "https://ratrig.com/collections/filament",
+      "https://ratrig.com/rat-rig-punkfil-brute-black-petg-cf10-filament-1-75mm-1kg.html",
+      "https://en.wikipedia.org/wiki/Rat_Rig"
+    ],
+    "last_verified": "2026-09-20",
+    "confidence": "medium",
+    "conflicts": "PunkFil's manufacturer and country of origin are undisclosed; the recycled-feedstock claim is the brand's own and is not third-party certified in any source found."
+  }
+}

@@ -1,0 +1,92 @@
+{
+    "manufacturer": "Filament PM",
+    "filaments": [
+        {
+            "name": "{color_name}",
+            "material": "ABS-T",
+            "density": 1.08,
+            "weights": [
+                {
+                    "weight": 1000
+                }
+            ],
+            "diameters": [
+                1.75
+            ],
+            "colors": [
+                {
+                    "name": "Black",
+                    "hex": "000000"
+                },
+                {
+                    "name": "Orange",
+                    "hex": "ef7622"
+                },
+                {
+                    "name": "Silver",
+                    "hex": "c0c0c4"
+                },
+                {
+                    "name": "White",
+                    "hex": "ffffff"
+                }
+            ]
+        },
+        {
+            "name": "{color_name}",
+            "material": "PETG",
+            "density": 1.27,
+            "weights": [
+                {
+                    "weight": 500
+                },
+                {
+                    "weight": 1000
+                },
+                {
+                    "weight": 2000
+                },
+                {
+                    "weight": 5000
+                }
+            ],
+            "diameters": [
+                1.75
+            ],
+            "colors": [
+                {
+                    "name": "Black",
+                    "hex": "000000"
+                },
+                {
+                    "name": "Blue",
+                    "hex": "1c50a0"
+                },
+                {
+                    "name": "Green",
+                    "hex": "1e8449"
+                },
+                {
+                    "name": "Grey",
+                    "hex": "808285"
+                },
+                {
+                    "name": "Orange",
+                    "hex": "ef7622"
+                },
+                {
+                    "name": "Red",
+                    "hex": "c8102e"
+                },
+                {
+                    "name": "White",
+                    "hex": "ffffff"
+                },
+                {
+                    "name": "Yellow",
+                    "hex": "f2c300"
+                }
+            ]
+        }
+    ]
+}

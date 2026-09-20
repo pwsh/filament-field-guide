@@ -270,9 +270,9 @@
       "https://wiki.bambulab.com/en/filament-acc/filament/heat-creep",
       "https://wiki.qidi3d.com/en/software/qidi-studio/expand/print-with-door-open"
     ],
-    "last_verified": "2026-07-31",
+    "last_verified": "2026-09-20",
     "confidence": "medium",
-    "conflicts": "Tensile strength: 6.4 MPa (Ultimaker Z) to 44.2 MPa (Ultrafuse XY) \u2014 the spread is mostly orientation, but grade and hardness differences add to it, so no single figure is meaningful without stating axis. Density: Ultrafuse 1.15, Ultimaker 1.22, Polymaker 1.24. Part cooling: Polymaker recommends 20-50% fan while other guides recommend the fan off for maximum layer adhesion. Drying time: Ultrafuse 5 h, Bambu 8-12 h, some community sources 24 h for soft grades. Bonding: this entry's sources describe PLA/PETG joints as mechanical interlock only, while the PETG entry cites sources reporting a genuine if weak TPU-PETG weld \u2014 unresolved. HDT, shrinkage %, max service temperature and the emissions profile are all unverified; no speciated emissions study for TPU was found."
+    "conflicts": "Tensile strength: 6.4 MPa (Ultimaker Z) to 44.2 MPa (Ultrafuse XY) \u2014 the spread is mostly orientation, but grade and hardness differences add to it, so no single figure is meaningful without stating axis. Density: Ultrafuse 1.15, Ultimaker 1.22, Polymaker 1.24. Part cooling: Polymaker recommends 20-50% fan while other guides recommend the fan off for maximum layer adhesion. Drying time: Ultrafuse 5 h, Bambu 8-12 h, some community sources 24 h for soft grades. Bonding: this entry's sources describe PLA/PETG joints as mechanical interlock only, while the PETG entry cites sources reporting a genuine if weak TPU-PETG weld \u2014 unresolved. HDT, shrinkage %, max service temperature and the emissions profile are all unverified; no speciated emissions study for TPU was found. Trade-name housekeeping 2026-09-20: the colorFabb varioShore TPU listing that this entry formerly carried was moved to lw-tpu in an earlier pass and is no longer here; the Forward AM 'Ultrafuse TPU 64D' listing has now likewise been moved to the new tpu-64d entry, which was created because three vendors sell a product labelled exactly Shore 64D. Neither product is base TPU and neither should be re-added here."
   },
   "trade_names": [
     {
@@ -349,11 +349,6 @@
       "manufacturer": "formfutura",
       "product": "TPU",
       "notes": "Standard TPU; grade hardnesses not enumerated in public listings"
-    },
-    {
-      "manufacturer": "forward-am",
-      "product": "Ultrafuse TPU 64D",
-      "notes": "Shore 64D rigid-flex; sits between tpu-60d and tpu-68d, so base tpu only."
     },
     {
       "manufacturer": "geeetech",

@@ -1,0 +1,181 @@
+{
+  "id": "pc-pbt-cf",
+  "name": "PC-PBT-CF (Carbon-Fiber-Filled PC/PBT Blend)",
+  "aliases": [
+    "PC/PBT CF",
+    "PC-PBT Carbon Fiber",
+    "DuraPro PC/PBT CF"
+  ],
+  "status": "researched",
+  "base_type": "pc-pbt",
+  "variation_kind": "carbon-fiber-filled",
+  "polymer_class": "polycarbonate",
+  "chemical_makeup": "The same bisphenol-A polycarbonate / polybutylene terephthalate alloy as the pc-pbt grade \u2014 an amorphous PC phase for stiffness and heat, a semicrystalline PBT phase for solvent, oil and fuel resistance \u2014 compounded with chopped carbon fiber. The fiber loading is not disclosed by the one vendor selling this material.",
+  "summary": "The low-warp, precision-oriented member of the PC family, and by some distance the cheapest fiber-filled engineering material in this catalog at roughly $57/kg. Deltas vs the pc-pbt grade: no heated chamber required, a much faster ceiling (up to 250 mm/s), and a manufacturer anti-warp claim \u2014 paid for with a mandatory hardened nozzle and the usual fiber penalty to layer adhesion. Tensile 60 MPa and a 2200 MPa modulus put it above the unfilled blend on stiffness. The published density of 1.01 g/cm\u00b3 is unusually low for a CF-filled blend and is recorded as-published rather than corrected.",
+  "printing": {
+    "nozzle_temp_c": {
+      "min": 265,
+      "max": 295,
+      "recommended": 280
+    },
+    "bed_temp_c": {
+      "min": 100,
+      "max": 110,
+      "recommended": 110
+    },
+    "speed_mm_s": {
+      "min": 30,
+      "max": 250,
+      "recommended": 60
+    },
+    "enclosure_recommended": true,
+    "heated_chamber_required": false,
+    "enclosure_open_for_cooling": false,
+    "requires_hardened_nozzle": true,
+    "part_cooling_fan_pct": {
+      "min": 0,
+      "max": 30,
+      "recommended": 10
+    },
+    "notes": "Extrudr's DuraPro PC/PBT CF is the only product behind this entry: 265-295 \u00b0C nozzle, 100-110 \u00b0C bed, part cooling 0-30 %, speed to 250 mm/s. The most consequential delta against the unfilled pc-pbt grade is heated_chamber_required, which is false here where it is true there \u2014 Polymaker's unfilled grade specifies a maintained 100-110 \u00b0C chamber, while Extrudr publishes no chamber requirement for the filled one and markets it on low warp instead. An enclosure is still recommended. The 250 mm/s figure is a vendor ceiling for the material rather than a practical recommendation; 60 mm/s is a conservative working value and is not itself a published figure. Hardened nozzle mandatory \u2014 carbon fiber destroys brass."
+  },
+  "feeding": {
+    "drive_system": "any",
+    "ams_compatible": "conditional",
+    "feeding_assistant_recommended": false,
+    "notes": "Rigid and stiff, so any drive system feeds it. AMS is 'conditional' rather than 'yes' on the usual fiber grounds: chopped carbon fiber abrades a PTFE feed path over time, and the PC phase wants a sealed desiccated route. No vendor documents this material in a material station (unverified). Unlike the unfilled pc-pbt grade, there is no 100-110 \u00b0C chamber for an AMS to sit next to, which removes the thermal objection."
+  },
+  "drying": {
+    "required_before_use": "always",
+    "temp_c": {
+      "min": 70,
+      "max": 80,
+      "recommended": 75
+    },
+    "time_hours": {
+      "min": 6,
+      "max": 8,
+      "recommended": 6
+    },
+    "methods": [
+      "filament dryer",
+      "convection oven at low temperature",
+      "drybox with desiccant while printing"
+    ],
+    "dryness_validation": "Clear extrudate with no popping at the nozzle and no visible voids in a purge line. Extrudr publishes no explicit check for this grade (unverified) \u2014 these are the base PC-PBT criteria.",
+    "notes": "No drying schedule is published for the CF grade, so the unfilled pc-pbt regimen (75 \u00b0C / 6 h, itself carried from base PC) is applied here (unverified for this material specifically). The PC phase dominates moisture behaviour and fiber loading does not change that, so the carry-over is defensible."
+  },
+  "storage": {
+    "recommendations": "Airtight container with desiccant; print from a drybox on long jobs. Follows base PC practice.",
+    "max_humidity_pct": 20,
+    "hygroscopy": "high"
+  },
+  "price": {
+    "usd_per_kg_low": 57,
+    "usd_per_kg_high": 57,
+    "notes": "Approximately $57/kg, derived from a $40.10 listing for a 700 g spool at 3DJake. That makes it the cheapest carbon-fiber-filled engineering material in this catalog by a wide margin \u2014 roughly half the price of the CF nylons and a third of ppa-cf. Single retailer, single spool size; the broader band is unverified."
+  },
+  "use_cases": {
+    "recommended": [
+      "precision industrial parts where dimensional repeatability matters",
+      "pulleys, rollers and other mechanically loaded rotating parts",
+      "low-warp structural parts at large footprints",
+      "jigs and fixtures exposed to oils and solvents",
+      "stiff brackets where unfilled PC-PBT would flex"
+    ],
+    "not_recommended": [
+      "cosmetic prints \u2014 the fiber-matte surface is not a finish",
+      "parts loaded in Z (fiber reinforcement worsens the anisotropy)",
+      "brass-nozzle printers",
+      "sustained outdoor UV exposure without coating",
+      "food-contact items \u2014 bisphenol-A based",
+      "maximum-heat applications \u2014 service tops out around 130 \u00b0C"
+    ]
+  },
+  "suitability": {
+    "food_contact": "no",
+    "load_bearing": "high",
+    "high_temperature": "moderate",
+    "outdoor": "limited"
+  },
+  "properties": {
+    "density_g_cm3": 1.01,
+    "grams_per_100cm3": 101,
+    "cm3_per_100g": 99.0,
+    "heat_deflection_c": 85,
+    "max_service_temp_c": 130,
+    "tensile_strength_mpa": {
+      "min": 60,
+      "max": 60,
+      "recommended": 60
+    },
+    "notes": "Density 1.01 g/cm\u00b3 is recorded exactly as Extrudr publishes it and is flagged rather than corrected: it is markedly below the unfilled pc-pbt grade's 1.20 g/cm\u00b3, which is the opposite direction from what a carbon-fiber loading normally produces, and it makes this the lightest engineering material in the catalog by volume (99 cm\u00b3 per 100 g). Treat it as a vendor figure requiring verification, and note that the derived weight/volume fields inherit the anomaly. HDT-B (1.8 MPa flexural) 85 \u00b0C; Vicat A 130 \u00b0C; the recorded 130 \u00b0C maximum service temperature rests on the Vicat figure rather than on a continuous-use rating, which overstates practical service under load \u2014 HDT-B 85 \u00b0C is the number to design to. Tensile 60 MPa with a tensile modulus of 2200 MPa, both above the unfilled blend's 50.4 MPa. Warp is described by the manufacturer as low, an anti-warp formulation claim rather than a measured shrinkage figure; no shrinkage percentage is published and none is recorded."
+  },
+  "scores": {
+    "ease_of_print": 5,
+    "dimensional_stability": 8,
+    "warp_tendency": 4,
+    "layer_adhesion": 5,
+    "compression_strength": 8,
+    "temperature_tolerance": 7,
+    "uv_tolerance": 3,
+    "weather_tolerance": 4,
+    "water_tolerance": 7
+  },
+  "compatibility": {
+    "bonds_with": [
+      "pc",
+      "pc-gf",
+      "pc-pbt"
+    ],
+    "support_materials": [
+      "hips"
+    ],
+    "usable_as_support_for": [],
+    "notes": "Welds to itself and, on shared PC chemistry, to the unfilled pc-pbt grade and the rest of the PC family \u2014 plausible from chemistry and inherited from the base entry rather than documented for the filled grade (unverified). HIPS is the practical breakaway support at these bed temperatures, carried from pc-pbt. pva degrades far below the 265-295 \u00b0C window; bvoh's stability through a long job at this temperature is unverified, so it is omitted as it is on the base entry. Not usable as a support for other materials \u2014 the melt window is too hot and the fiber-filled surface too aggressive."
+  },
+  "alternatives": [
+    {
+      "filament_id": "pc-pbt",
+      "reason": "The unfilled base: better layer adhesion (7 vs 5), no hardened nozzle, and a documented Polymaker datasheet behind its numbers \u2014 but it requires a maintained 100-110 \u00b0C chamber where the CF grade does not, and it gives up the stiffness (2200 MPa modulus) and the 60 MPa tensile."
+    },
+    {
+      "filament_id": "petg-cf",
+      "reason": "Cheaper again and dramatically easier on ordinary hardware (no enclosure, ~240 \u00b0C nozzle) for stiff, dimensionally decent parts \u2014 giving up roughly 40 \u00b0C of heat resistance, the PBT phase's solvent and fuel resistance, and the PC phase's toughness."
+    },
+    {
+      "filament_id": "pc-gf",
+      "reason": "Glass rather than carbon fiber on a PC base: comparable stiffness with better layer adhesion and none of the carbon dust hazard \u2014 but without the PBT phase it crazes in solvents and fuels where this blend does not."
+    }
+  ],
+  "emissions": {
+    "voc_level": "moderate",
+    "particulate_level": "high",
+    "primary_emissions": [
+      "ultrafine particles",
+      "respirable carbon fiber dust (post-processing)",
+      "unspecified high-temperature PC/PBT decomposition VOCs"
+    ],
+    "ventilation": "recommended",
+    "notes": "Carried from the unfilled pc-pbt entry, whose reasoning holds here: no styrene, so the VOC profile follows base PC's 'moderate', while particulates are 'high' because a 265-295 \u00b0C nozzle inside a warm enclosure concentrates ultrafine particles that escape when the door opens. The addition over the unfilled grade is post-processing carbon fiber dust. No measurement covers this material (unverified) \u2014 vent or filter, and let the enclosure clear before opening."
+  },
+  "safety_notes": "Abrasive: a hardened steel or ruby nozzle is mandatory and brass will not survive a spool. Wear respiratory protection with dust capture when sanding or machining printed parts \u2014 carbon fiber fines are a respiratory irritant. Bisphenol-A based like every PC grade, so keep parts away from food and drink regardless of surface finish. The 265-295 \u00b0C hotend and 110 \u00b0C bed are burn hazards and the enclosure concentrates off-gassing.",
+  "additional_notes": "Two figures on this entry deserve scepticism before anything is designed around them. The published density of 1.01 g/cm\u00b3 runs the wrong way for a fiber-filled blend and is recorded as-published. The 130 \u00b0C service figure rests on a Vicat A softening point, not a continuous-use rating; the HDT-B of 85 \u00b0C is the realistic design number under load. Set against that, the price is genuinely remarkable for a CF-filled engineering material, and the removal of the base grade's heated-chamber requirement makes it the only member of the PC-PBT family that prints on ordinary enclosed hardware.",
+  "provenance": {
+    "sources": [
+      "https://s3.extrudr.com/extrudr-media/product-catalogue/extrudr-Produktkatalog_EN.pdf",
+      "https://www.3djake.com/extrudr/durapro-pc-pbt-cf-black",
+      "https://extrudr.com/en/de/products/durapro-pc-pbt-cf/"
+    ],
+    "last_verified": "2026-09-20",
+    "confidence": "medium",
+    "conflicts": "Single-vendor entry \u2014 Extrudr DuraPro PC/PBT CF is the only product found, so nothing here is corroborated by a second source. Density 1.01 g/cm\u00b3 is the standout oddity: it is well below the unfilled pc-pbt grade's 1.20 and runs contrary to the expected effect of a carbon-fiber loading, which normally raises density. It is recorded as-published and flagged; the derived weight/volume fields inherit the anomaly. Maximum service temperature of 130 \u00b0C is taken from the Vicat A softening point rather than a continuous-use rating, and sits well above the HDT-B figure of 85 \u00b0C measured at 1.8 MPa \u2014 the two describe different things and the Vicat basis is noted rather than reconciled. Low warp is a manufacturer anti-warp formulation claim, not a measured shrinkage figure, and the warp_tendency score of 4 rests on that claim. Fiber loading percentage is not disclosed. Price is derived from a single 700 g spool listing ($40.10) at one retailer. Drying schedule, bonding pairs, shrinkage and AMS status are all carried from the unfilled pc-pbt entry rather than published for this grade."
+  },
+  "trade_names": [
+    {
+      "manufacturer": "extrudr",
+      "product": "DuraPro PC/PBT CF",
+      "notes": "The only product behind this entry: 265-295 \u00b0C nozzle, 100-110 \u00b0C bed, density 1.01 g/cm3, HDT-B 85 \u00b0C, Vicat A 130 \u00b0C, tensile 60 MPa / modulus 2200 MPa. Fiber loading not disclosed."
+    }
+  ]
+}

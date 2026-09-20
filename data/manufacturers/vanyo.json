@@ -1,0 +1,123 @@
+{
+  "id": "vanyo",
+  "name": "VANYO",
+  "status": "draft",
+  "summary": "China-based filament extruder selling a broad consumer range \u2014 PLA in seven cosmetic variants, PLA+, PETG, PETG-CF, ASA and TPU 95A \u2014 alongside an OEM private-label programme that puts the same production behind other companies' brand names. It entered public filament databases in September 2026 via SpoolmanDB pull request #479, which is the source of the printing parameters recorded here.",
+  "headquarters_country": "China",
+  "manufacturing_countries": [
+    "China"
+  ],
+  "brands": [
+    "VANYO"
+  ],
+  "oem_relationships": [
+    {
+      "company": "undisclosed private-label brands",
+      "relationship": "manufactures-for",
+      "notes": "VANYO operates an OEM/private-label programme, producing filament sold under other companies' brand names. The customer brands are not disclosed, so no specific partner can be named or verified \u2014 this entry records the existence of the programme, not any particular relationship. No partner appears in research/verified-oem-relationships.md. Anyone tracing a white-label brand of Chinese origin should treat VANYO as a candidate upstream manufacturer, not as a confirmed one."
+    }
+  ],
+  "product_lines": [
+    {
+      "name": "VANYO PLA+",
+      "filament_ids": [
+        "pla-plus"
+      ],
+      "notes": "Toughened PLA and the widest colour range in the catalog after standard PLA: 28 colours. 215 \u00b0C nozzle, 60 \u00b0C bed, density 1.24 g/cm\u00b3."
+    },
+    {
+      "name": "VANYO PLA Matte Pro",
+      "filament_ids": [
+        "pla-matte"
+      ],
+      "notes": "Matte-additive PLA. 220 \u00b0C nozzle, 60 \u00b0C bed, density 1.24 g/cm\u00b3."
+    },
+    {
+      "name": "VANYO PLA Silk",
+      "filament_ids": [
+        "pla-silk"
+      ],
+      "notes": "Luster-additive PLA. 225 \u00b0C nozzle \u2014 the hottest of the PLA variants \u2014 60 \u00b0C bed, density 1.24 g/cm\u00b3."
+    },
+    {
+      "name": "VANYO PLA Metallic",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Cosmetic metallic-pigment PLA. MAPPING NOTE: mapped to plain pla, not to pla-metal \u2014 pla-metal covers metal-POWDER-filled composites, whereas this is a pigment/pearlescent effect on an unmodified PLA base with no chemistry change. 215 \u00b0C nozzle, 60 \u00b0C bed, density 1.24 g/cm\u00b3, unchanged from the standard grade, which supports the reading that the base resin is untouched."
+    },
+    {
+      "name": "VANYO PLA Fluorescent",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Fluorescent-pigment PLA \u2014 colour under illumination rather than phosphorescent afterglow, so it is filed under plain pla rather than pla-glow. 215 \u00b0C nozzle, 60 \u00b0C bed, density 1.24 g/cm\u00b3."
+    },
+    {
+      "name": "VANYO PLA Luminous (glow-in-the-dark)",
+      "filament_ids": [
+        "pla-glow"
+      ],
+      "notes": "Phosphorescent-pigment PLA. 215 \u00b0C nozzle, 60 \u00b0C bed, density 1.24 g/cm\u00b3. Note the pigment is abrasive in most glow formulations; VANYO publishes no hardened-nozzle guidance (unverified)."
+    },
+    {
+      "name": "VANYO PLA Dual-Color Silk",
+      "filament_ids": [
+        "pla-gradient"
+      ],
+      "notes": "Two-tone coextruded silk PLA. Mapped to pla-gradient following the catalog's existing treatment of dual-tone coextruded products, with the same caveat that applies there: this is a colour-transition SKU produced by coextruding two dyed strands, not an along-strand dye gradient. 220 \u00b0C nozzle, 60 \u00b0C bed, density 1.24 g/cm\u00b3."
+    },
+    {
+      "name": "VANYO PETG",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "Standard amorphous PETG copolyester, 11 colours. 235 \u00b0C nozzle, 75 \u00b0C bed, density 1.27 g/cm\u00b3."
+    },
+    {
+      "name": "VANYO PETG-CF",
+      "filament_ids": [
+        "petg-cf"
+      ],
+      "notes": "Carbon-fiber reinforced PETG, 5 colours. 240 \u00b0C nozzle, 80 \u00b0C bed, density 1.29 g/cm\u00b3. A hardened nozzle is required for any carbon-filled material; VANYO publishes no such guidance itself (unverified)."
+    },
+    {
+      "name": "VANYO ASA",
+      "filament_ids": [
+        "asa"
+      ],
+      "notes": "Outdoor-grade ASA, 6 colours. 250 \u00b0C nozzle, 90 \u00b0C bed, density 1.07 g/cm\u00b3. No enclosure guidance is published (unverified), though ASA normally wants one."
+    },
+    {
+      "name": "VANYO TPU 95A",
+      "filament_ids": [
+        "tpu-95a"
+      ],
+      "notes": "Shore 95A flexible TPU, 15 colours. 235 \u00b0C nozzle, 60 \u00b0C bed, density 1.21 g/cm\u00b3 \u2014 close to the catalog's 1.22 family figure."
+    },
+    {
+      "name": "VANYO PC",
+      "filament_ids": [
+        "pc"
+      ],
+      "notes": "Polycarbonate. SOURCING CAVEAT: this line is not present in the SpoolmanDB #479 submission, which covers only the PLA, PLA+, PETG, PETG-CF, ASA and TPU lines, and no VANYO-published page for it was reachable in this pass. No nozzle temperature, bed temperature or density is recorded for it, and its existence is unverified."
+    },
+    {
+      "name": "VANYO PA-CF (announced)",
+      "filament_ids": [],
+      "notes": "Carbon-fiber nylon, listed as coming soon rather than shipping. Recorded as a note only: filament_ids is deliberately left empty so an unreleased product does not appear as catalog coverage. No parameters published, and nothing in the SpoolmanDB #479 submission covers it (unverified)."
+    }
+  ],
+  "makes_plates": false,
+  "price_tier": "budget",
+  "additional_notes": "Two things are worth knowing about this entry. First, the private-label programme: VANYO extrudes filament sold under other companies' brands, so a spool bearing an unfamiliar Western brand name and Chinese origin may well be VANYO production. The customer brands are not disclosed, which is normal for the arrangement and is exactly why white-label attribution in this catalog is so often 'suspected' rather than confirmed. Second, the provenance of the numbers: the nozzle temperatures, bed temperatures and densities recorded against each line come from the VANYO submission to SpoolmanDB (pull request #479, September 2026), where they are described as the manufacturer's own published values. They are internally consistent and unremarkable for the materials involved \u2014 215-225 \u00b0C across the PLA variants, 235 \u00b0C for PETG, 250 \u00b0C for ASA, densities of 1.24 for PLA, 1.27 for PETG, 1.29 for PETG-CF, 1.07 for ASA and 1.21 for TPU \u2014 but they reached this catalog through a community database submission rather than from a manufacturer datasheet read directly. The submission covers 11 product lines across 1.75 mm, 1 kg spools only, with a combined 134 colours, of which 54 are PLA variants. No 2.85 mm, no alternative spool weights and no technical data sheets were found.",
+  "provenance": {
+    "sources": [
+      "https://github.com/Donkie/SpoolmanDB/pull/479",
+      "https://patch-diff.githubusercontent.com/raw/Donkie/SpoolmanDB/pull/479.diff"
+    ],
+    "last_verified": "2026-09-20",
+    "confidence": "low",
+    "conflicts": "No VANYO-operated website was reachable in this pass \u2014 several candidate domains were probed on 2026-09-20 and none resolved or returned content \u2014 so endpoints is omitted entirely rather than populated with a guess, and no store, docs, support or social URL is recorded. Every printing parameter here is second-hand: it comes from the SpoolmanDB pull request #479 submission, which states the values are the manufacturer's published figures, and no manufacturer page was read to confirm that. The submission itself carries no website, country or company-information fields, so the China base, the headquarters country and the OEM private-label programme are asserted from the research brief for this pass and were NOT confirmed from a VANYO-published source (unverified). The private-label partners are undisclosed by definition, so 'undisclosed private-label brands' is recorded as the partner rather than any named company. Two product lines sit outside the submission and outside any reachable source: PC is recorded with no parameters and unverified existence, and PA-CF is recorded as an announced-but-unreleased line with an empty filament_ids so it does not read as coverage. The price tier 'budget' is inferred from the market position of a Chinese commodity extruder with a private-label programme; no pricing was observed. Status is 'draft' and confidence 'low' on all of the above."
+  }
+}

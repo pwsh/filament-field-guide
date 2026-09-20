@@ -524,6 +524,11 @@
       "manufacturer": "voxelab",
       "product": "PLA Pro (marketed as \"PLA+\")",
       "notes": "Limited public spec disclosure; classification from retailer listing marketing"
+    },
+    {
+      "manufacturer": "nobufil",
+      "product": "PLAx",
+      "notes": "Impact-modified PLA from recycled industrial feedstock; density 1.19, TDS 225 C / 65 C."
     }
   ]
 }

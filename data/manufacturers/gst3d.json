@@ -1,0 +1,78 @@
+{
+  "id": "gst3d",
+  "name": "GST3D (GST3D S.L.)",
+  "status": "researched",
+  "summary": "Ultra-budget Barcelona-based filament brand serving the EU and Latin America, best known for very cheap PLA+ in a wide colour range. The company claims European manufacture but names no facility, and community reviews repeatedly flag batch-to-batch quality variability.",
+  "headquarters_country": "Spain",
+  "manufacturing_countries": [],
+  "brands": [
+    "GST3D"
+  ],
+  "endpoints": {
+    "website": "https://gst3d.eu/",
+    "store": "https://gst3d.com/",
+    "social": {
+      "facebook": "https://www.facebook.com/gst3d.lat",
+      "instagram": "https://www.instagram.com/gst3d.eu"
+    }
+  },
+  "product_lines": [
+    {
+      "name": "PLA+ (Solid / Space / Silk / Fluor / Bright / Marble)",
+      "filament_ids": [
+        "pla-plus",
+        "pla-silk"
+      ],
+      "notes": "The volume line: a toughened PLA+ base across many finishes, including a silk variant. Marble and Space are pigment effects on the same base."
+    },
+    {
+      "name": "PLA Basic",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Economy unmodified PLA."
+    },
+    {
+      "name": "PETG / PETG-CF",
+      "filament_ids": [
+        "petg",
+        "petg-cf"
+      ],
+      "notes": "Standard and carbon-fibre-filled PETG."
+    },
+    {
+      "name": "GST3D ABS",
+      "filament_ids": [
+        "abs"
+      ],
+      "notes": "Standard ABS."
+    },
+    {
+      "name": "GST3D ASA",
+      "filament_ids": [
+        "asa"
+      ],
+      "notes": "Standard ASA."
+    },
+    {
+      "name": "GST3D TPU",
+      "filament_ids": [
+        "tpu"
+      ],
+      "notes": "Flexible TPU; no shore hardness published."
+    }
+  ],
+  "makes_plates": false,
+  "price_tier": "budget",
+  "additional_notes": "Pricing roughly USD 8-15/kg, among the cheapest filament sold in Europe. manufacturing_countries is empty because 'manufactured in Europe' is an unsupported marketing claim: no plant, address or contract extruder is disclosed, and Spain is confirmed only as the commercial base.",
+  "provenance": {
+    "sources": [
+      "https://gst3d.eu/",
+      "https://filamentcheatsheet.com/brands/gst3d/",
+      "https://www.hta3d.com/en/pla-filament-1.75mm-gst3d"
+    ],
+    "last_verified": "2026-09-20",
+    "confidence": "medium",
+    "conflicts": "Two unresolved points: the 'manufactured in Europe' claim has no supporting facility information, and independent reviews report noticeable batch-to-batch quality variability (diameter and colour consistency) that the brand does not address."
+  }
+}

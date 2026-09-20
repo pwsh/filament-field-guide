@@ -1,0 +1,79 @@
+{
+  "id": "zyltech",
+  "name": "ZYLtech Engineering, LLC",
+  "status": "researched",
+  "summary": "Houston, Texas filament manufacturer founded in 2015, extruding in-house with a stated target of roughly 500 tonnes per year by the end of 2025. Sells a Made-in-USA range at budget pricing, notable for 5 kg 'Texas Size' spools, and also supplies heated beds and glass build plates.",
+  "headquarters_country": "United States",
+  "manufacturing_countries": [
+    "United States"
+  ],
+  "brands": [
+    "ZYLtech",
+    "Texas Size"
+  ],
+  "endpoints": {
+    "website": "https://www.zyltech.com/",
+    "store": "https://www.zyltech.com/zyltech-filament/",
+    "social": {
+      "facebook": "https://www.facebook.com/zyltech/"
+    }
+  },
+  "product_lines": [
+    {
+      "name": "ZYLtech PLA (incl. Matte, Silk, Rainbow, CF)",
+      "filament_ids": [
+        "pla",
+        "pla-matte",
+        "pla-silk",
+        "pla-gradient",
+        "pla-cf"
+      ],
+      "notes": "The volume line with matte, luster, along-strand rainbow gradient and carbon-filled variants."
+    },
+    {
+      "name": "ZYLtech ABS",
+      "filament_ids": [
+        "abs"
+      ],
+      "notes": "Standard ABS."
+    },
+    {
+      "name": "ZYLtech ASA",
+      "filament_ids": [
+        "asa"
+      ],
+      "notes": "Standard ASA."
+    },
+    {
+      "name": "ZYLtech PETG",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "Standard PETG."
+    },
+    {
+      "name": "ZYLtech HIPS",
+      "filament_ids": [
+        "hips"
+      ],
+      "notes": "High-impact polystyrene, support/sacrificial use."
+    },
+    {
+      "name": "5 kg 'Texas Size' spools",
+      "filament_ids": [],
+      "notes": "A spool format, not a material: the same chemistries on 5 kg reels. Recorded because it is the brand's main differentiator, but spool size is never a filament variation."
+    }
+  ],
+  "makes_plates": true,
+  "price_tier": "budget",
+  "additional_notes": "Pricing roughly USD 17-20/kg, unusually cheap for US-extruded filament. The 500 t/yr figure is a company target rather than confirmed output. Build surfaces sold are glass plates and heated beds; the catalog's glass-borosilicate plate is the closest match but the specific product was not verified, so plate_ids is left unset.",
+  "provenance": {
+    "sources": [
+      "https://www.zyltech.com/about-us/",
+      "https://www.zyltech.com/zyltech-filament/"
+    ],
+    "last_verified": "2026-09-20",
+    "confidence": "high",
+    "conflicts": "The ~500 t/yr capacity is a stated goal for end-2025, not verified output."
+  }
+}

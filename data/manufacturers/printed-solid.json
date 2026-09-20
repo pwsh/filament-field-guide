@@ -1,0 +1,64 @@
+{
+  "id": "printed-solid",
+  "name": "Printed Solid (Prusa USA, Inc.)",
+  "status": "researched",
+  "summary": "Delaware retailer and manufacturer that built its own Jessie filament extrusion line in 2019, was acquired by Prusa Research in 2022, and was formally rebranded Prusa USA, Inc. in July 2026. Its Wilmington, Delaware facility extrudes the Jessie line and also produces Prusament and PEI build surfaces for the North American market.",
+  "headquarters_country": "United States",
+  "manufacturing_countries": [
+    "United States"
+  ],
+  "brands": [
+    "Printed Solid",
+    "Prusa USA",
+    "Jessie",
+    "Elixir"
+  ],
+  "oem_relationships": [
+    {
+      "company": "prusa-research",
+      "relationship": "parent-company",
+      "notes": "Acquired by Prusa Research in 2022 and rebranded Prusa USA, Inc. in July 2026. The Delaware facility is Prusa's North American production site, making Jessie filament, Prusament and PEI print surfaces."
+    }
+  ],
+  "endpoints": {
+    "website": "https://www.printedsolid.com/",
+    "store": "https://www.printedsolid.com/collections/jessie",
+    "social": {
+      "facebook": "https://www.facebook.com/PrintedSolid/"
+    }
+  },
+  "product_lines": [
+    {
+      "name": "Jessie Premium PLA",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "The flagship in-house PLA, extruded in Delaware since 2019."
+    },
+    {
+      "name": "Jessie Premium PETG",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "Standard PETG."
+    },
+    {
+      "name": "Jessie Elixir",
+      "filament_ids": [
+        "pla-silk"
+      ],
+      "notes": "Luster/silk-effect PLA."
+    }
+  ],
+  "makes_plates": true,
+  "price_tier": "mid",
+  "additional_notes": "Pricing about USD 25/kg. The Delaware site is the physical basis for the previously uncorroborated report that Prusa added US production: Printed Solid's own plant makes Prusament for North America alongside Jessie. PEI spring-steel print surfaces are produced there too; no specific plate id is claimed here, so plate_ids is left unset. The company also remains a large multi-brand retailer, so much of what it ships is not its own product.",
+  "provenance": {
+    "sources": [
+      "https://www.printedsolid.com/blogs/news/jessie-filament-is-now-made-in-house-at-printed-solid",
+      "https://www.tomshardware.com/3d-printing/delawares-printed-solid-rebrands-to-prusa-usa"
+    ],
+    "last_verified": "2026-09-20",
+    "confidence": "high"
+  }
+}

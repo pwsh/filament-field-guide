@@ -2,7 +2,7 @@
   "id": "taulman3d",
   "name": "taulman3D",
   "status": "researched",
-  "summary": "One of the earliest specialty-nylon FDM filament brands, historically based in Missouri, USA, and known for Nylon 645, Nylon 680 FDA, Alloy 910, Nylon Bridge and the T-Glase copolyester line. Acquired by Brazilian petrochemical major Braskem, which now hosts the taulman3D catalog on its braskem3d.com additive-manufacturing portal alongside Braskem's own PP/PE and bio-based filaments.",
+  "summary": "One of the earliest specialty-nylon FDM filament brands, historically based in Missouri, USA, and known for Nylon 645, Nylon 680 FDA, Alloy 910, Nylon Bridge and the T-Glase copolyester line. Acquired by Brazilian petrochemical major Braskem, which now hosts the taulman3D catalog on its braskem3d.com additive-manufacturing portal alongside Braskem's own PP/PE and bio-based filaments. DOMAIN STATUS 2026-09-20: taulman3d.com is no longer under the manufacturer's control \u2014 the domain is squatted and serves unrelated content, so any specification still cited from a taulman3d.com URL is historical and cannot be re-verified at source. The brand itself continues, sold as \"Xtellar Taulman\" through MatterHackers.",
   "headquarters_country": "United States",
   "manufacturing_countries": [
     "United States"
@@ -11,13 +11,15 @@
     "taulman3D",
     "T-Glase",
     "Alloy 910",
-    "Nylon Bridge"
+    "Nylon Bridge",
+    "Xtellar Taulman",
+    "Xtellar"
   ],
   "oem_relationships": [
     {
       "company": "Braskem",
       "relationship": "joint-venture",
-      "notes": "Braskem acquired taulman3D outright (Braskem press release; TCT Magazine, announced circa 2021-2022), so this is corporate ownership rather than a supply relationship — 'joint-venture' is the closest available enum value and overstates independence. Braskem's own copy states taulman3D 'is responsible for the entire filament manufacturing process, from raw material to packaging', implying in-house manufacture continued post-acquisition. Not present in research/verified-oem-relationships.md."
+      "notes": "Braskem acquired taulman3D outright (Braskem press release; TCT Magazine, announced circa 2021-2022), so this is corporate ownership rather than a supply relationship \u2014 'joint-venture' is the closest available enum value and overstates independence. Braskem's own copy states taulman3D 'is responsible for the entire filament manufacturing process, from raw material to packaging', implying in-house manufacture continued post-acquisition. Not present in research/verified-oem-relationships.md."
     },
     {
       "company": "Xtellar",
@@ -36,42 +38,42 @@
       "filament_ids": [
         "copa"
       ],
-      "notes": "Nylon co-polymer (PA6-copolymer type) engineered for FDM: low warp, dyeable, bonds to cellulose fibers. A copolymer rather than straight PA6, so mapped to base pa. Remapped pa→copa (copolyamide) 2026-08-01."
+      "notes": "Nylon co-polymer (PA6-copolymer type) engineered for FDM: low warp, dyeable, bonds to cellulose fibers. A copolymer rather than straight PA6, so mapped to base pa. Remapped pa\u2192copa (copolyamide) 2026-08-01."
     },
     {
       "name": "Nylon 645",
       "filament_ids": [
         "copa"
       ],
-      "notes": "Nylon co-polymer, stiffer and stronger than 618, natural translucent. Remapped pa→copa (copolyamide) 2026-08-01."
+      "notes": "Nylon co-polymer, stiffer and stronger than 618, natural translucent. Remapped pa\u2192copa (copolyamide) 2026-08-01."
     },
     {
       "name": "Nylon 680 / Nylon 680 FDA",
       "filament_ids": [
         "copa"
       ],
-      "notes": "645-family nylon co-polymer in an FDA-compliant food-contact grade. Remapped pa→copa (copolyamide) 2026-08-01."
+      "notes": "645-family nylon co-polymer in an FDA-compliant food-contact grade. Remapped pa\u2192copa (copolyamide) 2026-08-01."
     },
     {
       "name": "Bridge Nylon (645 Rev B)",
       "filament_ids": [
         "copa"
       ],
-      "notes": "More flexible revision of 645 at similar strength; same nylon-copolymer family. Remapped pa→copa (copolyamide) 2026-08-01."
+      "notes": "More flexible revision of 645 at similar strength; same nylon-copolymer family. Remapped pa\u2192copa (copolyamide) 2026-08-01."
     },
     {
       "name": "Nylon 230 (n)vent",
       "filament_ids": [
         "copa"
       ],
-      "notes": "Lower-melt-point nylon copolymer formulated to print on standard brass nozzles without an all-metal hotend. Remapped pa→copa (copolyamide) 2026-08-01."
+      "notes": "Lower-melt-point nylon copolymer formulated to print on standard brass nozzles without an all-metal hotend. Remapped pa\u2192copa (copolyamide) 2026-08-01."
     },
     {
       "name": "Alloy 910 / Nylon 910",
       "filament_ids": [
         "copa"
       ],
-      "notes": "Alloyed nylon copolymer for high tensile strength, minimal shrinkage and broad chemical resistance; not simply PA6 or PA12. Remapped pa→copa (copolyamide) 2026-08-01."
+      "notes": "Alloyed nylon copolymer for high tensile strength, minimal shrinkage and broad chemical resistance; not simply PA6 or PA12. Remapped pa\u2192copa (copolyamide) 2026-08-01."
     },
     {
       "name": "T-glase",
@@ -102,7 +104,7 @@
   ],
   "makes_plates": false,
   "price_tier": "engineering",
-  "additional_notes": "Pre-acquisition the company was long associated with St. Peters / O'Fallon, Missouri; that HQ was not re-verified post-Braskem, and it is unclear whether Braskem has since consolidated production into its own Brazilian or US sites. manufacturing_countries is recorded as United States on the strength of the Missouri plant description carried in distributor copy, which may be legacy marketing text. No standalone taulman3d.com was confirmed reachable in this research session — it may now redirect into braskem3d.com — so endpoints.website points at the Braskem AM portal that currently hosts the products. No social profiles were found. No build-plate products found. Offers FDA and medical-grade formulations. Xtellar-labelled SKUs at MatterHackers ranged $16.55-$60.00, but the SKU-level mapping between taulman3D and Xtellar names is unverified.",
+  "additional_notes": "Pre-acquisition the company was long associated with St. Peters / O'Fallon, Missouri; that HQ was not re-verified post-Braskem, and it is unclear whether Braskem has since consolidated production into its own Brazilian or US sites. manufacturing_countries is recorded as United States on the strength of the Missouri plant description carried in distributor copy, which may be legacy marketing text. No standalone taulman3d.com was confirmed reachable in this research session \u2014 it may now redirect into braskem3d.com \u2014 so endpoints.website points at the Braskem AM portal that currently hosts the products. No social profiles were found. No build-plate products found. Offers FDA and medical-grade formulations. Xtellar-labelled SKUs at MatterHackers ranged $16.55-$60.00, but the SKU-level mapping between taulman3D and Xtellar names is unverified. Domain observation 2026-09-20: taulman3d.com was checked directly and is NOT under manufacturer control \u2014 it is squatted and no longer serves the company's own pages. Two consequences for this entry. First, the taulman3d.com source URL in the provenance list (the Nylon 680 spec page) is dead as a live reference; the figure it supplied is a historical TDS value retained for continuity, not something re-verifiable. Second, the earlier open question about whether taulman3d.com simply redirected into braskem3d.com is now answered in the negative \u2014 it does not redirect, it is gone. The retail identity has settled in the meantime: MatterHackers sells the line under the composite name \"Xtellar Taulman\", which both confirms the Xtellar rebrand recorded in oem_relationships and shows the taulman name being retained rather than retired. 'Xtellar Taulman' is added to brands on that basis. Nylon 645 is listed at 250-255 \u00b0C nozzle / 45 \u00b0C bed, Nylon 680 and Bridge at 245-255 \u00b0C / 45 \u00b0C, Alloy 910 at 250-260 \u00b0C / 70 \u00b0C and t-glase at 238-245 \u00b0C / 45 \u00b0C in the MatterHackers listings, but these are historical TDS values carried into retail copy rather than figures re-verified against a live manufacturer page.",
   "provenance": {
     "sources": [
       "https://www.braskem.com.br/usa/news-detail/braskem-acquires-taulman3d-expanding-its-portfolio-of-materials-for-additive-manufacturing-applications",
@@ -115,10 +117,11 @@
       "https://nfil3d.com/en-us/product/bridge-nylon/",
       "https://www.taulman3d.com/nylon-680-spec.html",
       "https://filament2print.com/en/nylon-pa/640-taulman-680-fda.html",
-      "https://filament2print.com/en/blog/which-Taulman-3D-filament-choose"
+      "https://filament2print.com/en/blog/which-Taulman-3D-filament-choose",
+      "https://www.matterhackers.com/store/c/3d-printer-filament/taulman-nylon"
     ],
-    "last_verified": "2026-07-31",
+    "last_verified": "2026-09-20",
     "confidence": "low",
-    "conflicts": "Brand identity is unresolved: retail listings show the nylon line as 'Xtellar' while Braskem's portal still uses 'taulman3D', and no source confirms the rebrand. Manufacturing location is also unresolved — the Missouri plant claim comes from distributor copy that may predate the Braskem acquisition, and whether Braskem consolidated production into Brazil or its own US sites is unknown. Official website endpoint is an inference (braskem3d.com) because taulman3d.com reachability was not verified."
+    "conflicts": "Brand identity is unresolved: retail listings show the nylon line as 'Xtellar' while Braskem's portal still uses 'taulman3D', and no source confirms the rebrand. Manufacturing location is also unresolved \u2014 the Missouri plant claim comes from distributor copy that may predate the Braskem acquisition, and whether Braskem consolidated production into Brazil or its own US sites is unknown. Official website endpoint is an inference (braskem3d.com) because taulman3d.com reachability was not verified. Domain control, confirmed 2026-09-20: taulman3d.com is squatted and no longer under manufacturer control, so the taulman3d.com URL in this entry's source list is a dead reference and the specification it supplied is historical. This also closes the earlier speculation that taulman3d.com might redirect to braskem3d.com \u2014 it does not. The Xtellar rebrand, previously recorded as plausible but unconfirmed, is now better supported: MatterHackers sells the line under the composite name 'Xtellar Taulman', which is a retail observation rather than a manufacturer statement but is consistent across the listing. Manufacturing location remains unresolved and is NOT clarified by any of this."
   }
 }

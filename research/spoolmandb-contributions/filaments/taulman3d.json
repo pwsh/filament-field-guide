@@ -1,0 +1,116 @@
+{
+    "manufacturer": "taulman3D",
+    "filaments": [
+        {
+            "name": "Nylon 645 {color_name}",
+            "material": "PA",
+            "density": 1.52,
+            "weights": [
+                {
+                    "weight": 453
+                },
+                {
+                    "weight": 1000
+                }
+            ],
+            "diameters": [
+                1.75,
+                2.85,
+                3.0
+            ],
+            "extruder_temp_range": [
+                250,
+                255
+            ],
+            "bed_temp": 45,
+            "colors": [
+                {
+                    "name": "Black",
+                    "hex": "000000"
+                },
+                {
+                    "name": "Natural",
+                    "hex": "e8e0d0"
+                }
+            ]
+        },
+        {
+            "name": "Nylon 680 {color_name}",
+            "material": "PA",
+            "density": 1.52,
+            "weights": [
+                {
+                    "weight": 453
+                }
+            ],
+            "diameters": [
+                1.75,
+                2.85,
+                3.0
+            ],
+            "extruder_temp_range": [
+                245,
+                255
+            ],
+            "bed_temp": 45,
+            "colors": [
+                {
+                    "name": "Natural",
+                    "hex": "e8e0d0"
+                }
+            ]
+        },
+        {
+            "name": "Bridge {color_name}",
+            "material": "PA",
+            "density": 1.52,
+            "weights": [
+                {
+                    "weight": 453
+                }
+            ],
+            "diameters": [
+                1.75,
+                2.85,
+                3.0
+            ],
+            "extruder_temp_range": [
+                245,
+                255
+            ],
+            "bed_temp": 45,
+            "colors": [
+                {
+                    "name": "Natural",
+                    "hex": "e8e0d0"
+                }
+            ]
+        },
+        {
+            "name": "Alloy 910 {color_name}",
+            "material": "PA",
+            "density": 1.52,
+            "weights": [
+                {
+                    "weight": 453
+                }
+            ],
+            "diameters": [
+                1.75,
+                2.85,
+                3.0
+            ],
+            "extruder_temp_range": [
+                250,
+                260
+            ],
+            "bed_temp": 70,
+            "colors": [
+                {
+                    "name": "Natural",
+                    "hex": "e8e0d0"
+                }
+            ]
+        }
+    ]
+}

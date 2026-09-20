@@ -1,0 +1,97 @@
+{
+  "id": "nth-grillon",
+  "name": "NTH Grillon (Nicieza & Taverna Hnos. S.A.I.C.A.)",
+  "status": "researched",
+  "summary": "Argentine synthetic-fibre manufacturer (parent founded 1951 in Chivilcoy, Buenos Aires province) that commercialised the Grilon3 filament line in 2015 and began US/EU export by 2017. Filament is extruded in-house alongside the group's textile-fibre production, making it one of the few genuinely Argentine-made filament sources.",
+  "headquarters_country": "Argentina",
+  "manufacturing_countries": [
+    "Argentina"
+  ],
+  "brands": [
+    "Grilon",
+    "Grilon3",
+    "3N3",
+    "Gril-Flex",
+    "NTH"
+  ],
+  "endpoints": {
+    "website": "https://www.nth.com.ar/",
+    "store": "https://grilon3.com.ar/",
+    "social": {
+      "instagram": "https://www.instagram.com/nthgrilon/",
+      "facebook": "https://m.facebook.com/100077047687395/about/",
+      "linkedin": "https://ar.linkedin.com/showcase/productos-nth-grilon"
+    }
+  },
+  "product_lines": [
+    {
+      "name": "Grilon3 PLA / PLA+",
+      "filament_ids": [
+        "pla",
+        "pla-plus"
+      ],
+      "notes": "Base PLA plus a toughened PLA+ grade; the core volume line."
+    },
+    {
+      "name": "Grilon3 PETg",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "Standard glycol-modified PET copolyester."
+    },
+    {
+      "name": "Grilon3 ABS",
+      "filament_ids": [
+        "abs"
+      ],
+      "notes": "Standard ABS."
+    },
+    {
+      "name": "Grilon Nylon / Nylon 12",
+      "filament_ids": [
+        "pa",
+        "pa12"
+      ],
+      "notes": "Unspecified-grade polyamide plus a PA12 grade; NTH's own nylon-fibre background is the group's core competence."
+    },
+    {
+      "name": "Grilon Flex / Gril-Flex",
+      "filament_ids": [
+        "tpe"
+      ],
+      "notes": "Flexible elastomer; the listing does not state whether it is a polyester/SEBS TPE or a urethane, so the generic tpe id is used rather than a TPU shore grade."
+    },
+    {
+      "name": "Grilon POM",
+      "filament_ids": [],
+      "notes": "Polyoxymethylene (acetal). No POM id exists in the catalog, so no filament_ids are mapped - recorded here as an open catalog gap."
+    },
+    {
+      "name": "Grilon PVA",
+      "filament_ids": [
+        "pva"
+      ],
+      "notes": "Water-soluble support."
+    },
+    {
+      "name": "Grilon HIPS",
+      "filament_ids": [
+        "hips"
+      ],
+      "notes": "High-impact polystyrene, support/sacrificial use."
+    }
+  ],
+  "makes_plates": false,
+  "price_tier": "budget",
+  "additional_notes": "Street pricing roughly USD 14-20/kg. The Grilon3 e-commerce site is the retail arm; nth.com.ar is the industrial parent. A POM (acetal) line is offered but the catalog has no POM filament entry, so that product line carries no filament_ids.",
+  "provenance": {
+    "sources": [
+      "https://www.nth.com.ar/en/19_grilon3",
+      "https://grilon3.com.ar/nth-s-a-filamentos-3d-fdm-resena-de-una-decada-de-evolucion-y-futuro/",
+      "https://grilon3.com.ar/"
+    ],
+    "last_verified": "2026-09-20",
+    "confidence": "medium",
+    "conflicts": "Production volumes and the exact extrusion site are not published; in-house manufacture rests on the company's own account. Grilon Flex chemistry (TPE vs TPU) is not stated."
+  }
+}

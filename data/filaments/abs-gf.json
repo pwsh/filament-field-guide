@@ -278,6 +278,11 @@
       "manufacturer": "tinmorry",
       "product": "ABS Reinforced Filament (glass fiber)",
       "notes": "Glass-fiber ABS"
+    },
+    {
+      "manufacturer": "CR3D",
+      "product": "ABS FibCR20",
+      "notes": "20% glass fibre; density 1.18, 275 C nozzle / 100-120 C bed, HDT >=110 C."
     }
   ]
 }

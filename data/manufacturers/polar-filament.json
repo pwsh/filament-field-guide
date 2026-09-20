@@ -1,0 +1,90 @@
+{
+  "id": "polar-filament",
+  "name": "Polar Filament (Douglas Innovation)",
+  "status": "researched",
+  "summary": "Troy, Michigan filament manufacturer founded in 2017 and selling publicly since 2021, trading as Douglas Innovation. Markets an all-domestic supply chain - US resin (NatureWorks 4043D for PLA), US spools and US colorants - and also acts as a white-label extruder for roughly nine other US brands.",
+  "headquarters_country": "United States",
+  "manufacturing_countries": [
+    "United States"
+  ],
+  "brands": [
+    "Polar Filament"
+  ],
+  "oem_relationships": [
+    {
+      "company": "Undisclosed US brands",
+      "relationship": "manufactures-for",
+      "notes": "Polar states it white-labels filament for approximately nine other US brands. None is named publicly, so this edge records the arrangement without a counterparty; if any of those brands is later identified, split this into a named edge."
+    }
+  ],
+  "endpoints": {
+    "website": "https://polarfilament.com/",
+    "social": {
+      "instagram": "https://www.instagram.com/polarfilament/",
+      "discord": "https://discord.polarfilament.com"
+    }
+  },
+  "product_lines": [
+    {
+      "name": "Polar PLA",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Built on NatureWorks Ingeo 4043D, a named US resin - unusually specific disclosure for a retail brand."
+    },
+    {
+      "name": "Polar PETG",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "Standard PETG."
+    },
+    {
+      "name": "Polar ASA",
+      "filament_ids": [
+        "asa"
+      ],
+      "notes": "Standard ASA."
+    },
+    {
+      "name": "Nylon 12",
+      "filament_ids": [
+        "pa12"
+      ],
+      "notes": "Unfilled PA12."
+    },
+    {
+      "name": "TPU 72D / 60D / 95A",
+      "filament_ids": [
+        "tpu-72d",
+        "tpu-60d",
+        "tpu-95a"
+      ],
+      "notes": "Three shore grades spanning rigid-flexible to mainstream flexible."
+    },
+    {
+      "name": "Anti-Static",
+      "filament_ids": [],
+      "notes": "ESD/anti-static grade whose base polymer is not stated; abs-esd and petg-esd both presuppose a base that is not confirmed here, so no id is mapped."
+    },
+    {
+      "name": "Polar PHA",
+      "filament_ids": [
+        "pha"
+      ],
+      "notes": "Polyhydroxyalkanoate or PLA/PHA blend; blend ratio not published."
+    }
+  ],
+  "makes_plates": false,
+  "price_tier": "mid",
+  "additional_notes": "Pricing about USD 25/kg. The 100%-USA claim covers resin, spool and colorant sourcing, not just extrusion, which is stronger than the usual 'made in USA' assembly claim. The white-label business means some other US-branded filament on the market is physically Polar product.",
+  "provenance": {
+    "sources": [
+      "https://polarfilament.com/pages/about-us",
+      "https://polarfilament.com/"
+    ],
+    "last_verified": "2026-09-20",
+    "confidence": "medium",
+    "conflicts": "The count of white-label clients (~9) and their identities come from the company's own statements and are not independently verifiable."
+  }
+}
