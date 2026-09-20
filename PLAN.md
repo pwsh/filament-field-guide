@@ -162,8 +162,12 @@ every property sourced from the glossary.
 - scripts/spoolman_import.py: stdlib-only importer pushing the 26 SpoolmanDB-candidate
   brands (547 line x color filaments) into a live Spoolman via its REST API; dry-run
   default, --apply to write, idempotent on (vendor, name, material), --insecure for
-  internal certs. Owner's instance (spoolman.holzhueter.us) unreachable from Claude's
-  egress proxies (403 CONNECT) — run locally or allowlist the domain.
+  internal certs (https only), --update to PATCH changed fields onto existing filaments,
+  --pr N[,N] to import brands from open SpoolmanDB pull requests before they merge
+  (warns when the PR updates a brand upstream already carries, since that duplicates
+  Spoolman's native external-DB entries). The owner's
+  internal Spoolman instance is unreachable from Claude's egress proxies (403 CONNECT) —
+  run locally or allowlist the domain.
 - Fixed insignia.json Matte-line color names (template already carries the Matte prefix).
 
 ### 2026-09-20 (later) — Retail house brands (owner-reported)

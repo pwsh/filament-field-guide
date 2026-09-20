@@ -15,6 +15,34 @@ pip install jsonschema
 python scripts/validate.py
 ```
 
+### Populating a Spoolman instance
+
+`scripts/spoolman_import.py` pushes the vendors and filaments this catalog carries
+that SpoolmanDB upstream does not — read from `research/spoolmandb-contributions/` —
+into a running Spoolman server over its REST API.
+
+```bash
+# dry run (default): prints what would be created, writes nothing
+python scripts/spoolman_import.py --url http://spoolman.local:7912
+
+# create them; add --update to also sync changed values onto filaments
+# that already exist, and --brands to scope to certain candidate files
+python scripts/spoolman_import.py --url http://spoolman.local:7912 \
+    --apply --update --brands amolen,insignia
+
+# also pull brands from open SpoolmanDB pull requests, before they merge
+python scripts/spoolman_import.py --url http://spoolman.local:7912 --pr 478,479
+```
+
+Re-running is safe: unchanged filaments are skipped. The `--url` takes a plain
+`http://` base (what most installs use) or `https://`, with `--insecure` for a
+self-signed certificate on the latter. `--pr` currently of interest: #478
+(Snapmaker) and #479 (VANYO) add new brands, while #480 (Prusament) and #481
+(Sunlu) update brands SpoolmanDB already carries — importing those creates local
+duplicates of Spoolman's native external-database entries, and the script warns
+before doing so. Note that some color hex values are approximations — those are
+flagged in the contributions' `REVIEW.md`.
+
 ## Enabling GitHub Pages
 
 Repo Settings → Pages → Source: **Deploy from a branch** → `main` / `/ (root)`.
