@@ -91,15 +91,15 @@
             ],
             "colors": [
                 {
-                    "name": "Matte Black",
+                    "name": "Black",
                     "hex": "000000"
                 },
                 {
-                    "name": "Matte Blue",
+                    "name": "Blue",
                     "hex": "1976D2"
                 },
                 {
-                    "name": "Matte Green",
+                    "name": "Green",
                     "hex": "388E3C"
                 },
                 {
