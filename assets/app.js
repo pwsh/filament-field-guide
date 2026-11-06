@@ -3491,6 +3491,9 @@ async function router() {
   const route = parseHash();
   const app = document.getElementById('app');
   highlightNav(route.parts);
+  // Reading pages keep a comfortable centred column; data pages use the full width.
+  const narrow = route.parts[0] === 'glossary' || route.parts[2] === 'sheet';
+  document.getElementById('main').classList.toggle('narrow', narrow);
   Tooltip.hide();
 
   clear(app);
@@ -3537,9 +3540,20 @@ function setupPrintExpansion() {
   });
 }
 
+/** Expose the sticky header's height so sticky table headers can sit under it. */
+function setupHeaderOffset() {
+  const header = document.querySelector('.site-header');
+  if (!header) return;
+  const apply = () => document.documentElement.style.setProperty('--header-h', header.offsetHeight + 'px');
+  apply();
+  if (window.ResizeObserver) new ResizeObserver(apply).observe(header);
+  else window.addEventListener('resize', apply);
+}
+
 function boot() {
   Tooltip.init();
   setupPrintExpansion();
+  setupHeaderOffset();
   window.addEventListener('hashchange', onHashChange);
   if (!location.hash) location.replace('#/filaments');
   router();
