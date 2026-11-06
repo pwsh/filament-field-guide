@@ -158,6 +158,30 @@ every property sourced from the glossary.
   the workspace against the repo before generating bundles — the repo is the source
   of truth, not the workspace.
 ## Changelog
+### 2026-11-06 — Brand audit (owner request): deals tracker + SpoolmanDB merged/pending
+77 new manufacturer entries (99 -> 176): `stronghero3d` (owner-named; no rebrand link found), 11 brands newly
+merged into SpoolmanDB, 40 brands from open SpoolmanDB PRs, and 25 Amazon deal-tracker brands with an
+identifiable owner. 40 of the 77 are status draft / confidence low. Existing entries touched: `push-plastic`
+(location corrected to Springdale AR from its Terms of Service; relationship re-check negative), `ovv3d`
+(+OVVNYXE alias), `jamg-he` (+JH JAMG HE alias, suspected Conjure supply noted), `qidi-tech` (+Amazon alias),
+`kingroon` (POJECITY note), `spectrum-filaments` (PrograFen acquisition note). 36 researched-but-untraceable
+Amazon names and 57 low-volume names are recorded, not added, in `research/brand-audit-2026-11-06.md`.
+Schema (Fable, same day): relationship enum gains `sister-brand`, `suspected-sister-brand`,
+`suspected-parent-company` and `suspected-manufactures-for`, with a direction rule in RESEARCH_GUIDE §9.
+Re-encoded: lotactree and sainsmart (suspected parent), 3de and slic3d (parent downgraded to suspected),
+smartprint <-> professional-lab (suspected sister brands), and reciprocal suspected-manufactures-for edges
+on jamg-he (Conjure), flashforge (FilaBees) and elegoo (Phrozen Matte PLA). BIQU/BIGTREETECH stay one
+entry (one legal entity). Still open: no ids for POM, conductive or colour-change PLA; older entries
+that describe sister or parent links in notes only have not been swept.
+Verification pass (same day, fetch tools; browser integration was not connected): Amazon seller profiles,
+USPTO TSDR and Justia records were readable with curl. Resolved: FilaBees = Hangzhou Juwei E-commerce
+(Flashforge stays suspected), OVVNYXE/OVV3D = Shenzhen Hanyuan (HQ now China), 3D BEST Q = Foshan Qibaixi,
+Stronghero3D seller entity found, ten trademark owners confirmed, FUEL INVEST SE added as suspected parent of
+Print With Smile, COMTREE folded into `cctree`. All 36 previously untraceable Amazon names now have a seller
+entity in `research/brand-audit-2026-11-06.md`. On the owner's decision, 34 of them became draft entries
+(176 -> 210 manufacturers; `spider-maker` links to `phrozen`, COMTREE folded into `cctree`, POJECITY stays a
+note). Still browser-only: aio.lv, alza.cz, Alibaba, SAM.gov, Arkansas SoS, datacvr.virk.dk.
+
 ### 2026-09-20 (later 2) — Spoolman instance importer
 - scripts/spoolman_import.py: stdlib-only importer pushing the 26 SpoolmanDB-candidate
   brands (547 line x color filaments) into a live Spoolman via its REST API; dry-run

@@ -1,0 +1,75 @@
+{
+  "id": "kiwifil",
+  "name": "KiwiFil",
+  "status": "researched",
+  "summary": "New Zealand recycled-filament maker founded by Eva Hakansson and Bill Dube that has extruded since 2020, starting on a repurposed straw extruder. It sells recycled PLA, silk rPLA, 100% recycled rPETG, an rPCTG-rPETG high-temperature blend and NZ-wool-filled WoolyFil in 1.75 and 2.85 mm, and runs a spool-return programme.",
+  "headquarters_country": "New Zealand",
+  "manufacturing_countries": [
+    "New Zealand"
+  ],
+  "brands": [
+    "KiwiFil",
+    "UFO Filament",
+    "WoolyFil"
+  ],
+  "endpoints": {
+    "website": "https://www.kiwifil.shop/",
+    "store": "https://www.kiwifil.shop/",
+    "social": {
+      "instagram": "https://instagram.com/kiwifil"
+    }
+  },
+  "product_lines": [
+    {
+      "name": "rPLA pro",
+      "filament_ids": [
+        "pla-plus"
+      ],
+      "notes": "Recycled PLA, 'pro' grade; mapped per the PLA Pro convention, since the toughening is not documented."
+    },
+    {
+      "name": "Silk rPLA",
+      "filament_ids": [
+        "pla-silk"
+      ]
+    },
+    {
+      "name": "rPETG",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "100% recycled PETG; about NZ$45-48/kg."
+    },
+    {
+      "name": "rPCTG-rPETG",
+      "filament_ids": [
+        "pctg",
+        "petg"
+      ],
+      "notes": "Recycled PCTG/PETG high-temperature blend."
+    },
+    {
+      "name": "WoolyFil",
+      "filament_ids": [],
+      "notes": "Filament filled with NZ wool; the base polymer is not stated in the notes and no wool-fill id exists."
+    },
+    {
+      "name": "Glitter",
+      "filament_ids": [],
+      "notes": "Glitter filament; the base polymer is not stated in the notes."
+    }
+  ],
+  "makes_plates": false,
+  "price_tier": "mid",
+  "additional_notes": "Recycled-material focus. Also sells PLA and PETG pellets. Moving from cardboard to refillable plastic spools. Retailed in NZ/AU by PB Tech, which is a retail channel rather than an OEM tie. No white-label relationships found, so oem_relationships is empty. Legal entity name unknown.",
+  "provenance": {
+    "sources": [
+      "https://www.kiwifil.shop/",
+      "https://www.pbtech.com/product/INKKWF0004/KiwiFil-rPETG-Filament-Hot-Pink-rPETG-100-Recycled",
+      "https://api.github.com/repos/Donkie/SpoolmanDB/pulls/389/files"
+    ],
+    "last_verified": "2026-11-06",
+    "confidence": "high",
+    "conflicts": "City and legal entity not stated in the notes. The base polymers of WoolyFil and the glitter line are unverified."
+  }
+}

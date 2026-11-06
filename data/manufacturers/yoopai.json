@@ -1,0 +1,58 @@
+{
+  "id": "yoopai",
+  "name": "YOOPAI",
+  "status": "draft",
+  "summary": "Amazon/eBay-first brand selling budget PLA, Silk PLA and PETG on Bambu/Creality-compatible 1 kg spools alongside FilamentBox filament dryers and storage accessories. The USPTO trademark is reportedly held by Shenzhen Anmaisi Technology Co., Ltd.; who extrudes the filament is unknown.",
+  "headquarters_country": "China",
+  "brands": [
+    "YOOPAI",
+    "YooPai"
+  ],
+  "oem_relationships": [],
+  "endpoints": {
+    "store": "https://www.ebay.de/shop/yoopai"
+  },
+  "product_lines": [
+    {
+      "name": "PLA",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "1.75 mm, 1 kg."
+    },
+    {
+      "name": "Silk PLA",
+      "filament_ids": [
+        "pla-silk"
+      ]
+    },
+    {
+      "name": "PETG",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "~$14.99/kg."
+    },
+    {
+      "name": "FilamentBox dryer / storage",
+      "filament_ids": [],
+      "notes": "Accessory hardware (FilamentBox 4 dryer, connectors), not filament."
+    }
+  ],
+  "makes_plates": false,
+  "price_tier": "budget",
+  "additional_notes": "Owner Shenzhen Anmaisi Technology Co., Ltd. confirmed on the Justia trademark records (serials 90418638 / 90418649, Class 7 and Class 11; TSDR itself returned 500). The filings cover machines and appliances, not filament, which hints at outsourced filament but is not evidence of a specific OEM, so no relationship is encoded. The same Qianhai registered-office address is used by Shenzhen Chensi Trading (owner of the UJOYBIO mark); treated as an address coincidence. Heavy Amazon variation listings (owner counted 274).",
+  "provenance": {
+    "sources": [
+      "https://markinton.com/trademark/yoopai-90418638",
+      "https://markinton.com/trademark/yoopai-90418649",
+      "https://simplyprint.io/filaments/yoopai/silk-pla",
+      "https://www.ebay.de/shop/yoopai",
+      "https://trademarks.justia.com/904/18/yoopai-90418638.html",
+      "https://trademarks.justia.com/904/18/yoopai-90418649.html"
+    ],
+    "last_verified": "2026-11-06",
+    "confidence": "medium",
+    "conflicts": "Justia records read 2026-11-06: both YOOPAI marks (90418638 Class 7, 90418649 Class 11, registered 2021-10-19) are owned by Shenzhen Anmaisi Technology Co., Ltd., Rm 201, Bldg A, No. 1 Qianwan 1st Rd, Qianhai, Shenzhen. Neither class covers filament. SimplyPrint's 'brand from USA' claim is unsupported. Manufacturing country unknown."
+  }
+}

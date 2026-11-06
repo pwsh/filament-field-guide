@@ -1,0 +1,55 @@
+{
+  "id": "slic3d",
+  "name": "Slic3D (Jaycar house brand)",
+  "status": "draft",
+  "summary": "Budget PLA and PETG filament sold by AU/NZ electronics retailer Jaycar under Jaycar part numbers, very likely a Jaycar house brand. Offered on 1 kg 1.75 mm spools and as a spool-less refill; the contract extruder is undisclosed.",
+  "brands": [
+    "Slic3D",
+    "SLIC3D"
+  ],
+  "oem_relationships": [
+    {
+      "company": "Jaycar Electronics",
+      "relationship": "suspected-parent-company",
+      "notes": "Inferred, not stated by an official source: products carry Jaycar part numbers (TL64xx), a MakerWorld spool model is titled 'SLIC3D Spool by JAYCAR', SimplyPrint shop links go to jaycar.co.nz, and no independent Slic3D site exists."
+    },
+    {
+      "company": "Unidentified contract manufacturer",
+      "relationship": "suspected-manufactured-by",
+      "notes": "Jaycar is an electronics retailer with no known extrusion operation; no OEM has been identified."
+    }
+  ],
+  "endpoints": {
+    "store": "https://www.jaycar.co.nz/",
+    "docs": "https://help.jaycar.co.nz/hc/en-us/articles/52867901389209-How-to-use-spool-less-filament"
+  },
+  "product_lines": [
+    {
+      "name": "Basic PLA",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "10 colours, 190-230 C; 1 kg 1.75 mm; also a spool-less refill version (e.g. Jaycar TL6476)."
+    },
+    {
+      "name": "Basic PETG",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "11 colours, 230-260 C; 1 kg 1.75 mm."
+    }
+  ],
+  "makes_plates": false,
+  "price_tier": "budget",
+  "additional_notes": "Same house-brand pattern as insignia, michaels and hobby-lobby. The Open Filament Database lists New Zealand as origin, which may reflect only the Jaycar NZ sales channel, so headquarters_country is omitted. Jaycar describes the range as budget-friendly; no prices were read. Also sold via jaycar.com.au.",
+  "provenance": {
+    "sources": [
+      "https://simplyprint.io/filaments/slic3d",
+      "https://makerworld.com/models/2361292",
+      "https://help.jaycar.co.nz/hc/en-us/articles/52867901389209-How-to-use-spool-less-filament"
+    ],
+    "last_verified": "2026-11-06",
+    "confidence": "low",
+    "conflicts": "The house-brand inference is strong but no official source states it. The MakerWorld page and Jaycar listings were seen only as search snippets. Country of origin (NZ per OFD) unverified."
+  }
+}

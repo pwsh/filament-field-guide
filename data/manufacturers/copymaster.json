@@ -1,0 +1,66 @@
+{
+  "id": "copymaster",
+  "name": "Copymaster3D",
+  "status": "draft",
+  "summary": "European filament and printer brand (Copymaster 300 kit printer) sold through EU retailers, most visibly 3D Prima, with PLA, matte, silk and dual-silk PLA, PLA Carbon and PET-G Carbon. A single printer-catalogue source places it in the United Kingdom; owner and extruder are not established.",
+  "headquarters_country": "United Kingdom",
+  "brands": [
+    "Copymaster3D",
+    "Copymaster"
+  ],
+  "endpoints": {
+    "store": "https://3dprima.com/filament-resin/manufacturer/copymaster3d/"
+  },
+  "product_lines": [
+    {
+      "name": "PLA",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "+/-0.03 mm, 336 m/kg; one variant advertised at 300 mm/s."
+    },
+    {
+      "name": "PLA Matte",
+      "filament_ids": [
+        "pla-matte"
+      ]
+    },
+    {
+      "name": "PLA Silk",
+      "filament_ids": [
+        "pla-silk"
+      ]
+    },
+    {
+      "name": "Duo-Silk",
+      "filament_ids": [
+        "pla-silk"
+      ],
+      "notes": "Dual-colour silk PLA."
+    },
+    {
+      "name": "PLA Carbon",
+      "filament_ids": [
+        "pla-cf"
+      ]
+    },
+    {
+      "name": "PET-G Carbon",
+      "filament_ids": [
+        "petg-cf"
+      ]
+    }
+  ],
+  "makes_plates": false,
+  "additional_notes": "Sold by 3D Prima (listings titled '3D Prima Copymaster PLA'); the reseller link is recorded on the primacreator entry. Whether 3D Prima owns the brand is not established. Also sold via Galaxus, aio.lv and Smartech. No 'Copymaster 3D Ltd' entity found. Actual extruder unidentified; no evidence either way about in-house production, so no manufacturing relationship is encoded. Price tier unverified.",
+  "provenance": {
+    "sources": [
+      "https://aio.lv/en/brand--copymaster3d",
+      "https://www.aniwaa.com/product/3d-printers/copymaster3d-copymaster-300-kit/",
+      "https://3dprima.com/filament-resin/manufacturer/copymaster3d/copymaster3d-pla_30092_12371"
+    ],
+    "last_verified": "2026-11-06",
+    "confidence": "low",
+    "conflicts": "United Kingdom HQ comes only from an Aniwaa printer page; brand owner (possibly 3D Prima) and manufacturer unknown."
+  }
+}

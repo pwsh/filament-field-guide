@@ -1,0 +1,83 @@
+{
+  "id": "foxtruder",
+  "name": "FOXTRUDER",
+  "status": "draft",
+  "summary": "Amazon filament brand with a range of fibre-filled engineering filaments (PETG-CF, PETG-GF, ABS-GF, PA6-GF, PC-GF, TPU-GF) plus ASA and matte PLA, all 1 kg black at about $18-40/kg. The Amazon seller is a Hong Kong limited company; extruder unknown.",
+  "brands": [
+    "FOXTRUDER",
+    "FOXTRUDER-US"
+  ],
+  "oem_relationships": [],
+  "product_lines": [
+    {
+      "name": "PLA Matte",
+      "filament_ids": [
+        "pla-matte"
+      ],
+      "notes": "1 kg, $17.99."
+    },
+    {
+      "name": "PETG Carbon Fiber",
+      "filament_ids": [
+        "petg-cf"
+      ],
+      "notes": "1 kg, $18.99-19.99."
+    },
+    {
+      "name": "PETG Glass Fiber",
+      "filament_ids": [
+        "petg-gf"
+      ],
+      "notes": "1 kg frosted black, $18.99."
+    },
+    {
+      "name": "ASA",
+      "filament_ids": [
+        "asa"
+      ],
+      "notes": "1 kg, $22.99."
+    },
+    {
+      "name": "ABS-GF",
+      "filament_ids": [
+        "abs-gf"
+      ],
+      "notes": "1 kg, $23.99."
+    },
+    {
+      "name": "PA6-GF",
+      "filament_ids": [
+        "pa6-gf"
+      ],
+      "notes": "1 kg, $35.99."
+    },
+    {
+      "name": "PC-GF",
+      "filament_ids": [
+        "pc-gf"
+      ],
+      "notes": "1 kg, $39.99."
+    },
+    {
+      "name": "TPU-GF",
+      "filament_ids": [
+        "tpu-gf"
+      ],
+      "notes": "1 kg frosted black, $39.99."
+    }
+  ],
+  "makes_plates": false,
+  "price_tier": "mid",
+  "additional_notes": "Legal entity: TINMORRY CO., LIMITED (Business Name as printed), Tsim Sha Tsui, Kowloon, Hong Kong; Amazon seller 'FOXTRUDER-US' (id A3NT17VWQAZFYK), read 2026-11-06. The listing's Manufacturer field reads 'FOXTRUDER'. Store is Amazon only; no brand website found. The Hong Kong address is a single room in a commercial building, typical of a trading or holding company, so the extruder is unknown.",
+  "provenance": {
+    "sources": [
+      "https://livedeals.3dprintingdeals.com/deals?category=filament&brand=FOXTRUDER",
+      "https://www.amazon.com/dp/B0GVK4CX9H",
+      "https://www.amazon.com/sp?seller=A3NT17VWQAZFYK"
+    ],
+    "last_verified": "2026-11-06",
+    "confidence": "medium",
+    "conflicts": "Entity name is verbatim. A Hong Kong seller says nothing about where the filament is made; extruder and manufacturing country unknown."
+  },
+  "headquarters_country": "Hong Kong"
+}

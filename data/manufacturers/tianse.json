@@ -1,0 +1,34 @@
+{
+  "id": "tianse",
+  "name": "TIANSE",
+  "status": "draft",
+  "summary": "Amazon filament brand currently listed only with 5 kg spools of black and white PLA at $79.99 ($16/kg). The Amazon seller is a Guangzhou information-technology company; extruder unknown.",
+  "brands": [
+    "TIANSE",
+    "Tianse"
+  ],
+  "oem_relationships": [],
+  "product_lines": [
+    {
+      "name": "PLA",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "5 kg spools, black and white, $79.99 ($16/kg)."
+    }
+  ],
+  "makes_plates": false,
+  "price_tier": "budget",
+  "additional_notes": "Legal entity: Guangzhou Sanheng Information Technology Co., Ltd. (Business Name as printed), Xintang Town, Zengcheng District, Guangzhou, Guangdong; Amazon seller 'TIANSE' (id A23K5L4D34B9MY), read 2026-11-06. The listing's Manufacturer field reads 'TIANSE'. Store is Amazon only; no brand website found. The entity is an information-technology company, not a known extruder, so the maker is unknown.",
+  "provenance": {
+    "sources": [
+      "https://livedeals.3dprintingdeals.com/deals?category=filament&brand=Tianse",
+      "https://www.amazon.com/dp/B07Q56Z1BB",
+      "https://www.amazon.com/sp?seller=A23K5L4D34B9MY"
+    ],
+    "last_verified": "2026-11-06",
+    "confidence": "medium",
+    "conflicts": "Entity name is verbatim. Extruder and manufacturing country unknown; the tracker showed only two listings."
+  },
+  "headquarters_country": "China"
+}

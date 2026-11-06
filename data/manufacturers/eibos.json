@@ -1,0 +1,41 @@
+{
+  "id": "eibos",
+  "name": "EIBOS (Shenzhen EIBOS Chuanggou Tech Co., Ltd.)",
+  "status": "researched",
+  "summary": "Shenzhen company best known for filament dryers (Easdry, Tetras, Cyclopes, Polyphemus) and resin cleaner, which also sells PLA+ and silk PLA+ filament through its Amazon 'EIBOS Official Store'. Active since early 2020. The filament's extruder is not identified.",
+  "headquarters_country": "China",
+  "brands": [
+    "EIBOS"
+  ],
+  "oem_relationships": [],
+  "product_lines": [
+    {
+      "name": "PLA+ Standard",
+      "filament_ids": [
+        "pla-plus"
+      ],
+      "notes": "1 kg, $20.99."
+    },
+    {
+      "name": "PLA+ Silk Ribbon / Tri-Color Silk Ribbon",
+      "filament_ids": [
+        "pla-silk"
+      ],
+      "notes": "Dual/tri-colour silk; $20.99-28.99."
+    }
+  ],
+  "makes_plates": false,
+  "price_tier": "mid",
+  "additional_notes": "Legal entity named as manufacturer on an Amazon product listing and on a Rapid + TCT exhibitor page. As a dryer company its filament is probably OEM-sourced, but there is no evidence of the source, so no relationship is recorded. EIBOS dryers are resold by West3D and 3DPrintergear AU (not a filament relationship). Do not confuse with eSUN.",
+  "provenance": {
+    "sources": [
+      "https://livedeals.3dprintingdeals.com/deals?category=filament&brand=EIBOS",
+      "https://rapid3devent.com/exhibitors/shenzhen-eibos-chuanggou-tech-co-ltd",
+      "https://3dwithus.com/upgrading-bambu-lab-ams-with-the-eibos-series-x-tetras-dryer",
+      "https://3dwithus.com/?p=35037"
+    ],
+    "last_verified": "2026-11-06",
+    "confidence": "medium",
+    "conflicts": "Identity medium, filament sourcing low. The 'active since early 2020' date comes from a search snippet. A 3dwithus article links an 'Official Website' that was not retrieved, so no website endpoint is recorded."
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "id": "3do",
+  "name": "3DO ApS",
+  "status": "researched",
+  "summary": "Danish 3D-printing webshop in Herning (3DO ApS, CVR 45698831, successor to a 2021 sole proprietorship) selling printers, parts and own-label PLA, PETG, ASA and fibre-filled ASA. The extruder behind the filament is not identified.",
+  "headquarters_country": "Denmark",
+  "brands": [
+    "3DO"
+  ],
+  "oem_relationships": [],
+  "endpoints": {
+    "website": "https://3do.dk/",
+    "store": "https://3do.dk/8-filament"
+  },
+  "product_lines": [
+    {
+      "name": "PLA",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "1 kg, 1.75 mm; SpoolmanDB records a 220 g spool."
+    },
+    {
+      "name": "PETG",
+      "filament_ids": [
+        "petg"
+      ]
+    },
+    {
+      "name": "ASA",
+      "filament_ids": [
+        "asa"
+      ],
+      "notes": "Praised by Filament Cheat Sheet citing a MyTechFun test (original not verified)."
+    },
+    {
+      "name": "ASA-CF / ASA-GF",
+      "filament_ids": [
+        "asa-cf",
+        "asa-gf"
+      ],
+      "notes": "Per Filament Cheat Sheet only."
+    }
+  ],
+  "makes_plates": false,
+  "price_tier": "mid",
+  "additional_notes": "Registered at Godsbanevej 7, 7400 Herning; the 3do.dk footer shows 3DO ApS at the same address. Predecessor sole proprietorship '3DO' (CVR 42459852) ran 2021-06 to 2026-03-30. A colour-matched ASA collaboration with Rat Rig is claimed by a single aggregator (Filament Cheat Sheet) - rumoured, uncorroborated, not encoded. Not generally sold on Amazon. Price ~$22-35/kg per Filament Cheat Sheet (secondary).",
+  "provenance": {
+    "sources": [
+      "https://filamentcheatsheet.com/brands/3do/",
+      "https://3do.dk/",
+      "https://danskcvrapi.dk/en/company/3do-aps-45698831",
+      "https://danskcvrapi.dk/en/company/3do-42459852",
+      "https://raw.githubusercontent.com/Donkie/SpoolmanDB/main/filaments/3do.json"
+    ],
+    "last_verified": "2026-11-06",
+    "confidence": "medium",
+    "conflicts": "Identity and HQ solid; filament manufacturer and manufacturing country unknown. Rat Rig collaboration and ASA-CF/GF lines single-sourced to an aggregator."
+  }
+}

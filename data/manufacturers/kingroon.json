@@ -129,7 +129,7 @@
   "makes_plates": true,
   "plate_ids": [],
   "price_tier": "budget",
-  "additional_notes": "Catalog is wider than an earlier pass recorded: PLA (Basic/Plus/Matte/Silk/Rainbow-Silk/Glow/Rapid), PETG, PETG-CF, PLA-CF, ABS, ABS-CF and TPU 95A, plus a PA-CF whose base nylon grade is undisclosed. Roughly $10-18/kg, with bulk 10kg packs around $100. Also sells replacement parts, nozzles, build plates and filament dryers, including Bambu Lab-compatible replacement parts per a Formnext 2025 listing. Rated 'Tier B' (about 4.0/5) by one review aggregator, with occasional batch and diameter variability reported. Founding year and exact HQ city were not confirmed in this pass — a follow-up deep dive is recommended.",
+  "additional_notes": "Catalog is wider than an earlier pass recorded: PLA (Basic/Plus/Matte/Silk/Rainbow-Silk/Glow/Rapid), PETG, PETG-CF, PLA-CF, ABS, ABS-CF and TPU 95A, plus a PA-CF whose base nylon grade is undisclosed. Roughly $10-18/kg, with bulk 10kg packs around $100. Also sells replacement parts, nozzles, build plates and filament dryers, including Bambu Lab-compatible replacement parts per a Formnext 2025 listing. Rated 'Tier B' (about 4.0/5) by one review aggregator, with occasional batch and diameter variability reported. Founding year and exact HQ city were not confirmed in this pass — a follow-up deep dive is recommended. The Amazon brand field 'POJECITY' appears on Kingroon-titled listings (Manufacturer 'Kingroon'), but checked 2026-11-06 those listings are sold by two unrelated Shenzhen sellers: 'YAOQIHANG' (Shenzhen Yaoqihang Technology Co., Ltd., Bantian, Longgang) and 'Kingrooon' (Shenzhen Tongtuozhanzhi Keji Tech Co., Ltd., Bantian, Longgang). No seller is named POJECITY and Landu is not mentioned, so POJECITY looks like a reseller or brand-registry label, not a Kingroon or Landu account; the 'Kingrooon' storefront is not shown to be official.",
   "provenance": {
     "sources": [
       "https://kingroon.com/",
@@ -140,9 +140,15 @@
       "https://kingroon.com/products/kingroon-petg-carbon-fiber-black-filament",
       "https://www.spoolscout.com/data-sheets/kingroon/petg-petg-cf",
       "https://kingroon.com/products/kingroon-pa-cf-carbon-fiber-nylon-filament",
-      "https://kingroon.com/collections/carbon-fiber-filament"
+      "https://kingroon.com/collections/carbon-fiber-filament",
+      "https://livedeals.3dprintingdeals.com/deals?category=filament&brand=POJECITY",
+      "https://woodartsupply.com/a/s/products/kingroon-high-speed-petg-3d-printer-filament-1-75mm-3d-printer-rapid-filament-for-30-600mm-s-hyper-printing-filament-dimensional-accuracy-0-03-mm-10-kg-plastic-spool-22lbs-mixed-colors",
+      "https://www.amazon.com/dp/B0CYC66HXM",
+      "https://www.amazon.com/sp?seller=A2Q1EC28N3C7GK",
+      "https://www.amazon.com/dp/B09WYMJ9PD",
+      "https://www.amazon.com/sp?seller=A3C3P8LFHA9QEE"
     ],
-    "last_verified": "2026-07-31",
+    "last_verified": "2026-11-06",
     "confidence": "low",
     "conflicts": "Public sourcing on Kingroon's corporate details is thin: founding year and exact HQ city are unconfirmed. The Landu relationship rests on the owner-verified table alone; no public source names Landu directly."
   }

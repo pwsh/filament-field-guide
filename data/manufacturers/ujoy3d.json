@@ -1,0 +1,81 @@
+{
+  "id": "ujoy3d",
+  "name": "UJOY3D / UJOYBIO",
+  "status": "draft",
+  "summary": "Shenzhen-linked budget Amazon brand family selling PLA+, high-speed and metallic PETG, Hyper PLA and Elite PLA+ in 4- and 10-packs at about $7.50-10.50/kg, plus filament dryers and 3D-pen filament. The UJOY3D and UJOYBIO names share marketing and listings, but their USPTO records name different owners.",
+  "headquarters_country": "China",
+  "brands": [
+    "UJOY3D",
+    "UJOYBIO",
+    "UJOYBIO3D"
+  ],
+  "oem_relationships": [],
+  "endpoints": {
+    "social": {
+      "linktree": "https://linktr.ee/ujoybio"
+    }
+  },
+  "product_lines": [
+    {
+      "name": "PLA+ Standard",
+      "filament_ids": [
+        "pla-plus"
+      ],
+      "notes": "1 kg in 4- and 10-packs; 8/16 x 250 g bundles."
+    },
+    {
+      "name": "Elite PLA+",
+      "filament_ids": [
+        "pla-plus"
+      ],
+      "notes": "Per web listings."
+    },
+    {
+      "name": "Metallic PLA Plus",
+      "filament_ids": [
+        "pla-plus"
+      ],
+      "notes": "Per web listings; metallic look, no metal-fill evidence."
+    },
+    {
+      "name": "Hyper PLA (Hyper PLA Plus)",
+      "filament_ids": [
+        "pla-hf"
+      ],
+      "notes": "High-speed PLA per web listings."
+    },
+    {
+      "name": "PETG Standard / High Speed PETG",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "4- and 10-packs."
+    },
+    {
+      "name": "Metal PETG",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "Metallic-effect PETG."
+    }
+  ],
+  "makes_plates": false,
+  "price_tier": "budget",
+  "additional_notes": "Store is Amazon US; sites ujoybio.com / ujoybio3d.com were not reached. Two trademark filers: Yuanjia Biotechnology (Guangdong) Co., Ltd. for UJOY3D and Shenzhen Chensi Trading Co., Ltd for UJOYBIO; the marketing (Bambu Lab forum account 'UJOYBIO3D_Printer_Fi', linktr.ee/ujoybio) treats them as one brand. A seller listing self-claims the company is a PLA pellet manufacturer (unverified), so manufacturing_countries is omitted. Trustpilot reviews are mixed. No relationship to any catalog extruder found.",
+  "provenance": {
+    "sources": [
+      "https://livedeals.3dprintingdeals.com/deals?category=filament&brand=UJOY3D",
+      "https://livedeals.3dprintingdeals.com/deals?category=filament&brand=UJOYBIO",
+      "https://forum.bambulab.com/u/UJOYBIO3D_Printer_Fi",
+      "https://linktr.ee/ujoybio",
+      "https://ch.trustpilot.com/review/ujoybio.com",
+      "https://markinton.com/trademark/ujoy3d-98222774",
+      "https://markinton.com/trademark/ujoybio-98589271",
+      "https://trademarks.justia.com/898/22/ujoy3d-98222774.html",
+      "https://trademarks.justia.com/985/89/ujoybio-98589271.html"
+    ],
+    "last_verified": "2026-11-06",
+    "confidence": "medium",
+    "conflicts": "Justia records read 2026-11-06: UJOY3D (serial 98222774, filed 2023-10-13, Class 17 filament) is owned by Yuanjia Biotechnology (Guangdong) Co., Ltd., Futian, Shenzhen; UJOYBIO (serial 98589271, filed 2024-06-06, Class 17 filament) by Shenzhen Chensi Trading Co., Ltd, Qianhai, Shenzhen. Justia shows both at the initial '630 New Application' event only, so the earlier 'live' / 'dead' statuses are unsupported (TSDR returned 500). Two legal entities, one marketing family."
+  }
+}

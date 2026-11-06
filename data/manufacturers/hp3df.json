@@ -1,0 +1,77 @@
+{
+  "id": "hp3df",
+  "name": "HP3DF",
+  "status": "draft",
+  "summary": "Amazon filament brand selling a wide PLA range (standard, silk, dual-colour silk, matte, glitter, galaxy, glow, wood fill, colour-changing) in 1 kg spools at about $14-23/kg. The listing names Haining Shenglong New Material Technology as manufacturer; in-house extrusion is plausible but unconfirmed.",
+  "brands": [
+    "HP3DF",
+    "Hp3Df",
+    "Haining Shenglong New Material Technology Co., Ltd"
+  ],
+  "oem_relationships": [],
+  "product_lines": [
+    {
+      "name": "PLA",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "1 kg, $13.99-19.99."
+    },
+    {
+      "name": "PLA Silk / Dual Color Silk",
+      "filament_ids": [
+        "pla-silk"
+      ],
+      "notes": "1 kg, $17.99-19.99."
+    },
+    {
+      "name": "PLA Matte",
+      "filament_ids": [
+        "pla-matte"
+      ],
+      "notes": "1 kg, $19.99."
+    },
+    {
+      "name": "PLA Glitter / Galaxy",
+      "filament_ids": [
+        "pla-glitter"
+      ],
+      "notes": "1 kg glitter $19.99, galaxy $22.99."
+    },
+    {
+      "name": "PLA Glow in the Dark",
+      "filament_ids": [
+        "pla-glow"
+      ],
+      "notes": "1 kg, $19.99."
+    },
+    {
+      "name": "PLA Wood Fill",
+      "filament_ids": [
+        "pla-wood"
+      ],
+      "notes": "1 kg, $18.99."
+    },
+    {
+      "name": "PLA Color Changeable",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "1 kg, $19.99, matte and silk versions; the colour-change trigger (temperature or light) is not stated in the titles, so no specific id is asserted."
+    }
+  ],
+  "makes_plates": false,
+  "price_tier": "mid",
+  "additional_notes": "Legal entity: hainingshenglongxincailiaokeji (Business Name as printed; the listing's Manufacturer field gives Haining Shenglong New Material Technology Co., Ltd verbatim), Haizhou Subdistrict, Haining, Jiaxing, Zhejiang; Amazon seller 'HP3DF Store' (id A14C2CRMWM724X), read 2026-11-06. Store is Amazon only; no brand website found. The entity is a 'new material' technology company, so in-house extrusion is plausible, but no factory or production statement was found; no relationship recorded. First pass: no link to HP Inc.",
+  "provenance": {
+    "sources": [
+      "https://livedeals.3dprintingdeals.com/deals?category=filament&brand=HP3DF",
+      "https://www.amazon.com/dp/B0G2MSZF5V",
+      "https://www.amazon.com/sp?seller=A14C2CRMWM724X"
+    ],
+    "last_verified": "2026-11-06",
+    "confidence": "medium",
+    "conflicts": "The English name is verbatim from the Manufacturer field and matches the pinyin Business Name. Whether the company extrudes the filament itself, and where, is not stated."
+  },
+  "headquarters_country": "China"
+}

@@ -1,0 +1,100 @@
+{
+  "id": "arianeplast",
+  "name": "Arianeplast",
+  "status": "researched",
+  "summary": "French filament extruder in Sarrebourg (Moselle) producing 'fabriqué en France' filament from NatureWorks Ingeo resins: PLA+ on 1 kg and 8 kg spools in a wide colour range, plus skin-tone, glow, silk, carbon and bamboo PLA, PCTG, Ingeo 3D450 support, ASA, ABS and PETG. Also sells pellets and dyes and takes custom/bulk orders.",
+  "headquarters_country": "France",
+  "manufacturing_countries": [
+    "France"
+  ],
+  "brands": [
+    "Arianeplast",
+    "ArianePlast"
+  ],
+  "oem_relationships": [],
+  "endpoints": {
+    "website": "https://www.arianeplast.com",
+    "store": "https://www.arianeplast.com"
+  },
+  "product_lines": [
+    {
+      "name": "PLA+",
+      "filament_ids": [
+        "pla-plus"
+      ],
+      "notes": "1 kg and 8 kg spools; translucent, metallic and pearl colours; on Ingeo 4043D. EUR 23.19 sale / 28.98 list per 1 kg."
+    },
+    {
+      "name": "PLA Peau (skin tone)",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Skin-tone colour range."
+    },
+    {
+      "name": "Glow PLA",
+      "filament_ids": [
+        "pla-glow"
+      ]
+    },
+    {
+      "name": "Silk PLA",
+      "filament_ids": [
+        "pla-silk"
+      ]
+    },
+    {
+      "name": "PLA-CF",
+      "filament_ids": [
+        "pla-cf"
+      ]
+    },
+    {
+      "name": "Bamboo wood PLA",
+      "filament_ids": [
+        "pla-wood"
+      ]
+    },
+    {
+      "name": "PCTG",
+      "filament_ids": [
+        "pctg"
+      ]
+    },
+    {
+      "name": "Ingeo 3D450 support",
+      "filament_ids": [],
+      "notes": "NatureWorks Ingeo 3D450 support grade; removal method not confirmed in the notes, so neither pva nor support-breakaway is asserted."
+    },
+    {
+      "name": "ASA",
+      "filament_ids": [
+        "asa"
+      ]
+    },
+    {
+      "name": "ABS",
+      "filament_ids": [
+        "abs"
+      ]
+    },
+    {
+      "name": "PETG",
+      "filament_ids": [
+        "petg"
+      ]
+    }
+  ],
+  "price_tier": "mid",
+  "makes_plates": false,
+  "additional_notes": "In-house extrusion in Moselle workshops. NatureWorks (Ingeo 4043D, 3D450) is a raw-resin supplier, not a white-label relationship, so oem_relationships is empty. Listed in 3Dnatives' roundup of French filament manufacturers.",
+  "provenance": {
+    "sources": [
+      "https://www.arianeplast.com/en/content/4-Arianeplast-3",
+      "https://www.3dnatives.com/fabricant-francais-filament-3d-04102023/"
+    ],
+    "last_verified": "2026-11-06",
+    "confidence": "high",
+    "conflicts": "Founding year differs: 2015 on the company's own site vs 2018 in 3Dnatives. Formal legal entity not stated."
+  }
+}

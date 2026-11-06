@@ -1,0 +1,109 @@
+{
+  "id": "sakata-3d",
+  "name": "Sakata 3D",
+  "status": "researched",
+  "summary": "Spanish filament brand that retailers describe as 100% made in Spain, with one naming Polimersia Global S.L. as the manufacturer. Known for PLA 850 on NatureWorks Ingeo 3D850 resin, with silk, high-speed, matte, wood and Go&Print PLA lines plus PETG, ABS-E, ASA and HIPS.",
+  "headquarters_country": "Spain",
+  "manufacturing_countries": [
+    "Spain"
+  ],
+  "brands": [
+    "Sakata 3D",
+    "Go&Print"
+  ],
+  "oem_relationships": [
+    {
+      "company": "Polimersia Global S.L.",
+      "relationship": "suspected-manufactured-by",
+      "notes": "Optimus Digital product text says Sakata PETG is 'made in Spain by Polimersia Global S.L.'. Single retailer source; Polimersia may be the brand owner itself rather than a contract extruder."
+    }
+  ],
+  "endpoints": {
+    "store": "https://filament2print.com/en/abs/4014-abs-e-sakata.html"
+  },
+  "product_lines": [
+    {
+      "name": "PLA 850",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "NatureWorks Ingeo 3D850 resin; about 39 colours."
+    },
+    {
+      "name": "Silk 850",
+      "filament_ids": [
+        "pla-silk"
+      ]
+    },
+    {
+      "name": "High Speed PLA",
+      "filament_ids": [
+        "pla-hf"
+      ]
+    },
+    {
+      "name": "HR-870",
+      "filament_ids": [
+        "pla-ht"
+      ],
+      "notes": "Name points to NatureWorks Ingeo 3D870, the annealable high-heat grade; resin grade not confirmed by the notes."
+    },
+    {
+      "name": "Matte PLA",
+      "filament_ids": [
+        "pla-matte"
+      ]
+    },
+    {
+      "name": "Go&Print PLA",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Separate value PLA line, 23 colours."
+    },
+    {
+      "name": "Texture Wood PLA",
+      "filament_ids": [
+        "pla-wood"
+      ],
+      "notes": "450 g spools."
+    },
+    {
+      "name": "PETG",
+      "filament_ids": [
+        "petg"
+      ]
+    },
+    {
+      "name": "ABS-E",
+      "filament_ids": [
+        "abs"
+      ]
+    },
+    {
+      "name": "ASA",
+      "filament_ids": [
+        "asa"
+      ]
+    },
+    {
+      "name": "HIPS",
+      "filament_ids": [
+        "hips"
+      ]
+    }
+  ],
+  "makes_plates": false,
+  "additional_notes": "No official brand website found; sold through Spanish and EU retailers (coolmod.com, filament2print.com, optimusdigital.ro). No price evidence was read, so price_tier is omitted. Other Spanish brands in the catalog (gst3d, smart-materials-3d, winkle) were checked and no link was found. SpoolmanDB PR lists 11 products.",
+  "provenance": {
+    "sources": [
+      "https://simplyprint.io/filaments/sakata-3d",
+      "https://filament2print.com/en/abs/4014-abs-e-sakata.html",
+      "https://www.coolmod.com/sakata-3d-filamento-pla-850-1-75mm-1kg-silk-midnight/",
+      "https://optimusdigital.ro/ro/filamente-petg/10729-filament-petg-sakata-3d-175-mm-1-kg-natural.html"
+    ],
+    "last_verified": "2026-11-06",
+    "confidence": "medium",
+    "conflicts": "Spanish origin is consistent across retailers, but the Polimersia Global S.L. name comes from one retailer, and whether it is the brand owner or a contract maker is unresolved. City unknown."
+  }
+}

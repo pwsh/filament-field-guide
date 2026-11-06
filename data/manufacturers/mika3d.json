@@ -1,0 +1,61 @@
+{
+  "id": "mika3d",
+  "name": "MIKA3D",
+  "status": "draft",
+  "summary": "Amazon-first PLA brand selling silk, metallic silk, dual-colour silk, rainbow, standard and wood PLA in 1 kg spools and mini-spool bundles. An affiliate directory carries a self-description as a 'Professional 3D Filament Factory' offering OEM and private-label PLA, which is unverified. Legal entity and location are unknown.",
+  "brands": [
+    "MIKA3D",
+    "OEM MIKA3D"
+  ],
+  "oem_relationships": [],
+  "product_lines": [
+    {
+      "name": "Silk PLA (single colour, metallic, Silk Metal)",
+      "filament_ids": [
+        "pla-silk"
+      ],
+      "notes": "1 kg singles and 6-12 spool bundles; about $18-23/kg."
+    },
+    {
+      "name": "Dual Color Silk PLA (fast colour change)",
+      "filament_ids": [
+        "pla-silk"
+      ],
+      "notes": "1 kg and 6 x 250 g."
+    },
+    {
+      "name": "Standard PLA (250 g bundles)",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "2.85 mm PLA also seen on eBay."
+    },
+    {
+      "name": "Rainbow PLA",
+      "filament_ids": [
+        "pla-gradient"
+      ]
+    },
+    {
+      "name": "Wood PLA",
+      "filament_ids": [
+        "pla-wood"
+      ],
+      "notes": "1 kg."
+    }
+  ],
+  "makes_plates": false,
+  "price_tier": "mid",
+  "additional_notes": "Store is Amazon US, also resold on Newegg; no brand website found. Self-claimed manufactures-for unnamed private-label clients (affiliate directory blurb: 'Mika3d is the Professional 3D Filament Factory, which offering OEM service and produce Private Label PLA Filament'); because no client is named and the claim is unverified, no relationship item is recorded. The deal tracker also lists the name as 'OEM MIKA3D' with no evidence of a separate entity. A candidate OEM for other silk-PLA Amazon brands, but nothing links it to any.",
+  "provenance": {
+    "sources": [
+      "https://livedeals.3dprintingdeals.com/deals?category=filament&brand=MIKA3D",
+      "https://affi.io/m/mika3d",
+      "https://www.newegg.com/p/298-00MY-00043",
+      "https://woodartsupply.com/a/s/products/mika3d-wood-pla-3d-printing-filament-widely-fit-for-3d-printer-1-75mm-wooden-pla-1kg-2-2lbs-wood-pla"
+    ],
+    "last_verified": "2026-11-06",
+    "confidence": "low",
+    "conflicts": "No legal entity, address or trademark owner could be retrieved (Amazon pages not fetchable). The factory/OEM claim is self-reported only."
+  }
+}

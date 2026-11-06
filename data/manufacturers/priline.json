@@ -1,0 +1,71 @@
+{
+  "id": "priline",
+  "name": "PRILINE",
+  "status": "draft",
+  "summary": "Long-running Amazon brand selling PLA, wood PLA (including cherrywood), ASA and TPU in 98A, 95A high-flow, 90A and 85A, at about $15-26/kg for 1 kg and $56-58/kg for 0.5 kg soft TPU. The seller is a Shunde 3D technology company; the extruder is unknown.",
+  "brands": [
+    "PRILINE",
+    "Priline",
+    "Priline Direct"
+  ],
+  "oem_relationships": [],
+  "product_lines": [
+    {
+      "name": "PLA",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "1 kg, $14.99-23.99."
+    },
+    {
+      "name": "PLA Wood Fill (incl. cherrywood)",
+      "filament_ids": [
+        "pla-wood"
+      ],
+      "notes": "1 kg, $22.99-23.99."
+    },
+    {
+      "name": "ASA",
+      "filament_ids": [
+        "asa"
+      ],
+      "notes": "1 kg, $24.99-25.99."
+    },
+    {
+      "name": "TPU 98A",
+      "filament_ids": [
+        "tpu-98a"
+      ],
+      "notes": "1 kg, $22.99-23.99."
+    },
+    {
+      "name": "TPU 95A High Flow / High Speed",
+      "filament_ids": [
+        "tpu-95a"
+      ],
+      "notes": "1 kg, $24.99-25.99."
+    },
+    {
+      "name": "TPU 90A and 85A",
+      "filament_ids": [
+        "tpu-90a",
+        "tpu-85a"
+      ],
+      "notes": "0.5 kg spools, $27.99-28.99."
+    }
+  ],
+  "makes_plates": false,
+  "price_tier": "mid",
+  "additional_notes": "Legal entity: GUANGDONG SHUNDE ULTRALLINE 3D TECHNOLOGY CO.,LTD (verbatim, spelling 'ULTRALLINE' as printed), Shunde District, Foshan, Guangdong; Amazon seller 'Priline Direct' (id A1V5JEF00F138K), read 2026-11-06. The listing's Manufacturer field reads 'Priline'. Store is Amazon; the first pass found only an unofficial-looking website, not recorded as an endpoint. The seller is a 3D technology company occupying floors 2-3 of a building in a Shunde tech park, which leaves in-house extrusion possible but unconfirmed.",
+  "provenance": {
+    "sources": [
+      "https://livedeals.3dprintingdeals.com/deals?category=filament&brand=PRILINE",
+      "https://www.amazon.com/dp/B07VB7HFHW",
+      "https://www.amazon.com/sp?seller=A1V5JEF00F138K"
+    ],
+    "last_verified": "2026-11-06",
+    "confidence": "medium",
+    "conflicts": "Whether Ultralline 3D Technology extrudes the filament is unknown, and no Chinese-script registration was matched to the English name."
+  },
+  "headquarters_country": "China"
+}

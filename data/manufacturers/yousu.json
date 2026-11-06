@@ -1,0 +1,110 @@
+{
+  "id": "yousu",
+  "name": "Guangzhou Yousu 3D Technology Co., Ltd. (广州优塑三维科技有限公司)",
+  "status": "researched",
+  "summary": "Guangzhou manufacturer (YOUSU / 优塑) with a production base in Zengcheng District, selling budget PLA variants (matte, silk, rainbow, PLA+), engineering filaments (PETG, ABS+, TPU 95A, PP, PP-CF, PVA) plus resins and 3D pens, mainly via Amazon US. Presents as its own-brand extruder (TCT Asia 2024 exhibitor); no OEM or YASIN 3D relationship found.",
+  "headquarters_country": "China",
+  "manufacturing_countries": [
+    "China"
+  ],
+  "brands": [
+    "YOUSU",
+    "优塑"
+  ],
+  "oem_relationships": [],
+  "product_lines": [
+    {
+      "name": "PLA",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Spools 250 g to 5 kg; 5 kg PLA ~$12.5-13/kg."
+    },
+    {
+      "name": "Matte PLA",
+      "filament_ids": [
+        "pla-matte"
+      ],
+      "notes": "$14-19/kg per 3dprintingdeals."
+    },
+    {
+      "name": "PLA+",
+      "filament_ids": [
+        "pla-plus"
+      ]
+    },
+    {
+      "name": "Silk PLA (Dual-/Tri-colour)",
+      "filament_ids": [
+        "pla-silk"
+      ]
+    },
+    {
+      "name": "Rainbow PLA",
+      "filament_ids": [
+        "pla-gradient"
+      ]
+    },
+    {
+      "name": "Co-extrusion PLA",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Co-extruded multi-colour PLA; finish not specified, so no silk/gradient id asserted."
+    },
+    {
+      "name": "Glow PLA",
+      "filament_ids": [
+        "pla-glow"
+      ]
+    },
+    {
+      "name": "TPU 95A",
+      "filament_ids": [
+        "tpu-95a"
+      ]
+    },
+    {
+      "name": "ABS+",
+      "filament_ids": [
+        "abs-plus"
+      ]
+    },
+    {
+      "name": "PETG",
+      "filament_ids": [
+        "petg"
+      ]
+    },
+    {
+      "name": "PP / PP-CF",
+      "filament_ids": [
+        "pp",
+        "pp-cf"
+      ]
+    },
+    {
+      "name": "PVA",
+      "filament_ids": [
+        "pva"
+      ]
+    },
+    {
+      "name": "Conductive filament",
+      "filament_ids": [],
+      "notes": "Base polymer not stated; no conductive id exists in the catalog."
+    }
+  ],
+  "makes_plates": false,
+  "price_tier": "budget",
+  "additional_notes": "Company claims (founded c.2013, ISO 9001, 30-mu production base) come from a sponsored exhibitor article on shifair.com and are self-reported. Searches for YASIN return separate entities (YASIN 3D Technology Co., Ltd.; Hunan Yasin Technology) with no link to Yousu. No first-party website, docs or social accounts identified; sold on Amazon US.",
+  "provenance": {
+    "sources": [
+      "https://livedeals.3dprintingdeals.com/deals?category=filament&brand=Yousu",
+      "https://www.shifair.com/informationDetails/250254.html"
+    ],
+    "last_verified": "2026-11-06",
+    "confidence": "medium",
+    "conflicts": "Corporate claims are from a sponsored exhibitor article; no official site or registry record read."
+  }
+}

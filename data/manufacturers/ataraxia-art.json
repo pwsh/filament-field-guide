@@ -1,0 +1,66 @@
+{
+  "id": "ataraxia-art",
+  "name": "ATARAXIA ART",
+  "status": "draft",
+  "summary": "Amazon marketplace filament brand best known for a 'patented' Flexible PLA+ claimed to stretch 5-6x further than standard PLA, alongside PLA+, silk, matte, high-speed and wood PLA and PETG. Company, location and manufacturer are unknown.",
+  "brands": [
+    "ATARAXIA ART"
+  ],
+  "oem_relationships": [],
+  "product_lines": [
+    {
+      "name": "Flexible PLA+",
+      "filament_ids": [
+        "pla-plus"
+      ],
+      "notes": "Marketed as 'patented' with 5-6x the stretch of PLA; still a PLA-based product, not TPU, so mapped to pla-plus."
+    },
+    {
+      "name": "PLA+",
+      "filament_ids": [
+        "pla-plus"
+      ]
+    },
+    {
+      "name": "Silk PLA",
+      "filament_ids": [
+        "pla-silk"
+      ]
+    },
+    {
+      "name": "Matte PLA",
+      "filament_ids": [
+        "pla-matte"
+      ]
+    },
+    {
+      "name": "High Speed PLA",
+      "filament_ids": [
+        "pla-hf"
+      ]
+    },
+    {
+      "name": "Wood PLA",
+      "filament_ids": [
+        "pla-wood"
+      ]
+    },
+    {
+      "name": "PETG",
+      "filament_ids": [
+        "petg"
+      ]
+    }
+  ],
+  "makes_plates": false,
+  "additional_notes": "Sold on Amazon (mirrored via desertcart); no brand website found. Vacuum sealed with desiccant and a 'lifetime satisfaction guarantee'; reviews cite moisture and winding problems. No relationships found. Price tier unverified.",
+  "provenance": {
+    "sources": [
+      "https://www.desertcart.nz/products/402679621-ataraxia-art-flexible-pla-filament-1-75mm-3d-printer-premium",
+      "https://spoolfinder.com/filament/ataraxia_art-petg-brown-1spool-1kg-3cyqAM6kWsJz8QW5ot2pwq"
+    ],
+    "last_verified": "2026-11-06",
+    "confidence": "low",
+    "conflicts": "Only marketplace mirrors and aggregator listings; identity unresolved."
+  }
+}

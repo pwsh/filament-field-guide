@@ -19,6 +19,11 @@
       "company": "Voxelab",
       "relationship": "manufactures-for",
       "notes": "Owner-verified per research/verified-oem-relationships.md and self-disclosed on Voxelab's own about page, which describes Voxelab as 'a subsidiary brand of the premium 3D Printers developer Flashforge'. Voxelab has its own catalog and web presence and therefore also has its own entry."
+    },
+    {
+      "company": "FilaBees",
+      "relationship": "suspected-manufactures-for",
+      "notes": "FilaBees' Amazon seller account is named 'FilaBeesFLASHFORGE' and its listings' Manufacturer field reads 'Zhejiang Flashforge 3D Technology Co., Ltd' (read 2026-11-06). But the seller's registered Business Name and the FILABEES trademark owner are both Hangzhou Juwei E-commerce Co., Ltd., so FilaBees is a separate legal entity; whether it is a Flashforge affiliate or a reseller using Flashforge as supplier is unconfirmed."
     }
   ],
   "endpoints": {

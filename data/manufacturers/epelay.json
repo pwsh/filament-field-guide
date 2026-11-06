@@ -1,0 +1,68 @@
+{
+  "id": "epelay",
+  "name": "Epelay",
+  "status": "draft",
+  "summary": "Amazon filament brand selling PLA+, PETG, silk, dual-colour, galaxy/chameleon and glow PLA in 1 kg spools and multi-spool bundles at about $10-19/kg. The Amazon seller is a Changzhou e-commerce company; extruder unknown.",
+  "brands": [
+    "Epelay"
+  ],
+  "oem_relationships": [],
+  "product_lines": [
+    {
+      "name": "PLA+",
+      "filament_ids": [
+        "pla-plus"
+      ],
+      "notes": "1 kg spools ($16.99), 2-packs and 4/10 kg bundles ($10-14.49/kg); 8x250 g bundle $14.99/kg."
+    },
+    {
+      "name": "PLA+ Matte",
+      "filament_ids": [
+        "pla-matte"
+      ],
+      "notes": "1 kg, $16.99."
+    },
+    {
+      "name": "PLA / PLA+ Silk and Silk Dual Color",
+      "filament_ids": [
+        "pla-silk"
+      ],
+      "notes": "1 kg single and dual-colour silk, $14.99-18.99; 4x250 g dual-colour bundle."
+    },
+    {
+      "name": "PLA Galaxy / Galaxy Chameleon Silk",
+      "filament_ids": [
+        "pla-glitter"
+      ],
+      "notes": "1 kg, $14.99-17.99; listings describe colour-shifting sparkle finishes."
+    },
+    {
+      "name": "PLA Glow",
+      "filament_ids": [
+        "pla-glow"
+      ],
+      "notes": "1 kg multicolour, $18.99."
+    },
+    {
+      "name": "PETG",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "1 kg clear and metallic colours, $13.99-15.99."
+    }
+  ],
+  "makes_plates": false,
+  "price_tier": "budget",
+  "additional_notes": "Legal entity: Changzhou Hongrui Electronic Commerce Co., Ltd. (Business Name as printed), Tianning District, Changzhou, Jiangsu; Amazon seller 'Epelay' (id A3NK8TLRSVUV9A), read 2026-11-06. The listing's Manufacturer field reads 'Epelay'. Store is Amazon only; no brand website found. The entity is an e-commerce company, so the extruder is unknown. First pass: the resemblance to the eSUN ePLA product name is coincidental as far as found.",
+  "provenance": {
+    "sources": [
+      "https://livedeals.3dprintingdeals.com/deals?category=filament&brand=Epelay",
+      "https://www.amazon.com/dp/B0GLNKS2DP",
+      "https://www.amazon.com/sp?seller=A3NK8TLRSVUV9A"
+    ],
+    "last_verified": "2026-11-06",
+    "confidence": "medium",
+    "conflicts": "Entity name is verbatim from the seller profile. The extruder and manufacturing country are unknown."
+  },
+  "headquarters_country": "China"
+}

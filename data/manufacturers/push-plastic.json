@@ -130,7 +130,7 @@
   ],
   "makes_plates": false,
   "price_tier": "mid",
-  "additional_notes": "Location (Little Rock, Arkansas) comes from Filament Cheat Sheet; Push Plastic's own site does not state a location, so both HQ and manufacturing origin rest on a secondary source and should be confirmed against a primary source. In-house US extrusion since 2013 with a 100% virgin material claim (no regrind); no white-labeling confirmed in either direction, so oem_relationships is empty. A rumored connection to Filastruder was searched for and found no corroborating evidence — treat as unfounded. SAM.gov certified, CAGE Code 8CH52. Also resells 3D printers, accessories and resin/color pellets. Typical PLA/ABS pricing $22-32/kg; Filament Cheat Sheet rates the brand Tier B.",
+  "additional_notes": "Location: Springdale, Arkansas. Primary source is Push Plastic's own Terms of Service (Sec. 18: '605 Bain Street Suite #B, Springdale, US 72764'; ZIP 72764 is Arkansas, state not printed), corroborated by the 3printr manufacturer listing and an Advanced Manufacturing article on Arkansas 3D printing. This supersedes the earlier 'Little Rock, Arkansas' from Filament Cheat Sheet (secondary). In-house US extrusion since September 2013 (factory tour video; 'USA-made' per retailer) with a 100% virgin material claim (no regrind). Relationship re-check 2026-11-06: no OEM, white-label or parent relationship found in either direction, so oem_relationships stays empty; the rumoured Filastruder connection remains uncorroborated (zero hits connecting them). SAM.gov certified, CAGE Code 8CH52. Also offers CF PETG and CF ABS, spools up to 25 kg, bulk, pellets and custom colour matching, and resells 3D printers, accessories and resin/color pellets; sold direct (Shopify) plus Amazon and top3dshop. SpoolmanDB PR #438 (open, migrated from Open Filament Database) adds 15 filaments / 79 colours. Typical PLA/ABS pricing $22-32/kg; Filament Cheat Sheet rates the brand Tier B.",
   "provenance": {
     "sources": [
       "https://www.pushplastic.com/pages/about-us",
@@ -142,10 +142,16 @@
       "https://www.pushplastic.com/collections/cf-pc-pbt-1-75mm",
       "https://cdn.mscdirect.com/global/images/ProductDataSheet/pds_cf_pc_pbt_tds_spec.pdf",
       "https://www.pushplastic.com/products/pei-1010-filament-1-75mm-500g",
-      "https://www.pushplastic.com/products/carbon-fiber-nylon-filament-1-75mm-2kg"
+      "https://www.pushplastic.com/products/carbon-fiber-nylon-filament-1-75mm-2kg",
+      "https://www.pushplastic.com/",
+      "https://www.pushplastic.com/policies/terms-of-service",
+      "https://www.pushplastic.com/pages/contact",
+      "https://www.3printr.com/manufacturers/listing/push-plastic",
+      "https://www.advancedmanufacturing.org/states-of-the-industry/arkansas/making-a-push-for-3d-printing-in-arkansas/article_c54a396e-f568-4076-ac73-a56b415126ac.html",
+      "https://api.github.com/repos/Donkie/SpoolmanDB/pulls/438"
     ],
-    "last_verified": "2026-07-31",
+    "last_verified": "2026-11-06",
     "confidence": "medium",
-    "conflicts": "Little Rock, Arkansas as HQ and manufacturing site is corroborated only by a secondary review source; the company's own site is silent on location. Recommended follow-up: primary-source confirmation. Carbon-fiber base polymers are inferred."
+    "conflicts": "Resolved 2026-11-06: the Terms of Service address '605 Bain Street Suite #B Springdale US 72764' was read directly on pushplastic.com (state inferred from ZIP; corroborated by 3printr and Advanced Manufacturing), superseding Filament Cheat Sheet's 'Little Rock'. A Birdeye directory lists a second Springdale address (1206 Esi Dr, 72764), unverified. Arkansas Secretary of State (POST-only search form) and SAM.gov (JS shell) could not be read, so the registered entity name and CAGE 8CH52 are unconfirmed. 'No relationships' is medium confidence (absence of evidence). Carbon-fiber base polymers are inferred."
   }
 }

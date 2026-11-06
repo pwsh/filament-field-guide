@@ -1,0 +1,82 @@
+{
+  "id": "yuaneang",
+  "name": "YUANEANG",
+  "status": "draft",
+  "summary": "Amazon brand selling PLA (standard, matte, silk, crystal, rainbow and multi-colour), PETG, ABS, ASA and TPU, heavily as 10-16 spool bundles at $8-10/kg and as 1 kg spools at about $12-17/kg. The seller is a Dongguan plastics technology company.",
+  "brands": [
+    "YUANEANG",
+    "YUAN EANG",
+    "Yuaneang",
+    "YUANENG",
+    "yuanyangkeji"
+  ],
+  "oem_relationships": [],
+  "product_lines": [
+    {
+      "name": "PLA and PLA Matte",
+      "filament_ids": [
+        "pla",
+        "pla-matte"
+      ],
+      "notes": "1 kg $11.99-14.99; 16 x 1 kg bundles $139.99 ($8.75/kg)."
+    },
+    {
+      "name": "PLA Silk (single, dual, triple colour, rainbow)",
+      "filament_ids": [
+        "pla-silk",
+        "pla-gradient"
+      ],
+      "notes": "1 kg $12.99-15.99; 10 x 1 kg silk bundle $99.99."
+    },
+    {
+      "name": "PLA Crystal, Rainbow, Matte Rainbow, Dual/Triple-Color",
+      "filament_ids": [
+        "pla",
+        "pla-gradient"
+      ],
+      "notes": "1 kg $12.99-16.99; 16 kg matte-rainbow bundle $149.99."
+    },
+    {
+      "name": "PETG",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "1 kg $11.99-13.99; 12- and 16-spool bundles at about $8/kg."
+    },
+    {
+      "name": "ABS",
+      "filament_ids": [
+        "abs"
+      ],
+      "notes": "1 kg $11.99-14.99; 10 x 1 kg bundle $99.99."
+    },
+    {
+      "name": "ASA",
+      "filament_ids": [
+        "asa"
+      ],
+      "notes": "1 kg $14.99-15.99."
+    },
+    {
+      "name": "TPU 95A",
+      "filament_ids": [
+        "tpu-95a"
+      ],
+      "notes": "1 kg $15.99; 10 x 1 kg bundle $119.99."
+    }
+  ],
+  "makes_plates": false,
+  "price_tier": "budget",
+  "additional_notes": "Legal entity: dongguan yuanyang suliao keji youxian gongsi (rendering: Dongguan Yuanyang Plastic Technology Co., Ltd.), Huangjiang Town, Dongguan, Guangdong; Amazon seller 'yuanyangkeji' (id A3FISMRD54LLNX), read 2026-11-06. The listing's Manufacturer field reads 'YUANENG', which differs from the brand spelling 'YUANEANG'; the deal tracker's group ids also use 'yuaneng'. Store is Amazon only; no brand website was identified. 'suliao keji' means plastic technology, so in-house extrusion is plausible but not shown. First-pass note kept: its silk PLA listings resemble Yousu's, which is resemblance only and no relationship is recorded.",
+  "provenance": {
+    "sources": [
+      "https://livedeals.3dprintingdeals.com/deals?category=filament&brand=YUANEANG",
+      "https://www.amazon.com/dp/B0G6M12B4Y",
+      "https://www.amazon.com/sp?seller=A3FISMRD54LLNX"
+    ],
+    "last_verified": "2026-11-06",
+    "confidence": "low",
+    "conflicts": "The English company name is a rendering of a pinyin Business Name. Brand spelling YUANEANG vs Manufacturer field YUANENG is unexplained. Whether the plastics company extrudes the filament is unknown."
+  },
+  "headquarters_country": "China"
+}

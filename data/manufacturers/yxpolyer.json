@@ -1,0 +1,95 @@
+{
+  "id": "yxpolyer",
+  "name": "YXPOLYER (Guangdong Yinxi Technology Co., Ltd)",
+  "status": "draft",
+  "summary": "Amazon-first filament brand whose USPTO mark (filed 2021-10-11, plastic filaments for 3D printing) is owned by Guangdong Yinxi Technology Co., Ltd in China. Unusually broad engineering catalog for an Amazon brand: food-grade PLA+, PA6 and carbon-filled nylons, PC-CF, PPS and breakaway support. The extruder is unidentified.",
+  "headquarters_country": "China",
+  "brands": [
+    "YXPOLYER"
+  ],
+  "oem_relationships": [],
+  "product_lines": [
+    {
+      "name": "PLA+ (food grade)",
+      "filament_ids": [
+        "pla-plus"
+      ],
+      "notes": "Seller claims SGS food-grade testing (unverified); about $22/kg."
+    },
+    {
+      "name": "Flexible / Soft PLA (food grade)",
+      "filament_ids": [],
+      "notes": "Softened PLA formulation; no flexible-PLA id exists."
+    },
+    {
+      "name": "Nylon PA6",
+      "filament_ids": [
+        "pa6"
+      ]
+    },
+    {
+      "name": "Tough / Easy-Print Nylon",
+      "filament_ids": [
+        "pa"
+      ],
+      "notes": "Nylon grade not stated."
+    },
+    {
+      "name": "PA6-CF",
+      "filament_ids": [
+        "pa6-cf"
+      ]
+    },
+    {
+      "name": "PA12-CF",
+      "filament_ids": [
+        "pa12-cf"
+      ]
+    },
+    {
+      "name": "ABS Marble",
+      "filament_ids": [
+        "abs"
+      ],
+      "notes": "Marble-effect ABS; the stone-fill id is PLA-based, so only the ABS base is recorded."
+    },
+    {
+      "name": "PC (AMS-compatible reusable spools)",
+      "filament_ids": [
+        "pc"
+      ]
+    },
+    {
+      "name": "PC-CF",
+      "filament_ids": [
+        "pc"
+      ],
+      "notes": "Carbon-fibre polycarbonate; no pc-cf id exists, so the PC base is listed for family context."
+    },
+    {
+      "name": "PPS",
+      "filament_ids": [
+        "pps"
+      ],
+      "notes": "Sold on PC spools."
+    },
+    {
+      "name": "Breakaway Support",
+      "filament_ids": [
+        "support-breakaway"
+      ]
+    }
+  ],
+  "makes_plates": false,
+  "price_tier": "mid",
+  "additional_notes": "Store is Amazon only; no brand website found. The engineering range (PPS, PC-CF, carbon-filled nylons) suggests a real compounding source, but it is unidentified and no relationship is recorded. The trademark owner is in Humen Town, Dongguan, which fits the 'Yinxi Material' (Dongguan, founded 2022 per CB Insights) hypothesis geographically, but the two are not shown to be the same company.",
+  "provenance": {
+    "sources": [
+      "https://woodartsupply.com/products/yxpolyer-pps-filament-1-75mm-engineering-filament-for-fdm-3d-printer-filament-1kg-with-pc-spool",
+      "https://trademarks.justia.com/970/67/yxpolyer-97067743.html"
+    ],
+    "last_verified": "2026-11-06",
+    "confidence": "medium",
+    "conflicts": "Trademark record read on Justia 2026-11-06: YXPOLYER (serial 97067743, filed 2021-10-11, Class 17 filament) owner Guangdong Yinxi Technology Co., Ltd, Juqi Village, Humen Town, Dongguan. Manufacturing origin and extruder unverified; China presumed but not evidenced, so manufacturing_countries is omitted."
+  }
+}

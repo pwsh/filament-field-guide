@@ -1,0 +1,61 @@
+{
+  "id": "aicopyto",
+  "name": "AICOPYTO (Shenzhen Dayijihe Technology Co., Ltd.)",
+  "status": "draft",
+  "summary": "Amazon filament brand focused on silk PLA (single, dual, tri-colour and rainbow), plus PLA-CF, TPU 95A and ABS. Its USPTO mark (reg. 7535904, October 2024, Class 17) is owned by Shenzhen Dayijihe Technology Co., Ltd. per an aggregator snippet; the actual manufacturer is unknown.",
+  "headquarters_country": "China",
+  "brands": [
+    "AICOPYTO"
+  ],
+  "oem_relationships": [],
+  "product_lines": [
+    {
+      "name": "Silk PLA (single, dual-color)",
+      "filament_ids": [
+        "pla-silk"
+      ],
+      "notes": "Bulk of listings; about $14-20/kg; 4 x 1 kg bundles."
+    },
+    {
+      "name": "Silk Tri-Color / Rainbow PLA",
+      "filament_ids": [
+        "pla-silk",
+        "pla-gradient"
+      ]
+    },
+    {
+      "name": "PLA Carbon Fiber",
+      "filament_ids": [
+        "pla-cf"
+      ],
+      "notes": "About $20-23/kg."
+    },
+    {
+      "name": "TPU 95A",
+      "filament_ids": [
+        "tpu-95a"
+      ],
+      "notes": "About $20-24/kg."
+    },
+    {
+      "name": "ABS",
+      "filament_ids": [
+        "abs"
+      ],
+      "notes": "1 kg cardboard spool, seen on a reseller page."
+    }
+  ],
+  "makes_plates": false,
+  "price_tier": "budget",
+  "additional_notes": "Store is Amazon US; no brand website found. The trademark owner is not shown to be the extruder and no link to a known OEM was found.",
+  "provenance": {
+    "sources": [
+      "https://livedeals.3dprintingdeals.com/deals?category=filament&brand=AICOPYTO",
+      "https://markinton.com/trademark/aicopyto-98275718",
+      "https://trademarks.justia.com/982/75/aicopyto-98275718.html"
+    ],
+    "last_verified": "2026-11-06",
+    "confidence": "medium",
+    "conflicts": "Trademark record read on Justia 2026-11-06: AICOPYTO (serial 98275718, filed 2023-11-17, Class 17 filament) applicant Shenzhen Dayijihe Technology Co., Ltd., Huanan International, Shenzhen. Manufacturer and manufacturing country unknown."
+  }
+}

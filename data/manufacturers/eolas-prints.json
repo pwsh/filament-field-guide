@@ -1,0 +1,96 @@
+{
+  "id": "eolas-prints",
+  "name": "Eolas Prints",
+  "status": "researched",
+  "summary": "Spanish filament manufacturer in Cantabria (founded 2015, first PLA product 2017) claiming in-house production under ISO 9001/14001, positioned around certified filaments for industrial users. Sells PLA on NatureWorks Ingeo 850/870 grades plus silk, matte and high-speed PLA, flexible TPU grades, ABS, ASA and PETG, in 1.75 and 2.85 mm.",
+  "headquarters_country": "Spain",
+  "manufacturing_countries": [
+    "Spain"
+  ],
+  "brands": [
+    "Eolas Prints"
+  ],
+  "oem_relationships": [],
+  "endpoints": {
+    "website": "https://eolasprints.com",
+    "store": "https://eolasprints.com",
+    "docs": "https://eolasprints.com/pages/materials-catalogue"
+  },
+  "product_lines": [
+    {
+      "name": "PLA (Ingeo 850 / 870)",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Built on NatureWorks Ingeo 3D850/3D870 grades; 2.85 mm also offered. Not mapped to pla-ht because the notes do not state an annealing/high-heat claim."
+    },
+    {
+      "name": "Silk PLA",
+      "filament_ids": [
+        "pla-silk"
+      ]
+    },
+    {
+      "name": "Matte PLA",
+      "filament_ids": [
+        "pla-matte"
+      ]
+    },
+    {
+      "name": "High Speed PLA",
+      "filament_ids": [
+        "pla-hf"
+      ]
+    },
+    {
+      "name": "Flex TPU 93A",
+      "filament_ids": [
+        "tpu"
+      ],
+      "notes": "93A has no durometer-specific id."
+    },
+    {
+      "name": "Flex TPU D53",
+      "filament_ids": [
+        "tpu"
+      ],
+      "notes": "53D semi-rigid TPU; no exact id (tpu-55d is the nearest but not equivalent)."
+    },
+    {
+      "name": "Flex TPU D60 UV resistant",
+      "filament_ids": [
+        "tpu-60d"
+      ]
+    },
+    {
+      "name": "ABS",
+      "filament_ids": [
+        "abs"
+      ]
+    },
+    {
+      "name": "ASA",
+      "filament_ids": [
+        "asa"
+      ]
+    },
+    {
+      "name": "PETG",
+      "filament_ids": [
+        "petg"
+      ]
+    }
+  ],
+  "makes_plates": false,
+  "additional_notes": "Registered in the Mercantile Register of Cantabria, VAT ESB39813605; town not stated. A 2022 investor from Oxford, UK became an (unnamed) shareholder, which is not a brand relationship. An unrelated 'Eolas (Ireland)' appears in a research registry with no evidence of connection. No white-label relationships found. Price tier not verified.",
+  "provenance": {
+    "sources": [
+      "https://eolasprints.com/pages/company",
+      "https://www.3dnatives.com/en/eolas-prints-certified-3d-printing-filaments-industries-260920224/",
+      "https://eolasprints.com/pages/materials-catalogue"
+    ],
+    "last_verified": "2026-11-06",
+    "confidence": "high",
+    "conflicts": "In-house production and ISO certifications are the company's own claims (materials catalogue), echoed by 3Dnatives; legal form and exact town not stated."
+  }
+}

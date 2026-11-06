@@ -1,0 +1,98 @@
+{
+  "id": "print-with-smile",
+  "name": "Print With Smile",
+  "status": "draft",
+  "summary": "Prague, Czech Republic brand selling PLA, PETG (including recycled and bicolor metallic), ABS, ASA and carbon-fibre-filled PLA, PETG and PA12 filament, plus a 'Plug&Play' 3D print-farm system. The legal entity and manufacturer are unconfirmed.",
+  "headquarters_country": "Czech Republic",
+  "brands": [
+    "Print With Smile"
+  ],
+  "endpoints": {
+    "website": "https://www.printwithsmile.cz/",
+    "store": "https://www.printwithsmile.cz/"
+  },
+  "product_lines": [
+    {
+      "name": "PLA",
+      "filament_ids": [
+        "pla"
+      ]
+    },
+    {
+      "name": "Silk PLA",
+      "filament_ids": [
+        "pla-silk"
+      ]
+    },
+    {
+      "name": "PLA CF",
+      "filament_ids": [
+        "pla-cf"
+      ]
+    },
+    {
+      "name": "PETG",
+      "filament_ids": [
+        "petg"
+      ]
+    },
+    {
+      "name": "RE PETG",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "Recycled PETG."
+    },
+    {
+      "name": "PETG CF",
+      "filament_ids": [
+        "petg-cf"
+      ]
+    },
+    {
+      "name": "Bicolor Metallic PETG",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "Co-extruded two-tone metallic-look PETG; no PETG silk/dual-colour id exists."
+    },
+    {
+      "name": "ABS",
+      "filament_ids": [
+        "abs"
+      ]
+    },
+    {
+      "name": "ASA",
+      "filament_ids": [
+        "asa"
+      ]
+    },
+    {
+      "name": "PA12 CF",
+      "filament_ids": [
+        "pa12-cf"
+      ]
+    }
+  ],
+  "makes_plates": false,
+  "additional_notes": "Company address is Prague 5. FUEL INVEST, SE filed the US PRINT WITH SMILE trademark in March 2022 for plastic 3D filament from the same district; recorded as suspected-parent-company. Manufacturer unknown. Listed as an MSV/IBVV fair exhibitor. No price evidence, so price_tier is omitted.",
+  "provenance": {
+    "sources": [
+      "https://simplyprint.io/filaments/print-with-smile",
+      "https://ibvv.cz/en/ik-fair-exhibitor/print?id=62294",
+      "https://trademarks.justia.com/973/18/print-with-97318719.html",
+      "https://trademarks.justia.com/owners/fuel-invest-se-5134181/"
+    ],
+    "last_verified": "2026-11-06",
+    "confidence": "medium",
+    "conflicts": "Legal entity: FUEL INVEST, SE is the US trademark applicant (Justia record read 2026-11-06), with an address matching the exhibitor listing; recorded as suspected parent. EUIPO and the Czech register were not searched. Manufacturing origin unknown."
+  },
+  "oem_relationships": [
+    {
+      "company": "FUEL INVEST, SE",
+      "relationship": "suspected-parent-company",
+      "notes": "FUEL INVEST, SE (Societas Europaea, Vrázská 1562/24a, Praha 5, CZ 15300) filed the US mark PRINT WITH SMILE (serial 97318719, 2022-03-18, Class 17: plastic filaments for 3D printing) per the Justia record read 2026-11-06. The Prague 5 address matches the brand's IBVV exhibitor address. No statement that it operates the brand, so suspected."
+    }
+  ]
+}

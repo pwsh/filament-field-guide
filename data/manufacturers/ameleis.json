@@ -1,0 +1,32 @@
+{
+  "id": "ameleis",
+  "name": "Ameleis",
+  "status": "draft",
+  "summary": "Amazon-only brand (AmeLeis) known from a pastel PLA bundle of six 250 g spools (model PLA-6MKL) and 1 kg PLA spools listed in SpoolmanDB. Seller legal entity, location and manufacturer are unknown.",
+  "brands": [
+    "Ameleis",
+    "AmeLeis"
+  ],
+  "oem_relationships": [],
+  "product_lines": [
+    {
+      "name": "Pastel PLA bundle",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "6 x 250 g, 1.75 mm, +/-0.02 mm claim, model PLA-6MKL (ASIN B0GYNWLN2F). SpoolmanDB also lists 1 kg spools."
+    }
+  ],
+  "makes_plates": false,
+  "price_tier": "budget",
+  "additional_notes": "No official website or social accounts; seller legal name not retrievable; very new listing. Budget tier inferred from the Amazon bundle format, no price captured.",
+  "provenance": {
+    "sources": [
+      "https://camelcamelcamel.com/product/B0GYNWLN2F",
+      "https://raw.githubusercontent.com/Donkie/SpoolmanDB/main/filaments/ameleis.json"
+    ],
+    "last_verified": "2026-11-06",
+    "confidence": "low",
+    "conflicts": "Only a price-tracker listing and SpoolmanDB entry; identity, country and manufacturer unresolved."
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "id": "filkemp",
+  "name": "Filkemp (FILKEMP - Industria de Filamentos S.A.)",
+  "status": "researched",
+  "summary": "Portuguese industrial polymer and nylon monofilament maker based near Lisbon. It sells a consumer 3D-printing line, 3DFilkemp, with PLA, the PLN line, PETG, nylon and nylon-CF, distributed in the UK by Additive-X and GoPrint3D.",
+  "headquarters_country": "Portugal",
+  "manufacturing_countries": [
+    "Portugal"
+  ],
+  "brands": [
+    "Filkemp",
+    "3DFilkemp",
+    "PLN"
+  ],
+  "endpoints": {
+    "website": "https://3dfilkemp.com/",
+    "store": "https://3dfilkemp.com/"
+  },
+  "product_lines": [
+    {
+      "name": "PLA",
+      "filament_ids": [
+        "pla"
+      ]
+    },
+    {
+      "name": "PLN",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Described in the notes as a PLA-type line, marketed by Fabbaloo as a 'high-performance sustainable' filament; the exact chemistry is not documented."
+    },
+    {
+      "name": "PETG",
+      "filament_ids": [
+        "petg"
+      ]
+    },
+    {
+      "name": "Nylon",
+      "filament_ids": [
+        "pa"
+      ],
+      "notes": "PA type unspecified."
+    },
+    {
+      "name": "Nylon CF",
+      "filament_ids": [
+        "pa-cf"
+      ]
+    }
+  ],
+  "makes_plates": false,
+  "additional_notes": "Appears to extrude its own material; no catalog OEM relationship found. UK distribution through Additive-X (authorised distributor) and GoPrint3D. An Additive-X listing titles Filkemp PETG as '3D Print Master Pro', which may be a reseller name; the relationship is not verified beyond that listing. A secondary search summary claims Filkemp was founded in Germany in 1952, moved to Portugal in 1969, went through an MBO in 1998, and runs about 23 lines at ~5,000 t/yr; none of this is verified. Ships from Lisbon. Has Facebook, Instagram and YouTube presences (URLs not captured). No price evidence, so price_tier is omitted.",
+  "provenance": {
+    "sources": [
+      "https://3dfilkemp.com/",
+      "https://www.additive-x.com/shop/brands/filkemp.html",
+      "https://www.tctmagazine.com/goprint3d-filkemp-3d-printing-materials-uk/",
+      "https://fabbaloo.com/news/filkemp-launches-high-performance-sustainable-pln-filament-for-makers",
+      "https://transparencia.gov.pt/en/fundos-europeus/prr/beneficiarios-projetos/beneficiario/504220560/"
+    ],
+    "last_verified": "2026-11-06",
+    "confidence": "medium",
+    "conflicts": "Company history (1952 German founding, 1969 move, 1998 MBO, capacity) is from an unverified secondary summary. Legal name comes from a search-result listing on the Portuguese transparency portal."
+  }
+}

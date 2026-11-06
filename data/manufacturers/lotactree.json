@@ -1,0 +1,86 @@
+{
+  "id": "lotactree",
+  "name": "Lotactree (Longqi Europe, Lda)",
+  "status": "draft",
+  "summary": "Amazon PLA brand whose USPTO LOTACTREE marks are held by Longqi Europe, Lda, a company registered in Vila Nova de Gaia, Portugal; an Alibaba profile snippet ties the brand to Guangdong Longqi New Material Technology in China. Sells translucent crystal and gradient PLA, the 'PLA Force' range, toughened, silk and glow PLA at budget prices.",
+  "headquarters_country": "Portugal",
+  "brands": [
+    "Lotactree"
+  ],
+  "oem_relationships": [
+    {
+      "company": "Guangdong Longqi New Material Technology",
+      "relationship": "suspected-parent-company",
+      "notes": "An Alibaba profile snippet calls Lotactree a 3D-printing brand of 'Longqi'; the page returned empty on direct fetch. The trademark holder Longqi Europe, Lda (Portugal) shares the Longqi name."
+    }
+  ],
+  "product_lines": [
+    {
+      "name": "Translucent Crystal / Crystal Gradient PLA",
+      "filament_ids": [
+        "pla",
+        "pla-gradient"
+      ],
+      "notes": "From about $10/kg."
+    },
+    {
+      "name": "PLA Force (PLA-F)",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Marketing name; formulation not stated, so pla-plus is not asserted."
+    },
+    {
+      "name": "PLA Force Gradient",
+      "filament_ids": [
+        "pla-gradient"
+      ]
+    },
+    {
+      "name": "PLA Force Marble",
+      "filament_ids": [
+        "pla-stone"
+      ]
+    },
+    {
+      "name": "PLA Force Wood Fill",
+      "filament_ids": [
+        "pla-wood"
+      ]
+    },
+    {
+      "name": "PLA Toughened",
+      "filament_ids": [
+        "pla-plus"
+      ]
+    },
+    {
+      "name": "PLA Silk",
+      "filament_ids": [
+        "pla-silk"
+      ]
+    },
+    {
+      "name": "PLA Glow in the Dark",
+      "filament_ids": [
+        "pla-glow"
+      ]
+    }
+  ],
+  "makes_plates": false,
+  "price_tier": "budget",
+  "additional_notes": "Store is Amazon US; no brand website found. Trademark owner Longqi Europe, Lda (Portugal) confirmed on TSDR; its Class 35 registration 7499592 is cancelled and a newer stylized application (50028310, 2026) is pending. Suspected parent: Guangdong Longqi New Material Technology (an Alibaba profile snippet calls Lotactree a 3D-printing brand of 'Longqi'; the page cannot be read); recorded as suspected-parent-company. Manufacturing country unknown (China suspected).",
+  "provenance": {
+    "sources": [
+      "https://livedeals.3dprintingdeals.com/deals?category=filament&brand=Lotactree",
+      "https://markinton.com/trademark/lotactree-98170658",
+      "https://infotrustgo.pt/en/companies/longqi-europe-lda",
+      "https://longqiglobal.en.alibaba.com/ko_KR/company_profile.html",
+      "https://tsdr.uspto.gov/statusview/sn98170658",
+      "https://trademark.justia.com/owners/longqi-europe-lda-5639891"
+    ],
+    "last_verified": "2026-11-06",
+    "confidence": "low",
+    "conflicts": "USPTO TSDR read 2026-11-06: serial 98170658 (reg. 7499592, Sep 2024) is owned by Longqi Europe, Lda, Rua da Mina 644, Canelas, Vila Nova de Gaia, Portugal, and is CANCELLED under Section 16B; Justia lists further LOTACTREE filings 98170650 and a stylized application 50028310 (filed 2026-08-03, plastic filaments). The Guangdong Longqi New Material parent link remains a search snippet: the Alibaba profile returns only a captcha shell."
+  }
+}

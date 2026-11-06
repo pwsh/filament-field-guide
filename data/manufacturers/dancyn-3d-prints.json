@@ -1,0 +1,33 @@
+{
+  "id": "dancyn-3d-prints",
+  "name": "Dancyn 3D Prints",
+  "status": "draft",
+  "summary": "Very small filament seller known only from a single Shop.app listing for a high-speed PLA+ in many colours (listed as 'Basic' PLA in SpoolmanDB PR #350). Location, company and manufacturer are unknown.",
+  "brands": [
+    "Dancyn 3D Prints"
+  ],
+  "oem_relationships": [],
+  "endpoints": {
+    "store": "https://shop.app/products/9350691029244/high-speed-pla"
+  },
+  "product_lines": [
+    {
+      "name": "High Speed PLA+",
+      "filament_ids": [
+        "pla-hf",
+        "pla-plus"
+      ],
+      "notes": "Single product, many colours; 3 reviews on Shop.app."
+    }
+  ],
+  "makes_plates": false,
+  "additional_notes": "Not identifiable beyond one storefront listing; no website, legal entity or origin found, so no relationships are encoded.",
+  "provenance": {
+    "sources": [
+      "https://shop.app/products/9350691029244/high-speed-pla"
+    ],
+    "last_verified": "2026-11-06",
+    "confidence": "low",
+    "conflicts": "Single source; identity unresolved."
+  }
+}

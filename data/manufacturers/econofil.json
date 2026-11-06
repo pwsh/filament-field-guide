@@ -1,0 +1,107 @@
+{
+  "id": "econofil",
+  "name": "EconoFil (Filaments.ca house brand)",
+  "status": "researched",
+  "summary": "Budget house brand of Canadian retailer Filaments.ca, covering PLA (standard, silk, matte, glow, 3D850), PETG, PETG-CF, ABS, ASA, TPU and TPE, with a refill-coil system on reusable master spools since 2018. Filaments.ca says it makes some of its own filament and imports others; which applies to EconoFil is not stated.",
+  "headquarters_country": "Canada",
+  "brands": [
+    "EconoFil",
+    "Filaments.ca"
+  ],
+  "oem_relationships": [
+    {
+      "company": "Filaments.ca",
+      "relationship": "parent-company",
+      "notes": "EconoFil is sold as Filaments.ca's own brand on filaments.ca (https://filaments.ca/pages/econofil-pla). Legal entity name not given on the about page."
+    }
+  ],
+  "endpoints": {
+    "website": "https://filaments.ca",
+    "store": "https://filaments.ca",
+    "docs": "https://filaments.ca/pages/econofil-pla"
+  },
+  "product_lines": [
+    {
+      "name": "EconoFil Standard PLA",
+      "filament_ids": [
+        "pla"
+      ]
+    },
+    {
+      "name": "EconoFil Silk PLA",
+      "filament_ids": [
+        "pla-silk"
+      ],
+      "notes": "1 kg CAD 24.99 in a cached snapshot."
+    },
+    {
+      "name": "EconoFil Matte PLA",
+      "filament_ids": [
+        "pla-matte"
+      ]
+    },
+    {
+      "name": "EconoFil Glow PLA",
+      "filament_ids": [
+        "pla-glow"
+      ]
+    },
+    {
+      "name": "EconoFil PLA 3D850 (refill coils)",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "NatureWorks Ingeo 3D850 grade, sold as refill coils."
+    },
+    {
+      "name": "EconoFil Standard PETG",
+      "filament_ids": [
+        "petg"
+      ]
+    },
+    {
+      "name": "Carbon Fiber Hyper PETG",
+      "filament_ids": [
+        "petg-cf"
+      ]
+    },
+    {
+      "name": "EconoFil ABS",
+      "filament_ids": [
+        "abs"
+      ]
+    },
+    {
+      "name": "EconoFil ASA",
+      "filament_ids": [
+        "asa"
+      ]
+    },
+    {
+      "name": "EconoFil TPU",
+      "filament_ids": [
+        "tpu"
+      ],
+      "notes": "Shore hardness not given in the notes."
+    },
+    {
+      "name": "EconoFil TPE 85",
+      "filament_ids": [
+        "tpe"
+      ]
+    }
+  ],
+  "price_tier": "budget",
+  "makes_plates": false,
+  "additional_notes": "The actual extruder is unidentified. No suspected-manufactured-by relationship is encoded because Filaments.ca states it extrudes some filament itself, so there is no positive evidence that EconoFil is contract-made. A HardwareCanucks forum snippet mentions a PLA batch recall notice (batch BI06CA), not confirmed on company pages.",
+  "provenance": {
+    "sources": [
+      "https://filaments.ca/pages/about-us",
+      "https://filaments.ca/pages/econofil-pla",
+      "https://filaments.ca/blogs/news/econofil-refill-coils-now-available"
+    ],
+    "last_verified": "2026-11-06",
+    "confidence": "medium",
+    "conflicts": "Whether EconoFil is extruded in-house by Filaments.ca or imported is unstated; HQ city unknown; recall notice unverified."
+  }
+}

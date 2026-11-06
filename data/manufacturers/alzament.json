@@ -1,0 +1,114 @@
+{
+  "id": "alzament",
+  "name": "Alzament (Alza.cz house brand)",
+  "status": "researched",
+  "summary": "House filament brand of Czech online retailer Alza.cz (Prague), sold across Alza's country sites: basic, matte, silk and chameleon PLA, Hyper PLA+ / PLA+, PETG and Hyper PETG, PLA-CF, PETG-CF, ASA, ABS and TPU 95A at budget prices (Basic PLA 1 kg 249 CZK). Alza does not name the extruder.",
+  "headquarters_country": "Czech Republic",
+  "brands": [
+    "Alzament",
+    "Alza"
+  ],
+  "oem_relationships": [
+    {
+      "company": "Alza.cz a.s.",
+      "relationship": "parent-company",
+      "notes": "Alza.cz a.s. (company ID 27082440) lists Alzament under 'Our brands - 3D printer filament' (https://www.alza.cz/EN/3d-printer-filament/our-brands/28855595-e71.htm; seen in search results, page returned 403 to fetch)."
+    },
+    {
+      "company": "Unidentified contract manufacturer",
+      "relationship": "suspected-manufactured-by",
+      "notes": "Alza is a retailer and states no maker. Sourcing is inferred from the house-brand model only; no named OEM and no origin evidence, so no country is asserted."
+    }
+  ],
+  "endpoints": {
+    "website": "https://www.alza.cz",
+    "store": "https://www.alza.at/EN/alzament/v46531.htm",
+    "docs": "https://dwn.alza.cz/manual/148631"
+  },
+  "product_lines": [
+    {
+      "name": "Alzament Basic PLA",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "1.75 mm, 1 kg, +/-0.02 mm, 249 CZK."
+    },
+    {
+      "name": "Alzament Matte PLA",
+      "filament_ids": [
+        "pla-matte"
+      ]
+    },
+    {
+      "name": "Alzament Silk PLA",
+      "filament_ids": [
+        "pla-silk"
+      ]
+    },
+    {
+      "name": "Alzament Chameleon PLA",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Colour-shift effect PLA; finish not described in the notes, so no effect id is asserted."
+    },
+    {
+      "name": "Alzament Hyper PLA+ / PLA+",
+      "filament_ids": [
+        "pla-plus",
+        "pla-hf"
+      ],
+      "notes": "'Hyper' is high-speed positioning; TDS at dwn.alza.cz/manual/148631. Some reviews report clogging at high speed."
+    },
+    {
+      "name": "Alzament PETG / Hyper PETG",
+      "filament_ids": [
+        "petg"
+      ]
+    },
+    {
+      "name": "Alzament PETG-CF",
+      "filament_ids": [
+        "petg-cf"
+      ]
+    },
+    {
+      "name": "Alzament PLA-CF",
+      "filament_ids": [
+        "pla-cf"
+      ]
+    },
+    {
+      "name": "Alzament ASA",
+      "filament_ids": [
+        "asa"
+      ]
+    },
+    {
+      "name": "Alzament ABS",
+      "filament_ids": [
+        "abs"
+      ]
+    },
+    {
+      "name": "Alzament TPU 95A",
+      "filament_ids": [
+        "tpu-95a"
+      ]
+    }
+  ],
+  "price_tier": "budget",
+  "makes_plates": false,
+  "additional_notes": "24-month warranty. Analogous retailer house brands in the catalog: Insignia, Michaels, Hobby Lobby, Amazon Basics. Customer reviews on alza.cz complain that Hyper PLA clogs or cannot handle high speed.",
+  "provenance": {
+    "sources": [
+      "https://www.alza.at/EN/alzament/v46531.htm",
+      "https://www.alza.cz/EN/3d-printer-filament/our-brands/28855595-e71.htm",
+      "https://m.alza.cz/recenze/alzament-hyper-pla-1kg-black-12717985.htm",
+      "https://api.github.com/repos/Donkie/SpoolmanDB/pulls/329/files"
+    ],
+    "last_verified": "2026-11-06",
+    "confidence": "medium",
+    "conflicts": "Alza pages (alza.cz 'Our brands', alza.at brand page) still return 403 to every fetch (re-checked 2026-11-06), so the parent-company link rests on search results showing Alzament only on Alza domains. Identity medium confidence; manufacturer unknown (low)."
+  }
+}

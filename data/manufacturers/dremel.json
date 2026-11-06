@@ -1,0 +1,79 @@
+{
+  "id": "dremel",
+  "name": "Dremel",
+  "status": "draft",
+  "summary": "US power-tool brand whose DigiLab 3D-printer line is supported by a filament accessory range on 0.75 kg RFID-tagged spools: PLA, Matte, Silk and Eco PLA, Translucent PETG and TPU. A retailer listing gives China as country of origin; no extruder is named.",
+  "headquarters_country": "United States",
+  "manufacturing_countries": [
+    "China"
+  ],
+  "brands": [
+    "Dremel",
+    "Dremel DigiLab"
+  ],
+  "oem_relationships": [
+    {
+      "company": "Unidentified contract manufacturer",
+      "relationship": "suspected-manufactured-by",
+      "notes": "Dremel is a tool/printer brand, and a Zoro listing (PLA-BLU-01) gives country of origin China; no maker is named anywhere. Evidence is origin-only and weak."
+    }
+  ],
+  "endpoints": {
+    "website": "https://www.dremel.com"
+  },
+  "product_lines": [
+    {
+      "name": "DigiLab PLA",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "0.75 kg spools with RFID tag read by DigiLab printers for settings; plant-based PLA."
+    },
+    {
+      "name": "DigiLab Matte PLA",
+      "filament_ids": [
+        "pla-matte"
+      ]
+    },
+    {
+      "name": "DigiLab Silk PLA",
+      "filament_ids": [
+        "pla-silk"
+      ]
+    },
+    {
+      "name": "DigiLab Eco PLA",
+      "filament_ids": [
+        "pla"
+      ]
+    },
+    {
+      "name": "DigiLab Translucent PETG",
+      "filament_ids": [
+        "petg"
+      ]
+    },
+    {
+      "name": "DigiLab TPU",
+      "filament_ids": [
+        "tpu"
+      ]
+    },
+    {
+      "name": "DF line",
+      "filament_ids": [],
+      "notes": "A 'DF' line is mentioned but its chemistry is not described in the notes."
+    }
+  ],
+  "makes_plates": false,
+  "additional_notes": "Sold via Lowe's, Zoro and CDW. Bosch group ownership is general knowledge not verified in this research pass, so no parent-company relationship is encoded. Premium per-kg pricing is suggested but unverified. A guessed Dremel product URL returned 404.",
+  "provenance": {
+    "sources": [
+      "https://www.zoro.com/dremel-3d-printer-filament-pla-075-kg-w-bl-pla-blu-01/i/G507200047/",
+      "https://www.cdw.com/product/dremel-pla-filament-1pk-matte-olive/7749775"
+    ],
+    "last_verified": "2026-11-06",
+    "confidence": "low",
+    "conflicts": "Notes rate confidence low-medium. China origin rests on one retailer listing; HQ city and corporate parent unverified; no Dremel first-party filament page was read."
+  }
+}

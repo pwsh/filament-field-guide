@@ -1,0 +1,126 @@
+{
+  "id": "reprapper",
+  "name": "RepRapper Tech (Repraper Tech Co., Limited)",
+  "status": "researched",
+  "summary": "Hong Kong-registered (Kowloon) filament and 3D-printer company founded in 2012 and one of the oldest Amazon filament brands, claiming three filament lines and about 200 t/yr output in China. Broad catalog from PLA/PLA+ in 3-5 kg spools through silk, coextruded, aluminium-filled PLA, ABS, nylon and PVB. It supplies RepRap Warehouse's house-brand filament.",
+  "headquarters_country": "Hong Kong",
+  "manufacturing_countries": [
+    "China"
+  ],
+  "brands": [
+    "RepRapper",
+    "Repraper",
+    "Reprapper Tech",
+    "RepRap-Walmart"
+  ],
+  "oem_relationships": [
+    {
+      "company": "RepRap Warehouse",
+      "relationship": "manufactures-for",
+      "notes": "RepRap Warehouse states its house-brand filament comes from 'a trusted partner RepRapper Tech' (retailer statement)."
+    }
+  ],
+  "product_lines": [
+    {
+      "name": "PLA",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Including 3 kg and 5 kg spools."
+    },
+    {
+      "name": "PLA+ / MPLA",
+      "filament_ids": [
+        "pla-plus"
+      ],
+      "notes": "A retailer claims NatureWorks 4032D resin (unverified); 5 kg PLA+ about $70."
+    },
+    {
+      "name": "Silk PLA",
+      "filament_ids": [
+        "pla-silk"
+      ]
+    },
+    {
+      "name": "Dual / Tri-Color Coextrusion PLA",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Multi-colour coextruded PLA; finish not specified in the notes, so the base PLA id is used."
+    },
+    {
+      "name": "Glow PLA",
+      "filament_ids": [
+        "pla-glow"
+      ]
+    },
+    {
+      "name": "Wood PLA",
+      "filament_ids": [
+        "pla-wood"
+      ]
+    },
+    {
+      "name": "Aluminum PLA",
+      "filament_ids": [
+        "pla-metal"
+      ],
+      "notes": "About 30% aluminium-filled per 3DPrint.com coverage."
+    },
+    {
+      "name": "ABS",
+      "filament_ids": [
+        "abs"
+      ]
+    },
+    {
+      "name": "HIPS",
+      "filament_ids": [
+        "hips"
+      ]
+    },
+    {
+      "name": "PC",
+      "filament_ids": [
+        "pc"
+      ]
+    },
+    {
+      "name": "Nylon",
+      "filament_ids": [
+        "pa"
+      ],
+      "notes": "Grade not stated."
+    },
+    {
+      "name": "Flexible",
+      "filament_ids": [],
+      "notes": "Elastomer chemistry (TPU vs TPE) and hardness not stated, so no id is asserted."
+    },
+    {
+      "name": "POM",
+      "filament_ids": [],
+      "notes": "Acetal; no POM id exists in the catalog."
+    },
+    {
+      "name": "PVB",
+      "filament_ids": [
+        "pvb"
+      ]
+    }
+  ],
+  "makes_plates": false,
+  "price_tier": "budget",
+  "additional_notes": "Seller of record on Amazon is 'REPRAPPER TECH Co., LIMITED'; the company also sells 3D printers and components. The RepRap wiki lists repraper.com as its website (not verified as current). 2012-13 RepRap wiki reviews of the then 'RepRap-Walmart' filament were mixed to negative on diameter consistency. A possible link to Shenzhen Hello 3D appeared only as a search co-hit: rumoured, uncorroborated. No relationship to any extruder already in the catalog was found.",
+  "provenance": {
+    "sources": [
+      "https://reprap.org/wiki/FilamentReviews_RepRap-walmart_(repraper)",
+      "https://m.made-in-china.com/company-repraper/",
+      "https://3dprint.com/63660/reprapper-aluminum-pla/",
+      "https://www.reprapwarehouse.com/products/reprapper-tech-pla-christmas-tree-green-48-spools.oembed"
+    ],
+    "last_verified": "2026-11-06",
+    "confidence": "medium",
+    "conflicts": "Company profile (Kowloon address, founding 2012, 3 lines, ~200 t/yr) comes from a Made-in-China profile snippet and is self-reported; the 3DPrint.com aluminium-PLA detail was also read as a snippet only."
+  }
+}

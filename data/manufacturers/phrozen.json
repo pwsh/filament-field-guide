@@ -1,0 +1,78 @@
+{
+  "id": "phrozen",
+  "name": "Phrozen",
+  "status": "draft",
+  "summary": "Resin- and FDM-printer maker whose filament line (High-Speed PLA launched with the ARCO printer, Tough PLA, PLA+/Rapid PLA+, PLA Matte, PLA Bronze) sells at $18-23/kg. Retailer part numbers suggest the PLA Matte line is Elegoo-made; other lines' maker is unknown.",
+  "brands": [
+    "Phrozen"
+  ],
+  "oem_relationships": [
+    {
+      "company": "ELEGOO",
+      "relationship": "suspected-manufactured-by",
+      "notes": "PLA Matte only. Retailer aio.lv lists 'Phrozen PLA Matte' with MPNs 50.203.0250 (black) and 50.203.0251 (white), and one aio.lv title reads 'PLA Matte Filament Phrozen - ELEGOO Black'. These are Elegoo's own PLA Matte part numbers: 3DJake's Elegoo page reads 'Manufacturer No.: 50.203.0251 Manufacturer: Elegoo' (read 2026-11-06). aio.lv still returns 403 to every fetch, so the Phrozen side rests on search-result titles. No official statement."
+    },
+    {
+      "company": "Spider Maker",
+      "relationship": "distributes",
+      "notes": "Phrozen's Amazon account is the seller of record for Spider Maker nylon-CF and SpiderFlex TPU listings (seller details in additional_notes). Whether Phrozen owns the brand or only resells it is not stated; see the spider-maker entry."
+    }
+  ],
+  "endpoints": {
+    "website": "https://phrozen3d.com",
+    "store": "https://phrozen3d.com/products/high-speed-pla"
+  },
+  "product_lines": [
+    {
+      "name": "High-Speed PLA",
+      "filament_ids": [
+        "pla-hf"
+      ],
+      "notes": "8 colours, $22.99; launched alongside the ARCO FDM printer; maker not identified."
+    },
+    {
+      "name": "Tough PLA",
+      "filament_ids": [
+        "pla-plus"
+      ],
+      "notes": "$17.99."
+    },
+    {
+      "name": "PLA+ / Rapid PLA+",
+      "filament_ids": [
+        "pla-plus"
+      ],
+      "notes": "'Rapid' may indicate a high-flow grade; not confirmed, so pla-hf is not asserted."
+    },
+    {
+      "name": "PLA Matte",
+      "filament_ids": [
+        "pla-matte"
+      ],
+      "notes": "Suspected Elegoo-made (matching MPNs)."
+    },
+    {
+      "name": "PLA Bronze",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Unclear whether metal-filled or a colour/silk effect, so pla-metal is not asserted."
+    }
+  ],
+  "makes_plates": false,
+  "price_tier": "mid",
+  "additional_notes": "Legal entity (Phrozen Technology Co., Ltd.) and HQ (Hsinchu, Taiwan) are from background knowledge and were not verified from a source this session, so headquarters_country is omitted pending confirmation. SpoolmanDB PR #416 contains a single PLA entry. The Amazon brand 'SPIDER MAKER' (nylon carbon-fibre filament) is sold by the seller 'Phrozen 3D Printer' (id A34XNOS9PNSJKJ, Business Name 'PHROZEN TECH CO., LTD.', Hsinchu, Taiwan; read 2026-11-06). Phrozen is the seller of record; whether it owns the Spider Maker brand or resells it is not stated.",
+  "provenance": {
+    "sources": [
+      "https://phrozen3d.com/products/high-speed-pla",
+      "https://aio.lv/en/product--phrozen-502030251--12426784.md",
+      "https://aio.lv/en/product--elegoo-502030251--11470406.md",
+      "https://www.3djake.com/elegoo/pla-matte-matte-white",
+      "https://www.amazon.com/dp/B0CCV5S9YP",
+      "https://www.amazon.com/sp?seller=A34XNOS9PNSJKJ"
+    ],
+    "last_verified": "2026-11-06",
+    "confidence": "low",
+    "conflicts": "Elegoo link covers the Matte line only; Elegoo's part numbers are confirmed (3DJake), the Phrozen listings under the same numbers are search-result titles only (aio.lv 403, re-checked 2026-11-06). Corporate identity/HQ unverified. Manufacturing country unknown."
+  }
+}

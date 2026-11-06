@@ -1,0 +1,76 @@
+{
+  "id": "3dtools",
+  "name": "3DTOOLS",
+  "status": "draft",
+  "summary": "Amazon brand selling filament titled 'Bamboo Original' with Bambu-style colour codes and an RFID claim for Bambu AMS: PLA Basic and Matte refills, PLA Silk+, PLA-CF, ABS refills, ASA and TPU, at about $23-46/kg. The seller is a Hong Kong company; the extruder is unknown.",
+  "brands": [
+    "3DTOOLS",
+    "3DTOOLS Official Store"
+  ],
+  "oem_relationships": [],
+  "product_lines": [
+    {
+      "name": "PLA Basic / High Speed (refill)",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "1 kg spoolless refill, $23.19-24.99; titles claim RFID for Bambu Lab AMS."
+    },
+    {
+      "name": "PLA Matte (refill)",
+      "filament_ids": [
+        "pla-matte"
+      ],
+      "notes": "1 kg refill, $23.99-24.99."
+    },
+    {
+      "name": "PLA Silk+",
+      "filament_ids": [
+        "pla-silk"
+      ],
+      "notes": "1 kg, $26.99."
+    },
+    {
+      "name": "PLA-CF",
+      "filament_ids": [
+        "pla-cf"
+      ],
+      "notes": "1 kg, $39.99."
+    },
+    {
+      "name": "ABS (refill)",
+      "filament_ids": [
+        "abs"
+      ],
+      "notes": "1 kg refill, $24.99."
+    },
+    {
+      "name": "ASA",
+      "filament_ids": [
+        "asa"
+      ],
+      "notes": "1 kg with spool, $32.99."
+    },
+    {
+      "name": "TPU",
+      "filament_ids": [
+        "tpu"
+      ],
+      "notes": "1 kg, $42.99-45.99; hardness not given in titles."
+    }
+  ],
+  "makes_plates": false,
+  "price_tier": "mid",
+  "additional_notes": "Legal entity: HK IBOSSEN TECHNOLOGY CO., LIMITED (verbatim; no rendering needed), Tsim Sha Tsui, Kowloon, Hong Kong (Flat 917A, Block A, New Mandarin Plaza, 14 Science Museum Road); Amazon seller '3DTOOLS Official Store' (id A2TC570GWWXPWM), read 2026-11-06. The listing's Manufacturer field reads '3DTOOLS'. Store is Amazon only; no brand website was identified. A Hong Kong holding/trading address, so the extruder is unknown. Titles use 'Bamboo Original', Bambu Lab colour codes (e.g. 'Black 10101') and RFID claims; that is naming that mimics Bambu Lab, not evidence of any Bambu relationship. The Business Name resembles the catalog's `iboss` (Qingyuan IBoss Smart Technology), but no link is established, so no relationship is recorded. HK CCTREE Technology (the `cctree` / COMTREE seller) is at Flat 917B on the same floor, a different company.",
+  "provenance": {
+    "sources": [
+      "https://livedeals.3dprintingdeals.com/deals?category=filament&brand=3DTOOLS",
+      "https://www.amazon.com/dp/B0DXCQLP19",
+      "https://www.amazon.com/sp?seller=A2TC570GWWXPWM"
+    ],
+    "last_verified": "2026-11-06",
+    "confidence": "medium",
+    "conflicts": "Whether HK Ibossen is connected to Qingyuan IBoss, and whether the RFID tags work with Bambu AMS, is unknown. Extruder and manufacturing country are unknown."
+  },
+  "headquarters_country": "Hong Kong"
+}

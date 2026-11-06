@@ -1,0 +1,101 @@
+{
+  "id": "american-filament",
+  "name": "American Filament",
+  "status": "researched",
+  "summary": "US filament brand claiming all its filament is made in Huntsville, Alabama, selling PLA+ (incl. Regenerative and Tough Pro), PLA, matte, silk and CMYK PLA, and a made-in-USA PCTG at roughly $26-30 per kg. Related to the Lithophane Maker product brand sold on the same site.",
+  "headquarters_country": "United States",
+  "manufacturing_countries": [
+    "United States"
+  ],
+  "brands": [
+    "American Filament",
+    "AF",
+    "Lithophane Maker"
+  ],
+  "oem_relationships": [],
+  "endpoints": {
+    "website": "https://americanfilament.us",
+    "store": "https://americanfilament.us"
+  },
+  "product_lines": [
+    {
+      "name": "PLA+",
+      "filament_ids": [
+        "pla-plus"
+      ],
+      "notes": "$25.99 per 1 kg."
+    },
+    {
+      "name": "Regenerative PLA+",
+      "filament_ids": [
+        "pla-plus"
+      ]
+    },
+    {
+      "name": "Tough Pro PLA+",
+      "filament_ids": [
+        "pla-plus"
+      ],
+      "notes": "$28.99 per 1 kg."
+    },
+    {
+      "name": "PLA",
+      "filament_ids": [
+        "pla"
+      ]
+    },
+    {
+      "name": "Matte PLA",
+      "filament_ids": [
+        "pla-matte"
+      ]
+    },
+    {
+      "name": "Silk AF PLA",
+      "filament_ids": [
+        "pla-silk"
+      ]
+    },
+    {
+      "name": "CMYK PLA",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Colour set for CMYK/lithophane printing."
+    },
+    {
+      "name": "Lithophane Maker PLA",
+      "filament_ids": [
+        "pla"
+      ]
+    },
+    {
+      "name": "Prototyping Filament",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Base chemistry assumed PLA from the PLA product grouping; not explicitly stated."
+    },
+    {
+      "name": "PCTG",
+      "filament_ids": [
+        "pctg"
+      ],
+      "notes": "Made-in-USA differentiator; $29.99 per 1 kg. Also listed by The Virtual Foundry shop."
+    }
+  ],
+  "price_tier": "mid",
+  "makes_plates": false,
+  "additional_notes": "americanfilament.com 301-redirects to americanfilament.us. Also sold via Gigaparts, WREKD and The Virtual Foundry. No OEM relationship found; the extruder is not named but the site claims Huntsville production. A 2026 reviewer listed it with 3D-Fuel as a US PCTG source.",
+  "provenance": {
+    "sources": [
+      "https://americanfilament.us/",
+      "https://simplyprint.io/filaments/american-filament",
+      "https://api.github.com/repos/Donkie/SpoolmanDB/pulls/335/files",
+      "https://www.gigaparts.com/american-filament-pctg-1-75mm-1kg-spool-army-green-af.html"
+    ],
+    "last_verified": "2026-11-06",
+    "confidence": "medium",
+    "conflicts": "Huntsville manufacturing is an own-site claim only, not independently verified; no legal entity identified (footer reads only '(c) 2026, American Filament'). Gigaparts URL was seen as a search result."
+  }
+}

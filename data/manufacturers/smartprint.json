@@ -1,0 +1,151 @@
+{
+  "id": "smartprint",
+  "name": "SmartPrint (Smart Print)",
+  "status": "researched",
+  "summary": "Polish budget-to-mid filament brand (Smart Print) that two Central European retailers attribute to Imagine s.c. of Cholerzyn near Krakow. Broad PLA-variant range plus PETG, ABS/ABS+, ASA, TPU, PLA-CF and PA12-CF15 on 1 kg spools at roughly EUR 10-16/kg; there is no official brand website.",
+  "headquarters_country": "Poland",
+  "manufacturing_countries": [
+    "Poland"
+  ],
+  "brands": [
+    "SmartPrint",
+    "Smart Print",
+    "Imagine"
+  ],
+  "oem_relationships": [
+    {
+      "company": "Imagine s.c.",
+      "relationship": "suspected-manufactured-by",
+      "notes": "Suspected owner and manufacturer. 3dstisk.com names Imagine s.c. (Dominika Pamula, Krzysztof Pamula; Cholerzyn 501, 32-060 Liszki, Poland) as the manufacturer, and htmodel.sk titles listings 'Imagine filament ... | Smart Print'. Two consistent retailer sources; not verified against a company registry or an official brand site."
+    },
+    {
+      "company": "Professional LAB",
+      "relationship": "suspected-sister-brand",
+      "notes": "Retailers name Imagine s.c. (Cholerzyn, Poland) as the SmartPrint maker, and SimplyPrint links the Professional LAB shop to the same company. No official statement."
+    }
+  ],
+  "endpoints": {
+    "store": "https://3dstisk.com/vyrobce/smart-print/"
+  },
+  "product_lines": [
+    {
+      "name": "PLA",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "1 kg, 1.75 mm +/-0.03 mm."
+    },
+    {
+      "name": "PLA+",
+      "filament_ids": [
+        "pla-plus"
+      ],
+      "notes": "Also sold on 5 kg spools."
+    },
+    {
+      "name": "HS-PLA",
+      "filament_ids": [
+        "pla-hf"
+      ],
+      "notes": "High-speed PLA."
+    },
+    {
+      "name": "Meta PLA",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Marketing name; the chemistry difference from standard PLA is not documented."
+    },
+    {
+      "name": "Galaxy PLA",
+      "filament_ids": [
+        "pla-glitter"
+      ],
+      "notes": "Sparkle/galaxy-effect PLA."
+    },
+    {
+      "name": "Glow PLA",
+      "filament_ids": [
+        "pla-glow"
+      ]
+    },
+    {
+      "name": "Marble PLA",
+      "filament_ids": [
+        "pla-stone"
+      ]
+    },
+    {
+      "name": "Matte PLA",
+      "filament_ids": [
+        "pla-matte"
+      ]
+    },
+    {
+      "name": "Wood PLA",
+      "filament_ids": [
+        "pla-wood"
+      ]
+    },
+    {
+      "name": "Silk PLA (single, dual and tri-colour)",
+      "filament_ids": [
+        "pla-silk"
+      ],
+      "notes": "Dual and tri-colour versions are co-extruded silk, mapped to pla-silk."
+    },
+    {
+      "name": "PETG",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "Includes a transparent version."
+    },
+    {
+      "name": "ABS / ABS+",
+      "filament_ids": [
+        "abs",
+        "abs-plus"
+      ]
+    },
+    {
+      "name": "ASA",
+      "filament_ids": [
+        "asa"
+      ]
+    },
+    {
+      "name": "TPU",
+      "filament_ids": [
+        "tpu"
+      ],
+      "notes": "Shore hardness not stated in the notes."
+    },
+    {
+      "name": "PLA-CF",
+      "filament_ids": [
+        "pla-cf"
+      ]
+    },
+    {
+      "name": "PA12-CF15",
+      "filament_ids": [
+        "pa12-cf"
+      ],
+      "notes": "PA12 with 15% carbon fibre."
+    }
+  ],
+  "makes_plates": false,
+  "price_tier": "budget",
+  "additional_notes": "Professional LAB (ABS+ lines, listed by htmodel.sk as 'Imagine filament ABS+ ... | Professional Lab') is a suspected sister line from the same Imagine s.c. and has its own catalog entry (professional-lab); the shared ownership is suspected, not confirmed. Not to be confused with other, unrelated businesses named SmartPrint. No official website found; sold through resellers (3dstisk.com, htmodel.sk, empik.com). Retail pricing is about EUR 10-16/kg, at the budget/mid boundary. SpoolmanDB PR lists 21 products.",
+  "provenance": {
+    "sources": [
+      "https://simplyprint.io/filaments/smartprint",
+      "https://3dstisk.com/vyrobce/smart-print/",
+      "https://www.htmodel.sk/en/imagine-filament-pla-red-smart-print-1kg/"
+    ],
+    "last_verified": "2026-11-06",
+    "confidence": "medium",
+    "conflicts": "Imagine s.c. as owner/manufacturer comes from two retailers only, with no registry check and no official brand site. Polish manufacturing rests on the retailer calling Imagine the 'Polish manufacturer'."
+  }
+}

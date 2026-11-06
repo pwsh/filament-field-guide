@@ -1,0 +1,124 @@
+{
+  "id": "123-3d",
+  "name": "123-3D (123inkt house brand)",
+  "status": "researched",
+  "summary": "House-brand ('huismerk') filament of Dutch online retailer 123inkt, sold through the 123-3d.nl web shop it launched in 2015 (operated by 123 3D B.V., Almere). The broad range covers PLA in 1.75/2.85 mm including the Jupiter series, high-speed, Tough, chameleon and glow PLA, plus ABS, PETG, ASA, TPE, HIPS, cleaning and 3D-pen filament. The shop is also an official Real Filament dealer, but the house-brand extruder is not named.",
+  "headquarters_country": "Netherlands",
+  "brands": [
+    "123-3D",
+    "123-3D Jupiter",
+    "123inkt"
+  ],
+  "oem_relationships": [
+    {
+      "company": "123inkt",
+      "relationship": "parent-company",
+      "notes": "123-3d.nl was launched in 2015 by 123inkt.nl (https://www.123-3d.nl/news/123inktnl+lanceert+gespecialiseerde+3D-webwinkel+123-3Dnl-7.html); the site carries a 'powered by 123inkt' logo and listings on both sites are marked 'huismerkproduct'. Operating entity: 123 3D B.V., Koningsbeltweg 52, 1329 AK Almere."
+    },
+    {
+      "company": "Unidentified contract manufacturer",
+      "relationship": "suspected-manufactured-by",
+      "notes": "The site calls it 'our own house-brand filament' with no maker named; 123inkt is a retailer. A search summary said 'produced within Europe', unconfirmed for the house brand."
+    },
+    {
+      "company": "Real Filament",
+      "relationship": "distributes",
+      "notes": "123-3D is an official dealer of the separate Real Filament brand (https://www.123-3d.nl/page/realfilament.html). This is NOT evidence that Real makes 123-3D house-brand filament."
+    }
+  ],
+  "endpoints": {
+    "website": "https://www.123-3d.nl",
+    "store": "https://www.123inkt.nl"
+  },
+  "product_lines": [
+    {
+      "name": "123-3D PLA (incl. Jupiter series)",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "1.75 and 2.85 mm; 1 kg, 1.1 kg and 3 kg; about EUR 22.50 per 1.1 kg 2.85 mm, about EUR 49.50 per 3 kg 1.75 mm."
+    },
+    {
+      "name": "123-3D High Speed PLA",
+      "filament_ids": [
+        "pla-hf"
+      ],
+      "notes": "Claimed up to 800 mm/s."
+    },
+    {
+      "name": "123-3D PLA Tough",
+      "filament_ids": [
+        "pla-plus"
+      ]
+    },
+    {
+      "name": "123-3D Chameleon PLA",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Colour-shift effect PLA; finish not described in the notes."
+    },
+    {
+      "name": "123-3D Glow-in-the-dark PLA",
+      "filament_ids": [
+        "pla-glow"
+      ]
+    },
+    {
+      "name": "123-3D ABS",
+      "filament_ids": [
+        "abs"
+      ]
+    },
+    {
+      "name": "123-3D PETG",
+      "filament_ids": [
+        "petg"
+      ]
+    },
+    {
+      "name": "123-3D ASA",
+      "filament_ids": [
+        "asa"
+      ]
+    },
+    {
+      "name": "123-3D TPE",
+      "filament_ids": [
+        "tpe"
+      ]
+    },
+    {
+      "name": "123-3D HIPS",
+      "filament_ids": [
+        "hips"
+      ]
+    },
+    {
+      "name": "123-3D Cleaning filament",
+      "filament_ids": [
+        "cleaning"
+      ]
+    },
+    {
+      "name": "123-3D 3D-pen filament",
+      "filament_ids": [],
+      "notes": "3D-pen refill filament; chemistry not stated in the notes."
+    }
+  ],
+  "price_tier": "mid",
+  "makes_plates": false,
+  "additional_notes": "123inkt listings give Nederhorst den Berg as an address, while 123-3d.nl gives Almere.",
+  "provenance": {
+    "sources": [
+      "https://www.123-3d.nl/Onze-merken/123-3D-p165187.html",
+      "https://www.123-3d.nl/page/realfilament.html",
+      "https://www.123inkt.nl/123-3D-Filament-bruin-2-85-mm-PLA-1-1-kg-Jupiter-serie-i92704.html",
+      "https://www.123-3d.nl/news/123inktnl+lanceert+gespecialiseerde+3D-webwinkel+123-3Dnl-7.html",
+      "https://api.github.com/repos/Donkie/SpoolmanDB/pulls/324/files"
+    ],
+    "last_verified": "2026-11-06",
+    "confidence": "medium",
+    "conflicts": "Identity as 123inkt house brand is medium-high; manufacturer unknown (low). City differs between sources (Almere vs Nederhorst den Berg). 'Produced within Europe' is unconfirmed."
+  }
+}

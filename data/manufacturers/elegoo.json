@@ -20,6 +20,11 @@
       "company": "Deeplee",
       "relationship": "manufactures-for",
       "notes": "Owner-verified per research/verified-oem-relationships.md: Deeplee (deeplee3d.com) filament is manufactured by Elegoo. Deeplee is recorded here rather than as its own entry."
+    },
+    {
+      "company": "Phrozen",
+      "relationship": "suspected-manufactures-for",
+      "notes": "Phrozen PLA Matte only: retailer aio.lv lists it under Elegoo's own PLA Matte part numbers 50.203.0250/0251 (Elegoo's numbers confirmed on 3DJake, 2026-11-06); the aio.lv pages themselves return 403, so the Phrozen side is search-result titles only. No official statement."
     }
   ],
   "endpoints": {

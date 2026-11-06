@@ -1,0 +1,70 @@
+{
+  "id": "chitu-systems",
+  "name": "Chitu Systems (CBD-Tech)",
+  "status": "researched",
+  "summary": "Shenzhen division of CBD-Tech (founded 2014), best known for the CHITUBOX slicer and resin-printer control boards, which added the Conjure filament and resin lines plus the FilaPartner E1 dryer. Conjure filament covers PLA+/high-speed PLA+, silk PLA and PETG at budget prices. Retailer listing metadata names Jamg He as manufacturer of Conjure products, which is unconfirmed.",
+  "headquarters_country": "China",
+  "brands": [
+    "Chitu Systems",
+    "Conjure"
+  ],
+  "oem_relationships": [
+    {
+      "company": "CBD-Tech",
+      "relationship": "parent-company",
+      "notes": "chitusystems.com footer reads 'CBD-Tech All Rights Reserved' with support@cbd-3d.com and links to cbd-3d.com (read 2026-11-06). The Amazon seller 'ChiTu Systems Store' (id A395F2SUYKNZ10) has Business Name 'shenzhenshichuangbidekejiyouxiangongsi' (Shenzhen Chuangbide Technology Co., Ltd.; 'CBD' is the initialism of Chuangbide), Baoan, Shenzhen. One search result gives the parent as CBD (HK) TECHNOLOGY CO., LIMITED (unverified)."
+    },
+    {
+      "company": "Jamg He",
+      "relationship": "suspected-manufactured-by",
+      "notes": "Weak evidence: a firstquadcopter review calls the product 'ChiTu JAMG HE Conjure PLA+' and says Chitu sent 'JAMG HE 3D filaments'; search summaries of Desertcart and Woodartsupply listings show 'Jamg He' in the Manufacturer field (those pages returned 403, and the Desertcart hit may be Conjure resin). Against: the Amazon Conjure Silk PLA listings read on 2026-11-06 (B0CNW4NL6M, B0DJ6QSQZF) show Brand and Manufacturer 'chitu systems', with no mention of Jamg He. No official statement either way."
+    }
+  ],
+  "endpoints": {
+    "website": "https://chitusystems.com",
+    "store": "https://chitusystems.com"
+  },
+  "product_lines": [
+    {
+      "name": "Conjure PLA+ / High-Speed PLA+",
+      "filament_ids": [
+        "pla-plus",
+        "pla-hf"
+      ],
+      "notes": "Up to 600 mm/s claimed; about $18/roll."
+    },
+    {
+      "name": "Conjure Silk PLA (dual, tri, rainbow)",
+      "filament_ids": [
+        "pla-silk",
+        "pla-gradient"
+      ],
+      "notes": "Multipacks about $12-14/kg; also 4 x 200 g and 4 x 50 g mini bundles."
+    },
+    {
+      "name": "Conjure PETG",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "About $11/kg."
+    }
+  ],
+  "makes_plates": true,
+  "plate_ids": [],
+  "price_tier": "budget",
+  "additional_notes": "Also sells Conjure resin, PEI build plates and the FilaPartner E1 filament dryer; also on Amazon US. A review page has a 'Conjure filament quality issue' section whose details were not captured. No link was found between Chitu and AceAddity's trademark holder (Yangchun Moergu New Material), so the Jamg He connection rests solely on the Manufacturer field. Amazon seller legal entity: Shenzhen Chuangbide Technology Co., Ltd. (Business Name 'shenzhenshichuangbidekejiyouxiangongsi', Baoan, Shenzhen), i.e. CBD-Tech.",
+  "provenance": {
+    "sources": [
+      "https://livedeals.3dprintingdeals.com/deals?category=filament&brand=chitu%20systems",
+      "https://www.firstquadcopter.com/reviews/chitu-conjure-pla-and-high-speed-pla-3d-filaments/",
+      "https://woodartsupply.com/products/chitu-systems-conjure-silk-pla-3d-printer-filament-1-75mm-dual-color-filament-silk-blue-green-3d-printing-filament-1kg-2-2lb-a-silk-pla-blue-green-1kg",
+      "https://3dprint.com/320050/chitu-systems-and-the-filapartner-e1-moisture-control-for-better-prints/",
+      "https://chitusystems.com/products/pla-plus-filament",
+      "https://www.amazon.com/dp/B0CNW4NL6M",
+      "https://www.amazon.com/sp?seller=A395F2SUYKNZ10"
+    ],
+    "last_verified": "2026-11-06",
+    "confidence": "medium",
+    "conflicts": "The Jamg He manufacturing link is low-medium: it rests on one review and unread retailer feeds, while the Amazon listings name Chitu itself as manufacturer. CBD-Tech parent is now supported by the site footer and the Amazon seller's legal name (Shenzhen Chuangbide Technology). Manufacturing country not established."
+  }
+}

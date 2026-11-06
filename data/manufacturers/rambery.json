@@ -1,0 +1,72 @@
+{
+  "id": "rambery",
+  "name": "RAMBERY",
+  "status": "draft",
+  "summary": "Amazon brand selling PLA+ and a wide range of PLA effects (matte, silk, rainbow, tri-colour, clear and transparent rainbow, glow-in-the-dark, wood), largely as 4-10 kg bundles at about $10.50-15/kg and as 200-250 g multi-packs. 1 kg spools run about $13-26/kg. The seller is a Cixi printing-supplies company.",
+  "brands": [
+    "RAMBERY",
+    "Rambery"
+  ],
+  "oem_relationships": [],
+  "product_lines": [
+    {
+      "name": "PLA+",
+      "filament_ids": [
+        "pla-plus"
+      ],
+      "notes": "1 kg $12.99-14.99; 4 kg bundles $10.50-11/kg; 8 x 500 g and 16 x 200 g packs."
+    },
+    {
+      "name": "PLA Matte (incl. rainbow and multi-colour)",
+      "filament_ids": [
+        "pla-matte",
+        "pla-gradient"
+      ],
+      "notes": "4 kg bundles $12.50-15/kg; 1 kg $18.99-23.13; 200 g multi-packs."
+    },
+    {
+      "name": "PLA Silk (rainbow, tri-colour)",
+      "filament_ids": [
+        "pla-silk",
+        "pla-gradient"
+      ],
+      "notes": "1 kg $16.14-25.99; 4 kg bundle $15/kg; 250 g multi-packs."
+    },
+    {
+      "name": "PLA Clear / Transparent Rainbow",
+      "filament_ids": [
+        "pla",
+        "pla-gradient"
+      ],
+      "notes": "4 x 200-250 g packs."
+    },
+    {
+      "name": "PLA Glow in the Dark (incl. rainbow)",
+      "filament_ids": [
+        "pla-glow"
+      ],
+      "notes": "4 kg bundle $17.50/kg; 1 kg $21.99-28.99."
+    },
+    {
+      "name": "PLA Wood Fill",
+      "filament_ids": [
+        "pla-wood"
+      ],
+      "notes": "4 x 250 g bundle, $23.13/kg."
+    }
+  ],
+  "makes_plates": false,
+  "price_tier": "budget",
+  "additional_notes": "Legal entity: Cixi Lanbo Printing Supplies Co., Ltd. (verbatim; no rendering needed), Zhouxiang Town, Cixi, Ningbo, Zhejiang; Amazon seller 'RAMBERY' (id A2U3WI6GNISW23), read 2026-11-06. The listing's Manufacturer field reads 'RAMBERY'. Store is Amazon only; no brand website was identified. A printing-supplies company in a Wanyang (Zhouxiang) incubator park, so probably a consumables trader; extruder unknown. First-pass note kept: RAMBERY's bundle pricing is near-identical to Miailuy's, but the sellers are different companies (Miailuy is Shenzhen Wantaiyu Technology), and RAMBERY is also not the same company as PINBALL's Cixi seller; no relationship is recorded.",
+  "provenance": {
+    "sources": [
+      "https://livedeals.3dprintingdeals.com/deals?category=filament&brand=RAMBERY",
+      "https://www.amazon.com/dp/B0FSD6R314",
+      "https://www.amazon.com/sp?seller=A2U3WI6GNISW23"
+    ],
+    "last_verified": "2026-11-06",
+    "confidence": "medium",
+    "conflicts": "Similar pricing to Miailuy and a shared city with PINBALL do not establish a common supplier. Extruder and manufacturing country are unknown."
+  },
+  "headquarters_country": "China"
+}

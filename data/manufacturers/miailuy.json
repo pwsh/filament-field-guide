@@ -1,0 +1,54 @@
+{
+  "id": "miailuy",
+  "name": "Miailuy",
+  "status": "draft",
+  "summary": "Amazon brand selling PLA+ and silk PLA (plus PLA, PLA+ silk and PLA+ wood) as 1 kg spools at about $11-19/kg and as 2-10 kg bundles at $11.50-14/kg. The seller is a Shenzhen technology company; the extruder is unknown.",
+  "brands": [
+    "Miailuy"
+  ],
+  "oem_relationships": [],
+  "product_lines": [
+    {
+      "name": "PLA+",
+      "filament_ids": [
+        "pla-plus"
+      ],
+      "notes": "1 kg $10.99-17.99; 2 and 4 kg bundles $11.50-12.99/kg."
+    },
+    {
+      "name": "PLA",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "4 x 1 kg pack, $11/kg."
+    },
+    {
+      "name": "PLA Silk and PLA+ Silk",
+      "filament_ids": [
+        "pla-silk"
+      ],
+      "notes": "1 kg $13.29-18.99; 4 and 10 kg bundles $12.50-14/kg."
+    },
+    {
+      "name": "PLA+ Wood Fill",
+      "filament_ids": [
+        "pla-wood"
+      ],
+      "notes": "1 kg, $14.99."
+    }
+  ],
+  "makes_plates": false,
+  "price_tier": "budget",
+  "additional_notes": "Legal entity: Shenzhen Wantaiyu Technology Co., Ltd (verbatim; no rendering needed), Longtian Subdistrict, Pingshan District, Shenzhen, Guangdong; Amazon seller 'Miailuy' (id A14L9YUKO6IN15), read 2026-11-06. The listing's Manufacturer field reads 'Miailuy'. Store is Amazon only; no brand website was identified. The seller address is an office unit, and the name is a generic technology company, so the extruder is unknown. First-pass note kept: bundle pricing is near-identical to RAMBERY's, but the sellers are different companies; no relationship is recorded.",
+  "provenance": {
+    "sources": [
+      "https://livedeals.3dprintingdeals.com/deals?category=filament&brand=Miailuy",
+      "https://www.amazon.com/dp/B0FN44Z9XL",
+      "https://www.amazon.com/sp?seller=A14L9YUKO6IN15"
+    ],
+    "last_verified": "2026-11-06",
+    "confidence": "medium",
+    "conflicts": "Extruder and manufacturing country are unknown; the pricing match with RAMBERY is not evidence of a shared supplier."
+  },
+  "headquarters_country": "China"
+}

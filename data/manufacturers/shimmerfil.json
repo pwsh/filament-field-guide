@@ -1,0 +1,72 @@
+{
+  "id": "shimmerfil",
+  "name": "SHIMMERFIL (Ching Leung Inc)",
+  "status": "draft",
+  "summary": "Amazon filament brand whose pending USPTO SHIMMERFIL mark (filed 2024-12-06, plastic filaments for 3D printing) is held by Ching Leung Inc of Cary, North Carolina, which describes itself as a 3D-printing materials maker with production in China and a North American branch. Sells high-speed and silk PLA, PETG, glow PLA and a lightweight foaming PLA at budget prices.",
+  "headquarters_country": "United States",
+  "manufacturing_countries": [
+    "China"
+  ],
+  "brands": [
+    "SHIMMERFIL"
+  ],
+  "oem_relationships": [],
+  "product_lines": [
+    {
+      "name": "PLA High Speed / High Speed Basic",
+      "filament_ids": [
+        "pla-hf"
+      ],
+      "notes": "$13-17/kg."
+    },
+    {
+      "name": "High Speed Silk PLA",
+      "filament_ids": [
+        "pla-silk",
+        "pla-hf"
+      ],
+      "notes": "18 colours."
+    },
+    {
+      "name": "Silk Tri-Color Gradient / Rainbow PLA",
+      "filament_ids": [
+        "pla-silk",
+        "pla-gradient"
+      ]
+    },
+    {
+      "name": "PETG Standard / Transparent",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "$11-15/kg."
+    },
+    {
+      "name": "PLA Glow",
+      "filament_ids": [
+        "pla-glow"
+      ]
+    },
+    {
+      "name": "Aero lightweight PLA",
+      "filament_ids": [
+        "lw-pla"
+      ],
+      "notes": "Foaming lightweight PLA per spoolfinder listing."
+    }
+  ],
+  "makes_plates": false,
+  "price_tier": "budget",
+  "additional_notes": "Store is Amazon US; no brand website found. Not related to Inland's 'Shimmer' PLA line (name coincidence). Ching Leung's self-description (production sites in Zhejiang and Jiangsu) comes from an event exhibitor directory and is unverified; the Amazon seller of record was not checked.",
+  "provenance": {
+    "sources": [
+      "https://livedeals.3dprintingdeals.com/deals?category=filament&brand=SHIMMERFIL",
+      "https://rapid2025.smallworldlabs.com/co/ching-leung-inc",
+      "https://camelcamelcamel.com/product/B0FDKHQ4JM",
+      "https://trademarks.justia.com/988/89/shimmerfil-98889053.html"
+    ],
+    "last_verified": "2026-11-06",
+    "confidence": "medium",
+    "conflicts": "Trademark record read on Justia 2026-11-06 (SHIMMERFIL, serial 98889053, filed 2024-12-06, Class 17 filament, owner Ching Leung Inc, #335 7151 O'Kelly Chapel Rd, Cary, NC 27519; the '#335' suggests a mailbox address). The US headquarters and China manufacturing come from a self-described exhibitor directory entry and are unverified."
+  }
+}

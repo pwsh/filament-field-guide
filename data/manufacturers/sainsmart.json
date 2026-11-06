@@ -1,0 +1,87 @@
+{
+  "id": "sainsmart",
+  "name": "SainSmart",
+  "status": "draft",
+  "summary": "Long-running (since 2011) Amazon-first electronics, CNC (Genmitsu) and 3D-printing brand whose own-label filament range is led by flexible TPU 95A, alongside PLA, PETG, ASA, ABS, nylon, PVA and PEBA. It also resells Creality Hyper RFID PLA with Creality branding intact. Corporate ownership is unresolved: the site names Vastmind LLC, while a secondary source names Dongguan-based Shangrui Technology.",
+  "manufacturing_countries": [
+    "China"
+  ],
+  "brands": [
+    "SainSmart",
+    "Genmitsu"
+  ],
+  "oem_relationships": [
+    {
+      "company": "Shenzhen Creality 3D Technology Co., Ltd. (深圳市创想三维科技股份有限公司)",
+      "relationship": "distributes",
+      "notes": "sainsmart.com sells 'Creality Hyper RFID PLA' (SKU 101-90-640HPR-BK) with Creality branding intact. Confirmed as a listing only; no official partner statement found."
+    },
+    {
+      "company": "Shangrui Technology",
+      "relationship": "suspected-parent-company",
+      "notes": "EcomCrew (read 2026-11-06, secondary): 'SainSmart is the most well known of Shangrui Technology's brands'; Shangrui Technology Co., Ltd. (尚睿科技, Dongguan, founded 2011) listed on NEEQ on 2025-05-27. SainSmart's own site footer reads '© 2011 - 2026 Vastmind LLC', so Vastmind LLC is the site operator; no primary document links Vastmind to Shangrui, though the shared 2011 start date is consistent with one group."
+    }
+  ],
+  "endpoints": {
+    "website": "https://www.sainsmart.com",
+    "store": "https://www.sainsmart.com",
+    "docs": "https://www.sainsmart.com/blogs/news"
+  },
+  "product_lines": [
+    {
+      "name": "Flexible TPU 95A (incl. Matte TPU)",
+      "filament_ids": [
+        "tpu-95a"
+      ],
+      "notes": "Flagship line; about 12 TPU SKUs, 0.8 kg spools."
+    },
+    {
+      "name": "PLA / PETG / ASA / ABS",
+      "filament_ids": [
+        "pla",
+        "petg",
+        "asa",
+        "abs"
+      ],
+      "notes": "Commodity materials in the own-label range (SimplyPrint counts 28 lines in total)."
+    },
+    {
+      "name": "Nylon (PA6, PA12-CF)",
+      "filament_ids": [
+        "pa6",
+        "pa12-cf"
+      ],
+      "notes": "Own-label engineering nylons per SimplyPrint."
+    },
+    {
+      "name": "PVA / PEBA",
+      "filament_ids": [
+        "pva",
+        "peba"
+      ],
+      "notes": "Soluble support and PEBA per SimplyPrint."
+    },
+    {
+      "name": "Creality Hyper PLA RFID (resold)",
+      "filament_ids": [
+        "pla-hf"
+      ],
+      "notes": "Creality's high-speed PLA, resold under Creality branding at $29.99 on sainsmart.com; not a SainSmart product."
+    }
+  ],
+  "makes_plates": false,
+  "price_tier": "mid",
+  "additional_notes": "Sister brand Genmitsu covers CNC; the company also sells 3D printers and open-hardware electronics. SimplyPrint reports no RFID/NFC tags on SainSmart own-brand spools. Retailer spec sheets list China as production country; the own-label extruder is unidentified, and no evidence was found either way, so no manufactured-by relationship is recorded. Site operator: Vastmind LLC (sainsmart.com copyright line). Reported owner: Shangrui Technology Co., Ltd., Dongguan (EcomCrew).",
+  "provenance": {
+    "sources": [
+      "https://sainsmart.com/pages/our-story",
+      "https://simplyprint.io/filaments/sainsmart",
+      "https://www.sainsmart.com/products/creality-hyper-rfid-pla-filament-1-75mm",
+      "https://www.ecomcrew.com/amazon-seller-sainsmart-goes-public-in-china/",
+      "https://www.sainsmart.com/policies/terms-of-service"
+    ],
+    "last_verified": "2026-11-06",
+    "confidence": "low",
+    "conflicts": "Both facts are now read on page: Vastmind LLC is the site operator (sainsmart.com footer), and EcomCrew (single secondary source) names Shangrui Technology as owner. No primary document (NEEQ filing, imprint) connects the two, so the parent stays suspected and headquarters_country is omitted (the site gives no address)."
+  }
+}

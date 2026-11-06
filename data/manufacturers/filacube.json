@@ -1,0 +1,42 @@
+{
+  "id": "filacube",
+  "name": "FilaCube (FilaCube LLC)",
+  "status": "draft",
+  "summary": "Houston, Texas marketplace filament brand (FilaCube LLC) selling 'PLA 2' in many Pantone-style colours on 1.75 mm 1 kg spools, plus 3D-pen filament, via Walmart and Newegg. It claims 'Made in USA' manufacture, which is unverified.",
+  "headquarters_country": "United States",
+  "brands": [
+    "FilaCube",
+    "FilaCube PLA 2"
+  ],
+  "endpoints": {
+    "store": "https://www.walmart.com/global/seller/101016128"
+  },
+  "product_lines": [
+    {
+      "name": "PLA 2",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "1.75 mm, 1 kg; many colours with Pantone-style names (e.g. Greenery)."
+    },
+    {
+      "name": "3D pen filament",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Short-length filament for 3D pens; material presumed PLA, not confirmed."
+    }
+  ],
+  "makes_plates": false,
+  "additional_notes": "Walmart seller profile: FilaCube LLC, 12624 Rip Van Winkle Dr, Houston, TX 77024 (seller 101016128). Not related to 3D Systems 'Cube' cartridges despite the similar name. No website found. 'Made in USA/Texas' is a seller claim only, so manufacturing_countries is omitted. No relationships found. Reviews are mixed (spooling and warping complaints vs good colour), which is anecdotal. No prices captured, so price_tier is omitted.",
+  "provenance": {
+    "sources": [
+      "https://www.walmart.com/global/seller/101016128",
+      "https://simplyprint.io/filaments/filacube/pla-greenery-yellowish-green-shade",
+      "https://www.newegg.com/p/298-00N0-001H6"
+    ],
+    "last_verified": "2026-11-06",
+    "confidence": "low",
+    "conflicts": "Notes rate this medium-low. The US-manufacturing claim is unverified seller marketing."
+  }
+}

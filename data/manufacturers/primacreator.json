@@ -1,0 +1,176 @@
+{
+  "id": "primacreator",
+  "name": "PrimaCreator (3D Prima / Prima Printer Nordic AB)",
+  "status": "researched",
+  "summary": "House filament brands of 3D Prima (Prima Printer Nordic AB), a 3D-printing reseller founded in 2014 in Malmo, Sweden, with a second office in Norderstedt, Germany. The PrimaCreator family covers the budget EasyPrint and PrimaValue lines and the broad PrimaSelect range up to PEEK, PEKK and PEI. The contract extruders are not disclosed.",
+  "headquarters_country": "Sweden",
+  "brands": [
+    "PrimaCreator",
+    "3D Prima",
+    "PrimaSelect",
+    "PrimaValue",
+    "EasyPrint",
+    "3D Prima Basic"
+  ],
+  "oem_relationships": [
+    {
+      "company": "Prima Printer Nordic AB",
+      "relationship": "parent-company",
+      "notes": "Confirmed: 3dprima.com presents PrimaCreator and PrimaValue as its own brands. Operator of 3D Prima, Blidogatan 27 D, Malmo."
+    },
+    {
+      "company": "Unidentified contract manufacturer",
+      "relationship": "suspected-manufactured-by",
+      "notes": "3D Prima is a reseller/distributor house brand with no disclosed extrusion of its own; the breadth of the PrimaSelect engineering range (PEEK, PEKK, PEI) points to several OEM sources. No manufacturer identified."
+    },
+    {
+      "company": "Copymaster3D",
+      "relationship": "distributes",
+      "notes": "3D Prima (Prima Printer Nordic AB) sells Copymaster3D filament in its shop. Confirmed as seller only; brand ownership not established."
+    }
+  ],
+  "endpoints": {
+    "website": "https://www.primacreator.com",
+    "store": "https://www.3dprima.com"
+  },
+  "product_lines": [
+    {
+      "name": "EasyPrint PLA",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "1 kg and 3 kg spools."
+    },
+    {
+      "name": "EasyPrint Matte PLA",
+      "filament_ids": [
+        "pla-matte"
+      ]
+    },
+    {
+      "name": "EasyPrint PETG",
+      "filament_ids": [
+        "petg"
+      ]
+    },
+    {
+      "name": "PrimaValue PLA / PLA+",
+      "filament_ids": [
+        "pla",
+        "pla-plus"
+      ],
+      "notes": "Budget line."
+    },
+    {
+      "name": "PrimaValue ABS",
+      "filament_ids": [
+        "abs"
+      ]
+    },
+    {
+      "name": "PrimaValue PETG",
+      "filament_ids": [
+        "petg"
+      ]
+    },
+    {
+      "name": "PrimaSelect PLA",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "34 colours."
+    },
+    {
+      "name": "PrimaSelect Satin PLA",
+      "filament_ids": [
+        "pla-matte"
+      ],
+      "notes": "Satin (semi-matte) finish."
+    },
+    {
+      "name": "PrimaSelect ABS",
+      "filament_ids": [
+        "abs"
+      ]
+    },
+    {
+      "name": "PrimaSelect ASA / ASA+",
+      "filament_ids": [
+        "asa"
+      ]
+    },
+    {
+      "name": "PrimaSelect PETG / PETG Carbon",
+      "filament_ids": [
+        "petg",
+        "petg-cf"
+      ]
+    },
+    {
+      "name": "PrimaSelect NylonPower PA6 / PA12",
+      "filament_ids": [
+        "pa6",
+        "pa12"
+      ]
+    },
+    {
+      "name": "PrimaSelect NylonPower CF / GF",
+      "filament_ids": [
+        "pa-cf"
+      ],
+      "notes": "Carbon- and glass-fibre NylonPower; the base nylon (PA6 vs PA12) for each filled grade is not stated, so only the generic pa-cf id is asserted and GF is not mapped."
+    },
+    {
+      "name": "PrimaSelect PC / PC-CF",
+      "filament_ids": [
+        "pc"
+      ],
+      "notes": "No PC-CF id exists; pc listed for family context."
+    },
+    {
+      "name": "PrimaSelect PEEK / PEEK-CF",
+      "filament_ids": [
+        "peek",
+        "peek-cf"
+      ]
+    },
+    {
+      "name": "PrimaSelect PEKK",
+      "filament_ids": [
+        "pekk"
+      ]
+    },
+    {
+      "name": "PrimaSelect PEI (Ultem)",
+      "filament_ids": [
+        "pei-ultem"
+      ]
+    },
+    {
+      "name": "PrimaSelect BVOH",
+      "filament_ids": [
+        "bvoh"
+      ]
+    },
+    {
+      "name": "3D Prima Basic Recycle PLA",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "The only product in SpoolmanDB PR #323 under the '3D Prima Basic' name. Could not be verified on 3dprima.com and is folded in here as a 3D Prima sub-line."
+    }
+  ],
+  "makes_plates": false,
+  "additional_notes": "Founded 2014. Price positioning spans budget (EasyPrint, PrimaValue) to engineering (PrimaSelect high-temperature polymers), so a single price_tier is omitted. '3D Prima Basic' appears in the Open Filament Database as a separate brand with one Recycle PLA product. It is treated here as a 3D Prima sub-line rather than a separate manufacturer (same-entity link suspected from the name only). Also sold through marketplaces such as Skroutz. SpoolmanDB PR lists 66 PrimaCreator products. Manufacturing countries are unknown.",
+  "provenance": {
+    "sources": [
+      "https://www.3dprima.com",
+      "https://www.primacreator.com",
+      "https://simplyprint.io/filaments/primacreator",
+      "https://directory.tradedoubler.com/en/programs/383581-3D-Prima-FI"
+    ],
+    "last_verified": "2026-11-06",
+    "confidence": "medium",
+    "conflicts": "Brand ownership by Prima Printer Nordic AB is high confidence. Nothing is known about the actual manufacturers. The 3D Prima Basic line and its Recycle PLA could not be verified on the 3D Prima site."
+  }
+}

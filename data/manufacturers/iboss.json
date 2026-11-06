@@ -1,0 +1,57 @@
+{
+  "id": "iboss",
+  "name": "Qingyuan IBoss Smart Technology Co., Ltd.",
+  "status": "draft",
+  "summary": "Qingyuan (Guangdong) supplier selling iBOSS PLA+, Silk/dual-colour silk, rainbow/macaron PLA and PETG (1.75 mm, +/-0.02 mm claimed) via Amazon, Newegg and Best Buy Canada. Presents on Made-in-China as a manufacturer/trading company; no OEM relationship identified.",
+  "headquarters_country": "China",
+  "manufacturing_countries": [
+    "China"
+  ],
+  "brands": [
+    "iBOSS",
+    "IBOSS",
+    "iboss3d"
+  ],
+  "oem_relationships": [],
+  "endpoints": {
+    "website": "https://iboss3d.en.made-in-china.com"
+  },
+  "product_lines": [
+    {
+      "name": "PLA+ / PLA Pro",
+      "filament_ids": [
+        "pla-plus"
+      ]
+    },
+    {
+      "name": "Silk PLA / Dual-colour Silk PLA",
+      "filament_ids": [
+        "pla-silk"
+      ]
+    },
+    {
+      "name": "Rainbow / Macaron PLA",
+      "filament_ids": [
+        "pla-gradient"
+      ],
+      "notes": "Rainbow mapped to gradient; macaron (pastel) colours are plain PLA chemistry."
+    },
+    {
+      "name": "PETG",
+      "filament_ids": [
+        "petg"
+      ]
+    }
+  ],
+  "makes_plates": false,
+  "price_tier": "budget",
+  "additional_notes": "Website endpoint is a Made-in-China supplier page only (audited supplier report); another page names 'IBoss Technology'. Self-reported claims of patents and a Xi'an Jiaotong University tech-transfer partnership are unverified. Because the listing is 'manufacturer/trading company', in-house extrusion is neither confirmed nor ruled out, so no relationship is encoded. Budget tier unverified. The Amazon brand '3DTOOLS' (Bambu-style product naming) is sold by '3DTOOLS Official Store', Business Name 'HK IBOSSEN TECHNOLOGY CO., LIMITED' (Flat 917A, New Mandarin Plaza, Tsim Sha Tsui, Hong Kong; read 2026-11-06). The IBOSSEN name resembles iBOSS, but no link to Qingyuan IBoss is established; recorded here as a lead only.",
+  "provenance": {
+    "sources": [
+      "https://iboss3d.en.made-in-china.com/audited-supplier-reports/report.html"
+    ],
+    "last_verified": "2026-11-06",
+    "confidence": "low",
+    "conflicts": "Single B2B-platform source; manufacturer vs trading-company status unresolved."
+  }
+}

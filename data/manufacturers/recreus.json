@@ -1,0 +1,128 @@
+{
+  "id": "recreus",
+  "name": "Recreus (Recreus Industries, S.L.)",
+  "status": "researched",
+  "summary": "Flexible-filament specialist and extruder in Elda, Alicante, Spain, best known for the Filaflex TPU/TPE range, launched around 2013-2014, with shore hardness from 60A to 95A. Also makes PLA, PETG, PETG-CF, high-flow PETG and the PP3D polypropylene line, mostly on 500 g spools.",
+  "headquarters_country": "Spain",
+  "manufacturing_countries": [
+    "Spain"
+  ],
+  "brands": [
+    "Recreus",
+    "Filaflex",
+    "Reciflex",
+    "PP3D"
+  ],
+  "endpoints": {
+    "website": "https://recreus.com",
+    "store": "https://recreus.com",
+    "docs": "https://recreus.com/en/pages/company"
+  },
+  "product_lines": [
+    {
+      "name": "Filaflex 60A",
+      "filament_ids": [
+        "tpu-60a"
+      ]
+    },
+    {
+      "name": "Filaflex 70A Ultra Soft",
+      "filament_ids": [
+        "tpu"
+      ],
+      "notes": "70A has no durometer-specific id."
+    },
+    {
+      "name": "Filaflex 82A",
+      "filament_ids": [
+        "tpu"
+      ],
+      "notes": "82A has no durometer-specific id."
+    },
+    {
+      "name": "Filaflex 95A Medium Flex",
+      "filament_ids": [
+        "tpu-95a"
+      ]
+    },
+    {
+      "name": "Filaflex Foamy",
+      "filament_ids": [
+        "lw-tpu"
+      ],
+      "notes": "Foaming lightweight flexible."
+    },
+    {
+      "name": "Filaflex Purifier / Conductive",
+      "filament_ids": [
+        "tpu"
+      ],
+      "notes": "Functional TPU grades."
+    },
+    {
+      "name": "Filaflex SEBS",
+      "filament_ids": [
+        "tpe"
+      ],
+      "notes": "SEBS styrenic thermoplastic elastomer, not TPU."
+    },
+    {
+      "name": "Reciflex / Filaflex Balena",
+      "filament_ids": [
+        "tpu"
+      ],
+      "notes": "Recycled or bio-based flexible lines."
+    },
+    {
+      "name": "PLA",
+      "filament_ids": [
+        "pla"
+      ]
+    },
+    {
+      "name": "PETG",
+      "filament_ids": [
+        "petg"
+      ]
+    },
+    {
+      "name": "PETG CF",
+      "filament_ids": [
+        "petg-cf"
+      ]
+    },
+    {
+      "name": "PETG HF",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "High-speed PETG; no high-flow PETG id exists."
+    },
+    {
+      "name": "PP3D",
+      "filament_ids": [
+        "pp"
+      ],
+      "notes": "Polypropylene; a polypropylene adhesion primer is also sold."
+    },
+    {
+      "name": "PP3D GF",
+      "filament_ids": [
+        "pp-gf"
+      ]
+    }
+  ],
+  "makes_plates": false,
+  "price_tier": "premium",
+  "additional_notes": "Founded by Ignacio Garcia; trademarks held by Recreus Industries, S.L. (Poligono Industrial Finca Lacy, Elda). The company page announces a strategic alliance with Repsol. That is a materials and industrial partnership, not white-labelling, and none of the enum values fits it, so it is recorded here only. No OEM-for-others relationship found. The Bambu Lab and Prusa bundles are compatibility accessory packs, not manufacturing deals. Premium tier reflects specialist flex positioning; prices not verified. Also sold through 3DJake (3djake.com/recreus).",
+  "provenance": {
+    "sources": [
+      "https://recreus.com/en/pages/company",
+      "https://recreus.com/en/blogs/news/10-years-of-filaflex-join-us-in-celebrating-its-10th-anniversary",
+      "https://trademarks.justia.com/owners/recreus-industries-s-l-5054243"
+    ],
+    "last_verified": "2026-11-06",
+    "confidence": "high",
+    "conflicts": "Price tier not verified against prices. The Filaflex launch year is approximate (2013-2014, from a '10 years' anniversary post)."
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "id": "renkforce",
+  "name": "Renkforce (Conrad Electronic house brand)",
+  "status": "researched",
+  "summary": "House brand of German electronics retailer Conrad Electronic SE (Hirschau) covering 3D printers, accessories and filament, chiefly 1.75 mm PETG plus PLA test sets. Country of origin on retail listings is China; the contract extruder is unidentified.",
+  "headquarters_country": "Germany",
+  "manufacturing_countries": [
+    "China"
+  ],
+  "brands": [
+    "Renkforce"
+  ],
+  "oem_relationships": [
+    {
+      "company": "Conrad Electronic SE",
+      "relationship": "parent-company",
+      "notes": "Renkforce is Conrad's house brand; datasheets state 'distributed by Conrad Electronic SE' (Klaus-Conrad-Str. 1, Hirschau). Trademark owner not verified in a register."
+    },
+    {
+      "company": "Unidentified contract manufacturer",
+      "relationship": "suspected-manufactured-by",
+      "notes": "Retailer house brand, not an extruder; Digitec and Rapid Online PETG listings give country of origin China. Factory unknown."
+    }
+  ],
+  "endpoints": {
+    "website": "https://www.conrad.de",
+    "store": "https://www.conrad.de"
+  },
+  "product_lines": [
+    {
+      "name": "PETG",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "1.75 mm, 1 kg; SKUs RF-4738592 (black), RF-4738596 (red), RF-6838904/6/8 (black/natural/white)."
+    },
+    {
+      "name": "PETG Pro",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "Lower-temperature (220 C) PETG grade."
+    },
+    {
+      "name": "PLA / filament test sets",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "250 g PLA test sets."
+    }
+  ],
+  "makes_plates": false,
+  "additional_notes": "Compare other retailer house brands (Insignia, Michaels, Hobby Lobby). Conrad also resells Polymaker, Spectrum and Fiberlogy filament under their own names - that is ordinary retail and not evidence of who makes Renkforce filament. SpoolmanDB lists only PETG. Docs are Conrad-hosted datasheets. Price tier (mid) unverified, so omitted.",
+  "provenance": {
+    "sources": [
+      "https://www.digitec.ch/en/s1/product/renkforce-rf-6838906-filament-petg-175-mm-1-kg-natural-1-pc-petg-175-mm-1000-g-transparent-3d-printe-62316494",
+      "https://www.rapidonline.com/renkforce-rf6838904-filament-petg-1-75mm-1kg-black-17-5104",
+      "https://asset.conrad.com/media10/add/160267/c1/-/de/001007508DS01/datasheet-1007508-renkforce-rf1000-3d-printer.pdf"
+    ],
+    "last_verified": "2026-11-06",
+    "confidence": "medium",
+    "conflicts": "Brand ownership is strong (Conrad datasheet) but the trademark register was not checked; actual filament factory unknown beyond country of origin China."
+  }
+}

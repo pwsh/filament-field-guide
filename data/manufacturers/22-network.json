@@ -1,0 +1,72 @@
+{
+  "id": "22-network",
+  "name": "22 Network",
+  "status": "draft",
+  "summary": "Amazon-channel filament brand with a Hong Kong office address on its own site, selling 1 kg PLA, PLA+/PLA Pro, PETG/PETG Pro and silk, rainbow matte, glow and wood PLA; also advertises prototyping and low-volume production services. Factory photos are shown without a location.",
+  "headquarters_country": "Hong Kong",
+  "brands": [
+    "22 Network",
+    "22Network"
+  ],
+  "oem_relationships": [],
+  "endpoints": {
+    "website": "https://22-network.com/"
+  },
+  "product_lines": [
+    {
+      "name": "PLA",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "200-220 C, bed 22-60 C (Open Filament Database data)."
+    },
+    {
+      "name": "PLA+ / PLA Pro",
+      "filament_ids": [
+        "pla-plus"
+      ]
+    },
+    {
+      "name": "PETG / PETG Pro",
+      "filament_ids": [
+        "petg"
+      ]
+    },
+    {
+      "name": "PLA Silk (single / dual colour)",
+      "filament_ids": [
+        "pla-silk"
+      ]
+    },
+    {
+      "name": "PLA Matte (rainbow)",
+      "filament_ids": [
+        "pla-matte"
+      ]
+    },
+    {
+      "name": "PLA Glow (luminous)",
+      "filament_ids": [
+        "pla-glow"
+      ]
+    },
+    {
+      "name": "PLA Wood",
+      "filament_ids": [
+        "pla-wood"
+      ]
+    }
+  ],
+  "makes_plates": false,
+  "additional_notes": "The site claims its own factory (photos, no location). Manufacture in China by an unidentified extruder is suspected but there is no evidence for it, so no relationship is encoded. Store links go to Amazon; no prices on the site, so price tier is not set. The Hong Kong address (1/E, The Voeux, 102-104 Des Voeux Road Central) looks like a registered/virtual office.",
+  "provenance": {
+    "sources": [
+      "https://22-network.com/",
+      "https://simplyprint.io/filaments/22-network",
+      "https://api.github.com/repos/Donkie/SpoolmanDB/pulls/326/files"
+    ],
+    "last_verified": "2026-11-06",
+    "confidence": "low",
+    "conflicts": "SimplyPrint labels the brand USA; its own site gives a Hong Kong address. Manufacturing location unknown. Legal entity not stated."
+  }
+}

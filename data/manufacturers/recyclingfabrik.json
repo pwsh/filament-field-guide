@@ -1,0 +1,61 @@
+{
+  "id": "recyclingfabrik",
+  "name": "RecyclingFabrik (Recycling Fabrik GmbH)",
+  "status": "researched",
+  "summary": "Braunschweig, Germany recycler founded in April 2021 that turns 3D-print waste and industrial scrap into recycled PLA and PETG filament, and runs a take-back service. Offers custom RAL colours on spools from 0.75 kg to 10 kg; in April 2026 it paused customer intake to develop a next-generation process.",
+  "headquarters_country": "Germany",
+  "manufacturing_countries": [
+    "Germany"
+  ],
+  "brands": [
+    "RecyclingFabrik",
+    "Recycling Fabrik",
+    "rPLA",
+    "rPETG"
+  ],
+  "endpoints": {
+    "website": "https://recyclingfabrik.com",
+    "store": "https://www.3djake.com/recyclingfabrik"
+  },
+  "product_lines": [
+    {
+      "name": "rPLA",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Recycled from 3D-print waste and industrial scrap; custom RAL colours."
+    },
+    {
+      "name": "rPLA Matte",
+      "filament_ids": [
+        "pla-matte"
+      ]
+    },
+    {
+      "name": "rPLA Silk",
+      "filament_ids": [
+        "pla-silk"
+      ]
+    },
+    {
+      "name": "rPETG",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "Recycled PETG."
+    }
+  ],
+  "makes_plates": false,
+  "additional_notes": "Managing directors Rudolf Leue and Joern van Leeuwen. Does its own recycling and extrusion; no white-label relationship was found, so oem_relationships is empty. Sold through 3DJake, which has a RecyclingFabrik brand page; that is a retail listing only. Spool sizes 0.75-10 kg per the Formnext exhibitor profile. Fabbaloo (April 2026) reported that intake was paused to develop a next-generation process, so check current availability. Price tier not verified, so omitted. PDF flyers are on the company site.",
+  "provenance": {
+    "sources": [
+      "https://www.fabbaloo.com/news/3d-print-recycling-firm-recyclingfabrik-pauses-intake-to-develop-next-generation-process",
+      "https://formnext.mesago.com/frankfurt/en/exhibitor-search.detail.html/recycling-fabrik-gmbh/FORMNEXT/mf_6_0052389020_4948812_10000133202501.html",
+      "https://simplyprint.io/filaments/recyclingfabrik",
+      "https://www.3djake.com/recyclingfabrik"
+    ],
+    "last_verified": "2026-11-06",
+    "confidence": "medium",
+    "conflicts": "Notes rate this medium-high. Current operating status after the 2026 intake pause is unclear."
+  }
+}

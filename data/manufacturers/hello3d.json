@@ -1,0 +1,104 @@
+{
+  "id": "hello3d",
+  "name": "Hello 3D (Shenzhen Hello 3D Technology Co., Ltd.)",
+  "status": "researched",
+  "summary": "Shenzhen filament producer that self-describes as an OEM/ODM manufacturer with its own brand, claiming a 5,000 m2 factory, four lines and about 1,000 t/yr. It sells a broad range (PLA, silk, marble, colour-change, glow, conductive PLA, ABS, PETG, TPU, PVA) mainly through Alibaba and other marketplaces, with a thin Amazon presence. No relationship to any catalog company was found.",
+  "headquarters_country": "China",
+  "manufacturing_countries": [
+    "China"
+  ],
+  "brands": [
+    "HELLO3D",
+    "Hello 3D"
+  ],
+  "oem_relationships": [],
+  "endpoints": {
+    "store": "https://hello3d.m.en.alibaba.com/custom_page/Page2.htm"
+  },
+  "product_lines": [
+    {
+      "name": "Glow in the Dark Multicolor Rainbow PLA",
+      "filament_ids": [
+        "pla-glow",
+        "pla-gradient"
+      ],
+      "notes": "The only Amazon listing on the deal tracker, $14.99/kg."
+    },
+    {
+      "name": "PLA",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Per marketplace listings."
+    },
+    {
+      "name": "Silk PLA",
+      "filament_ids": [
+        "pla-silk"
+      ],
+      "notes": "Per marketplace listings."
+    },
+    {
+      "name": "Marble PLA",
+      "filament_ids": [
+        "pla-stone"
+      ],
+      "notes": "Per marketplace listings."
+    },
+    {
+      "name": "UV / temperature colour-change PLA",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "No colour-change id exists."
+    },
+    {
+      "name": "Conductive PLA",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "No conductive id exists."
+    },
+    {
+      "name": "ABS",
+      "filament_ids": [
+        "abs"
+      ]
+    },
+    {
+      "name": "PETG",
+      "filament_ids": [
+        "petg"
+      ]
+    },
+    {
+      "name": "TPU",
+      "filament_ids": [
+        "tpu"
+      ],
+      "notes": "Hardness not stated."
+    },
+    {
+      "name": "PVA",
+      "filament_ids": [
+        "pva"
+      ]
+    }
+  ],
+  "makes_plates": false,
+  "price_tier": "budget",
+  "additional_notes": "USPTO HELLO3D mark (serial 97201090, filed 2022-01-04, registered 2023-01-31) is owned by Shenzhen Hello 3D Technology Co., Ltd., consistent with the factory profiles. Factory size and output figures are self-reported on Alibaba/Made-in-China. No official brand website found. A possible link to RepRapper appeared only as a search co-hit: rumoured, uncorroborated. Its OEM/ODM clients are not named, so no manufactures-for item is recorded.",
+  "provenance": {
+    "sources": [
+      "https://livedeals.3dprintingdeals.com/deals?category=filament&brand=HELLO3D",
+      "https://trademarks.justia.com/owners/shenzhen-hello-3d-technology-co-ltd-5066112",
+      "https://markinton.com/trademark/hello3d-97201090",
+      "https://fr.made-in-china.com/co_hello3d/",
+      "https://hello3d.m.en.alibaba.com/custom_page/Page2.htm",
+      "https://3dstisk.com/vyrobce/hello-3d/"
+    ],
+    "last_verified": "2026-11-06",
+    "confidence": "medium",
+    "conflicts": "Factory capacity, lines and OEM/ODM role are self-reported and unverified. The Justia owner page returned 403 (snippet only)."
+  }
+}

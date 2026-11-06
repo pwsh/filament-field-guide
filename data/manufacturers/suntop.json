@@ -1,0 +1,88 @@
+{
+  "id": "suntop",
+  "name": "SunTop Food Safe",
+  "status": "draft",
+  "summary": "Amazon brand marketing PLA+ and PETG made with food-contact compliant raw materials, plus PLA+ silk and matte, ABS+, ABS-CF, ABS-GF, ASA, PETG-CF and PC, mostly 1 kg at about $12-23/kg and a 4 kg PLA+ bundle at $10/kg. The seller is Andersun Global Inc. in Taoyuan, Taiwan; the extruder is unknown.",
+  "brands": [
+    "SunTop Food Safe",
+    "SunTop",
+    "Suntop",
+    "Andersun",
+    "Andersun 3d filament"
+  ],
+  "oem_relationships": [],
+  "product_lines": [
+    {
+      "name": "PLA+ (incl. 'Food Safe High Speed PRO')",
+      "filament_ids": [
+        "pla-plus"
+      ],
+      "notes": "1 kg $11.72-20.99; 4 x 1 kg bundle $10/kg. Titles say 'made with food-contact compliant raw materials'."
+    },
+    {
+      "name": "PLA+ Silk (incl. tri-colour) and Matte",
+      "filament_ids": [
+        "pla-silk",
+        "pla-matte"
+      ],
+      "notes": "1 kg $13.29-20.99."
+    },
+    {
+      "name": "PETG (standard, high speed, matte, food safe)",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "1 kg $19.99-22.99."
+    },
+    {
+      "name": "PETG Carbon Fiber",
+      "filament_ids": [
+        "petg-cf"
+      ],
+      "notes": "1 kg $21.99."
+    },
+    {
+      "name": "ABS+ PRO",
+      "filament_ids": [
+        "abs-plus"
+      ],
+      "notes": "0.9 kg spool, $14.43/kg."
+    },
+    {
+      "name": "ABS-CF and ABS-GF",
+      "filament_ids": [
+        "abs-cf",
+        "abs-gf"
+      ],
+      "notes": "1 kg $18.99-21.99."
+    },
+    {
+      "name": "ASA",
+      "filament_ids": [
+        "asa"
+      ],
+      "notes": "1 kg $21.99."
+    },
+    {
+      "name": "PC",
+      "filament_ids": [
+        "pc"
+      ],
+      "notes": "1 kg $22.99, sold pre-dried."
+    }
+  ],
+  "makes_plates": false,
+  "price_tier": "mid",
+  "additional_notes": "Legal entity: Andersun Global Inc. (verbatim; no rendering needed), Taoyuan District, Taoyuan City, Taiwan (No. 10-1, Emei 3rd St.); Amazon seller 'Andersun 3d filament' (id A1F7YOOBPA23HI), read 2026-11-06. The listing's Manufacturer field reads 'SunTop Food Safe'. Store is Amazon only; no brand website was identified. Andersun Global Inc. reads as a trading company, so the extruder is unknown. The food-safety wording is a listing claim about raw materials, not a certification that was checked. First-pass note kept: despite the name, no link to Sunlu was found.",
+  "provenance": {
+    "sources": [
+      "https://livedeals.3dprintingdeals.com/deals?category=filament&brand=SunTop%20Food%20Safe",
+      "https://www.amazon.com/dp/B0G46RBKVY",
+      "https://www.amazon.com/sp?seller=A1F7YOOBPA23HI"
+    ],
+    "last_verified": "2026-11-06",
+    "confidence": "medium",
+    "conflicts": "Whether Andersun makes the filament in Taiwan or buys it in is unknown. The food-contact claim was not verified."
+  },
+  "headquarters_country": "Taiwan"
+}

@@ -1,0 +1,48 @@
+{
+  "id": "spider-maker",
+  "name": "SPIDER MAKER",
+  "status": "draft",
+  "summary": "Filament brand on Amazon selling nylon carbon-fibre ($23.70/kg in 1 kg) and matte TPU ('SpiderFlex', $90/kg in 0.5 kg). Sold by Phrozen's own Amazon seller account; whether Phrozen owns the brand is not stated.",
+  "brands": [
+    "SPIDER MAKER",
+    "Spider Maker",
+    "SpiderMaker"
+  ],
+  "oem_relationships": [
+    {
+      "company": "Phrozen",
+      "relationship": "suspected-parent-company",
+      "notes": "The Amazon listing (ASIN B0CCV5S9YP, Manufacturer 'SPIDER MAKER') is sold by Phrozen's seller account 'Phrozen 3D Printer' (id A34XNOS9PNSJKJ, Business Name 'PHROZEN TECH CO., LTD.', Hsinchu), and the first pass found the brand in Phrozen's US store. That makes Phrozen the seller of record only; ownership is not stated, so the parent link is suspected."
+    }
+  ],
+  "product_lines": [
+    {
+      "name": "Nylon Carbon Fiber",
+      "filament_ids": [
+        "pa-cf"
+      ],
+      "notes": "1 kg $23.70; 0.5 kg $14.70 ($29.40/kg); base polyamide not stated."
+    },
+    {
+      "name": "SpiderFlex TPU Matte",
+      "filament_ids": [
+        "tpu"
+      ],
+      "notes": "0.5 kg, $45 ($90/kg); hardness not stated in the titles."
+    }
+  ],
+  "makes_plates": false,
+  "price_tier": "mid",
+  "additional_notes": "Legal entity: PHROZEN TECH CO., LTD. (Business Name as printed), Xiangshan District, Hsinchu, Taiwan; Amazon seller 'Phrozen 3D Printer' (id A34XNOS9PNSJKJ), read 2026-11-06. The listing's Manufacturer field reads 'SPIDER MAKER'. First pass: also sold through Phrozen's US store. No separate Spider Maker website or company was found. Phrozen is a printer maker, not a known extruder, so the filament maker is unknown.",
+  "provenance": {
+    "sources": [
+      "https://livedeals.3dprintingdeals.com/deals?category=filament&brand=SPIDER%20MAKER",
+      "https://www.amazon.com/dp/B0CCV5S9YP",
+      "https://www.amazon.com/sp?seller=A34XNOS9PNSJKJ"
+    ],
+    "last_verified": "2026-11-06",
+    "confidence": "medium",
+    "conflicts": "Phrozen is the confirmed seller of record; whether it owns Spider Maker or resells another company's brand is not stated. Extruder and manufacturing country unknown."
+  },
+  "headquarters_country": "Taiwan"
+}

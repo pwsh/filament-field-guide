@@ -1,0 +1,45 @@
+{
+  "id": "lovoon",
+  "name": "LOVOON",
+  "status": "draft",
+  "summary": "Amazon-first brand selling coextruded dual- and tri-colour 'Silk Magic' PLA, colour-shift gradient PLA and glow PLA (1.75 mm, 1 kg, +/-0.02 mm, pre-dried and vacuum sealed). Legal entity, location and manufacturer are unknown.",
+  "brands": [
+    "LOVOON"
+  ],
+  "oem_relationships": [],
+  "product_lines": [
+    {
+      "name": "Silk Magic (dual-/tri-colour silk PLA)",
+      "filament_ids": [
+        "pla-silk"
+      ],
+      "notes": "Coextruded multicolour silk; SpoolmanDB name 'Silk Magic Color'."
+    },
+    {
+      "name": "Colour-shift gradient PLA",
+      "filament_ids": [
+        "pla-gradient"
+      ],
+      "notes": "Per retailer listings."
+    },
+    {
+      "name": "Glow PLA",
+      "filament_ids": [
+        "pla-glow"
+      ],
+      "notes": "Per retailer listings."
+    }
+  ],
+  "makes_plates": false,
+  "additional_notes": "Sold through Amazon and Newegg marketplace sellers (e.g. Newegg seller 'xinlanqing' on some listings). Marketplace listings name LOVOON as both brand and manufacturer, uncorroborated. Manufacturing likely China but unverified. Next step: Amazon 'Business Name' seller lookup. Price tier (budget-mid) not verified.",
+  "provenance": {
+    "sources": [
+      "https://raw.githubusercontent.com/Donkie/SpoolmanDB/main/filaments/lovoon.json",
+      "https://www.desertcart.com.ar/products/549234300-lovoon-3d-printer-filament-tricolor-pla-filament-1-75mm-silk",
+      "https://www.newegg.com/p/298-00MU-00166"
+    ],
+    "last_verified": "2026-11-06",
+    "confidence": "low",
+    "conflicts": "Only retailer listings; identity thin and 3dprintingdeals not checked."
+  }
+}

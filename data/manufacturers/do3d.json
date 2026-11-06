@@ -1,0 +1,56 @@
+{
+  "id": "do3d",
+  "name": "DO3D",
+  "status": "draft",
+  "summary": "Amazon filament brand focused on silk PLA (single, dual-colour, rainbow, metallic) plus basic and glow PLA bundles, in 1 kg spools and 250 g-spool bundles at about $17-23/kg. The Amazon seller is a Yiwu plastic-products company; extruder unknown.",
+  "brands": [
+    "DO3D",
+    "Do3D"
+  ],
+  "oem_relationships": [],
+  "product_lines": [
+    {
+      "name": "PLA Silk / Silk Dual Color / Silk Metallic",
+      "filament_ids": [
+        "pla-silk"
+      ],
+      "notes": "1 kg $16.99-22.99; 8-colour 2 kg and 5-colour 1.25 kg bundles of 250 g spools, $18-20.50/kg."
+    },
+    {
+      "name": "PLA Silk Rainbow",
+      "filament_ids": [
+        "pla-silk",
+        "pla-gradient"
+      ],
+      "notes": "1 kg, $19.99."
+    },
+    {
+      "name": "PLA Basic",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "8-colour 2 kg bundle $39.99 (about $20/kg); 1.25 kg bundle $28.99 and 2 kg bundle $35.99 (the tracker's $/kg for these two, $115.96 and $143.96, is a calculation error)."
+    },
+    {
+      "name": "PLA Glow",
+      "filament_ids": [
+        "pla-glow"
+      ],
+      "notes": "1.25 kg multicolour bundle, $25.99 ($20.79/kg)."
+    }
+  ],
+  "makes_plates": false,
+  "price_tier": "mid",
+  "additional_notes": "Legal entity: Yiwusangxuansuliaozhipinyouxiangongsi (Business Name as printed; Yiwu Sangxuan Plastic Products Co., Ltd. is a rendering), Futian Subdistrict, Yiwu, Jinhua, Zhejiang; Amazon seller 'DO3D' (id A3CTI3X4IU6CMH), read 2026-11-06. The listing's Manufacturer field reads 'DO3D'. Store is Amazon only; no brand website found. The rendered name is a plastic-products company, but the address is a room in a multi-unit building, so whether it extrudes filament is not established. DO3D (room 501), Bblife (room 401) and TTYT3D (room 201) give the same building as their Business Address (Building 81, Unit 7, Chengxin District 3, Futian Subdistrict, Yiwu) but under three different Business Names, so they are recorded as separate companies; no relationship is asserted. First pass: one eBay listing showed Creality in the brand field, probably a listing error.",
+  "provenance": {
+    "sources": [
+      "https://livedeals.3dprintingdeals.com/deals?category=filament&brand=DO3D",
+      "https://www.amazon.com/dp/B0BVHS6Y8V",
+      "https://www.amazon.com/sp?seller=A3CTI3X4IU6CMH"
+    ],
+    "last_verified": "2026-11-06",
+    "confidence": "low",
+    "conflicts": "The English company name is only a pinyin rendering. Extruder and manufacturing country unknown."
+  },
+  "headquarters_country": "China"
+}

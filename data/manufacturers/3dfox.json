@@ -1,0 +1,61 @@
+{
+  "id": "3dfox",
+  "name": "3DFOX",
+  "status": "researched",
+  "summary": "Czech filament shop in Liberec that says it produces its own filament, focused on the spoolless FOX REFILL line (PLA, PETG, ABS, ASA) advertised as Bambu AMS-compatible, with printed reusable spools sold separately and discounted overrun stock. Budget pricing (PLA refill 1 kg 339 CZK).",
+  "headquarters_country": "Czech Republic",
+  "manufacturing_countries": [
+    "Czech Republic"
+  ],
+  "brands": [
+    "3DFOX",
+    "FOX REFILL"
+  ],
+  "oem_relationships": [],
+  "endpoints": {
+    "website": "https://3dfoxshop.cz",
+    "store": "https://3dfoxshop.cz/fox-refill/"
+  },
+  "product_lines": [
+    {
+      "name": "FOX REFILL PLA",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Spoolless refill, 1 kg and 3 kg; 339 CZK per 1 kg. Discounted overrun ('prebehy') stock also sold."
+    },
+    {
+      "name": "FOX REFILL PETG",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "289 CZK per 1 kg; overrun stock also sold."
+    },
+    {
+      "name": "FOX REFILL ABS",
+      "filament_ids": [
+        "abs"
+      ],
+      "notes": "0.85 kg refill."
+    },
+    {
+      "name": "FOX REFILL ASA",
+      "filament_ids": [
+        "asa"
+      ]
+    }
+  ],
+  "price_tier": "budget",
+  "makes_plates": false,
+  "additional_notes": "Physical store in Liberec. SpoolmanDB PR #330 contains only two PLA REFILL entries. No relationships found; self-described own production.",
+  "provenance": {
+    "sources": [
+      "https://3dfoxshop.cz/fox-refill/",
+      "https://simplyprint.io/filaments/3dfox",
+      "https://api.github.com/repos/Donkie/SpoolmanDB/pulls/330/files"
+    ],
+    "last_verified": "2026-11-06",
+    "confidence": "medium",
+    "conflicts": "Own production in Liberec is the shop's uncorroborated claim; shop page names no company or ICO."
+  }
+}

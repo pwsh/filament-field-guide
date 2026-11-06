@@ -1,0 +1,79 @@
+{
+  "id": "filabees",
+  "name": "FilaBees",
+  "status": "draft",
+  "summary": "Amazon filament brand selling gradient and clear PLA, high-speed PLA+, PETG, soft TPU and sparkle ASA, plus Flashforge Adventurer 5M replacement parts. Its Amazon seller account is named 'FilaBeesFLASHFORGE' and a price tracker lists Zhejiang Flashforge as manufacturer, but the FILABEES trademark is owned by Hangzhou Juwei E-commerce Co., Ltd., so the Flashforge link is suspected, not proven.",
+  "headquarters_country": "China",
+  "brands": [
+    "FilaBees",
+    "FILABEES"
+  ],
+  "oem_relationships": [
+    {
+      "company": "Zhejiang Flashforge 3D Technology Co., Ltd.",
+      "relationship": "suspected-manufactured-by",
+      "notes": "Evidence for Flashforge: the Amazon seller account is named 'FilaBeesFLASHFORGE', the Amazon listing's Manufacturer field reads 'Zhejiang Flashforge 3D Technology Co., Ltd', and FilaBees sells Flashforge Adventurer 5M replacement parts. Evidence against a direct Flashforge identity: the seller's registered Business Name is Hangzhou Juwei E-commerce Co., Ltd. (Xihu District, Hangzhou) and the FILABEES trademark (serial 90704927, reg. 6729027, live, Class 17) is owned by the same Juwei entity at the same Yinyuxuan Room 303 address. So the brand owner and seller are one Hangzhou company; Flashforge appears only in listing metadata and the account name. Whether Juwei is a Flashforge affiliate or merely lists Flashforge as supplier is unknown."
+    }
+  ],
+  "product_lines": [
+    {
+      "name": "PLA Crystal Clear Gradient",
+      "filament_ids": [
+        "pla-gradient"
+      ],
+      "notes": "Transparent gradient PLA."
+    },
+    {
+      "name": "PLA Rapid Rainbow / PLA High Speed Gradient",
+      "filament_ids": [
+        "pla-hf",
+        "pla-gradient"
+      ]
+    },
+    {
+      "name": "PLA+ High Speed",
+      "filament_ids": [
+        "pla-plus",
+        "pla-hf"
+      ]
+    },
+    {
+      "name": "PETG Transparent / PETG High Speed Metallic",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "About $19-25/kg."
+    },
+    {
+      "name": "TPU Soft Flexible",
+      "filament_ids": [
+        "tpu"
+      ],
+      "notes": "Hardness not stated."
+    },
+    {
+      "name": "ASA Sparkle",
+      "filament_ids": [
+        "asa"
+      ],
+      "notes": "About $23-25/kg."
+    }
+  ],
+  "makes_plates": false,
+  "price_tier": "mid",
+  "additional_notes": "Legal entity: Hangzhou Juwei E-commerce Co., Ltd. (Amazon seller Business Name 'hangzhoujuweidianzishangwuyouxiangongsi', Room 303, Building 7, Yinyuxuan, Xihu District, Hangzhou; identical to the USPTO TSDR owner address for serial 90704927). Store is Amazon US (seller FilaBeesFLASHFORGE, id A2NATLBBZAM8H1); no brand website found. A third-party guide rates it 4.83 from 38 reviews (unverified).",
+  "provenance": {
+    "sources": [
+      "https://livedeals.3dprintingdeals.com/deals?category=filament&brand=FilaBees",
+      "https://www.findthisbest.com/brand/895720-filabees",
+      "https://markinton.com/trademark/filabees-90704927",
+      "https://camelcamelcamel.com/product/B0G2Y4BDYY",
+      "https://tsdr.uspto.gov/statusview/sn90704927",
+      "https://www.amazon.com/sp?seller=A2NATLBBZAM8H1",
+      "https://www.amazon.com/dp/B0G2Y4BDYY"
+    ],
+    "last_verified": "2026-11-06",
+    "confidence": "medium",
+    "conflicts": "Resolved 2026-11-06: the trademark owner and the Amazon seller are the same entity (Hangzhou Juwei E-commerce Co., Ltd.), read on USPTO TSDR and the Amazon seller profile. Remaining open point: whether Juwei is related to Flashforge; the Flashforge link rests on the Manufacturer listing field and the seller account name."
+  }
+}

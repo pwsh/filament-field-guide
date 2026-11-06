@@ -1,0 +1,70 @@
+{
+  "id": "semdon",
+  "name": "Semdon",
+  "status": "draft",
+  "summary": "Amazon PLA brand with silk, tri-colour gradient, metallic silk, multicolour coextrusion, transparent, high-speed and wood PLA, as 1 kg spools at about $17-29/kg and 4 x 250 g packs. The Amazon seller is a Guangzhou logistics company, so the extruder is unknown.",
+  "brands": [
+    "Semdon",
+    "SEMDON"
+  ],
+  "oem_relationships": [],
+  "product_lines": [
+    {
+      "name": "PLA and PLA High Speed",
+      "filament_ids": [
+        "pla",
+        "pla-hf"
+      ],
+      "notes": "1 kg $17.99-26.99; 2 kg $13.49/kg; 4 x 250 g packs."
+    },
+    {
+      "name": "PLA Silk (incl. metallic, dual colour, rainbow)",
+      "filament_ids": [
+        "pla-silk"
+      ],
+      "notes": "1 kg $16.99-27.99; 4 x 250 g packs."
+    },
+    {
+      "name": "PLA Tri-Color Gradient (silk, matte)",
+      "filament_ids": [
+        "pla-gradient"
+      ],
+      "notes": "1 kg $17.99-28.99; 2 x 1 kg bundle."
+    },
+    {
+      "name": "PLA Multicolor / Dual Color Coextrusion",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "1 kg $23.99; 4 x 250 g silk coextrusion pack."
+    },
+    {
+      "name": "PLA Transparent",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "1 kg, $21.99."
+    },
+    {
+      "name": "PLA Wood Fill",
+      "filament_ids": [
+        "pla-wood"
+      ],
+      "notes": "1 kg $26.99; 4 x 250 g and 4 x 500 g packs."
+    }
+  ],
+  "makes_plates": false,
+  "price_tier": "mid",
+  "additional_notes": "Legal entity: guangzhoushiyihengwuliuyouxiangongsi (rendering: Guangzhou Yiheng Logistics Co., Ltd.), Nancun Town, Panyu District, Guangzhou, Guangdong; Amazon seller 'Semdon' (id A2ANZSTXCT5YZ8), read 2026-11-06. The listing's Manufacturer field reads 'Semdon'. Store is Amazon only; no brand website was identified. 'wuliu' means logistics, so the seller entity is a logistics company rather than a manufacturer and the extruder is unknown. Only one ASIN's seller was read; a second ASIN was not compared. The first pass found no entity.",
+  "provenance": {
+    "sources": [
+      "https://livedeals.3dprintingdeals.com/deals?category=filament&brand=Semdon",
+      "https://www.amazon.com/dp/B0F4PCJFJ4",
+      "https://www.amazon.com/sp?seller=A2ANZSTXCT5YZ8"
+    ],
+    "last_verified": "2026-11-06",
+    "confidence": "low",
+    "conflicts": "The English company name is a rendering of a run-together pinyin Business Name. A logistics company as seller of record says nothing about who makes the filament."
+  },
+  "headquarters_country": "China"
+}

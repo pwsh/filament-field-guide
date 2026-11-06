@@ -1,0 +1,58 @@
+{
+  "id": "entina",
+  "name": "Entina (ENTINA3D)",
+  "status": "draft",
+  "summary": "Beginner 3D-printer brand (Tina2 / Tina2C / Tina2S / Tina2 Plus) that sells companion PLA in small-spool bundles: basic PLA 4-colour sets, 250 g high-speed PLA and 4 x 200 g silk PLA. Effective per-kg prices are high because of the mini-spool format. The legal entity is unconfirmed.",
+  "brands": [
+    "Entina",
+    "ENTINA3D"
+  ],
+  "oem_relationships": [],
+  "endpoints": {
+    "website": "https://entina3d.com/",
+    "store": "https://entina3d.com/",
+    "social": {
+      "facebook": "https://www.facebook.com/OfficialEntina3d",
+      "instagram": "https://www.instagram.com/entina_official",
+      "youtube": "https://www.youtube.com/@ENTINA3D",
+      "tiktok": "https://www.tiktok.com/@entina_official"
+    }
+  },
+  "product_lines": [
+    {
+      "name": "PLA Basic / Standard bundles",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "4-colour bundles of small spools (4 x 50 g and 200 g sets); about $180/kg effective."
+    },
+    {
+      "name": "PLA High Speed",
+      "filament_ids": [
+        "pla-hf"
+      ],
+      "notes": "250 g spools, $13.99 (about $56/kg)."
+    },
+    {
+      "name": "Silk PLA bundle",
+      "filament_ids": [
+        "pla-silk"
+      ],
+      "notes": "4 x 200 g per site title (tracker says 4 x 50 g), $36-37."
+    }
+  ],
+  "makes_plates": false,
+  "price_tier": "premium",
+  "additional_notes": "Printer maker first, not a bulk-filament brand; also sells Tina2/Tina2C starter bundles. The site shows a US phone number (+1 206 797 6097) and only '© ENTINA' in the footer. Filament origin unknown and no relationship recorded. Deal-tracker pack sizes are inconsistent with listing titles.",
+  "provenance": {
+    "sources": [
+      "https://livedeals.3dprintingdeals.com/deals?category=filament&brand=Entina",
+      "https://entina3d.com/",
+      "https://techgearlab.com/reviews/cool-gadgets/3d-printer/entina-tina2",
+      "https://www.entina3d.com/products/entina-4-colors-silk-shiny-3d-printer-filament-bundle-pla-filament-1-75-mm-for-3d-printers-dimensional-accuracy-0-02-mm-200g-x-4-spools-set"
+    ],
+    "last_verified": "2026-11-06",
+    "confidence": "low",
+    "conflicts": "Possible legal entity MINGAO LIMITED (Hong Kong) comes from a single techgearlab snippet and is uncorroborated; Newegg calls the seller China-based, while the site lists a US phone number. headquarters_country is therefore omitted."
+  }
+}

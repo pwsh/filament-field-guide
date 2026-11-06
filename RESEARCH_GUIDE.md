@@ -42,6 +42,17 @@ updating data. Follow it exactly and the site updates itself.
    cleanly). Do not list a material in its own `bonds_with` — self-bonding is implicit.
    The validator enforces all of this.
 
+9. **Relationship vocabulary (extended 2026-11-06).** `oem_relationships[].relationship` reads from
+   the entry toward `company`: `manufactures-for`, `manufactured-by`, `rebrands`, `distributes`
+   (this entry resells the company's product — never the reverse), `joint-venture`,
+   `parent-company` (the company owns this entry), `sister-brand` (separate brand, same owner or
+   operator). Each of manufactures-for, manufactured-by, parent-company and sister-brand has a
+   `suspected-` form: use it whenever the link rests on listing metadata, a single secondary
+   source, or inference, and put the evidence in `notes`. Rumour with no evidence stays in
+   `additional_notes`. Brands run by one legal entity share one entry (list them in `brands`);
+   `sister-brand` is for brands that each have their own entry. Record both directions when
+   both companies are in the catalog.
+
 ## Model delegation (per user policy)
 
 - Sonnet agents: research — read manufacturer sites, datasheets, community guides; return

@@ -1,0 +1,73 @@
+{
+  "id": "mg-chemicals",
+  "name": "MG Chemicals",
+  "status": "researched",
+  "summary": "Burlington, Ontario electronics-chemicals company with a side line of 3D-printing filament (PLA with glow, thermochromic and wood variants, and PETG; ABS discontinued), sold mainly through electronics distributors such as DigiKey and Mouser. The extruder is not named.",
+  "headquarters_country": "Canada",
+  "brands": [
+    "MG Chemicals"
+  ],
+  "oem_relationships": [],
+  "endpoints": {
+    "website": "https://mgchemicals.com",
+    "docs": "https://www.farnell.com/datasheets/2815381.pdf"
+  },
+  "product_lines": [
+    {
+      "name": "PLA",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "1.75 mm 1 kg; $29-41/kg through electronics distributors."
+    },
+    {
+      "name": "Glow-in-the-dark PLA",
+      "filament_ids": [
+        "pla-glow"
+      ],
+      "notes": "Older variant."
+    },
+    {
+      "name": "Thermochromic PLA",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Older variant; no thermochromic id exists."
+    },
+    {
+      "name": "Wood-filled PLA",
+      "filament_ids": [
+        "pla-wood"
+      ],
+      "notes": "Older variant."
+    },
+    {
+      "name": "PETG",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "1 kg."
+    },
+    {
+      "name": "ABS",
+      "filament_ids": [
+        "abs"
+      ],
+      "notes": "Discontinued; was listed as unavailable in EU/UK."
+    }
+  ],
+  "makes_plates": false,
+  "price_tier": "premium",
+  "additional_notes": "Address 1210 Corporate Drive, Burlington, ON L7L 5R6. Sold via DigiKey, Mouser, Amazon and Lee's Electronic; the deal tracker currently shows no MG Chemicals listings. The site says only 'manufactured under strict quality control', so it may use a contract extruder, but nothing confirms that and no relationship is recorded.",
+  "provenance": {
+    "sources": [
+      "https://mgchemicals.com/products/discontinued-products/abs-filaments/",
+      "https://www.digikey.tw/en/product-highlight/m/mg-chemicals/3d-printing-filaments",
+      "https://www.farnell.com/datasheets/2815381.pdf",
+      "https://livedeals.3dprintingdeals.com/deals?category=filament&brand=MG%20Chemicals"
+    ],
+    "last_verified": "2026-11-06",
+    "confidence": "medium",
+    "conflicts": "Manufacturing location not stated by the company; omitted."
+  }
+}

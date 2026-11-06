@@ -1,0 +1,45 @@
+{
+  "id": "3dgenius",
+  "name": "3Dgenius",
+  "status": "draft",
+  "summary": "Amazon brand of small-spool silk PLA (dual, triple colour, rainbow, gradient) and matte rainbow PLA, mostly 250 g and 500 g spools and multi-packs at about $20-46/kg, with a few 1 kg spools at about $22/kg. Sold by a Shenzhen seller whose storefront is named JMLocks; the extruder is unknown.",
+  "brands": [
+    "3Dgenius",
+    "3DGenius",
+    "3DGENIUS",
+    "JMLocks"
+  ],
+  "oem_relationships": [],
+  "product_lines": [
+    {
+      "name": "PLA Silk Dual / Triple Color, Rainbow, Gradient",
+      "filament_ids": [
+        "pla-silk",
+        "pla-gradient"
+      ],
+      "notes": "Mostly 250 g and 500 g spools ($20-46/kg) and 4-12 spool mini packs; one 1 kg tri-colour spool at $21.99."
+    },
+    {
+      "name": "PLA Matte Rainbow",
+      "filament_ids": [
+        "pla-matte",
+        "pla-gradient"
+      ],
+      "notes": "250 g and 500 g spools, $39.96-43.98/kg."
+    }
+  ],
+  "makes_plates": false,
+  "price_tier": "mid",
+  "additional_notes": "Legal entity: shen zhen shi jin ma suo ye you xian gong si (rendering, uncertain: Shenzhen Jinmasuoye Co., Ltd., possibly 'Jinma Lock Industry', consistent with the storefront name 'JMLocks'), Fuhai Subdistrict, Bao'an District, Shenzhen, Guangdong; Amazon seller 'JMLocks' (id A1KJ9E6OZ7W0FC), read 2026-11-06. The listing's Manufacturer field reads '3Dgenius'. Store is Amazon only; no brand website was identified. The storefront name and the likely reading of the Business Name point to a lock business, so 3Dgenius filament is presumably bought in; extruder unknown. Price tier set to mid: the per-kg price is high only because most spools are 250-500 g.",
+  "provenance": {
+    "sources": [
+      "https://livedeals.3dprintingdeals.com/deals?category=filament&brand=3Dgenius",
+      "https://www.amazon.com/dp/B0C9DV3M3J",
+      "https://www.amazon.com/sp?seller=A1KJ9E6OZ7W0FC"
+    ],
+    "last_verified": "2026-11-06",
+    "confidence": "low",
+    "conflicts": "The Business Name is spaced pinyin and the 'lock industry' reading is an inference from the storefront name 'JMLocks', not a printed English name. Extruder unknown."
+  },
+  "headquarters_country": "China"
+}

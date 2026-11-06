@@ -1,0 +1,69 @@
+{
+  "id": "filaxix",
+  "name": "Filaxix",
+  "status": "draft",
+  "summary": "Amazon filament brand focused on PETG variants (standard, matte rapid, carbon-fibre, glass-fibre), plus ASA and nylon carbon-fibre, at about $14-28/kg for 1 kg spools. The Amazon seller is a Huizhou technology company; extruder unknown.",
+  "brands": [
+    "Filaxix",
+    "FILAXIX"
+  ],
+  "oem_relationships": [],
+  "product_lines": [
+    {
+      "name": "PETG",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "1 kg metallic colours, $16.27-17.13."
+    },
+    {
+      "name": "PETG Matte Rapid",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "1 kg, $18.04-22.99; a matte high-speed grade; there is no specific id for matte PETG."
+    },
+    {
+      "name": "PETG Carbon Fiber",
+      "filament_ids": [
+        "petg-cf"
+      ],
+      "notes": "1 kg, $13.93-18.99."
+    },
+    {
+      "name": "PETG Glass Fiber",
+      "filament_ids": [
+        "petg-gf"
+      ],
+      "notes": "1 kg, $25.47-27.99."
+    },
+    {
+      "name": "ASA",
+      "filament_ids": [
+        "asa"
+      ],
+      "notes": "1 kg, $18.04-24.99."
+    },
+    {
+      "name": "Nylon Carbon Fiber",
+      "filament_ids": [
+        "pa-cf"
+      ],
+      "notes": "0.5 kg, $48.99 ($97.98/kg); base polyamide not stated."
+    }
+  ],
+  "makes_plates": false,
+  "price_tier": "mid",
+  "additional_notes": "Legal entity: Hui zhou shi sai na san wei ke ji you xian gong si (Business Name as printed; Huizhou Sainasanwei Technology Co., Ltd. is a rendering, 'san wei' probably meaning '3D'), Huicheng District, Huizhou, Guangdong; Amazon seller 'FILAXIX' (id A1LXSKHV3NVROV), read 2026-11-06. The listing's Manufacturer field reads 'Filaxix'. Store is Amazon only; no brand website found. The address is a unit in an industrial park, but no production statement was found, so the extruder is unknown.",
+  "provenance": {
+    "sources": [
+      "https://livedeals.3dprintingdeals.com/deals?category=filament&brand=Filaxix",
+      "https://www.amazon.com/dp/B0DJ115XP8",
+      "https://www.amazon.com/sp?seller=A1LXSKHV3NVROV"
+    ],
+    "last_verified": "2026-11-06",
+    "confidence": "low",
+    "conflicts": "The English company name is only a pinyin rendering. Extruder and manufacturing country unknown."
+  },
+  "headquarters_country": "China"
+}

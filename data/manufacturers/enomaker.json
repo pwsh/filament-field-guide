@@ -1,0 +1,55 @@
+{
+  "id": "enomaker",
+  "name": "ENOMAKER (Shenzhen Enomaker Technology Co., Ltd.)",
+  "status": "draft",
+  "summary": "Shenzhen-based Amazon filament brand whose ENOMAKER trademark (US application filed 2018-08-31, covering 3D-printing filaments) is held by Shenzhen Enomaker Technology Co., Ltd. Current range is Bambu-compatible spoolless PLA refills with RFID, matte PLA and silk PLA+. No OEM relationship is known.",
+  "headquarters_country": "China",
+  "brands": [
+    "ENOMAKER"
+  ],
+  "oem_relationships": [],
+  "product_lines": [
+    {
+      "name": "PLA Basic Refill (Bambu AMS)",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "1 kg spoolless refill with RFID for AMS; colour names copy Bambu's; $24-25/kg."
+    },
+    {
+      "name": "PLA Matte Refill",
+      "filament_ids": [
+        "pla-matte"
+      ],
+      "notes": "15+ colours."
+    },
+    {
+      "name": "PLA+ Silk+ / Silk Dual Color",
+      "filament_ids": [
+        "pla-silk"
+      ],
+      "notes": "Marketed as PLA+ silk; $26-29/kg."
+    },
+    {
+      "name": "PLA+ Silk Gradient",
+      "filament_ids": [
+        "pla-silk",
+        "pla-gradient"
+      ]
+    }
+  ],
+  "makes_plates": false,
+  "price_tier": "mid",
+  "additional_notes": "Store is Amazon US, also resold through Desertcart and Ubuy; no brand website verified (enomaker.com unconfirmed). The 2018 trademark makes it older than most Amazon-first newcomers; the Bambu-refill range is a recent line extension. No evidence it rebrands a catalog extruder, so oem_relationships is empty.",
+  "provenance": {
+    "sources": [
+      "https://livedeals.3dprintingdeals.com/deals?category=filament&brand=ENOMAKER",
+      "https://trademarks.justia.com/owners/shenzhen-enomaker-technology-co-ltd-4088118",
+      "https://camelcamelcamel.com/product/B0GF1KBC4F",
+      "https://trademarks.justia.com/881/00/enomaker-88100013.html"
+    ],
+    "last_verified": "2026-11-06",
+    "confidence": "medium",
+    "conflicts": "Trademark record read on Justia 2026-11-06 (ENOMAKER, serial 88100013, registered 2019-09-17, Class 17 filament, owner Shenzhen Enomaker Technology Co., Ltd., Longhua District, Shenzhen). Manufacturing origin unknown (China likely, not evidenced); no first-party site read."
+  }
+}

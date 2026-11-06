@@ -1,0 +1,69 @@
+{
+  "id": "filamentree",
+  "name": "Filamentree",
+  "status": "draft",
+  "summary": "Filament brand described only as 'a European manufacturer' and sold in the Czech Republic by 3D Stisk s.r.o. (Ostrava). Its range covers PLA, the tougher PLA Blaster and PLA Plus, silk PLA, PLA-CF, PETG and PETG-CF, with a claimed +/-0.02 mm tolerance.",
+  "brands": [
+    "Filamentree"
+  ],
+  "endpoints": {
+    "store": "https://3dstisk.com/vyrobce/filamentree/"
+  },
+  "product_lines": [
+    {
+      "name": "PLA / PLA Basic",
+      "filament_ids": [
+        "pla"
+      ]
+    },
+    {
+      "name": "PLA Blaster",
+      "filament_ids": [
+        "pla-plus"
+      ],
+      "notes": "Marketed as a tougher PLA; about EUR 20.5/kg incl. VAT at 3D Stisk."
+    },
+    {
+      "name": "PLA Plus",
+      "filament_ids": [
+        "pla-plus"
+      ]
+    },
+    {
+      "name": "Silk PLA",
+      "filament_ids": [
+        "pla-silk"
+      ]
+    },
+    {
+      "name": "PLA-CF",
+      "filament_ids": [
+        "pla-cf"
+      ]
+    },
+    {
+      "name": "PETG",
+      "filament_ids": [
+        "petg"
+      ]
+    },
+    {
+      "name": "PETG-CF",
+      "filament_ids": [
+        "petg-cf"
+      ]
+    }
+  ],
+  "makes_plates": false,
+  "price_tier": "mid",
+  "additional_notes": "Very thin public footprint: no brand website found. 3D Stisk s.r.o. (Ostrava, CZ) lists 58 Filamentree products; that is a confirmed retail channel, not an OEM tie. The Czech retail channel hints at Central European origin, but no country is stated, so headquarters and manufacturing countries are omitted. No OEM identified. SpoolmanDB PR #364 lists 6 filaments.",
+  "provenance": {
+    "sources": [
+      "https://3dstisk.com/vyrobce/filamentree/",
+      "https://3dstisk.com/produkt/filamentree-pla-blaster-window-grey-1kg/"
+    ],
+    "last_verified": "2026-11-06",
+    "confidence": "low",
+    "conflicts": "Company identity, country and manufacturer unknown; the product page was seen as a search result only."
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "id": "3d-printing-canada",
+  "name": "N3 Technologies Inc. (3D Printing Canada)",
+  "status": "researched",
+  "summary": "Hamilton, Ontario 3D-printer and filament retailer (N3 Technologies Inc., Canadian owned since 2014) that distributes brands such as Bambu Lab and Creality and sells its own-label 'Made in Canada' 3DPC PLA+ and a Budget PLA/PETG line. The extruder behind the own-label filament is not named.",
+  "headquarters_country": "Canada",
+  "manufacturing_countries": [
+    "Canada"
+  ],
+  "brands": [
+    "3D Printing Canada",
+    "3DPC",
+    "3D Printing USA"
+  ],
+  "oem_relationships": [
+    {
+      "company": "Bambu Lab (拓竹 Tuozhu)",
+      "relationship": "distributes",
+      "notes": "Retailer listing (ensun.io) names Bambu Lab among distributed brands."
+    },
+    {
+      "company": "Shenzhen Creality 3D Technology Co., Ltd. (深圳市创想三维科技股份有限公司)",
+      "relationship": "distributes",
+      "notes": "Retailer listing (ensun.io) names Creality among distributed brands."
+    },
+    {
+      "company": "Matter3D Inc",
+      "relationship": "distributes",
+      "notes": "Matter3D Performance PETG/PLA sold on 3dprintingcanada.com and via RobotShop as '3D Printing Canada/USA Matter3D'."
+    }
+  ],
+  "endpoints": {
+    "website": "https://3dprintingcanada.com",
+    "store": "https://3dprintingcanada.com/collections/canadian-made-filaments"
+  },
+  "product_lines": [
+    {
+      "name": "3DPC PLA+",
+      "filament_ids": [
+        "pla-plus"
+      ],
+      "notes": "Marketed as Canadian-made, +/-0.02 mm claim. Also sold on sister store 3dprintingusa.com."
+    },
+    {
+      "name": "Budget PLA",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "1 kg; SpoolmanDB records a 149 g spool."
+    },
+    {
+      "name": "Budget PETG",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "1 kg; SpoolmanDB records a 230 g spool."
+    }
+  ],
+  "makes_plates": false,
+  "price_tier": "budget",
+  "additional_notes": "Legal name from site JSON-LD. Sister storefront 3dprintingusa.com carries the same 3DPC PLA+ collection. Primarily a retailer: whether the 3DPC line is extruded in-house or by a Canadian contract extruder is not stated, and the origin of the Budget line is unknown, so no manufactured-by relationship is encoded. Budget tier inferred from the line name; no price captured. The collection page was rate-limited during research (details from search snippet and raw HTML).",
+  "provenance": {
+    "sources": [
+      "https://3dprintingcanada.com/pages/about-us",
+      "https://3dprintingcanada.com/collections/canadian-made-filaments",
+      "https://3dprint.com/197994/3d-printing-canada-grand-opening/",
+      "https://ensun.io/company/3d-printing-649d81f26c9f1151ca61681e",
+      "https://3dprintingusa.com/collections/3dpc-pla-plus",
+      "https://raw.githubusercontent.com/Donkie/SpoolmanDB/main/filaments/3dprintingcanada.json"
+    ],
+    "last_verified": "2026-11-06",
+    "confidence": "medium",
+    "conflicts": "'Made in Canada' applies to the 3DPC line only and the actual extruder is unnamed; manufacturing country for the Budget line is unknown."
+  }
+}

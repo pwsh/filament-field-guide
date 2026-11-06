@@ -1,0 +1,54 @@
+{
+  "id": "xyzprinting",
+  "name": "XYZprinting, Inc.",
+  "status": "researched",
+  "summary": "Taiwanese printer maker (da Vinci series) within the New Kinpo Group, historically known for proprietary-cartridge PLA and ABS filament with refillable ABS cartridges introduced in 2015. Current Amazon presence is a single ABS listing at about $33/kg. The filament extruder is not identified.",
+  "headquarters_country": "Taiwan",
+  "brands": [
+    "XYZprinting",
+    "da Vinci"
+  ],
+  "oem_relationships": [
+    {
+      "company": "New Kinpo Group",
+      "relationship": "parent-company",
+      "notes": "FacFox coverage describes New Kinpo as parent of Cal-Comp, XYZprinting, Kinpo Electronics and AcBel (search snippet)."
+    }
+  ],
+  "product_lines": [
+    {
+      "name": "ABS Standard",
+      "filament_ids": [
+        "abs"
+      ],
+      "notes": "1 kg black, $32.99; the only current deal-tracker listing."
+    },
+    {
+      "name": "PLA (cartridge)",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Historical proprietary-cartridge PLA announced 2015."
+    },
+    {
+      "name": "Refillable ABS cartridges",
+      "filament_ids": [
+        "abs"
+      ],
+      "notes": "Historical, announced 2015."
+    }
+  ],
+  "makes_plates": false,
+  "price_tier": "premium",
+  "additional_notes": "Website xyzprinting.com not verified in this pass, so not recorded as an endpoint. HQ city (New Taipei) not verified. Filament extruder not identified and no relationship recorded.",
+  "provenance": {
+    "sources": [
+      "https://livedeals.3dprintingdeals.com/deals?category=filament&brand=Xyzprinting",
+      "https://prnewswire.com/news-releases/xyzprinting-announces-availability-of-new-pla-filaments-and-refillable-abs-filament-cartridges-300036232.html",
+      "https://facfox.com/news/?p=69838"
+    ],
+    "last_verified": "2026-11-06",
+    "confidence": "medium",
+    "conflicts": "Parent-company relationship rests on a search snippet of the FacFox article. Manufacturing country unknown."
+  }
+}

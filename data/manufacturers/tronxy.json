@@ -1,0 +1,65 @@
+{
+  "id": "tronxy",
+  "name": "Tronxy (Shenzhen Tronxy Technology Co., Ltd.)",
+  "status": "researched",
+  "summary": "Shenzhen 3D-printer maker that also sells own-label filament, mostly PETG (rapid, metallic and transparent) plus TPU and glow PLA, through Amazon and tronxy3d.com at budget prices. The filament extruder is not identified.",
+  "headquarters_country": "China",
+  "brands": [
+    "Tronxy",
+    "Tronxy 3D"
+  ],
+  "oem_relationships": [],
+  "endpoints": {
+    "website": "https://tronxy3d.com",
+    "store": "https://tronxy3d.com"
+  },
+  "product_lines": [
+    {
+      "name": "PETG Rapid / High Speed PETG",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "1 kg 1.75 mm, $11.50-17.99 on Amazon."
+    },
+    {
+      "name": "PETG Metallic / High Speed Metallic",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "$16.59-24.99."
+    },
+    {
+      "name": "Standard PETG (transparent colours)",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "Brand store lists bed 80-90 C, 30-60 mm/s, +/-0.05 mm."
+    },
+    {
+      "name": "TPU",
+      "filament_ids": [
+        "tpu"
+      ],
+      "notes": "Brand store; hardness not stated."
+    },
+    {
+      "name": "Glow PLA",
+      "filament_ids": [
+        "pla-glow"
+      ],
+      "notes": "Brand store."
+    }
+  ],
+  "makes_plates": false,
+  "price_tier": "budget",
+  "additional_notes": "Primarily a printer maker. Filament is probably OEM-sourced, but there is no evidence of the source, so no relationship is recorded. Example product page: https://tronxy3d.com/products/petg-3d-printer-filament-1-75mm-diameter-tolerance-0-05-mm-1-kg-2-2lbs-spool-1-75-mm-petg-filament-for-3d-printer-transparent-red",
+  "provenance": {
+    "sources": [
+      "https://livedeals.3dprintingdeals.com/deals?category=filament&brand=TRONXY",
+      "https://tronxy3d.com/products/petg-3d-printer-filament-1-75mm-diameter-tolerance-0-05-mm-1-kg-2-2lbs-spool-1-75-mm-petg-filament-for-3d-printer-transparent-red"
+    ],
+    "last_verified": "2026-11-06",
+    "confidence": "medium",
+    "conflicts": "Legal entity name comes from a search summary, not a registry. Filament sourcing and manufacturing country unknown."
+  }
+}

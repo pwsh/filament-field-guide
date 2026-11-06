@@ -1,0 +1,31 @@
+{
+  "id": "filajoy3d",
+  "name": "Filajoy3D (Guangzhou Bingrui Technology Co., Ltd.)",
+  "status": "draft",
+  "summary": "Amazon-first silk-PLA brand whose USPTO FILAJOY3D mark (Class 17, filed June 2025, registered February 2026) is owned by Guangzhou Bingrui Technology Co., Ltd. in China. Sells silk PLA in 1 kg spools and 4 x 250 g multicolour bundles. Nothing shows Bingrui extrudes filament itself.",
+  "headquarters_country": "China",
+  "brands": [
+    "Filajoy3D"
+  ],
+  "oem_relationships": [],
+  "product_lines": [
+    {
+      "name": "Silk PLA",
+      "filament_ids": [
+        "pla-silk"
+      ],
+      "notes": "1 kg spools and 250 g x 4 multicolour bundles; +/-0.02-0.03 mm claimed."
+    }
+  ],
+  "makes_plates": false,
+  "additional_notes": "Amazon is the only store found. There is no web trace of Bingrui as an extruder; it looks like an Amazon-first brand company, but no positive evidence of contract sourcing exists, so no relationship is recorded. Search also surfaced Guangzhou Yousu3D by proximity only: no evidence of a link.",
+  "provenance": {
+    "sources": [
+      "https://markinton.com/trademark/filajoy3d-99260014",
+      "https://trademarks.justia.com/992/60/filajoy3d-99260014.html"
+    ],
+    "last_verified": "2026-11-06",
+    "confidence": "medium",
+    "conflicts": "Trademark record read on Justia 2026-11-06: FILAJOY3D (serial 99260014, filed 2025-06-30, Class 17) applicant Guangzhou Bingrui Technology Co., Ltd., Panyu District, Guangzhou. Manufacturing origin unknown."
+  }
+}

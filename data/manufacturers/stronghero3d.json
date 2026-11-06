@@ -1,0 +1,75 @@
+{
+  "id": "stronghero3d",
+  "name": "Stronghero3D",
+  "status": "researched",
+  "summary": "Shenzhen filament brand (Stronghero3D Tech Co., Ltd., reportedly founded 2014 by Tommy Wu) specialising in multicolour rainbow/gradient, glitter and colour-change PLA plus multicolour PETG, sold mainly through an Amazon storefront. No OEM, white-label or parent relationship was found; it appears to be an independent small colour-niche maker.",
+  "headquarters_country": "China",
+  "brands": [
+    "Stronghero3D",
+    "StrongHero3D"
+  ],
+  "oem_relationships": [],
+  "endpoints": {
+    "website": "https://www.stronghero3d.com/"
+  },
+  "product_lines": [
+    {
+      "name": "PLA Rainbow / Multi-color (N2/N3)",
+      "filament_ids": [
+        "pla-gradient"
+      ],
+      "notes": "Core niche: gradient multicolour PLA. 1.75 mm, 1 kg, +/-0.05 mm claimed."
+    },
+    {
+      "name": "PLA Sparkling Glitter / Galaxy",
+      "filament_ids": [
+        "pla-glitter"
+      ]
+    },
+    {
+      "name": "PLA Wood Stone",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Name does not make clear whether it is wood-filled, stone-filled or a colour effect, so no filled id is asserted."
+    },
+    {
+      "name": "PLA Chameleon",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Colour-change (thermochromic/angle-shift) PLA; no dedicated id."
+    },
+    {
+      "name": "PETG N2/N3 Multi color",
+      "filament_ids": [
+        "petg"
+      ]
+    },
+    {
+      "name": "Legacy retail range (2019)",
+      "filament_ids": [
+        "pla-silk",
+        "pla-plus",
+        "pla-glow",
+        "pla-stone",
+        "abs",
+        "tpu"
+      ],
+      "notes": "Per a 2019 article/retail listing: Silk PLA, PLA Plus, Glitter Infill PLA, ABS, TPU, Marble/Bronze/Metal rainbow and glow-in-the-dark. Marble mapped to pla-stone; Bronze/Metal rainbow not mapped to pla-metal because metal fill is not confirmed. Current availability unverified."
+    }
+  ],
+  "makes_plates": false,
+  "additional_notes": "Legal entity behind the Amazon storefront 'STRONGHERO' (seller id AKCLTRB5OCUWD, read 2026-11-06): Business Name 'shenzhenshizhongjingyoupingkejiyouxiangongsi', rendered Shenzhen Zhongjingyouping Technology Co., Ltd. (pinyin reading, not an official English name), at Feige floor factory building 507, 1223 Guanguang Road, Guihua Community, Guanlan Street, Longhua District, Shenzhen 518110. 'Stronghero3D Tech Co.,Ltd' appears only as the site logo alt text; stronghero3d.com has no imprint, address or about page (all candidates 404). No trademark owner found on USPTO. Founding (2014, founder Tommy Wu, Shenzhen) rests on a single 3D Printing Industry article (Apr 2019). Owner asked whether it is a rebrand: no evidence of a rebrand or of any link to YASIN 3D / Hunan Yasin Technology / YOUSU was found, and the seller entity name matches no other catalog company (absence of evidence, not a proven negative). The 'Technical Support: REANOD' footer is a website-builder credit. Social: Facebook, YouTube @Stronghero3d, WeChat SZHERO3D. Price tier not recorded (budget-mid, unverified).",
+  "provenance": {
+    "sources": [
+      "https://www.stronghero3d.com/",
+      "https://3dprintingindustry.com/?p=153913",
+      "https://www.amazon.com/dp/B0DJ4M6FH2",
+      "https://www.amazon.com/sp?seller=AKCLTRB5OCUWD"
+    ],
+    "last_verified": "2026-11-06",
+    "confidence": "medium",
+    "conflicts": "Identity now medium-high (Amazon seller legal entity read); the English rendering of the entity name is a pinyin reading. The 'no relationship' finding stays low confidence (absence of evidence). Manufacturing country presumed China but not stated. Founding details single-sourced."
+  }
+}

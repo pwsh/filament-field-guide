@@ -1,0 +1,47 @@
+{
+  "id": "locyfens",
+  "name": "LOCYFENS",
+  "status": "draft",
+  "summary": "Marketplace-only budget filament brand selling silk PLA, including co-extruded dual- and tri-colour and gradient variants, on 1.75 mm 1 kg spools. A US trademark was filed in April 2022; the owner and country are unconfirmed.",
+  "brands": [
+    "LOCYFENS"
+  ],
+  "endpoints": {
+    "store": "https://www.newegg.com/p/298-00KN-001R8"
+  },
+  "product_lines": [
+    {
+      "name": "Silk PLA",
+      "filament_ids": [
+        "pla-silk"
+      ],
+      "notes": "1.75 mm +/-0.02 mm, 1 kg."
+    },
+    {
+      "name": "Dual / Tri-colour Silk PLA",
+      "filament_ids": [
+        "pla-silk"
+      ],
+      "notes": "Co-extruded multi-colour silk."
+    },
+    {
+      "name": "Gradient Silk PLA",
+      "filament_ids": [
+        "pla-gradient"
+      ]
+    }
+  ],
+  "makes_plates": false,
+  "price_tier": "budget",
+  "additional_notes": "No brand website found (locyfens.com did not resolve). A USPTO/Justia record for LOCYFENS covering ABS/PLA filament was filed in April 2022; the owner was not read. China origin is likely given the marketplace-only pattern but unverified, so headquarters is omitted. No relationships found. SpoolmanDB PR #396 has 1 entry. Next step: read the trademark record for the owner name.",
+  "provenance": {
+    "sources": [
+      "https://www.newegg.com/p/298-00KN-001R8",
+      "https://trademark.justia.com/category/rubber-goods/2022/april/9",
+      "https://api.github.com/repos/Donkie/SpoolmanDB/pulls/396/files"
+    ],
+    "last_verified": "2026-11-06",
+    "confidence": "low",
+    "conflicts": "Owner, country and manufacturer all unknown."
+  }
+}

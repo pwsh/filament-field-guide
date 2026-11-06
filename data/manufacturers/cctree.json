@@ -1,0 +1,97 @@
+{
+  "id": "cctree",
+  "name": "CCTREE",
+  "status": "draft",
+  "summary": "Budget Amazon filament brand selling high-speed PLA, PETG and ABS, PLA+, wood PLA and TPU 95A, at $10-16/kg for basics. Reseller Top3DShop describes it as a Chinese maker with 10+ years of low-cost filament production and an official supplier for Creality's CR-10 series, neither of which is corroborated.",
+  "headquarters_country": "China",
+  "manufacturing_countries": [
+    "China"
+  ],
+  "brands": [
+    "CCTREE",
+    "COMTREE"
+  ],
+  "oem_relationships": [],
+  "product_lines": [
+    {
+      "name": "PLA High Speed",
+      "filament_ids": [
+        "pla-hf"
+      ]
+    },
+    {
+      "name": "PLA Matte High Speed",
+      "filament_ids": [
+        "pla-matte",
+        "pla-hf"
+      ]
+    },
+    {
+      "name": "PLA+ Standard",
+      "filament_ids": [
+        "pla-plus"
+      ]
+    },
+    {
+      "name": "PLA+ Glow",
+      "filament_ids": [
+        "pla-glow"
+      ]
+    },
+    {
+      "name": "PLA+ Color Change",
+      "filament_ids": [
+        "pla-plus"
+      ],
+      "notes": "Colour-change mechanism (gradient vs thermochromic) not stated, so only the PLA+ base is recorded."
+    },
+    {
+      "name": "Wood PLA",
+      "filament_ids": [
+        "pla-wood"
+      ]
+    },
+    {
+      "name": "PETG High Speed / Galaxy / Gradient / Glow",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "Effect PETGs; no PETG effect ids exist."
+    },
+    {
+      "name": "ABS High Speed / Standard",
+      "filament_ids": [
+        "abs"
+      ]
+    },
+    {
+      "name": "TPU 95A",
+      "filament_ids": [
+        "tpu-95a"
+      ]
+    },
+    {
+      "name": "HIPS / Nylon / PC (per Top3DShop)",
+      "filament_ids": [
+        "hips",
+        "pa",
+        "pc"
+      ],
+      "notes": "Listed by the reseller only; POM is also claimed but has no catalog id."
+    }
+  ],
+  "makes_plates": false,
+  "price_tier": "budget",
+  "additional_notes": "Store is Amazon US; resold by Top3DShop (https://top3dshop.com/3d-printer-filaments/cctree-filaments). No brand website found. Top3DShop's claim that CCTREE is an 'official filament supplier for Creality CR-10 series' is a vendor claim not corroborated by Creality, so no relationship is encoded. The Amazon brand COMTREE is sold by the seller 'HK KEKE TECH', whose registered Business Name is 'HK CCTREE TECHNOLOGY CO., LIMITED' (Flat 917B, New Mandarin Plaza, Tsim Sha Tsui, Hong Kong; read 2026-11-06), so COMTREE is recorded as a second brand of the CCTREE company. Legal entity of the CCTREE storefront itself not read. Resale-page reviews are mixed (clogging, underweight 930-970 g spools).",
+  "provenance": {
+    "sources": [
+      "https://livedeals.3dprintingdeals.com/deals?category=filament&brand=CCTREE",
+      "https://top3dshop.com/3d-printer-filaments/cctree-filaments",
+      "https://woodartsupply.com/products/cctree-wood-pla-filament-1-75mm-3d-printer-pla-pluspla-with-real-wood-fiber-wood-texture-filament-dimensional-accuracy-0-02mm-1kg-spool2-2lbs-fit-most-fdm-3d-printers-wood-teak",
+      "https://livedeals.3dprintingdeals.com/deals?category=filament&brand=COMTREE"
+    ],
+    "last_verified": "2026-11-06",
+    "confidence": "low",
+    "conflicts": "Legal entity for the COMTREE listings is HK CCTREE Technology Co., Limited (Hong Kong), from the Amazon seller profile; the CCTREE storefront's own seller profile was not read, and the mainland factory (if any) is unknown. China as manufacturing country rests on a single reseller (Top3DShop); the 10+ years and Creality-supplier claims are vendor copy."
+  }
+}

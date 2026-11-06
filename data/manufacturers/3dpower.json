@@ -1,0 +1,111 @@
+{
+  "id": "3dpower",
+  "name": "3DPower",
+  "status": "draft",
+  "summary": "Polish filament brand (founded 2020 per a retailer) with a wide range: basic, Hyper Speed, HT 150, marble, matte, pastel, dual-colour silk and Select PLA, PETG variants, ABS, ASA, Hyper PA6 and Elasti 90A TPU, including spoolless refills. Company and manufacturer details were not found.",
+  "headquarters_country": "Poland",
+  "brands": [
+    "3DPower"
+  ],
+  "oem_relationships": [],
+  "endpoints": {
+    "website": "https://3dpower.com"
+  },
+  "product_lines": [
+    {
+      "name": "Basic PLA",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Tolerance +/-0.03 mm; refills without plastic spool offered."
+    },
+    {
+      "name": "Hyper Speed PLA",
+      "filament_ids": [
+        "pla-hf"
+      ],
+      "notes": "Not to be confused with Raise3D's similarly named product."
+    },
+    {
+      "name": "HT 150 PLA",
+      "filament_ids": [
+        "pla-ht"
+      ],
+      "notes": "Annealable high-temperature PLA."
+    },
+    {
+      "name": "Marble PLA",
+      "filament_ids": [
+        "pla-stone"
+      ]
+    },
+    {
+      "name": "Matte PLA",
+      "filament_ids": [
+        "pla-matte"
+      ]
+    },
+    {
+      "name": "Pastel PLA",
+      "filament_ids": [
+        "pla"
+      ]
+    },
+    {
+      "name": "Dual Color Silk PLA",
+      "filament_ids": [
+        "pla-silk"
+      ]
+    },
+    {
+      "name": "Select PLA",
+      "filament_ids": [
+        "pla"
+      ]
+    },
+    {
+      "name": "PETG Basic / Hyper Speed / Select",
+      "filament_ids": [
+        "petg"
+      ]
+    },
+    {
+      "name": "ABS",
+      "filament_ids": [
+        "abs"
+      ]
+    },
+    {
+      "name": "ASA",
+      "filament_ids": [
+        "asa"
+      ]
+    },
+    {
+      "name": "Hyper PA6",
+      "filament_ids": [
+        "pa6"
+      ]
+    },
+    {
+      "name": "Elasti 90A TPU",
+      "filament_ids": [
+        "tpu-90a"
+      ],
+      "notes": "0.5 kg spools."
+    }
+  ],
+  "makes_plates": false,
+  "additional_notes": "Sold via 3dstisk.com and ManoMano; Shumee (a Polish reseller) lists it on mimovrste.com, a reseller link judged too weak to encode as a relationship. No manufacturing relationship found. 3dpower.com returned no content when fetched. SpoolmanDB PR #322 has 15 filaments. Price tier not verified.",
+  "provenance": {
+    "sources": [
+      "https://simplyprint.io/filaments/3dpower",
+      "https://3dstisk.com/vyrobce/3dpower/",
+      "https://www.mimovrste.com/tiskalniki-3d/shumee-filament-3dpower-elasti-tpu-90-100168265029",
+      "https://api.github.com/repos/Donkie/SpoolmanDB/pulls/322/files"
+    ],
+    "last_verified": "2026-11-06",
+    "confidence": "low",
+    "conflicts": "Notes rate confidence low-medium. Legal entity not found; whether 3DPower extrudes itself is unknown; 'founded 2020' comes only from a retailer."
+  }
+}

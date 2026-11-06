@@ -1,0 +1,116 @@
+{
+  "id": "gizmo-dorks",
+  "name": "Gizmo Dorks",
+  "status": "researched",
+  "summary": "Long-running US filament and accessory brand based in Temple City, California, founded around 2009 and sold through its own site, Amazon, Walmart and eBay. It carries a wide catalog from ABS and PLA effects to PC, POM, PVA and nylon in 1.75 and 2.85 mm. An eBay listing shows China as the country of manufacture, which suggests contract-sourced filament.",
+  "headquarters_country": "United States",
+  "brands": [
+    "Gizmo Dorks"
+  ],
+  "oem_relationships": [
+    {
+      "company": "Unidentified Chinese contract manufacturer",
+      "relationship": "suspected-manufactured-by",
+      "notes": "Weak evidence: one eBay Gizmo Dorks nylon listing gives China as country of manufacture. No factory named, and it is not confirmed for other materials."
+    }
+  ],
+  "endpoints": {
+    "website": "https://gizmodorks.com/",
+    "store": "https://gizmodorks.com/"
+  },
+  "product_lines": [
+    {
+      "name": "ABS (incl. low-odor, glow, thermochromic, conductive)",
+      "filament_ids": [
+        "abs"
+      ],
+      "notes": "Effect and functional ABS variants; no glow, thermo or conductive ABS ids exist."
+    },
+    {
+      "name": "ABS-CF",
+      "filament_ids": [
+        "abs-cf"
+      ]
+    },
+    {
+      "name": "PLA (silk, glitter, glow, fluorescent)",
+      "filament_ids": [
+        "pla",
+        "pla-silk",
+        "pla-glitter",
+        "pla-glow"
+      ]
+    },
+    {
+      "name": "PLA Pro Plus",
+      "filament_ids": [
+        "pla-plus"
+      ]
+    },
+    {
+      "name": "PETG",
+      "filament_ids": [
+        "petg"
+      ]
+    },
+    {
+      "name": "HIPS",
+      "filament_ids": [
+        "hips"
+      ]
+    },
+    {
+      "name": "PC",
+      "filament_ids": [
+        "pc"
+      ]
+    },
+    {
+      "name": "POM / Acetal",
+      "filament_ids": [],
+      "notes": "Polyoxymethylene; no POM id exists in the catalog."
+    },
+    {
+      "name": "PVA",
+      "filament_ids": [
+        "pva"
+      ]
+    },
+    {
+      "name": "TPU",
+      "filament_ids": [
+        "tpu"
+      ],
+      "notes": "Hardness not stated in the notes."
+    },
+    {
+      "name": "Nylon",
+      "filament_ids": [
+        "pa"
+      ],
+      "notes": "PA type unspecified."
+    },
+    {
+      "name": "Wood / metal fill",
+      "filament_ids": [
+        "pla-wood",
+        "pla-metal"
+      ],
+      "notes": "Base polymer presumed to be PLA (the usual carrier); not confirmed in the notes."
+    }
+  ],
+  "makes_plates": false,
+  "price_tier": "budget",
+  "additional_notes": "Also sells tapes, PEI sheets and accessories. Spool sizes run from 200 g samples to 5 kg. The founding year (~2009) comes from a secondary source (facfox). Temple City, CA comes from the eBay seller location and a MapQuest listing. Manufacturing country is unconfirmed beyond one eBay listing, so manufacturing_countries is omitted. Pricing is budget to mid. Legal entity unknown.",
+  "provenance": {
+    "sources": [
+      "https://gizmodorks.com/",
+      "https://simplyprint.io/filaments/gizmo-dorks",
+      "https://www.ebay.com/itm/Gizmo-Dorks-Nylon-3D-Printer-Filament-1-75mm-or-3mm-2-85mm-1kg-for-3D-Printing-/323273227998",
+      "https://api.github.com/repos/Donkie/SpoolmanDB/pulls/371/files"
+    ],
+    "last_verified": "2026-11-06",
+    "confidence": "medium",
+    "conflicts": "Country of manufacture rests on a single eBay listing for one material. Founding year and city come from secondary sources."
+  }
+}

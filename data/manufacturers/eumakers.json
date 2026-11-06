@@ -1,0 +1,81 @@
+{
+  "id": "eumakers",
+  "name": "EUMAKERS",
+  "status": "researched",
+  "summary": "Italian PLA filament brand from Barletta, Puglia, founded in 2014 by Demi Sfregola as the 3D branch of the family's Rigenera Biocompound and SMP plastic-extrusion businesses. It sells NatureWorks Ingeo-based PLA in matte, silk, metallic, pearl, iridescent, fluorescent, glitter and UV-glow finishes, with a spool re-use programme.",
+  "headquarters_country": "Italy",
+  "manufacturing_countries": [
+    "Italy"
+  ],
+  "brands": [
+    "EUMAKERS",
+    "Eumakers",
+    "EUMAKEIT"
+  ],
+  "oem_relationships": [
+    {
+      "company": "SMP",
+      "relationship": "parent-company",
+      "notes": "Per 3DPrint.com, EUMAKERS belongs to the SMP plastic-extrusion group, founded by founder Demi Sfregola's grandfather."
+    },
+    {
+      "company": "Rigenera Biocompound",
+      "relationship": "parent-company",
+      "notes": "EUMAKERS is described as Rigenera's '3D branch' (3DPrint.com, Cults3D profile); a supplier listing names 'RIGENERA DI SFREGOLA COSIMO DAMIANO'. The exact corporate structure between Rigenera and SMP is unverified."
+    }
+  ],
+  "product_lines": [
+    {
+      "name": "PLA",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "NatureWorks Ingeo resin."
+    },
+    {
+      "name": "Matte PLA",
+      "filament_ids": [
+        "pla-matte"
+      ]
+    },
+    {
+      "name": "Silk PLA",
+      "filament_ids": [
+        "pla-silk"
+      ]
+    },
+    {
+      "name": "Metallic / Pearl / Iridescent / Fluorescent PLA",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Pigment-effect PLA finishes; not metal-filled."
+    },
+    {
+      "name": "Silver Glitter PLA",
+      "filament_ids": [
+        "pla-glitter"
+      ]
+    },
+    {
+      "name": "UV Reactive Glow PLA",
+      "filament_ids": [
+        "pla-glow"
+      ]
+    }
+  ],
+  "makes_plates": false,
+  "price_tier": "mid",
+  "additional_notes": "Address Via degli Artigiani 74, Barletta, per a packaging-design listing. NatureWorks supplies the raw PLA resin; that is a raw-material supply relationship, not an OEM relationship. No catalog OEM link. EUMAKEIT is a related line of upcycled design objects. One Ultimaker-forum user noted an intentionally rough filament surface that makes Bowden feeding harder (anecdotal). The eumakers.com domain was not fetched, so no endpoints are recorded. Has a Cults3D 'EUMAKERS' profile. SpoolmanDB PR #358 lists 9 PLA filaments.",
+  "provenance": {
+    "sources": [
+      "https://3dprint.com/74062/eumakers-filament-spools/",
+      "https://simplyprint.io/filaments/eumakers",
+      "https://community.ultimaker.com/topic/24132-eumakers-pla/",
+      "https://packmedia.net/node/5681"
+    ],
+    "last_verified": "2026-11-06",
+    "confidence": "medium",
+    "conflicts": "The exact legal entity is unresolved (Rigenera sole proprietorship vs SMP group). The Barletta address comes from a third-party packaging listing."
+  }
+}

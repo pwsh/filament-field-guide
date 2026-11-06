@@ -1,0 +1,42 @@
+{
+  "id": "rittsun",
+  "name": "RITTSUN",
+  "status": "draft",
+  "summary": "Amazon PETG brand whose listings appear under the Amazon brand field 'Generic': 1 kg PETG (about $13-26/kg), 5 x 1 kg bundles at $9.32/kg, and 15% carbon-fibre PETG at about $24-38/kg. The seller is a Hong Kong company; the extruder is unknown.",
+  "brands": [
+    "RITTSUN",
+    "RITTSUN 3D"
+  ],
+  "oem_relationships": [],
+  "product_lines": [
+    {
+      "name": "PETG",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "1 kg and 2 kg, about $12.79-25.59/kg; 5 x 1 kg bundles $9.32/kg."
+    },
+    {
+      "name": "PETG Carbon Fiber",
+      "filament_ids": [
+        "petg-cf"
+      ],
+      "notes": "15% carbon fibre, matte, 1 kg, $23.99-37.59."
+    }
+  ],
+  "makes_plates": false,
+  "price_tier": "budget",
+  "additional_notes": "Legal entity: Rittsun Technology Co.. Limited (verbatim, sic; read as Rittsun Technology Co., Limited), Tai Kok Tsui, Kowloon, Hong Kong (Room 12, 6/F, The Cloud, 111 Tung Chau Street); Amazon seller 'RITTSUN 3D' (id A2O0RNA9FDFVDY), read 2026-11-06. The listing's Manufacturer field reads 'RITTSUN'. Store is Amazon only; no brand website was identified. A Hong Kong company address, so the extruder is unknown. RITTSUN listings appear under Amazon brand 'Generic', and the deal tracker's brand=RITTSUN page is empty, so the source is the brand=Generic page; that page also carries non-RITTSUN listings (unbranded PETG, 'compatible for' eSUN nylon and Kingroon PLA, Flashforge ABS) that are not attributed here. The first pass found nothing on RITTSUN.",
+  "provenance": {
+    "sources": [
+      "https://livedeals.3dprintingdeals.com/deals?category=filament&brand=Generic",
+      "https://livedeals.3dprintingdeals.com/deals?category=filament&brand=RITTSUN",
+      "https://www.amazon.com/dp/B0H1WFV26T",
+      "https://www.amazon.com/sp?seller=A2O0RNA9FDFVDY"
+    ],
+    "last_verified": "2026-11-06",
+    "confidence": "medium",
+    "conflicts": "Only one ASIN's seller was read; unbranded 'Generic' PETG listings on the same tracker page may or may not be RITTSUN stock. Extruder and manufacturing country are unknown."
+  },
+  "headquarters_country": "Hong Kong"
+}

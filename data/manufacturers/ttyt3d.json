@@ -1,0 +1,56 @@
+{
+  "id": "ttyt3d",
+  "name": "TTYT3D",
+  "status": "draft",
+  "summary": "Amazon filament brand selling silk PLA (rainbow, dual-colour, metal sparkle), basic PLA and glow-in-the-dark rainbow PLA in 1 kg spools and 250 g-spool bundles at about $16-24/kg. The Amazon seller is a Yiwu technology company; extruder unknown.",
+  "brands": [
+    "TTYT3D"
+  ],
+  "oem_relationships": [],
+  "product_lines": [
+    {
+      "name": "PLA Silk Rainbow",
+      "filament_ids": [
+        "pla-silk",
+        "pla-gradient"
+      ],
+      "notes": "1 kg, $15.99-18.99."
+    },
+    {
+      "name": "PLA Silk Dual Color / Metal Sparkle",
+      "filament_ids": [
+        "pla-silk"
+      ],
+      "notes": "1 kg, $18.99; 8-colour 2 kg silk bundle $21/kg."
+    },
+    {
+      "name": "PLA",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "8-colour 2 kg bundle, $20/kg."
+    },
+    {
+      "name": "PLA Glow in the Dark Rainbow",
+      "filament_ids": [
+        "pla-glow",
+        "pla-gradient"
+      ],
+      "notes": "1 kg $23.99; 1.25 kg bundle $23.19/kg."
+    }
+  ],
+  "makes_plates": false,
+  "price_tier": "mid",
+  "additional_notes": "Legal entity: Yiwu Lifen Zhineng Keji Youxian Gongsi (Business Name as printed; Yiwu Lifen Intelligent Technology Co., Ltd. is a rendering), Futian Subdistrict, Yiwu, Jinhua, Zhejiang; Amazon seller 'TTYT3D' (id A1K1ELLAK2YBEU), read 2026-11-06. The listing's Manufacturer field reads 'TTYT3D'. Store is Amazon only; no brand website found. The entity is a technology company, not a known extruder, so the maker is unknown. DO3D (room 501), Bblife (room 401) and TTYT3D (room 201) give the same building as their Business Address (Building 81, Unit 7, Chengxin District 3, Futian Subdistrict, Yiwu) but under three different Business Names, so they are recorded as separate companies; no relationship is asserted. First pass: a TTYT3D US trademark is registered to a Ningbo company, which is not this Yiwu seller and is not confirmed to be related.",
+  "provenance": {
+    "sources": [
+      "https://livedeals.3dprintingdeals.com/deals?category=filament&brand=TTYT3D",
+      "https://www.amazon.com/dp/B09XKMQ5RM",
+      "https://www.amazon.com/sp?seller=A1K1ELLAK2YBEU"
+    ],
+    "last_verified": "2026-11-06",
+    "confidence": "low",
+    "conflicts": "The English company name is only a pinyin rendering. The Ningbo trademark owner and the Yiwu seller differ; which one controls the brand is unknown. Extruder and manufacturing country unknown."
+  },
+  "headquarters_country": "China"
+}

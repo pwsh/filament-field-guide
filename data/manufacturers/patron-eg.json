@@ -1,0 +1,35 @@
+{
+  "id": "patron-eg",
+  "name": "Patron EG",
+  "status": "draft",
+  "summary": "Filament brand marketed as PATRON (SpoolmanDB 'Patron EG'), known from a marble PLA line sold by an Alexandria, Egypt reseller at 780 EGP/kg. Likely an Egyptian local or private-label brand; owner and manufacturer unknown.",
+  "brands": [
+    "PATRON",
+    "Patron EG",
+    "Patroneg"
+  ],
+  "oem_relationships": [],
+  "endpoints": {
+    "store": "https://makerselectronics.com/product/patron-pla-filament-marble-1-75mm/"
+  },
+  "product_lines": [
+    {
+      "name": "Marble PLA",
+      "filament_ids": [
+        "pla-stone"
+      ],
+      "notes": "White, Mocha, Baby Blue and Turquoise Marble; 1.75 mm +/-0.03 mm, 1 kg; 780 EGP. Product page labels it PLA+ while SpoolmanDB says PLA, so pla-plus is not asserted."
+    }
+  ],
+  "makes_plates": false,
+  "additional_notes": "Egyptian origin is inferred from the 'EG' suffix and the Egyptian reseller (Makers Electronics, Alexandria) and is unconfirmed, so headquarters_country is omitted. No official website or social accounts found.",
+  "provenance": {
+    "sources": [
+      "https://makerselectronics.com/product/patron-pla-filament-marble-1-75mm/",
+      "https://raw.githubusercontent.com/Donkie/SpoolmanDB/main/filaments/patroneg.json"
+    ],
+    "last_verified": "2026-11-06",
+    "confidence": "low",
+    "conflicts": "Single reseller page; PLA vs PLA+ disagreement between reseller and SpoolmanDB; country inferred only."
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "id": "pinball",
+  "name": "PINBALL",
+  "status": "draft",
+  "summary": "Amazon brand selling PETG (standard, rainbow, clear rainbow) and PLA (standard, matte rainbow, silk rainbow/dual/tri-colour, glow), led by bulk PETG bundles of 2-10 kg at $8-15/kg, the cheapest bulk PETG on the deal tracker. 1 kg spools run about $14-19/kg. The seller is a Cixi technology company.",
+  "brands": [
+    "PINBALL",
+    "Pinball",
+    "PINBALL Store"
+  ],
+  "oem_relationships": [],
+  "product_lines": [
+    {
+      "name": "PETG",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "1 kg $13.99-14.99; 2, 4, 8 and 10 x 1 kg bundles down to $79.99 for 10 kg ($8/kg)."
+    },
+    {
+      "name": "PETG Rainbow / Clear Rainbow",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "1 kg $15.99-16.99; 4 x 1 kg $39.99-41.99. No gradient-PETG id exists, so mapped to petg."
+    },
+    {
+      "name": "PLA and PLA Matte Rainbow",
+      "filament_ids": [
+        "pla",
+        "pla-matte",
+        "pla-gradient"
+      ],
+      "notes": "8 x 1 kg bundles $81-95; 1 kg matte rainbow $18.99; 4 x 250 g packs."
+    },
+    {
+      "name": "PLA Silk Rainbow / Dual / Tri-Color",
+      "filament_ids": [
+        "pla-silk",
+        "pla-gradient"
+      ],
+      "notes": "1 kg $16.99-18.99; 4 x 250 g and 4 x 500 g packs."
+    },
+    {
+      "name": "PLA Glow",
+      "filament_ids": [
+        "pla-glow"
+      ],
+      "notes": "1 kg, $21.99."
+    }
+  ],
+  "makes_plates": false,
+  "price_tier": "budget",
+  "additional_notes": "Legal entity: Cixi Fengyuan Technology Co., LTD (verbatim; no rendering needed), Baishalu Subdistrict, Cixi, Ningbo, Zhejiang; Amazon seller 'PINBALL Store' (id A2REZLNCJRF079), read 2026-11-06. The listing's Manufacturer field reads 'PINBALL'. Store is Amazon only; no brand website was identified. The seller address is an office suite, and the name is a generic technology company, so the extruder is unknown. First-pass note kept: a US trademark for PINBALL covering 3D filament exists (serial 98635848); its owner was not retrievable, so it is not tied to this entity. RAMBERY's seller is also in Cixi but is a different company (Cixi Lanbo Printing Supplies).",
+  "provenance": {
+    "sources": [
+      "https://livedeals.3dprintingdeals.com/deals?category=filament&brand=PINBALL",
+      "https://www.amazon.com/dp/B0FK4JQSX3",
+      "https://www.amazon.com/sp?seller=A2REZLNCJRF079"
+    ],
+    "last_verified": "2026-11-06",
+    "confidence": "medium",
+    "conflicts": "The owner of US trademark serial 98635848 was not read, so it is not confirmed to be Cixi Fengyuan Technology. Extruder and manufacturing country are unknown."
+  },
+  "headquarters_country": "China"
+}

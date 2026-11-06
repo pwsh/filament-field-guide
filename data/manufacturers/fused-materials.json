@@ -1,0 +1,41 @@
+{
+  "id": "fused-materials",
+  "name": "FUSED MATERIALS",
+  "status": "draft",
+  "summary": "Small Amazon filament brand selling PLA ($18.69-21.99/kg) and PVA support (about $79/kg) in 1 kg spools. The Amazon seller is Solve Light, LLC of Staten Island, New York; extruder unknown.",
+  "brands": [
+    "FUSED MATERIALS",
+    "Fused Materials"
+  ],
+  "oem_relationships": [],
+  "product_lines": [
+    {
+      "name": "PLA",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "1 kg white/red, $18.69-21.99."
+    },
+    {
+      "name": "PVA",
+      "filament_ids": [
+        "pva"
+      ],
+      "notes": "1 kg, $78.99; one variant at $39.99 is shown by the tracker at $79.98/kg, so its spool is probably 0.5 kg."
+    }
+  ],
+  "makes_plates": false,
+  "price_tier": "mid",
+  "additional_notes": "Legal entity: Solve Light, LLC (Business Name as printed), Staten Island, New York, United States; Amazon seller 'SolveLight Robotics' (id A70KGOG8QQHTH), read 2026-11-06. The listing's Manufacturer field reads 'Fused Materials'. Store is Amazon only; no brand website found. The seller presents as a robotics storefront and no extrusion operation was found, so the filament is presumably sourced from an unidentified extruder.",
+  "provenance": {
+    "sources": [
+      "https://livedeals.3dprintingdeals.com/deals?category=filament&brand=FUSED%20MATERIALS",
+      "https://www.amazon.com/dp/B0892TWDDT",
+      "https://www.amazon.com/sp?seller=A70KGOG8QQHTH"
+    ],
+    "last_verified": "2026-11-06",
+    "confidence": "medium",
+    "conflicts": "Entity name is verbatim. A US seller does not establish US manufacture; extruder and manufacturing country unknown."
+  },
+  "headquarters_country": "United States"
+}

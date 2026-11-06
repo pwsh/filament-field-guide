@@ -1,0 +1,64 @@
+{
+  "id": "artillery",
+  "name": "Artillery 3D",
+  "status": "researched",
+  "summary": "Shenzhen printer maker (est. 2018; Sidewinder X1, Genius, Hornet) that also sells house-brand PLA: Basic, Lite, Macaron Rainbow, Matte Gradient 'Dopamine' and 5/10 kg value packs. The filament extruder is not identified.",
+  "headquarters_country": "China",
+  "brands": [
+    "Artillery",
+    "Artillery 3D"
+  ],
+  "oem_relationships": [],
+  "endpoints": {
+    "website": "https://www.artillery3d.com",
+    "store": "https://www.artillery3d.com"
+  },
+  "product_lines": [
+    {
+      "name": "PLA Basic",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "SpoolmanDB: 155 g spool, 190-220 C."
+    },
+    {
+      "name": "PLA Lite",
+      "filament_ids": [
+        "pla"
+      ]
+    },
+    {
+      "name": "PLA Macaron Rainbow",
+      "filament_ids": [
+        "pla-gradient"
+      ]
+    },
+    {
+      "name": "PLA Matte Gradient (Dopamine)",
+      "filament_ids": [
+        "pla-matte",
+        "pla-gradient"
+      ]
+    },
+    {
+      "name": "PLA 5 kg / 10 kg value packs",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Multi-spool packs, not a separate formulation."
+    }
+  ],
+  "makes_plates": false,
+  "price_tier": "budget",
+  "additional_notes": "Peer of other printer-maker house filaments (Creality, Anycubic, Elegoo). No filament OEM identified, so oem_relationships is empty. Budget tier not price-verified.",
+  "provenance": {
+    "sources": [
+      "https://www.artillery3d.com/pages/brand-history",
+      "https://3dprint.com/287378/artillerys-low-cost-3d-printers-shake-up-desktop-market/",
+      "https://raw.githubusercontent.com/Donkie/SpoolmanDB/main/filaments/artillery.json"
+    ],
+    "last_verified": "2026-11-06",
+    "confidence": "medium",
+    "conflicts": "Legal entity unresolved: the brand-history page names Shenzhen Xingchenqihang Technology Co., Ltd.; other sources name Shenzhen Yuntuchuangzhi Technology Co., Ltd. Filament manufacturing country unknown (likely China)."
+  }
+}

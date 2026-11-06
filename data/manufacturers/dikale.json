@@ -1,0 +1,49 @@
+{
+  "id": "dikale",
+  "name": "Dikale",
+  "status": "draft",
+  "summary": "Brand known mainly for 3D pens that also sells PLA+ filament on Amazon: standard, silk, dual/tri-colour silk and glow, in 1 kg spools, 250 g spools and 6-10 kg bundles, about $13-27/kg (single 250 g spools up to $40/kg). The Amazon seller is a Shenzhen trade/supply-chain company; extruder unknown.",
+  "brands": [
+    "Dikale",
+    "dikale",
+    "Dikale US"
+  ],
+  "oem_relationships": [],
+  "product_lines": [
+    {
+      "name": "PLA+",
+      "filament_ids": [
+        "pla-plus"
+      ],
+      "notes": "10-colour 10 kg bundle $13/kg, 12-spool 6 kg bundle $18.33/kg, 12x250 g bundle $23.33/kg."
+    },
+    {
+      "name": "PLA+ Silk / Dual Color / Tricolor",
+      "filament_ids": [
+        "pla-silk"
+      ],
+      "notes": "250 g spools ($8.99-9.99, $36-40/kg) and 1-3 kg bundles of 250 g spools ($24.66-26.99/kg)."
+    },
+    {
+      "name": "PLA+ Glow in the Dark",
+      "filament_ids": [
+        "pla-glow"
+      ],
+      "notes": "1 kg luminous green/blue, $22.99-23.99."
+    }
+  ],
+  "makes_plates": false,
+  "price_tier": "mid",
+  "additional_notes": "Legal entity: HUA SHANG MAO YI GONG YING LIAN SHEN ZHEN YOU XIAN GONG SI (Business Name as printed; Shenzhen Huashang Trade Supply Chain Co., Ltd. is a rendering), Nanshan Subdistrict, Qianhai Shenzhen-Hong Kong Cooperation Zone, Shenzhen, Guangdong; Amazon seller 'Dikale US' (id A2IWVCNPHOV3BT), read 2026-11-06. The listing's Manufacturer field reads 'dikale'. Store seen is Amazon; a brand website was not verified. The entity is a trade/supply-chain company, so the extruder is unknown. First pass: Dikale is primarily a 3D-pen maker and filament is an extension of that range.",
+  "provenance": {
+    "sources": [
+      "https://livedeals.3dprintingdeals.com/deals?category=filament&brand=Dikale",
+      "https://www.amazon.com/dp/B0C9QGBF7H",
+      "https://www.amazon.com/sp?seller=A2IWVCNPHOV3BT"
+    ],
+    "last_verified": "2026-11-06",
+    "confidence": "low",
+    "conflicts": "The English company name is only a pinyin rendering. Extruder and manufacturing country unknown; whether the pen business and this seller are the same company is not established."
+  },
+  "headquarters_country": "China"
+}

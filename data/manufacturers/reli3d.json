@@ -1,0 +1,58 @@
+{
+  "id": "reli3d",
+  "name": "Reli3D",
+  "status": "draft",
+  "summary": "Amazon brand selling engineering filaments: low-warp and standard PP, carbon-fibre PP, PC-ABS, PAHT-CF nylon and a water-soluble support, at about $30-35/kg for 1 kg spools and $52-66/kg for 0.5-0.7 kg spools. The Amazon seller is a Guangzhou trading company; extruder unknown.",
+  "brands": [
+    "Reli3D"
+  ],
+  "oem_relationships": [],
+  "product_lines": [
+    {
+      "name": "PP / Low Warp PP",
+      "filament_ids": [
+        "pp"
+      ],
+      "notes": "1 kg, $29.99."
+    },
+    {
+      "name": "Carbon Fiber PP",
+      "filament_ids": [
+        "pp-cf"
+      ],
+      "notes": "700 g, $39.99 ($57.13/kg)."
+    },
+    {
+      "name": "PC-ABS / Low Warp PC-ABS",
+      "filament_ids": [
+        "pc-abs"
+      ],
+      "notes": "1 kg, $34.99."
+    },
+    {
+      "name": "PAHT-CF (Nylon Carbon Fiber)",
+      "filament_ids": [
+        "pa-cf"
+      ],
+      "notes": "500 g, $25.99 ($51.98/kg); the base polyamide is not stated beyond 'PAHT'."
+    },
+    {
+      "name": "PLA Water Soluble Support",
+      "notes": "500 g, $32.99. The title says PLA but water-soluble; the actual polymer (PVA, BVOH or a modified PLA) is not stated, so no filament id is asserted."
+    }
+  ],
+  "makes_plates": false,
+  "price_tier": "engineering",
+  "additional_notes": "Legal entity: Guangzhou Yuan Qi Man Cang Mao Yi You Xian Gong Si (Business Name as printed; Guangzhou Yuanqi Mancang Trading Co., Ltd. is a rendering), Tianhe District, Guangzhou, Guangdong; Amazon seller 'Reli3D' (id A2NVI8V8ZRCHCE), read 2026-11-06. The listing's Manufacturer field reads 'Reli3D'. Store is Amazon only; first pass found no web presence. The entity is a trading company, so the extruder is unknown.",
+  "provenance": {
+    "sources": [
+      "https://livedeals.3dprintingdeals.com/deals?category=filament&brand=Reli3D",
+      "https://www.amazon.com/dp/B0FVG4ZDQG",
+      "https://www.amazon.com/sp?seller=A2NVI8V8ZRCHCE"
+    ],
+    "last_verified": "2026-11-06",
+    "confidence": "low",
+    "conflicts": "The English company name is only a pinyin rendering. Extruder and manufacturing country unknown."
+  },
+  "headquarters_country": "China"
+}

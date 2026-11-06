@@ -1,0 +1,92 @@
+{
+  "id": "justmaker",
+  "name": "JUSTMAKER",
+  "status": "draft",
+  "summary": "Amazon filament brand with a broad 1 kg range on cardboard spools: PLA, PLA Carbon Fiber Lite, PETG (Pro/PETG+, Rapid, Matte, Glass Fiber), ABS and ABS+, ASA and TPU in 95A and 64D. Single spools run about $15-25/kg, TPU 64D up to about $34/kg. The Amazon seller is a Suzhou technology company; the extruder is unknown.",
+  "brands": [
+    "JUSTMAKER",
+    "Justmaker",
+    "Justmaker US"
+  ],
+  "oem_relationships": [],
+  "product_lines": [
+    {
+      "name": "PLA",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "1 kg on an 'upgrade cardboard spool' plus a 2 kg spool; about $15-25/kg."
+    },
+    {
+      "name": "PLA Carbon Fiber Lite (matte)",
+      "filament_ids": [
+        "pla-cf"
+      ],
+      "notes": "1 kg, $18.99-19.99."
+    },
+    {
+      "name": "PETG Pro (PETG+)",
+      "filament_ids": [
+        "petg-plus"
+      ],
+      "notes": "1 kg, $20.99-22.99."
+    },
+    {
+      "name": "PETG Rapid and PETG Matte",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "High-speed 'Rapid' and matte PETG, 1 kg, $19.99-22.99."
+    },
+    {
+      "name": "PETG Glass Fiber",
+      "filament_ids": [
+        "petg-gf"
+      ],
+      "notes": "1 kg, $21.99-25.99."
+    },
+    {
+      "name": "ABS and ABS+",
+      "filament_ids": [
+        "abs",
+        "abs-plus"
+      ],
+      "notes": "ABS Matte, ABS Transparent (incl. low-odour and matte transparent) and ABS+, 1 kg, $18.99-25.99."
+    },
+    {
+      "name": "ASA",
+      "filament_ids": [
+        "asa"
+      ],
+      "notes": "1 kg, $21.99."
+    },
+    {
+      "name": "TPU 95A",
+      "filament_ids": [
+        "tpu-95a"
+      ],
+      "notes": "1 kg, $19.99-23.99."
+    },
+    {
+      "name": "TPU 64D",
+      "filament_ids": [
+        "tpu-64d"
+      ],
+      "notes": "1 kg, $27.99-33.99."
+    }
+  ],
+  "makes_plates": false,
+  "price_tier": "mid",
+  "additional_notes": "Legal entity: yi he ke ji (suzhou) you xian gong si (rendering: Yihe Technology (Suzhou) Co., Ltd.), Suzhou New District (高新区), Suzhou, Jiangsu; Amazon seller 'Justmaker US' (id A30P6KWBQLOYCU), read 2026-11-06. The listing's Manufacturer field reads 'JUSTMAKER'. Store is Amazon only; no brand website was identified. The name is a generic technology company, so whether it extrudes or buys in filament is unknown. The first-pass search found no legal owner; this seller profile is the only entity evidence.",
+  "provenance": {
+    "sources": [
+      "https://livedeals.3dprintingdeals.com/deals?category=filament&brand=JUSTMAKER",
+      "https://www.amazon.com/dp/B0CPSHZWRG",
+      "https://www.amazon.com/sp?seller=A30P6KWBQLOYCU"
+    ],
+    "last_verified": "2026-11-06",
+    "confidence": "low",
+    "conflicts": "The English company name is a rendering of a pinyin Business Name and was not matched to a Chinese-script registration. Extruder and manufacturing country are unknown."
+  },
+  "headquarters_country": "China"
+}

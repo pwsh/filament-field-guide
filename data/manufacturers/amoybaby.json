@@ -1,0 +1,56 @@
+{
+  "id": "amoybaby",
+  "name": "Amoybaby",
+  "status": "draft",
+  "summary": "Amazon brand focused on silk PLA (single and dual colour, high-speed, metallic and high-gloss), with matte rainbow and glow-in-the-dark PLA, as 1 kg spools at about $18-25/kg and 2-6 kg bundles at $12-15/kg. The seller is a Shenzhen industrial company; the extruder is unknown.",
+  "brands": [
+    "Amoybaby",
+    "Amoybaby 3D"
+  ],
+  "oem_relationships": [],
+  "product_lines": [
+    {
+      "name": "PLA Silk (incl. high-speed, metallic, high-gloss)",
+      "filament_ids": [
+        "pla-silk"
+      ],
+      "notes": "1 kg $17.99-21.99; 2 x 1 kg $14.99/kg; 4-6 kg bundles from $15/kg."
+    },
+    {
+      "name": "PLA Dual Color Silk",
+      "filament_ids": [
+        "pla-silk"
+      ],
+      "notes": "1 kg $17.99-21.99; 2 kg bundle from $11.99/kg."
+    },
+    {
+      "name": "PLA Matte Rainbow",
+      "filament_ids": [
+        "pla-matte",
+        "pla-gradient"
+      ],
+      "notes": "1 kg $18.99-22.99; 250 g packs."
+    },
+    {
+      "name": "PLA Glow in the Dark (incl. rainbow)",
+      "filament_ids": [
+        "pla-glow"
+      ],
+      "notes": "1 kg $21.99-24.99; 4 x 1 kg bundle $17.50/kg; small packs."
+    }
+  ],
+  "makes_plates": false,
+  "price_tier": "mid",
+  "additional_notes": "Legal entity: Shenzhen Weitao Industrial Co., Ltd. (verbatim; no rendering needed), Xixiang Subdistrict, Bao'an District, Shenzhen, Guangdong; Amazon seller 'Amoybaby 3D' (id A1U1LWOPG2KX7Z), read 2026-11-06. The listing's Manufacturer field reads 'Amoybaby'. Store is Amazon only; no brand website was identified. The seller address is a unit in the Bao'an internet industry base, so this looks like an e-commerce company; extruder unknown. The first pass found no owner.",
+  "provenance": {
+    "sources": [
+      "https://livedeals.3dprintingdeals.com/deals?category=filament&brand=Amoybaby",
+      "https://www.amazon.com/dp/B0DXDWX3PM",
+      "https://www.amazon.com/sp?seller=A1U1LWOPG2KX7Z"
+    ],
+    "last_verified": "2026-11-06",
+    "confidence": "medium",
+    "conflicts": "Extruder and manufacturing country are unknown."
+  },
+  "headquarters_country": "China"
+}

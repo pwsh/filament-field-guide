@@ -9,13 +9,19 @@
   ],
   "brands": [
     "Jamg He",
-    "AceAddity"
+    "AceAddity",
+    "JH JAMG HE"
   ],
   "oem_relationships": [
     {
       "company": "AceAddity",
       "relationship": "manufactures-for",
       "notes": "User-verified (research/verified-oem-relationships.md). Neither company's own site acknowledges the arrangement, so it is recorded as owner-verified ground truth without external corroboration; AceAddity has no independent catalog presence and gets no separate entry."
+    },
+    {
+      "company": "Chitu Systems (CBD-Tech)",
+      "relationship": "suspected-manufactures-for",
+      "notes": "Weak: a firstquadcopter review calls the product 'ChiTu JAMG HE Conjure PLA+'; search summaries of Desertcart/Woodartsupply listings show 'Jamg He' as Manufacturer (pages unreadable). The Amazon Conjure listings read on 2026-11-06 name 'chitu systems' as Manufacturer and do not mention Jamg He. No official statement."
     }
   ],
   "endpoints": {
@@ -117,7 +123,7 @@
     }
   ],
   "price_tier": "mid",
-  "additional_notes": "Also sells SLA/LCD/DLP resins (Standard Plus, Water Washable, Eco Standard, engineering grades), LCD 3D printers, UV ink, curing boxes and filament dryers — the broadest non-filament hardware lineup in this cluster, suggesting a manufacturing group rather than a pure filament label. Target sectors: jewelry, dental, medical, aerospace, education. Products claim FDA, REACH, CE, RoHS and TSCA compliance. EU distributor pricing: filaments EUR 12.50-29.95, resins EUR 19.95-29.99. Further listings at https://filament2print.com/en/brand/112-jamg-he, https://3dpartnershop.com/brands/jamghe/ and https://protomont.com/brand/jamg-he/. Build plates not confirmed, so makes_plates is left unset. Manufacturing city was not established; China origin is inferred from company background.",
+  "additional_notes": "Also sells SLA/LCD/DLP resins (Standard Plus, Water Washable, Eco Standard, engineering grades), LCD 3D printers, UV ink, curing boxes and filament dryers — the broadest non-filament hardware lineup in this cluster, suggesting a manufacturing group rather than a pure filament label. Target sectors: jewelry, dental, medical, aerospace, education. Products claim FDA, REACH, CE, RoHS and TSCA compliance. EU distributor pricing: filaments EUR 12.50-29.95, resins EUR 19.95-29.99. Further listings at https://filament2print.com/en/brand/112-jamg-he, https://3dpartnershop.com/brands/jamghe/ and https://protomont.com/brand/jamg-he/. Build plates not confirmed, so makes_plates is left unset. Manufacturing city was not established; China origin is inferred from company background. 'JH JAMG HE' is the Amazon brand-field spelling. Suspected manufactures-for Chitu Systems (Conjure), per retailer listing metadata: Desertcart and Woodartsupply listings for Conjure PLA+ and Conjure resin name 'Jamg He' in the Manufacturer field with brand Chitu Systems, and a firstquadcopter review titles the product 'ChiTu JAMG HE Conjure PLA+'. No statement from either company, so no relationship item is recorded here (see chitu-systems).",
   "provenance": {
     "sources": [
       "https://www.jamghe.com/",
@@ -128,9 +134,10 @@
       "https://www.jamghe.com/products/matt-pla-3d-printer-filament",
       "https://www.jamghe.com/products/matte-pla-3d-printer-filament",
       "https://www.jamghe.com/products/jamg-he-silk-pla-filament-for-3d-printer",
-      "https://www.jamghe.com/products/lw-pla"
+      "https://www.jamghe.com/products/lw-pla",
+      "https://www.firstquadcopter.com/reviews/chitu-conjure-pla-and-high-speed-pla-3d-filaments/"
     ],
-    "last_verified": "2026-07-31",
+    "last_verified": "2026-11-06",
     "confidence": "low",
     "conflicts": "Ownership chain (brand owned by Yongchanghe, established 2001, itself a subsidiary of Meilianxing Technology Co., Ltd.) comes from a single AI-summarised fetch and needs corroboration. No HQ city or factory location was found. The owner-verified AceAddity relationship is not acknowledged by either company publicly."
   }

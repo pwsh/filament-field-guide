@@ -1,0 +1,68 @@
+{
+  "id": "3de",
+  "name": "3DE (3D Eksperten)",
+  "status": "draft",
+  "summary": "Danish filament brand that appears to be the house brand of the shop 3D Eksperten (3deksperten.dk), selling a 'Premium' range of PLA, silk PLA, PETG and conductive filament on cardboard spools in 1.75 and 2.85 mm, also via Elgiganten. Ownership is suspected rather than confirmed and the extruder is unknown.",
+  "headquarters_country": "Denmark",
+  "brands": [
+    "3DE",
+    "3DE Premium",
+    "3D Eksperten"
+  ],
+  "oem_relationships": [
+    {
+      "company": "3D Eksperten",
+      "relationship": "suspected-parent-company",
+      "notes": "Suspected, not confirmed: an Elgiganten listing for '3DE Premium - Conductive Filament' describes 3D Eksperten as the seller, and the SpoolmanDB PR file is named 3deksperten.json. No imprint obtained (3deksperten.dk/pages/om-os returned 404). A search hit mentioning '3D Nordic ApS' is unverified. Suspected, not confirmed: the shop About page returned 404."
+    },
+    {
+      "company": "Unidentified contract manufacturer",
+      "relationship": "suspected-manufactured-by",
+      "notes": "Inferred only from the apparent retailer house-brand model; no evidence about the extruder or origin was found."
+    }
+  ],
+  "endpoints": {
+    "website": "https://3deksperten.dk",
+    "store": "https://3deksperten.dk"
+  },
+  "product_lines": [
+    {
+      "name": "3DE Premium PLA",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "190-220 C; 1.75 and 2.85 mm; cardboard spool, vacuum packed with silica; about DKK 190 per 1 kg."
+    },
+    {
+      "name": "3DE Premium Silk PLA",
+      "filament_ids": [
+        "pla-silk"
+      ]
+    },
+    {
+      "name": "3DE Premium PETG",
+      "filament_ids": [
+        "petg"
+      ]
+    },
+    {
+      "name": "3DE Premium Conductive",
+      "filament_ids": [],
+      "notes": "Conductive filament; base polymer not stated in the notes."
+    }
+  ],
+  "price_tier": "mid",
+  "makes_plates": false,
+  "additional_notes": "Also sold through Elgiganten.dk. SimplyPrint names the brand '3DE'; SpoolmanDB PR uses the file name 3deksperten.",
+  "provenance": {
+    "sources": [
+      "https://simplyprint.io/filaments/3deksperten",
+      "https://www.elgiganten.dk/product/computer-kontor/printere-kontor/3d-printer/3de-premium-conductive-filament-175mm-1kg-default-title/836714",
+      "https://api.github.com/repos/Donkie/SpoolmanDB/pulls/328/files",
+      "https://3deksperten.dk/"
+    ],
+    "last_verified": "2026-11-06",
+    "confidence": "low",
+    "conflicts": "Re-checked 2026-11-06: 3deksperten.dk is a live Danish Shopify store with no imprint or CVR text on its pages (/pages/om-os 404); a CVR aggregator hit (CVR 34856990, sole proprietorship, registration reportedly ended 2018) is unreliable and may be a different business; datacvr.virk.dk (JS app) not read. House-brand link to 3D Eksperten remains inferred from a retailer listing and the PR file name; legal entity unverified; price tier from a single DKK price (~$27/kg)."
+  }
+}

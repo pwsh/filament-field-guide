@@ -1,0 +1,47 @@
+{
+  "id": "vioxy-fil",
+  "name": "Vioxy Fil",
+  "status": "draft",
+  "summary": "Amazon filament brand selling only PETG (standard, matte, translucent) in 1 kg spools ($9.99-14.99) and 10-12 kg bundles ($7.17-8.30/kg). The Amazon seller is a Shenzhen technology company; extruder unknown.",
+  "brands": [
+    "Vioxy Fil"
+  ],
+  "oem_relationships": [],
+  "product_lines": [
+    {
+      "name": "PETG",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "1 kg $9.99-13.99; 10-12 kg bundles $7.17-8/kg."
+    },
+    {
+      "name": "PETG Clear",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "1 kg translucent colours, $11.99."
+    },
+    {
+      "name": "PETG Matte",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "1 kg $11.99-14.99; 10 kg bundle $8.30/kg; there is no specific id for matte PETG."
+    }
+  ],
+  "makes_plates": false,
+  "price_tier": "budget",
+  "additional_notes": "Legal entity: Shenzhenweiyangkejiyouxiangongsi (Business Name as printed; Shenzhen Weiyang Technology Co., Ltd. is a rendering), Bantian Subdistrict, Longgang District, Shenzhen, Guangdong; Amazon seller 'shenzhenweiyang' (id AH20WJ27CHOH8), read 2026-11-06. The listing's Manufacturer field reads 'Vioxy Fil'. Store is Amazon only; no brand website found. The entity is a technology company, not a known extruder, so the maker is unknown.",
+  "provenance": {
+    "sources": [
+      "https://livedeals.3dprintingdeals.com/deals?category=filament&brand=Vioxy%20Fil",
+      "https://www.amazon.com/dp/B0H29RBLSC",
+      "https://www.amazon.com/sp?seller=AH20WJ27CHOH8"
+    ],
+    "last_verified": "2026-11-06",
+    "confidence": "low",
+    "conflicts": "The English company name is only a pinyin rendering. Extruder and manufacturing country unknown."
+  },
+  "headquarters_country": "China"
+}

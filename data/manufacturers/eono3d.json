@@ -1,0 +1,95 @@
+{
+  "id": "eono3d",
+  "name": "EONO3D",
+  "status": "draft",
+  "summary": "Amazon brand with a broad range: PETG (1 kg and 6-10 kg bundles at about $10-16/kg), PLA (matte, silk tri-colour, glitter galaxy, marble, conductive), TPU (standard, matte, silk, flexible), PHA, PP, PP glass-fibre and carbon-fibre, and PVA. The seller is a Guangzhou industrial company; the extruder is unknown.",
+  "brands": [
+    "EONO3D",
+    "Eono3D"
+  ],
+  "oem_relationships": [],
+  "product_lines": [
+    {
+      "name": "PETG",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "1 kg $9.99-15.58; 6 kg and 10 kg bundles $9.83-10.80/kg, including translucent."
+    },
+    {
+      "name": "PLA Matte and Matte Marble",
+      "filament_ids": [
+        "pla-matte"
+      ],
+      "notes": "1 kg $13.99-19.99."
+    },
+    {
+      "name": "PLA Silk (incl. tri-colour, metallic gold)",
+      "filament_ids": [
+        "pla-silk"
+      ],
+      "notes": "1 kg $14.99-19.99; 6 kg tri-colour bundle $13.33/kg."
+    },
+    {
+      "name": "PLA Glitter Galaxy",
+      "filament_ids": [
+        "pla-glitter"
+      ],
+      "notes": "1 kg $16.99-20.99; 4 x 250 g packs."
+    },
+    {
+      "name": "PLA Conductive",
+      "notes": "1 kg black, $34.99, sold as electrically conductive for ESD and sensors. No conductive-PLA filament id exists, so no filament_ids."
+    },
+    {
+      "name": "TPU (standard, matte, silk, flexible)",
+      "filament_ids": [
+        "tpu"
+      ],
+      "notes": "1 kg $16.99-28.99; 4 x 250 g packs; hardness not given in titles."
+    },
+    {
+      "name": "PHA",
+      "filament_ids": [
+        "pha"
+      ],
+      "notes": "1 kg $19.49; 4 x 250 g pack."
+    },
+    {
+      "name": "PP",
+      "filament_ids": [
+        "pp"
+      ],
+      "notes": "1 kg $29.99; listing says 5 build sheets are included for adhesion."
+    },
+    {
+      "name": "PP Glass Fiber and PP-CF",
+      "filament_ids": [
+        "pp-gf",
+        "pp-cf"
+      ],
+      "notes": "700 g spools, $44-47/kg."
+    },
+    {
+      "name": "PVA",
+      "filament_ids": [
+        "pva"
+      ],
+      "notes": "500 g water-soluble support, $65.98/kg."
+    }
+  ],
+  "makes_plates": false,
+  "price_tier": "budget",
+  "additional_notes": "Legal entity: GUANGZHOU AOYUE INDUSTRIAL CO.,LTD. (verbatim; no rendering needed), Xintang Town, Zengcheng District, Guangzhou, Guangdong; Amazon seller 'GUANGZHOU AOYUE INDUSTRIAL CO.,LTD.' (id A2YRZKM8EAE2CF), read 2026-11-06. The listing's Manufacturer field reads 'EONO3D'. Store is Amazon only; no brand website was identified. The seller is a generic industrial company at a 4th-floor address, so in-house extrusion is unconfirmed. First-pass notes kept: no support was found for EONO3D being an Amazon-owned label (the seller is this third-party company); a UK trademark application was seen in a search snippet but the applicant was not read. The PP listings bundle PP adhesion sheets, which are not build plates, so makes_plates is false.",
+  "provenance": {
+    "sources": [
+      "https://livedeals.3dprintingdeals.com/deals?category=filament&brand=EONO3D",
+      "https://www.amazon.com/dp/B0G2BPPZ6G",
+      "https://www.amazon.com/sp?seller=A2YRZKM8EAE2CF"
+    ],
+    "last_verified": "2026-11-06",
+    "confidence": "medium",
+    "conflicts": "The UK trademark applicant was not read. Extruder and manufacturing country are unknown. Price tier set to budget from PETG and PLA prices; the PP, PP composites and PVA are priced higher."
+  },
+  "headquarters_country": "China"
+}

@@ -1,0 +1,55 @@
+{
+  "id": "tewirrow",
+  "name": "TEWIRROW",
+  "status": "draft",
+  "summary": "Amazon brand selling 1 kg PLA (basic, matte, Silk+, silk dual/multi-colour, marble) as spools and spoolless refills, titled 'Bamboo Original' / 'Bamboo Lab' with Bambu-style colour codes and an RFID claim for Bambu AMS, at about $23-38/kg. The seller is a Shenzhen technology company; the extruder is unknown.",
+  "brands": [
+    "TEWIRROW",
+    "Tewirrow"
+  ],
+  "oem_relationships": [],
+  "product_lines": [
+    {
+      "name": "PLA Basic (incl. refill)",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "1 kg, $22.99-23.99; titles claim RFID for Bambu Lab AMS."
+    },
+    {
+      "name": "PLA Matte High Speed",
+      "filament_ids": [
+        "pla-matte"
+      ],
+      "notes": "1 kg spool and refill, $23.59-24.59."
+    },
+    {
+      "name": "PLA Silk+ and Silk Dual/Multi-Color",
+      "filament_ids": [
+        "pla-silk"
+      ],
+      "notes": "1 kg, $26.99-28.99."
+    },
+    {
+      "name": "PLA Marble",
+      "filament_ids": [
+        "pla-stone"
+      ],
+      "notes": "Marble-textured 1 kg, $38.39."
+    }
+  ],
+  "makes_plates": false,
+  "price_tier": "mid",
+  "additional_notes": "Legal entity: shenzhenshiyingzhuoyingkejiyouxiangongsi (rendering: Shenzhen Yingzhuoying Technology Co., Ltd.), Yutang Subdistrict, Guangming District, Shenzhen, Guangdong; Amazon seller 'TEWIRROW' (id A2NC27HKD3M8FD), read 2026-11-06. The listing's Manufacturer field reads 'TEWIRROW'. Store is Amazon only; no brand website was identified. A generic technology company, so the extruder is unknown. Listing titles use 'Bamboo Original' / 'Bamboo Lab' and Bambu Lab colour codes (e.g. 'Gold 13405') and claim RFID tags; that is naming that mimics Bambu Lab, not evidence of any Bambu relationship. First-pass note kept: the only US trademarks found for TEWIRROW are non-filament marks held by an individual in Shenzhen.",
+  "provenance": {
+    "sources": [
+      "https://livedeals.3dprintingdeals.com/deals?category=filament&brand=TEWIRROW",
+      "https://www.amazon.com/dp/B0HDBPQHG4",
+      "https://www.amazon.com/sp?seller=A2NC27HKD3M8FD"
+    ],
+    "last_verified": "2026-11-06",
+    "confidence": "low",
+    "conflicts": "The English company name is a rendering of a run-together pinyin Business Name. Whether the RFID tags are real and readable by Bambu AMS was not checked. Extruder unknown."
+  },
+  "headquarters_country": "China"
+}

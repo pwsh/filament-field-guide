@@ -1,0 +1,49 @@
+{
+  "id": "sovb-3d",
+  "name": "SOVB 3D",
+  "status": "draft",
+  "summary": "French filament brand (SOVB3D) selling PLA in about 30 colours and ABS in about 24 colours, plus a glow-in-the-dark ABS, on 1 kg 1.75 mm spools. Very little public company information; the manufacturer and legal entity are unknown.",
+  "headquarters_country": "France",
+  "brands": [
+    "SOVB 3D",
+    "SOVB3D"
+  ],
+  "endpoints": {
+    "website": "https://www.sovb3d.fr/",
+    "store": "https://www.sovb3d.fr/"
+  },
+  "product_lines": [
+    {
+      "name": "Fil PLA",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "About 30 colours; 1 kg, 1.75 mm; brand states 190-230 C nozzle while SimplyPrint lists 180-200 C."
+    },
+    {
+      "name": "Fil ABS",
+      "filament_ids": [
+        "abs"
+      ],
+      "notes": "About 24 colours."
+    },
+    {
+      "name": "Glow ABS",
+      "filament_ids": [
+        "abs"
+      ],
+      "notes": "Single glow-in-the-dark colour. Mapped to abs because the catalog has no glow-ABS id."
+    }
+  ],
+  "makes_plates": false,
+  "additional_notes": "Not related to Sovol (the similar name is search noise). Only an aggregator listing was read; no imprint or legal entity found. No OEM relationship was found either way, so oem_relationships is empty. No price evidence, so price_tier is omitted. SpoolmanDB PR #454 contains only 3 products.",
+  "provenance": {
+    "sources": [
+      "https://simplyprint.io/filaments/sovb-3d",
+      "https://simplyprint.io/filaments/sovb-3d/fil-pla"
+    ],
+    "last_verified": "2026-11-06",
+    "confidence": "low",
+    "conflicts": "Nozzle temperature range disagrees between the brand listing (190-230 C) and SimplyPrint (180-200 C). City, legal entity and manufacturing origin unverified."
+  }
+}

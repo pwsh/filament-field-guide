@@ -1,0 +1,82 @@
+{
+  "id": "layerworks-solutions",
+  "name": "LayerWorks Solutions",
+  "status": "researched",
+  "summary": "Small US extruder in Chattanooga, Tennessee that grew out of a print farm (owner Jonathan Holman) and says it uses US-sourced resin. It sells PLA, the lower-cost WORKS Series PLA, rPLA, high-flow PETG, PRO PCTG, ABS and FR ABS, and offers monthly OEM/bulk contracts to print farms.",
+  "headquarters_country": "United States",
+  "manufacturing_countries": [
+    "United States"
+  ],
+  "brands": [
+    "LayerWorks Solutions",
+    "LayerWorks",
+    "LWS",
+    "WORKS Series"
+  ],
+  "endpoints": {
+    "website": "https://layerworkssolutions.com/",
+    "store": "https://layerworkssolutions.com/"
+  },
+  "product_lines": [
+    {
+      "name": "LayerWorks PLA",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "About $25/kg."
+    },
+    {
+      "name": "WORKS Series PLA",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Lower-cost line, about $15-20/kg."
+    },
+    {
+      "name": "rPLA",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Recycled PLA."
+    },
+    {
+      "name": "High Flow PETG",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "High-speed PETG; no high-flow PETG id exists."
+    },
+    {
+      "name": "PRO PCTG",
+      "filament_ids": [
+        "pctg"
+      ]
+    },
+    {
+      "name": "ABS",
+      "filament_ids": [
+        "abs"
+      ]
+    },
+    {
+      "name": "FR ABS",
+      "filament_ids": [
+        "abs-fr"
+      ]
+    }
+  ],
+  "makes_plates": false,
+  "price_tier": "budget",
+  "additional_notes": "Appears to be an original extruder; no white-label relationship found. It sells monthly OEM/bulk supply contracts to print farms, but no named client brands were found, so no manufactures-for relationship is encoded. Also sold via reach.dog/shop/layerworkssolutions. Covered by NewsChannel 9 (Chattanooga). Pricing ($15-25/kg) sits at the budget/mid boundary. Filament data is in the Open Filament Database.",
+  "provenance": {
+    "sources": [
+      "https://layerworkssolutions.com/",
+      "https://newschannel9.com/news/instagram/amazing-america-chattanooga-company-helps-power-americas-3d-printing-boom",
+      "https://simplyprint.io/filaments/layerworks-solutions/pla-layerworks-works-series",
+      "https://api.github.com/repos/Donkie/SpoolmanDB/pulls/394/files"
+    ],
+    "last_verified": "2026-11-06",
+    "confidence": "medium",
+    "conflicts": "Notes rate this medium-high. HQ is Chattanooga, TN per the company site and NewsChannel 9, while a data aggregator lists Hanover, PA. US resin sourcing is a company claim. Legal form unknown."
+  }
+}

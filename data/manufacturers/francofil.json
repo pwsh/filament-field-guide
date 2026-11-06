@@ -1,0 +1,100 @@
+{
+  "id": "francofil",
+  "name": "Francofil",
+  "status": "researched",
+  "summary": "French filament maker in Normandy, founded in 2017 by Florent Port, that extrudes PLA, ABS, ASA, PETG, PETG-CF, TPU and TPE. It is known for recycled and upcycled materials, including recycled PP and ABS resin from Veolia and PLA filled with coffee grounds or slate-quarry waste, and makes custom filaments for clients.",
+  "headquarters_country": "France",
+  "manufacturing_countries": [
+    "France"
+  ],
+  "brands": [
+    "Francofil"
+  ],
+  "endpoints": {
+    "website": "https://www.francofil.fr/",
+    "store": "https://filament2print.com/es/brand/65-francofil"
+  },
+  "product_lines": [
+    {
+      "name": "PLA",
+      "filament_ids": [
+        "pla"
+      ]
+    },
+    {
+      "name": "PLA Glow",
+      "filament_ids": [
+        "pla-glow"
+      ]
+    },
+    {
+      "name": "PLA with slate-quarry waste",
+      "filament_ids": [
+        "pla-stone"
+      ],
+      "notes": "Mineral-filled PLA using slate waste."
+    },
+    {
+      "name": "PLA with coffee grounds",
+      "filament_ids": [],
+      "notes": "Coffee-ground-filled PLA; no organic-fill id exists."
+    },
+    {
+      "name": "ABS",
+      "filament_ids": [
+        "abs"
+      ],
+      "notes": "Includes coloured recycled ABS resin from Veolia."
+    },
+    {
+      "name": "ASA",
+      "filament_ids": [
+        "asa"
+      ]
+    },
+    {
+      "name": "PETG",
+      "filament_ids": [
+        "petg"
+      ]
+    },
+    {
+      "name": "PETG-CF",
+      "filament_ids": [
+        "petg-cf"
+      ]
+    },
+    {
+      "name": "TPU",
+      "filament_ids": [
+        "tpu"
+      ],
+      "notes": "Two TPU entries in SpoolmanDB PR #370; hardness not stated in the notes."
+    },
+    {
+      "name": "TPE",
+      "filament_ids": [
+        "tpe"
+      ]
+    },
+    {
+      "name": "Recycled PP",
+      "filament_ids": [
+        "pp"
+      ],
+      "notes": "Extruded from Veolia-supplied recycled PP, per Nextmove."
+    }
+  ],
+  "makes_plates": false,
+  "additional_notes": "Veolia supplies recycled PP and coloured ABS resin that Francofil extrudes (confirmed by Nextmove). That is a raw-material supply partnership, not an OEM relationship, so it is recorded here only. No link to any catalog OEM found. Member of the Mov'eo cluster. One 3DJake page says the brand is 'no longer available' there, so current retail status is unclear. The francofil.fr domain comes from a search summary and was not fetched. Legal entity and exact city unknown. No price evidence, so price_tier is omitted.",
+  "provenance": {
+    "sources": [
+      "https://nextmove.fr/en/blog/francofil-sassocie-avec-veolia-pour-fabriquer-des-filaments-3d-en-plastique-recycle",
+      "https://3djake.com/francofil",
+      "https://filament2print.com/es/brand/65-francofil"
+    ],
+    "last_verified": "2026-11-06",
+    "confidence": "medium",
+    "conflicts": "Legal entity, exact Normandy city and current trading status unverified (3DJake shows 'no longer available'). Website domain not fetched."
+  }
+}

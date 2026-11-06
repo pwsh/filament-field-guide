@@ -1,0 +1,128 @@
+{
+  "id": "nebula",
+  "name": "Nebula Filaments",
+  "status": "researched",
+  "summary": "Polish filament maker in Stare Bystre (Malopolska) that says it extrudes on Polish machines using its own granulate and dye recipes. It sells PREMIUM, TECH and ART lines plus the budget Colorfil brand, and offers private-label filament production.",
+  "headquarters_country": "Poland",
+  "manufacturing_countries": [
+    "Poland"
+  ],
+  "brands": [
+    "Nebula Filaments",
+    "Nebula",
+    "Colorfil"
+  ],
+  "oem_relationships": [
+    {
+      "company": "Unidentified private-label clients",
+      "relationship": "manufactures-for",
+      "notes": "nebulafilaments.com offers custom-branded filament production; no specific client brands identified."
+    }
+  ],
+  "endpoints": {
+    "website": "https://nebulafilaments.com/pl",
+    "store": "https://nebulafilaments.com/pl"
+  },
+  "product_lines": [
+    {
+      "name": "PREMIUM PLA",
+      "filament_ids": [
+        "pla"
+      ]
+    },
+    {
+      "name": "PREMIUM PLA Silk",
+      "filament_ids": [
+        "pla-silk"
+      ]
+    },
+    {
+      "name": "PREMIUM PETG",
+      "filament_ids": [
+        "petg"
+      ]
+    },
+    {
+      "name": "TECH PLA 607 / PLA 609 HD",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Numbered technical PLA grades; differences not documented in the notes."
+    },
+    {
+      "name": "TECH ABS 702",
+      "filament_ids": [
+        "abs"
+      ]
+    },
+    {
+      "name": "TECH ASA 301",
+      "filament_ids": [
+        "asa"
+      ]
+    },
+    {
+      "name": "TECH HIPS 404",
+      "filament_ids": [
+        "hips"
+      ]
+    },
+    {
+      "name": "ART PLA Glowing",
+      "filament_ids": [
+        "pla-glow"
+      ]
+    },
+    {
+      "name": "ART PLA Glitter",
+      "filament_ids": [
+        "pla-glitter"
+      ]
+    },
+    {
+      "name": "ART PLA Marble",
+      "filament_ids": [
+        "pla-stone"
+      ]
+    },
+    {
+      "name": "ART PLA Thermo / Mystic Green",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Thermochromic and colour-effect PLA; no thermochromic id exists."
+    },
+    {
+      "name": "ART ABS Glowing / Marble / Thermo",
+      "filament_ids": [
+        "abs"
+      ],
+      "notes": "Effect ABS; no glow, marble or thermo ABS ids exist."
+    },
+    {
+      "name": "ART PETG Chameleon",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "Colour-shift PETG."
+    },
+    {
+      "name": "Colorfil",
+      "filament_ids": [],
+      "notes": "Nebula's own budget line; materials not detailed in the notes."
+    }
+  ],
+  "makes_plates": false,
+  "additional_notes": "NIP 7352773408, REGON 123214332; address Stare Bystre 356, 34-407 Stare Bystre; legal form not stated. The site says raw materials come from established global polymer producers, with Nebula's own granulate and dye recipe. Czech retailer 3dstisk.com lists 'Eazyfil' next to Nebula, but the Nebula site does not mention Eazyfil, so the link is rumoured and uncorroborated. Not related to colorFabb's 'PLA Chameleon Nebula' or Siddament's 'nebula pla fix'. Distributed by Smart3D and others. Pricing is budget to mid (EU), so no single tier is given. TDS documents are available via SimplyPrint.",
+  "provenance": {
+    "sources": [
+      "https://nebulafilaments.com/pl",
+      "https://simplyprint.io/filaments/nebula",
+      "https://3dstisk.com/vyrobce/nebula/",
+      "https://api.github.com/repos/Donkie/SpoolmanDB/pulls/404/files"
+    ],
+    "last_verified": "2026-11-06",
+    "confidence": "medium",
+    "conflicts": "Identity is high confidence. 3dstisk.com describes the filament as Czech-made, which conflicts with the company's own Polish-manufacturing statement; that claim is uncorroborated. The Eazyfil link is unverified."
+  }
+}

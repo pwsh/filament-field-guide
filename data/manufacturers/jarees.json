@@ -1,0 +1,65 @@
+{
+  "id": "jarees",
+  "name": "JAREES (Nanchang Jiaruiya Technology Co., Ltd.)",
+  "status": "draft",
+  "summary": "PETG-heavy Amazon filament brand whose USPTO JAREES mark (reg. 6379542, June 2021) is owned by Nanchang Jiaruiya Technology Co., Ltd. in China, though in Class 9 rather than the filament class. Sells high-speed, tough, matte, transparent, rainbow, wood and metallic PETG plus silk, high-speed and PLA+ PLA. Extruder unknown.",
+  "headquarters_country": "China",
+  "brands": [
+    "JAREES"
+  ],
+  "oem_relationships": [],
+  "product_lines": [
+    {
+      "name": "PETG High Speed / Tough / High Transparency",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "About $11.7-20/kg."
+    },
+    {
+      "name": "PETG Matte / Rainbow / Metallic",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "Effect PETGs; no PETG effect ids exist."
+    },
+    {
+      "name": "PETG Wood Fill",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "Wood-filled PETG; the wood-fill id is PLA-based, so only the PETG base is recorded."
+    },
+    {
+      "name": "PLA Silk",
+      "filament_ids": [
+        "pla-silk"
+      ]
+    },
+    {
+      "name": "PLA High Speed",
+      "filament_ids": [
+        "pla-hf"
+      ]
+    },
+    {
+      "name": "PLA+",
+      "filament_ids": [
+        "pla-plus"
+      ]
+    }
+  ],
+  "makes_plates": false,
+  "price_tier": "budget",
+  "additional_notes": "Store is Amazon US, where JAREES is listed as manufacturer; no brand website found. No relationship to any extruder found.",
+  "provenance": {
+    "sources": [
+      "https://livedeals.3dprintingdeals.com/deals?category=filament&brand=JAREES",
+      "https://markinton.com/trademark/jarees-90215355",
+      "https://trademarks.justia.com/902/15/jarees-90215355.html"
+    ],
+    "last_verified": "2026-11-06",
+    "confidence": "low",
+    "conflicts": "Trademark record read on Justia 2026-11-06: JAREES (serial 90215355, registered 2021-06-08) is Class 9 only, owned by Nanchang Jiaruiya Technology Co., Ltd., Nanchang, Jiangxi. The record does not cover filament, so the owner-to-filament link stays weaker than usual."
+  }
+}

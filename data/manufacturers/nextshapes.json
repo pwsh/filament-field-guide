@@ -1,0 +1,49 @@
+{
+  "id": "nextshapes",
+  "name": "NextShapes",
+  "status": "draft",
+  "summary": "Amazon brand selling 1 kg PETG (high-flow, high-speed, matte) and PLA, mostly as spoolless refills marketed as fitting Bambu Lab printers, at about $10-19/kg. The Amazon seller is a Zhongshan technology company; the extruder is unknown.",
+  "brands": [
+    "NextShapes",
+    "NEXTSHAPES",
+    "Nextshapes"
+  ],
+  "oem_relationships": [],
+  "product_lines": [
+    {
+      "name": "PETG HF / High Speed",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "1 kg spooled and refill, plus a 2 x 1 kg refill pack; about $10-18/kg."
+    },
+    {
+      "name": "PETG Matte",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "1 kg spooled and refill, $13.19-17.59; no matte-PETG id exists, so mapped to petg."
+    },
+    {
+      "name": "PLA refill ('Refilament')",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "1 kg refill for reusable spools, $12.23-18.99."
+    }
+  ],
+  "makes_plates": false,
+  "price_tier": "budget",
+  "additional_notes": "Legal entity: zhongshandajiankejiyouxiangongsi (rendering: Zhongshan Dajian Technology Co., Ltd.), Tanzhou Town, Zhongshan, Guangdong; Amazon seller 'NextShapes' (id A20XTI1VP791EX), read 2026-11-06. The listing's Manufacturer field reads 'NextShapes'. Store is Amazon only; no brand website was identified. The seller address is a ground-floor factory unit (厂房C) in Tanzhou, but the name is a generic technology company, so in-house extrusion is unconfirmed. The first pass found only an unverified supplier listing for a 'NextShapes Technology Co., Ltd.', which does not match the seller entity.",
+  "provenance": {
+    "sources": [
+      "https://livedeals.3dprintingdeals.com/deals?category=filament&brand=NextShapes",
+      "https://www.amazon.com/dp/B0FNWCDD8Y",
+      "https://www.amazon.com/sp?seller=A20XTI1VP791EX"
+    ],
+    "last_verified": "2026-11-06",
+    "confidence": "low",
+    "conflicts": "The English company name is a rendering of a run-together pinyin Business Name. The unverified 'NextShapes Technology Co., Ltd.' name from the first pass is not the Amazon seller entity. Extruder unknown."
+  },
+  "headquarters_country": "China"
+}

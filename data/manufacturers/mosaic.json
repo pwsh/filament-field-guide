@@ -1,0 +1,54 @@
+{
+  "id": "mosaic",
+  "name": "Mosaic Manufacturing",
+  "status": "researched",
+  "summary": "Canadian 3D-printing hardware company, launched in 2015 on Kickstarter as a Montreal startup, known for the Palette multi-material splicers and now focused on industrial and orthotics/prosthetics printing (Array, Element, Orion). It sells 'Mosaic Materials' PLA, ABS and ASA tuned for Palette splicing; the filament manufacturer is not disclosed.",
+  "headquarters_country": "Canada",
+  "brands": [
+    "Mosaic",
+    "Mosaic Materials"
+  ],
+  "endpoints": {
+    "website": "https://mosaicmfg.com/",
+    "store": "https://mosaicmfg.com/",
+    "docs": "https://mosaicmfg.com/pages/materials"
+  },
+  "product_lines": [
+    {
+      "name": "Mosaic PLA",
+      "filament_ids": [
+        "pla"
+      ]
+    },
+    {
+      "name": "Mosaic ABS",
+      "filament_ids": [
+        "abs"
+      ]
+    },
+    {
+      "name": "Mosaic ASA",
+      "filament_ids": [
+        "asa"
+      ]
+    },
+    {
+      "name": "Aero / Align (O&P materials)",
+      "filament_ids": [],
+      "notes": "Materials for orthotics and prosthetics on the Orion printer; chemistry not documented in the notes."
+    }
+  ],
+  "makes_plates": false,
+  "additional_notes": "Primarily a hardware company; filament is a secondary product line. The filament OEM is not disclosed. Contract extrusion is plausible, but there is no evidence either way, so oem_relationships is empty. colorFabb's mention of Mosaic is Palette compatibility only. Premium pricing is suggested but unverified, so price_tier is omitted. SpoolmanDB PR #403 lists 3 entries.",
+  "provenance": {
+    "sources": [
+      "https://mosaicmfg.com/",
+      "https://mosaicmfg.com/pages/materials",
+      "https://www.crowdfundinsider.com/2015/04/66518-montreal-startup-mosaic-manufacturing-hits-kickstarter-with-new-3d-printer-technology-the-palette/",
+      "https://api.github.com/repos/Donkie/SpoolmanDB/pulls/403/files"
+    ],
+    "last_verified": "2026-11-06",
+    "confidence": "medium",
+    "conflicts": "City unresolved: 2015 coverage calls it a Montreal startup, and Hamilton was suggested but not verified. Filament manufacturer and origin unknown (low confidence)."
+  }
+}

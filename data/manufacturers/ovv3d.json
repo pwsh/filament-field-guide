@@ -3,18 +3,19 @@
   "name": "OVV3D",
   "status": "researched",
   "summary": "Novelty-focused PLA brand selling dual-, tri- and quad-colour silk, matte, wood-fill, gradient and glow filaments plus filament storage and drying accessories. It fronts a Brooklyn, New York storefront address, but the OVV3D word mark is registered to Shenzhen Hanyuan Technology Co., Ltd. in China, so the US address reads as a distribution front over Chinese production.",
-  "headquarters_country": "United States",
+  "headquarters_country": "China",
   "manufacturing_countries": [
     "China"
   ],
   "brands": [
-    "OVV3D"
+    "OVV3D",
+    "OVVNYXE"
   ],
   "oem_relationships": [
     {
       "company": "Shenzhen Hanyuan Technology Co., Ltd.",
       "relationship": "suspected-manufactured-by",
-      "notes": "USPTO application serial 97525156 for the OVV3D word mark, filed July 2022 in International Class 017 (plastics, including filament), names Shenzhen Hanyuan Technology Co., Ltd. of Shenzhen, China as applicant/owner. Trademark ownership establishes who controls the brand, not conclusively who extrudes the filament, but combined with the absence of any US manufacturing claim it is the strongest available origin signal."
+      "notes": "Brand owner confirmed 2026-11-06: the Amazon seller 'OVV3D' (id A1BPIEXDSLDOLU) has Business Name 'shenzhenshihanyuankejiyouxiangongsi' (Shenzhen Hanyuan Technology Co., Ltd.), Baoan District, Shenzhen, and the OVV3D trademark application (serial 97525156, Class 017, Justia shows only the initial filing event) names the same company as applicant. The Amazon listing shows brand OVVNYXE with seller and Manufacturer OVV3D, so OVVNYXE is the same company's listing brand. Hanyuan controls the brand; whether it extrudes or buys from a contract manufacturer is still unknown, hence suspected-manufactured-by."
     }
   ],
   "endpoints": {
@@ -144,7 +145,7 @@
   ],
   "makes_plates": false,
   "price_tier": "budget",
-  "additional_notes": "Storefront address is 392A Van Brunt St, Brooklyn, NY 11231, phone (212) 228-5166; no manufacturing statement or country-of-origin claim appears anywhere on the site, and no manufacturer-operated social accounts were found (thin evidence flag). The site's about copy claims general ABS, PETG, TPU, wood and silk categories, but the only SKUs actually surfaced across the site, Amazon store and third-party catalogues are PLA and PLA variants — the non-PLA claims are unsubstantiated and are not recorded as product lines. Accessories are filament storage and drying rather than build surfaces (a 30-pack desiccant/storage bag set with auto pump, drying and storage solutions), so makes_plates is false. Bundle packs of 4 x 200 g are common; the site self-reports 39,607+ annual sales and 2,910+ reviews, which is an unaudited vendor claim. Also distributed via Newegg and reseller The Makers Den.",
+  "additional_notes": "Legal entity: Shenzhen Hanyuan Technology Co., Ltd. (Amazon seller Business Name, Baoan District, Shenzhen; matches the USPTO applicant). OVVNYXE is the brand field on the same company's Amazon listings (sold by OVV3D, Manufacturer OVV3D). US storefront address 392A Van Brunt St, Brooklyn, NY 11231, phone (212) 228-5166, appears on theovv3d.com; no manufacturing statement anywhere. The site's about copy claims ABS, PETG, TPU, wood and silk, but only PLA and PLA variants are observable as SKUs, so the non-PLA claims are not recorded as product lines. Accessories are filament storage and drying (desiccant/storage bag sets), so makes_plates is false.",
   "provenance": {
     "sources": [
       "https://theovv3d.com/",
@@ -152,10 +153,14 @@
       "https://3dfilamentprofiles.com/filaments/ovv3d",
       "https://www.amazon.com/stores/OVV3D/page/0285590C-25A0-48F2-90E1-612C68A0074D",
       "https://www.newegg.com/p/298-00MP-00049",
-      "https://themakersden.com/products/ovv3d"
+      "https://themakersden.com/products/ovv3d",
+      "https://www.desertcart.ma/products/532817265-ovvnyxe-pla-3d-filament-1-75mm-wood-200g-x-4",
+      "https://livedeals.3dprintingdeals.com/deals?category=filament&brand=OVVNYXE",
+      "https://www.amazon.com/dp/B0B3JV15XH",
+      "https://www.amazon.com/sp?seller=A1BPIEXDSLDOLU"
     ],
-    "last_verified": "2026-08-01",
-    "confidence": "low",
-    "conflicts": "The Brooklyn storefront address and the Shenzhen trademark ownership point in opposite directions; headquarters_country records the US storefront while manufacturing_countries records China from the trademark filing, and neither is confirmed by a company statement. The catalogue described in the site's own about text (ABS, PETG, TPU) does not match the PLA-only SKU set actually observable, so either the copy is boilerplate or part of the range is unlisted. No social presence and no TDS were found, so specifications rest entirely on retail listings."
+    "last_verified": "2026-11-06",
+    "confidence": "medium",
+    "conflicts": "Resolved 2026-11-06: the Brooklyn address is a US storefront/forwarding address; the legal entity behind the Amazon seller and the trademark is Shenzhen Hanyuan Technology, so headquarters_country is now China. Still open: the site's about copy claims ABS, PETG, TPU but only PLA SKUs are observable; no TDS; extruder unidentified."
   }
 }

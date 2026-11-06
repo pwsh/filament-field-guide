@@ -1,0 +1,63 @@
+{
+  "id": "kretrum",
+  "name": "Kretrum",
+  "status": "draft",
+  "summary": "Amazon filament brand selling PLA in solid colours plus silk dual/tri-colour, glow, matte pastel and rainbow variants, mostly 1 kg at about $17-30/kg. The Amazon seller is a Guangzhou technology company; extruder unknown.",
+  "brands": [
+    "Kretrum",
+    "KRETRUM",
+    "Kretrum-DIY"
+  ],
+  "oem_relationships": [],
+  "product_lines": [
+    {
+      "name": "PLA",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "1 kg, $16.99-24.99."
+    },
+    {
+      "name": "PLA Silk Dual / Tri Color",
+      "filament_ids": [
+        "pla-silk"
+      ],
+      "notes": "1 kg $25.49-29.99; 4-spool 1 kg bundles $26.99-27.99 (the tracker's $/kg for these, over $100, is a calculation error)."
+    },
+    {
+      "name": "PLA Glow in the Dark",
+      "filament_ids": [
+        "pla-glow"
+      ],
+      "notes": "1 kg, $24.29-29.99."
+    },
+    {
+      "name": "PLA Matte Pastel Bundle",
+      "filament_ids": [
+        "pla-matte"
+      ],
+      "notes": "1 kg, $26.99."
+    },
+    {
+      "name": "PLA Rainbow Bundle",
+      "filament_ids": [
+        "pla-gradient"
+      ],
+      "notes": "1 kg, $26.99; whether the spools are gradient or a set of solid colours is not clear from the title."
+    }
+  ],
+  "makes_plates": false,
+  "price_tier": "mid",
+  "additional_notes": "Legal entity: guang zhou shu yu ke ji you xian gong si (Business Name as printed; Guangzhou Shuyu Technology Co., Ltd. is a rendering), Huangpu District, Guangzhou, Guangdong; Amazon seller 'Kretrum-DIY' (id AVW3PP2QGGF04), read 2026-11-06. The listing's Manufacturer field reads 'Kretrum'. Store is Amazon only; no brand website found. The entity is a technology company, not a known extruder, so the maker is unknown.",
+  "provenance": {
+    "sources": [
+      "https://livedeals.3dprintingdeals.com/deals?category=filament&brand=Kretrum",
+      "https://www.amazon.com/dp/B0CXXGMDDW",
+      "https://www.amazon.com/sp?seller=AVW3PP2QGGF04"
+    ],
+    "last_verified": "2026-11-06",
+    "confidence": "low",
+    "conflicts": "The English company name is only a pinyin rendering. Extruder and manufacturing country unknown."
+  },
+  "headquarters_country": "China"
+}

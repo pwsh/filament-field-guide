@@ -1,0 +1,56 @@
+{
+  "id": "3d-best-q",
+  "name": "3D BEST Q",
+  "status": "draft",
+  "summary": "Amazon filament brand focused on PCTG (including carbon-fibre PCTG) plus TPU and PETG, at about $29/kg for PCTG. A Desertcart listing summary names Foshan QiBaiXi Trade Ltd., Co as the seller entity, which is unverified. Extruder unknown.",
+  "brands": [
+    "3D BEST Q",
+    "3D BEST-Q"
+  ],
+  "oem_relationships": [],
+  "product_lines": [
+    {
+      "name": "PCTG",
+      "filament_ids": [
+        "pctg"
+      ],
+      "notes": "1 kg 1.75 mm in white/black/clear, $28.99; users say it needs drying and is harder to print than PETG."
+    },
+    {
+      "name": "Carbon Fiber PCTG",
+      "filament_ids": [
+        "pctg-cf"
+      ],
+      "notes": "Black, $39.99."
+    },
+    {
+      "name": "TPU",
+      "filament_ids": [
+        "tpu"
+      ],
+      "notes": "Black 1 kg, $29.90; hardness not stated."
+    },
+    {
+      "name": "PETG",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "Reviewer mention only (rope-like surface texture, uncorroborated)."
+    }
+  ],
+  "makes_plates": false,
+  "price_tier": "mid",
+  "additional_notes": "Legal entity: Foshan Qibaixi Trade Co., Ltd. (Amazon seller Business Name and Manufacturer field, read 2026-11-06), Nanhai District, Foshan, Guangdong. Store is Amazon only; no brand website found. The entity is a trading company, so filament is presumably sourced from an unidentified extruder; no relationship recorded.",
+  "provenance": {
+    "sources": [
+      "https://livedeals.3dprintingdeals.com/deals?category=filament&brand=3D%20BEST%20Q",
+      "https://www.desertcart.lk/products/488225867-3d-best-q-pctg-black-1-75mm-3d-printer-filament",
+      "https://www.amazon.com/dp/B0C33LWLBR",
+      "https://www.amazon.com/sp?seller=AEL2UO3IJ6V9M"
+    ],
+    "last_verified": "2026-11-06",
+    "confidence": "medium",
+    "conflicts": "Resolved 2026-11-06: the Amazon seller '3D BEST-Q' (id AEL2UO3IJ6V9M) has Business Name 'Foshan Qibaixi Trade Co.,Ltd', Nanhai District, Foshan, and the listing's Manufacturer field reads 'Foshan QiBaiXi trade Ltd.,Co'. A trading company, so the extruder is unknown."
+  },
+  "headquarters_country": "China"
+}

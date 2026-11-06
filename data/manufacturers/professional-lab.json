@@ -1,0 +1,138 @@
+{
+  "id": "professional-lab",
+  "name": "Professional LAB",
+  "status": "draft",
+  "summary": "Polish (per SimplyPrint/Open Filament Database) budget filament brand with a very broad catalogue: many PLA variants, PLA+, PLA-CF, PETG, PETG-CF, ASA, ABS, TPU and PA12-CF15, sold via print-imagine.com and resellers such as 3dstisk.com and Empik. Owner and manufacturer unknown.",
+  "headquarters_country": "Poland",
+  "brands": [
+    "Professional LAB",
+    "Prof. Lab",
+    "Prof Lab"
+  ],
+  "oem_relationships": [
+    {
+      "company": "SmartPrint (Smart Print)",
+      "relationship": "suspected-sister-brand",
+      "notes": "SimplyPrint links the Professional LAB shop to print-imagine.com (Imagine s.c.), the suspected maker of SmartPrint. print-imagine.com's imprint never mentions Professional LAB, so this is weak."
+    }
+  ],
+  "endpoints": {
+    "store": "https://print-imagine.com"
+  },
+  "product_lines": [
+    {
+      "name": "PLA (standard, Pastel, Meta)",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "'Meta' finish undefined; mapped to plain PLA."
+    },
+    {
+      "name": "PLA Matte",
+      "filament_ids": [
+        "pla-matte"
+      ]
+    },
+    {
+      "name": "PLA Silk / Silk Dual / Silk Tri",
+      "filament_ids": [
+        "pla-silk"
+      ]
+    },
+    {
+      "name": "PLA Marble",
+      "filament_ids": [
+        "pla-stone"
+      ]
+    },
+    {
+      "name": "PLA Galaxy",
+      "filament_ids": [
+        "pla-glitter"
+      ]
+    },
+    {
+      "name": "PLA Glow",
+      "filament_ids": [
+        "pla-glow"
+      ]
+    },
+    {
+      "name": "PLA Wood",
+      "filament_ids": [
+        "pla-wood"
+      ]
+    },
+    {
+      "name": "PLA HS (high-speed)",
+      "filament_ids": [
+        "pla-hf"
+      ]
+    },
+    {
+      "name": "PLA+",
+      "filament_ids": [
+        "pla-plus"
+      ]
+    },
+    {
+      "name": "PLA-CF",
+      "filament_ids": [
+        "pla-cf"
+      ]
+    },
+    {
+      "name": "PETG (standard, Matte, Transparent)",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "No matte-PETG id exists."
+    },
+    {
+      "name": "PETG-CF",
+      "filament_ids": [
+        "petg-cf"
+      ]
+    },
+    {
+      "name": "ASA",
+      "filament_ids": [
+        "asa"
+      ]
+    },
+    {
+      "name": "ABS",
+      "filament_ids": [
+        "abs"
+      ]
+    },
+    {
+      "name": "TPU",
+      "filament_ids": [
+        "tpu"
+      ],
+      "notes": "Hardness not captured."
+    },
+    {
+      "name": "PA12-CF15",
+      "filament_ids": [
+        "pa12-cf"
+      ],
+      "notes": "15% carbon-fibre nylon 12."
+    }
+  ],
+  "makes_plates": false,
+  "price_tier": "budget",
+  "additional_notes": "Pricing: Empik ~39-60 PLN/kg; 3dstisk EUR 10-15/kg PETG. SimplyPrint links the brand shop to print-imagine.com (Imagine s.c., Cholerzyn, Liszki, Poland), but print-imagine.com's imprint never mentions Professional LAB, so that is a retailer link, not proof of ownership. A search hit for Fiberlab S.A. (Fiberlogy) surfaced but nothing connects it to Professional LAB - not a relationship. The broad catalogue at budget prices suggests private-label sourcing, but that is speculation with no evidence.",
+  "provenance": {
+    "sources": [
+      "https://simplyprint.io/filaments/professional-lab",
+      "https://raw.githubusercontent.com/Donkie/SpoolmanDB/main/filaments/professionallab.json",
+      "https://3dstisk.com/vyrobce/prof-lab/",
+      "https://print-imagine.com"
+    ],
+    "last_verified": "2026-11-06",
+    "confidence": "low",
+    "conflicts": "Country (Poland) is from SimplyPrint/Open Filament Database; a reseller only says 'European brand'. Owner, legal entity and manufacturer unknown."
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "id": "biqu",
+  "name": "Shenzhen BIQU Innovation Technology Co., Ltd",
+  "status": "researched",
+  "summary": "Shenzhen printer and upgrade-parts brand (est. 2015), sister brand of mainboard maker BIGTREETECH, that has sold its own PLA since around 2021: PLA Matte, PLA Premium, 'GO' PLA and PLA-HR. The filament extruder is not identified.",
+  "headquarters_country": "China",
+  "brands": [
+    "BIQU",
+    "BIGTREETECH"
+  ],
+  "oem_relationships": [],
+  "endpoints": {
+    "website": "https://biqu.equipment",
+    "store": "https://biqu.equipment"
+  },
+  "product_lines": [
+    {
+      "name": "PLA Matte",
+      "filament_ids": [
+        "pla-matte"
+      ]
+    },
+    {
+      "name": "PLA Premium",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Glossy standard PLA."
+    },
+    {
+      "name": "GO PLA",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "SpoolmanDB: 1 kg, 250 g spool, 210-240 C."
+    },
+    {
+      "name": "PLA-HR",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Seen only on a desertcart listing; meaning of 'HR' not established, so no variant id asserted."
+    }
+  ],
+  "makes_plates": false,
+  "additional_notes": "BIGTREETECH (Shenzhen Bigtree Technology, mainboards) is described by SimplyPrint as BIQU's sister brand; both names are recorded under brands on this one entry because BIGTREETECH has no separate filament line or catalog entry to point a sister-brand relationship at. No evidence of a filament OEM. biqu.equipment was rate-limited during research and not read directly. Price tier budget-mid, unverified, so omitted.",
+  "provenance": {
+    "sources": [
+      "https://formnext.mesago.com/frankfurt/de/ausstellersuche.detail.html/shenzhen-biqu-innovation-technology-co--ltd.html",
+      "https://simplyprint.io/compatibility/bigtreetech",
+      "https://hacklines.com/en/editions/233300/click",
+      "https://raw.githubusercontent.com/Donkie/SpoolmanDB/main/filaments/biqu.json"
+    ],
+    "last_verified": "2026-11-06",
+    "confidence": "medium",
+    "conflicts": "Exact corporate tie between BIQU and BIGTREETECH (common ownership vs brand partnership) not verified from a registry. Filament manufacturer and manufacturing country unknown."
+  }
+}

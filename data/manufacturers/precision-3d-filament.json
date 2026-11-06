@@ -1,0 +1,34 @@
+{
+  "id": "precision-3d-filament",
+  "name": "Precision 3D Filament",
+  "status": "draft",
+  "summary": "Filament brand known only from a SpoolmanDB submission listing a PLA and a Glow PLA. No company, location or manufacturer could be identified.",
+  "brands": [
+    "Precision 3D Filament"
+  ],
+  "product_lines": [
+    {
+      "name": "PLA",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "Generic colour template entry in SpoolmanDB PR #426."
+    },
+    {
+      "name": "Glow PLA",
+      "filament_ids": [
+        "pla-glow"
+      ]
+    }
+  ],
+  "makes_plates": false,
+  "additional_notes": "Unidentified. precision3dfilament.com returned HTTP 406 to an automated fetch and could not be verified, so no endpoints are recorded. Web searches only returned unrelated products (3Devo Precision Series extruders, FormFutura High Precision PLA). Relationships, country and price tier unknown.",
+  "provenance": {
+    "sources": [
+      "https://api.github.com/repos/Donkie/SpoolmanDB/pulls/426/files"
+    ],
+    "last_verified": "2026-11-06",
+    "confidence": "low",
+    "conflicts": "Brand identity not established beyond the SpoolmanDB PR; the domain could not be confirmed to belong to this brand."
+  }
+}

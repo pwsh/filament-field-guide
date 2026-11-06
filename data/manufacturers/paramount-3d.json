@@ -1,0 +1,103 @@
+{
+  "id": "paramount-3d",
+  "name": "Paramount 3D",
+  "status": "researched",
+  "summary": "Bensenville, Illinois (US) supplier selling filament alongside PCB prototyping boards, copper-clad laminates and FR-4. It claims to have been founded in 1994. The range covers PLA (matte and silk), PETG, ABS, ASA, flexible, PVA, nylon and CF-filled PA6, PETG and ABS, much of it in named military-style colours. The origin of the filament is not stated.",
+  "headquarters_country": "United States",
+  "brands": [
+    "Paramount 3D"
+  ],
+  "endpoints": {
+    "website": "https://www.paramount-3d.com/",
+    "store": "https://www.paramount-3d.com/"
+  },
+  "product_lines": [
+    {
+      "name": "PLA",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "1.75 mm 1 kg; many named colours. Also sold on 'masterspools' (refills)."
+    },
+    {
+      "name": "Matte PLA",
+      "filament_ids": [
+        "pla-matte"
+      ]
+    },
+    {
+      "name": "Silk PLA",
+      "filament_ids": [
+        "pla-silk"
+      ]
+    },
+    {
+      "name": "PETG",
+      "filament_ids": [
+        "petg"
+      ]
+    },
+    {
+      "name": "ABS",
+      "filament_ids": [
+        "abs"
+      ]
+    },
+    {
+      "name": "ASA",
+      "filament_ids": [
+        "asa"
+      ]
+    },
+    {
+      "name": "FlexPLA / TPU",
+      "filament_ids": [
+        "tpu"
+      ],
+      "notes": "Flexible line; whether 'FlexPLA' is a TPU or a flexible PLA blend is not documented."
+    },
+    {
+      "name": "PVA",
+      "filament_ids": [
+        "pva"
+      ]
+    },
+    {
+      "name": "Nylon",
+      "filament_ids": [
+        "pa"
+      ],
+      "notes": "PA type unspecified."
+    },
+    {
+      "name": "PA6-CF",
+      "filament_ids": [
+        "pa6-cf"
+      ]
+    },
+    {
+      "name": "PETG-CF",
+      "filament_ids": [
+        "petg-cf"
+      ]
+    },
+    {
+      "name": "ABS-CF",
+      "filament_ids": [
+        "abs-cf"
+      ]
+    }
+  ],
+  "makes_plates": false,
+  "additional_notes": "Address 754 Birginal Dr, Bensenville, IL 60106; phone (630) 594-1840, email team@paramount-usa.com. The site shows (c)2016 while claiming the company was founded in 1994. Not the 3D Systems-owned Paramount Industries. Manufacturing origin is not disclosed, and the '100% virgin' claims are marketing, so oem_relationships is empty. Sold on its own site plus Amazon and third parties. Price tier unverified, so omitted. SpoolmanDB PR #413 lists 12 entries.",
+  "provenance": {
+    "sources": [
+      "https://www.paramount-3d.com/",
+      "https://simplyprint.io/filaments/paramount-3d",
+      "https://api.github.com/repos/Donkie/SpoolmanDB/pulls/413/files"
+    ],
+    "last_verified": "2026-11-06",
+    "confidence": "medium",
+    "conflicts": "Identity and location are medium confidence; manufacturing origin is low/unknown. Legal entity name not stated on the site."
+  }
+}

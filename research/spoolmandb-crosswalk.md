@@ -71,3 +71,9 @@ Printed Solid → acquired by Prusa Research 2022, rebranded Prusa USA Inc (Jul 
 KVP → acquired by Toner Plastics (Aug 2024), now "Village Plastics", relocated MA.
 taulman3D → domain squatted; survives as "Xtellar Taulman" via MatterHackers.
 chckx3d, voxelab, ovv3d, real-filament sites unreachable/degraded at review time.
+
+## Re-check 2026-11-06
+
+SpoolmanDB `main` is now 86 brand files and about 80 PRs are open. All 11 newly merged brands and all 40
+new pending-PR brands now have catalog entries. Full detail, including the PR-by-PR list and the overlap with
+our Direction-B candidates, is in `research/brand-audit-2026-11-06.md`.

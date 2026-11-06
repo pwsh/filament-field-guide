@@ -1,0 +1,47 @@
+{
+  "id": "gryddle",
+  "name": "Gryddle",
+  "status": "draft",
+  "summary": "Amazon filament brand selling PLA, high-speed PLA and PETG, mostly in 10-16 kg multi-colour bundles at about $7-9/kg (single 1 kg PETG $9.47-16.99). The Amazon seller is a Jingmen trading company; extruder unknown.",
+  "brands": [
+    "Gryddle"
+  ],
+  "oem_relationships": [],
+  "product_lines": [
+    {
+      "name": "PLA",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "2 kg black ($8/kg), 10 kg black/white ($6.99/kg) and 16-colour 16 kg bundles ($8.12-9.31/kg)."
+    },
+    {
+      "name": "PLA High Speed",
+      "filament_ids": [
+        "pla-hf"
+      ],
+      "notes": "10-colour 10 kg bundle, $7.99/kg."
+    },
+    {
+      "name": "PETG",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "1 kg $9.47-16.99; 10/12/16 kg bundles $7.45-8.90/kg. Variant names on the tracker cite diameter tolerances from 0.03 to 0.20 mm, which look like listing data errors."
+    }
+  ],
+  "makes_plates": false,
+  "price_tier": "budget",
+  "additional_notes": "Legal entity: Jingmenshihuanxumaoyiyouxiangongsi (Business Name as printed; Jingmen Huanxu Trading Co., Ltd. is a rendering), Duodao District, Jingmen, Hubei; Amazon seller 'Gryddle' (id A28V1Z0Q8V7IUY), read 2026-11-06. The listing's Manufacturer field reads 'Gryddle'. Store is Amazon only; no brand website found. The entity is a trading company, so the extruder is unknown. First pass: the cheapest bundles in its research batch.",
+  "provenance": {
+    "sources": [
+      "https://livedeals.3dprintingdeals.com/deals?category=filament&brand=Gryddle",
+      "https://www.amazon.com/dp/B0FQ55PWCW",
+      "https://www.amazon.com/sp?seller=A28V1Z0Q8V7IUY"
+    ],
+    "last_verified": "2026-11-06",
+    "confidence": "low",
+    "conflicts": "The English company name is only a pinyin rendering. Extruder and manufacturing country unknown."
+  },
+  "headquarters_country": "China"
+}

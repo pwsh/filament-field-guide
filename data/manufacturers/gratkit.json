@@ -1,0 +1,73 @@
+{
+  "id": "gratkit",
+  "name": "GratKit",
+  "status": "draft",
+  "summary": "Amazon brand built around 6 kg PETG bundles (about $11-15/kg) plus 1 kg PETG, gradient and glitter PETG, and matte, silk dual/tri-colour, rainbow, marble and wood PLA at about $14-25/kg. The seller is a Shenzhen intelligent-equipment company; the extruder is unknown.",
+  "brands": [
+    "GratKit",
+    "GRATKIT",
+    "Gratkit",
+    "GratKit Smart Equipment"
+  ],
+  "oem_relationships": [],
+  "product_lines": [
+    {
+      "name": "PETG",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "6 x 1 kg bundles $67.99-79.99 ($11.33-13.33/kg), 10 kg $149.99, 1 kg $14.99; also transparent and high-speed PETG."
+    },
+    {
+      "name": "PETG Gradient and Glitter Rainbow",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "1 kg $18.99-21.99; 6 kg gradient bundle $15/kg. No gradient-PETG id exists, so mapped to petg."
+    },
+    {
+      "name": "PLA Matte (incl. tri-colour and rainbow)",
+      "filament_ids": [
+        "pla-matte",
+        "pla-gradient"
+      ],
+      "notes": "1 kg $13.99-24.99; 6 kg tri-colour bundle $15/kg."
+    },
+    {
+      "name": "PLA Silk (dual, tri-colour, rainbow)",
+      "filament_ids": [
+        "pla-silk",
+        "pla-gradient"
+      ],
+      "notes": "1 kg $15.99-21.99; 2, 6 and 10 kg bundles."
+    },
+    {
+      "name": "PLA Marble",
+      "filament_ids": [
+        "pla-stone"
+      ],
+      "notes": "1 kg $21.99."
+    },
+    {
+      "name": "PLA Wood Fill",
+      "filament_ids": [
+        "pla-wood"
+      ],
+      "notes": "1 kg $22.99; 4 x 250 g bundle."
+    }
+  ],
+  "makes_plates": false,
+  "price_tier": "mid",
+  "additional_notes": "Legal entity: Shenzhenshi Keyue Zhineng Zhuangbei Youxiangongsi (rendering: Shenzhen Keyue Intelligent Equipment Co., Ltd.), Fuyong Subdistrict, Bao'an District, Shenzhen, Guangdong; Amazon seller 'GratKit' (id A12TV7ARCTIY6L), read 2026-11-06. The listing's Manufacturer field reads 'GratKit Smart Equipment', consistent with the seller entity. Store is Amazon only; no brand website was identified. The seller address is an office in an office tower and the name is an equipment company, so the filament is presumably bought in; extruder unknown. First-pass note kept: one Alibaba listing described a Guangdong-made GratKit matte PLA, unverified. Price tier set to mid from 1 kg spool prices; the 6 kg PETG bundles alone would be budget.",
+  "provenance": {
+    "sources": [
+      "https://livedeals.3dprintingdeals.com/deals?category=filament&brand=GratKit",
+      "https://www.amazon.com/dp/B0CJVCNYGC",
+      "https://www.amazon.com/sp?seller=A12TV7ARCTIY6L"
+    ],
+    "last_verified": "2026-11-06",
+    "confidence": "low",
+    "conflicts": "The English company name is a rendering of a pinyin Business Name. Extruder and manufacturing country are unknown; the Alibaba 'made in Guangdong' line is unverified."
+  },
+  "headquarters_country": "China"
+}

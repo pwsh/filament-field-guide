@@ -1,0 +1,95 @@
+{
+  "id": "fiberthree",
+  "name": "FiberThree (F3)",
+  "status": "draft",
+  "summary": "Technical nylon and composite filament specialist, described by Filament2Print as German. Its F3 PA range covers PA6 and PA12 (Pure, Lite, ESD) and CF- and GF-filled grades, alongside PC-CF, PLA-GF, PP-GF and TPU, on 500 g and 1 kg spools. It is resold by Prusa Research and 3DJake.",
+  "headquarters_country": "Germany",
+  "brands": [
+    "FiberThree",
+    "Fiber Three",
+    "Fibrethree",
+    "F3"
+  ],
+  "endpoints": {
+    "website": "https://www.fiberthree.com/",
+    "store": "https://www.prusa3d.com/en/product/fiberthree-f3-pa-pure-pro-filament-500g"
+  },
+  "product_lines": [
+    {
+      "name": "F3 PA6 (Pure / Lite)",
+      "filament_ids": [
+        "pa6"
+      ]
+    },
+    {
+      "name": "F3 PA12",
+      "filament_ids": [
+        "pa12"
+      ]
+    },
+    {
+      "name": "F3 PA ESD",
+      "filament_ids": [
+        "pa"
+      ],
+      "notes": "Static-dissipative nylon; no PA-ESD id exists and the base nylon is not stated."
+    },
+    {
+      "name": "F3 PA6-CF",
+      "filament_ids": [
+        "pa6-cf"
+      ]
+    },
+    {
+      "name": "F3 PA6-GF / PA6-GF30",
+      "filament_ids": [
+        "pa6-gf"
+      ]
+    },
+    {
+      "name": "F3 PA12-CF",
+      "filament_ids": [
+        "pa12-cf"
+      ]
+    },
+    {
+      "name": "F3 PC-CF",
+      "filament_ids": [
+        "pc"
+      ],
+      "notes": "No PC-CF id exists; pc listed for family context."
+    },
+    {
+      "name": "F3 PLA-GF",
+      "filament_ids": [
+        "pla-gf"
+      ]
+    },
+    {
+      "name": "F3 PP-GF",
+      "filament_ids": [
+        "pp-gf"
+      ]
+    },
+    {
+      "name": "F3 TPU",
+      "filament_ids": [
+        "tpu"
+      ],
+      "notes": "Two TPU entries in SpoolmanDB PR #360; hardness not stated."
+    }
+  ],
+  "makes_plates": false,
+  "price_tier": "engineering",
+  "additional_notes": "Prusa Research's e-shop sells F3 PA Pure, CF and GF, and 3DJake, Filament2Print and others also stock the range. These are reseller relationships, not OEM ties, and are recorded here only. Also sells filament drying cases. fiberthree.com failed with an expired TLS certificate at fetch time, and several retailers list items as sold out or discontinued, so the brand's current status is uncertain. A possible Czech entity could not be confirmed. Legal entity unknown.",
+  "provenance": {
+    "sources": [
+      "https://filament2print.com/en/brand/88-fiber-three",
+      "https://www.prusa3d.com/en/product/fiberthree-f3-pa-pure-pro-filament-500g",
+      "https://www.3djake.ch/fr-CH/fiberthree/f3-pa-gf-pro"
+    ],
+    "last_verified": "2026-11-06",
+    "confidence": "low",
+    "conflicts": "Notes rate this medium-low. German origin rests on a Filament2Print description, not an imprint (the official site was unreachable). Possible Czech entity unconfirmed. Possibly discontinued."
+  }
+}

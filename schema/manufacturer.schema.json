@@ -29,7 +29,10 @@
         "required": ["company", "relationship"],
         "properties": {
           "company": { "type": "string" },
-          "relationship": { "enum": ["manufactures-for", "manufactured-by", "suspected-manufactured-by", "rebrands", "joint-venture", "distributes", "parent-company"] },
+          "relationship": {
+            "enum": ["manufactures-for", "suspected-manufactures-for", "manufactured-by", "suspected-manufactured-by", "rebrands", "joint-venture", "distributes", "parent-company", "suspected-parent-company", "sister-brand", "suspected-sister-brand"],
+            "description": "Read from this entry toward `company`: this entry manufactures-for / is manufactured-by / rebrands / distributes (resells) the company; parent-company = the company owns this entry; sister-brand = separate brand under the same owner or operator. suspected-* = evidence exists but is unconfirmed; state the evidence and its strength in `notes`."
+          },
           "notes": { "type": "string" }
         }
       },

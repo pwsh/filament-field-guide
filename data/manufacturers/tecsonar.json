@@ -1,0 +1,68 @@
+{
+  "id": "tecsonar",
+  "name": "TECSONAR",
+  "status": "draft",
+  "summary": "Amazon brand of rainbow-effect PLA (matte, silk, crystal, gradient) sold as 1 kg spools at about $15-19/kg and 10-16 kg bundles at about $12/kg, plus 250 g packs of PLA, PETG and TPU (85A, 95A, glow, chameleon). The seller is a Guangzhou technology company; the extruder is unknown.",
+  "brands": [
+    "TECSONAR",
+    "Tecsonar",
+    "tecsonar",
+    "TECSANAR"
+  ],
+  "oem_relationships": [],
+  "product_lines": [
+    {
+      "name": "PLA Matte / Silk / Crystal Rainbow and Gradient",
+      "filament_ids": [
+        "pla-matte",
+        "pla-silk",
+        "pla-gradient"
+      ],
+      "notes": "1 kg $14.99-18.99; 10 x 1 kg bundles $119.99 ($12/kg); 4 x 250 g and 100 g packs."
+    },
+    {
+      "name": "PLA Glow in the Dark",
+      "filament_ids": [
+        "pla-glow"
+      ],
+      "notes": "250 g spools and 8 x 250 g pack."
+    },
+    {
+      "name": "PLA Matte and Silk 250 g packs",
+      "filament_ids": [
+        "pla-matte",
+        "pla-silk"
+      ],
+      "notes": "8 x 250 g and 250 g spools."
+    },
+    {
+      "name": "PETG",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "8 x 250 g pack, $14.99/kg."
+    },
+    {
+      "name": "TPU 85A and 95A (incl. glow, chameleon)",
+      "filament_ids": [
+        "tpu-85a",
+        "tpu-95a"
+      ],
+      "notes": "250 g spools, $44-56/kg."
+    }
+  ],
+  "makes_plates": false,
+  "price_tier": "budget",
+  "additional_notes": "Legal entity: Guangzhouxujinkejiyouxiangongsi (rendering: Guangzhou Xujin Technology Co., Ltd.; the storefront itself is named 'Guangzhou Xujin Technology Co., Limited'), Licheng Subdistrict, Zengcheng District, Guangzhou, Guangdong; Amazon seller 'Guangzhou Xujin Technology Co., Limited' (id A2ES7SYU6KOC20), read 2026-11-06. The listing's Manufacturer field reads 'tecsonar'; one listing spells the brand 'TECSANAR'. Store is Amazon only; no brand website was identified. A generic technology company at an office address, so the extruder is unknown. The deal tracker computes implausible per-kg prices for some bundles (e.g. a 10 x 1 kg bundle shown as 10 x 100 g); prices here are taken from the listing titles. The first pass found no entity.",
+  "provenance": {
+    "sources": [
+      "https://livedeals.3dprintingdeals.com/deals?category=filament&brand=TECSONAR",
+      "https://www.amazon.com/dp/B0F6T84PHS",
+      "https://www.amazon.com/sp?seller=A2ES7SYU6KOC20"
+    ],
+    "last_verified": "2026-11-06",
+    "confidence": "medium",
+    "conflicts": "The Business Name is run-together pinyin; the English form is supported by the storefront name. Extruder and manufacturing country are unknown."
+  },
+  "headquarters_country": "China"
+}

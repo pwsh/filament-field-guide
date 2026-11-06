@@ -1,0 +1,42 @@
+{
+  "id": "l3d",
+  "name": "L3D",
+  "status": "draft",
+  "summary": "Filament brand known only from a SpoolmanDB entry listing Basic PLA, Silk PLA and PETG on 1 kg / 1.75 mm spools. Company identity, country and manufacturer could not be established.",
+  "brands": [
+    "L3D"
+  ],
+  "oem_relationships": [],
+  "product_lines": [
+    {
+      "name": "Basic PLA",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "1 kg, 1.75 mm, 210 g spool (SpoolmanDB)."
+    },
+    {
+      "name": "Silk PLA",
+      "filament_ids": [
+        "pla-silk"
+      ]
+    },
+    {
+      "name": "PETG",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "SpoolmanDB lists matte colours."
+    }
+  ],
+  "makes_plates": false,
+  "additional_notes": "Several searches returned nothing; the name is ambiguous. No website, store or social accounts identified.",
+  "provenance": {
+    "sources": [
+      "https://raw.githubusercontent.com/Donkie/SpoolmanDB/main/filaments/l3d.json"
+    ],
+    "last_verified": "2026-11-06",
+    "confidence": "low",
+    "conflicts": "Single source (SpoolmanDB); brand could not be identified."
+  }
+}

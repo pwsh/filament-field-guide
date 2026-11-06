@@ -1,0 +1,82 @@
+{
+  "id": "epax",
+  "name": "EPAX 3D",
+  "status": "researched",
+  "summary": "US-based maker of LCD/resin 3D printers (active since 2014, shipping from a North Carolina office) that also sells a side line of 1.75 mm, 1 kg FDM filament: high-speed PLA variants, silk and glow PLA, PETG, ASA, TPU 95A and PETG-CF. The filament's actual extruder is not disclosed.",
+  "headquarters_country": "United States",
+  "brands": [
+    "EPAX",
+    "EPAX 3D"
+  ],
+  "oem_relationships": [],
+  "endpoints": {
+    "website": "https://epax3d.com",
+    "store": "https://epax3d.com"
+  },
+  "product_lines": [
+    {
+      "name": "Fast PLA+ / High Speed PLA",
+      "filament_ids": [
+        "pla-hf",
+        "pla-plus"
+      ],
+      "notes": "Marketed as high-speed PLA+; 'compatible with Bambu AMS' is a compatibility claim only."
+    },
+    {
+      "name": "Matte High Speed PLA",
+      "filament_ids": [
+        "pla-matte",
+        "pla-hf"
+      ]
+    },
+    {
+      "name": "Luminous High Speed Glow PLA",
+      "filament_ids": [
+        "pla-glow"
+      ]
+    },
+    {
+      "name": "Magic Silk PLA",
+      "filament_ids": [
+        "pla-silk"
+      ],
+      "notes": "Neon/galaxy colour range."
+    },
+    {
+      "name": "Fast PETG",
+      "filament_ids": [
+        "petg"
+      ]
+    },
+    {
+      "name": "ASA",
+      "filament_ids": [
+        "asa"
+      ]
+    },
+    {
+      "name": "TPU 95A",
+      "filament_ids": [
+        "tpu-95a"
+      ]
+    },
+    {
+      "name": "PETG-CF",
+      "filament_ids": [
+        "petg-cf"
+      ],
+      "notes": "Listed on the shop but not in the SpoolmanDB PR (#357)."
+    }
+  ],
+  "makes_plates": false,
+  "additional_notes": "Printer maker first; filament is an accessory line. EPAX Dental is a separate site. Legal entity and city not established (trades as 'EPAX 3D'). No filament OEM identified, so oem_relationships is empty. Price tier not checked.",
+  "provenance": {
+    "sources": [
+      "https://epax3d.com",
+      "https://simplyprint.io/filaments/epax"
+    ],
+    "last_verified": "2026-11-06",
+    "confidence": "medium",
+    "conflicts": "Identity is medium confidence; manufacturing origin and filament OEM are unknown (low). 'North Carolina Office' is a shipping origin, not a confirmed HQ."
+  }
+}

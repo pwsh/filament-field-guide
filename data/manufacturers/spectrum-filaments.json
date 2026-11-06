@@ -627,7 +627,7 @@
   ],
   "makes_plates": false,
   "price_tier": "premium",
-  "additional_notes": "Registered address: Spectrum Group Sp. z o.o., Parkowa 85, 05-806 Pecice, Poland; production is at the same Pecice site near Warsaw. Also operates a legacy shop at https://shop.spectrumfilaments.com/ and an alternate Shopify storefront at https://spectrum-filaments.myshopify.com/, neither of which is recorded in endpoints since the current US store supersedes them. Offers spool authenticity verification. Instagram, YouTube, Facebook and TikTok all reportedly use the handle @spectrumfilaments, but the exact URLs were not individually confirmed, so only LinkedIn is recorded. No build-plate products found. Price tier recorded as premium for the Premium PLA/engineering range although the catalogue straddles mid and premium; no verified $/kg figure.",
+  "additional_notes": "Registered address: Spectrum Group Sp. z o.o., Parkowa 85, 05-806 Pecice, Poland; production is at the same Pecice site near Warsaw. Also operates a legacy shop at https://shop.spectrumfilaments.com/ and an alternate Shopify storefront at https://spectrum-filaments.myshopify.com/, neither of which is recorded in endpoints since the current US store supersedes them. Offers spool authenticity verification. Instagram, YouTube, Facebook and TikTok all reportedly use the handle @spectrumfilaments, but the exact URLs were not individually confirmed, so only LinkedIn is recorded. No build-plate products found. Price tier recorded as premium for the Premium PLA/engineering range although the catalogue straddles mid and premium; no verified $/kg figure. PrograFen (graphene-additive PLA/PETG, Graphene Light ~0.5% and Graphene Strong ~5%) was reportedly acquired by Spectrum in February 2024 (per search summaries of Spectrum pages, not read verbatim) and is sold on spectrumfilaments.com and the legacy shop.",
   "provenance": {
     "sources": [
       "https://spectrumfilaments.com/en/",
@@ -640,7 +640,9 @@
       "https://spectrumfilaments.com/en/download/",
       "https://spectrumfilaments.com/wp-content/uploads/2022/05/en_tds_spectrum_sflex_85a.pdf",
       "https://spectrumfilaments.com/wp-content/uploads/2022/05/en_tds_spectrum_sflex_90a.pdf",
-      "https://spectrumfilaments.com/wp-content/uploads/2022/05/en_tds_spectrum_sflex_98a.pdf"
+      "https://spectrumfilaments.com/wp-content/uploads/2022/05/en_tds_spectrum_sflex_98a.pdf",
+      "https://spectrumfilaments.com/en/filament/prografen-pla-graphene-light/",
+      "https://shop.spectrumfilaments.com/eng_m_PROGRAFEN-2908.html"
     ],
     "last_verified": "2026-07-31",
     "confidence": "medium",

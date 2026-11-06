@@ -1,0 +1,56 @@
+{
+  "id": "filamentworld",
+  "name": "Filamentworld",
+  "status": "draft",
+  "summary": "Filament seller listed as German by SimplyPrint, offering PLA (standard, matte, silk, metallic silk; about 34 colours), PETG and ABS on 1 kg spools. Likely a shop or private-label brand; the company and manufacturer are unknown.",
+  "headquarters_country": "Germany",
+  "brands": [
+    "Filamentworld"
+  ],
+  "product_lines": [
+    {
+      "name": "PLA",
+      "filament_ids": [
+        "pla"
+      ],
+      "notes": "About 34 colours, 1 kg spools."
+    },
+    {
+      "name": "Matte PLA",
+      "filament_ids": [
+        "pla-matte"
+      ]
+    },
+    {
+      "name": "Silk / Metallic Silk PLA",
+      "filament_ids": [
+        "pla-silk"
+      ]
+    },
+    {
+      "name": "PETG",
+      "filament_ids": [
+        "petg"
+      ],
+      "notes": "Two PETG entries in SpoolmanDB PR #365."
+    },
+    {
+      "name": "ABS",
+      "filament_ids": [
+        "abs"
+      ]
+    }
+  ],
+  "makes_plates": false,
+  "additional_notes": "No imprint or company information found. The domain is unresolved: SimplyPrint links filamentworld.com while search results show filamentworld.de, so no endpoint is recorded. An old Hubs forum post names filamentworld.de as a place to buy eSUN filament. A reseller or rebrand link to eSUN is therefore rumoured and uncorroborated, and it is not encoded. Price tier unknown.",
+  "provenance": {
+    "sources": [
+      "https://simplyprint.io/filaments/filamentworld",
+      "https://simplyprint.io/filaments/filamentworld/pla",
+      "https://hubs.com/talk/t/which-filament-brand-to-buy/9195/4"
+    ],
+    "last_verified": "2026-11-06",
+    "confidence": "low",
+    "conflicts": "Germany as headquarters comes only from the SimplyPrint brand page and is not verified by an imprint. Website domain (.de vs .com) unresolved."
+  }
+}

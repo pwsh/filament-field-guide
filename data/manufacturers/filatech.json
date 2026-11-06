@@ -1,0 +1,38 @@
+{
+  "id": "filatech",
+  "name": "Filatech (Filatech 3D Printing Industries)",
+  "status": "draft",
+  "summary": "Filament manufacturer in the RAKEZ free zone, Ras Al Khaimah, United Arab Emirates, that calls itself the first and only Middle East filament maker (founded late 2016, production from May 2017). It claims 160+ products across 15 materials; SpoolmanDB lists only its PLA and ABS.",
+  "headquarters_country": "United Arab Emirates",
+  "manufacturing_countries": [
+    "United Arab Emirates"
+  ],
+  "brands": [
+    "Filatech",
+    "Filatech Industries"
+  ],
+  "product_lines": [
+    {
+      "name": "PLA",
+      "filament_ids": [
+        "pla"
+      ]
+    },
+    {
+      "name": "ABS",
+      "filament_ids": [
+        "abs"
+      ]
+    }
+  ],
+  "makes_plates": false,
+  "additional_notes": "All company claims (first/only Middle East maker, 160+ products, 15 materials) are self-reported in a RAKEZ promotional success story. A directory lists 11-50 employees. That the SpoolmanDB 'Filatech' (PR #366) is this UAE company is assumed from the name match only. Website not identified. No relationships found. Price tier unknown.",
+  "provenance": {
+    "sources": [
+      "https://rakez.com/en/Success-Stories/Filatech-Industries"
+    ],
+    "last_verified": "2026-11-06",
+    "confidence": "low",
+    "conflicts": "Notes rate this low-medium. Single promotional source; the entity match between the SpoolmanDB brand and the UAE company is assumed; exact legal name unknown."
+  }
+}

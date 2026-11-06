@@ -1,0 +1,77 @@
+{
+  "id": "toksen3d",
+  "name": "Guangzhou Toksen 3D Technology Co., Ltd.",
+  "status": "draft",
+  "summary": "Young (2024) Guangzhou filament brand TOKSEN3D selling budget PLA, high-speed PLA, transparent rainbow PLA, PETG, ABS, TPU and ASA via Amazon and Newegg. A supplier directory describes the company as a trading company, so it likely sources from an unidentified extruder.",
+  "headquarters_country": "China",
+  "brands": [
+    "TOKSEN3D",
+    "Toksen3D"
+  ],
+  "oem_relationships": [
+    {
+      "company": "Unidentified contract manufacturer",
+      "relationship": "suspected-manufactured-by",
+      "notes": "Weak evidence: a supplier directory lists the company as a trading company founded 2024 rather than a factory. No extruder named anywhere."
+    }
+  ],
+  "product_lines": [
+    {
+      "name": "PLA",
+      "filament_ids": [
+        "pla"
+      ]
+    },
+    {
+      "name": "High-speed PLA",
+      "filament_ids": [
+        "pla-hf"
+      ]
+    },
+    {
+      "name": "Transparent rainbow PLA",
+      "filament_ids": [
+        "pla-gradient"
+      ]
+    },
+    {
+      "name": "PETG",
+      "filament_ids": [
+        "petg"
+      ]
+    },
+    {
+      "name": "ABS",
+      "filament_ids": [
+        "abs"
+      ]
+    },
+    {
+      "name": "TPU",
+      "filament_ids": [
+        "tpu"
+      ],
+      "notes": "Hardness not captured."
+    },
+    {
+      "name": "ASA",
+      "filament_ids": [
+        "asa"
+      ]
+    }
+  ],
+  "makes_plates": false,
+  "price_tier": "budget",
+  "additional_notes": "Trademark filers per Justia: Guangzhou Toksen 3D Technology Co., Ltd. (logo mark, Oct 2024) and Guangzhou Tuosen 3D Technology Co., Ltd (word mark TOKSEN3D, Dec 2024), same Huadu District address; spellings Tuosen and Tosen 3D also appear on sourcing sites. No official website, docs or social accounts found. Budget tier unverified.",
+  "provenance": {
+    "sources": [
+      "https://trademark.justia.com/owners/guangzhou-toksen-3d-technology-co-ltd-6049190",
+      "https://trademark.justia.com/owners/guangzhou-tuosen-3d-technology-co-ltd-6113859",
+      "https://trademarks.justia.com/988/83/toksen3d-98883539.html",
+      "https://trademarks.justia.com/987/80/n-98780681.html"
+    ],
+    "last_verified": "2026-11-06",
+    "confidence": "medium",
+    "conflicts": "Justia records read 2026-11-06: the word mark TOKSEN3D (serial 98883539, filed 2024-12-03, Class 17) is filed by 'Guangzhou Tuosen 3D Technology Co., Ltd' and the logo mark (serial 98780681, filed 2024-10-01, Class 17) by 'Guangzhou Toksen 3D Technology Co., Ltd.'; both at Building 16, No. 10 Xinhua Road, Huadu District, Guangzhou, so almost certainly one business under two romanisations (address evidence only). Trading-company description from a supplier directory not independently checked; manufacturing country unknown."
+  }
+}
